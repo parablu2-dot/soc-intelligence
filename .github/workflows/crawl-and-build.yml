@@ -72,6 +72,11 @@ jobs:
           # 브랜치 이름 지정 → crawl job이 push한 최신 커밋을 동적으로 받음
           ref: main
 
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Stage site artifacts
         # data/refined/ 만 site/data/ 아래로 복사 (raw/, soc.db 제외)
         run: |
