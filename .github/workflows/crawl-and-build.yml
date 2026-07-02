@@ -83,7 +83,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy site --project-name=soc-intelligence
+          command: pages deploy site --project-name=soc-intelligence --verbose
 
       - name: Verify deployment
         run: bash scripts/check_deploy.sh https://soc-intelligence.pages.dev
