@@ -69,8 +69,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # crawl 잡이 push한 최신 커밋 포함
-          ref: ${{ github.ref }}
+          # 브랜치 이름 지정 → crawl job이 push한 최신 커밋을 동적으로 받음
+          ref: main
 
       - name: Stage site artifacts
         # data/refined/ 만 site/data/ 아래로 복사 (raw/, soc.db 제외)
@@ -78,12 +78,19 @@ jobs:
           mkdir -p site/data
           cp -r data/refined site/data/
 
+      - name: Create Cloudflare Pages project (idempotent)
+        # 프로젝트가 없으면 생성, 이미 있으면 에러 무시
+        run: npx wrangler pages project create soc-intelligence --production-branch=main || true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy site --project-name=soc-intelligence --verbose
+          command: pages deploy site --project-name=soc-intelligence
 
       - name: Verify deployment
         run: bash scripts/check_deploy.sh https://soc-intelligence.pages.dev
