@@ -1,0 +1,17 @@
+# CI 빌드 중 생성되는 파일 — 커밋 대상 아님
+site/data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# 환경 변수
+.env
+.env.*
+
+# 에디터
+.vscode/
+.idea/

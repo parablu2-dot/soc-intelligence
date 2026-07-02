@@ -1,0 +1,161 @@
+# 소스 레지스트리 — 신규 크롤러 추가 시 여기에 등록
+# enabled: false인 항목은 run_all.py가 건너뜀
+
+mobile_ap:
+  apple:
+    enabled: true
+    module: crawlers.mobile_ap.apple
+    class: AppleCrawler
+  qualcomm:
+    enabled: true
+    module: crawlers.mobile_ap.qualcomm
+    class: QualcommCrawler
+  mediatek:
+    enabled: true
+    module: crawlers.mobile_ap.mediatek
+    class: MediaTekCrawler
+  unisoc:
+    enabled: true
+    module: crawlers.mobile_ap.unisoc
+    class: UnisocCrawler
+  exynos:
+    enabled: true
+    module: crawlers.mobile_ap.exynos
+    class: ExynosCrawler
+
+hpc_datacenter:
+  nvidia:
+    enabled: true
+    module: crawlers.hpc_datacenter.nvidia
+    class: NvidiaCrawler
+  amd:
+    enabled: true
+    module: crawlers.hpc_datacenter.amd
+    class: AmdCrawler
+  intel:
+    enabled: true
+    module: crawlers.hpc_datacenter.intel
+    class: IntelCrawler
+  sk_hynix:
+    enabled: false
+    module: crawlers.hpc_datacenter.sk_hynix
+    class: SkHynixCrawler
+  tesla:
+    enabled: false
+    module: crawlers.hpc_datacenter.tesla
+    class: TeslaCrawler
+  hiring:
+    enabled: true
+    module: crawlers.hpc_datacenter.hiring
+    class: HiringCrawler
+
+custom_soc:
+  broadcom:
+    enabled: true
+    module: crawlers.custom_soc.broadcom
+    class: BroadcomCrawler
+  marvell:
+    enabled: true
+    module: crawlers.custom_soc.marvell
+    class: MarvellCrawler
+  hyperscaler_inhouse:
+    enabled: true
+    module: crawlers.custom_soc.hyperscaler_inhouse
+    class: HyperscalerCrawler
+
+foundry:
+  tsmc:
+    enabled: true
+    module: crawlers.foundry.tsmc
+    class: TsmcCrawler
+  samsung_foundry:
+    enabled: true
+    module: crawlers.foundry.samsung_foundry
+    class: SamsungFoundryCrawler
+  intel_foundry:
+    enabled: true
+    module: crawlers.foundry.intel_foundry
+    class: IntelFoundryCrawler
+  globalfoundries:
+    enabled: true
+    module: crawlers.foundry.globalfoundries
+    class: GlobalFoundriesCrawler
+  smic:
+    enabled: true
+    module: crawlers.foundry.smic
+    class: SmicCrawler
+  trendforce:
+    enabled: true
+    module: crawlers.foundry.trendforce
+    class: TrendforceCrawler
+  etnews:
+    enabled: true
+    module: crawlers.foundry.etnews
+    class: EtnewsCrawler
+
+packaging:
+  ase:
+    enabled: true
+    module: crawlers.packaging.ase
+    class: AseCrawler
+  amkor:
+    enabled: true
+    module: crawlers.packaging.amkor
+    class: AmkorCrawler
+  jcet:
+    enabled: true
+    module: crawlers.packaging.jcet
+    class: JcetCrawler
+
+# 공통 정책
+policy:
+  # exclude_domains 제거함 — 3계층 distillation의 검증 노드가 출처 신뢰도를 개별 판단
+  preferred_sources:
+    - Reuters
+    - Bloomberg
+    - TechInsights
+    - SemiAnalysis
+    - DigiTimes
+    - TrendForce
+
+# Dedup·Lineage 파이프라인 설정 (scripts/dedup_gate.py)
+dedup:
+  model: "all-MiniLM-L6-v2"   # sentence-transformers 로컬 모델
+  threshold: 0.88              # 코사인 유사도 ≥ 이 값 → merged
+  noise_threshold: 0.50        # 향후 noise 판정 확장용 (현재 미사용)
+
+# 생태계 업체 목록 (생태계 그래프 + 채용 레이더 단일 소스)
+# site/js/app.js의 _ECO_RELATIONS 업체와 동기화 유지
+eco_companies:
+  - tsmc
+  - apple
+  - nvidia
+  - amd
+  - qualcomm
+  - broadcom
+  - mediatek
+  - samsung_foundry
+  - exynos
+  - intel
+  - intel_foundry
+  - globalfoundries
+  - smic
+  - ase
+  - amkor
+  - jcet
+  - marvell
+  - hyperscaler_inhouse
+
+# 채용 레이더 Google News 업체별 쿼리 (슬러그: 검색어, hiring.py가 읽음)
+# 슬러그 → 표시 태그 매핑은 hiring.py 내 _SLUG_TO_TAG 참고
+hiring_targets:
+  tsmc: '"TSMC" ("chip design" OR "design center" OR "R&D") hiring OR recruit'
+  samsung_foundry: '"Samsung Foundry" ("chip design" OR "design center") hiring OR recruit'
+  apple: '"Apple Silicon" OR "Apple chip" ("design center" OR hiring OR recruit)'
+  nvidia: '"NVIDIA" "chip design" OR "GPU design" hiring OR recruit OR "design center"'
+  amd: '"AMD" "chip design" OR "GPU" hiring OR recruit OR "design center"'
+  qualcomm: '"Qualcomm" ("chip design" OR "SoC") hiring OR recruit OR "design center"'
+  broadcom: '"Broadcom" ("ASIC" OR "chip design") hiring OR recruit'
+  marvell: '"Marvell" semiconductor ("chip design" OR "design center") hiring OR recruit'
+  mediatek: '"MediaTek" ("chip design" OR "design center") hiring OR recruit'
+  intel: '"Intel" ("chip design" OR "fab" OR "foundry") hiring OR recruit OR "design center"'

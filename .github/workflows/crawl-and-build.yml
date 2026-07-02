@@ -1,0 +1,95 @@
+name: crawl-and-build
+
+on:
+  schedule:
+    # 매일 01:00 UTC (KST 10:00) 자동 실행
+    - cron: '0 1 * * *'
+  workflow_dispatch:  # 수동 트리거 허용
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # git push를 위해 필요
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # sentence-transformers 모델 캐시 (첫 다운로드 후 재사용)
+      - name: Cache sentence-transformers model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: st-model-all-MiniLM-L6-v2
+
+      - name: Install dependencies
+        working-directory: soc-intelligence
+        run: pip install -r requirements.txt
+
+      # ── 1. 크롤링 ─────────────────────────────────────────────
+      - name: Run crawlers
+        working-directory: soc-intelligence
+        # 일부 크롤러 실패해도 수집된 데이터는 저장
+        run: python -m crawlers.run_all || true
+
+      # ── 2. Dedup Gate (임베딩 dedup + lineage) ────────────────
+      - name: Run dedup gate
+        working-directory: soc-intelligence
+        run: python scripts/dedup_gate.py
+
+      # ── 3. LLM 병합 (merged 판정 건만, ANTHROPIC_API_KEY 필수) ─
+      - name: Run merge refine
+        working-directory: soc-intelligence
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/merge_refine.py
+
+      # ── 4. canonical → data/refined/ JSON export ──────────────
+      - name: Export refined JSON
+        working-directory: soc-intelligence
+        run: python scripts/export_refined.py
+
+      # ── 5. 커밋 (data/ 전체 + soc.db 포함) ────────────────────
+      - name: Commit crawled and refined data
+        working-directory: soc-intelligence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "chore: crawl+dedup $(date -u +'%Y-%m-%d')"
+          git push
+
+  deploy:
+    needs: crawl
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # crawl 잡이 push한 최신 커밋 포함
+          ref: ${{ github.ref }}
+
+      - name: Stage site artifacts
+        # data/refined/ 만 site/data/ 아래로 복사 (raw/, soc.db 제외)
+        run: |
+          mkdir -p soc-intelligence/site/data
+          cp -r soc-intelligence/data/refined soc-intelligence/site/data/
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy soc-intelligence/site --project-name=soc-intelligence
+
+      - name: Verify deployment
+        run: bash soc-intelligence/scripts/check_deploy.sh https://soc-intelligence.pages.dev
