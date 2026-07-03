@@ -57,6 +57,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
           git diff --staged --quiet || git commit -m "chore: crawl+dedup $(date -u +'%Y-%m-%d')"
+          git pull --rebase origin main
           git push
 
   deploy:
