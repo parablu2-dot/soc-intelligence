@@ -221,7 +221,7 @@ def _generate_company_summaries(conn, client) -> None:
             }
             ok += 1
         except Exception as exc:
-            print(f"  [!] {company}: {exc}")
+            print(f"::warning::company_summaries [{company}] failed: {exc}")
             fail += 1
 
     out = {
