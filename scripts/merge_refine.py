@@ -70,7 +70,7 @@ Rules (hard constraints):
 def run() -> None:
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
-        print("[merge_refine] ANTHROPIC_API_KEY not set — skipping LLM step")
+        print("::warning::ANTHROPIC_API_KEY not set — LLM merge and company summaries skipped")
         return
 
     import anthropic
@@ -99,47 +99,46 @@ def run() -> None:
 
         print(f"[merge_refine] {len(rows)} merged decisions pending LLM update")
         if not rows:
-            print("[merge_refine] nothing to do")
-            return
+            print("[merge_refine] no merged decisions — skipping merge step")
+        else:
+            now_ts = datetime.now(timezone.utc).isoformat()
+            ok = fail = 0
 
-        now_ts = datetime.now(timezone.utc).isoformat()
-        ok = fail = 0
+            for row in rows:
+                existing_inf = json.loads(row["inference"])
+                raw_sig = json.loads(row["raw_json"])
 
-        for row in rows:
-            existing_inf = json.loads(row["inference"])
-            raw_sig = json.loads(row["raw_json"])
-
-            prompt = _PROMPT_TMPL.format(
-                existing_title=row["can_title"],
-                existing_inference=json.dumps(existing_inf, ensure_ascii=False),
-                new_title=row["raw_title"],
-                new_summary=row["raw_summary"] or "",
-                new_tags=json.dumps(raw_sig.get("tags") or [], ensure_ascii=False),
-            )
-
-            try:
-                resp = client.messages.create(
-                    model="claude-haiku-4-5-20251001",
-                    max_tokens=256,
-                    messages=[{"role": "user", "content": prompt}],
-                    tools=[_TOOL_SCHEMA],
-                    tool_choice={"type": "tool", "name": "update_inference"},
+                prompt = _PROMPT_TMPL.format(
+                    existing_title=row["can_title"],
+                    existing_inference=json.dumps(existing_inf, ensure_ascii=False),
+                    new_title=row["raw_title"],
+                    new_summary=row["raw_summary"] or "",
+                    new_tags=json.dumps(raw_sig.get("tags") or [], ensure_ascii=False),
                 )
-                tool_block = next(b for b in resp.content if b.type == "tool_use")
-                new_inf: dict = tool_block.input
-                update_canonical(conn, row["canonical_id"], {
-                    "inference": json.dumps(new_inf, ensure_ascii=False),
-                    "updated_at": now_ts,
-                })
-                ok += 1
-            except Exception as exc:
-                print(f"  [!] {row['canonical_id'][:10]}… error: {exc}")
-                fail += 1
 
-        conn.commit()
-        print(f"[merge_refine] done — ok={ok} fail={fail}")
+                try:
+                    resp = client.messages.create(
+                        model="claude-haiku-4-5-20251001",
+                        max_tokens=256,
+                        messages=[{"role": "user", "content": prompt}],
+                        tools=[_TOOL_SCHEMA],
+                        tool_choice={"type": "tool", "name": "update_inference"},
+                    )
+                    tool_block = next(b for b in resp.content if b.type == "tool_use")
+                    new_inf: dict = tool_block.input
+                    update_canonical(conn, row["canonical_id"], {
+                        "inference": json.dumps(new_inf, ensure_ascii=False),
+                        "updated_at": now_ts,
+                    })
+                    ok += 1
+                except Exception as exc:
+                    print(f"  [!] {row['canonical_id'][:10]}… error: {exc}")
+                    fail += 1
 
-        # 회사별 전략 요약 생성 (업체별 주요 전략 모듈용)
+            conn.commit()
+            print(f"[merge_refine] done — ok={ok} fail={fail}")
+
+        # merged 판정 유무와 무관하게 항상 회사별 요약 생성
         _generate_company_summaries(conn, client)
 
     finally:

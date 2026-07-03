@@ -14,8 +14,8 @@ from crawlers.common.rss_utils import (
 )
 from crawlers.common.schema import RefinedSignal
 
-_NEWS_URL = "https://pr.tsmc.com/english/news"
-_IR_URL = "https://investor.tsmc.com/english/news/press-releases"
+_NEWS_URL = "https://pr.tsmc.com/english/latest-news"
+_IR_URL = "https://pr.tsmc.com/english/news-archives"
 _SOURCE_NAME = "TSMC Newsroom"
 
 
