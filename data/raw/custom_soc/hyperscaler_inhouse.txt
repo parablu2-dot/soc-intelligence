@@ -5369,7 +5369,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 	<atom:link href="https://azure.microsoft.com/en-us/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://azure.microsoft.com/en-us/blog/</link>
 	<description>Get the latest Azure news, updates, and announcements from the Azure blog. From product updates to hot topics, hear from the Azure experts.</description>
-	<lastBuildDate>Tue, 30 Jun 2026 18:12:36 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 29 Jun 2026 20:23:10 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -5385,362 +5385,6 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 	<height>32</height>
 </image> 
 	<item>
-		<title>Azure IaaS: How to design, build, and optimize cloud infrastructure for long-term cost optimization efficiency</title>
-		<link>https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/</link>
-					<comments>https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/#respond</comments>
-		
-		<dc:creator><![CDATA[Maria Bledsoe]]></dc:creator>
-		<pubDate>Tue, 30 Jun 2026 16:00:00 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[Management and governance]]></category>
-		<category><![CDATA[Storage]]></category>
-		<category><![CDATA[Azure IaaS]]></category>
-		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=52339</guid>
-
-					<description><![CDATA[<p>As organizations modernize infrastructure, migrate mission-critical workloads, build cloud-native applications, and scale AI—cost efficiency remains a foundational principle of cloud architectures.</p>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/">Azure IaaS: How to design, build, and optimize cloud infrastructure for long-term cost optimization efficiency</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<aside class="table-of-contents-block accordion wp-block-bloginabox-theme-table-of-contents" id="accordion-e2c523ab-33f0-4b93-9686-668542f5c017" data-bi-aN="table-of-contents">
-	<button class="btn btn-collapse" type="button" aria-expanded="true" aria-controls="accordion-collapse-e2c523ab-33f0-4b93-9686-668542f5c017">
-		<span class="table-of-contents-block__label">In this article</span>
-		<span class="table-of-contents-block__current" aria-hidden="true"></span>
-
-		<svg class="table-of-contents-block__arrow" aria-label="Toggle arrow" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M15.7761 11L18 8.82043L9 0L0 8.82043L2.22394 11L9 4.35913L15.7761 11Z" fill="currentColor" />
-		</svg>
-	</button>
-	<div id="accordion-collapse-e2c523ab-33f0-4b93-9686-668542f5c017" class="table-of-contents-block__collapse-wrapper collapse show" data-parent="#accordion-e2c523ab-33f0-4b93-9686-668542f5c017">
-		<div class="table-of-contents-block__content">
-			<ol class="table-of-contents-block__list"><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#compute-matching-resources-to-workload-requirements">Compute: Matching resources to workload requirements</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#storage-balancing-performance-and-lifecycle-management">Storage: Balancing performance and lifecycle management</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#networking-improving-efficiency-without-compromising-resiliency">Networking: Improving efficiency without compromising resiliency</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#continuous-optimization-is-where-long-term-savings-happen">Continuous optimization is where long-term savings happen</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#continue-your-azure-iaas-optimization-journey">Continue your Azure IaaS optimization journey</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#create-a-resilient-infrastructure-with-azure">Create a resilient infrastructure with Azure</a></li></ol>		</div>
-	</div>
-	<span class="table-of-contents-block__progress-bar"></span>
-</aside>
-
-
-
-<p class="wp-block-paragraph"><em>This blog post is the third part of a blog series called <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazure.microsoft.com%2Fen-us%2Fblog%2Ftag%2Fazure-iaas%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C6e1c78a85c2040ce3c1108ded1fb3397%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639179074098601042%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=mnBTkxRVox%2F%2FXUsLjCQqgid0goRkY3S7s7WFEnDINaI%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer">Azure IaaS</a> which will share best practices and guidance to help you build a trusted infrastructure platform—from performance, resiliency, and security to scalability and cost efficiency.</em></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity" />
-
-
-
-<p class="wp-block-paragraph">As organizations modernize infrastructure, migrate mission-critical workloads, build cloud-native applications, and scale AI—<a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-principles-that-still-matter/" target="_blank" rel="noopener noreferrer">cost efficiency remains a foundational principle</a> of cloud architectures.</p>
-
-
-
-<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://aka.ms/azureIaaS" target="_blank" rel="noopener noreferrer">Discover the Benefits of Azure IaaS</a></div>
-</div>
-
-
-
-<p class="wp-block-paragraph">Yet cloud costs are rarely driven by a single decision. More often, across Azure Infrastructure-as-a-Service (IaaS) environments, they are the result of many compounded architectural choices across compute, storage, and networking. </p>
-
-
-
-<p class="wp-block-paragraph">Common examples include overprovisioning infrastructure when selecting a larger virtual machine than a workload requires or keeping infrequently accessed data on premium storage, building resilient architectures that introduce unnecessary overhead, or collecting and retaining more operational data than is needed. Individually, these decisions may seem minor, but over time they can significantly impact both cost and operational efficiency. </p>
-
-
-
-<p class="wp-block-paragraph">These challenges become even more important as organizations expand AI initiatives, modernize applications, and support growing performance and resiliency requirements. </p>
-
-
-
-<p class="wp-block-paragraph">
-  The opportunity lies in addressing these inefficiencies before they become entrenched. By making informed infrastructure decisions during planning, deployment, and ongoing operations, organizations can improve resource utilization, reduce total cost of ownership (TCO), and create a more scalable foundation for future growth.
-</p>
-
-
-
-<p class="wp-block-paragraph">In this blog, we&#8217;ll explore some of the most common infrastructure cost challenges organizations face today and examine how Azure IaaS capabilities across compute, storage, and networking can help improve efficiency, reduce TCO, and highlight resources available in the <a href="https://azure.microsoft.com/en-us/solutions/azure-iaas/#resource-center" target="_blank" rel="noopener noreferrer">Azure IaaS Resource Center</a> to help you make more informed decisions.</p>
-
-
-
-<p class="wp-block-paragraph">
-  Many of the most impactful optimization opportunities originate long before a workload enters production. To better understand where these opportunities exist, let&#8217;s examine common efficiency challenges (and solutions) across compute, storage, and networking.
-</p>
-
-
-
-<h2 class="wp-block-heading" id="compute-matching-resources-to-workload-requirements"><a id="post-52339-_Toc598210129"></a>Compute: Matching resources to workload requirements</h2>
-
-
-
-<p class="wp-block-paragraph">
-  Compute inefficiencies are often the easiest to identify because they directly affect both performance and infrastructure spend.
-</p>
-
-
-
-<p class="wp-block-paragraph">
-  The goal is not simply to select the lowest-cost compute option, but rather to align infrastructure resources with workload requirements while preserving flexibility for future growth.
-</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-us/products/virtual-machines">Azure provides a broad portfolio of virtual machine options</a>, enabling organizations to select the architecture, processor type, performance profile, and scale characteristics that best match workload needs; allowing organizations to align infrastructure investments with workload needs rather than paying for unused capacity. 
-</p>
-
-
-
-<p class="wp-block-paragraph">
-  Equally important is taking advantage of <a href="https://azure.microsoft.com/en-us/pricing">Azure&#8217;s flexible pricing options</a>. Depending on workload characteristics, organizations can combine Pay-As-You-Go pricing, <a href="https://azure.microsoft.com/en-us/pricing/offers/savings-plans">Azure savings plans</a>, <a href="https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/save-compute-costs-reservations">Azure Reservations</a>, and <a href="https://azure.microsoft.com/en-us/products/virtual-machines/spot">Azure Spot Virtual Machines</a> to better align costs with actual usage patterns.
-</p>
-
-
-
-<p class="wp-block-paragraph">
-  For highly scalable environments, services such as <a href="https://azure.microsoft.com/en-us/products/virtual-machine-scale-sets">Azure Virtual Machine Scale Sets</a> automatically balance compute demand with available capacity by scaling resources up or down in real time, ensuring the environment is right-sized while optimizing cost efficiency. <a href="https://azure.microsoft.com/en-us/products/compute-fleet">Azure Compute Fleet</a> help organizations intelligently balance capacity, availability, and price-performance across large deployments; reducing the operational complexity associated with managing infrastructure at scale.
-</p>
-
-
-
-<p class="wp-block-paragraph">
-  The result is a compute environment that is not only cost-efficient, but also better aligned to application requirements and business outcomes.
-</p>
-
-
-
-<h2 class="wp-block-heading" id="storage-balancing-performance-and-lifecycle-management"><a id="post-52339-_Toc646919671"></a>Storage: Balancing performance and lifecycle management</h2>
-
-
-
-<p class="wp-block-paragraph">
-  Storage inefficiencies often develop gradually, at times making them difficult to identify until environments reach significant scale. The key is to ensure that performance, capacity, and data access requirements remain aligned.
-</p>
-
-
-
-<h3 class="wp-block-heading" id="choose-the-right-storage-service-for-the-workload">Choose the right storage service for the workload</h3>
-
-
-
-<p class="wp-block-paragraph">Storage performance requirements vary dramatically across workloads. Some applications demand consistent low-latency block storage, while others prioritize storage capacity, durability, or long-term retention. Selecting the appropriate storage service and performance tier is critical to maximizing both efficiency and value.</p>
-
-
-
-<p class="wp-block-paragraph">
-  For example:
-</p>
-
-
-
-<ul class="wp-block-list">
-<li class="wp-block-list-item">Business applications may benefit from <a href="https://azure.microsoft.com/en-gb/products/storage/disks/" target="_blank" rel="noopener noreferrer">Premium SSD v2 offerings</a>.</li>
-
-
-
-<li class="wp-block-list-item">Business-critical transactional databases may require <a href="https://azure.microsoft.com/en-gb/products/storage/disks/" target="_blank" rel="noopener noreferrer">Ultra Disk</a> to meet stringent low-latency performance requirements.</li>
-
-
-
-<li class="wp-block-list-item">Large-scale block storage environments can benefit from consolidated architectures using <a href="https://azure.microsoft.com/en-us/products/storage/elastic-san">Azure Elastic Storage Area Network (SAN)</a>.</li>
-
-
-
-<li class="wp-block-list-item">Linux/Windows file shares, home directories, and shared storage scenarios may benefit from <a href="https://azure.microsoft.com/en-us/products/storage/files">Azure Files</a> or <a href="https://azure.microsoft.com/en-us/products/netapp">Azure NetApp Files</a>.</li>
-
-
-
-<li class="wp-block-list-item">Object storage workloads often benefit from the alignment between <a href="https://azure.microsoft.com/en-us/products/storage/blobs">Azure Blob Storage</a> tiers and data access patterns.</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="automate-data-lifecycle-management">Automate data lifecycle management</h3>
-
-
-
-<p class="wp-block-paragraph">Equally important is ensuring data remains on the appropriate storage tier throughout its lifecycle. In many environments, data access patterns change significantly over time, yet storage configurations remain static. This disconnect often results in organizations paying for performance they no longer need.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-us/products/storage/blobs">Azure Blob Storage</a> provides capabilities that help organizations automatically align storage costs with data access patterns. Automated tiering and lifecycle policies maintain low-latency access for frequently used data while optimizing costs by transitioning infrequently accessed data to lower-cost tiers.
-</p>
-
-
-
-<p class="wp-block-paragraph">The result is a storage strategy that continuously adapts as usage patterns evolve, without requiring ongoing manual intervention.</p>
-
-
-
-<h3 class="wp-block-heading" id="improve-visibility-across-your-storage-estate">Improve visibility across your storage estate</h3>
-
-
-
-<p class="wp-block-paragraph">Optimization starts with understanding where costs are being generated.</p>
-
-
-
-<p class="wp-block-paragraph">
-  Tools such as <a href="https://azure.microsoft.com/en-us/products/storage-discovery">Azure Storage Discovery</a> and <a href="https://azure.microsoft.com/en-us/products/storage-actions">Azure Storage Actions</a> can help organizations gain visibility into their storage environments, uncover optimization opportunities, and automate actions across large-scale deployments.
-</p>
-
-
-
-<p class="wp-block-paragraph">Rather than managing storage account by account, teams can identify patterns and <a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/" target="_blank" rel="noopener noreferrer">implement cost-saving actions</a> consistently across their entire data estate.</p>
-
-
-
-<p class="wp-block-paragraph">Together, these capabilities help organizations move beyond storage provisioning and toward ongoing storage optimization.</p>
-
-
-
-<h2 class="wp-block-heading" id="networking-improving-efficiency-without-compromising-resiliency"><a id="post-52339-_Toc155015881"></a>Networking: Improving efficiency without compromising resiliency</h2>
-
-
-
-<p class="wp-block-paragraph">Networking presents a unique optimization challenge because organizations must balance connectivity, performance, resiliency, and operational visibility.</p>
-
-
-
-<h3 class="wp-block-heading" id="achieve-resiliency-more-efficiently">Achieve resiliency more efficiently</h3>
-
-
-
-<p class="wp-block-paragraph">Historically, improving resiliency often requires duplicating infrastructure components, creating additional cost and management overhead. Today, organizations increasingly seek architectures that deliver resiliency while minimizing complexity and excess infrastructure.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-us/products/category/networking">Azure networking capabilities</a> help organizations evaluate these tradeoffs more effectively. Services such as <a href="https://learn.microsoft.com/en-us/azure/expressroute/metro">ExpressRoute Metro</a>, <a href="https://learn.microsoft.com/en-us/azure/reliability/reliability-nat-gateway">Zone Redundant NAT Gateway</a>, and scalable networking architectures provide opportunities to improve resiliency and scalability while maintaining operational efficiency.
-</p>
-
-
-
-<h3 class="wp-block-heading" id="reduce-operational-and-logging-expenses">Reduce operational and logging expenses</h3>
-
-
-
-<p class="wp-block-paragraph">Operational visibility is another important consideration. Network and firewall logs are essential for troubleshooting, security, and governance, but collecting every possible data point can create significant storage and operational costs over time.</p>
-
-
-
-<p class="wp-block-paragraph">Modern filtering and analytics capabilities help teams focus on the most relevant network data, reducing both storage consumption and investigation complexity.</p>
-
-
-
-<p class="wp-block-paragraph">This gives organizations the information they need while avoiding excessive log growth and long-term retention costs.</p>
-
-
-
-<p class="wp-block-paragraph">By implementing filtering, automation, and intelligent logging strategies, organizations can focus on the data that provides actionable insights while reducing unnecessary information collection and retention.</p>
-
-
-
-<h2 class="wp-block-heading" id="continuous-optimization-is-where-long-term-savings-happen"><a id="post-52339-_Toc1333105540"></a>Continuous optimization is where long-term savings happen</h2>
-
-
-
-<p class="wp-block-paragraph">Infrastructure efficiency is not achieved through a single migration, architecture review, or pricing decision.</p>
-
-
-
-<p class="wp-block-paragraph">As workloads evolve, usage patterns shift, and new platform capabilities become available, opportunities for optimization continuously emerge.</p>
-
-
-
-<p class="wp-block-paragraph">The organizations that realize the greatest value from cloud investments are often those that treat optimization as an ongoing operational discipline. They regularly evaluate infrastructure utilization, revisit architectural assumptions, automate lifecycle management processes, and adopt new capabilities that improve efficiency across their environments.</p>
-
-
-
-<p class="wp-block-paragraph">While individual improvements may appear incremental, the cumulative impact can be substantial. A right-sized virtual machine (VM), a more appropriate storage tier, an automated lifecycle policy, or a more efficient networking architecture may each deliver modest savings independently. Together, they create a more efficient, scalable, and resilient infrastructure foundation.</p>
-
-
-
-<p class="wp-block-paragraph">
-  Azure continues to deliver important capabilities such as <a href="https://azure.microsoft.com/en-us/products/copilot">Azure Copilot</a> to help customers optimize cloud costs by combining real-time insights, AI-driven recommendations, and automated optimization actions, empowering teams to quickly identify waste, right-size resources, and forecast spend with minimal effort.
-</p>
-
-
-
-<h2 class="wp-block-heading" id="continue-your-azure-iaas-optimization-journey"><a id="post-52339-_Toc561313402"></a>Continue your Azure IaaS optimization journey</h2>
-
-
-
-<p class="wp-block-paragraph">Whether you&#8217;re supporting AI workloads, modernizing existing applications, migrating existing workloads, or planning future growth, building efficiency into cloud architectures has never been more important.</p>
-
-
-
-<p class="wp-block-paragraph">The Azure IaaS Resource Center provides guidance, best practices, technical resources, and optimization strategies across compute, storage, and networking to help you design, build, and optimize Azure environments with confidence.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Visit the </strong><a href="https://azure.microsoft.com/en-us/solutions/azure-iaas/#resource-center" target="_blank" rel="noopener noreferrer"><strong>Azure IaaS Resource Center</strong></a> to explore cost optimization guidance, architectural best practices, product resources, and tools that can help you maximize value from your Azure infrastructure investments.</p>
-
-
-
-<p class="wp-block-paragraph">To go deeper, explore the <a href="https://azure.microsoft.com/en-us/solutions/azure-iaas/#resource-center" target="_blank" rel="noopener noreferrer">Azure IaaS Resource Center</a> for tutorials, best practices, and guidance across compute, storage, and networking to help you design and operate resilient infrastructure with greater confidence.</p>
-
-
-
-<div class="wp-block-bloginabox-theme-promotional">
-	
-<div class="promotional promotional--has-media promotional--media-right">
-	<div class="promotional__wrapper">
-		<div class="promotional__content-wrapper">
-			<div class="promotional__content">
-				
-
-<h2 class="wp-block-heading" id="create-a-resilient-infrastructure-with-azure">Create a resilient infrastructure with Azure</h2>
-
-
-
-<p class="wp-block-paragraph">Visit the Azure IaaS Resource Center to start building a stronger, more efficient infrastructure today.</p>
-
-
-
-<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://aka.ms/azureIaaS" target="_blank" rel="noopener noreferrer">Get started with Azure</a></div>
-</div>
-
-			</div>
-		</div>
-					<div class="promotional__media-wrapper">
-				<div class="promotional__media">
-											<img decoding="async" width="2560" height="1440" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-scaled.jpg" class="attachment-full size-full" alt="" loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-scaled.jpg 2560w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-1024x576.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-768x432.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-1536x864.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-2048x1152.jpg 2048w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-809x455.jpg 809w" sizes="auto, (max-width: 2560px) 100vw, 2560px" />									</div>
-			</div>
-			</div>
-</div>
-</div>
-
-
-
-<p class="wp-block-paragraph"><strong>Did you miss these posts in the <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazure.microsoft.com%2Fen-us%2Fblog%2Ftag%2Fazure-iaas%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C6e1c78a85c2040ce3c1108ded1fb3397%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639179074098680415%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=u6neb%2Bgif%2FtzS90yCe6CDAt8PdbAdFb%2BVuZQ5efReYI%3D&amp;reserved=0">Azure IaaS series</a>?</strong>
-</p>
-
-
-
-<ul class="wp-block-list">
-<li class="wp-block-list-item"><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazure.microsoft.com%2Fen-us%2Fblog%2Fazure-iaas-series-explore-new-resources-for-building-a-stronger-more-efficient-infrastructure%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C6e1c78a85c2040ce3c1108ded1fb3397%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639179074098705580%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=cEa4qf16a5y9kslgN2WdcDcMNGS5xejNtCA78rvkLb8%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer">Explore new resources for building a stronger, more efficient infrastructure</a></li>
-
-
-
-<li class="wp-block-list-item"><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazure.microsoft.com%2Fen-us%2Fblog%2Fazure-iaas-keep-critical-applications-running-with-built-in-resiliency-at-scale%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C6e1c78a85c2040ce3c1108ded1fb3397%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639179074098741750%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=pBzo%2F99PcF%2B4ulMr180xYzZj3w0Od%2F2E1MemFzOIDYY%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer">Keep critical applications running with built-in resiliency at scale</a></li>
-
-
-
-<li class="wp-block-list-item"><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazure.microsoft.com%2Fen-us%2Fblog%2Fazure-iaas-defense-in-depth-built-on-secure-by-design-principles%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C6e1c78a85c2040ce3c1108ded1fb3397%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639179074098766836%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=jIP%2FqztvMeyCR9iVdRQeuHgwiRRGTauwRusUp0MyLVY%3D&amp;reserved=0" target="_blank" rel="noreferrer noopener">Defense in depth built on secure-by-design principles</a>&nbsp;</li>
-
-
-
-<li class="wp-block-list-item"><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazure.microsoft.com%2Fen-us%2Fblog%2Fazure-iaas-deploy-high-performance-workloads-with-a-system-level-approach%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C6e1c78a85c2040ce3c1108ded1fb3397%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639179074098993991%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=5M%2F1xvKA75ocpzKrGg%2Bmhxj9AVIKAPu3XLNfloKTsJI%3D&amp;reserved=0" target="_blank" rel="noreferrer noopener">Deploy high-performance workloads with a system-level approach</a>&nbsp;</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph"></p>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/">Azure IaaS: How to design, build, and optimize cloud infrastructure for long-term cost optimization efficiency</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
 		<title>Claude in Microsoft Foundry is now generally available</title>
 		<link>https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/</link>
 					<comments>https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/#respond</comments>
@@ -5834,7 +5478,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a4471b115a4a"></universal-media-player>
+		<universal-media-player id="ump-6a4370d55b4e2"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5848,7 +5492,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a4471b115a4a", options);
+				ump("ump-6a4370d55b4e2", options);
 			});
 		</script>
 	</div>
@@ -5880,7 +5524,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a4471b115dc1"></universal-media-player>
+		<universal-media-player id="ump-6a4370d55b83e"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5894,7 +5538,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a4471b115dc1", options);
+				ump("ump-6a4370d55b83e", options);
 			});
 		</script>
 	</div>
@@ -6023,7 +5667,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4471b122992&quot;}" data-wp-interactive="core/image" data-wp-key="6a4471b122992" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-2-2.png" alt="Chart showing trending AI agent tasks across AI, data, and cloud workflows. Highest-confidence use cases include automated report generation and distribution (84), certificate expiration monitoring and renewal (81.5), and boilerplate code generation for new features (82.5). Scores indicate strong confidence in automation for reporting, monitoring, code generation, and cloud operations tasks." class="wp-image-15378" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4370d566bd8&quot;}" data-wp-interactive="core/image" data-wp-key="6a4370d566bd8" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-2-2.png" alt="Chart showing trending AI agent tasks across AI, data, and cloud workflows. Highest-confidence use cases include automated report generation and distribution (84), certificate expiration monitoring and renewal (81.5), and boilerplate code generation for new features (82.5). Scores indicate strong confidence in automation for reporting, monitoring, code generation, and cloud operations tasks." class="wp-image-15378" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6071,7 +5715,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 <p class="wp-block-paragraph">What&#8217;s changing, and what remains underappreciated, is the skill it takes to draw that boundary well: the discipline of <a href="https://learn.microsoft.com/en-us/azure/foundry/how-to/evaluate-generative-ai-app">full-lifecycle evaluations</a> and <a href="https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview">guardrails</a>. Success means measuring agent output against intent and keeping behavior inside your business strategy. It&#8217;s new territory for most engineering teams, and it&#8217;s becoming table stakes for modern software faster than most organizations realize. The good news: the same tools generating the work can help you build the harness. <a href="https://docs.github.com/en/copilot/concepts/agents/github-copilot-app">Ask GitHub Copilot</a> to write the evals and it will. Frontier teams are already doing this, and it&#8217;s why they&#8217;re pulling ahead.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4471b1239ff&quot;}" data-wp-interactive="core/image" data-wp-key="6a4471b1239ff" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-3-2.webp" alt="MIT Technology Review Insights survey chart titled &ldquo;Concerns are addressed by keeping humans in the loop and increasing observability.&rdquo; Respondents most frequently identified keeping humans in the loop (59%) and increasing observability/monitoring and tracing (53%) as key ways to address concerns around AI agents. Other approaches include creating privacy-governed documentation (42%), upskilling within one&rsquo;s craft (36%), addressing security and access control (33%), API and framework standardization (25%), identifying and communicating ROI (25%), scaling personal potential (16%), and accessing ecosystem support (11%)" class="wp-image-15379 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2019/02/1bbe5959-0e2e-4309-8079-3a71ce986e5e.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4370d567ed4&quot;}" data-wp-interactive="core/image" data-wp-key="6a4370d567ed4" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-3-2.webp" alt="MIT Technology Review Insights survey chart titled &ldquo;Concerns are addressed by keeping humans in the loop and increasing observability.&rdquo; Respondents most frequently identified keeping humans in the loop (59%) and increasing observability/monitoring and tracing (53%) as key ways to address concerns around AI agents. Other approaches include creating privacy-governed documentation (42%), upskilling within one&rsquo;s craft (36%), addressing security and access control (33%), API and framework standardization (25%), identifying and communicating ROI (25%), scaling personal potential (16%), and accessing ecosystem support (11%)" class="wp-image-15379 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2019/02/1bbe5959-0e2e-4309-8079-3a71ce986e5e.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6100,7 +5744,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4471b12ae2b&quot;}" data-wp-interactive="core/image" data-wp-key="6a4471b12ae2b" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-4-2.png" alt="MIT Technology Review Insights survey chart showing confidence that AI agents will enhance careers across technology disciplines. System reliability and site operations has the highest confidence levels, while database administration and performance, security operations, and data integration roles show lower but still predominantly positive confidence. Across all roles, confidence significantly outweighs lack of confidence." class="wp-image-15380" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4370d56f352&quot;}" data-wp-interactive="core/image" data-wp-key="6a4370d56f352" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-4-2.png" alt="MIT Technology Review Insights survey chart showing confidence that AI agents will enhance careers across technology disciplines. System reliability and site operations has the highest confidence levels, while database administration and performance, security operations, and data integration roles show lower but still predominantly positive confidence. Across all roles, confidence significantly outweighs lack of confidence." class="wp-image-15380" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6438,7 +6082,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4471b1387a6&quot;}" data-wp-interactive="core/image" data-wp-key="6a4471b1387a6" class="wp-block-image size-full wp-lightbox-container"><img fetchpriority="high" decoding="async" width="1280" height="720" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/metrics-dashboard-1.gif" alt="Scrolling through high C P U no index dashboard." class="wp-image-52357" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4370d57d70b&quot;}" data-wp-interactive="core/image" data-wp-key="6a4370d57d70b" class="wp-block-image size-full wp-lightbox-container"><img fetchpriority="high" decoding="async" width="1280" height="720" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/metrics-dashboard-1.gif" alt="Scrolling through high C P U no index dashboard." class="wp-image-52357" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6668,7 +6312,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4471b13df96&quot;}" data-wp-interactive="core/image" data-wp-key="6a4471b13df96" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" width="1280" height="720" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/PetalGraphicSVG.svg" alt="Diagram showing a human-in-the-loop governance model for agentic cloud operations, with Create, Deploy, Govern, Secure, and Operate connected in a continuous cycle around a central review and approval process." class="wp-image-52286" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4370d58288b&quot;}" data-wp-interactive="core/image" data-wp-key="6a4370d58288b" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" width="1280" height="720" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/PetalGraphicSVG.svg" alt="Diagram showing a human-in-the-loop governance model for agentic cloud operations, with Create, Deploy, Govern, Secure, and Operate connected in a continuous cycle around a central review and approval process." class="wp-image-52286" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6841,7 +6485,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 		</div>
 					<div class="promotional__media-wrapper">
 				<div class="promotional__media">
-											<img decoding="async" width="1920" height="1280" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003.jpg" class="attachment-full size-full" alt="Two people sitting at desks and working at computers." loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003.jpg 1920w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-300x200.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-1024x683.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-768x512.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-1536x1024.jpg 1536w" sizes="auto, (max-width: 1920px) 100vw, 1920px" />									</div>
+											<img decoding="async" width="1920" height="1280" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003.jpg" class="attachment-full size-full" alt="Two people sitting at the desks and working at computers." loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003.jpg 1920w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-300x200.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-1024x683.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-768x512.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-1536x1024.jpg 1536w" sizes="auto, (max-width: 1920px) 100vw, 1920px" />									</div>
 			</div>
 			</div>
 </div>
@@ -6963,7 +6607,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<p class="wp-block-paragraph">To help close the gap between planning and action, Azure Copilot Migration Agent is extending&nbsp;<a href="https://azure.microsoft.com/en-us/products/azure-migrate" target="_blank" rel="noreferrer noopener">Azure Migrate</a>&nbsp;with new&nbsp;<a href="https://azure.microsoft.com/en-us/products/category/storage" target="_blank" rel="noreferrer noopener">Azure Storage</a>&nbsp;integration,&nbsp;<a href="https://techcommunity.microsoft.com/blog/azurestorageblog/file-share-migrations-simplified-with-azure-copilot-migration-agent/4524563" target="_blank" rel="noreferrer noopener">now available in preview</a>. Instead of leaving teams to&nbsp;interpret assessment outputs&nbsp;and manually map them to a storage migration approach, this guided, AI-powered experience uses&nbsp;<a href="https://azure.microsoft.com/en-us/products/azure-migrate" target="_blank" rel="noreferrer noopener">Azure Migrate</a>&nbsp;project data to help evaluate storage options, align workloads to the right Azure storage services, and identify the most appropriate execution tool, whether that is&nbsp;<a href="https://azure.microsoft.com/en-us/products/storage-mover" target="_blank" rel="noreferrer noopener">Azure Storage Mover</a>,&nbsp;<a href="https://azure.microsoft.com/en-us/products/databox" target="_blank" rel="noreferrer noopener">Azure Data Box</a>, or another Azure storage migration approach. The result is a faster, more connected path from discovery to decision, helping teams reduce uncertainty and move into execution with greater confidence.</p>
+<p class="wp-block-paragraph">To help close the gap between planning and action, Azure Copilot Migration Agent is extending <a href="https://azure.microsoft.com/en-us/products/azure-migrate" target="_blank" rel="noreferrer noopener">Azure Migrate</a> with new <a href="https://azure.microsoft.com/en-us/products/category/storage" target="_blank" rel="noreferrer noopener">Azure Storage</a> integration, <a href="https://techcommunity.microsoft.com/blog/azurestorageblog/file-share-migrations-simplified-with-azure-copilot-migration-agent/4524563" target="_blank" rel="noreferrer noopener">now available in preview</a>. Instead of leaving teams to interpret assessment outputs and manually map them to a storage migration approach, this guided, AI-powered experience uses <a href="https://azure.microsoft.com/en-us/products/azure-migrate" target="_blank" rel="noreferrer noopener">Azure Migrate</a> project data to help evaluate storage options, align workloads to the right Azure storage services, and identify the most appropriate execution tool, whether that is <a href="https://azure.microsoft.com/en-us/products/storage-mover" target="_blank" rel="noreferrer noopener">Azure Storage Mover</a>, <a href="https://azure.microsoft.com/en-us/products/databox" target="_blank" rel="noreferrer noopener">Azure Data Box</a>, or another Azure storage migration approach. The result is a faster, more connected path from discovery to decision, helping teams reduce uncertainty and move into execution with greater confidence.</p>
 
 
 
@@ -7011,7 +6655,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4471b14418b&quot;}" data-wp-interactive="core/image" data-wp-key="6a4471b14418b" class="wp-block-image size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-1024x576.jpg" alt="Picture of a matrix table for Microsoft 1P migration tools and the sources and targets they each support." class="wp-image-52251" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-1024x576.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-768x432.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-1536x864.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-809x455.jpg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4370d589757&quot;}" data-wp-interactive="core/image" data-wp-key="6a4370d589757" class="wp-block-image size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-1024x576.jpg" alt="Picture of a matrix table for Microsoft 1P migration tools and the sources and targets they each support." class="wp-image-52251" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-1024x576.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-768x432.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-1536x864.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-809x455.jpg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7063,7 +6707,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 
 
 <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://learn.microsoft.com/en-us/azure/storage-mover/cloud-to-cloud-migration?tabs=portal" target="_blank" rel="noreferrer noopener">Learn how to migrate data from AWS S3 to Azure Blob</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" target="_blank">Learn how to migrate data from AWS S3 to Azure Blob</a></div>
 </div>
 
 
@@ -7149,7 +6793,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4471b1457f9&quot;}" data-wp-interactive="core/image" data-wp-key="6a4471b1457f9" class="wp-block-image size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-1024x576.jpg" alt="A picture of a diagram depicting hybrid migration motions with Azure Data Box and Azure Storage Mover." class="wp-image-52249" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-1024x576.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-768x432.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-1536x864.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-809x455.jpg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4370d58b4eb&quot;}" data-wp-interactive="core/image" data-wp-key="6a4370d58b4eb" class="wp-block-image size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-1024x576.jpg" alt="A picture of a diagram depicting hybrid migration motions with Azure Data Box and Azure Storage Mover." class="wp-image-52249" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-1024x576.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-768x432.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-1536x864.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-809x455.jpg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7338,7 +6982,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a4471b149b67"></universal-media-player>
+		<universal-media-player id="ump-6a4370d590812"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -7352,7 +6996,7 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a4471b149b67", options);
+				ump("ump-6a4370d590812", options);
 			});
 		</script>
 	</div>
@@ -8049,6 +7693,485 @@ LIMIT 1000&lt;/code&gt;&lt;/pre&gt;
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Announcing Microsoft Discovery general availability and Microsoft Discovery app preview</title>
+		<link>https://azure.microsoft.com/en-us/blog/announcing-microsoft-discovery-general-availability-and-microsoft-discovery-app-preview/</link>
+					<comments>https://azure.microsoft.com/en-us/blog/announcing-microsoft-discovery-general-availability-and-microsoft-discovery-app-preview/#respond</comments>
+		
+		<dc:creator><![CDATA[Aseem Datar]]></dc:creator>
+		<pubDate>Tue, 02 Jun 2026 18:15:00 +0000</pubDate>
+				<category><![CDATA[AI + machine learning]]></category>
+		<category><![CDATA[Internet of things]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[Copilot]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=51244</guid>
+
+					<description><![CDATA[<p>At Microsoft Build, we are announcing that Microsoft Discovery is now generally available for all organizations, providing a comprehensive platform for building and governing agentic AI workflows.</p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/announcing-microsoft-discovery-general-availability-and-microsoft-discovery-app-preview/">Announcing Microsoft Discovery general availability and Microsoft Discovery app preview</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<aside class="table-of-contents-block accordion wp-block-bloginabox-theme-table-of-contents" id="accordion-56113823-fe94-4150-a7bb-4e44cb20d51c" data-bi-aN="table-of-contents">
+	<button class="btn btn-collapse" type="button" aria-expanded="true" aria-controls="accordion-collapse-56113823-fe94-4150-a7bb-4e44cb20d51c">
+		<span class="table-of-contents-block__label">In this article</span>
+		<span class="table-of-contents-block__current" aria-hidden="true"></span>
+
+		<svg class="table-of-contents-block__arrow" aria-label="Toggle arrow" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M15.7761 11L18 8.82043L9 0L0 8.82043L2.22394 11L9 4.35913L15.7761 11Z" fill="currentColor" />
+		</svg>
+	</button>
+	<div id="accordion-collapse-56113823-fe94-4150-a7bb-4e44cb20d51c" class="table-of-contents-block__collapse-wrapper collapse show" data-parent="#accordion-56113823-fe94-4150-a7bb-4e44cb20d51c">
+		<div class="table-of-contents-block__content">
+			<ol class="table-of-contents-block__list"><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#how-microsoft-discovery-supports-r-d-workflows-at-scale">How Microsoft Discovery supports R&amp;D workflows at scale</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#expanding-access-with-the-microsoft-discovery-app-preview">Expanding access with the Microsoft Discovery app preview</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#applying-microsoft-discovery-across-r-d">Applying Microsoft Discovery across R&amp;D</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#get-started-today-with-microsoft-discovery">Get started today with Microsoft Discovery</a></li></ol>		</div>
+	</div>
+	<span class="table-of-contents-block__progress-bar"></span>
+</aside>
+
+
+
+<p class="wp-block-paragraph">Breakthroughs in science and engineering rarely come from a single insight. They emerge through cycles of hypothesis, experimentation, refinement, and review across teams, tools, and data.</p>
+
+
+
+<p class="wp-block-paragraph">Today at Microsoft Build, we are announcing that <a href="https://azure.microsoft.com/en-us/solutions/discovery/">Microsoft Discovery is now generally available</a> for all organizations, providing a comprehensive platform for building and governing agentic AI workflows across scientific and engineering disciplines. We are also introducing the Microsoft Discovery app in preview, a local desktop experience that helps researchers, students, and scientific teams begin working with Microsoft Discovery today.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://azure.microsoft.com/en-us/solutions/discovery/" target="_blank" rel="noreferrer noopener">Explore Microsoft Discovery features</a></div>
+</div>
+
+
+
+<p class="wp-block-paragraph">Since introducing Microsoft Discovery in private preview <a href="https://azure.microsoft.com/en-us/blog/transforming-rd-with-agentic-ai-introducing-microsoft-discovery/" target="_blank" rel="noreferrer noopener">at Microsoft Build last year</a>, we have worked closely with organizations applying AI to complex research and development (R&amp;D) workflows. Their feedback helped reinforce where agentic AI needs to go beyond individual assistance, like supporting the iterative loops, evidence preservation, and tool coordination that define scientific work.</p>
+
+
+
+<p class="wp-block-paragraph">The most challenging problems in R&amp;D require more than just a prompt interface or a single model response. Scientific workflows require:</p>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item">Integration with institutional knowledge and domain expertise.</li>
+
+
+
+<li class="wp-block-list-item">Access to specialized modeling, simulation, and analysis tools.</li>
+
+
+
+<li class="wp-block-list-item">Connection to experimental evidence and validation data.</li>
+
+
+
+<li class="wp-block-list-item">Support for review processes that shape research decisions.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">A materials scientist may need to evaluate performance, safety, and cost alongside manufacturability and regulatory constraints. A semiconductor team may need to explore a larger design space without losing physical fidelity or traceability. A life sciences researcher may need to connect literature and experimental data with models and cohort-level evidence before deciding what to validate next.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://learn.microsoft.com/en-us/azure/microsoft-discovery/overview-what-is-microsoft-discovery" target="_blank" rel="noreferrer noopener">Microsoft Discovery is designed to work within these existing R&amp;D environments</a>, not replace them. The platform helps experts understand the reasoning path behind outputs and keeps human judgment at the center of scientific and engineering decisions. The general availability of Microsoft Discovery marks a significant milestone in turning these requirements into a production-ready platform for R&amp;D environments with governance and transparency built in.</p>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4370d59cebf&quot;}" data-wp-interactive="core/image" data-wp-key="6a4370d59cebf" class="wp-block-image aligncenter size-large has-custom-border wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Workspace2-1024x576.webp" alt="Microsoft Discovery initial screen showing the initial welcome landing page asking the individual, &ldquo;What would you like to discover today?&rdquo; with an open prompt box." class="wp-image-51250 webp-format" style="border-top-left-radius:1px;border-top-right-radius:1px;border-bottom-left-radius:1px;border-bottom-right-radius:1px" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Workspace2-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Workspace2-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Workspace2-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Workspace2-1536x864.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Workspace2-2048x1152.webp 2048w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Workspace2-1024x576.webp"><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button><figcaption class="wp-element-caption"><em>Figure 1: The Microsoft Discovery workspace welcome experience</em>.</figcaption></figure>
+
+
+
+<h2 class="wp-block-heading" id="how-microsoft-discovery-supports-r-d-workflows-at-scale">How Microsoft Discovery supports R&amp;D workflows at scale</h2>
+
+
+
+<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-us/solutions/discovery/" target="_blank" rel="noreferrer noopener">Microsoft Discovery enables organizations to define agentic workflows</a> around their own R&amp;D programs. Teams can create and coordinate specialized agents, connect those agents to institutional knowledge and external scientific information, and orchestrate work across modeling, simulation, analysis, and validation tools.</p>
+
+
+
+<p class="wp-block-paragraph">At the center of the platform is <a href="https://learn.microsoft.com/en-us/azure/microsoft-discovery/concept-discovery-engine">the Microsoft Discovery Engine</a>, which supports the core loop of scientific work by helping teams move from evidence to hypotheses, through execution and analysis, and into the next iteration. This loop allows teams to move beyond isolated analysis toward repeatable, evidence-driven exploration, where they can compare tradeoffs, question assumptions, and narrow a search space in a way that can be reviewed and repeated.</p>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4370d59dec9&quot;}" data-wp-interactive="core/image" data-wp-key="6a4370d59dec9" class="wp-block-image aligncenter size-large has-custom-border wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task1-1024x576.webp" alt="Microsoft Discovery Engine interface showing task creation and status overview with completion tracking." class="wp-image-51251 webp-format" style="border-top-left-radius:1px;border-top-right-radius:1px;border-bottom-left-radius:1px;border-bottom-right-radius:1px" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task1-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task1-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task1-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task1-1536x864.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task1-2048x1152.webp 2048w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task1-1024x576.webp"><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button><figcaption class="wp-element-caption"><em>Figure 2: The Microsoft Discovery Engine task creation and status overview</em>.</figcaption></figure>
+
+
+
+<p class="wp-block-paragraph">As we continued product development, we focused on what it takes to <a href="https://azure.microsoft.com/en-us/blog/microsoft-discovery-advancing-agentic-rd-at-scale/" target="_blank" rel="noreferrer noopener">bring agentic AI into production R&amp;D environments</a>:</p>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item">Workflows need to remain reproducible.</li>
+
+
+
+<li class="wp-block-list-item">Outputs must be reviewable.</li>
+
+
+
+<li class="wp-block-list-item">Proprietary knowledge must be connected and governed appropriately.</li>
+
+
+
+<li class="wp-block-list-item">Agentic systems need to fit into the operating model of R&amp;D organizations.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Those considerations, along with continued customer feedback, helped shape the general availability release and the platform capabilities behind it.</p>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4370d59ef08&quot;}" data-wp-interactive="core/image" data-wp-key="6a4370d59ef08" class="wp-block-image aligncenter size-large has-custom-border wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task2-1024x576.webp" alt="Discovery Engine interface displaying a confidence summary table with categorical scores and detailed findings section with inline citations and source references." class="wp-image-51252 webp-format" style="border-top-left-radius:1px;border-top-right-radius:1px;border-bottom-left-radius:1px;border-bottom-right-radius:1px" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task2-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task2-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task2-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task2-1536x864.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task2-2048x1152.webp 2048w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/Discovery-Task2-1024x576.webp"><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button><figcaption class="wp-element-caption"><em>Figure 3: The Microsoft Discovery Engine output with confidence scoring and cited research findings</em>.</figcaption></figure>
+
+
+
+<h2 class="wp-block-heading" id="expanding-access-with-the-microsoft-discovery-app-preview">Expanding access with the Microsoft Discovery app preview</h2>
+
+
+
+<p class="wp-block-paragraph">An important goal for Microsoft is to make advanced AI and computing capabilities more accessible to the people working on some of today’s most difficult scientific and engineering challenges. Alongside the general availability of Microsoft Discovery, we are introducing the Microsoft Discovery app available in preview today.</p>
+
+
+
+<p class="wp-block-paragraph">The Microsoft Discovery app is a localized experience that gives researchers, students, academic labs, and scientific teams a simpler way to begin using Microsoft Discovery capabilities without starting with a full enterprise deployment. It is available for download on the <a href="https://github.com/microsoft/discovery">Microsoft Discovery GitHub</a> and users can get started with a <a href="https://github.com/features/copilot">GitHub Copilot account</a>.</p>
+
+
+
+<p class="wp-block-paragraph">This preview extends Microsoft Discovery to earlier stages of exploration, where research ideas begin as small-team projects, academic work, or individual investigation. <a href="https://github.com/microsoft/discovery">The Microsoft Discovery app</a> is designed to lower the barrier to hands-on exploration, with a practical entry point for literature exploration, hypothesis generation, scientific reasoning, and iterative experimentation.</p>
+
+
+
+<p class="wp-block-paragraph">The app lets researchers explore Microsoft Discovery capabilities using their own working environment. As projects mature and complexity increases, researchers and teams can bring work developed locally into Microsoft Discovery platform to support more advanced R&amp;D programs.</p>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4370d59fd6d&quot;}" data-wp-interactive="core/image" data-wp-key="6a4370d59fd6d" class="wp-block-image aligncenter size-full has-custom-border wp-lightbox-container"><img loading="lazy" decoding="async" width="1920" height="1020" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/DiscoveryApp_Setup_newlogo.gif" alt="Figure 4: The Microsoft Discovery app welcome screen." class="wp-image-51332" style="border-top-left-radius:1px;border-top-right-radius:1px;border-bottom-left-radius:1px;border-bottom-right-radius:1px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button><figcaption class="wp-element-caption"><em>Figure 4: The Microsoft Discovery app welcome screen</em>.</figcaption></figure>
+
+
+
+<h2 class="wp-block-heading" id="applying-microsoft-discovery-across-r-d">Applying Microsoft Discovery across R&amp;D</h2>
+
+
+
+<p class="wp-block-paragraph">During preview, organizations helped shape the path to general availability by sharing feedback on how they were using Microsoft Discovery to explore advanced R&amp;D workflows grounded in domain-specific data, established research methods, and expert review.</p>
+
+
+
+<p class="wp-block-paragraph">Partners are contributing domain expertise and solution depth that can help organizations adapt Microsoft Discovery to the tools, data, and processes already central to their R&amp;D work. Together, this work offers an early view into <a href="https://learn.microsoft.com/en-us/azure/microsoft-discovery/overview-key-scenarios" target="_blank" rel="noreferrer noopener">how Microsoft Discovery is being used across domains</a> and how a growing ecosystem can help make complex R&amp;D workflows more systematic, transparent, and repeatable.</p>
+
+
+
+<h3 class="wp-block-heading" id="yale-engineering">Yale Engineering</h3>
+
+
+
+<p class="wp-block-paragraph">A collaboration across Professor David Kwabi’s group at Yale Engineering and researchers from Microsoft used the Discovery Engine to advance the frontier of agentic small molecule design for grid-scale aqueous organic redox flow batteries (ORFBs).</p>
+
+
+
+<p class="wp-block-paragraph">ORFBs are promising, leading candidates for sustainable, environmentally friendly, long-duration energy storage, but challenging to optimize. Electrolytes must balance complex molecular properties like redox potential, aqueous solubility, synthetic tractability, and electrochemical reversibility. The Discovery Engine, building on our <a href="https://www.microsoft.com/en-us/research/blog/self-adaptive-reasoning-for-science/" target="_blank" rel="noopener">cognitive loop via in-situ optimization research</a>, enables long-horizon scientific reasoning while ensuring trust in the entire process.</p>
+
+
+
+<p class="wp-block-paragraph">With these capabilities, the team used the agentic loop to drive in-silico exploration and convergence of candidates, interpret experimental results, and propose diagnostic experiments. Experts at Yale Engineering led all experimental characterization, verified results interpretation, and evaluated the practical applicability of the designs. <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Faka.ms%2Fclosed-loop-molecular-design&amp;data=05%7C02%7Cv-kakrulek%40microsoft.com%7C7982702a46eb4439e3cc08dec0c4b0f1%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639160148921092990%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=s6q4i1iDhQYBkRDGQ4BYCAbc%2BNpE9QYug2sXILPbC5w%3D&amp;reserved=0" target="_blank" rel="noreferrer noopener">The research is available here.</a></p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow has-quote-default-font-size">
+
+<p class="has-large-font-size wp-block-paragraph">This work introduces a powerful new framework for advancing battery science with AI. By endowing an agent with the ability to reason from and adapt to experiments, we combine the strengths of human-led experimentation with AI&#8217;s capacity to explore vast chemical design spaces &#8211; and we&#8217;re only beginning to see what it can do.</p>
+
+<cite>—David Kwabi, Associate Professor, Yale</cite></blockquote>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button is-style-light"><a class="wp-block-button__link wp-element-button" href="http://engineering.yale.edu/news/kwabi-microsoft" target="_blank" rel="noreferrer noopener">Read more about the Yale and Microsoft collaboration</a></div>
+</div>
+
+
+
+<h3 class="wp-block-heading" id="georgia-institute-of-technology">Georgia Institute of Technology</h3>
+
+
+
+<p class="wp-block-paragraph">Georgia Tech is exploring how an agentic AI system can re-evaluate the prebiotic plausibility of histidine, a biochemically important amino acid whose emergence under plausible prebiotic conditions remains unclear despite its ubiquity in biology. Classical machine learning and AI approaches have struggled in this domain due to the lack of standardized datasets and the inherently multimodal nature of the data.</p>
+
+
+
+<p class="wp-block-paragraph">The proposed scenario requires a multi-agent AI system composed of specialized AI ‘scientists’ for distinct data modalities, including mass spectrometry analysis, literature extraction, planetary mission data retrieval, and chemical reaction pathway modeling.</p>
+
+
+
+<p class="wp-block-paragraph">These agents will collaborate through a central reasoning coordinator to integrate diverse and heterogeneous datasets, aiming to move from “absence-of-evidence” to a robust, evidence-based assessment of histidine’s prebiotic viability. The framework developed can also be repurposed to investigate other contested biosignatures, building a scalable pipeline for origins-of-life inquiry.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow has-quote-default-font-size">
+
+<p class="has-large-font-size wp-block-paragraph">Our collaboration with the Microsoft Discovery team through the Georgia Tech AI for Research program has been highly valuable, both scientifically and operationally. Working together on agentic AI systems to probe questions about the origins of life has given us early exposure to the state of the art embodied in the Discovery platform, while also enabling genuinely close technical collaboration. This hands-on partnership has enabled meaningful bidirectional learning.</p>
+
+<cite>—Dr. Amirali Aghazadeh, Assistant Professor, School of Electrical and Computer Engineering, Georgia Tech</cite></blockquote>
+
+
+
+<h3 class="wp-block-heading" id="pacific-northwest-national-laboratory">Pacific Northwest National Laboratory</h3>
+
+
+
+<p class="wp-block-paragraph">Microsoft and Pacific Northwest National Laboratory (PNNL) are rewriting the rules of scientific discovery, unleashing AI that doesn&#8217;t just assist researchers but orchestrates the entire discovery journey from new hypotheses to real-world experiments.</p>
+
+
+
+<p class="wp-block-paragraph">Powered by <a href="https://azure.microsoft.com/en-us/solutions/discovery/" target="_blank" rel="noreferrer noopener">Microsoft Discovery</a>, cutting-edge robotics and AI agents work like a virtual research team: imagining experiments, reasoning across mountains of scientific data, designing brand-new molecules, and learning on the fly from live laboratory results at PNNL.</p>
+
+
+
+<p class="wp-block-paragraph">In energy storage, this collaboration is fast-tracking the hunt for next-generation organic redox flow battery materials—breakthroughs that could slash our reliance on critical minerals like vanadium while providing cheaper, more scalable energy storage technologies that make our power grid tougher than ever.</p>
+
+
+
+<p class="wp-block-paragraph">In biosystems engineering, Microsoft Discovery is plugging directly into PNNL&#8217;s laboratory automation infrastructure to launch self-driving scientific workflows that autonomously design, run, and fine-tune biological experiments in real time.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow has-quote-default-font-size">
+
+<p class="has-large-font-size wp-block-paragraph">Together, Microsoft and PNNL are pioneering a new model for science, where robotics and autonomous laboratories fuse with AI and cloud infrastructure into one intelligent, closed-loop discovery engine that dramatically reduces the timeline from ideas to breakthroughs and opens the door to a new era of innovation in energy, biology, and material synthesis.</p>
+
+<cite>—Robert Runkle, Physicist and Lead for Autonomous Discovery Strategy, Pacific Northwest National Laboratory</cite></blockquote>
+
+
+
+<h3 class="wp-block-heading" id="ginkgo-bioworks">Ginkgo Bioworks</h3>
+
+
+
+<p class="wp-block-paragraph">Ginkgo Bioworks and Microsoft are collaborating to bring agentic AI into biological discovery. Specialized agents can analyze biological datasets, generate hypotheses, and design experiments to execute on an autonomous lab. Soon, researchers will be able to scope and plan experiments in <a href="https://azure.microsoft.com/en-us/solutions/discovery/" target="_blank" rel="noreferrer noopener">Microsoft Discovery</a> and run them directly on Ginkgo Cloud Lab—no in-house automation required.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow has-quote-default-font-size">
+
+<p class="has-large-font-size wp-block-paragraph">Together, agentic AI and autonomous labs will change every part of the scientific process. Iteration cycles will get faster, experiments will require less manual hands-on time, and computational analyses will become more systematic and exhaustive. By making both easier to use, Microsoft and Ginkgo aim to bring greater speed, scale and reproducibility to pre-clinical research.</p>
+
+<cite>—Jason Kelly, CEO, Ginkgo Bioworks, Inc.</cite></blockquote>
+
+
+
+<h3 class="wp-block-heading" id="causaly">Causaly</h3>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.causaly.com/blog/drug-discovery-has-been-missing-decision-quality-evidence-causaly-and-microsoft-are-closing-the-gap?utm_source=Microsoft&amp;utm_medium=Partner&amp;utm_campaign=Microsoft_Discovery_Announcement&amp;utm_content=Marketplace_Announcement" target="_blank" rel="noreferrer noopener">Causaly</a> provides agentic solutions that compound the world&#8217;s biomedical evidence with an organization&#8217;s proprietary knowledge to deliver confident, traceable, cited decisions at every stage, from discovery through launch.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow has-quote-default-font-size">
+
+<p class="has-large-font-size wp-block-paragraph">Drug discovery does not suffer from a lack of data. It suffers from a lack of trustworthy interpretation. Microsoft Discovery brings scientific computation over enterprise data, and Causaly brings the prior knowledge, mechanistic reasoning, and provenance needed to turn those signals into decisions. Together, we can help researchers move from raw data to evidence-backed judgment much faster and with greater confidence.</p>
+
+<cite>—Yiannis Kiachopoulos, Co-Founder and CEO, Causaly</cite></blockquote>
+
+
+
+<h3 class="wp-block-heading" id="cambridge-consultants">Cambridge Consultants</h3>
+
+
+
+<p class="wp-block-paragraph">With Microsoft Discovery, <a href="https://cmcn.uk/msft" target="_blank" rel="noreferrer noopener">Cambridge Consultants</a> is helping demonstrate how AI agents, simulation, and physical lab systems can work together in a closed-loop discovery process.</p>
+
+
+
+<p class="wp-block-paragraph">These autonomous, AI-powered cycles can turn months of experimental work into days or hours. The result is a more connected model for R&amp;D, one designed to accelerate candidate generation, experimental planning, and real-world validation.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow has-quote-default-font-size">
+
+<p class="has-large-font-size wp-block-paragraph">Microsoft Discovery has the potential to help researchers move faster from promising ideas to real-world results. We see this as an important step toward more scalable, integrated, and intelligent R&amp;D.</p>
+
+<cite>—Joe Corrigan, Chief Technology Officer, Cambridge Consultants</cite></blockquote>
+
+
+
+<h3 class="wp-block-heading" id="wiley">Wiley</h3>
+
+
+
+<p class="wp-block-paragraph">At every stage of the research and development process, life sciences and pharmaceutical teams need fast access to the most current, credible evidence available. Wiley Research Agent: Life Sciences delivers a continuously updated index of more than one million authoritative, high-quality, and trusted articles with hybrid search capabilities to support advanced scientific reasoning.</p>
+
+
+
+<p class="wp-block-paragraph">The agent searches, retrieves, and synthesizes relevant findings into a coherent, evidence-based response to queries. It can operate as a stand-alone research service, or in orchestration with other <a href="https://azure.microsoft.com/en-us/solutions/discovery/" target="_blank" rel="noreferrer noopener">Microsoft Discovery</a> agents, fitting naturally into the broader scientific reasoning workflows that Discovery enables. The Wiley Life Sciences Research Agent will be the first of several Wiley agents offered commercially on the Microsoft Discovery platform over time.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow has-quote-default-font-size">
+
+<p class="has-large-font-size wp-block-paragraph">Scientific discovery depends on connecting trusted evidence with increasingly powerful AI systems. By bringing Wiley’s authoritative life sciences research into Microsoft Discovery, we can help life sciences and pharmaceutical teams accelerate hypothesis generation, experimentation, and results interpretation across a continuous scientific reasoning loop.</p>
+
+<cite>—Josh Jarrett, Senior Vice President and General Manager of Applied Research Intelligence at Wiley</cite></blockquote>
+
+
+
+<h3 class="wp-block-heading" id="bhp">BHP</h3>
+
+
+
+<p class="wp-block-paragraph">BHP, the largest mining company in the world, is using Microsoft Discovery to accelerate discovery of advanced copper leaching solutions—in a matter of months instead of years.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow has-quote-default-font-size">
+
+<p class="has-large-font-size wp-block-paragraph">As copper demand grows and new deposits become harder to find and more expensive to develop, improving recovery from existing ores is a critical lever to help meet future supply needs. This partnership has given our technical experts the tools they need to narrow an almost infinite field of possibilities down to a small number of options that could one day be deployed in our global copper operations. We are testing against the realities of our ore bodies and operating constraints, so we are solving for what can actually work in practice. This shows how technology and human expertise can be applied together to solve complex, real-world challenges.</p>
+
+<cite>—Jessica Farrell, Vice President Innovation, BHP</cite></blockquote>
+
+
+
+<h3 class="wp-block-heading" id="syensqo">Syensqo</h3>
+
+
+
+<p class="wp-block-paragraph">Syensqo is a global science company developing groundbreaking solutions that enhance the way we live, work, travel, and play. The company is currently leveraging <a href="https://azure.microsoft.com/en-us/solutions/discovery/" target="_blank" rel="noreferrer noopener">Microsoft Discovery</a> to scale agentic AI that accelerates discovery, improves decision-making, and unlocks measurable business impact, particularly in the development of next-generation heat transfer fluids for semiconductor manufacturing.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow has-quote-default-font-size">
+
+<p class="has-large-font-size wp-block-paragraph">We are now entering a new phase of our partnership with Microsoft, focused on scaling AI agents across research, sales and marketing to drive near-term growth. By connecting customer demand to scientific development and back-to-market execution, agentic AI is enabling faster cycles, sharper prioritization, and tangible impact on revenue growth and business performance.</p>
+
+<cite>—Mike Radossich, CEO of Syensqo</cite></blockquote>
+
+
+
+<h3 class="wp-block-heading" id="gsk">GSK</h3>
+
+
+
+<p class="wp-block-paragraph">GSK, the global biopharma, is working to accelerate the discovery, development, and delivery of medicines and vaccines to patients.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow has-quote-default-font-size">
+
+<p class="has-large-font-size wp-block-paragraph">Working with partners like Microsoft Discovery, we see the opportunity to rapidly iterate on candidate molecules, potentially accelerating decision-making via rapid data generation and analysis.</p>
+
+<cite>—Christopher Austin, Senior Vice President, R&amp;D Technologies, GSK</cite></blockquote>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4370d5a224b&quot;}" data-wp-interactive="core/image" data-wp-key="6a4370d5a224b" class="wp-block-image aligncenter size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Slide1-1024x576.jpg" alt="A grid view of customers and partners that are a part of the Microsoft Discovery ecosystem." class="wp-image-51529" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Slide1-1024x576.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Slide1-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Slide1-768x432.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Slide1.jpg 1280w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button><figcaption class="wp-element-caption">Figure 5: Microsoft Discovery has an expanding ecosystem of partners offering integrated tools and specialized expertise.</figcaption></figure>
+
+
+
+<div class="is-style-inline wp-block-bloginabox-theme-promotional">
+	
+<div class="promotional promotional--has-media promotional--media-right">
+	<div class="promotional__wrapper">
+		<div class="promotional__content-wrapper">
+			<div class="promotional__content">
+				
+
+<h2 class="wp-block-heading" id="get-started-today-with-microsoft-discovery">Get started today with Microsoft Discovery</h2>
+
+
+
+<p class="wp-block-paragraph">Microsoft Discovery is now generally available for organizations ready to bring agentic AI into R&amp;D workflows.</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button  is-full-width-on-mobile"><a data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://aka.ms/MicrosoftDiscoveryDocs">Review documentation</a></div>
+</div>
+
+			</div>
+		</div>
+					<div class="promotional__media-wrapper">
+				<div class="promotional__media">
+											<img decoding="async" width="1920" height="2160" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/FY26AE-Azure-Composite-Sky15-004.jpg" class="attachment-full size-full" alt="geometric shapes" loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/FY26AE-Azure-Composite-Sky15-004.jpg 1920w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/FY26AE-Azure-Composite-Sky15-004-267x300.jpg 267w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/FY26AE-Azure-Composite-Sky15-004-910x1024.jpg 910w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/FY26AE-Azure-Composite-Sky15-004-768x864.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/FY26AE-Azure-Composite-Sky15-004-1365x1536.jpg 1365w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/FY26AE-Azure-Composite-Sky15-004-1820x2048.jpg 1820w" sizes="auto, (max-width: 1920px) 100vw, 1920px" />									</div>
+			</div>
+			</div>
+</div>
+</div>
+
+
+
+<p class="wp-block-paragraph"><em><a href="https://azure.microsoft.com/en-us/solutions/discovery/" target="_blank" rel="noreferrer noopener">Microsoft Discovery</a> is generally available. <a href="https://github.com/microsoft/discovery" target="_blank" rel="noreferrer noopener">The Microsoft Discovery app</a> is available in preview. Preview features and capabilities are subject to change</em>.</p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/announcing-microsoft-discovery-general-availability-and-microsoft-discovery-app-preview/">Announcing Microsoft Discovery general availability and Microsoft Discovery app preview</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/announcing-microsoft-discovery-general-availability-and-microsoft-discovery-app-preview/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
