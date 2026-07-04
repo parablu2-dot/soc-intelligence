@@ -129,6 +129,7 @@ _COMPANY_KEYWORDS = [
     "foundry", "fab", "silicon", "hbm", "cowos", "ai accelerator",
     "sk hynix", "sk하이닉스", "micron", "tesla", "fsd", "dojo",
     "marvell", "globalfoundries", "ase group", "amkor", "jcet",
+    "google", "meta", "anthropic", "openai", "tpu", "mtia",
 ]
 
 # config.yaml 슬러그 → Google News 피드 company_tag 매핑
@@ -151,6 +152,10 @@ _SLUG_TO_TAG: dict[str, str] = {
     "jcet": "JCET",
     "exynos": "Samsung",
     "hyperscaler_inhouse": "Hyperscaler",
+    "google": "Google",
+    "meta": "Meta",
+    "anthropic": "Anthropic",
+    "openai": "OpenAI",
 }
 
 _CFG_PATH = Path(__file__).resolve().parents[2] / "crawlers" / "config.yaml"

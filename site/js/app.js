@@ -665,6 +665,25 @@ function modMetrics() {
   const axisCounts = axes.map(a => ({ label: axisLabel(a), count: allSignals.filter(s=>s.axis===a).length }));
   const maxCat = Math.max(...catCounts.map(x=>x.count), 1);
   const maxAxis = Math.max(...axisCounts.map(x=>x.count), 1);
+
+  // 일자별 추이 (최근 14일)
+  const days = [...Array(14)].map((_, i) => {
+    const d = new Date(Date.now() - (13 - i) * 86400000).toISOString().slice(0, 10);
+    return { date: d, count: allSignals.filter(s => s.published_date === d).length };
+  });
+  const maxDay = Math.max(...days.map(d => d.count), 1);
+
+  // 축 × 카테고리 교차 집계
+  const crossRows = axes.map(a => {
+    const rowTotal = allSignals.filter(s => s.axis === a).length;
+    return `<tr>
+      <td>${axisLabel(a)}</td>
+      ${cats.map(c => `<td>${allSignals.filter(s => s.axis === a && s.category === c).length}</td>`).join('')}
+      <td style="font-weight:600">${rowTotal}</td>
+    </tr>`;
+  }).join('');
+  const colTotals = cats.map(c => allSignals.filter(s => s.category === c).length);
+
   return `
     ${header('숫자 대시보드', `총 신호 ${total}건`)}
     <div class="stat-grid">
@@ -672,6 +691,14 @@ function modMetrics() {
       ${crawlStatus.filter(s=>s.ok).length > 0
         ? `<div class="stat-card"><div class="stat-value">${crawlStatus.filter(s=>s.ok).length}</div><div class="stat-label">활성 소스</div></div>`
         : ''}
+    </div>
+    <h3 style="margin:16px 0 10px;font-size:14px">일자별 추이 (최근 14일)</h3>
+    <div style="display:flex;align-items:flex-end;gap:4px;height:80px;margin-bottom:20px">
+      ${days.map(d => `
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px" title="${d.date}: ${d.count}건">
+          <div style="width:100%;background:var(--accent);border-radius:2px 2px 0 0;height:${Math.max(2, Math.round(d.count/maxDay*60))}px"></div>
+          <span style="font-size:9px;color:var(--text-muted)">${d.date.slice(5)}</span>
+        </div>`).join('')}
     </div>
     <h3 style="margin:16px 0 10px;font-size:14px">카테고리별</h3>
     ${catCounts.map(({label,count}) => `
@@ -686,7 +713,20 @@ function modMetrics() {
         <span class="bar-label">${label}</span>
         <div class="bar-track"><div class="bar-fill" style="width:${Math.round(count/maxAxis*100)}%;background:var(--purple)"></div></div>
         <span class="bar-count">${count}</span>
-      </div>`).join('')}`;
+      </div>`).join('')}
+    <h3 style="margin:20px 0 10px;font-size:14px">축 × 카테고리 교차 집계</h3>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>축</th>${cats.map(c=>`<th>${c}</th>`).join('')}<th>합계</th></tr></thead>
+      <tbody>
+        ${crossRows}
+        <tr style="font-weight:600">
+          <td>합계</td>
+          ${colTotals.map(n => `<td>${n}</td>`).join('')}
+          <td>${total}</td>
+        </tr>
+      </tbody>
+    </table></div>`;
 }
 
 // ── 9. 벤치마크 성능 ──────────────────────────────────────────────────────
@@ -731,31 +771,46 @@ function modWorkbench() {
     </table>`;
 }
 
-// ── 10. 공정·패키징 매트릭스 ─────────────────────────────────────────────
+// ── 10. 공정·패키징 매트릭스 (축별 도메인 그룹) ──────────────────────────
 function modMatrix() {
   // hiring 신호 제외 (채용 레이더 전용 — 이 모듈에서 미노출)
   const techSignals = allSignals.filter(s => s.category !== 'hiring');
-  const companies = [...new Set(techSignals.map(s=>s.company))];
   const techTags = ['2nm','3nm','4nm','5nm','CoWoS','HBM4','HBM3E','HBM','UCIe','chiplet','InFO','3D IC'];
-  const matrix = {};
+  const axes = ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'];
+
+  const matrix = {};       // company -> Set(tags)
+  const companyAxis = {};  // company -> axis (최초 신호 기준)
   techSignals.forEach(s => {
     if (!matrix[s.company]) matrix[s.company] = new Set();
     (s.tags || []).forEach(t => matrix[s.company].add(t));
+    if (!companyAxis[s.company]) companyAxis[s.company] = s.axis;
   });
-  const rows = companies.map(co => `
-    <tr>
-      <td>${co}</td>
-      ${techTags.map(t =>
-        `<td class="${matrix[co]?.has(t) ? 'matrix-cell-yes' : 'matrix-cell-no'}">${matrix[co]?.has(t) ? '●' : '·'}</td>`
-      ).join('')}
-    </tr>`).join('');
+
+  const sections = axes.map(axis => {
+    const companies = Object.keys(matrix)
+      .filter(co => companyAxis[co] === axis)
+      .sort((a, b) => matrix[b].size - matrix[a].size);
+    if (!companies.length) return '';
+    const rows = companies.map(co => `
+      <tr>
+        <td>${coLabel(co)}</td>
+        ${techTags.map(t =>
+          `<td class="${matrix[co].has(t) ? 'matrix-cell-yes' : 'matrix-cell-no'}">${matrix[co].has(t) ? '●' : '·'}</td>`
+        ).join('')}
+        <td style="color:var(--text-muted);font-size:12px">${matrix[co].size}</td>
+      </tr>`).join('');
+    return `
+      <h3 style="margin:20px 0 8px;font-size:13px;color:var(--accent)">${axisLabel(axis)}</h3>
+      <div style="overflow-x:auto">
+      <table class="matrix-table">
+        <thead><tr><th>회사</th>${techTags.map(t=>`<th style="font-size:11px">${t}</th>`).join('')}<th style="font-size:11px">커버리지</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table></div>`;
+  }).join('');
+
   return `
-    ${header('공정·패키징 매트릭스', '수집된 신호 기준 기술 커버리지')}
-    <div style="overflow-x:auto">
-    <table class="matrix-table">
-      <thead><tr><th>회사</th>${techTags.map(t=>`<th style="font-size:11px">${t}</th>`).join('')}</tr></thead>
-      <tbody>${rows}</tbody>
-    </table></div>`;
+    ${header('공정·패키징 매트릭스', '축별 회사 그룹 · 수집된 신호 기준 기술 커버리지')}
+    ${sections || '<div class="empty"><h3>신호 없음</h3><p>해당 축의 크롤러를 실행해 데이터를 수집하세요.</p></div>'}`;
 }
 
 // ── 11. SoC 카테고리 (5축) ────────────────────────────────────────────────
