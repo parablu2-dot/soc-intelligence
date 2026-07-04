@@ -17,6 +17,23 @@
   --header-h: 52px;
 }
 
+/* White 테마 (--theme=light) — 동일 토큰 세트만 재정의 */
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --surface: #f6f8fa;
+  --surface2: #eaeef2;
+  --border: #d0d7de;
+  --text: #1f2328;
+  --text-muted: #59636e;
+  --accent: #0969da;
+  --accent-dim: #218bff;
+  --green: #1a7f37;
+  --yellow: #9a6700;
+  --red: #cf222e;
+  --purple: #8250df;
+  --orange: #bc4c00;
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -41,6 +58,7 @@ header {
   padding: 0 20px;
   gap: 12px;
   flex-shrink: 0;
+  flex-wrap: wrap;
   z-index: 10;
 }
 header h1 {
@@ -57,11 +75,26 @@ header .badge {
   border-radius: 12px;
   font-weight: 500;
 }
+header .update-time {
+  font-size: 12px;
+  color: var(--text-muted);
+}
 header .crawl-time {
   margin-left: auto;
   font-size: 12px;
   color: var(--text-muted);
 }
+.theme-toggle-btn {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.theme-toggle-btn:hover { border-color: var(--accent); color: var(--text); }
 
 /* Layout */
 .layout {
@@ -331,7 +364,8 @@ tr:hover td { background: var(--surface2); }
 }
 .eco-columns {
   display: flex;
-  gap: 10px;
+  --node-w: 120px; /* eco-node 참조 폭 토큰 — 간격 계산 기준 */
+  gap: calc(var(--node-w) * 0.5);
   position: relative;
   z-index: 1;
 }
@@ -339,7 +373,8 @@ tr:hover td { background: var(--surface2); }
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  --node-h: 32px; /* eco-node 참조 높이 토큰 — 간격 계산 기준 */
+  gap: calc(var(--node-h) * 0.5);
 }
 .eco-axis-label {
   font-size: 10px;
@@ -376,7 +411,21 @@ tr:hover td { background: var(--surface2); }
   background: rgba(63,185,80,0.07);
 }
 .eco-node.eco-node-empty { opacity: 0.45; }
+.eco-node-logo {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-dim);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .eco-node-name {
+  flex: 1;
   color: var(--text);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -396,6 +445,9 @@ tr:hover td { background: var(--surface2); }
   nav { width: 48px; }
   nav a span.nav-label { display: none; }
   main { padding: 16px; }
-  .eco-columns { gap: 5px; }
+  .update-time { display: none; }
+  .eco-columns { --node-w: 50px; }
+  .eco-column { --node-h: 24px; }
   .eco-node { padding: 5px 6px; font-size: 10px; }
+  .eco-node-logo { width: 16px; height: 16px; font-size: 8px; }
 }

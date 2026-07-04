@@ -69,13 +69,20 @@ const _CO_DISPLAY = {
 };
 function coLabel(co) { return _CO_DISPLAY[co] || co; }
 
+// 노드 로고 배지 — coLabel 표시명에서 이니셜 자동 파생 (하드코딩 금지)
+function _ecoLogoInitials(co) {
+  const words = coLabel(co).split(/\s+/);
+  return words.length >= 2
+    ? (words[0][0] + words[1][0]).toUpperCase()
+    : coLabel(co).slice(0, 2).toUpperCase();
+}
+
 // ── 모듈 정의 (v2 Phase 1: 17 → 13) ─────────────────────────────────────
 const MODULES = [
   { id: 'today',      label: '오늘의 요약',           icon: '★' },
   { id: 'review',     label: '일일 리뷰 큐',           icon: '☑' },
-  { id: 'control',    label: '크롤링 관제',             icon: '⚙' },
-  { id: 'foundry',    label: '파운드리 캐파',           icon: '▦' },
   { id: 'articles',   label: '기사 (영어/중문/한국어)', icon: '◈' },
+  { id: 'foundry',    label: '파운드리 캐파',           icon: '▦' },
   { id: 'ecosystem',  label: 'SoC 생태계·다이나믹스',  icon: '⬡' },
   { id: 'hiring',     label: '인재·채용 레이더',        icon: '⚑' },
   { id: 'metrics',    label: '숫자 대시보드',            icon: '▣' },
@@ -84,6 +91,7 @@ const MODULES = [
   { id: 'categories', label: 'SoC 카테고리',             icon: '⊟' },
   { id: 'competitor', label: '업체별 주요 전략',          icon: '◉' },
   { id: 'channels',   label: '정보 획득 채널',            icon: '⛓' },
+  { id: 'control',    label: '크롤링 관제',             icon: '⚙' },
 ];
 
 // ── 전역 상태 ──────────────────────────────────────────────────────────────
@@ -98,6 +106,7 @@ let distillationNotes = JSON.parse(localStorage.getItem('distillation_notes') ||
 
 // ── 부트스트랩 ─────────────────────────────────────────────────────────────
 async function boot() {
+  initTheme();
   renderLayout();
   await loadAllData();
   navigate(location.hash.replace('#', '') || 'today');
@@ -105,6 +114,18 @@ async function boot() {
     if (currentModule === 'ecosystem') ecoDrawLines(_ECO_RELATIONS, null);
   });
 }
+
+// ── White/Black 테마 토글 ───────────────────────────────────────────────
+function initTheme() {
+  document.documentElement.dataset.theme = localStorage.getItem('theme') || 'dark';
+}
+window.toggleTheme = function() {
+  const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('theme', next);
+  const btn = document.getElementById('theme-toggle');
+  if (btn) btn.textContent = next === 'light' ? 'Black' : 'White';
+};
 
 async function loadAllData() {
   // 신호 데이터 로드
@@ -135,6 +156,8 @@ async function loadAllData() {
   companySummaries = sumData || {};
   document.getElementById('crawl-time').textContent =
     `신호 ${allSignals.length}건 · 캐파 ${capacityRecords.length}건 · ${new Date().toLocaleString('ko-KR')}`;
+  document.getElementById('update-time').textContent =
+    `News 최근 갱신: ${allSignals[0]?.published_date || '–'}`;
 }
 
 // ── 레이아웃 렌더 ─────────────────────────────────────────────────────────
@@ -142,6 +165,8 @@ function renderLayout() {
   document.body.innerHTML = `
     <header>
       <h1>SoC Intelligence</h1>
+      <span class="update-time" id="update-time">News 최근 갱신 확인 중...</span>
+      <button class="theme-toggle-btn" id="theme-toggle" onclick="toggleTheme()">${document.documentElement.dataset.theme === 'light' ? 'Black' : 'White'}</button>
       <span class="crawl-time" id="crawl-time">로딩 중...</span>
     </header>
     <div class="layout">
@@ -537,6 +562,7 @@ function modEcosystem() {
       ${AXIS_COMPANIES[axis].map(co => {
         const cnt = allSignals.filter(s => s.company === co).length;
         return `<div class="eco-node${cnt === 0 ? ' eco-node-empty' : ''}" data-company="${co}" onclick="ecoSelectNode(this,'${co}')">
+          <span class="eco-node-logo">${_ecoLogoInitials(co)}</span>
           <span class="eco-node-name">${coLabel(co)}</span>
           ${cnt > 0 ? `<span class="eco-node-count">${cnt}</span>` : ''}
         </div>`;
