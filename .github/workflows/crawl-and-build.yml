@@ -46,11 +46,18 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/merge_refine.py
 
-      # ── 4. canonical → data/refined/ JSON export ──────────────
+      # ── 4. 1차 증류 메모 → 축·카테고리별 요약 (data/distillation_notes.json
+      #      이 없으면 스킵 — 프론트 "메모 내보내기" 버튼으로 수동 커밋 필요) ─
+      - name: Run distillation summary
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/summarize_distillation.py
+
+      # ── 5. canonical → data/refined/ JSON export ──────────────
       - name: Export refined JSON
         run: python scripts/export_refined.py
 
-      # ── 5. 커밋 (data/ 전체 + soc.db 포함) ────────────────────
+      # ── 6. 커밋 (data/ 전체 + soc.db 포함) ────────────────────
       - name: Commit crawled and refined data
         run: |
           git config user.name "github-actions[bot]"

@@ -147,16 +147,24 @@ def run() -> None:
 
 _SUMMARY_TOOL: dict = {
     "name": "company_summary",
-    "description": "Generate a competitive intelligence summary for a semiconductor company",
+    "description": "Generate a competitive intelligence summary for a semiconductor company in English, Simplified Chinese, and Korean",
     "input_schema": {
         "type": "object",
         "properties": {
-            "summary": {
+            "summary_en": {
                 "type": "string",
                 "description": "2-3 sentence competitive intelligence summary focusing on strategy, roadmap, and market position",
             },
+            "summary_zh": {
+                "type": "string",
+                "description": "Faithful translation of summary_en into Simplified Chinese — same facts, no additions or omissions",
+            },
+            "summary_ko": {
+                "type": "string",
+                "description": "Faithful translation of summary_en into Korean — same facts, no additions or omissions",
+            },
         },
-        "required": ["summary"],
+        "required": ["summary_en", "summary_zh", "summary_ko"],
         "additionalProperties": False,
     },
 }
@@ -168,10 +176,13 @@ Company: {company}
 Recent signals (newest first):
 {headlines}
 
-Write a 2-3 sentence competitive intelligence summary of this company's current strategic direction and market activity.
+Write a 2-3 sentence competitive intelligence summary of this company's current strategic direction and market activity (summary_en).
 Focus on technology roadmap, capacity moves, partnerships, and competitive positioning.
 Do NOT include hiring news. Do NOT use filler phrases like "Based on recent signals".
 Be concise and specific to observable facts.
+
+Then provide the SAME summary faithfully translated into Simplified Chinese (summary_zh) and Korean (summary_ko).
+Do not add or omit facts between language versions — they must convey identical information.
 """
 
 _DATA_REFINED = ROOT / "data" / "refined"
@@ -215,7 +226,10 @@ def _generate_company_summaries(conn, client) -> None:
             )
             tool_block = next(b for b in resp.content if b.type == "tool_use")
             summaries[company] = {
-                "summary": tool_block.input["summary"],
+                "summary": tool_block.input["summary_en"],  # 하위호환 기본값 (구 프론트/캐시)
+                "summary_en": tool_block.input["summary_en"],
+                "summary_zh": tool_block.input["summary_zh"],
+                "summary_ko": tool_block.input["summary_ko"],
                 "signal_count": len(headlines),
                 "generated_at": now_ts,
             }

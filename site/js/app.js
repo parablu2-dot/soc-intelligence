@@ -69,13 +69,20 @@ const _CO_DISPLAY = {
 };
 function coLabel(co) { return _CO_DISPLAY[co] || co; }
 
-// 노드 로고 배지 — coLabel 표시명에서 이니셜 자동 파생 (하드코딩 금지)
-function _ecoLogoInitials(co) {
+// 업체 로고 배지 — coLabel 표시명에서 이니셜 자동 파생 (하드코딩 금지)
+function _logoInitials(co) {
   const words = coLabel(co).split(/\s+/);
   return words.length >= 2
     ? (words[0][0] + words[1][0]).toUpperCase()
     : coLabel(co).slice(0, 2).toUpperCase();
 }
+function coLogoBadge(co) {
+  return `<span class="logo-badge">${_logoInitials(co)}</span>`;
+}
+
+// 크롤러 소스/집계 그룹 — 실제 개별 업체가 아님. 업체 비교 뷰
+// (매트릭스·벤치마크 스코어·업체별 전략)에서 제외
+const _NON_VENDOR_COMPANIES = ['hiring', 'trendforce', 'etnews', 'hyperscaler_inhouse'];
 
 // ── 모듈 정의 (v2 Phase 1: 17 → 13) ─────────────────────────────────────
 const MODULES = [
@@ -103,6 +110,7 @@ let crawlStatus = [];
 let currentModule = 'today';
 let reviewedSet = new Set(JSON.parse(localStorage.getItem('reviewed') || '[]'));
 let distillationNotes = JSON.parse(localStorage.getItem('distillation_notes') || '[]');
+let distillationSummaries = {};  // {"axis||category": {summary, note_count, generated_at}} — 빌드타임 생성
 
 // ── 부트스트랩 ─────────────────────────────────────────────────────────────
 async function boot() {
@@ -149,11 +157,15 @@ async function loadAllData() {
   const sumLoad = fetch(`${DATA_BASE}/refined/company_summaries.json`)
     .then(r => r.ok ? r.json() : {})
     .catch(() => {});
+  const distLoad = fetch(`${DATA_BASE}/refined/distillation_summaries.json`)
+    .then(r => r.ok ? r.json() : {})
+    .catch(() => ({}));
 
-  const [results, capData, sumData] = await Promise.all([Promise.all(loads), capLoad, sumLoad]);
+  const [results, capData, sumData, distData] = await Promise.all([Promise.all(loads), capLoad, sumLoad, distLoad]);
   allSignals = results.flat().sort((a, b) => b.published_date.localeCompare(a.published_date));
   capacityRecords = capData;
   companySummaries = sumData || {};
+  distillationSummaries = distData?.summaries || {};
   document.getElementById('crawl-time').textContent =
     `신호 ${allSignals.length}건 · 캐파 ${capacityRecords.length}건 · ${new Date().toLocaleString('ko-KR')}`;
   document.getElementById('update-time').textContent =
@@ -252,7 +264,7 @@ function signalCard(s, opts = {}) {
     <div class="signal-card" style="${reviewed ? 'opacity:0.5' : ''}">
       <div class="signal-meta">
         ${chipAxis(s.axis)}
-        <span class="chip" style="background:var(--surface2);color:var(--text-muted)">${s.company}</span>
+        <span class="chip" style="background:var(--surface2);color:var(--text-muted);display:inline-flex;align-items:center;gap:4px">${coLogoBadge(s.company)}${coLabel(s.company)}</span>
         ${chipCat(s.category)}
         ${isTF ? '<span class="chip" style="background:#e67e00;color:#fff;font-size:10px">TrendForce</span>' : ''}
         ${chipTags(s.tags)}
@@ -316,11 +328,19 @@ function _distillationNotePanel(axis, category) {
      </div>`
   ).join('') || '<span style="font-size:11px;color:var(--text-muted)">코멘트 없음</span>';
 
+  const catSummary = distillationSummaries[noteKey];
+  const summaryHtml = catSummary ? `
+    <div style="background:var(--surface2);border-left:2px solid var(--accent);padding:6px 8px;margin-bottom:8px;font-size:12px;line-height:1.5">
+      <strong style="color:var(--accent);font-size:10px">◉ 카테고리 요약 (빌드타임 생성 · 메모 ${catSummary.note_count}건)</strong>
+      <div style="margin-top:4px">${catSummary.summary}</div>
+    </div>` : '';
+
   return `
     <div class="distillation-panel" data-key="${noteKey}" style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:10px 12px;margin-bottom:10px">
       <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:6px">
         ✎ 1차 증류 — ${axisLabel(axis)} / ${category}
       </div>
+      ${summaryHtml}
       <div id="notes-${noteKey.replace('||','-')}">${existingHtml}</div>
       <div style="display:flex;gap:6px;margin-top:6px">
         <textarea id="note-input-${noteKey.replace('||','-')}" rows="2"
@@ -354,6 +374,12 @@ function modReview() {
   const axes = ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'];
   return `
     ${header('일일 리뷰 큐 · 1차 증류', `미완료 ${unreviewed.length}건 · 완료 표시하면 흐려집니다`)}
+    <div style="margin-bottom:12px">
+      <button class="filter-btn" onclick="exportDistillationNotes()">📥 메모 내보내기 (JSON)</button>
+      <span style="font-size:11px;color:var(--text-muted);margin-left:8px">
+        data/distillation_notes.json으로 커밋하면 다음 빌드에서 카테고리 요약이 생성됩니다
+      </span>
+    </div>
     <div class="filters">
       <button class="filter-btn active" onclick="reviewFilter(this,'all')">전체</button>
       ${axes.map(a =>
@@ -562,7 +588,7 @@ function modEcosystem() {
       ${AXIS_COMPANIES[axis].map(co => {
         const cnt = allSignals.filter(s => s.company === co).length;
         return `<div class="eco-node${cnt === 0 ? ' eco-node-empty' : ''}" data-company="${co}" onclick="ecoSelectNode(this,'${co}')">
-          <span class="eco-node-logo">${_ecoLogoInitials(co)}</span>
+          <span class="eco-node-logo">${_logoInitials(co)}</span>
           <span class="eco-node-name">${coLabel(co)}</span>
           ${cnt > 0 ? `<span class="eco-node-count">${cnt}</span>` : ''}
         </div>`;
@@ -731,7 +757,8 @@ function modMetrics() {
 
 // ── 9. 벤치마크 성능 ──────────────────────────────────────────────────────
 function modWorkbench() {
-  const companies = [...new Set(allSignals.map(s=>s.company))];
+  const companies = [...new Set(allSignals.map(s=>s.company))]
+    .filter(co => !_NON_VENDOR_COMPANIES.includes(co));
   const scores = companies.map(co => {
     const sigs = allSignals.filter(s => s.company === co);
     const processScore = sigs.filter(s=>s.category==='process'||s.category==='packaging').length * 2;
@@ -742,7 +769,7 @@ function modWorkbench() {
   const maxScore = scores[0]?.total || 1;
   const scoreRows = scores.map(({ co, total, count }) => `
     <tr>
-      <td>${co}</td>
+      <td style="display:flex;align-items:center;gap:6px">${coLogoBadge(co)}${coLabel(co)}</td>
       <td>${count}</td>
       <td>
         <div class="bar-track" style="width:120px;display:inline-block">
@@ -788,12 +815,12 @@ function modMatrix() {
 
   const sections = axes.map(axis => {
     const companies = Object.keys(matrix)
-      .filter(co => companyAxis[co] === axis)
+      .filter(co => companyAxis[co] === axis && !_NON_VENDOR_COMPANIES.includes(co))
       .sort((a, b) => matrix[b].size - matrix[a].size);
     if (!companies.length) return '';
     const rows = companies.map(co => `
       <tr>
-        <td>${coLabel(co)}</td>
+        <td style="display:flex;align-items:center;gap:6px">${coLogoBadge(co)}${coLabel(co)}</td>
         ${techTags.map(t =>
           `<td class="${matrix[co].has(t) ? 'matrix-cell-yes' : 'matrix-cell-no'}">${matrix[co].has(t) ? '●' : '·'}</td>`
         ).join('')}
@@ -842,27 +869,51 @@ function modCategories() {
 }
 
 // ── LLM 요약 카드 (modCompetitor + competitorTab 공용) ────────────────────
+const _summaryLangCache = {};  // company -> {ko,en,zh} — 빌드타임 사전번역 캐시 (switchSummaryLang 공용)
+const _SUMMARY_LANG_LABEL = { ko: '한', en: 'EN', zh: '中' };
+
 function _companySummaryCard(company) {
   const sum = companySummaries.summaries?.[company];
   if (!sum) return '<div style="font-size:11px;color:var(--text-muted);margin-bottom:12px">LLM 요약 없음 — merge_refine.py 실행 후 생성됩니다.</div>';
+  const langs = { ko: sum.summary_ko, en: sum.summary_en || sum.summary, zh: sum.summary_zh };
+  const available = ['ko','en','zh'].filter(l => langs[l]);
+  const defaultLang = available.includes('ko') ? 'ko' : available[0];
+  _summaryLangCache[company] = langs;
+  const langBtns = available.map(l =>
+    `<button class="filter-btn summary-lang-btn${l===defaultLang?' active':''}" data-lang="${l}"
+       style="font-size:10px;padding:2px 8px" onclick="switchSummaryLang(this,'${company}')">${_SUMMARY_LANG_LABEL[l]}</button>`
+  ).join('');
   return `
-    <div style="background:var(--surface);border:1px solid var(--accent);border-radius:6px;padding:12px 14px;margin-bottom:16px">
-      <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:6px">◉ LLM 전략 요약 (빌드타임 생성)</div>
-      <div style="font-size:13px;line-height:1.6">${sum.summary}</div>
+    <div class="summary-card" style="background:var(--surface);border:1px solid var(--accent);border-radius:6px;padding:12px 14px;margin-bottom:16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:6px">
+        <span style="font-size:11px;font-weight:600;color:var(--accent)">◉ LLM 전략 요약 (빌드타임 생성)</span>
+        ${available.length > 1 ? `<span class="summary-lang-bar" style="display:flex;gap:4px">${langBtns}</span>` : ''}
+      </div>
+      <div class="summary-lang-text" style="font-size:13px;line-height:1.6">${langs[defaultLang]}</div>
       <div style="font-size:10px;color:var(--text-muted);margin-top:8px">
         신호 ${sum.signal_count}건 기준 · ${(sum.generated_at||'').slice(0,10) || '–'}
       </div>
     </div>`;
 }
 
+window.switchSummaryLang = function(btn, company) {
+  const card = btn.closest('.summary-card');
+  card.querySelectorAll('.summary-lang-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const langs = _summaryLangCache[company];
+  const textEl = card.querySelector('.summary-lang-text');
+  if (textEl && langs) textEl.textContent = langs[btn.dataset.lang];
+};
+
 // ── 12. 업체별 주요 전략 ─────────────────────────────────────────────────
 function modCompetitor() {
-  // hiring 신호 제외 (채용 레이더 전용 — 이 모듈에서 미노출)
+  // hiring 신호 및 업체 아닌 소스(트렌드포스 등) 제외 — 채용 레이더/기사 전용
   const stratSignals = allSignals.filter(s => s.category !== 'hiring');
-  const companies = [...new Set(stratSignals.map(s=>s.company))];
+  const companies = [...new Set(stratSignals.map(s=>s.company))]
+    .filter(co => !_NON_VENDOR_COMPANIES.includes(co));
   const activeCompany = companies[0] || '';
   const tabs = companies.map(co =>
-    `<button class="filter-btn ${co===activeCompany?'active':''}" onclick="competitorTab(this,'${co}')">${co}</button>`
+    `<button class="filter-btn ${co===activeCompany?'active':''}" style="display:inline-flex;align-items:center;gap:5px" onclick="competitorTab(this,'${co}')">${coLogoBadge(co)}${coLabel(co)}</button>`
   ).join('');
   const sigs = stratSignals.filter(s => s.company === activeCompany);
   return `
@@ -1104,6 +1155,16 @@ window.saveNote = function(axis, category) {
        </div>`
     ).join('');
   }
+};
+
+window.exportDistillationNotes = function() {
+  const blob = new Blob([JSON.stringify(distillationNotes, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'distillation_notes.json';
+  a.click();
+  URL.revokeObjectURL(url);
 };
 
 window.filterFoundry = function(btn, cat) {

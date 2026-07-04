@@ -424,6 +424,21 @@ tr:hover td { background: var(--surface2); }
   align-items: center;
   justify-content: center;
 }
+
+/* ── 업체 로고 배지 (신호카드·매트릭스·벤치마크·업체별 전략 공용) ───────── */
+.logo-badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-dim);
+  color: #fff;
+  font-size: 8px;
+  font-weight: 700;
+}
 .eco-node-name {
   flex: 1;
   color: var(--text);
