@@ -115,3 +115,21 @@ class DistillationNote:
 
     def to_dict(self) -> dict:
         return asdict(self)
+
+
+@dataclass
+class BomImplication:
+    """component-intelligence axis — downstream 디바이스/칩셋 수요를 부품·기판 수요로 파생.
+    facts/inferences 분리 원칙에서 inference 하위 (RefinedSignal의 사실 위에 얹는 정성 판단).
+    static 매핑 — LLM은 distill 시점 규칙 적용만, runtime-token-zero 유지.
+    저장: data/baseline/bom_implications.json
+    """
+    component_group: str    # "MLCC" | "substrate" | "module" | "inductor" | "silicon_cap" | "glass_substrate"
+    device_axis: str        # "server" | "mobile" | "pc"
+    direction: str           # "up" | "down" | "neutral"
+    basis_fact_id: str       # facts[] 참조 (BaselineFact.id 또는 서술적 slug — 실 BaselineFact 부재 시)
+    strength_hint: str       # "strong" | "moderate" | "weak" — 정성. 유닛 예측 아님
+    derivation_type: str     # "content" | "leading" | "near_fact" | "transition"
+
+    def to_dict(self) -> dict:
+        return asdict(self)
