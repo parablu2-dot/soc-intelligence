@@ -255,6 +255,62 @@ input.search-box:focus { border-color: var(--accent); }
 .chip-cat-price     { background: rgba(248,81,73,0.15); color: var(--red); }
 .chip-cat-hiring    { background: rgba(188,140,255,0.15); color: var(--purple); }
 .chip-tag { background: var(--surface2); color: var(--text-muted); border: 1px solid var(--border); }
+.chip-note { background: var(--surface2); color: var(--text-muted); border: 1px solid var(--border); margin-left: 4px; }
+.chip-note-status { background: rgba(210,153,34,0.15); color: var(--yellow); margin-left: 4px; }
+
+/* Baseline Notes (deep-research 장문 노트) */
+.baseline-notes-panel { margin-bottom: 16px; }
+.baseline-note-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.baseline-note-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  cursor: pointer;
+}
+.baseline-note-head:hover { background: var(--surface2); }
+.baseline-note-topic { font-size: 14px; font-weight: 500; color: var(--text); }
+.baseline-note-meta { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.baseline-note-body {
+  padding: 4px 16px 16px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.baseline-note-body h3, .baseline-note-body h4, .baseline-note-body h5, .baseline-note-body h6 {
+  color: var(--text);
+  margin: 14px 0 6px;
+}
+.baseline-note-body blockquote {
+  border-left: 2px solid var(--accent);
+  margin: 8px 0;
+  padding: 4px 10px;
+  background: var(--surface2);
+}
+.baseline-note-body code { background: var(--surface2); padding: 1px 4px; border-radius: 3px; }
+.baseline-note-body .wikilink { color: var(--accent); }
+.baseline-note-body ul { margin: 6px 0; padding-left: 20px; }
+.baseline-note-body hr { border: none; border-top: 1px solid var(--border); margin: 12px 0; }
+.baseline-note-body table.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+  font-size: 12px;
+}
+.baseline-note-body table.md-table th, .baseline-note-body table.md-table td {
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  text-align: left;
+}
+.baseline-note-body table.md-table th { background: var(--surface2); color: var(--text); }
 
 /* Stat cards */
 .stat-grid {

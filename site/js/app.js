@@ -111,6 +111,7 @@ let currentModule = 'today';
 let reviewedSet = new Set(JSON.parse(localStorage.getItem('reviewed') || '[]'));
 let distillationNotes = JSON.parse(localStorage.getItem('distillation_notes') || '[]');
 let distillationSummaries = {};  // {"axis||category": {summary, note_count, generated_at}} — 빌드타임 생성
+let baselineNotes = [];  // BaselineNote[] — data/baseline/notes/*.md 빌드타임 파싱 (장문 deep-research 노트)
 
 // ── 부트스트랩 ─────────────────────────────────────────────────────────────
 async function boot() {
@@ -160,12 +161,17 @@ async function loadAllData() {
   const distLoad = fetch(`${DATA_BASE}/refined/distillation_summaries.json`)
     .then(r => r.ok ? r.json() : {})
     .catch(() => ({}));
+  const baselineNotesLoad = fetch(`${DATA_BASE}/refined/baseline_notes.json`)
+    .then(r => r.ok ? r.json() : {})
+    .catch(() => ({}));
 
-  const [results, capData, sumData, distData] = await Promise.all([Promise.all(loads), capLoad, sumLoad, distLoad]);
+  const [results, capData, sumData, distData, baselineNotesData] =
+    await Promise.all([Promise.all(loads), capLoad, sumLoad, distLoad, baselineNotesLoad]);
   allSignals = results.flat().sort((a, b) => b.published_date.localeCompare(a.published_date));
   capacityRecords = capData;
   companySummaries = sumData || {};
   distillationSummaries = distData?.summaries || {};
+  baselineNotes = baselineNotesData?.notes || [];
   document.getElementById('crawl-time').textContent =
     `신호 ${allSignals.length}건 · 캐파 ${capacityRecords.length}건 · ${new Date().toLocaleString('ko-KR')}`;
   document.getElementById('update-time').textContent =
@@ -317,6 +323,110 @@ function modToday() {
     <div id="today-list">${signalList(recent.slice(0, 30))}</div>`;
 }
 
+// ── Baseline Notes (deep-research 장문 노트, data/baseline/notes/*.md) ───
+function _escHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function _mdInline(s) {
+  return s
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\[\[([^\]]+)\]\]/g, '<span class="wikilink">$1</span>');
+}
+
+// 아주 가벼운 markdown → HTML 변환. 헤더/굵게/인용/목록/표/구분선만 지원 (풀 CommonMark 아님).
+function _mdLite(md) {
+  const lines = _escHtml(md).split('\n');
+  let html = '';
+  let i = 0;
+  let inList = false;
+
+  const closeList = () => { if (inList) { html += '</ul>'; inList = false; } };
+
+  const isTableSep = line => /^\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?$/.test(line.trim());
+
+  while (i < lines.length) {
+    const line = lines[i];
+
+    if (!line.trim()) { closeList(); i++; continue; }
+
+    const h = line.match(/^(#{1,4})\s+(.*)$/);
+    if (h) {
+      closeList();
+      const level = Math.min(h[1].length + 2, 6); // 문서 h1 → h3 정도로 낮춰 카드 안에서 과하지 않게
+      html += `<h${level}>${_mdInline(h[2])}</h${level}>`;
+      i++; continue;
+    }
+
+    if (line.startsWith('|') && lines[i + 1] && isTableSep(lines[i + 1])) {
+      closeList();
+      const headCells = line.split('|').slice(1, -1).map(c => c.trim());
+      html += '<table class="md-table"><thead><tr>' +
+        headCells.map(c => `<th>${_mdInline(c)}</th>`).join('') + '</tr></thead><tbody>';
+      i += 2;
+      while (i < lines.length && lines[i].trim().startsWith('|')) {
+        const cells = lines[i].split('|').slice(1, -1).map(c => c.trim());
+        html += '<tr>' + cells.map(c => `<td>${_mdInline(c)}</td>`).join('') + '</tr>';
+        i++;
+      }
+      html += '</tbody></table>';
+      continue;
+    }
+
+    if (/^-{3,}$/.test(line.trim())) { closeList(); html += '<hr>'; i++; continue; }
+
+    const bq = line.match(/^>\s?(.*)$/);
+    if (bq) { closeList(); html += `<blockquote>${_mdInline(bq[1])}</blockquote>`; i++; continue; }
+
+    const li = line.match(/^[-*]\s+(?:\[( |x)\]\s+)?(.*)$/);
+    if (li) {
+      if (!inList) { html += '<ul>'; inList = true; }
+      const checkbox = li[1] !== undefined ? `${li[1] === 'x' ? '☑' : '☐'} ` : '';
+      html += `<li>${checkbox}${_mdInline(li[2])}</li>`;
+      i++; continue;
+    }
+
+    closeList();
+    html += `<p>${_mdInline(line)}</p>`;
+    i++;
+  }
+  closeList();
+  return html;
+}
+
+function _baselineNoteCard(note) {
+  const tags = (note.tags || []).map(t => `<span class="chip chip-note">${t}</span>`).join('');
+  const statusLabel = note.status ? `<span class="chip chip-note-status">${note.status}</span>` : '';
+  return `
+    <div class="baseline-note-card">
+      <div class="baseline-note-head" onclick="toggleBaselineNote('${note.id}')">
+        <div>
+          <div class="baseline-note-topic">${note.topic}</div>
+          <div class="baseline-note-meta">${note.axis || ''} ${note.date ? '· ' + note.date : ''}</div>
+        </div>
+        <div>${statusLabel}${tags}</div>
+      </div>
+      <div id="bn-body-${note.id}" class="baseline-note-body" style="display:none">${_mdLite(note.body_md)}</div>
+    </div>`;
+}
+
+function _baselineNotesPanel() {
+  if (!baselineNotes.length) return '';
+  return `
+    <div class="baseline-notes-panel">
+      <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:8px">
+        📥 Baseline Notes — 승격 대기 (dashboard 층, 켜뮤 아님 · ${baselineNotes.length}건)
+      </div>
+      ${baselineNotes.map(_baselineNoteCard).join('')}
+    </div>`;
+}
+
+window.toggleBaselineNote = function(id) {
+  const el = document.getElementById(`bn-body-${id}`);
+  if (el) el.style.display = el.style.display === 'none' ? 'block' : 'none';
+};
+
 // ── 2. 일일 리뷰 큐 (5축 + 카테고리 필터 + 1차 증류 코멘트) ───────────────
 function _distillationNotePanel(axis, category) {
   const noteKey = `${axis}||${category}`;
@@ -374,6 +484,7 @@ function modReview() {
   const axes = ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'];
   return `
     ${header('일일 리뷰 큐 · 1차 증류', `미완료 ${unreviewed.length}건 · 완료 표시하면 흐려집니다`)}
+    ${_baselineNotesPanel()}
     <div style="margin-bottom:12px">
       <button class="filter-btn" onclick="exportDistillationNotes()">📥 메모 내보내기 (JSON)</button>
       <span style="font-size:11px;color:var(--text-muted);margin-left:8px">

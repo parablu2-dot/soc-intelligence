@@ -57,6 +57,10 @@ jobs:
       - name: Export refined JSON
         run: python scripts/export_refined.py
 
+      # ── 5.5 baseline notes(장문 deep-research 노트) → JSON manifest ─
+      - name: Export baseline notes
+        run: python scripts/export_baseline_notes.py
+
       # ── 6. 커밋 (data/ 전체 + soc.db 포함) ────────────────────
       - name: Commit crawled and refined data
         run: |
