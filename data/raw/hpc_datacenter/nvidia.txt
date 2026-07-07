@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Mon, 06 Jul 2026 16:40:49 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 07 Jul 2026 00:10:06 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,53 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=7.0</generator>
 	<item>
+		<title>NVIDIA and Hugging Face Bring New Models and Frameworks to LeRobot for the Open Robotics Community</title>
+		<link>https://blogs.nvidia.com/blog/hugging-face-lerobot-models-frameworks-open-robotics/</link>
+		
+		<dc:creator><![CDATA[Sasa Docca]]></dc:creator>
+		<pubDate>Tue, 07 Jul 2026 06:00:26 +0000</pubDate>
+				<category><![CDATA[Robotics]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Cosmos]]></category>
+		<category><![CDATA[Isaac]]></category>
+		<category><![CDATA[Jetson]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Physical AI]]></category>
+		<category><![CDATA[Simulation and Design]]></category>
+		<category><![CDATA[Synthetic Data Generation]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=95979</guid>
+
+					<description><![CDATA[Open source AI has shown how quickly developers can innovate when models, data and tools are shared. Robotics has the same opportunity, but advancements in physical AI development can still be gated by costly and fragmented resources, from large datasets and robot foundation models to simulation, compute and validation tools. NVIDIA and Hugging Face are [&#8230;]]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><span style="font-weight: 400;">Open source AI has shown how quickly developers can innovate when models, data and tools are shared. </span><a target="_blank" href="https://www.nvidia.com/en-us/industries/robotics/"><span style="font-weight: 400;">Robotics</span></a><span style="font-weight: 400;"> has the same opportunity, but advancements in </span><a target="_blank" href="https://www.nvidia.com/en-us/glossary/generative-physical-ai/"><span style="font-weight: 400;">physical AI</span></a><span style="font-weight: 400;"> development can still be gated by costly and fragmented resources, from large datasets and robot foundation models to simulation, compute and validation tools.</span></p>
+<p><span style="font-weight: 400;">NVIDIA and </span><a target="_blank" href="https://huggingface.co/blog/lerobot-release-v060"><span style="font-weight: 400;">Hugging Face</span></a><span style="font-weight: 400;"> are collaborating to bring the </span><a target="_blank" href="https://developer.nvidia.com/isaac/gr00t"><span style="font-weight: 400;">NVIDIA Isaac GR00T 1.7</span></a><span style="font-weight: 400;"> open, reasoning vision language action (VLA) model for </span><a target="_blank" href="https://www.nvidia.com/en-us/use-cases/humanoid-robots/"><span style="font-weight: 400;">humanoid robots</span></a><span style="font-weight: 400;"> and the </span><a target="_blank" href="https://nvidia.github.io/IsaacTeleop/"><span style="font-weight: 400;">NVIDIA Isaac Teleop</span></a><span style="font-weight: 400;"> framework to LeRobot — Hugging Face’s open source library for robotics — with </span><a target="_blank" href="https://www.nvidia.com/en-us/ai/cosmos/"><span style="font-weight: 400;">NVIDIA Cosmos 3</span></a><span style="font-weight: 400;">, a frontier model for physical AI, planned soon. Together, these integrations give developers a more accessible and standardized path for end-to-end robot development while driving innovation and collaboration across the open robotics community.</span></p>
+<p><span style="font-weight: 400;">“Open source is how a field turns advanced research into something people can study, adapt and build on,” said Thomas Wolf, cofounder and chief science officer at Hugging Face. “With NVIDIA Isaac GR00T 1.7 and Isaac TeleOp in LeRobot today, robotics developers can use shared models, data and workflows to train and evaluate robots in the open. And with NVIDIA Cosmos 3 planned next, the community will have a path to bring frontier world models into that same collaborative loop.” </span></p>
+<h2><b>An Open Pipeline for Robot Foundation Models</b></h2>
+<p><span style="font-weight: 400;">Hugging Face LeRobot is an open source robotics library for training, running and sharing robot datasets, models, policies and workflows. NVIDIA’s continued partnership with Hugging Face connects NVIDIA’s 3 million robotics developers with Hugging Face’s 16 million AI builders, expanding access to frontier physical AI tools through open workflows.</span></p>
+<p><span style="font-weight: 400;">Bringing NVIDIA physical AI capabilities into LeRobot gives developers a common way to collect and standardize data, train and fine-tune robot foundation models, evaluate performance and deploy models through open workflows. The integrations include:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><b>NVIDIA Isaac Teleop</b><span style="font-weight: 400;">, an open source framework for robot data collection, helps developers capture high-quality human demonstrations from external devices using standardized, interoperable formats, then expand and share datasets with the community, all directly in LeRobot. </span></li>
+<li style="font-weight: 400;" aria-level="1"><b>NVIDIA Isaac GR00T 1.7</b><span style="font-weight: 400;">, the first open and commercially viable robot foundation model, makes it easier to post-train and deploy models through LeRobot workflows, helping developers adapt GR00T to new robot embodiments and tasks with benchmarked performance.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>NVIDIA Cosmos 3</b><span style="font-weight: 400;">, a frontier world foundation model for physical AI coming soon to LeRobot, will help developers generate and augment robotics data, simulate scenarios and support policy development when real-world data is limited or too expensive to collect.</span></li>
+</ul>
+<p><span style="font-weight: 400;">These integrations build on a broader set of NVIDIA resources already connected to LeRobot to support the full robotics development loop, including: </span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">The largest </span><a target="_blank" href="https://huggingface.co/collections/nvidia/physical-ai"><b>open source physical AI dataset</b></a><span style="font-weight: 400;">, downloaded more than 15 million times, which includes more than 350,000 real and simulated trajectories and 57 million grasps to help developers kickstart their robotics workflows.</span></li>
+<li style="font-weight: 400;" aria-level="1"><a target="_blank" href="https://developer.nvidia.com/isaac/sim"><b>NVIDIA Isaac Sim</b></a><b>&#8211; and </b><a target="_blank" href="https://developer.nvidia.com/isaac/lab"><b>Isaac Lab</b></a><b>-based simulation frameworks</b><span style="font-weight: 400;"> to help developers set up environments, generate robot data, test policies and validate behaviors before moving to physical robots.</span></li>
+<li style="font-weight: 400;" aria-level="1"><a target="_blank" href="https://developer.nvidia.com/isaac/lab-arena"><b>NVIDIA Isaac Lab-Arena</b></a><b> in LeRobot Environment Hub</b><span style="font-weight: 400;"> to enable developers to quickly prototype complex simulation environments, register them in LeRobot EnvHub and seamlessly use them within the LeRobot ecosystem to train and evaluate generalist robot policies such as GR00T, Pi and SmolVLA.</span></li>
+<li style="font-weight: 400;" aria-level="1"><b>NVIDIA Jetson Thor integration with LeRobot’s Reachy 2</b><span style="font-weight: 400;"> to support deployment of VLA models on open source humanoid robots.</span></li>
+</ul>
+<p><i><span style="font-weight: 400;">Learn more about how to use Isaac Teleop, Isaac GR00T 1.7 and Isaac Lab-Arena with LeRobot for end-to-end humanoid development and </span></i><a target="_blank" href="https://huggingface.co/blog/nvidia/nvidia-isaac-teleop-and-gr00t17-in-lerobot"><i><span style="font-weight: 400;">explore detailed LeRobot integration workflows</span></i></a><i><span style="font-weight: 400;">.</span></i></p>
+]]></content:encoded>
+					
+		
+		
+				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/07/nv-gr00t-e2r-letobot-2up-KV-r2-1600x900-1.jpg" type="image/jpeg" width="1600" height="900">
+			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/07/nv-gr00t-e2r-letobot-2up-KV-r2-1600x900-1-842x450.jpg" width="842" height="450" />
+			<media:title type="html"><![CDATA[NVIDIA and Hugging Face Bring New Models and Frameworks to LeRobot for the Open Robotics Community]]></media:title>
+			<media:description type="html"></media:description>
+		</media:content>
+	</item>
+		<item>
 		<title>How Open Models Are Driving AI Research</title>
 		<link>https://blogs.nvidia.com/blog/open-models-icml-2026/</link>
 		
@@ -56,7 +103,7 @@
 <p><span style="font-weight: 400;">Sakana AI</span><span style="font-weight: 400;"> — attending ICML this year — built its <a target="_blank" href="https://sakana.ai/fugu/">Fugu</a> and Fugu-Ultra models directly on Nemotron 3 Ultra, using the open foundation to push forward its work on AI research automation.</span></p>
 <p><a target="_blank" href="https://kilo.ai/models/by/nvidia"><span style="font-weight: 400;">KiloCode</span></a><span style="font-weight: 400;"> integrated Nemotron into its code-routing architecture, reporting token cost reductions of up to 90% — a result with real implications for the economics of deploying AI in production.</span></p>
 <p><a target="_blank" href="https://nvidianews.nvidia.com/news/naver-ai-infrastructure"><span style="font-weight: 400;">NAVER</span></a><span style="font-weight: 400;"> developed its own model using the Nemotron architecture, extending the foundation for Korean-language AI research.</span></p>
-<p><a target="_blank" href="https://www.together.ai/models/nvidia-nemotron-3-super"><span style="font-weight: 400;">Together AI</span></a><span style="font-weight: 400;"> is hosting Nemotron models on its platform, making them more accessible to researchers who need reliable, seamless access to open inference.</span></p>
+<p><a target="_blank" href="https://www.together.ai/models/nvidia-nemotron-3-ultra"><span style="font-weight: 400;">Together AI</span></a><span style="font-weight: 400;"> is hosting Nemotron models on its platform, making them more accessible to researchers who need reliable, seamless access to open inference.</span></p>
 <p><span style="font-weight: 400;">Humanoid</span><span style="font-weight: 400;">, </span><a href="https://blogs.nvidia.com/blog/nvidia-and-lg-group-ai-factory/"><span style="font-weight: 400;">LG Electronics</span></a><span style="font-weight: 400;">, </span><span style="font-weight: 400;">NEURA Robotics</span><span style="font-weight: 400;"> and </span><span style="font-weight: 400;">Noble Machines</span><span style="font-weight: 400;"> are adopting NVIDIA Isaac GR00T  models to accelerate industrial deployments of their humanoids, while </span><span style="font-weight: 400;">1X</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">Agility</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">Agile Robots</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">Boston Dynamics</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">Hexagon Robotics</span><span style="font-weight: 400;">, and </span><span style="font-weight: 400;">Mentee</span><span style="font-weight: 400;"> are building the next generation of humanoids using Cosmos world models, Isaac Sim and Isaac Lab to accelerate the development and validation of their robots.</span></p>
 <p><span style="font-weight: 400;">Explore NVIDIA’s open models on </span><a target="_blank" href="https://huggingface.co/nvidia"><span style="font-weight: 400;">Hugging Face</span></a><span style="font-weight: 400;">.</span></p>
 <p><span style="font-weight: 400;">Explore genomics and biology research at ICML’s </span><a target="_blank" href="https://genbio-workshop.github.io/2026/"><span style="font-weight: 400;">GenBio Workshop</span></a><span style="font-weight: 400;"> on Friday, July 10.</span></p>
@@ -871,66 +918,6 @@
 				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/06/telco-tm-forum-1920x1080-1.jpg" type="image/jpeg" width="1920" height="1080">
 			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/06/telco-tm-forum-1920x1080-1-842x450.jpg" width="842" height="450" />
 			<media:title type="html"><![CDATA[NVIDIA Brings Trusted, 24/7 AI Agents to Telecom Operations]]></media:title>
-			<media:description type="html"></media:description>
-		</media:content>
-	</item>
-		<item>
-		<title>At ISC, JUPITER Shows What Exascale Science Looks Like</title>
-		<link>https://blogs.nvidia.com/blog/jupiter-exascale-supercomputing-science/</link>
-		
-		<dc:creator><![CDATA[Chris Porter]]></dc:creator>
-		<pubDate>Mon, 22 Jun 2026 13:00:48 +0000</pubDate>
-				<category><![CDATA[AI Infrastructure]]></category>
-		<category><![CDATA[Supercomputing]]></category>
-		<category><![CDATA[6G]]></category>
-		<category><![CDATA[Agentic AI]]></category>
-		<category><![CDATA[Artificial Intelligence]]></category>
-		<category><![CDATA[Climate]]></category>
-		<category><![CDATA[Healthcare and Life Sciences]]></category>
-		<category><![CDATA[High-Performance Computing]]></category>
-		<category><![CDATA[Quantum Computing]]></category>
-		<category><![CDATA[Science]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=94825</guid>
-
-					<description><![CDATA[JUPITER, Europe’s first exascale supercomputer at Germany’s Forschungszentrum Jülich, runs on NVIDIA Grace Hopper Superchips and NVIDIA Quantum-X800 InfiniBand networking — and it’s had a busy year. As the international supercomputing community gathers at ISC in Hamburg this week, four projects running on JUPITER point to what exascale computing can actually do: map the human [&#8230;]]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><span style="font-weight: 400;">JUPITER, Europe’s </span><a href="https://blogs.nvidia.com/blog/jupiter-exascale-supercomputer-live/"><span style="font-weight: 400;">first exascale supercomputer</span></a><span style="font-weight: 400;"> at Germany’s Forschungszentrum Jülich, runs on NVIDIA Grace Hopper Superchips and NVIDIA Quantum-X800 InfiniBand networking — and it’s had a busy year.</span></p>
-<p><span style="font-weight: 400;">As the international supercomputing community gathers at ISC in Hamburg this week, four projects running on JUPITER point to what exascale computing can actually do: map the human brain at cellular scale, simulate the entire Earth’s climate at 1-kilometer resolution, build AI systems for the next generation of wireless networks and simulate a universal 50-qubit quantum computer.</span></p>
-<p><span style="font-weight: 400;">“With JUPITER, Europe doesn’t just join the exascale era — it leads it, across the widest range of science and AI of any system worldwide,” said Thomas Lippert, director of the Jülich Supercomputing Centre and professor at Goethe University Frankfurt. </span></p>
-<p><span style="font-weight: 400;">Four projects, detailed below, share a throughline: scientific problems that were out of reach on previous hardware are now tractable at exascale.</span></p>
-<h2><b>A Foundation Model for Mapping the Brain</b></h2>
-<p><span style="font-weight: 400;">The Jülich Brain Atlas project — anchored at Jülich’s Institute of Neuroscience and Medicine with partner Helmholtz AI, partner hospital and other Helmholtz institutions — has produced CytoNet, a foundation model for brain microarchitecture analysis.</span></p>
-<p><span style="font-weight: 400;">The complexity of the human brain is astonishing. With 86 billion neurons and about 100 trillion connections between them, understanding brain function at single neuron resolution has been out of reach, until now.</span></p>
-<p><span style="font-weight: 400;">The research is led by neuroscientist Katrin Amunts and computer scientist Christian Schiffer at INM-1, Jülich’s Institute of Neuroscience and Medicine. The model learns from brain imaging data at cellular scale, building a map that links individual cell structures to broader patterns of brain organization and function.</span></p>
-<p><span style="font-weight: 400;">Training ran on JUPITER in under five days, using 6.5 petabytes of data from 21 post-mortem brains on 4,096 NVIDIA Grace Hopper Superchips. A paper describing the work is available on </span><a target="_blank" href="https://nam11.safelinks.protection.outlook.com/?url=https://arxiv.org/abs/2511.01870&amp;data=05%7C02%7Cebeisswenger@nvidia.com%7Cc274713bce1142a1269c08dece05af50%7C43083d15727340c1b7db39efd9ccc17a%7C0%7C0%7C639174722164559791%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ==%7C0%7C%7C%7C&amp;sdata=KlFh0OFbSuKtVV5wuc+Wc7Gw4VL/t9Ry0Hhs947m4Ss=&amp;reserved=0"><span style="font-weight: 400;">arXiv</span></a><span style="font-weight: 400;">.</span></p>
-<p><span style="font-weight: 400;">“For the first time, we’re not just using AI to analyze the brain — we’re building an agent that can think through the experiment itself,” said Katrin Amunts, director of INM-1 at Forschungszentrum Jülich and professor of brain research at Heinrich Heine University Düsseldorf. “That changes what neuroscience will be, and JUPITER is what makes that sentence possible to say today.”</span></p>
-<p><span style="font-weight: 400;">That agent is the team’s next step: building an AI agent for brain researchers — integrating multimodal reasoning, language interfaces and Q&amp;A capabilities using open models, including </span><a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/"><span style="font-weight: 400;">NVIDIA Nemotron 3 120B</span></a><span style="font-weight: 400;">, working toward AI assistants that can help scientists interrogate brain data directly.</span></p>
-<h2><b>Climate at Kilometer Resolution</b></h2>
-<p><span style="font-weight: 400;">A novel ICON configuration — developed by researchers at the ETH Zurich, German Climate Computing Centre (DKRZ), Jülich Supercomputing Centre (JSC), Max Planck Institute for Meteorology, NVIDIA, Swiss National Supercomputing Centre (CSCS) and the University of Hamburg — </span><a href="https://blogs.nvidia.com/blog/gordon-bell-finalists-2025/"><span style="font-weight: 400;">won the Gordon Bell Prize</span></a><span style="font-weight: 400;"> for Climate Modelling at SC25 last November.</span></p>
-<p><span style="font-weight: 400;">The breakthrough isn’t resolution alone. ICON is the first model to simulate a coupled Earth system at 1-kilometer resolution, with ocean, atmosphere and land, biogeochemistry and the full carbon cycle, with carbon exchanged, between all components. It can simulate and visualize complete ecosystems, such as phytoplankton blooms and zooplankton grazing. Previous systems could model pieces of this; ICON runs it all. This allows a much more precise and complete simulation of the Earth — observable at that level of detail for the first time.</span></p>
-<p><span style="font-weight: 400;">Running on 20,480 NVIDIA Grace Hopper Superchips on JUPITER, the model simulated roughly 146 days of real climate into 24 hours of compute, setting a world record in global climate simulation. NVIDIA’s involvement in the ICON community spans more than a decade.</span><span style="font-weight: 400;"><br />
-</span><span style="font-weight: 400;"><br />
-</span><span style="font-weight: 400;">“Our simulations resolve the fine-scale winds, ocean eddies and upper-ocean mixing that shape marine ecosystems and regulate the ocean’s uptake of carbon,” said Daniel Klocke, computational infrastructure and model development group leader at the Max Planck Institute for Meteorology. “At a global resolution of just 1 kilometer, many of these interactions emerge directly from the laws of physics rather than being approximated. This gives us an unprecedented view of how the atmosphere, ocean and biosphere work together, helping us understand the processes driving our changing climate.&#8221;</span></p>
-<h2><b>6G Gets an Exascale Partner</b></h2>
-<p><span style="font-weight: 400;">In March, Ericsson and Forschungszentrum Jülich announced a collaboration to develop AI for the continued evolution of 5G and for 6G networks — with JUPITER as the compute engine for large-scale AI model training and testing.</span></p>
-<p><span style="font-weight: 400;">The collaboration targets brain-inspired architectures designed to handle complex network operations at far lower energy costs. </span></p>
-<p><span style="font-weight: 400;">Research priorities include AI models for Ericsson’s radio and core networks, energy-efficient AI inference at the radio edge using neuromorphic approaches, and modular supercomputing architecture concepts drawn from JSC’s exascale work. </span></p>
-<h2><b>Breaking Quantum Records</b></h2>
-<p><span style="font-weight: 400;">Researchers at the Jülich Supercomputing Centre (JSC), working with the jointly run NVIDIA Application Lab, also set a world first by fully simulating a universal 50-qubit quantum computer, surpassing the previous 48-qubit record. </span></p>
-<p><span style="font-weight: 400;">The simulation was made possible by drawing on the coherent, tightly coupled CPU-GPU memory architecture of JUPITER&#8217;s NVIDIA GH200 Grace Hopper Superchips, which lets data exceeding GPU limits spill seamlessly into CPU memory with minimal performance loss — allowing JUPITER to hold a far greater quantum state than GPU memory alone, which is what pushed the simulation past the previous 48-qubit record. </span><span style="font-weight: 400;"><br />
-</span><span style="font-weight: 400;"><br />
-</span><span style="font-weight: 400;">For now, that kind of simulation is the most powerful tool quantum research has: today’s quantum hardware can’t yet outperform classical computers on useful problems, so simulating quantum machines at the largest possible scale is how researchers design and stress-test the algorithms that future hardware will run.</span></p>
-<p><span style="font-weight: 400;">This powerful quantum simulator, JUQCS-50, will be </span><span style="font-weight: 400;">accessible </span><span style="font-weight: 400;">to explore the performance of quantum algorithm designs within JUNIQ, the quantum computer user facility at JSC, led by Kristel Michielsen, director of JSC and professor at the University of Cologne. JUQCS-50 turns Europe&#8217;s first exascale system into a powerful testbed for tomorrow’s quantum-GPU supercomputers.</span></p>
-<h2><b>Exascale’s Impact</b></h2>
-<p><span style="font-weight: 400;">The range of science running on JUPITER — from neurons to atmosphere to wireless infrastructure to quantum — makes a case that exascale computing has moved from a research category into production. </span></p>
-<p><span style="font-weight: 400;">The results are a proof point for the Grace Hopper platform at the frontier of science.</span></p>
-<p><i><span style="font-weight: 400;">Learn more about </span></i><a href="https://blogs.nvidia.com/blog/tag/science/"><i><span style="font-weight: 400;">NVIDIA AI for science</span></i></a><i><span style="font-weight: 400;">.</span></i></p>
-]]></content:encoded>
-					
-		
-		
-				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/06/hpc-corp-blog-isc26-julich-supercomputer-1280x680-5359150.png" type="image/png" width="1280" height="680">
-			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/06/hpc-corp-blog-isc26-julich-supercomputer-1280x680-5359150-842x450.png" width="842" height="450" />
-			<media:title type="html"><![CDATA[At ISC, JUPITER Shows What Exascale Science Looks Like]]></media:title>
 			<media:description type="html"></media:description>
 		</media:content>
 	</item>

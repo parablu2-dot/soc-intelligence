@@ -6,7 +6,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/machine-learning/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/machine-learning/</link>
 	<description>Official Machine Learning Blog of Amazon Web Services</description>
-	<lastBuildDate>Mon, 06 Jul 2026 18:24:34 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 06 Jul 2026 22:35:55 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -14,6 +14,230 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>From Hugging Face to Amazon SageMaker Studio in one click</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/from-hugging-face-to-amazon-sagemaker-studio-in-one-click-2/</link>
+		
+		<dc:creator><![CDATA[Hazim Qudah]]></dc:creator>
+		<pubDate>Mon, 06 Jul 2026 22:35:55 +0000</pubDate>
+				<category><![CDATA[Advanced (300)]]></category>
+		<category><![CDATA[Amazon SageMaker AI]]></category>
+		<category><![CDATA[Technical How-to]]></category>
+		<guid isPermaLink="false">36aa20434afd5b9e42aa8e0699f10369d99e0974</guid>
+
+					<description>Today, we’re excited to announce a deep-link integration between Hugging Face and Amazon SageMaker AI. Developers can now go from model discovery to hands-on experimentation in SageMaker Studio with a single selection.</description>
+										<content:encoded>&lt;p&gt;Today, we’re excited to announce a deep-link integration between &lt;a href="https://huggingface.co/" target="_blank" rel="noopener"&gt;Hugging Face&lt;/a&gt; and &lt;a href="https://aws.amazon.com/sagemaker/ai/studio/" target="_blank" rel="noopener"&gt;Amazon SageMaker AI&lt;/a&gt;. Developers can now go from model discovery to hands-on experimentation in SageMaker Studio with a single selection. Whether you fine-tune a foundation model (FM) from &lt;a href="https://aws.amazon.com/sagemaker/ai/jumpstart/" target="_blank" rel="noopener"&gt;Amazon SageMaker JumpStart&lt;/a&gt; or deploy it to an &lt;a href="https://aws.amazon.com/sagemaker/ai/deploy/" target="_blank" rel="noopener"&gt;Amazon SageMaker Inference&lt;/a&gt; endpoint, you can now land directly inside the relevant SageMaker Studio workflow. Your selected model is pre-loaded, and the environment is fully configured and ready to go.&lt;/p&gt; 
+&lt;p&gt;Previously, getting started on SageMaker Studio after discovering a model on Hugging Face required navigating multiple steps. These included opening Amazon SageMaker AI on the AWS Management Console, creating a domain, configuring AWS Identity and Access Management (IAM) permissions, and sometimes requesting graphics processing unit (GPU) quota. For developers who want to iterate quickly, this friction slows down the path from inspiration to experimentation. The integration creates a more direct path from discovery to enterprise deployment.&lt;/p&gt; 
+&lt;blockquote&gt;
+ &lt;p&gt;&lt;em&gt;“At Arcee, we build open models so developers and enterprises can actually own what they run: inspect the weights, post-train on their own data, and deploy on their own terms. This integration takes that promise the last mile. Going from an open model on Hugging Face straight into SageMaker Studio in a single click, then fine-tuning or deploying it inside your own AWS environment with nothing to wire up, is the kind of experience open models have been missing. Open weights you own, running in the cloud you control. That is exactly the combination our customers have been asking for.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt; 
+&lt;p&gt;— Mark McQuade, Founder and CEO, Arcee AI&lt;/p&gt; 
+&lt;p&gt;With the launch of a one-click Studio landing experience, choosing &lt;em&gt;Customize on SageMaker AI&lt;/em&gt; or &lt;em&gt;Deploy on SageMaker AI&lt;/em&gt; on a supported Hugging Face model page takes you directly to the console. SageMaker AI then automatically provisions a new domain with pre-configured permissions in seconds and carries the model context through.&lt;/p&gt; 
+&lt;h2 id="whats-new"&gt;What’s new&lt;/h2&gt; 
+&lt;p&gt;This launch introduces three capabilities that shorten the path from a Hugging Face model to a working SageMaker Studio workflow.&lt;/p&gt; 
+&lt;h3 id="deep-links-from-hugging-face-into-sagemaker-studio"&gt;Deep links from Hugging Face into SageMaker Studio&lt;/h3&gt; 
+&lt;p&gt;When you browse models on Hugging Face, you’ll now see action buttons alongside supported models that map directly to SageMaker Studio workflows:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Customize on SageMaker AI&lt;/strong&gt;&amp;nbsp;opens the Model Customization page in Studio with the selected model pre-loaded, ready to fine-tune.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Deploy on SageMaker AI&lt;/strong&gt;&amp;nbsp;opens the Deployment page in Studio with the model pre-configured for endpoint deployment.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;Each entry point preserves the context, meaning you don’t need to search for the model again once inside Studio.&lt;/p&gt; 
+&lt;h3 id="pre-configured-permissions"&gt;Pre-configured permissions&lt;/h3&gt; 
+&lt;p&gt;New Studio environments created through this flow come with permissions already configured for the full range of SageMaker AI capabilities, including model customization, training jobs, notebook experimentation, and endpoint deployment. A new managed policy, &lt;a href="https://aws.amazon.com/about-aws/whats-new/2026/01/quick-setup-model-customization-sagemaker-studio/" target="_blank" rel="noopener"&gt;AmazonSageMakerModelCustomizationCoreAccess&lt;/a&gt;, is created and attached for you. It provides permissions for serverless model customization jobs using supervised fine-tuning (SFT), direct preference optimization (DPO), reinforcement learning with verifiable rewards (RLVR), and reinforcement learning from AI feedback (RLAIF), with supported deployment to SageMaker AI or Amazon Bedrock endpoints. This alleviates the need to manually create and configure AWS Identity and Access Management (IAM) roles and policies before you can start experimenting. For existing Studio environments, actionable messages with direct links to documentation guide you through adding these permissions.&lt;/p&gt; 
+&lt;h3 id="gpu-quota-visibility"&gt;GPU quota visibility&lt;/h3&gt; 
+&lt;p&gt;When selecting instance types for deployment or training, the Studio UI now surfaces quota availability directly in the instance selection list. You can immediately see which GPU instance types (G5, G6) are available under your account’s current limits. You don’t need to navigate separately to Service Quotas. If you still need to request a limit increase, you’re redirected directly to the Service Quotas page for the respective instance type.&lt;/p&gt; 
+&lt;h2 id="walkthrough-deep-linking-from-hugging-face-to-sagemaker-studio"&gt;Walkthrough: Deep-linking from Hugging Face to SageMaker Studio&lt;/h2&gt; 
+&lt;p&gt;Let’s walk through the experience of customizing or deploying a model starting from Hugging Face.&lt;/p&gt; 
+&lt;h3 id="step-1-discover-and-select"&gt;Step 1: Discover and select&lt;/h3&gt; 
+&lt;p&gt;On the Hugging Face model page, select &lt;strong&gt;Customize on SageMaker AI&lt;/strong&gt; for a supported model.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/06/ML-21254-1.png" alt="Hugging Face model page showing the Customize on SageMaker AI button for a supported model" width="800"&gt;&lt;/p&gt; 
+&lt;h3 id="step-2-sign-in"&gt;Step 2: Sign in&lt;/h3&gt; 
+&lt;p&gt;You’re prompted to sign in to AWS using your existing credentials. If you already have an active console session, this step is skipped automatically. For more information, see &lt;a href="https://docs.aws.amazon.com/signin/latest/userguide/how-to-sign-in.html" target="_blank" rel="noopener"&gt;Sign in to the AWS Management Console&lt;/a&gt;.&lt;/p&gt; 
+&lt;h3 id="step-3-land-in-studio"&gt;Step 3: Land in Studio&lt;/h3&gt; 
+&lt;p&gt;You arrive directly on the Model Customization page inside SageMaker Studio with your model pre-selected. Next, configure your fine-tuning parameters such as training data, hyperparameters, and instance type, then submit the customization job.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/06/ML-21254-2.png" alt="SageMaker Studio Model Customization page with the selected model pre-loaded and fine-tuning parameters ready to configure" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;Alternatively, selecting &lt;strong&gt;Deploy on SageMaker AI&lt;/strong&gt; opens the endpoint deployment page in Studio with the model pre-configured. Select your instance type (quota visibility included), review the settings, and deploy.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/06/ML-21254-3.png" alt="SageMaker Studio endpoint deployment page with the model pre-configured and instance type selection showing quota visibility" width="800"&gt;&lt;/p&gt; 
+&lt;h3 id="step-4-test-your-endpoint"&gt;Step 4: Test your endpoint&lt;/h3&gt; 
+&lt;p&gt;After you deploy your endpoint, test inference directly from Studio’s endpoint &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/manage-endpoints-studio-test.html" target="_blank" rel="noopener"&gt;testing interface&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2 id="getting-started"&gt;Getting started&lt;/h2&gt; 
+&lt;p&gt;You can try this experience today:&lt;/p&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;Browse models on Hugging Face.&lt;/li&gt; 
+ &lt;li&gt;Look for the &lt;strong&gt;Customize on SageMaker AI&lt;/strong&gt; or &lt;strong&gt;Deploy on SageMaker AI&lt;/strong&gt; buttons on supported models.&lt;/li&gt; 
+ &lt;li&gt;Select and follow the streamlined sign-in flow.&lt;/li&gt; 
+ &lt;li&gt;Start building in a fully configured SageMaker Studio environment.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;The launch of a one-click Studio landing experience minimizes the friction between discovering a model and experimenting with it. By connecting Hugging Face directly to the SageMaker Studio workflows, developers can stay in their flow. There’s no context switching, no manual environment setup, and no permission troubleshooting.&lt;/p&gt; 
+&lt;p&gt;To get started, visit the &lt;a href="https://aws.amazon.com/sagemaker/ai/studio/" target="_blank" rel="noopener"&gt;Amazon SageMaker Studio&lt;/a&gt; page or explore models on Hugging Face and choose Deploy or Customize on SageMaker AI.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/06/ML-21254-4.png" alt="Hazim Qudah" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Hazim Qudah&lt;/h3&gt; 
+  &lt;p&gt;Hazim is a Specialist Solutions Architect at AWS based in Dallas, TX. He enjoys helping customers build and adopt AI/ML solutions using AWS technologies and best practices. Prior to his role at AWS, he spent many years in technology consulting with customers across many industries and geographies. In his free time, he enjoys running and playing with his dogs Nala and Chai!&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/06/ML-21254-5.png" alt="Naidile Murali" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Naidile Murali&lt;/h3&gt; 
+  &lt;p&gt;Naidile is a Product Manager at AWS based in Bellevue, WA. She focuses on enhancing the AI/ML developer experience on Amazon SageMaker AI, including onboarding, IDE connectivity, and GPU capacity management. Prior to AWS, she worked as a software engineer at HSBC. Naidile holds an MBA from Georgetown University.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Teaching models to forget: Selective unlearning with Amazon Nova</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/teaching-models-to-forget-selective-unlearning-with-amazon-nova/</link>
+		
+		<dc:creator><![CDATA[Qian Hu]]></dc:creator>
+		<pubDate>Mon, 06 Jul 2026 22:23:45 +0000</pubDate>
+				<category><![CDATA[Amazon SageMaker]]></category>
+		<category><![CDATA[Announcements]]></category>
+		<category><![CDATA[Foundational (100)]]></category>
+		<guid isPermaLink="false">e451c5cb5932ddbe103cc2baf499c9ded6565a70</guid>
+
+					<description>In this post, we introduce Reverse Direct Preference Optimization (rDPO), the novel unlearning technique behind Amazon Nova Customizable Content Moderation Settings (CCMS), and show how it reduces over-deflection while preserving model quality. We also provide pointers for customers who want to apply these preference optimization techniques to their own experiments.</description>
+										<content:encoded>&lt;p&gt;Organizations deploying foundation models (FMs) often encounter a common challenge: model safeguards designed for content moderation can also prevent legitimate, business-critical use cases. A media company summarizing scripts with mature language, a cyber security firm simulating real-world threats, or a legal team processing sensitive evidence may all find that default content moderation controls deflect the very content they need to work with. For example, a security team asking the model to generate a sample phishing email for employee awareness training may receive a refusal, even though the intent is defensive.&lt;/p&gt; 
+&lt;p&gt;Because the model learns these safeguards during post-training alignment, prompt engineering alone cannot overcome them. The model’s tendency to deflect is embedded in its parameters, requiring a targeted modification at the model level to selectively adjust this behavior. In this post, we introduce &lt;em&gt;Reverse Direct Preference Optimization (rDPO)&lt;/em&gt;, the novel unlearning technique behind Amazon Nova Customizable Content Moderation Settings (CCMS), and show how it reduces over-deflection while preserving model quality. We also provide pointers for customers who want to apply these preference optimization techniques to their own experiments.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/nova/" target="_blank" rel="noopener"&gt;Amazon Nova&lt;/a&gt; &lt;a href="https://docs.aws.amazon.com/nova/latest/userguide/customizable-content-moderation.html" target="_blank" rel="noopener"&gt;Customizable Content Moderation Settings (CCMS)&lt;/a&gt; addresses this by letting approved customers selectively adjust safeguards across four responsible AI (RAI) pillars. These pillars encompass:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Safety – Covering dangerous activities, weapons, and controlled substances.&lt;/li&gt; 
+ &lt;li&gt;Sensitive content – Including profanity, nudity, and bullying.&lt;/li&gt; 
+ &lt;li&gt;Fairness – Considerations around bias and culture.&lt;/li&gt; 
+ &lt;li&gt;Security – Concerns involving malware and malicious content.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;Amazon Nova enforces essential, non-configurable controls for responsible use of AI, such as controls to prevent harm to children and preserve privacy.&lt;/p&gt; 
+&lt;p&gt;The science behind CCMS is &lt;em&gt;unlearning&lt;/em&gt;, a technique for selectively removing learned behaviors from a model’s parameters without retraining from scratch. We train Low-Rank Adaptation (LoRA) adapters to reverse the model’s alignment to specific policies. The result is a custom model variant that generates content in customer-approved policy areas while remaining aligned everywhere else.&lt;/p&gt; 
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt; 
+&lt;h3 id="lora-adapter-training"&gt;LoRA adapter training&lt;/h3&gt; 
+&lt;p&gt;CCMS works by providing customers with a LoRA adapter that has been trained to unlearn specific RAI policies from the core model. When a customer imports this adapter, they receive a custom model identified by a unique Amazon Resource Name (ARN). At inference time, the adapter steers the core model away from deflecting content in the customer’s approved policy areas. Additionally, Nova’s output moderation guardrails are configured for the customer’s approved policies when using that custom model ARN.&lt;/p&gt; 
+&lt;h3 id="rdpo-a-novel-approach-for-unlearning"&gt;rDPO: A novel approach for unlearning&lt;/h3&gt; 
+&lt;p&gt;The key scientific challenge is performing this unlearning effectively: the model must stop deflecting content in targeted policy areas while preserving its general capabilities (instruction following, coding, math) and maintaining alignment in non-targeted areas. A direct fine-tuning approach risks degrading overall model quality.&lt;/p&gt; 
+&lt;p&gt;One state-of-the-art approach is &lt;a href="https://arxiv.org/abs/2404.05868" target="_blank" rel="noopener"&gt;Negative Preference Optimization (NPO)&lt;/a&gt;, which builds upon Direct Preference Optimization (DPO). DPO is a preference optimization approach that trains the model to rank the preferred response higher than a dispreferred one, relative to a reference model. It moves the model toward the preferred response and away from the dispreferred one. NPO achieves unlearning by removing positive samples from the optimization objective, effectively training the model to move away from its learned deflection behavior. However, NPO only teaches the model to forget without guiding it toward high-quality alternative responses, which can result in degraded output quality.&lt;/p&gt; 
+&lt;p&gt;To address this, we developed rDPO, which reverses the preference pair in the DPO objective. Rather than simply making the model forget, rDPO simultaneously guides it toward generating high-quality responses in the unlearned policy areas. This dual objective not only produces better response quality but also improves training efficiency, requiring fewer optimization steps to converge.&lt;/p&gt; 
+&lt;p&gt;The following shows the comparison of DPO, NPO, and rDPO loss functions:&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/06/ML-21116-1.png" alt="Side-by-side loss function equations for DPO, NPO, and rDPO" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;In DPO loss, &lt;span class="math inline"&gt;&lt;em&gt;y&lt;/em&gt;&lt;sub&gt;&lt;em&gt;w&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt;, &lt;span class="math inline"&gt;&lt;em&gt;y&lt;/em&gt;&lt;sub&gt;&lt;em&gt;l&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; are the preferred and dispreferred response, respectively, where &lt;span class="math inline"&gt;&lt;em&gt;w&lt;/em&gt;&lt;/span&gt; and &lt;span class="math inline"&gt;&lt;em&gt;l&lt;/em&gt;&lt;/span&gt; mean win and lose responses, respectively. The loss function optimizes the model to rank preferred response higher than the dispreferred one. In NPO loss, &lt;span class="math inline"&gt;&lt;em&gt;y&lt;/em&gt;&lt;sub&gt;&lt;em&gt;f&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; is the response to forget, the NPO loss trains the model to move away from &lt;span class="math inline"&gt;&lt;em&gt;y&lt;/em&gt;&lt;sub&gt;&lt;em&gt;f&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt;. In rDPO, &lt;span class="math inline"&gt;&lt;em&gt;y&lt;/em&gt;&lt;sub&gt;&lt;em&gt;t&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; is the target response and &lt;span class="math inline"&gt;&lt;em&gt;y&lt;/em&gt;&lt;sub&gt;&lt;em&gt;f&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; is the forgetting response. The rDPO loss function teaches the model to move away from the forgetting response while moving close to the target response. We call our approach rDPO as the training objectives are the reverse of the DPO applied in the original model’s post-training stage.&lt;/p&gt; 
+&lt;p&gt;The following figures show the training dynamics of NPO and rDPO and their performance on the evaluation dataset.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/06/ML-21116-2.png" alt="Training accuracy over optimization steps for NPO and rDPO, with rDPO converging near 1 by step 30" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/06/ML-21116-3.png" alt="Training reward over optimization steps for NPO and rDPO, with rDPO increasing while NPO decreases" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;From the training dynamics, we can see that the training accuracy of rDPO converges to almost 1 at around step 30, and the training accuracy of NPO does not change too much. The training rewards of the chosen response (aka target response) of rDPO continues growing while that of the NPO continues dropping. This implies that rDPO moves the behavior of the model to the target response, while it’s hard for NPO to move the model away from the forgetting response and to the target response. This is likely because the base model has strong RAI alignment, making it difficult to move away from safe responses.&lt;/p&gt; 
+&lt;p&gt;We can see similar trends on NPO and rDPO’s performance on the evaluation dataset. The training dynamics plots show that rDPO is much more efficient than NPO in terms of unlearning performance.&lt;/p&gt; 
+&lt;h3 id="customization-pipeline"&gt;Customization pipeline&lt;/h3&gt; 
+&lt;p&gt;The following figure shows the model customization pipeline.&lt;/p&gt; 
+&lt;p&gt;&lt;img loading="lazy" class="alignleft size-full wp-image-134932" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/06/Image-7-6-26-at-9.44 AM.png" alt="" width="774" height="175"&gt;&lt;/p&gt; 
+&lt;p&gt;It starts with data preparation, where a set of prompts is curated to represent the target policy areas where we want to unlearn alignment behaviors. Given those prompts, we generate the forgetting and target responses. We train a model with rDPO and the generated data. Once the training loop finishes, the LoRA adapter is exported and ready for serving. We choose LoRA fine-tuning because of its training efficiency and lower inference cost compared to full-rank fine-tuning.&lt;/p&gt; 
+&lt;h2 id="results"&gt;Results&lt;/h2&gt; 
+&lt;p&gt;We evaluate the RAI customized model on two dimensions: (1) reduction in over-deflection on sensitive requests, and (2) preservation of general model capabilities.&lt;/p&gt; 
+&lt;p&gt;Deflection rate measures the percentage of prompts that the model refuses to answer. For the baseline model, a high deflection rate on sensitive content indicates that legitimate requests are being blocked. A lower deflection rate after customization means the model is now able to process those requests successfully. The following table shows deflection rates across five evaluation categories:&lt;/p&gt; 
+&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Model&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Red Team Prompts&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Fairness&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Safety&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Security&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Sensitive Content&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Baseline&lt;/td&gt; 
+   &lt;td&gt;98.10%&lt;/td&gt; 
+   &lt;td&gt;51.84%&lt;/td&gt; 
+   &lt;td&gt;86.51%&lt;/td&gt; 
+   &lt;td&gt;91.61%&lt;/td&gt; 
+   &lt;td&gt;79.02%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;RAI customized model&lt;/td&gt; 
+   &lt;td&gt;47%&lt;/td&gt; 
+   &lt;td&gt;23.83%&lt;/td&gt; 
+   &lt;td&gt;32.77%&lt;/td&gt; 
+   &lt;td&gt;45.73%&lt;/td&gt; 
+   &lt;td&gt;33.58%&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;p&gt;The results show substantial reductions in deflection rate across all policy categories. Safety deflections dropped from 86.51 percent to 32.77 percent (a 53.74 percentage point reduction). The customized model now processes the majority of safety-related requests that the baseline would have refused. Similar improvements are seen across Fairness (28 pp reduction), Security (46 pp), and Sensitive Content (45 pp). Importantly, these reductions are achieved through the rDPO-trained LoRA adapter without any modification to the base model weights.&lt;/p&gt; 
+&lt;p&gt;A critical requirement for any unlearning approach is that it must not degrade the model’s general capabilities. To verify this, we evaluate the customized model on three utility benchmarks: instruction following, mathematical reasoning (Math Mini), and code generation (MBXP Python):&lt;/p&gt; 
+&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Model&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Instruction Following&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Math Mini&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;MBXP Python&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Baseline&lt;/td&gt; 
+   &lt;td&gt;94.12%&lt;/td&gt; 
+   &lt;td&gt;86.40%&lt;/td&gt; 
+   &lt;td&gt;74.80%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;RAI customized model&lt;/td&gt; 
+   &lt;td&gt;92.57%&lt;/td&gt; 
+   &lt;td&gt;85.20%&lt;/td&gt; 
+   &lt;td&gt;73%&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;p&gt;The customized model retains near-baseline performance across all utility benchmarks, with drops of only 1.55 percentage points on instruction following, 1.20 pp on math, and 1.80 pp on code generation. These minimal degradations confirm that the rDPO approach successfully targets only the RAI alignment parameters while leaving the model’s core capabilities intact, a key advantage of the LoRA-based approach over full model fine-tuning.&lt;/p&gt; 
+&lt;h2 id="getting-started"&gt;Getting started&lt;/h2&gt; 
+&lt;p&gt;The preference optimization techniques described in this post, including DPO, NPO, and rDPO, are accessible to customers who want to explore unlearning and alignment research on their own. Amazon SageMaker AI supports DPO training with both full-rank and LoRA approaches for Amazon Nova and &lt;a href="https://aws.amazon.com/sagemaker/ai/model-customization/" target="_blank" rel="noopener"&gt;over 20 open-weight models&lt;/a&gt;, and Amazon SageMaker HyperPod provides ready-made DPO recipes that can serve as a starting point for custom unlearning experiments. See &lt;a href="https://aws.amazon.com/blogs/machine-learning/customize-amazon-nova-in-amazon-sagemaker-ai-using-direct-preference-optimization/" target="_blank" rel="noopener"&gt;Customize Amazon Nova in Amazon SageMaker AI using Direct Preference Optimization&lt;/a&gt; for a step-by-step walkthrough.&lt;/p&gt; 
+&lt;p&gt;For customers who want the benefits of unlearning without building it themselves, CCMS provides pre-trained LoRA adapters for Amazon Nova ready to deploy. Adapters are shared through &lt;a href="https://aws.amazon.com/ram/" target="_blank" rel="noopener"&gt;AWS Resource Access Manager&lt;/a&gt; (AWS RAM). After you &lt;a href="https://docs.aws.amazon.com/ram/latest/userguide/working-with-shared-invitations.html" target="_blank" rel="noopener"&gt;accept&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/copy-model-copy.html" target="_blank" rel="noopener"&gt;copy&lt;/a&gt; an adapter into your account, it appears as a custom model in Amazon Bedrock with a unique ARN. You then &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/deploy-custom-model-on-demand.html" target="_blank" rel="noopener"&gt;create an on-demand inference custom model deployment&lt;/a&gt; and use the custom model deployment ARN in &lt;a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html" target="_blank" rel="noopener"&gt;the standard Converse API&lt;/a&gt;. No other code changes are required:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-bash"&gt;aws bedrock-runtime converse \
+  --model-id "arn:aws:bedrock:us-east-1:&amp;lt;account-id&amp;gt;:custom-model-deployment/&amp;lt;deployment-id&amp;gt;" \
+  --region us-east-1 \
+  --messages '[{"role": "user", "content": [{"text": "Your prompt here"}]}]'&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Deploying a custom model incurs standard Amazon Bedrock inference charges. See Amazon Bedrock pricing for details.&lt;/p&gt; 
+&lt;p&gt;The customized model behaves identically to the base Nova model for non-configured policy areas. For additional application-level safeguards, you can pair CCMS with &lt;a href="https://aws.amazon.com/bedrock/guardrails/" target="_blank" rel="noopener"&gt;Amazon Bedrock Guardrails&lt;/a&gt; to implement topic-specific filtering, hallucination detection, or custom content policies on top of the configured model.&lt;/p&gt; 
+&lt;p&gt;To request access and discuss which policy pillars to configure for your use case, reach out to your AWS account team or create a support case from the &lt;a href="https://support.console.aws.amazon.com/support/home#/" target="_blank" rel="noopener"&gt;AWS Support Center Console&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In this post, we introduced Reverse DPO (rDPO), a preference-based unlearning technique. It addresses a key limitation of existing approaches like NPO: the inability to simultaneously guide the model toward high-quality responses while unlearning targeted behaviors. By reversing the preference pair in the DPO objective, rDPO achieves both goals in a single training signal, converging faster and producing better output quality than NPO. Requiring fewer training iterations, rDPO also reduces the time and cost of producing customized adapters for customers.&lt;/p&gt; 
+&lt;p&gt;Our evaluation on &lt;a href="https://aws.amazon.com/nova/models/" target="_blank" rel="noopener"&gt;Amazon Nova 2 Lite&lt;/a&gt; demonstrates that rDPO-trained LoRA adapters reduce deflection rates by up to 54 percentage points across RAI policy categories while degrading utility benchmarks by less than 2 percentage points. Importantly, these customizations operate within the bounds of Amazon Nova universal, &lt;a href="https://docs.aws.amazon.com/nova/latest/userguide/responsible-use.html" target="_blank" rel="noopener"&gt;non-configurable protections&lt;/a&gt;, ensuring that core safeguards remain intact regardless of adapter configuration. The LoRA-based approach is particularly well-suited to this problem: it isolates unlearning to a small set of adapter parameters, preserves the base model’s integrity, and enables modular deployment where different policy configurations can be served from the same foundation model.&lt;/p&gt; 
+&lt;p&gt;These techniques power &lt;a href="https://docs.aws.amazon.com/nova/latest/userguide/customizable-content-moderation.html" target="_blank" rel="noopener"&gt;Amazon Nova&lt;/a&gt; CCMS, which provides customers with pre-trained adapters ready to deploy using Amazon Bedrock. For researchers and practitioners interested in further exploring preference-based unlearning, Amazon SageMaker AI offers &lt;a href="https://github.com/aws/sagemaker-hyperpod-recipes?tab=readme-ov-file#fine-tuning" target="_blank" rel="noopener"&gt;DPO training recipes&lt;/a&gt; that can serve as a foundation for custom experimentation. For further instructions on customizing Nova in Amazon SageMaker AI, see our &lt;a href="https://docs.aws.amazon.com/nova/latest/nova2-userguide/nova-model.html" target="_blank" rel="noopener"&gt;documentation&lt;/a&gt; and blogs on &lt;a href="https://aws.amazon.com/blogs/aws/announcing-amazon-nova-customization-in-amazon-sagemaker-ai/" target="_blank" rel="noopener"&gt;Nova customization&lt;/a&gt; and &lt;a href="https://aws.amazon.com/blogs/machine-learning/advanced-fine-tuning-methods-on-amazon-sagemaker-ai/" target="_blank" rel="noopener"&gt;advanced fine-tuning methods&lt;/a&gt; on Amazon SageMaker AI.&lt;/p&gt; 
+&lt;h2 id="acknowledgement"&gt;Acknowledgement&lt;/h2&gt; 
+&lt;p&gt;The contributors to this project include Ekraam Sabir, Weitong Ruan, Payal Motwani, Rahul Gupta, Claire O’Brien Rajkumar, Dhwanil Desai, and Nikhil Sanil.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/06/ML-21116-4.png" alt="Qian Hu" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Qian Hu&lt;/h3&gt; 
+  &lt;p&gt;Qian is a Senior Applied Scientist in the Amazon AGI Foundations RAI team, where he focuses on Responsible AI including guardrail models, RAI customization, post-training alignment.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/06/ML-21116-5.png" alt="Veda Raman" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Veda Raman&lt;/h3&gt; 
+  &lt;p&gt;Veda is a Sr Solutions Architect for Generative AI for Amazon Nova and Agentic AI at AWS. She helps customers design and build Agentic AI solutions using Amazon Nova models and Amazon Bedrock AgentCore. She previously worked with customers building ML solutions using Amazon SageMaker and also as a serverless solutions architect at AWS.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/06/ML-21116-6.jpg" alt="Dan Sinnreich" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Dan Sinnreich&lt;/h3&gt; 
+  &lt;p&gt;Dan is a Sr.&amp;nbsp;Product Manager at Amazon, where he builds AI safety controls for Amazon Nova models. Previously, he built no-code/low-code machine learning capabilities for Amazon SageMaker, making ML accessible to a broader range of practitioners. Outside of work, he can be found playing hockey and reading science fiction.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Run MiniMax models on Amazon Bedrock</title>
 		<link>https://aws.amazon.com/blogs/machine-learning/run-minimax-models-on-amazon-bedrock/</link>
 		
@@ -419,7 +643,7 @@ client = boto3.client("bedrock-runtime", config=config)&lt;/code&gt;&lt;/pre&gt;
 &lt;footer&gt; 
  &lt;div class="blog-author-box"&gt; 
   &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/25/ML-21143-1.jpg" alt="Zohreh Norouzi" width="100" height="100"&gt;&lt;/p&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/25/ML-21143-1.jpg" alt="Zohreh Norouzi" width="100" height="100"&gt;&lt;/p&gt; 
   &lt;/div&gt; 
   &lt;h3 class="lb-h4"&gt;Zohreh Norouzi&lt;/h3&gt; 
   &lt;p&gt;Zohreh is a Security Solutions Architect at Amazon Web Services. She helps customers make good security choices and accelerate their journey to the AWS Cloud. She has been actively involved in AI security initiatives across APJ, using her expertise to help customers build secure AI solutions at scale.&lt;/p&gt; 
@@ -5106,325 +5330,6 @@ npx cdk destroy --all&lt;/code&gt;&lt;/pre&gt;
 		
 		
 			</item>
-		<item>
-		<title>How Outpost VFX Uses AWS to Accelerate AI Model Training for Visual Effects</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/how-outpost-vfx-uses-aws-to-accelerate-ai-model-training-for-visual-effects/</link>
-					
-		
-		<dc:creator><![CDATA[Alex Newton]]></dc:creator>
-		<pubDate>Tue, 30 Jun 2026 16:37:09 +0000</pubDate>
-				<category><![CDATA[Amazon EC2]]></category>
-		<category><![CDATA[Amazon SageMaker AI]]></category>
-		<category><![CDATA[Content Production]]></category>
-		<category><![CDATA[Customer Solutions]]></category>
-		<category><![CDATA[Europe]]></category>
-		<category><![CDATA[Media & Entertainment]]></category>
-		<guid isPermaLink="false">77505a7d40abc62ddfe122cbd077c28faf5ebad2</guid>
-
-					<description>In this post, we explore how Outpost VFX achieved 8x faster training speeds using AWS infrastructure to transform their face replacement workflow, the technical architecture they implemented to overcome single-GPU limitations, and the measurable results achieved through AWS multi-GPU training.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post was co-written with Tim Chauncey and Dheeraj Bhadani of Outpost VFX.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;AI model training for visual effects (VFX) can take weeks, creating bottlenecks in production timelines. For Outpost VFX, which operates studios across the UK, Canada, and India delivering high-end film and episodic content, every day of delay impacts client deliverables and project schedules.&lt;/p&gt; 
-&lt;p&gt;In this post, we explore how Outpost VFX achieved 8x faster training speeds using AWS infrastructure to transform their face replacement workflow, the technical architecture they implemented to overcome single-GPU limitations, and the measurable results achieved through AWS multi-GPU training.&lt;/p&gt; 
-&lt;h2&gt;The challenge: Single-GPU bottlenecks in AI training&lt;/h2&gt; 
-&lt;p&gt;Traditional face replacement workflows in visual effects production require over 5 days of compositing or specialist beauty and de-aging support to create initial versions for director approval. While effective, these methods create bottlenecks early in the iterative approval process, the phase that is most critical to production timelines. For VFX professionals, slow AI training translates directly to missed deadlines, increased costs, and delayed client feedback cycles.&lt;/p&gt; 
-&lt;p&gt;Outpost VFX had developed an AI model capable of training on on-set footage to accelerate face replacement processes. However, efficiency was constrained by single-GPU compute limitations. The existing face swap tool could only utilize one GPU at a time, limiting video random access memory (VRAM) access and processing capacity for model training operations. This prevented the team from realizing the full potential of their AI-assisted approach.&lt;/p&gt; 
-&lt;h2&gt;Design considerations&lt;/h2&gt; 
-&lt;p&gt;Outpost VFX identified three critical technical requirements for optimizing their AI workflow:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Compute scalability&lt;/strong&gt; – The team needed to parallelize face replacement model training across multiple GPUs to achieve meaningful efficiency improvements. Single-GPU training was creating week-long delays in model iteration cycles.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Infrastructure security&lt;/strong&gt; – As an AWS customer since 2022 with a fully virtualized technology stack, Outpost VFX needed the solution to adhere to its exacting security requirements for processing highly sensitive production data.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Performance optimization&lt;/strong&gt; – Beyond raw speed improvements, the architecture needed to support larger datasets and higher-resolution images to improve output quality.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;To address these requirements, Outpost VFX collaborated with AWS Generative AI Innovation Center developers who worked as an extension of their technology department to modernize their AI learning algorithms. The AWS Generative AI Innovation Center is a team of strategists, data scientists, engineers, and solutions architects that works step-by-step with customers to build bespoke solutions that harness the power of generative AI. Learn more about how to engage with the team on the &lt;a href="https://aws.amazon.com/ai/generative-ai/innovation-center/" target="_blank" rel="noopener noreferrer"&gt;Generative AI Innovation Center&lt;/a&gt; webpage.&lt;/p&gt; 
-&lt;h2&gt;Architecture implementation&lt;/h2&gt; 
-&lt;p&gt;The solution involved adapting the Outpost VFX existing face swap model codebase to support distributed GPU training across multiple GPUs. The implementation used AWS multi-GPU Amazon Elastic Compute Cloud (Amazon EC2) P5 instances within a segregated, secure cloud environment that aligned with the Outpost VFX existing infrastructure requirements.&lt;/p&gt; 
-&lt;p&gt;Originally, Outpost VFX trained their face swap models on GPU-accelerated workstations. This involved collecting small datasets of actors and their stunt doubles and fine-tuning a base model on RTX 3090 GPUs. While this method worked, the Outpost team found that training time was slow, at around 1–2 weeks per fine-tune. Scaling up would have been difficult because of the management overhead of those cloud workstations. At this point, they looked at training on P5 instances.&lt;/p&gt; 
-&lt;p&gt;P5 instances feature NVIDIA H100 GPUs, which are purpose-built for distributed training workloads. Unlike G-series instances that use PCIe communication between GPUs, P5 instances provide NV Link interconnects offering significantly higher bandwidth for gradient synchronization, which is a critical factor when training across multiple GPUs. The H100’s 14,592 CUDA cores and 80GB of high-bandwidth HBM3 memory also represented a substantial upgrade over their local RTX 3090 setup.&lt;/p&gt; 
-&lt;p&gt;Outpost VFX worked with the Generative AI Innovation Center to help them get their model running on the P5 instances. Over a 6-week advisory period, AWS scientists converted the model code to use PyTorch Distributed Data Parallel (DDP) training strategy. DDP is a parallelization technique that copies model weights to each GPU, allowing the system to process more images in each training batch. This approach increases the number of images that can be fitted into each batch, directly accelerating the training process.&lt;/p&gt; 
-&lt;p&gt;The technical implementation included multi-GPU parallelization of face replacement model training, enhanced security architecture for sensitive production data, and integration with Outpost VFX existing AWS-based technology stack. As Outpost VFX continues to evolve their AI pipeline, the team sees potential in services like Amazon SageMaker AI with managed training, model versioning and hosted inference to further streamline how they develop and deploy models across their global studios.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="size-full wp-image-132389 alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/26/image-ML-20295-1.png" alt="" width="1107" height="431"&gt;&lt;/p&gt; 
-&lt;h2&gt;Measuring performance improvements&lt;/h2&gt; 
-&lt;p&gt;To test the speed improvement of the multi-GPU training, Outpost VFX collected an image dataset for training, fixed model hyperparameters, and measured the time for the training to reach a specific loss threshold. They set the baseline as one GPU on a G5 instance compared to running the models on the P5 instances.&lt;/p&gt; 
-&lt;p&gt;The combined development effort between Outpost VFX and AWS achieved up to 8x improvement in face replacement model learning speeds. This performance increase directly translated to faster iteration cycles, enabling more rapid director approval processes for early versions. The ability to train models on higher-resolution images and larger datasets improved output quality. Most significantly, v001 delivery to clients for initial review now takes 2 days, compared to the previous 1–2 week timeline.&lt;/p&gt; 
-&lt;blockquote&gt;
- &lt;p&gt;&lt;em&gt;“We are now able to iterate much faster thanks to our parallelized workflow and the ability to harness multiple top-end GPUs at once,” &lt;/em&gt;explains Tim Chauncey, CTO of Outpost VFX.&lt;em&gt; “Speed of iteration is critical to VFX work, and this architecture provides more robust and scalable capabilities for future development.”&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt; 
-&lt;p&gt;A future improvement could include increasing the quality of image outputs. Outpost could increase the image resolutions passed to the model and use newer generations of Amazon EC2 P5 instances with more VRAM to process these larger images and larger datasets.&lt;/p&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;The AWS-optimized architecture enables Outpost VFX to offer enhanced AI-assisted face replacement capabilities to clients while maintaining the security and scalability requirements of high-end visual effects production. The parallelized workflow architecture including a migration from local consumer NVIDIA GPUs to enterprise NVIDIA GPUs provides a foundation for future AI tool development and scaling across Outpost VFX global studio operations.&lt;/p&gt; 
-&lt;blockquote&gt;
- &lt;p&gt;&lt;em&gt;“What excites me most is that these models are no longer research experiments; they are becoming an integral part of the modern VFX pipeline,” &lt;/em&gt;says Dheeraj Bhadani, Lead Software Architect at Outpost VFX.&lt;em&gt; “Multi-GPU acceleration is the foundation on which next-generation creative tools will be built.”&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt; 
-&lt;h2&gt;Next steps&lt;/h2&gt; 
-&lt;p&gt;If you’re looking to accelerate your own AI training workflows, consider these steps:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Evaluate your current GPU utilization: Identify whether single-GPU constraints are limiting your training performance&lt;/li&gt; 
- &lt;li&gt;Explore multi-GPU architectures: Amazon EC2 P5 instances provide scalable compute for distributed training workloads&lt;/li&gt; 
- &lt;li&gt;Engage with AWS Generative AI Innovation Center: the same team that helped Outpost VFX parallelize their training workflow&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;You can achieve similar results by implementing distributed training strategies tailored to your specific use case and infrastructure requirements.&lt;/p&gt; 
-&lt;h3&gt;Acknowledgments&lt;/h3&gt; 
-&lt;p&gt;The authors would like to thank the following contributors for their support on this project Josh Chappatte, Laksh Puri and Ruchi Bhatia.&lt;/p&gt; 
-&lt;hr style="width: 80%"&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img loading="lazy" class="alignleft wp-image-132390" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/26/image-ML-20295-2.jpeg" alt="Alex Newton" width="100" height="133"&gt;
-  &lt;/div&gt; 
-  &lt;div style="overflow: hidden"&gt; 
-   &lt;h3 class="lb-h4"&gt;Alex Newton&lt;/h3&gt; 
-   &lt;p&gt;Alex is a Data Scientist at the AWS Generative AI Innovation Center, helping customers solve complex problems with generative AI and machine learning. He enjoys applying state of the art ML solutions to solve real world challenges.&lt;/p&gt; 
-  &lt;/div&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img loading="lazy" class="alignleft wp-image-132391" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/26/image-ML-20295-3.jpeg" alt="Hanno Bever" width="100" height="133"&gt;
-  &lt;/div&gt; 
-  &lt;div style="overflow: hidden"&gt; 
-   &lt;h3 class="lb-h4"&gt;Hanno Bever&lt;/h3&gt; 
-   &lt;p&gt;Hanno is a Senior Machine Learning Engineer in the AWS Generative AI Innovation Center based in London. In his 6 years at Amazon, he has helped customers across all industries run machine learning workloads on AWS. He specializes in scaling distributed model training and optimizing inference on AWS Trainium and GPU instances.&lt;/p&gt; 
-  &lt;/div&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img loading="lazy" class="alignleft wp-image-132392" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/26/image-ML-20295-4.jpeg" alt="Stephen Smith" width="100" height="133"&gt;
-  &lt;/div&gt; 
-  &lt;div style="overflow: hidden"&gt; 
-   &lt;h3 class="lb-h4"&gt;Stephen Smith&lt;/h3&gt; 
-   &lt;p&gt;Stephen is a Senior Solutions Architect at AWS, based in the UK. He works with enterprise customers to design modern, scalable, cost-effective cloud architectures across a range of industries. With over 7 years at AWS, Stephen is passionate about helping customers adopt modern data and AI solutions to solve real business challenges.&lt;/p&gt; 
-  &lt;/div&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img loading="lazy" class="alignleft wp-image-132396" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/26/image-ML-20295-8.png" alt="Tim Chauncey" width="100" height="125"&gt;
-  &lt;/div&gt; 
-  &lt;div style="overflow: hidden"&gt; 
-   &lt;h3 class="lb-h4"&gt;Tim Chauncey&lt;/h3&gt; 
-   &lt;p&gt;Tim has been Chief Technology Officer at UK-headquartered Outpost VFX since 2022. His tenure has seen a revolution in how the studio delivers high-end film and episodic productions, including a successful migration from traditional on-prem solutions to a unified cloud infrastructure running globally on AWS. He is now leading a team integrating bleeding-edge ML production tools and agentic systems into Outpost’s production workflows.&lt;/p&gt; 
-  &lt;/div&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img loading="lazy" class="alignleft wp-image-132397" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/26/image-ML-20295-9.jpeg" alt="Dheeraj Bhadani" width="100" height="79"&gt;
-  &lt;/div&gt; 
-  &lt;div style="overflow: hidden"&gt; 
-   &lt;h3 class="lb-h4"&gt;Dheeraj Bhadani&lt;/h3&gt; 
-   &lt;p&gt;Dheeraj is a Lead Software Architect at Outpost VFX with more than two decades of experience in the VFX and animation industry. An innovative and seasoned architect, he has played key roles in technological advancements recognized by the Academy Sci-Tech Awards. Dheeraj is passionate about designing and building highly distributed, scalable, and resilient systems from inception through implementation. In recent years, he has focused on architecting and developing strategic, production-grade AI and machine learning tools, integrated into Digital Content Creation applications, and deployed as standalone solutions.&lt;/p&gt; 
-  &lt;/div&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-					
-			
-		
-		
-			</item>
-		<item>
-		<title>Building bilingual NER for cargo logistics with Amazon Bedrock</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/building-bilingual-ner-for-cargo-logistics-with-amazon-bedrock/</link>
-		
-		<dc:creator><![CDATA[Manu Raj L S]]></dc:creator>
-		<pubDate>Tue, 30 Jun 2026 16:33:46 +0000</pubDate>
-				<category><![CDATA[Amazon Bedrock]]></category>
-		<category><![CDATA[Customer Solutions]]></category>
-		<guid isPermaLink="false">4bcdad0ccd08552680d001ae7d895bf42e27b109</guid>
-
-					<description>In this post, we share the technical approach using token-based distillation, lessons learned, and deployment architecture. If you face similar bilingual NER challenges, you can benefit from IBS Software’s experience with the Amazon Bedrock knowledge distillation capabilities.</description>
-										<content:encoded>&lt;p&gt;&lt;a href="https://www.ibsplc.com/" target="_blank" rel="noopener"&gt;IBS Software&lt;/a&gt;’s Cargo system processes thousands of bilingual cargo logistics email messages daily. The system extracts critical information such as air waybill (AWB) numbers, flight details, weights, and delivery instructions in both English and Japanese. This added to the complexity of building a robust Named Entity Recognition (NER) solution. Challenges included manual intervention that slowed operations and a trade-off between accuracy and cost. IBS Software needed an AI solution that could accurately identify 23 different entity types across two languages while remaining cost-effective at scale.&lt;/p&gt; 
-&lt;p&gt;After exploring multiple approaches, IBS Software used managed distillation capabilities of Amazon Bedrock to create a production-ready solution. By distilling knowledge from Amazon Nova Pro into the more efficient &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-lite.html" target="_blank" rel="noopener"&gt;Amazon Nova Lite&lt;/a&gt; model, IBS Software achieved 95.085 percent F1-Score accuracy while reducing operational costs by 14x. This case study details their journey from facing complex open-source implementations to a successful deployment on AWS that now processes cargo email messages in real time.&lt;/p&gt; 
-&lt;p&gt;In this post, we share the technical approach using token-based distillation, lessons learned, and deployment architecture. If you face similar bilingual NER challenges, you can benefit from IBS Software’s experience with the &lt;a href="https://aws.amazon.com/bedrock/model-distillation/" target="_blank" rel="noopener"&gt;Amazon Bedrock&lt;/a&gt; knowledge distillation capabilities.&lt;/p&gt; 
-&lt;h2 id="overview-of-solution"&gt;Overview of solution&lt;/h2&gt; 
-&lt;p&gt;The goal was to build a bilingual NER system capable of extracting 23 entity types from cargo logistics email messages written in English and Japanese. The key entities include:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;AWB (Air Waybill) numbers.&lt;/li&gt; 
- &lt;li&gt;Flight numbers and routes.&lt;/li&gt; 
- &lt;li&gt;Weights (gross, chargeable, dimensional).&lt;/li&gt; 
- &lt;li&gt;Dimensions and volume.&lt;/li&gt; 
- &lt;li&gt;Commodity descriptions.&lt;/li&gt; 
- &lt;li&gt;Shipper and consignee information.&lt;/li&gt; 
- &lt;li&gt;Special handling codes.&lt;/li&gt; 
- &lt;li&gt;Delivery instructions.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;The primary risks included maintaining high accuracy across both languages, managing inference costs at scale, and achieving low latency for real-time processing. With the model distillation capabilities of Amazon Bedrock, you can use smaller, faster, and more cost-effective models. These models deliver accuracy for your use case that is comparable to the most advanced models in Amazon Bedrock.&lt;/p&gt; 
-&lt;p&gt;The following diagram shows the end-to-end bilingual NER workflow on Amazon Bedrock.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/25/ML-20433-1.png" alt="End-to-end bilingual NER workflow on Amazon Bedrock" width="600"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Figure 1: End-to-end bilingual NER workflow on Amazon Bedrock&lt;/em&gt;&lt;/p&gt; 
-&lt;h2 id="solution"&gt;Solution&lt;/h2&gt; 
-&lt;p&gt;IBS’s team of nine researchers and engineers spent approximately 4 months developing and deploying this solution. The project timeline included:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Month 1:&lt;/strong&gt; Dataset preparation and annotation of 500 bilingual email messages.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Month 2:&lt;/strong&gt; Challenges with open-source frameworks (PyTorch, TextBrewer).&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Month 3:&lt;/strong&gt; Successful distillation using Amazon Bedrock (Nova Pro → Nova Lite).&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Month 4:&lt;/strong&gt; Production deployment and optimization.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Key tasks completed:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Annotated 500 cargo email messages (350 English, 150 Japanese) with 23 entity types.&lt;/li&gt; 
- &lt;li&gt;Configured Amazon Bedrock distillation with custom hyperparameters.&lt;/li&gt; 
- &lt;li&gt;Trained student model for 4 epochs over 70 steps.&lt;/li&gt; 
- &lt;li&gt;Achieved loss reduction from 0.05 to 0.008.&lt;/li&gt; 
- &lt;li&gt;Deployed inference endpoint with .eml file processing pipeline.&lt;/li&gt; 
- &lt;li&gt;Validated 95.085 percent F1-Score on test set.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;IBS Software deployed all infrastructure using Amazon Bedrock managed services, which bypassed the need for custom model hosting infrastructure.&lt;/p&gt; 
-&lt;h3 id="challenges-with-open-source-approaches"&gt;Challenges with open-source approaches&lt;/h3&gt; 
-&lt;p&gt;Initially, the team attempted knowledge distillation using open-source frameworks including PyTorch-based implementations and the TextBrewer library. These approaches failed because of:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Complexity in configuring distillation pipelines for bilingual data.&lt;/li&gt; 
- &lt;li&gt;Lack of managed infrastructure for training and deployment.&lt;/li&gt; 
- &lt;li&gt;Difficulty tuning hyperparameters for token-level distillation.&lt;/li&gt; 
- &lt;li&gt;Incompatibility with our production email processing workflow.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;For more details on knowledge distillation fundamentals, see &lt;a href="https://docs.aws.amazon.com/machine-learning/" target="_blank" rel="noopener"&gt;AWS Machine Learning Best Practices&lt;/a&gt;.&lt;/p&gt; 
-&lt;h3 id="amazon-bedrock-distillation-approach"&gt;Amazon Bedrock distillation approach&lt;/h3&gt; 
-&lt;p&gt;We pivoted to Amazon Bedrock Model Distillation, using Amazon Nova Pro as the teacher model and Nova Lite as the student model. The key advantages included:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Managed training infrastructure with automatic hyperparameter optimization.&lt;/li&gt; 
- &lt;li&gt;Native support for token-level distillation.&lt;/li&gt; 
- &lt;li&gt;Ease of integration with our email processing pipeline.&lt;/li&gt; 
- &lt;li&gt;Built-in monitoring and evaluation metrics.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;&lt;strong&gt;Training configuration:&lt;/strong&gt;&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;distillation_config = {
-    "teacher_model": "amazon.nova-pro-v1:0",
-    "student_model": "amazon.nova-lite-v1:0",
-    "max_sequence_length": 2048,
-    "epochs": 4,
-    "training_steps": 70,
-    "loss_function": "token_level_kl_divergence"
-}&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;The training process reduced loss from 0.05 to 0.008 over 70 steps, indicating strong knowledge transfer from teacher to student.&lt;/p&gt; 
-&lt;p&gt;For Amazon Bedrock distillation documentation, see &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-distillation.html" target="_blank" rel="noopener"&gt;Customize a model with distillation in Amazon Bedrock&lt;/a&gt;.&lt;/p&gt; 
-&lt;h3 id="dataset-preparation"&gt;Dataset preparation&lt;/h3&gt; 
-&lt;p&gt;Our dataset consisted of 500 real-world cargo logistics email messages:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;350 English email messages:&lt;/strong&gt; Standard cargo documentation with AWB numbers, flight details, weights, and handling instructions.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;150 Japanese email messages:&lt;/strong&gt; Similar content with Japanese-specific formatting and terminology.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Each email message was manually annotated for 23 entity types by domain experts familiar with cargo logistics terminology. The annotation process took approximately 3 weeks and supplied high-quality training data for both languages.&lt;/p&gt; 
-&lt;h3 id="model-evaluation"&gt;Model evaluation&lt;/h3&gt; 
-&lt;p&gt;We evaluated both teacher and student models using F1-Score, the harmonic mean of precision and recall:&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Results:&lt;/strong&gt;&lt;/p&gt; 
-&lt;p&gt;Although the base Nova Lite model offered approximately 84 percent overall F1-Score, the teacher model and the customized Nova Lite model achieved an approximately 10 percent uplift in accuracy. The following table shows the F1-Score results.&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Model&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Overall F1-Score&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;English F1-Score&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Japanese F1-Score&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Nova Pro (Teacher)&lt;/td&gt; 
-   &lt;td&gt;97.0%&lt;/td&gt; 
-   &lt;td&gt;97.8%&lt;/td&gt; 
-   &lt;td&gt;96.2%&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Nova Lite (Student)&lt;/td&gt; 
-   &lt;td&gt;95.085%&lt;/td&gt; 
-   &lt;td&gt;96.535%&lt;/td&gt; 
-   &lt;td&gt;93.635%&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;The distilled Nova Lite model retained 98 percent of the teacher’s performance while providing 14x cost reduction in production inference.&lt;/p&gt; 
-&lt;h3 id="error-analysis-and-challenges"&gt;Error analysis and challenges&lt;/h3&gt; 
-&lt;p&gt;We observed that the student model showed a 2.565 percent lower F1-Score on Japanese text than on English text. This gap came primarily from complex kanji character combinations in commodity descriptions, ambiguous entity boundaries in Japanese text without spaces, and the smaller volume of Japanese training data (150 compared to 350 email messages). Multi-line delivery instructions with embedded entities also occasionally caused boundary detection errors.&lt;/p&gt; 
-&lt;p&gt;To overcome these challenges, we augmented Japanese training data with synthetic examples. We also applied post-processing rules for known entity patterns (AWB format, flight number regex) and implemented confidence thresholding to flag low-confidence predictions for human review.&lt;/p&gt; 
-&lt;h3 id="deployment-workflow"&gt;Deployment workflow&lt;/h3&gt; 
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following deployment creates AWS resources that incur charges. Amazon Simple Storage Service (Amazon S3) storage, AWS Lambda invocations, Amazon Bedrock model inference, and Amazon DynamoDB storage all have associated costs. Delete these resources when you no longer need them to avoid ongoing charges.&lt;/p&gt; 
-&lt;p&gt;Our production deployment processes .eml files through the following workflow:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;&lt;strong&gt;Email ingestion:&lt;/strong&gt; Cargo email messages arrive as .eml files in Amazon S3.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Preprocessing:&lt;/strong&gt; AWS Lambda extracts email body and metadata.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Inference:&lt;/strong&gt; Amazon Bedrock endpoint processes text with distilled Nova Lite model.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Entity extraction:&lt;/strong&gt; Model returns 23 entity types with confidence scores.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Post-processing:&lt;/strong&gt; Validation rules and confidence filtering applied.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Output:&lt;/strong&gt; Structured JSON with extracted entities stored in Amazon DynamoDB.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;import boto3
-import json
-
-bedrock_runtime = boto3.client('bedrock-runtime')
-
-def extract_entities(email_text):
-    response = bedrock_runtime.invoke_model(
-        modelId='&amp;lt;custom model arn&amp;gt;',
-        body=json.dumps({
-            "inputText": email_text,
-            "taskType": "NER",
-            "entityTypes": [
-                "AWB_NUMBER", "FLIGHT_NUMBER", "WEIGHT_GROSS",
-                "WEIGHT_CHARGEABLE", "DIMENSIONS", "COMMODITY",
-                "SHIPPER", "CONSIGNEE", "HANDLING_CODE",
-                # ... 14 more entity types
-            ]
-        })
-    )
-
-    result = json.loads(response['body'].read())
-    return result['entities']&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;For Lambda integration patterns, see &lt;a href="https://docs.aws.amazon.com/lambda/latest/dg/services-bedrock.html" target="_blank" rel="noopener"&gt;AWS Lambda with Amazon Bedrock&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;The entire pipeline processes email messages in under 2 seconds with 95.085 percent accuracy, meeting our real-time processing requirements.&lt;/p&gt; 
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we showed how IBS Software used Amazon Bedrock managed distillation capabilities to build a cost-effective bilingual NER system for cargo logistics. The system achieves 95.085 percent F1-Score while reducing operational costs by 14x. The distilled Nova Lite model retains 98 percent of the teacher model’s performance, making it ideal for high-volume production workloads.&lt;/p&gt; 
-&lt;p&gt;Our key takeaway was that Amazon Bedrock managed distillation capabilities alleviated the complexity of open-source frameworks. The token-level knowledge distillation preserved accuracy across both English and Japanese, and the 2048-token sequence length accommodated typical cargo email lengths. Production deployment with AWS Lambda and Amazon S3 integration required minimal custom infrastructure.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Next steps:&lt;/strong&gt;&lt;/p&gt; 
-&lt;p&gt;If you’re facing similar bilingual NER challenges, consider:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Start with Amazon Bedrock on-demand foundation models for rapid prototyping.&lt;/li&gt; 
- &lt;li&gt;Invest in high-quality bilingual training data annotation.&lt;/li&gt; 
- &lt;li&gt;Explore model distillation with the training dataset. One limitation of model distillation is that the teacher model and the student model must be within the same model family.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;For more information about the topics discussed in this post, see the following resources:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;a href="https://aws.amazon.com/blogs/machine-learning/a-guide-to-amazon-bedrock-model-distillation-preview/" target="_blank" rel="noopener"&gt;A guide to Amazon Bedrock Model Distillation&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://aws.amazon.com/blogs/machine-learning/accelerating-custom-entity-recognition-with-claude-tool-use-in-amazon-bedrock/" target="_blank" rel="noopener"&gt;Accelerating custom entity recognition with Claude tool use in Amazon Bedrock&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://aws.amazon.com/blogs/machine-learning/build-an-ai-powered-document-processing-platform-with-open-source-ner-model-and-llm-on-amazon-sagemaker/" target="_blank" rel="noopener"&gt;Build an AI-powered document processing platform with open-source NER model and LLM on Amazon SageMaker AI&lt;/a&gt;&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;If you’re working on bilingual NER or knowledge distillation for your own use case, we’d love to hear about your experience. Share your questions or feedback in the comments.&lt;/p&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Manu Raj L S&lt;/h3&gt; 
-  &lt;p&gt;Manu is a Principal Consultant, Data Science at IBS Software.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Joshwin Lal Tennyson J S&lt;/h3&gt; 
-  &lt;p&gt;Joshwin is a Lead AI Engineer at IBS Software.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Basil K&lt;/h3&gt; 
-  &lt;p&gt;Basil is a Lead Product Architect at IBS Software.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Madhukiran J&lt;/h3&gt; 
-  &lt;p&gt;Madhukiran is a Sr.Technical Account Manager at AWS Enterprise Support. He supports enterprise customers leverage AWS services like Bedrock, AgentCore, and SageMaker to build innovative solutions. His expertise spans Machine learning, GenAI and Containers (Amazon EKS, Amazon ECS)&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
 	</channel>
 </rss>
 
@@ -5574,7 +5479,7 @@ def extract_entities(email_text):
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4718d6046df&quot;}" data-wp-interactive="core/image" data-wp-key="6a4718d6046df" class="wp-block-image aligncenter size-full wp-lightbox-container"><img fetchpriority="high" decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4a9bdb4ccb7&quot;}" data-wp-interactive="core/image" data-wp-key="6a4a9bdb4ccb7" class="wp-block-image aligncenter size-full wp-lightbox-container"><img fetchpriority="high" decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5920,7 +5825,7 @@ def extract_entities(email_text):
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4718d612981&quot;}" data-wp-interactive="core/image" data-wp-key="6a4718d612981" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4a9bdb5d7ea&quot;}" data-wp-interactive="core/image" data-wp-key="6a4a9bdb5d7ea" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6633,7 +6538,7 @@ def extract_entities(email_text):
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a4718d61dc4b"></universal-media-player>
+		<universal-media-player id="ump-6a4a9bdb69ce0"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6647,7 +6552,7 @@ def extract_entities(email_text):
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a4718d61dc4b", options);
+				ump("ump-6a4a9bdb69ce0", options);
 			});
 		</script>
 	</div>
@@ -6679,7 +6584,7 @@ def extract_entities(email_text):
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a4718d61df69"></universal-media-player>
+		<universal-media-player id="ump-6a4a9bdb6a072"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6693,7 +6598,7 @@ def extract_entities(email_text):
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a4718d61df69", options);
+				ump("ump-6a4a9bdb6a072", options);
 			});
 		</script>
 	</div>
@@ -6821,7 +6726,7 @@ def extract_entities(email_text):
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4718d6292b7&quot;}" data-wp-interactive="core/image" data-wp-key="6a4718d6292b7" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-2-2.png" alt="Chart showing trending AI agent tasks across AI, data, and cloud workflows. Highest-confidence use cases include automated report generation and distribution (84), certificate expiration monitoring and renewal (81.5), and boilerplate code generation for new features (82.5). Scores indicate strong confidence in automation for reporting, monitoring, code generation, and cloud operations tasks." class="wp-image-15378" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4a9bdb77dec&quot;}" data-wp-interactive="core/image" data-wp-key="6a4a9bdb77dec" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-2-2.png" alt="Chart showing trending AI agent tasks across AI, data, and cloud workflows. Highest-confidence use cases include automated report generation and distribution (84), certificate expiration monitoring and renewal (81.5), and boilerplate code generation for new features (82.5). Scores indicate strong confidence in automation for reporting, monitoring, code generation, and cloud operations tasks." class="wp-image-15378" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6869,7 +6774,7 @@ def extract_entities(email_text):
 <p class="wp-block-paragraph">What&#8217;s changing, and what remains underappreciated, is the skill it takes to draw that boundary well: the discipline of <a href="https://learn.microsoft.com/en-us/azure/foundry/how-to/evaluate-generative-ai-app">full-lifecycle evaluations</a> and <a href="https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview">guardrails</a>. Success means measuring agent output against intent and keeping behavior inside your business strategy. It&#8217;s new territory for most engineering teams, and it&#8217;s becoming table stakes for modern software faster than most organizations realize. The good news: the same tools generating the work can help you build the harness. <a href="https://docs.github.com/en/copilot/concepts/agents/github-copilot-app">Ask GitHub Copilot</a> to write the evals and it will. Frontier teams are already doing this, and it&#8217;s why they&#8217;re pulling ahead.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4718d62a473&quot;}" data-wp-interactive="core/image" data-wp-key="6a4718d62a473" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-3-2.webp" alt="MIT Technology Review Insights survey chart titled &ldquo;Concerns are addressed by keeping humans in the loop and increasing observability.&rdquo; Respondents most frequently identified keeping humans in the loop (59%) and increasing observability/monitoring and tracing (53%) as key ways to address concerns around AI agents. Other approaches include creating privacy-governed documentation (42%), upskilling within one&rsquo;s craft (36%), addressing security and access control (33%), API and framework standardization (25%), identifying and communicating ROI (25%), scaling personal potential (16%), and accessing ecosystem support (11%)" class="wp-image-15379 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2019/02/1bbe5959-0e2e-4309-8079-3a71ce986e5e.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4a9bdb79158&quot;}" data-wp-interactive="core/image" data-wp-key="6a4a9bdb79158" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-3-2.webp" alt="MIT Technology Review Insights survey chart titled &ldquo;Concerns are addressed by keeping humans in the loop and increasing observability.&rdquo; Respondents most frequently identified keeping humans in the loop (59%) and increasing observability/monitoring and tracing (53%) as key ways to address concerns around AI agents. Other approaches include creating privacy-governed documentation (42%), upskilling within one&rsquo;s craft (36%), addressing security and access control (33%), API and framework standardization (25%), identifying and communicating ROI (25%), scaling personal potential (16%), and accessing ecosystem support (11%)" class="wp-image-15379 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2019/02/1bbe5959-0e2e-4309-8079-3a71ce986e5e.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6898,7 +6803,7 @@ def extract_entities(email_text):
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4718d6320d7&quot;}" data-wp-interactive="core/image" data-wp-key="6a4718d6320d7" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-4-2.png" alt="MIT Technology Review Insights survey chart showing confidence that AI agents will enhance careers across technology disciplines. System reliability and site operations has the highest confidence levels, while database administration and performance, security operations, and data integration roles show lower but still predominantly positive confidence. Across all roles, confidence significantly outweighs lack of confidence." class="wp-image-15380" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4a9bdb80b91&quot;}" data-wp-interactive="core/image" data-wp-key="6a4a9bdb80b91" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-4-2.png" alt="MIT Technology Review Insights survey chart showing confidence that AI agents will enhance careers across technology disciplines. System reliability and site operations has the highest confidence levels, while database administration and performance, security operations, and data integration roles show lower but still predominantly positive confidence. Across all roles, confidence significantly outweighs lack of confidence." class="wp-image-15380" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7236,7 +7141,7 @@ def extract_entities(email_text):
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4718d6401c6&quot;}" data-wp-interactive="core/image" data-wp-key="6a4718d6401c6" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" width="1280" height="720" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/metrics-dashboard-1.gif" alt="Scrolling through high C P U no index dashboard." class="wp-image-52357" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4a9bdb8ec78&quot;}" data-wp-interactive="core/image" data-wp-key="6a4a9bdb8ec78" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" width="1280" height="720" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/metrics-dashboard-1.gif" alt="Scrolling through high C P U no index dashboard." class="wp-image-52357" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7466,7 +7371,7 @@ def extract_entities(email_text):
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4718d645222&quot;}" data-wp-interactive="core/image" data-wp-key="6a4718d645222" class="wp-block-image aligncenter size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1280" height="720" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/PetalGraphicSVG.svg" alt="Diagram showing a human-in-the-loop governance model for agentic cloud operations, with Create, Deploy, Govern, Secure, and Operate connected in a continuous cycle around a central review and approval process." class="wp-image-52286" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4a9bdb94744&quot;}" data-wp-interactive="core/image" data-wp-key="6a4a9bdb94744" class="wp-block-image aligncenter size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1280" height="720" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/PetalGraphicSVG.svg" alt="Diagram showing a human-in-the-loop governance model for agentic cloud operations, with Create, Deploy, Govern, Secure, and Operate connected in a continuous cycle around a central review and approval process." class="wp-image-52286" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7809,7 +7714,7 @@ def extract_entities(email_text):
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4718d649d39&quot;}" data-wp-interactive="core/image" data-wp-key="6a4718d649d39" class="wp-block-image size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-1024x576.jpg" alt="Picture of a matrix table for Microsoft 1P migration tools and the sources and targets they each support." class="wp-image-52251" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-1024x576.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-768x432.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-1536x864.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-809x455.jpg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4a9bdb9a472&quot;}" data-wp-interactive="core/image" data-wp-key="6a4a9bdb9a472" class="wp-block-image size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-1024x576.jpg" alt="Picture of a matrix table for Microsoft 1P migration tools and the sources and targets they each support." class="wp-image-52251" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-1024x576.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-768x432.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-1536x864.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-809x455.jpg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7947,7 +7852,7 @@ def extract_entities(email_text):
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4718d64b8a5&quot;}" data-wp-interactive="core/image" data-wp-key="6a4718d64b8a5" class="wp-block-image size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-1024x576.jpg" alt="A picture of a diagram depicting hybrid migration motions with Azure Data Box and Azure Storage Mover." class="wp-image-52249" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-1024x576.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-768x432.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-1536x864.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-809x455.jpg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a4a9bdb9c0b2&quot;}" data-wp-interactive="core/image" data-wp-key="6a4a9bdb9c0b2" class="wp-block-image size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-1024x576.jpg" alt="A picture of a diagram depicting hybrid migration motions with Azure Data Box and Azure Storage Mover." class="wp-image-52249" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-1024x576.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-768x432.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-1536x864.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144-809x455.jpg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/L200-300-Azure-Cloud-Storage-and-Data-Migration-Solutions-v3-FINAL_144.jpg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -8136,7 +8041,7 @@ def extract_entities(email_text):
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a4718d6501be"></universal-media-player>
+		<universal-media-player id="ump-6a4a9bdba1deb"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -8150,7 +8055,7 @@ def extract_entities(email_text):
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a4718d6501be", options);
+				ump("ump-6a4a9bdba1deb", options);
 			});
 		</script>
 	</div>
