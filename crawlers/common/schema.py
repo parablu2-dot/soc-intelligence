@@ -26,6 +26,8 @@ class RefinedSignal:
     diff_type: Optional[str] = None    # "confirm" | "update_candidate" | "noise" | None
     baseline_ref: Optional[str] = None # 연결된 BaselineFact.id (nullable)
     verified: Optional[bool] = None    # HITL 검증 완료 여부
+    # ── Phase 4: 소스 신뢰등급 (nullable — 기존 크롤러 변경 불필요) ──
+    source_tier: Optional[str] = None  # "primary" | "aggregator" | None (Google News 등 aggregator 표시)
 
     def to_dict(self) -> dict:
         d = asdict(self)
@@ -112,6 +114,82 @@ class DistillationNote:
     category: str                       # "news" | "process" | "hiring" | event_type
     linked_signal_urls: list[str]       # 이 그룹에 속한 RefinedSignal URL 목록
     comment: str                        # 사람이 읽고 남긴 판단 (자유서술)
+
+    def to_dict(self) -> dict:
+        return asdict(self)
+
+
+@dataclass
+class TechSignal:
+    """기술 소스(논문·특허) — Phase 5, item 3. 뉴스 파이프라인(RefinedSignal)과 분리된
+    별도 source class. axis/company 없음 — 경쟁사 축이 아니라 기술 자체가 단위.
+    저volocity·고신호라 dedup_gate/merge_refine을 거치지 않고 URL 기준 누적만 한다
+    (켜뮤 증류 후보 stratum). 저장: data/refined/tech/{source_class}.json
+    """
+    lens: str              # "tech" 고정 — 뉴스 lens와 구분
+    source_class: str      # "paper" | "patent" | "journal"
+    category: str          # arXiv: "cs.AR" 등 원본 분류 코드
+    title: str
+    url: str
+    published_date: str    # "YYYY-MM-DD"
+    source: str             # "arXiv" 등
+    summary: Optional[str] = None
+    authors: Optional[list[str]] = None
+
+    def to_dict(self) -> dict:
+        return {k: v for k, v in asdict(self).items() if v is not None}
+
+
+@dataclass
+class PatentSignal:
+    """기술 소스 — 특허 (Phase 5, item 3 후속). TechSignal(논문)과도 별개 클래스 —
+    자연 유니크키(publication_number)라 URL 기준 누적과 달리 그 자체로 idempotent.
+    크롤러가 아니라 GHA cron에서 BigQuery(patents-public-data.patents.publications) 직접 조회로 채움.
+    저장: data/refined/tech/patents.json (dedup_gate ingestion 제외 대상 — arxiv.py와 동일 취급)
+    """
+    # ── 자연 유니크키 ──
+    publication_number: str            # e.g. "US-11234567-B2"
+
+    # ── 확정 필드 (BigQuery patents.publications) ──
+    assignee_harmonized: str
+    cpc: list[str]                     # e.g. ["H01L23/48", "H01L21/768"]
+    filing_date: date
+    publication_date: date
+    title: str
+    abstract: str
+
+    # ── 파이프라인 메타 ──
+    axis: str                          # mobile_ap | hpc_datacenter | custom_soc | foundry | packaging | component_intelligence
+    source_tier: str = "primary"       # news=aggregator와 구분
+    url: Optional[str] = None          # patents.google.com/patent/{publication_number}
+
+    # ── distill lens="patent" 산출 (초기 None, 리뷰층에서 채움) ──
+    bom_implication: Optional[str] = None
+    derivation_type: Optional[str] = None
+
+    # tentative: google_patents_research.publications 스키마 실측 후 확정
+    top_terms: list[str] = field(default_factory=list)
+
+    def to_dict(self) -> dict:
+        d = asdict(self)
+        d["filing_date"] = self.filing_date.isoformat()
+        d["publication_date"] = self.publication_date.isoformat()
+        return {k: v for k, v in d.items() if v is not None and v != []}
+
+
+@dataclass
+class BomImplication:
+    """component-intelligence axis — downstream 디바이스/칩셋 수요를 부품·기판 수요로 파생.
+    facts/inferences 분리 원칙에서 inference 하위 (RefinedSignal의 사실 위에 얹는 정성 판단).
+    static 매핑 — LLM은 distill 시점 규칙 적용만, runtime-token-zero 유지.
+    저장: data/baseline/bom_implications.json
+    """
+    component_group: str    # "MLCC" | "substrate" | "module" | "inductor" | "silicon_cap" | "glass_substrate"
+    device_axis: str        # "server" | "mobile" | "pc"
+    direction: str           # "up" | "down" | "neutral"
+    basis_fact_id: str       # facts[] 참조 (BaselineFact.id 또는 서술적 slug — 실 BaselineFact 부재 시)
+    strength_hint: str       # "strong" | "moderate" | "weak" — 정성. 유닛 예측 아님
+    derivation_type: str     # "content" | "leading" | "near_fact" | "transition"
 
     def to_dict(self) -> dict:
         return asdict(self)

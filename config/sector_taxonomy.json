@@ -1,0 +1,113 @@
+{
+  "_meta": {
+    "purpose": "흩어진 섹터/축 분류(axis 폴더구조 + rss_utils.infer_category 키워드)의 단일 소스. (a) 크롤 쿼리 확장 (b) 수집 아이템 섹터 분류에 사용. Phase 3(item 6·7)이 소비.",
+    "derived_from": "docs/프로젝트_마스터_인덱스.md",
+    "generation": "1회 수동 추출 — 런타임 파싱 금지. 마스터 인덱스 갱신 시 수동 재생성 (자동 동기화 안 함).",
+    "generated_date": "2026-07-07",
+    "note": "2-step 안전판 1단계: 신규 섹터 라우팅·요약용으로 도입만. 기존 crawlers/common/rss_utils.py의 infer_category 리팩터는 별도 커밋으로 이후 처리."
+  },
+  "axes": {
+    "mobile_ap": {
+      "label": "Mobile AP",
+      "layer": "application",
+      "entities": ["apple", "qualcomm", "mediatek", "unisoc", "exynos"],
+      "keywords": [
+        "mobile ap", "application processor", "bionic", "apple silicon",
+        "snapdragon", "dimensity", "exynos", "kirin", "smartphone chip", "모바일 ap"
+      ],
+      "boundary_note": "경계 = merchant AP만(Qualcomm·MediaTek). captive(Apple A·Tensor)는 Custom SoC 오버레이로 이월."
+    },
+    "hpc_datacenter": {
+      "label": "HPC·Datacenter",
+      "layer": "application",
+      "entities": ["nvidia", "amd", "intel", "sk_hynix", "tesla"],
+      "keywords": [
+        "data center", "datacenter", "hpc", "accelerator", "ai chip", "gpu",
+        "hbm", "hbm3", "hbm3e", "hbm4", "cowos", "interposer", "buffer die",
+        "leading-edge logic", "데이터센터", "고성능컴퓨팅"
+      ]
+    },
+    "custom_soc": {
+      "label": "Custom SoC",
+      "layer": "overlay",
+      "overlay_note": "Mobile AP·HPC·DC 두 응용처축을 가로지르는 오버레이. make-vs-buy 경쟁축(발주자별 궤적) + captive 태그(#captive→[발주자], captive≠custom·confidence 속성 필수).",
+      "entities": ["broadcom", "marvell", "hyperscaler_inhouse"],
+      "keywords": [
+        "asic", "trainium", "tpu", "maia", "custom silicon", "in-house chip",
+        "custom soc", "turn-key", "design win", "captive"
+      ]
+    },
+    "foundry": {
+      "label": "Foundry",
+      "layer": "dependent",
+      "entities": ["tsmc", "samsung_foundry", "intel_foundry", "globalfoundries", "smic"],
+      "keywords": [
+        "2nm", "3nm", "4nm", "5nm", "n2", "n3", "n4", "n5", "angstrom",
+        "nanometer", "process node", "foundry capacity", "fab capacity",
+        "gaa", "wafer price", "foundry", "파운드리", "웨이퍼", "공정", "미세공정"
+      ]
+    },
+    "packaging": {
+      "label": "Packaging",
+      "layer": "dependent",
+      "entities": ["ase", "amkor", "jcet"],
+      "keywords": [
+        "cowos", "ucie", "hbm", "chiplet", "3d ic", "advanced packaging",
+        "integrated fan-out", "fan-out", "interposer", "첨단패키징", "패키징"
+      ],
+      "package_module_tier": {
+        "label": "Package Module tier",
+        "note": "부품층도 순수 기법층도 아닌 '사이 계층' — 하위 부품군 통합 + eco-chain 이질",
+        "keywords": {
+          "CPO": ["co-packaged optics", "cpo", "silicon photonics", "sipho"],
+          "Si Cap": ["silicon capacitor", "si cap", "실리콘 커패시터"],
+          "BSPDN": ["backside power delivery", "bspdn", "후면전력", "backside power"],
+          "CIS PKG": ["cis package", "image sensor package", "cis pkg"]
+        }
+      },
+      "component_2tier": {
+        "label": "부품 2-tier",
+        "groups": ["ABF", "유리기판", "MLCC", "인덕터"],
+        "keywords": ["abf substrate", "glass substrate", "유리기판", "mlcc", "inductor", "인덕터"]
+      }
+    }
+  },
+  "component_intelligence": {
+    "label": "부품 (서버축, PoC)",
+    "device_axis": "server",
+    "baseline_ref_prefix": "srv-f",
+    "baseline_ids": ["srv-f01", "srv-f02", "srv-f03", "srv-f04", "srv-f05"],
+    "component_groups": ["MLCC", "substrate", "inductor", "module"],
+    "entities": ["samsung_electro_mechanics"],
+    "new_biz_bridge": {
+      "srv-f01": "silicon_cap",
+      "srv-f02": "glass_substrate"
+    },
+    "note": "A1 SAM 경계=현 사업범위 유지(명시적 벤처뉴스 전까지) / A2 content=수량×혼합고정단가 / A3 강도=현 점유율 전망 rebase"
+  },
+  "watch_triggers": [
+    {
+      "axis": "foundry",
+      "trigger": "Terafab PDK 0.9 성숙",
+      "recall_keywords": ["terafab", "pdk 0.9", "gaa pdk"]
+    },
+    {
+      "axis": "foundry",
+      "trigger": "후면전력(BSPDN) 양산라인 가동",
+      "recall_keywords": ["backside power delivery", "bspdn mass production", "후면전력 양산", "backside power"]
+    },
+    {
+      "axis": "foundry",
+      "trigger": "Intel 14A 외부고객 확보",
+      "recall_keywords": ["intel 14a external customer", "14a 외부고객", "intel 14a design win"]
+    },
+    {
+      "axis": "component_intelligence",
+      "trigger": "신사업(Si Cap·Glass) 사업 진출/투자 뉴스 — 부품 SAM 경계 이동 임계",
+      "recall_keywords": [
+        "silicon capacitor investment", "glass substrate investment",
+        "실리콘 커패시터 투자", "유리기판 투자", "신규 라인 발표", "capex 발표"
+      ]
+    }
+  ]
+}

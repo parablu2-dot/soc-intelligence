@@ -1,0 +1,43 @@
+name: patents-bigquery
+
+on:
+  schedule:
+    # 매주 월요일 20:00 UTC (KST 화요일 05:00) — 특허는 뉴스보다 cadence가 느려 daily는 낭비
+    - cron: '0 20 * * 1'
+  workflow_dispatch:  # 수동 트리거 — 첫 실행은 이걸로 확인
+
+jobs:
+  patents:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # git push를 위해 필요
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # BigQuery 공개 데이터셋(patents-public-data) 직접 쿼리 — 크롤러 아님, LLM 미개입
+      - name: Query patents (BigQuery)
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
+        run: python scripts/patents_bigquery.py
+
+      # data/refined/tech/patents.json만 커밋 — 다음 daily crawl-and-build의 deploy job이
+      # site/data/refined로 복사해 배포함 (이 워크플로는 자체 배포 없음, 지연 최대 1일)
+      - name: Commit patent data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/refined/tech/patents.json
+          git diff --staged --quiet || git commit -m "chore: patents BigQuery refresh $(date -u +'%Y-%m-%d')"
+          git pull --rebase origin main
+          git push

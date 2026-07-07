@@ -10,13 +10,16 @@ const DATA_SOURCES = [
   { axis: 'mobile_ap',      company: 'mediatek' },
   { axis: 'mobile_ap',      company: 'unisoc' },
   { axis: 'mobile_ap',      company: 'exynos' },
+  { axis: 'mobile_ap',      company: 'googlenews' },  // Phase 4: 축별 뉴스 확장
   { axis: 'hpc_datacenter', company: 'nvidia' },
   { axis: 'hpc_datacenter', company: 'amd' },
   { axis: 'hpc_datacenter', company: 'intel' },
   { axis: 'hpc_datacenter', company: 'hiring' },      // Phase 3: 채용 레이더
+  { axis: 'hpc_datacenter', company: 'googlenews' },  // Phase 4: 축별 뉴스 확장
   { axis: 'custom_soc',     company: 'broadcom' },
   { axis: 'custom_soc',     company: 'marvell' },
   { axis: 'custom_soc',     company: 'hyperscaler_inhouse' },
+  { axis: 'custom_soc',     company: 'googlenews' },  // Phase 4: 축별 뉴스 확장
   { axis: 'foundry',        company: 'tsmc' },
   { axis: 'foundry',        company: 'samsung_foundry' },
   { axis: 'foundry',        company: 'intel_foundry' },
@@ -24,9 +27,11 @@ const DATA_SOURCES = [
   { axis: 'foundry',        company: 'smic' },
   { axis: 'foundry',        company: 'trendforce' },   // Phase 3: 캐파 실소스
   { axis: 'foundry',        company: 'etnews' },       // Phase 3: 한국어 소스
+  { axis: 'foundry',        company: 'googlenews' },  // Phase 4: 축별 뉴스 확장
   { axis: 'packaging',      company: 'ase' },
   { axis: 'packaging',      company: 'amkor' },
   { axis: 'packaging',      company: 'jcet' },
+  { axis: 'packaging',      company: 'googlenews' },  // Phase 4: 축별 뉴스 확장
 ];
 
 const DATA_BASE = window.location.pathname.startsWith('/site/') ? '../data' : 'data';
@@ -82,7 +87,7 @@ function coLogoBadge(co) {
 
 // 크롤러 소스/집계 그룹 — 실제 개별 업체가 아님. 업체 비교 뷰
 // (매트릭스·벤치마크 스코어·업체별 전략)에서 제외
-const _NON_VENDOR_COMPANIES = ['hiring', 'trendforce', 'etnews', 'hyperscaler_inhouse'];
+const _NON_VENDOR_COMPANIES = ['hiring', 'trendforce', 'etnews', 'hyperscaler_inhouse', 'googlenews'];
 
 // ── 모듈 정의 (v2 Phase 1: 17 → 13) ─────────────────────────────────────
 const MODULES = [
@@ -111,6 +116,10 @@ let currentModule = 'today';
 let reviewedSet = new Set(JSON.parse(localStorage.getItem('reviewed') || '[]'));
 let distillationNotes = JSON.parse(localStorage.getItem('distillation_notes') || '[]');
 let distillationSummaries = {};  // {"axis||category": {summary, note_count, generated_at}} — 빌드타임 생성
+let baselineNotes = [];  // BaselineNote[] — data/baseline/notes/*.md 빌드타임 파싱 (장문 deep-research 노트)
+let versionInfo = null;  // data/refined/version.json — 단일 진실원 (version/date/maturity)
+let sectorSummaries = {};  // {axis: {summary, item_count, generated_at}} — Phase 3 item 6, 빌드타임 생성
+let dailyTop5 = [];  // [{axis, company, headline, url, source, published_date, score}] — Phase 3 item 7
 
 // ── 부트스트랩 ─────────────────────────────────────────────────────────────
 async function boot() {
@@ -160,16 +169,39 @@ async function loadAllData() {
   const distLoad = fetch(`${DATA_BASE}/refined/distillation_summaries.json`)
     .then(r => r.ok ? r.json() : {})
     .catch(() => ({}));
+  const baselineNotesLoad = fetch(`${DATA_BASE}/refined/baseline_notes.json`)
+    .then(r => r.ok ? r.json() : {})
+    .catch(() => ({}));
+  const versionLoad = fetch(`${DATA_BASE}/refined/version.json`)
+    .then(r => r.ok ? r.json() : null)
+    .catch(() => null);
+  const sectorSumLoad = fetch(`${DATA_BASE}/refined/sector_summaries.json`)
+    .then(r => r.ok ? r.json() : null)
+    .catch(() => null);
+  const top5Load = fetch(`${DATA_BASE}/refined/daily_top5.json`)
+    .then(r => r.ok ? r.json() : null)
+    .catch(() => null);
 
-  const [results, capData, sumData, distData] = await Promise.all([Promise.all(loads), capLoad, sumLoad, distLoad]);
+  const [results, capData, sumData, distData, baselineNotesData, versionData, sectorSumData, top5Data] =
+    await Promise.all([Promise.all(loads), capLoad, sumLoad, distLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load]);
   allSignals = results.flat().sort((a, b) => b.published_date.localeCompare(a.published_date));
   capacityRecords = capData;
   companySummaries = sumData || {};
   distillationSummaries = distData?.summaries || {};
+  baselineNotes = baselineNotesData?.notes || [];
+  versionInfo = versionData;
+  sectorSummaries = sectorSumData?.sectors || {};
+  dailyTop5 = top5Data?.top5 || [];
   document.getElementById('crawl-time').textContent =
     `신호 ${allSignals.length}건 · 캐파 ${capacityRecords.length}건 · ${new Date().toLocaleString('ko-KR')}`;
   document.getElementById('update-time').textContent =
     `News 최근 갱신: ${allSignals[0]?.published_date || '–'}`;
+  const footerEl = document.getElementById('version-info');
+  if (footerEl) {
+    footerEl.textContent = versionInfo
+      ? `v${versionInfo.version} · ${versionInfo.date}`
+      : '';
+  }
 }
 
 // ── 레이아웃 렌더 ─────────────────────────────────────────────────────────
@@ -184,7 +216,8 @@ function renderLayout() {
     <div class="layout">
       <nav id="sidebar">${renderNav()}</nav>
       <main id="content"></main>
-    </div>`;
+    </div>
+    <footer id="app-footer"><span id="version-info"></span></footer>`;
 
   document.getElementById('sidebar').addEventListener('click', e => {
     const a = e.target.closest('a[data-mod]');
@@ -288,6 +321,27 @@ function header(title, desc) {
   return `<div class="module-title">${title}</div><div class="module-desc">${desc}</div>`;
 }
 
+// ── 일일 Top-5 (Phase 3 item 7 — 휴리스틱 랭킹, 빌드타임 생성) ──────────────
+function _dailyTop5Panel() {
+  if (!dailyTop5.length) return '';
+  const rows = dailyTop5.map((t, i) => `
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:8px 0;${i ? 'border-top:1px solid var(--border)' : ''}">
+      <div style="font-size:14px;font-weight:700;color:var(--accent);min-width:18px">${i + 1}</div>
+      <div style="flex:1">
+        <div style="display:flex;gap:6px;align-items:center;margin-bottom:2px">
+          ${chipAxis(t.axis)}
+          <span style="font-size:10px;color:var(--text-muted)">${t.source} · ${t.published_date}</span>
+        </div>
+        <a href="${t.url}" target="_blank" rel="noopener" style="font-size:13px;font-weight:500">${t.headline}</a>
+      </div>
+    </div>`).join('');
+  return `
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:12px 14px;margin-bottom:16px">
+      <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:4px">★ 일일 Summary — 중요도 Top 5</div>
+      ${rows}
+    </div>`;
+}
+
 // ── 1. 오늘의 요약 (드릴다운) ─────────────────────────────────────────────
 function modToday() {
   const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
@@ -298,6 +352,7 @@ function modToday() {
   });
   return `
     ${header('오늘의 요약', `지난 24시간 신호 ${recent.length}건 — 카드 클릭으로 필터`)}
+    ${_dailyTop5Panel()}
     <div class="stat-grid">
       ${['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'].map(a =>
         `<div class="stat-card stat-card-clickable" onclick="todayDrill('axis','${a}',this)">
@@ -316,6 +371,110 @@ function modToday() {
     </div>
     <div id="today-list">${signalList(recent.slice(0, 30))}</div>`;
 }
+
+// ── Baseline Notes (deep-research 장문 노트, data/baseline/notes/*.md) ───
+function _escHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function _mdInline(s) {
+  return s
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\[\[([^\]]+)\]\]/g, '<span class="wikilink">$1</span>');
+}
+
+// 아주 가벼운 markdown → HTML 변환. 헤더/굵게/인용/목록/표/구분선만 지원 (풀 CommonMark 아님).
+function _mdLite(md) {
+  const lines = _escHtml(md).split('\n');
+  let html = '';
+  let i = 0;
+  let inList = false;
+
+  const closeList = () => { if (inList) { html += '</ul>'; inList = false; } };
+
+  const isTableSep = line => /^\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?$/.test(line.trim());
+
+  while (i < lines.length) {
+    const line = lines[i];
+
+    if (!line.trim()) { closeList(); i++; continue; }
+
+    const h = line.match(/^(#{1,4})\s+(.*)$/);
+    if (h) {
+      closeList();
+      const level = Math.min(h[1].length + 2, 6); // 문서 h1 → h3 정도로 낮춰 카드 안에서 과하지 않게
+      html += `<h${level}>${_mdInline(h[2])}</h${level}>`;
+      i++; continue;
+    }
+
+    if (line.startsWith('|') && lines[i + 1] && isTableSep(lines[i + 1])) {
+      closeList();
+      const headCells = line.split('|').slice(1, -1).map(c => c.trim());
+      html += '<table class="md-table"><thead><tr>' +
+        headCells.map(c => `<th>${_mdInline(c)}</th>`).join('') + '</tr></thead><tbody>';
+      i += 2;
+      while (i < lines.length && lines[i].trim().startsWith('|')) {
+        const cells = lines[i].split('|').slice(1, -1).map(c => c.trim());
+        html += '<tr>' + cells.map(c => `<td>${_mdInline(c)}</td>`).join('') + '</tr>';
+        i++;
+      }
+      html += '</tbody></table>';
+      continue;
+    }
+
+    if (/^-{3,}$/.test(line.trim())) { closeList(); html += '<hr>'; i++; continue; }
+
+    const bq = line.match(/^>\s?(.*)$/);
+    if (bq) { closeList(); html += `<blockquote>${_mdInline(bq[1])}</blockquote>`; i++; continue; }
+
+    const li = line.match(/^[-*]\s+(?:\[( |x)\]\s+)?(.*)$/);
+    if (li) {
+      if (!inList) { html += '<ul>'; inList = true; }
+      const checkbox = li[1] !== undefined ? `${li[1] === 'x' ? '☑' : '☐'} ` : '';
+      html += `<li>${checkbox}${_mdInline(li[2])}</li>`;
+      i++; continue;
+    }
+
+    closeList();
+    html += `<p>${_mdInline(line)}</p>`;
+    i++;
+  }
+  closeList();
+  return html;
+}
+
+function _baselineNoteCard(note) {
+  const tags = (note.tags || []).map(t => `<span class="chip chip-note">${t}</span>`).join('');
+  const statusLabel = note.status ? `<span class="chip chip-note-status">${note.status}</span>` : '';
+  return `
+    <div class="baseline-note-card">
+      <div class="baseline-note-head" onclick="toggleBaselineNote('${note.id}')">
+        <div>
+          <div class="baseline-note-topic">${note.topic}</div>
+          <div class="baseline-note-meta">${note.axis || ''} ${note.date ? '· ' + note.date : ''}</div>
+        </div>
+        <div>${statusLabel}${tags}</div>
+      </div>
+      <div id="bn-body-${note.id}" class="baseline-note-body" style="display:none">${_mdLite(note.body_md)}</div>
+    </div>`;
+}
+
+function _baselineNotesPanel() {
+  if (!baselineNotes.length) return '';
+  return `
+    <div class="baseline-notes-panel">
+      <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:8px">
+        📥 Baseline Notes — 승격 대기 (dashboard 층, 켜뮤 아님 · ${baselineNotes.length}건)
+      </div>
+      ${baselineNotes.map(_baselineNoteCard).join('')}
+    </div>`;
+}
+
+window.toggleBaselineNote = function(id) {
+  const el = document.getElementById(`bn-body-${id}`);
+  if (el) el.style.display = el.style.display === 'none' ? 'block' : 'none';
+};
 
 // ── 2. 일일 리뷰 큐 (5축 + 카테고리 필터 + 1차 증류 코멘트) ───────────────
 function _distillationNotePanel(axis, category) {
@@ -369,11 +528,34 @@ function _reviewGroupedList(signals, activeAxis) {
   return html || signalList([]);
 }
 
+// ── 섹터별 1문단 요약 (Phase 3 item 6 — distill 단계 빌드타임 생성) ─────────
+function _sectorSummariesPanel() {
+  const axes = ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'];
+  const present = axes.filter(a => sectorSummaries[a]);
+  if (!present.length) return '';
+  return `
+    <div style="margin-bottom:14px">
+      <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:6px">◉ 섹터별 요약 (당일 수집분)</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px">
+        ${present.map(a => `
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:10px 12px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+              ${chipAxis(a)}
+              <span style="font-size:10px;color:var(--text-muted)">${sectorSummaries[a].item_count}건</span>
+            </div>
+            <div style="font-size:12px;line-height:1.5">${sectorSummaries[a].summary}</div>
+          </div>`).join('')}
+      </div>
+    </div>`;
+}
+
 function modReview() {
   const unreviewed = allSignals.filter(s => !reviewedSet.has(s.url));
   const axes = ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'];
   return `
-    ${header('일일 리뷰 큐 · 1차 증류', `미완료 ${unreviewed.length}건 · 완료 표시하면 흐려집니다`)}
+    ${header('일일 리뷰', `미완료 ${unreviewed.length}건 · 완료 표시하면 흐려집니다`)}
+    ${_baselineNotesPanel()}
+    ${_sectorSummariesPanel()}
     <div style="margin-bottom:12px">
       <button class="filter-btn" onclick="exportDistillationNotes()">📥 메모 내보내기 (JSON)</button>
       <span style="font-size:11px;color:var(--text-muted);margin-left:8px">

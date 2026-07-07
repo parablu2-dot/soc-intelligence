@@ -1,0 +1,57 @@
+{
+  "_comment": "component-intelligence axis — BomImplication static mapping. PoC 범위: axis=hpc_datacenter 5건만 실제 적용, 나머지 축은 schema만 개방 (SoC_Dashboard_부품기판_확장_설계 참고: data/baseline/notes/component_intelligence_bom_design.md).",
+  "axis": "hpc_datacenter",
+  "generated_at": "2026-07-06",
+  "items": [
+    {
+      "id": "bom_hpc_001",
+      "basis_fact_id": "hpc_datacenter_ai_accelerator_generation_transition",
+      "basis_fact": "AI 가속기 세대전환 (HBM 스택↑, TDP↑)",
+      "component_group": "MLCC",
+      "device_axis": "server",
+      "direction": "up",
+      "strength_hint": "strong",
+      "derivation_type": "content"
+    },
+    {
+      "id": "bom_hpc_002",
+      "basis_fact_id": "hpc_datacenter_gpu_package_scaleup",
+      "basis_fact": "GPU 패키지 대형화 (2.5D/CoWoS 면적↑)",
+      "component_group": "substrate",
+      "device_axis": "server",
+      "direction": "up",
+      "strength_hint": "strong",
+      "derivation_type": "content"
+    },
+    {
+      "id": "bom_hpc_003",
+      "basis_fact_id": "hpc_datacenter_power_density_increase",
+      "basis_fact": "서버 전력밀도↑ → 고전류 전원단",
+      "component_group": "inductor",
+      "device_axis": "server",
+      "direction": "up",
+      "strength_hint": "moderate",
+      "derivation_type": "content"
+    },
+    {
+      "id": "bom_hpc_004",
+      "basis_fact_id": "hpc_datacenter_rack_scale_liquid_cooling",
+      "basis_fact": "랙 단위 수랭 (rack-scale)",
+      "component_group": "module",
+      "device_axis": "server",
+      "direction": "up",
+      "strength_hint": "moderate",
+      "derivation_type": "content"
+    },
+    {
+      "id": "bom_hpc_005",
+      "basis_fact_id": "hpc_datacenter_cpu_refresh_recovery_plus_ai_content",
+      "basis_fact": "CPU/범용 서버 리프레시 회복 + AI 대당 content 급증 (대수 드라이버 × 대당-content 드라이버 분리)",
+      "component_group": "MLCC",
+      "device_axis": "server",
+      "direction": "up",
+      "strength_hint": "moderate",
+      "derivation_type": "content"
+    }
+  ]
+}
