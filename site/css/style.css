@@ -103,6 +103,22 @@ header .crawl-time {
   overflow: hidden;
 }
 
+/* Footer */
+footer#app-footer {
+  flex-shrink: 0;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+footer#app-footer #version-info {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
 /* Sidebar */
 nav {
   width: var(--sidebar-w);

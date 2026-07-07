@@ -61,6 +61,10 @@ jobs:
       - name: Export baseline notes
         run: python scripts/export_baseline_notes.py
 
+      # ── 5.6 version.json의 date 필드 build 시각으로 갱신 (version/maturity는 수동) ─
+      - name: Stamp version date
+        run: python scripts/stamp_version.py
+
       # ── 6. 커밋 (data/ 전체 + soc.db 포함) ────────────────────
       - name: Commit crawled and refined data
         run: |

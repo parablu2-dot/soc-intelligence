@@ -112,6 +112,7 @@ let reviewedSet = new Set(JSON.parse(localStorage.getItem('reviewed') || '[]'));
 let distillationNotes = JSON.parse(localStorage.getItem('distillation_notes') || '[]');
 let distillationSummaries = {};  // {"axis||category": {summary, note_count, generated_at}} — 빌드타임 생성
 let baselineNotes = [];  // BaselineNote[] — data/baseline/notes/*.md 빌드타임 파싱 (장문 deep-research 노트)
+let versionInfo = null;  // data/refined/version.json — 단일 진실원 (version/date/maturity)
 
 // ── 부트스트랩 ─────────────────────────────────────────────────────────────
 async function boot() {
@@ -164,18 +165,28 @@ async function loadAllData() {
   const baselineNotesLoad = fetch(`${DATA_BASE}/refined/baseline_notes.json`)
     .then(r => r.ok ? r.json() : {})
     .catch(() => ({}));
+  const versionLoad = fetch(`${DATA_BASE}/refined/version.json`)
+    .then(r => r.ok ? r.json() : null)
+    .catch(() => null);
 
-  const [results, capData, sumData, distData, baselineNotesData] =
-    await Promise.all([Promise.all(loads), capLoad, sumLoad, distLoad, baselineNotesLoad]);
+  const [results, capData, sumData, distData, baselineNotesData, versionData] =
+    await Promise.all([Promise.all(loads), capLoad, sumLoad, distLoad, baselineNotesLoad, versionLoad]);
   allSignals = results.flat().sort((a, b) => b.published_date.localeCompare(a.published_date));
   capacityRecords = capData;
   companySummaries = sumData || {};
   distillationSummaries = distData?.summaries || {};
   baselineNotes = baselineNotesData?.notes || [];
+  versionInfo = versionData;
   document.getElementById('crawl-time').textContent =
     `신호 ${allSignals.length}건 · 캐파 ${capacityRecords.length}건 · ${new Date().toLocaleString('ko-KR')}`;
   document.getElementById('update-time').textContent =
     `News 최근 갱신: ${allSignals[0]?.published_date || '–'}`;
+  const footerEl = document.getElementById('version-info');
+  if (footerEl) {
+    footerEl.textContent = versionInfo
+      ? `v${versionInfo.version} · ${versionInfo.date}`
+      : '';
+  }
 }
 
 // ── 레이아웃 렌더 ─────────────────────────────────────────────────────────
@@ -190,7 +201,8 @@ function renderLayout() {
     <div class="layout">
       <nav id="sidebar">${renderNav()}</nav>
       <main id="content"></main>
-    </div>`;
+    </div>
+    <footer id="app-footer"><span id="version-info"></span></footer>`;
 
   document.getElementById('sidebar').addEventListener('click', e => {
     const a = e.target.closest('a[data-mod]');
@@ -483,7 +495,7 @@ function modReview() {
   const unreviewed = allSignals.filter(s => !reviewedSet.has(s.url));
   const axes = ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'];
   return `
-    ${header('일일 리뷰 큐 · 1차 증류', `미완료 ${unreviewed.length}건 · 완료 표시하면 흐려집니다`)}
+    ${header('일일 리뷰', `미완료 ${unreviewed.length}건 · 완료 표시하면 흐려집니다`)}
     ${_baselineNotesPanel()}
     <div style="margin-bottom:12px">
       <button class="filter-btn" onclick="exportDistillationNotes()">📥 메모 내보내기 (JSON)</button>
