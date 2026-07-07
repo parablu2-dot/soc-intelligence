@@ -10,13 +10,16 @@ const DATA_SOURCES = [
   { axis: 'mobile_ap',      company: 'mediatek' },
   { axis: 'mobile_ap',      company: 'unisoc' },
   { axis: 'mobile_ap',      company: 'exynos' },
+  { axis: 'mobile_ap',      company: 'googlenews' },  // Phase 4: 축별 뉴스 확장
   { axis: 'hpc_datacenter', company: 'nvidia' },
   { axis: 'hpc_datacenter', company: 'amd' },
   { axis: 'hpc_datacenter', company: 'intel' },
   { axis: 'hpc_datacenter', company: 'hiring' },      // Phase 3: 채용 레이더
+  { axis: 'hpc_datacenter', company: 'googlenews' },  // Phase 4: 축별 뉴스 확장
   { axis: 'custom_soc',     company: 'broadcom' },
   { axis: 'custom_soc',     company: 'marvell' },
   { axis: 'custom_soc',     company: 'hyperscaler_inhouse' },
+  { axis: 'custom_soc',     company: 'googlenews' },  // Phase 4: 축별 뉴스 확장
   { axis: 'foundry',        company: 'tsmc' },
   { axis: 'foundry',        company: 'samsung_foundry' },
   { axis: 'foundry',        company: 'intel_foundry' },
@@ -24,9 +27,11 @@ const DATA_SOURCES = [
   { axis: 'foundry',        company: 'smic' },
   { axis: 'foundry',        company: 'trendforce' },   // Phase 3: 캐파 실소스
   { axis: 'foundry',        company: 'etnews' },       // Phase 3: 한국어 소스
+  { axis: 'foundry',        company: 'googlenews' },  // Phase 4: 축별 뉴스 확장
   { axis: 'packaging',      company: 'ase' },
   { axis: 'packaging',      company: 'amkor' },
   { axis: 'packaging',      company: 'jcet' },
+  { axis: 'packaging',      company: 'googlenews' },  // Phase 4: 축별 뉴스 확장
 ];
 
 const DATA_BASE = window.location.pathname.startsWith('/site/') ? '../data' : 'data';
@@ -82,7 +87,7 @@ function coLogoBadge(co) {
 
 // 크롤러 소스/집계 그룹 — 실제 개별 업체가 아님. 업체 비교 뷰
 // (매트릭스·벤치마크 스코어·업체별 전략)에서 제외
-const _NON_VENDOR_COMPANIES = ['hiring', 'trendforce', 'etnews', 'hyperscaler_inhouse'];
+const _NON_VENDOR_COMPANIES = ['hiring', 'trendforce', 'etnews', 'hyperscaler_inhouse', 'googlenews'];
 
 // ── 모듈 정의 (v2 Phase 1: 17 → 13) ─────────────────────────────────────
 const MODULES = [

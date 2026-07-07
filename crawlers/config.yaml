@@ -22,6 +22,10 @@ mobile_ap:
     enabled: true
     module: crawlers.mobile_ap.exynos
     class: ExynosCrawler
+  googlenews:
+    enabled: true
+    module: crawlers.mobile_ap.googlenews
+    class: MobileApGoogleNewsCrawler
 
 hpc_datacenter:
   nvidia:
@@ -48,6 +52,10 @@ hpc_datacenter:
     enabled: true
     module: crawlers.hpc_datacenter.hiring
     class: HiringCrawler
+  googlenews:
+    enabled: true
+    module: crawlers.hpc_datacenter.googlenews
+    class: HpcDatacenterGoogleNewsCrawler
 
 custom_soc:
   broadcom:
@@ -62,6 +70,10 @@ custom_soc:
     enabled: true
     module: crawlers.custom_soc.hyperscaler_inhouse
     class: HyperscalerCrawler
+  googlenews:
+    enabled: true
+    module: crawlers.custom_soc.googlenews
+    class: CustomSocGoogleNewsCrawler
 
 foundry:
   tsmc:
@@ -92,6 +104,10 @@ foundry:
     enabled: true
     module: crawlers.foundry.etnews
     class: EtnewsCrawler
+  googlenews:
+    enabled: true
+    module: crawlers.foundry.googlenews
+    class: FoundryGoogleNewsCrawler
 
 packaging:
   ase:
@@ -106,6 +122,10 @@ packaging:
     enabled: true
     module: crawlers.packaging.jcet
     class: JcetCrawler
+  googlenews:
+    enabled: true
+    module: crawlers.packaging.googlenews
+    class: PackagingGoogleNewsCrawler
 
 # 공통 정책
 policy:
@@ -145,6 +165,15 @@ eco_companies:
   - jcet
   - marvell
   - hyperscaler_inhouse
+
+# 축별 Google News RSS 쿼리 (Phase 4 — config/sector_taxonomy.json 키워드에서 생성)
+# hiring_targets와 동일한 방식: 새 sources.yaml 만들지 않고 여기 적재, crawlers/{axis}/googlenews.py가 읽음
+axis_news_queries:
+  mobile_ap: '"mobile AP" OR "application processor" OR Snapdragon OR Dimensity OR "Apple silicon" semiconductor'
+  hpc_datacenter: '"data center" OR HPC accelerator OR "AI chip" GPU HBM semiconductor'
+  custom_soc: 'ASIC OR "custom silicon" OR Trainium OR TPU OR Maia chip design'
+  foundry: 'foundry "process node" OR "2nm" OR "3nm" OR "wafer capacity" TSMC OR "Samsung Foundry"'
+  packaging: 'CoWoS OR chiplet OR "advanced packaging" OR UCIe semiconductor'
 
 # 채용 레이더 Google News 업체별 쿼리 (슬러그: 검색어, hiring.py가 읽음)
 # 슬러그 → 표시 태그 매핑은 hiring.py 내 _SLUG_TO_TAG 참고

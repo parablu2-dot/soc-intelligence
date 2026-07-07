@@ -137,6 +137,22 @@ def infer_category(text: str) -> str:
     return "news"
 
 
+def dedupe_by_title(items: list[dict]) -> list[dict]:
+    """Google News 등 aggregator가 같은 기사를 발행처만 다르게(제목 끝 ' - 발행처')
+    여러 건 반환하는 문제 완화. 제목 정규화 후 첫 등장만 남긴다 (URL은 원본 유지).
+    dedup_gate.py의 임베딩 dedup(축+회사 스코프)과 별개로 크롤러 단계에서 먼저 걸러낸다."""
+    seen: set[str] = set()
+    out = []
+    for item in items:
+        norm = re.sub(r"\s*-\s*[^-]+$", "", item["title"]).strip().lower()
+        norm = re.sub(r"[^\w\s]", "", norm)
+        if norm in seen:
+            continue
+        seen.add(norm)
+        out.append(item)
+    return out
+
+
 def strip_html(text: str) -> str:
     """HTML 태그를 제거한다."""
     if not text:

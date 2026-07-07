@@ -26,6 +26,8 @@ class RefinedSignal:
     diff_type: Optional[str] = None    # "confirm" | "update_candidate" | "noise" | None
     baseline_ref: Optional[str] = None # 연결된 BaselineFact.id (nullable)
     verified: Optional[bool] = None    # HITL 검증 완료 여부
+    # ── Phase 4: 소스 신뢰등급 (nullable — 기존 크롤러 변경 불필요) ──
+    source_tier: Optional[str] = None  # "primary" | "aggregator" | None (Google News 등 aggregator 표시)
 
     def to_dict(self) -> dict:
         d = asdict(self)
