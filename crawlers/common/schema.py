@@ -141,6 +141,43 @@ class TechSignal:
 
 
 @dataclass
+class PatentSignal:
+    """기술 소스 — 특허 (Phase 5, item 3 후속). TechSignal(논문)과도 별개 클래스 —
+    자연 유니크키(publication_number)라 URL 기준 누적과 달리 그 자체로 idempotent.
+    크롤러가 아니라 GHA cron에서 BigQuery(patents-public-data.patents.publications) 직접 조회로 채움.
+    저장: data/refined/tech/patents.json (dedup_gate ingestion 제외 대상 — arxiv.py와 동일 취급)
+    """
+    # ── 자연 유니크키 ──
+    publication_number: str            # e.g. "US-11234567-B2"
+
+    # ── 확정 필드 (BigQuery patents.publications) ──
+    assignee_harmonized: str
+    cpc: list[str]                     # e.g. ["H01L23/48", "H01L21/768"]
+    filing_date: date
+    publication_date: date
+    title: str
+    abstract: str
+
+    # ── 파이프라인 메타 ──
+    axis: str                          # mobile_ap | hpc_datacenter | custom_soc | foundry | packaging | component_intelligence
+    source_tier: str = "primary"       # news=aggregator와 구분
+    url: Optional[str] = None          # patents.google.com/patent/{publication_number}
+
+    # ── distill lens="patent" 산출 (초기 None, 리뷰층에서 채움) ──
+    bom_implication: Optional[str] = None
+    derivation_type: Optional[str] = None
+
+    # tentative: google_patents_research.publications 스키마 실측 후 확정
+    top_terms: list[str] = field(default_factory=list)
+
+    def to_dict(self) -> dict:
+        d = asdict(self)
+        d["filing_date"] = self.filing_date.isoformat()
+        d["publication_date"] = self.publication_date.isoformat()
+        return {k: v for k, v in d.items() if v is not None and v != []}
+
+
+@dataclass
 class BomImplication:
     """component-intelligence axis — downstream 디바이스/칩셋 수요를 부품·기판 수요로 파생.
     facts/inferences 분리 원칙에서 inference 하위 (RefinedSignal의 사실 위에 얹는 정성 판단).
