@@ -90,6 +90,8 @@ def _ingest_refined(conn) -> int:
     for jpath in DATA_REFINED.rglob("*.json"):
         if jpath.name == "capacity_records.json":
             continue
+        if jpath.parent.name == "tech":
+            continue  # Phase 5: TechSignal(논문/특허) — 별도 stratum, 뉴스 dedup 파이프라인과 분리
         try:
             records = json.loads(jpath.read_text(encoding="utf-8"))
         except Exception:
