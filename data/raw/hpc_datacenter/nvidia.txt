@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Tue, 07 Jul 2026 17:16:02 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 08 Jul 2026 16:09:54 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,51 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=7.0</generator>
 	<item>
+		<title>NVIDIA Nemotron Achieves Benchmark-Leading Performance With LangChain Deep Agents Harness</title>
+		<link>https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/</link>
+		
+		<dc:creator><![CDATA[Adel El Hallak]]></dc:creator>
+		<pubDate>Wed, 08 Jul 2026 15:00:27 +0000</pubDate>
+				<category><![CDATA[Deep Learning]]></category>
+		<category><![CDATA[Nemotron]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=96008</guid>
+
+					<description><![CDATA[NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform.  LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x [&#8230;]]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><span style="font-weight: 400;">NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform. </span></p>
+<p><span style="font-weight: 400;">LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x lower inference cost per run than leading closed models. </span></p>
+<p><span style="font-weight: 400;">Measured against LangChain’s Deep Agents benchmark, Nemotron 3 Ultra also achieved business task parity with the highest-scoring closed models. No model retraining was required. Every gain came from engineering the environment around the model, not the model itself. </span></p>
+<p><span style="font-weight: 400;">At a tenth of the cost, teams harnessing NVIDIA Nemotron 3 Ultra can run evaluations continuously, experiment faster and build specialized agents across more of their business. </span></p>
+<p><span style="font-weight: 400;">LangChain’s agent engineering platform has more than 200 million monthly downloads. By tuning its Deep Agents harness specifically for </span><a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/"><span style="font-weight: 400;">NVIDIA Nemotron</span></a><span style="font-weight: 400;"> 3 Ultra, it allows for high-performing agents that complete more tasks, run faster and give enterprises a fully open stack they can customize, own and run anywhere.</span></p>
+<p><span style="font-weight: 400;">“The way to build better agents is to keep improving the system around the model,” said Harrison Chase, cofounder and CEO of LangChain. “Memory, tool use, evaluation and model behavior compound when teams can tune them together. Our work with NVIDIA shows that enterprises can get strong performance from an open stack while keeping control over the agent systems they are building.”</span></p>
+<p><span style="font-weight: 400;">Abridge,</span> <span style="font-weight: 400;">Amdocs</span><span style="font-weight: 400;"> and </span><span style="font-weight: 400;">Box</span><span style="font-weight: 400;"> are embedding specialized agents directly into their platforms and global systems integrator </span><span style="font-weight: 400;">EY</span><span style="font-weight: 400;"> is expanding its NVIDIA implementation capabilities around NVIDIA NemoClaw blueprints for LangChain Deep Agents, helping clients customize, evaluate and govern specialized agents across high-value workflows. </span></p>
+<p><span style="font-weight: 400;">NVIDIA founder and CEO Jensen Huang recently sat down with Chase to discuss why the last six months have seen a leap in useful AI for enterprises.</span></p>
+<p><iframe title="Jensen Huang: Why companies need open agent systems" width="1200" height="675" src="https://www.youtube.com/embed/Yy3JH6dDugc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h2>Harness Engineering, Not Fine-Tuning</h2>
+<p><span style="font-weight: 400;">LangChain’s team ran Nemotron 3 Ultra against its public Deep Agents benchmark suite, then analyzed the </span><a target="_blank" href="https://www.nvidia.com/en-us/glossary/deep-agents/"><span style="font-weight: 400;">deep agent’s</span></a><span style="font-weight: 400;"> execution traces to find exactly where it lost points. Instead of retraining the model, the team <a target="_blank" href="https://developer.nvidia.com/blog/create-a-langchain-deep-agents-harness-profile-for-nvidia-nemotron-3-ultra-to-improve-performance/">tuned the harness</a> around it — adjusting system prompts, tool descriptions and middleware.</span></p>
+<p><span style="font-weight: 400;">Every developer using LangChain Deep Agents with Nemotron 3 Ultra can put this to work today — the tuned profile is available directly through LangChain.</span></p>
+<h2>An Open Stack Built to Own</h2>
+<p><span style="font-weight: 400;">NVIDIA NemoClaw for LangChain Deep Agents is the open reference blueprint that packages this work for enterprises building their own </span><a target="_blank" href="https://www.nvidia.com/en-us/glossary/specialized-ai/"><span style="font-weight: 400;">specialized AI</span></a><span style="font-weight: 400;"> — </span><a target="_blank" href="https://www.nvidia.com/en-us/glossary/multi-agent-systems/"><span style="font-weight: 400;">systems of models</span></a><span style="font-weight: 400;">, tools and runtime — tuned for their own workflows. It combines LangChain Deep Agents Code, tuned for Nemotron 3 Ultra, with the </span><a target="_blank" href="https://build.nvidia.com/openshell"><span style="font-weight: 400;">NVIDIA OpenShell</span></a><span style="font-weight: 400;"> secure runtime for executing agent actions safely.</span></p>
+<p><span style="font-weight: 400;">An open model, an open harness and an open secure runtime means enterprises own the full stack, end to end. They can customize it around the expertise that sets their business apart, keep improving it and run it anywhere — their own infrastructure, their own cloud, their own governance. </span></p>
+<p><span style="font-weight: 400;">That distinction matters more as agents take on higher-stakes work. The shift from AI assistants that answer questions to agents that take action inside core systems changes what businesses get from their AI. </span></p>
+<p><span style="font-weight: 400;">NemoClaw for LangChain Deep Agents and the tuned Nemotron 3 Ultra model profile are available </span><a target="_blank" href="https://docs.langchain.com/oss/python/deepagents/code/overview"><span style="font-weight: 400;">now</span></a><span style="font-weight: 400;">. Developers can pull the tuned Deep Agents harness directly from LangChain, or use the </span><a target="_blank" href="https://build.nvidia.com/nvidia/nemoclaw-for-langchain-deep-agents-code/"><span style="font-weight: 400;">NemoClaw for LangChain</span></a><span style="font-weight: 400;"> Deep Agents blueprint as a starting point for building specialized agents from scratch. </span></p>
+<h2>How to Get Started</h2>
+<p><span style="font-weight: 400;">LangChain developers can access Nemotron 3 Ultra on</span> <a target="_blank" href="https://www.baseten.co/blog/nvidia-nemotron-3-ultra-and-langchain-deep-agents-on-baseten"><span style="font-weight: 400;">Baseten</span><span style="font-weight: 400;">,</span></a> <a target="_blank" href="https://www.crusoe.ai/cloud/managed-inference"><span style="font-weight: 400;">Crusoe Cloud</span></a><span style="font-weight: 400;">, </span><a target="_blank" href="https://deepinfra.com/blog/nvidia-nemotron-3-ultra-langchain-deep-agents"><span style="font-weight: 400;">DeepInfra</span><span style="font-weight: 400;">, </span></a><a target="_blank" href="https://fireworks.ai/models/fireworks/nemotron-3-ultra-nvfp4?utm_term=nemotron%203%20ultra&amp;utm_campaign=SEM_Non_Brand&amp;utm_source=adwords&amp;utm_medium=ppc&amp;utm_id=23966119562&amp;hsa_acc=6824341280&amp;hsa_cam=23966119562&amp;hsa_grp=194972178142&amp;hsa_ad=813772870557&amp;hsa_src=g&amp;hsa_tgt=kwd-2542408021127&amp;hsa_kw=nemotron%203%20ultra&amp;hsa_mt=p&amp;hsa_net=adwords&amp;hsa_ver=3&amp;gad_source=1&amp;gad_campaignid=23966119562&amp;gbraid=0AAAAA-vkpDMHe2p_mlpf0kNvWazZouP_z&amp;gclid=CjwKCAjwx7LSBhB3EiwAjcodxGaGsV2DVKTGCc5iGx4leadXuyXl4uK_Z9rPKJzlJnFsi-M_UlCGixoCv0YQAvD_BwE"><span style="font-weight: 400;">Fireworks</span><span style="font-weight: 400;">,</span></a> <a target="_blank" href="https://dev.nebius.com/blueprints?utm_source=nvidia&amp;utm_medium=partner-blog&amp;utm_campaign=langchain-nemoclaw-launch-2026-07&amp;utm_content=cta-deploy"><span style="font-weight: 400;">Nebius</span></a><span style="font-weight: 400;"> and </span><a target="_blank" href="https://togetherai.link/IyR8AH2"><span style="font-weight: 400;">Together AI</span></a> <span style="font-weight: 400;"> platforms, giving them a direct, hosted path to the tuned harness in production. </span></p>
+<p><span style="font-weight: 400;">EY</span><span style="font-weight: 400;"> can help enterprises start building their own specialized agents today, using this open software stack.  </span></p>
+<p><span style="font-weight: 400;"><a target="_blank" href="https://www.prnewswire.com/news-releases/langchain-and-nvidia-launch-nemoclaw-deep-agents-blueprint-for-enterprise-agents-302820446.html">Learn more</a> about NVIDIA NemoClaw for LangChain Deep Agents and NVIDIA Nemotron. </span></p>
+<p><i><span style="font-weight: 400;">Stay up to date on agentic AI, </span></i><a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/"><i><span style="font-weight: 400;">NVIDIA Nemotron</span></i></a><i><span style="font-weight: 400;"> and more by subscribing to </span></i><a target="_blank" href="https://www.nvidia.com/en-us/executive-insights/generative-ai-tools/?modal=stay-inf"><i><span style="font-weight: 400;">NVIDIA news</span></i></a><i><span style="font-weight: 400;">,</span></i><a target="_blank" href="https://developer.nvidia.com/community"><i><span style="font-weight: 400;"> joining the community</span></i></a><i><span style="font-weight: 400;">, and following NVIDIA AI on </span></i><a target="_blank" href="https://www.linkedin.com/showcase/nvidia-ai/posts/?feedView=all"><i><span style="font-weight: 400;">LinkedIn</span></i></a><i><span style="font-weight: 400;">, </span></i><a target="_blank" href="https://www.instagram.com/nvidiaai/?hl=en"><i><span style="font-weight: 400;">Instagram</span></i></a><i><span style="font-weight: 400;">, </span></i><a target="_blank" href="https://x.com/NVIDIAAIDev"><i><span style="font-weight: 400;">X</span></i></a><i><span style="font-weight: 400;"> and </span></i><a target="_blank" href="https://www.facebook.com/NVIDIAAI"><i><span style="font-weight: 400;">Facebook</span></i></a><i><span style="font-weight: 400;">.  </span></i></p>
+<p><i><span style="font-weight: 400;">Explore </span></i><a target="_blank" href="https://youtube.com/playlist?list=PL5B692fm6--vdRKB14FImVi7MTJ77zjn4&amp;feature=shared"><i><span style="font-weight: 400;">self-paced video tutorials and livestreams</span></i></a><i><span style="font-weight: 400;">.</span></i></p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/07/Nemotron_LangChain-scaled.jpg" type="image/jpeg" width="2048" height="1152">
+			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/07/Nemotron_LangChain-842x450.jpg" width="842" height="450" />
+			<media:title type="html"><![CDATA[NVIDIA Nemotron Achieves Benchmark-Leading Performance With LangChain Deep Agents Harness]]></media:title>
+			<media:description type="html"></media:description>
+		</media:content>
+	</item>
+		<item>
 		<title>AI Innovators Adopt NVIDIA Vera — Why Max Single-Threaded CPU at Scale Matters</title>
 		<link>https://blogs.nvidia.com/blog/nvidia-vera-max-single-threaded-cpu-at-scale/</link>
 		
@@ -28,6 +73,7 @@
 				<category><![CDATA[AI Infrastructure]]></category>
 		<category><![CDATA[Agentic AI]]></category>
 		<category><![CDATA[AI Factory]]></category>
+		<category><![CDATA[AI Training]]></category>
 		<category><![CDATA[Artificial Intelligence]]></category>
 		<category><![CDATA[Hardware]]></category>
 		<category><![CDATA[Inference]]></category>
@@ -60,7 +106,7 @@
 <p><span style="font-weight: 400;">More cores in a CPU means more agent tasks per CPU, and data center CPUs need lots of cores to maximize throughput of tasks.</span></p>
 <p><span style="font-weight: 400;">However, adding more cores to a CPU cannot shorten the time for each step inside a single agent loop. More cores can’t make any one task run faster. In fact, CPUs designed to maximize core count can even slow down the performance of each core as they contend for resources.   </span></p>
 <p><span style="font-weight: 400;">Individual per-core performance matters to drive the speed of each step’s completion. The throughput of additional cores is useful but insufficient. And since each action is dependent on the previous result, per-core speed determines how fast the loop advances.</span></p>
-<figure id="attachment_95990" aria-describedby="caption-attachment-95990" style="width: 1079px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" class="size-full wp-image-95990" src="https://blogs.nvidia.com/wp-content/uploads/2026/07/single-threaded-core-performance-vs-throughput.png" alt="" width="1079" height="784" srcset="https://blogs.nvidia.com/wp-content/uploads/2026/07/single-threaded-core-performance-vs-throughput.png 1079w, https://blogs.nvidia.com/wp-content/uploads/2026/07/single-threaded-core-performance-vs-throughput-960x698.png 960w, https://blogs.nvidia.com/wp-content/uploads/2026/07/single-threaded-core-performance-vs-throughput-630x458.png 630w" sizes="(max-width: 1079px) 100vw, 1079px" /><figcaption id="caption-attachment-95990" class="wp-caption-text">Single-threaded core performance vs. throughput.</figcaption></figure>
+<p><span style="font-weight: 400;"><img fetchpriority="high" decoding="async" class="aligncenter size-large wp-image-96016" src="https://blogs.nvidia.com/wp-content/uploads/2026/07/single-threaded-cpu-chart-1680x1036.jpg" alt="" width="1200" height="740" srcset="https://blogs.nvidia.com/wp-content/uploads/2026/07/single-threaded-cpu-chart-1680x1036.jpg 1680w, https://blogs.nvidia.com/wp-content/uploads/2026/07/single-threaded-cpu-chart-960x592.jpg 960w, https://blogs.nvidia.com/wp-content/uploads/2026/07/single-threaded-cpu-chart-1280x789.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2026/07/single-threaded-cpu-chart-1536x947.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2026/07/single-threaded-cpu-chart-scaled.jpg 2048w, https://blogs.nvidia.com/wp-content/uploads/2026/07/single-threaded-cpu-chart-630x388.jpg 630w" sizes="(max-width: 1200px) 100vw, 1200px" /></span></p>
 <p><span style="font-weight: 400;">In the end, the best agentic CPU needs the best single-threaded performance per core, and every core needs to deliver that performance without compromise. The world counts in seconds. Agents count in nanoseconds. NVIDIA Vera is built for this new category — and speed — of work.</span></p>
 <h2><b>NVIDIA Vera Is the Max Single-Threaded CPU at Scale for Agents</b></h2>
 <p><span style="font-weight: 400;">NVIDIA Vera is a max single-threaded CPU at scale, designed from the ground up for the agent loop: the work that happens between model calls as agents use tools, process data, run code and check results.</span></p>
@@ -162,7 +208,7 @@
 <p><span style="font-weight: 400;">Open infrastructure gives researchers the tools to accelerate breakthroughs. </span></p>
 <p><span style="font-weight: 400;">The papers show Nemotron being used less like a single model release and more like a research stack: open weights to evaluate against, open datasets to train and adapt with, and open recipes for reasoning, tool use, safety, data curation and efficient inference.</span></p>
 <p><span style="font-weight: 400;">Alongside the models, NeMo Curator and the open datasets it supports </span><a href="https://blogs.nvidia.com/blog/nemotron-open-source-ai/"><span style="font-weight: 400;">gives researchers a reproducible foundation for training data curation</span></a><span style="font-weight: 400;">. SDG tools enable creating high-quality training sets at a scale and speed that would’ve been impractical just a few years ago.</span></p>
-<p><iframe title="YouTube video player" src="https://www.youtube.com/embed/Oojrfdl42LI?si=d8DWB-qpGVCFc0_-&amp;start=93" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p><iframe loading="lazy" title="YouTube video player" src="https://www.youtube.com/embed/Oojrfdl42LI?si=d8DWB-qpGVCFc0_-&amp;start=93" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
 <p><span style="font-weight: 400;">The </span><a target="_blank" href="https://www.nvidia.com/en-us/ai/cosmos/"><span style="font-weight: 400;">Cosmos 3</span></a><span style="font-weight: 400;"> family of open, frontier </span><a target="_blank" href="https://www.nvidia.com/en-us/glossary/omni-model/"><span style="font-weight: 400;">omnimodels</span></a><span style="font-weight: 400;"> gives researchers and developers a generational leap in the ability to build robots, autonomous vehicles and vision AI that perceive, reason, plan and act in the physical world.</span></p>
 <p><span style="font-weight: 400;">In addition, the </span><a target="_blank" href="https://www.nvidia.com/en-us/solutions/autonomous-vehicles/alpamayo/"><span style="font-weight: 400;">NVIDIA Alpamayo</span></a><span style="font-weight: 400;"> open model family for autonomous vehicle development, </span><a target="_blank" href="https://developer.nvidia.com/isaac/gr00t"><span style="font-weight: 400;">NVIDIA Isaac GR00T</span></a><span style="font-weight: 400;"> for robotics and </span><a target="_blank" href="https://github.com/NVIDIA-BioNeMo"><span style="font-weight: 400;">NVIDIA BioNeMo</span></a><span style="font-weight: 400;"> for biomedical help accelerate research and development across industries.</span></p>
 <h2><b>The Ecosystem Building on Top</b></h2>
@@ -879,58 +925,6 @@
 				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/06/agentic-ai-agent-toolkit-kv-r3b-1920x1080-2.png" type="image/png" width="1920" height="1080">
 			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/06/agentic-ai-agent-toolkit-kv-r3b-1920x1080-2-842x450.png" width="842" height="450" />
 			<media:title type="html"><![CDATA[How Businesses Are Building Specialized AI They Can Trust]]></media:title>
-			<media:description type="html"></media:description>
-		</media:content>
-	</item>
-		<item>
-		<title>NVIDIA Powers Over 400 of the World’s 500 Fastest Supercomputers</title>
-		<link>https://blogs.nvidia.com/blog/top500-green500-supercomputers-isc-2026/</link>
-		
-		<dc:creator><![CDATA[Chris Porter]]></dc:creator>
-		<pubDate>Tue, 23 Jun 2026 09:00:38 +0000</pubDate>
-				<category><![CDATA[AI Infrastructure]]></category>
-		<category><![CDATA[Hardware]]></category>
-		<category><![CDATA[Networking]]></category>
-		<category><![CDATA[Supercomputing]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=94919</guid>
-
-					<description><![CDATA[NVIDIA technologies power more than 400 of the world’s 500 fastest supercomputers — 81% of the TOP500 — according to the latest rankings released this week at the ISC High Performance conference in Hamburg, Germany.]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><strong>News Highlights:</strong></p>
-<ul>
-<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">NVIDIA technology runs 81% of the TOP500 and 90% of the systems new to the list.</span></li>
-<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">26 systems on the TOP500 adopted the NVIDIA Grace CPU, up eight from the previous list.</span></li>
-<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">The top eight systems on the Green500 run on NVIDIA GPUs and nine of the top 10 use NVIDIA technologies.</span></li>
-<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">No. 1 on the Green500, KAIROS, uses a single NVIDIA Grace Hopper Superchip.</span></li>
-<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">376 of the TOP500 systems are interconnected using NVIDIA networking.</span></li>
-</ul>
-<p><span style="font-weight: 400;">NVIDIA technologies power more than 400 of the world’s 500 fastest supercomputers — 81% of the TOP500 — according to the latest rankings released this week at the ISC High Performance conference in Hamburg, Germany.</span></p>
-<p><span style="font-weight: 400;">That’s a gain of 17 systems from the previous list, with the momentum in new deployments: nearly nine of every 10 systems new to the ranking are built on NVIDIA technologies.</span></p>
-<p><span style="font-weight: 400;">That percentage reflects a deliberate preference for machines built for AI, simulation and science together. And it’s compounding: NVIDIA systems across the TOP500 now deliver more than 2x the AI training and nearly 3x the AI inference throughput of every other platform combined.</span></p>
-<p><span style="font-weight: 400;">GPU and networking adoption each hit new highs, with NVIDIA GPUs accelerating a record 238 systems and NVIDIA networking connecting a record 376 — the vast majority on NVIDIA Quantum InfiniBand, the backbone of large-scale AI and high-performance computing, and the rest on Ethernet. </span></p>
-<p><span style="font-weight: 400;">The trend behind the numbers is bigger than any one list: Accelerated computing is becoming the foundation for the systems taking on the world’s most demanding work, across AI and science.</span></p>
-<p><span style="font-weight: 400;">Updated twice a year, the TOP500 ranks the world’s fastest supercomputers, while the Green500 list measures how much computing each delivers per watt.</span></p>
-<h2><b>A Full-Stack Footprint</b></h2>
-<p><span style="font-weight: 400;">NVIDIA’s reach now spans the full system — GPU, networking and, increasingly, the CPU — with NVIDIA Grace CPU adoption reaching 26 systems, up eight from the previous list, with nearly 2.5 million Grace CPUs shipped.</span></p>
-<p><span style="font-weight: 400;">NVIDIA Grace-based machines sit atop both rankings: JUPITER at No. 5 and Alps at No. 10 on the TOP500, and KAIROS at No. 1 on the Green500.</span></p>
-<p><span style="font-weight: 400;">Each pairs an NVIDIA GPU with the Grace CPU in a single NVIDIA Grace Hopper Superchip, letting the two share memory with minimal overhead — a design built for the memory-intensive demands of modern AI.</span></p>
-<p><span style="font-weight: 400;">The </span><a target="_blank" href="https://nvidianews.nvidia.com/news/nvidia-unveils-vera-the-cpu-for-agents"><span style="font-weight: 400;">NVIDIA Vera CPU</span></a><span style="font-weight: 400;">, announced earlier this year, builds on the success of Grace, taking CPU performance and energy efficiency to new levels for the most demanding AI workloads in modern data centers — where agents move from answering basic questions to taking actions, running code, using tools and evaluating results.</span></p>
-<h2><b>Topping the Efficiency List</b></h2>
-<p><span style="font-weight: 400;">NVIDIA swept the Green500 ranking of the most energy-efficient supercomputers: The top eight all run on NVIDIA GPUs and nine of the top 10 use NVIDIA technologies. </span></p>
-<p><span style="font-weight: 400;">Leading the list is KAIROS, an NVIDIA Grace Hopper system at France’s University of Toulouse, at 73.3 gigaflops per watt — with Grace Hopper systems taking the top four spots, across France, Germany and the U.K.</span></p>
-<h2><b>From Exascale Science to the Next Wave</b></h2>
-<p><span style="font-weight: 400;">A record </span><a target="_blank" href="https://nvidianews.nvidia.com/news/europe-unveils-a-record-35-new-nvidia-ai-supercomputers"><span style="font-weight: 400;">35 NVIDIA AI HPC supercomputers</span></a><span style="font-weight: 400;"> are in development across Europe — equipping more than 3 million researchers with next-generation infrastructure for continental AI, accelerated science and industrial innovation.</span></p>
-<p><span style="font-weight: 400;">Among these systems is JUPITER, </span><a href="https://blogs.nvidia.com/blog/jupiter-exascale-supercomputing-science"><span style="font-weight: 400;">Europe’s fastest supercomputer and its first to reach exascale</span></a><span style="font-weight: 400;">, at the Jülich Supercomputing Centre in Germany.</span></p>
-<p><span style="font-weight: 400;">JUPITER is mapping the human brain at cellular scale, simulating Earth’s climate and advancing the AI behind next-generation 6G networks.</span></p>
-<p><span style="font-weight: 400;">The newest arrivals to the list run on the NVIDIA Blackwell architecture, with B200 and GB200 systems entering the rankings across Asia, Europe and the U.S. — and the first GB200 systems debuting in Japan.</span></p>
-<p><span style="font-weight: 400;">The buildout is global, from a new AI factory in South Africa to national AI systems in Saudi Arabia, Singapore and Vietnam.</span></p>
-<p><span style="font-weight: 400;">It’s the same story up and down the list: the world’s AI buildout is running on NVIDIA.</span></p>
-]]></content:encoded>
-					
-		
-		
-				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/06/hpc-corp-blog-isc26-wrap-up-blog-1280x680-5375050.png" type="image/png" width="1280" height="680">
-			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/06/hpc-corp-blog-isc26-wrap-up-blog-1280x680-5375050-842x450.png" width="842" height="450" />
-			<media:title type="html"><![CDATA[NVIDIA Powers Over 400 of the World’s 500 Fastest Supercomputers]]></media:title>
 			<media:description type="html"></media:description>
 		</media:content>
 	</item>
