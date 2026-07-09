@@ -2,6 +2,200 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Human and LLM Collaboration for Accelerated Materials Synthesis and Discovery",
+    "url": "https://arxiv.org/abs/2607.07604v1",
+    "published_date": "2026-07-08",
+    "source": "arXiv",
+    "summary": "Although Large Language Models (LLM) and Artificial Intelligence (AI) tools have enabled a rapid increase in the generation rate of predicted materials, the rate of new materials discovery has lagged behind. This is due to the challenges associated with designing a sequence of chemical reactions to predictably produce new materials, especially in new structure types. Here, we report a study of human and LLM generated recipes for the synthesis of known and new materials. The success of the recipe",
+    "authors": [
+      "Gregory Bassen",
+      "Wyatt Bunstine",
+      "Sarah Okandey",
+      "Sarah Cheung",
+      "Elaine Flowers",
+      "Ritwik Bose",
+      "Joshua Hummel",
+      "Christopher D. Stiles",
+      "Maxime A. Siegler",
+      "Tyrel M. McQueen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Monolithic GaN Systems Combining Non-Volatile Memory and Analog Computing via Area-Ratio-Engineered Ferroelectric AlScN Gate Stacks",
+    "url": "https://arxiv.org/abs/2607.07577v1",
+    "published_date": "2026-07-08",
+    "source": "arXiv",
+    "summary": "Gallium nitride (GaN) transistors have become the platform of choice for power electronics and radio-frequency power amplifiers. To unlock capabilities beyond those of conventional GaN, integrating ferroelectric heterostructure has been considered toward memory, logic and reconfigurable systems. Here, we demonstrate ferroelectric GaN transistors employing an AlScN-based gate stack in which systematic engineering of the area-ratio (SMIS/SMFM) provides unified control over both memory and analog f",
+    "authors": [
+      "Hyeong Jun Joo",
+      "Jong Min Park",
+      "Kieran Barrett-Snyder",
+      "Brendan Hanrahan",
+      "Geonwook Yoo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Energy Efficiency Optimization in Distributed MIMO vRAN via Cross-Layer Link Abstraction",
+    "url": "https://arxiv.org/abs/2607.07520v1",
+    "published_date": "2026-07-08",
+    "source": "arXiv",
+    "summary": "Virtualized radio access networks (vRAN) run the compute-intensive multiple-input multiple-output (MIMO) baseband as software on shared servers, which makes energy efficiency (EE) a primary design objective. Distributed MIMO vRAN consumes power across virtualized distributed unit (vDU) baseband, fronthaul transport, and per-radio-unit operation. We build a power model that resolves these three components. We then develop a framework that jointly selects modulation, transmission rank, and per-sub",
+    "authors": [
+      "Jaebum Park",
+      "Chan-Byoung Chae",
+      "Robert W. Heath"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Stability of Flow Models for Graph Signals",
+    "url": "https://arxiv.org/abs/2607.07510v1",
+    "published_date": "2026-07-08",
+    "source": "arXiv",
+    "summary": "Generating signals on graphs requires permutation-equivariant models that exhibit stability with respect to relative structural perturbations. While favorable stability properties of Graph Neural Networks (GNNs) have been well documented, it is unclear how structural errors propagate through the dynamics of continuous generative flow models that are gaining traction for graph signal generation. In this paper, we analyze continuous normalized flow models parameterized by GNNs and show that permut",
+    "authors": [
+      "Martin Schmidt",
+      "Gonzalo Mateos"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Optimizing high-temperature electron mobility in single-crystal Bi$_2$O$_2$Se based on its unconventional dependence on concentration",
+    "url": "https://arxiv.org/abs/2607.07384v1",
+    "published_date": "2026-07-08",
+    "source": "arXiv",
+    "summary": "Quasi-2D Bi$_2$O$_2$Se is part of an intensive materials research effort aimed at finding new semiconductors that outperform silicon-based electronics in terms of speed and power consumption. This material exhibits exceptionally high carrier mobility at low temperatures but mediocre mobility at 300 K. Its high mobility is generally associated with its high permittivity ($\\varepsilon_r$~500), which is also associated with metallicity persisting down to very low carrier concentrations. This materi",
+    "authors": [
+      "Antonín Sojka",
+      "Petr Knotek",
+      "Jan Zich",
+      "Martin Míšek",
+      "Roman Tesař",
+      "Kyo-Hoon Ahn",
+      "Petr Levinský",
+      "Jiří Navrátil",
+      "Pavlína Ruleová",
+      "Jiří Hejtmánek",
+      "Karel Knížek",
+      "Václav Holý",
+      "Čestmír Drašar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Vectorizing Quantum Control: A RISC-V Vector Extension Architecture for Scalable Qubit Systems",
+    "url": "https://arxiv.org/abs/2607.07372v1",
+    "published_date": "2026-07-08",
+    "source": "arXiv",
+    "summary": "The Quantum Control Processor (QCP) bridges the gap between compiler toolchains and control electronics, and is responsible for translating compiled quantum circuits into executable instructions that directly manipulate qubits and handle measurement feedback. However, existing designs rely primarily on customized instruction sets, limiting design reuse and requiring significant effort to build supporting toolchains. Furthermore, efficiently addressing qubits and scheduling operations in highly s",
+    "authors": [
+      "Xiaorang Guo",
+      "Kun Qin",
+      "Yanbin Chen",
+      "Carsten Trinitis",
+      "Martin Schulz"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Force-Isosurface Simulations Probe the Limits of High-Resolution AFM on Three-Dimensional Molecules",
+    "url": "https://arxiv.org/abs/2607.07363v1",
+    "published_date": "2026-07-08",
+    "source": "arXiv",
+    "summary": "High-resolution atomic force microscopy has transformed molecular imaging by revealing intramolecular structure directly in real space. A major remaining challenge is to extend this capability from largely planar molecules to non-planar molecular systems, where the most important structural information may be distributed across different heights above the surface. Here we use probe-particle-model simulations to predict the constant-force contours expected above molecules with increasing structur",
+    "authors": [
+      "Edward J Dunn",
+      "Robert J Young",
+      "Samuel P Jarvis"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Terahertz Phase Inversion via Field-Free Spin-Orbit Torque Switching in an Antenna-Integrated Spintronic Heterostructure",
+    "url": "https://arxiv.org/abs/2607.07220v1",
+    "published_date": "2026-07-08",
+    "source": "arXiv",
+    "summary": "We demonstrate microsecond-timescale electrical control of the terahertz (THz) emission phase in broadband field-free spintronic THz emitters, enabling megahertz-rate phase inversion while overcoming the kilohertz limitations of conventional mechanical and field-driven approaches. Our device integrates an H-dipole antenna with a spintronic heterostructure exhibiting uniaxial magnetic anisotropy, enabling deterministic spin-orbit torque induced in-plane magnetization switching without external ma",
+    "authors": [
+      "Amir Khan",
+      "Tiago de Oliveira Schneider",
+      "Suraj Joshi",
+      "Mohammad Faraz Abdullah",
+      "Reshma Rajeev Lekha",
+      "Sascha Preu",
+      "Markus Meinert"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "econ.GN",
+    "title": "Memory Scarcity, Open Models, and the Restructuring of the AI Industry, 2026-2030 -- A quantitative scenario analysis of inference economics, training-cost divergence, and infrastructure solvency",
+    "url": "https://arxiv.org/abs/2607.07207v1",
+    "published_date": "2026-07-08",
+    "source": "arXiv",
+    "summary": "We analyze how four forces restructure the AI industry over 2026-2030: the DRAM/HBM price surge, frontier-capable open-weight models (GLM-5.2), rapid inference-efficiency gains (near-Shannon-limit KV-cache compression, lightweight local runtimes), and the entry of Meta and xAI into compute resale on fleets bought before the memory repricing. Formulating inference economics in dollars per petabyte of bandwidth delivered (\\$/PB) -- model-agnostic for bandwidth-bound decode -- we show the entrant-i",
+    "authors": [
+      "Satoshi Matsuoka"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "ThermoDSE: A Thermal-Aware and Comprehensive Design Space Exploration for Chiplet-Based DNN Accelerators",
+    "url": "https://arxiv.org/abs/2607.07096v1",
+    "published_date": "2026-07-08",
+    "source": "arXiv",
+    "summary": "Chiplet-based DNN accelerators provide a scalable path to balance performance and yield for modern AI workloads. However, such systems face critical challenges in area and thermal constraints. Design space optimization should jointly consider fine-grained task modeling, chiplet granularity, core granularity, and critical physical constraints. To the best of our knowledge, this is the first framework that involves all these factors.\n  In this work, we propose ThermoDSE, a thermal-aware and compre",
+    "authors": [
+      "Jian Peng",
+      "Hanwei Fan",
+      "Jingbo Jiang",
+      "Lin Jiang",
+      "Wei Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Ethaline deep eutectic solvent under nanoconfinement: Unveiling structural and dynamical changes",
+    "url": "https://arxiv.org/abs/2607.07090v1",
+    "published_date": "2026-07-08",
+    "source": "arXiv",
+    "summary": "Hybrid nanomaterials incorporating deep eutectic solvents (DES) in porous hosts or at solid interfaces are gaining increasing attention for their potential interest across a wide range of applications. Under these conditions, the performances of DESs may be influenced by interfacial effects and spatial restrictions. In this study, we examined the effects of nanoconfinement on both the structure and molecular dynamics of the prototypical DES ethaline (a mixture of choline chloride and ethylene gl",
+    "authors": [
+      "Kamar Mohammad Nadim",
+      "Mozhdehei Armin",
+      "Lefort Ronan",
+      "Moréac Alain",
+      "Ollivier Jacques",
+      "Appel Markus",
+      "Viviana Cristiglio",
+      "Denis Morineau"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "physics.optics",
     "title": "Calibration of systematic distortions in quantum emitter localization microscopy for deterministic nanophotonic fabrication",
     "url": "https://arxiv.org/abs/2607.05370v1",
