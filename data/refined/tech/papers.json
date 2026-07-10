@@ -3,6 +3,299 @@
     "lens": "tech",
     "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
+    "title": "Best Practices for First-Principles Modeling of Amorphous Oxide Semiconductors: A Statistical Framework and Application to Zn-Sn-O",
+    "url": "https://arxiv.org/abs/2607.08667v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Ternary and quaternary amorphous oxide semiconductors have many properties that make them promising candidates for use in electronic applications like display, memory, and back end of line logic. However, finding the right material for a given application and optimizing its properties, deposition, and integration, requires a thorough understanding of the physics and chemistry at play. When properly carried out, first principles computations can play a crucial role in enhancing this understanding",
+    "authors": [
+      "Michiel J. van Setten",
+      "Tonglin L. Newsom",
+      "Christopher Pashartis",
+      "Vera van Noort",
+      "Rebecca L. Peterson",
+      "Geoffrey Pourtois"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Physical aging of glasses of an organic semiconductor",
+    "url": "https://arxiv.org/abs/2607.08653v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "All glasses, including organic semiconductor glasses, are non-equilibrium materials whose properties will change with time. This physical aging process is poorly understood for organic semiconductors, hindering the rational design of highly durable devices. In this study, we investigated the volume and enthalpy recovery processes in both thin films and bulk glasses of N,N'-Bis(3-methylphenyl)-N,N'-diphenylbenzidine (TPD). Our results revealed that volume recovery kinetics exhibit negligible depe",
+    "authors": [
+      "Shinian Cheng",
+      "Kritika Jha",
+      "Zijian Wang",
+      "Juliana B. Lugo",
+      "Hayley Kositzke",
+      "John H. Perepezko",
+      "Zahra Fakhraai",
+      "Mark D. Ediger"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Parasitic MIMO Beamforming for Multi-Active Multi-Parasitic Antenna Arrays with Binary Control",
+    "url": "https://arxiv.org/abs/2607.08624v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "In 6G, MIMO dimensions continue to scale, yet the increased cost, power consumption, and hardware complexity associated with growing RF chains limit practical deployment. Parasitic antennas offer a promising alternative that can add spatial degrees of freedom and array gain without a proportional increase in RF chains. From a communication perspective, prior work on parasitic antennas has primarily focused on adjusting continuous reactance values using varactors, but such varactor-based tuning h",
+    "authors": [
+      "Taejun Lee",
+      "Byunghyun Lee",
+      "Thomas E. Roth",
+      "David J. Love"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Large-scale first-principle simulations of amorphous indium oxide",
+    "url": "https://arxiv.org/abs/2607.08617v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Amorphous indium oxide (a-In$_2$O$_3$) is a high-electron-mobility semiconductor of central importance in thin-film transistors and a promising photoanode for solar-driven water oxidation. Despite sustained experimental and computational investigations, the structural motifs underlying its unusual transport properties and the existence of O-O peroxide-like bonds within its network have remained unresolved. Here we develop a MACE-based machine-learned interatomic potential trained on first-princi",
+    "authors": [
+      "Matthew Bousquet",
+      "Francois Gygi",
+      "Giulia Galli"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Broadband silicon photonic phase shifters driven by gradient optical forces",
+    "url": "https://arxiv.org/abs/2607.08558v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "While initially deployed for optical interconnects, silicon photonics is increasingly being explored as a hardware platform for programmable optical systems, including linear optical processors, neuromorphic photonic networks, quantum photonic circuits and multiplexed sensor arrays. Common to most existing implementations is that light is controlled with electronics, and even basic demonstrations wherein light directly controls light remain limited. Here we demonstrate a broadband all-optical si",
+    "authors": [
+      "Guillermo Arregui",
+      "Sander Jæger Linde",
+      "Magnus Vejby Nielsen",
+      "Bingrui Lu",
+      "Nikolaj B. Hougs",
+      "Babak Vosoughi Lahijani",
+      "Søren Stobbe"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.PL",
+    "title": "ESBMC-Arduino: Closing the Deployment Gap for Formal Verification of Open-Hardware PLCs",
+    "url": "https://arxiv.org/abs/2607.08550v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "OpenPLC, Arduino OPTA, CONTROLLINO, and Industrial Shields M-Duino bring IEC 61131-3 to low-cost microcontrollers used in real automation and industrial control system (ICS) security research. Existing open-source verifiers for IEC 61131-3, including ESBMC-PLC, prove safety over an abstract scan-cycle model with idealized unbounded integers. The board artifact runs on a resource-constrained microcontroller unit (MCU) with 16-bit words (8-bit AVR Arduinos), and sensors are read via a finite-resol",
+    "authors": [
+      "Pierre Dantas",
+      "Lucas Cordeiro",
+      "Waldir Junior"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "The Radial Distribution Functions of Nanofluids: Molecular Dynamics Simulations",
+    "url": "https://arxiv.org/abs/2607.08527v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Nanofluids, which are composed of insoluble, stable, and well-dispersed solid particles of nanoscale and/or subnanometer sizes suspended in a base liquid, are the next generation of liquids of today. The purpose of this paper is to investigate the one dimensional and three dimensional angle dependent radial distribution functions RDF and ARDF of polymeric nanofluids made up of nonrigid (soft) nanoparticles and a polymer melt (base fluid) using the molecular dynamics simulation approach and to se",
+    "authors": [
+      "Özlem Öztürk"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Fundamental Sensing Limits of 6G Cooperative MIMO-ISAC Networks: Joint Position-Velocity CRLB and Decoupling Analysis",
+    "url": "https://arxiv.org/abs/2607.08510v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "This paper presents a Cramér-Rao lower bound (CRLB)-based performance bound analysis of cooperative multiple-input multiple-output (MIMO) integrated sensing and communications (ISAC) networks. We first show the CRLB transformation of the signal-level parameters to the state parameters (position and velocity) in cooperative ISAC networks. Unlike existing studies that primarily ignored coupling between position and velocity in the Fisher information matrix (FIM), we derive the full FIM and the cor",
+    "authors": [
+      "Yanpeng Su",
+      "Norman Franchi",
+      "Maximilian Lübke"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "FPGN: Redefining Ultra-Fast Programmable Gate-based Neural Acceleration with Differentiable LUTs",
+    "url": "https://arxiv.org/abs/2607.08427v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Achieving nanosecond-scale inference latency for deep neural networks (DNNs) has become a primary architectural concern for latency-critical applications. While Field-Programmable Gate Arrays (FPGAs) offer a promising substrate for low-latency inference, conventional FPGA accelerators remain arithmetic-centric, using LUTs primarily as building blocks for numerical operators and peripheral logic. In contrast, recent LUT-native neural networks treat LUTs as learnable neurons, revealing promising t",
+    "authors": [
+      "Jiawei Liang",
+      "Haotong Qin",
+      "Linfeng Du",
+      "Xingyu Liu",
+      "Shangkun Li",
+      "Hui Yu",
+      "Michele Magno",
+      "Xinyu Chen",
+      "Jiang Xu",
+      "Wei Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CL",
+    "title": "Detecting Ladder Logic Bombs in IEC 61131-3 PLC Programs using ESBMC-PLC+: A Formal Verification Approach with Trigger Synthesis",
+    "url": "https://arxiv.org/abs/2607.08417v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "A Ladder Logic Bomb (LLB) is malicious control logic in a Programmable Logic Controller (PLC) program that lies dormant until a trigger activates a payload to manipulate actuators, forge sensor readings, or deny operator control. We observe that real malicious logic hides inside function-block bodies, which existing ladder-diagram verifiers drop from their intermediate representation (IR), making bombs invisible to provers. We present ESBMC-LLB, which uses ESBMC-PLC+ as its verification engine a",
+    "authors": [
+      "Pierre Dantas",
+      "Lucas Cordeiro",
+      "Waldir Junior"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Who Needs DRAM? We Have Fiber",
+    "url": "https://arxiv.org/abs/2607.08407v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "The rising pressure on DRAM availability and contract pricing reflects generative AI's massive high-performance memory requirements. This pressure is heavily compounded by hyperscale data center expansion, which now consumes a significant portion of global DRAM output. In this work, we propose a new architecture: Fiber Memory, which reimagines the role of optical fiber in a hyperscale data center, deploying it as an active, recirculating delay-line memory for immutable data, such as large langua",
+    "authors": [
+      "Hannah Atmer",
+      "Thiemo Voigt",
+      "Yuan Yao",
+      "Stefanos Kaxiras"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Inverse-designed meta processing units for multi-task near-field photonic computing",
+    "url": "https://arxiv.org/abs/2607.08360v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Integrated photonic neural networks require optical operators that are simultaneously compact, matrix-general and compatible with task-level reconfigurability. Here we introduce a meta processing unit (MPU), an inverse-designed near-field photonic device that implements local complex matrix transformations within a shallow-etched silicon region. Each 2x2 operator occupies 9.6 umx4.8 um and is designed as a reusable passive matrix primitive that can be combined with reconfigurable MZI neurons. We",
+    "authors": [
+      "Chu Wu",
+      "Zeyu Cai",
+      "Songtao Yang",
+      "Ruoyu Shen",
+      "Yinan Zhao",
+      "Haiou Zhang",
+      "Wei Chu",
+      "Xing Lin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Bright and Dark Excitons in CrSBr: Local Ligand-Field Character and Band-Coherent Optical Selection Rules",
+    "url": "https://arxiv.org/abs/2607.08355v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Magnetic van der Waals semiconductors such as CrSBr host an intricate exciton landscape whose physical interpretation has converged only recently. A many-body Feynman diagrammatic approach based on quasiparticle self-consistent GW with electron-hole ladder vertex corrections to the screened Coulomb interaction has established the electronic band gap, excitonic orbital character, real-space extent, binding energies, and bosonic-coupling signatures of the bright XA exciton near 1.34 eV and the hig",
+    "authors": [
+      "Swagata Acharya",
+      "Jessica McDivitt",
+      "Dimitar Pashov",
+      "Mark van Schilfgaarde",
+      "Justin C. Johnson",
+      "Jeffrey L. Blackburn"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Interplay between Electronic Structure, Chemical Bonding, and Lattice Symmetry in Bismuth Vanadate",
+    "url": "https://arxiv.org/abs/2607.08327v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Bismuth vanadate (BiVO$_4$) is a prototypical oxide photocatalyst that occurs in both tetragonal and monoclinic scheelite phases with markedly different photocatalytic and photoelectrochemical activities. Accurately identifying the monoclinic phase as the ground state and explaining the origin of its symmetry-breaking distortion are unusually challenging from a theoretical perspective, with various levels of theory and associated physical interpretations for this behaviour reported in the litera",
+    "authors": [
+      "Philip Schwinghammer",
+      "Franziska S. Hegner",
+      "Frederico P. Delgado",
+      "Michel Panhans",
+      "Konrad Merkel",
+      "Frank Ortmann",
+      "Ian D. Sharp",
+      "David A. Egger"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Ion-Implanted Silicon Nanoregions Enable Ultra-Low-Loss Trimming of Cladded Photonic Integrated Circuits",
+    "url": "https://arxiv.org/abs/2607.08266v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Photonic integrated circuits (PICs) have emerged as a key platform for information processing, including optical communication and computing. As PIC complexity increases, fabrication-induced response deviations accumulate, making post-fabrication trimming critical for unlocking their full potential. Here, we demonstrate that silicon ion implantation enables scalable, ultra-low-loss trimming of cladded PICs by locally forming a high-index silicon-rich region. Structural characterization confirms ",
+    "authors": [
+      "Zhongyu Tang",
+      "Shabnam Taheriniya",
+      "Seongmin Jo",
+      "Xinyu Ma",
+      "Akhil Varri",
+      "Anna P. Ovvyan",
+      "Vincent Spreter",
+      "Liam McRae",
+      "Xiansong Meng",
+      "Wolfram H. P. Pernice",
+      "Rongyang Xu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Nonlocal Electrostatic Origin of Schottky-Barrier Variability in 2D Contacts",
+    "url": "https://arxiv.org/abs/2607.08253v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Electrical contacts often limit the performance of atomically thin semiconductor devices. The Schottky barrier height (SBH) is conventionally treated as a local interface property, yet reported values for the same metal/2D-semiconductor contact vary by hundreds of meV. Here we show that, in top contacts, the effective SBH exhibits a pronounced nonlocal electrostatic dependence on defects near the contact edge, beyond the conventional local interface framework. A nonlocal electrostatic model, sup",
+    "authors": [
+      "Hangbo Zhou",
+      "Yong-Wei Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Multiuser Zak-OTFS on the Uplink with Superimposed Spread-Pilots",
+    "url": "https://arxiv.org/abs/2607.08247v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "In this paper, we consider the uplink of a multiuser Zak-OTFS system comprising users with heterogeneous delay-Doppler (DD) periods/frame sizes. Multiple access is achieved through time-frequency (TF) shifts that place the users in non-overlapping regions of the TF plane. Closed-form expressions for the effective DD domain channel between each user and the base station are derived for sinc and Gaussian pulse shaping filters. The inter-user interference (IUI) is shown to be negligible under the T",
+    "authors": [
+      "Sai Pradeep Muppaneni",
+      "Ananthanarayanan Chockalingam"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
     "title": "Human and LLM Collaboration for Accelerated Materials Synthesis and Discovery",
     "url": "https://arxiv.org/abs/2607.07604v1",
     "published_date": "2026-07-08",
