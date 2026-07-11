@@ -1,12 +1,12 @@
 {
   "date": "2026-07-11",
-  "generated_at": "2026-07-11T08:33:17.981713+00:00",
+  "generated_at": "2026-07-11T09:51:02.989267+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
       "date": "2026-07-11",
       "item_count": 1,
-      "generated_at": "2026-07-11T08:33:17.981187+00:00",
+      "generated_at": "2026-07-11T09:51:02.988702+00:00",
       "content": {
         "ko": {
           "executive_summary": "",
@@ -26,248 +26,138 @@
       "sector": "HPC·Datacenter",
       "date": "2026-07-11",
       "item_count": 9,
-      "generated_at": "2026-07-11T08:33:17.981187+00:00",
+      "generated_at": "2026-07-11T09:51:02.988702+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Nvidia, SK Hynix, AMD, Tesla, and Tata are all competing intensively for semiconductor talent, with SK Hynix removing educational degree requirements for new hires to prioritize skill-based hiring. AMD is investing $400 million over five years in India R&D operations, while Tesla Korea is actively recruiting AI chip engineers.",
+          "executive_summary": "경쟁사들이 반도체 인재 확보 경쟁에 나서면서 대만 반도체 인재 부족 심화. SK하이닉스는 신입사원 채용 시 학력 제한을 전면 폐지하고 문제해결력을 중시하는 인재중심 채용 전략 추진. Nvidia, AMD, Tesla Korea 등 글로벌 업체들도 인도 및 대만에서 엔지니어 채용을 확대 중.",
           "key_facts": [
-            "Nvidia expanding hiring in Taiwan amid talent shortage",
-            "SK Hynix eliminating degree requirements in recruitment, emphasizing problem-solving skills",
-            "AMD investing $400 million over 5 years in India operations",
-            "Tata Electronics recruiting from Intel's talent pool",
-            "Tesla Korea hiring AI chip engineers for high-volume AI chips"
+            "SK하이닉스 신입사원 채용 시 학력 자격요건 전면 삭제",
+            "Nvidia 대만 반도체 인재 채용 확대로 지역 인재 부족 심화",
+            "AMD 인도에 향후 5년 약 4억 달러 규모 연구개발 투자 계획",
+            "Tata Electronics가 Intel 인재풀에서 기술인재 영입 추진",
+            "Tesla Korea AI 칩 엔지니어 채용 중"
           ],
           "implications": [
             {
-              "keyword": "Talent War",
-              "text": "Intense competition for chip design and engineering talent across regions; companies removing traditional hiring barriers to access broader talent pools"
+              "keyword": "인재 확보 경쟁",
+              "text": "글로벌 반도체 업체들의 공격적 채용으로 대만 반도체 인재 부족 심화, SK하이닉스 등 한국 기업도 학력 제한 폐지 등 채용 기준 완화로 대응"
             },
             {
-              "keyword": "Geographic Diversification",
-              "text": "AMD's India expansion and Tata's growth signal shift of semiconductor engineering and talent development away from traditional centers"
+              "keyword": "신규 역량 중심 채용",
+              "text": "학위보다 AI 활용경험, 문제해결력 등 실무 역량 중심의 채용 기준 전환 추세"
             },
             {
-              "keyword": "AI Capability Race",
-              "text": "Companies prioritizing AI chip expertise in recruitment, indicating accelerated internal AI accelerator/processor development strategies"
+              "keyword": "지역별 R&D 거점 강화",
+              "text": "AMD 인도 투자 등 글로벌 업체들이 아시아 신흥 기술 거점에 R&D 센터 확대"
             }
           ],
-          "counterpoint": "Talent recruitment wins do not guarantee successful product development or time-to-market delivery."
+          "counterpoint": "단순 채용 공고 확대만으로는 실제 인재 부족을 근본적으로 해결하기 어려울 수 있음."
         },
         "en": {
-          "executive_summary": "Nvidia, SK Hynix, AMD, Tesla, and Tata are all competing intensively for semiconductor talent, with SK Hynix removing educational degree requirements for new hires to prioritize skill-based hiring. AMD is investing $400 million over five years in India R&D operations, while Tesla Korea is actively recruiting AI chip engineers.",
+          "executive_summary": "Competitors intensify competition for semiconductor talent, exacerbating semiconductor talent shortage in Taiwan. SK Hynix pursues talent-centric recruitment strategy by eliminating educational requirements entirely for new hires and emphasizing problem-solving ability. Global companies such as Nvidia, AMD, and Tesla Korea are expanding engineer recruitment in India and Taiwan.",
           "key_facts": [
-            "Nvidia expanding hiring in Taiwan amid talent shortage",
-            "SK Hynix eliminating degree requirements in recruitment, emphasizing problem-solving skills",
-            "AMD investing $400 million over 5 years in India operations",
-            "Tata Electronics recruiting from Intel's talent pool",
-            "Tesla Korea hiring AI chip engineers for high-volume AI chips"
+            "SK Hynix eliminates all educational qualification requirements for new hire recruitment",
+            "Nvidia expands semiconductor talent recruitment in Taiwan, deepening regional talent shortage",
+            "AMD plans approximately $400 million R&D investment in India over the next 5 years",
+            "Tata Electronics pursues technical talent recruitment from Intel's talent pool",
+            "Tesla Korea recruiting AI chip engineers"
           ],
           "implications": [
             {
-              "keyword": "Talent War",
-              "text": "Intense competition for chip design and engineering talent across regions; companies removing traditional hiring barriers to access broader talent pools"
+              "keyword": "Talent acquisition competition",
+              "text": "Aggressive recruitment by global semiconductor companies intensifies talent shortage in Taiwan, while Korean companies like SK Hynix respond by relaxing recruitment standards such as eliminating educational restrictions"
             },
             {
-              "keyword": "Geographic Diversification",
-              "text": "AMD's India expansion and Tata's growth signal shift of semiconductor engineering and talent development away from traditional centers"
+              "keyword": "Skills-based recruitment",
+              "text": "Shift in recruitment criteria toward practical competencies such as AI application experience and problem-solving ability over degrees"
             },
             {
-              "keyword": "AI Capability Race",
-              "text": "Companies prioritizing AI chip expertise in recruitment, indicating accelerated internal AI accelerator/processor development strategies"
+              "keyword": "Regional R&D hub strengthening",
+              "text": "Global companies expand R&D centers in emerging Asian technology hubs, such as AMD's India investment"
             }
           ],
-          "counterpoint": "Talent recruitment wins do not guarantee successful product development or time-to-market delivery."
+          "counterpoint": "Expanding job postings alone may not fundamentally resolve actual talent shortages."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
       "date": "2026-07-11",
-      "item_count": 10,
-      "generated_at": "2026-07-11T08:33:17.981187+00:00",
+      "item_count": 11,
+      "generated_at": "2026-07-11T09:51:02.988702+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Major AI companies including Meta, OpenAI, DeepSeek, and Google are all developing in-house custom AI chips, signaling a shift away from Nvidia dependence. Meta begins in-house chip production in September; Apple commits $30 billion to Broadcom for 15 billion custom chips; all firms ultimately depend on TSMC manufacturing.",
+          "executive_summary": "OpenAI, DeepSeek, Meta 등 AI 대형사들이 Nvidia 의존도 감소를 위해 커스텀 AI 칩 개발에 나서면서 반도체 자급 동향 가속화. Meta는 9월부터 자체 AI 칩 양산 시작, Apple은 Broadcom과 300억 달러 규모 칩 파트너십 체결. TSMC가 이러한 커스텀 칩 생산의 핵심 병목으로 부상.",
           "key_facts": [
-            "Meta starting in-house AI chip production in September",
-            "Apple-Broadcom partnership worth $30 billion for 15 billion chips",
-            "OpenAI, DeepSeek, Meta, and Google developing custom AI chips",
-            "Google adopting Nvidia-style TPU business growth approach",
-            "TSMC remains critical manufacturing partner for all custom chip players (Nvidia, AMD, Apple, Broadcom, Meta, Google)"
+            "Meta 9월부터 자체 AI 칩 양산 시작",
+            "Apple과 Broadcom 300억 달러 규모 칩 파트너십 체결 (150억 개 칩 생산)",
+            "OpenAI, Broadcom과 'Jalapeño' 칩 공동 개발 추진",
+            "Google TPU 비즈니스 확대를 위해 Nvidia 스타일 고객 접근 전략 채택",
+            "Meta의 커스텀 AI 칩이 AI 경제 구조 재정의 가능성 제시",
+            "TSMC가 AI 칩 생산 병목(Physical Chokepoint) 역할"
           ],
           "implications": [
             {
-              "keyword": "Vertical Integration",
-              "text": "AI giants investing billions in proprietary chip design to reduce Nvidia dependency and optimize TCO for inference workloads"
+              "keyword": "AI 칩 자급화 전략",
+              "text": "OpenAI, Meta, DeepSeek 등 AI 대형 고객들이 Nvidia 의존도 감소를 위해 커스텀 칩 개발 가속화, 반도체 산업 구도 변화"
             },
             {
-              "keyword": "TSMC Concentration Risk",
-              "text": "Custom chip proliferation increases TSMC's central role and manufacturing bottleneck; every custom AI chip ultimately depends on TSMC capacity"
+              "keyword": "TSMC 의존도 심화",
+              "text": "Meta, Apple, Broadcom 등 모든 커스텀 칩 설계 업체가 TSMC 제조능력에 의존하면서 TSMC의 경제적 지위 강화"
             },
             {
-              "keyword": "Economics Transformation",
-              "text": "Meta and others redefine AI economics through custom silicon optimized for their specific workloads, shifting value away from GPU vendors"
+              "keyword": "경제 효율성 재평가",
+              "text": "Meta의 커스텀 칩이 AI 인프라 비용 구조를 재정의하고 장기적으로 산업 경제성을 개선할 수 있는 기회 제시"
             }
           ],
-          "counterpoint": "Custom chip development requires multi-year timelines and significant engineering investment; first-generation designs may underperform expectations."
+          "counterpoint": "커스텀 칩 개발의 높은 초기 투자비와 개발 리스크가 모든 기업에 실현 가능한 전략이 아닐 수 있음."
         },
         "en": {
-          "executive_summary": "Major AI companies including Meta, OpenAI, DeepSeek, and Google are all developing in-house custom AI chips, signaling a shift away from Nvidia dependence. Meta begins in-house chip production in September; Apple commits $30 billion to Broadcom for 15 billion custom chips; all firms ultimately depend on TSMC manufacturing.",
+          "executive_summary": "Major AI companies such as OpenAI, DeepSeek, and Meta accelerate semiconductor self-sufficiency trends by developing custom AI chips to reduce Nvidia dependence. Meta begins mass production of proprietary AI chips starting September, and Apple signs a $30 billion chip partnership with Broadcom. TSMC emerges as a critical bottleneck in custom chip production.",
           "key_facts": [
-            "Meta starting in-house AI chip production in September",
-            "Apple-Broadcom partnership worth $30 billion for 15 billion chips",
-            "OpenAI, DeepSeek, Meta, and Google developing custom AI chips",
-            "Google adopting Nvidia-style TPU business growth approach",
-            "TSMC remains critical manufacturing partner for all custom chip players (Nvidia, AMD, Apple, Broadcom, Meta, Google)"
+            "Meta begins mass production of proprietary AI chips starting September",
+            "Apple and Broadcom sign $30 billion chip partnership (150 billion chip production)",
+            "OpenAI and Broadcom jointly develop 'Jalapeño' chip",
+            "Google adopts Nvidia-style customer approach strategy to expand TPU business",
+            "Meta's custom AI chip presents possibility of redefining AI economy structure",
+            "TSMC serves as AI chip production bottleneck (Physical Chokepoint)"
           ],
           "implications": [
             {
-              "keyword": "Vertical Integration",
-              "text": "AI giants investing billions in proprietary chip design to reduce Nvidia dependency and optimize TCO for inference workloads"
+              "keyword": "AI chip self-sufficiency strategy",
+              "text": "Major AI customers such as OpenAI, Meta, and DeepSeek accelerate custom chip development to reduce Nvidia dependence, shifting semiconductor industry structure"
             },
             {
-              "keyword": "TSMC Concentration Risk",
-              "text": "Custom chip proliferation increases TSMC's central role and manufacturing bottleneck; every custom AI chip ultimately depends on TSMC capacity"
+              "keyword": "TSMC dependence intensification",
+              "text": "All custom chip design companies including Meta, Apple, and Broadcom rely on TSMC's manufacturing capacity, strengthening TSMC's economic position"
             },
             {
-              "keyword": "Economics Transformation",
-              "text": "Meta and others redefine AI economics through custom silicon optimized for their specific workloads, shifting value away from GPU vendors"
+              "keyword": "Economic efficiency reassessment",
+              "text": "Meta's custom chip redefines AI infrastructure cost structure and presents opportunity to improve industry economics in the long term"
             }
           ],
-          "counterpoint": "Custom chip development requires multi-year timelines and significant engineering investment; first-generation designs may underperform expectations."
+          "counterpoint": "High initial investment costs and development risks of custom chip development may not be a feasible strategy for all companies."
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
       "date": "2026-07-11",
-      "item_count": 6,
-      "generated_at": "2026-07-11T08:33:17.981187+00:00",
+      "item_count": 7,
+      "generated_at": "2026-07-11T09:51:02.988702+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "SK Hynix achieved strong Nasdaq debut (13% gain, trading at $168-$177), while advancing next-generation AI memory via in-memory computing technology with TetraMem. A Japanese upstart is targeting 30% 2nm wafer price reduction versus TSMC, and Intel and Samsung are advancing competing 2nm processes (18A and SF2).",
-          "key_facts": [
-            "SK Hynix ADR Nasdaq debut: opened 14% above $149 IPO price at $170, closed 12.8% higher at $168.01",
-            "SK Hynix and TetraMem validated memristor-based in-memory computing SoC technology",
-            "Japanese upstart targeting 30% cost reduction for 2nm wafer pricing",
-            "Intel 18A vs Samsung SF2 competing at 2nm process node",
-            "SK Chairman Choi Tae-won signals willingness to invest in US memory fab if conditions align"
-          ],
-          "implications": [
-            {
-              "keyword": "AI Memory Architecture",
-              "text": "SK Hynix in-memory computing validates HBM successor technologies improving power efficiency for AI inference"
-            },
-            {
-              "keyword": "Process Cost Competition",
-              "text": "Japanese entrant and Intel/Samsung alternatives creating pricing pressure on TSMC's advanced node dominance"
-            },
-            {
-              "keyword": "US Capacity Expansion",
-              "text": "SK Hynix Nasdaq listing and executive signaling suggest accelerated US memory fab investment driven by AI demand and geopolitical incentives"
-            },
-            {
-              "keyword": "TSMC Pricing Pressure",
-              "text": "Multiple competitors at 2nm (Intel, Samsung, Japanese startup) reduce TSMC's pricing power and may accelerate foundry capacity competition"
-            }
-          ],
-          "counterpoint": "A Japanese upstart achieving 30% cost reduction at 2nm requires unproven process maturity and volume ramp-up; timeline and yield risks remain high."
-        },
-        "en": {
-          "executive_summary": "SK Hynix achieved strong Nasdaq debut (13% gain, trading at $168-$177), while advancing next-generation AI memory via in-memory computing technology with TetraMem. A Japanese upstart is targeting 30% 2nm wafer price reduction versus TSMC, and Intel and Samsung are advancing competing 2nm processes (18A and SF2).",
-          "key_facts": [
-            "SK Hynix ADR Nasdaq debut: opened 14% above $149 IPO price at $170, closed 12.8% higher at $168.01",
-            "SK Hynix and TetraMem validated memristor-based in-memory computing SoC technology",
-            "Japanese upstart targeting 30% cost reduction for 2nm wafer pricing",
-            "Intel 18A vs Samsung SF2 competing at 2nm process node",
-            "SK Chairman Choi Tae-won signals willingness to invest in US memory fab if conditions align"
-          ],
-          "implications": [
-            {
-              "keyword": "AI Memory Architecture",
-              "text": "SK Hynix in-memory computing validates HBM successor technologies improving power efficiency for AI inference"
-            },
-            {
-              "keyword": "Process Cost Competition",
-              "text": "Japanese entrant and Intel/Samsung alternatives creating pricing pressure on TSMC's advanced node dominance"
-            },
-            {
-              "keyword": "US Capacity Expansion",
-              "text": "SK Hynix Nasdaq listing and executive signaling suggest accelerated US memory fab investment driven by AI demand and geopolitical incentives"
-            },
-            {
-              "keyword": "TSMC Pricing Pressure",
-              "text": "Multiple competitors at 2nm (Intel, Samsung, Japanese startup) reduce TSMC's pricing power and may accelerate foundry capacity competition"
-            }
-          ],
-          "counterpoint": "A Japanese upstart achieving 30% cost reduction at 2nm requires unproven process maturity and volume ramp-up; timeline and yield risks remain high."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
       "date": "2026-07-11",
-      "item_count": 14,
-      "generated_at": "2026-07-11T08:33:17.981187+00:00",
+      "item_count": 16,
+      "generated_at": "2026-07-11T09:51:02.988702+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Advanced packaging technology is accelerating with Nova winning tool-of-record at GlobalFoundries, Intel's EMIB-T enabling 10x+ reticle dies and 12 Gb/s+ HBM4e integration, and regional packaging expansion in Vietnam. King Yuan investing $1.4 billion in US expansion; TSMC's CoWoS capacity signals AI spending limits.",
-          "key_facts": [
-            "Nova (NVMI) wins tool-of-record status at GlobalFoundries for advanced packaging",
-            "Intel EMIB-T supports 10x+ reticle dies with HBM4e DRAM at 12 Gb/s+",
-            "King Yuan (Nvidia supplier) investing $1.4 billion in US chip expansion",
-            "Vietnam establishing regional semiconductor packaging center",
-            "TSMC Q2 earnings July 16 expected to signal AI spending ceiling via CoWoS capacity metrics"
-          ],
-          "implications": [
-            {
-              "keyword": "Chiplet Assembly Scaling",
-              "text": "Intel EMIB-T and advanced packaging tooling enable larger, more complex HPC/AI die assemblies with integrated memory, addressing reticle size limitations"
-            },
-            {
-              "keyword": "Supply Chain Resilience",
-              "text": "King Yuan US expansion and Vietnam packaging hub reduce Asia-concentrated packaging bottleneck for Nvidia and other AI accelerator suppliers"
-            },
-            {
-              "keyword": "Memory-Logic Integration",
-              "text": "HBM4e integration via EMIB-T critical for AI chip performance; packaging becomes strategic differentiator alongside process node"
-            },
-            {
-              "keyword": "AI Capacity Constraints",
-              "text": "TSMC CoWoS capacity metrics will reveal whether AI server demand is sustainable or approaching saturation"
-            }
-          ],
-          "counterpoint": "CoWoS capacity constraints may reflect supply-chain bottlenecks rather than actual demand ceiling; customer allocation and inventory dynamics complicate interpretation."
-        },
-        "en": {
-          "executive_summary": "Advanced packaging technology is accelerating with Nova winning tool-of-record at GlobalFoundries, Intel's EMIB-T enabling 10x+ reticle dies and 12 Gb/s+ HBM4e integration, and regional packaging expansion in Vietnam. King Yuan investing $1.4 billion in US expansion; TSMC's CoWoS capacity signals AI spending limits.",
-          "key_facts": [
-            "Nova (NVMI) wins tool-of-record status at GlobalFoundries for advanced packaging",
-            "Intel EMIB-T supports 10x+ reticle dies with HBM4e DRAM at 12 Gb/s+",
-            "King Yuan (Nvidia supplier) investing $1.4 billion in US chip expansion",
-            "Vietnam establishing regional semiconductor packaging center",
-            "TSMC Q2 earnings July 16 expected to signal AI spending ceiling via CoWoS capacity metrics"
-          ],
-          "implications": [
-            {
-              "keyword": "Chiplet Assembly Scaling",
-              "text": "Intel EMIB-T and advanced packaging tooling enable larger, more complex HPC/AI die assemblies with integrated memory, addressing reticle size limitations"
-            },
-            {
-              "keyword": "Supply Chain Resilience",
-              "text": "King Yuan US expansion and Vietnam packaging hub reduce Asia-concentrated packaging bottleneck for Nvidia and other AI accelerator suppliers"
-            },
-            {
-              "keyword": "Memory-Logic Integration",
-              "text": "HBM4e integration via EMIB-T critical for AI chip performance; packaging becomes strategic differentiator alongside process node"
-            },
-            {
-              "keyword": "AI Capacity Constraints",
-              "text": "TSMC CoWoS capacity metrics will reveal whether AI server demand is sustainable or approaching saturation"
-            }
-          ],
-          "counterpoint": "CoWoS capacity constraints may reflect supply-chain bottlenecks rather than actual demand ceiling; customer allocation and inventory dynamics complicate interpretation."
-        }
+        "ko": {},
+        "en": {}
       }
     }
   }
