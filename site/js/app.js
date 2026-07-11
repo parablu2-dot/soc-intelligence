@@ -115,10 +115,11 @@ let crawlStatus = [];
 let currentModule = 'today';
 let reviewedSet = new Set(JSON.parse(localStorage.getItem('reviewed') || '[]'));
 let distillationNotes = JSON.parse(localStorage.getItem('distillation_notes') || '[]');
-let distillationSummaries = {};  // {"axis||category": {summary, note_count, generated_at}} — 빌드타임 생성
-let baselineNotes = [];  // BaselineNote[] — data/baseline/notes/*.md 빌드타임 파싱 (장문 deep-research 노트)
+let distillationSummaries = {};  // {"axis||category": {content:{ko,en}, note_count, generated_at}} — A-2 구조화 스키마
+let baselineNotes = [];  // BaselineNote[] — data/baseline/notes/*.md 빌드타임 파싱 (장문 deep-research 노트, ko 고정)
 let versionInfo = null;  // data/refined/version.json — 단일 진실원 (version/date/maturity)
-let sectorSummaries = {};  // {axis: {summary, item_count, generated_at}} — Phase 3 item 6, 빌드타임 생성
+let sectorSummaries = {};  // {axis: {sector, content:{ko,en}, item_count, generated_at}} — A-2 구조화 스키마
+let summaryLang = 'ko';  // B-2: 섹터 요약/1차 증류 ko↔en 정적 토글 (클라이언트 메모리만, storage 미사용)
 let dailyTop5 = [];  // [{axis, company, headline, url, source, published_date, score}] — Phase 3 item 7
 
 // ── 부트스트랩 ─────────────────────────────────────────────────────────────
@@ -476,6 +477,12 @@ window.toggleBaselineNote = function(id) {
   if (el) el.style.display = el.style.display === 'none' ? 'block' : 'none';
 };
 
+// B-2: ko/en 정적 토글 — 런타임 번역·fetch 없음, 커밋된 content.{ko,en} 전환만. 상태는 메모리만(새로고침 시 ko로 복귀).
+window.toggleSummaryLang = function() {
+  summaryLang = summaryLang === 'ko' ? 'en' : 'ko';
+  navigate('review');
+};
+
 // ── 2. 일일 리뷰 큐 (5축 + 카테고리 필터 + 1차 증류 코멘트) ───────────────
 function _distillationNotePanel(axis, category) {
   const noteKey = `${axis}||${category}`;
@@ -491,7 +498,7 @@ function _distillationNotePanel(axis, category) {
   const summaryHtml = catSummary && catSummary.content ? `
     <div style="background:var(--surface2);border-left:2px solid var(--accent);padding:6px 8px;margin-bottom:8px">
       <strong style="color:var(--accent);font-size:10px">◉ 카테고리 요약 (빌드타임 생성 · 메모 ${catSummary.note_count}건)</strong>
-      <div style="margin-top:4px">${_structuredSummaryHtml(catSummary.content.ko)}</div>
+      <div style="margin-top:4px">${_structuredSummaryHtml(catSummary.content[summaryLang])}</div>
     </div>` : '';
 
   return `
@@ -558,7 +565,7 @@ function _sectorSummariesPanel() {
               ${chipAxis(a)}
               <span style="font-size:10px;color:var(--text-muted)">${sectorSummaries[a].item_count}건</span>
             </div>
-            ${_structuredSummaryHtml(sectorSummaries[a].content.ko)}
+            ${_structuredSummaryHtml(sectorSummaries[a].content[summaryLang])}
           </div>`).join('')}
       </div>
     </div>`;
@@ -569,6 +576,10 @@ function modReview() {
   const axes = ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'];
   return `
     ${header('일일 리뷰', `미완료 ${unreviewed.length}건 · 완료 표시하면 흐려집니다`)}
+    <div style="margin-bottom:10px">
+      <button class="filter-btn" onclick="toggleSummaryLang()">${summaryLang === 'ko' ? 'KO → EN' : 'EN → KO'}</button>
+      <span style="font-size:11px;color:var(--text-muted);margin-left:8px">섹터 요약·1차 증류 요약 언어 전환 (정적, 커밋된 번역만 표시)</span>
+    </div>
     ${_baselineNotesPanel()}
     ${_sectorSummariesPanel()}
     <div style="margin-bottom:12px">
