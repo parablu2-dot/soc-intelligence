@@ -228,7 +228,7 @@ def _generate_company_summaries(conn, client) -> None:
             summaries[company] = {
                 "summary": tool_block.input["summary_en"],  # 하위호환 기본값 (구 프론트/캐시)
                 "summary_en": tool_block.input["summary_en"],
-                "summary_zh": tool_block.input["summary_zh"],
+                "summary_zh": tool_block.input.get("summary_zh", ""),  # A-2에서 ko/en로 재편, zh 유지 안 함
                 "summary_ko": tool_block.input["summary_ko"],
                 "signal_count": len(headlines),
                 "generated_at": now_ts,
