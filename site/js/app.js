@@ -488,10 +488,10 @@ function _distillationNotePanel(axis, category) {
   ).join('') || '<span style="font-size:11px;color:var(--text-muted)">코멘트 없음</span>';
 
   const catSummary = distillationSummaries[noteKey];
-  const summaryHtml = catSummary ? `
-    <div style="background:var(--surface2);border-left:2px solid var(--accent);padding:6px 8px;margin-bottom:8px;font-size:12px;line-height:1.5">
+  const summaryHtml = catSummary && catSummary.content ? `
+    <div style="background:var(--surface2);border-left:2px solid var(--accent);padding:6px 8px;margin-bottom:8px">
       <strong style="color:var(--accent);font-size:10px">◉ 카테고리 요약 (빌드타임 생성 · 메모 ${catSummary.note_count}건)</strong>
-      <div style="margin-top:4px">${catSummary.summary}</div>
+      <div style="margin-top:4px">${_structuredSummaryHtml(catSummary.content.ko)}</div>
     </div>` : '';
 
   return `
@@ -528,10 +528,25 @@ function _reviewGroupedList(signals, activeAxis) {
   return html || signalList([]);
 }
 
+// ── A-2 통일 구조화 요약 렌더 (executive_summary/key_facts/implications/counterpoint) ─
+// content.ko 고정 렌더 — 언어 토글은 B-2에서 추가.
+function _structuredSummaryHtml(content) {
+  if (!content) return '';
+  const facts = (content.key_facts || []).map(f => `<li>${f}</li>`).join('');
+  const implications = (content.implications || [])
+    .map(im => `<div><strong>[${im.keyword}]</strong> ${im.text}</div>`)
+    .join('');
+  return `
+    ${content.executive_summary ? `<div style="font-size:12px;line-height:1.5">${content.executive_summary}</div>` : ''}
+    ${facts ? `<ul style="margin:6px 0 0 16px;padding:0;font-size:12px;line-height:1.5">${facts}</ul>` : ''}
+    ${implications ? `<div style="margin-top:6px;font-size:12px;line-height:1.5">${implications}</div>` : ''}
+    ${content.counterpoint ? `<div style="margin-top:6px;font-size:11px;color:var(--text-muted)">▸ ${content.counterpoint}</div>` : ''}`;
+}
+
 // ── 섹터별 1문단 요약 (Phase 3 item 6 — distill 단계 빌드타임 생성) ─────────
 function _sectorSummariesPanel() {
   const axes = ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'];
-  const present = axes.filter(a => sectorSummaries[a]);
+  const present = axes.filter(a => sectorSummaries[a] && sectorSummaries[a].content);
   if (!present.length) return '';
   return `
     <div style="margin-bottom:14px">
@@ -543,7 +558,7 @@ function _sectorSummariesPanel() {
               ${chipAxis(a)}
               <span style="font-size:10px;color:var(--text-muted)">${sectorSummaries[a].item_count}건</span>
             </div>
-            <div style="font-size:12px;line-height:1.5">${sectorSummaries[a].summary}</div>
+            ${_structuredSummaryHtml(sectorSummaries[a].content.ko)}
           </div>`).join('')}
       </div>
     </div>`;
