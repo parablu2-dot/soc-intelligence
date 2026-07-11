@@ -1,8 +1,9 @@
 """
-send_review_mail.py — 일일 리뷰 메일링 (Phase 6, self-test).
+send_review_mail.py — 일일 리뷰 메일링 (Phase 6, self-test → B-1 ko content 조립).
 
-Phase 3에서 이미 정적 저장된 data/refined/daily_top5.json, sector_summaries.json을
-그대로 이메일 본문으로 렌더한다. 재계산·재요약 없음 (runtime-token-zero 유지).
+data/refined/daily_top5.json, sector_summaries.json(content.ko, A-2 구조화 스키마)을
+그대로 이메일 본문으로 렌더한다. 재계산·재요약·LLM 호출 없음 (runtime-token-zero 유지).
+메일은 KO 고정 발송 — 메일 클라이언트가 JS 토글을 지원하지 않으므로 영문은 사이트 토글로 유도.
 수신자는 천 1인 — 구독자 시스템 없음(YAGNI). 발송 실패해도 워크플로 전체가 죽지 않도록
 이 스크립트 자체도 예외를 삼키고 항상 exit 0 (워크플로 쪽 continue-on-error와 이중 격리).
 """
@@ -39,6 +40,27 @@ def _load_json(path: Path) -> dict:
         return {}
 
 
+def _sector_block_html(axis: str, info: dict) -> str:
+    content = (info.get("content") or {}).get("ko") or {}
+    if not content:
+        return ""
+    label = info.get("sector") or _AXIS_LABELS.get(axis, axis)
+    facts = "".join(f'<li style="margin-bottom:2px">{f}</li>' for f in content.get("key_facts") or [])
+    implications = "".join(
+        f'<div style="margin-bottom:2px"><strong>[{im["keyword"]}]</strong> {im["text"]}</div>'
+        for im in content.get("implications") or []
+    )
+    counterpoint = content.get("counterpoint") or ""
+    return f"""\
+<div style="margin-bottom:16px">
+  <div style="font-weight:600;color:#58a6ff;font-size:13px;margin-bottom:4px">{label}</div>
+  <div style="font-size:13px;line-height:1.6;color:#e6edf3">{content.get("executive_summary", "")}</div>
+  {f'<ul style="margin:6px 0 0 16px;padding:0;font-size:12px;line-height:1.6;color:#e6edf3">{facts}</ul>' if facts else ''}
+  {f'<div style="margin-top:6px;font-size:12px;line-height:1.6;color:#e6edf3">{implications}</div>' if implications else ''}
+  {f'<div style="margin-top:6px;font-size:12px;color:#8b949e">▸ {counterpoint}</div>' if counterpoint else ''}
+</div>"""
+
+
 def _build_html(top5: list[dict], sectors: dict, date: str) -> str:
     top5_rows = "".join(
         f'<tr><td style="padding:6px 0;vertical-align:top;font-weight:600;color:#58a6ff">{i+1}.</td>'
@@ -49,13 +71,7 @@ def _build_html(top5: list[dict], sectors: dict, date: str) -> str:
         for i, t in enumerate(top5)
     )
 
-    sector_blocks = "".join(
-        f'<div style="margin-bottom:14px">'
-        f'<div style="font-weight:600;color:#58a6ff;font-size:13px;margin-bottom:4px">{_AXIS_LABELS.get(axis, axis)}</div>'
-        f'<div style="font-size:13px;line-height:1.6;color:#e6edf3">{info.get("summary", "")}</div>'
-        f'</div>'
-        for axis, info in sectors.items() if info.get("summary")
-    )
+    sector_blocks = "".join(_sector_block_html(axis, info) for axis, info in sectors.items())
 
     return f"""\
 <div style="font-family:-apple-system,Segoe UI,Arial,sans-serif;background:#0d1117;color:#e6edf3;padding:20px;max-width:640px;margin:0 auto">
@@ -69,7 +85,8 @@ def _build_html(top5: list[dict], sectors: dict, date: str) -> str:
   {sector_blocks}
 
   <div style="margin-top:20px;padding-top:12px;border-top:1px solid #30363d;font-size:12px">
-    <a href="{SITE_URL}" style="color:#58a6ff">{SITE_URL}</a>
+    <a href="{SITE_URL}" style="color:#58a6ff">{SITE_URL}</a><br>
+    <span style="color:#8b949e">영문 요약은 사이트 상단 KO/EN 토글에서 확인하세요.</span>
   </div>
 </div>"""
 
