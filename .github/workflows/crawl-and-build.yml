@@ -87,11 +87,9 @@ jobs:
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push
 
-      # ── 7. 일일 리뷰 메일링 (Phase 6, self-test) ───────────────
-      # 검증 단계: workflow_dispatch 수동 트리거로 1회 발송 확인 후 이 if 조건을 제거해 cron 편입.
+      # ── 7. 일일 리뷰 메일링 (Phase 6 self-test → B-1, 2026-07-11 발송·레이아웃 확인 완료로 cron 편입) ─
       # Phase 3 정적 산출물(top5/섹터요약)을 그대로 렌더 — 재계산·재요약 없음.
       - name: Send daily review email
-        if: github.event_name == 'workflow_dispatch'
         continue-on-error: true
         env:
           SMTP_USER: ${{ secrets.SMTP_USER }}
