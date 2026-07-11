@@ -1,31 +1,240 @@
 {
-  "date": "2026-07-10",
-  "generated_at": "2026-07-10T21:10:26.438844+00:00",
+  "date": "2026-07-11",
+  "generated_at": "2026-07-11T01:58:54.628308+00:00",
   "sectors": {
     "mobile_ap": {
-      "summary": "Apple and Broadcom's $30 billion deal marks a significant strategic shift toward custom in-house AI chip development, signaling major changes in Apple's sourcing and design strategy.",
+      "sector": "Mobile AP",
+      "date": "2026-07-11",
       "item_count": 1,
-      "generated_at": "2026-07-10T21:10:26.437864+00:00"
+      "generated_at": "2026-07-11T01:58:54.627934+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "LLM-optimized AI chips are emerging as a design trend in mobile and application processor markets.",
+          "key_facts": [],
+          "implications": [],
+          "counterpoint": ""
+        },
+        "en": {
+          "executive_summary": "LLM-optimized AI chips are emerging as a design trend in mobile and application processor markets.",
+          "key_facts": [],
+          "implications": [],
+          "counterpoint": ""
+        }
+      }
     },
     "hpc_datacenter": {
-      "summary": "SK hynix's record $26.5 billion Nasdaq IPO debut underscores robust demand for HBM memory chips in AI systems, while Micron achieved 87% data center margins. Aggressive recruiting by SK hynix, Samsung, and TSMC in the US and Asia reflects intensifying competition for AI talent, alongside hiring bans and credential-free recruitment initiatives driven by the semiconductor boom.",
-      "item_count": 13,
-      "generated_at": "2026-07-10T21:10:26.437864+00:00"
+      "sector": "HPC·Datacenter",
+      "date": "2026-07-11",
+      "item_count": 3,
+      "generated_at": "2026-07-11T01:58:54.627934+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "Nvidia's aggressive hiring in Taiwan is intensifying competition for semiconductor talent, while SK하이닉스 and Tata Electronics are also expanding recruitment efforts to build engineering capacity.",
+          "key_facts": [
+            "Nvidia intensifying hiring plans in Taiwan",
+            "SK하이닉스 launching continuous recruitment for entry-level engineers",
+            "Tata Electronics recruiting from Intel's talent pool"
+          ],
+          "implications": [
+            {
+              "keyword": "Talent Competition",
+              "text": "Accelerated hiring by hyperscalers and foundries is tightening the semiconductor talent market, particularly in Asia."
+            },
+            {
+              "keyword": "Engineering Capacity",
+              "text": "New recruitment programs signaling increased R&D and production capacity expansion across HPC and datacenter segments."
+            }
+          ],
+          "counterpoint": "Broad recruitment does not guarantee successful onboarding or retention of specialized HPC talent."
+        },
+        "en": {
+          "executive_summary": "Nvidia's aggressive hiring in Taiwan is intensifying competition for semiconductor talent, while SK Hynix and Tata Electronics are also expanding recruitment efforts to build engineering capacity.",
+          "key_facts": [
+            "Nvidia intensifying hiring plans in Taiwan",
+            "SK Hynix launching continuous recruitment for entry-level engineers",
+            "Tata Electronics recruiting from Intel's talent pool"
+          ],
+          "implications": [
+            {
+              "keyword": "Talent Competition",
+              "text": "Accelerated hiring by hyperscalers and foundries is tightening the semiconductor talent market, particularly in Asia."
+            },
+            {
+              "keyword": "Engineering Capacity",
+              "text": "New recruitment programs signaling increased R&D and production capacity expansion across HPC and datacenter segments."
+            }
+          ],
+          "counterpoint": "Broad recruitment does not guarantee successful onboarding or retention of specialized HPC talent."
+        }
+      }
     },
     "custom_soc": {
-      "summary": "Meta begins manufacturing its in-house AI chip in September targeting 14 gigawatts of computing power, while Chinese AI developers DeepSeek and Zhipu AI join the custom chip race with their own silicon designs. Broadcom gained 5% following expanded Apple chip deals, though NVIDIA's next AI system faces delays to 2028 due to circuit board issues, and thermal management remains a critical challenge in advanced AI chip design.",
-      "item_count": 20,
-      "generated_at": "2026-07-10T21:10:26.437864+00:00"
+      "sector": "Custom SoC",
+      "date": "2026-07-11",
+      "item_count": 5,
+      "generated_at": "2026-07-11T01:58:54.627934+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "AI giants including Meta, OpenAI, and DeepSeek are pursuing custom chip development to reduce reliance on Nvidia, with Meta starting in-house production in September. Google is adopting a Nvidia-style ecosystem approach to expand its TPU business, while Apple and Broadcom are deepening their chip partnership with a $30 billion deal.",
+          "key_facts": [
+            "Meta beginning in-house AI chip production in September",
+            "Apple-Broadcom partnership valued at $30 billion",
+            "OpenAI, DeepSeek, and Meta spearheading custom chip wave",
+            "Google adopting Nvidia-style TPU expansion strategy"
+          ],
+          "implications": [
+            {
+              "keyword": "Vertical Integration",
+              "text": "Hyperscalers are investing heavily in custom silicon design to achieve better cost efficiency and performance differentiation for AI workloads."
+            },
+            {
+              "keyword": "Nvidia Alternatives",
+              "text": "Multiple high-volume AI customers are reducing dependency on Nvidia GPUs by developing proprietary solutions, fragmenting the accelerator market."
+            },
+            {
+              "keyword": "Ecosystem Competition",
+              "text": "Google's TPU strategy mirrors Nvidia's approach, suggesting competition for AI chip supply will intensify beyond Nvidia's traditional dominance."
+            }
+          ],
+          "counterpoint": "Custom chip success requires sustained investment and proven performance—early announcements do not guarantee competitive viability or rapid scaling."
+        },
+        "en": {
+          "executive_summary": "AI giants including Meta, OpenAI, and DeepSeek are pursuing custom chip development to reduce reliance on Nvidia, with Meta starting in-house production in September. Google is adopting a Nvidia-style ecosystem approach to expand its TPU business, while Apple and Broadcom are deepening their chip partnership with a $30 billion deal.",
+          "key_facts": [
+            "Meta beginning in-house AI chip production in September",
+            "Apple-Broadcom partnership valued at $30 billion",
+            "OpenAI, DeepSeek, and Meta spearheading custom chip wave",
+            "Google adopting Nvidia-style TPU expansion strategy"
+          ],
+          "implications": [
+            {
+              "keyword": "Vertical Integration",
+              "text": "Hyperscalers are investing heavily in custom silicon design to achieve better cost efficiency and performance differentiation for AI workloads."
+            },
+            {
+              "keyword": "Nvidia Alternatives",
+              "text": "Multiple high-volume AI customers are reducing dependency on Nvidia GPUs by developing proprietary solutions, fragmenting the accelerator market."
+            },
+            {
+              "keyword": "Ecosystem Competition",
+              "text": "Google's TPU strategy mirrors Nvidia's approach, suggesting competition for AI chip supply will intensify beyond Nvidia's traditional dominance."
+            }
+          ],
+          "counterpoint": "Custom chip success requires sustained investment and proven performance—early announcements do not guarantee competitive viability or rapid scaling."
+        }
+      }
     },
     "foundry": {
-      "summary": "Rapidus plans competitive 2nm pricing around $20,000 per wafer at 2027 launch to pressure TSMC, while Samsung targets a 1.4nm Exynos SoC after three generations despite TSMC's early lead. SK hynix's Nasdaq listing success and Samsung's divergent HBM4 strategies (4nm vs SK hynix's 12nm approach) underscore intensifying foundry competition and memory-logic integration efforts for AI applications.",
-      "item_count": 23,
-      "generated_at": "2026-07-10T21:10:26.437864+00:00"
+      "sector": "Foundry",
+      "date": "2026-07-11",
+      "item_count": 4,
+      "generated_at": "2026-07-11T01:58:54.627934+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "SK하이닉스 achieved a strong 13% IPO debut on Nasdaq, intensifying US competition for memory chip manufacturing capacity. Meanwhile, SK하이닉스 is advancing in-memory computing AI technology with Tetramem, and competing foundries are positioning advanced nodes including 2nm (Intel 18A vs. Samsung SF2) to challenge TSMC's dominance.",
+          "key_facts": [
+            "SK하이닉스 ADR rose 13% on Nasdaq debut, priced at $170 vs. $149 IPO price",
+            "SK하이닉스 verified memristor-based in-memory computing (IMC) SoC technology with Tetramem",
+            "Japanese upstart targets 30% reduction in 2nm wafer pricing vs. TSMC",
+            "Intel 18A vs. Samsung SF2 2nm process nodes being compared for competitive positioning"
+          ],
+          "implications": [
+            {
+              "keyword": "US Capacity Race",
+              "text": "SK하이닉스's successful Nasdaq entry signals strong investor appetite for memory manufacturing diversification outside Asia, escalating US government competition for fab investment."
+            },
+            {
+              "keyword": "2nm Economics",
+              "text": "New entrants attempting aggressive 2nm pricing could disrupt TSMC's foundry margins if technical execution succeeds; comparison of Intel 18A and Samsung SF2 reflects intensifying node-level competition."
+            },
+            {
+              "keyword": "AI Memory Innovation",
+              "text": "In-memory computing breakthroughs (IMC SoC) position memory makers as direct competitors in AI chip design, challenging traditional CPU/GPU-centric architectures."
+            }
+          ],
+          "counterpoint": "Japanese upstart's 30% price target remains speculative; achieving 2nm yield parity with TSMC requires proven manufacturing maturity not yet demonstrated."
+        },
+        "en": {
+          "executive_summary": "SK Hynix achieved a strong 13% IPO debut on Nasdaq, intensifying US competition for memory chip manufacturing capacity. Meanwhile, SK Hynix is advancing in-memory computing AI technology with Tetramem, and competing foundries are positioning advanced nodes including 2nm (Intel 18A vs. Samsung SF2) to challenge TSMC's dominance.",
+          "key_facts": [
+            "SK Hynix ADR rose 13% on Nasdaq debut, priced at $170 vs. $149 IPO price",
+            "SK Hynix verified memristor-based in-memory computing (IMC) SoC technology with Tetramem",
+            "Japanese upstart targets 30% reduction in 2nm wafer pricing vs. TSMC",
+            "Intel 18A vs. Samsung SF2 2nm process nodes being compared for competitive positioning"
+          ],
+          "implications": [
+            {
+              "keyword": "US Capacity Race",
+              "text": "SK Hynix's successful Nasdaq entry signals strong investor appetite for memory manufacturing diversification outside Asia, escalating US government competition for fab investment."
+            },
+            {
+              "keyword": "2nm Economics",
+              "text": "New entrants attempting aggressive 2nm pricing could disrupt TSMC's foundry margins if technical execution succeeds; comparison of Intel 18A and Samsung SF2 reflects intensifying node-level competition."
+            },
+            {
+              "keyword": "AI Memory Innovation",
+              "text": "In-memory computing breakthroughs (IMC SoC) position memory makers as direct competitors in AI chip design, challenging traditional CPU/GPU-centric architectures."
+            }
+          ],
+          "counterpoint": "Japanese upstart's 30% price target remains speculative; achieving 2nm yield parity with TSMC requires proven manufacturing maturity not yet demonstrated."
+        }
+      }
     },
     "packaging": {
-      "summary": "Advanced packaging demand surges with ASE Technology's Q2 revenue hitting a record NT$191 billion driven by momentum in heterogeneous integration technologies. Samsung developed a '2.xD' packaging architecture integrating HBM, logic, and optical components to address AI power and thermal challenges, while ZEISS opened its first Asian semiconductor innovation hub in South Korea to expand packaging and photomask collaboration capabilities.",
-      "item_count": 30,
-      "generated_at": "2026-07-10T21:10:26.437864+00:00"
+      "sector": "Packaging",
+      "date": "2026-07-11",
+      "item_count": 8,
+      "generated_at": "2026-07-11T01:58:54.627934+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "Intel's EMIB-T advanced packaging technology enables ultra-large die complexes with 10x+ reticle dies and 12 Gb/s+ HBM4e support, addressing AI/HPC scaling limits. Nova (NVMI) secured tool-of-record status at Global Foundries for advanced packaging, while Tata's semiconductor plant in Assam will receive Rs 14,044 crore government incentive.",
+          "key_facts": [
+            "Intel EMIB-T supports 10x+ reticle die complexes with HBM4e DRAM up to 12 Gb/s",
+            "Nova (NVMI) awarded tool-of-record at Global Foundries for advanced packaging",
+            "Tata semiconductor plant (Assam) receiving Rs 14,044 crore government incentive",
+            "Market forecasts through 2035 project growth in semiconductor sealants, reagent integration, and specialty chemicals driven by advanced packaging and automation"
+          ],
+          "implications": [
+            {
+              "keyword": "Chiplet Scaling",
+              "text": "EMIB-T and advanced packaging innovations enable hyper-scale AI/HPC die assembly, addressing reticle size limits and supporting denser interconnects (HBM4e)."
+            },
+            {
+              "keyword": "Packaging Supply Chain",
+              "text": "Nova's tool dominance and growing demand for advanced sealants and specialty chemicals indicate packaging becoming a critical bottleneck and differentiation vector."
+            },
+            {
+              "keyword": "Geographic Expansion",
+              "text": "Tata's government-backed Assam fab investment represents India's push for semiconductor manufacturing autonomy, diversifying global packaging and assembly capacity beyond traditional hubs."
+            }
+          ],
+          "counterpoint": "EMIB-T and advanced packaging require mature supply chains and yield ramp discipline; delays in specialty chemical or tool availability could constrain AI chip production timelines."
+        },
+        "en": {
+          "executive_summary": "Intel's EMIB-T advanced packaging technology enables ultra-large die complexes with 10x+ reticle dies and 12 Gb/s+ HBM4e support, addressing AI/HPC scaling limits. Nova (NVMI) secured tool-of-record status at Global Foundries for advanced packaging, while Tata's semiconductor plant in Assam will receive Rs 14,044 crore government incentive.",
+          "key_facts": [
+            "Intel EMIB-T supports 10x+ reticle die complexes with HBM4e DRAM up to 12 Gb/s",
+            "Nova (NVMI) awarded tool-of-record at Global Foundries for advanced packaging",
+            "Tata semiconductor plant (Assam) receiving Rs 14,044 crore government incentive",
+            "Market forecasts through 2035 project growth in semiconductor sealants, reagent integration, and specialty chemicals driven by advanced packaging and automation"
+          ],
+          "implications": [
+            {
+              "keyword": "Chiplet Scaling",
+              "text": "EMIB-T and advanced packaging innovations enable hyper-scale AI/HPC die assembly, addressing reticle size limits and supporting denser interconnects (HBM4e)."
+            },
+            {
+              "keyword": "Packaging Supply Chain",
+              "text": "Nova's tool dominance and growing demand for advanced sealants and specialty chemicals indicate packaging becoming a critical bottleneck and differentiation vector."
+            },
+            {
+              "keyword": "Geographic Expansion",
+              "text": "Tata's government-backed Assam fab investment represents India's push for semiconductor manufacturing autonomy, diversifying global packaging and assembly capacity beyond traditional hubs."
+            }
+          ],
+          "counterpoint": "EMIB-T and advanced packaging require mature supply chains and yield ramp discipline; delays in specialty chemical or tool availability could constrain AI chip production timelines."
+        }
+      }
     }
   }
 }
