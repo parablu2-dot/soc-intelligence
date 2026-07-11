@@ -14,16 +14,16 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
       # sentence-transformers 모델 캐시 (첫 다운로드 후 재사용)
       - name: Cache sentence-transformers model
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/huggingface
           key: st-model-all-MiniLM-L6-v2
@@ -105,7 +105,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           # 브랜치 이름 지정 → crawl job이 push한 최신 커밋을 동적으로 받음
           ref: main
