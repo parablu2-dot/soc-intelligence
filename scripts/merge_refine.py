@@ -219,17 +219,17 @@ def _generate_company_summaries(conn, client) -> None:
         try:
             resp = client.messages.create(
                 model="claude-haiku-4-5-20251001",
-                max_tokens=256,
+                max_tokens=768,  # 3개 언어(en/zh/ko) 요약 전체를 담기엔 256이 부족해 응답이 잘려 필드가 누락되던 근본 원인
                 messages=[{"role": "user", "content": prompt}],
                 tools=[_SUMMARY_TOOL],
                 tool_choice={"type": "tool", "name": "company_summary"},
             )
             tool_block = next(b for b in resp.content if b.type == "tool_use")
             summaries[company] = {
-                "summary": tool_block.input["summary_en"],  # 하위호환 기본값 (구 프론트/캐시)
-                "summary_en": tool_block.input["summary_en"],
+                "summary": tool_block.input.get("summary_en", ""),  # 하위호환 기본값 (구 프론트/캐시)
+                "summary_en": tool_block.input.get("summary_en", ""),
                 "summary_zh": tool_block.input.get("summary_zh", ""),  # A-2에서 ko/en로 재편, zh 유지 안 함
-                "summary_ko": tool_block.input["summary_ko"],
+                "summary_ko": tool_block.input.get("summary_ko", ""),
                 "signal_count": len(headlines),
                 "generated_at": now_ts,
             }
