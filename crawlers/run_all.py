@@ -13,6 +13,10 @@ import yaml
 
 CONFIG_PATH = Path(__file__).parent / "config.yaml"
 
+# config.yaml의 크롤러 축만 순회 — dedup/eco_companies/axis_news_queries/hiring_targets/policy 등
+# 비-axis 섹션은 크롤러 스펙이 아니므로 제외(섞어서 순회하면 spec이 dict가 아니라 크래시).
+_CRAWLER_AXES = ["mobile_ap", "hpc_datacenter", "custom_soc", "foundry", "packaging"]
+
 
 def load_config() -> dict:
     with open(CONFIG_PATH, encoding="utf-8") as f:
@@ -23,9 +27,8 @@ def run_all() -> None:
     config = load_config()
     total, failed = 0, []
 
-    for axis, companies in config.items():
-        if axis == "policy":
-            continue
+    for axis in _CRAWLER_AXES:
+        companies = config.get(axis) or {}
         for company, spec in companies.items():
             if not spec or not spec.get("enabled"):
                 continue
