@@ -1,166 +1,84 @@
 {
-  "date": "2026-07-11",
-  "generated_at": "2026-07-11T20:52:20.175353+00:00",
+  "date": "2026-07-12",
+  "generated_at": "2026-07-12T20:55:21.460064+00:00",
   "sectors": {
-    "mobile_ap": {
-      "sector": "Mobile AP",
-      "date": "2026-07-11",
-      "item_count": 2,
-      "generated_at": "2026-07-11T20:52:20.174523+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "LLM-최적화 AI 칩 수요가 증가하고 있으며, Galaxy S26는 아마존 프라임 데이에 ¥113,300으로 17% 할인 판매되었다. 칩 가격 인상 전 마지막 기회로 평가되고 있다.",
-          "key_facts": [
-            "Galaxy S26 아마존 프라임 데이 가격: ¥113,300",
-            "Galaxy S26 할인율: 17% 할인"
-          ],
-          "implications": [
-            {
-              "keyword": "가격 상승 압력",
-              "text": "칩 가격 인상 임박으로 소비자들이 현재의 가격 구간을 마지막 기회로 인식"
-            }
-          ],
-          "counterpoint": ""
-        },
-        "en": {
-          "executive_summary": "Demand for LLM-optimized AI chips is increasing, and the Galaxy S26 was sold at ¥113,300 with a 17% discount during Amazon Prime Day. It is being evaluated as the last opportunity before chip price increases.",
-          "key_facts": [
-            "Galaxy S26 Amazon Prime Day price: ¥113,300",
-            "Galaxy S26 discount rate: 17% discount"
-          ],
-          "implications": [
-            {
-              "keyword": "Price increase pressure",
-              "text": "With chip price increases imminent, consumers regard the current price range as a last opportunity"
-            }
-          ],
-          "counterpoint": ""
-        }
-      }
-    },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-07-11",
-      "item_count": 17,
-      "generated_at": "2026-07-11T20:52:20.174523+00:00",
+      "date": "2026-07-12",
+      "item_count": 15,
+      "generated_at": "2026-07-12T20:55:21.459276+00:00",
       "content": {
         "ko": {
-          "executive_summary": "AI 반도체 수요 증가에 따라 SK하이닉스, 삼성전자, Nvidia, AMD, Tesla 등이 적극적인 채용을 추진 중이다. SK하이닉스는 신입사원 채용에서 학력 자격요건을 전면 철폐하고 HBM·AI 제조 인력 54개 직무를 모집하며, Nvidia는 대만 반도체 인재 채용 경쟁을 심화시키고 있다.",
+          "executive_summary": "SK Hynix 나스닥 상장 및 채용 확대, Nvidia의 Beersheva R&D센터 개설, Micron의 애틀란타 메모리 설계센터 신설 등 HPC/데이터센터 인프라 투자가 활발. GPU 모듈 수지 시장은 AI 및 이질 통합으로 2035년까지 성장 전망.",
           "key_facts": [
-            "SK하이닉스: 신입사원 채용 학력 자격요건 전면 삭제",
-            "SK하이닉스: 경력직 54개 직무 모집 (HBM·AI 제조)",
-            "Nvidia: 대만 반도체 인재 채용 경쟁 심화",
-            "AMD: 향후 5년간 인도 R&D 투자 약 $400 million",
-            "Tesla Korea: AI 칩 엔지니어 채용 진행 중",
-            "Tata Electronics: Intel 풀에서 기술 인재 영입"
+            "SK Hynix 신입사원 2500명 몰려, 월급 450만원",
+            "SK Hynix 성장전략 조직 신설, IB·PE 인재 영입",
+            "Nvidia Beersheva R&D센터 개설, 수백 명 채용 계획",
+            "Micron 애틀란타 메모리 설계센터 신설",
+            "Samsung, SK, Hyundai 한국 청년 채용 확대 계획",
+            "Tesla Project Dojo 슈퍼컴퓨터 관련 기술 도용 소송",
+            "OpenAI, Anthropic이 Salesforce에서 인재 영입"
           ],
           "implications": [
             {
-              "keyword": "인재 확보 전쟁",
-              "text": "AI 칩 개발·제조 수요 급증으로 글로벌 반도체 기업들의 채용 경쟁 심화, 비학위 기반 채용 확대"
+              "keyword": "인재 확보 경쟁",
+              "text": "AI/HPC 분야 수요 증가로 글로벌 반도체·IT 기업들의 적극적 채용 확대, 특히 한국 대기업의 신입사원 채용 문턱 완화로 성장성 중심 선발 추세"
             },
             {
-              "keyword": "지역 R&D 확장",
-              "text": "Nvidia 일본 R&D 센터 설립, AMD 인도 투자 확대 등 지역 거점 강화 추진"
+              "keyword": "R&D 센터 글로벌 확산",
+              "text": "Nvidia, Samsung, Micron 등이 이스라엘, 베트남, 미국 등 전략적 위치에 R&D 센터 개설, 지역별 기술 인력 확보 및 현지 시장 진출 강화"
             },
             {
-              "keyword": "인력 재배치",
-              "text": "대만 내 인재 쏠림 현상 심화, Tata의 Intel 인재 영입으로 기업 간 인력 이동 활발"
+              "keyword": "GPU 인프라 시장 성장",
+              "text": "2035년까지 GPU 모듈용 수지 시장 확대 전망, 이질 통합(heterogeneous integration) 기술 주도로 AI 수요 충족"
             }
           ],
-          "counterpoint": "Nvidia 주가는 올해 7% 상승에 그쳐 필라델피아 반도체지수 대비 저조한 성과"
+          "counterpoint": "대규모 채용 및 R&D 투자는 미래 수요 기대에 기반한 것으로, 실제 시장 성장이 예상에 못 미칠 경우 과잉 투자 위험 존재."
         },
         "en": {
-          "executive_summary": "In response to increased demand for AI semiconductors, SK Hynix, Samsung Electronics, Nvidia, AMD, and Tesla are actively advancing recruitment. SK Hynix is abolishing educational qualifications for new graduate hires and recruiting 54 HBM and AI manufacturing positions, while Nvidia is intensifying competition for Taiwanese semiconductor talent.",
+          "executive_summary": "Active investment in HPC/datacenter infrastructure including SK Hynix's Nasdaq listing and expanded hiring, Nvidia's opening of Beersheva R&D center, and Micron's launch of Atlanta memory design center. GPU module resin market projected to grow through 2035 driven by AI and heterogeneous integration.",
           "key_facts": [
-            "SK Hynix: Completely eliminated educational qualification requirements for new graduate hires",
-            "SK Hynix: Recruiting 54 experienced positions (HBM and AI manufacturing)",
-            "Nvidia: Intensifying competition for Taiwanese semiconductor talent",
-            "AMD: Approximately $400 million in India R&D investment over the next 5 years",
-            "Tesla Korea: Recruiting AI chip engineers",
-            "Tata Electronics: Acquiring technical talent from Intel pool"
+            "SK Hynix attracts 2,500 new hires at 4.5 million won monthly salary",
+            "SK Hynix establishes growth strategy organization, recruits IB·PE talent",
+            "Nvidia opens Beersheva R&D center, plans to hire hundreds",
+            "Micron launches Atlanta memory design center",
+            "Samsung, SK, Hyundai expand Korean youth recruitment plans",
+            "Tesla Project Dojo supercomputer technology theft lawsuit",
+            "OpenAI, Anthropic recruit talent from Salesforce"
           ],
           "implications": [
             {
-              "keyword": "Talent acquisition war",
-              "text": "Sharp intensification of recruitment competition among global semiconductor companies due to surging demand for AI chip development and manufacturing; expansion of non-degree-based hiring"
+              "keyword": "Talent acquisition competition",
+              "text": "Increased AI/HPC demand drives aggressive hiring expansion by global semiconductor and IT companies, with Korean conglomerates relaxing new hire selection criteria to prioritize growth potential."
             },
             {
-              "keyword": "Regional R&D expansion",
-              "text": "Strengthening of regional hubs including Nvidia establishing Japan R&D center and AMD expanding India investment"
+              "keyword": "R&D center global expansion",
+              "text": "Nvidia, Samsung, Micron and others establish R&D centers in strategically located regions including Israel, Vietnam, and the US to secure regional technical talent and strengthen local market entry."
             },
             {
-              "keyword": "Workforce reallocation",
-              "text": "Intensifying talent concentration within Taiwan; active inter-company talent movement as Tata acquires Intel talent"
+              "keyword": "GPU infrastructure market growth",
+              "text": "GPU module resin market expansion projected through 2035, led by heterogeneous integration technology to meet AI demand."
             }
           ],
-          "counterpoint": "Nvidia's stock price rose 7% this year, underperforming the Philadelphia Semiconductor Index"
+          "counterpoint": "Large-scale hiring and R&D investment are based on anticipated future demand, with significant overinvestment risk if actual market growth falls short of expectations."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-07-11",
-      "item_count": 13,
-      "generated_at": "2026-07-11T20:52:20.174523+00:00",
+      "date": "2026-07-12",
+      "item_count": 14,
+      "generated_at": "2026-07-12T20:55:21.459276+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Meta, OpenAI, DeepSeek, Google 등 AI 대형 기업들이 Nvidia 의존성 탈피를 위해 자체 AI 칩 개발에 박차를 가하고 있다. Meta는 9월 자체 AI 칩 량산 시작, Apple은 Broadcom과 $30 billion 규모 칩 파트너십 체결, OpenAI는 Broadcom의 Jalapeño 칩 개발을 추진 중이다.",
-          "key_facts": [
-            "Meta: 9월 자체 AI 칩 생산 시작",
-            "Apple-Broadcom: $30 billion 파트너십, 150억 칩 생산 계획",
-            "OpenAI: Broadcom과 Jalapeño 칩 개발",
-            "Google: TPU 사업 Nvidia 방식 채택",
-            "DeepSeek: 칩 개발로 AI 하드웨어 경쟁 재편"
-          ],
-          "implications": [
-            {
-              "keyword": "공급망 다원화",
-              "text": "AI 대형사들의 자체 칩 개발로 Nvidia 의존성 감소, TSMC 공급망 부하 증가"
-            },
-            {
-              "keyword": "경제성 재정의",
-              "text": "Meta의 자체 칩이 AI 경제학을 재정의할 수 있으며, Apple의 대규모 주문으로 Broadcom 수익성 강화"
-            },
-            {
-              "keyword": "TSMC 병목",
-              "text": "모든 첨단 칩 제조가 TSMC에 의존하며 공급 제약이 심화, AI 칩 병목 현상 해소 어려움"
-            }
-          ],
-          "counterpoint": "TSMC 공급망 중앙화로 인해 자체 칩 개발도 결국 TSMC 제조 능력에 의존"
-        },
-        "en": {
-          "executive_summary": "Major AI companies including Meta, OpenAI, DeepSeek, and Google are accelerating development of proprietary AI chips to reduce dependence on Nvidia. Meta began mass production of its own AI chips in September, Apple concluded a $30 billion chip partnership with Broadcom, and OpenAI is advancing development of Broadcom's Jalapeño chip.",
-          "key_facts": [
-            "Meta: Began proprietary AI chip production in September",
-            "Apple-Broadcom: $30 billion partnership with plans to produce 15 billion chips",
-            "OpenAI: Developing Jalapeño chip with Broadcom",
-            "Google: Adopting Nvidia model for TPU business",
-            "DeepSeek: Reshaping AI hardware competition through chip development"
-          ],
-          "implications": [
-            {
-              "keyword": "Supply chain diversification",
-              "text": "Reduction of Nvidia dependence through proprietary chip development by major AI companies; increased TSMC supply chain burden"
-            },
-            {
-              "keyword": "Economics redefined",
-              "text": "Meta's proprietary chip has potential to redefine AI economics; Apple's large-scale orders strengthen Broadcom profitability"
-            },
-            {
-              "keyword": "TSMC bottleneck",
-              "text": "All advanced chip manufacturing depends on TSMC with intensifying supply constraints; difficult to resolve AI chip bottleneck"
-            }
-          ],
-          "counterpoint": "Centralization of TSMC supply chain means proprietary chip development ultimately depends on TSMC manufacturing capacity"
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-07-11",
-      "item_count": 13,
-      "generated_at": "2026-07-11T20:52:20.174523+00:00",
+      "date": "2026-07-12",
+      "item_count": 6,
+      "generated_at": "2026-07-12T20:55:21.459276+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -168,9 +86,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-07-11",
-      "item_count": 26,
-      "generated_at": "2026-07-11T20:52:20.174523+00:00",
+      "date": "2026-07-12",
+      "item_count": 24,
+      "generated_at": "2026-07-12T20:55:21.459276+00:00",
       "content": {
         "ko": {},
         "en": {}
