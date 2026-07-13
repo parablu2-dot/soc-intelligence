@@ -2,6 +2,124 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.ET",
+    "title": "LLM for EDA in Front-End Design: Challenges and Opportunities",
+    "url": "https://arxiv.org/abs/2607.09616v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "As chip complexity increases and time-to-market pressures grow, front-end design has become a critical bottleneck in chip development. Recently, Large Language Models (LLMs) have shown great potential in Electronic Design Automation (EDA). Beyond specification understanding, LLMs show the potential to serve as a unified intelligent interface for hardware description language (HDL) generation, testbench construction, and design space exploration. The rise of agentic AI, represented by pioneering ",
+    "authors": [
+      "Kangwei Xu",
+      "Bing Li",
+      "Ulf Schlichtmann"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Fused Constrained Policy Reuse Optimization for Wireless Resource Allocation",
+    "url": "https://arxiv.org/abs/2607.09498v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "Deep reinforcement learning (DRL) has been widely adopted for wireless resource allocation due to its model-free adaptability. However, online exploration is costly, as randomly initialized policies may violate long-term constraints before sufficient data are collected. Future wireless systems must cope with increasingly dynamic traffic, fluctuating channel conditions, and stringent energy efficiency requirements, demanding algorithms that can learn quickly with minimal environment interactions ",
+    "authors": [
+      "An Liu",
+      "Zheyuan Zhou",
+      "Kexuan Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "OAM-Enabled Holographic MIMO Communications with Stacked Intelligent Metasurfaces",
+    "url": "https://arxiv.org/abs/2607.09479v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "This study investigates orbital angular momentum (OAM)-based holographic multiple-input multiple-output (HMIMO) links enabled by stacked intelligent metasurfaces (SIM) in the radiative near-field. By using multilayer programmable metasurfaces at both link ends, SIMs enable analog electromagnetic domain wave processing for low-complexity and energy-efficient flexible wavefront synthesis. We analyzed OAM mode generation and reception with SIM-based transceivers and quantified their ability to synt",
+    "authors": [
+      "Giulia Torcolacci",
+      "Davide Dardari"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Unraveling atomic-resolution valence electron energy-loss spectroscopic imaging in a single-crystal CaNb2O6",
+    "url": "https://arxiv.org/abs/2607.09466v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "Despite advancements in electron optics and spectrometer design over the past twenty years, atomic-resolution valence-electron energy-loss spectroscopy imaging remains challenging due to the delocalization of inelastic electron scattering. In this study, we used an energy-filtered spectrometer equipped with a hybrid-pixel direct electron detector and spherical aberration-corrected scanning transmission electron microscopy to analyze many-electron excitations and interband transitions in a single",
+    "authors": [
+      "Sz-Chian Liou",
+      "Xiang-Lin Huang",
+      "Vladimir P. Oleshko",
+      "I-Ching Lin",
+      "Yin-Ping Lan",
+      "Hsin-An Chen",
+      "Guo-Jiun Shu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Electronic manipulation of polar order in electron crystal",
+    "url": "https://arxiv.org/abs/2607.09425v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "When interaction among atoms or ions is strong enough, they often arrange periodically, forming a crystal. The arrangement patterns of atoms or ions can encode information, a concept that has enabled devices such as ferroelectric memories. It has been found that not only atoms or ions but also electrons in condensed matter can crystallize when Coulomb interaction is strong enough. Typical examples are charge-ordered states in solids, where different valences, or different electron numbers, of an",
+    "authors": [
+      "Takashi Kikkawa",
+      "Ziyan Chen",
+      "Yuto Fujimoto",
+      "Takahiro Morimoto",
+      "Yuya Hirata",
+      "Hiroki Arisawa",
+      "Alexey A. Kaverzin",
+      "Satoshi Okamoto",
+      "Yoichi Okimoto",
+      "Naoshi Ikeda",
+      "Eiji Saitoh"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.acc-ph",
+    "title": "Weak-Strong Steady-State Microbunching Accelerator Light Source",
+    "url": "https://arxiv.org/abs/2607.09243v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "We propose a phase space manipulation involving one energy modulation sandwiched by two dispersion sections which converts a bunched particle beam or bunch train to ultra-high-harmonic density modulation, while the energy modulation in principle can be arbitrarily weak. The same scheme can also be used for energy bunching, creating energy levels in a bunched beam. We further propose a mechanism invoking three laser modulators in a storage ring to longitudinally focus the electron beam both weakl",
+    "authors": [
+      "Xiujie Deng",
+      "Alexander Wu Chao",
+      "Wenhui Huang",
+      "Zhilong Pan",
+      "Chuanxiang Tang",
+      "Jingyuan Zhao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.SD",
+    "title": "ReGen: Hierarchical Multi-Prompt Representation Generation for Efficient Waveform Diffusion Models",
+    "url": "https://arxiv.org/abs/2607.09134v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "Representation alignment (REPA) has been investigated to accelerate diffusion training, but we observe that regularizing intermediate representations in diffusion Transformers (DiT) may implicitly entangle latents and limit generative capacity. To address this issue, we propose ReGen, a hierarchical multi-prompt representation generation framework that jointly estimates multiple vector fields for both representations and data within a single diffusion model. We further introduce generalized flow",
+    "authors": [
+      "Sang-Hoon Lee",
+      "Ha-Yeong Choi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Best Practices for First-Principles Modeling of Amorphous Oxide Semiconductors: A Statistical Framework and Application to Zn-Sn-O",
     "url": "https://arxiv.org/abs/2607.08667v1",
@@ -290,6 +408,132 @@
     "authors": [
       "Sai Pradeep Muppaneni",
       "Ananthanarayanan Chockalingam"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration",
+    "url": "https://arxiv.org/abs/2607.08993v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "As large language models (LLMs) scale, their memory and computation demands have grown substantially, making weight-only quantization a widely adopted technique for reducing model size with minimal accuracy loss. However, on current GPUs, CUDA-core-based dequantization introduces substantial instruction overhead, on-chip traffic, and pipeline stalls, making it a major bottleneck for high-throughput, cloud-scale LLM serving. To address these limitations, we propose StreamDQ, a lightweight archite",
+    "authors": [
+      "Minki Jeong",
+      "Daegun Yoon",
+      "Soohong Ahn",
+      "Seungyong Lee",
+      "Nameun Kang",
+      "Hyeonseok Ju",
+      "Ieryung Park",
+      "Joonseop Sim",
+      "Youngpyo Joo",
+      "Hoshik Kim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Every Sample Counts: Supervised Fine-Tuning of Language Models with Pointwise Constraints",
+    "url": "https://arxiv.org/abs/2607.08968v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Fine-tuning language models often requires enforcing constraints on individual inputs without compromising downstream performance. Existing constrained alignment methods impose constraints on average, which can induce undesirable disparities across inputs or users. We propose a novel alignment framework that addresses this gap by enforcing per-sample constraints while still minimizing an average loss. To mitigate the impact of overly restrictive constraints and outliers, we introduce a learned, ",
+    "authors": [
+      "Ignacio Hounie",
+      "Ignacio Boero",
+      "Alejandro Ribeiro"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Fast Homoepitaxy on (100) \\b{eta}-Ga2O3 Substrates with Large Grown-In Offcut",
+    "url": "https://arxiv.org/abs/2607.08929v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "The choice of crystalline orientation and offcut angle is non-trivial for low-symmetry $β\\text{-Ga}_2\\text{O}_3$, where anisotropy impacts bulk and thin film synthesis, material properties, and power device fabrication and performance. Scalable (100)-oriented $β\\text{-Ga}_2\\text{O}_3$ wafers are desirable for electronic devices but are not typically used due to 10-30x slower growth rates compared to other orientations. Here we report molecular beam epitaxy (MBE) growth rates equal to the fast gr",
+    "authors": [
+      "M. Brooks Tellekamp",
+      "Drew Haven",
+      "David Joyce",
+      "John Mangum",
+      "Henry Garland",
+      "Robert Lavelle",
+      "Kevin Schulte",
+      "Anna Sacchi",
+      "Matt Young",
+      "Andriy Zakutayev"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.soft",
+    "title": "Generic behavior of ultrastability and anisotropic molecular packing in co-deposited organic semiconductor glass mixtures",
+    "url": "https://arxiv.org/abs/2607.08889v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Vapor-deposited glass mixtures of organic semiconductors commonly serve as active layers in organic electronic devices, whose lifetime and performance are strongly influenced by the stability and structure of these mixed glasses. Here, we study the stability and anisotropic molecular packing of six co-deposited organic semiconductor glass mixtures with 50:50 weight ratio, by differential scanning calorimetry and spectroscopic ellipsometry. We find that all six binary systems exhibit high kinetic",
+    "authors": [
+      "Shinian Cheng",
+      "Yejung Lee",
+      "Junguang Yu",
+      "Lian Yu",
+      "Mark D. Ediger"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "High density two-component glasses of organic semiconductors prepared by physical vapor deposition",
+    "url": "https://arxiv.org/abs/2607.08881v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Physical Vapor Deposition (PVD) is widely utilized for the production of organic semiconductor devices due to its ability to form thin layers with exceptional properties. Although the layers in the device usually consist of two or more components, there is limited understanding about the fundamental characteristics of such multi-component vapor-deposited glasses. Here, spectroscopic ellipsometry was employed to characterize the densities, thermal stabilities and optical properties of co-vapor de",
+    "authors": [
+      "Yejung Lee",
+      "Shinian Cheng",
+      "M. D. Ediger"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Ferroelastic instability in rutile TiO2 and thermodynamic suppression of the CaCl2-type phase",
+    "url": "https://arxiv.org/abs/2607.08860v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "We investigate the role of the CaCl2-type (Pnnm) phase in the high-pressure transformation of rutile TiO2, whose experimental signature has remained elusive. While analogies with other rutile-type oxides suggest such an intermediate, TiO2 typically exhibits a direct transformation to higher-coordination phases such as baddeleyite. Using an all-electron density functional framework combined with density functional perturbation theory, we show that rutile TiO2 undergoes a ferroelastic instability ",
+    "authors": [
+      "Jared Pohlmann",
+      "Anjy-Joe Olatunbosun",
+      "Kenneth Park"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "A 2.4 GHz LC-VCO Fractional-N Phase Locked Loop Open-Source Design in 130-nm BiCMOS",
+    "url": "https://arxiv.org/abs/2607.08852v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Radio frequency (RF) integrated circuit design using the open-source complementary Metal-Oxide semiconductor (CMOS) ecosystem, such as for phase-locked loops (PLLs), is limited by the absence of reliable passive device models, particularly on-chip spiral inductors. Consequently, prior work relies on ring-oscillator-based voltage-controlled oscillators (VCOs) with degraded phase noise performance. This work presents a 2.4 GHz type-II fractional-N PLL implemented in the IHP SG13G2 130 nm BiCMOS op",
+    "authors": [
+      "Manimohan Thiriloganathan",
+      "Shenal Ranasinghe",
+      "Avishka Herath",
+      "Rajinthan Rameshkumar",
+      "Hansa Marasinghe",
+      "Anjana Viduranga",
+      "Gayangana Leelarathne",
+      "Kithmin Wickremasinghe"
     ]
   },
   {
