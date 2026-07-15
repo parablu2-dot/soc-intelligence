@@ -3,6 +3,390 @@
     "lens": "tech",
     "source_class": "paper",
     "category": "eess.SP",
+    "title": "GPU-Accelerated Optimisation of Symmetric Bidirectional Ultrawideband Coherent Transmission Under Launch Power Constraints",
+    "url": "https://arxiv.org/abs/2607.12921v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "We optimise bidirectional OESCL-band coherent transmission under total fibre power constraints using a GPU-accelerated boundary-value Raman solver and launch-power optimisation. While no gain is observed without power constraints, for an 18-dBm limit 3-span transmission reversing the O-band direction increases aggregate capacity by up to 24.5%",
+    "authors": [
+      "Mindaugas Jarmolovičius",
+      "Eric Sillekens",
+      "Polina Bayvel",
+      "Robert I. Killey"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "A 32-channel event-based bio-signal analog front-end with adaptive delta and pulse frequency encoding",
+    "url": "https://arxiv.org/abs/2607.12901v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Low-power event-based Analog Front-Ends (AFEs) are essential for building efficient, end-to-end neuromorphic signal processing systems. In this paper, we present an event-based AFE Application-Specific Integrated Circuit (ASIC) optimized for biomedical signal acquisition and encoding. The chip features 32 independently programmable input channels with dual-mode encoding mechanism outputs, comprising Pulse Frequency Modulation (PFM) and adaptive Asynchronous Delta Modulator (aADM) circuits. The a",
+    "authors": [
+      "Narayanan Shyam",
+      "Saptarshi Ghosh",
+      "Giacomo Indiveri"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "HeteroMosaic: Exposing and Exploiting Heterogeneous Execution Opportunities for Energy-Efficient Edge LLM Inference",
+    "url": "https://arxiv.org/abs/2607.12839v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Modern edge system-on-chips (SoCs) combine CPUs, integrated GPUs (iGPUs), and neural processing units (NPUs), yet existing LLM runtimes typically make coarse device-level decisions or optimize operators in isolation. As a result, they underutilize heterogeneous resources, particularly on unified-memory platforms where performance depends on both device placement and task-graph coordination.\n  We present HeteroMosaic, a heterogeneity-first scheduling framework for edge LLM inference. HeteroMosaic",
+    "authors": [
+      "Gregory Hyegang Jun",
+      "Wesley Pang",
+      "Eddie Richter",
+      "Mehdi Saeedi",
+      "Aporva Amarnath",
+      "Pallavi Ferrao",
+      "Deming Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "CLIP-3D: Closed-Loop Evaluation of Performance and Physical Constraints for 3D ICs",
+    "url": "https://arxiv.org/abs/2607.12788v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "3D integration packs more power into a smaller footprint, so a candidate design's actual throughput depends on its layout: which macro sits on which tier, where the hot spot lands, and how cache geometry maps to access cycles. Architectural simulators like gem5 report IPC under idealized timing. They do not produce the per-block power map, the cache cycle counts, or the 3D layout that decide the realized billion-instructions-per-second (BIPS), so early-stage 3D-IC exploration selects designs wit",
+    "authors": [
+      "Shuo Ren",
+      "Libo Shen",
+      "Yaohui Han",
+      "Leilei Jin",
+      "Chenghan Wang",
+      "Zhen Zhuang",
+      "Rongliang Fu",
+      "Bei Yu",
+      "Tsung-Yi Ho"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.ins-det",
+    "title": "Traceable In Situ Microwave Power Measurement at the Cryogenic Device Plane in a Dilution Refrigerator",
+    "url": "https://arxiv.org/abs/2607.12751v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Accurate knowledge of the microwave power delivered to a cryogenic device under test (DUT) is essential for the characterization and operation of superconducting quantum circuits. However, this information is difficult to obtain inside dilution refrigerators because of distributed attenuation, impedance mismatch, switch-path repeatability, and temperature-dependent microwave components. This paper presents an in situ measurement method for RF power at the cryogenic device plane. The method uses ",
+    "authors": [
+      "Paolo Panetta",
+      "Andrea Celotto",
+      "Alessandro Alocco",
+      "Bernardo Galvano",
+      "Luca Fasolo",
+      "Emanuele Palumbo",
+      "Luca Callegaro",
+      "Luca Oberto",
+      "Patrizia Livreri",
+      "Emanuele Enrico"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Are gate-all-around 2D CFETs the optimal architecture for the A2 node and beyond?",
+    "url": "https://arxiv.org/abs/2607.12707v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "As logic scaling enters the angstrom era, vertically stacked complementary field-effect transistors (CFETs) based on atomically thin two-dimensional (2D) semiconductors offer a potential route to extend device scaling beyond the A2 node. Here, we develop an A2-oriented 2D CFET integration flow with a CPP of 36 nm and Lg of 10 nm and present initial demonstrations of several key process modules. Despite their atomically thin channels, 2D GAA CFETs do not provide a contacted poly pitch scaling adv",
+    "authors": [
+      "Fengben Xi",
+      "Gautam Gaddemane",
+      "Anshul Gupta",
+      "Sheng Yang",
+      "Aryan Afzalian",
+      "Quentin Smets",
+      "Maarten Van de Put",
+      "Kaustuv Banerjee",
+      "Tom Schram",
+      "Devin Verreck",
+      "Ward Janssens",
+      "Juergen Boemmels",
+      "Xiangyu Wu",
+      "Thomas Chiarella",
+      "Jérôme Mitard",
+      "Gouri Sankar Kar",
+      "Geert Hellings",
+      "Cesar Javier Lockhart de la Rosa"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "SpeedyGS: Content-Aware 3D Gaussian Splatting Compression via Two-Stage Optimization",
+    "url": "https://arxiv.org/abs/2607.12656v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Recent progress in compressing large-scale 3D Gaussian Splatting (3DGS) data has substantially reduced storage footprint, network transmission bandwidth, and memory traffic to GPU caches before rendering. Yet decoding with advanced 3DGS codecs still takes seconds, making them unsuitable for interactive applications. To systematically address this challenge, we propose SpeedyGS, a Content-Aware 3DGS Compressor that separately optimizes the structural formation and statistical coding. First, in st",
+    "authors": [
+      "Junteng Zhang",
+      "Tong Chen",
+      "Yuxin Zhao",
+      "Yibo Shi",
+      "Jing Wang",
+      "Zhan Ma"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Switched-Feed Pinching-Antenna Systems for Wideband Terahertz Communications",
+    "url": "https://arxiv.org/abs/2607.12646v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "The pinching-antenna system (PASS) uses dielectric particles along a low-loss waveguide as reconfigurable passive radiators. Existing analyses conclude that the in-waveguide attenuation is negligible at low frequencies and millimeter wave bands; we show this fails at terahertz (THz), where realizable waveguide losses are dramatically larger. We develop a unified wideband THz-PASS propagation model integrating in-waveguide attenuation, atmospheric absorption, molecular re-radiation noise, and bea",
+    "authors": [
+      "Wei Jiang",
+      "Hans D. Schotten"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.ins-det",
+    "title": "A critical consideration of X-ray detectors based on Ga2O3: excitation, carrier transport mechanisms and performance standardization",
+    "url": "https://arxiv.org/abs/2607.12638v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "X-ray detection underpins a wide range of applications in medicine, security, industrial inspection, scientific research for non-destructive imaging and material analysis. The rapid development of Ga2O3-based X-ray detectors offers a promising pathway toward next-generation detectors with high sensitivity, low noise, and harsh environment applications, benefiting from its intrinsic material properties such as high density, wide band gap energy, and high thermal-chemical stability. However, the u",
+    "authors": [
+      "Alfred Moore",
+      "Daniel A Lamb",
+      "Lijie Li",
+      "Oliver Fox",
+      "Kawal Sawhney",
+      "Ciaran Llewelyn",
+      "Jon E Evans",
+      "Saqib Rafique",
+      "Tiantian Chai",
+      "John Harrington",
+      "Zabeada Aslam",
+      "Andrew P Brown",
+      "Rik Drummond-Brydson",
+      "Yaonan Hou"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Compatibility of Martensitic Microstructures in Polycrystals",
+    "url": "https://arxiv.org/abs/2607.12572v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "The paper studies martensitic microstructures in polycrystals, focussing on their compatibility across grain boundaries. After a reduction to the case of a planar grain boundary, the case when the grain boundary separates two constant gradients of zero energy is considered. It is shown that for cubic-to tetragonal transformations such a configuration can occur when the relative grain rotation is not in the cubic group. Then the case when the grain boundary separates two simple laminates of zero ",
+    "authors": [
+      "John M. Ball",
+      "Myrto Galanopoulou"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Comparison of Dimension Reduction Methods for EEG Seizure Detection Using Autonomous AI-Driven Optimization",
+    "url": "https://arxiv.org/abs/2607.12546v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Automated epileptic seizure detection from multichannel electroencephalography (EEG) benefits from dimension reduction to obtain compact, discriminative representations. We compare four signal-space dimension reduction methods, Principal Component Analysis (PCA), Dynamical Component Analysis (DyCA), Dynamic Mode Decomposition (DMD), and Average Volatility Dimensioning (AVD), for deep learning-based seizure detection on the Temple University Hospital Seizure Corpus (TUSZ v2.0.3). To enable a comp",
+    "authors": [
+      "Annika Stiehl",
+      "Vishal Kagade",
+      "Nicolas Weeger",
+      "Nicole Ille",
+      "Stefan Geißelsöder",
+      "Christian Uhl"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.str-el",
+    "title": "Research on topological materials using ultrafast spectroscopy",
+    "url": "https://arxiv.org/abs/2607.12536v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Topological materials, characterized by symmetry-protected nontrivial band structures such as Dirac cones and Weyl nodes, host diverse quantum phenomena, with potential applications in quantum transport, spintronics, and nonlinear optics. Ultrafast pump-probe spectroscopy has emerged as a powerful tool for exploring nonequilibrium dynamics in these systems. Its femtosecond resolution allows charge, spin, orbital, and lattice interactions to be tracked on their intrinsic timescales, thereby revea",
+    "authors": [
+      "Hao Liu",
+      "Jian-Qiao Meng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "AFDM-FTN: A Spectrally Efficient Waveform for High-Mobility Communications",
+    "url": "https://arxiv.org/abs/2607.12510v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "This paper proposes an affine frequency division multiplexing (AFDM)-aided faster-than-Nyquist (FTN) waveform, termed AFDM-FTN, to enhance spectral efficiency (SE) in high-mobility communication scenarios. We first derive the AFDM-FTN input-output relationship and analyze the FTN-induced interference pattern in AFDM-FTN. To address the channel estimation challenges, a low-complexity channel estimator based on the basis expansion model (BEM) is developed. By exploiting the intrinsic characteristi",
+    "authors": [
+      "Xianle Dai",
+      "Qu Luo",
+      "Jianguo Li",
+      "Fabien Heliot",
+      "Shuangyang Li",
+      "Lixia Xiao",
+      "Pei Xiao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Realizable N:M Sparse Transformer Inference via Search-Kernel Co-Design",
+    "url": "https://arxiv.org/abs/2607.12505v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Vision Transformers (ViTs) achieve strong accuracy but incur high inference latency. Semi-structured N:M sparsity can reduce arithmetic cost, yet its theoretical savings often fail to translate into proportional end-to-end speedups on modern GPUs. This mismatch arises because deployment latency depends not only on arithmetic reduction but also on execution regularity and hardware scheduling under sparsity. Achieving practical acceleration, therefore, requires coordinated design across sparse exe",
+    "authors": [
+      "Yiming Liu",
+      "Wenqi Lou",
+      "Zhiguang Wang",
+      "Zhiwei Ke",
+      "Fengrui Zuo",
+      "Chao Wang",
+      "Xuehai Zhou"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Many-body interactions in the dielectric theory of stopping power of solids for classical and quantum projectiles",
+    "url": "https://arxiv.org/abs/2607.12498v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "We take account of the many-body dynamic interactions by including the wave-vector and frequency-dependent exchange and correlations (xc) kernel $f_{xc}(\\qv,ω)$ in the framework of the dielectric theory of the stopping power of crystals for moving charges. The cases of classical and quantum projectiles are considered. We find that (I) the role of the xc effects in slowing of charges in crystalline solids is more pronounced than it is within the jellium model and (II) For velocities below the sto",
+    "authors": [
+      "Vladimir U. Nazarov",
+      "Vyacheslav M. Silkin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Local Maxima of the Entrywise $\\ell_4$ Norm on the Orthogonal Group",
+    "url": "https://arxiv.org/abs/2607.12431v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "We classify the local maximizers of the entrywise fourth-power objective \\[ Q\\longmapsto \\lVert Q\\rVert_4^4 =\\sum_{i,j=1}^r q_{ij}^4 \\] over the real orthogonal group $\\mathcal O(r)$. We prove that the signed permutation matrices are the only local maximizers, and hence the only global maximizers, in every dimension. More strongly, every other stationary point has an explicit rank-two tangent direction with strictly positive second variation. The proof is based on a maximum-entry pivot for the o",
+    "authors": [
+      "Dian Jin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "ArchSim: Computer Architecture Simulation as a Service",
+    "url": "https://arxiv.org/abs/2607.12359v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Conducting a complete computer architecture simulation study is challenging because configuration, execution, and analysis are often encoded implicitly in scripts or directory conventions rather than represented explicitly. As a result, studies are difficult to scale, hard to reproduce, and dependent on custom tooling at every stage. We present ArchSim, which makes the structure of a simulation study explicit. In ArchSim, hardware topologies are described as declarative graphs that automatically",
+    "authors": [
+      "Sabila Al Jannat",
+      "Wenhan Lyu",
+      "Le Khanh Trinh Mai",
+      "Huizhi Zhao",
+      "Zhuoyan Zheng",
+      "Katherine E. Isaacs",
+      "Yifan Sun"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Space-Time Modulated vs 2-Bit Reflect-Arrays: A Comparison of Main Beam Gain and Sidelobe Level Performance",
+    "url": "https://arxiv.org/abs/2607.12342v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "This paper presents a comprehensive analysis of the phase errors introduced by 2-bit reflectarray architectures and investigates their impact on aperture synthesis for beam-steering applications. Building upon this analysis, an amplitude-aware synthesis technique based on space-time modulated (STM) reflect-arrays is proposed to mitigate the main-beam gain degradation commonly associated with STM-based equivalent phase generation while preserving the enhanced phase resolution enabled by temporal ",
+    "authors": [
+      "Muhammad Rizwan Akram",
+      "Douglas H. Werner"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Emergent toroidal induction in a polar Weyl ferromagnet",
+    "url": "https://arxiv.org/abs/2607.12322v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Spin-orbit coupling (SOC) underpins modern spintronics by enabling the electrical generation of spin torques. Its reciprocal counterpart, in which magnetization dynamics produce electromotive forces through a spin-dependent Berry phase, is known as emergent electromagnetic induction (EEMI). However, this effect has previously been observed only in magnetic textures with spatial gradients, such as domain walls, helices, and skyrmions. Here, we demonstrate that even a spatially uniform ferromagnet",
+    "authors": [
+      "Yuuri Suzuki",
+      "Yukako Fujishiro",
+      "Masataka Mogi",
+      "Juba Bouaziz",
+      "Takahiro Anan",
+      "Akiko Kikkawa",
+      "Daiki Yamaguchi",
+      "Max T. Birch",
+      "Yuto Kiyonaga",
+      "Minoru Kawamura",
+      "Yasujiro Taguchi",
+      "Takahiro Morimoto",
+      "Naoto Nagaosa",
+      "Ryotaro Arita",
+      "Yoshinori Tokura"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Emulated Integrity Replica: Enabling Self-Healing on FPGA SoCs via Hierarchical Twins",
+    "url": "https://arxiv.org/abs/2607.12298v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Convolutional neural networks (CNNs) are increasingly being deployed on system-on-chip (SoC) platforms, where hardware-accelerated inference enables low-latency edge computing. Achieving fault tolerance on these devices remains challenging because conventional redundancy (dual/triple modular redundancy, DMR/TMR) incurs high resource cost, while software-centric methods (e.g., algorithm-based fault tolerance (ABFT), checkpoint-restart, instruction-level duplication, and software watchdogs/asserti",
+    "authors": [
+      "Arsalan Ali Malik",
+      "Ali Suvizi",
+      "Guru Venkataramani",
+      "Aydin Aysu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "ORRAM: An OpenROAD-Integrated RAM Generator Using Standard Cells",
+    "url": "https://arxiv.org/abs/2607.12244v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Memory inference remains a significant challenge in turnkey ASIC design flows. Inferring flip-flops from RTL can create thousands of densely interconnected instances which dramatically slow down design flows and impede performance. Memory compilers address this issue, although they are third-party tools which are often PDK-specific and may require specialized cells not in the base PDK.\n  To address these shortcomings, we present ORRAM, a standard-cell-based memory generator built as a native mod",
+    "authors": [
+      "Brayden Louie",
+      "Thinh P. Nguyen",
+      "Matt Liberty",
+      "Austin Rovinski"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
     "title": "Detection of sUAS in Urban Environments using Multi-Antenna Micro-Doppler Radar",
     "url": "https://arxiv.org/abs/2607.11868v1",
     "published_date": "2026-07-13",
