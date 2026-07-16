@@ -2,6 +2,239 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "quant-ph",
+    "title": "Cluster-configurational study of G-center in Silicon",
+    "url": "https://arxiv.org/abs/2607.14083v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Understanding the properties of defects is imperative for proper use for variety of applications including quantum computing. In this paper, we use the multiconfigurational self consistent field (MCSCF) combined with DFT optimized geometry in order to investigate the spin and optical properties of G centers in Silicon. By utilizing quantum chemistry based methods, we show excellent agreement with the Zero Phonon Line and Zero Field Splitting Tensor components of the G center. We also calculate t",
+    "authors": [
+      "Narayan Pokhrel",
+      "Kyungwha Park",
+      "Vsevolod Ivanov"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "The WEST code for large-scale excited-state materials simulations",
+    "url": "https://arxiv.org/abs/2607.14025v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "We present WEST, an open-source plane-wave pseudopotential code for large-scale excited-state materials simulations, and describe its theoretical foundations, software architecture, and capabilities. WEST implements full-frequency GW, quantum defect embedding theory, the Bethe-Salpeter equation, and time-dependent density functional theory within a common algorithmic framework that avoids the explicit computation of virtual electronic states. By combining density functional and density matrix pe",
+    "authors": [
+      "Victor Wen-zhe Yu",
+      "Siyuan Chen",
+      "Yu Jin",
+      "Vrindaa Somjit",
+      "Stefano Paolo Villani",
+      "Jiawei Zhan",
+      "Marco Govoni",
+      "Giulia Galli"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "PiVoT: A Variational Solution for Real-time Large-scale Multi-object Detection and Tracking under Heavy Clutter",
+    "url": "https://arxiv.org/abs/2607.13891v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Multi-object detection and tracking from noisy point clouds remain challenging in many data-scarce radar applications. Current Bayesian trackers based on Poisson measurement models offer a training-free solution but struggle to achieve accuracy and efficiency under severe clutter, large object populations, and full-resolution Doppler point clouds. We address this with PiVoT, a fast, clutter-resilient multi-object tracker for both positional and Doppler measurements. PiVoT performs end-to-end det",
+    "authors": [
+      "Runze Gan",
+      "Qing Li",
+      "Simon J. Godsill",
+      "Mike E. Davies",
+      "James R. Hopgood"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "First-principles Study of Structural and Electronic Properties of Mn-doped Cu2NiXY4 (X=Sn, Ge, Si; Y=S, Se) Chalcogenide Semiconductors",
+    "url": "https://arxiv.org/abs/2607.13846v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "In this work, the effect of partial substitution of Mn by Ni on the structural and electronic properties of kesterite systems Cu2NiXY4 (X = Sn, Ge, Si; Y = S, Se) was studied using density functional theory (DFT). The mBJ+U method was used to characterize the bandgap more accurately. To the best of our knowledge, a systematic comparative study of Mn substitution in the entire Cu2NiXY4 (X = Sn, Ge, Si; Y = S, Se) family has not been previously performed. Due to crystallographic constraints of the",
+    "authors": [
+      "Iskandar Raufzoda",
+      "Dilshod Nematov",
+      "Amondullo Burhonzoda"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "quant-ph",
+    "title": "Wireless millikelvin interconnects for superconducting quantum hardware",
+    "url": "https://arxiv.org/abs/2607.13834v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Scalable quantum computing is limited by the dense network of electrical interconnects linking cryogenic quantum processors to room-temperature control electronics. To overcome this bottleneck, considerable effort has focused on cryogenic CMOS electronics and microwave-to-optical transduction, aiming to reduce wiring complexity and thermal loading. Wireless interconnects have recently emerged as a promising complementary approach, yet their compatibility with superconducting quantum hardware rem",
+    "authors": [
+      "Kristopher Barr",
+      "Mingyan Zhong",
+      "Euan Parry",
+      "Manoj Stanley",
+      "Qusay Al-Taai",
+      "Paniz Foshat",
+      "Kaveh Delfanazari",
+      "Martin Weides",
+      "Nick M. Ridler",
+      "Chong Li",
+      "Alessandro Rossi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Kaleido: Algorithm-Hardware Co-Design for Video Diffusion Transformers by Exploiting Latent Space Correlations",
+    "url": "https://arxiv.org/abs/2607.13770v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Video diffusion transformers (vDiTs) generate high quality video but introduce extremely high compute cost due to the long diffusion timesteps and self attention computation. As diffusion timesteps are reduced, the computation cost of self attention becomes the dominant bottleneck. Existing acceleration approaches largely inherit sparse attention techniques from large language models, which fail to consider the unique spatiotemporal correlation of video data.\n  This paper presents Kaleido, an al",
+    "authors": [
+      "Wenxuan Miao",
+      "Haosong Liu",
+      "Weiming Hu",
+      "Zihan Liu",
+      "Aiyue Chen",
+      "Jianlin Yu",
+      "Yiwu Yao",
+      "Yiming Gan",
+      "Jieru Zhao",
+      "Jingwen Leng",
+      "Minyi Guo",
+      "Yu Feng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Design and Analysis of a Higher-Order Enhanced Phase-Locked Loop via the Ahmadi-Chaudhry-Zhang Newton Framework",
+    "url": "https://arxiv.org/abs/2607.13752v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "The enhanced phase-locked loop (EPLL) is widely used in power systems to estimate the amplitude, phase, and frequency of sinusoidal voltages. Existing EPLL formulations are primarily derived from first- or second-order optimization methods, which may exhibit slow convergence, saddle-point attraction, or undesired oscillatory behavior. This paper presents a new higher-order EPLL based on the recently proposed Ahmadi-Chaudhry-Zhang (ACZ) higher-order Newton framework. Since the ACZ method was orig",
+    "authors": [
+      "Shafayat Abrar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.soft",
+    "title": "Microscopic constitutive theory of stress overshoot, yielding, and strain hardening in amorphous materials",
+    "url": "https://arxiv.org/abs/2607.13734v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "We develop a microscopic constitutive theory for the nonlinear deformation of metallic and polymer glasses based on nonaffine elasticity coupled to irreversible many-body relaxation. The theory predicts the full stress--strain response, from linear elasticity through stress overshoot and yielding to steady plastic flow. We show that stress overshoot originates from the competition between a nonaffine elastic instability induced by strain-driven loss of mechanical connectivity at the atomic/molec",
+    "authors": [
+      "Ankit Singh",
+      "Valeriy V. Ginzburg",
+      "Alessio Zaccone"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Microstructure-Conditioned Surrogate Models for Graded Multiscale Optimization of Mycelium Composites",
+    "url": "https://arxiv.org/abs/2607.13688v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Emerging sustainable materials increasingly rely on engineered hierarchy and microstructure to achieve control of their properties and mechanical behavior. Optimizing these materials with controllable microstructures requires efficient multiscale simulations. Data-driven surrogate models for the microscale can accelerate multiscale simulations, but require large amounts of data even for a fixed microstructure. When a range of microstructures is considered, as is the case in multiscale optimizati",
+    "authors": [
+      "J. Storm",
+      "I. B. C. M. Rocha",
+      "S. Schyck",
+      "K. Masania",
+      "F. P. van der Meer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Role of small-radius and high-electronegativity A-Site dopants in enhancing proton transport and stability of perovskite electrolytes",
+    "url": "https://arxiv.org/abs/2607.13657v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "The practical application of BaCeO$_3$-based electrolytes is limited by their poor chemical stability in proton-conducting solid oxide fuel cells. Commonly employed B-site doping strategies typically improve proton transport with limited improvement in stability. Recent experiments show that A-site Ca doping can simultaneously enhance both properties. Here, through first-principles calculations and mechanistic analysis of Ca-doped BaCeO$_3$, we identify the synergistic roles of small-radius, hig",
+    "authors": [
+      "Hang Ma",
+      "Ying Liang",
+      "Tianxing Ma"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "CIMERA: Compute-in-Interconnect and Memory with Reconfigurable Precision for LLM Inference",
+    "url": "https://arxiv.org/abs/2607.13649v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "LLM impose significant computational and memory demands, creating challenges for energy-efficient inference across platforms ranging from data centers to power-constrained edge devices. Weight precision plays a critical role in balancing inference accuracy, throughput, and energy consumption, while modern LLM workloads exhibit pronounced heterogeneity and tolerance that favors adaptive precision execution. This paper presents CIMERA, a reconfigurable-precision LLM inference accelerator that inte",
+    "authors": [
+      "Yue Jiet Chong",
+      "Yimin Wang",
+      "Wei Zhang",
+      "Xuanyao Fong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Emergent induction in magnetic Weyl semimetals",
+    "url": "https://arxiv.org/abs/2607.13559v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "We theoretically study emergent electromagnetic responses in Weyl semimetals. Focusing on magnetic Weyl semimetals, we develop a general theory of emergent induction driven by magnetic dynamics. We show that magnetoelectric (ME) responses in Weyl semimetals give rise to emergent induction mediated by magnetization dynamics. Using effective two-band models for magnetic Weyl semimetals, we derive a formula for the ME response that includes both intraband and interband contributions. The resulting ",
+    "authors": [
+      "Takahiro Anan",
+      "Takahiro Morimoto"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Posterior-Confidence Driven Beamforming for Energy-Efficient Integrated Sensing and Communication",
+    "url": "https://arxiv.org/abs/2607.13470v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Energy efficiency will pose an essential limitation for sixth-generation (6G) integrated sensing and communication (ISAC) systems, given the high sensing power consumption associated with persistent sensing, despite stable communication requirements. This paper proposes an energy-efficient multiple-input multiple-output (MIMO) dual-functional radar-communication (DFRC) beamforming framework that minimizes transmit power while guaranteeing per-user signal-to-interference-plus-noise ratio (SINR) a",
+    "authors": [
+      "Nusaibah A. Alshorman",
+      "Huseyin Arslan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Physics-Informed Residual Deep Learning for Constitutive Modeling of Hot Deformation and Dynamic Recrystallization in a Mo-Rich $α+β$ Titanium Alloy",
+    "url": "https://arxiv.org/abs/2607.13467v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Accurate constitutive modeling of hot deformation behavior is essential for designing thermomechanical processes in advanced structural alloys. Conventional Arrhenius-type and empirical models do not adequately capture the combined effects of strain hardening, dynamic recovery (DRV), and dynamic recrystallization (DRX) across broad processing conditions. In this study, two Stacked Residual Physics-Informed Neural Networks (STAR-PINNs) were developed to simulate the hot deformation response of a ",
+    "authors": [
+      "Prashil S. Joshi",
+      "Diksha Mahadule",
+      "Rajesh K. Khatirkar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "eess.SP",
     "title": "GPU-Accelerated Optimisation of Symmetric Bidirectional Ultrawideband Coherent Transmission Under Launch Power Constraints",
     "url": "https://arxiv.org/abs/2607.12921v1",
