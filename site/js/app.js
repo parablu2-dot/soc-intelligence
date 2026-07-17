@@ -343,144 +343,22 @@ function _dailyTop5Panel() {
     </div>`;
 }
 
-// ── 1. 오늘의 요약 (드릴다운) ─────────────────────────────────────────────
+// ── 1. 오늘의 요약 (섹터별 요약 · 당일 수집분) ─────────────────────────────
 function modToday() {
-  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
-  const recent = allSignals.filter(s => s.published_date >= yesterday);
-  const byAxis = {};
-  ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'].forEach(a => {
-    byAxis[a] = recent.filter(s => s.axis === a);
-  });
   return `
-    ${header('오늘의 요약', `지난 24시간 신호 ${recent.length}건 — 카드 클릭으로 필터`)}
-    ${_dailyTop5Panel()}
-    <div class="stat-grid">
-      ${['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'].map(a =>
-        `<div class="stat-card stat-card-clickable" onclick="todayDrill('axis','${a}',this)">
-          <div class="stat-value">${byAxis[a].length}</div>
-          <div class="stat-label">${axisLabel(a)}</div>
-        </div>`
-      ).join('')}
-      <div class="stat-card stat-card-clickable" onclick="todayDrill('cat','process',this)">
-        <div class="stat-value">${recent.filter(s=>s.category==='process').length}</div>
-        <div class="stat-label">공정 노드</div>
-      </div>
-      <div class="stat-card stat-card-clickable" onclick="todayDrill('cat','price',this)">
-        <div class="stat-value">${recent.filter(s=>s.category==='price').length}</div>
-        <div class="stat-label">가격</div>
-      </div>
+    ${header('오늘의 요약', '섹터별 요약 (당일 수집분) — 빌드타임 LLM 생성, 5축 기준')}
+    <div style="margin-bottom:10px">
+      <button class="filter-btn" onclick="toggleSummaryLang()">${summaryLang === 'ko' ? 'KO → EN' : 'EN → KO'}</button>
+      <span style="font-size:11px;color:var(--text-muted);margin-left:8px">섹터 요약 언어 전환 (정적, 커밋된 번역만 표시)</span>
     </div>
-    <div id="today-list">${signalList(recent.slice(0, 30))}</div>`;
+    ${_dailyTop5Panel()}
+    ${_sectorSummariesPanel()}`;
 }
-
-// ── Baseline Notes (deep-research 장문 노트, data/baseline/notes/*.md) ───
-function _escHtml(s) {
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
-
-function _mdInline(s) {
-  return s
-    .replace(/`([^`]+)`/g, '<code>$1</code>')
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/\[\[([^\]]+)\]\]/g, '<span class="wikilink">$1</span>');
-}
-
-// 아주 가벼운 markdown → HTML 변환. 헤더/굵게/인용/목록/표/구분선만 지원 (풀 CommonMark 아님).
-function _mdLite(md) {
-  const lines = _escHtml(md).split('\n');
-  let html = '';
-  let i = 0;
-  let inList = false;
-
-  const closeList = () => { if (inList) { html += '</ul>'; inList = false; } };
-
-  const isTableSep = line => /^\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?$/.test(line.trim());
-
-  while (i < lines.length) {
-    const line = lines[i];
-
-    if (!line.trim()) { closeList(); i++; continue; }
-
-    const h = line.match(/^(#{1,4})\s+(.*)$/);
-    if (h) {
-      closeList();
-      const level = Math.min(h[1].length + 2, 6); // 문서 h1 → h3 정도로 낮춰 카드 안에서 과하지 않게
-      html += `<h${level}>${_mdInline(h[2])}</h${level}>`;
-      i++; continue;
-    }
-
-    if (line.startsWith('|') && lines[i + 1] && isTableSep(lines[i + 1])) {
-      closeList();
-      const headCells = line.split('|').slice(1, -1).map(c => c.trim());
-      html += '<table class="md-table"><thead><tr>' +
-        headCells.map(c => `<th>${_mdInline(c)}</th>`).join('') + '</tr></thead><tbody>';
-      i += 2;
-      while (i < lines.length && lines[i].trim().startsWith('|')) {
-        const cells = lines[i].split('|').slice(1, -1).map(c => c.trim());
-        html += '<tr>' + cells.map(c => `<td>${_mdInline(c)}</td>`).join('') + '</tr>';
-        i++;
-      }
-      html += '</tbody></table>';
-      continue;
-    }
-
-    if (/^-{3,}$/.test(line.trim())) { closeList(); html += '<hr>'; i++; continue; }
-
-    const bq = line.match(/^>\s?(.*)$/);
-    if (bq) { closeList(); html += `<blockquote>${_mdInline(bq[1])}</blockquote>`; i++; continue; }
-
-    const li = line.match(/^[-*]\s+(?:\[( |x)\]\s+)?(.*)$/);
-    if (li) {
-      if (!inList) { html += '<ul>'; inList = true; }
-      const checkbox = li[1] !== undefined ? `${li[1] === 'x' ? '☑' : '☐'} ` : '';
-      html += `<li>${checkbox}${_mdInline(li[2])}</li>`;
-      i++; continue;
-    }
-
-    closeList();
-    html += `<p>${_mdInline(line)}</p>`;
-    i++;
-  }
-  closeList();
-  return html;
-}
-
-function _baselineNoteCard(note) {
-  const tags = (note.tags || []).map(t => `<span class="chip chip-note">${t}</span>`).join('');
-  const statusLabel = note.status ? `<span class="chip chip-note-status">${note.status}</span>` : '';
-  return `
-    <div class="baseline-note-card">
-      <div class="baseline-note-head" onclick="toggleBaselineNote('${note.id}')">
-        <div>
-          <div class="baseline-note-topic">${note.topic}</div>
-          <div class="baseline-note-meta">${note.axis || ''} ${note.date ? '· ' + note.date : ''}</div>
-        </div>
-        <div>${statusLabel}${tags}</div>
-      </div>
-      <div id="bn-body-${note.id}" class="baseline-note-body" style="display:none">${_mdLite(note.body_md)}</div>
-    </div>`;
-}
-
-function _baselineNotesPanel() {
-  if (!baselineNotes.length) return '';
-  return `
-    <div class="baseline-notes-panel">
-      <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:8px">
-        📥 Baseline Notes — 승격 대기 (dashboard 층, 켜뮤 아님 · ${baselineNotes.length}건)
-      </div>
-      ${baselineNotes.map(_baselineNoteCard).join('')}
-    </div>`;
-}
-
-window.toggleBaselineNote = function(id) {
-  const el = document.getElementById(`bn-body-${id}`);
-  if (el) el.style.display = el.style.display === 'none' ? 'block' : 'none';
-};
 
 // B-2: ko/en 정적 토글 — 런타임 번역·fetch 없음, 커밋된 content.{ko,en} 전환만. 상태는 메모리만(새로고침 시 ko로 복귀).
 window.toggleSummaryLang = function() {
   summaryLang = summaryLang === 'ko' ? 'en' : 'ko';
-  navigate('review');
+  navigate('today');
 };
 
 // ── 2. 일일 리뷰 큐 (5축 + 카테고리 필터 + 1차 증류 코멘트) ───────────────
@@ -576,18 +454,6 @@ function modReview() {
   const axes = ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'];
   return `
     ${header('일일 리뷰', `미완료 ${unreviewed.length}건 · 완료 표시하면 흐려집니다`)}
-    <div style="margin-bottom:10px">
-      <button class="filter-btn" onclick="toggleSummaryLang()">${summaryLang === 'ko' ? 'KO → EN' : 'EN → KO'}</button>
-      <span style="font-size:11px;color:var(--text-muted);margin-left:8px">섹터 요약·1차 증류 요약 언어 전환 (정적, 커밋된 번역만 표시)</span>
-    </div>
-    ${_baselineNotesPanel()}
-    ${_sectorSummariesPanel()}
-    <div style="margin-bottom:12px">
-      <button class="filter-btn" onclick="exportDistillationNotes()">📥 메모 내보내기 (JSON)</button>
-      <span style="font-size:11px;color:var(--text-muted);margin-left:8px">
-        data/distillation_notes.json으로 커밋하면 다음 빌드에서 카테고리 요약이 생성됩니다
-      </span>
-    </div>
     <div class="filters">
       <button class="filter-btn active" onclick="reviewFilter(this,'all')">전체</button>
       ${axes.map(a =>
@@ -1192,25 +1058,6 @@ window.hiringFilter = function(btn, type) {
   document.getElementById('hiring-list').innerHTML = signalList(filtered);
 };
 const _CATS = ['news','process','price','hiring'];  // 'packaging'은 reviewFilter에서 axis와 통합 처리
-
-// 오늘의 요약 드릴다운
-window.todayDrill = function(type, value, card) {
-  const wasActive = card.classList.contains('active');
-  document.querySelectorAll('.stat-card-clickable').forEach(c => c.classList.remove('active'));
-  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
-  const recent = allSignals.filter(s => s.published_date >= yesterday);
-  const list = document.getElementById('today-list');
-  if (wasActive) {
-    list.innerHTML = signalList(recent.slice(0,30));
-    return;
-  }
-  card.classList.add('active');
-  let filtered;
-  if (type === 'axis') filtered = recent.filter(s => s.axis === value);
-  else if (type === 'cat') filtered = recent.filter(s => s.category === value);
-  else filtered = recent;
-  list.innerHTML = signalList(filtered.slice(0,30));
-};
 
 // 생태계 그래프 SVG 선 그리기
 window.ecoDrawLines = function(relations, activeCompany) {
