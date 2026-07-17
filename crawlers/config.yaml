@@ -175,6 +175,11 @@ axis_news_queries:
   foundry: 'foundry "process node" OR "2nm" OR "3nm" OR "wafer capacity" TSMC OR "Samsung Foundry"'
   packaging: 'CoWoS OR chiplet OR "advanced packaging" OR UCIe semiconductor'
 
+# 중국어(zh) 기술 뉴스 Google News 쿼리 — crawlers/tech/googlenews_zh.py가 읽음.
+# TechSignal은 axis 없음 — 5축 대신 SoC 도메인 전반을 포괄하는 단일 쿼리.
+# 20260717 후속 작업지시서 — Baidu는 robots.txt 전면 차단(불가)이라 Google News zh로 대체.
+tech_zh_query: '半导体 OR 芯片 OR 晶圆代工 OR 先进封装 OR 台积电 OR 三星 OR 英伟达'
+
 # 채용 레이더 Google News 업체별 쿼리 (슬러그: 검색어, hiring.py가 읽음)
 # 슬러그 → 표시 태그 매핑은 hiring.py 내 _SLUG_TO_TAG 참고
 hiring_targets:

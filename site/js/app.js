@@ -36,6 +36,9 @@ const DATA_SOURCES = [
 
 const DATA_BASE = window.location.pathname.startsWith('/site/') ? '../data' : 'data';
 
+// TechSignal 소스 (axis/company 없음 — data/refined/tech/*.json, 20260717 후속)
+const TECH_SOURCES = ['papers.json', 'news_zh.json'];
+
 // ── 5축 업체 관계 데이터 (생태계 그래프) ─────────────────────────────────
 const _ECO_RELATIONS = [
   // 파운드리 공급 관계
@@ -119,6 +122,7 @@ let versionInfo = null;  // data/refined/version.json — 단일 진실원 (vers
 let sectorSummaries = {};  // {axis: {sector, content:{ko,en}, item_count, generated_at}} — A-2 구조화 스키마
 let summaryLang = 'ko';  // B-2: 섹터 요약 ko↔en 정적 토글 (클라이언트 메모리만, storage 미사용)
 let dailyTop5 = [];  // [{axis, company, headline, url, source, published_date, score}] — Phase 3 item 7
+let techSignals = [];  // TechSignal[] — data/refined/tech/*.json (axis/company 없음, arXiv 논문 + Google News zh, 20260717 후속)
 
 // ── 부트스트랩 ─────────────────────────────────────────────────────────────
 async function boot() {
@@ -177,9 +181,12 @@ async function loadAllData() {
   const top5Load = fetch(`${DATA_BASE}/refined/daily_top5.json`)
     .then(r => r.ok ? r.json() : null)
     .catch(() => null);
+  const techLoads = TECH_SOURCES.map(f =>
+    fetch(`${DATA_BASE}/refined/tech/${f}`).then(r => r.ok ? r.json() : []).catch(() => [])
+  );
 
-  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data] =
-    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load]);
+  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data, techResults] =
+    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load, Promise.all(techLoads)]);
   allSignals = results.flat().sort((a, b) => b.published_date.localeCompare(a.published_date));
   capacityRecords = capData;
   companySummaries = sumData || {};
@@ -187,6 +194,7 @@ async function loadAllData() {
   versionInfo = versionData;
   sectorSummaries = sectorSumData?.sectors || {};
   dailyTop5 = top5Data?.top5 || [];
+  techSignals = techResults.flat().sort((a, b) => (b.published_date || '').localeCompare(a.published_date || ''));
   document.getElementById('crawl-time').textContent =
     `신호 ${allSignals.length}건 · 캐파 ${capacityRecords.length}건 · ${new Date().toLocaleString('ko-KR')}`;
   document.getElementById('update-time').textContent =
@@ -980,10 +988,33 @@ function modChannels() {
     ${header('정보 획득 채널', '크롤러 현황 및 소스별 신호 분포')}
     <div class="channel-list" style="margin-bottom:24px">${rows}</div>
     <h3 style="margin-bottom:10px;font-size:14px">소스별 신호 수</h3>
-    <table>
+    <table style="margin-bottom:24px">
       <thead><tr><th>소스</th><th>신호 수</th></tr></thead>
       <tbody>${sourcePart}</tbody>
-    </table>`;
+    </table>
+    ${_techSignalsPanel()}`;
+}
+
+// ── 기술 신호 (TechSignal — axis/company 없음, arXiv 논문 + Google News zh, 20260717 후속) ─
+function _techSignalsPanel() {
+  if (!techSignals.length) return '';
+  const bySource = {};
+  techSignals.forEach(s => { bySource[s.source] = (bySource[s.source] || 0) + 1; });
+  const rows = techSignals.slice(0, 20).map(s => `
+    <div class="signal-card">
+      <span class="chip">${s.source}</span>
+      <span class="chip">${s.category}</span>
+      <a href="${s.url}" target="_blank" rel="noopener">${s.title}</a>
+      <div style="color:var(--text-muted);font-size:11px">${s.published_date}</div>
+    </div>`).join('');
+  return `
+    <h3 style="margin-bottom:10px;font-size:14px">
+      ◉ 기술 신호 (Tech Signals · ${techSignals.length}건 — ${Object.entries(bySource).map(([s,c]) => `${s} ${c}`).join(' · ')})
+    </h3>
+    <p style="color:var(--text-muted);font-size:12px;margin-bottom:10px">
+      5축 경쟁사 추적과 분리된 별도 stratum(axis/company 없음) — 논문·중국어권 뉴스 원자료, 최근 20건
+    </p>
+    <div style="margin-bottom:24px">${rows}</div>`;
 }
 
 // ── 이벤트 핸들러 ─────────────────────────────────────────────────────────

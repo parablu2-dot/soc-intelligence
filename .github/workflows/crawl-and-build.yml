@@ -36,9 +36,13 @@ jobs:
         # 일부 크롤러 실패해도 수집된 데이터는 저장
         run: python -m crawlers.run_all || true
 
-      # ── 1.5 기술 소스(논문) — 뉴스 파이프라인과 분리된 별도 stratum, LLM 미개입 ─
+      # ── 1.5 기술 소스(논문·zh 뉴스) — 뉴스 파이프라인과 분리된 별도 stratum, LLM 미개입 ─
       - name: Run tech sources (arXiv papers)
         run: python -m crawlers.tech.arxiv || true
+
+      # 20260717 후속 — Baidu는 robots.txt 전면 차단(불가), Google News zh로 대체
+      - name: Run tech sources (Google News zh)
+        run: python -m crawlers.tech.googlenews_zh || true
 
       # ── 2. Dedup Gate (임베딩 dedup + lineage) ────────────────
       - name: Run dedup gate

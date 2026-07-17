@@ -57,3 +57,14 @@ const CHINESE_SOURCES = ['DigiTimes','Unisoc','MediaTek','SMIC','JCET'];
 
 어느 쪽이든 프론트 `app.js`의 `CHINESE_SOURCES` 매칭 방식(현재는 회사명 기반)을
 `tags.includes('ZH')` 기준으로 바꿔야 실제 언어 기준 분류가 된다.
+
+## 추가: 후속 세션에서 구현 완료 (2026-07-17)
+
+사용자 확인 후 대안 1(Google News zh 쿼리 변형)을 **TechSignal 스키마**로 구현.
+`crawlers/tech/googlenews_zh.py` — arxiv.py와 동일하게 axis/company 없는 별도 stratum.
+실행 결과: 94건 수집, TSMC 실적/AI칩 수요/항저우 칩 허브 등 실제 관련성 높은 기사 확인.
+
+TechSignal은 "기사" 탭(axis 기반 `allSignals`)에는 뜨지 않고, 지금까지 프론트에 전혀
+노출되지 않던 arXiv 논문과 함께 신설 "정보 획득 채널" 모듈의 `_techSignalsPanel()`에서
+별도 섹션으로 노출하기로 결정(사용자 선택 — RefinedSignal 전환도 고려했으나 지시대로
+TechSignal 유지 + 전용 패널 신설).
