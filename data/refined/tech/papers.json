@@ -2,6 +2,1023 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "quant-ph",
+    "title": "Cluster-configurational study of G-center in Silicon",
+    "url": "https://arxiv.org/abs/2607.14083v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Understanding the properties of defects is imperative for proper use for variety of applications including quantum computing. In this paper, we use the multiconfigurational self consistent field (MCSCF) combined with DFT optimized geometry in order to investigate the spin and optical properties of G centers in Silicon. By utilizing quantum chemistry based methods, we show excellent agreement with the Zero Phonon Line and Zero Field Splitting Tensor components of the G center. We also calculate t",
+    "authors": [
+      "Narayan Pokhrel",
+      "Kyungwha Park",
+      "Vsevolod Ivanov"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "The WEST code for large-scale excited-state materials simulations",
+    "url": "https://arxiv.org/abs/2607.14025v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "We present WEST, an open-source plane-wave pseudopotential code for large-scale excited-state materials simulations, and describe its theoretical foundations, software architecture, and capabilities. WEST implements full-frequency GW, quantum defect embedding theory, the Bethe-Salpeter equation, and time-dependent density functional theory within a common algorithmic framework that avoids the explicit computation of virtual electronic states. By combining density functional and density matrix pe",
+    "authors": [
+      "Victor Wen-zhe Yu",
+      "Siyuan Chen",
+      "Yu Jin",
+      "Vrindaa Somjit",
+      "Stefano Paolo Villani",
+      "Jiawei Zhan",
+      "Marco Govoni",
+      "Giulia Galli"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "PiVoT: A Variational Solution for Real-time Large-scale Multi-object Detection and Tracking under Heavy Clutter",
+    "url": "https://arxiv.org/abs/2607.13891v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Multi-object detection and tracking from noisy point clouds remain challenging in many data-scarce radar applications. Current Bayesian trackers based on Poisson measurement models offer a training-free solution but struggle to achieve accuracy and efficiency under severe clutter, large object populations, and full-resolution Doppler point clouds. We address this with PiVoT, a fast, clutter-resilient multi-object tracker for both positional and Doppler measurements. PiVoT performs end-to-end det",
+    "authors": [
+      "Runze Gan",
+      "Qing Li",
+      "Simon J. Godsill",
+      "Mike E. Davies",
+      "James R. Hopgood"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "First-principles Study of Structural and Electronic Properties of Mn-doped Cu2NiXY4 (X=Sn, Ge, Si; Y=S, Se) Chalcogenide Semiconductors",
+    "url": "https://arxiv.org/abs/2607.13846v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "In this work, the effect of partial substitution of Mn by Ni on the structural and electronic properties of kesterite systems Cu2NiXY4 (X = Sn, Ge, Si; Y = S, Se) was studied using density functional theory (DFT). The mBJ+U method was used to characterize the bandgap more accurately. To the best of our knowledge, a systematic comparative study of Mn substitution in the entire Cu2NiXY4 (X = Sn, Ge, Si; Y = S, Se) family has not been previously performed. Due to crystallographic constraints of the",
+    "authors": [
+      "Iskandar Raufzoda",
+      "Dilshod Nematov",
+      "Amondullo Burhonzoda"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "quant-ph",
+    "title": "Wireless millikelvin interconnects for superconducting quantum hardware",
+    "url": "https://arxiv.org/abs/2607.13834v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Scalable quantum computing is limited by the dense network of electrical interconnects linking cryogenic quantum processors to room-temperature control electronics. To overcome this bottleneck, considerable effort has focused on cryogenic CMOS electronics and microwave-to-optical transduction, aiming to reduce wiring complexity and thermal loading. Wireless interconnects have recently emerged as a promising complementary approach, yet their compatibility with superconducting quantum hardware rem",
+    "authors": [
+      "Kristopher Barr",
+      "Mingyan Zhong",
+      "Euan Parry",
+      "Manoj Stanley",
+      "Qusay Al-Taai",
+      "Paniz Foshat",
+      "Kaveh Delfanazari",
+      "Martin Weides",
+      "Nick M. Ridler",
+      "Chong Li",
+      "Alessandro Rossi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Kaleido: Algorithm-Hardware Co-Design for Video Diffusion Transformers by Exploiting Latent Space Correlations",
+    "url": "https://arxiv.org/abs/2607.13770v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Video diffusion transformers (vDiTs) generate high quality video but introduce extremely high compute cost due to the long diffusion timesteps and self attention computation. As diffusion timesteps are reduced, the computation cost of self attention becomes the dominant bottleneck. Existing acceleration approaches largely inherit sparse attention techniques from large language models, which fail to consider the unique spatiotemporal correlation of video data.\n  This paper presents Kaleido, an al",
+    "authors": [
+      "Wenxuan Miao",
+      "Haosong Liu",
+      "Weiming Hu",
+      "Zihan Liu",
+      "Aiyue Chen",
+      "Jianlin Yu",
+      "Yiwu Yao",
+      "Yiming Gan",
+      "Jieru Zhao",
+      "Jingwen Leng",
+      "Minyi Guo",
+      "Yu Feng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Design and Analysis of a Higher-Order Enhanced Phase-Locked Loop via the Ahmadi-Chaudhry-Zhang Newton Framework",
+    "url": "https://arxiv.org/abs/2607.13752v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "The enhanced phase-locked loop (EPLL) is widely used in power systems to estimate the amplitude, phase, and frequency of sinusoidal voltages. Existing EPLL formulations are primarily derived from first- or second-order optimization methods, which may exhibit slow convergence, saddle-point attraction, or undesired oscillatory behavior. This paper presents a new higher-order EPLL based on the recently proposed Ahmadi-Chaudhry-Zhang (ACZ) higher-order Newton framework. Since the ACZ method was orig",
+    "authors": [
+      "Shafayat Abrar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.soft",
+    "title": "Microscopic constitutive theory of stress overshoot, yielding, and strain hardening in amorphous materials",
+    "url": "https://arxiv.org/abs/2607.13734v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "We develop a microscopic constitutive theory for the nonlinear deformation of metallic and polymer glasses based on nonaffine elasticity coupled to irreversible many-body relaxation. The theory predicts the full stress--strain response, from linear elasticity through stress overshoot and yielding to steady plastic flow. We show that stress overshoot originates from the competition between a nonaffine elastic instability induced by strain-driven loss of mechanical connectivity at the atomic/molec",
+    "authors": [
+      "Ankit Singh",
+      "Valeriy V. Ginzburg",
+      "Alessio Zaccone"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Microstructure-Conditioned Surrogate Models for Graded Multiscale Optimization of Mycelium Composites",
+    "url": "https://arxiv.org/abs/2607.13688v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Emerging sustainable materials increasingly rely on engineered hierarchy and microstructure to achieve control of their properties and mechanical behavior. Optimizing these materials with controllable microstructures requires efficient multiscale simulations. Data-driven surrogate models for the microscale can accelerate multiscale simulations, but require large amounts of data even for a fixed microstructure. When a range of microstructures is considered, as is the case in multiscale optimizati",
+    "authors": [
+      "J. Storm",
+      "I. B. C. M. Rocha",
+      "S. Schyck",
+      "K. Masania",
+      "F. P. van der Meer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Role of small-radius and high-electronegativity A-Site dopants in enhancing proton transport and stability of perovskite electrolytes",
+    "url": "https://arxiv.org/abs/2607.13657v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "The practical application of BaCeO$_3$-based electrolytes is limited by their poor chemical stability in proton-conducting solid oxide fuel cells. Commonly employed B-site doping strategies typically improve proton transport with limited improvement in stability. Recent experiments show that A-site Ca doping can simultaneously enhance both properties. Here, through first-principles calculations and mechanistic analysis of Ca-doped BaCeO$_3$, we identify the synergistic roles of small-radius, hig",
+    "authors": [
+      "Hang Ma",
+      "Ying Liang",
+      "Tianxing Ma"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "CIMERA: Compute-in-Interconnect and Memory with Reconfigurable Precision for LLM Inference",
+    "url": "https://arxiv.org/abs/2607.13649v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "LLM impose significant computational and memory demands, creating challenges for energy-efficient inference across platforms ranging from data centers to power-constrained edge devices. Weight precision plays a critical role in balancing inference accuracy, throughput, and energy consumption, while modern LLM workloads exhibit pronounced heterogeneity and tolerance that favors adaptive precision execution. This paper presents CIMERA, a reconfigurable-precision LLM inference accelerator that inte",
+    "authors": [
+      "Yue Jiet Chong",
+      "Yimin Wang",
+      "Wei Zhang",
+      "Xuanyao Fong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Emergent induction in magnetic Weyl semimetals",
+    "url": "https://arxiv.org/abs/2607.13559v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "We theoretically study emergent electromagnetic responses in Weyl semimetals. Focusing on magnetic Weyl semimetals, we develop a general theory of emergent induction driven by magnetic dynamics. We show that magnetoelectric (ME) responses in Weyl semimetals give rise to emergent induction mediated by magnetization dynamics. Using effective two-band models for magnetic Weyl semimetals, we derive a formula for the ME response that includes both intraband and interband contributions. The resulting ",
+    "authors": [
+      "Takahiro Anan",
+      "Takahiro Morimoto"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Posterior-Confidence Driven Beamforming for Energy-Efficient Integrated Sensing and Communication",
+    "url": "https://arxiv.org/abs/2607.13470v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Energy efficiency will pose an essential limitation for sixth-generation (6G) integrated sensing and communication (ISAC) systems, given the high sensing power consumption associated with persistent sensing, despite stable communication requirements. This paper proposes an energy-efficient multiple-input multiple-output (MIMO) dual-functional radar-communication (DFRC) beamforming framework that minimizes transmit power while guaranteeing per-user signal-to-interference-plus-noise ratio (SINR) a",
+    "authors": [
+      "Nusaibah A. Alshorman",
+      "Huseyin Arslan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Physics-Informed Residual Deep Learning for Constitutive Modeling of Hot Deformation and Dynamic Recrystallization in a Mo-Rich $α+β$ Titanium Alloy",
+    "url": "https://arxiv.org/abs/2607.13467v1",
+    "published_date": "2026-07-15",
+    "source": "arXiv",
+    "summary": "Accurate constitutive modeling of hot deformation behavior is essential for designing thermomechanical processes in advanced structural alloys. Conventional Arrhenius-type and empirical models do not adequately capture the combined effects of strain hardening, dynamic recovery (DRV), and dynamic recrystallization (DRX) across broad processing conditions. In this study, two Stacked Residual Physics-Informed Neural Networks (STAR-PINNs) were developed to simulate the hot deformation response of a ",
+    "authors": [
+      "Prashil S. Joshi",
+      "Diksha Mahadule",
+      "Rajesh K. Khatirkar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "GPU-Accelerated Optimisation of Symmetric Bidirectional Ultrawideband Coherent Transmission Under Launch Power Constraints",
+    "url": "https://arxiv.org/abs/2607.12921v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "We optimise bidirectional OESCL-band coherent transmission under total fibre power constraints using a GPU-accelerated boundary-value Raman solver and launch-power optimisation. While no gain is observed without power constraints, for an 18-dBm limit 3-span transmission reversing the O-band direction increases aggregate capacity by up to 24.5%",
+    "authors": [
+      "Mindaugas Jarmolovičius",
+      "Eric Sillekens",
+      "Polina Bayvel",
+      "Robert I. Killey"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "A 32-channel event-based bio-signal analog front-end with adaptive delta and pulse frequency encoding",
+    "url": "https://arxiv.org/abs/2607.12901v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Low-power event-based Analog Front-Ends (AFEs) are essential for building efficient, end-to-end neuromorphic signal processing systems. In this paper, we present an event-based AFE Application-Specific Integrated Circuit (ASIC) optimized for biomedical signal acquisition and encoding. The chip features 32 independently programmable input channels with dual-mode encoding mechanism outputs, comprising Pulse Frequency Modulation (PFM) and adaptive Asynchronous Delta Modulator (aADM) circuits. The a",
+    "authors": [
+      "Narayanan Shyam",
+      "Saptarshi Ghosh",
+      "Giacomo Indiveri"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "HeteroMosaic: Exposing and Exploiting Heterogeneous Execution Opportunities for Energy-Efficient Edge LLM Inference",
+    "url": "https://arxiv.org/abs/2607.12839v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Modern edge system-on-chips (SoCs) combine CPUs, integrated GPUs (iGPUs), and neural processing units (NPUs), yet existing LLM runtimes typically make coarse device-level decisions or optimize operators in isolation. As a result, they underutilize heterogeneous resources, particularly on unified-memory platforms where performance depends on both device placement and task-graph coordination.\n  We present HeteroMosaic, a heterogeneity-first scheduling framework for edge LLM inference. HeteroMosaic",
+    "authors": [
+      "Gregory Hyegang Jun",
+      "Wesley Pang",
+      "Eddie Richter",
+      "Mehdi Saeedi",
+      "Aporva Amarnath",
+      "Pallavi Ferrao",
+      "Deming Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "CLIP-3D: Closed-Loop Evaluation of Performance and Physical Constraints for 3D ICs",
+    "url": "https://arxiv.org/abs/2607.12788v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "3D integration packs more power into a smaller footprint, so a candidate design's actual throughput depends on its layout: which macro sits on which tier, where the hot spot lands, and how cache geometry maps to access cycles. Architectural simulators like gem5 report IPC under idealized timing. They do not produce the per-block power map, the cache cycle counts, or the 3D layout that decide the realized billion-instructions-per-second (BIPS), so early-stage 3D-IC exploration selects designs wit",
+    "authors": [
+      "Shuo Ren",
+      "Libo Shen",
+      "Yaohui Han",
+      "Leilei Jin",
+      "Chenghan Wang",
+      "Zhen Zhuang",
+      "Rongliang Fu",
+      "Bei Yu",
+      "Tsung-Yi Ho"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.ins-det",
+    "title": "Traceable In Situ Microwave Power Measurement at the Cryogenic Device Plane in a Dilution Refrigerator",
+    "url": "https://arxiv.org/abs/2607.12751v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Accurate knowledge of the microwave power delivered to a cryogenic device under test (DUT) is essential for the characterization and operation of superconducting quantum circuits. However, this information is difficult to obtain inside dilution refrigerators because of distributed attenuation, impedance mismatch, switch-path repeatability, and temperature-dependent microwave components. This paper presents an in situ measurement method for RF power at the cryogenic device plane. The method uses ",
+    "authors": [
+      "Paolo Panetta",
+      "Andrea Celotto",
+      "Alessandro Alocco",
+      "Bernardo Galvano",
+      "Luca Fasolo",
+      "Emanuele Palumbo",
+      "Luca Callegaro",
+      "Luca Oberto",
+      "Patrizia Livreri",
+      "Emanuele Enrico"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Are gate-all-around 2D CFETs the optimal architecture for the A2 node and beyond?",
+    "url": "https://arxiv.org/abs/2607.12707v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "As logic scaling enters the angstrom era, vertically stacked complementary field-effect transistors (CFETs) based on atomically thin two-dimensional (2D) semiconductors offer a potential route to extend device scaling beyond the A2 node. Here, we develop an A2-oriented 2D CFET integration flow with a CPP of 36 nm and Lg of 10 nm and present initial demonstrations of several key process modules. Despite their atomically thin channels, 2D GAA CFETs do not provide a contacted poly pitch scaling adv",
+    "authors": [
+      "Fengben Xi",
+      "Gautam Gaddemane",
+      "Anshul Gupta",
+      "Sheng Yang",
+      "Aryan Afzalian",
+      "Quentin Smets",
+      "Maarten Van de Put",
+      "Kaustuv Banerjee",
+      "Tom Schram",
+      "Devin Verreck",
+      "Ward Janssens",
+      "Juergen Boemmels",
+      "Xiangyu Wu",
+      "Thomas Chiarella",
+      "Jérôme Mitard",
+      "Gouri Sankar Kar",
+      "Geert Hellings",
+      "Cesar Javier Lockhart de la Rosa"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "SpeedyGS: Content-Aware 3D Gaussian Splatting Compression via Two-Stage Optimization",
+    "url": "https://arxiv.org/abs/2607.12656v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Recent progress in compressing large-scale 3D Gaussian Splatting (3DGS) data has substantially reduced storage footprint, network transmission bandwidth, and memory traffic to GPU caches before rendering. Yet decoding with advanced 3DGS codecs still takes seconds, making them unsuitable for interactive applications. To systematically address this challenge, we propose SpeedyGS, a Content-Aware 3DGS Compressor that separately optimizes the structural formation and statistical coding. First, in st",
+    "authors": [
+      "Junteng Zhang",
+      "Tong Chen",
+      "Yuxin Zhao",
+      "Yibo Shi",
+      "Jing Wang",
+      "Zhan Ma"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Switched-Feed Pinching-Antenna Systems for Wideband Terahertz Communications",
+    "url": "https://arxiv.org/abs/2607.12646v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "The pinching-antenna system (PASS) uses dielectric particles along a low-loss waveguide as reconfigurable passive radiators. Existing analyses conclude that the in-waveguide attenuation is negligible at low frequencies and millimeter wave bands; we show this fails at terahertz (THz), where realizable waveguide losses are dramatically larger. We develop a unified wideband THz-PASS propagation model integrating in-waveguide attenuation, atmospheric absorption, molecular re-radiation noise, and bea",
+    "authors": [
+      "Wei Jiang",
+      "Hans D. Schotten"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.ins-det",
+    "title": "A critical consideration of X-ray detectors based on Ga2O3: excitation, carrier transport mechanisms and performance standardization",
+    "url": "https://arxiv.org/abs/2607.12638v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "X-ray detection underpins a wide range of applications in medicine, security, industrial inspection, scientific research for non-destructive imaging and material analysis. The rapid development of Ga2O3-based X-ray detectors offers a promising pathway toward next-generation detectors with high sensitivity, low noise, and harsh environment applications, benefiting from its intrinsic material properties such as high density, wide band gap energy, and high thermal-chemical stability. However, the u",
+    "authors": [
+      "Alfred Moore",
+      "Daniel A Lamb",
+      "Lijie Li",
+      "Oliver Fox",
+      "Kawal Sawhney",
+      "Ciaran Llewelyn",
+      "Jon E Evans",
+      "Saqib Rafique",
+      "Tiantian Chai",
+      "John Harrington",
+      "Zabeada Aslam",
+      "Andrew P Brown",
+      "Rik Drummond-Brydson",
+      "Yaonan Hou"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Compatibility of Martensitic Microstructures in Polycrystals",
+    "url": "https://arxiv.org/abs/2607.12572v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "The paper studies martensitic microstructures in polycrystals, focussing on their compatibility across grain boundaries. After a reduction to the case of a planar grain boundary, the case when the grain boundary separates two constant gradients of zero energy is considered. It is shown that for cubic-to tetragonal transformations such a configuration can occur when the relative grain rotation is not in the cubic group. Then the case when the grain boundary separates two simple laminates of zero ",
+    "authors": [
+      "John M. Ball",
+      "Myrto Galanopoulou"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Comparison of Dimension Reduction Methods for EEG Seizure Detection Using Autonomous AI-Driven Optimization",
+    "url": "https://arxiv.org/abs/2607.12546v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Automated epileptic seizure detection from multichannel electroencephalography (EEG) benefits from dimension reduction to obtain compact, discriminative representations. We compare four signal-space dimension reduction methods, Principal Component Analysis (PCA), Dynamical Component Analysis (DyCA), Dynamic Mode Decomposition (DMD), and Average Volatility Dimensioning (AVD), for deep learning-based seizure detection on the Temple University Hospital Seizure Corpus (TUSZ v2.0.3). To enable a comp",
+    "authors": [
+      "Annika Stiehl",
+      "Vishal Kagade",
+      "Nicolas Weeger",
+      "Nicole Ille",
+      "Stefan Geißelsöder",
+      "Christian Uhl"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.str-el",
+    "title": "Research on topological materials using ultrafast spectroscopy",
+    "url": "https://arxiv.org/abs/2607.12536v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Topological materials, characterized by symmetry-protected nontrivial band structures such as Dirac cones and Weyl nodes, host diverse quantum phenomena, with potential applications in quantum transport, spintronics, and nonlinear optics. Ultrafast pump-probe spectroscopy has emerged as a powerful tool for exploring nonequilibrium dynamics in these systems. Its femtosecond resolution allows charge, spin, orbital, and lattice interactions to be tracked on their intrinsic timescales, thereby revea",
+    "authors": [
+      "Hao Liu",
+      "Jian-Qiao Meng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "AFDM-FTN: A Spectrally Efficient Waveform for High-Mobility Communications",
+    "url": "https://arxiv.org/abs/2607.12510v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "This paper proposes an affine frequency division multiplexing (AFDM)-aided faster-than-Nyquist (FTN) waveform, termed AFDM-FTN, to enhance spectral efficiency (SE) in high-mobility communication scenarios. We first derive the AFDM-FTN input-output relationship and analyze the FTN-induced interference pattern in AFDM-FTN. To address the channel estimation challenges, a low-complexity channel estimator based on the basis expansion model (BEM) is developed. By exploiting the intrinsic characteristi",
+    "authors": [
+      "Xianle Dai",
+      "Qu Luo",
+      "Jianguo Li",
+      "Fabien Heliot",
+      "Shuangyang Li",
+      "Lixia Xiao",
+      "Pei Xiao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Realizable N:M Sparse Transformer Inference via Search-Kernel Co-Design",
+    "url": "https://arxiv.org/abs/2607.12505v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Vision Transformers (ViTs) achieve strong accuracy but incur high inference latency. Semi-structured N:M sparsity can reduce arithmetic cost, yet its theoretical savings often fail to translate into proportional end-to-end speedups on modern GPUs. This mismatch arises because deployment latency depends not only on arithmetic reduction but also on execution regularity and hardware scheduling under sparsity. Achieving practical acceleration, therefore, requires coordinated design across sparse exe",
+    "authors": [
+      "Yiming Liu",
+      "Wenqi Lou",
+      "Zhiguang Wang",
+      "Zhiwei Ke",
+      "Fengrui Zuo",
+      "Chao Wang",
+      "Xuehai Zhou"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Many-body interactions in the dielectric theory of stopping power of solids for classical and quantum projectiles",
+    "url": "https://arxiv.org/abs/2607.12498v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "We take account of the many-body dynamic interactions by including the wave-vector and frequency-dependent exchange and correlations (xc) kernel $f_{xc}(\\qv,ω)$ in the framework of the dielectric theory of the stopping power of crystals for moving charges. The cases of classical and quantum projectiles are considered. We find that (I) the role of the xc effects in slowing of charges in crystalline solids is more pronounced than it is within the jellium model and (II) For velocities below the sto",
+    "authors": [
+      "Vladimir U. Nazarov",
+      "Vyacheslav M. Silkin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Local Maxima of the Entrywise $\\ell_4$ Norm on the Orthogonal Group",
+    "url": "https://arxiv.org/abs/2607.12431v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "We classify the local maximizers of the entrywise fourth-power objective \\[ Q\\longmapsto \\lVert Q\\rVert_4^4 =\\sum_{i,j=1}^r q_{ij}^4 \\] over the real orthogonal group $\\mathcal O(r)$. We prove that the signed permutation matrices are the only local maximizers, and hence the only global maximizers, in every dimension. More strongly, every other stationary point has an explicit rank-two tangent direction with strictly positive second variation. The proof is based on a maximum-entry pivot for the o",
+    "authors": [
+      "Dian Jin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "ArchSim: Computer Architecture Simulation as a Service",
+    "url": "https://arxiv.org/abs/2607.12359v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Conducting a complete computer architecture simulation study is challenging because configuration, execution, and analysis are often encoded implicitly in scripts or directory conventions rather than represented explicitly. As a result, studies are difficult to scale, hard to reproduce, and dependent on custom tooling at every stage. We present ArchSim, which makes the structure of a simulation study explicit. In ArchSim, hardware topologies are described as declarative graphs that automatically",
+    "authors": [
+      "Sabila Al Jannat",
+      "Wenhan Lyu",
+      "Le Khanh Trinh Mai",
+      "Huizhi Zhao",
+      "Zhuoyan Zheng",
+      "Katherine E. Isaacs",
+      "Yifan Sun"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Space-Time Modulated vs 2-Bit Reflect-Arrays: A Comparison of Main Beam Gain and Sidelobe Level Performance",
+    "url": "https://arxiv.org/abs/2607.12342v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "This paper presents a comprehensive analysis of the phase errors introduced by 2-bit reflectarray architectures and investigates their impact on aperture synthesis for beam-steering applications. Building upon this analysis, an amplitude-aware synthesis technique based on space-time modulated (STM) reflect-arrays is proposed to mitigate the main-beam gain degradation commonly associated with STM-based equivalent phase generation while preserving the enhanced phase resolution enabled by temporal ",
+    "authors": [
+      "Muhammad Rizwan Akram",
+      "Douglas H. Werner"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Emergent toroidal induction in a polar Weyl ferromagnet",
+    "url": "https://arxiv.org/abs/2607.12322v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Spin-orbit coupling (SOC) underpins modern spintronics by enabling the electrical generation of spin torques. Its reciprocal counterpart, in which magnetization dynamics produce electromotive forces through a spin-dependent Berry phase, is known as emergent electromagnetic induction (EEMI). However, this effect has previously been observed only in magnetic textures with spatial gradients, such as domain walls, helices, and skyrmions. Here, we demonstrate that even a spatially uniform ferromagnet",
+    "authors": [
+      "Yuuri Suzuki",
+      "Yukako Fujishiro",
+      "Masataka Mogi",
+      "Juba Bouaziz",
+      "Takahiro Anan",
+      "Akiko Kikkawa",
+      "Daiki Yamaguchi",
+      "Max T. Birch",
+      "Yuto Kiyonaga",
+      "Minoru Kawamura",
+      "Yasujiro Taguchi",
+      "Takahiro Morimoto",
+      "Naoto Nagaosa",
+      "Ryotaro Arita",
+      "Yoshinori Tokura"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Emulated Integrity Replica: Enabling Self-Healing on FPGA SoCs via Hierarchical Twins",
+    "url": "https://arxiv.org/abs/2607.12298v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Convolutional neural networks (CNNs) are increasingly being deployed on system-on-chip (SoC) platforms, where hardware-accelerated inference enables low-latency edge computing. Achieving fault tolerance on these devices remains challenging because conventional redundancy (dual/triple modular redundancy, DMR/TMR) incurs high resource cost, while software-centric methods (e.g., algorithm-based fault tolerance (ABFT), checkpoint-restart, instruction-level duplication, and software watchdogs/asserti",
+    "authors": [
+      "Arsalan Ali Malik",
+      "Ali Suvizi",
+      "Guru Venkataramani",
+      "Aydin Aysu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "ORRAM: An OpenROAD-Integrated RAM Generator Using Standard Cells",
+    "url": "https://arxiv.org/abs/2607.12244v1",
+    "published_date": "2026-07-14",
+    "source": "arXiv",
+    "summary": "Memory inference remains a significant challenge in turnkey ASIC design flows. Inferring flip-flops from RTL can create thousands of densely interconnected instances which dramatically slow down design flows and impede performance. Memory compilers address this issue, although they are third-party tools which are often PDK-specific and may require specialized cells not in the base PDK.\n  To address these shortcomings, we present ORRAM, a standard-cell-based memory generator built as a native mod",
+    "authors": [
+      "Brayden Louie",
+      "Thinh P. Nguyen",
+      "Matt Liberty",
+      "Austin Rovinski"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Detection of sUAS in Urban Environments using Multi-Antenna Micro-Doppler Radar",
+    "url": "https://arxiv.org/abs/2607.11868v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "Sensing and early detection of small unmanned aerial systems (sUAS) are critically important in modern-day defense. In dense urban and indoor environments, detection becomes extremely challenging due to dense multipath, fading, low-altitude flight, and non-line-of-sight (NLOS) radio-frequency propagation. This paper presents a continuous-wave multiple-input multiple-output radar and a deep learning model for sUAS detection using NLOS signals. The radar operates at 2.47 GHz, and spectral correlat",
+    "authors": [
+      "Chamindu Liyanage",
+      "Chirantha Kurukulasuriya",
+      "Chathuni Wijegunawardana",
+      "Wikum Kumara",
+      "Chamira U. S. Edussooriya",
+      "Arjuna Madanayake"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CY",
+    "title": "Can LLMs Perform Deep Technical Comprehension of Computer Architecture Papers?",
+    "url": "https://arxiv.org/abs/2607.11859v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "Can large language models perform deep technical comprehension of computer architecture papers -- not summarization, but structured critique that names the core mechanism, surfaces buried assumptions, and connects a contribution beyond its own scope? We study Gauntlet, an open-source pipeline that analyzes a paper through five independent expert-persona reviewers and an adversarial synthesis stage. On 20 ISCA 2025 and HPCA 2026 papers, ten researchers each wrote their own analyses and then judge",
+    "authors": [
+      "Nishant Aggarwal",
+      "Ayushi Dubal",
+      "Sreeraj Kannakarankodi",
+      "Ian McDougall",
+      "Adarsh Mittal",
+      "Vishnu Ramadas",
+      "Noah Scott",
+      "Ranganath Selagamsetty",
+      "Weichu Yang",
+      "Karthikeyan Sankaralingam"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Strain-controlled crystalline--amorphous transition and flat-band tuning in buckled silicon kagome",
+    "url": "https://arxiv.org/abs/2607.11790v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "Electronic flat bands in an elemental two-dimensional material provide an attractive setting for electron interactions competing with suppressed kinetic energy. Here we propose a buckled silicon kagome lattice (SiKL), an unfunctionalized six-atom monolayer of bond-linked Si$_3$ triangles and dodecagonal pores. Its planar parent hosts a dispersionless Kohn--Sham band near the Fermi level but is unstable to out-of-plane distortions. Following three soft zone-centre phonons and relaxing displaced s",
+    "authors": [
+      "Chenhaoyue Wang",
+      "Amartya S. Banerjee"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Spacer-Mediated Gold Nanocube Arrays for Edge-Localized Excitonic Enhancement in Monolayer MoS2",
+    "url": "https://arxiv.org/abs/2607.11768v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "Plasmonic nanostructures offer an effective route for enhancing light-matter interaction in atomically thin semiconductors, whose optical response is intrinsically limited by their sub-nanometer active thickness. Here, we numerically investigate excitonic enhancement in monolayer (ML) Molybdenum Disulfide (MoS2) coupled to size-tuned gold (Au) nanocube arrays separated by thin aluminum oxide (Al2O3) and hexagonal boron nitride (h-BN) spacer layers. By varying the nanocube side length, the locali",
+    "authors": [
+      "Abdullah Efe Yildiz",
+      "Emre Ozan Polat"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "DeepRT Engine: A Unified GPU-Parallel Ray-Tracing Framework with Hybrid SBR-IM Path Search for 6G Digital Twin Channel",
+    "url": "https://arxiv.org/abs/2607.11743v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "Digital twin channel (DTC) aims to establish a real-time digital counterpart of physical wireless channels for reproducing and predicting site-specific propagation characteristics. As a high-precision channel computation method for realistic propagation scenarios, ray tracing (RT) serves as a key enabler for DTC construction. However, conventional RT suffers from high complexity under serial path-searching workflows. This letter proposes DeepRT Engine (DeepRT-E), a parallel RT acceleration archi",
+    "authors": [
+      "Tao Wu",
+      "Li Yu",
+      "Yuxiang Zhang",
+      "Jianhua Zhang",
+      "Qixing Wang",
+      "Guangyi Liu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Scalable Rate-Splitting Precoding via Recurrent Structure-Preserving Graph Neural Networks",
+    "url": "https://arxiv.org/abs/2607.11740v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "Graph neural network (GNN)-based precoding has demonstrated strong potential for scalable multi-user beamforming in multi-user multiple-input single-output (MU-MISO) systems under space division multiple access (SDMA). However, direct extension to rate-splitting multiple access (RSMA) is non-trivial due to the coupled common/private-stream structure inherent to RSMA, which requires a fundamentally different graph representation and permutation equivariance structure. Motivated by this, we propos",
+    "authors": [
+      "Wonseok Choi",
+      "Jeongjae Lee",
+      "Songnam Hong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "OwnDPDLab: A Flexible Open-Source Testbed for Wideband DPD Algorithm Benchmarking",
+    "url": "https://arxiv.org/abs/2607.11612v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "5G and Beyond-5G standards require digital predistortion (DPD) algorithms to operate on increased signal bandwidths. Wideband laboratory test hardware is cost-intensive, and openly available solutions lack flexibility. The OwnDPDLab provides a highly flexible, affordable, open-source, and openly accessible system. It is based on the RFSoC 4x2 and supports full control of center frequency, sampling mode, output power, and input attenuation at a signal bandwidth of up to 1 GHz. The system's capabi",
+    "authors": [
+      "Marvin Jaeger",
+      "Philipp Luetke",
+      "David Kopyto",
+      "Georg Frederik Riemschneider",
+      "Omar Jabi",
+      "Alexander Koelpin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Synthesis of Ti2B2Clx MBenes in molten salts from theoretical and experimental perspectives",
+    "url": "https://arxiv.org/abs/2607.11550v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "The unique properties and application possibilities of two-dimensional (2D) materials motivates the exploration of different nanolaminated compounds. Here, by using a molten salt approach, we selectively etch Ti2InB2 with ZnCl2 to produce a multilayer (ml) Ti2B2Clx MBene. Scanning transmission electron microscopy, in combination with energy dispersive X-ray, and electron energy loss spectroscopies show that In atoms are completely removed from the precursor upon etching, being replaced by chlori",
+    "authors": [
+      "Rodrigo M. Ronchi",
+      "Emile Defoy",
+      "Andrejs Petruhins",
+      "Justinas Palisaitis",
+      "Lianghao Yu",
+      "Lan Tang",
+      "Solenn Reguer",
+      "Dominique Thiaudière",
+      "Ningjun Chen",
+      "Durga Sankar Vavilapalli",
+      "David Portehault",
+      "Jonas Björk",
+      "Per O. Å. Persson",
+      "Johanna Rosen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Heterogeneous-Gradient Phase--Polarization Alignment and Maximal-Ratio Weight Allocation for Multi-Aperture Coherent FSO Reception",
+    "url": "https://arxiv.org/abs/2607.11458v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "Multi-aperture coherent reception can improve freespace optical (FSO) links by converting spatial diversity into coherent combining gain. In turbulent links, the aperture branches are simultaneously affected by relative phase errors, polarization mismatch, and unequal signal-to-noise ratios (SNRs). Existing methods treat phase/polarization alignment and branch-weight allocation as separate operations, or absorb all impairments into a high-dimensional MIMO equalizer that obscures the physical mea",
+    "authors": [
+      "Cheng Chen",
+      "Tong Luo",
+      "Jiayin Xue",
+      "Siyu Gong",
+      "Qun Zhang",
+      "Linsheng Fan",
+      "Qi Wu",
+      "Yanfu Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "From Wireless SNNs to SN P Systems: A Low-Energy Rule-Based Conversion",
+    "url": "https://arxiv.org/abs/2607.11428v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "Distributed wireless spiking neural networks (DWSNNs) are a promising paradigm for energy-efficient edge inference in resource-constrained environments such as wireless sensor networks (WSNs). Yet, two limitations persist: their internal decision process is opaque, and their residual energy footprint remains a limiting factor for ultra-low-power deployments. This paper proposes a systematic methodology to convert a trained DWSNN into an equivalent Spiking Neural P (SN P) system, a biologically-i",
+    "authors": [
+      "Pietro Savazzi",
+      "Mauro Marchese",
+      "Anna Vizziello",
+      "Fabio Dell'Acqua"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CV",
+    "title": "A Nearable Soft Mat Based on Distributed Optical Fiber Sensing for Physiological Monitoring",
+    "url": "https://arxiv.org/abs/2607.11255v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "Distributed optical fiber sensing (DOFS) combines the advantages of fiber optic sensors, including flexibility, small size, immunity to electromagnetic interference, and high metrological performance, with the capability to transform a single optical fiber into a continuous sensing element for spatially resolved mechanical measurements. Optical frequency domain reflectometry (OFDR), based on Rayleigh backscattering, enables high spatial resolution DOFS measurements, broadening the range of poten",
+    "authors": [
+      "Vincenzo Lavorgna",
+      "Martina Pulcinelli",
+      "Andrea Polimadei",
+      "Rosaria D Amato",
+      "Carlo Massaroni",
+      "Michele Arturo Caponero",
+      "Emiliano Schena",
+      "Daniela Lo Presti"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Impact of Electronic Energy Dissipation on Primary Radiation Damage Formation in Silicon",
+    "url": "https://arxiv.org/abs/2607.11253v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "In this work, we investigate the role of ion-electron coupling in simulations of radiation damage formation in silicon using molecular dynamics simulations within a two-temperature model. We explore predictions of a threshold-free approach to the coupling that accounts for both the electronic stopping and electron-phonon coupling using a local electron density-based formalism. We compare two different coupling functions across a range of primary knock-on atom energies using two interatomic poten",
+    "authors": [
+      "Nadezda Korepanova",
+      "Rafael Nuñez-Palacio",
+      "Andrea E. Sand"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.comp-ph",
+    "title": "Uncertainty-Aware Structure-Property Mapping of Spinodoid Metamaterials via Heteroscedastic Gaussian Process Regression",
+    "url": "https://arxiv.org/abs/2607.11209v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "Spinodoid metamaterials offer a broad, tunable design space for anisotropic mechanical properties, yet their structure-property relationships are commonly treated as representative mappings from cone-angle descriptors to single effective stiffness values. This deterministic view overlooks the stochastic nature of Gaussian random field (GRF)-based topology generation, where identical cone-angle descriptors can produce different morphology realizations and property scatter. Here, we present an unc",
+    "authors": [
+      "Minwoo Park",
+      "Junseo Park",
+      "Mingyu Lee",
+      "Hugon Lee",
+      "Hanbin Cho",
+      "Ikjin Lee",
+      "Seunghwa Ryu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Reliable Associative Lookup in Content-Addressable Memory",
+    "url": "https://arxiv.org/abs/2607.11153v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "Content Addressable Memory (CAM) is an important memory paradigm, which performs fast search by comparing an input query against all stored entries in parallel, achieving $O(1)$ lookup complexity. CAM is typically built upon conventional memory technologies, such as SRAM and Non-Volatile Memory (NVM). Accordingly, CAM can also be subject to the reliability challenges of these underlying technologies. In traditional memory systems, protection codes play a critical role in ensuring reliability and",
+    "authors": [
+      "Fan Li",
+      "Yanan Guo",
+      "Xin Xin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Tiling decomposition multiplicity predicts stability of GaN(0001) surface reconstructions",
+    "url": "https://arxiv.org/abs/2607.11105v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "The stable adatom configurations of a semiconductor surface have traditionally been sought by sampling: density functional theory (DFT) energies steer a heuristic or Bayesian search through a configuration space far too large to cover. Here we show that, for the GaN(0001)-$(6\\times6)$ surface under the electron counting (EC) rule, the search can instead be posed as a discrete tiling problem and solved exhaustively. Enumerating all rhombus tilings of the surface lattice, together with all EC-comp",
+    "authors": [
+      "Tetsuji Kuboyama",
+      "Akira Kusaba",
+      "Karol Kawka",
+      "Pawel Kempisty"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Holographic MIMO-assisted Multiuser Transmission with Electromagnetic Exposure Constraints",
+    "url": "https://arxiv.org/abs/2607.11015v1",
+    "published_date": "2026-07-13",
+    "source": "arXiv",
+    "summary": "Holographic multiple-input multiple-output (HMIMO) has emerged as a promising technology for future wireless systems by enabling continuous electromagnetic (EM) field control over large apertures. However, user-side EM exposure has become an increasingly important concern in large-scale array systems. This paper addresses this issue by developing a multiuser uplink HMIMO model, where a physically consistent specific absorption rate (SAR) model is established to quantify the EM exposure. On this ",
+    "authors": [
+      "Yilin Yang",
+      "Mengyu Qian",
+      "Ahmed Elzanaty",
+      "Li You"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.ET",
+    "title": "LLM for EDA in Front-End Design: Challenges and Opportunities",
+    "url": "https://arxiv.org/abs/2607.09616v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "As chip complexity increases and time-to-market pressures grow, front-end design has become a critical bottleneck in chip development. Recently, Large Language Models (LLMs) have shown great potential in Electronic Design Automation (EDA). Beyond specification understanding, LLMs show the potential to serve as a unified intelligent interface for hardware description language (HDL) generation, testbench construction, and design space exploration. The rise of agentic AI, represented by pioneering ",
+    "authors": [
+      "Kangwei Xu",
+      "Bing Li",
+      "Ulf Schlichtmann"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Fused Constrained Policy Reuse Optimization for Wireless Resource Allocation",
+    "url": "https://arxiv.org/abs/2607.09498v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "Deep reinforcement learning (DRL) has been widely adopted for wireless resource allocation due to its model-free adaptability. However, online exploration is costly, as randomly initialized policies may violate long-term constraints before sufficient data are collected. Future wireless systems must cope with increasingly dynamic traffic, fluctuating channel conditions, and stringent energy efficiency requirements, demanding algorithms that can learn quickly with minimal environment interactions ",
+    "authors": [
+      "An Liu",
+      "Zheyuan Zhou",
+      "Kexuan Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "OAM-Enabled Holographic MIMO Communications with Stacked Intelligent Metasurfaces",
+    "url": "https://arxiv.org/abs/2607.09479v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "This study investigates orbital angular momentum (OAM)-based holographic multiple-input multiple-output (HMIMO) links enabled by stacked intelligent metasurfaces (SIM) in the radiative near-field. By using multilayer programmable metasurfaces at both link ends, SIMs enable analog electromagnetic domain wave processing for low-complexity and energy-efficient flexible wavefront synthesis. We analyzed OAM mode generation and reception with SIM-based transceivers and quantified their ability to synt",
+    "authors": [
+      "Giulia Torcolacci",
+      "Davide Dardari"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Unraveling atomic-resolution valence electron energy-loss spectroscopic imaging in a single-crystal CaNb2O6",
+    "url": "https://arxiv.org/abs/2607.09466v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "Despite advancements in electron optics and spectrometer design over the past twenty years, atomic-resolution valence-electron energy-loss spectroscopy imaging remains challenging due to the delocalization of inelastic electron scattering. In this study, we used an energy-filtered spectrometer equipped with a hybrid-pixel direct electron detector and spherical aberration-corrected scanning transmission electron microscopy to analyze many-electron excitations and interband transitions in a single",
+    "authors": [
+      "Sz-Chian Liou",
+      "Xiang-Lin Huang",
+      "Vladimir P. Oleshko",
+      "I-Ching Lin",
+      "Yin-Ping Lan",
+      "Hsin-An Chen",
+      "Guo-Jiun Shu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Electronic manipulation of polar order in electron crystal",
+    "url": "https://arxiv.org/abs/2607.09425v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "When interaction among atoms or ions is strong enough, they often arrange periodically, forming a crystal. The arrangement patterns of atoms or ions can encode information, a concept that has enabled devices such as ferroelectric memories. It has been found that not only atoms or ions but also electrons in condensed matter can crystallize when Coulomb interaction is strong enough. Typical examples are charge-ordered states in solids, where different valences, or different electron numbers, of an",
+    "authors": [
+      "Takashi Kikkawa",
+      "Ziyan Chen",
+      "Yuto Fujimoto",
+      "Takahiro Morimoto",
+      "Yuya Hirata",
+      "Hiroki Arisawa",
+      "Alexey A. Kaverzin",
+      "Satoshi Okamoto",
+      "Yoichi Okimoto",
+      "Naoshi Ikeda",
+      "Eiji Saitoh"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.acc-ph",
+    "title": "Weak-Strong Steady-State Microbunching Accelerator Light Source",
+    "url": "https://arxiv.org/abs/2607.09243v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "We propose a phase space manipulation involving one energy modulation sandwiched by two dispersion sections which converts a bunched particle beam or bunch train to ultra-high-harmonic density modulation, while the energy modulation in principle can be arbitrarily weak. The same scheme can also be used for energy bunching, creating energy levels in a bunched beam. We further propose a mechanism invoking three laser modulators in a storage ring to longitudinally focus the electron beam both weakl",
+    "authors": [
+      "Xiujie Deng",
+      "Alexander Wu Chao",
+      "Wenhui Huang",
+      "Zhilong Pan",
+      "Chuanxiang Tang",
+      "Jingyuan Zhao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.SD",
+    "title": "ReGen: Hierarchical Multi-Prompt Representation Generation for Efficient Waveform Diffusion Models",
+    "url": "https://arxiv.org/abs/2607.09134v1",
+    "published_date": "2026-07-10",
+    "source": "arXiv",
+    "summary": "Representation alignment (REPA) has been investigated to accelerate diffusion training, but we observe that regularizing intermediate representations in diffusion Transformers (DiT) may implicitly entangle latents and limit generative capacity. To address this issue, we propose ReGen, a hierarchical multi-prompt representation generation framework that jointly estimates multiple vector fields for both representations and data within a single diffusion model. We further introduce generalized flow",
+    "authors": [
+      "Sang-Hoon Lee",
+      "Ha-Yeong Choi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Best Practices for First-Principles Modeling of Amorphous Oxide Semiconductors: A Statistical Framework and Application to Zn-Sn-O",
     "url": "https://arxiv.org/abs/2607.08667v1",
@@ -290,6 +1307,132 @@
     "authors": [
       "Sai Pradeep Muppaneni",
       "Ananthanarayanan Chockalingam"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "StreamDQ: Near-Memory Weight DeQuantization in Custom HBM for Scalable AI Inference Acceleration",
+    "url": "https://arxiv.org/abs/2607.08993v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "As large language models (LLMs) scale, their memory and computation demands have grown substantially, making weight-only quantization a widely adopted technique for reducing model size with minimal accuracy loss. However, on current GPUs, CUDA-core-based dequantization introduces substantial instruction overhead, on-chip traffic, and pipeline stalls, making it a major bottleneck for high-throughput, cloud-scale LLM serving. To address these limitations, we propose StreamDQ, a lightweight archite",
+    "authors": [
+      "Minki Jeong",
+      "Daegun Yoon",
+      "Soohong Ahn",
+      "Seungyong Lee",
+      "Nameun Kang",
+      "Hyeonseok Ju",
+      "Ieryung Park",
+      "Joonseop Sim",
+      "Youngpyo Joo",
+      "Hoshik Kim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Every Sample Counts: Supervised Fine-Tuning of Language Models with Pointwise Constraints",
+    "url": "https://arxiv.org/abs/2607.08968v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Fine-tuning language models often requires enforcing constraints on individual inputs without compromising downstream performance. Existing constrained alignment methods impose constraints on average, which can induce undesirable disparities across inputs or users. We propose a novel alignment framework that addresses this gap by enforcing per-sample constraints while still minimizing an average loss. To mitigate the impact of overly restrictive constraints and outliers, we introduce a learned, ",
+    "authors": [
+      "Ignacio Hounie",
+      "Ignacio Boero",
+      "Alejandro Ribeiro"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Fast Homoepitaxy on (100) \\b{eta}-Ga2O3 Substrates with Large Grown-In Offcut",
+    "url": "https://arxiv.org/abs/2607.08929v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "The choice of crystalline orientation and offcut angle is non-trivial for low-symmetry $β\\text{-Ga}_2\\text{O}_3$, where anisotropy impacts bulk and thin film synthesis, material properties, and power device fabrication and performance. Scalable (100)-oriented $β\\text{-Ga}_2\\text{O}_3$ wafers are desirable for electronic devices but are not typically used due to 10-30x slower growth rates compared to other orientations. Here we report molecular beam epitaxy (MBE) growth rates equal to the fast gr",
+    "authors": [
+      "M. Brooks Tellekamp",
+      "Drew Haven",
+      "David Joyce",
+      "John Mangum",
+      "Henry Garland",
+      "Robert Lavelle",
+      "Kevin Schulte",
+      "Anna Sacchi",
+      "Matt Young",
+      "Andriy Zakutayev"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.soft",
+    "title": "Generic behavior of ultrastability and anisotropic molecular packing in co-deposited organic semiconductor glass mixtures",
+    "url": "https://arxiv.org/abs/2607.08889v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Vapor-deposited glass mixtures of organic semiconductors commonly serve as active layers in organic electronic devices, whose lifetime and performance are strongly influenced by the stability and structure of these mixed glasses. Here, we study the stability and anisotropic molecular packing of six co-deposited organic semiconductor glass mixtures with 50:50 weight ratio, by differential scanning calorimetry and spectroscopic ellipsometry. We find that all six binary systems exhibit high kinetic",
+    "authors": [
+      "Shinian Cheng",
+      "Yejung Lee",
+      "Junguang Yu",
+      "Lian Yu",
+      "Mark D. Ediger"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "High density two-component glasses of organic semiconductors prepared by physical vapor deposition",
+    "url": "https://arxiv.org/abs/2607.08881v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Physical Vapor Deposition (PVD) is widely utilized for the production of organic semiconductor devices due to its ability to form thin layers with exceptional properties. Although the layers in the device usually consist of two or more components, there is limited understanding about the fundamental characteristics of such multi-component vapor-deposited glasses. Here, spectroscopic ellipsometry was employed to characterize the densities, thermal stabilities and optical properties of co-vapor de",
+    "authors": [
+      "Yejung Lee",
+      "Shinian Cheng",
+      "M. D. Ediger"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Ferroelastic instability in rutile TiO2 and thermodynamic suppression of the CaCl2-type phase",
+    "url": "https://arxiv.org/abs/2607.08860v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "We investigate the role of the CaCl2-type (Pnnm) phase in the high-pressure transformation of rutile TiO2, whose experimental signature has remained elusive. While analogies with other rutile-type oxides suggest such an intermediate, TiO2 typically exhibits a direct transformation to higher-coordination phases such as baddeleyite. Using an all-electron density functional framework combined with density functional perturbation theory, we show that rutile TiO2 undergoes a ferroelastic instability ",
+    "authors": [
+      "Jared Pohlmann",
+      "Anjy-Joe Olatunbosun",
+      "Kenneth Park"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "A 2.4 GHz LC-VCO Fractional-N Phase Locked Loop Open-Source Design in 130-nm BiCMOS",
+    "url": "https://arxiv.org/abs/2607.08852v1",
+    "published_date": "2026-07-09",
+    "source": "arXiv",
+    "summary": "Radio frequency (RF) integrated circuit design using the open-source complementary Metal-Oxide semiconductor (CMOS) ecosystem, such as for phase-locked loops (PLLs), is limited by the absence of reliable passive device models, particularly on-chip spiral inductors. Consequently, prior work relies on ring-oscillator-based voltage-controlled oscillators (VCOs) with degraded phase noise performance. This work presents a 2.4 GHz type-II fractional-N PLL implemented in the IHP SG13G2 130 nm BiCMOS op",
+    "authors": [
+      "Manimohan Thiriloganathan",
+      "Shenal Ranasinghe",
+      "Avishka Herath",
+      "Rajinthan Rameshkumar",
+      "Hansa Marasinghe",
+      "Anjana Viduranga",
+      "Gayangana Leelarathne",
+      "Kithmin Wickremasinghe"
     ]
   },
   {
