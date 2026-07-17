@@ -1,270 +1,204 @@
 {
-  "date": "2026-07-16",
-  "generated_at": "2026-07-16T21:04:04.766751+00:00",
+  "date": "2026-07-17",
+  "generated_at": "2026-07-17T05:05:07.914227+00:00",
   "sectors": {
-    "mobile_ap": {
-      "sector": "Mobile AP",
-      "date": "2026-07-16",
-      "item_count": 3,
-      "generated_at": "2026-07-16T21:04:04.766000+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "Apple M5 chips integrate neural accelerators enabling frame generation for non-native gaming titles with major FPS improvements. TSMC, Apple's primary supplier, reported Q2 profit jumping 77% to record highs, while Apple simultaneously evaluates AI chip startups.",
-          "key_facts": [
-            "Apple M5 neural accelerators support frame generation for gaming",
-            "TSMC Q2 profit surged 77% year-over-year to record levels",
-            "Apple exploring partnerships with AI chip startups"
-          ],
-          "implications": [
-            {
-              "keyword": "Gaming Performance",
-              "text": "Neural accelerators in M5 mark strategic shift toward AI-driven graphics optimization, extending gaming capabilities on Apple Silicon"
-            },
-            {
-              "keyword": "Supply Chain Validation",
-              "text": "TSMC's record profitability reinforces its role as critical infrastructure partner for Apple's advanced chip production"
-            }
-          ],
-          "counterpoint": "Apple's interest in external AI chip startups signals potential hedging against TSMC dependency despite record partnership success."
-        },
-        "en": {
-          "executive_summary": "Apple M5 chips integrate neural accelerators enabling frame generation for non-native gaming titles with major FPS improvements. TSMC, Apple's primary supplier, reported Q2 profit jumping 77% to record highs, while Apple simultaneously evaluates AI chip startups.",
-          "key_facts": [
-            "Apple M5 neural accelerators support frame generation for gaming",
-            "TSMC Q2 profit surged 77% year-over-year to record levels",
-            "Apple exploring partnerships with AI chip startups"
-          ],
-          "implications": [
-            {
-              "keyword": "Gaming Performance",
-              "text": "Neural accelerators in M5 mark strategic shift toward AI-driven graphics optimization, extending gaming capabilities on Apple Silicon"
-            },
-            {
-              "keyword": "Supply Chain Validation",
-              "text": "TSMC's record profitability reinforces its role as critical infrastructure partner for Apple's advanced chip production"
-            }
-          ],
-          "counterpoint": "Apple's interest in external AI chip startups signals potential hedging against TSMC dependency despite record partnership success."
-        }
-      }
-    },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-07-16",
-      "item_count": 4,
-      "generated_at": "2026-07-16T21:04:04.766000+00:00",
+      "date": "2026-07-17",
+      "item_count": 8,
+      "generated_at": "2026-07-17T05:05:07.913851+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Samsung and SK Hynix are aggressively expanding chip hiring as Korea faces a semiconductor talent crunch amid a widening chip supercycle. Samsung Electronics is positioned to reclaim HBM market leadership with HBM4 next year.",
+          "executive_summary": "SK하이닉스가 HBM 호황에 따른 대규모 채용 시작하며 신입 채용을 전년 대비 3.4배 증원하고 있다. 회사는 학력 제한 채용 자격요건을 전면 폐지해 실력 중심의 인재 확보 전략을 추진 중이며, 신입초임은 월 450만원 수준이다.",
           "key_facts": [
-            "Samsung and SK Hynix step up hiring to address talent shortage",
-            "Semiconductor firms leading new graduate recruitment amid chip supercycle expansion",
-            "Samsung Electronics targets HBM market lead with HBM4 introduction next year"
+            "SK하이닉스 신규 채용 3.4배 증가",
+            "신입초임 월 450만원",
+            "이직률 0%대",
+            "채용 학력 자격요건 완전 삭제"
           ],
           "implications": [
             {
-              "keyword": "Talent Competition",
-              "text": "Major Korean chipmakers competing intensely for engineering talent, signaling sustained investment confidence in HPC/datacenter demand"
+              "keyword": "인재 전쟁",
+              "text": "HBM 수요 급증으로 업계 경쟁이 치열해지면서 SK하이닉스가 학력 제한 폐지로 채용 범위를 확대해 인재 확보 경쟁에 선제 대응"
             },
             {
-              "keyword": "Memory Leadership",
-              "text": "Samsung HBM4 trajectory indicates confidence in displacing SK Hynix despite current market dynamics; growth rate peaking suggests market maturation"
+              "keyword": "내부 안정화",
+              "text": "높은 임금 수준과 0%대 이직률은 HBM 호황 시장에서의 강한 경쟁력 유지와 기술 노하우 보호 필요성을 반영"
+            },
+            {
+              "keyword": "산업 신호",
+              "text": "대규모 채용 신호는 반도체 업계의 호황세 지속과 고급 메모리 기술에 대한 강한 수요를 나타냄"
             }
           ],
-          "counterpoint": "SK Hynix and Samsung's parallel hiring expansions reflect uncertainty about which player will consolidate market advantage in high-bandwidth memory."
+          "counterpoint": "채용 확대가 단기 호황 사이클에 기반한 것이라면 경기 둔화 시 구조적 부담으로 전환될 수 있음."
         },
         "en": {
-          "executive_summary": "Samsung and SK Hynix are aggressively expanding chip hiring as Korea faces a semiconductor talent crunch amid a widening chip supercycle. Samsung Electronics is positioned to reclaim HBM market leadership with HBM4 next year.",
+          "executive_summary": "SK Hynix is launching large-scale hiring driven by HBM boom, expanding new graduate recruitment 3.4x year-on-year. The company has completely abolished educational credential requirements for hiring to pursue merit-based talent acquisition strategy, with new graduate base salary around 4.5 million won per month.",
           "key_facts": [
-            "Samsung and SK Hynix step up hiring to address talent shortage",
-            "Semiconductor firms leading new graduate recruitment amid chip supercycle expansion",
-            "Samsung Electronics targets HBM market lead with HBM4 introduction next year"
+            "SK Hynix new hiring increases 3.4x",
+            "New graduate base salary 4.5 million won per month",
+            "Turnover rate in 0% range",
+            "Educational credential requirements completely eliminated"
           ],
           "implications": [
             {
-              "keyword": "Talent Competition",
-              "text": "Major Korean chipmakers competing intensely for engineering talent, signaling sustained investment confidence in HPC/datacenter demand"
+              "keyword": "Talent War",
+              "text": "As industry competition intensifies due to surging HBM demand, SK Hynix proactively expands recruitment scope by eliminating educational barriers to compete in talent acquisition"
             },
             {
-              "keyword": "Memory Leadership",
-              "text": "Samsung HBM4 trajectory indicates confidence in displacing SK Hynix despite current market dynamics; growth rate peaking suggests market maturation"
+              "keyword": "Internal Stabilization",
+              "text": "High wage levels and turnover rate in 0% range reflect the need to maintain strong competitiveness in the HBM boom market and protect technical expertise"
+            },
+            {
+              "keyword": "Industry Signal",
+              "text": "Large-scale hiring signal indicates sustained semiconductor industry boom and strong demand for advanced memory technology"
             }
           ],
-          "counterpoint": "SK Hynix and Samsung's parallel hiring expansions reflect uncertainty about which player will consolidate market advantage in high-bandwidth memory."
+          "counterpoint": "If hiring expansion is based on near-term boom cycles, it could convert to structural burden during economic downturns."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-07-16",
-      "item_count": 15,
-      "generated_at": "2026-07-16T21:04:04.766000+00:00",
+      "date": "2026-07-17",
+      "item_count": 9,
+      "generated_at": "2026-07-17T05:05:07.913851+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Custom AI chip development accelerates across the ecosystem: Samsung faces capacity constraints from Google TPU orders, Apple sources from multiple startups, and Anthropic negotiates Samsung manufacturing. Nokia-NVIDIA GPU-based AI-RAN and Cadence's AI design agents extend AI chip demand across radio access networks and design automation.",
+          "executive_summary": "Meta, Amazon, Apple 등 주요 빅테크 기업들이 맞춤형 AI 칩 개발을 통해 시장 진입을 가속화하고 있으며, 공급 부족으로 인한 수요 초과 현상이 지속되고 있다. Taiwan Semiconductor와 C-DAC는 각각 미국과 인도에서 대규모 투자를 통해 현지 칩 제조 능력 구축에 나서고 있다.",
           "key_facts": [
-            "Samsung potentially outsourcing Google TPU work due to AI chip order saturation",
-            "Apple evaluating AI chip startups for custom silicon alternatives",
-            "Anthropic in early talks with Samsung for custom AI chip manufacturing",
-            "Nokia and NVIDIA launch first GPU-based AI-RAN targeting double spectrum capacity",
-            "Broadcom secured five-year ASIC custom chip deal with Apple",
-            "Cadence releases AI agents (AuraStack) for chip, circuit board, and packaging design",
-            "Hydrofluoric acid prices rising due to AI chip demand outpacing semiconductor materials supply",
-            "AWS showcasing Taiwan-based AI chip suppliers to expand ecosystem",
-            "MicroVision Semiconductor expanding advanced ASIC and mixed-signal design capabilities"
+            "Amazon AI 칩 사업 225억 달러 약정 확보",
+            "Apple Broadcom과 300억 달러 거래로 150억 개 칩 생산 계약",
+            "Taiwan Semiconductor 미국 제조 확장에 1000억 달러 투자",
+            "C-DAC, 인도 주도 Nvidia 수준 AI 칩 개발 중",
+            "India 반도체 설비 투자 기록 경신 예상",
+            "Trainium 수요가 공급 초과"
           ],
           "implications": [
             {
-              "keyword": "Supply Chain Saturation",
-              "text": "Samsung's capacity constraints forcing outsourcing of major OEM orders (Google TPU); indicates custom ASIC demand exceeding foundry margins"
+              "keyword": "공급망 다변화",
+              "text": "빅테크의 맞춤형 칩 개발 가속화와 Taiwan Semiconductor의 미국 투자 확대는 Nvidia와 같은 기존 공급업체에 대한 의존도 감소를 의미"
             },
             {
-              "keyword": "Design Automation Shift",
-              "text": "Cadence's AI agents for circuit design acceleration suggest AI is becoming foundational to chip design workflows, not ancillary"
+              "keyword": "지역 중심 전략",
+              "text": "미국과 인도가 각각 현지 칩 제조 능력 구축에 대규모 투자하는 것은 글로벌 공급망 재구성 움직임을 반영"
             },
             {
-              "keyword": "Material Constraints",
-              "text": "Hydrofluoric acid price escalation reveals supply chain bottleneck; AI chip demand growth outpacing specialty materials capacity"
+              "keyword": "수급 긴장",
+              "text": "Amazon Trainium 수요가 공급을 초과하는 상황은 AI 칩에 대한 현재의 극도로 높은 수요 수준을 입증"
             },
             {
-              "keyword": "Ecosystem Fragmentation",
-              "text": "Multiple OEMs (Apple, Anthropic, AWS) sourcing custom silicon from different partners; reduces dominance of single foundry or fabless player"
-            },
-            {
-              "keyword": "Infrastructure Demand",
-              "text": "GPU-based AI-RAN indicates AI-driven architecture shifts extending beyond datacenters into telecom/radio access networks"
+              "keyword": "업계 구조 변화",
+              "text": "Meta, Amazon, Apple의 맞춤형 칩 진입은 전문 칩 설계사와 파운드리 사업 구조에 장기 영향"
             }
           ],
-          "counterpoint": "OpenAI's prediction that AI will design its own chips may underestimate specialized human expertise required for yield, thermal management, and power optimization."
+          "counterpoint": "AI 칩에 대한 수요 둔화나 기술 개발 난관이 발생할 경우 빅테크의 대규모 투자가 과잉 공급으로 전환될 수 있음."
         },
         "en": {
-          "executive_summary": "Custom AI chip development accelerates across the ecosystem: Samsung faces capacity constraints from Google TPU orders, Apple sources from multiple startups, and Anthropic negotiates Samsung manufacturing. Nokia-NVIDIA GPU-based AI-RAN and Cadence's AI design agents extend AI chip demand across radio access networks and design automation.",
+          "executive_summary": "Major big tech companies including Meta, Amazon, and Apple are accelerating market entry through custom AI chip development, while supply shortage and excess demand conditions persist. Taiwan Semiconductor and C-DAC are undertaking large-scale investments to build local chip manufacturing capabilities in the United States and India respectively.",
           "key_facts": [
-            "Samsung potentially outsourcing Google TPU work due to AI chip order saturation",
-            "Apple evaluating AI chip startups for custom silicon alternatives",
-            "Anthropic in early talks with Samsung for custom AI chip manufacturing",
-            "Nokia and NVIDIA launch first GPU-based AI-RAN targeting double spectrum capacity",
-            "Broadcom secured five-year ASIC custom chip deal with Apple",
-            "Cadence releases AI agents (AuraStack) for chip, circuit board, and packaging design",
-            "Hydrofluoric acid prices rising due to AI chip demand outpacing semiconductor materials supply",
-            "AWS showcasing Taiwan-based AI chip suppliers to expand ecosystem",
-            "MicroVision Semiconductor expanding advanced ASIC and mixed-signal design capabilities"
+            "Amazon AI chip business secures 22.5 billion dollar commitment",
+            "Apple Broadcom 30 billion dollar deal to produce 15 billion chips",
+            "Taiwan Semiconductor invests 100 billion dollars in US manufacturing expansion",
+            "C-DAC developing Nvidia-level AI chips led by India",
+            "India semiconductor facility investment expected to set new record",
+            "Trainium demand exceeds supply"
           ],
           "implications": [
             {
-              "keyword": "Supply Chain Saturation",
-              "text": "Samsung's capacity constraints forcing outsourcing of major OEM orders (Google TPU); indicates custom ASIC demand exceeding foundry margins"
+              "keyword": "Supply Chain Diversification",
+              "text": "Acceleration of custom chip development by big tech and Taiwan Semiconductor's expanded US investment signifies reduced dependence on existing suppliers like Nvidia"
             },
             {
-              "keyword": "Design Automation Shift",
-              "text": "Cadence's AI agents for circuit design acceleration suggest AI is becoming foundational to chip design workflows, not ancillary"
+              "keyword": "Regional Focused Strategy",
+              "text": "Large-scale investments by the US and India in building local chip manufacturing capabilities reflect global supply chain restructuring efforts"
             },
             {
-              "keyword": "Material Constraints",
-              "text": "Hydrofluoric acid price escalation reveals supply chain bottleneck; AI chip demand growth outpacing specialty materials capacity"
+              "keyword": "Supply-Demand Tension",
+              "text": "Amazon Trainium demand exceeding supply demonstrates the current extremely high demand level for AI chips"
             },
             {
-              "keyword": "Ecosystem Fragmentation",
-              "text": "Multiple OEMs (Apple, Anthropic, AWS) sourcing custom silicon from different partners; reduces dominance of single foundry or fabless player"
-            },
-            {
-              "keyword": "Infrastructure Demand",
-              "text": "GPU-based AI-RAN indicates AI-driven architecture shifts extending beyond datacenters into telecom/radio access networks"
+              "keyword": "Industry Structure Change",
+              "text": "Custom chip entry by Meta, Amazon, and Apple will have long-term impact on specialist chip design and foundry business structure"
             }
           ],
-          "counterpoint": "OpenAI's prediction that AI will design its own chips may underestimate specialized human expertise required for yield, thermal management, and power optimization."
+          "counterpoint": "If demand slowdown or technology development challenges occur, big tech's massive investments could convert to oversupply."
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-07-16",
-      "item_count": 23,
-      "generated_at": "2026-07-16T21:04:04.766000+00:00",
+      "date": "2026-07-17",
+      "item_count": 5,
+      "generated_at": "2026-07-17T05:05:07.913851+00:00",
       "content": {
         "ko": {
-          "executive_summary": "TSMC posted record Q2 results with net income of NT$706.6B (77% YoY growth), raised 2026 capex to $60-64B, and announced additional US$100B Arizona investment for four new advanced fabs targeting 2nm and packaging. Full-year growth outlook increased to 40%+ driven by AI infrastructure demand, though Intel is reducing 2nm Nova Lake orders as it advances on TSMC's 18A process.",
+          "executive_summary": "TSMC는 Q2 순이익이 77% 증가하고 영업 마진이 컨센서스를 크게 상회하면서 AI 수요 호황의 주요 수혜자로 부상했다. 한편 Samsung은 고가의 High-NA EUV 대량생산을 보류해 파운드리 사업 턴어라운드 비용 부담을 완화하는 전략을 취하고 있다.",
           "key_facts": [
-            "TSMC Q2 2024 net income NT$706.6B, surpassing market expectations of NT$632.6B",
-            "TSMC Q2 gross margin 67.7%, beating forecast",
-            "TSMC 2026 capex increased 15% to $60-64B from prior guidance",
-            "TSMC announces US$100B additional Arizona investment for four advanced fabs",
-            "TSMC 2024 full-year sales growth outlook raised to 40%+ YoY",
-            "TSMC A14 validation approaching 90% of target; mass production targeted for 2028",
-            "Intel cutting planned TSMC 2nm Nova Lake orders as Intel 18A advances",
-            "TSMC CEO notes technology selection requires differentiation beyond commodity approach",
-            "Samsung semiconductor bonus payout under review at shareholder meeting (₩40T target)",
-            "Korean government stresses semiconductor boom does not reflect broader economy strength"
+            "TSMC Q2 순이익 77% 증가",
+            "TSMC 영업 마진 컨센서스 크게 초과",
+            "TSMC CEO Samsung의 높은 수익성에 '질투' 표현",
+            "Samsung High-NA EUV 대량생산 지연",
+            "Kioxia, Viasat 특허 소송에서 2억 2900만 달러 판결",
+            "Samsung, Netlist ITC 조사 대상"
           ],
           "implications": [
             {
-              "keyword": "Capex Escalation",
-              "text": "TSMC's $100B+ incremental US investment and 15% capex increase signal confidence in sustained AI datacenter demand extending beyond 2025"
+              "keyword": "시장 우위",
+              "text": "TSMC의 강한 수익성 증가는 고급 노드 수요에 있어 여전히 압도적 우위를 유지하고 있음을 시사"
             },
             {
-              "keyword": "Process Leadership",
-              "text": "A14 approaching 90% validation with 2028 mass production roadmap confirms TSMC maintaining process node lead; Intel's 18A shift suggests competitive acknowledgment"
+              "keyword": "경쟁 격차",
+              "text": "Samsung의 High-NA 투자 보류는 Advanced Logic 노드에서 TSMC와의 기술/비용 격차 확대 위험을 의미"
             },
             {
-              "keyword": "Margin Defense",
-              "text": "TSMC's 67.7% gross margin and CEO's 'not like buying milk' comment underscore pricing power; continued differentiation vs. commodity risk"
+              "keyword": "지적재산권 분쟁",
+              "text": "Kioxia의 특허 패소와 Samsung의 ITC 조사는 메모리 업체 간 지적재산권 경쟁 심화를 반영"
             },
             {
-              "keyword": "Geographic Diversification",
-              "text": "Arizona fab expansion reduces TSMC Taiwan geopolitical concentration risk while securing US customer commitments"
-            },
-            {
-              "keyword": "Competitor Pressure",
-              "text": "Samsung's ₩40T bonus reflects foundry profit participation pressure; Korean government acknowledges narrow concentration of prosperity in chip sector"
+              "keyword": "산업 재편",
+              "text": "Intel의 독일 팹 부지 매각 검토는 파운드리 업체 간 재편 가능성을 시사"
             }
           ],
-          "counterpoint": "TSMC CEO's jealousy of Samsung's profits and admission that margin peaking suggests competitive and cyclical headwinds may limit sustained 40%+ growth."
+          "counterpoint": "TSMC의 뛰어난 수익성은 일시적 AI 호황에 기반할 수 있으며, 경기 조정 시 마진 압력이 발생할 가능성 존재."
         },
         "en": {
-          "executive_summary": "TSMC posted record Q2 results with net income of NT$706.6B (77% YoY growth), raised 2026 capex to $60-64B, and announced additional US$100B Arizona investment for four new advanced fabs targeting 2nm and packaging. Full-year growth outlook increased to 40%+ driven by AI infrastructure demand, though Intel is reducing 2nm Nova Lake orders as it advances on TSMC's 18A process.",
+          "executive_summary": "TSMC emerges as major beneficiary of AI demand boom with Q2 net income increasing 77% and operating margin significantly exceeding consensus. Samsung meanwhile is suspending high-cost High-NA EUV mass production to ease foundry business turnaround cost burden.",
           "key_facts": [
-            "TSMC Q2 2024 net income NT$706.6B, surpassing market expectations of NT$632.6B",
-            "TSMC Q2 gross margin 67.7%, beating forecast",
-            "TSMC 2026 capex increased 15% to $60-64B from prior guidance",
-            "TSMC announces US$100B additional Arizona investment for four advanced fabs",
-            "TSMC 2024 full-year sales growth outlook raised to 40%+ YoY",
-            "TSMC A14 validation approaching 90% of target; mass production targeted for 2028",
-            "Intel cutting planned TSMC 2nm Nova Lake orders as Intel 18A advances",
-            "TSMC CEO notes technology selection requires differentiation beyond commodity approach",
-            "Samsung semiconductor bonus payout under review at shareholder meeting (₩40T target)",
-            "Korean government stresses semiconductor boom does not reflect broader economy strength"
+            "TSMC Q2 net income increases 77%",
+            "TSMC operating margin significantly exceeds consensus",
+            "TSMC CEO expresses 'envy' toward Samsung's high profitability",
+            "Samsung delays High-NA EUV mass production",
+            "Kioxia, Viasat patent lawsuit results in 229 million dollar judgment",
+            "Samsung subject to ITC investigation by Netlist"
           ],
           "implications": [
             {
-              "keyword": "Capex Escalation",
-              "text": "TSMC's $100B+ incremental US investment and 15% capex increase signal confidence in sustained AI datacenter demand extending beyond 2025"
+              "keyword": "Market Leadership",
+              "text": "TSMC's strong profit growth suggests it maintains overwhelming dominance in advanced node demand"
             },
             {
-              "keyword": "Process Leadership",
-              "text": "A14 approaching 90% validation with 2028 mass production roadmap confirms TSMC maintaining process node lead; Intel's 18A shift suggests competitive acknowledgment"
+              "keyword": "Competitive Gap",
+              "text": "Samsung's High-NA investment suspension signals risk of widening technology and cost gap versus TSMC in Advanced Logic nodes"
             },
             {
-              "keyword": "Margin Defense",
-              "text": "TSMC's 67.7% gross margin and CEO's 'not like buying milk' comment underscore pricing power; continued differentiation vs. commodity risk"
+              "keyword": "Intellectual Property Dispute",
+              "text": "Kioxia's patent loss and Samsung's ITC investigation reflect intensifying intellectual property competition among memory providers"
             },
             {
-              "keyword": "Geographic Diversification",
-              "text": "Arizona fab expansion reduces TSMC Taiwan geopolitical concentration risk while securing US customer commitments"
-            },
-            {
-              "keyword": "Competitor Pressure",
-              "text": "Samsung's ₩40T bonus reflects foundry profit participation pressure; Korean government acknowledges narrow concentration of prosperity in chip sector"
+              "keyword": "Industry Realignment",
+              "text": "Intel's consideration of divesting German fab site suggests possibility of foundry player consolidation"
             }
           ],
-          "counterpoint": "TSMC CEO's jealousy of Samsung's profits and admission that margin peaking suggests competitive and cyclical headwinds may limit sustained 40%+ growth."
+          "counterpoint": "TSMC's strong profitability may be based on temporary AI boom, with margin pressure possible during economic adjustment."
         }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-07-16",
-      "item_count": 32,
-      "generated_at": "2026-07-16T21:04:04.766000+00:00",
+      "date": "2026-07-17",
+      "item_count": 11,
+      "generated_at": "2026-07-17T05:05:07.913851+00:00",
       "content": {
         "ko": {},
         "en": {}

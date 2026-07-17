@@ -6,7 +6,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/machine-learning/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/machine-learning/</link>
 	<description>Official Machine Learning Blog of Amazon Web Services</description>
-	<lastBuildDate>Thu, 16 Jul 2026 19:29:26 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 16 Jul 2026 22:39:05 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -14,6 +14,228 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Build enterprise search for agents with Amazon Bedrock Managed Knowledge Base</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/build-enterprise-search-for-agents-with-amazon-bedrock-managed-knowledge-base/</link>
+		
+		<dc:creator><![CDATA[Dani Mitchell]]></dc:creator>
+		<pubDate>Thu, 16 Jul 2026 21:29:14 +0000</pubDate>
+				<category><![CDATA[Amazon Bedrock Knowledge Bases]]></category>
+		<category><![CDATA[Announcements]]></category>
+		<category><![CDATA[Intermediate (200)]]></category>
+		<guid isPermaLink="false">8e50afea9ffc6d052fce86614e4ef6027e9f4be3</guid>
+
+					<description>In this post, we walk through the three pillars that make this possible: simplified setup, smarter retrieval, and production readiness. We also show you code examples for setting up a knowledge base and retrieving from it.</description>
+										<content:encoded>&lt;p&gt;Knowledge bases that ground agents and generative AI applications over your enterprise data are hard to build at scale. Teams typically stitch together connectors, parsers, vector stores, knowledge graphs, and retrieval logic, then operationalize all of it for production. Each piece brings its own challenges. You must decide which data sources to connect and how to parse multimodal document types. You must choose between graph and vector databases, then provision and scale them. You must also handle complex queries that reason across diverse content, and layer on the document-level access control, observability, and security that production demands.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/bedrock/"&gt;Amazon Bedrock&lt;/a&gt; now offers &lt;a href="https://aws.amazon.com/bedrock/knowledge-bases/"&gt;Managed Knowledge Base&lt;/a&gt; in general availability, a fully managed agentic retrieval solution that handles scaling, high-accuracy retrieval, and document access control on your behalf. You can connect your enterprise data sources or crawl the web and start ingesting. Getting started through the &lt;a href="https://console.aws.amazon.com/"&gt;AWS Management Console&lt;/a&gt; requires no model selection. Sensible defaults take you from zero to your first retrieval in minutes, compared to the days or weeks typically needed to assemble a comparable pipeline from scratch. When you’re ready to customize, you have control over embedding models, rerankers, chunking strategies, and more.&lt;/p&gt; 
+&lt;p&gt;In this post, we walk through the three pillars that make this possible: simplified setup, smarter retrieval, and production readiness. We also show you &lt;a href="https://github.com/aws-samples/amazon-bedrock-samples/blob/main/rag/managed-knowledge-bases/03-use-case-example/01-end-to-end-example-with-ac-gateway/01-bmkb-with-agentcore-gateway.ipynb"&gt;code examples&lt;/a&gt; for setting up a knowledge base and retrieving from it.&lt;/p&gt; 
+&lt;h2 id="simplified-setup"&gt;Simplified setup&lt;/h2&gt; 
+&lt;p&gt;Developers today typically procure and build data ingestion pipelines, vector or graph storage, and retrieval infrastructure separately. This means managing separate infrastructure, separate billing models, separate rate limits, and the complexity of piecing it all together into a coherent pipeline.&lt;/p&gt; 
+&lt;p&gt;Managed Knowledge Base abstracts this complexity away. You configure a knowledge base, and the service handles everything downstream, from ingesting enterprise data through native connectors to managing vector stores on your behalf.&lt;/p&gt; 
+&lt;h3 id="native-enterprise-connectors-with-acl-support"&gt;Native enterprise connectors with ACL support&lt;/h3&gt; 
+&lt;p&gt;Managed Knowledge Base includes six native connectors (&lt;a href="https://aws.amazon.com/s3/"&gt;Amazon Simple Storage Service&lt;/a&gt; (Amazon S3), &lt;a href="https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration"&gt;Microsoft SharePoint&lt;/a&gt;, &lt;a href="https://www.atlassian.com/software/confluence"&gt;Atlassian Confluence&lt;/a&gt;, &lt;a href="https://workspace.google.com/products/drive/"&gt;Google Drive&lt;/a&gt;, &lt;a href="https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage"&gt;Microsoft OneDrive&lt;/a&gt;, and Web Crawler). It also includes a direct ingestion API for documents that don’t live in a supported source. On subsequent syncs, the service processes only modified or new documents, reducing time, cost, and staleness.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/19/ML-20588-1.png" alt="Diagram showing the native enterprise connectors and real-time ACL checks feeding documents into Managed Knowledge Base" width="600"&gt;&lt;/p&gt; 
+&lt;p&gt;Managed Knowledge Base uses real-time access control list (ACL) checks as an additional layer of security on top of existing pre-retrieval ACL filtering. The pre-filtered documents are transient for the life of the API call and are not visible to large language models (LLMs) or users. This maintains current access controls by checking permissions directly with the authoritative source at query time, rather than relying on potentially stale or incorrectly mapped ACL data.&lt;/p&gt; 
+&lt;blockquote&gt;
+ &lt;p&gt;&lt;em&gt;&lt;strong&gt;Syngenta Group&lt;/strong&gt; uses Bedrock Managed Knowledge Bases to enable employees to create knowledge bases on demand, syncing data from SharePoint and Confluence for internal knowledge search and agentic RAG applications.&lt;/em&gt;&lt;br&gt; &lt;em&gt;&amp;nbsp;– Jason Krohn, Head of Data and AI Technology&lt;/em&gt;&lt;/p&gt; 
+ &lt;p&gt;&lt;em&gt;&lt;strong&gt;MRH&amp;nbsp;Trowe&lt;/strong&gt; is using Bedrock Managed Knowledge Bases to power an internal AI Copilot that gives employees instant, grounded answers from across our corporate knowledge base — spanning thousands of documents in Confluence and SharePoint, in both English and German. With native connectors and built-in access controls, our teams can search across policies, client documentation, and operational content without building custom retrieval pipelines — accelerating how our employees access the knowledge they need to serve clients.&lt;br&gt; – Dr. Malte Polley, Teamleader Data Analytics &amp;amp; AI&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt; 
+&lt;h3 id="parsing-across-multimodal-data"&gt;Parsing across multimodal data&lt;/h3&gt; 
+&lt;p&gt;Your data fragments across many formats: machine-readable content in web applications, digital files containing embedded images like PDFs, PPTX, and DOCX, scanned documents, and media content such as audio and video. Rather than building separate pipelines for each format, Managed Knowledge Base provides fully managed parsing that automatically selects the right strategy per content type. It handles tables, charts, diagrams, mixed layouts, and media without configuration from you. The service supports visual content documents (PDFs, PPT/PPTX, DOCX) up to 500 MB, audio files up to 2 GB, and video files up to 10 GB.&lt;/p&gt; 
+&lt;p&gt;&lt;img loading="lazy" class="wp-image-135459 alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/13/Picture1.png" alt="" width="824" height="260"&gt;&lt;/p&gt; 
+&lt;p&gt;After the service parses content, it splits the content into segments for retrieval. By default, Managed Knowledge Base decides on the most suitable chunking strategy on your behalf. If you understand your data and want more control, you can choose a custom strategy like fixed-size chunking, where you set the approximate token size, or no chunking, for documents that are already pre-processed or pre-split.&lt;/p&gt; 
+&lt;h3 id="service-managed-data-storage"&gt;Service-managed data storage&lt;/h3&gt; 
+&lt;p&gt;Choosing a semantic retrieval database is one of the most complex decisions in a knowledge retrieval pipeline. Each option has different performance profiles, pricing models, scaling characteristics, and feature sets. After you choose, you must still provision capacity, configure indices, manage backups, and tune performance over time.&lt;/p&gt; 
+&lt;p&gt;Managed Knowledge Base removes that work entirely with a unified storage layer. The service auto-provisions storage so you don’t decide on vector dimensions or similarity metrics, and it auto scales from gigabytes to terabytes without intervention. Hybrid search combining keyword and semantic retrieval is continuously on, with no separate index configuration to manage. Data is encrypted at rest and in transit using AWS Key Management Service (AWS KMS) keys, either AWS managed or customer managed.&lt;/p&gt; 
+&lt;p&gt;You don’t interact with the underlying storage. Your AWS services handle monitoring, tuning, backups, patching, and capacity management for you.&lt;/p&gt; 
+&lt;blockquote&gt;
+ &lt;p&gt;&lt;em&gt;&lt;strong&gt;OpenAI&lt;/strong&gt; is using Bedrock Managed Knowledge Bases’ RAG capabilities to ground inference and model responses, reliably and at scale for millions of users, with the right customer context.&lt;/em&gt;&lt;br&gt; &lt;em&gt;&amp;nbsp;– Lavanya Singh, Member of Technical Staff, OpenAI&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt; 
+&lt;h3 id="setup-in-three-steps"&gt;Setup in three steps&lt;/h3&gt; 
+&lt;p&gt;Let’s look at how to set up a managed knowledge base programmatically. Three API calls are all it takes: create the knowledge base, add a data source, and start ingestion. The following example uses Amazon S3 as the data source with a fully managed embedding model, with no model Amazon Resource Name (ARN), vector store, or chunking configuration required.&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;import boto3
+
+bedrock_agent = boto3.client('bedrock-agent', region_name='us-west-2')
+
+# Step 1: Create a fully managed knowledge base (zero-config)
+kb_response = bedrock_agent.create_knowledge_base(
+    name='my-managed-kb',
+    description='Product documentation knowledge base',
+    roleArn='arn:aws:iam::123456789012:role/BedrockKBRole',
+    knowledgeBaseConfiguration={
+        'type': 'MANAGED',
+        'managedKnowledgeBaseConfiguration': {
+            'embeddingModelType': 'MANAGED'
+        }
+    }
+)
+kb_id = kb_response['knowledgeBase']['knowledgeBaseId']
+
+# Step 2: Add an S3 data source
+ds_response = bedrock_agent.create_data_source(
+    knowledgeBaseId=kb_id,
+    name='my-s3-docs',
+    dataSourceConfiguration={
+        'type': 'S3',
+        's3Configuration': {
+            'bucketArn': 'arn:aws:s3:::amzn-s3-demo-bucket',
+            'inclusionPrefixes': ['documents/']
+        }
+    }
+)
+data_source_id = ds_response['dataSource']['dataSourceId']
+
+# Step 3: Start ingestion
+bedrock_agent.start_ingestion_job(
+    knowledgeBaseId=kb_id,
+    dataSourceId=data_source_id
+)&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h2 id="smarter-retrieval"&gt;Smarter retrieval&lt;/h2&gt; 
+&lt;p&gt;A single retrieval step can’t answer every question. Direct lookups work fine on their own, but comparative analysis, multi-hop reasoning, and research queries need more. Managed Knowledge Base offers two retrieval APIs, each designed for different complexity levels:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Retrieve&lt;/strong&gt; returns ranked source chunks with relevance scores and metadata. Use it for direct lookups, FAQ-style questions, and scenarios where low latency is critical. You control the number of results and can apply metadata filters to narrow the search.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Agentic Retrieval&lt;/strong&gt; uses a foundation model (FM) to decompose complex queries into sub-queries. It retrieves iteratively across one or more knowledge bases and evaluates whether the results are sufficient before returning them. Agentic Retrieval can also generate a synthesized response using the managed orchestration LLM or a model available on Amazon Bedrock. Use it for comparative analysis, multi-hop questions, research queries, and scenarios that require synthesizing information from multiple sources or documents.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h3 id="how-agentic-retrieval-works"&gt;How Agentic Retrieval works&lt;/h3&gt; 
+&lt;p&gt;Comparing two products, tracing a decision across multiple documents, or synthesizing research from different sources requires multiple retrieval steps. You also need to evaluate intermediate results and recognize when you have enough information.&lt;/p&gt; 
+&lt;p&gt;Agentic Retrieval handles this automatically, across one or more knowledge bases. When a query comes in, the service:&lt;/p&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;&lt;strong&gt;Plans&lt;/strong&gt; by analyzing the query and decomposing it into sub-queries, each targeting a specific retriever across your configured knowledge bases.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Retrieves&lt;/strong&gt; by executing sub-queries in parallel against one or multiple knowledge bases.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Evaluates&lt;/strong&gt; whether the results are sufficient. If not, it plans and executes additional retrieval rounds (up to five by default).&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Returns&lt;/strong&gt; deduplicated chunks from all iterations, with trace events streaming throughout for full observability.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;You can balance accuracy and latency for your use case. The &lt;code&gt;maxAgentIteration&lt;/code&gt; parameter controls how many rounds the model performs, and you select the foundation model used for planning and evaluation.&lt;/p&gt; 
+&lt;p&gt;The following code shows an example of invoking Agentic Retrieval and processing its streaming response. The request specifies the user’s query, the knowledge base to search, the foundation model to use for planning and evaluation, and the maximum number of retrieval iterations. As the service runs, it streams trace events that show each planning step and sub-query being executed, followed by the final retrieval results:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;bedrock_runtime = boto3.client('bedrock-agent-runtime', region_name='us-west-2')
+
+response = bedrock_runtime.agentic_retrieve_stream(
+    messages=[{
+        'role': 'user',
+        'content': [{'text': 'Compare the pricing tiers of Product A and Product B'}]
+    }],
+    retrievers=[{
+        'knowledgeBaseRetriever': {
+            'knowledgeBaseId': kb_id,
+            'maxResults': 10
+        }
+    }],
+    agenticRetrieveConfiguration={
+        'foundationModel': {
+            'modelArn': 'arn:aws:bedrock:us-west-2::foundation-model/anthropic.claude-sonnet-4-20250514'
+        },
+        'maxAgentIteration': 5  # 1-10, default 5
+    }
+)
+
+# Trace events stream in real time, then final results arrive
+for event in response['stream']:
+    if 'trace' in event:
+        trace = event['trace']
+        if 'planning' in trace:
+            print(f"Planning: {len(trace['planning'].get('actions', []))} sub-queries")
+        elif 'retrieval' in trace:
+            print(f"Retrieving: {trace['retrieval'].get('input', {}).get('text', '')}")
+    elif 'retrievalResults' in event:
+        results = event['retrievalResults']['results']
+        print(f"\n{len(results)} deduplicated results returned")
+        for i, r in enumerate(results[:5], 1):
+            print(f"  {i}. {r['content']['text'][:150]}...")&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h2 id="production-ready"&gt;Production ready&lt;/h2&gt; 
+&lt;p&gt;Getting a Retrieval Augmented Generation (RAG) prototype working is one thing. Operating it at scale with proper access control, observability, and security is where many teams stall. Managed Knowledge Base includes &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway.html"&gt;AgentCore Gateway&lt;/a&gt; integration, document-level access control, and observability out of the box, so you can deploy without building these layers yourself.&lt;/p&gt; 
+&lt;h3 id="native-agentcore-gateway-integration"&gt;Native AgentCore Gateway integration&lt;/h3&gt; 
+&lt;p&gt;Managed Knowledge Bases integrates natively with AgentCore Gateway, giving you a streamlined way to expose your knowledge base to agents. When you add your knowledge base as a target on the gateway, it becomes a tool that agents compatible with the Model Context Protocol (MCP) can discover and invoke automatically. AWS &lt;a href="https://aws.amazon.com/iam/"&gt;Identity and Access Management&lt;/a&gt; (IAM), routing, and observability are centralized at the gateway. You can also use Managed Knowledge Bases standalone by calling the retrieval APIs directly from your application if that better suits your use case.&lt;/p&gt; 
+&lt;p&gt;AgentCore Gateway adds the following to your Managed Knowledge Bases integration:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Abstracted infrastructure&lt;/strong&gt;: Knowledge base IDs are hidden behind the gateway, so agents simply discover and call tools by name, decoupling your agent code from underlying infrastructure.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Framework compatibility&lt;/strong&gt;: Agents interact through a standardized MCP endpoint, making your knowledge bases instantly compatible with MCP-aware frameworks, including Strands, LangChain, and CrewAI.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Unified access point&lt;/strong&gt;: A single gateway URL becomes the access point for your knowledge bases across your organization, simplifying agent configuration and governance.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Centralized security&lt;/strong&gt;: IAM policy at the gateway level replaces per-knowledge-base permissions management, giving you one place to enforce security, audit access, and manage scale.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Transparent operations&lt;/strong&gt;: Built-in observability, routing, and authentication are handled for you, so you can add, swap, or scale knowledge bases without changing a single line of agent code.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/19/ML-20588-3.png" alt="Architecture diagram of AgentCore Gateway fronting a Managed Knowledge Base, with MCP-compatible agent frameworks invoking it as a tool through a single gateway URL" width="600"&gt;&lt;/p&gt; 
+&lt;p&gt;After you create a gateway and add your knowledge base as a target, MCP-compatible agent frameworks can discover and invoke it without knowing the underlying knowledge base ID:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;from strands.tools.mcp import MCPClient
+from mcp_proxy_for_aws.client import aws_iam_streamablehttp_client
+
+mcp_client = MCPClient(lambda: aws_iam_streamablehttp_client(
+    endpoint=gateway_url,
+    aws_region='us-west-2',
+    aws_service='bedrock-agentcore',
+))
+
+with mcp_client:
+    # KB tools are auto-discovered via MCP
+    tools = mcp_client.list_tools_sync()
+    print(f"Available tools: {[t.tool_name for t in tools]}")
+
+    # Retrieve (the agent never sees the KB ID)
+    result = mcp_client.call_tool_sync(
+        'tool_call_1',
+        tools[0].tool_name,
+        {'retrievalQuery': {'text': 'What is our total revenue?'}},
+    )&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;This pattern works with &lt;a href="https://strandsagents.com/"&gt;Strands&lt;/a&gt;, &lt;a href="https://www.langchain.com/"&gt;LangChain&lt;/a&gt;, &lt;a href="https://crewai.com/"&gt;CrewAI&lt;/a&gt;, or other MCP-compatible frameworks. The gateway handles IAM, routing, and observability transparently.&lt;/p&gt; 
+&lt;blockquote&gt;
+ &lt;p&gt;&lt;em&gt;At &lt;strong&gt;Sony&lt;/strong&gt;, we’re building an agentic chat platform on Amazon Bedrock AgentCore to help teams get trusted answers from complex enterprise content and live web information. With Bedrock Managed Knowledge Base and Web Search now available as tools in AgentCore, our agents can reason across internal PDFs, presentations, spreadsheets, charts, and tables, going beyond simple vector retrieval, and ground responses in current web information while keeping our data within AWS. The result is a single experience for answering questions across internal knowledge and the web&lt;/em&gt;&lt;br&gt; &lt;em&gt;– Masahiro Oba, Senior General Manager, Sony Group Corporation&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt; 
+&lt;h3 id="observability"&gt;Observability&lt;/h3&gt; 
+&lt;p&gt;Every knowledge base query, whether through the SDK or the gateway, automatically publishes metrics to &lt;a href="https://aws.amazon.com/cloudwatch/"&gt;Amazon CloudWatch&lt;/a&gt; under the &lt;code&gt;AWS/Bedrock/KnowledgeBases&lt;/code&gt; namespace, including invocations, client and server errors, and throttles. For Agentic Retrieval, trace events stream in real time, showing each planning step, sub-query, and evaluation round. This gives you full visibility into the retrieval process without writing instrumentation code.&lt;/p&gt; 
+&lt;p&gt;For a complete end-to-end walkthrough, check out the &lt;a href="https://github.com/aws-samples/amazon-bedrock-samples/blob/main/rag/managed-knowledge-bases/03-use-case-example/01-end-to-end-example-with-ac-gateway/01-bmkb-with-agentcore-gateway.ipynb"&gt;notebook on GitHub&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2 id="where-managed-knowledge-base-fits"&gt;Where Managed Knowledge Base fits&lt;/h2&gt; 
+&lt;p&gt;AWS offers multiple options for building the knowledge retrieval that grounds agents, generative AI applications, and RAG pipelines. The right choice depends on how much control you need versus how much you want managed for you. The following diagram shows where Managed Knowledge Base sits along that spectrum, from the highest level of abstraction (&lt;a href="https://aws.amazon.com/quick/"&gt;Amazon Quick&lt;/a&gt;) to building your own RAG pipeline from scratch.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/19/ML-20588-4.png" alt="Spectrum diagram showing AWS knowledge retrieval options from Amazon Quick (highest abstraction) through Managed Knowledge Base and Bedrock Knowledge Bases to a custom RAG pipeline (lowest abstraction)" width="600"&gt;&lt;/p&gt; 
+&lt;p&gt;If you need to choose your own vector store and assemble the connector workflow yourself, Amazon Bedrock Knowledge Bases remains available. Managed Knowledge Base is for teams that want to focus on their application rather than the underlying infrastructure, with the service handling storage, scaling, and retrieval on your behalf.&lt;/p&gt; 
+&lt;h2 id="pricing"&gt;Pricing&lt;/h2&gt; 
+&lt;p&gt;Managed Knowledge Bases consolidates pricing into a straightforward, usage-based model rather than spreading costs across multiple capacity units. You pay for storage of your raw data, standard retrieval API calls, and Agentic Retrieval when you need multi-hop reasoning. The multimodal document parser, managed embedding model and managed re-ranker&amp;nbsp; are all included at no extra cost. If you choose to use a different Amazon Bedrock model for embeddings, re-ranking, or orchestration, standard Bedrock pricing applies for those models.&lt;/p&gt; 
+&lt;p&gt;For complete pricing details and worked examples, see the &lt;a href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noopener"&gt;Amazon Bedrock pricing page&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Amazon Bedrock Managed Knowledge Base removes the infrastructure work that sits between your enterprise data and a working retrieval-augmented generation application. Connect your data sources, let the service handle parsing, storage, and indexing, and retrieve using the mode that matches your query complexity.&lt;/p&gt; 
+&lt;p&gt;Document-level access control, real-time ACL checks, and native observability through Amazon CloudWatch are built in, so your knowledge base is ready for production workloads at launch. With native AgentCore Gateway integration, your knowledge bases become tools that MCP-compatible agents can discover and use without custom code.&lt;/p&gt; 
+&lt;p&gt;Managed Knowledge Base is now available in us-east-1 (N. Virginia), us-west-2 (Oregon), eu-west-1 (Dublin), eu-central-1 (Frankfurt), ap-southeast-2 (Sydney), eu-west-2 (London), ap-northeast-1 (Tokyo), and us-gov-west-1 (AWS GovCloud US-West).&lt;/p&gt; 
+&lt;p&gt;To get started, see the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/kb-build-managed.html"&gt;documentation&lt;/a&gt; or try it out on the &lt;a href="https://console.aws.amazon.com/"&gt;AWS Management Console&lt;/a&gt;.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/11/ml-20969-image-6.png" alt="Dani Mitchell" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Dani Mitchell&lt;/h3&gt; 
+  &lt;p&gt;Dani is a Sr GenAI Specialist Solutions Architect at AWS and the SA lead for Amazon Bedrock Knowledge Bases. He helps enterprises across the world design and deploy generative AI solutions using Amazon Bedrock and Anthropic’s models and capabilities to build scalable, production-ready applications.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img loading="lazy" class="size-full wp-image-122664 alignleft" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/01/09/snghigf-e1721342253292-258x300-1.jpg" alt="" width="100" height="116"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Sandeep Singh&lt;/h3&gt; 
+  &lt;p&gt;Sandeep is a Senior Generative AI Data Scientist at AWS, helping large enterprises innovate with generative AI. He specializes in generative AI, Agentic AI, machine learning, and system design, delivering AI/ML-powered solutions to solve complex business problems across diverse industries.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/19/ML-20588-5.jpg" alt="Siddhant Sahu" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Siddhant Sahu&lt;/h3&gt; 
+  &lt;p&gt;Siddhant is a Sr Product Manager at Amazon Web Services, where he focuses on Bedrock Managed Knowledge Bases. He builds agentic search products that help ISVs and enterprises connect generative AI to their enterprise data.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/19/ML-20588-6.jpg" alt="Amit Choudhary" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Amit Choudhary&lt;/h3&gt; 
+  &lt;p&gt;Amit is a Principal Product Manager at AWS, where he currently leads Knowledge Bases for Amazon Quick and leads data ingestion capabilities for Amazon Bedrock Knowledge Bases. His work enables secure AI interactions grounded in enterprise knowledge, transforming how organizations use their data for AI-powered insights and decision-making. Previously, he enabled enterprises to securely connect their data sources to Amazon Q Business for user productivity, and built AWS Clean Rooms Differential Privacy, helping enterprises protect user privacy with mathematical guarantees in just a few steps. Outside of work, he enjoys traveling.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Introducing Grok on Amazon Bedrock</title>
 		<link>https://aws.amazon.com/blogs/machine-learning/introducing-grok-on-amazon-bedrock/</link>
 		
@@ -34,7 +256,7 @@
 &lt;h2 id="how-you-access-grok-4.3-on-amazon-bedrock"&gt;How you access Grok 4.3 on Amazon Bedrock&lt;/h2&gt; 
 &lt;p&gt;Grok 4.3 runs on Mantle, and accessing it differs from models that use the Amazon Bedrock Runtime API. Mantle uses OpenAI-compatible APIs. You can invoke Grok 4.3 either with the OpenAI SDK or through direct HTTPS requests to the Chat Completions API or the Responses API.&lt;/p&gt; 
 &lt;p&gt;The Mantle endpoint URL is Region-specific and follows this pattern:&lt;/p&gt; 
-&lt;p&gt;&lt;a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/30/21284-1.png"&gt;&lt;img class="alignnone size-full wp-image-134693" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/30/21284-1.png" alt="Display of URL showing which parts are the Base URL, Region, and Path" width="468" height="176"&gt;&lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/30/21284-1.png"&gt;&lt;img loading="lazy" class="alignnone size-full wp-image-134693" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/30/21284-1.png" alt="Display of URL showing which parts are the Base URL, Region, and Path" width="468" height="176"&gt;&lt;/a&gt;&lt;/p&gt; 
 &lt;p&gt;For example, in &lt;code&gt;us-west-2&lt;/code&gt; the base URL is &lt;code&gt;https://bedrock-mantle.us-west-2.api.aws/openai/v1&lt;/code&gt;. Note that the Responses API URL route differs slightly on the Mantle endpoint (&lt;code&gt;/openai/v1/&lt;/code&gt;) from the Runtime endpoint (&lt;code&gt;/v1/responses&lt;/code&gt;).&lt;/p&gt; 
 &lt;p&gt;To set up your SDK with Grok 4.3, set the base URL with the correct Region and path as described in the preceding section.&lt;/p&gt; 
 &lt;p&gt;When using Grok, note that the context window is 1 million tokens and that the defaults depart from the standard OpenAI specification in three places:&lt;/p&gt; 
@@ -3783,287 +4005,6 @@ LIMIT 10&lt;/code&gt;&lt;/pre&gt;
 		
 		
 			</item>
-		<item>
-		<title>Deploying quantized models on Amazon SageMaker AI with Unsloth</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/deploying-quantized-models-on-amazon-sagemaker-ai-with-unsloth/</link>
-		
-		<dc:creator><![CDATA[Michael Battaglia]]></dc:creator>
-		<pubDate>Fri, 10 Jul 2026 15:26:05 +0000</pubDate>
-				<category><![CDATA[Advanced (300)]]></category>
-		<category><![CDATA[Amazon SageMaker]]></category>
-		<category><![CDATA[Technical How-to]]></category>
-		<guid isPermaLink="false">c6aa6dd3ad32bbc2511cb3f9b4f313d6dc35607c</guid>
-
-					<description>In this post, you will learn four deployment patterns for taking models that have already been quantized with Unsloth and deploying them on AWS infrastructure. The patterns use Amazon Elastic Compute Cloud (Amazon EC2) for direct instance access, Amazon SageMaker AI inference endpoints for managed serving, and Amazon Elastic Kubernetes Service (Amazon EKS) or Amazon Elastic Container Service (Amazon ECS) when inference needs to fit into an existing container framework. You also learn operational practices for production deployments.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post was co-written with Daniel Han and Michael Han from Unsloth.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Deploying large foundation models (FMs) stored at their original 16-bit floating-point precision (BF16 or FP16) is expensive. They need large GPU instances, driving up serving costs, and slowing down iteration cycles. Quantization addresses this by reducing the numerical precision of a model’s weights (for example from 16-bit to 4-bit), which shrinks the memory usage significantly. The drawback of quantization is that it can reduce the accuracy of a model, which is where dynamic quantization becomes compelling. When done correctly, dynamic quantization can reduce memory usage while maintaining accuracy. The savings in instance cost, storage, and startup time can compound quickly at scale.&lt;/p&gt; 
-&lt;p&gt;In this post, you will learn four deployment patterns for taking models that have already been quantized with &lt;a href="https://github.com/unslothai/unsloth" target="_blank" rel="noopener"&gt;Unsloth&lt;/a&gt; and deploying them on AWS infrastructure. The patterns use Amazon Elastic Compute Cloud (Amazon EC2) for direct instance access, Amazon SageMaker AI inference endpoints for managed serving, and Amazon Elastic Kubernetes Service (Amazon EKS) or Amazon Elastic Container Service (Amazon ECS) when inference needs to fit into an existing container framework. You also learn operational practices for production deployments.&lt;/p&gt; 
-&lt;h2 id="what-is-unsloth-dynamic-quantization"&gt;What is Unsloth Dynamic quantization?&lt;/h2&gt; 
-&lt;p&gt;As Daniel Han, co-founder of Unsloth, &lt;a href="https://www.youtube.com/live/wRcByxXkJCQ&amp;amp;t=1577" target="_blank" rel="noopener"&gt;explains&lt;/a&gt;:&lt;/p&gt; 
-&lt;blockquote&gt;
- &lt;p&gt;&lt;em&gt;“The biggest problem of a powerful model is it’s very big and you need 1.5TB to run this model. By using some tricks you can make the model 217GB in size. You might think because it’s 86% smaller, accuracy will degrade by 86%, but that’s not the case, it only degrades by 14% accuracy. This methodology we call it dynamic quantization and we show many benchmarks where you can reduce the disk space of the model, by not quantizing all weights down to 4-bit etc. but some layers remain in higher 8-bits.”&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt; 
-&lt;p&gt;In practical terms, quantization reduces the number of bits used to store each weight. A standard BF16 model uses 16 bits per parameter. Quantizing to 4-bit shrinks the size by 75 percent, though real-world file sizes are slightly larger because of quantization metadata. For an 8-billion parameter model, that takes the memory footprint from approximately 16 GB down to approximately 5 GB. That’s often the difference between needing a multi-GPU instance and fitting comfortably on a single GPU.&lt;/p&gt; 
-&lt;p&gt;&lt;a href="https://github.com/unslothai/unsloth" target="_blank" rel="noopener"&gt;Unsloth&lt;/a&gt; is a tool for fine-tuning and quantizing foundation models. &lt;a href="https://unsloth.ai/blog/dynamic-4bit" target="_blank" rel="noopener"&gt;Unsloth Dynamic&lt;/a&gt; is a quantization methodology that goes beyond uniform compression. Rather than applying the same bit reduction to every layer, it works in three steps:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;&lt;strong&gt;Layer-by-layer analysis –&lt;/strong&gt;&amp;nbsp;Unsloth measures how sensitive each layer is to precision loss.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Dynamic bit allocation –&lt;/strong&gt;&amp;nbsp;Important layers (those where precision loss causes meaningful output degradation) are kept at higher precision (for example, 16-bit), while less sensitive layers are quantized aggressively (4-bit or lower).&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Precision tuning –&lt;/strong&gt;&amp;nbsp;The quantization is tuned so that the combined output quality remains as close as possible to the original, while keeping disk space usage as small as possible.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;The end goal of this process is to make the accuracy differences between the quantized model and the standard model as small as possible, while also compressing the model size by a meaningful amount. With the open source Unsloth package, you can fine-tune, run, export, and deploy models in one unified workflow.&lt;/p&gt; 
-&lt;p&gt;When you deploy on AWS, quantization matters because it changes three things simultaneously. First, the instance decision: a large model that would otherwise require larger GPUs might become practical on a smaller one, or even on CPU. Second, the startup and storage profile: smaller model files move, store, and promote across environments faster. Third, the deployment flexibility: you can choose a smaller model file for cost-sensitive inference, a higher-fidelity export for quality-sensitive inference, or a merged representation for higher-throughput GPU serving. That flexibility is what makes Unsloth useful in an AWS environment. With it, you can adapt the model to the serving path instead of forcing every deployment into the same runtime and hardware assumptions.&lt;/p&gt; 
-&lt;h2 id="which-model-format-to-use"&gt;Which model format to use&lt;/h2&gt; 
-&lt;p&gt;A key principle in the Unsloth deployment workflow is that the output artifact should drive the serving design. Infrastructure selection comes second. First, choose the artifact and runtime, then place that runtime on the AWS service that matches your operating model.&lt;/p&gt; 
-&lt;p&gt;Unsloth supports multiple deployment-oriented output types:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;GGUF files –&lt;/strong&gt;&amp;nbsp;GGUF is a single-file format that packages model weights, tokenizer, and metadata together, making it self-contained and ready to load without additional files. Use these for lightweight runtimes such as llama.cpp, Ollama, and &lt;a href="https://unsloth.ai/docs/new/studio/install" target="_blank" rel="noopener"&gt;Unsloth&lt;/a&gt;. On AWS, this maps to Amazon EC2 or an Amazon SageMaker AI custom container.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Merged safetensors weights –&lt;/strong&gt;&amp;nbsp;(16-bit, 8-bit, FP8 4-bit, NVFP4) can be created through Unsloth for higher-throughput engines such as &lt;a href="https://docs.vllm.ai" target="_blank" rel="noopener"&gt;vLLM&lt;/a&gt; and &lt;a href="https://sgl-project.github.io" target="_blank" rel="noopener"&gt;SGLang&lt;/a&gt;. On AWS, this maps to Amazon SageMaker AI Large Model Inference (LMI) containers, Amazon EKS, or Amazon ECS.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="a-practical-deployment-map"&gt;A practical deployment map&lt;/h2&gt; 
-&lt;p&gt;The following table maps each artifact type to its best-fit runtime and AWS target, so you can quickly identify which deployment pattern matches your requirements.&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Artifact&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Best-fit runtime&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Best-fit AWS target&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Use when&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;GGUF&lt;/td&gt; 
-   &lt;td&gt;llama.cpp / llama-server or Unsloth&lt;/td&gt; 
-   &lt;td&gt;Amazon EC2&lt;/td&gt; 
-   &lt;td&gt;Fastest path to hands-on testing with direct instance access&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;GGUF&lt;/td&gt; 
-   &lt;td&gt;llama.cpp in a custom container or Unsloth&lt;/td&gt; 
-   &lt;td&gt;Amazon SageMaker AI&lt;/td&gt; 
-   &lt;td&gt;Managed endpoints with autoscaling, lightweight runtime&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Merged 16-bit or 4-bit weights&lt;/td&gt; 
-   &lt;td&gt;vLLM / SGLang / LMI backends&lt;/td&gt; 
-   &lt;td&gt;Amazon SageMaker AI&lt;/td&gt; 
-   &lt;td&gt;High throughput, batching, autoscaling, production GPU serving&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Any containerized stack&lt;/td&gt; 
-   &lt;td&gt;Your preferred runtime&lt;/td&gt; 
-   &lt;td&gt;Amazon EKS or Amazon ECS&lt;/td&gt; 
-   &lt;td&gt;Inference must integrate into an existing container framework&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;Each deployment pattern in this post follows the same general workflow:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Fine-tune or download a model in Unsloth.&lt;/li&gt; 
- &lt;li&gt;Export the model file that matches the runtime you want.&lt;/li&gt; 
- &lt;li&gt;Validate the runtime locally or on Amazon EC2.&lt;/li&gt; 
- &lt;li&gt;Promote the same model file and runtime combination to a managed or environment-native deployment.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;That sequencing helps avoid unexpected behavior later, especially around memory use, prompt formatting, and latency behavior.&lt;/p&gt; 
-&lt;h2 id="pattern-1-gguf-on-amazon-ec2-with-llama.cpp-and-unsloth"&gt;Pattern 1: GGUF on Amazon EC2 with llama.cpp and Unsloth&lt;/h2&gt; 
-&lt;p&gt;Use this pattern to validate quantization levels quickly with direct instance access. For many use cases, Amazon EC2 is a strong starting point because you get maximum control with minimum abstraction. Benchmark several quantization levels, test prompt formatting, compare CPU versus GPU behavior, and understand the actual memory footprint before you commit to a managed endpoint design.&lt;/p&gt; 
-&lt;p&gt;A typical Unsloth export looks like this:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;model.save_pretrained_gguf("gguf_model", tokenizer, quantization_method="q4_k_xl")&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;This produces a GGUF file ready for local llama.cpp-based inference. The companion repository uses q4_k_xl for its quantized endpoint. Different quantization methods control the trade-off between file size and output fidelity: use q8_0 for higher output fidelity at roughly double the file size, or f16 for a full-precision GGUF with no quantization loss. See the &lt;a href="https://unsloth.ai/docs/basics/unsloth-dynamic-2.0-ggufs" target="_blank" rel="noopener"&gt;Unsloth GGUF documentation&lt;/a&gt; for the complete list of quantization methods and their characteristics.&lt;/p&gt; 
-&lt;p&gt;After you have the GGUF, a minimal llama-server launch requires the following configurations:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-bash"&gt;llama-server \
-  --model /models/my-model.gguf \
-  --alias my-model \
-  --ctx-size 8192 \
-  --host 0.0.0.0 \
-  --port 8080&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-bash"&gt;unsloth run \
-  --model /models/my-model.gguf \
-  --alias my-model \
-  --ctx-size 8192 \
-  --host 0.0.0.0 \
-  --port 8080&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;At that point, your application can talk to the model through an OpenAI-compatible interface:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;from openai import OpenAI
-
-client = OpenAI(
-    base_url="http://&amp;lt;ec2-private-ip&amp;gt;:8080/v1",
-    api_key="not-required",
-)
-response = client.chat.completions.create(
-    model="my-model",
-    messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "Explain AWS Graviton in two sentences."},
-    ],
-    max_tokens=128,
-)
-print(response.choices[0].message.content)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;blockquote&gt;
- &lt;p&gt;&lt;strong&gt;&lt;img src="https://s.w.org/images/core/emoji/14.0.0/72x72/26a0.png" alt="⚠" class="wp-smiley" style="height: 1em; max-height: 1em;"&gt; Important:&lt;/strong&gt; This configuration is suitable for isolated testing. For production, restrict the security group to known Classless Inter-Domain Routing (CIDR) blocks, bind to a private interface (for example, 127.0.0.1), and place the endpoint behind an authenticated API gateway or load balancer.&lt;/p&gt;
-&lt;/blockquote&gt; 
-&lt;p&gt;This path is attractive for three reasons. It is transparent to debug, it stays close to upstream runtime behavior, and it gives you a clean place to test quantization choices before you add container contracts, autoscaling policies, or endpoint governance.&lt;/p&gt; 
-&lt;p&gt;Amazon EC2 is also the most direct place to evaluate practical deployment questions:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Quantization quality –&lt;/strong&gt;&amp;nbsp;Compare outputs across quantization levels (for example, q4_k_m versus q8_0) against your specific evaluation criteria. Quality impact varies by model architecture and task.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Hardware requirements –&lt;/strong&gt;&amp;nbsp;If the model’s memory footprint exceeds available CPU RAM, you need a GPU-backed instance. Check peak memory usage during inference, not only model load. For best performance, have sufficient RAM or VRAM to load the entire model into memory. For example, if the model is 128 GB disk, aim for more than 128 GB of available RAM or VRAM.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Context length trade-offs –&lt;/strong&gt;&amp;nbsp;Longer context windows increase both latency and memory consumption. Test with representative prompt lengths to find the right balance for your workload.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Chat template validation –&lt;/strong&gt;&amp;nbsp;Verify that the structured prompt format (which maps roles such as “system” and “user” to the token sequences the model expects) produces consistent behavior outside the training environment.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;For evaluation, internal tools, proof-of-concept work, and early production pilots, Amazon EC2 is often the right starting point.&lt;/p&gt; 
-&lt;h2 id="pattern-2-gguf-on-amazon-sagemaker-ai-with-a-custom-container"&gt;Pattern 2: GGUF on Amazon SageMaker AI with a custom container&lt;/h2&gt; 
-&lt;p&gt;Amazon EC2 is recommended for fast iteration, but it doesn’t give you a managed inference service out of the box. When you want a production endpoint with autoscaling, monitoring, AWS Identity and Access Management (IAM) integration, and a stable API surface, Amazon SageMaker AI inference endpoints become the better fit.&lt;/p&gt; 
-&lt;p&gt;For GGUF deployments, the most practical design is usually a custom inference container that packages the GGUF model file together with llama.cpp or another lightweight runtime. The container then exposes the Amazon SageMaker AI hosting interface, which requires that the container listen on port 8080, implement /ping for health checks, and /invocations for inference requests.&lt;/p&gt; 
-&lt;p&gt;The &lt;a href="https://github.com/aws-samples/sample-quantized-ML-model-comparison" target="_blank" rel="noopener"&gt;companion GitHub repository&lt;/a&gt; includes a complete working example of this pattern. It deploys a side-by-side comparison of Unsloth’s dynamically quantized Qwen3-VL-8B-Instruct (Q4_K_XL GGUF served with llama.cpp on ml.g5.xlarge, approximately $1.41/hr) against the full-precision BF16 variant (served with vLLM on ml.g5.12xlarge, approximately $7.09/hr). Pricing as of June 2026; see the &lt;a href="https://aws.amazon.com/sagemaker/pricing/" target="_blank" rel="noopener"&gt;Amazon SageMaker AI pricing page&lt;/a&gt; for current rates. The entrypoint script starts llama-server on an internal port and uses nginx as a reverse proxy to satisfy the Amazon SageMaker AI interface:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-bash"&gt;# Start llama-server with the GGUF model and vision projector
-/app/llama-server \
-  --model /models/Qwen3-VL-8B-Instruct-UD-Q4_K_XL.gguf \
-  --mmproj /models/mmproj-F16.gguf \
-  --host 0.0.0.0 \
-  --port 8081 \
-  --ctx-size 4096&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Nginx then maps /ping to the llama-server health check and /invocations to the chat completions endpoint, giving Amazon SageMaker AI a standard interface while keeping the runtime lightweight:&lt;/p&gt; 
-&lt;pre class="nginx"&gt;&lt;code&gt;# SageMaker health check endpoint
-location /ping {
-    proxy_pass http://llama_backend/health;
-}
-
-# SageMaker inference endpoint -&amp;gt; llama.cpp chat completions
-location /invocations {
-    proxy_pass http://llama_backend/v1/chat/completions;
-    proxy_read_timeout 120s;
-}&lt;/code&gt;&lt;/pre&gt; 
-&lt;p&gt;A common architecture might look like this:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Store the finalized GGUF model file in Amazon Simple Storage Service (Amazon S3).&lt;/li&gt; 
- &lt;li&gt;Start the Amazon SageMaker AI container and place the model under /opt/ml/model.&lt;/li&gt; 
- &lt;li&gt;Launch llama.cpp or Unsloth against the local model file.&lt;/li&gt; 
- &lt;li&gt;Expose a thin API layer that translates Amazon SageMaker AI requests into local inference calls.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;The following architecture diagram from the companion GitHub repository shows how the sample deploys both a quantized GGUF endpoint (this pattern) and a full-precision vLLM endpoint (Pattern 3). The flow works as follows:&lt;/p&gt; 
-&lt;p&gt;&lt;img title="Architecture diagram of the companion sample deployment" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/08/ML-20601-1.png" alt="Architecture diagram showing two Amazon SageMaker AI real-time endpoints deployed with Terraform: a quantized GGUF endpoint (Qwen3-VL-8B-Instruct Q4_K_XL served by llama.cpp on ml.g5.xlarge) and a full-precision BF16 endpoint (served by vLLM through LMI on ml.g5.12xlarge). Supporting infrastructure includes Amazon ECR, AWS CodeBuild, Amazon S3, and VPC networking." width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Figure: Architecture diagram of the companion sample deployment.&lt;/em&gt;&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Terraform provisions all infrastructure including Amazon Elastic Container Registry (Amazon ECR), AWS CodeBuild, and Amazon S3 resources.&lt;/li&gt; 
- &lt;li&gt;AWS CodeBuild builds the custom container image and pushes it to Amazon ECR.&lt;/li&gt; 
- &lt;li&gt;Amazon SageMaker AI creates two real-time endpoints within a virtual private cloud (VPC): one for the quantized GGUF model (Pattern 2) and one for the full-precision model (Pattern 3).&lt;/li&gt; 
- &lt;li&gt;Both endpoints pull their respective model files from Amazon S3 at startup.&lt;/li&gt; 
- &lt;li&gt;An Amazon SageMaker Notebook Instance provides access to the comparison notebook for running evaluations against both endpoints.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;This pattern works well because it keeps the runtime lightweight while letting Amazon SageMaker AI handle the operational concerns that matter in production, such as endpoint lifecycle and autoscaling. For smaller models, this path is especially compelling on CPU-backed endpoints. For larger quantized models or lower-latency requirements, you can move the same design to GPU-backed endpoints.&lt;/p&gt; 
-&lt;p&gt;A trade-off is that llama.cpp is the inference/deployment engine, but not the whole serving system. In Amazon SageMaker AI, you still need a container that behaves like an Amazon SageMaker AI endpoint. That wrapper layer does not require significant implementation effort, but it’s an important part of the production design.&lt;/p&gt; 
-&lt;h2 id="pattern-3-merged-weights-on-amazon-sagemaker-ai-with-gpu-optimized-serving-engines"&gt;Pattern 3: Merged weights on Amazon SageMaker AI with GPU-optimized serving engines&lt;/h2&gt; 
-&lt;p&gt;GGUF is excellent when model file size and lightweight serving are the priorities. It’s not always the right choice when you prioritize throughput and GPU efficiency. Merged weights become more attractive in those scenarios.&lt;/p&gt; 
-&lt;p&gt;Merged weights refer to a model saved as a single unified set of safetensors weights. This is often the result of combining a fine-tuned adapter (such as a Low-Rank Adaptation (LoRA), adapter) with the base model, but it also applies to base models saved directly in a deployment-ready format. Unsloth supports save paths for merged 16-bit and merged 4-bit outputs, along with LoRA-only exports. Those are more aligned with runtimes such as &lt;a href="https://docs.vllm.ai" target="_blank" rel="noopener"&gt;vLLM&lt;/a&gt; and &lt;a href="https://sgl-project.github.io" target="_blank" rel="noopener"&gt;SGLang&lt;/a&gt; that are built around production GPU serving patterns such as batching, high token throughput, and multi-GPU scaling.&lt;/p&gt; 
-&lt;p&gt;A representative export looks like this:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;model.save_pretrained_merged(
-    "finetuned_model",
-    tokenizer,
-    save_method="merged_16bit",
-)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;The serving path is:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-bash"&gt;vllm serve finetuned_model&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;On AWS, the LMI containers available for Amazon SageMaker AI are especially relevant here. For the full-precision endpoint in the &lt;a href="https://github.com/aws-samples/sample-quantized-ML-model-comparison" target="_blank" rel="noopener"&gt;companion sample&lt;/a&gt;, the LMI container for Amazon SageMaker AI is configured entirely through environment variables on the Terraform model resource:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-ini"&gt;HF_MODEL_ID = "Qwen/Qwen3-VL-8B-Instruct"
-OPTION_DTYPE = "bf16"
-OPTION_ROLLING_BATCH = "vllm"
-OPTION_TENSOR_PARALLEL_DEGREE = "4"
-OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;No custom container is needed. The LMI container downloads the model from &lt;a href="https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct" target="_blank" rel="noopener"&gt;Hugging Face&lt;/a&gt; at startup and serves it through vLLM with tensor parallelism across 4 A10G GPUs. Tensor parallelism splits a model across multiple GPUs so each GPU handles a portion of the computation in parallel. If the workload demands continuous batching, higher concurrency, or larger model footprints, a vLLM-style path is often a better production choice than a lightweight GGUF runtime. The deployment priorities shift from&lt;em&gt; fit the model cheaply&lt;/em&gt; to &lt;em&gt;serve the model efficiently at scale&lt;/em&gt;, and this pattern addresses that shift directly.&lt;/p&gt; 
-&lt;p&gt;A useful rule of thumb: use GGUF and llama.cpp when you want the lightest deployment path and the runtime fits the workload. Use merged weights (the combined base model and adapter output) with vLLM, SGLang, or an LMI backend when throughput, batching, concurrency, or hardware topology become the dominant constraints.&lt;/p&gt; 
-&lt;h2 id="pattern-4-use-amazon-eks-or-amazon-ecs-when-inference-must-fit-the-environment-you-already-run"&gt;Pattern 4: Use Amazon EKS or Amazon ECS when inference must fit the environment you already run&lt;/h2&gt; 
-&lt;p&gt;If you want inference to look like every other service you operate, running within the same orchestration, networking, and observability stack, this pattern fits. If you already standardize on Kubernetes or Amazon ECS, package the Unsloth runtime into that environment instead of introducing a separate serving surface only for models.&lt;/p&gt; 
-&lt;p&gt;This pattern is particularly useful when:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Inference needs to live next to other application services.&lt;/li&gt; 
- &lt;li&gt;You already have strong tooling around Amazon EKS or Amazon ECS.&lt;/li&gt; 
- &lt;li&gt;You have already standardized deployment, networking, observability, and security at the infrastructure layer.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;In those environments, the practical question becomes less “Should I use Amazon SageMaker AI?” and more “Which Unsloth export best fits the runtime I want to containerize?”&lt;/p&gt; 
-&lt;p&gt;For teams that need managed cluster infrastructure for large-scale model training and inference, &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod.html" target="_blank" rel="noopener"&gt;Amazon SageMaker HyperPod&lt;/a&gt; is also worth evaluating, though this post focuses on inference-only deployment patterns.&lt;/p&gt; 
-&lt;h2 id="operational-practices-that-matter-most"&gt;Operational practices that matter most&lt;/h2&gt; 
-&lt;p&gt;No matter which AWS path you choose, a few practices have an outsized effect on whether the deployment works well in production. For detailed guidance on each topic, see the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html" target="_blank" rel="noopener"&gt;Amazon SageMaker AI hosting documentation&lt;/a&gt;.&lt;/p&gt; 
-&lt;h3 id="keep-prompt-formatting-consistent-end-to-end"&gt;Keep prompt formatting consistent end to end&lt;/h3&gt; 
-&lt;p&gt;Inconsistent prompt formatting is one of the most common ways to misdiagnose a good model as a bad deployment. When an exported model behaves worse outside Unsloth, the problem is often not the quantization method. It’s usually a mismatch in the chat template, end-of-sequence (EOS) handling (the logic that tells the model when to stop generating tokens), or prompt structure between training and inference. If the model is coherent in one environment and unstable in another, check prompt formatting before investigating the model file. See the &lt;a href="https://unsloth.ai/docs/basics/chat-templates" target="_blank" rel="noopener"&gt;Unsloth chat templates documentation&lt;/a&gt; for details on export-time template configuration.&lt;/p&gt; 
-&lt;h3 id="benchmark-the-full-deployment-shape-not-only-the-quantization-level"&gt;Benchmark the full deployment shape, not only the quantization level&lt;/h3&gt; 
-&lt;p&gt;A quantization benchmark on its own isn’t enough. Real behavior depends on context length, concurrency, request mix, streaming behavior, startup path, and the runtime itself. A smaller model file might not produce the best production outcome if the application requires longer contexts or burstier traffic. Likewise, a more accurate model file might not be worth the extra memory cost if the workload is latency-sensitive and cost-constrained. Evaluate the full deployment picture: file size, runtime behavior, hardware fit, and request pattern. Amazon SageMaker AI also provides &lt;a href="https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-ai-now-supports-optimized-generative-ai-inference-recommendations/" target="_blank" rel="noopener"&gt;inference recommendations&lt;/a&gt; that can help you identify optimal instance types and configurations.&lt;/p&gt; 
-&lt;h3 id="use-stable-artifact-delivery"&gt;Use stable artifact delivery&lt;/h3&gt; 
-&lt;p&gt;After you finalize the model, promote it through a predictable storage path. On AWS, that usually means storing the chosen model file in &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-access-training-data.html" target="_blank" rel="noopener"&gt;Amazon S3&lt;/a&gt; and loading it from there rather than depending on runtime downloads from external sources during startup. That makes endpoint initialization more predictable and simplifies governance, especially in restricted network environments.&lt;/p&gt; 
-&lt;h3 id="monitor-the-service-not-only-the-model"&gt;Monitor the service, not only the model&lt;/h3&gt; 
-&lt;p&gt;Production performance is not only about token quality. It’s also about startup time, tail latency, concurrency, scaling behavior, and model-loading characteristics. Managed endpoints make this more visible because you can watch invocation metrics, concurrency behavior, and scaling signals directly through &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/monitoring-cloudwatch.html" target="_blank" rel="noopener"&gt;Amazon CloudWatch&lt;/a&gt;. On self-managed Amazon EC2 deployments, expose and track the equivalent signals.&lt;/p&gt; 
-&lt;h3 id="validate-the-container-contract-early"&gt;Validate the container contract early&lt;/h3&gt; 
-&lt;p&gt;If you’re deploying on Amazon SageMaker AI with a custom container, validate the container locally before you deploy it. Make sure /ping and /invocations behave correctly, the model loads from the expected path, and the runtime survives realistic prompt sizes. That step catches many integration issues before they turn into endpoint debugging sessions. See the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-inference-code.html" target="_blank" rel="noopener"&gt;Amazon SageMaker custom container guide&lt;/a&gt; for the full interface specification.&lt;/p&gt; 
-&lt;h3 id="design-for-security-and-networking-from-the-start"&gt;Design for security and networking from the start&lt;/h3&gt; 
-&lt;p&gt;Model serving often becomes part of a larger application environment, which means networking, &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/security-iam.html" target="_blank" rel="noopener"&gt;IAM role scoping&lt;/a&gt;, internet access, &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html" target="_blank" rel="noopener"&gt;AWS Key Management Service (AWS KMS) encryption&lt;/a&gt;, and VPC placement matter as much as runtime performance. Make these decisions up front rather than retrofitting them after the endpoint is already in use. Enable &lt;a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html" target="_blank" rel="noopener"&gt;AWS CloudTrail&lt;/a&gt; for API-level audit logging across deployed resources. See the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/infrastructure-security.html" target="_blank" rel="noopener"&gt;Amazon SageMaker infrastructure security documentation&lt;/a&gt; for VPC configuration and encryption guidance.&lt;/p&gt; 
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;The best way to deploy Unsloth-quantized models on AWS is to begin with the model file you actually want to serve. GGUF gives you a lightweight path into llama.cpp and llama-server, which makes Amazon EC2 the most direct place to validate a model and Amazon SageMaker AI a practical next step when you need managed endpoints. Merged weights give you a more natural path into vLLM, SGLang, and LMI containers when throughput and scale matter more than a minimal runtime.&lt;/p&gt; 
-&lt;p&gt;Although this post uses Qwen3-VL-8B-Instruct as the example, Unsloth supports a wide range of open-source model architectures including Llama, Qwen, Mistral, Gemma, and others. The deployment patterns apply regardless of which model you choose.&lt;/p&gt; 
-&lt;p&gt;That is the real advantage of combining Unsloth with AWS. You can adjust for cost, throughput, or environment fit without changing the core model workflow. Start with the model file, align it to the runtime, and then choose the AWS service that matches how you want to operate inference in production.&lt;/p&gt; 
-&lt;h3 id="next-steps"&gt;Next steps&lt;/h3&gt; 
-&lt;p&gt;To see these patterns in action, clone the &lt;a href="https://github.com/aws-samples/sample-quantized-ML-model-comparison" target="_blank" rel="noopener"&gt;companion GitHub repository&lt;/a&gt; and run terraform apply to deploy both a quantized GGUF endpoint and a full-precision vLLM endpoint on Amazon SageMaker AI. Terraform provisions the infrastructure and an Amazon SageMaker Notebook Instance with the repository pre-cloned, so you can start running the comparison notebook immediately.&lt;/p&gt; 
-&lt;p&gt;The notebook sends identical image prompts to both endpoints, demonstrating multimodal vision-language inference with Qwen3-VL, and produces side-by-side comparisons of output quality, latency, throughput, and cost. It also includes a benchmarking framework that evaluates both models against a structured dataset using objective quality metrics (exact match, BLEU, ROUGE-L). With this framework, you can quantify degradation from quantization rather than relying on subjective judgment. For automated instance selection and configuration tuning beyond what the notebook measures, Amazon SageMaker AI also provides &lt;a href="https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-ai-now-supports-optimized-generative-ai-inference-recommendations/" target="_blank" rel="noopener"&gt;inference recommendations&lt;/a&gt; that can identify optimal deployment configurations for your workload. To avoid ongoing charges when you are done, run terraform destroy to remove the provisioned resources.&lt;/p&gt; 
-&lt;p&gt;To learn more:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;a href="https://unsloth.ai/docs/basics/unsloth-dynamic-2.0-ggufs" target="_blank" rel="noopener"&gt;Unsloth Dynamic 2.0 GGUF documentation&lt;/a&gt; – quantization methods and export options.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://github.com/aws-samples/sample-quantized-ML-model-comparison" target="_blank" rel="noopener"&gt;Companion GitHub repository&lt;/a&gt; – Terraform templates, custom container code, and the comparison notebook.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/08/ML-20601-2.png" alt="Daniel Han" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Daniel Han&lt;/h3&gt; 
-  &lt;p&gt;Daniel is the co-founder of Unsloth and is passionate about open-source AI and local models. Having previously worked at NVIDIA, he has helped build Unsloth into one of the largest distributors of open models, with a mission to make open-source AI as accessible, efficient, and accurate as possible for everyone. Daniel has collaborated with leading model labs, including Google DeepMind and Meta, to help fix issues in open models such as Gemma, Llama, and Mistral. Unsloth’s broader goal is to strengthen the open-source AI ecosystem. Daniel also focuses on low-level optimization work, including writing custom kernels and Triton kernels to improve model training performance.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/08/ML-20601-3.png" alt="Michael Han" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Michael Han&lt;/h3&gt; 
-  &lt;p&gt;Michael is the co-founder of Unsloth, where he focuses on product, design, comms, and engineering to make open-source AI easier for everyone to use. With a strong passion for story-telling, Michael shapes Unsloth’s user experience, communication, and product direction to make training and running local models faster, simpler, and more accessible. Michael has collaborated with leading model labs, including Google DeepMind and Meta, to help distribute and fix issues in open models such as Gemma, Llama, and Mistral. Michael’s goal is to educate the world on the power of open models, make tools approachable for everyone, and support the broader open-source community.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/08/ML-20601-4.jpeg" alt="Michaelangelo Battaglia" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Michaelangelo Battaglia&lt;/h3&gt; 
-  &lt;p&gt;Michaelangelo is a Solutions Architect at AWS. He works with large-scale ISVs to design scalable AI solutions. He has a focus in GPUs, PyTorch, and custom deep learning ASICs.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/08/ML-20601-5.jpg" alt="Dylan Souvage" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Dylan Souvage&lt;/h3&gt; 
-  &lt;p&gt;Dylan is a Senior Partner Solutions Architect at AWS. Dylan loves working with customers to understand their business needs and help them in their cloud journey.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/08/ML-20601-6.jpeg" alt="Zoish Pithawala" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Zoish Pithawala&lt;/h3&gt; 
-  &lt;p&gt;Zoish is a Senior Startup Solutions Architect at Amazon Web Services based in San Francisco. She works with early-stage startups, helping them build AI-first products, design scalable and secure infrastructure, and make their first critical architecture decisions on AWS.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
 	</channel>
 </rss>
 
@@ -4193,7 +4134,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a56f3a635769"></universal-media-player>
+		<universal-media-player id="ump-6a5199ab21793"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -4207,7 +4148,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a56f3a635769", options);
+				ump("ump-6a5199ab21793", options);
 			});
 		</script>
 	</div>
@@ -5089,7 +5030,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a56f3a648945&quot;}" data-wp-interactive="core/image" data-wp-key="6a56f3a648945" class="wp-block-image aligncenter size-full wp-lightbox-container"><img fetchpriority="high" decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5199ab35226&quot;}" data-wp-interactive="core/image" data-wp-key="6a5199ab35226" class="wp-block-image aligncenter size-full wp-lightbox-container"><img fetchpriority="high" decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5435,7 +5376,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a56f3a6553b5&quot;}" data-wp-interactive="core/image" data-wp-key="6a56f3a6553b5" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5199ab4103f&quot;}" data-wp-interactive="core/image" data-wp-key="6a5199ab4103f" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6096,7 +6037,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a56f3a660dc9"></universal-media-player>
+		<universal-media-player id="ump-6a5199ab495d1"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6110,7 +6051,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a56f3a660dc9", options);
+				ump("ump-6a5199ab495d1", options);
 			});
 		</script>
 	</div>
@@ -6166,7 +6107,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a56f3a66154f"></universal-media-player>
+		<universal-media-player id="ump-6a5199ab49b76"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6180,7 +6121,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a56f3a66154f", options);
+				ump("ump-6a5199ab49b76", options);
 			});
 		</script>
 	</div>
@@ -6212,7 +6153,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a56f3a661924"></universal-media-player>
+		<universal-media-player id="ump-6a5199ab49e6d"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6226,7 +6167,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a56f3a661924", options);
+				ump("ump-6a5199ab49e6d", options);
 			});
 		</script>
 	</div>
@@ -6354,7 +6295,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a56f3a66ee74&quot;}" data-wp-interactive="core/image" data-wp-key="6a56f3a66ee74" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-2-2.png" alt="Chart showing trending AI agent tasks across AI, data, and cloud workflows. Highest-confidence use cases include automated report generation and distribution (84), certificate expiration monitoring and renewal (81.5), and boilerplate code generation for new features (82.5). Scores indicate strong confidence in automation for reporting, monitoring, code generation, and cloud operations tasks." class="wp-image-15378" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5199ab54a94&quot;}" data-wp-interactive="core/image" data-wp-key="6a5199ab54a94" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-2-2.png" alt="Chart showing trending AI agent tasks across AI, data, and cloud workflows. Highest-confidence use cases include automated report generation and distribution (84), certificate expiration monitoring and renewal (81.5), and boilerplate code generation for new features (82.5). Scores indicate strong confidence in automation for reporting, monitoring, code generation, and cloud operations tasks." class="wp-image-15378" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6402,7 +6343,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 <p class="wp-block-paragraph">What&#8217;s changing, and what remains underappreciated, is the skill it takes to draw that boundary well: the discipline of <a href="https://learn.microsoft.com/en-us/azure/foundry/how-to/evaluate-generative-ai-app">full-lifecycle evaluations</a> and <a href="https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview">guardrails</a>. Success means measuring agent output against intent and keeping behavior inside your business strategy. It&#8217;s new territory for most engineering teams, and it&#8217;s becoming table stakes for modern software faster than most organizations realize. The good news: the same tools generating the work can help you build the harness. <a href="https://docs.github.com/en/copilot/concepts/agents/github-copilot-app">Ask GitHub Copilot</a> to write the evals and it will. Frontier teams are already doing this, and it&#8217;s why they&#8217;re pulling ahead.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a56f3a6702f6&quot;}" data-wp-interactive="core/image" data-wp-key="6a56f3a6702f6" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-3-2.webp" alt="MIT Technology Review Insights survey chart titled &ldquo;Concerns are addressed by keeping humans in the loop and increasing observability.&rdquo; Respondents most frequently identified keeping humans in the loop (59%) and increasing observability/monitoring and tracing (53%) as key ways to address concerns around AI agents. Other approaches include creating privacy-governed documentation (42%), upskilling within one&rsquo;s craft (36%), addressing security and access control (33%), API and framework standardization (25%), identifying and communicating ROI (25%), scaling personal potential (16%), and accessing ecosystem support (11%)" class="wp-image-15379 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2019/02/1bbe5959-0e2e-4309-8079-3a71ce986e5e.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5199ab55bef&quot;}" data-wp-interactive="core/image" data-wp-key="6a5199ab55bef" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-3-2.webp" alt="MIT Technology Review Insights survey chart titled &ldquo;Concerns are addressed by keeping humans in the loop and increasing observability.&rdquo; Respondents most frequently identified keeping humans in the loop (59%) and increasing observability/monitoring and tracing (53%) as key ways to address concerns around AI agents. Other approaches include creating privacy-governed documentation (42%), upskilling within one&rsquo;s craft (36%), addressing security and access control (33%), API and framework standardization (25%), identifying and communicating ROI (25%), scaling personal potential (16%), and accessing ecosystem support (11%)" class="wp-image-15379 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2019/02/1bbe5959-0e2e-4309-8079-3a71ce986e5e.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6431,7 +6372,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a56f3a678207&quot;}" data-wp-interactive="core/image" data-wp-key="6a56f3a678207" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-4-2.png" alt="MIT Technology Review Insights survey chart showing confidence that AI agents will enhance careers across technology disciplines. System reliability and site operations has the highest confidence levels, while database administration and performance, security operations, and data integration roles show lower but still predominantly positive confidence. Across all roles, confidence significantly outweighs lack of confidence." class="wp-image-15380" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5199ab5d49f&quot;}" data-wp-interactive="core/image" data-wp-key="6a5199ab5d49f" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-4-2.png" alt="MIT Technology Review Insights survey chart showing confidence that AI agents will enhance careers across technology disciplines. System reliability and site operations has the highest confidence levels, while database administration and performance, security operations, and data integration roles show lower but still predominantly positive confidence. Across all roles, confidence significantly outweighs lack of confidence." class="wp-image-15380" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6769,7 +6710,7 @@ OPTION_MAX_MODEL_LEN = "4096"&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a56f3a686a77&quot;}" data-wp-interactive="core/image" data-wp-key="6a56f3a686a77" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" width="1280" height="720" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/metrics-dashboard-1.gif" alt="Scrolling through high C P U no index dashboard." class="wp-image-52357" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a5199ab69bc9&quot;}" data-wp-interactive="core/image" data-wp-key="6a5199ab69bc9" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" width="1280" height="720" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/metrics-dashboard-1.gif" alt="Scrolling through high C P U no index dashboard." class="wp-image-52357" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
