@@ -1,0 +1,41 @@
+name: backfill-company-strategy
+
+# 1회성 백필 전용 — 스케줄 없음, workflow_dispatch로 사용자가 직접 1회 실행.
+# 로컬 환경엔 ANTHROPIC_API_KEY가 없어 여기서 실행할 수 없었음 — 이미 GitHub repo secret으로
+# 등록된 키를 그대로 재사용하기 위해 Actions에서 실행하도록 분리. 백필 완료 후 이 워크플로 파일은
+# 삭제해도 무방(company-strategy.yml의 월간 실행과는 무관한 일회성 작업).
+on:
+  workflow_dispatch:
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # git push를 위해 필요
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # canonical_nodes 최근 1년치(since 필터)를 회사당 최대 40건으로 모아 1회 LLM 호출로 재집계
+      - name: Run company strategy backfill
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/backfill_company_strategy.py
+
+      - name: Commit backfilled company strategy data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/refined/company_summaries.json
+          git diff --staged --quiet || git commit -m "chore: one-time company strategy backfill (1yr lookback, 20260717)"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push
