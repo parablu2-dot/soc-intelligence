@@ -918,7 +918,9 @@ function modMatrix() {
 function modCategories() {
   const axes = ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'];
   const activeAxis = window._catActiveAxis || axes[0];
-  const cats = ['news','process','packaging','price','hiring'];
+  // process/packaging/price/hiring은 각각 공정·패키징 매트릭스 / 파운드리 캐파 / 인재·채용 레이더 전용 모듈에서
+  // 이미 축·카테고리 교차로 다룬다 — 이 화면은 축별 일반 뉴스 브라우징으로 범위를 좁혀 중복을 없앤다.
+  const cats = ['news'];
   const sigs = allSignals.filter(s => s.axis === activeAxis);
   const sections = cats.map(cat => {
     const catSigs = sigs.filter(s => s.category === cat);
@@ -931,7 +933,7 @@ function modCategories() {
       </div>`;
   }).join('');
   return `
-    ${header('SoC 카테고리 (5축)', '축 선택 후 카테고리별 신호 확인')}
+    ${header('SoC 카테고리 (5축)', '축 선택 후 일반 뉴스 확인 · 공정/패키징은 공정·패키징 매트릭스, 가격은 파운드리 캐파, 채용은 인재·채용 레이더 참고')}
     <div class="filters">
       ${axes.map(a =>
         `<button class="filter-btn ${a===activeAxis?'active':''}" onclick="catAxis(this,'${a}')">${axisLabel(a)}</button>`
