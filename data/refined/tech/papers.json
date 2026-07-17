@@ -2,6 +2,296 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.supr-con",
+    "title": "Magnetic Order in bilayer Ruddlesden-Popper Nickelates",
+    "url": "https://arxiv.org/abs/2607.15228v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "The recent discovery of high-temperature superconductivity in the bilayer nickelate La$_3$Ni$_2$O$_7$ has led to extensive interest in the correlation physics of its normal state. Given that the superconducitivity develops near a density wave order in the phase diagram, it is important to elucidate the nature of this order. Based on the accumulated experimental evidence for a bad metal state in proximity to an orbital-selective Mott phase, here we describe magnetic correlations of the system in ",
+    "authors": [
+      "Yiming Wang",
+      "Guijing Duan",
+      "Zhiguang Liao",
+      "Kuan-Sen Lin",
+      "Rong Yu",
+      "Qimiao Si"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Hyperfine driven spin relaxation of charge carriers in metal-halide perovskites",
+    "url": "https://arxiv.org/abs/2607.15224v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "Spin relaxation of localized charge carriers in semiconductors is primarily governed by hyperfine interaction with the surrounding nuclear spin bath. While this mechanism is well-established in III-V bulk materials and quantum dots, its critical role in metal halide perovskites (MHPs) has only recently emerged. Their inverted band structure induces an unusual hierarchy of hyperfine couplings, with hole interactions dominating electron interactions, particurlaly in Pb-based perovskites. Here, we ",
+    "authors": [
+      "Guillaume Lague",
+      "Frédérick Bernardot",
+      "Mauricio Calvo",
+      "Olfa Selmi",
+      "Sofia Masi",
+      "Christophe Testelin",
+      "Hernan Miguez",
+      "Ivan Mora-Sero",
+      "Maria Chamarro"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "NIFA: Nonlinear IMC enhanced FPGA for efficient ML inference",
+    "url": "https://arxiv.org/abs/2607.15123v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "Recent FPGAs have improved deep learning (DL) inference efficiency through dedicated tensor blocks and in-BRAM computation. ReRAM-based analog in-memory computing (IMC) pushes efficiency further, offering an order-of-magnitude improvement in compute density and energy efficiency over conventional digital logic by performing vector-matrix multiplication (VMM) directly within the ReRAM crossbar; prior work has integrated such IMC blocks into FPGAs for DL inference. However, conventional IMC design",
+    "authors": [
+      "Jiajun Hu",
+      "Ruthwik Reddy Sunketa",
+      "Lei Zhao",
+      "Archit Gajjar",
+      "Luca Buonanno",
+      "Aman Arora"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Pattern-Guided Design Space Exploration for FPGA Accelerator Design",
+    "url": "https://arxiv.org/abs/2607.15068v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "High-level synthesis (HLS) raises the abstraction level of FPGA accelerator design from hardware description languages to C/C++, but high-quality results still depend on schedule decisions such as pipelining, unrolling, tiling, reordering, and buffering. These decisions create a combinatorial design space, while many numerical kernels exhibit recurring computation patterns that suggest different optimization strategies. This paper presents PATTERNDSE, a lightweight pattern-guided design space ex",
+    "authors": [
+      "Jialiang Zhang",
+      "Weiman Yan",
+      "Yuelin Zou"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "Interaction energies of H$_2$ and CO on transition-metal surfaces computed by a range-separated hybrid van der Waals density functional",
+    "url": "https://arxiv.org/abs/2607.15066v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "Dissociative chemisorption (DC) of H$_2$ on the Cu(111) surface is a prototypical problem for understanding elements of heterogeneous catalysis [Science 326, 832 (2009)]. The challenge lies in modeling the reaction dynamics that in turn reflects a classical potential for atomic deformations, friction, and inelastic scattering. Here, I test the use of a set of range-separated hybrid (RSH) van der Waals density functionals (vdW-DFs) [JPCM 37, 211501 (2025)] on their ability to describe the classic",
+    "authors": [
+      "Per Hyldgaard"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CE",
+    "title": "Neural operators solve inverse problems for constitutive model discovery",
+    "url": "https://arxiv.org/abs/2607.15049v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "Characterizing the mechanical response of materials traditionally requires solving optimization problems in which model parameters are calibrated or trained to minimize the discrepancy between model predictions and experimental data. This process can be computationally expensive and time-consuming. To overcome this limitation, we propose two neural operator architectures that directly map experimentally measured data to the constitutive functions governing the mechanical response of the material",
+    "authors": [
+      "Moritz Flaschel",
+      "Burigede Liu",
+      "Ellen Kuhl"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Differentiable Routability-Driven Package Floorplanning with Pin Assignment",
+    "url": "https://arxiv.org/abs/2607.15005v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "As advanced packaging technology evolves, increasing interconnect density in redistribution layers (RDLs) makes routability critical to package floorplanning. Meanwhile, power integrity requirements often reserve fan-in regions for the power delivery network (PDN), forcing signal nets through fan-out regions and complicating routability estimation. Existing uniform grid-based congestion models cannot accurately characterize fan-out congestion, while previous pin assignment methods struggle to ev",
+    "authors": [
+      "Yiqi Huang",
+      "Zepeng Li",
+      "Zhen Zhuang",
+      "Kehao Chen",
+      "Genggeng Liu",
+      "Tsung-Yi Ho"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Achievable-Rate Analysis of MISO Systems with Transmit-Side Multiport Matching Networks",
+    "url": "https://arxiv.org/abs/2607.14992v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "Characterizing communication performance under the physical constraints imposed by radio frequency front-end circuits is essential for bridging communication-theoretic analysis and practical circuit design. In this work, we investigate the achievable-rate upper bound of a multiple-input single-output (MISO) system with a transmitter-side interconnected multiport matching network (MMN) under multiport Bode--Fano constraints and develop a rate-oriented MMN circuit realization method. First, based ",
+    "authors": [
+      "Wendong Cheng",
+      "Li Chen",
+      "Weidong Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "CODA: Algorithm-Hardware Co-design for Edge Video Diffusion via NMP-Enabled Compute-Cache Operator Disaggregation",
+    "url": "https://arxiv.org/abs/2607.14908v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "Deploying Video Diffusion Models (VDMs) on edge devices is appealing for localized and privacy-preserving generation, but their iterative Transformer-based denoising remains too slow for practical local inference. Cross-Timestep Caching (CTC) has emerged as a promising direction for reducing redundant computation, reusing activations across adjacent denoising steps rather than modifying model weights, while largely preserving generation fidelity. However, on memory-constrained edge GPUs, CTC req",
+    "authors": [
+      "Yuanpeng Zhang",
+      "YuXuan Wu",
+      "Yitong Xiao",
+      "Chenhao Xue",
+      "Yi Ren",
+      "Cong Li",
+      "Yihan Yin",
+      "Dimin Niu",
+      "Guangyu Sun"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "SevenNet-Polar for MultiTask Prediction of Energy, Forces, Stress, and Born Effective Charges: Development and Application to ZrO$_2$, Li$_3$PO$_4$, and Perovskites",
+    "url": "https://arxiv.org/abs/2607.14827v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "Accurate prediction of the Born effective charge (BEC) tensor is crucial for modeling materials under electric fields but remains computationally expensive. To bridge this gap, we present SevenNet-Polar, an equivariant graph neural network framework based on the SevenNet architecture for fast and accurate BEC predictions. Our BEC-only predictors can achieve an RMSE as low as 0.0043 e on ZrO$_2$, Li$_3$PO$_4$, and perovskites, despite the presence of high-temperature (up to 2,000 K) and defect-la",
+    "authors": [
+      "Anh Khoa Augustin Lu",
+      "Shungo Arai",
+      "Yutack Park",
+      "Seungwu Han",
+      "Tsuyoshi Miyazaki",
+      "Satoshi Watanabe"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Toward Energy-Efficient and Low-Power Arrhythmia Detection for Wearable Devices",
+    "url": "https://arxiv.org/abs/2607.14747v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "Cardiovascular diseases are the leading cause of death worldwide, and conditions such as arrhythmia often require long-term monitoring for effective detection and diagnosis. However, current wearable monitoring devices are bulky, uncomfortable, and typically rely on clinicians to manually evaluate electrocardiograms (ECGs). While Deep Learning (DL) algorithms have shown superior performance in arrhythmia detection and classification, their computational complexity coupled with high power consump",
+    "authors": [
+      "Floriaan Bulten",
+      "Yawar Rasheed",
+      "Arlene John",
+      "Vincenzo Stoico",
+      "Ghayoor Gillani"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Tunable Magneto-Excitonic Coupling in Alloyed van der Waals Antiferromagnet",
+    "url": "https://arxiv.org/abs/2607.14723v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "The unique coupling between magnetic order and photo-generated excitons, electron-hole pairs bound by Coulomb interaction, in layered magnetic semiconductors offers a powerful mechanism for controlling light-matter interactions. In the van der Waals antiferromagnet CrSBr, this coupling is exceptionally strong and manifests distinctly between two coexisting excitonic states: the localised, Frenkel-like XA exciton and the more delocalised, Wannier-Mott-like XB exciton, providing a unique playgroun",
+    "authors": [
+      "Maciej Smiertka",
+      "Oliwia Janikowska",
+      "Katarzyna Olkowska-Pucko",
+      "Grzegorz Krasucki",
+      "Katarzyna Posmyk",
+      "Paulina Peksa",
+      "Alessandro Surrente",
+      "Dimitar Pashov",
+      "Kseniia Mosina",
+      "Zdenek Sofer",
+      "Mark van Schilfgaarde",
+      "Adam Babinski",
+      "Maciej R. Molas",
+      "Gabriela Komorowska",
+      "Esteban Zamora-Amo",
+      "Andres Castellanos-Gomez",
+      "Federico Mompean",
+      "Mar Garcia-Hernandez",
+      "Michal Baranowski",
+      "Swagata Acharya",
+      "Paulina Plochocka"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Direct observation of anisotropic exciton dispersion in the 2D semiconductor CrSBr",
+    "url": "https://arxiv.org/abs/2607.14712v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "We report momentum-resolved measurements of exciton dispersion in multilayer CrSBr using defocus-engineered electron energy-loss spectroscopy, supported by first-principles calculations. A pronounced in-plane anisotropy is observed, with the exciton exhibiting a linear dispersion along $Γ$Y within $\\lvert \\boldsymbol{q} \\rvert$ < 0.007 Å$^{-1}$, while remaining nearly dispersionless along $Γ$X. The slope reaches 7.02 eV Å, among the largest reported in low-dimensional systems. The calculations r",
+    "authors": [
+      "Yiwen Song",
+      "Peiyi He",
+      "Weizhe Zhang",
+      "Wenyuan Ouyang",
+      "Wenjing Liu",
+      "Jinlong Du",
+      "Zuxin Chen",
+      "Jiuyu Sun",
+      "Peng Gao",
+      "Yu Ye"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Efficient Quantum Algorithm for Phase Optimization of 1-Bit RIS-Assisted MIMO Communication System",
+    "url": "https://arxiv.org/abs/2607.14700v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "We propose a Quantum Approximate Optimization Algorithm with a deterministic linear ramp schedule (QAOA-LR) for phase optimization of a 1-bit RIS-assisted MIMO communication system. Each RIS element is restricted to a binary phase shift of 0 or π, turning the passive beamforming design problem with N elements into a combinatorial optimization problem over 2^N configurations. Instead of running a classical optimizer, QAOA-LR uses a fixed linear ramp to set the variational parameters across p laye",
+    "authors": [
+      "Soumyadip Paul",
+      "Neel Kanth Kundu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "ExaGEMM: Exploration Framework for CPU-Driven ML Inference via Associative In-Register Computing for Low-Bit GEMM",
+    "url": "https://arxiv.org/abs/2607.14622v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "Low-bit GEMM is increasingly central to efficient ML inference, yet very-low-bit execution remains a poor fit for conventional CPUs. Practical deployment spans fragmented regimes-from 1/2/4-bit weights to varying activation precision-whose feasibility, reuse opportunity, and support cost differ under fixed SIMD and register-file budgets, making lightweight CPU support selection a first-class design problem. We present ExaGEMM, a workload-aware codesign and exploration framework for CPU-native lo",
+    "authors": [
+      "Hyunwoo Oh",
+      "Suyeon Jang",
+      "Hanning Chen",
+      "Sanggeon Yun",
+      "Ryozo Masukawa",
+      "Mohsen Imani"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Adaptive Score-Based VAMP: Self-Tuning Hyperparameters via Tilted EM",
+    "url": "https://arxiv.org/abs/2607.14597v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "Approximate-message-passing methods offer fast Bayesian inference for high-dimensional inverse problems, but their performance and state-evolution predictions rely on correctly specified module parameters. This paper develops an adaptive version of score-based vector approximate message passing (SC-VAMP). Each parameterized factor is updated by a local tilted expectation-maximization (EM) step that reuses the tilted moments already computed by the single-input single-output module interface. Und",
+    "authors": [
+      "Siqi Na",
+      "Tadashi Wadayama"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "quant-ph",
     "title": "Cluster-configurational study of G-center in Silicon",
     "url": "https://arxiv.org/abs/2607.14083v1",
