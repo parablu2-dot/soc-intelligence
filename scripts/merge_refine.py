@@ -138,114 +138,11 @@ def run() -> None:
             conn.commit()
             print(f"[merge_refine] done — ok={ok} fail={fail}")
 
-        # merged 판정 유무와 무관하게 항상 회사별 요약 생성
-        _generate_company_summaries(conn, client)
+        # 업체별 전략 요약(company_summaries.json)은 scripts/company_strategy.py로 분리,
+        # company-strategy.yml에서 월 1회 별도 실행 (daily 재생성 불필요 — Phase 6, 20260717)
 
     finally:
         conn.close()
-
-
-_SUMMARY_TOOL: dict = {
-    "name": "company_summary",
-    "description": "Generate a competitive intelligence summary for a semiconductor company in English, Simplified Chinese, and Korean",
-    "input_schema": {
-        "type": "object",
-        "properties": {
-            "summary_en": {
-                "type": "string",
-                "description": "2-3 sentence competitive intelligence summary focusing on strategy, roadmap, and market position",
-            },
-            "summary_zh": {
-                "type": "string",
-                "description": "Faithful translation of summary_en into Simplified Chinese — same facts, no additions or omissions",
-            },
-            "summary_ko": {
-                "type": "string",
-                "description": "Faithful translation of summary_en into Korean — same facts, no additions or omissions",
-            },
-        },
-        "required": ["summary_en", "summary_zh", "summary_ko"],
-        "additionalProperties": False,
-    },
-}
-
-_SUMMARY_PROMPT = """\
-You are a semiconductor competitive intelligence analyst at SK hynix.
-
-Company: {company}
-Recent signals (newest first):
-{headlines}
-
-Write a 2-3 sentence competitive intelligence summary of this company's current strategic direction and market activity (summary_en).
-Focus on technology roadmap, capacity moves, partnerships, and competitive positioning.
-Do NOT include hiring news. Do NOT use filler phrases like "Based on recent signals".
-Be concise and specific to observable facts.
-
-Then provide the SAME summary faithfully translated into Simplified Chinese (summary_zh) and Korean (summary_ko).
-Do not add or omit facts between language versions — they must convey identical information.
-"""
-
-_DATA_REFINED = ROOT / "data" / "refined"
-
-
-def _generate_company_summaries(conn, client) -> None:
-    """canonical_nodes를 회사별로 집계 → LLM 요약 → data/refined/company_summaries.json."""
-    from collections import defaultdict
-
-    rows = conn.execute(
-        "SELECT company, title, updated_at FROM canonical_nodes "
-        "WHERE company != 'hiring' "
-        "ORDER BY updated_at DESC"
-    ).fetchall()
-
-    by_company: dict[str, list[str]] = defaultdict(list)
-    for row in rows:
-        if len(by_company[row["company"]]) < 10:
-            by_company[row["company"]].append(row["title"])
-
-    print(f"[company_summaries] {len(by_company)} companies to summarise")
-    now_ts = datetime.now(timezone.utc).isoformat()
-    summaries: dict = {}
-    ok = fail = skip = 0
-
-    for company, headlines in by_company.items():
-        if len(headlines) < 2:
-            skip += 1
-            continue
-        prompt = _SUMMARY_PROMPT.format(
-            company=company,
-            headlines="\n".join(f"- {h}" for h in headlines),
-        )
-        try:
-            resp = client.messages.create(
-                model="claude-haiku-4-5-20251001",
-                max_tokens=768,  # 3개 언어(en/zh/ko) 요약 전체를 담기엔 256이 부족해 응답이 잘려 필드가 누락되던 근본 원인
-                messages=[{"role": "user", "content": prompt}],
-                tools=[_SUMMARY_TOOL],
-                tool_choice={"type": "tool", "name": "company_summary"},
-            )
-            tool_block = next(b for b in resp.content if b.type == "tool_use")
-            summaries[company] = {
-                "summary": tool_block.input.get("summary_en", ""),  # 하위호환 기본값 (구 프론트/캐시)
-                "summary_en": tool_block.input.get("summary_en", ""),
-                "summary_zh": tool_block.input.get("summary_zh", ""),  # A-2에서 ko/en로 재편, zh 유지 안 함
-                "summary_ko": tool_block.input.get("summary_ko", ""),
-                "signal_count": len(headlines),
-                "generated_at": now_ts,
-            }
-            ok += 1
-        except Exception as exc:
-            print(f"::warning::company_summaries [{company}] failed: {exc}")
-            fail += 1
-
-    out = {
-        "generated_at": now_ts,
-        "summaries": summaries,
-    }
-    out_path = _DATA_REFINED / "company_summaries.json"
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"[company_summaries] ok={ok} fail={fail} skip={skip} → {out_path}")
 
 
 if __name__ == "__main__":
