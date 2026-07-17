@@ -1,9 +1,11 @@
 """
 send_review_mail.py — 일일 리뷰 메일링 (Phase 6, self-test → B-1 ko content 조립).
 
-data/refined/daily_top5.json, sector_summaries.json(content.ko, A-2 구조화 스키마)을
+data/refined/daily_top5.json, sector_summaries.json(content.{ko,en}, A-2 구조화 스키마)을
 그대로 이메일 본문으로 렌더한다. 재계산·재요약·LLM 호출 없음 (runtime-token-zero 유지).
-메일은 KO 고정 발송 — 메일 클라이언트가 JS 토글을 지원하지 않으므로 영문은 사이트 토글로 유도.
+메일은 한글판 + 영문판을 한 메일에 순서대로 병기 발송 (20260717 후속 작업지시서 — 메일
+클라이언트가 JS 토글을 지원하지 않아 사이트 토글로 유도하던 방식 대신, 이미 커밋된
+content.ko/content.en을 그대로 둘 다 렌더).
 수신자는 천 1인 — 구독자 시스템 없음(YAGNI). 발송 실패해도 워크플로 전체가 죽지 않도록
 이 스크립트 자체도 예외를 삼키고 항상 exit 0 (워크플로 쪽 continue-on-error와 이중 격리).
 """
@@ -40,8 +42,8 @@ def _load_json(path: Path) -> dict:
         return {}
 
 
-def _sector_block_html(axis: str, info: dict) -> str:
-    content = (info.get("content") or {}).get("ko") or {}
+def _sector_block_html(axis: str, info: dict, lang: str) -> str:
+    content = (info.get("content") or {}).get(lang) or {}
     if not content:
         return ""
     label = info.get("sector") or _AXIS_LABELS.get(axis, axis)
@@ -71,7 +73,8 @@ def _build_html(top5: list[dict], sectors: dict, date: str) -> str:
         for i, t in enumerate(top5)
     )
 
-    sector_blocks = "".join(_sector_block_html(axis, info) for axis, info in sectors.items())
+    sector_blocks_ko = "".join(_sector_block_html(axis, info, "ko") for axis, info in sectors.items())
+    sector_blocks_en = "".join(_sector_block_html(axis, info, "en") for axis, info in sectors.items())
 
     return f"""\
 <div style="font-family:-apple-system,Segoe UI,Arial,sans-serif;background:#0d1117;color:#e6edf3;padding:20px;max-width:640px;margin:0 auto">
@@ -81,12 +84,16 @@ def _build_html(top5: list[dict], sectors: dict, date: str) -> str:
   <div style="font-size:12px;font-weight:600;color:#58a6ff;margin-bottom:8px">★ 일일 Summary — Top 5</div>
   <table style="width:100%;border-collapse:collapse;margin-bottom:20px">{top5_rows}</table>
 
-  <div style="font-size:12px;font-weight:600;color:#58a6ff;margin-bottom:8px">◉ 섹터별 요약</div>
-  {sector_blocks}
+  <div style="font-size:12px;font-weight:600;color:#58a6ff;margin-bottom:8px">◉ 섹터별 요약 (한국어)</div>
+  {sector_blocks_ko}
+
+  <div style="margin:20px 0;border-top:1px solid #30363d"></div>
+
+  <div style="font-size:12px;font-weight:600;color:#58a6ff;margin-bottom:8px">◉ Sector Summary (English)</div>
+  {sector_blocks_en}
 
   <div style="margin-top:20px;padding-top:12px;border-top:1px solid #30363d;font-size:12px">
-    <a href="{SITE_URL}" style="color:#58a6ff">{SITE_URL}</a><br>
-    <span style="color:#8b949e">영문 요약은 사이트 상단 KO/EN 토글에서 확인하세요.</span>
+    <a href="{SITE_URL}" style="color:#58a6ff">{SITE_URL}</a>
   </div>
 </div>"""
 

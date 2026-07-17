@@ -1,0 +1,42 @@
+name: company-strategy
+
+on:
+  schedule:
+    # 매월 1일 20:00 UTC (KST 2일 05:00) — 업체별 전략 요약은 daily crawl보다 cadence가 느려 월 1회로 분리
+    - cron: '0 20 1 * *'
+  workflow_dispatch:  # 수동 트리거 — 첫 실행은 이걸로 확인
+
+jobs:
+  company-strategy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # git push를 위해 필요
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # data/soc.db(canonical_nodes) 기준 회사별 헤드라인 집계 → LLM 요약, 유일한 LLM 호출 지점
+      - name: Generate company strategy summaries
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/company_strategy.py
+
+      # data/refined/company_summaries.json만 커밋 — 다음 daily crawl-and-build의 deploy job이
+      # site/data/refined로 복사해 배포함 (이 워크플로는 자체 배포 없음, 지연 최대 1일)
+      - name: Commit company strategy data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/refined/company_summaries.json
+          git diff --staged --quiet || git commit -m "chore: company strategy refresh $(date -u +'%Y-%m-%d')"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push

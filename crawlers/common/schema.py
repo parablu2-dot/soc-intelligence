@@ -121,14 +121,14 @@ class DistillationNote:
 
 @dataclass
 class TechSignal:
-    """기술 소스(논문·특허) — Phase 5, item 3. 뉴스 파이프라인(RefinedSignal)과 분리된
-    별도 source class. axis/company 없음 — 경쟁사 축이 아니라 기술 자체가 단위.
+    """기술 소스(논문·특허·언어권 뉴스) — Phase 5, item 3 + 20260717 후속(zh 뉴스). 뉴스 파이프라인
+    (RefinedSignal)과 분리된 별도 source class. axis/company 없음 — 경쟁사 축이 아니라 기술 자체가 단위.
     저volocity·고신호라 dedup_gate/merge_refine을 거치지 않고 URL 기준 누적만 한다
     (켜뮤 증류 후보 stratum). 저장: data/refined/tech/{source_class}.json
     """
     lens: str              # "tech" 고정 — 뉴스 lens와 구분
-    source_class: str      # "paper" | "patent" | "journal"
-    category: str          # arXiv: "cs.AR" 등 원본 분류 코드
+    source_class: str      # "paper" | "patent" | "journal" | "news"
+    category: str          # arXiv: "cs.AR" 등 원본 분류 코드, news류는 고정 태그(예: "zh_news")
     title: str
     url: str
     published_date: str    # "YYYY-MM-DD"

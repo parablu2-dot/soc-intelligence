@@ -36,9 +36,13 @@ jobs:
         # 일부 크롤러 실패해도 수집된 데이터는 저장
         run: python -m crawlers.run_all || true
 
-      # ── 1.5 기술 소스(논문) — 뉴스 파이프라인과 분리된 별도 stratum, LLM 미개입 ─
+      # ── 1.5 기술 소스(논문·zh 뉴스) — 뉴스 파이프라인과 분리된 별도 stratum, LLM 미개입 ─
       - name: Run tech sources (arXiv papers)
         run: python -m crawlers.tech.arxiv || true
+
+      # 20260717 후속 — Baidu는 robots.txt 전면 차단(불가), Google News zh로 대체
+      - name: Run tech sources (Google News zh)
+        run: python -m crawlers.tech.googlenews_zh || true
 
       # ── 2. Dedup Gate (임베딩 dedup + lineage) ────────────────
       - name: Run dedup gate
@@ -55,13 +59,6 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/summarize_sectors.py
-
-      # ── 4. 1차 증류 메모 → 축·카테고리별 요약 (data/distillation_notes.json
-      #      이 없으면 스킵 — 프론트 "메모 내보내기" 버튼으로 수동 커밋 필요) ─
-      - name: Run distillation summary
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scripts/summarize_distillation.py
 
       # ── 5. canonical → data/refined/ JSON export ──────────────
       - name: Export refined JSON

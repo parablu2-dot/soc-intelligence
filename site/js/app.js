@@ -36,6 +36,9 @@ const DATA_SOURCES = [
 
 const DATA_BASE = window.location.pathname.startsWith('/site/') ? '../data' : 'data';
 
+// TechSignal 소스 (axis/company 없음 — data/refined/tech/*.json, 20260717 후속)
+const TECH_SOURCES = ['papers.json', 'news_zh.json'];
+
 // ── 5축 업체 관계 데이터 (생태계 그래프) ─────────────────────────────────
 const _ECO_RELATIONS = [
   // 파운드리 공급 관계
@@ -114,13 +117,12 @@ let _artSignals = { en: [], zh: [], kr: [] };  // 기사 탭 별 신호 캐시 (
 let crawlStatus = [];
 let currentModule = 'today';
 let reviewedSet = new Set(JSON.parse(localStorage.getItem('reviewed') || '[]'));
-let distillationNotes = JSON.parse(localStorage.getItem('distillation_notes') || '[]');
-let distillationSummaries = {};  // {"axis||category": {content:{ko,en}, note_count, generated_at}} — A-2 구조화 스키마
 let baselineNotes = [];  // BaselineNote[] — data/baseline/notes/*.md 빌드타임 파싱 (장문 deep-research 노트, ko 고정)
 let versionInfo = null;  // data/refined/version.json — 단일 진실원 (version/date/maturity)
 let sectorSummaries = {};  // {axis: {sector, content:{ko,en}, item_count, generated_at}} — A-2 구조화 스키마
-let summaryLang = 'ko';  // B-2: 섹터 요약/1차 증류 ko↔en 정적 토글 (클라이언트 메모리만, storage 미사용)
+let summaryLang = 'ko';  // B-2: 섹터 요약 ko↔en 정적 토글 (클라이언트 메모리만, storage 미사용)
 let dailyTop5 = [];  // [{axis, company, headline, url, source, published_date, score}] — Phase 3 item 7
+let techSignals = [];  // TechSignal[] — data/refined/tech/*.json (axis/company 없음, arXiv 논문 + Google News zh, 20260717 후속)
 
 // ── 부트스트랩 ─────────────────────────────────────────────────────────────
 async function boot() {
@@ -167,9 +169,6 @@ async function loadAllData() {
   const sumLoad = fetch(`${DATA_BASE}/refined/company_summaries.json`)
     .then(r => r.ok ? r.json() : {})
     .catch(() => {});
-  const distLoad = fetch(`${DATA_BASE}/refined/distillation_summaries.json`)
-    .then(r => r.ok ? r.json() : {})
-    .catch(() => ({}));
   const baselineNotesLoad = fetch(`${DATA_BASE}/refined/baseline_notes.json`)
     .then(r => r.ok ? r.json() : {})
     .catch(() => ({}));
@@ -182,17 +181,20 @@ async function loadAllData() {
   const top5Load = fetch(`${DATA_BASE}/refined/daily_top5.json`)
     .then(r => r.ok ? r.json() : null)
     .catch(() => null);
+  const techLoads = TECH_SOURCES.map(f =>
+    fetch(`${DATA_BASE}/refined/tech/${f}`).then(r => r.ok ? r.json() : []).catch(() => [])
+  );
 
-  const [results, capData, sumData, distData, baselineNotesData, versionData, sectorSumData, top5Data] =
-    await Promise.all([Promise.all(loads), capLoad, sumLoad, distLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load]);
+  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data, techResults] =
+    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load, Promise.all(techLoads)]);
   allSignals = results.flat().sort((a, b) => b.published_date.localeCompare(a.published_date));
   capacityRecords = capData;
   companySummaries = sumData || {};
-  distillationSummaries = distData?.summaries || {};
   baselineNotes = baselineNotesData?.notes || [];
   versionInfo = versionData;
   sectorSummaries = sectorSumData?.sectors || {};
   dailyTop5 = top5Data?.top5 || [];
+  techSignals = techResults.flat().sort((a, b) => (b.published_date || '').localeCompare(a.published_date || ''));
   document.getElementById('crawl-time').textContent =
     `신호 ${allSignals.length}건 · 캐파 ${capacityRecords.length}건 · ${new Date().toLocaleString('ko-KR')}`;
   document.getElementById('update-time').textContent =
@@ -343,182 +345,25 @@ function _dailyTop5Panel() {
     </div>`;
 }
 
-// ── 1. 오늘의 요약 (드릴다운) ─────────────────────────────────────────────
+// ── 1. 오늘의 요약 (섹터별 요약 · 당일 수집분) ─────────────────────────────
 function modToday() {
-  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
-  const recent = allSignals.filter(s => s.published_date >= yesterday);
-  const byAxis = {};
-  ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'].forEach(a => {
-    byAxis[a] = recent.filter(s => s.axis === a);
-  });
   return `
-    ${header('오늘의 요약', `지난 24시간 신호 ${recent.length}건 — 카드 클릭으로 필터`)}
-    ${_dailyTop5Panel()}
-    <div class="stat-grid">
-      ${['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'].map(a =>
-        `<div class="stat-card stat-card-clickable" onclick="todayDrill('axis','${a}',this)">
-          <div class="stat-value">${byAxis[a].length}</div>
-          <div class="stat-label">${axisLabel(a)}</div>
-        </div>`
-      ).join('')}
-      <div class="stat-card stat-card-clickable" onclick="todayDrill('cat','process',this)">
-        <div class="stat-value">${recent.filter(s=>s.category==='process').length}</div>
-        <div class="stat-label">공정 노드</div>
-      </div>
-      <div class="stat-card stat-card-clickable" onclick="todayDrill('cat','price',this)">
-        <div class="stat-value">${recent.filter(s=>s.category==='price').length}</div>
-        <div class="stat-label">가격</div>
-      </div>
+    ${header('오늘의 요약', '섹터별 요약 (당일 수집분) — 빌드타임 LLM 생성, 5축 기준')}
+    <div style="margin-bottom:10px">
+      <button class="filter-btn" onclick="toggleSummaryLang()">${summaryLang === 'ko' ? 'KO → EN' : 'EN → KO'}</button>
+      <span style="font-size:11px;color:var(--text-muted);margin-left:8px">섹터 요약 언어 전환 (정적, 커밋된 번역만 표시)</span>
     </div>
-    <div id="today-list">${signalList(recent.slice(0, 30))}</div>`;
+    ${_dailyTop5Panel()}
+    ${_sectorSummariesPanel()}`;
 }
-
-// ── Baseline Notes (deep-research 장문 노트, data/baseline/notes/*.md) ───
-function _escHtml(s) {
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
-
-function _mdInline(s) {
-  return s
-    .replace(/`([^`]+)`/g, '<code>$1</code>')
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/\[\[([^\]]+)\]\]/g, '<span class="wikilink">$1</span>');
-}
-
-// 아주 가벼운 markdown → HTML 변환. 헤더/굵게/인용/목록/표/구분선만 지원 (풀 CommonMark 아님).
-function _mdLite(md) {
-  const lines = _escHtml(md).split('\n');
-  let html = '';
-  let i = 0;
-  let inList = false;
-
-  const closeList = () => { if (inList) { html += '</ul>'; inList = false; } };
-
-  const isTableSep = line => /^\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?$/.test(line.trim());
-
-  while (i < lines.length) {
-    const line = lines[i];
-
-    if (!line.trim()) { closeList(); i++; continue; }
-
-    const h = line.match(/^(#{1,4})\s+(.*)$/);
-    if (h) {
-      closeList();
-      const level = Math.min(h[1].length + 2, 6); // 문서 h1 → h3 정도로 낮춰 카드 안에서 과하지 않게
-      html += `<h${level}>${_mdInline(h[2])}</h${level}>`;
-      i++; continue;
-    }
-
-    if (line.startsWith('|') && lines[i + 1] && isTableSep(lines[i + 1])) {
-      closeList();
-      const headCells = line.split('|').slice(1, -1).map(c => c.trim());
-      html += '<table class="md-table"><thead><tr>' +
-        headCells.map(c => `<th>${_mdInline(c)}</th>`).join('') + '</tr></thead><tbody>';
-      i += 2;
-      while (i < lines.length && lines[i].trim().startsWith('|')) {
-        const cells = lines[i].split('|').slice(1, -1).map(c => c.trim());
-        html += '<tr>' + cells.map(c => `<td>${_mdInline(c)}</td>`).join('') + '</tr>';
-        i++;
-      }
-      html += '</tbody></table>';
-      continue;
-    }
-
-    if (/^-{3,}$/.test(line.trim())) { closeList(); html += '<hr>'; i++; continue; }
-
-    const bq = line.match(/^>\s?(.*)$/);
-    if (bq) { closeList(); html += `<blockquote>${_mdInline(bq[1])}</blockquote>`; i++; continue; }
-
-    const li = line.match(/^[-*]\s+(?:\[( |x)\]\s+)?(.*)$/);
-    if (li) {
-      if (!inList) { html += '<ul>'; inList = true; }
-      const checkbox = li[1] !== undefined ? `${li[1] === 'x' ? '☑' : '☐'} ` : '';
-      html += `<li>${checkbox}${_mdInline(li[2])}</li>`;
-      i++; continue;
-    }
-
-    closeList();
-    html += `<p>${_mdInline(line)}</p>`;
-    i++;
-  }
-  closeList();
-  return html;
-}
-
-function _baselineNoteCard(note) {
-  const tags = (note.tags || []).map(t => `<span class="chip chip-note">${t}</span>`).join('');
-  const statusLabel = note.status ? `<span class="chip chip-note-status">${note.status}</span>` : '';
-  return `
-    <div class="baseline-note-card">
-      <div class="baseline-note-head" onclick="toggleBaselineNote('${note.id}')">
-        <div>
-          <div class="baseline-note-topic">${note.topic}</div>
-          <div class="baseline-note-meta">${note.axis || ''} ${note.date ? '· ' + note.date : ''}</div>
-        </div>
-        <div>${statusLabel}${tags}</div>
-      </div>
-      <div id="bn-body-${note.id}" class="baseline-note-body" style="display:none">${_mdLite(note.body_md)}</div>
-    </div>`;
-}
-
-function _baselineNotesPanel() {
-  if (!baselineNotes.length) return '';
-  return `
-    <div class="baseline-notes-panel">
-      <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:8px">
-        📥 Baseline Notes — 승격 대기 (dashboard 층, 켜뮤 아님 · ${baselineNotes.length}건)
-      </div>
-      ${baselineNotes.map(_baselineNoteCard).join('')}
-    </div>`;
-}
-
-window.toggleBaselineNote = function(id) {
-  const el = document.getElementById(`bn-body-${id}`);
-  if (el) el.style.display = el.style.display === 'none' ? 'block' : 'none';
-};
 
 // B-2: ko/en 정적 토글 — 런타임 번역·fetch 없음, 커밋된 content.{ko,en} 전환만. 상태는 메모리만(새로고침 시 ko로 복귀).
 window.toggleSummaryLang = function() {
   summaryLang = summaryLang === 'ko' ? 'en' : 'ko';
-  navigate('review');
+  navigate('today');
 };
 
-// ── 2. 일일 리뷰 큐 (5축 + 카테고리 필터 + 1차 증류 코멘트) ───────────────
-function _distillationNotePanel(axis, category) {
-  const noteKey = `${axis}||${category}`;
-  const existing = distillationNotes.filter(n => n.axis === axis && n.category === category);
-  const existingHtml = existing.slice(-3).reverse().map(n =>
-    `<div style="margin-bottom:6px;padding:6px 8px;background:var(--surface2);border-radius:4px;font-size:11px">
-      <span style="color:var(--text-muted)">${n.date}</span>
-      <div style="margin-top:2px">${n.comment}</div>
-     </div>`
-  ).join('') || '<span style="font-size:11px;color:var(--text-muted)">코멘트 없음</span>';
-
-  const catSummary = distillationSummaries[noteKey];
-  const summaryHtml = catSummary && catSummary.content ? `
-    <div style="background:var(--surface2);border-left:2px solid var(--accent);padding:6px 8px;margin-bottom:8px">
-      <strong style="color:var(--accent);font-size:10px">◉ 카테고리 요약 (빌드타임 생성 · 메모 ${catSummary.note_count}건)</strong>
-      <div style="margin-top:4px">${_structuredSummaryHtml(catSummary.content[summaryLang])}</div>
-    </div>` : '';
-
-  return `
-    <div class="distillation-panel" data-key="${noteKey}" style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:10px 12px;margin-bottom:10px">
-      <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:6px">
-        ✎ 1차 증류 — ${axisLabel(axis)} / ${category}
-      </div>
-      ${summaryHtml}
-      <div id="notes-${noteKey.replace('||','-')}">${existingHtml}</div>
-      <div style="display:flex;gap:6px;margin-top:6px">
-        <textarea id="note-input-${noteKey.replace('||','-')}" rows="2"
-          placeholder="판단 메모 (append-only, 수정 불가)…"
-          style="flex:1;resize:vertical;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:4px 6px;color:var(--text);font-size:12px"></textarea>
-        <button class="filter-btn"
-          onclick="saveNote('${axis}','${category}')"
-          style="align-self:flex-end">저장</button>
-      </div>
-    </div>`;
-}
-
+// ── 2. 일일 리뷰 큐 (5축 + 카테고리 필터) ───────────────────────────────
 function _reviewGroupedList(signals, activeAxis) {
   if (!signals.length) return signalList([]);
   const cats = ['process','packaging','price','hiring','news'];
@@ -528,8 +373,7 @@ function _reviewGroupedList(signals, activeAxis) {
       s.category === cat && (!activeAxis || s.axis === activeAxis)
     );
     if (!group.length) return;
-    const groupAxis = activeAxis || group[0].axis;
-    html += _distillationNotePanel(groupAxis, cat);
+    html += `<h3 style="margin-bottom:8px;font-size:13px">${chipCat(cat)} ${group.length}건</h3>`;
     html += `<div style="margin-bottom:16px">${signalList(group.slice(0, 15), { reviewBtn: true })}</div>`;
   });
   return html || signalList([]);
@@ -576,18 +420,6 @@ function modReview() {
   const axes = ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'];
   return `
     ${header('일일 리뷰', `미완료 ${unreviewed.length}건 · 완료 표시하면 흐려집니다`)}
-    <div style="margin-bottom:10px">
-      <button class="filter-btn" onclick="toggleSummaryLang()">${summaryLang === 'ko' ? 'KO → EN' : 'EN → KO'}</button>
-      <span style="font-size:11px;color:var(--text-muted);margin-left:8px">섹터 요약·1차 증류 요약 언어 전환 (정적, 커밋된 번역만 표시)</span>
-    </div>
-    ${_baselineNotesPanel()}
-    ${_sectorSummariesPanel()}
-    <div style="margin-bottom:12px">
-      <button class="filter-btn" onclick="exportDistillationNotes()">📥 메모 내보내기 (JSON)</button>
-      <span style="font-size:11px;color:var(--text-muted);margin-left:8px">
-        data/distillation_notes.json으로 커밋하면 다음 빌드에서 카테고리 요약이 생성됩니다
-      </span>
-    </div>
     <div class="filters">
       <button class="filter-btn active" onclick="reviewFilter(this,'all')">전체</button>
       ${axes.map(a =>
@@ -1052,7 +884,9 @@ function modMatrix() {
 function modCategories() {
   const axes = ['mobile_ap','hpc_datacenter','custom_soc','foundry','packaging'];
   const activeAxis = window._catActiveAxis || axes[0];
-  const cats = ['news','process','packaging','price','hiring'];
+  // process/packaging/price/hiring은 각각 공정·패키징 매트릭스 / 파운드리 캐파 / 인재·채용 레이더 전용 모듈에서
+  // 이미 축·카테고리 교차로 다룬다 — 이 화면은 축별 일반 뉴스 브라우징으로 범위를 좁혀 중복을 없앤다.
+  const cats = ['news'];
   const sigs = allSignals.filter(s => s.axis === activeAxis);
   const sections = cats.map(cat => {
     const catSigs = sigs.filter(s => s.category === cat);
@@ -1065,7 +899,7 @@ function modCategories() {
       </div>`;
   }).join('');
   return `
-    ${header('SoC 카테고리 (5축)', '축 선택 후 카테고리별 신호 확인')}
+    ${header('SoC 카테고리 (5축)', '축 선택 후 일반 뉴스 확인 · 공정/패키징은 공정·패키징 매트릭스, 가격은 파운드리 캐파, 채용은 인재·채용 레이더 참고')}
     <div class="filters">
       ${axes.map(a =>
         `<button class="filter-btn ${a===activeAxis?'active':''}" onclick="catAxis(this,'${a}')">${axisLabel(a)}</button>`
@@ -1154,10 +988,33 @@ function modChannels() {
     ${header('정보 획득 채널', '크롤러 현황 및 소스별 신호 분포')}
     <div class="channel-list" style="margin-bottom:24px">${rows}</div>
     <h3 style="margin-bottom:10px;font-size:14px">소스별 신호 수</h3>
-    <table>
+    <table style="margin-bottom:24px">
       <thead><tr><th>소스</th><th>신호 수</th></tr></thead>
       <tbody>${sourcePart}</tbody>
-    </table>`;
+    </table>
+    ${_techSignalsPanel()}`;
+}
+
+// ── 기술 신호 (TechSignal — axis/company 없음, arXiv 논문 + Google News zh, 20260717 후속) ─
+function _techSignalsPanel() {
+  if (!techSignals.length) return '';
+  const bySource = {};
+  techSignals.forEach(s => { bySource[s.source] = (bySource[s.source] || 0) + 1; });
+  const rows = techSignals.slice(0, 20).map(s => `
+    <div class="signal-card">
+      <span class="chip">${s.source}</span>
+      <span class="chip">${s.category}</span>
+      <a href="${s.url}" target="_blank" rel="noopener">${s.title}</a>
+      <div style="color:var(--text-muted);font-size:11px">${s.published_date}</div>
+    </div>`).join('');
+  return `
+    <h3 style="margin-bottom:10px;font-size:14px">
+      ◉ 기술 신호 (Tech Signals · ${techSignals.length}건 — ${Object.entries(bySource).map(([s,c]) => `${s} ${c}`).join(' · ')})
+    </h3>
+    <p style="color:var(--text-muted);font-size:12px;margin-bottom:10px">
+      5축 경쟁사 추적과 분리된 별도 stratum(axis/company 없음) — 논문·중국어권 뉴스 원자료, 최근 20건
+    </p>
+    <div style="margin-bottom:24px">${rows}</div>`;
 }
 
 // ── 이벤트 핸들러 ─────────────────────────────────────────────────────────
@@ -1192,25 +1049,6 @@ window.hiringFilter = function(btn, type) {
   document.getElementById('hiring-list').innerHTML = signalList(filtered);
 };
 const _CATS = ['news','process','price','hiring'];  // 'packaging'은 reviewFilter에서 axis와 통합 처리
-
-// 오늘의 요약 드릴다운
-window.todayDrill = function(type, value, card) {
-  const wasActive = card.classList.contains('active');
-  document.querySelectorAll('.stat-card-clickable').forEach(c => c.classList.remove('active'));
-  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
-  const recent = allSignals.filter(s => s.published_date >= yesterday);
-  const list = document.getElementById('today-list');
-  if (wasActive) {
-    list.innerHTML = signalList(recent.slice(0,30));
-    return;
-  }
-  card.classList.add('active');
-  let filtered;
-  if (type === 'axis') filtered = recent.filter(s => s.axis === value);
-  else if (type === 'cat') filtered = recent.filter(s => s.category === value);
-  else filtered = recent;
-  list.innerHTML = signalList(filtered.slice(0,30));
-};
 
 // 생태계 그래프 SVG 선 그리기
 window.ecoDrawLines = function(relations, activeCompany) {
@@ -1327,52 +1165,10 @@ window.reviewFilter = function(btn, filter) {
                    : _CATS.includes(filter) ? filter : null;
   const el = document.getElementById('review-list');
   if (activeCat) {
-    const groupAxis = activeAxis || (sigs[0]?.axis) || 'foundry';
-    el.innerHTML = _distillationNotePanel(groupAxis, activeCat)
-      + signalList(sigs, { reviewBtn: true });
+    el.innerHTML = signalList(sigs, { reviewBtn: true });
   } else {
     el.innerHTML = _reviewGroupedList(sigs, activeAxis);
   }
-};
-
-window.saveNote = function(axis, category) {
-  const key = `${axis}||${category}`.replace('||', '-');
-  const input = document.getElementById(`note-input-${key}`);
-  if (!input || !input.value.trim()) return;
-  const note = {
-    id: Date.now().toString(36),
-    date: new Date().toISOString().slice(0, 10),
-    axis,
-    category,
-    linked_signal_urls: [],
-    comment: input.value.trim(),
-  };
-  distillationNotes.push(note);
-  localStorage.setItem('distillation_notes', JSON.stringify(distillationNotes));
-  input.value = '';
-  // 패널의 노트 목록만 새로고침
-  const notesEl = document.getElementById(`notes-${key}`);
-  if (notesEl) {
-    const recent = distillationNotes
-      .filter(n => n.axis === axis && n.category === category)
-      .slice(-3).reverse();
-    notesEl.innerHTML = recent.map(n =>
-      `<div style="margin-bottom:6px;padding:6px 8px;background:var(--surface2);border-radius:4px;font-size:11px">
-        <span style="color:var(--text-muted)">${n.date}</span>
-        <div style="margin-top:2px">${n.comment}</div>
-       </div>`
-    ).join('');
-  }
-};
-
-window.exportDistillationNotes = function() {
-  const blob = new Blob([JSON.stringify(distillationNotes, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'distillation_notes.json';
-  a.click();
-  URL.revokeObjectURL(url);
 };
 
 window.filterFoundry = function(btn, cat) {
