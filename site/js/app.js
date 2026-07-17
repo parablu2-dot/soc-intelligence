@@ -114,12 +114,10 @@ let _artSignals = { en: [], zh: [], kr: [] };  // 기사 탭 별 신호 캐시 (
 let crawlStatus = [];
 let currentModule = 'today';
 let reviewedSet = new Set(JSON.parse(localStorage.getItem('reviewed') || '[]'));
-let distillationNotes = JSON.parse(localStorage.getItem('distillation_notes') || '[]');
-let distillationSummaries = {};  // {"axis||category": {content:{ko,en}, note_count, generated_at}} — A-2 구조화 스키마
 let baselineNotes = [];  // BaselineNote[] — data/baseline/notes/*.md 빌드타임 파싱 (장문 deep-research 노트, ko 고정)
 let versionInfo = null;  // data/refined/version.json — 단일 진실원 (version/date/maturity)
 let sectorSummaries = {};  // {axis: {sector, content:{ko,en}, item_count, generated_at}} — A-2 구조화 스키마
-let summaryLang = 'ko';  // B-2: 섹터 요약/1차 증류 ko↔en 정적 토글 (클라이언트 메모리만, storage 미사용)
+let summaryLang = 'ko';  // B-2: 섹터 요약 ko↔en 정적 토글 (클라이언트 메모리만, storage 미사용)
 let dailyTop5 = [];  // [{axis, company, headline, url, source, published_date, score}] — Phase 3 item 7
 
 // ── 부트스트랩 ─────────────────────────────────────────────────────────────
@@ -167,9 +165,6 @@ async function loadAllData() {
   const sumLoad = fetch(`${DATA_BASE}/refined/company_summaries.json`)
     .then(r => r.ok ? r.json() : {})
     .catch(() => {});
-  const distLoad = fetch(`${DATA_BASE}/refined/distillation_summaries.json`)
-    .then(r => r.ok ? r.json() : {})
-    .catch(() => ({}));
   const baselineNotesLoad = fetch(`${DATA_BASE}/refined/baseline_notes.json`)
     .then(r => r.ok ? r.json() : {})
     .catch(() => ({}));
@@ -183,12 +178,11 @@ async function loadAllData() {
     .then(r => r.ok ? r.json() : null)
     .catch(() => null);
 
-  const [results, capData, sumData, distData, baselineNotesData, versionData, sectorSumData, top5Data] =
-    await Promise.all([Promise.all(loads), capLoad, sumLoad, distLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load]);
+  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data] =
+    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load]);
   allSignals = results.flat().sort((a, b) => b.published_date.localeCompare(a.published_date));
   capacityRecords = capData;
   companySummaries = sumData || {};
-  distillationSummaries = distData?.summaries || {};
   baselineNotes = baselineNotesData?.notes || [];
   versionInfo = versionData;
   sectorSummaries = sectorSumData?.sectors || {};
@@ -361,42 +355,7 @@ window.toggleSummaryLang = function() {
   navigate('today');
 };
 
-// ── 2. 일일 리뷰 큐 (5축 + 카테고리 필터 + 1차 증류 코멘트) ───────────────
-function _distillationNotePanel(axis, category) {
-  const noteKey = `${axis}||${category}`;
-  const existing = distillationNotes.filter(n => n.axis === axis && n.category === category);
-  const existingHtml = existing.slice(-3).reverse().map(n =>
-    `<div style="margin-bottom:6px;padding:6px 8px;background:var(--surface2);border-radius:4px;font-size:11px">
-      <span style="color:var(--text-muted)">${n.date}</span>
-      <div style="margin-top:2px">${n.comment}</div>
-     </div>`
-  ).join('') || '<span style="font-size:11px;color:var(--text-muted)">코멘트 없음</span>';
-
-  const catSummary = distillationSummaries[noteKey];
-  const summaryHtml = catSummary && catSummary.content ? `
-    <div style="background:var(--surface2);border-left:2px solid var(--accent);padding:6px 8px;margin-bottom:8px">
-      <strong style="color:var(--accent);font-size:10px">◉ 카테고리 요약 (빌드타임 생성 · 메모 ${catSummary.note_count}건)</strong>
-      <div style="margin-top:4px">${_structuredSummaryHtml(catSummary.content[summaryLang])}</div>
-    </div>` : '';
-
-  return `
-    <div class="distillation-panel" data-key="${noteKey}" style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:10px 12px;margin-bottom:10px">
-      <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:6px">
-        ✎ 1차 증류 — ${axisLabel(axis)} / ${category}
-      </div>
-      ${summaryHtml}
-      <div id="notes-${noteKey.replace('||','-')}">${existingHtml}</div>
-      <div style="display:flex;gap:6px;margin-top:6px">
-        <textarea id="note-input-${noteKey.replace('||','-')}" rows="2"
-          placeholder="판단 메모 (append-only, 수정 불가)…"
-          style="flex:1;resize:vertical;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:4px 6px;color:var(--text);font-size:12px"></textarea>
-        <button class="filter-btn"
-          onclick="saveNote('${axis}','${category}')"
-          style="align-self:flex-end">저장</button>
-      </div>
-    </div>`;
-}
-
+// ── 2. 일일 리뷰 큐 (5축 + 카테고리 필터) ───────────────────────────────
 function _reviewGroupedList(signals, activeAxis) {
   if (!signals.length) return signalList([]);
   const cats = ['process','packaging','price','hiring','news'];
@@ -406,8 +365,7 @@ function _reviewGroupedList(signals, activeAxis) {
       s.category === cat && (!activeAxis || s.axis === activeAxis)
     );
     if (!group.length) return;
-    const groupAxis = activeAxis || group[0].axis;
-    html += _distillationNotePanel(groupAxis, cat);
+    html += `<h3 style="margin-bottom:8px;font-size:13px">${chipCat(cat)} ${group.length}건</h3>`;
     html += `<div style="margin-bottom:16px">${signalList(group.slice(0, 15), { reviewBtn: true })}</div>`;
   });
   return html || signalList([]);
@@ -1176,52 +1134,10 @@ window.reviewFilter = function(btn, filter) {
                    : _CATS.includes(filter) ? filter : null;
   const el = document.getElementById('review-list');
   if (activeCat) {
-    const groupAxis = activeAxis || (sigs[0]?.axis) || 'foundry';
-    el.innerHTML = _distillationNotePanel(groupAxis, activeCat)
-      + signalList(sigs, { reviewBtn: true });
+    el.innerHTML = signalList(sigs, { reviewBtn: true });
   } else {
     el.innerHTML = _reviewGroupedList(sigs, activeAxis);
   }
-};
-
-window.saveNote = function(axis, category) {
-  const key = `${axis}||${category}`.replace('||', '-');
-  const input = document.getElementById(`note-input-${key}`);
-  if (!input || !input.value.trim()) return;
-  const note = {
-    id: Date.now().toString(36),
-    date: new Date().toISOString().slice(0, 10),
-    axis,
-    category,
-    linked_signal_urls: [],
-    comment: input.value.trim(),
-  };
-  distillationNotes.push(note);
-  localStorage.setItem('distillation_notes', JSON.stringify(distillationNotes));
-  input.value = '';
-  // 패널의 노트 목록만 새로고침
-  const notesEl = document.getElementById(`notes-${key}`);
-  if (notesEl) {
-    const recent = distillationNotes
-      .filter(n => n.axis === axis && n.category === category)
-      .slice(-3).reverse();
-    notesEl.innerHTML = recent.map(n =>
-      `<div style="margin-bottom:6px;padding:6px 8px;background:var(--surface2);border-radius:4px;font-size:11px">
-        <span style="color:var(--text-muted)">${n.date}</span>
-        <div style="margin-top:2px">${n.comment}</div>
-       </div>`
-    ).join('');
-  }
-};
-
-window.exportDistillationNotes = function() {
-  const blob = new Blob([JSON.stringify(distillationNotes, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'distillation_notes.json';
-  a.click();
-  URL.revokeObjectURL(url);
 };
 
 window.filterFoundry = function(btn, cat) {
