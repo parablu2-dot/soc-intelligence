@@ -1,203 +1,83 @@
 {
-  "date": "2026-07-18",
-  "generated_at": "2026-07-18T20:51:48.811327+00:00",
+  "date": "2026-07-19",
+  "generated_at": "2026-07-19T20:54:55.654563+00:00",
   "sectors": {
-    "mobile_ap": {
-      "sector": "Mobile AP",
-      "date": "2026-07-18",
-      "item_count": 2,
-      "generated_at": "2026-07-18T20:51:48.810927+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "Qualcomm maintains steady stock performance driven by Snapdragon and RF component growth momentum. TSMC's advanced wafer pricing power remains intact despite market pressures, commanding premium valuations.",
-          "key_facts": [
-            "Qualcomm: Snapdragon and RF growth underpinning earnings outlook",
-            "TSMC: $30,000 wafer pricing model"
-          ],
-          "implications": [
-            {
-              "keyword": "Premium positioning",
-              "text": "TSMC's ability to sustain high wafer costs reflects dominant market position in advanced nodes"
-            },
-            {
-              "keyword": "Snapdragon momentum",
-              "text": "Qualcomm RF and mobile processor strength supporting valuation despite broader market volatility"
-            }
-          ],
-          "counterpoint": "Headline lacks specificity on Q1/Q2 earnings beats or forward guidance changes."
-        },
-        "en": {
-          "executive_summary": "Qualcomm maintains steady stock performance driven by Snapdragon and RF component growth momentum. TSMC's advanced wafer pricing power remains intact despite market pressures, commanding premium valuations.",
-          "key_facts": [
-            "Qualcomm: Snapdragon and RF growth underpinning earnings outlook",
-            "TSMC: $30,000 wafer pricing model"
-          ],
-          "implications": [
-            {
-              "keyword": "Premium positioning",
-              "text": "TSMC's ability to sustain high wafer costs reflects dominant market position in advanced nodes"
-            },
-            {
-              "keyword": "Snapdragon momentum",
-              "text": "Qualcomm RF and mobile processor strength supporting valuation despite broader market volatility"
-            }
-          ],
-          "counterpoint": "Headline lacks specificity on Q1/Q2 earnings beats or forward guidance changes."
-        }
-      }
-    },
-    "hpc_datacenter": {
-      "sector": "HPC·Datacenter",
-      "date": "2026-07-18",
-      "item_count": 6,
-      "generated_at": "2026-07-18T20:51:48.810927+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "SK하이닉스와 삼성전자가 AI 반도체 인재 확보를 위해 적극적으로 채용을 확대하고 있으며, 베트남 엔지니어의 글로벌 반도체 공급망 내 역할이 증대되고 있다. Google이 Anthropic에 $40B를 추가 투자하면서 AI 칩 주식은 지정학적 리스크와 포트폴리오 재조정으로 약세장에 진입했다.",
-          "key_facts": [
-            "SK하이닉스: 미국 상장, 빅테크 기업에서 AI 반도체 인재 수혈 추진",
-            "삼성전자·SK하이닉스: 학계 추정 10만 명의 AI 반도체 인재 양성 필요",
-            "SK하이닉스: 채용 시 학력 요건 완화 정책 시행",
-            "Google: Anthropic에 $40B 투자 약정",
-            "Vietnamese engineers: 글로벌 반도체 가치사슬에서 역할 확대"
-          ],
-          "implications": [
-            {
-              "keyword": "인재 부족 심화",
-              "text": "AI 반도체 인재 수요가 10만 명 규모로 추정되며 기업 간 쟁탈전 심화"
-            },
-            {
-              "keyword": "교육 체제 전환",
-              "text": "AI 시대 대응을 위해 학력 무관 채용 확대로 교육 시스템 재구성 필요"
-            },
-            {
-              "keyword": "지정학적 리스크",
-              "text": "AI 칩 주식이 약세장 진입으로 투자 심리 악화"
-            },
-            {
-              "keyword": "글로벌 공급망 다변화",
-              "text": "베트남 엔지니어 역할 확대로 중국 의존도 낮추는 전략 진행"
-            }
-          ],
-          "counterpoint": "AI 칩 주식의 약세는 구조적 약세가 아닌 단기 포트폴리오 재조정 영향으로 보임."
-        },
-        "en": {
-          "executive_summary": "SK Hynix and Samsung Electronics are aggressively expanding recruitment to secure AI semiconductor talent, while Vietnamese engineers' role in the global semiconductor supply chain is growing. With Google committing an additional $40B investment to Anthropic, AI chip stocks have entered a bear market amid geopolitical risks and portfolio rebalancing.",
-          "key_facts": [
-            "SK Hynix: US listing, pursuing talent inflow from big tech companies for AI semiconductor expertise",
-            "Samsung Electronics and SK Hynix: Estimated 100,000 AI semiconductor talent development needed according to academia",
-            "SK Hynix: Implementing relaxed educational requirement policy in recruitment",
-            "Google: Commits $40B investment to Anthropic",
-            "Vietnamese engineers: Expanding role in global semiconductor value chain"
-          ],
-          "implications": [
-            {
-              "keyword": "Intensifying talent shortage",
-              "text": "AI semiconductor talent demand estimated at 100,000 scale with escalating competition among companies"
-            },
-            {
-              "keyword": "Education system transformation",
-              "text": "Educational system restructuring needed with expanded recruitment regardless of academic background to respond to AI era"
-            },
-            {
-              "keyword": "Geopolitical risk",
-              "text": "AI chip stocks entering bear market with deteriorating investment sentiment"
-            },
-            {
-              "keyword": "Global supply chain diversification",
-              "text": "Expanded role of Vietnamese engineers advancing strategy to reduce dependence on China"
-            }
-          ],
-          "counterpoint": "AI chip stock weakness appears to be short-term portfolio rebalancing impact rather than structural weakness."
-        }
-      }
-    },
-    "custom_soc": {
-      "sector": "Custom SoC",
-      "date": "2026-07-18",
-      "item_count": 8,
-      "generated_at": "2026-07-18T20:51:48.810927+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "Intel과 Google이 AI 칩 설계에서 협력을 심화시키고 있으며, Marvell은 시장 혼란 속에서도 새로운 스위치 칩 개발을 진행 중이다. AI 가속기 칩 시장이 2033년까지 US$ 377B에 도달할 것으로 예측되며, 중국 기업 Meituan은 자국 칩으로 1.6조 파라미터 모델을 학습했다.",
-          "key_facts": [
-            "Intel과 Google: AI 칩 설계 협력 강화",
-            "AI 가속기 칩 시장: 2033년 US$ 377B 규모 전망",
-            "Marvell Technology: 새로운 스위치 칩 개발 진행",
-            "Meituan: LongCat-2.0 (1.6조 파라미터) 중국 칩으로 학습",
-            "Iridium: 신규 PNT 칩 출시에도 불구하고 49% 저평가 평가",
-            "Edge Inference와 Custom Silicon: 2035년까지 AI/ML 시장 성장 견인"
-          ],
-          "implications": [
-            {
-              "keyword": "칩 설계 협력 확대",
-              "text": "Intel-Google 협력으로 맞춤형 AI 칩 설계 경쟁력 강화"
-            },
-            {
-              "keyword": "시장 규모 확대",
-              "text": "AI 가속기 칩이 향후 주요 성장 동력으로 2033년 377B 규모까지 확대"
-            },
-            {
-              "keyword": "중국 자립화",
-              "text": "Meituan의 국산 칩 활용으로 대규모 AI 모델 학습 가능성 시연"
-            },
-            {
-              "keyword": "엣지 인퍼런스 부상",
-              "text": "커스텀 실리콘과 엣지 추론이 AI/ML 시장 성장을 주도할 전망"
-            }
-          ],
-          "counterpoint": "전반적인 반도체 주가 부진 속에서 개별 기업 뉴스의 중장기 영향은 제한적일 수 있음."
-        },
-        "en": {
-          "executive_summary": "Intel and Google are deepening collaboration in AI chip design, while Marvell is advancing development of new switch chips amid market turbulence. The AI accelerator chip market is projected to reach US$377B by 2033, and Chinese company Meituan has trained a 1.6 trillion parameter model using domestic chips.",
-          "key_facts": [
-            "Intel and Google: Strengthening AI chip design collaboration",
-            "AI accelerator chip market: Projected to reach US$377B in scale by 2033",
-            "Marvell Technology: Advancing development of new switch chips",
-            "Meituan: LongCat-2.0 (1.6 trillion parameter) trained on domestic Chinese chips",
-            "Iridium: 49% undervaluation despite launch of new PNT chip",
-            "Edge Inference and Custom Silicon: Expected to drive AI/ML market growth through 2035"
-          ],
-          "implications": [
-            {
-              "keyword": "Expanded chip design collaboration",
-              "text": "Intel-Google collaboration strengthening competitiveness in customized AI chip design"
-            },
-            {
-              "keyword": "Market scale expansion",
-              "text": "AI accelerator chips emerging as key growth driver with market expansion to $377B scale by 2033"
-            },
-            {
-              "keyword": "Chinese self-reliance",
-              "text": "Meituan's use of domestic chips demonstrating feasibility of training large-scale AI models"
-            },
-            {
-              "keyword": "Rise of edge inference",
-              "text": "Custom silicon and edge inference expected to lead AI/ML market growth"
-            }
-          ],
-          "counterpoint": "Long-term impact of individual company news may be limited amid overall semiconductor stock underperformance."
-        }
-      }
-    },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-07-18",
-      "item_count": 3,
-      "generated_at": "2026-07-18T20:51:48.810927+00:00",
+      "date": "2026-07-19",
+      "item_count": 8,
+      "generated_at": "2026-07-19T20:54:55.654381+00:00",
       "content": {
-        "ko": {},
-        "en": {}
-      }
-    },
-    "packaging": {
-      "sector": "Packaging",
-      "date": "2026-07-18",
-      "item_count": 11,
-      "generated_at": "2026-07-18T20:51:48.810927+00:00",
-      "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "파운드리·소재 부문에서 국내 기업 시엠티엑스가 600mm 단결정 실리콘 잉곳 양산에 착수하며 세계 최초 애프터마켓 공급을 시작했고, 디노티시아는 벡터 DB 전용 반도체(VDPU) 연말 양산을 목표로 샘플 칩 성능 평가 중이다. 정부는 내년 4조원을 투입해 엔비디아 베라 루빈 GPU 1만장 확보 계획을 발표하며 AI 인프라 확충에 박차를 가하고 있다.",
+          "key_facts": [
+            "씨엠티엑스, 600mm 단결정 실리콘 잉곳 양산 개시 — 애프터마켓 분야 세계 최초",
+            "디노티시사, VDPU 샘플 칩 제작 완료 — 연말 양산 계획",
+            "정부, 내년 베라 루빈 GPU 1만장 확보에 약 4조원 투입",
+            "글로벌 PC 시장 2분기 출하량 6567만대 — 전년 대비 3.6% 감소",
+            "애플, PC 시장 유일 두 자릿수 성장률 기록",
+            "메모리 반도체 가격 급등으로 TCL코리아 내달 TV·냉장고·세탁기 5% 안팎 인상",
+            "한국 반도체 수출, 6월 월 400억달러 돌파 — 사상 최고치 448억2000만달러"
+          ],
+          "implications": [
+            {
+              "keyword": "반도체 소재 수직계열화",
+              "text": "씨엠티엑스의 600mm 실리콘 잉곳 양산은 원소재부터 최종 부품까지 일관 생산 전략으로 원가·품질·납기 경쟁력 확보를 의미하며, 기존 수입 의존도를 낮추는 산업 구조 전환 신호"
+            },
+            {
+              "keyword": "AI 칩 전문화 추세",
+              "text": "디노티시아의 VDPU 상용화와 정부의 베라 루빈 GPU 확보는 벡터 데이터 처리·AI 연산 등 용도별 전문 칩 개발 가속화를 반영하며, 범용 반도체 경쟁 심화 속 차별화 전략 필요성 증대"
+            },
+            {
+              "keyword": "메모리 가격 인상의 파급",
+              "text": "메모리 반도체 가격 급등으로 PC·가전 제조사들이 출고가 인상을 단행 중이며, 글로벌 PC 시장 위축에도 불구하고 애플의 가성비 전략이 차별화 요소로 기능"
+            },
+            {
+              "keyword": "정부 AI 인프라 투자",
+              "text": "과학기술정보통신부의 4조원 규모 GPU 확보 사업은 국가 차원의 AI 컴퓨팅 자원 확충으로, '모두의 AI' 등 국민 서비스 기반 구축을 위한 전략적 선제 투자"
+            },
+            {
+              "keyword": "한국 반도체 수출 강세",
+              "text": "6월 월 400억달러 돌파는 AI 투자 확대에 힘입은 차세대 메모리·첨단 시스템 반도체 수요 급증을 반영하며, 글로벌 경쟁에서 한국 기업의 입지 강화를 시사"
+            }
+          ],
+          "counterpoint": "기술 산업의 역사가 항상 주도국이 경쟁에서 우위를 유지하지는 못했다는 점에서 한국 반도체 산업의 지속적 우위 보장은 불확실하며, 유럽 등 다른 주요 지역과의 기술·시장 격차 변화에 주목 필요"
+        },
+        "en": {
+          "executive_summary": "In the foundry and materials sector, domestic company CMTX has begun mass production of 600mm monocrystalline silicon ingots and started the world's first aftermarket supply, while Denoticia is evaluating sample chip performance targeting year-end mass production of a vector DB-dedicated semiconductor (VDPU). The government announced a plan to secure 10,000 units of Nvidia Vera Rubin GPUs by investing approximately 4 trillion won next year, accelerating the expansion of AI infrastructure.",
+          "key_facts": [
+            "CMTX begins mass production of 600mm monocrystalline silicon ingots — world's first in the aftermarket sector",
+            "Denoticia completes VDPU sample chip production — planning year-end mass production",
+            "Government to invest approximately 4 trillion won to secure 10,000 Vera Rubin GPUs next year",
+            "Global PC market 2nd quarter shipments of 65.67 million units — down 3.6% year-on-year",
+            "Apple records the only double-digit growth rate in the PC market",
+            "Memory semiconductor price surge prompts TCL Korea to raise prices for TVs, refrigerators, and washing machines by around 5% next month",
+            "Korea semiconductor exports surpass 40 billion dollars monthly in June — record high of 44.82 billion dollars"
+          ],
+          "implications": [
+            {
+              "keyword": "Semiconductor material vertical integration",
+              "text": "CMTX's 600mm silicon ingot mass production represents a vertically integrated production strategy from raw materials to final components, securing competitiveness in cost, quality, and delivery time, and signaling an industrial structural transition that reduces existing import dependency"
+            },
+            {
+              "keyword": "AI chip specialization trend",
+              "text": "Denoticia's VDPU commercialization and the government's acquisition of Vera Rubin GPUs reflect accelerated development of application-specific semiconductors for vector data processing and AI computation, underscoring the growing necessity for differentiation strategies amid intensifying competition in general-purpose semiconductors"
+            },
+            {
+              "keyword": "Impact of memory price increases",
+              "text": "Rising memory semiconductor prices are driving PC and home appliance manufacturers to raise retail prices, and despite the global PC market contraction, Apple's cost-performance strategy serves as a differentiating factor"
+            },
+            {
+              "keyword": "Government AI infrastructure investment",
+              "text": "The Ministry of Science and ICT's 4 trillion won GPU acquisition project represents national-level expansion of AI computing resources and is a strategic preemptive investment for building the foundation for national services such as 'AI for All'"
+            },
+            {
+              "keyword": "Korea semiconductor export strength",
+              "text": "Surpassing 40 billion dollars monthly in June reflects surging demand for next-generation memory and advanced system semiconductors driven by expanded AI investments, suggesting strengthened positioning of Korean companies in global competition"
+            }
+          ],
+          "counterpoint": "Given that the history of technology industries shows that leading countries do not always maintain competitive advantage, sustained superiority of Korea's semiconductor industry is uncertain, and attention to changes in technological and market gaps with other major regions such as Europe is necessary"
+        }
       }
     }
   }
