@@ -2,6 +2,241 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.LG",
+    "title": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing",
+    "url": "https://arxiv.org/abs/2607.16183v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "To address the escalating energy and latency demands of machine-learning workloads, we introduce a blueprint for an energy-efficient and fast thermodynamic computing stack that leverages stochastic analog processes in physical hardware. In this work, we focus on energy-based thermodynamic computing where the stochastic process is well described by Langevin dynamics with tunable energy potentials. The implementation of such potentials in physical hardware enables us to generate and sample from ba",
+    "authors": [
+      "Owen Lockwood",
+      "Jérémy Béjanin",
+      "Joost Bus",
+      "Christopher Chamberland",
+      "Patrick Huembeli",
+      "Frank Schäfer",
+      "Guillaume Verdon"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "A Dynamical Phase-Field Model for the Optical Properties of Ferroelectrics",
+    "url": "https://arxiv.org/abs/2607.16180v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "Ferroelectric materials are promising platforms for controllable photonic devices because of the strong coupling between their spontaneous polarization and optical properties. Yet, these materials remain challenging to design because of the close connection between the ferroelectric domain structure and optical response, which no existing theoretical approach can capture. Here, we develop a dynamical phase-field model that directly couples the ferroelectric order to the local optical response by",
+    "authors": [
+      "Aiden Ross",
+      "Anya Frazer",
+      "Venkatraman Gopalan",
+      "Long-Qing Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "A Kalman Filter-Assisted Data-Predictive SAR ADC With Reduced Switching Energy for Low-Power Applications",
+    "url": "https://arxiv.org/abs/2607.16139v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "The proliferation of Internet of Things (IoT) devices and wearable health monitors has created an urgent demand for ultra-low-power analog-to-digital converters (ADCs). Successive approximation register (SAR) ADCs are widely used in such applications, yet their energy efficiency remains constrained by the sequential bit-by-bit switching of the capacitive DAC (CDAC). The high-weight most significant bit (MSB) transitions dominate the total switching energy, and the rigid N -cycle conversion flow ",
+    "authors": [
+      "Xiyuan Feng",
+      "Yuxiang Zhao",
+      "Jie Xiong",
+      "Dian Lin",
+      "Yunlei Zhong",
+      "Wei Liu",
+      "Zhongheng Ji",
+      "Ruiyu Tian",
+      "Chenhao Zhuo",
+      "Yue Yin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Subgrain-resolved Analysis of Degradation in Cu Metallization via Scanning 3DXRD and Thermomechanical Modeling",
+    "url": "https://arxiv.org/abs/2607.16108v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "Metallization layers play a key role in the performance and reliability of modern power semiconductor devices. During short-circuit events, rapid heating of power metallization layers induces thermomechanical incompatibility stresses, which may contribute to material degradation and impact device performance. In this work, potential degradation hotspots associated with thermomechanical loading in Cu power metallization are investigated using a combined experimental--computational approach. Scann",
+    "authors": [
+      "Nikhil Prabhu",
+      "Laura Neumann",
+      "Michael Reisinger",
+      "James A. D. Ball",
+      "Cedric Corley-Wiciak",
+      "Manuel Petersmann",
+      "Agnieszka Corley-Wiciak",
+      "Jonathan Wright",
+      "Carsten Detlefs",
+      "Martin Diehl"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Structural Relaxation Enables Millisecond Infrared Photodetection in Selenium Iodine Semiconductors",
+    "url": "https://arxiv.org/abs/2607.16054v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "The optoelectronic performance of amorphous and partially crystalline semiconductors is strongly governed by structural disorder, yet establishing direct correlations between structural evolution and carrier transport remains challenging. Here, we show that the solid state optoelectronic response of selenium iodine (SeI2) is dictated by its transformation from a metastable glassy phase into an ordered lamellar structure. Vertically resolved transport measurements reveal pronounced depth-dependen",
+    "authors": [
+      "Biman Jana"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Reducing Power Consumption of Embedded Dynamic Memories with ECCs",
+    "url": "https://arxiv.org/abs/2607.16042v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "Gain-cell embedded dynamic random-access memory (GCRAM) offers dense and energy-efficient on-chip storage, but retention-time variations force frequent refresh operations to cover worst-case bits. Error-correction codes (ECCs) can alleviate this limitation by masking bit errors from weak cells and thereby reduce refresh cost. However, the trade-off between the additional access and logic energy introduced by ECCs and the power savings from longer refresh intervals is nontrivial, especially consi",
+    "authors": [
+      "Wenqing Song",
+      "Yifei Shen",
+      "Andreas Burg"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Current Should Not Sneak: Constrained Codes for Reliable Memristor Crossbar Arrays",
+    "url": "https://arxiv.org/abs/2607.15929v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "The approach of squeezing more transistors in the same area in order to speed up computing is no longer effective. Currently, researchers and engineers are searching for novel solutions that offer faster computing. One of these solutions is to compute where you store, known as in-memory computing. Resistive random access memories (ReRAMs), which are based on memristor crossbar arrays, enable in-memory computing. Moreover, ReRAMs offer large storage capacity associated with energy efficiency. In ",
+    "authors": [
+      "Selahattin Kaan Kırgeç",
+      "Yunus Alp Bıyıkoğlu",
+      "Ahmed Hareedy"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Sub-microsecond conformational dynamics in an optical nanocavity",
+    "url": "https://arxiv.org/abs/2607.15925v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "Microsecond conformational changes underlie many protein functions, but ensemble averaging has been needed to observe them without labels. Single-shot measurements on individual proteins have had insufficient speed, while protein Brownian-motion has obscured signals. Here, we report a fibre-integrated silicon-photonic sensor that overcomes these barriers, resolving protein dynamics at sub-microsecond speeds in continuous single-shot measurements that can extend over minutes. This is achieved by ",
+    "authors": [
+      "Heehun Sung",
+      "Sam C Scholten",
+      "Pavlina Sasheva",
+      "Igor Marinkovic",
+      "Warwick P Bowen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Reconfigurable Nonlocal Light-Emitting Metalens Nanolasers via Bound States in the Continuum",
+    "url": "https://arxiv.org/abs/2607.15852v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "The development of on-chip, reconfigurable coherent light sources operating in the visible spectrum is critical for next-generation optical computing and high-speed data processing. Here, we demonstrate an all-optically tunable nanolaser based on a hybrid dielectric metasurface. The platform integrates a Rhodamine B (Rd B) dye gain medium with a Niobium Pentoxide (Nb2O5) metasurface supporting a high-Q Bound State in the Continuum (BIC) resonance. Active, non-volatile tuning is achieved by incor",
+    "authors": [
+      "Omar A. M. Abdelraouf"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "DSTAR: Accelerating Diffusion Transformers via Spatial and Temporal Redundancy Reduction",
+    "url": "https://arxiv.org/abs/2607.15846v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "Diffusion Transformers (DiTs) have been widely used in many tasks, including image synthesis, video generation, and content editing. However, their multi-iteration inference process leads to performance inefficiency and high energy consumption. Existing acceleration methods primarily focus on reducing temporal redundancy between adjacent timesteps, but often overlook the specific features of DiTs. As a result, these approaches either suffer from great accuracy degradation or fail to achieve high",
+    "authors": [
+      "Chi Zhang",
+      "Jieru Zhao",
+      "Yu Feng",
+      "Chen Zhang",
+      "Quan Chen",
+      "Minyi Guo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "Vogls: a Fast Interactive Full-timing Simulator for Pre-silicon Power Side-Channel Analysis",
+    "url": "https://arxiv.org/abs/2607.15782v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "Designing hardware circuits resistant to side-channel attacks increasingly relies on simulation to predict device leakage before fabrication. Current functional verification simulators are designed for extended correctness-checking runs and are ill-suited for producing large numbers of short trace collections with slight input variants needed for side-channel analysis. We present Vogls: an open-source Verilog simulator built for side-channel analysis, that is the first simulator to combine compi",
+    "authors": [
+      "Gijs Burghoorn",
+      "Ileana Buhan",
+      "Lejla Batina"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "FSIM: Fluid Element Stacked Intelligent Metasurface for Multiuser Downlink Networks",
+    "url": "https://arxiv.org/abs/2607.15651v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "A fluid element (FE)-aided stacked intelligent metasurface (FSIM) for multiple-input single-output (MISO) communication system is investigated, where a multi-antenna base station (BS) serves multiple single-antenna users through FSIM. Unlike conventional SIM with fixed meta-atom deployment, the architecture allows the meta-atoms in each layer to move within a predefined fluidic region to further increase the spatial diversity. By jointly optimizing the two-dimensional meta-atom positions, BS tra",
+    "authors": [
+      "Tsung-Yu Wei",
+      "Li-Hsiang Shen",
+      "Kai-Ten Feng",
+      "Lie-Liang Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Symmetry-Enforced Dirac Fermions and Structural Metastability in Pentagonal Monolayers of Transition-Metal Ditellurides",
+    "url": "https://arxiv.org/abs/2607.15580v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "The recent synthesis of pentagonal PdTe$_2$ monolayer motivates broader research interests in transition-metal ditellurides whose electronic phases are governed by symmetry and structural reconstruction. The pentagonal phase of transition-metal ditellurides exhibits electronic properties that are dramatically different from those of its hexagonal counterpart due to its lower crystalline symmetry. Using first-principles calculations, we study monolayer $X$Te$_2$ ($X=\\mathrm{Pd},\\mathrm{Pt},\\mathr",
+    "authors": [
+      "Manoj Gadtoula",
+      "Clayton Conner",
+      "Avinash Sah",
+      "Ronghao Luo",
+      "Guang Bian"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Terahertz Time-Domain Spectroscopy as a Universal Defect Fingerprinting Tool for Organic Halide Perovskite Solar Cells",
+    "url": "https://arxiv.org/abs/2607.15538v1",
+    "published_date": "2026-07-17",
+    "source": "arXiv",
+    "summary": "Organic-inorganic hybrid perovskites (OHPs) deliver certified single-junction power conversion efficiencies (PCEs) exceeding 26% and perovskite-silicon tandem values surpassing 34%, yet a substantial gap with the Shockley-Queisser (S-Q) limit persists-primarily due to grain-boundary (GB) defects that drive non-radiative recombination, ion migration, and degradation. Rational passivation demands a non-contact tool capable of identifying and quantifying specific defect species in device-relevant t",
+    "authors": [
+      "Inhee Maeng",
+      "Young Mi Lee",
+      "Jinwoo Park",
+      "Seung Jae Oh",
+      "Min-Cherl Jung"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.supr-con",
     "title": "Magnetic Order in bilayer Ruddlesden-Popper Nickelates",
     "url": "https://arxiv.org/abs/2607.15228v1",
@@ -287,6 +522,23 @@
     "authors": [
       "Siqi Na",
       "Tadashi Wadayama"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Low Complexity Neural Network Digital Predistortion of Wideband Power Amplifiers through Feature Selection",
+    "url": "https://arxiv.org/abs/2607.15441v1",
+    "published_date": "2026-07-16",
+    "source": "arXiv",
+    "summary": "Due to the continuous increase in communication bandwidth and the use of highly efficient yet nonlinear power amplifiers, Digital Predistortion (DPD) algorithms are becoming increasingly complex. In particular, neural network (NN) based DPD approaches using Phase-Normalized NN architectures often incur substantially higher computational costs than widely deployed polynomial-based methods, such as the Memory Polynomial (MP) and Generalized Memory Polynomial (GMP) models. To bridge this gap betwee",
+    "authors": [
+      "Cel Thys",
+      "Rodney Martinez Alonso",
+      "Ali H Alsarraf",
+      "Dominique Schreurs",
+      "Sofie Pollin"
     ]
   },
   {
