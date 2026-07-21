@@ -2,6 +2,328 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Excitonic effects in the photocarriers dynamics of two-dimensional materials",
+    "url": "https://arxiv.org/abs/2607.18183v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "We investigate the role of excitonic correlations in shaping the ultrafast dynamics of photoexcited carriers in semiconductors. Conventional approaches describe relaxation within single-particle frameworks, where electron-electron and electron-phonon scattering drive thermalization toward Fermi-Dirac distributions, neglecting electron-hole correlations that dominate near band edges. We introduce a two-particle framework based on excitonic Bloch equations (XBE) that captures carrier-phonon scatte",
+    "authors": [
+      "Carlos Betancur",
+      "Gianluca Stefanucci",
+      "Enrico Perfetto"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Empowering On-Device Model Adaptation with an Edge AI Inference Accelerator",
+    "url": "https://arxiv.org/abs/2607.18101v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "On-device model adaptation is essential to enable lifelong personalization on resource-constrained hardware, but compute, power, and memory limitations of such devices make end-to-end backpropagation impractical for modern deep neural networks. This work proposes a heterogeneous adaptation pipeline that repurposes a commercial edge AI inference accelerator, Hailo-8L, for frozen-backbone feature extraction during on-device training. The computational graph is partitioned so that the pre-trained b",
+    "authors": [
+      "Mateusz Piechocki",
+      "Alessandro Capotondi",
+      "Marek Kraft"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Hardware Mechanisms to Dynamically Throttle AI Performance",
+    "url": "https://arxiv.org/abs/2607.18069v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "As more capable AI models are increasingly integrated into critical computer systems, the lack of control over AI intent motivates safety mechanisms. Existing software safeguards impose only behavioral constraints that can potentially be bypassed by sufficiently intelligent models. While hardware-level safety enforcement has been recognized as an essential last line of defense, few mechanisms have been proposed beyond policy regulations on unauthorized accesses or coarse full-chip shutdown. What",
+    "authors": [
+      "Haiyue Ma",
+      "Lauren Malek",
+      "Joseph Forzani",
+      "David Wentzlaff"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Self-Interference-Aware AS-Assisted Tri-Hybrid Beamforming for Full-Duplex Massive MIMO",
+    "url": "https://arxiv.org/abs/2607.18036v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "This paper proposes a tri-hybrid beamforming (tri-HBF) scheme with antenna-selection (AS)-based reconfigurable sub-arrays for full-duplex (FD) massive multiple-input multiple-output (mMIMO) systems. A sub-connected HBF architecture is adopted, where AS is performed in a group-wise manner to avoid excessive switch-network and routing complexity. An alternating optimization (AO) algorithm is developed to jointly optimize the i) active antenna subsets considering a self-interference (SI)-aware util",
+    "authors": [
+      "Yuanzhe Gong",
+      "Cheng-Jie Zhao",
+      "Tho Le-Ngoc"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Spin-phonon interaction in a symmetry-enforced spin-polarized state",
+    "url": "https://arxiv.org/abs/2607.17980v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "Symmetry-governed magnetic materials have emerged as a promising platform for spintronic functionalities without net magnetization or stray magnetic fields, motivating the exploration of how lattice dynamics couple to symmetry-derived spin-polarized electronic states. Understanding spin-phonon coupling in these systems is therefore essential for uncovering the microscopic origin of spin-lattice interactions and for enabling their control in quantum materials. However, this mechanism remains poor",
+    "authors": [
+      "Suman Kalyan Pradhan",
+      "Dayal Das",
+      "Shubham Patel",
+      "Subhajit Mahapatra",
+      "Sachin Majee",
+      "Dibyendu Majee",
+      "Arnab Bera",
+      "Achintya Singha",
+      "Snehasish Nandy",
+      "Samik DuttaGupta",
+      "Atindra Nath Pal"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "RuNNer 2.0: A Software Suite for High-Dimensional Neural Network Potentials",
+    "url": "https://arxiv.org/abs/2607.17978v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "We present RuNNer 2.0, the \"Ruhr University Neural Network energy representation\", a highly optimized software suite for training and evaluating high-dimensional neural network potentials (HDNNPs) of the second, third, and fourth generation. Long-range electrostatics and charge equilibration (QEq) for the description of non-local charge transfer in fourth-generation (4G) HDNNPs are accelerated by quasi-linear-scaling plane-wave methods, reducing QEq computational complexity from $\\mathcal{O}(N^3",
+    "authors": [
+      "Alexander L. M. Knoll",
+      "Moritz R. Schäfer",
+      "K. Nikolas Lausch",
+      "Moritz Gubler",
+      "Henry Wang",
+      "Richard Springborn",
+      "Redouan El Haouari",
+      "Alea Miako Liebetrau",
+      "Jonas A. Finkler",
+      "Emir Kocer",
+      "Marco Eckhoff",
+      "Gunnar Schmitz",
+      "Jörg Behler"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Localized crystallization of Ce:YIG thin films on Si using CO2 laser annealing for integrated nonreciprocal photonic device applications",
+    "url": "https://arxiv.org/abs/2607.17905v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "Laser annealing (LA) technique has emerged as an effective method for localized crystallization of magneto-optical (MO) garnet thin films on semiconductor substrates. However, no studies have explored the crystallization and magneto-optical (MO) properties of cerium-substituted yttrium iron garnet (Ce:YIG, Ce1Y2Fe5O12) thin films for integrated photonic device applications using LA technique. In this study, we provide a comprehensive investigation into the laser annealing of Ce:YIG films deposit",
+    "authors": [
+      "Xinran Ji",
+      "Junxian Wang",
+      "Tianchi Zhang",
+      "Xuan Zhao",
+      "Di Wu",
+      "Zixuan Wei",
+      "Yizhi Chen",
+      "Jialong Wang",
+      "Lei Bi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "SEAM-V: A Hybrid-Decoupled RISC-V Vector Processor with Backend-Visible EP Context for Sustained Vector Throughput",
+    "url": "https://arxiv.org/abs/2607.17899v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "Data-parallel workloads in deep learning and scientific computing continue to drive demand for higher processor throughput, energy efficiency, and scalability. The RISC-V Vector Extension (RVV) supports scalable execution through a vector-length-agnostic programming model. However, many tightly coupled implementations still rely on the scalar core to supply vector instructions one at a time, making execution susceptible to vector-instruction supply gaps, scalar-side progression delays, and conse",
+    "authors": [
+      "Weiying Wang",
+      "Zhiwei Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Task-Oriented Precoding for Edge Inference over Large-Scale MIMO Systems",
+    "url": "https://arxiv.org/abs/2607.17877v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "Future wireless networks are expected to support networked artificial intelligence (AI) services, where multiple devices transmit learned features to an edge server for distributed inference. This setting calls for task-oriented physical-layer optimization, where wireless transmission should preserve useful information for inference rather than only maximize the rate or reconstruct the transmitted signals. A key physical-layer control variable is the multiple-input multiple-output precoder, whic",
+    "authors": [
+      "Hongru Li",
+      "Zeyan Zhuang",
+      "Zixin Wang",
+      "Hengtao He",
+      "Shenghui Song",
+      "Jun Zhang",
+      "Khaled B. Letaief"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Massive MIMO-OFDM ISAC for Sparse ISAR Imaging: Joint Power and Subcarrier Allocation",
+    "url": "https://arxiv.org/abs/2607.17862v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "This paper investigates a massive multiple-input multiple-output (mMIMO) orthogonal frequency-division multiplexing (OFDM) framework for integrated sensing and communication (ISAC) with inverse synthetic aperture radar (ISAR) imaging, supporting applications such as the Internet of Things (IoT). A dual-function architecture combines communication precoding and dedicated sensing beamforming to enable simultaneous downlink communication and ISAR imaging. Due to intermittent pilot transmission and ",
+    "authors": [
+      "Hamid Reza Hashempour",
+      "Yanjiao Li",
+      "Jie Zhang",
+      "Hyundong Shin",
+      "Hien Quoc Ngo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "New Number Formats for FFT IP Cores in Optical OFDM Transceivers",
+    "url": "https://arxiv.org/abs/2607.17835v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "Many state-of-the-art DSP implementations use fixed-point arithmetic due to its reduced hardware complexity and high throughput compared to conventional floating-point arithmetic. In contrast, machine learning accelerators exhibit substantial gains from reduced-precision floating-point formats, enabling improvements in energy efficiency and peak throughput. These advances motivate a re-evaluation of numerical representations for classical DSP workloads. A central question is whether reduced-prec",
+    "authors": [
+      "Lukas Krupp",
+      "Gustavo Magalhães Gomes De Souza",
+      "Sani Nassif",
+      "Norbert Wehn"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Physically motivated iso-orbital indicator for meta-GGA exchange functionals",
+    "url": "https://arxiv.org/abs/2607.17736v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "The iso-orbital indicator $α= (τ- τ^\\mathrm{vW})/τ^\\mathrm{UEG}$ is a key ingredient of meta-generalized gradient approximation (meta-GGA) functionals, but diverges in low-density tails , causing unphysical exchange potentials and systematic band gap errors as noted in [J. Chem. Phys. 150, 161101 (2019)]. We replace the denominator of $α$ with a physically motivated Pauli KED drawn from the orbital-free DFT literature, eliminating the divergence in the low density atomic tail without any empiric",
+    "authors": [
+      "Jeet Sharma",
+      "Abhishek Bhattacharjee",
+      "Bikash Patra",
+      "Prasanjit Samal"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Efficient Quantum-Mechanical Modeling of Nonradiative Charge Transfer Processes",
+    "url": "https://arxiv.org/abs/2607.17730v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "Nonradiative charge transfer processes play a central role in a wide range of physical phenomena, including reliability phenomena in semiconductor devices such as bias temperature instability, hysteresis, random telegraph noise, and trap-assisted tunneling. nonradiative multiphonon (NMP) theory provides a physically rigorous framework for describing such charge transitions, but its full quantum-mechanical formulation is computationally too demanding for large-scale simulations. In this work, we ",
+    "authors": [
+      "Alexander Karl",
+      "Dominic Waldhoer",
+      "Theresia Knobloch",
+      "Christoph Wilhelmer",
+      "Tibor Grasser"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Numerical Investigation of a 3D End-Firing Antenna Array Based on Two-Photon Polymerization on Thin-Film Lithium Niobate for Optical Beam Steering",
+    "url": "https://arxiv.org/abs/2607.17698v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "Optical phased arrays (OPAs) are key components for solid-state beam steering in emerging photonic technologies such as LiDAR, optical communication, and adaptive optics. However, conventional integrated OPA designs face trade-offs between bandwidth, steering range, and fabrication complexity. Here we designed and numerically analyzed a novel three-dimensional end-firing antenna array compatible with fabrication using two-photon polymerization (2PP) directly on a thin-film lithium niobate (TFLN)",
+    "authors": [
+      "David Trop",
+      "Boris Desiatov"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Waveform Design for OTFS Assisted Simultaneous Acoustic Information and Power Transfer",
+    "url": "https://arxiv.org/abs/2607.17631v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "Simultaneous acoustic information and power transfer (SAIPT) is a promising technique for supporting self-sustainable Internet of Underwater Things (IoUT) networks through concurrent data transmission and energy supplement. However, existing OFDM-based SAIPT studies are vulnerable to severe multipath propagation and Doppler effects in dynamic underwater acoustic channels. To address this issue, this paper proposes an orthogonal time frequency space (OTFS)-based SAIPT waveform design for dynamic ",
+    "authors": [
+      "Jinheng Kang",
+      "Yizhe Zhao",
+      "Kun Yang",
+      "Jun Liu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Tensor-Based Dynamic Channel Estimation for mmWave Movable Antenna MIMO Systems",
+    "url": "https://arxiv.org/abs/2607.17591v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "This paper investigates the dynamic channel estimation algorithm in mmWave movable antenna (MA) multiple-input multiple-output (MIMO) systems. To achieve highly accurate channel estimation, we propose a tensor decomposition-based channel estimation algorithm. First, by leveraging the path response model and utilizing the intrinsic sparsity of mmWave channels, the channel corresponding to MA pairs at the base station and mobile station is transformed into a superposition of channels from sparse p",
+    "authors": [
+      "Zhendong Li",
+      "Linchu Chen",
+      "Lin Chen",
+      "Zhou Su",
+      "Ruoyu Zhang",
+      "Guangji Chen",
+      "Ying Wang",
+      "Wen Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Cross-Domain Acceleration of Open Modification Search: From Commodity Platforms to Emerging Memory and Storage Devices",
+    "url": "https://arxiv.org/abs/2607.17569v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "Open modification search (OMS) in mass spectrometry (MS) is a data-intensive workload whose performance is dominantly limited by reference data movement rather than computation. Prior OMS accelerators have largely been evaluated in isolation, making it difficult to understand system-level trade-offs across platforms. This paper presents the first workload-driven, cross-platform survey of accelerators for MS search by studying not only commodity platforms, but also emerging memory- and storage-ce",
+    "authors": [
+      "Sumukh Pinge",
+      "Chang Eun Song",
+      "Po-Kai Hsu",
+      "Zheyu Li",
+      "Ashkan Moradifirouzabadi",
+      "Yanru Chen",
+      "Xiangjin Wu",
+      "Wei-Chen Chen",
+      "Eric Pop",
+      "Shimeng Yu",
+      "H. -S. Philip Wong",
+      "Tajana Rosing",
+      "Mingu Kang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "D-NOVA: In-Storage Retrieval Accelerator via Dual-Bound 3D NAND-Optimized Similarity Search with Vector Adaptation",
+    "url": "https://arxiv.org/abs/2607.17538v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "Retrieval-Augmented Generation (RAG) enhances the factual grounding of large language model (LLM) inference by retrieving relevant information from external knowledge bases. However, its dense vector retrieval introduces significant latency and energy overhead, becoming the primary performance bottleneck. Although recent in-storage accelerators aim to reduce data movement, they still rely on host or embedded processors outside the memory, where nearly 70% of the total retrieval time is spent. As",
+    "authors": [
+      "Chang Eun Song",
+      "Sumukh Pinge",
+      "Tianqi Zhang",
+      "Sung Eun Kim",
+      "Tajana S. Rosing",
+      "Mingu Kang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.LG",
     "title": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing",
     "url": "https://arxiv.org/abs/2607.16183v1",

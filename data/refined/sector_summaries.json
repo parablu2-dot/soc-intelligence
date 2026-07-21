@@ -1,204 +1,136 @@
 {
-  "date": "2026-07-20",
-  "generated_at": "2026-07-20T21:19:10.934770+00:00",
+  "date": "2026-07-21",
+  "generated_at": "2026-07-21T21:15:56.916082+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-07-20",
-      "item_count": 2,
-      "generated_at": "2026-07-20T21:19:10.933709+00:00",
+      "date": "2026-07-21",
+      "item_count": 3,
+      "generated_at": "2026-07-21T21:15:56.914978+00:00",
       "content": {
         "ko": {
-          "executive_summary": "TSMC는 애리조나에 12개의 칩 제조 시설 건설을 계획 중이며, Qualcomm은 AI 칩셋 모멘텀과 최근 실적 지표를 둘러싼 투자자 평가 속에서 주가가 안정세를 유지하고 있다.",
+          "executive_summary": "TSMC를 통한 Apple Silicon 공급에 가격 압박이 예상되고 있으며, MediaTek의 Dimensity 9500 AI 이미징 기술과 Qualcomm의 Snapdragon 및 라이선싱이 모바일 시장의 경쟁 구도를 주도하고 있다.",
           "key_facts": [
-            "TSMC Arizona 12개 칩 제조 시설 계획"
+            "TSMC, 2027년 칩 제조 가격 최대 10% 인상 예정",
+            "MediaTek Tech Day 2026에서 Dimensity 9500 공개",
+            "Qualcomm Snapdragon 및 라이선싱으로 실적 견조"
           ],
-          "implications": [],
-          "counterpoint": ""
+          "implications": [
+            {
+              "keyword": "가격 상승 전가",
+              "text": "TSMC의 10% 가격 인상은 Apple Silicon 기반 디바이스 제조원가 상승으로 이어질 것으로 예상되며, 2027년부터 최종 제품 가격에 영향을 미칠 수 있음"
+            },
+            {
+              "keyword": "AI 이미징 경쟁",
+              "text": "MediaTek의 Dimensity 9500 AI 이미징 기술은 모바일 프로세서의 AI 기능 경쟁을 심화시키며, 스마트폰 칩 설계의 차별화 포인트가 되고 있음"
+            }
+          ],
+          "counterpoint": "TSMC 가격 인상이 2027년 예정이므로 2026년 모바일 AP 시장에는 직접적인 영향이 제한적임"
         },
         "en": {
-          "executive_summary": "TSMC is planning the construction of 12 chip manufacturing facilities in Arizona, and Qualcomm's stock price remains stable amid investor assessments surrounding AI chipset momentum and recent performance metrics.",
+          "executive_summary": "Price pressure is expected in Apple Silicon supply through TSMC, while MediaTek's Dimensity 9500 AI imaging technology and Qualcomm's Snapdragon and licensing drive competitive dynamics in the mobile market.",
           "key_facts": [
-            "TSMC Arizona 12 chip manufacturing facilities planned"
+            "TSMC plans chip manufacturing price increase of up to 10% in 2027",
+            "MediaTek Tech Day 2026 unveils Dimensity 9500",
+            "Qualcomm Snapdragon and licensing drive solid performance"
           ],
-          "implications": [],
-          "counterpoint": ""
+          "implications": [
+            {
+              "keyword": "Price increase pass-through",
+              "text": "TSMC's 10% price increase is expected to result in higher manufacturing costs for Apple Silicon-based devices, and could impact final product prices from 2027 onwards"
+            },
+            {
+              "keyword": "AI imaging competition",
+              "text": "MediaTek's Dimensity 9500 AI imaging technology intensifies AI capability competition in mobile processors and becomes a differentiation point in smartphone chip design"
+            }
+          ],
+          "counterpoint": "Since TSMC's price increase is scheduled for 2027, direct impact on the 2026 mobile AP market is limited"
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-07-20",
-      "item_count": 27,
-      "generated_at": "2026-07-20T21:19:10.933709+00:00",
+      "date": "2026-07-21",
+      "item_count": 12,
+      "generated_at": "2026-07-21T21:15:56.914978+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Microsoft가 AMD Instinct 및 EPYC 프로세서의 차세대 제품을 배포하며 전략적 파트너십을 확대하고 있고, 남한의 반도체 산업에서는 AI 붐으로 인한 신입 채용 공고가 47% 급증했으며 삼성전자와 SK하이닉스가 선도하고 있다.",
+          "executive_summary": "NVIDIA의 Spectrum-6 네트워킹과 Rubin GPU가 차세대 AI 인프라를 주도하고 있으며, SK하이닉스와 삼성전자가 미국 내 AI/HBM 인재 확보 경쟁을 심화시키고 있다. 한국 반도체 업계의 진입 채용이 47% 증가하여 인력 수급 전쟁이 가열되고 있다.",
           "key_facts": [
-            "Microsoft, AMD Instinct 및 EPYC 차세대 프로세서 배포",
-            "남한 반도체 산업 신입 채용 공고 47% 증가",
-            "삼성전자, SK하이닉스 채용 확대",
-            "중국, 칩 인재 부족 해결 위해 신규 과정 및 임금 인상 추진"
+            "NVIDIA Spectrum-6, 차세대 AI 팩토리 네트워킹 인프라 출시",
+            "NVIDIA Rubin GPU, Blackwell 대비 에이전틱 AI 성능 10배 증가",
+            "SK하이닉스, 미국 산호세·인디애나 AI/팩토리 셋업 채용 대폭 확대",
+            "한국 반도체 진입 채용 47% 증가",
+            "NVIDIA, 이스라엘 비어셰바 R&D 센터 개설"
           ],
           "implications": [
             {
-              "keyword": "AI 수요 확대",
-              "text": "HPC 데이터센터 수요 급증으로 인한 프로세서 공급 강화 및 인재 수급 경쟁 심화"
+              "keyword": "HBM 인재전쟁",
+              "text": "SK하이닉스의 미국 내 경력사원 대규모 채용으로 삼성전자와의 HBM 인재 확보 경쟁이 심화되고 있으며, AI 반도체 기술 경쟁력 확보가 기업 생존 요소로 작용"
             },
             {
-              "keyword": "지역별 인재 확보 경쟁",
-              "text": "남한 및 중국의 반도체 기업들이 AI 인력 수급을 위한 공격적 채용 전략 추진 중"
+              "keyword": "AI 인프라 고도화",
+              "text": "NVIDIA Rubin의 10배 성능 향상과 Spectrum-6 네트워킹은 차세대 에이전틱 AI 시대의 필수 기술이며, 이천 반도체 연구단지 조성 등 한국의 HPC 인프라 구축 필요성 증대"
+            },
+            {
+              "keyword": "지역별 R&D 거점 확대",
+              "text": "NVIDIA 이스라엘 R&D 센터와 Apple의 RISC-V 개발팀 확보는 글로벌 AI 칩 설계의 다각화 추세를 반영"
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "SK하이닉스의 미국 내 채용 확대가 ADR 상장 이후 글로벌 자금 유입과 연계되었으나, 실제 HBM4 수율 경쟁의 승패는 2026년 하반기 제품 출시 시점에 결정될 것"
         },
         "en": {
-          "executive_summary": "Microsoft is expanding strategic partnerships by deploying next-generation AMD Instinct and EPYC processors, while South Korea's semiconductor industry is experiencing a 47% surge in new graduate job postings due to the AI boom, led by Samsung Electronics and SK Hynix.",
+          "executive_summary": "NVIDIA's Spectrum-6 networking and Rubin GPU lead next-generation AI infrastructure, while SK Hynix and Samsung Electronics intensify competition to secure AI/HBM talent in the United States. Korea's semiconductor industry entry-level hiring has increased 47%, heating up the talent acquisition battle.",
           "key_facts": [
-            "Microsoft deploying next-generation AMD Instinct and EPYC processors",
-            "South Korea semiconductor industry new graduate job postings up 47%",
-            "Samsung Electronics, SK Hynix expanding recruitment",
-            "China rolling out new programs and wage increases to address chip talent shortage"
+            "NVIDIA Spectrum-6 launches next-generation AI factory networking infrastructure",
+            "NVIDIA Rubin GPU achieves 10x agentic AI performance improvement versus Blackwell",
+            "SK Hynix significantly expands hiring for AI/factory setups in San Jose and Indiana",
+            "Korean semiconductor entry-level hiring increases 47%",
+            "NVIDIA opens R&D center in Beersheba, Israel"
           ],
           "implications": [
             {
-              "keyword": "Expanding AI demand",
-              "text": "Surge in HPC datacenter demand driving processor supply strengthening and intensifying talent acquisition competition"
+              "keyword": "HBM talent war",
+              "text": "SK Hynix's large-scale hiring of experienced talent in the United States intensifies HBM talent competition with Samsung Electronics, making AI semiconductor technological competitiveness a matter of corporate survival"
             },
             {
-              "keyword": "Regional talent acquisition competition",
-              "text": "South Korean and Chinese semiconductor companies pursuing aggressive hiring strategies for AI workforce recruitment"
+              "keyword": "AI infrastructure advancement",
+              "text": "NVIDIA Rubin's 10x performance improvement and Spectrum-6 networking are essential technologies for the next-generation agentic AI era, increasing the necessity for Korea to build HPC infrastructure such as Icheon semiconductor research complexes"
+            },
+            {
+              "keyword": "Geographic R&D hub expansion",
+              "text": "NVIDIA's Israel R&D center and Apple's RISC-V development team expansion reflect a trend of diversification in global AI chip design"
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "While SK Hynix's expanded U.S. hiring was linked to capital inflows following its ADR listing, the actual winner in HBM4 yield competition will be determined at the product launch point in H2 2026"
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-07-20",
-      "item_count": 25,
-      "generated_at": "2026-07-20T21:19:10.933709+00:00",
+      "date": "2026-07-21",
+      "item_count": 33,
+      "generated_at": "2026-07-21T21:15:56.914978+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Google은 Gemini AI 아키텍처를 실리콘에 직접 임베드하는 'Frozen v2' 칩을 개발 중이며, 이를 통해 추론 효율을 최대 10배까지 향상시킬 것으로 기대된다.",
-          "key_facts": [
-            "Google Frozen v2 AI 추론 칩 개발 중",
-            "Gemini 아키텍처 실리콘 임베드 방식",
-            "TPU 대비 최대 10배 효율성 향상 목표",
-            "Alphabet 주가 보도에 따라 상승"
-          ],
-          "implications": [
-            {
-              "keyword": "커스텀 AI 칩 경쟁",
-              "text": "Google의 Frozen v2는 AI 추론 효율 최적화를 위한 HW/SW 통합 설계 트렌드를 가속화할 것으로 예상"
-            },
-            {
-              "keyword": "고효율 AI 인프라",
-              "text": "임베드된 Gemini 아키텍처로 서버 칩 전력 소비 및 레이턴시 감소로 데이터센터 비용 효율성 개선"
-            }
-          ],
-          "counterpoint": ""
-        },
-        "en": {
-          "executive_summary": "Google is developing the 'Frozen v2' chip that directly embeds Gemini AI architecture into silicon, expected to improve inference efficiency by up to 10 times.",
-          "key_facts": [
-            "Google developing Frozen v2 AI inference chip",
-            "Gemini architecture silicon embedding approach",
-            "Targeting up to 10x efficiency improvement versus TPU",
-            "Alphabet stock price rising according to reports"
-          ],
-          "implications": [
-            {
-              "keyword": "Custom AI chip competition",
-              "text": "Google's Frozen v2 is expected to accelerate the HW/SW integrated design trend for optimizing AI inference efficiency"
-            },
-            {
-              "keyword": "High-efficiency AI infrastructure",
-              "text": "Embedded Gemini architecture reducing server chip power consumption and latency, improving datacenter cost efficiency"
-            }
-          ],
-          "counterpoint": ""
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-07-20",
-      "item_count": 17,
-      "generated_at": "2026-07-20T21:19:10.933709+00:00",
+      "date": "2026-07-21",
+      "item_count": 16,
+      "generated_at": "2026-07-21T21:15:56.914978+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "TSMC는 애리조나에 $265B를 투자하며 4-5배 높은 건설 비용에도 불구하고 AI 칩 수요 추세에 대응 중이고, AMD의 Zen 6 기반 EPYC Venice가 TSMC 2nm에서 출시되며 서버 시장 경쟁이 재정의되고 있다. Tesla의 AI5는 Samsung 파운드리에서 2nm급 노드로 테이프아웃되었으며, Google은 차세대 AI 칩 구축을 위해 Samsung과 협력하고 있다.",
-          "key_facts": [
-            "TSMC 애리조나 투자 $265B 규모",
-            "TSMC 4-5배 높은 미국 팹 건설 비용 직면",
-            "AMD EPYC Venice (Zen 6) TSMC 2nm 출시",
-            "Tesla AI5 Samsung 파운드리 2nm급 노드 테이프아웃",
-            "Google, Samsung과 차세대 AI 칩 협력",
-            "SK Group 회장, 내년 AI 칩 수요 60-100% 증가 예상",
-            "Samsung Galaxy Watch 9에서 Exynos 대신 Snapdragon Wear Elite 채택",
-            "코스피 4% 이상 하락, 반도체 투자심리 위축"
-          ],
-          "implications": [
-            {
-              "keyword": "지정학적 칩 공급망 재구성",
-              "text": "TSMC의 미국 투자 확대로 중국 규제 회피 및 미국 고객사 현지 공급 기반 구축"
-            },
-            {
-              "keyword": "2nm 경쟁 심화",
-              "text": "TSMC와 Samsung의 2nm 노드 경쟁으로 HPC/AI 칩 파운드리 점유율 재편 가능성"
-            },
-            {
-              "keyword": "멀티소싱 전략",
-              "text": "Tesla, Google 등 대형 칩 설계사가 TSMC 및 Samsung 파운드리를 동시 활용하며 공급망 리스크 분산"
-            },
-            {
-              "keyword": "시장 심리 악화",
-              "text": "코스피 하락 및 반도체 피크아웃 우려로 인한 투자 심리 위축, 다만 기관은 6000선을 바닥으로 평가"
-            }
-          ],
-          "counterpoint": "미국 팹 건설 비용이 높음에도 불구하고 TSMC CFO는 AI 메가트렌드 기회를 강조하고 있어, 수익성 달성까지 단기적 비용 압박이 지속될 가능성"
-        },
-        "en": {
-          "executive_summary": "TSMC is investing $265B in Arizona and responding to AI chip demand trends despite facing 4-5x higher construction costs, while AMD's Zen 6-based EPYC Venice launches on TSMC 2nm, redefining server market competition. Tesla's AI5 has taped out on Samsung foundry at 2nm-class nodes, and Google is collaborating with Samsung to build next-generation AI chips.",
-          "key_facts": [
-            "TSMC Arizona investment $265B scale",
-            "TSMC facing 4-5x higher US fab construction costs",
-            "AMD EPYC Venice (Zen 6) launching on TSMC 2nm",
-            "Tesla AI5 taped out on Samsung foundry at 2nm-class nodes",
-            "Google collaborating with Samsung on next-generation AI chips",
-            "SK Group chairman expects 60-100% increase in AI chip demand next year",
-            "Samsung Galaxy Watch 9 adopting Snapdragon Wear Elite instead of Exynos",
-            "KOSPI declined over 4%, semiconductor investment sentiment weakened"
-          ],
-          "implications": [
-            {
-              "keyword": "Geopolitical supply chain reconfiguration",
-              "text": "TSMC's expanded US investment establishes local supply base for US customers while circumventing China regulations"
-            },
-            {
-              "keyword": "Intensifying 2nm competition",
-              "text": "TSMC and Samsung's 2nm node competition may reshape HPC/AI chip foundry market share"
-            },
-            {
-              "keyword": "Multi-sourcing strategy",
-              "text": "Major chip designers like Tesla and Google are simultaneously utilizing TSMC and Samsung foundries to diversify supply chain risk"
-            },
-            {
-              "keyword": "Deteriorating market sentiment",
-              "text": "KOSPI decline and concerns about semiconductor peak-out dampening investment sentiment, though institutions view 6000 as floor"
-            }
-          ],
-          "counterpoint": "Despite high US fab construction costs, TSMC's CFO emphasizes the AI mega-trend opportunity, indicating near-term cost pressures may persist until profitability is achieved"
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-07-20",
-      "item_count": 23,
-      "generated_at": "2026-07-20T21:19:10.933709+00:00",
+      "date": "2026-07-21",
+      "item_count": 29,
+      "generated_at": "2026-07-21T21:15:56.914978+00:00",
       "content": {
         "ko": {},
         "en": {}

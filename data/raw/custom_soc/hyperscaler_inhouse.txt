@@ -6,7 +6,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/machine-learning/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/machine-learning/</link>
 	<description>Official Machine Learning Blog of Amazon Web Services</description>
-	<lastBuildDate>Mon, 20 Jul 2026 17:25:24 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 21 Jul 2026 16:23:12 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -14,6 +14,506 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Exploring self-distilled reasoning for supervised fine-tuning with Amazon Nova</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/exploring-self-distilled-reasoning-for-supervised-fine-tuning-with-amazon-nova/</link>
+		
+		<dc:creator><![CDATA[Rushil Anirudh]]></dc:creator>
+		<pubDate>Tue, 21 Jul 2026 16:23:12 +0000</pubDate>
+				<category><![CDATA[Advanced (300)]]></category>
+		<category><![CDATA[Amazon SageMaker]]></category>
+		<category><![CDATA[Best Practices]]></category>
+		<guid isPermaLink="false">4f85d2b1154526202e9b3034e44e7fb5d6011e18</guid>
+
+					<description>In this post, we explore an idea for generating thinking tokens for datasets that lack reasoning traces in SFT customization. We first examine the reasoning suppression problem, then introduce Self-Distilled Reasoning (SDR), validate it across three benchmarks, and provide practical recommendations.</description>
+										<content:encoded>&lt;p&gt;When you fine-tune a model using Supervised Fine-Tuning (SFT), creating high-quality chain-of-thought (CoT) reasoning traces for your training data is often impractical and can be prohibitively expensive. As a result, you might choose to skip reasoning during SFT and train with only inputs and outputs. However, reasoning is a key capability of the &lt;a href="https://aws.amazon.com/nova/models/" target="_blank" rel="noopener"&gt;Amazon Nova 2&lt;/a&gt; family of models, and it’s been shown to significantly enhance prediction performance in Nova and other frontier models, often with performance gains on hard problems like coding and math. With Amazon Nova 2 customization, you can use the power of thinking models on your specific domains through techniques such as SFT and Reinforcement Fine-Tuning (RFT). For SFT, a key requirement to unlock these gains is the availability of golden CoT traces in the SFT dataset, that is, thinking traces from a strong teacher model that have been further validated and cleaned.&lt;/p&gt; 
+&lt;p&gt;In this post, we explore an idea for generating thinking tokens for datasets that lack reasoning traces in SFT customization. We first examine the reasoning suppression problem, then introduce Self-Distilled Reasoning (SDR), validate it across three benchmarks, and provide practical recommendations. SDR re-uses the chain of thought from the base Amazon Nova 2 Lite model as a stand-in for non-reasoning datasets. Through our experiments we make a few observations on the impact of introducing SDR, from improving target performance to mitigating &lt;a href="https://arxiv.org/abs/2501.17161" target="_blank" rel="noopener"&gt;catastrophic forgetting&lt;/a&gt;. This is in line with a growing body of work that is discovering the importance of distilling information from a model into itself during training, otherwise known as &lt;a href="https://arxiv.org/html/2601.19897v1" target="_blank" rel="noopener"&gt;self-distillation&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;The following figure illustrates how SDR compares with vanilla SFT and model merging across target performance and math retention. Model merging is a straightforward approach to retain previously acquired skills, that takes an SFT checkpoint and merges it back to the base model (before SFT). However, merging often comes at the expense of forgoing gains obtained on the SFT checkpoint because of catastrophic forgetting which manifests as a trade-off between target and general performance. SDR on the other hand mitigates this issue with similar or better target performance as pure SFT (with no merging) while retaining most of general performance.&lt;/p&gt; 
+&lt;p&gt;&lt;img class="size-full wp-image-135745 aligncenter" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/21/ML-20897-1-1-1.png" alt="Chart comparing SDR, vanilla SFT, and model merging across target performance and math retention" width="500" height="507"&gt;&lt;/p&gt; 
+&lt;p&gt;Because of catastrophic forgetting, we observe that SFT on a dataset can lead to previous knowledge being completely lost. For instance, we find that vanilla SFT leads to Math performance dropping from 70 percent (base) to 6 percent on average (Table 2). With SDR, we’re able to almost entirely recover it back. Self-distilled reasoning allows us to retain the base model’s capabilities without compromising on target performance, and in many cases it improves target performance as well. Model merging is a common solution to mitigate catastrophic forgetting, but SDR achieves this retention more effectively.&lt;/p&gt; 
+&lt;p&gt;SDR provides in-training regularization by augmenting the dataset with the model’s own reasoning traces. It doesn’t require a separate teacher model or post-hoc interpolation. This approach requires no human annotation, is applicable to existing SFT datasets regardless of domain, and is more effective than model merging at preserving both target and general performance.&lt;/p&gt; 
+&lt;p&gt;Compared with model merging, self-distillation yields nearly identical math performance (70 percent compared to 68 percent) while improving target performance by over 6.5 percent on average at the same time. This finding aligns with recent &lt;a href="https://arxiv.org/html/2601.19897v1" target="_blank" rel="noopener"&gt;research&lt;/a&gt; that advocates self-distillation as a powerful mechanism to mitigate catastrophic forgetting.&lt;/p&gt; 
+&lt;h2 id="background-sft-on-datasets-without-reasoning-tokens-may-result-in-loss-of-reasoning-ability"&gt;Background: SFT on datasets without reasoning tokens may result in loss of reasoning ability&lt;/h2&gt; 
+&lt;p&gt;Before introducing the approach, it is important to understand why SFT on datasets without reasoning traces leads to degraded model performance. This section examines the reasoning suppression problem, quantifies the impact of reasoning on target performance, and discusses model merging as an existing recovery mechanism.&lt;/p&gt; 
+&lt;h3 id="the-reasoning-suppression-problem"&gt;The reasoning suppression problem&lt;/h3&gt; 
+&lt;p&gt;SFT training on non-reasoning datasets with reasoning mode active leads to a critical issue: the model loses its ability to reason during inference, even when you explicitly turn on reasoning mode. We hypothesize that this phenomenon occurs because the training objective calculates loss on both reasoning and output tokens together. When training data contains only input-output pairs without intermediate reasoning steps, the model receives no supervision signal for generating coherent reasoning traces. The loss function effectively penalizes tokens that don’t directly contribute to the final output, training the model to bypass its reasoning mechanisms. This behavior &lt;a href="https://arxiv.org/abs/2004.07780" target="_blank" rel="noopener"&gt;exemplifies shortcut learning&lt;/a&gt;, where models rely on spurious correlations rather than learning robust reasoning patterns.&lt;/p&gt; 
+&lt;h3 id="quantifying-the-impact-of-reasoning"&gt;Quantifying the impact of reasoning&lt;/h3&gt; 
+&lt;p&gt;Despite the suppression issue, turning on reasoning during both training and inference produces significant benefits in target performance. To confirm fair comparison, we maintain consistency between train and inference settings: comparing reasoning-on during both training and inference versus reasoning-off during both training and inference. Our experiments reveal that turning on reasoning during training and inference leads to a significant improvement. The following table demonstrates this effect on the LLaVA CoT dataset with varying LoRA (Low-Rank Adaptation) merge weights.&lt;/p&gt; 
+&lt;table style="height: 294px" border="1px" width="747" cellpadding="10px"&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Merge weight&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Target perf (reasoning on)&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Target perf (reasoning off)&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Delta&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;0.0 (base)&lt;/td&gt; 
+   &lt;td&gt;12.30%&lt;/td&gt; 
+   &lt;td&gt;12.30%&lt;/td&gt; 
+   &lt;td&gt;0%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;0.3&lt;/td&gt; 
+   &lt;td&gt;34.38%&lt;/td&gt; 
+   &lt;td&gt;35.28%&lt;/td&gt; 
+   &lt;td&gt;-0.9%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;0.5&lt;/td&gt; 
+   &lt;td&gt;60.51%&lt;/td&gt; 
+   &lt;td&gt;48.80%&lt;/td&gt; 
+   &lt;td&gt;+11.7%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;0.7&lt;/td&gt; 
+   &lt;td&gt;66.67%&lt;/td&gt; 
+   &lt;td&gt;54.05%&lt;/td&gt; 
+   &lt;td&gt;+12.6%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;1.0 (full merge)&lt;/td&gt; 
+   &lt;td&gt;65.17%&lt;/td&gt; 
+   &lt;td&gt;47.90%&lt;/td&gt; 
+   &lt;td&gt;+17.3%&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;p&gt;Table 1: Impact of reasoning and merging weight on target performance. Training and inference reasoning modes are kept consistent.&lt;/p&gt; 
+&lt;h3 id="model-merging-as-a-recovery-mechanism"&gt;Model merging as a recovery mechanism&lt;/h3&gt; 
+&lt;p&gt;Our current recommended approach to address the reasoning suppression issue for SFT use cases without reasoning tokens is to use model merging as a mechanism to recover the reasoning skill. Similar to how model merging can restore mathematical or coding capabilities after domain-specific fine-tuning, we find that reasoning capability can be recovered through weighted interpolation between the fine-tuned model and the base model. This recovery is strongly correlated with the restoration of general performance metrics (such as math and coding benchmarks), suggesting that reasoning is a fundamental capability that underlies multiple downstream skills.&lt;/p&gt; 
+&lt;p&gt;To understand this better, we use the following benchmarks in this experiment:&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;ToolACE&lt;/strong&gt; – Tool-calling benchmark (10K samples). Evaluates the model’s ability to generate correct function calls with proper argument names and values given a user query and available tool definitions. Short context (approximately 2K tokens). Scored on strict success rate (exact match of function name and all arguments). Requires &lt;a href="https://huggingface.co/datasets/Team-ACE/ToolACE"&gt;precise structured output and argument value inference&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;CoCoHD&lt;/strong&gt; – Long-context structured extraction (730 samples). Evaluates extraction of 10 metadata fields (title, chamber, committee, members, dates) from U.S. congressional hearing transcripts in JSON format. Long context (35K–85K characters). Scored on key/value overlap between predicted and target JSON. Requires parsing very long documents and producing schema-conformant structured output. Extracted from &lt;a href="https://github.com/gtfintechlab/CoCoHD"&gt;GitHub&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;GovReport&lt;/strong&gt; – Long-context abstractive summarization (17K samples). Evaluates generation of 250–450 word plain-text summaries of U.S. government reports (GAO, CRS). Long context (35K–85K characters input). Scored on ROUGE-L (longest common subsequence overlap with reference summary). Requires synthesizing dense policy documents into concise, factual narratives. Extracted from &lt;a href="https://huggingface.co/datasets/ccdv/govreport-summarization"&gt;HuggingFace&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Invoice-OCR&lt;/strong&gt; – Multimodal document understanding (approximately 500 samples, image and text). Evaluates extraction of structured fields from scanned invoice images. Short context (single image and prompt). Scored on ANLS (Average Normalized Levenshtein Similarity). Requires visual text recognition and field-level extraction from varied document layouts. Extracted from &lt;a href="https://www.kaggle.com/datasets/osamahosamabdellatif/high-quality-invoice-images-for-ocr"&gt;Kaggle&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;CaptionGen&lt;/strong&gt; – Video captioning (1800 samples, video and text). Evaluates generation of descriptive captions for video clips. Variable context (video frames and prompt). Scored using automated evaluation (likely CIDEr/METEOR or LLM-judge). Requires temporal understanding across video frames and natural language generation. Extracted from &lt;a href="https://huggingface.co/datasets/friedrichor/MSVD"&gt;HuggingFace.&lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;We investigate whether reasoning emerges with model merging. On an Instruction Following benchmark, we count the number of reasoning tokens on a model that is trained without reasoning. The x-axis shows the merging weight between the custom and the base model, where 0.0 corresponds to the base model and 1.0 is the SFT model without merging.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/14/ML-20897-2-1.jpeg" alt="Chart of reasoning token count versus merge weight between the custom and base model" width="800"&gt;&lt;/p&gt; 
+&lt;h3 id="implications-for-customization"&gt;Implications for customization&lt;/h3&gt; 
+&lt;p&gt;These findings have important implications if you’re deploying customized models. First, maintaining the same reasoning mode during training and inference is critical for optimal performance. Second, without intervention, domain-specific SFT can significantly degrade general reasoning abilities. Third, model merging offers a post-hoc solution, but requires careful tuning of the merging weight to balance competing objectives. These trade-offs motivated us to develop a training approach that preserves reasoning capability without requiring post-hoc interventions.&lt;/p&gt; 
+&lt;h3 id="role-of-reasoning-in-sft"&gt;Role of reasoning in SFT&lt;/h3&gt; 
+&lt;p&gt;Reasoning traces in SFT serve three critical functions that connect reinforcement fine-tuning (RFT), regularization, and self-distillation paradigms.&lt;/p&gt; 
+&lt;p&gt;First, reasoning traces act as implicit policy regularization by constraining the fine-tuned model to stay close to the base model’s policy. This prevents catastrophic forgetting and capability degradation in a manner similar to &lt;a href="https://arxiv.org/html/2501.17161v1" target="_blank" rel="noopener"&gt;KL-regularization in RLHF&lt;/a&gt;. Second, reasoning provides process supervision, analogous to step-by-step reward shaping in RFT, rather than just outcome supervision. This leads to &lt;a href="https://arxiv.org/html/2509.22230v1" target="_blank" rel="noopener"&gt;more robust generalization&lt;/a&gt;. Third, self-distillation, where a model learns from its own predictions, has proven effective across domains from Born-Again Networks to Constitutional AI. Reasoning traces offer particularly rich self-supervision by capturing the model’s problem-solving process rather than just final outputs, as demonstrated in &lt;a href="https://arxiv.org/html/2601.19897v1" target="_blank" rel="noopener"&gt;recent continual learning research&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;Recent work shows that effective fine-tuned models maintain proximity to the base model in &lt;a href="https://arxiv.org/html/2501.17161v1" target="_blank" rel="noopener"&gt;parameter space&lt;/a&gt;, and our approach uses this insight by applying the base model’s own reasoning traces as training targets, creating a learning signal consistent with the model’s internal representations while providing dense token-level supervision throughout the reasoning process.&lt;/p&gt; 
+&lt;h3 id="self-distilled-reasoning"&gt;Self-distilled reasoning&lt;/h3&gt; 
+&lt;p&gt;We propose an effective approach that uses self-distilled reasoning (SDR) for SFT customization on datasets without reasoning traces. The process works in three stages. First, you use the base reasoning model (such as Amazon Nova 2 Lite) to generate reasoning traces for each example in the SFT dataset. Next, you augment the training data by prepending the generated reasoning traces to the original outputs. Finally, you fine-tune the model with reasoning mode turned on, providing supervision on both reasoning and output tokens.&lt;/p&gt; 
+&lt;p&gt;SDR offers several advantages for your SFT workflow. There is zero annotation cost because no human effort is required to create the reasoning traces. The reasoning traces are consistent with the base model’s own problem-solving approach. The technique scales to existing SFT datasets regardless of domain and gives you flexibility to use different teacher models.&lt;/p&gt; 
+&lt;h2 id="constructing-reasoning-traces-for-sft"&gt;Constructing reasoning traces for SFT&lt;/h2&gt; 
+&lt;p&gt;We query Amazon Bedrock to obtain reasoning traces for a given dataset. There are two approaches to construct chain-of-thought reasoning, each with different trade-offs.&lt;/p&gt; 
+&lt;h3 id="basic-reasoning"&gt;Basic reasoning&lt;/h3&gt; 
+&lt;p&gt;This approach generates reasoning traces in a forward manner, where the model naturally produces its reasoning given only the question. This mimics how the model would reason during inference. The prompt template is:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;Think through this question naturally and show your reasoning:
+{user_text}
+Format your response with &amp;lt;thinking&amp;gt; tags for reasoning and &amp;lt;answer&amp;gt; tags for the final answer.
+Use a consistent reasoning style.&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h3 id="guided-reasoning"&gt;Guided reasoning&lt;/h3&gt; 
+&lt;p&gt;This approach uses the availability of ground-truth answers to guide reasoning generation in a backward manner. By providing both the question and answer, we ask the model to reconstruct plausible reasoning that connects them, similar to hindsight learning approaches. The prompt template is:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;Generate natural reasoning for solving this question.
+Act as if you don't know the answer yet.
+Question:
+{user_text}
+Answer to arrive at:
+{assistant_content}
+Format your response with &amp;lt;thinking&amp;gt; tags for reasoning
+and &amp;lt;answer&amp;gt; tags for the final answer. Write natural
+reasoning that works toward this answer without assuming
+you know it beforehand. Use a consistent reasoning style.&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;To verify the model does not accidentally leak the answer into the reasoning trace (which would introduce noise), we perform a secondary filtering step that removes mentions of the answer to obtain the final reasoning trace.&lt;/p&gt; 
+&lt;h3 id="implementation-pipeline"&gt;Implementation pipeline&lt;/h3&gt; 
+&lt;p&gt;The following code shows how to implement guided reasoning using the Amazon Bedrock Converse API. The pipeline reads your SFT training data, generates Chain-of-Thought (CoT) reasoning traces, and assembles the final dataset with &lt;code&gt;reasoningContent&lt;/code&gt; blocks.&lt;/p&gt; 
+&lt;h4 id="setup-and-coj-prompt-generation"&gt;Setup and CoT prompt generation&lt;/h4&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;import json, re, boto3, time
+
+MODEL_ID = "amazon.nova-lite-v1:0"
+bedrock = boto3.client("bedrock-runtime", region_name="us-east-1")
+
+COT_SYSTEM = """You are an expert evaluator. Provide a
+detailed Chain-of-Thought explaining why the given
+ground truth answer is correct and makes sense."""
+
+COT_USER_TEMPLATE = """Given the task context and ground
+truth annotation, provide a Chain-of-Thought.
+**Original System Context:** {system_prompt}
+**Original User Request:** {user_prompt}
+**Ground Truth Annotation:**
+```json
+{ground_truth}
+```
+ONLY provide your justification within
+&amp;lt;justification&amp;gt;&amp;lt;/justification&amp;gt; tags."""&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h4 id="invoke-amazon-bedrock-and-assemble-the-final-dataset"&gt;Invoke Amazon Bedrock and assemble the final dataset&lt;/h4&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;# Invoke Bedrock for each CoT prompt
+for req in cot_requests:
+    response = bedrock.converse(
+        modelId=MODEL_ID,
+        system=[{"text": req["system"]}],
+        messages=[{"role":"user",
+        "content":[{"text":req["query"]}]}],
+        inferenceConfig={"maxTokens":4096,"temperature":0.3,"topP": 0.9,"topK": 50})
+    output = response["output"]["message"]["content"][0]["text"]
+    time.sleep(2) # rate limit
+
+# Parse &amp;lt;justification&amp;gt; tags and build SFT dataset
+for idx, item in enumerate(original_data):
+    tags = extract_xml_tag(inference[idx], "justification")
+    reasoning_block = {"reasoningContent": {"reasoningText":
+        {"text": "Based on the provided context, lets think"
+        " step by step " + tags[0].strip()}}}
+    sft_dataset.append({
+        "schemaVersion": "bedrock-conversation-2024",
+        "system": item["system"],
+        "messages": [item["messages"][0],
+        {"role": "assistant",
+        "content": [reasoning_block, original_text]}]})&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h4 id="inference-configuration-parameters"&gt;Inference configuration parameters&lt;/h4&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;temperature: 0.3&lt;/strong&gt; Low randomness produces consistent, deterministic reasoning traces suitable for training data.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;topP: 0.9&lt;/strong&gt; Nucleus sampling that retains the top 90 percent probability mass. Balances coherence with enough diversity to avoid degenerate repetitions.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;topK: 50&lt;/strong&gt; Limits token candidates to the top 50 at each step. Prevents unlikely tokens from appearing in reasoning traces while keeping natural language flow.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h4 id="sample-input-no-reasoning"&gt;Sample input (no reasoning)&lt;/h4&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-json"&gt;{"schemaVersion": "bedrock-conversation-2024",
+"system": [{"text": "You are a legal expert..."}],
+"messages": [
+{"role": "user", "content": [{"text":
+"Review this clause: Company shall not disclose
+data to third parties."}]},
+{"role": "assistant", "content": [{"text":
+"[{"comment_id": "001", "severity": "Medium",
+"comment": "Add standard confidentiality
+exceptions...", ...}]"}]}]}&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h4 id="sample-output-with-reasoning-prepended"&gt;Sample output (with reasoning prepended)&lt;/h4&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-json"&gt;{"role": "assistant", "content": [
+{"reasoningContent": {"reasoningText": {"text":
+"Based on the provided context, lets think step by
+step: 1. Correctness: The annotation correctly
+identifies an issue with the clause by suggesting
+standard confidentiality exceptions... 2. Severity:
+Medium is appropriate because... 3. Category:
+Privacy fits because data protection is a core
+privacy concern... 6. References: std-clauses.pdf
+validates the need for exceptions."}}},
+{"text": "[{"comment_id": "001", ...}]"}]}&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;Our experiments (discussed in the next section) demonstrate that this approach leads to significant improvements in both target domain performance and general capability preservation, validating the hypothesis that self-distilled reasoning provides valuable inductive bias during fine-tuning.&lt;/p&gt; 
+&lt;h2 id="experiments"&gt;Experiments&lt;/h2&gt; 
+&lt;p&gt;We run experiments on three benchmarks that do not have reasoning.&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;a href="https://medmcqa.github.io/" target="_blank" rel="noopener"&gt;MedMCQA&lt;/a&gt; is a Q&amp;amp;A style dataset that contains 10k training samples.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://github.com/gtfintechlab/CoCoHD" target="_blank" rel="noopener"&gt;CoCoHD&lt;/a&gt; is a congressional hearing dataset that has long context (20-60k tokens) and has a task of producing a JSON with specific fields.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://www.kaggle.com/datasets/osamahosamabdellatif/high-quality-invoice-images-for-ocr" target="_blank" rel="noopener"&gt;Invoice-OCR&lt;/a&gt; is a multimodal dataset that has images of invoices and requires a JSON output with the fields from the image.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;The following table summarizes our SDR results across three benchmarks. Each column captures a specific dimension of the experimental setup: &lt;em&gt;Model&lt;/em&gt; refers to the dataset used for fine-tuning (or the base Nova 2 Lite model when no fine-tuning is applied). &lt;em&gt;Reasoning Traces&lt;/em&gt; indicates which model generated the chain-of-thought traces prepended to the training data. “None” means no reasoning was added to the dataset. &lt;em&gt;Training Reasoning&lt;/em&gt; specifies whether reasoning mode was enabled during the SFT training process. &lt;em&gt;Inference Reasoning&lt;/em&gt; specifies whether reasoning mode was enabled at prediction time. &lt;em&gt;Merging&lt;/em&gt; indicates whether model merging (weighted interpolation between the fine-tuned checkpoint and the base model) was applied after training to recover lost general capabilities. &lt;em&gt;Target&lt;/em&gt; reports accuracy on the domain-specific benchmark the model was fine-tuned for. &lt;em&gt;Math ↑ (control)&lt;/em&gt; reports accuracy on a math benchmark used as a control metric to measure catastrophic forgetting. The base model scores 70 percent, so any significant drop signals that general reasoning ability has been lost during fine-tuning.&lt;/p&gt; 
+&lt;table style="height: 1345px" border="1px" width="982" cellpadding="10px"&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Dataset&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Reasoning Traces&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Training Reasoning&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Inference Reasoning&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Merging&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Target&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt; &lt;p&gt;&lt;strong&gt;Math ↑&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;(control)&lt;/p&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Nova 2 Lite&lt;/td&gt; 
+   &lt;td&gt;None&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;–&lt;/td&gt; 
+   &lt;td&gt;55.60%&lt;/td&gt; 
+   &lt;td&gt;12.90%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Nova 2 Lite&lt;/td&gt; 
+   &lt;td&gt;None&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;–&lt;/td&gt; 
+   &lt;td&gt;55.40%&lt;/td&gt; 
+   &lt;td&gt;70%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;MedMCQA&lt;/td&gt; 
+   &lt;td&gt;None&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;60.50%&lt;/td&gt; 
+   &lt;td&gt;8.30%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;MedMCQA&lt;/td&gt; 
+   &lt;td&gt;None&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;63.80%&lt;/td&gt; 
+   &lt;td&gt;0%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr style="background-color: #ebe6e6"&gt; 
+   &lt;td colspan="7"&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;MedMCQA&lt;/td&gt; 
+   &lt;td&gt;Nova 2 Lite Basic&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;66.60%&lt;/td&gt; 
+   &lt;td&gt;67.90%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;MedMCQA&lt;/td&gt; 
+   &lt;td&gt;Nova 2 Lite Guided&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;65.70%&lt;/td&gt; 
+   &lt;td&gt;59.60%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr style="background-color: #ebe6e6"&gt; 
+   &lt;td colspan="7"&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Nova 2 Lite&lt;/td&gt; 
+   &lt;td&gt;None&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;–&lt;/td&gt; 
+   &lt;td&gt;45%&lt;/td&gt; 
+   &lt;td&gt;12.90%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Nova 2 Lite&lt;/td&gt; 
+   &lt;td&gt;None&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;–&lt;/td&gt; 
+   &lt;td&gt;45%&lt;/td&gt; 
+   &lt;td&gt;70%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;CoCoHD&lt;/td&gt; 
+   &lt;td&gt;None&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;59.30%&lt;/td&gt; 
+   &lt;td&gt;70%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;CoCoHD&lt;/td&gt; 
+   &lt;td&gt;None&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;61.30%&lt;/td&gt; 
+   &lt;td&gt;6.30%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr style="background-color: #ebe6e6"&gt; 
+   &lt;td colspan="7"&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;CoCoHD&lt;/td&gt; 
+   &lt;td&gt;Nova 2 Lite Basic&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;55.40%&lt;/td&gt; 
+   &lt;td&gt;73.80%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;CoCoHD&lt;/td&gt; 
+   &lt;td&gt;Nova 2 Lite Supervised&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;61.30%&lt;/td&gt; 
+   &lt;td&gt;65.80%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr style="background-color: #ebe6e6"&gt; 
+   &lt;td colspan="7"&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Nova 2 Lite&lt;/td&gt; 
+   &lt;td&gt;None&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;–&lt;/td&gt; 
+   &lt;td&gt;82.10%&lt;/td&gt; 
+   &lt;td&gt;12.90%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Nova 2 Lite&lt;/td&gt; 
+   &lt;td&gt;None&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;–&lt;/td&gt; 
+   &lt;td&gt;81.40%&lt;/td&gt; 
+   &lt;td&gt;70%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Invoice-OCR&lt;/td&gt; 
+   &lt;td&gt;None&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;82.30%&lt;/td&gt; 
+   &lt;td&gt;70.80%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Invoice-OCR&lt;/td&gt; 
+   &lt;td&gt;None&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;88.10%&lt;/td&gt; 
+   &lt;td&gt;9.60%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr style="background-color: #ebe6e6"&gt; 
+   &lt;td colspan="7"&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Invoice-OCR&lt;/td&gt; 
+   &lt;td&gt;Nova 2 Lite Basic&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;86.10%&lt;/td&gt; 
+   &lt;td&gt;67.10%&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Invoice-OCR&lt;/td&gt; 
+   &lt;td&gt;Nova 2 Lite Supervised&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;Yes&lt;/td&gt; 
+   &lt;td&gt;No&lt;/td&gt; 
+   &lt;td&gt;87.90%&lt;/td&gt; 
+   &lt;td&gt;67.90%&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;p&gt;Table 2: SDR results across three benchmarks. Rows are grouped by dataset. All SDR rows use merge weight 1.0 (no merging needed).&lt;/p&gt; 
+&lt;h2 id="sft-with-partial-or-missing-reasoning-traces"&gt;SFT with partial or missing reasoning traces&lt;/h2&gt; 
+&lt;p&gt;Reasoning data can be expensive or difficult to curate, and as a result we often encounter situations where only a portion of the SFT dataset contains reasoning. To better understand how SFT behaves in this situation we conduct an ablation study next. We also explore how SDR can help in this situation as a low-overhead and cost-effective alternative.&lt;/p&gt; 
+&lt;h4 id="sft-training-with-only-partial-reasoning-traces"&gt;SFT training with only partial reasoning traces&lt;/h4&gt; 
+&lt;p&gt;In this study, we examine the effect of SFT when only a subset of the dataset contains reasoning, which simulates common real-world scenarios for many users. We ran ablations with reasoning traces for LoRA SFT on 10k training samples from LLaVA CoT benchmark. The eval benchmark for this is MathVista where the base model struggles (12.3 percent) mainly because of formatting inconsistencies and LoRA SFT shows a large improvement (34.4 percent).&lt;/p&gt; 
+&lt;h4 id="math-control-benchmark-catastrophic-forgetting"&gt;Math (control) benchmark — catastrophic forgetting&lt;/h4&gt; 
+&lt;p&gt;The Math (control) benchmark measures whether the model retains general mathematical reasoning capability after SFT. This is a notable finding: without SDR prefill, general math capability collapses from 68% to 3% as you reduce the percentage of reasoning data in training. With SDR, it stays stable at 65–72 percent regardless of how much reasoning data you include.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/14/ML-20897-3-1.png" alt="Chart showing Math control accuracy staying stable with SDR versus collapsing without SDR as reasoning data decreases" width="800"&gt;&lt;/p&gt; 
+&lt;h4 id="key-insight"&gt;Key insight&lt;/h4&gt; 
+&lt;p&gt;&lt;strong&gt;Without SDR:&lt;/strong&gt; Reducing reasoning data below 75 percent causes catastrophic forgetting on Math control: 66.6 percent to 21.7 percent to 3.3 percent to 2.5 percent. The model loses its general math capability entirely.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;With SDR:&lt;/strong&gt; Math (control) stays stable at 64–72 percent across all data percentages, even with 0 percent reasoning data. SDR prefill completely prevents catastrophic forgetting.&lt;/p&gt; 
+&lt;h4 id="median-reasoning-tokens-at-inference"&gt;Median reasoning tokens at inference&lt;/h4&gt; 
+&lt;p&gt;This chart shows the token budget spent on reasoning traces during inference. SDR models produce more reasoning tokens (400–860). Models trained with less than or equal to (≤) 25 percent reasoning data and no prefill produce zero reasoning tokens. This means they have completely lost the ability to reason step-by-step.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/14/ML-20897-4-1.png" alt="Chart of median reasoning tokens at inference across training reasoning-data percentages, with and without SDR prefill" width="800"&gt;&lt;/p&gt; 
+&lt;h4 id="key-insight-1"&gt;Key insight&lt;/h4&gt; 
+&lt;p&gt;&lt;strong&gt;SDR teaches reasoning behavior:&lt;/strong&gt; Even with 0 percent reasoning data in training, SDR prefill causes the model to produce 859 median reasoning tokens. Without SDR at less than or equal to (≤) 25 percent reasoning data, the model produces zero tokens. It has forgotten how to reason.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Base model comparison:&lt;/strong&gt; The base Amazon Nova 2 Lite model produces 1,254 median reasoning tokens. After SFT with 100 percent reasoning data, this drops to 367, and the model becomes more efficient (fewer tokens for the same or better accuracy).&lt;/p&gt; 
+&lt;h4 id="mathvista-target-reasoning-on-versus-off"&gt;MathVista (target) — reasoning on versus off&lt;/h4&gt; 
+&lt;p&gt;This chart compares MathVista accuracy with reasoning enabled and disabled at inference time. Enabling reasoning at inference has the greatest impact. It roughly doubles performance regardless of training data composition.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/14/ML-20897-5-1.png" alt="Chart comparing MathVista accuracy with reasoning enabled and disabled across training data compositions" width="800"&gt;&lt;/p&gt; 
+&lt;h4 id="key-insight-2"&gt;Key insight&lt;/h4&gt; 
+&lt;p&gt;Reasoning on at inference consistently delivers 35–47 percent accuracy, compared to 14–22 percent with reasoning off. This is roughly a 2x improvement.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Best configuration:&lt;/strong&gt; 50 percent reasoning data plus SDR prefill achieves 45.2 percent MathVista with 70.4 percent Math control, avoiding forgetting while maximizing target performance.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Without reasoning at inference,&lt;/strong&gt; performance drops to near base-model levels (approximately 15–22 percent), regardless of training composition. The model needs the reasoning step to perform well on this benchmark. A notable observation here is that training with SDR prefill (that is, with reasoning enabled) results in better eval performance even with reasoning disabled during inference time. For example, when only 75 percent of the dataset is missing CoT supervision, SDR prefill boosts eval performance by over 5pp even with reasoning disabled at inference (16.4 percent to 21.3 percent), indicating that SDR has an impact in how the model solves a task even when reasoning is disabled.&lt;/p&gt; 
+&lt;h2 id="conclusions-and-recommendations"&gt;Conclusions and recommendations&lt;/h2&gt; 
+&lt;p&gt;Our experiments across three benchmarks (MedMCQA, CoCoHD, Invoice-OCR) and an ablation on partial-reasoning datasets (LLaVA-CoT) converge on a consistent finding: Self-Distilled Reasoning (SDR) offers a zero-cost approach that simultaneously improves target performance and preserves general capabilities, without requiring model merging.&lt;/p&gt; 
+&lt;p&gt;The starting point for these findings is that reasoning is fragile under vanilla SFT. Training on data without reasoning traces causes reasoning suppression: the model shortcuts to the answer and loses general skills, with Math accuracy collapsing from 70 percent to 0 percent. Model merging partially recovers these skills, but it introduces a trade-off between target and general performance that is hard to tune and adds a checkpoint-mixing step to the training pipeline.&lt;/p&gt; 
+&lt;p&gt;SDR removes this trade-off. By augmenting the dataset with the base model’s own reasoning traces, SDR retains general performance at Math ≈ 68 percent while delivering a over 6.5 percent relative gain in target performance over the best model-merging checkpoints, with no additional annotation cost. The approach holds up even when the base model is weak on the target domain: on MedMCQA, where the base model scores 55.6 percent, SDR lifts target accuracy by approximately three pp (63.8 percent to 66.6 percent) and recovers Math from 0 percent to 67.9 percent. In other words, SDR works both when the base model has latent domain skill to unlock and when it doesn’t.&lt;/p&gt; 
+&lt;p&gt;The benefit extends to mixed-reasoning training, where only a fraction of the SFT samples carry reasoning traces. This is a common real-world setting since reasoning data is expensive to curate, and our LLaVA-CoT ablation shows it is also fragile. General capability holds up at 75 percent reasoning coverage (Math 66.6 percent) but collapses sharply below that: at 50 percent Math drops to 21.7 percent, at 25 percent to 3.3 percent, and at 0 percent to 2.5 percent. Target accuracy moves non-monotonically across these mixes, so there is no safe dilution point. Pre-filling the missing traces with Nova 2 Lite removes the cliff entirely: Math stays in the 65–71 percent range across all mixes, and 50 percent SDR reaches 45.2 percent target accuracy, higher than the 34.4 percent seen with 100 percent human-authored reasoning. The gain also transfers to reasoning-disabled inference, so teams can patch their datasets once and keep their existing serving path.&lt;/p&gt; 
+&lt;p&gt;One caveat shapes the recommendation on which teacher to use. A stronger teacher isn’t always better: Amazon Nova 2 Pro (Preview) traces improve target accuracy but cause a proportional drop in general performance, consistent with prior findings that a &lt;a href="https://aclanthology.org/2025.findings-acl.1301.pdf" target="_blank" rel="noopener"&gt;large student-teacher gap hurts distillation&lt;/a&gt;. Lite-generated traces offer the most balanced outcome across target and general performance and are the default we recommend.&lt;/p&gt; 
+&lt;p&gt;Taken together, these results point to a practical practitioner path: use SDR with same-family traces (Amazon Nova 2 Lite for Amazon Nova 2 Lite customers) as the default SFT recipe, apply it as a gap-filler whenever reasoning coverage is below roughly 75 percent, and reserve stronger-teacher or guided-reasoning variants for cases where the base model is weak on the target domain and the general-capability cost is acceptable. The broader implication is that SDR is a useful inductive bias for continual learning settings where new skills arrive over time and previously learned skills need to be preserved. Combining it with data mixing and light merging is a natural next step to explore.&lt;/p&gt; 
+&lt;h2 id="practitioner-decision-guide"&gt;Practitioner decision guide&lt;/h2&gt; 
+&lt;p&gt;Use this guide to determine when to use Self-Distilled Reasoning (SDR), model merging, or standard SFT based on your data composition and latency constraints.&lt;/p&gt; 
+&lt;p&gt;&amp;nbsp;&lt;/p&gt; 
+&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Scenario&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Recommendation&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;1&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Default or new SFT job without reasoning, but seeing regression on general performance&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;If latency sensitive: Use model merging to recover general performance regression. If latency constraints accommodate reasoning: Use SDR with Nova 2 Lite-generated reasoning traces. This gives the best balance of target performance and general capability preservation (often higher than with model merging)&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;2&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Base model is weak on target domain&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Consider guided reasoning to provide additional signal during trace generation.&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;3&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Dataset already has partial reasoning (≥ 50%)&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;We recommend training with reasoning turned on. The existing traces are sufficient to preserve general skills.&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;4&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Dataset has &amp;lt; 50% reasoning traces&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;If latency constraints allow for reasoning during inference, pre-fill missing traces with Nova 2 Lite reasoning (one-time, offline). Without this, general performance will collapse.&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;5&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;You do not need general capabilities&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Reasoning data has minimal impact on target performance. Standard SFT is fine.&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;6&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Continual learning or multi-skill preservation&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Consider combining SDR with data mixing and a small (or zero) merge weight for the best retention of previously learned skills.&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;7&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;You still want to use model merging&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;We recommend using a smaller merge weight when SDR is applied. SDR already provides the regularization that merging was compensating for.&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;p&gt;For more information about Amazon Nova models and customization options, see the &lt;a href="https://docs.aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock documentation&lt;/a&gt;. To get started with SFT customization, see the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models.html" target="_blank" rel="noopener"&gt;Amazon Bedrock model customization guide&lt;/a&gt;. If you have questions or want to share your experience with SDR, reach out to your AWS account team.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/14/ML-20897-6-1.jpg" alt="Rushil Anirudh" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Rushil Anirudh&lt;/h3&gt; 
+  &lt;p&gt;Rushil is an Applied Scientist on the Forge team, where he works on the science behind SFT — making LoRA and full fine-tuning more accurate and reliable for frontier model customization. His research spans generative models across vision and language, model robustness, and uncertainty quantification. Outside work, he’s usually hunting down good food in the Bay Area or reading history and first-contact sci-fi.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/14/ML-20897-7-1.jpg" alt="Shiva Mahalingam" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Shiva Mahalingam&lt;/h3&gt; 
+  &lt;p&gt;Shiva is a Senior Solutions Architect in the Engineering, Construction, Real Estate, and Transportation (ECRT) segment at AWS. He works with enterprise customers to design and implement cloud-native architectures, with a focus on data for agents, model customization, and agentic AI solutions. He helps organizations navigate the complexities of fine-tuning, prompt engineering, and domain adaptation to unlock business value from their data. He is passionate about enabling customers to move from experimentation to production-ready AI workloads on AWS. When not working, he listens to music and plays percussion instruments.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/14/ML-20897-8-1.jpg" alt="Anupam Dewan" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Anupam Dewan&lt;/h3&gt; 
+  &lt;p&gt;Anupam is a Senior Solutions Architect working in Amazon Nova team with a passion for generative AI and its real-world applications. He focuses on Nova customization and Amazon Nova Forge, helping enterprises realize the true potential of LLMs with power of customization. He is also passionate about teaching data science, and analytics and helping Enterprise build LLMs that work for their businesses. Outside of work, you can find him hiking, volunteering or enjoying nature.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Custom OS installation now available on AWS DeepRacer devices</title>
 		<link>https://aws.amazon.com/blogs/machine-learning/custom-os-installation-now-available-on-aws-deepracer-devices/</link>
 		
@@ -73,7 +573,7 @@
 &lt;footer&gt; 
  &lt;div class="blog-author-box"&gt; 
   &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/16/ML-20957-1.jpg" alt="Don Barber" width="100" height="100"&gt;&lt;/p&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/16/ML-20957-1.jpg" alt="Don Barber" width="100" height="100"&gt;&lt;/p&gt; 
   &lt;/div&gt; 
   &lt;h3 class="lb-h4"&gt;Don Barber&lt;/h3&gt; 
   &lt;p&gt;Don is a Senior Solutions Architect Manager working with AWS Strategic Accounts. Along with helping customers implement disruptive technology at scale, Don was an inaugural member of the AWS DeepRacer pitcrew, ran the first corporate league events, helped invent community racing and virtual live racing, and designed many of the AWS DeepRacer workshops, directly impacting thousands of developers to get started with AIML. Don is proud to help extend the lifespan of the AWS DeepRacer devices through this release.&lt;/p&gt; 
@@ -2185,7 +2685,7 @@ Always report back error messages exactly as received.
 &lt;p&gt;&lt;a href="https://thrad.ai/" target="_blank" rel="noopener"&gt;Thrad.ai&lt;/a&gt; is building the advertising infrastructure for AI, introducing paid ads in LLMs. Their platform lets chat interfaces monetize through ads and lets brands advertise in them. They faced an especially signal-rich version of this problem. Tracking these patterns manually doesn’t scale, and generic outreach lacks the context that makes email worth opening. Thrad.ai’s sales team spent 30 to 45 minutes researching each lead across six sources before writing one outreach email.&lt;/p&gt; 
 &lt;p&gt;A single AI agent can’t solve this: the signal diversity is too broad, the source APIs too varied, and the analysis too nuanced for one model to handle well. With multi-agent orchestration, you assign each source to a specialist agent, then fuse results through a dedicated analysis agent that spots cross-source patterns.&lt;/p&gt; 
 &lt;p&gt;This post shows how Thrad.ai deployed a multi-agent system with &lt;a href="https://strandsagents.com/" target="_blank" rel="noopener"&gt;Strands Agents&lt;/a&gt; and &lt;a href="https://aws.amazon.com/bedrock/agentcore/" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore&lt;/a&gt; that automates the pipeline from prospect discovery through personalized email generation. The post compares two orchestration patterns (Swarm and Graph) with head-to-head benchmarks on latency, cost, and email quality. You’ll also learn how the system scores prospects using weighted criteria, intent classification, and temporal decay, plus governance controls for production deployment.&lt;/p&gt; 
-&lt;p&gt;You can apply these patterns to competitive intelligence, candidate sourcing, and market research. A &lt;a href="https://github.com/aws-samples/sample-multi-agent-social-intelligence-strands-agentcore" target="_blank" rel="noopener"&gt;companion repository&lt;/a&gt; is available to help you follow along.&lt;/p&gt; 
+&lt;p&gt;You can apply these patterns to competitive intelligence, candidate sourcing, and market research. A &lt;a href="https://github.com/aws-samples/sample-social-intelligence-agents" target="_blank" rel="noopener"&gt;companion repository&lt;/a&gt; is available to help you follow along.&lt;/p&gt; 
 &lt;h2 id="prerequisites"&gt;Prerequisites&lt;/h2&gt; 
 &lt;p&gt;This post assumes familiarity with Python, AWS Cloud Development Kit (AWS CDK) basics, and large language model (LLM) concepts.&lt;/p&gt; 
 &lt;ul&gt; 
@@ -2209,7 +2709,7 @@ uv sync
 cd infra &amp;amp;&amp;amp; cdk deploy --all&lt;/code&gt;&lt;/pre&gt; 
 &lt;/div&gt; 
 &lt;blockquote&gt;
- &lt;p&gt;Full setup guide: &lt;a href="https://github.com/aws-samples/sample-multi-agent-social-intelligence-strands-agentcore" target="_blank" rel="noopener"&gt;README.md&lt;/a&gt;&lt;/p&gt;
+ &lt;p&gt;Full setup guide: &lt;a href="https://github.com/aws-samples/sample-social-intelligence-agents/blob/main/README.md" target="_blank" rel="noopener"&gt;README.md&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt; 
 &lt;h2 id="solution-overview"&gt;Solution overview&lt;/h2&gt; 
 &lt;p&gt;With this architecture illustrated in Figure 1, you can turn raw social signals into personalized outreach automatically. Four specialized agents handle discovery, enrichment, scoring, and email generation, each with its own tools and strict output validation.&lt;/p&gt; 
@@ -2354,7 +2854,7 @@ builder.add_edge("analysis", "email", condition=_score_above_threshold)&lt;/code
 &lt;/ul&gt; 
 &lt;p&gt;Thrad.ai found that YouTube API calls accounted for 40% of total latency. The trace data led the team to add &lt;code&gt;get_with_retry&lt;/code&gt; with exponential backoff to HTTP calls.&lt;/p&gt; 
 &lt;blockquote&gt;
- &lt;p&gt;The &lt;a href="https://github.com/aws-samples/sample-multi-agent-social-intelligence-strands-agentcore" target="_blank" rel="noopener"&gt;companion README&lt;/a&gt; for this blog post and &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-get-started-toolkit.html" target="_blank" rel="noopener"&gt;AgentCore documentation&lt;/a&gt; provides the full CDK stack, Gateway setup, and deployment walkthrough.&lt;/p&gt;
+ &lt;p&gt;The &lt;a href="https://github.com/aws-samples/sample-social-intelligence-agents/blob/main/README.md" target="_blank" rel="noopener"&gt;companion README&lt;/a&gt; for this blog post and &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-get-started-toolkit.html" target="_blank" rel="noopener"&gt;AgentCore documentation&lt;/a&gt; provides the full CDK stack, Gateway setup, and deployment walkthrough.&lt;/p&gt;
 &lt;/blockquote&gt; 
 &lt;h2 id="walkthrough-a-real-run"&gt;Walkthrough: A real run&lt;/h2&gt; 
 &lt;p&gt;Here’s what a Graph run produces against the current Hacker News feed:&lt;/p&gt; 
@@ -2418,7 +2918,7 @@ Best,
 &lt;h3 id="next-steps"&gt;Next steps&lt;/h3&gt; 
 &lt;p&gt;&lt;strong&gt;To deploy and customize:&lt;/strong&gt;&lt;/p&gt; 
 &lt;ol type="1"&gt; 
- &lt;li&gt;Clone the &lt;a href="https://github.com/aws-samples/sample-multi-agent-social-intelligence-strands-agentcore" target="_blank" rel="noopener"&gt;companion repository&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;Clone the &lt;a href="https://github.com/aws-samples/sample-social-intelligence-agents" target="_blank" rel="noopener"&gt;companion repository&lt;/a&gt;.&lt;/li&gt; 
  &lt;li&gt;Deploy the infrastructure with &lt;code&gt;cdk deploy --all&lt;/code&gt;.&lt;/li&gt; 
  &lt;li&gt;Configure API keys in AWS Secrets Manager.&lt;/li&gt; 
  &lt;li&gt;Swap data sources by registering new Lambda targets in &lt;code&gt;infra/gateway_stack.py&lt;/code&gt;.&lt;/li&gt; 
@@ -3443,123 +3943,6 @@ cp template.env .env
   &lt;/div&gt; 
   &lt;h3 class="lb-h4"&gt;Andrew Johnston&lt;/h3&gt; 
   &lt;p&gt;Andrew is a partner solutions architect at AWS focused on UK Public Sector initiatives. With over 30 years in IT across the UK and US, he brings deep expertise from his work with global integrators, SMEs, and software companies. Andrew excels at connecting business needs with technical solutions, helping AWS partners deliver innovative outcomes for their customers. His unique ability to spot patterns and craft elegant solutions makes him an asset in driving public sector digital transformation.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Building an agentic AI solution at Bluesight with Amazon Bedrock</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/building-an-agentic-ai-solution-at-bluesight-with-amazon-bedrock/</link>
-		
-		<dc:creator><![CDATA[Vijay Venkatesh]]></dc:creator>
-		<pubDate>Mon, 13 Jul 2026 17:34:38 +0000</pubDate>
-				<category><![CDATA[Amazon Bedrock]]></category>
-		<category><![CDATA[Amazon Bedrock AgentCore]]></category>
-		<category><![CDATA[Amazon CloudWatch]]></category>
-		<category><![CDATA[Amazon Cognito]]></category>
-		<category><![CDATA[Amazon Elastic Container Registry]]></category>
-		<category><![CDATA[Amazon Simple Storage Service (S3)]]></category>
-		<category><![CDATA[AWS Key Management Service]]></category>
-		<category><![CDATA[AWS Lambda]]></category>
-		<category><![CDATA[Customer Solutions]]></category>
-		<guid isPermaLink="false">5847b86e4be04554c7c7a0b81df1f30a35b5c47b</guid>
-
-					<description>In this post, we describe how Bluesight used two AWS engagements and Amazon Bedrock AgentCore to evolve from a single-product AI prototype to Prism, a unified agentic AI solution spanning six healthcare compliance products. Prism Assistant for ControlCheck launched in May 2026 and is already in use by 20 health systems. A more complex multi-product agentic solution is on track for later in 2026.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post is co-written with Vijay Venkatesh, CTO at Bluesight.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;If you build software for hospitals, you know that compliance work scales poorly. Hospitals managing 340B Drug Pricing Program compliance face a compounding data problem. Proving that a Group Purchasing Organization (GPO) purchased drug qualifies for an exception requires cross-referencing each purchase against several sources at once. These include Food and Drug Administration (FDA) shortage lists, American Society of Health-System Pharmacists (ASHP) data, days-on-hand inventory, machine learning (ML) based shortage predictions, and backorder signals from hundreds of other hospitals. For a single covered entity, this manual audit process consumes over 4,000 hours annually. Multiply that across a network of over 620 hospitals, and the scale of the problem becomes clear.&lt;/p&gt; 
-&lt;p&gt;&lt;a href="https://www.bluesight.com/" target="_blank" rel="noopener"&gt;Bluesight&lt;/a&gt; powers hospital and pharmacy operations with intelligence that simplifies inventory management, procurement, and compliance. As a &lt;a href="https://www.thomabravo.com/" target="_blank" rel="noopener"&gt;Thoma Bravo&lt;/a&gt; portfolio company, Bluesight offers a product suite of KitCheck, ControlCheck, CostCheck, 340BCheck, ShortageCheck, and PrivacyPro that serves thousands of partners across the United States. Each product solves a distinct piece of the compliance puzzle. But customers kept asking for something that cut across product boundaries. They wanted an AI layer that could reason over data from multiple systems at once and surface actionable insights without requiring analysts to manually stitch reports together.&lt;/p&gt; 
-&lt;p&gt;In this post, we describe how Bluesight used two AWS engagements and &lt;a href="https://aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock&lt;/a&gt; AgentCore to evolve from a single-product AI prototype to &lt;a href="https://bluesight.com/prism/" target="_blank" rel="noopener"&gt;Prism&lt;/a&gt;, a unified agentic AI solution spanning six healthcare compliance products. Prism Assistant for ControlCheck launched in May 2026 and is already in use by 20 health systems. A more complex multi-product agentic solution is on track for later in 2026.&lt;/p&gt; 
-&lt;h2 id="the-compliance-challenges-driving-bluesight-toward-agentic-ai"&gt;The compliance challenges driving Bluesight toward agentic AI&lt;/h2&gt; 
-&lt;p&gt;Bluesight’s first AI opportunity was in drug diversion detection. &lt;a href="https://bluesight.com/drug-diversion-monitoring/" target="_blank" rel="noopener"&gt;ControlCheck&lt;/a&gt; monitors controlled substance transactions across hospital pharmacies, flagging potential diversion patterns through sophisticated analytics. Compliance teams were spending hours compiling reports, writing executive business reviews, and manually correlating signals across dashboards. A conversational interface that could perform this analysis in seconds would save hospital users and customer success teams enormous amounts of time. But it had to meet the security and accuracy standards that hospital compliance programs demand.&lt;/p&gt; 
-&lt;p&gt;The second challenge was more ambitious. Hospitals classified as DSH (Disproportionate Share), PED (Children’s), or CAN (Free-Standing Cancer) are prohibited from purchasing outpatient drugs through GPO contracts unless the drug is genuinely unavailable through non-GPO channels. Proving that exception requires evidence from multiple Bluesight products at once: purchase records from CostCheck, shortage data from ShortageCheck, and 340B eligibility from 340BCheck. No single product had the full picture.&lt;/p&gt; 
-&lt;p&gt;Both use cases shared a common constraint: the architecture had to be production-grade from day one. Patient data is governed by the Health Insurance Portability and Accountability Act (HIPAA). Hospital compliance teams need audit trails. Any AI system making claims about drug purchasing compliance must be explainable and deterministic where it matters. Bluesight needed a reusable AI architecture, not one-off solutions that would require rebuilding for each new use case.&lt;/p&gt; 
-&lt;h2 id="building-on-amazon-bedrock-agentcore"&gt;Building on Amazon Bedrock AgentCore&lt;/h2&gt; 
-&lt;p&gt;Bluesight chose AWS because &lt;a href="https://aws.amazon.com/bedrock/agentcore/" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore&lt;/a&gt; provided production-grade agentic AI infrastructure without requiring the team to build it from scratch. Three capabilities were decisive in this choice.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/09/ML-21092-1-1.png" alt="Prism Assistant single-agent architecture on Amazon Bedrock AgentCore" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Figure 1. Prism Assistant single-agent architecture on Amazon Bedrock AgentCore.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;First, Amazon Bedrock is &lt;a href="https://aws.amazon.com/compliance/hipaa-compliance/" target="_blank" rel="noopener"&gt;HIPAA-eligible&lt;/a&gt;. For a healthcare company handling protected health information, this was non-negotiable. Bluesight operates under a Business Associate Agreement (BAA) with AWS, and customer data processed by Amazon Bedrock isn’t used to train foundation models (FM). This combination of regulatory compliance and data privacy gave the team confidence to connect agents to live hospital data.&lt;/p&gt; 
-&lt;p&gt;Second, &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/agentcore-runtime.html" target="_blank" rel="noopener"&gt;AgentCore Runtime&lt;/a&gt; provides secure, serverless hosting with session isolation, which is critical when multiple hospitals query the system concurrently. &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/agentcore-gateway.html" target="_blank" rel="noopener"&gt;AgentCore Gateway&lt;/a&gt; transforms existing product APIs into &lt;a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener"&gt;Model Context Protocol (MCP)&lt;/a&gt; compatible tools that agents can discover and invoke, with built-in authentication and encryption. This meant connecting agents to live data sources across three products without building custom integration infrastructure from the ground up.&lt;/p&gt; 
-&lt;p&gt;Third, the agent-to-agent communication pattern in AgentCore matched the architecture Bluesight needed for the GPO prohibition use case. A coordinating agent delegates to specialized data workers. One queries CostCheck purchase records, another checks ShortageCheck availability data, and a third validates 340B eligibility. AgentCore Runtime supports this multi-agent pattern with proper separation of concerns and observability across the full execution chain.&lt;/p&gt; 
-&lt;h2 id="from-controlcheck-prototype-to-production-in-nine-months"&gt;From ControlCheck prototype to production in nine months&lt;/h2&gt; 
-&lt;p&gt;In September 2025, Bluesight partnered with AWS through the &lt;a href="https://aws.amazon.com/experience-based-acceleration/" target="_blank" rel="noopener"&gt;EBA&lt;/a&gt; (Experience-Based Acceleration) program for a three-day intensive sprint. The objective was to build a conversational drug diversion analyst for ControlCheck that could query live data and generate visual reports.&lt;/p&gt; 
-&lt;p&gt;The team of 15, made up of eight Bluesight engineers and seven AWS professionals, built a functioning agent with &lt;a href="https://github.com/strands-agents/" target="_blank" rel="noopener"&gt;Strands Agents&lt;/a&gt; on Amazon Bedrock, hosted on AgentCore Runtime. They connected over 10 ControlCheck APIs through AgentCore Gateway as MCP servers, built a frontend with chart generation, and implemented observability for performance monitoring and cost attribution.&lt;/p&gt; 
-&lt;p&gt;A key architectural decision was separating the AI reasoning from the data layer. Rather than exposing raw databases to the agent, the team wrapped existing ControlCheck API endpoints in &lt;a href="https://aws.amazon.com/lambda/" target="_blank" rel="noopener"&gt;AWS Lambda&lt;/a&gt; functions that returned structured, agent-optimized data. This reduced query latency from 5 minutes to 10 seconds and kept business logic in the application layer where it belonged. The agent’s job was to interpret user questions, orchestrate tool calls, and present results clearly.&lt;/p&gt; 
-&lt;p&gt;After the demo, Samir Neyazi, Director of Product Management at Bluesight, was unequivocal: “This is exactly what diversion program leaders have been waiting for — it gets them to answers faster and takes the manual grind out of every investigation.” He wanted it in front of customers that same Monday.&lt;/p&gt; 
-&lt;p&gt;“Healthcare sets a high bar on compliance, data security, and scale. Our collaboration with AWS resulted in an architecture that could handle all of that at once,” says Vijay Venkatesh, CTO at Bluesight. “Built on that foundation, Bluesight’s domain expertise and proprietary data make the feature genuinely useful to the customers performing compliance work every day.”&lt;/p&gt; 
-&lt;p&gt;The EBA gave Bluesight an architecture ready for production from day one. It was deployed in a virtual private cloud (VPC), fully encrypted, with authentication, observability, and infrastructure-as-code already in place. No architectural pivots were needed, and no technical debt accumulated that would need unwinding later. &lt;a href="https://lp.bluesight.com/controlcheck-assistant" target="_blank" rel="noopener"&gt;Prism Assistant&lt;/a&gt; is Bluesight’s unified branding for in-app AI across all products. It went from that three-day sprint to production general availability in under nine months. That timeline would typically take 12–18 months of exploratory AI development.&lt;/p&gt; 
-&lt;h2 id="scaling-to-multi-product-intelligence-with-prism"&gt;Scaling to multi-product intelligence with Prism&lt;/h2&gt; 
-&lt;p&gt;In March 2026, Bluesight returned for a second EBA. This time the goal was more ambitious: build an agentic AI solution that orchestrates across multiple products to automate GPO prohibition compliance auditing.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone size-full wp-image-135301" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/10/gpo_orchestrator.png" alt="" width="3078" height="3181"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Figure 2. GPO prohibition multi-agent orchestration architecture.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;The reference architecture and patterns from the first EBA significantly reduced development time. What took three days of intensive work to establish for ControlCheck became reusable infrastructure for Prism. The team organized into three workstreams, covering agent behavior and infrastructure, data workers and tools, and UX/frontend, and moved fast because the foundational patterns were already proven.&lt;/p&gt; 
-&lt;p&gt;The resulting Prism architecture runs Claude Sonnet 4.6 as the primary model and Claude Haiku 4.5 for fast operations, both on Amazon Bedrock through AgentCore Runtime deployed in a VPC with private subnets. AgentCore Gateway connects Lambda-backed tools to CostCheck, ShortageCheck, and 340BCheck data sources. A GPO-specific orchestrator agent coordinates with specialized data worker agents, each responsible for gathering evidence from a specific product domain.&lt;/p&gt; 
-&lt;p&gt;The compliance determination itself is not a large language model (LLM) opinion. Bluesight built a deterministic scoring pipeline with 13 evidence signals, priority-based matching, and configurable temporal windows. The LLM orchestrates data gathering and report generation, but the scoring logic is rule-based and auditable. This is a critical distinction for hospital compliance programs that must demonstrate their methodology to regulators.&lt;/p&gt; 
-&lt;p&gt;The full system was connected and operational by end of Day 1. Every planned feature was working by end of Day 2. Day 3 focused on polish, exploratory testing, and a demo to Bluesight business stakeholders and AWS executive sponsors. The agent achieved 100 percent invoice discovery rate and 93 percent evidence justification accuracy on synthetic data during the EBA, exceeding the 85 percent target.&lt;/p&gt; 
-&lt;p&gt;“We returned for the second engagement with bigger questions. Not just ‘can we build another agent,’ but ‘can we build a platform,’” says Venkatesh. “That meant pushing the architecture further and stress-testing it against a compliance workflow that crosses product boundaries in ways the first engagement never did. The fact that it worked, and worked fast, is what turned Prism from an idea into a vision we could actually commit to building.”&lt;/p&gt; 
-&lt;p&gt;“The whole AWS team was great to work with. We made way more progress than I’d hoped, and that was thanks to your team guiding us on both trying things and following patterns. We wouldn’t have had as good of a demo without the EBA process,” says Steve Hodges, Sr.&amp;nbsp;Engineering Manager at Bluesight.&lt;/p&gt; 
-&lt;p&gt;“It’s amazing what you can accomplish when you put a bunch of smart people working towards a single goal in a room together for three days,” adds AJ Rivosecchi, Director of Product Managment at Bluesight.&lt;/p&gt; 
-&lt;h2 id="security-and-compliance-in-production"&gt;Security and compliance in production&lt;/h2&gt; 
-&lt;p&gt;For healthcare organizations evaluating agentic AI, security is not a feature to add later. It’s a design constraint from the start. Bluesight’s architecture addresses this at every layer.&lt;/p&gt; 
-&lt;p&gt;The HIPAA eligibility and BAA coverage of Amazon Bedrock help support compliance efforts for patient-adjacent data processed by agents. However, organizations remain responsible for their own compliance assessment under the AWS shared responsibility model. AgentCore Runtime deploys within a VPC using private subnets and security groups, keeping all communication between agents and data sources within a controlled network boundary. &lt;a href="https://aws.amazon.com/cognito/" target="_blank" rel="noopener"&gt;Amazon Cognito&lt;/a&gt; handles OAuth2 client credentials flow with JSON Web Token (JWT) validation, authenticating and authorizing each agent request before any data access occurs.&lt;/p&gt; 
-&lt;p&gt;&lt;a href="https://aws.amazon.com/kms/" target="_blank" rel="noopener"&gt;AWS Key Management Service (AWS KMS)&lt;/a&gt; manages encryption keys for data at rest and in transit. &lt;a href="https://aws.amazon.com/secrets-manager/" target="_blank" rel="noopener"&gt;AWS Secrets Manager&lt;/a&gt; handles credentials for downstream service connections. &lt;a href="https://aws.amazon.com/cloudwatch/" target="_blank" rel="noopener"&gt;Amazon CloudWatch&lt;/a&gt; provides dashboards, alarms, and metric filters across the full agent execution chain. Every agent decision, tool invocation, and data access is logged and traceable.&lt;/p&gt; 
-&lt;p&gt;This observability layer isn’t only operational tooling. Hospital compliance programs must be able to demonstrate exactly how a compliance determination was reached. That means showing which data sources were consulted, what evidence was gathered, and how the scoring rubric was applied. This is a regulatory requirement, not a nice-to-have. The combination of deterministic scoring logic and comprehensive audit trails gives compliance teams confidence that AI-assisted determinations are defensible.&lt;/p&gt; 
-&lt;p&gt;“Security is paramount for our hospital customers,” says Vijay Venkatesh, CTO at Bluesight. “Our hospital customers need to know their data is protected under HIPAA before they’ll adopt any AI solution. Amazon Bedrock’s HIPAA eligibility and the network isolation built into AgentCore gave us a security posture we could confidently present to compliance teams from day one.”&lt;/p&gt; 
-&lt;h2 id="results"&gt;Results&lt;/h2&gt; 
-&lt;p&gt;Early adopters of Prism Assistant are already seeing measurable improvements in their daily workflows. Based on Bluesight’s internal measurements across 20 health systems, diversion teams report up to 97% faster report generation and data analysis compared to their previous processes:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Recurring reports completed 96 percent faster, dropping from approximately six hours of manual assembly to 15 minutes.&lt;/li&gt; 
- &lt;li&gt;Pre-investigation triage time decreased by 90 percent, from three hours to roughly 10 minutes.&lt;/li&gt; 
- &lt;li&gt;Controlled substance variance analysis completed 97 percent faster, from 30 minutes to under a minute.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Beyond the Prism Assistant metrics, the two engagements delivered compounding value at the solution level:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;12–18 months of typical AI development compressed to under 9 months for the first agent to reach production.&lt;/li&gt; 
- &lt;li&gt;100 percent invoice discovery rate on synthetic test data, meaning every relevant purchase is identified by the GPO agent.&lt;/li&gt; 
- &lt;li&gt;93 percent evidence justification accuracy on synthetic test data, exceeding the 85 percent target.&lt;/li&gt; 
- &lt;li&gt;Over 4,000 hours of annual manual compliance work targeted for removal.&lt;/li&gt; 
- &lt;li&gt;Second agent built in a fraction of the time by reusing the first engagement’s architecture.&lt;/li&gt; 
- &lt;li&gt;Solution designed to scale to over 2,000 hospitals across Bluesight’s network.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;“The two EBAs delivered extraordinary time-to-market acceleration that wouldn’t have been possible through traditional development,” says Venkatesh. “The first gave us speed and a solid foundation. The second proved we could apply that foundation to deliver sophisticated multi-product capabilities in a fraction of the time. The AWS partnership model, which brought architectural expertise, technology validation, and multiple Solutions Architects working alongside our team, was the accelerant that made both outcomes possible.”&lt;/p&gt; 
-&lt;h2 id="whats-next-for-prism"&gt;What’s next for Prism&lt;/h2&gt; 
-&lt;p&gt;Prism is Bluesight’s unified AI layer across all six products. The GPO prohibition agent is the first multi-product solution, coming later in 2026, while Prism Assistant for ControlCheck is already released and in use by 20 health systems.&lt;/p&gt; 
-&lt;p&gt;Near-term, the team is expanding the evaluation suite from over 3–15 test cases covering edge cases and regression scenarios. The team is also completing production deployment of the GPO agent and gathering feedback from hospital operators and compliance teams.&lt;/p&gt; 
-&lt;p&gt;Longer-term, Bluesight plans to extend the agent-to-agent architecture to additional compliance use cases: 340B material breach identification, workflow triage, and automated audit preparation. The cross-customer data network spanning over 620 hospitals, expandable to over 2,000, provides an evidence layer that grows more valuable with each hospital that joins the solution. This network effect, combined with the reusable agent architecture, positions Prism as infrastructure that compounds in value over time.&lt;/p&gt; 
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;Bluesight’s path from a single-product AI prototype to a multi-product agentic solution took nine months. Amazon Bedrock AgentCore provided the production infrastructure, including runtime, gateway, memory, and observability. With it, the engineering team could focus on healthcare domain logic rather than building AI infrastructure. The EBA model created architectural foundations that compounded in value across both engagements, and the security-first design gave hospital customers confidence to adopt AI for compliance workflows.&lt;/p&gt; 
-&lt;p&gt;If you’re building agentic AI for a regulated industry, you can start from the same primitives Bluesight used. Explore &lt;a href="https://aws.amazon.com/bedrock/agentcore/" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore&lt;/a&gt; and open the &lt;a href="https://console.aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock console&lt;/a&gt; to try it in your own account. Build your first agent with the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/agents-core.html" target="_blank" rel="noopener"&gt;AgentCore documentation&lt;/a&gt; and the &lt;a href="https://github.com/strands-agents/" target="_blank" rel="noopener"&gt;Strands Agents&lt;/a&gt; framework, and browse end-to-end examples in the &lt;a href="https://github.com/awslabs/amazon-bedrock-agentcore-samples" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore samples repository&lt;/a&gt;. To go deeper on agents on AWS, see &lt;a href="https://aws.amazon.com/blogs/machine-learning/building-health-care-agents-using-amazon-bedrock-agentcore/" target="_blank" rel="noopener"&gt;Building healthcare agents using Amazon Bedrock AgentCore&lt;/a&gt; and &lt;a href="https://aws.amazon.com/blogs/machine-learning/rede-mater-dei-de-saude-monitoring-ai-agents-in-the-revenue-cycle-with-amazon-bedrock-agentcore/" target="_blank" rel="noopener"&gt;Rede Mater Dei de Saúde: Monitoring AI agents in the revenue cycle with Amazon Bedrock AgentCore&lt;/a&gt;. For more about building healthcare AI solutions on AWS, visit &lt;a href="https://aws.amazon.com/health/" target="_blank" rel="noopener"&gt;AWS for Health&lt;/a&gt;.&lt;/p&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/09/ML-21092-3-1.jpeg" alt="Vijay Venkatesh" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Vijay Venkatesh&lt;/h3&gt; 
-  &lt;p&gt;Vijay is the Chief Technology Officer at Bluesight, where he leads technology strategy, engineering, and security across the company’s suite of healthcare compliance and supply chain products. Previously, he served as CTO at MakeSpace (acq. by Clutter) and CTO at Pearson, where he led technology for global markets. He has built and scaled engineering across healthcare, education, logistics, and commerce, focusing on ML-driven products, security programs, and regulated environments.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/09/ML-21092-4-1.jpeg" alt="Sam You" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Sam You&lt;/h3&gt; 
-  &lt;p&gt;Sam is a Technical Customer Solutions Manager at AWS, focused on generative AI and agentic solutions for healthcare and enterprise customers. Prior to AWS, he built HIPAA-compliant ML systems at Tempus AI and holds a degree in data science. He is interested in sustainability and the intersection of AI and healthcare.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/09/ML-21092-5-1.jpeg" alt="Chae Clark" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Chae Clark&lt;/h3&gt; 
-  &lt;p&gt;Chae is a Senior AI and ML Specialist Solutions Architect at AWS, focused on agentic AI security, production deployment patterns, and Amazon Bedrock AgentCore. He writes on topics including prompt injection defense, large context transfers in agentic workflows, and Bedrock Guardrails.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/09/ML-21092-6-1.jpeg" alt="Jiju Sarojini" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Jiju Sarojini&lt;/h3&gt; 
-  &lt;p&gt;Jiju R Sarojini is a Senior Customer Solutions Manager at AWS with over 20 years of proven experience leading digital transformation and innovation across Fortune 500 companies. He guides organizations through cloud migration, modernization, and AI/Generative AI adoption journeys. Specializing in agentic AI strategy, Jiju enables enterprises to operationalize AI at scale, transforming strategic vision into measurable business outcomes. A certified cloud and AI specialist, his hands-on approach helps organizations build future-ready capabilities using AWS’s advanced AI services.&lt;/p&gt; 
  &lt;/div&gt; 
 &lt;/footer&gt;</content:encoded>
 					
