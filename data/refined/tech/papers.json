@@ -2,6 +2,202 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.AR",
+    "title": "A Flexible Sparsity-Aware FPGA Accelerator with Column-Wise Compression for Efficient CNN Inference",
+    "url": "https://arxiv.org/abs/2607.19248v1",
+    "published_date": "2026-07-21",
+    "source": "arXiv",
+    "summary": "Efficient acceleration of convolutional neural networks (CNNs) on resource-constrained platforms remains challenging due to the irregularity of sparsity patterns and the associated hardware overhead. While unstructured sparsity offers high model accuracy, it introduces significant inefficiencies in hardware mapping, whereas structured sparsity simplifies execution at the cost of reduced flexibility. This paper presents SparHiXcel-v2, a cost-effective and highly configurable FPGA-based CNN accele",
+    "authors": [
+      "Amirhossein Zarei",
+      "Shervin Vakili"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Time-resolved ARPES in pumped excitonic systems: Floquet physics induced by excitonic fields",
+    "url": "https://arxiv.org/abs/2607.19242v1",
+    "published_date": "2026-07-21",
+    "source": "arXiv",
+    "summary": "We develop a theoretical framework based on the Dynamical Projective Operatorial Approach (DPOA) to study the time- and angle-resolved photoemission spectroscopy (TR-ARPES) of pumped excitonic systems. Including Coulomb electron-electron interactions at the Hartree-Fock (HF) level, our formalism captures the formation of excitonic bound states under the application of pump pulses. Considering a prototypical two-dimensional two-band semiconductor, we analyze the equilibrium phase diagram, which s",
+    "authors": [
+      "Amir Eskandari-asl",
+      "Adolfo Avella"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Direct Spatiotemporal Imaging of Charge Carrier Dynamics in Operative Semiconductor Devices",
+    "url": "https://arxiv.org/abs/2607.19157v1",
+    "published_date": "2026-07-21",
+    "source": "arXiv",
+    "summary": "Understanding charge carrier dynamics within electronic devices is crucial, as it governs both the internal evolution of signals and the externally measurable current. Yet, direct imaging of these dynamics remains elusive: existing approaches are often indirect or inherently perturbative. Here, we introduce Carrier Dynamics by Pockels Imaging (CDPI), a sensitive, quantitative, and non-invasive method that enables direct access to internal charge dynamics. By probing the local electric field, CDP",
+    "authors": [
+      "Adriano Cola",
+      "Antonio Valletta",
+      "Isabella Farella",
+      "Vaclav Dědič",
+      "Lorenzo Dominici"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Thermal and electrical conductivity of a refractory high-entropy alloy after high-pressure torsion: Electron versus phonon contributions",
+    "url": "https://arxiv.org/abs/2607.19123v1",
+    "published_date": "2026-07-21",
+    "source": "arXiv",
+    "summary": "The equiatomic refractory high-entropy alloy TiZrHfNbTa was processed by high-pressure torsion (HPT) to investigate the effect of nanostructuring and defect engineering on thermal and electrical transport properties. Severe plastic deformation (SPD) via the HPT treatment induces substantial accumulation of dislocations, grain refinement to the nanometer level (average: 40 nm), and partial transformation from the BCC phase to the omega phase. While hardness increases to a steady state with proces",
+    "authors": [
+      "Jacqueline Hidalgo-Jimenez",
+      "Payam Edalati",
+      "Md Amirul Islam",
+      "Makoto Arita",
+      "Bidyut Baran Saha",
+      "Kaveh Edalati"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Multiscale ensemble Monte Carlo of transport and gas sensing in monolayer MoS$_2$",
+    "url": "https://arxiv.org/abs/2607.18895v1",
+    "published_date": "2026-07-21",
+    "source": "arXiv",
+    "summary": "Two-dimensional semiconductors, such as monolayer MoS$_2$, combine a technologically useful band gap with an all-surface geometry, making them attractive both as field-effect-transistor channels and as chemically sensitive devices. Predictive device design requires a transport model that is (i) physically grounded rather than empirical, (ii) validated against experiments, and (iii) able to span the scales from electron-phonon coupling to terminal current and sensor response. We present a self-co",
+    "authors": [
+      "Lado Filipovic"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.PL",
+    "title": "High-Level Synthesis of Efficient Pipelines with Visibility Control",
+    "url": "https://arxiv.org/abs/2607.18765v1",
+    "published_date": "2026-07-21",
+    "source": "arXiv",
+    "summary": "High-level synthesis (HLS) raises the abstraction of hardware design from concurrent register-transfer level (RTL) programs to sequential programs. Among the forms of parallelism HLS exploits, pipelining demands fine-grained control over pipeline structure and hazard resolution to achieve competitive power, performance, and area (PPA). However, existing tools either lack such control or sacrifice sequential semantics to provide it.\n  We present an HLS tool that embeds fine-grained pipeline contr",
+    "authors": [
+      "Jungin Rhee",
+      "Minseong Jang",
+      "Jaewoo Kim",
+      "Jeehoon Kang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.supr-con",
+    "title": "Self-consistent GW theory for superconductivity in SrTiO3 models",
+    "url": "https://arxiv.org/abs/2607.18757v1",
+    "published_date": "2026-07-21",
+    "source": "arXiv",
+    "summary": "Superconductivity in doped SrTiO$_3$ occurs over a wide range of carrier densities, including those for which the Fermi energy is below the polar longitudinal optical phonon scale. In this regime, the assumptions underpinning conventional implementations of Migdal-Eliashberg theory, including frequency cutoffs at the phonon scale and a Coulomb pseudopotential $μ^\\ast$, are not valid. We solve the finite-temperature $GW$ equations with full momentum and frequency dependence, without cutoffs or $μ",
+    "authors": [
+      "Zhi-Hao Cui",
+      "John Sous",
+      "Andrew J. Millis",
+      "David R. Reichman"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Low-Complexity Channel Estimation Framework for Non-Square UPA-Assisted XL-MIMO Systems",
+    "url": "https://arxiv.org/abs/2607.18744v1",
+    "published_date": "2026-07-21",
+    "source": "arXiv",
+    "summary": "Low-complexity channel state information acquisition is crucial for extremely large-scale multiple-input multiple-output (XL-MIMO) systems. However, practical deployments of non-square uniform planar arrays (UPAs) in hybrid-field environments face prohibitive computational complexity and degraded estimation accuracy due to limited elevation angle-of-arrival (AoA) resolution and deteriorated channel sparsity. To tackle these challenges, we propose a low-complexity channel estimation framework. Fi",
+    "authors": [
+      "Yilong Liu",
+      "Xi Yang",
+      "Binggui Zhou",
+      "Yu Han",
+      "Ting Liu",
+      "Shaodan Ma"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Non-Square UPA-Enabled XL-MIMO Systems: Anisotropic Near-Field Characterization, Fundamental Limits, and Channel Estimation",
+    "url": "https://arxiv.org/abs/2607.18736v1",
+    "published_date": "2026-07-21",
+    "source": "arXiv",
+    "summary": "Extremely large-scale multiple-input multiple-output (XL-MIMO) is crucial for next-generation communication systems. In practice, the deployment of non-square uniform planar arrays (UPAs) fundamentally alters wavefront characteristics and induces anisotropic beamfocusing capability along different axes due to the aperture disparity originating from the non-square array geometry. To fully uncover the performance impact of such non-square geometry and thus unleash the potential of the non-square U",
+    "authors": [
+      "Yilong Liu",
+      "Xi Yang",
+      "Jing Xu",
+      "Jun Zhang",
+      "Shi jin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "An Efficient Fault-Tolerance Scheme for CKKS Computation on CPUs",
+    "url": "https://arxiv.org/abs/2607.18720v1",
+    "published_date": "2026-07-21",
+    "source": "arXiv",
+    "summary": "Fully homomorphic encryption (FHE) enables computation on encrypted data, but its long ciphertext dataflow and high-dimensional modular arithmetic make it vulnerable to silent data corruption caused by transient hardware faults. Existing protection methods either target dedicated accelerators or impose substantial execution, modular-arithmetic, and memory-access overheads on CPUs.\n  This work presents an efficient fault-tolerance scheme for CPU-based CKKS computation. It checks the input-output ",
+    "authors": [
+      "Jianan Mu",
+      "Ge Yu",
+      "Tenghui Hua",
+      "Liang Kong",
+      "Jing Ye",
+      "Xing Hu",
+      "Meng Li",
+      "Xiaowei Li",
+      "Huawei Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "math.ST",
+    "title": "Gaffke's confidence interval for the mean of bounded data is inadmissible but asymptotically efficient",
+    "url": "https://arxiv.org/abs/2607.18661v1",
+    "published_date": "2026-07-21",
+    "source": "arXiv",
+    "summary": "Given observations $\\mathbf x=(x_1,\\dots,x_n)$, Gaffke (2005) defined \\[ K_n(\\mathbf x)=\\mathbb{P}_{\\mathbf D}\\!\\left\\{\\sum_{i=1}^n x_iD_i\\le 1\\right\\}, \\qquad (D_0,D_1,\\ldots,D_n)\\sim\\mathrm{Dirichlet}(1,\\ldots,1), \\] and conjectured that it is a $p$-value whenever the inputs are independent e-values. Recently, Vlassis and Thomas (2026) proved this conjecture. Inverting the tests for observations in $[0,1]$ gives the confidence interval studied by Learned-Miller and Thomas (2020), which reduces",
+    "authors": [
+      "Jiahao Ming",
+      "Aaditya Ramdas",
+      "Yi Shen",
+      "Ruodu Wang",
+      "Ian Waudby-Smith"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Semantic-Aware Data-Aided Channel Estimation with Large Language Models for MIMO Systems",
+    "url": "https://arxiv.org/abs/2607.18640v1",
+    "published_date": "2026-07-21",
+    "source": "arXiv",
+    "summary": "Data-aided channel estimation enhances spectral efficiency by reusing detected symbols as virtual pilots. In this process, selecting only reliable symbols is crucial to prevent misdetected symbols from corrupting the channel estimate. However, conventional methods rely exclusively on physical-layer statistics. Beyond physical-layer information, transmitted payloads possess inherent semantic structures that can be exploited to resolve detection errors. In this paper, we propose a novel semantic-a",
+    "authors": [
+      "Sojeong Park",
+      "Jaehyun Choi",
+      "Hyun Jong Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Excitonic effects in the photocarriers dynamics of two-dimensional materials",
     "url": "https://arxiv.org/abs/2607.18183v1",
@@ -319,6 +515,40 @@
       "Sung Eun Kim",
       "Tajana S. Rosing",
       "Mingu Kang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "PIP-NTT: Towards a Scalable Memory-Parallelized Accelerator for Iterative NTT in PQC",
+    "url": "https://arxiv.org/abs/2607.18533v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "The iterative forward and inverse number theoretic transform (NTT) is a key component in lattice-based post-quantum cryptography (PQC), typically implemented using Cooley-Tukey and Gentleman-Sande butterfly units. Existing iterative NTT accelerators often rely on ping-pong memory schemes and large memory blocks tied to the cyclotomic ring, which limits overall efficiency. To overcome this, we propose a memory-parallelization strategy using four smaller n/4-sized memories for ring size n, preserv",
+    "authors": [
+      "Malik Imran",
+      "Ayesha Khalid",
+      "Ciara Rafferty",
+      "Safiullah Khan",
+      "Muhammad Rashid",
+      "Maire O'Neill"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Long-Horizon Wireless Link Scheduling with State-Augmented Graph Neural Networks",
+    "url": "https://arxiv.org/abs/2607.18480v1",
+    "published_date": "2026-07-20",
+    "source": "arXiv",
+    "summary": "We address optimal link scheduling in large-scale wireless networks. The goal is to schedule transmissions over a time horizon so that to maximize sum rate while ensuring that average rates of each customer attain a minimum rate requirement. To this end, we formulate a constrained optimization problem and solve it using Lagrangian duality. Common primal-dual approaches lead to time invariant policies. Our constraint requires all links transmit a fraction of the time while avoiding interference, ",
+    "authors": [
+      "Romina Garcia Camargo",
+      "Zhiyang Wang",
+      "Navid NaderiAlizadeh",
+      "Alejandro Ribeiro"
     ]
   },
   {

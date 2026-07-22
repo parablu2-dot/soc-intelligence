@@ -1,116 +1,66 @@
 {
-  "date": "2026-07-21",
-  "generated_at": "2026-07-21T21:15:56.916082+00:00",
+  "date": "2026-07-22",
+  "generated_at": "2026-07-22T21:13:01.989952+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-07-21",
-      "item_count": 3,
-      "generated_at": "2026-07-21T21:15:56.914978+00:00",
+      "date": "2026-07-22",
+      "item_count": 4,
+      "generated_at": "2026-07-22T21:13:01.989014+00:00",
       "content": {
         "ko": {
-          "executive_summary": "TSMC를 통한 Apple Silicon 공급에 가격 압박이 예상되고 있으며, MediaTek의 Dimensity 9500 AI 이미징 기술과 Qualcomm의 Snapdragon 및 라이선싱이 모바일 시장의 경쟁 구도를 주도하고 있다.",
+          "executive_summary": "Qualcomm과 Samsung은 Snapdragon 칩으로 Galaxy 스마트폰, 시계, 스마트글래스를 포함한 협력 확대를 발표했다. 이 확대된 파트너십은 Galaxy AI 에코시스템을 강화한다.",
           "key_facts": [
-            "TSMC, 2027년 칩 제조 가격 최대 10% 인상 예정",
-            "MediaTek Tech Day 2026에서 Dimensity 9500 공개",
-            "Qualcomm Snapdragon 및 라이선싱으로 실적 견조"
+            "Qualcomm과 Samsung: Snapdragon 칩 협력 확대",
+            "Galaxy 라인업: 스마트폰, 시계, Intelligent Eyewear 포함"
           ],
           "implications": [
             {
-              "keyword": "가격 상승 전가",
-              "text": "TSMC의 10% 가격 인상은 Apple Silicon 기반 디바이스 제조원가 상승으로 이어질 것으로 예상되며, 2027년부터 최종 제품 가격에 영향을 미칠 수 있음"
+              "keyword": "Market Position",
+              "text": "Qualcomm과 Samsung의 확대된 협력은 모바일 AP 시장에서 두 회사의 강한 지위를 강화하고 경쟁사 대비 에코시스템 통합 우위를 제공"
             },
             {
-              "keyword": "AI 이미징 경쟁",
-              "text": "MediaTek의 Dimensity 9500 AI 이미징 기술은 모바일 프로세서의 AI 기능 경쟁을 심화시키며, 스마트폰 칩 설계의 차별화 포인트가 되고 있음"
+              "keyword": "AI Integration",
+              "text": "Galaxy AI 에코시스템 확대는 웨어러블과 스마트글래스로 AI 기능 통합을 가속화"
             }
           ],
-          "counterpoint": "TSMC 가격 인상이 2027년 예정이므로 2026년 모바일 AP 시장에는 직접적인 영향이 제한적임"
+          "counterpoint": ""
         },
         "en": {
-          "executive_summary": "Price pressure is expected in Apple Silicon supply through TSMC, while MediaTek's Dimensity 9500 AI imaging technology and Qualcomm's Snapdragon and licensing drive competitive dynamics in the mobile market.",
+          "executive_summary": "Qualcomm and Samsung announced an expansion of their collaboration on Snapdragon chips for Galaxy smartphones, smartwatches, and smart glasses. This expanded partnership strengthens the Galaxy AI ecosystem.",
           "key_facts": [
-            "TSMC plans chip manufacturing price increase of up to 10% in 2027",
-            "MediaTek Tech Day 2026 unveils Dimensity 9500",
-            "Qualcomm Snapdragon and licensing drive solid performance"
+            "Qualcomm and Samsung: Expansion of Snapdragon chip collaboration",
+            "Galaxy lineup: Includes smartphones, smartwatches, and Intelligent Eyewear"
           ],
           "implications": [
             {
-              "keyword": "Price increase pass-through",
-              "text": "TSMC's 10% price increase is expected to result in higher manufacturing costs for Apple Silicon-based devices, and could impact final product prices from 2027 onwards"
+              "keyword": "Market Position",
+              "text": "The expanded collaboration between Qualcomm and Samsung strengthens both companies' strong positions in the mobile AP market and provides ecosystem integration advantages over competitors."
             },
             {
-              "keyword": "AI imaging competition",
-              "text": "MediaTek's Dimensity 9500 AI imaging technology intensifies AI capability competition in mobile processors and becomes a differentiation point in smartphone chip design"
+              "keyword": "AI Integration",
+              "text": "The expansion of the Galaxy AI ecosystem accelerates AI functionality integration across wearables and smart glasses."
             }
           ],
-          "counterpoint": "Since TSMC's price increase is scheduled for 2027, direct impact on the 2026 mobile AP market is limited"
+          "counterpoint": ""
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-07-21",
-      "item_count": 12,
-      "generated_at": "2026-07-21T21:15:56.914978+00:00",
+      "date": "2026-07-22",
+      "item_count": 9,
+      "generated_at": "2026-07-22T21:13:01.989014+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "NVIDIA의 Spectrum-6 네트워킹과 Rubin GPU가 차세대 AI 인프라를 주도하고 있으며, SK하이닉스와 삼성전자가 미국 내 AI/HBM 인재 확보 경쟁을 심화시키고 있다. 한국 반도체 업계의 진입 채용이 47% 증가하여 인력 수급 전쟁이 가열되고 있다.",
-          "key_facts": [
-            "NVIDIA Spectrum-6, 차세대 AI 팩토리 네트워킹 인프라 출시",
-            "NVIDIA Rubin GPU, Blackwell 대비 에이전틱 AI 성능 10배 증가",
-            "SK하이닉스, 미국 산호세·인디애나 AI/팩토리 셋업 채용 대폭 확대",
-            "한국 반도체 진입 채용 47% 증가",
-            "NVIDIA, 이스라엘 비어셰바 R&D 센터 개설"
-          ],
-          "implications": [
-            {
-              "keyword": "HBM 인재전쟁",
-              "text": "SK하이닉스의 미국 내 경력사원 대규모 채용으로 삼성전자와의 HBM 인재 확보 경쟁이 심화되고 있으며, AI 반도체 기술 경쟁력 확보가 기업 생존 요소로 작용"
-            },
-            {
-              "keyword": "AI 인프라 고도화",
-              "text": "NVIDIA Rubin의 10배 성능 향상과 Spectrum-6 네트워킹은 차세대 에이전틱 AI 시대의 필수 기술이며, 이천 반도체 연구단지 조성 등 한국의 HPC 인프라 구축 필요성 증대"
-            },
-            {
-              "keyword": "지역별 R&D 거점 확대",
-              "text": "NVIDIA 이스라엘 R&D 센터와 Apple의 RISC-V 개발팀 확보는 글로벌 AI 칩 설계의 다각화 추세를 반영"
-            }
-          ],
-          "counterpoint": "SK하이닉스의 미국 내 채용 확대가 ADR 상장 이후 글로벌 자금 유입과 연계되었으나, 실제 HBM4 수율 경쟁의 승패는 2026년 하반기 제품 출시 시점에 결정될 것"
-        },
-        "en": {
-          "executive_summary": "NVIDIA's Spectrum-6 networking and Rubin GPU lead next-generation AI infrastructure, while SK Hynix and Samsung Electronics intensify competition to secure AI/HBM talent in the United States. Korea's semiconductor industry entry-level hiring has increased 47%, heating up the talent acquisition battle.",
-          "key_facts": [
-            "NVIDIA Spectrum-6 launches next-generation AI factory networking infrastructure",
-            "NVIDIA Rubin GPU achieves 10x agentic AI performance improvement versus Blackwell",
-            "SK Hynix significantly expands hiring for AI/factory setups in San Jose and Indiana",
-            "Korean semiconductor entry-level hiring increases 47%",
-            "NVIDIA opens R&D center in Beersheba, Israel"
-          ],
-          "implications": [
-            {
-              "keyword": "HBM talent war",
-              "text": "SK Hynix's large-scale hiring of experienced talent in the United States intensifies HBM talent competition with Samsung Electronics, making AI semiconductor technological competitiveness a matter of corporate survival"
-            },
-            {
-              "keyword": "AI infrastructure advancement",
-              "text": "NVIDIA Rubin's 10x performance improvement and Spectrum-6 networking are essential technologies for the next-generation agentic AI era, increasing the necessity for Korea to build HPC infrastructure such as Icheon semiconductor research complexes"
-            },
-            {
-              "keyword": "Geographic R&D hub expansion",
-              "text": "NVIDIA's Israel R&D center and Apple's RISC-V development team expansion reflect a trend of diversification in global AI chip design"
-            }
-          ],
-          "counterpoint": "While SK Hynix's expanded U.S. hiring was linked to capital inflows following its ADR listing, the actual winner in HBM4 yield competition will be determined at the product launch point in H2 2026"
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-07-21",
-      "item_count": 33,
-      "generated_at": "2026-07-21T21:15:56.914978+00:00",
+      "date": "2026-07-22",
+      "item_count": 19,
+      "generated_at": "2026-07-22T21:13:01.989014+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -118,9 +68,9 @@
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-07-21",
-      "item_count": 16,
-      "generated_at": "2026-07-21T21:15:56.914978+00:00",
+      "date": "2026-07-22",
+      "item_count": 19,
+      "generated_at": "2026-07-22T21:13:01.989014+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -128,9 +78,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-07-21",
-      "item_count": 29,
-      "generated_at": "2026-07-21T21:15:56.914978+00:00",
+      "date": "2026-07-22",
+      "item_count": 26,
+      "generated_at": "2026-07-22T21:13:01.989014+00:00",
       "content": {
         "ko": {},
         "en": {}
