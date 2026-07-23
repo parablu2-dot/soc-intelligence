@@ -1,89 +1,91 @@
 {
-  "date": "2026-07-22",
-  "generated_at": "2026-07-22T21:13:01.989952+00:00",
+  "date": "2026-07-23",
+  "generated_at": "2026-07-23T21:11:06.561155+00:00",
   "sectors": {
-    "mobile_ap": {
-      "sector": "Mobile AP",
-      "date": "2026-07-22",
-      "item_count": 4,
-      "generated_at": "2026-07-22T21:13:01.989014+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "Qualcomm과 Samsung은 Snapdragon 칩으로 Galaxy 스마트폰, 시계, 스마트글래스를 포함한 협력 확대를 발표했다. 이 확대된 파트너십은 Galaxy AI 에코시스템을 강화한다.",
-          "key_facts": [
-            "Qualcomm과 Samsung: Snapdragon 칩 협력 확대",
-            "Galaxy 라인업: 스마트폰, 시계, Intelligent Eyewear 포함"
-          ],
-          "implications": [
-            {
-              "keyword": "Market Position",
-              "text": "Qualcomm과 Samsung의 확대된 협력은 모바일 AP 시장에서 두 회사의 강한 지위를 강화하고 경쟁사 대비 에코시스템 통합 우위를 제공"
-            },
-            {
-              "keyword": "AI Integration",
-              "text": "Galaxy AI 에코시스템 확대는 웨어러블과 스마트글래스로 AI 기능 통합을 가속화"
-            }
-          ],
-          "counterpoint": ""
-        },
-        "en": {
-          "executive_summary": "Qualcomm and Samsung announced an expansion of their collaboration on Snapdragon chips for Galaxy smartphones, smartwatches, and smart glasses. This expanded partnership strengthens the Galaxy AI ecosystem.",
-          "key_facts": [
-            "Qualcomm and Samsung: Expansion of Snapdragon chip collaboration",
-            "Galaxy lineup: Includes smartphones, smartwatches, and Intelligent Eyewear"
-          ],
-          "implications": [
-            {
-              "keyword": "Market Position",
-              "text": "The expanded collaboration between Qualcomm and Samsung strengthens both companies' strong positions in the mobile AP market and provides ecosystem integration advantages over competitors."
-            },
-            {
-              "keyword": "AI Integration",
-              "text": "The expansion of the Galaxy AI ecosystem accelerates AI functionality integration across wearables and smart glasses."
-            }
-          ],
-          "counterpoint": ""
-        }
-      }
-    },
-    "hpc_datacenter": {
-      "sector": "HPC·Datacenter",
-      "date": "2026-07-22",
-      "item_count": 9,
-      "generated_at": "2026-07-22T21:13:01.989014+00:00",
-      "content": {
-        "ko": {},
-        "en": {}
-      }
-    },
-    "custom_soc": {
-      "sector": "Custom SoC",
-      "date": "2026-07-22",
-      "item_count": 19,
-      "generated_at": "2026-07-22T21:13:01.989014+00:00",
-      "content": {
-        "ko": {},
-        "en": {}
-      }
-    },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-07-22",
-      "item_count": 19,
-      "generated_at": "2026-07-22T21:13:01.989014+00:00",
+      "date": "2026-07-23",
+      "item_count": 12,
+      "generated_at": "2026-07-23T21:11:06.560910+00:00",
       "content": {
-        "ko": {},
-        "en": {}
-      }
-    },
-    "packaging": {
-      "sector": "Packaging",
-      "date": "2026-07-22",
-      "item_count": 26,
-      "generated_at": "2026-07-22T21:13:01.989014+00:00",
-      "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "파운드리·메모리 시장에서 SK하이닉스의 Q2 영업마진 기록 달성과 HBM 수급 강화가 진행 중이며, 삼성전자는 갤럭시 Z폴드8에 TSMC 3nm 칩을 탑재하고 가격을 100달러 인상했다. 반도체 제조사들의 동시다발적 팹 투자로 장비 납기가 최대 2배 증가하면서 공급망 병목이 심화되는 중이다.",
+          "key_facts": [
+            "SK하이닉스 Q2 기록 영업마진 달성, HBM 혼합비 영향으로 ASP 성장 제약",
+            "삼성 갤럭시 Z폴드8 TSMC 3nm 탑재, 가격 100달러 인상",
+            "SK하이닉스 인텔 오하이오 팹 운영 파트너 검토 중",
+            "글로벌 회사채 발행액 2024년 상반기 3조6813억달러 (전년동기 대비 10% 증가)",
+            "엑시콘, 삼성전자와 CXL 3.1 테스터 양산 평가 진행 (월말 완료 예상)",
+            "아이큐랩 8인치 SiC 전력반도체 양산 준비 완료, 수율 90% 이상 달성",
+            "반도체 장비 납기 최대 2배 증가로 제조사 간 조기 구매주문 경쟁 심화",
+            "삼성·LG, 유럽가전제조협회(APPLiA)와 공동 EU 산업 지원 촉구",
+            "정부 국민성장펀드로 핵심광물 공급망 투자 지원 시작",
+            "AMD, 앤트로픽과 전략 파트너십 체결 (MI455X GPU·EPYC Venice CPU 공급, 2027년 상반기 1GW 규모 도입 예정)",
+            "인텔리빅스 고속도로 CCTV 4000대 AI 관제 사업 수주 (국산 NPU 기반)"
+          ],
+          "implications": [
+            {
+              "keyword": "HBM 수급 및 ASP 압박",
+              "text": "SK하이닉스의 HBM 믹스 증가로 평균판매가 성장이 제한되고 있으며, 차세대 CXL 메모리로의 전환이 검사장비 기업의 신규 수요처가 되고 있다."
+            },
+            {
+              "keyword": "팹 투자 과열과 장비 공급 병목",
+              "text": "글로벌 제조사의 동시다발적 팹 건설로 반도체 장비 납기가 급증하면서 조기 구매주문 및 공급망 확보가 전략적 경쟁요소로 부상했다."
+            },
+            {
+              "keyword": "빅테크 자본지출 확대와 재무 부담",
+              "text": "AI 데이터센터 및 반도체 인프라 투자 경쟁으로 글로벌 회사채 발행이 사상 최대에 달하면서 기술 기업들의 차입 비용 상승 리스크가 증가했다."
+            },
+            {
+              "keyword": "차세대 전력반도체 국산화",
+              "text": "아이큐랩의 8인치 SiC 양산 성공과 높은 수율 달성으로 국내 전력반도체 자급역량이 강화되고 있다."
+            },
+            {
+              "keyword": "AI 칩 공급 다원화 경쟁",
+              "text": "AMD가 앤트로픽과 MI455X GPU 및 EPYC CPU 공급 계약을 체결하면서 엔비디아 의존도 감소 움직임이 가시화되고 있다."
+            }
+          ],
+          "counterpoint": "SK하이닉스의 오하이오 팹 파트너십은 인수 계획 부인 후 검토 단계로, 최종 체결 가능성이 불확실하며, 반도체 장비 납기 개선은 업계 설비 투자 사이클 정상화에 의존적이다."
+        },
+        "en": {
+          "executive_summary": "In the foundry and memory markets, SK Hynix is recording Q2 operating margin achievements and strengthening HBM supply, while Samsung Electronics is equipping the Galaxy Z Fold8 with TSMC 3nm chips and raising prices by $100. Simultaneous fab investments by semiconductor manufacturers are increasing equipment delivery times by up to 2 times, intensifying supply chain bottlenecks.",
+          "key_facts": [
+            "SK Hynix achieves record Q2 operating margin, ASP growth constrained by HBM mix impact",
+            "Samsung Galaxy Z Fold8 equipped with TSMC 3nm, price increased by $100",
+            "SK Hynix reviewing operating partner options for Intel Ohio fab",
+            "Global corporate bond issuance in first half of 2024: $368.13 billion (10% increase year-over-year)",
+            "Exicon conducting mass production evaluation of CXL 3.1 tester with Samsung Electronics (completion expected by end of month)",
+            "IQlap completes preparation for mass production of 8-inch SiC power semiconductor, achieves yield rate above 90%",
+            "Semiconductor equipment delivery times increased up to 2 times, intensifying early purchase competition among manufacturers",
+            "Samsung and LG urging European Appliance Manufacturers' Association (APPLiA) to support EU industry jointly",
+            "Government begins supporting critical mineral supply chain investment through National Growth Fund",
+            "AMD establishes strategic partnership with Anthropic (MI455X GPU and EPYC Venice CPU supply, planned 1GW scale deployment in first half of 2027)",
+            "IntelliVix wins AI control project for 4,000 highway CCTVs (based on domestic NPU)"
+          ],
+          "implications": [
+            {
+              "keyword": "HBM supply and ASP pressure",
+              "text": "SK Hynix's increased HBM mix is limiting average selling price growth, and transition to next-generation CXL memory is becoming a new demand source for testing equipment companies."
+            },
+            {
+              "keyword": "Fab investment overheating and equipment supply bottleneck",
+              "text": "Simultaneous global fab construction by manufacturers is rapidly increasing semiconductor equipment delivery times, with early purchasing orders and supply chain securing emerging as strategic competitive factors."
+            },
+            {
+              "keyword": "Big tech capex expansion and financial burden",
+              "text": "Competition in AI data center and semiconductor infrastructure investments is driving global corporate bond issuance to record highs, increasing borrowing cost risks for technology companies."
+            },
+            {
+              "keyword": "Next-generation power semiconductor localization",
+              "text": "IQlap's successful 8-inch SiC mass production and achievement of high yield rates are strengthening domestic power semiconductor self-sufficiency."
+            },
+            {
+              "keyword": "AI chip supply diversification competition",
+              "text": "AMD's contract with Anthropic for MI455X GPU and EPYC CPU supply is making tangible progress in reducing NVIDIA dependency."
+            }
+          ],
+          "counterpoint": "SK Hynix's Ohio fab partnership is in review stage after denial of acquisition plans, with final agreement feasibility uncertain, and semiconductor equipment delivery improvements are dependent on normalization of industry capex cycles."
+        }
       }
     }
   }

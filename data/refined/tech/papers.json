@@ -2,6 +2,273 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "quant-ph",
+    "title": "Coupling phase interference effects in a multimode cavity magnonics system",
+    "url": "https://arxiv.org/abs/2607.20234v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "Coupling phases play a decisive yet often overlooked role in cavity magnonics, particularly in complex multimode systems. Here, we investigate phase-mediated interference effects in a cavity magnonics system comprising a four-post re-entrant microwave cavity coupled to Yttrium Iron Garnet (YIG) spheres. Using an input-output model that explicitly accounts for both internal and external coupling phases, we achieve agreement with experimental microwave transmission measurements. Our results unrave",
+    "authors": [
+      "M. Avicena",
+      "G. Bourcin",
+      "V. Vlaminck",
+      "J. Bourhill",
+      "V. Castel"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Formal Foundations for Known Good Reliable Die Screening in Chiplet-Based AI Systems-on-Chip",
+    "url": "https://arxiv.org/abs/2607.20141v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "The rapid growth of chiplet-based artificial intelligence systems-on-chip (SoCs) has exposed a fundamental gap in semiconductor test methodology. Existing Known Good Die (KGD) screening guarantees pre-assembly functional correctness, yet it offers no probabilistic assurance of post-assembly reliability lifetime. To address this limitation, the present work formalizes the transition from KGD to Known Good Reliable Die (KGRD) screening as a constrained inference problem over incomplete pre-assembl",
+    "authors": [
+      "Prashanthi Metku",
+      "Chandra Gandu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "Reading and Steering Representations of Materials-Science Mechanisms in an Open-Weight Language Model",
+    "url": "https://arxiv.org/abs/2607.20058v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "Large language models can answer scientific questions, yet a correct output does not reveal whether the model represents or uses the governing physics. Here we show that materials science mechanism information in the open-weight google/gemma-4-E4B-it model has three experimentally separable forms: concepts are readable in individual hidden states, constitutive orientation is carried by controlled transformations between states, and selected internal representations causally control engineering a",
+    "authors": [
+      "Markus J. Buehler"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Thickness-dependent crack suppression and wrinkle formation in freestanding BaTiO3 membranes",
+    "url": "https://arxiv.org/abs/2607.20054v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "Freestanding ferroelectric oxide membranes offer a promising route toward silicon-integrated low-power electronic and memory devices, but reproducible membrane quality remains challenging, particularly in ultrathin BaTiO3 (BTO), where cracking and wrinkling hinder integration. Here, we show that crack and wrinkle formation in released BaTiO3 membranes can be tuned by jointly controlling oxide thickness and polymer support thickness. Reducing the BaTiO3 thickness from 15 nm to 5 nm suppresses lar",
+    "authors": [
+      "Rajesh Mandal",
+      "Ajay Kumar",
+      "Nini Pryds"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "On Runlength Limited Codes for BICM Systems",
+    "url": "https://arxiv.org/abs/2607.20026v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "We study the use of runlength-limited (RLL) block codes in bit-interleaved coded modulation (BICM) systems. In this setting, the RLL code acts as the symbol mapper, whose assignment between input bits and RLL symbols is critical for performance. In this work, we aim at optimizing the assignment scheme of RLL codes. One of the main applications of RLL codes is the mitigation of intersymbol interference (ISI) in systems with coarse quantization. However, channel memory and quantization nonlinearit",
+    "authors": [
+      "Stephan Zeitz",
+      "Florian Roth",
+      "Meik Dörpinghaus",
+      "Gerhard Fettweis"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "SNR-Dependent Mismatched Filtering for Bistatic OFDM Ranging",
+    "url": "https://arxiv.org/abs/2607.20012v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "This paper investigates the ranging performance of a bistatic integrated sensing and communications (ISAC) system employing orthogonal frequency-division multiplexing (OFDM), in which an ISAC transmitter emits a communication waveform carrying random data symbols, and a separate receiver performs ranging by correlating the received signal with a locally demodulated symbol sequence. Owing to inevitable demodulation errors, the ranging processor operates under mismatched filtering rather than idea",
+    "authors": [
+      "Ying Zhang",
+      "Fan Liu",
+      "Yifeng Xiong",
+      "Jie Yang",
+      "Xinyi Wang",
+      "Shi Jin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Drift-Aware RL-based Wavelet Denoising for Network-Traffic Anomaly Detection",
+    "url": "https://arxiv.org/abs/2607.20011v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "Traffic-utilisation measurements for network monitoring are corrupted by additive noise and statistical drift: time-dependent change in the signal's mean, variance, distributional shape, or tail behaviour. Static wavelet denoising, calibrated under stationary independent and identically distributed (i.i.d.) Gaussian assumptions, becomes mismatched under drift and, at moderate-to-high signal-to-noise ratio (SNR), over-suppresses useful structure and degrades monitoring decisions. We propose a dri",
+    "authors": [
+      "Priyalakshmi Sheela",
+      "Indrakshi Dey"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Graph Distribution-valued Signals in Wasserstein Spaces: Theory and Applications",
+    "url": "https://arxiv.org/abs/2607.20008v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "We introduce a framework for graph signal processing (GSP) in which signals are represented as graph distribution-valued signals (GDSs), i.e., probability measures in a Wasserstein space. This perspective addresses fundamental limitations of classical vector-based GSP, including the requirement for complete synchronous observations across vertices and the need for strict temporal correspondence in observed filter input--output pairs. Furthermore, by modeling the graph structure as a distribution",
+    "authors": [
+      "Yanan Zhao",
+      "Feng Ji",
+      "Xingchao Jian",
+      "Wee Peng Tay"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Dirac-vortex modes beyond the continuum limit",
+    "url": "https://arxiv.org/abs/2607.20000v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "Dirac-vortex modes (DVMs) in Kekule-modulated lattices provide a topological route to wave confinement and are commonly described by the continuum Jackiw-Rossi model, in which the initial phase acts as a redundant gauge degree of freedom and does not affect observables of the mode. Here we show that this picture breaks down in discrete lattices when the complex mass texture that induces the DVMs no longer satisfies the slowly varying envelope approximation. In this regime, lattice discreteness t",
+    "authors": [
+      "Jiayu Fan",
+      "Jiusi Yu",
+      "Aoning Luo",
+      "Yiyi Yao",
+      "Shijie Kang",
+      "Xiexuan Zhang",
+      "Haitao Li",
+      "Biye Xie",
+      "Xiao-Dong Chen",
+      "Xiaoxiao Wu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.NI",
+    "title": "Towards Ultra-High Reliability in Wi-Fi 8: IEEE 802.11bn Core Mechanisms, mmWave Integration, and Performance Verification",
+    "url": "https://arxiv.org/abs/2607.19931v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "As the demand for wireless connectivity expands from high-speed data transmission to high-reliability applications, such as the Industrial Internet of Things and immersive communications, traditional Wi-Fi technologies optimized primarily for peak throughput face new challenges in reliability and latency. Consequently, Wi-Fi 8 aims to achieve ultra-high reliability (UHR), improve communication performance in complex environments, and drive the transition from high-speed connectivity to highly re",
+    "authors": [
+      "Xiaoqian Liu",
+      "Ming Gan",
+      "Weijie Dai",
+      "Yuhan Dong",
+      "Calvin Chun-Kit Chan",
+      "Jian Song"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "DGNA: Dissecting GPU NUMA Architecture through Microbenchmarking and Data Analysis",
+    "url": "https://arxiv.org/abs/2607.19922v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "Graphics Processing Units (GPUs), due to their immense parallel processing capabilities, have become essential across various fields, including gaming and artificial intelligence. With significant advancements in GPU cores, GPU memory efficiency has lagged, resulting in bottlenecks that can limit workload efficiency. To bridge this gap, a deep understanding of GPU memory architectures, particularly Non-Uniform Memory Access (NUMA) mechanisms within L2 and DRAM, is essential for optimizing applic",
+    "authors": [
+      "Changxi Liu",
+      "Yun Chen",
+      "Trevor E. Carlson"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Elastic Trapped States at Dislocation Defects in Scaled Coupling and Hofstadter Models",
+    "url": "https://arxiv.org/abs/2607.19890v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "Elastic topological dislocations provide a pathway for trapping elastic wave energy at internal defects, rather than being confined solely to external boundaries or corners, which are typically associated with topological insulators (TIs). However, two practical constraints persist. First, highly confined dislocation states based on conventional Su-Schrieffer-Heeger (SSH) dimerization usually require a large coupling contrast and a correspondingly enlarged bandgap, which may be challenging to re",
+    "authors": [
+      "Yangkai Liu",
+      "Cheng Lin",
+      "Yuan Liu",
+      "Jiao Shen",
+      "Yifan Zhu",
+      "Haiyan Fan",
+      "Hui Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "A Covert Precision Satellite Communication Framework Assisted by Cooperative IRSs",
+    "url": "https://arxiv.org/abs/2607.19883v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "Satellite communication (SatCom), as an effective complement to terrestrial networks, has attracted considerable attention from both academia and industry owing to its wide coverage and high flexibility. However, the inherent openness of satellite links renders them highly vulnerable to eavesdropping, thereby posing significant security challenges. In this paper, we propose a satellite covert precision wireless communication (CPWC) system, where multiple intelligent reflecting surfaces (IRSs) co",
+    "authors": [
+      "Haoyang Wu",
+      "Yunfan Bai",
+      "Mei Shen",
+      "Yuwen Qian",
+      "Guangji Chen",
+      "Long Shi",
+      "Feng Shu",
+      "Jun Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "WARA: A Closed-Loop Multi-Agent Framework for Wireless Optimization Autoresearch",
+    "url": "https://arxiv.org/abs/2607.19822v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "Large language model (LLM) agents have shown growing capabilities in tool use, code execution, artifact inspection, and iterative revision, creating new opportunities for automating scientific research. To the best of our knowledge, this paper presents the first end-to-end autoresearch framework for the wireless domain, with a particular focus on wireless resource allocation optimization, an essential area for characterizing the fundamental performance limits of wireless systems and enhancing th",
+    "authors": [
+      "Yuan Guo",
+      "Yilong Chen",
+      "Chao Hu",
+      "Xianghao Yu",
+      "Liang Hong",
+      "Jie Xu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Analytical Retrieval of Material Parameters in Monolayer Transition-Metal Dichalcogenides Based on a Solvable Exciton Model",
+    "url": "https://arxiv.org/abs/2607.19698v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "We develop an analytical procedure to retrieve fundamental material parameters of monolayer transition-metal dichalcogenides from optical and magneto-optical exciton spectra, based on the solvable modified Kratzer model. The proposed retrieval procedure naturally consists of two complementary stages. In the first stage, explicit inversion formulas determine the quasiparticle bandgap, effective screening parameter, and energy scaling factor directly from the experimentally measured energies of th",
+    "authors": [
+      "Duy-Nhat Ly",
+      "Thanh-Son Nguyen",
+      "Ngoc-Tram D. Hoang",
+      "Van-Hoang Le"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Leveraging ECRAM for Edge Continual Learning",
+    "url": "https://arxiv.org/abs/2607.19661v1",
+    "published_date": "2026-07-22",
+    "source": "arXiv",
+    "summary": "Several edge computing platforms, such as autonomous vehicles and smart sensing devices, need to adapt to dynamic environments in real time by learning from new data in the field. Continual learning has emerged as a promising solution for edge training, by incorporating techniques that successfully combine a highly summarized version of previously trained data (to avoid catastrophic forgetting) with recently sensed data. However, as is the case with other ML algorithms, continual learning genera",
+    "authors": [
+      "Nabila Tasnim",
+      "Haoran Liu",
+      "Qing Cao",
+      "Saugata Ghose"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.AR",
     "title": "A Flexible Sparsity-Aware FPGA Accelerator with Column-Wise Compression for Efficient CNN Inference",
     "url": "https://arxiv.org/abs/2607.19248v1",
