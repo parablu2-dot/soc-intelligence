@@ -1,91 +1,285 @@
 {
-  "date": "2026-07-23",
-  "generated_at": "2026-07-23T21:11:06.561155+00:00",
+  "date": "2026-07-24",
+  "generated_at": "2026-07-24T21:09:54.293581+00:00",
   "sectors": {
-    "foundry": {
-      "sector": "Foundry",
-      "date": "2026-07-23",
-      "item_count": 12,
-      "generated_at": "2026-07-23T21:11:06.560910+00:00",
+    "mobile_ap": {
+      "sector": "Mobile AP",
+      "date": "2026-07-24",
+      "item_count": 2,
+      "generated_at": "2026-07-24T21:09:54.292837+00:00",
       "content": {
         "ko": {
-          "executive_summary": "파운드리·메모리 시장에서 SK하이닉스의 Q2 영업마진 기록 달성과 HBM 수급 강화가 진행 중이며, 삼성전자는 갤럭시 Z폴드8에 TSMC 3nm 칩을 탑재하고 가격을 100달러 인상했다. 반도체 제조사들의 동시다발적 팹 투자로 장비 납기가 최대 2배 증가하면서 공급망 병목이 심화되는 중이다.",
+          "executive_summary": "Snapdragon chip prices are rising by double digits, pressuring Android device manufacturers, while Qualcomm's stock remains stable supported by Snapdragon sales and licensing revenues.",
           "key_facts": [
-            "SK하이닉스 Q2 기록 영업마진 달성, HBM 혼합비 영향으로 ASP 성장 제약",
-            "삼성 갤럭시 Z폴드8 TSMC 3nm 탑재, 가격 100달러 인상",
-            "SK하이닉스 인텔 오하이오 팹 운영 파트너 검토 중",
-            "글로벌 회사채 발행액 2024년 상반기 3조6813억달러 (전년동기 대비 10% 증가)",
-            "엑시콘, 삼성전자와 CXL 3.1 테스터 양산 평가 진행 (월말 완료 예상)",
-            "아이큐랩 8인치 SiC 전력반도체 양산 준비 완료, 수율 90% 이상 달성",
-            "반도체 장비 납기 최대 2배 증가로 제조사 간 조기 구매주문 경쟁 심화",
-            "삼성·LG, 유럽가전제조협회(APPLiA)와 공동 EU 산업 지원 촉구",
-            "정부 국민성장펀드로 핵심광물 공급망 투자 지원 시작",
-            "AMD, 앤트로픽과 전략 파트너십 체결 (MI455X GPU·EPYC Venice CPU 공급, 2027년 상반기 1GW 규모 도입 예정)",
-            "인텔리빅스 고속도로 CCTV 4000대 AI 관제 사업 수주 (국산 NPU 기반)"
+            "Snapdragon prices rising by double digits",
+            "Qualcomm earnings supported by Snapdragon and licensing business"
           ],
           "implications": [
             {
-              "keyword": "HBM 수급 및 ASP 압박",
-              "text": "SK하이닉스의 HBM 믹스 증가로 평균판매가 성장이 제한되고 있으며, 차세대 CXL 메모리로의 전환이 검사장비 기업의 신규 수요처가 되고 있다."
+              "keyword": "OEM Margin Pressure",
+              "text": "Android device makers face increased component costs that may compress profit margins or increase retail prices"
             },
             {
-              "keyword": "팹 투자 과열과 장비 공급 병목",
-              "text": "글로벌 제조사의 동시다발적 팹 건설로 반도체 장비 납기가 급증하면서 조기 구매주문 및 공급망 확보가 전략적 경쟁요소로 부상했다."
-            },
-            {
-              "keyword": "빅테크 자본지출 확대와 재무 부담",
-              "text": "AI 데이터센터 및 반도체 인프라 투자 경쟁으로 글로벌 회사채 발행이 사상 최대에 달하면서 기술 기업들의 차입 비용 상승 리스크가 증가했다."
-            },
-            {
-              "keyword": "차세대 전력반도체 국산화",
-              "text": "아이큐랩의 8인치 SiC 양산 성공과 높은 수율 달성으로 국내 전력반도체 자급역량이 강화되고 있다."
-            },
-            {
-              "keyword": "AI 칩 공급 다원화 경쟁",
-              "text": "AMD가 앤트로픽과 MI455X GPU 및 EPYC CPU 공급 계약을 체결하면서 엔비디아 의존도 감소 움직임이 가시화되고 있다."
+              "keyword": "Qualcomm Pricing Power",
+              "text": "Price increases indicate strong demand and Qualcomm's ability to pass costs to market despite competitive environment"
             }
           ],
-          "counterpoint": "SK하이닉스의 오하이오 팹 파트너십은 인수 계획 부인 후 검토 단계로, 최종 체결 가능성이 불확실하며, 반도체 장비 납기 개선은 업계 설비 투자 사이클 정상화에 의존적이다."
+          "counterpoint": "Higher Snapdragon prices may incentivize device makers to explore alternative chipsets or negotiate volume commitments."
         },
         "en": {
-          "executive_summary": "In the foundry and memory markets, SK Hynix is recording Q2 operating margin achievements and strengthening HBM supply, while Samsung Electronics is equipping the Galaxy Z Fold8 with TSMC 3nm chips and raising prices by $100. Simultaneous fab investments by semiconductor manufacturers are increasing equipment delivery times by up to 2 times, intensifying supply chain bottlenecks.",
+          "executive_summary": "Snapdragon chip prices are rising by double digits, pressuring Android device manufacturers, while Qualcomm's stock remains stable supported by Snapdragon sales and licensing revenues.",
           "key_facts": [
-            "SK Hynix achieves record Q2 operating margin, ASP growth constrained by HBM mix impact",
-            "Samsung Galaxy Z Fold8 equipped with TSMC 3nm, price increased by $100",
-            "SK Hynix reviewing operating partner options for Intel Ohio fab",
-            "Global corporate bond issuance in first half of 2024: $368.13 billion (10% increase year-over-year)",
-            "Exicon conducting mass production evaluation of CXL 3.1 tester with Samsung Electronics (completion expected by end of month)",
-            "IQlap completes preparation for mass production of 8-inch SiC power semiconductor, achieves yield rate above 90%",
-            "Semiconductor equipment delivery times increased up to 2 times, intensifying early purchase competition among manufacturers",
-            "Samsung and LG urging European Appliance Manufacturers' Association (APPLiA) to support EU industry jointly",
-            "Government begins supporting critical mineral supply chain investment through National Growth Fund",
-            "AMD establishes strategic partnership with Anthropic (MI455X GPU and EPYC Venice CPU supply, planned 1GW scale deployment in first half of 2027)",
-            "IntelliVix wins AI control project for 4,000 highway CCTVs (based on domestic NPU)"
+            "Snapdragon prices rising by double digits",
+            "Qualcomm earnings supported by Snapdragon and licensing business"
           ],
           "implications": [
             {
-              "keyword": "HBM supply and ASP pressure",
-              "text": "SK Hynix's increased HBM mix is limiting average selling price growth, and transition to next-generation CXL memory is becoming a new demand source for testing equipment companies."
+              "keyword": "OEM Margin Pressure",
+              "text": "Android device makers face increased component costs that may compress profit margins or increase retail prices"
             },
             {
-              "keyword": "Fab investment overheating and equipment supply bottleneck",
-              "text": "Simultaneous global fab construction by manufacturers is rapidly increasing semiconductor equipment delivery times, with early purchasing orders and supply chain securing emerging as strategic competitive factors."
-            },
-            {
-              "keyword": "Big tech capex expansion and financial burden",
-              "text": "Competition in AI data center and semiconductor infrastructure investments is driving global corporate bond issuance to record highs, increasing borrowing cost risks for technology companies."
-            },
-            {
-              "keyword": "Next-generation power semiconductor localization",
-              "text": "IQlap's successful 8-inch SiC mass production and achievement of high yield rates are strengthening domestic power semiconductor self-sufficiency."
-            },
-            {
-              "keyword": "AI chip supply diversification competition",
-              "text": "AMD's contract with Anthropic for MI455X GPU and EPYC CPU supply is making tangible progress in reducing NVIDIA dependency."
+              "keyword": "Qualcomm Pricing Power",
+              "text": "Price increases indicate strong demand and Qualcomm's ability to pass costs to market despite competitive environment"
             }
           ],
-          "counterpoint": "SK Hynix's Ohio fab partnership is in review stage after denial of acquisition plans, with final agreement feasibility uncertain, and semiconductor equipment delivery improvements are dependent on normalization of industry capex cycles."
+          "counterpoint": "Higher Snapdragon prices may incentivize device makers to explore alternative chipsets or negotiate volume commitments."
         }
+      }
+    },
+    "hpc_datacenter": {
+      "sector": "HPC·Datacenter",
+      "date": "2026-07-24",
+      "item_count": 12,
+      "generated_at": "2026-07-24T21:09:54.292837+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "South Korea's semiconductor industry is experiencing explosive hiring growth (47% surge in entry-level recruitment) driven by AI chip demand, with major players SK Hynix and Samsung recruiting advanced talent while NVIDIA establishes new R&D capabilities in the region. AI chip imports now surpass PC and phone shipments, reflecting structural market shift toward accelerator chips.",
+          "key_facts": [
+            "47% surge in entry-level semiconductor hiring in South Korea",
+            "NVIDIA opens new R&D center in South Korea",
+            "SK Hynix recruiting AI and factory setup talent in US",
+            "Samsung and SK Hynix pursuing PhD-level talent acquisition",
+            "AI chip imports eclipse PC and phone shipment volumes",
+            "Samsung and SK Hynix signing major AI chip deals with US tech giants",
+            "AMD's first 2nm GPU unveiled with AI rack performance outperforming NVIDIA",
+            "Intel and Lens Technology collaboration on glass substrate-based semiconductor packaging"
+          ],
+          "implications": [
+            {
+              "keyword": "Talent Competition",
+              "text": "Global semiconductor majors aggressively recruiting local and international talent, creating wage pressure and brain drain risks in emerging markets"
+            },
+            {
+              "keyword": "Memory Supply Dynamics",
+              "text": "Samsung and SK Hynix securing large AI deals while memory shortages squeeze end consumers, indicating strategic supply allocation to high-margin AI customers"
+            },
+            {
+              "keyword": "Process Node Acceleration",
+              "text": "AMD's 2nm GPU and competing advanced packaging solutions indicate foundries racing to deliver leading-edge process capabilities for AI workloads"
+            },
+            {
+              "keyword": "Market Structure Shift",
+              "text": "AI chip volumes now dwarf traditional consumer electronics demand, fundamentally reshaping supply chain priorities and capacity allocation"
+            }
+          ],
+          "counterpoint": "Aggressive talent acquisition may not translate to retained productivity if regional startup ecosystems and R&D environments remain underdeveloped."
+        },
+        "en": {
+          "executive_summary": "South Korea's semiconductor industry is experiencing explosive hiring growth (47% surge in entry-level recruitment) driven by AI chip demand, with major players SK Hynix and Samsung recruiting advanced talent while NVIDIA establishes new R&D capabilities in the region. AI chip imports now surpass PC and phone shipments, reflecting structural market shift toward accelerator chips.",
+          "key_facts": [
+            "47% surge in entry-level semiconductor hiring in South Korea",
+            "NVIDIA opens new R&D center in South Korea",
+            "SK Hynix recruiting AI and factory setup talent in US",
+            "Samsung and SK Hynix pursuing PhD-level talent acquisition",
+            "AI chip imports eclipse PC and phone shipment volumes",
+            "Samsung and SK Hynix signing major AI chip deals with US tech giants",
+            "AMD's first 2nm GPU unveiled with AI rack performance outperforming NVIDIA",
+            "Intel and Lens Technology collaboration on glass substrate-based semiconductor packaging"
+          ],
+          "implications": [
+            {
+              "keyword": "Talent Competition",
+              "text": "Global semiconductor majors aggressively recruiting local and international talent, creating wage pressure and brain drain risks in emerging markets"
+            },
+            {
+              "keyword": "Memory Supply Dynamics",
+              "text": "Samsung and SK Hynix securing large AI deals while memory shortages squeeze end consumers, indicating strategic supply allocation to high-margin AI customers"
+            },
+            {
+              "keyword": "Process Node Acceleration",
+              "text": "AMD's 2nm GPU and competing advanced packaging solutions indicate foundries racing to deliver leading-edge process capabilities for AI workloads"
+            },
+            {
+              "keyword": "Market Structure Shift",
+              "text": "AI chip volumes now dwarf traditional consumer electronics demand, fundamentally reshaping supply chain priorities and capacity allocation"
+            }
+          ],
+          "counterpoint": "Aggressive talent acquisition may not translate to retained productivity if regional startup ecosystems and R&D environments remain underdeveloped."
+        }
+      }
+    },
+    "custom_soc": {
+      "sector": "Custom SoC",
+      "date": "2026-07-24",
+      "item_count": 18,
+      "generated_at": "2026-07-24T21:09:54.292837+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "Major tech companies are competing intensely in custom AI silicon with Google expanding TPU distribution to customer data centers (still unpublished pricing), AMD partnering with Cerebras for inference acceleration, and Amazon's Trainium chips already reaching $20 billion annual run-rate revenue. Intel, NVIDIA, and design startups like Etched (valued at $10.3 billion) are racing to capture the $100 billion custom AI chip market.",
+          "key_facts": [
+            "Google Ironwood TPU has no public price three months after launch",
+            "Google selling TPU systems into customer data centers for first time",
+            "AMD collaborating with Cerebras on high-speed inference cloud services",
+            "Intel CEO targets $100 billion custom AI chip market; supports $20+ billion CapEx",
+            "Amazon Trainium chips running at $20 billion annual pace",
+            "Etched AI startup valued at $10.3 billion",
+            "Intel-Fortinet partnership on next-generation security processor",
+            "Ettifos leading Korea defense chip R&D for MANET modems",
+            "Amazon's Trainium eroding NVIDIA dominance through early 2027",
+            "Display Processor IP market growth driven by 8K and automotive demand"
+          ],
+          "implications": [
+            {
+              "keyword": "Pricing Strategy Opacity",
+              "text": "Google's Ironwood TPU pricing delay suggests either premium positioning, cost uncertainty, or competitive pressure avoiding disclosure"
+            },
+            {
+              "keyword": "Hyperscaler Vertical Integration",
+              "text": "Amazon's $20B Trainium revenue and Google/NVIDIA custom chip investments represent major ODM shift away from pure merchant foundries"
+            },
+            {
+              "keyword": "Inference Acceleration Battle",
+              "text": "AMD-Cerebras and NVIDIA-Amazon partnerships indicate inference workloads becoming critical differentiator as training capacity matures"
+            },
+            {
+              "keyword": "NVIDIA Market Share Erosion",
+              "text": "Multiple competitors (Amazon, Google, AMD, Etched) explicitly targeting NVIDIA dominance signals fragmentation of AI silicon market by 2027"
+            },
+            {
+              "keyword": "Defense/Security Specialization",
+              "text": "Intel-Fortinet security processor and Korean MANET modem development indicate growing custom silicon demand in defense/telecom verticals"
+            }
+          ],
+          "counterpoint": "Custom silicon success requires sustained software ecosystem investment and customer lock-in that many entrants may struggle to achieve against NVIDIA's CUDA ecosystem."
+        },
+        "en": {
+          "executive_summary": "Major tech companies are competing intensely in custom AI silicon with Google expanding TPU distribution to customer data centers (still unpublished pricing), AMD partnering with Cerebras for inference acceleration, and Amazon's Trainium chips already reaching $20 billion annual run-rate revenue. Intel, NVIDIA, and design startups like Etched (valued at $10.3 billion) are racing to capture the $100 billion custom AI chip market.",
+          "key_facts": [
+            "Google Ironwood TPU has no public price three months after launch",
+            "Google selling TPU systems into customer data centers for first time",
+            "AMD collaborating with Cerebras on high-speed inference cloud services",
+            "Intel CEO targets $100 billion custom AI chip market; supports $20+ billion CapEx",
+            "Amazon Trainium chips running at $20 billion annual pace",
+            "Etched AI startup valued at $10.3 billion",
+            "Intel-Fortinet partnership on next-generation security processor",
+            "Ettifos leading Korea defense chip R&D for MANET modems",
+            "Amazon's Trainium eroding NVIDIA dominance through early 2027",
+            "Display Processor IP market growth driven by 8K and automotive demand"
+          ],
+          "implications": [
+            {
+              "keyword": "Pricing Strategy Opacity",
+              "text": "Google's Ironwood TPU pricing delay suggests either premium positioning, cost uncertainty, or competitive pressure avoiding disclosure"
+            },
+            {
+              "keyword": "Hyperscaler Vertical Integration",
+              "text": "Amazon's $20B Trainium revenue and Google/NVIDIA custom chip investments represent major ODM shift away from pure merchant foundries"
+            },
+            {
+              "keyword": "Inference Acceleration Battle",
+              "text": "AMD-Cerebras and NVIDIA-Amazon partnerships indicate inference workloads becoming critical differentiator as training capacity matures"
+            },
+            {
+              "keyword": "NVIDIA Market Share Erosion",
+              "text": "Multiple competitors (Amazon, Google, AMD, Etched) explicitly targeting NVIDIA dominance signals fragmentation of AI silicon market by 2027"
+            },
+            {
+              "keyword": "Defense/Security Specialization",
+              "text": "Intel-Fortinet security processor and Korean MANET modem development indicate growing custom silicon demand in defense/telecom verticals"
+            }
+          ],
+          "counterpoint": "Custom silicon success requires sustained software ecosystem investment and customer lock-in that many entrants may struggle to achieve against NVIDIA's CUDA ecosystem."
+        }
+      }
+    },
+    "foundry": {
+      "sector": "Foundry",
+      "date": "2026-07-24",
+      "item_count": 10,
+      "generated_at": "2026-07-24T21:09:54.292837+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "Foundry competition is intensifying with AMD unveiling the MI455X to compete with NVIDIA's Rubin, driving demand for TSMC's 2nm node and advanced packaging (CoWoS-L). AMD's roadmap extends to Florence (2028, sub-2nm) and Ravenna (2030), while Intel accelerates 14A to 2028, narrowing the gap with TSMC. Tesla partners with Samsung and TSMC for AI5 chips, and advanced packaging via CXL and glass substrates emerges as critical bottleneck.",
+          "key_facts": [
+            "AMD MI455X targets NVIDIA Rubin",
+            "TSMC 2nm and CoWoS-L packaging demand rising",
+            "AMD roadmap: Florence 2028 (sub-2nm), Ravenna 2030",
+            "Intel pulls forward 14A timeline to 2028, matching TSMC pace",
+            "Tesla partners with Samsung and TSMC for AI5 chips",
+            "CXL identified as solution for KV cache memory bottleneck",
+            "NVIDIA Rubin and AMD MI455X competing for AI accelerator market"
+          ],
+          "implications": [
+            {
+              "keyword": "Process Node Convergence",
+              "text": "Intel's 14A at 2028 and TSMC's 2nm roadmap are converging, reducing process node differentiation as primary competitive weapon"
+            },
+            {
+              "keyword": "Packaging Becomes Bottleneck",
+              "text": "CoWoS-L and advanced packaging capacity constraints now limit AI accelerator deployment more than process node maturity"
+            },
+            {
+              "keyword": "Memory Architecture Shift",
+              "text": "CXL and glass substrate technologies indicate industry moving beyond chiplet stacking toward coherent memory hierarchy solutions"
+            },
+            {
+              "keyword": "Hyperscaler Supply Diversification",
+              "text": "Tesla multi-sourcing (Samsung + TSMC) and Amazon/Google custom chips reduce TSMC concentration risk but fragment capacity allocation"
+            }
+          ],
+          "counterpoint": "AMD and Intel roadmaps are aspirational; execution delays or yield challenges could defer competitive node parity beyond stated timelines."
+        },
+        "en": {
+          "executive_summary": "Foundry competition is intensifying with AMD unveiling the MI455X to compete with NVIDIA's Rubin, driving demand for TSMC's 2nm node and advanced packaging (CoWoS-L). AMD's roadmap extends to Florence (2028, sub-2nm) and Ravenna (2030), while Intel accelerates 14A to 2028, narrowing the gap with TSMC. Tesla partners with Samsung and TSMC for AI5 chips, and advanced packaging via CXL and glass substrates emerges as critical bottleneck.",
+          "key_facts": [
+            "AMD MI455X targets NVIDIA Rubin",
+            "TSMC 2nm and CoWoS-L packaging demand rising",
+            "AMD roadmap: Florence 2028 (sub-2nm), Ravenna 2030",
+            "Intel pulls forward 14A timeline to 2028, matching TSMC pace",
+            "Tesla partners with Samsung and TSMC for AI5 chips",
+            "CXL identified as solution for KV cache memory bottleneck",
+            "NVIDIA Rubin and AMD MI455X competing for AI accelerator market"
+          ],
+          "implications": [
+            {
+              "keyword": "Process Node Convergence",
+              "text": "Intel's 14A at 2028 and TSMC's 2nm roadmap are converging, reducing process node differentiation as primary competitive weapon"
+            },
+            {
+              "keyword": "Packaging Becomes Bottleneck",
+              "text": "CoWoS-L and advanced packaging capacity constraints now limit AI accelerator deployment more than process node maturity"
+            },
+            {
+              "keyword": "Memory Architecture Shift",
+              "text": "CXL and glass substrate technologies indicate industry moving beyond chiplet stacking toward coherent memory hierarchy solutions"
+            },
+            {
+              "keyword": "Hyperscaler Supply Diversification",
+              "text": "Tesla multi-sourcing (Samsung + TSMC) and Amazon/Google custom chips reduce TSMC concentration risk but fragment capacity allocation"
+            }
+          ],
+          "counterpoint": "AMD and Intel roadmaps are aspirational; execution delays or yield challenges could defer competitive node parity beyond stated timelines."
+        }
+      }
+    },
+    "packaging": {
+      "sector": "Packaging",
+      "date": "2026-07-24",
+      "item_count": 24,
+      "generated_at": "2026-07-24T21:09:54.292837+00:00",
+      "content": {
+        "ko": {},
+        "en": {}
       }
     }
   }
