@@ -1,96 +1,260 @@
 {
-  "date": "2026-07-25",
-  "generated_at": "2026-07-25T20:57:13.240204+00:00",
+  "date": "2026-07-26",
+  "generated_at": "2026-07-26T21:02:45.833611+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-07-25",
-      "item_count": 5,
-      "generated_at": "2026-07-25T20:57:13.239724+00:00",
+      "date": "2026-07-26",
+      "item_count": 2,
+      "generated_at": "2026-07-26T21:02:45.832967+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Qualcomm announced double-digit price increases for Snapdragon 8 Elite Gen 6 due to higher supplier costs, with expanded partnerships including Samsung for Snapdragon production. Samsung and Broadcom signed a landmark $200 billion HBM and AI semiconductor deal, while Micron is lobbying to block Apple's Chinese memory chip plans.",
+          "executive_summary": "Qualcomm plans double-digit chip price increases, raising smartphone costs. More affordable Elite Gen 5 chips could mitigate pricing pressure in the high-performance segment.",
           "key_facts": [
-            "Qualcomm planning double-digit Snapdragon price increase",
-            "Samsung and Broadcom $200 billion HBM and AI semiconductor deal",
-            "Micron lobbying Trump to block Apple Chinese memory chip plan"
+            "Qualcomm: double-digit price increase announced",
+            "Elite Gen 5 chips positioned as more affordable high-performance alternative"
           ],
           "implications": [
             {
-              "keyword": "Cost Pressures",
-              "text": "Higher Snapdragon prices will increase Android phone manufacturing costs"
+              "keyword": "Pricing Pressure",
+              "text": "Double-digit ASP increases will force OEMs to absorb costs or pass them to consumers, potentially slowing smartphone upgrade cycles."
             },
             {
-              "keyword": "Samsung Expansion",
-              "text": "Deepened Snapdragon ties strengthen Samsung's chipset production role"
-            },
-            {
-              "keyword": "Supply Chain Politics",
-              "text": "Micron competition heating up over Apple memory sourcing strategies"
+              "keyword": "Market Segmentation",
+              "text": "More affordable Elite Gen 5 may preserve volume in mid-to-high tier segments despite Qualcomm's flagship price hikes."
             }
           ],
-          "counterpoint": "Price increases may be limited by competitive pressure from MediaTek and other ARM competitors."
+          "counterpoint": "Budget and ultra-premium segments may show divergent demand responses to pricing."
         },
         "en": {
-          "executive_summary": "Qualcomm announced double-digit price increases for Snapdragon 8 Elite Gen 6 due to higher supplier costs, with expanded partnerships including Samsung for Snapdragon production. Samsung and Broadcom signed a landmark $200 billion HBM and AI semiconductor deal, while Micron is lobbying to block Apple's Chinese memory chip plans.",
+          "executive_summary": "Qualcomm plans double-digit chip price increases, raising smartphone costs. More affordable Elite Gen 5 chips could mitigate pricing pressure in the high-performance segment.",
           "key_facts": [
-            "Qualcomm planning double-digit Snapdragon price increase",
-            "Samsung and Broadcom $200 billion HBM and AI semiconductor deal",
-            "Micron lobbying Trump to block Apple Chinese memory chip plan"
+            "Qualcomm: double-digit price increase announced",
+            "Elite Gen 5 chips positioned as more affordable high-performance alternative"
           ],
           "implications": [
             {
-              "keyword": "Cost Pressures",
-              "text": "Higher Snapdragon prices will increase Android phone manufacturing costs"
+              "keyword": "Pricing Pressure",
+              "text": "Double-digit ASP increases will force OEMs to absorb costs or pass them to consumers, potentially slowing smartphone upgrade cycles."
             },
             {
-              "keyword": "Samsung Expansion",
-              "text": "Deepened Snapdragon ties strengthen Samsung's chipset production role"
-            },
-            {
-              "keyword": "Supply Chain Politics",
-              "text": "Micron competition heating up over Apple memory sourcing strategies"
+              "keyword": "Market Segmentation",
+              "text": "More affordable Elite Gen 5 may preserve volume in mid-to-high tier segments despite Qualcomm's flagship price hikes."
             }
           ],
-          "counterpoint": "Price increases may be limited by competitive pressure from MediaTek and other ARM competitors."
+          "counterpoint": "Budget and ultra-premium segments may show divergent demand responses to pricing."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-07-25",
-      "item_count": 9,
-      "generated_at": "2026-07-25T20:57:13.239724+00:00",
+      "date": "2026-07-26",
+      "item_count": 10,
+      "generated_at": "2026-07-26T21:02:45.832967+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "South Korean semiconductor firms Samsung and SK Hynix aggressively expand hiring to capitalize on AI demand, with SK Hynix removing education requirements for entry-level recruiting in H2 2025 and both firms accelerating domestic and US talent acquisition. Meanwhile, Tesla has shut down its Dojo supercomputer program and reassigned the team.",
+          "key_facts": [
+            "South Korea semiconductor hiring surges amid AI boom (JobKorea data)",
+            "SK Hynix: eliminating education-based hiring restrictions from H2 2025",
+            "New graduate hiring up 47% (Samsung, SK Hynix both expanding intake)",
+            "SK Hynix: simultaneous R&D and manufacturing talent recruitment in US",
+            "SK Hynix: Icheon semiconductor research cluster being developed",
+            "SK Hynix Chairman Chey Tae-won emphasizing 'three core muscle' talent strategy",
+            "Tesla: Dojo supercomputer program shut down, team reassigned"
+          ],
+          "implications": [
+            {
+              "keyword": "Talent Competition",
+              "text": "SK Hynix and Samsung removing educational barriers signals acute talent scarcity and willingness to compete on growth potential rather than credentials."
+            },
+            {
+              "keyword": "Geographic Expansion",
+              "text": "SK Hynix US hiring surge reflects supply chain diversification and hedging against regional concentration risk in Korea."
+            },
+            {
+              "keyword": "AI Infrastructure Consolidation",
+              "text": "Tesla's Dojo shutdown removes a potential competitor in custom AI accelerator development, consolidating market around incumbent suppliers."
+            }
+          ],
+          "counterpoint": "Rapid hiring during peak AI cycle may create excess capacity if demand normalizes."
+        },
+        "en": {
+          "executive_summary": "South Korean semiconductor firms Samsung and SK Hynix aggressively expand hiring to capitalize on AI demand, with SK Hynix removing education requirements for entry-level recruiting in H2 2025 and both firms accelerating domestic and US talent acquisition. Meanwhile, Tesla has shut down its Dojo supercomputer program and reassigned the team.",
+          "key_facts": [
+            "South Korea semiconductor hiring surges amid AI boom (JobKorea data)",
+            "SK Hynix: eliminating education-based hiring restrictions from H2 2025",
+            "New graduate hiring up 47% (Samsung, SK Hynix both expanding intake)",
+            "SK Hynix: simultaneous R&D and manufacturing talent recruitment in US",
+            "SK Hynix: Icheon semiconductor research cluster being developed",
+            "SK Hynix Chairman Chey Tae-won emphasizing 'three core muscle' talent strategy",
+            "Tesla: Dojo supercomputer program shut down, team reassigned"
+          ],
+          "implications": [
+            {
+              "keyword": "Talent Competition",
+              "text": "SK Hynix and Samsung removing educational barriers signals acute talent scarcity and willingness to compete on growth potential rather than credentials."
+            },
+            {
+              "keyword": "Geographic Expansion",
+              "text": "SK Hynix US hiring surge reflects supply chain diversification and hedging against regional concentration risk in Korea."
+            },
+            {
+              "keyword": "AI Infrastructure Consolidation",
+              "text": "Tesla's Dojo shutdown removes a potential competitor in custom AI accelerator development, consolidating market around incumbent suppliers."
+            }
+          ],
+          "counterpoint": "Rapid hiring during peak AI cycle may create excess capacity if demand normalizes."
+        }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-07-25",
-      "item_count": 7,
-      "generated_at": "2026-07-25T20:57:13.239724+00:00",
+      "date": "2026-07-26",
+      "item_count": 6,
+      "generated_at": "2026-07-26T21:02:45.832967+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Nvidia maintains dominance in AI chips, but AMD and Intel are gaining Wall Street attention as alternatives. Samsung and Broadcom announced a landmark $200 billion AI chip partnership through 2030, signaling intensifying competition in custom AI accelerators and inference chips.",
+          "key_facts": [
+            "Samsung-Broadcom: $200 billion AI chip partnership through 2030",
+            "Nvidia: retains lead in AI chip market share",
+            "AMD and Intel: gaining investor reconsideration amid Nvidia alternatives narrative"
+          ],
+          "implications": [
+            {
+              "keyword": "Competitive Consolidation",
+              "text": "Samsung-Broadcom alliance targets hyperscaler lock-in at scale, challenging Nvidia's single-vendor dominance in custom accelerators."
+            },
+            {
+              "keyword": "Multi-Vendor Strategy",
+              "text": "AI inference and accelerator market fragmentation accelerating; hyperscalers building portfolio of qualified suppliers to reduce Nvidia dependency."
+            },
+            {
+              "keyword": "Custom Silicon Economics",
+              "text": "Long-term partnerships with foundries + established design wins (Broadcom) lowering barrier for non-Nvidia platforms in inference workloads."
+            }
+          ],
+          "counterpoint": "Nvidia's training chip advantage and software ecosystem (CUDA) remain difficult to displace despite partnership announcements."
+        },
+        "en": {
+          "executive_summary": "Nvidia maintains dominance in AI chips, but AMD and Intel are gaining Wall Street attention as alternatives. Samsung and Broadcom announced a landmark $200 billion AI chip partnership through 2030, signaling intensifying competition in custom AI accelerators and inference chips.",
+          "key_facts": [
+            "Samsung-Broadcom: $200 billion AI chip partnership through 2030",
+            "Nvidia: retains lead in AI chip market share",
+            "AMD and Intel: gaining investor reconsideration amid Nvidia alternatives narrative"
+          ],
+          "implications": [
+            {
+              "keyword": "Competitive Consolidation",
+              "text": "Samsung-Broadcom alliance targets hyperscaler lock-in at scale, challenging Nvidia's single-vendor dominance in custom accelerators."
+            },
+            {
+              "keyword": "Multi-Vendor Strategy",
+              "text": "AI inference and accelerator market fragmentation accelerating; hyperscalers building portfolio of qualified suppliers to reduce Nvidia dependency."
+            },
+            {
+              "keyword": "Custom Silicon Economics",
+              "text": "Long-term partnerships with foundries + established design wins (Broadcom) lowering barrier for non-Nvidia platforms in inference workloads."
+            }
+          ],
+          "counterpoint": "Nvidia's training chip advantage and software ecosystem (CUDA) remain difficult to displace despite partnership announcements."
+        }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-07-25",
-      "item_count": 16,
-      "generated_at": "2026-07-25T20:57:13.239724+00:00",
+      "date": "2026-07-26",
+      "item_count": 15,
+      "generated_at": "2026-07-26T21:02:45.832967+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Samsung secured a landmark $200 billion Broadcom AI chip partnership through 2030 encompassing HBM, DRAM, and advanced foundry services. TSMC is advancing N3E efficient 3nm process. SK Hynix has become de facto second-largest shareholder in Kioxia following Bain Capital's stake divestment. Meanwhile, Korean President Lee visited Silicon Valley to announce a $950 billion Korea-US AI and semiconductor alliance with Samsung, SK Hynix, and major tech firms committing to long-term supply partnerships.",
+          "key_facts": [
+            "Samsung-Broadcom: $200 billion partnership through 2030 (HBM, DRAM, foundry)",
+            "TSMC: advancing N3E efficient 3nm process node",
+            "SK Hynix: became de facto second-largest Kioxia shareholder (Bain divested stake, no voting rights pending regulator approval)",
+            "Kioxia divestment value: approximately 2.5 trillion yen",
+            "Korea-US alliance: $950 billion AI and semiconductor cooperation announced",
+            "Samsung, SK Hynix: long-term 5-year supply contracts with US hyperscalers",
+            "Samsung Electronics: HBM, DRAM, and advanced foundry cooperation with OpenAI",
+            "Samsung SDS: partnership with Anthropic announced",
+            "Naver: partnership with Nvidia announced",
+            "Suwon city: 10 billion won government funding for quantum-AI semiconductor advanced packaging verification platform (2026-2030, 11.5 billion won total)",
+            "Mokpo National University CSRC: semiconductor talent partnership with Dongshin University",
+            "KAIST-Nvidia: establishing Human Physical AI NVAITC research center"
+          ],
+          "implications": [
+            {
+              "keyword": "Strategic Partnerships",
+              "text": "Samsung-Broadcom $200B deal locks in foundry capacity and anchors long-term demand, reducing exposure to spot market volatility."
+            },
+            {
+              "keyword": "Korea Geopolitical Leverage",
+              "text": "$950 billion Korea-US alliance and executive-level tech diplomacy elevate Korea's strategic role in AI supply chains and establish formal state-backed coordination."
+            },
+            {
+              "keyword": "Memory-Logic Integration",
+              "text": "HBM + advanced foundry bundling in Samsung-Broadcom deal reflects hyperscaler preference for integrated suppliers mitigating chiplet integration risk."
+            },
+            {
+              "keyword": "SK Hynix Kioxia Position",
+              "text": "De facto second-largest shareholding strengthens SK Hynix's NAND influence but regulatory approval uncertainty creates execution risk."
+            },
+            {
+              "keyword": "Node Roadmap Intensity",
+              "text": "TSMC N3E focus and Korea-backed advanced packaging platforms (quantum-AI, 2nm roadmaps) indicate foundries competing on sub-3nm efficiency and heterogeneous integration."
+            }
+          ],
+          "counterpoint": "SK Hynix Kioxia voting rights remain unresolved pending antitrust review; regulatory approval is not assured."
+        },
+        "en": {
+          "executive_summary": "Samsung secured a landmark $200 billion Broadcom AI chip partnership through 2030 encompassing HBM, DRAM, and advanced foundry services. TSMC is advancing N3E efficient 3nm process. SK Hynix has become de facto second-largest shareholder in Kioxia following Bain Capital's stake divestment. Meanwhile, Korean President Lee visited Silicon Valley to announce a $950 billion Korea-US AI and semiconductor alliance with Samsung, SK Hynix, and major tech firms committing to long-term supply partnerships.",
+          "key_facts": [
+            "Samsung-Broadcom: $200 billion partnership through 2030 (HBM, DRAM, foundry)",
+            "TSMC: advancing N3E efficient 3nm process node",
+            "SK Hynix: became de facto second-largest Kioxia shareholder (Bain divested stake, no voting rights pending regulator approval)",
+            "Kioxia divestment value: approximately 2.5 trillion yen",
+            "Korea-US alliance: $950 billion AI and semiconductor cooperation announced",
+            "Samsung, SK Hynix: long-term 5-year supply contracts with US hyperscalers",
+            "Samsung Electronics: HBM, DRAM, and advanced foundry cooperation with OpenAI",
+            "Samsung SDS: partnership with Anthropic announced",
+            "Naver: partnership with Nvidia announced",
+            "Suwon city: 10 billion won government funding for quantum-AI semiconductor advanced packaging verification platform (2026-2030, 11.5 billion won total)",
+            "Mokpo National University CSRC: semiconductor talent partnership with Dongshin University",
+            "KAIST-Nvidia: establishing Human Physical AI NVAITC research center"
+          ],
+          "implications": [
+            {
+              "keyword": "Strategic Partnerships",
+              "text": "Samsung-Broadcom $200B deal locks in foundry capacity and anchors long-term demand, reducing exposure to spot market volatility."
+            },
+            {
+              "keyword": "Korea Geopolitical Leverage",
+              "text": "$950 billion Korea-US alliance and executive-level tech diplomacy elevate Korea's strategic role in AI supply chains and establish formal state-backed coordination."
+            },
+            {
+              "keyword": "Memory-Logic Integration",
+              "text": "HBM + advanced foundry bundling in Samsung-Broadcom deal reflects hyperscaler preference for integrated suppliers mitigating chiplet integration risk."
+            },
+            {
+              "keyword": "SK Hynix Kioxia Position",
+              "text": "De facto second-largest shareholding strengthens SK Hynix's NAND influence but regulatory approval uncertainty creates execution risk."
+            },
+            {
+              "keyword": "Node Roadmap Intensity",
+              "text": "TSMC N3E focus and Korea-backed advanced packaging platforms (quantum-AI, 2nm roadmaps) indicate foundries competing on sub-3nm efficiency and heterogeneous integration."
+            }
+          ],
+          "counterpoint": "SK Hynix Kioxia voting rights remain unresolved pending antitrust review; regulatory approval is not assured."
+        }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-07-25",
-      "item_count": 6,
-      "generated_at": "2026-07-25T20:57:13.239724+00:00",
+      "date": "2026-07-26",
+      "item_count": 5,
+      "generated_at": "2026-07-26T21:02:45.832967+00:00",
       "content": {
         "ko": {},
         "en": {}
