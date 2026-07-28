@@ -2,6 +2,338 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Growth and characterization of planar hexagonal Ge on CdS",
+    "url": "https://arxiv.org/abs/2607.24685v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "Hexagonal group-IV semiconductors have attracted increasing interest owing to their unconventional electronic and optical properties compared to the cubic diamond phase. However, the stabilization of these metastable allotropes in planar heterostructures remains a major challenge. In this work, we demonstrate the epitaxial growth of planar hexagonal germanium on non-basal $m$-plane CdS substrates by low-energy plasma-enhanced chemical vapor deposition. The role of growth temperature in the forma",
+    "authors": [
+      "Andrea Besana",
+      "Veronica Regazzoni",
+      "Marco Faverzani",
+      "Fabrizio Rovaris",
+      "Emiliano Bonera",
+      "Sonia Freddi",
+      "Elisa Brugaletta",
+      "Mohamed Zaghloul",
+      "Fabio Pezzoli",
+      "Francesco Montalenti",
+      "Monica Bollani",
+      "Daniel Chrastina",
+      "Anna Marzegalli",
+      "Antonio M. Mio",
+      "Emilio Scalise",
+      "Giovanni Isella"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "A Heterogeneous Neural Network Accelerator for End-to-End Multitask RF Signal Recognition",
+    "url": "https://arxiv.org/abs/2607.24669v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "This paper presents a heterogeneous neural network accelerator for multi-task RF signal recognition, supporting automatic modulation recognition (AMR), hardware-Trojan covert channel (HT-CC) detection, and GNSS jamming classification. We introduce a compact attention-enhanced convolutional neural network (CNN) combined with LSDec, a learnable streaming decimator that enables adaptive temporal downsampling and flexible input lengths. The hardware architecture integrates a novel dual-pipeline, fus",
+    "authors": [
+      "Zhifan Song",
+      "Haralampos-G. Stratigopoulos",
+      "Hassan Aboushady"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "quant-ph",
+    "title": "Quantum-Limited Symbol-Blind Channel Estimation for Coherent State Discrimination",
+    "url": "https://arxiv.org/abs/2607.24644v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "Residual dispersion breaks temporal-mode matching in photon-starved coherent links. For equiprobable $M$-ary PSK coherent states in a known spectral mode, with unknown symbols and carrier phase, we establish the quantum limit for blind joint estimation of group delay and second-order dispersion: after eliminating the common phase, it is $4N_s\\mathbf{C}$, set by the covariance of the centered generators alone. A multi-output quantum pulse gate with photon-number-resolving detection locally attain",
+    "authors": [
+      "Hongxu Chen",
+      "Renzhi Yuan",
+      "Haifeng Yao",
+      "Mugen Peng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.ET",
+    "title": "The SpiNNaker2 chip: a many-core platform for flexible and scalable brain-inspired computing",
+    "url": "https://arxiv.org/abs/2607.24396v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "In deep learning, efficiency gets more and more important to compensate for the ongoing growth in model sizes and applications. Neuromorphic hardware has long been advocated as an upcoming alternative to deep networks, taking inspiration from the brain for achieving unprecedented energy efficiency. However, demonstrations of these gains only recently began to grow in complexity and real-world applicability. With SpiNNaker2, we present a chip that bridges the gap between deep networks and neuromo",
+    "authors": [
+      "Stefan Scholze",
+      "Johannes Partzsch",
+      "Sebastian Höppner",
+      "Florian Kelber",
+      "Andreas Dixius",
+      "Marco Stolba",
+      "Sirine Arfa",
+      "Marc Berthel",
+      "Georg Ellguth",
+      "Jim Garside",
+      "Hector A. Gonzalez",
+      "Stephan Hartmann",
+      "Thomas Kiel-Hocker",
+      "Dongwei Hu",
+      "Matthias Jobst",
+      "Khaleelulla Khan Nazeer",
+      "Tim Langer",
+      "Chen Liu",
+      "Gengting Liu",
+      "Matthias Lohrmann",
+      "Mantas Mikaitis",
+      "Felix Neumärker",
+      "Amirhossein Rostami",
+      "Stefan Schiefer",
+      "Tilo Schubert",
+      "Delong Shang",
+      "Bernhard Vogginger",
+      "Yexin Yan",
+      "Steve Furber",
+      "Christian Mayr"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Toward Alias-Free Channel Extrapolation in Upper Mid-Band Systems: A Spatial-Frequency-Temporal Tensor Learning Approach",
+    "url": "https://arxiv.org/abs/2607.24330v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "Upper mid-band massive multiple-input multiple-output (MIMO) offers a favorable capacity-coverage trade-off for next-generation wireless systems, but its large antenna arrays, wide bandwidths, and faster temporal variation substantially increase the pilot overhead required for accurate channel state information (CSI) acquisition. To reduce this overhead, this paper establishes a tensor-structured multi-domain channel extrapolation framework that exploits the limited-scattering nature of practica",
+    "authors": [
+      "Jiawei Zhuang",
+      "Hongwei Hou",
+      "Yafei Wang",
+      "Xinping Yi",
+      "Wenjin Wang",
+      "Jiangzhou Wang",
+      "Björn Ottersten"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Beam-Domain Channel Estimation for mmWave MIMO using Sub-6 GHz Out-of-Band Information",
+    "url": "https://arxiv.org/abs/2607.24227v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "Future wireless multiple-input multiple-output (MIMO) systems will integrate sub-6 GHz and millimeter wave (mmWave) bands to support high data rates for latency-critical applications. The coexistence of these bands enables the use of reliable out-of-band sub-6 GHz information to assist mmWave link establishment, particularly for channel estimation. In this paper, we propose a novel beam-domain channel estimation method for mmWave MIMO that leverages sub-6 GHz beam-domain information to improve e",
+    "authors": [
+      "Faruk Pasic",
+      "Mariam Mussbah",
+      "Stefan Schwarz",
+      "Markus Rupp"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.str-el",
+    "title": "Accessing Few-Layer CrI$_3$ Magnetoelasticity Through Bulk Single Crystals",
+    "url": "https://arxiv.org/abs/2607.24222v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "The persistence of ferromagnetic long-range order in monolayers of the van der Waals semiconductor CrI$_3$ opens new routes for spintronic applications based on two-dimensional quantum magnets. In the fabrication of such devices, the constituent materials inevitably experience anisotropic strain, which modifies their intrinsic electronic properties. At the same time, strain can serve as a powerful tuning parameter, driving the material to desired regimes. While several theoretical studies have i",
+    "authors": [
+      "J. Arneth",
+      "M. Möller",
+      "D. A. S. Kaib",
+      "P. P. Stavropoulos",
+      "A. Razpopov",
+      "M. Jonak",
+      "S. Spachmann",
+      "M. Abdel-Hafiez",
+      "S. Biswas",
+      "K. Riedl",
+      "R. Valentí",
+      "R. Klingeler"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "DICE: Detailed Inter-Chiplet End-to-End PHY Modeling for Accurate Chiplet Simulation",
+    "url": "https://arxiv.org/abs/2607.24221v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "Scaling monolithic multicores is increasingly constrained by power/thermal limits, yield, and rising manufacturing and testing costs. Chiplet designs address these challenges by partitioning large dies into smaller parts (typically multiple core-complex dies and an I/O die) linked via high-bandwidth physical fabrics (PHY). As bandwidth and wiring density scale, however, these short-reach links are pushed closer to their signal-integrity limits, increasing susceptibility to noise, crosstalk, and ",
+    "authors": [
+      "Rashid Aligholipour",
+      "Stefanos kaxiras",
+      "Yuan Yao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "PIMID: A Full-System Simulator with Intricacy and Diversity for Processing-in-Memory",
+    "url": "https://arxiv.org/abs/2607.24196v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "Processing-in-Memory addresses the memory wall by co-locating computation with memory, but because real PIM hardware remains scarce, simulation is the primary way to explore the PIM design space. Yet existing PIM simulators each cover only part of that space: they typically model a single memory technology, fix processing elements at one level of the memory hierarchy, support a single execution model, and stop at the device boundary. We therefore present PIMID, an execution- and trace-driven ful",
+    "authors": [
+      "Yuan He",
+      "Masaaki Kondo",
+      "Galen M. Shipman",
+      "Jered B. Dominguez-Trujillo",
+      "Shigeki Tomishima",
+      "Kazi Asifuzzaman"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Hierarchical THz Near-Field Localization with Subarray Processing and Covariance Correction",
+    "url": "https://arxiv.org/abs/2607.24149v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "Terahertz (THz)-band near-field (NF) localization offers high spatial resolution due to short wavelengths and distance-dependent wavefront curvature in NF multi-antenna systems. However, large arrays and dense deployments, necessary to mitigate THz path loss, raise the received signal dimensionality, creating computational overhead for localization. Furthermore, traditional two-dimensional (2D) subspace algorithms suffer from excessive complexity and poor robustness under coherent sources. This ",
+    "authors": [
+      "Ahmad Dkhan",
+      "Yazan Dayoub",
+      "Jana El Haj",
+      "Hadi Sarieddeen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.soft",
+    "title": "Response-Selected Hidden Hyperuniformity in Hydrodynamic Active Matter",
+    "url": "https://arxiv.org/abs/2607.24102v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "Hyperuniformity in active matter is usually treated as a property of a prescribed density or continuum field. This view misses a basic feature of hydrodynamic active matter: an incompressible fluid does not respond equally to every microscopic force. Longitudinal forcing is absorbed into pressure, whereas transverse forcing drives flow. The relevant question is therefore not only whether particles are uniformly arranged or whether the total activity is small, but which sector of the active forci",
+    "authors": [
+      "Liyu Zhong",
+      "Yang Jiao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Interaction-driven electronic ferroelectricity in van der Waals heterostructures",
+    "url": "https://arxiv.org/abs/2607.24087v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "Strong electronic correlations in narrow-band systems provide a promising route to realize emergent quantum phases. While ferroelectricity in van der Waals materials is typically associated with inversion symmetry breaking driven by lattice distortions, interlayer sliding, or moiré reconstruction, the possibility of generating ferroelectricity directly from electronic interactions remains largely unexplored. Here, using molecular beam epitaxy, scanning tunneling microscopy, and ab initio calcula",
+    "authors": [
+      "Ziying Wang",
+      "Ana Vera Montoto",
+      "Mohammad Amini",
+      "Yuxiao Ding",
+      "Jose L. Lado",
+      "Robert Drost",
+      "Adolfo O. Fumega",
+      "Peter Liljeroth"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Non-Centrosymmetric $γ$-Phase GaS Nanobelts for On-Chip Nonlinear Photonic Applications",
+    "url": "https://arxiv.org/abs/2607.23939v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "Second-order nonlinear optical processes in van der Waals (vdW) semiconductors offer a compelling route toward compact, integrable photon-conversion platforms. Among III-VI vdW semiconductors, GaS is particularly attractive owing to its wide bandgap suppressing two-photon absorption under near-infrared laser excitation. However, bulk GaS typically crystallizes in the centrosymmetric $β$ phase, which eliminates second-order nonlinearity and severely limits its application in nonlinear photonics. ",
+    "authors": [
+      "Yukihiro Endo",
+      "Masato Takiguchi",
+      "Yoshiaki Sekine",
+      "Hisashi Sumikura",
+      "Yoshitaka Taniyasu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "math.ST",
+    "title": "The Phase Transition in Online PCA Depends on $n/d\\log(d)$, not $n/d$",
+    "url": "https://arxiv.org/abs/2607.23914v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "High dimensional statistical theory has established the importance of constant aspect ratio, when the number of dimensions ($d$) and samples ($n$) satisfy $n,d\\to\\infty$ with $n/d\\to γ\\in(0,\\infty)$, in understanding the limits of canonical estimation problems. In particular, for estimating the top eigenvector of a $d\\times d$ population covariance matrix from $n$ iid samples, the BBP phase transition gives a precise threshold -- a simple functional of the aspect ratio -- such that the top sampl",
+    "authors": [
+      "Apratim Dey"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "ADVERSARIAL: And-Inverter Graph-Assisted Hardware Trojan Detection At Scale",
+    "url": "https://arxiv.org/abs/2607.23882v1",
+    "published_date": "2026-07-26",
+    "source": "arXiv",
+    "summary": "Modern System-on-Chip (SoCs) often contain hundreds of millions to tens of billions of gates, making existing Hardware Trojan (HT) detection methods impractical due to their immense scale. The proposed approach incorporates symbolically enabled learning by modeling flattened gate-level netlists as Boolean networks represented as And-Inverter Graphs (AIGs), where all internal nodes are 2-input AND gates and inversions reside on the edges. Each directed connection is expressed as a triple within a",
+    "authors": [
+      "Yaroslav Popryho",
+      "Debjit Pal",
+      "Inna Partin-Vaisband"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Dispersion models describing coupled systems in doped crystals. II. Infrared phonon excitations in GaAs single crystals and phonon-plasmon coupling in Zn-doped GaAs",
+    "url": "https://arxiv.org/abs/2607.23868v1",
+    "published_date": "2026-07-26",
+    "source": "arXiv",
+    "summary": "We present a temperature-dependent infrared study of intrinsic and Zn-doped GaAs within a generalized dispersion framework describing coupled phonon and free-carrier excitations. Reflectance, transmittance, and ellipsometric data measured from 300 to 440 K are fitted simultaneously using Gaussian-broadened distributions for single-phonon modes and triangle-delta-triangle representations for multiphonon absorption bands. The formalism provides a self-consistent description of lattice and carrier ",
+    "authors": [
+      "Daniel Franta",
+      "Beata Hroncova",
+      "Mihai-George Muresan",
+      "Stefan Zollner"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Parallel Cascaded Recursive Filtering on Multi-Core CPUs and GPUs",
+    "url": "https://arxiv.org/abs/2607.23763v1",
+    "published_date": "2026-07-26",
+    "source": "arXiv",
+    "summary": "The companion of this paper reformulated cascaded second-order (biquad) recursive filtering as a block-tridiagonal linear system and developed two parallel solution algorithms, PH factorization and cyclic reduction, reaching over 600 Megasamples per second on a single SIMD core. This paper scales that framework to multi-core CPUs and GPUs, where a new obstacle appears: the terminal outputs of each signal block group are the initial conditions of the next, so naively distributed groups serialize.",
+    "authors": [
+      "Haotian Zhai",
+      "Bernd-Peter Paris"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Cross-System Neural Precoder: Exploiting Structural Consistency for Fast Adaptation",
+    "url": "https://arxiv.org/abs/2607.23738v1",
+    "published_date": "2026-07-26",
+    "source": "arXiv",
+    "summary": "Adapting learning-based precoding across different system configurations is challenging due to multiple types of variables and constraints. While large-scale neural networks have been proposed for cross-task adaptation, whether such adaptability requires large models remains unclear. In this paper, we identify a structural property of a class of precoding problems: the subproblems associated with each type of variable in alternative optimization (AO) share a common computational structure across",
+    "authors": [
+      "Jia Guo",
+      "Chenyang Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "eess.SP",
     "title": "Toward Generalizable Cognitive Impairment Detection with Speech-Based Multimodal Large Language Models",
     "url": "https://arxiv.org/abs/2607.21496v1",

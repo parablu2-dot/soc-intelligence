@@ -6,7 +6,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/machine-learning/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/machine-learning/</link>
 	<description>Official Machine Learning Blog of Amazon Web Services</description>
-	<lastBuildDate>Mon, 27 Jul 2026 16:11:32 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 28 Jul 2026 19:07:09 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -14,6 +14,583 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>How AgentCore Gateway supports the MCP 2026-07-28 spec</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec/</link>
+		
+		<dc:creator><![CDATA[Sean Eichenberger]]></dc:creator>
+		<pubDate>Tue, 28 Jul 2026 19:07:09 +0000</pubDate>
+				<category><![CDATA[Amazon Bedrock AgentCore]]></category>
+		<category><![CDATA[Announcements]]></category>
+		<category><![CDATA[Intermediate (200)]]></category>
+		<guid isPermaLink="false">6f308dab489ca3e002058919cc2813576498c4ee</guid>
+
+					<description>The Model Context Protocol (MCP) published its 2026-07-28 specification, the largest revision since launch: MCP is now stateless, with a governed extensions system and hardened authorization. Learn what changed and how to enable the new version on Amazon Bedrock AgentCore Gateway with a single UpdateGateway call.</description>
+										<content:encoded>&lt;p&gt;Today, the Model Context Protocol (MCP) published its 2026-07-28 specification, the largest and most significant revision of the protocol since its launch. With this release MCP becomes a stateless protocol that scales on ordinary HTTP infrastructure. Alongside the transport changes, this new version introduces a governed extensions system, strengthens authorization by aligning more closely with enterprise practices for OAuth 2.0 and OpenID Connect, and establishes lifecycle guarantees that limit future breakage.&lt;/p&gt; 
+&lt;p&gt;You can start using the latest protocol on your &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway.html" target="_blank" rel="noopener"&gt;AgentCore Gateway&lt;/a&gt;, a capability of Amazon Bedrock AgentCore, today by calling &lt;code&gt;UpdateGateway&lt;/code&gt; with the list of versions you want your gateway to support. Existing clients keep working exactly as before, and there is no per-target step. In this post, we walk through what changed in the protocol and why, what it means for your agents and tools, and how to enable the new version on your gateways.&lt;/p&gt; 
+&lt;p&gt;Already familiar with the spec changes? Jump straight to &lt;a href="#updating-your-agentcore-gateway"&gt;Updating your AgentCore Gateway&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2 id="what-changes-with-the-new-spec-and-why-it-matters"&gt;What changes with the new spec and why it matters&lt;/h2&gt; 
+&lt;p&gt;This release contains &lt;strong&gt;backward-incompatible changes&lt;/strong&gt; to the MCP protocol. The transition to statelessness is a foundational change that protocol maintainers believe is necessary to address scaling challenges with enterprise deployments. The introduction of breaking changes with new versions, however, is not expected to be the norm. To help facilitate backward-compatible updates in future revisions, maintainers have introduced new governance enhancements to the protocol specification (a feature lifecycle policy, an extensions framework, and a conformance-suite requirement). These enhancements are designed to support protocol evolution without breaking core capabilities.&lt;/p&gt; 
+&lt;p&gt;Upgrading is also &lt;strong&gt;opt-in&lt;/strong&gt;, and nothing changes until both you and your clients act. AgentCore Gateway advertises the protocol versions it speaks through a single configuration field. Clients select a version on every request. Adding 2026-07-28 to a gateway that also advertises 2025-11-25 does not change anything for clients that request the older version. Only a client that requests 2026-07-28 gets the new behavior. Nothing breaks on July 28.&lt;/p&gt; 
+&lt;h2 id="mcp-is-now-stateless"&gt;1. MCP is now stateless&lt;/h2&gt; 
+&lt;p&gt;In prior versions of the protocol, every Streamable HTTP interaction with an MCP server began with an &lt;code&gt;initialize&lt;/code&gt;/&lt;code&gt;initialized&lt;/code&gt; handshake, in which the client and server exchanged protocol versions and capabilities. The server then issued an &lt;code&gt;Mcp-Session-Id&lt;/code&gt; header that every subsequent request was required to carry:&lt;/p&gt; 
+&lt;pre class="http"&gt;&lt;code&gt;POST /mcp HTTP/1.1
+Mcp-Session-Id: 1868a90c-3a3f-4f5b
+Content-Type: application/json
+Accept: application/json
+
+{"jsonrpc":"2.0","id":2,"method":"tools/call",
+"params":{"name":"search","arguments":{"q":"otters"}}}&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;That session pinned the client to the server that issued it. Therefore, to scale an MCP server horizontally, operators needed sticky sessions at the load balancer, a shared session store behind the fleet, or both.&lt;/p&gt; 
+&lt;p&gt;By removing sessions, remote MCP servers effectively become standard HTTPS endpoints, which scale cleanly with enterprise workloads. As the protocol becomes stateless, the handshake and the protocol-level session are both no longer needed (&lt;a class="Hyperlink TrackedChange TrackChangeHyperlinkInstruction SCXW147330082 BCX0" href="https://modelcontextprotocol.io/seps/2575-stateless-mcp" target="_blank" rel="noreferrer noopener"&gt;&lt;span class="TextRun Underlined SCXW147330082 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="none"&gt;&lt;span class="NormalTextRun SCXW147330082 BCX0"&gt;SEP-2575&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span class="TextRun SCXW147330082 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"&gt;&lt;span class="NormalTextRun SCXW147330082 BCX0"&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;span class="TextRun SCXW147330082 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"&gt;&lt;span class="NormalTextRun SCXW147330082 BCX0"&gt;and&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;a class="Hyperlink TrackedChange TrackChangeHyperlinkInstruction SCXW147330082 BCX0" href="https://modelcontextprotocol.io/seps/2567-sessionless-mcp" target="_blank" rel="noreferrer noopener"&gt;&lt;span class="TextRun Underlined SCXW147330082 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="none"&gt;&lt;span class="NormalTextRun SCXW147330082 BCX0"&gt;SEP-2567&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span class="TextRun SCXW147330082 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"&gt;&lt;span class="NormalTextRun SCXW147330082 BCX0"&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;remove these requirements from the new protocol version). With 2026-07-28, every request now carries protocol version, client info, and client capabilities inside its &lt;code&gt;_meta&lt;/code&gt; parameter, eliminating the need for a one-time initialization handshake. Clients that need to learn what a server supports can call the new &lt;code&gt;server/discover&lt;/code&gt; method at any point. The net effect is that a single tool call is fully self-contained. It requires no prior session context and can be routed to any server instance. Removing the protocol session does not preclude support for stateful applications. When servers need continuity across calls, you can follow established patterns for HTTP requests by passing an explicit ID as a tool parameter, which should come from one of your own tools.&lt;/p&gt; 
+&lt;pre class="http"&gt;&lt;code&gt;POST /mcp HTTP/1.1
+MCP-Protocol-Version: 2026-07-28
+Mcp-Method: tools/call
+Mcp-Name: create_basket
+Content-Type: application/json
+Accept: application/json,text/event-stream
+
+{"jsonrpc":"2.0","id":1,"method":"tools/call",
+"params":{"name":"create_basket","arguments":{},
+"_meta":{"io.modelcontextprotocol/clientInfo":{"name":"my-app","version":"1.0"}}}}&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;Response:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-json"&gt;{"jsonrpc":"2.0","id":1,
+"result":{"resultType":"complete","content":[{"type":"text","text":"Created basket bsk_a1b2c3"}],"structuredContent":{"basket_id":"bsk_a1b2c3"},"isError": false}}&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;You can then use the agent’s own capabilities to thread this state handle through subsequent requests:&lt;/p&gt; 
+&lt;pre class="http"&gt;&lt;code&gt;POST /mcp HTTP/1.1
+MCP-Protocol-Version: 2026-07-28
+Mcp-Method: tools/call
+Mcp-Name: add_item
+Content-Type: application/json
+Accept: application/json,text/event-stream
+
+{"jsonrpc":"2.0","id":1,"method":"tools/call",
+"params":{"name":"add_item","arguments":{"basket_id": "bsk_a1b2c3", "sku": "shoes"},
+"_meta":{"io.modelcontextprotocol/clientInfo":{"name":"my-app","version":"1.0"}}}}&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;AgentCore Gateway has always shielded agents from much of MCP’s session mechanics. It aggregates your AWS Lambda functions, APIs, and MCP servers behind a single MCP endpoint and manages the protocol conversation with each target on your behalf. With 2026-07-28, that gets simpler on both sides: an agent’s first tool call is one self-contained request rather than a handshake followed by a call. Each request carries an &lt;code&gt;Mcp-Protocol-Version&lt;/code&gt; header. The gateway serves the request in that version when the version appears in &lt;code&gt;supportedVersions&lt;/code&gt;, or rejects it with &lt;code&gt;HTTP 400&lt;/code&gt; (code &lt;code&gt;-32022&lt;/code&gt;) and a list of supported versions when it does not. Requests that omit the header default to 2025-03-26.&lt;/p&gt; 
+&lt;h2 id="routable-cacheable-traceable-traffic"&gt;2. Routing,&amp;nbsp;caching, and&amp;nbsp;tracing&amp;nbsp;without&amp;nbsp;parsing the&amp;nbsp;body&lt;/h2&gt; 
+&lt;p&gt;In prior versions of the protocol, the operation a request performed was opaque to anything sitting between client and server. Load balancers, API gateways, and rate limiters all had to parse the JSON-RPC body to determine what method was being called. Detecting changes to a server’s tool catalog meant holding a long-lived SSE stream open and waiting for a push notification. MCP traffic, in short, did not play well with standard HTTP infrastructure.&lt;/p&gt; 
+&lt;p&gt;2026-07-28 closes that gap in three ways. First, every Streamable HTTP request now surfaces its intent in standard headers: &lt;code&gt;Mcp-Method&lt;/code&gt; and &lt;code&gt;Mcp-Name&lt;/code&gt; (&lt;a href="https://modelcontextprotocol.io/seps/2243-http-standardization" target="_blank" rel="noopener"&gt;SEP-2243&lt;/a&gt;) travel outside the body, giving intermediaries enough information to route, throttle, and meter at the HTTP layer alone. A server that receives a request where the declared headers contradict the body rejects it outright. Second, responses to list and resource-read operations now include explicit freshness metadata, &lt;code&gt;ttlMs&lt;/code&gt; and &lt;code&gt;cacheScope&lt;/code&gt;, borrowed from the semantics of HTTP &lt;code&gt;Cache-Control&lt;/code&gt; (&lt;a href="https://modelcontextprotocol.io/seps/2549-TTL-for-list-results" target="_blank" rel="noopener"&gt;SEP-2549&lt;/a&gt;). Clients can cache a &lt;code&gt;tools/list&lt;/code&gt; response for a known duration and scope without maintaining a persistent connection only to watch for invalidations. Third, the spec now reserves the W3C Trace Context keys (&lt;code&gt;traceparent&lt;/code&gt;, &lt;code&gt;tracestate&lt;/code&gt;, &lt;code&gt;baggage&lt;/code&gt;) inside &lt;code&gt;_meta&lt;/code&gt; (&lt;a href="https://modelcontextprotocol.io/seps/414-request-meta" target="_blank" rel="noopener"&gt;SEP-414&lt;/a&gt;), formalizing what several SDKs had already adopted in practice. A distributed trace originating in your application can now propagate through the full call chain, from agent to MCP client to gateway to downstream service, and render as a unified span tree in any OpenTelemetry-compatible collector.&lt;/p&gt; 
+&lt;p&gt;On the 2026-07-28 path, AgentCore Gateway surfaces these primitives directly. Every tool result from your gateway carries the new structured result envelope, and cacheable results include TTL and scope hints for conformant client SDKs. The gateway also enforces the custom-header binding: when a tool’s input schema marks a field as header-bound, the gateway rejects any request whose header is absent or contradicts the body (&lt;code&gt;HTTP 400&lt;/code&gt;, code &lt;code&gt;-32020&lt;/code&gt;).&lt;/p&gt; 
+&lt;h2 id="server-to-client-interactions-without-persistent-connections"&gt;3. Server-to-client&amp;nbsp;interactions without&amp;nbsp;persistent&amp;nbsp;connections&lt;/h2&gt; 
+&lt;p&gt;A stateless protocol still needs a way for a server to talk back to the client mid-call. MCP has three such interactions: elicitation, where the server asks the end user for input (“this tool is about to delete three files. Confirm?”), roots, where the server asks for available directories and files in the filesystem, and sampling, where the server asks the client’s model to generate a response. In previous versions, delivering these requests meant the server held an SSE stream open back to the client.&lt;/p&gt; 
+&lt;p&gt;With the latest protocol version, server-initiated requests are now only permitted while the server is actively processing a client request (&lt;a href="https://modelcontextprotocol.io/seps/2260-Require-Server-requests-to-be-associated-with-Client-requests" target="_blank" rel="noopener"&gt;SEP-2260&lt;/a&gt;). Every prompt a user sees traces back to something they or their agent started. Multi Round-Trip Requests (&lt;a href="https://modelcontextprotocol.io/seps/2322-MRTR" target="_blank" rel="noopener"&gt;SEP-2322&lt;/a&gt;) replace the previous long-lived stream. Here, the server embeds questions in an &lt;code&gt;InputRequiredResult&lt;/code&gt; and externalizes state through an opaque &lt;code&gt;requestState&lt;/code&gt; token rather than pushing a question over SSE. Only tools that declare elicitation or sampling inputs trigger the multi-round-trip exchange, and only when the client advertises support for it.&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-json"&gt;{
+  "resultType": "input_required",
+  "inputRequests": {
+    "confirm": {
+      "method": "elicitation/create",
+      "params": {
+        "mode": "form",
+        "message": "Delete 3 files?",
+        "requestedSchema": {
+          "type": "object",
+          "properties": {
+            "confirm": {
+              "type": "boolean"
+            },
+            "required": ["confirm"]
+          }
+        }
+      }
+    },
+    "requestState": "eyJzdGVwIjoxLCJmaWxlcyI6WyJhIiwiYiIsImMiXX0="
+  }
+}&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;Clients collect the user’s answers and re-issue the original call with the responses and the &lt;code&gt;requestState&lt;/code&gt;. Everything the server needs is in the payload, so any server instance can pick up the retry.&lt;/p&gt; 
+&lt;p&gt;Separately, progress notifications and log delivery are now request-scoped. The gateway relays progress updates only when the client supplies a progress token on the originating request, and delivers log messages only when the client sets &lt;code&gt;io.modelcontextprotocol/logLevel&lt;/code&gt; in per-request metadata.&lt;/p&gt; 
+&lt;h2 id="extensions-become-first-class"&gt;4. Decoupling extensions from the core spec&lt;/h2&gt; 
+&lt;p&gt;Until now, MCP extensions were an informal concept with no governance behind them. &lt;a href="https://modelcontextprotocol.io/seps/2133-extensions" target="_blank" rel="noopener"&gt;SEP-2133&lt;/a&gt; introduces one. Each extension carries a reverse-DNS ID, is negotiated through an &lt;code&gt;extensions&lt;/code&gt; map in client and server capabilities, lives in a dedicated repository under delegated maintainers, and follows its own release cadence independent of the core spec. A new Extensions Track within the SEP process defines how an extension graduates from experimental to official status, which changes how the protocol grows. Rather than every new idea competing for space in the core specification and forcing a breaking version bump, capabilities can now mature as opt-in extensions on their own timelines. Clients and servers that do not negotiate a given extension are unaffected.&lt;/p&gt; 
+&lt;h2 id="authorization-hardening"&gt;5. Authorization hardening&lt;/h2&gt; 
+&lt;p&gt;Six SEPs bring MCP’s&amp;nbsp;authorization specification into closer alignment with&amp;nbsp;production OAuth 2.0 and OpenID Connect deployments. Your gateway’s inbound authorization, whether IAM (SigV4) or OAuth/JWT, is unchanged by the protocol version. So are your outbound credential&amp;nbsp;providers. Upgrading the protocol version does not require changing credentials or authorizer configuration.&lt;/p&gt; 
+&lt;h2 id="error-handling-and-deprecations"&gt;6. Error handling and deprecations&lt;/h2&gt; 
+&lt;p&gt;On earlier protocol versions, nearly everything came back as HTTP 200 with an error tucked inside the JSON-RPC body, including transport-level failures. On 2026-07-28, the transport and application layers are cleanly separated. Transport failures return real HTTP status codes. Application-level outcomes stay in the body:&lt;/p&gt; 
+&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Situation&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;2025-* versions&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;2026-07-28&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Unknown method&lt;/td&gt; 
+   &lt;td&gt;In-body JSON-RPC error, &lt;code&gt;HTTP 200&lt;/code&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;code&gt;HTTP 404&lt;/code&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Unsupported protocol version&lt;/td&gt; 
+   &lt;td&gt;Varies&lt;/td&gt; 
+   &lt;td&gt;&lt;code&gt;HTTP 400&lt;/code&gt;, code &lt;code&gt;-32022&lt;/code&gt;. Body lists supported versions&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Header-bound field absent or mismatched&lt;/td&gt; 
+   &lt;td&gt;Varies&lt;/td&gt; 
+   &lt;td&gt;&lt;code&gt;HTTP 400&lt;/code&gt;, code &lt;code&gt;-32020&lt;/code&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Missing required client capability&lt;/td&gt; 
+   &lt;td&gt;Not applicable&lt;/td&gt; 
+   &lt;td&gt;Code &lt;code&gt;-32021&lt;/code&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;p&gt;These changes only matter for code that inspects error responses. They let your HTTP-level monitoring, alarming, and retry logic distinguish routing problems from application-level issues without parsing the body. The spec also reassigns the “&lt;em&gt;resource not found&lt;/em&gt;” error code from the MCP-specific &lt;code&gt;-32002&lt;/code&gt; to JSON-RPC’s standard &lt;code&gt;-32602&lt;/code&gt; Invalid Params (&lt;a href="https://modelcontextprotocol.io/seps/2164-resource-not-found-error" target="_blank" rel="noopener"&gt;SEP-2164&lt;/a&gt;). If your client matches on &lt;code&gt;-32002&lt;/code&gt; anywhere, audit those code paths. Additionally, on the 2026-07-28 path: &lt;code&gt;logging/setLevel&lt;/code&gt; is retired, and a client that calls it is rejected. To opt into log delivery, you can set the per-request metadata field &lt;code&gt;io.modelcontextprotocol/logLevel&lt;/code&gt; instead.&lt;/p&gt; 
+&lt;p&gt;Three core features are deprecated under the protocol’s new feature lifecycle policy (&lt;a href="https://modelcontextprotocol.io/seps/2577-deprecate-roots-sampling-and-logging" target="_blank" rel="noopener"&gt;SEP-2577&lt;/a&gt;): Roots (replaced by tool parameters, resource URIs, or server configuration), Sampling (replaced by direct integration with LLM provider APIs), and Logging (replaced by &lt;code&gt;stderr&lt;/code&gt; for stdio transports and OpenTelemetry for structured observability). These deprecations are advisory. The methods, types, and capability flags remain functional in this release and in any specification version published within twelve months of it. However, we highly recommend that new implementations not take a dependency on them.&lt;/p&gt; 
+&lt;h2 id="schema-support"&gt;7. Schema support&lt;/h2&gt; 
+&lt;p&gt;Tool &lt;code&gt;inputSchema&lt;/code&gt; and &lt;code&gt;outputSchema&lt;/code&gt; now support the full &lt;a href="https://json-schema.org/draft/2020-12" target="_blank" rel="noopener"&gt;JSON Schema 2020-12&lt;/a&gt; vocabulary (&lt;a href="https://modelcontextprotocol.io/seps/2106-json-schema-2020-12" target="_blank" rel="noopener"&gt;SEP-2106&lt;/a&gt;). Input schemas retain the &lt;code&gt;type: "object"&lt;/code&gt; root requirement but gain composition keywords (&lt;code&gt;oneOf&lt;/code&gt;, &lt;code&gt;anyOf&lt;/code&gt;, &lt;code&gt;allOf&lt;/code&gt;), conditionals, and internal references (&lt;code&gt;$ref&lt;/code&gt;, &lt;code&gt;$defs&lt;/code&gt;). Output schemas have no root-type restriction, and &lt;code&gt;structuredContent&lt;/code&gt; may be any valid JSON value. Implementations must not follow external &lt;code&gt;$ref&lt;/code&gt; URIs automatically and should enforce depth and time limits during validation.&lt;/p&gt; 
+&lt;h2 id="deciding-if-youre-ready-to-update"&gt;Deciding if you’re ready to update&lt;/h2&gt; 
+&lt;p&gt;Work through three questions before you enable the new version:&lt;/p&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;&lt;strong&gt;Are your clients ready?&lt;/strong&gt; Your agents reach Gateway through MCP client SDKs. Check that the SDKs your agent frameworks and host applications use have shipped&amp;nbsp;2026-07-28&amp;nbsp;support. Tier 1 SDKs were expected to ship support during the ten-week release candidate window, so most mainstream stacks are ready today. See the&amp;nbsp;&lt;a class="Hyperlink SCXW148261944 BCX0" href="https://modelcontextprotocol.io/docs/sdk" target="_blank" rel="noreferrer noopener"&gt;MCP SDK documentation&lt;/a&gt;&amp;nbsp;for the current tier list. Test clients that support&amp;nbsp;2026-07-28 before you advertise it on a production gateway.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Does anything you run depend on removed or changed behavior?&lt;/strong&gt; Audit for: protocol sessions used to carry application state, &lt;code&gt;logging/setLevel&lt;/code&gt;, client code matching the literal &lt;code&gt;-32002&lt;/code&gt; error code, and any dependence on Roots, Sampling, or Logging. If your tools use elicitation or sampling, note that the gateway carries these through a new per-request mechanism on 2026-07-28 rather than a persistent session. Confirm your clients declare the matching capability. A client that omits it is rejected with code &lt;code&gt;-32021&lt;/code&gt;.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Do you control both sides?&lt;/strong&gt; You don’t need to. Version selection happens per request, so a dual-version gateway serves old and new clients simultaneously. You can upgrade clients and the gateway on independent schedules, in either order.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;For the full details, see the&amp;nbsp;MCP 2026-07-28 specification the &lt;a class="Hyperlink TrackedChange SCXW247456459 BCX0" href="https://modelcontextprotocol.io/specification/2026-07-28/changelog" target="_blank" rel="noreferrer noopener"&gt;changelog against 2025-11-25&lt;/a&gt;, and the&amp;nbsp;&lt;a class="Hyperlink SCXW247456459 BCX0" href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noreferrer noopener"&gt;MCP blog’s release candidate announcement&lt;/a&gt;&lt;/p&gt; 
+&lt;h2 id="updating-your-agentcore-gateway"&gt;Updating your AgentCore Gateway&lt;/h2&gt; 
+&lt;p&gt;For AgentCore Gateway customers, adopting 2026-07-28 is a configuration change. Your AgentCore Gateway can support multiple protocol versions simultaneously. You can add 2026-07-28 to your gateway’s list of &lt;code&gt;supportedVersions&lt;/code&gt; with a single &lt;code&gt;UpdateGateway&lt;/code&gt; call. There’s no need to re-create the gateway or make changes to individual gateway target configurations. The MCP version is a property of the gateway, not of its targets, and updates to that property are performed in place. Tool definitions, target configuration, and inbound authentication (IAM and OAuth) are all unchanged by the version change.&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;UpdateGateway&lt;/code&gt; &lt;strong&gt;replaces&lt;/strong&gt; &lt;code&gt;supportedVersions&lt;/code&gt; with the set you send. It does not append. Read the current configuration first, then send the complete list you want the gateway to advertise:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-bash"&gt;# 1. Read the current configuration.
+aws bedrock-agentcore-control get-gateway \
+    --gateway-identifier &amp;lt;gateway-id&amp;gt;
+
+# 2. Advertise 2026-07-28 alongside the existing version.
+aws bedrock-agentcore-control update-gateway \
+    --name &amp;lt;gateway-name&amp;gt; \
+    --role-arn &amp;lt;gateway-role-arn&amp;gt; \
+    --protocol-type MCP \
+    --authorizer-type &amp;lt;gateway-authorizer-type&amp;gt; \
+    --gateway-identifier &amp;lt;gateway-id&amp;gt; \
+    --protocol-configuration '{
+  "mcp": {
+    "supportedVersions": ["2025-11-25", "2026-07-28"]
+  }
+}'&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;AgentCore Gateway works with any of the following protocol versions: 2025-03-26, 2025-06-18, 2025-11-25, and 2026-07-28.&lt;/p&gt; 
+&lt;p&gt;Confirm the new version is live by calling your gateway with the new headers:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-bash"&gt;curl -s https://&amp;lt;your-gateway-endpoint&amp;gt;/mcp \
+    -H "Authorization: Bearer $TOKEN" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json,text/event-stream" \
+    -H "MCP-Protocol-Version: 2026-07-28" \
+    -H "Mcp-Method: tools/list" \
+    -d '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{}}'&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;A successful response confirms the gateway served the request at 2026-07-28. A rejection with code &lt;code&gt;-32022&lt;/code&gt; means the version isn’t in the gateway’s &lt;code&gt;supportedVersions&lt;/code&gt; yet, and the response body lists what the gateway currently advertises.&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;supportedVersions&lt;/code&gt; is the complete set the gateway advertises, so rolling back is the same operation in reverse. That is, send the list without 2026-07-28. Requests specifying the removed version are rejected with a response body listing the versions the gateway still supports. Make sure clients you’ve already migrated can fall back before you remove the version they’re requesting.&lt;/p&gt; 
+&lt;h2 id="how-version-selection-works"&gt;How version selection works&lt;/h2&gt; 
+&lt;p&gt;Clients select a version on each request, not through a one-time handshake. Each MCP request declares its version in the &lt;code&gt;MCP-Protocol-Version&lt;/code&gt; header, and the gateway honors it when it’s in &lt;code&gt;supportedVersions&lt;/code&gt;:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;A request naming a version the gateway advertises is served in that version. On a dual-version gateway (for example, 2026-07-28 and 2025-11-25), a 2026-07-28 request gets the new behavior and a 2025-11-25 request gets the earlier behavior.&lt;/li&gt; 
+ &lt;li&gt;A request naming a version the gateway does &lt;em&gt;not&lt;/em&gt; advertise is rejected with &lt;code&gt;HTTP 400&lt;/code&gt; and code &lt;code&gt;-32022&lt;/code&gt;. The response body lists the versions the gateway supports.&lt;/li&gt; 
+ &lt;li&gt;A request that omits the header gets the default version, 2025-03-26. If that default isn’t in the gateway’s &lt;code&gt;supportedVersions&lt;/code&gt;, the request is rejected.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;Your existing clients continue to work as long as they request protocol versions listed in the gateway’s &lt;code&gt;supportedVersions&lt;/code&gt;. That gives you a clean, three-stage rollout: add 2026-07-28 alongside your existing versions, migrate clients at your own pace, and only after all clients request the new version, trim the list down.&lt;/p&gt; 
+&lt;p&gt;If your gateway fronts an MCP server target that upgrades to 2026-07-28 before your clients do, it translates between versions, so a &lt;code&gt;2025-*&lt;/code&gt; client can call ordinary tools on a 2026-07-28 target and receive results in the format it expects, without upgrading. However, this translation does not currently support elicitations and sampling calls from servers to clients. If a &lt;code&gt;2025-*&lt;/code&gt; client calls a tool on the &lt;code&gt;2026-*&lt;/code&gt; server that requires elicitation or sampling, it receives an error.&lt;/p&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;MCP &lt;code&gt;2026-07-28&lt;/code&gt; is the protocol’s biggest revision ever, and it’s designed to be the last revision that breaks compatibility. Statelessness gives MCP a foundation that scales on commodity HTTP infrastructure while MCP Extensions give new capabilities room to evolve on their own schedules.&lt;/p&gt; 
+&lt;p&gt;With Amazon Bedrock AgentCore Gateway, adding support for the latest protocol version is only one &lt;code&gt;UpdateGateway&lt;/code&gt; call. To get started, see the &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway.html" target="_blank" rel="noopener"&gt;AgentCore Gateway documentation&lt;/a&gt;, review the &lt;a href="https://modelcontextprotocol.io/specification/draft" target="_blank" rel="noopener"&gt;MCP 2026-07-28 specification&lt;/a&gt; and its &lt;a href="https://modelcontextprotocol.io/specification/draft/changelog" target="_blank" rel="noopener"&gt;changelog&lt;/a&gt;, and try enabling the new version on a gateway today. If you have feedback on the specification itself, the maintainers welcome issues in the &lt;a href="https://github.com/modelcontextprotocol/modelcontextprotocol/issues" target="_blank" rel="noopener"&gt;MCP specification repository&lt;/a&gt;. For questions about AgentCore Gateway, reach out through &lt;a href="https://repost.aws/" target="_blank" rel="noopener"&gt;AWS re:Post&lt;/a&gt; or your usual AWS Support channels.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/28/ML-21559-1.jpg" alt="Sean Eichenberger" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Sean Eichenberger&lt;/h3&gt; 
+  &lt;p&gt;Sean is a Principal Product Manager at AWS Agentic AI. He leads initiatives across agent governance, safety, and connectivity for Amazon Bedrock AgentCore.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/28/ML-21559-2.jpg" alt="Luca Chang" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Luca Chang&lt;/h3&gt; 
+  &lt;p&gt;Luca is a Software Development Engineer at AWS working on Amazon Bedrock AgentCore, and is an MCP specification maintainer. Luca is an author of the MCP Tasks feature proposal and is an active bridge between AWS customer needs and protocol development efforts. His background spans distributed systems and complex AI applications.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Market surveillance agent with LangGraph and Strands on AgentCore</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/market-surveillance-agent-with-langgraph-and-strands-on-agentcore/</link>
+		
+		<dc:creator><![CDATA[Gleb Geinke]]></dc:creator>
+		<pubDate>Tue, 28 Jul 2026 17:24:54 +0000</pubDate>
+				<category><![CDATA[Advanced (300)]]></category>
+		<category><![CDATA[Amazon Bedrock AgentCore]]></category>
+		<category><![CDATA[Generative AI]]></category>
+		<category><![CDATA[Technical How-to]]></category>
+		<guid isPermaLink="false">f15c6cc8df3f2f9b16de540e8bd4a5060a725c5c</guid>
+
+					<description>Learn how to architect and deploy a production-ready multi-agent AI system using LangGraph for workflow orchestration and Strands for agent reasoning on Amazon Bedrock AgentCore. This post walks through a market surveillance example with state-driven orchestration, checkpoint-based recovery, and AgentCore memory and observability.</description>
+										<content:encoded>&lt;p&gt;As artificial intelligence applications evolve from simple chatbots to sophisticated autonomous systems, organizations face new challenges in orchestrating complex multi-agent workflows that can handle real-world production scenarios. Traditional single-agent approaches often fall short when dealing with intricate business processes that require specialized expertise, dynamic decision-making, and robust error recovery mechanisms. The financial services industry exemplifies this challenge. Market surveillance systems must coordinate multiple specialized agents to analyze trading patterns, investigate suspicious activities, and generate comprehensive reports while maintaining strict compliance and reliability standards.&lt;/p&gt; 
+&lt;p&gt;The solution combines two frameworks: &lt;a href="https://www.langchain.com/langgraph" target="_blank" rel="noopener"&gt;LangGraph&lt;/a&gt; for macro-level workflow orchestration and &lt;a href="https://strandsagents.com/" target="_blank" rel="noopener"&gt;Strands&lt;/a&gt; for intelligent agent reasoning. LangGraph excels at managing state and directed graphs for multi-agent coordination. It gives you fine-grained control over both workflow execution and state that can be shared between agents. Its central persistence layer supports features critical for production, including human-in-the-loop interactions and robust checkpoint-based recovery from failures. Meanwhile, Strands Agent serves as the reasoning engine within individual workflow nodes. It offers model-agnostic capabilities that integrate with various large language model (LLM) providers while maintaining flexible tool integration and comprehensive observability.&lt;/p&gt; 
+&lt;p&gt;With the release of &lt;a href="https://aws.amazon.com/bedrock/agentcore/" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore&lt;/a&gt; last year, productionizing an agentic solution might be simplified for many use cases. The combination provides a strong foundation for production-ready agentic AI systems that can handle complex use cases while helping to deliver the infrastructure reliability and observability that enterprise applications demand.&lt;/p&gt; 
+&lt;p&gt;In this post, we demonstrate how to architect and deploy a multi-agent AI system using LangGraph and Strands on AWS infrastructure. You learn how to implement state-driven workflow orchestration with LangGraph’s checkpoint system, integrate Strands agents for specialized reasoning tasks, and use AgentCore for scalable production deployment. The complete solution is available on &lt;a href="https://github.com/aws-samples/sample-langgraph-strands-market-analysis" target="_blank" rel="noopener"&gt;GitHub&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2 id="strands-intelligent-agent-reasoning"&gt;Strands: Intelligent agent reasoning&lt;/h2&gt; 
+&lt;p&gt;Strands Agent operates on a model-agnostic architecture that adapts to your existing infrastructure without imposing architectural constraints. The agent implements an agentic reasoning loop that continuously evaluates tool outputs and makes decisions based on intermediate results, so you can build sophisticated multi-step analysis workflows. The framework includes comprehensive session and state management and multiple conversation managers to keep your context window from overflowing.&lt;/p&gt; 
+&lt;p&gt;With Strands, you can configure external tool interactions by defining tool schemas and access patterns. For our surveillance agent, we separate the discovery of data from the retrieval to avoid hallucinations and strengthen the solution against injection attacks. We use tools like &lt;code&gt;get_report_list&lt;/code&gt; and &lt;code&gt;get_report_schema&lt;/code&gt; to find reports and &lt;code&gt;run_report&lt;/code&gt; to build the SQL query with validated parameters and run it.&lt;/p&gt; 
+&lt;p&gt;We create a &lt;code&gt;security_monitor&lt;/code&gt; agent with the following tools and a system prompt:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;from strands import Agent, tool
+from strands.models.bedrock import BedrockModel
+
+model = BedrockModel(
+    model_id="us.anthropic.claude-sonnet-4-6",
+    region_name="us-east-1",
+    max_tokens=16000,
+    additional_request_fields={
+        "thinking": {"type": "adaptive", "budget_tokens": 8000},
+    },
+    cache_prompt="default",
+)
+
+@tool
+def get_report_list(agent_name: str) -&amp;gt; str:
+    """Load the list of available reports for a specific agent.
+
+    Args:
+        agent_name: Name of the agent (e.g. 'security_monitor').
+
+    Returns:
+        str: JSON array of report objects with name and description.
+    """
+    reports_data = load_agent_reports(agent_name)
+    return json.dumps(reports_data["reports"], indent=2)
+
+@tool
+def get_report_schema(report_name: str, query_intent: str) -&amp;gt; str:
+    """Load column definitions for a report so you can build queries.
+
+    Args:
+        report_name: Name of the report (e.g. 'TradeActivity').
+        query_intent: Description of what data to extract.
+
+    Returns:
+        str: JSON object with parameters and column definitions.
+    """
+    return json.dumps(load_json_report_definition(report_name), indent=2)
+
+@tool
+def run_report(
+    report_name: str,
+    filters: Dict[str, Any],
+    limit: Optional[int] = None,
+) -&amp;gt; Dict[str, Any]:
+    """Run a predefined report. The tool validates every filter against the
+    report's schema and builds a parameterised SQL query. The LLM never writes
+    raw SQL, so filter values cannot be injected into the query.
+
+    Args:
+        report_name: A report from `get_report_list` (e.g. 'TradeActivity').
+        filters: Equality filters keyed by column name, e.g.
+            {"symbol": "AAPL", "date": "2024-03-15"}.
+        limit: Optional row cap (1..10000).
+
+    Returns:
+        dict: {'success': bool, 'data': str (CSV), 'error': str or None}
+    """
+    schema = load_json_report_definition(report_name)
+    allowed_columns = {c["name"] for c in schema["columns"]}
+
+    # Reject any filter field that is not in the report's allowed list of columns.
+    unknown = set(filters) - allowed_columns
+    if unknown:
+        raise ValueError(
+            f"Unknown filter field(s) {sorted(unknown)} for {report_name}. "
+            f"Allowed: {sorted(allowed_columns)}"
+        )
+
+    # Build SQL with named bind parameters.
+    where = " AND ".join(f"{field} = :{field}" for field in filters)
+    sql = f"SELECT * FROM {schema['reportName']}"
+    if where:
+        sql += f" WHERE {where}"
+    if limit is not None:
+        if not isinstance(limit, int) or not 1 &amp;lt;= limit &amp;lt;= 10_000:
+            raise ValueError("limit must be an integer in [1, 10000]")
+        sql += f" LIMIT {limit}"
+
+    return query_market_data(report_name=report_name, sql=sql, bind=filters)
+
+security_monitor = Agent(
+    model=model,
+    system_prompt=SECURITY_MONITOR_PROMPT,
+    tools=[get_report_list, get_report_schema, run_report],
+    name="security_monitor",
+)&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h2 id="langgraph-macro-workflow-orchestration"&gt;LangGraph: Macro workflow orchestration&lt;/h2&gt; 
+&lt;p&gt;LangGraph provides production-grade orchestration for multi-agent systems through three core capabilities that make it well-suited for complex AI workflows.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Graph-based state machines&lt;/strong&gt;: LangGraph models agent workflows as directed graphs where nodes represent functions containing agent logic, and edges determine execution flow. This declarative approach transforms complex multi-step reasoning into readable, maintainable code. Graphs support conditional branching, parallel execution, and dynamic routing. These capabilities are important for real-world scenarios where workflows adapt based on intermediate results.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Persistent state management&lt;/strong&gt;: The framework’s checkpoint system automatically snapshots complete workflow state after every node execution. With these checkpoints, you can recover smoothly from failures and support human-in-the-loop interactions. When analysts need to review intermediate results or errors occur, the system restores from the exact checkpoint. It then resumes without losing previous work. This stateful architecture supports commonly used patterns like multi-turn conversations, iterative refinement, and long-running investigations that span hours or days.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Production reliability:&lt;/strong&gt; LangGraph includes built-in retry strategies with exponential backoff for handling throttling or other failures that might occur in your system. It also provides comprehensive observability through OpenTelemetry for straightforward integration with most observability applications.&lt;/p&gt; 
+&lt;p&gt;Let’s build an orchestration layer that routes queries between our specialist Strands agents. The following code defines our workflow graph: a shared state, an orchestrator that selects which specialist agents to invoke, conditional routing between them, and checkpoint-backed persistence for recovery and human-in-the-loop review.&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;from typing import TypedDict, Optional, List, Dict, Any
+from langgraph.graph import END, StateGraph
+from langgraph_checkpoint_aws import AgentCoreMemorySaver
+
+class AgentState(TypedDict):
+    query_text: str
+    session_id: Optional[str]
+    agent_task_map: Optional[Dict[str, str]]
+    required_agents: Optional[List[str]]
+    current_agent_index: Optional[int]
+    # Each specialist writes its insights here
+    security_monitor_insights: Optional[Dict[str, Any]]
+    broker_monitor_insights: Optional[Dict[str, Any]]
+    risk_monitor_insights: Optional[Dict[str, Any]]
+    intel_analyst_insights: Optional[Dict[str, Any]]
+    synthesizer_insights: Optional[str]
+
+SPECIALIST_NODES = {
+    "security_monitor": security_monitor_node,
+    "broker_monitor": broker_monitor_node,
+    "risk_monitor": risk_monitor_node,
+    "intel_analyst": intel_analyst_node,
+}
+
+def route_analysts(state: AgentState) -&amp;gt; str:
+    """Dynamic routing --- walk the required_agents list by index."""
+    required = state.get("required_agents", [])
+    index = state.get("current_agent_index", 0)
+    if not required:
+        return END
+    if index &amp;lt; len(required):
+        return required[index]
+    return "synthesizer"
+
+# Build the graph
+workflow = StateGraph(AgentState)
+workflow.add_node("orchestrator", orchestrator_node)
+for name, node_fn in SPECIALIST_NODES.items():
+    workflow.add_node(name, node_fn)
+workflow.add_node("synthesizer", synthesizer_node)
+workflow.set_entry_point("orchestrator")
+
+# Conditional edges --- the orchestrator and every specialist route through route_analysts, which can hand off to any specialist or the synthesizer.
+ALL_TARGETS = {name: name for name in SPECIALIST_NODES} | {
+    "synthesizer": "synthesizer",
+    END: END,
+}
+workflow.add_conditional_edges("orchestrator", route_analysts, ALL_TARGETS)
+for name in SPECIALIST_NODES:
+    workflow.add_conditional_edges(name, route_analysts, ALL_TARGETS)
+workflow.add_edge("synthesizer", END)
+
+# AgentCoreMemorySaver checkpoints the state after every node
+checkpointer = AgentCoreMemorySaver(MEMORY_ID, region_name=REGION)
+graph = workflow.compile(checkpointer=checkpointer)&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/24/ML-19945-1.png" alt="LangGraph workflow routing an orchestrator to specialist agent nodes and a synthesizer with checkpoint persistence" width="800" height="641"&gt;
+ &lt;p class="wp-caption-text"&gt;LangGraph workflow orchestration for the market analysis agent&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2 id="why-langgraph-and-strands-together"&gt;Why LangGraph and Strands together&lt;/h2&gt; 
+&lt;p&gt;Many enterprise use cases must be grounded in strict, predefined workflows. Relying purely on the non-deterministic nature of an LLM to execute the right steps is a risk. However, specific steps within those workflows do require the agile reasoning with the intelligence of the LLM.&lt;/p&gt; 
+&lt;p&gt;The combination of LangGraph and Strands bridges this gap. You can use it to build systems where deterministic orchestration houses localized, dynamic intelligence.&lt;/p&gt; 
+&lt;p&gt;Here is how this architectural pairing solves complex workflow challenges:&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;“Node” level intelligence&lt;/strong&gt;: LangGraph defines the higher-level orchestration for the workflow. Strands agents are placed at specific nodes, where a complex workflow might require LLM analysis or navigating ambiguity. They apply autonomous reasoning and tool use only where that flexibility is strictly required.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Context isolation with nodal agents&lt;/strong&gt;: Monolithic agents easily lose track of their instructions. By placing individual Strands agents inside separate LangGraph nodes, you compartmentalize memory. Each agent manages its own hyper-focused context and tool history, while LangGraph maintains a structured, overarching session state that these different agents can update and reference independently.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Supercharging orchestration&lt;/strong&gt;: At its core, LangGraph is a low-level routing and orchestration tool. By embedding Strands, you instantly plug a comprehensive enterprise agent framework into your graph. You get the robust routing of LangGraph alongside Strands’ native Model Context Protocol (MCP) integrations, steering controls, safety guardrails, and evaluation.&lt;/p&gt; 
+&lt;p&gt;Concretely, each specialist is a LangGraph node. The node spins up a fresh Strands agent with its own system prompt, tools, and isolated context. It runs the task the orchestrator assigned and returns a state update. LangGraph merges that partial update into the shared state the other nodes read from. Here is the security monitor node:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;async def security_monitor_node(state: AgentState) -&amp;gt; AgentState:
+    """
+    Single-day activity analyst agent that assesses price, volume and tick-level trades
+    """
+    agent = Agent(
+        name="security_monitor",
+        model=analyst_model,
+        system_prompt=SECURITY_MONITOR_PROMPT,
+        tools=[get_report_list, get_report_schema, run_report],
+        callback_handler=None,
+    )
+
+    # Pull this node's task from the shared state the orchestrator populated.
+    task = state.get("agent_task_map", {}).get("security_monitor", state["query_text"])
+
+    # Strands runs its own reasoning + tool loop; collect the agent's final text.
+    chunks = []
+    async for event in agent.stream_async(task):
+        if "data" in event:
+            chunks.append(event["data"])
+    result = "".join(chunks)
+
+    # Return shared state updates
+    return {
+        "security_monitor_insights": {"task": task, "business_insights": result},
+        "current_agent_index": state.get("current_agent_index", 0) + 1,
+    }&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h2 id="aws-infrastructure-and-deployment-with-agentcore"&gt;AWS infrastructure and deployment with AgentCore&lt;/h2&gt; 
+&lt;p&gt;Amazon Bedrock AgentCore provides a fully managed service for deploying and operating agents at scale, alleviating infrastructure management while delivering production-grade capabilities.&lt;/p&gt; 
+&lt;p&gt;Runtime deployment: AgentCore runtime, a capability of Amazon Bedrock AgentCore, transforms local agent code into cloud-native deployments with minimal configuration. The service is framework agnostic and works with LangGraph and Strands out of the box. It provides purpose-built infrastructure for dynamic agent workloads, including extended runtimes for long-running investigations, low-latency execution for interactive workflows, and automatic scaling based on demand.&lt;/p&gt; 
+&lt;p&gt;Deploy your LangGraph orchestrator and Strands agents using the AgentCore Python SDK, a capability of Amazon Bedrock AgentCore, and the starter toolkit. The runtime handles containerization, networking, and compute provisioning automatically. AgentCore handles the undifferentiated heavy lifting of container orchestration, scaling, and session management.&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;# api.py --- AgentCore runtime entry point
+from bedrock_agentcore.runtime import BedrockAgentCoreApp
+from src.agents import Workflow
+
+app = BedrockAgentCoreApp()
+workflow = Workflow()
+
+@app.entrypoint
+async def market_surveillance_workflow(payload):
+    """Invoked by AgentCore for each request. Yields streaming chunks."""
+    prompt = payload.get("prompt")
+    session_id = payload.get("session_id", "default-session")
+    actor_id = payload.get("actor_id", "default-actor")
+    async for chunk in workflow.stream_query(
+        session_id=session_id, prompt=prompt, actor_id=actor_id
+    ):
+        yield chunk
+
+if __name__ == "__main__":
+    app.run()
+
+# Deploy with the AgentCore starter toolkit
+from bedrock_agentcore_starter_toolkit import Runtime
+
+runtime = Runtime()
+runtime.configure(
+    entrypoint="api.py",
+    auto_create_execution_role=True,
+    auto_create_ecr=True,
+    requirements_file="requirements.txt",
+    region="us-east-1",
+    agent_name="market_surveillance_workflow",
+)
+result = runtime.launch()
+print(f"Agent ARN: {result.agent_arn}")
+
+# Invoke the deployed agent
+import boto3, json
+
+client = boto3.client("bedrock-agentcore", region_name="us-east-1")
+response = client.invoke_agent_runtime(
+    agentRuntimeArn=result.agent_arn,
+    qualifier="DEFAULT",
+    payload=json.dumps({
+        "prompt": "What caused the AAPL price spike at 11:00 AM on March 15, 2024?",
+        "session_id": "session-001",
+        "actor_id": "analyst-jane",
+    }),
+)
+
+# AgentCore returns a server-sent-events stream. Parse it:
+for raw in response["response"].iter_lines():
+    if not raw:
+        continue
+    line = raw.decode("utf-8") if isinstance(raw, bytes) else raw
+    if not line.startswith("data: "):
+        continue
+    try:
+        chunk = json.loads(line[6:])
+        if isinstance(chunk, str) and chunk.startswith("data: "):
+            chunk = json.loads(chunk[6:])
+    except json.JSONDecodeError:
+        continue  # malformed chunk --- skip, don't crash
+    if isinstance(chunk, dict) and chunk.get("type") == "text":
+        print(chunk["content"], end="")&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;Memory integration: LangGraph integrates with AgentCore memory, a capability of Amazon Bedrock AgentCore, through the &lt;code&gt;langgraph-checkpoint-aws&lt;/code&gt; package with a few lines of code, providing both short-term checkpoint persistence and intelligent long-term memory retrieval.&lt;/p&gt; 
+&lt;p&gt;The &lt;code&gt;AgentCoreMemorySaver&lt;/code&gt; class, used in this example, handles checkpoint objects containing user messages, AI responses, graph execution state, and metadata. After each node completion, LangGraph automatically saves checkpoints to AgentCore memory. You get stateful conversations and workflow recovery without managing Amazon DynamoDB tables or implementing custom serialization logic.&lt;/p&gt; 
+&lt;p&gt;The &lt;code&gt;AgentCoreMemoryStore&lt;/code&gt; class provides intelligent memory capabilities where AgentCore automatically extracts insights, summaries, and user preferences from conversations. Agents can search through these memories in future interactions, so you can deliver personalized experiences that improve over time. This addresses the fundamental challenge of agent statelessness: each interaction builds upon previous knowledge rather than starting fresh.&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;import boto3, time
+
+REGION = "us-east-1"
+control_client = boto3.client("bedrock-agentcore-control", region_name=REGION)
+
+response = control_client.create_memory(
+    name="MarketSurveillanceMemory",
+    description="Memory for market surveillance multi-agent workflow.",
+    eventExpiryDuration=90,  # days
+)
+MEMORY_ID = response["memory"]["id"]
+print(f"Memory ID: {MEMORY_ID}")
+
+# Wait for ACTIVE, with a 10-minute deadline. Creation normally takes 1-3 min.
+deadline = time.time() + 600
+while True:
+    status = control_client.get_memory(memoryId=MEMORY_ID)["memory"]["status"]
+    if status == "ACTIVE":
+        break
+    if status == "FAILED" or time.time() &amp;gt;= deadline:
+        raise RuntimeError(f"Memory {MEMORY_ID} is {status!r} (expected ACTIVE)")
+    time.sleep(10)&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;On graph build:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;checkpointer = AgentCoreMemorySaver(MEMORY_ID, region_name=REGION)
+graph = workflow.compile(checkpointer=checkpointer)&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;On invocation, pass &lt;code&gt;thread_id&lt;/code&gt; and &lt;code&gt;actor_id&lt;/code&gt; to the agent. These are unique identifiers for the user and session:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;config = {
+    "configurable": {
+        "thread_id": "surveillance-session-001",
+        "actor_id": "analyst-jane",
+    }
+}
+
+response = await graph.ainvoke(
+    {"query_text": "Which brokers were most active?"},
+    config=config,
+)&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;Observability and operations: AgentCore includes built-in observability through integration with Amazon CloudWatch and AWS X-Ray, capturing agent execution traces, tool invocations, and performance metrics. The service provides dashboards for monitoring agent behavior, identifying bottlenecks, and optimizing costs. Combined with LangGraph’s OpenTelemetry events, you gain comprehensive visibility from high-level workflow orchestration down to individual LLM calls and reasoning steps.&lt;/p&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In this post, we showed how to build production-ready multi-agent AI systems by combining LangGraph’s robust workflow orchestration with Strands’ intelligent agent reasoning capabilities, deployed on AWS infrastructure.&lt;/p&gt; 
+&lt;p&gt;The hybrid architecture we explored demonstrates how LangGraph excels at macro-level orchestration (managing agent coordination, state persistence, and workflow recovery) while Strands provides the detailed reasoning engine within individual nodes. With this separation of concerns, you can build sophisticated systems that handle complex business processes while maintaining production reliability through checkpoint-based recovery and comprehensive observability.&lt;/p&gt; 
+&lt;p&gt;Consider extending this architecture for other complex orchestration scenarios such as document processing pipelines, customer service automation, or compliance monitoring systems. The model-agnostic nature of Strands combined with LangGraph’s state management makes this pattern particularly valuable for enterprise applications requiring both flexibility and reliability.&lt;/p&gt; 
+&lt;p&gt;To dive deeper into the technical implementation details and build a market analysis agent yourself, see the &lt;a href="https://github.com/aws-samples/sample-langgraph-strands-market-analysis" target="_blank" rel="noopener"&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/24/ML-19945-2.jpg" alt="Gleb Geinke" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Gleb Geinke&lt;/h3&gt; 
+  &lt;p&gt;Gleb is a Deep Learning Architect at the AWS Generative AI Innovation Center. Gleb collaborates directly with enterprise customers to design and scale transformational generative AI solutions for complex business challenges.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/24/ML-19945-3.png" alt="Siddhesh Tiwari" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Siddhesh Tiwari&lt;/h3&gt; 
+  &lt;p&gt;Siddhesh is a Data Scientist at AWS Professional Services. He works with enterprise customers to design and deliver generative AI, agentic AI, and machine learning solutions on AWS.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/24/ML-19945-4.png" alt="Wang Teng Lee" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Wang Teng Lee&lt;/h3&gt; 
+  &lt;p&gt;Wang Teng is a Delivery Consultant with AWS Professional Services, specializing in AI and agentic solutions. He works hands-on with customers across the full delivery lifecycle – architecture, development, and deployment – and stays on the leading edge of AI, exploring how emerging technologies can simplify the way we live and work.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt;
+   &lt;img loading="lazy" class="alignnone size-full wp-image-136007" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/24/Efren_Faderanga.jpg" alt="Efren Faderanga headshot" width="120" height="160"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Efren Faderanga&lt;/h3&gt; 
+  &lt;p&gt;Efren Faderanga is a Delivery Consultant at AWS Professional Services, building the infrastructure that makes agentic AI systems production-ready. He specialises in multi-agent orchestration, CI/CD pipelines, and the serverless, event-driven foundations that autonomous systems run on. His work focuses on bridging the gap between AI engineering and production infrastructure.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Beyond RAG: Task-aware knowledge compression for enterprise AI on AWS</title>
 		<link>https://aws.amazon.com/blogs/machine-learning/beyond-rag-task-aware-knowledge-compression-for-enterprise-ai-on-aws/</link>
 		
@@ -40,7 +617,7 @@
 &lt;h2&gt;Architecture on AWS&lt;/h2&gt; 
 &lt;p&gt;The implementation runs on AWS as two decoupled serverless pipelines: one for ingestion and one for queries. Figure 1 illustrates both pipelines.&lt;/p&gt; 
 &lt;div style="width: 810px" class="wp-caption alignnone"&gt;
- &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/23/ML-19433-1.png" alt="TAKC architecture on AWS showing two serverless pipelines: an ingestion and compression pipeline and an authenticated query pipeline" width="800" height="1071"&gt;
+ &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/23/ML-19433-1.png" alt="TAKC architecture on AWS showing two serverless pipelines: an ingestion and compression pipeline and an authenticated query pipeline" width="800" height="1071"&gt;
  &lt;p class="wp-caption-text"&gt;TAKC architecture. The pipeline flow handles data ingestion and compression. The user flow handles authenticated queries&lt;/p&gt;
 &lt;/div&gt; 
 &lt;p&gt;We chose &lt;a href="https://docs.aws.amazon.com/lambda/" target="_blank" rel="noopener"&gt;AWS Lambda&lt;/a&gt; for compute because each function invocation is short-lived and event-driven. The workload processes data in bursts during ingestion and handles variable query loads between bursts, making serverless a natural fit.&lt;/p&gt; 
@@ -5021,257 +5598,12 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 <enclosure length="7683639" type="video/mp4" url="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-21151/ML-21151-video2.mp4"/>
 
 			</item>
-		<item>
-		<title>Transform your sales organization with Amazon Quick: your new agentic AI teammate</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/transform-your-sales-organization-with-amazon-quick-your-new-agentic-ai-teammate/</link>
-		
-		<dc:creator><![CDATA[Spencer Martenson]]></dc:creator>
-		<pubDate>Fri, 17 Jul 2026 18:42:36 +0000</pubDate>
-				<category><![CDATA[Amazon Quick Sight]]></category>
-		<category><![CDATA[Announcements]]></category>
-		<category><![CDATA[Foundational (100)]]></category>
-		<guid isPermaLink="false">19eb0a7f236f0093bfcd857d41a8178380a8de27</guid>
-
-					<description>In this post, we walk through a few ways that Quick delivers on this promise. We cover the entire sales cycle, from identifying your highest-priority prospect, contacting them, working the deal to close, and keeping the CRM up to date as the account matures, while protecting your scarcest resource: your time.</description>
-										<content:encoded>&lt;p&gt;The average sales rep spends &lt;a href="https://www.salesforce.com/en-us/wp-content/uploads/sites/4/documents/reports/sales/salesforce-state-of-sales-report-2026.pdf" target="_blank" rel="noopener"&gt;only 40% of their time actually selling&lt;/a&gt;. The rest is eaten up by necessary, but lower-value work: customer relationship management (CRM) updates, prospect research, email drafting, and endless context-switching between tools. Before you know it, the day has passed and you’ve spent only a small fraction of your time on the things that close deals and deliver value for customers.&lt;/p&gt; 
-&lt;p&gt;&lt;a href="https://aws.amazon.com/quick/" target="_blank" rel="noopener"&gt;Amazon Quick&lt;/a&gt; is an AI assistant for work that turns questions into answers, answers into actions, and actions into outcomes. Quick helps reps spend more time selling and less time on administrative tasks, whether you’re working in the browser, the &lt;a href="https://www.aboutamazon.com/news/aws/amazon-quick-desktop-ai-assistant" target="_blank" rel="noopener"&gt;desktop app&lt;/a&gt;, or directly within Microsoft 365, Outlook, and other tools you already use every day. The result? Your sales team can cover more territory, close deals faster, and deepen customer loyalty at any scale.&lt;/p&gt; 
-&lt;p&gt;Companies like &lt;a href="https://www.youtube.com/watch?v=zvoIkRihQ-E" target="_blank" rel="noopener"&gt;3M&lt;/a&gt;, AWS Global Sales, and Amazon are already using Quick to unlock their sellers’ full potential. See how &lt;a href="https://www.youtube.com/watch?v=HihYLcQZcJM" target="_blank" rel="noopener"&gt;AWS Global Sales transforms insights delivery&lt;/a&gt;, &lt;a href="https://www.youtube.com/watch?v=aC6Hm_AppXo" target="_blank" rel="noopener"&gt;AWS sales teams stay current on new launches&lt;/a&gt;, and &lt;a href="https://www.youtube.com/watch?v=p872D0NA-jE&amp;amp;t=1423s" target="_blank" rel="noopener"&gt;Amazon’s journey deploying Quick Suite across thousands of users&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;In this post, we walk through a few ways that Quick delivers on this promise. We cover the entire sales cycle, from identifying your highest-priority prospect, contacting them, working the deal to close, and keeping the CRM up to date as the account matures, while protecting your scarcest resource: your time.&lt;/p&gt; 
-&lt;h2&gt;Lead scoring and prospect prioritization: focus on the highest-value opportunities&lt;/h2&gt; 
-&lt;p&gt;You’re staring at a list of 200 leads in your CRM. Some filled out a form 6 months ago. Others downloaded a whitepaper last week. A few replied to cold email messages. Which ones deserve your attention today?&lt;/p&gt; 
-&lt;p&gt;This challenge is the norm. Most sales teams lack visibility into which leads are actually ready to buy, leading to missed opportunities and longer sales cycles. Or, scarce resources are used prioritizing smaller opportunities at the expense of the largest ones.&lt;/p&gt; 
-&lt;p&gt;Amazon Quick helps you identify and prioritize high-intent prospects automatically by connecting to your CRM, email, web analytics, and support systems to analyze engagement signals and dynamically rank leads by buying intent. With &lt;a href="https://aws.amazon.com/quick/chat-agents/" target="_blank" rel="noopener"&gt;custom chat agents&lt;/a&gt; that pull context from internal documents, opportunity details, and account history, Quick helps you focus on the prospects most likely to convert.&lt;/p&gt; 
-&lt;p&gt;Before we can start prioritizing prospects for outreach, you must integrate Quick with your existing CRM system. Step-by-step instructions are available for &lt;a href="https://docs.aws.amazon.com/quick/latest/userguide/salesforce-integration.html" target="_blank" rel="noopener"&gt;Salesforce&lt;/a&gt;, &lt;a href="https://docs.aws.amazon.com/quick/latest/userguide/hubspot-integration.html" target="_blank" rel="noopener"&gt;HubSpot&lt;/a&gt;, &lt;a href="https://docs.aws.amazon.com/quick/latest/userguide/servicenow-integration.html" target="_blank" rel="noopener"&gt;ServiceNow&lt;/a&gt;, and &lt;a href="https://docs.aws.amazon.com/quick/latest/userguide/supported-integrations.html" target="_blank" rel="noopener"&gt;other systems&lt;/a&gt; in the Quick documentation.&lt;/p&gt; 
-&lt;p&gt;Start by creating a dashboard using &lt;a href="https://aws.amazon.com/quick/quicksight/" target="_blank" rel="noopener"&gt;Amazon Quick Sight&lt;/a&gt;, the business intelligence service within Amazon Quick that’s used to build interactive visualizations from your connected data sources. Then, use chat to prompt Quick to assess the dashboard and provide a list of the most urgent deals to pursue.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-1.png" alt="Quick scores and ranks the pipeline using live CRM data." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;p&gt;The user provides a natural language prompt, for example “rank my pipeline”, and Quick aggregates data across connected systems to produce a prioritized view. Deals with stalled progression, overdue follow-ups, or competitive pressure surface at the top.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-2.png" alt="A natural language prompt initiates the pipeline analysis in Amazon Quick." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;h2&gt;Risk detection and next steps&lt;/h2&gt; 
-&lt;p&gt;For each deal, Quick identifies specific risk signals such as stalled email threads, missed follow-ups, and competitor mentions, and recommends concrete next actions. Sellers can trigger a follow-up skill directly from the conversation without switching context.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-3.png" alt="Risk signals and recommended next steps for a specific deal in Amazon Quick." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;h2&gt;Personalized outreach and email engagement: craft messages that resonate in seconds&lt;/h2&gt; 
-&lt;p&gt;Now that you’ve identified your highest-priority prospect, it’s time to reach out. Traditionally, crafting a message that’s sufficiently personalized required you to manually search across your CRM, internal documents, and external signals like the company’s website, recent press releases, and your prospect’s LinkedIn page. The alternative is to send a generic email message that will almost certainly be ignored.&lt;/p&gt; 
-&lt;p&gt;Quick removes this tradeoff, helping you craft highly tailored outreach that references specific context such as recent company news, pain points from past interactions, and relevant use cases, without hours of manual research.&lt;/p&gt; 
-&lt;p&gt;Because this is a recurring challenge, you can create a skill using Amazon Quick: a reusable, automated workflow that runs a series of steps on your behalf. In this case, we tell Quick to “research a prospect by pulling data from multiple sources (CRM, email threads, Slack conversations, account briefs, and web research), then generate a personalized outreach message.” You use this skill for the current prospect, but you can repurpose it across all your accounts going forward.&lt;/p&gt; 
-&lt;p&gt;This step requires you to integrate &lt;a href="https://docs.aws.amazon.com/quick/latest/userguide/microsoft-outlook-integration.html" target="_blank" rel="noopener"&gt;Outlook&lt;/a&gt; with Amazon Quick.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-4.png" alt="A personalized outreach email generated from deal context and conversation history." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;p&gt;This outreach is powered by a custom skill: a reusable workflow that any team member can trigger by name or configure to run automatically when conditions are met. After reviewing the email and providing any feedback, you can send it directly from Quick.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-5.png" alt="The Custom Skills interface in Amazon Quick showing reusable workflow configuration." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;p&gt;With the extensions for Microsoft 365, you can also work directly inside Outlook or Teams. Quick surfaces as a side panel within your email client, so you can generate personalized outreach, pull account context, and refine messaging without ever switching tabs.&lt;/p&gt; 
-&lt;h2&gt;Activity monitoring: start every day with clarity&lt;/h2&gt; 
-&lt;p&gt;The &lt;em&gt;Activity Feed&lt;/em&gt; surfaces changes that occurred overnight across Slack, email, and CRM, prioritized by relevance to the seller’s active deals. This replaces manual morning triage across multiple tools with a single consolidated view.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-6.png" alt="The Activity Feed in Amazon Quick consolidates overnight changes across connected systems." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;h2&gt;Account intelligence: prepare to close with confidence&lt;/h2&gt; 
-&lt;p&gt;The customer agrees to meet the following week to discuss your proposed solution. Success! But now comes the prep work. Traditionally, you’d spend multiple hours preparing, toggling between Salesforce for deal history, ServiceNow for support tickets, your email client for past conversations, and a search engine for industry context. By the time you’ve pieced together a full picture, you’ve burned an hour.&lt;/p&gt; 
-&lt;p&gt;You can ask Quick to create a one-page meeting prep document with the account snapshot, attendee bios, questions, and risks. Link Quick Chat to a &lt;a href="https://aws.amazon.com/quick/spaces/" target="_blank" rel="noopener"&gt;Quick Space&lt;/a&gt;, a centralized knowledge repository where you can organize documents, data sources, and files that Quick can reference when answering questions or finishing tasks.&lt;/p&gt; 
-&lt;p&gt;When preparing for a Quarterly Business Review (QBR), Quick can go further by outlining and building a full presentation deck from deal files, support incidents, and email threads. The seller reviews the proposed outline, selects a theme, and approves the build.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-7.png" alt="Quick proposes a deck outline based on live account data." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;p&gt;The resulting deck includes an account snapshot, incident timeline, deal status, and remediation plan, built from current data rather than manually assembled from multiple sources. A few minutes of prep instead of hours.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-8.png" alt="A completed QBR deck built from live data sources in Amazon Quick." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;h2&gt;Call transcript scoring: evaluate every conversation against your methodology&lt;/h2&gt; 
-&lt;p&gt;After a meeting, sellers can drop a call transcript into Quick for automated scoring against their sales methodology, such as MEDDPICC, BANT, or a custom framework. Quick identifies what was covered, what gaps remain, and provides a structured assessment of deal health based on the conversation.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-9.png" alt="Call transcript scoring against sales methodology in Amazon Quick." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;h2&gt;CRM automation and activity logging: keep the system of record accurate&lt;/h2&gt; 
-&lt;p&gt;Traditionally, every interaction requires 15–20 minutes of CRM updates that are often difficult to prioritize while juggling other time-sensitive customer interactions. As time passes between a meeting and updating Salesforce, context gets lost and details slip through the cracks.&lt;/p&gt; 
-&lt;p&gt;Following call analysis, Quick pushes structured updates to Salesforce, including deal probability, next steps, risk flags, and a conversation summary. This keeps the system of record accurate without requiring manual data entry.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-10.png" alt="CRM fields updated automatically based on call analysis in Amazon Quick." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;h2&gt;Custom applications from natural language: build tools without code&lt;/h2&gt; 
-&lt;p&gt;Quick lets sellers and sales operations teams build interactive applications from a natural language prompt, automatically reading connected data schemas and scaffolding a live application without writing code.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-11.png" alt="A custom pipeline tracker application built from a natural language prompt." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-12.png" alt="The Applications Assistant in Amazon Quick reads connected data schemas to scaffold the application." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;p&gt;The resulting application is live, shareable, and iterable. You can add features, change layouts, or connect new data sources with follow-up prompts.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-13.png" alt="A published sales application pulling live data from Salesforce." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-14.png" alt="Sharing and role-based access controls for published applications." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;h2&gt;Knowledge Graph: map relationships across your book of business&lt;/h2&gt; 
-&lt;p&gt;The Knowledge Graph maps relationships between people, accounts, deals, and interactions that Quick has learned from connected tools. Sellers can query relationship history, identify warm introduction paths, and understand account structures without manual research.&lt;/p&gt; 
-&lt;p&gt;&lt;img loading="lazy" class="alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/28/ML-20807-15.png" alt="The Knowledge Graph in Amazon Quick visualizing account and relationship data." width="600" height="1458"&gt;&lt;/p&gt; 
-&lt;h2&gt;Getting started&lt;/h2&gt; 
-&lt;p&gt;This post demonstrated a full sales workflow in Amazon Quick, from morning pipeline review through personalized outreach, meeting preparation, call scoring, CRM updates, custom application creation, and relationship mapping. Each capability connects to the next, creating a continuous workflow that keeps sellers in flow rather than switching between tools.&lt;/p&gt; 
-&lt;p&gt;The following table summarizes the capabilities covered in this post.&lt;/p&gt; 
-&lt;table style="height: 486px" border="1px" width="764" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Capability&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Function&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Pipeline scoring&lt;/td&gt; 
-   &lt;td&gt;Rank deals using live CRM signals.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Risk detection&lt;/td&gt; 
-   &lt;td&gt;Surface stalled deals and competitive threats.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Personalized outreach&lt;/td&gt; 
-   &lt;td&gt;Generate context-aware email messages from deal history.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Custom skills&lt;/td&gt; 
-   &lt;td&gt;Codify and share reusable workflows.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Activity Feed&lt;/td&gt; 
-   &lt;td&gt;Monitor overnight changes across systems.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Meeting prep and QBR decks&lt;/td&gt; 
-   &lt;td&gt;Build presentations from live account data.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Call scoring&lt;/td&gt; 
-   &lt;td&gt;Evaluate transcripts against methodology.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;CRM updates&lt;/td&gt; 
-   &lt;td&gt;Push structured updates to Salesforce.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Custom applications&lt;/td&gt; 
-   &lt;td&gt;Build interactive tools from prompts.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Knowledge Graph&lt;/td&gt; 
-   &lt;td&gt;Map relationship intelligence.&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;What could your day look like? Start with one workflow, such as lead scoring, meeting prep, or CRM automation, and experience the difference. Explore the &lt;a href="https://aws.amazon.com/quick/sales/" target="_blank" rel="noopener"&gt;Amazon Quick for Sales&lt;/a&gt; page to learn more, or watch Quick in action in the &lt;a href="https://www.youtube.com/watch?v=aC6Hm_AppXo" target="_blank" rel="noopener"&gt;Sales demo&lt;/a&gt; and &lt;a href="https://www.youtube.com/watch?v=HihYLcQZcJM" target="_blank" rel="noopener"&gt;full walkthrough&lt;/a&gt;.&lt;/p&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the author&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/16/ML-21220-4.jpg" alt="Spencer Martenson" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Spencer Martenson&lt;/h3&gt; 
-  &lt;p&gt;Spencer has spent six years at AWS translating complex technology into stories that resonate with customers. He previously led product marketing for SAP on AWS, helping enterprises modernize their critical ERP workloads in the cloud. Now he’s focused on Amazon Quick — building GTM strategies that help customers work smarter by taking advantage of the latest advancements in AI. Spencer lives in Seattle, spending his spare time pursuing rare birds and training his dog.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Introducing Mobile Layout for Amazon Quick dashboards</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/introducing-mobile-layout-for-amazon-quick-dashboards/</link>
-		
-		<dc:creator><![CDATA[Rushabh Vora]]></dc:creator>
-		<pubDate>Fri, 17 Jul 2026 17:13:15 +0000</pubDate>
-				<category><![CDATA[Amazon Quick Sight]]></category>
-		<category><![CDATA[Amazon Quick Suite]]></category>
-		<category><![CDATA[Announcements]]></category>
-		<category><![CDATA[Foundational (100)]]></category>
-		<guid isPermaLink="false">c7c7b20143e9236cf53af22804c327ab641f9a42</guid>
-
-					<description>Teams that rely on dashboards for daily decisions often must pinch and zoom to interact with controls originally designed for larger displays. Checking revenue during a morning standup, reviewing pipeline metrics between meetings, or monitoring operations while traveling all require extra effort when the dashboard was built for a desktop screen. Mobile Layout for Amazon […]</description>
-										<content:encoded>&lt;p&gt;Teams that rely on dashboards for daily decisions often must pinch and zoom to interact with controls originally designed for larger displays. Checking revenue during a morning standup, reviewing pipeline metrics between meetings, or monitoring operations while traveling all require extra effort when the dashboard was built for a desktop screen.&lt;/p&gt; 
-&lt;p&gt;Mobile Layout for Amazon Quick Free Form dashboards solves this by automatically rendering dashboards as a single-column, touch-optimized view that fills the device screen. Readers get immediate access to their data without resizing or scrolling horizontally. Mobile Layout for Free Form dashboards is now available in each supported AWS Region. Mobile Layout transforms the desktop canvas into a single-column, continuous scroll experience sized for the device. Visuals fill the screen width, maintain their aspect ratio, and remain interactive.&lt;/p&gt; 
-&lt;p&gt;Authors do not need to make changes for this to take effect. Dashboard readers get immediate, frictionless access to their data on any phone or tablet. In this post, we show you how Mobile Layout works and what you can do to optimize your dashboards.&lt;/p&gt; 
-&lt;p&gt;The following animation shows a Free Form dashboard opening on a phone in Mobile Layout, with the reader scrolling through key performance indicators (KPIs) and charts in a continuous vertical feed.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-21189/ML-21189-1.gif" alt="Animation of a Free Form dashboard opening on a phone in Mobile Layout as the reader scrolls through KPIs and charts in a single vertical column" width="800"&gt;&lt;/p&gt; 
-&lt;h2 id="mobile-layout-explained"&gt;Mobile layout explained&lt;/h2&gt; 
-&lt;p&gt;Mobile Layout is a rendering mode for Free Form dashboards. When a reader opens a Free Form dashboard on a device with a small viewport, Amazon Quick detects the screen size and renders the mobile view. The reader gets a single-column, vertically scrollable feed of visuals, each sized to fill the screen width.&lt;/p&gt; 
-&lt;p&gt;Detection is based on the device viewport. When the viewport falls within phone or tablet dimensions, Mobile Layout activates. On larger screens, the standard desktop rendering is used.&lt;/p&gt; 
-&lt;h2 id="capabilities"&gt;Capabilities&lt;/h2&gt; 
-&lt;p&gt;Mobile Layout includes the following capabilities for Free Form dashboards.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Continuous scroll.&lt;/strong&gt; Visuals stack in a single column. Each visual fills the full viewport width. Aspect ratios are preserved: portrait-shaped visuals stay tall, landscape-shaped visuals stay wide.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Group-aware rendering.&lt;/strong&gt; Free Form dashboards often use overlapping visuals (for example, KPI values layered on a colored background). Mobile Layout respects group boundaries. Grouped visuals render together as a single unit, preserving the layered design.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Reader controls.&lt;/strong&gt; In the Quick mobile app, readers can use a built-in view switcher to toggle between Mobile view (continuous scroll) and Desktop view (the original rendering). On web (mobile browser), portrait orientation renders the mobile experience and landscape orientation renders the desktop experience.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Performance.&lt;/strong&gt; Mobile Layout uses an optimized rendering path that reduces resource consumption on mobile devices. Dashboards that previously had difficulty rendering on phones now load and scroll smoothly.&lt;/p&gt; 
-&lt;p&gt;The following image shows the same dashboard in Desktop view (left) and Mobile continuous scroll view (right).&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/16/ML-21189-2.png" alt="The same dashboard shown side by side in Desktop view on the left and Mobile continuous scroll view on the right" width="800"&gt;&lt;/p&gt; 
-&lt;h2 id="required-actions"&gt;Required actions&lt;/h2&gt; 
-&lt;p&gt;&lt;strong&gt;For dashboard readers:&lt;/strong&gt; Nothing. Mobile Layout works for existing Free Form dashboards. There is no setting to turn on, no migration to perform, and nothing to update. Open a dashboard on a phone or tablet and access the mobile view immediately.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;For authors and administrators:&lt;/strong&gt; Nothing is required. Authors of Free Form dashboards benefit automatically because their published dashboards already render in Mobile Layout on smaller screens. Authors who use Tiled or Classic layouts are not affected. Those layout types retain their existing responsive behavior. Administrators do not need to configure anything. Mobile Layout is active by default for Free Form dashboards across the account.&lt;/p&gt; 
-&lt;h2 id="getting-the-best-mobile-experience-with-groups"&gt;Getting the best mobile experience with groups&lt;/h2&gt; 
-&lt;p&gt;Authors who use overlapping visuals can take one optional step to verify that their design translates well to mobile: organize those visuals into Groups.&lt;/p&gt; 
-&lt;p&gt;In Free Form layout, authors commonly layer visuals on top of each other. You might place KPI values on top of a colored background, or stack comparison cards over a container.&lt;/p&gt; 
-&lt;p&gt;On desktop, these overlapping elements render as intended. On mobile, the layout engine needs to decide how to handle them.&lt;/p&gt; 
-&lt;p&gt;Without grouping, each visual becomes its own card in the mobile scroll. A KPI that sits on a background image appears as separate elements: the background rendered as one card, each KPI rendered as a separate card. The visuals still render correctly, but they lose their layered relationship.&lt;/p&gt; 
-&lt;p&gt;With grouping, all visuals in the group render together as a single unit. The background and KPIs stay together, preserving the banner as the author designed it.&lt;/p&gt; 
-&lt;p&gt;For documentation on working with visual groups in Free Form layout, refer to &lt;a href="https://docs.aws.amazon.com/quick/latest/userguide/customizing-visuals-in-free-form.html" target="_blank" rel="noopener"&gt;Customizing visuals in a free-form layout&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;The following animation compares grouped visuals (where the KPI banner stays as one unit) with ungrouped visuals (where KPIs appear as separate cards) on mobile.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-21189/ML-21189-3.gif" alt="Animation comparing grouped visuals, where the KPI banner stays as one unit, with ungrouped visuals, where KPIs appear as separate cards on mobile" width="800"&gt;&lt;/p&gt; 
-&lt;h2 id="how-to-group-overlapping-visuals"&gt;How to group overlapping visuals&lt;/h2&gt; 
-&lt;p&gt;To group visuals, complete the following steps.&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Open your analysis in Amazon Quick authoring mode.&lt;/li&gt; 
- &lt;li&gt;Hold Shift and select each visual that should stay together (for example, a background rectangle and the KPI visuals on top of it).&lt;/li&gt; 
- &lt;li&gt;Open the context menu and choose &lt;strong&gt;Group&lt;/strong&gt;.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;There is no limit to the number of groups per sheet. Each group is treated as a single visual unit on mobile.&lt;/p&gt; 
-&lt;p&gt;The following animation shows the Amazon Quick authoring view with the right-click context menu and the Group option.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/16/ML-21189-4.gif" alt="Animation of the Amazon Quick authoring view showing the context (right-click) menu with the Group option" width="800"&gt;&lt;/p&gt; 
-&lt;h2 id="how-visuals-are-sized-on-mobile"&gt;How visuals are sized on mobile&lt;/h2&gt; 
-&lt;p&gt;When Mobile Layout renders visuals in the continuous scroll, it applies the following guardrails.&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Each visual fills the full viewport width.&lt;/li&gt; 
- &lt;li&gt;Aspect ratios are preserved. A tall bar chart stays tall. A wide line chart stays proportionally short.&lt;/li&gt; 
- &lt;li&gt;A minimum height of 272 pixels means that chart elements (legends, axis labels, sort buttons) remain visible.&lt;/li&gt; 
- &lt;li&gt;A maximum height cap prevents visuals from exceeding the viewport.&lt;/li&gt; 
- &lt;li&gt;Tables with many columns render at full width with horizontal scrolling turned on.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;If a visual becomes too short to render its internal elements, an informational icon appears. The reader can switch to Desktop mode or rotate to landscape to view the full visual.&lt;/p&gt; 
-&lt;h2 id="get-started"&gt;Get started&lt;/h2&gt; 
-&lt;p&gt;Mobile Layout removes the need to pinch and zoom on dashboards designed for desktop screens. It’s available today in Amazon Quick. To try it out by following these steps.&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Open a Free Form dashboard on your phone or tablet using the Quick mobile app.&lt;/li&gt; 
- &lt;li&gt;Scroll through your visuals in the continuous scroll view.&lt;/li&gt; 
- &lt;li&gt;Use the view switcher to toggle between Mobile, Desktop, and Landscape modes.&lt;/li&gt; 
- &lt;li&gt;If you have overlapping visuals, open your analysis, select them, open the context menu, and choose &lt;strong&gt;Group&lt;/strong&gt;.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;The following image shows the view switcher control on the mobile app.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/16/ML-21189-5.gif" alt="Animation of the view switcher control in the Quick mobile app toggling between Mobile, Desktop, and Landscape modes" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;For more information, see the following resources:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;a href="https://aws.amazon.com/quicksight/" target="_blank" rel="noopener"&gt;Amazon Quick&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/quick/latest/userguide/what-is.html" target="_blank" rel="noopener"&gt;Amazon Quick User Guide&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://us-east-2.signin.aws.amazon.com/oauth?client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&amp;amp;code_challenge=O0g6-r6p0zsGp55DCMg3uJ1yyOCeLmdf-JGW7U0zEO4&amp;amp;code_challenge_method=SHA-256&amp;amp;response_type=code&amp;amp;redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fca-oauth-flow-id%3D147e%26hashArgs%3D%2523%26isauthcode%3Dtrue%26oauthStart%3D1784223676797%26state%3DhashArgsFromTB_us-east-2_136780f3a388e8db" target="_blank" rel="noopener"&gt;Amazon Quick console&lt;/a&gt;&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;We welcome feedback through the Quick console feedback mechanism.&lt;/p&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/16/ML-21189-6.jpg" alt="Rushabh Vora" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Rushabh Vora&lt;/h3&gt; 
-  &lt;p&gt;Rushabh is a Principal Product Manager for Amazon Quick at Amazon Web Services, where he leads generative AI capabilities for data analysis and visualization. Rushabh focuses on enabling organizations to transform raw datasets into actionable insights through natural language, reducing the time from data to decision from hours to minutes. He is passionate about making data exploration and dashboard creation accessible to every business user, regardless of technical expertise.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/16/ML-21189-7.png" alt="Christopher Lott" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Christopher Lott&lt;/h3&gt; 
-  &lt;p&gt;Christopher is a Principal Solutions Architect for Amazon Quick. He has 25 years of enterprise software development experience. Chris lives in Sacramento, California, and enjoys gardening, cooking, aerospace/general aviation, and traveling the world.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignnone size-full wp-image-135637" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/16/upadhyan.jpg" alt="" width="100" height="134"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Nachiketha Sagri Hayavadana Upadhya&lt;/h3&gt; 
-  &lt;p&gt;Nachiketha is a Senior Front-End Engineer for Amazon QuickSight. With over 6 years of experience on the QuickSight team, Nachiketha specializes in building theming capabilities and authoring constructs that enable customers to create visually rich, brand-consistent analytics experiences.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignnone size-full wp-image-135638" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/16/Screenshot-2026-07-16-at-2.05.57 PM.png" alt="" width="396" height="474"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Sai Dinesh Garapati&lt;/h3&gt; 
-  &lt;p&gt;Sai Dinesh Garapati is a Front-End Engineer for Amazon QuickSight, where he works on Dashboards and analysis authoring experience. He build interactive features that help authors create and customize dashboards more effectively.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
 	</channel>
 </rss>
 
 ### SOURCE:Google AI Blog ###
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>AI</title><link>https://blog.google/innovation-and-ai/technology/ai/</link><description>AI</description><atom:link href="https://blog.google/innovation-and-ai/technology/ai/rss/" rel="self"/><language>en-us</language><lastBuildDate>Wed, 22 Jul 2026 13:00:00 +0000</lastBuildDate><image><url>https://blog.google/innovation-and-ai/technology/ai/static/blogv2/images/google.png</url><title>AI</title><link>https://blog.google/innovation-and-ai/technology/ai/</link></image><item><title>3 Google updates from Galaxy Unpacked 2026</title><link>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp" width="540"/><media:description>Gentle Monster glasses, Warby Parker glasses, a prompt asking for the history behind a pictured building, and a prompt asking to book a table at a pictured restaurant</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp"&gt;We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.</description><pubDate>Wed, 22 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</guid><category>Gemini App</category><category>Android</category><category>Gemini Notebook</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>3 Google updates from Galaxy Unpacked 2026</title><description>We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Menaka Shroff</name><title>VP of Android Ecosystem Marketing</title><department/><company/></author></item><item><title>Connect more of your apps to Search</title><link>https://blog.google/products-and-platforms/products/search/connected-apps/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp" width="540"/><media:description>Connected apps rendering</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp"&gt;You’ll be able to securely link and interact with your go-to services directly in AI Mode.</description><pubDate>Thu, 16 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/connected-apps/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Connect more of your apps to Search</title><description>You’ll be able to securely link and interact with your go-to services directly in AI Mode.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/connected-apps/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Chips Mistry</name><title>Senior Product Manager</title><department>Search</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Biharck Araújo</name><title>Engineering Lead</title><department>Search</department><company/></author></item><item><title>Create, edit and star in videos with two Google Vids updates</title><link>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp" width="540"/><media:description>Text "Gemini Omni and Personal Avatars in Google Vids" surrounded by various images</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp"&gt;Gemini Omni and personal avatars in Google Vids make video creation easier than ever.</description><pubDate>Thu, 16 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</guid><category>Google Workspace</category><category>Google One</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Create, edit and star in videos with two Google Vids updates</title><description>Gemini Omni and personal avatars in Google Vids make video creation easier than ever.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Justin Luk</name><title>Product Manager</title><department/><company/></author></item><item><title>Celebrating 25 years of visual search innovation</title><link>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_25th_hero.max-600x600.format-webp.webp" width="540"/><media:description>Google Images logo surrounded by illustrations of people searching for different images</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_25th_hero.max-600x600.format-webp.webp"&gt;Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.</description><pubDate>Tue, 14 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Celebrating 25 years of visual search innovation</title><description>Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Brad Kellett</name><title>Senior Engineering Director</title><department>Search</department><company/></author></item><item><title>Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp" width="540"/><media:description>Managed agents feature bundle launch</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp"&gt;We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><pubDate>Tue, 07 Jul 2026 08:54:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</title><description>We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Philipp Schmid</name><title>Developer Relations Engineer</title><department>Google DeepMind</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mariano Cocirio</name><title>Product Manager</title><department>Google DeepMind</department><company/></author></item><item><title>The latest AI news we announced in June 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp" width="540"/><media:description>June Pixel Drop hero</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp"&gt;Here are Google’s latest AI updates from June 2026.</description><pubDate>Wed, 01 Jul 2026 18:15:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</guid><category>Search</category><category>NotebookLM</category><category>Android</category><category>Arts &amp; Culture</category><category>Google DeepMind</category><category>Developer tools</category><category>Learning &amp; Education</category><category>UK</category><category>AI</category><category>Pixel</category><category>Gemini App</category><category>Gemini models</category><category>Google Research</category><category>Safety &amp; Security</category><category>Google Nest</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>The latest AI news we announced in June 2026</title><description>Here are Google’s latest AI updates from June 2026.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.</title><link>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp"&gt;Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.</description><pubDate>Wed, 01 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</guid><category>Learning &amp; Education</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.</title><description/><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</url></og></item><item><title>Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers</title><link>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp" width="540"/><media:description>Four illustrated characters representing different professional roles, including a scientist, technician, explorer, and observer.</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp"&gt;Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.</description><pubDate>Tue, 30 Jun 2026 06:00:00 +0000</pubDate><guid>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</guid><category>UK</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers</title><description>Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.</description><site_name>Google</site_name><url>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Kate Alessi</name><title>Vice President and Managing Director</title><department/><company>Google UK &amp; Ireland</company></author></item><item><title>Ask an AI expert: What exactly is the full stack?</title><link>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp" width="540"/><media:description>An illustration depicting a full-stack AI infrastructure against a dark background</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp"&gt;A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.</description><pubDate>Mon, 29 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Ask an AI expert: What exactly is the full stack?</title><description>A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Molly McHugh-Johnson</name><title>Contributor</title><department/><company/></author></item><item><title>Our latest Google Finance upgrades, including a new app</title><link>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp" width="540"/><media:description>The Google Finance logo, surrounded by elements of the user interface</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp"&gt;The new Google Finance is coming out of beta and launching a new Android app.</description><pubDate>Thu, 25 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Our latest Google Finance upgrades, including a new app</title><description>The new Google Finance is coming out of beta and launching a new Android app.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Barine Tee</name><title>Principal Engineer</title><department>Search</department><company/></author></item><item><title>New research shows how AMIE, our medical AI, could help manage health conditions.</title><link>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp"&gt;Research in “Nature” shows our conversational AI system matches primary care physicians in complex disease management.</description><pubDate>Wed, 17 Jun 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</guid><category>Google Research</category><category>Google DeepMind</category><category>Health</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>New research shows how AMIE, our medical AI, could help manage health conditions.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mike Schaekermann</name><title>Research Lead</title><department/><company/></author></item><item><title>We’re strengthening our presence in Alabama through new investments and community support.</title><link>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</link><description>Google has announced a $1.5 billion investment for 2026 and 2027 to expand its data center campus in Jackson County, Alabama. Operating since 2019 on a repurposed former…</description><pubDate>Mon, 15 Jun 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</guid><category>Global Network</category><category>Creating opportunity</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>We’re strengthening our presence in Alabama through new investments and community support.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</url></og></item><item><title>Our new community investments in Virginia support local jobs and expand energy affordability.</title><link>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/VirginiaSocial.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/VirginiaSocial.max-600x600.format-webp.webp"&gt;We’re helping build the state’s next-generation workforce and investing in energy programs.</description><pubDate>Thu, 11 Jun 2026 20:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/</guid><category>Google.org</category><category>Global Network</category><category>Creating opportunity</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Our new community investments in Virginia support local jobs and expand energy affordability.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/</url></og></item><item><title>The latest AI news we announced in May 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/May_AI_Recap_still.max-600x600.format-webp.webp" width="540"/><media:description>May AI recap</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/May_AI_Recap_still.max-600x600.format-webp.webp"&gt;Here are Google’s latest AI updates from May 2026</description><pubDate>Fri, 05 Jun 2026 14:45:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/</guid><category>Search</category><category>Android</category><category>Google DeepMind</category><category>Google Labs</category><category>Quantum computing</category><category>Google Health</category><category>Shopping</category><category>Google Cloud</category><category>AI</category><category>Gemini App</category><category>Gemini models</category><category>Fitbit</category><category>Google Research</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>The latest AI news we announced in May 2026</title><description>Here are Google’s latest AI updates from May 2026</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Blog Team</name><title/><department/><company/></author></item><item><title>5 ways Google Search can level up your thrift and vintage shopping</title><link>https://blog.google/products-and-platforms/products/search/thrifting-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Thrifting_Header.max-600x600.format-webp.webp" width="540"/><media:description>A colorful, grain-textured collage of various items scattered across a light blue background. The items include a green bucket hat, a wooden clothes hanger, a blue-and-red striped collar, blue sunglasses, denim shorts, a yellow price tag, a red high-heele</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Thrifting_Header.max-600x600.format-webp.webp"&gt;Uncover second-hand scores with AI tools in Google Search and Shopping.</description><pubDate>Wed, 03 Jun 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/thrifting-tips/</guid><category>Search</category><category>Shopping</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways Google Search can level up your thrift and vintage shopping</title><description>Uncover second-hand scores with AI tools in Google Search and Shopping.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/thrifting-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Megan Stoner</name><title>Contributing writer</title><department/><company/></author></item><item><title>How we used Gemini to build Google I/O 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_IO.max-600x600.format-webp.webp" width="540"/><media:description>A collage of I/O-related images, including the Antigravity Coffee Co. pop-up, a colorful jellyfish and a still from the Timmy TPU video. The word AI repeats three times on the left of the image, and there are colorful icons, including a sparkle, as well.</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_IO.max-600x600.format-webp.webp"&gt;Learn how Googlers used AI to produce Google I/O 2026.</description><pubDate>Mon, 01 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/</guid><category>Gemini models</category><category>Google Labs</category><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>How we used Gemini to build Google I/O 2026</title><description>Learn how Googlers used AI to produce Google I/O 2026.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Marvin Chow</name><title>VP</title><department>Marketing</department><company/></author></item><item><title>Take our I/O 2026 quiz, vibe coded in Google AI Studio.</title><link>https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IOQuiz2026_social.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IOQuiz2026_social.max-600x600.format-webp.webp"&gt;We used Google AI Studio to vibe code a quiz about our top I/O 2026 announcements.</description><pubDate>Fri, 29 May 2026 19:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Take our I/O 2026 quiz, vibe coded in Google AI Studio.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Zahra Thompson</name><title>Contributing writer</title><department/><company/></author></item><item><title>9 demos of Gemini Omni and Gemini 3.5 in action</title><link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Omni_and_Gemini_3.5_hero.max-600x600.format-webp.webp" width="540"/><media:description>Gemini Omni &amp; Gemini 3.5 hero</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Omni_and_Gemini_3.5_hero.max-600x600.format-webp.webp"&gt;Watch 9 videos showing the capabilities of Gemini Omni and Gemini 3.5, announced at Google I/O 2026.</description><pubDate>Fri, 29 May 2026 17:30:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/</guid><category>Gemini models</category><category>Google DeepMind</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>9 demos of Gemini Omni and Gemini 3.5 in action</title><description>Watch 9 videos showing the capabilities of Gemini Omni and Gemini 3.5, announced at Google I/O 2026.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Zahra Thompson</name><title>Contributing writer</title><department/><company/></author></item><item><title>Check out real-life AI prototypes from the Futures Lab.</title><link>https://blog.google/innovation-and-ai/technology/ai/university-waterloo-labs/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/FutureLabs_social.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/FutureLabs_social.max-600x600.format-webp.webp"&gt;University of Waterloo students develop AI prototypes like sign language tutors to reshape the future of education and work.</description><pubDate>Fri, 29 May 2026 12:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/university-waterloo-labs/</guid><category>Learning &amp; Education</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Check out real-life AI prototypes from the Futures Lab.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/university-waterloo-labs/</url></og></item><item><title>Catch up on 12 major I/O 2026 moments</title><link>https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/KW_KNH.max-600x600.format-webp.webp" width="540"/><media:description>The colorful I/O logo against a black background, surrounded by stills from the I/O keynote</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/KW_KNH.max-600x600.format-webp.webp"&gt;Here are 12 of the biggest Google I/O 2026 keynote moments, including news about Gemini Omni, Gemini 3.5 Flash and more.</description><pubDate>Thu, 28 May 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos/</guid><category>Search</category><category>Android</category><category>Google Labs</category><category>Shopping</category><category>AI</category><category>Gemini App</category><category>Gemini models</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Catch up on 12 major I/O 2026 moments</title><description>Here are 12 of the biggest Google I/O 2026 keynote moments, including news about Gemini Omni, Gemini 3.5 Flash and more.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Zahra Thompson</name><title>Contributing writer</title><department/><company/></author></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>AI</title><link>https://blog.google/innovation-and-ai/technology/ai/</link><description>AI</description><atom:link href="https://blog.google/innovation-and-ai/technology/ai/rss/" rel="self"/><language>en-us</language><lastBuildDate>Tue, 28 Jul 2026 16:00:00 +0000</lastBuildDate><image><url>https://blog.google/innovation-and-ai/technology/ai/static/blogv2/images/google.png</url><title>AI</title><link>https://blog.google/innovation-and-ai/technology/ai/</link></image><item><title>Gemini API Managed Agents: 3.6 Flash, hooks, and more</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/unnamed_2_vNnOv20.max-600x600.format-webp.webp" width="540"/><media:description>Managed Agents Gemini 3.6 Flash, Hooks and Triggers</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/unnamed_2_vNnOv20.max-600x600.format-webp.webp"&gt;We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><pubDate>Tue, 28 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Gemini API Managed Agents: 3.6 Flash, hooks, and more</title><description>We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Philipp Schmid</name><title>Member of the Technical Staff</title><department>Google DeepMind</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mariano Cocirio</name><title>Product Manager</title><department>Google DeepMind</department><company/></author></item><item><title>5 ways AI Mode in Search helps you enjoy the real world</title><link>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_real_world.max-600x600.format-webp.webp" width="540"/><media:description>Illustration of a black magnifying glass in a white circle on green grass surrounded by items related to fun activities like tennis and games</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_real_world.max-600x600.format-webp.webp"&gt;It might sound counterintuitive, but Search's AI tools can actually help you make the most of your time offline whether you want to book concert tickets or find the perf…</description><pubDate>Tue, 28 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways AI Mode in Search helps you enjoy the real world</title><description>It might sound counterintuitive, but Search's AI tools can actually help you make the most of your time offline whether you want to book concert tickets or find the perfect hiking boots.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>5 ways to host the ultimate dinner party with Google Search</title><link>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinner_parties.max-600x600.format-webp.webp" width="540"/><media:description>An illustrated black magnifying glass with a sparkle in a white circle surrounded by a dinner party tablescape</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinner_parties.max-600x600.format-webp.webp"&gt;These AI features can help you craft a menu, design a tablescape, and handle other party-planning tasks.</description><pubDate>Tue, 28 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways to host the ultimate dinner party with Google Search</title><description>These AI features can help you craft a menu, design a tablescape, and handle other party-planning tasks.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>3 Google updates from Galaxy Unpacked 2026</title><link>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp" width="540"/><media:description>Gentle Monster glasses, Warby Parker glasses, a prompt asking for the history behind a pictured building, and a prompt asking to book a table at a pictured restaurant</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp"&gt;We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.</description><pubDate>Wed, 22 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</guid><category>Gemini App</category><category>Android</category><category>Gemini Notebook</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>3 Google updates from Galaxy Unpacked 2026</title><description>We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Menaka Shroff</name><title>VP of Android Ecosystem Marketing</title><department/><company/></author></item><item><title>Connect more of your apps to Search</title><link>https://blog.google/products-and-platforms/products/search/connected-apps/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp" width="540"/><media:description>Connected apps rendering</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp"&gt;You’ll be able to securely link and interact with your go-to services directly in AI Mode.</description><pubDate>Thu, 16 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/connected-apps/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Connect more of your apps to Search</title><description>You’ll be able to securely link and interact with your go-to services directly in AI Mode.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/connected-apps/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Chips Mistry</name><title>Senior Product Manager</title><department>Search</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Biharck Araújo</name><title>Engineering Lead</title><department>Search</department><company/></author></item><item><title>Create, edit and star in videos with two Google Vids updates</title><link>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp" width="540"/><media:description>Text "Gemini Omni and Personal Avatars in Google Vids" surrounded by various images</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp"&gt;Gemini Omni and personal avatars in Google Vids make video creation easier than ever.</description><pubDate>Thu, 16 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</guid><category>Google Workspace</category><category>Google One</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Create, edit and star in videos with two Google Vids updates</title><description>Gemini Omni and personal avatars in Google Vids make video creation easier than ever.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Justin Luk</name><title>Product Manager</title><department/><company/></author></item><item><title>Celebrating 25 years of visual search innovation</title><link>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_25th_hero.max-600x600.format-webp.webp" width="540"/><media:description>Google Images logo surrounded by illustrations of people searching for different images</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_25th_hero.max-600x600.format-webp.webp"&gt;Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.</description><pubDate>Tue, 14 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Celebrating 25 years of visual search innovation</title><description>Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Brad Kellett</name><title>Senior Engineering Director</title><department>Search</department><company/></author></item><item><title>Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp" width="540"/><media:description>Managed agents feature bundle launch</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp"&gt;We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><pubDate>Tue, 07 Jul 2026 08:54:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</title><description>We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Philipp Schmid</name><title>Developer Relations Engineer</title><department>Google DeepMind</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mariano Cocirio</name><title>Product Manager</title><department>Google DeepMind</department><company/></author></item><item><title>The latest AI news we announced in June 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp" width="540"/><media:description>June Pixel Drop hero</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp"&gt;Here are Google’s latest AI updates from June 2026.</description><pubDate>Wed, 01 Jul 2026 18:15:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</guid><category>Search</category><category>NotebookLM</category><category>Android</category><category>Arts &amp; Culture</category><category>Google DeepMind</category><category>Developer tools</category><category>Learning &amp; Education</category><category>UK</category><category>AI</category><category>Pixel</category><category>Gemini App</category><category>Gemini models</category><category>Google Research</category><category>Safety &amp; Security</category><category>Google Nest</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>The latest AI news we announced in June 2026</title><description>Here are Google’s latest AI updates from June 2026.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.</title><link>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp"&gt;Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.</description><pubDate>Wed, 01 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</guid><category>Learning &amp; Education</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.</title><description/><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</url></og></item><item><title>Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers</title><link>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp" width="540"/><media:description>Four illustrated characters representing different professional roles, including a scientist, technician, explorer, and observer.</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp"&gt;Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.</description><pubDate>Tue, 30 Jun 2026 06:00:00 +0000</pubDate><guid>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</guid><category>UK</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers</title><description>Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.</description><site_name>Google</site_name><url>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Kate Alessi</name><title>Vice President and Managing Director</title><department/><company>Google UK &amp; Ireland</company></author></item><item><title>Ask an AI expert: What exactly is the full stack?</title><link>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp" width="540"/><media:description>An illustration depicting a full-stack AI infrastructure against a dark background</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp"&gt;A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.</description><pubDate>Mon, 29 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Ask an AI expert: What exactly is the full stack?</title><description>A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Molly McHugh-Johnson</name><title>Contributor</title><department/><company/></author></item><item><title>Our latest Google Finance upgrades, including a new app</title><link>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp" width="540"/><media:description>The Google Finance logo, surrounded by elements of the user interface</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp"&gt;The new Google Finance is coming out of beta and launching a new Android app.</description><pubDate>Thu, 25 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Our latest Google Finance upgrades, including a new app</title><description>The new Google Finance is coming out of beta and launching a new Android app.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Barine Tee</name><title>Principal Engineer</title><department>Search</department><company/></author></item><item><title>New research shows how AMIE, our medical AI, could help manage health conditions.</title><link>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp"&gt;Research in “Nature” shows our conversational AI system matches primary care physicians in complex disease management.</description><pubDate>Wed, 17 Jun 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</guid><category>Google Research</category><category>Google DeepMind</category><category>Health</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>New research shows how AMIE, our medical AI, could help manage health conditions.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mike Schaekermann</name><title>Research Lead</title><department/><company/></author></item><item><title>We’re strengthening our presence in Alabama through new investments and community support.</title><link>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</link><description>Google has announced a $1.5 billion investment for 2026 and 2027 to expand its data center campus in Jackson County, Alabama. Operating since 2019 on a repurposed former…</description><pubDate>Mon, 15 Jun 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</guid><category>Global Network</category><category>Creating opportunity</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>We’re strengthening our presence in Alabama through new investments and community support.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</url></og></item><item><title>Our new community investments in Virginia support local jobs and expand energy affordability.</title><link>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/VirginiaSocial.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/VirginiaSocial.max-600x600.format-webp.webp"&gt;We’re helping build the state’s next-generation workforce and investing in energy programs.</description><pubDate>Thu, 11 Jun 2026 20:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/</guid><category>Google.org</category><category>Global Network</category><category>Creating opportunity</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Our new community investments in Virginia support local jobs and expand energy affordability.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/</url></og></item><item><title>The latest AI news we announced in May 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/May_AI_Recap_still.max-600x600.format-webp.webp" width="540"/><media:description>May AI recap</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/May_AI_Recap_still.max-600x600.format-webp.webp"&gt;Here are Google’s latest AI updates from May 2026</description><pubDate>Fri, 05 Jun 2026 14:45:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/</guid><category>Search</category><category>Android</category><category>Google DeepMind</category><category>Google Labs</category><category>Quantum computing</category><category>Google Health</category><category>Shopping</category><category>Google Cloud</category><category>AI</category><category>Gemini App</category><category>Gemini models</category><category>Fitbit</category><category>Google Research</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>The latest AI news we announced in May 2026</title><description>Here are Google’s latest AI updates from May 2026</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Blog Team</name><title/><department/><company/></author></item><item><title>5 ways Google Search can level up your thrift and vintage shopping</title><link>https://blog.google/products-and-platforms/products/search/thrifting-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Thrifting_Header.max-600x600.format-webp.webp" width="540"/><media:description>A colorful, grain-textured collage of various items scattered across a light blue background. The items include a green bucket hat, a wooden clothes hanger, a blue-and-red striped collar, blue sunglasses, denim shorts, a yellow price tag, a red high-heele</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Thrifting_Header.max-600x600.format-webp.webp"&gt;Uncover second-hand scores with AI tools in Google Search and Shopping.</description><pubDate>Wed, 03 Jun 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/thrifting-tips/</guid><category>Search</category><category>Shopping</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways Google Search can level up your thrift and vintage shopping</title><description>Uncover second-hand scores with AI tools in Google Search and Shopping.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/thrifting-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Megan Stoner</name><title>Contributing writer</title><department/><company/></author></item><item><title>How we used Gemini to build Google I/O 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_IO.max-600x600.format-webp.webp" width="540"/><media:description>A collage of I/O-related images, including the Antigravity Coffee Co. pop-up, a colorful jellyfish and a still from the Timmy TPU video. The word AI repeats three times on the left of the image, and there are colorful icons, including a sparkle, as well.</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_IO.max-600x600.format-webp.webp"&gt;Learn how Googlers used AI to produce Google I/O 2026.</description><pubDate>Mon, 01 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/</guid><category>Gemini models</category><category>Google Labs</category><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>How we used Gemini to build Google I/O 2026</title><description>Learn how Googlers used AI to produce Google I/O 2026.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Marvin Chow</name><title>VP</title><department>Marketing</department><company/></author></item><item><title>Take our I/O 2026 quiz, vibe coded in Google AI Studio.</title><link>https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IOQuiz2026_social.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IOQuiz2026_social.max-600x600.format-webp.webp"&gt;We used Google AI Studio to vibe code a quiz about our top I/O 2026 announcements.</description><pubDate>Fri, 29 May 2026 19:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Take our I/O 2026 quiz, vibe coded in Google AI Studio.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Zahra Thompson</name><title>Contributing writer</title><department/><company/></author></item></channel></rss>
 
 ### SOURCE:Microsoft Azure Blog ###
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
@@ -5857,7 +6189,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a66531a70376"></universal-media-player>
+		<universal-media-player id="ump-6a64da733abd9"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5871,7 +6203,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a66531a70376", options);
+				ump("ump-6a64da733abd9", options);
 			});
 		</script>
 	</div>
@@ -6657,7 +6989,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 		<category><![CDATA[Management and governance]]></category>
 		<category><![CDATA[Advancing reliability]]></category>
 		<category><![CDATA[AI]]></category>
-		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=52479</guid>
+		<guid isPermaLink="false"></guid>
 
 					<description><![CDATA[<p>Learn how Microsoft is building a digital twin of Azure Service Health and why it changes how hyperscale operates.</p>
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/">Meet Brain: The AI system behind Azure reliability</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
@@ -6757,7 +7089,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a66531a870e3&quot;}" data-wp-interactive="core/image" data-wp-key="6a66531a870e3" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a64da734f5db&quot;}" data-wp-interactive="core/image" data-wp-key="6a64da734f5db" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7103,7 +7435,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a66531a945be&quot;}" data-wp-interactive="core/image" data-wp-key="6a66531a945be" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a64da735e88a&quot;}" data-wp-interactive="core/image" data-wp-key="6a64da735e88a" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7764,7 +8096,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a66531a9e4bd"></universal-media-player>
+		<universal-media-player id="ump-6a64da7369c6f"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -7778,7 +8110,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a66531a9e4bd", options);
+				ump("ump-6a64da7369c6f", options);
 			});
 		</script>
 	</div>
@@ -7834,7 +8166,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a66531a9ebbc"></universal-media-player>
+		<universal-media-player id="ump-6a64da736a3a5"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -7848,7 +8180,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a66531a9ebbc", options);
+				ump("ump-6a64da736a3a5", options);
 			});
 		</script>
 	</div>
@@ -7880,7 +8212,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a66531a9ee86"></universal-media-player>
+		<universal-media-player id="ump-6a64da736a72a"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -7894,7 +8226,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a66531a9ee86", options);
+				ump("ump-6a64da736a72a", options);
 			});
 		</script>
 	</div>
@@ -8022,7 +8354,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a66531aab0cf&quot;}" data-wp-interactive="core/image" data-wp-key="6a66531aab0cf" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-2-2.png" alt="Chart showing trending AI agent tasks across AI, data, and cloud workflows. Highest-confidence use cases include automated report generation and distribution (84), certificate expiration monitoring and renewal (81.5), and boilerplate code generation for new features (82.5). Scores indicate strong confidence in automation for reporting, monitoring, code generation, and cloud operations tasks." class="wp-image-15378" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a64da7375aae&quot;}" data-wp-interactive="core/image" data-wp-key="6a64da7375aae" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-2-2.png" alt="Chart showing trending AI agent tasks across AI, data, and cloud workflows. Highest-confidence use cases include automated report generation and distribution (84), certificate expiration monitoring and renewal (81.5), and boilerplate code generation for new features (82.5). Scores indicate strong confidence in automation for reporting, monitoring, code generation, and cloud operations tasks." class="wp-image-15378" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -8070,7 +8402,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 <p class="wp-block-paragraph">What&#8217;s changing, and what remains underappreciated, is the skill it takes to draw that boundary well: the discipline of <a href="https://learn.microsoft.com/en-us/azure/foundry/how-to/evaluate-generative-ai-app">full-lifecycle evaluations</a> and <a href="https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview">guardrails</a>. Success means measuring agent output against intent and keeping behavior inside your business strategy. It&#8217;s new territory for most engineering teams, and it&#8217;s becoming table stakes for modern software faster than most organizations realize. The good news: the same tools generating the work can help you build the harness. <a href="https://docs.github.com/en/copilot/concepts/agents/github-copilot-app">Ask GitHub Copilot</a> to write the evals and it will. Frontier teams are already doing this, and it&#8217;s why they&#8217;re pulling ahead.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a66531aac3cb&quot;}" data-wp-interactive="core/image" data-wp-key="6a66531aac3cb" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-3-2.webp" alt="MIT Technology Review Insights survey chart titled &ldquo;Concerns are addressed by keeping humans in the loop and increasing observability.&rdquo; Respondents most frequently identified keeping humans in the loop (59%) and increasing observability/monitoring and tracing (53%) as key ways to address concerns around AI agents. Other approaches include creating privacy-governed documentation (42%), upskilling within one&rsquo;s craft (36%), addressing security and access control (33%), API and framework standardization (25%), identifying and communicating ROI (25%), scaling personal potential (16%), and accessing ecosystem support (11%)" class="wp-image-15379 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2019/02/1bbe5959-0e2e-4309-8079-3a71ce986e5e.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a64da7376bf9&quot;}" data-wp-interactive="core/image" data-wp-key="6a64da7376bf9" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-3-2.webp" alt="MIT Technology Review Insights survey chart titled &ldquo;Concerns are addressed by keeping humans in the loop and increasing observability.&rdquo; Respondents most frequently identified keeping humans in the loop (59%) and increasing observability/monitoring and tracing (53%) as key ways to address concerns around AI agents. Other approaches include creating privacy-governed documentation (42%), upskilling within one&rsquo;s craft (36%), addressing security and access control (33%), API and framework standardization (25%), identifying and communicating ROI (25%), scaling personal potential (16%), and accessing ecosystem support (11%)" class="wp-image-15379 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2019/02/1bbe5959-0e2e-4309-8079-3a71ce986e5e.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -8099,7 +8431,7 @@ outputs/local-eval-report.json&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a66531ab46ca&quot;}" data-wp-interactive="core/image" data-wp-key="6a66531ab46ca" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-4-2.png" alt="MIT Technology Review Insights survey chart showing confidence that AI agents will enhance careers across technology disciplines. System reliability and site operations has the highest confidence levels, while database administration and performance, security operations, and data integration roles show lower but still predominantly positive confidence. Across all roles, confidence significantly outweighs lack of confidence." class="wp-image-15380" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a64da737e4ee&quot;}" data-wp-interactive="core/image" data-wp-key="6a64da737e4ee" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-4-2.png" alt="MIT Technology Review Insights survey chart showing confidence that AI agents will enhance careers across technology disciplines. System reliability and site operations has the highest confidence levels, while database administration and performance, security operations, and data integration roles show lower but still predominantly positive confidence. Across all roles, confidence significantly outweighs lack of confidence." class="wp-image-15380" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"

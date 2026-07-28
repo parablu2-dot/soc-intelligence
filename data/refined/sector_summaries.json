@@ -1,210 +1,76 @@
 {
-  "date": "2026-07-27",
-  "generated_at": "2026-07-27T21:16:57.428855+00:00",
+  "date": "2026-07-28",
+  "generated_at": "2026-07-28T21:13:17.656804+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-07-27",
-      "item_count": 5,
-      "generated_at": "2026-07-27T21:16:57.427953+00:00",
+      "date": "2026-07-28",
+      "item_count": 3,
+      "generated_at": "2026-07-28T21:13:17.656185+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Qualcomm announced double-digit chip price increases effective September 1, 2024 across hardware partner deliveries. Samsung's Exynos processor was notably absent from its Galaxy Unpacked event, signaling strategic shifts in mobile SoC positioning.",
+          "executive_summary": "Qualcomm는 9월 1일부터 칩 가격을 인상하며 공급업체 비용 상승을 반영할 예정이다. 가격 인상은 스마트폰 비용에 대한 압박을 가할 것으로 예상된다.",
           "key_facts": [
-            "Qualcomm price hikes effective September 1, 2024",
-            "Qualcomm AI Frame Fusion officially announced for next-gen Snapdragon Pro",
-            "Samsung Exynos absent from Galaxy Unpacked event"
+            "Qualcomm 9월 1일부터 칩 가격 인상",
+            "공급업체 비용 상승으로 인한 가격 인상"
           ],
           "implications": [
             {
-              "keyword": "Cost Pressures",
-              "text": "Double-digit price increases may accelerate OEM migration to alternative SoC suppliers or proprietary designs"
+              "keyword": "소비자 가격 영향",
+              "text": "스마트폰 제조업체들이 가격 인상 비용을 최종 소비자 가격에 전가할 가능성"
             },
             {
-              "keyword": "Samsung Strategy",
-              "text": "Exynos absence suggests potential reduced reliance on internal SoC development or consolidation toward flagship-only chips"
-            },
-            {
-              "keyword": "AI Features",
-              "text": "Qualcomm's AI Frame Fusion positioning indicates accelerating mobile AI capability competition"
+              "keyword": "시장 경쟁",
+              "text": "비용 효율적인 대체 칩 공급업체에 대한 수요 증가 가능성"
             }
           ],
-          "counterpoint": "Price increases apply only to post-September 1 orders, allowing a narrow window for inventory-based mitigation by OEMs."
+          "counterpoint": ""
         },
         "en": {
-          "executive_summary": "Qualcomm announced double-digit chip price increases effective September 1, 2024 across hardware partner deliveries. Samsung's Exynos processor was notably absent from its Galaxy Unpacked event, signaling strategic shifts in mobile SoC positioning.",
+          "executive_summary": "Qualcomm will raise chip prices starting September 1st, reflecting increased supplier costs. The price increase is expected to put pressure on smartphone costs.",
           "key_facts": [
-            "Qualcomm price hikes effective September 1, 2024",
-            "Qualcomm AI Frame Fusion officially announced for next-gen Snapdragon Pro",
-            "Samsung Exynos absent from Galaxy Unpacked event"
+            "Qualcomm raises chip prices starting September 1st",
+            "Price increase due to rising supplier costs"
           ],
           "implications": [
             {
-              "keyword": "Cost Pressures",
-              "text": "Double-digit price increases may accelerate OEM migration to alternative SoC suppliers or proprietary designs"
+              "keyword": "Consumer Price Impact",
+              "text": "Smartphone manufacturers may pass through the cost increase to end consumer prices"
             },
             {
-              "keyword": "Samsung Strategy",
-              "text": "Exynos absence suggests potential reduced reliance on internal SoC development or consolidation toward flagship-only chips"
-            },
-            {
-              "keyword": "AI Features",
-              "text": "Qualcomm's AI Frame Fusion positioning indicates accelerating mobile AI capability competition"
+              "keyword": "Market Competition",
+              "text": "Potential increase in demand for cost-efficient alternative chip suppliers"
             }
           ],
-          "counterpoint": "Price increases apply only to post-September 1 orders, allowing a narrow window for inventory-based mitigation by OEMs."
+          "counterpoint": ""
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-07-27",
-      "item_count": 14,
-      "generated_at": "2026-07-27T21:16:57.427953+00:00",
+      "date": "2026-07-28",
+      "item_count": 8,
+      "generated_at": "2026-07-28T21:13:17.656185+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Global semiconductor firms are intensifying talent recruitment in Korea while Vietnam faces chip design engineer shortages. NVIDIA CEO Huang stated the chip industry must grow 10x over the next decade to support 100 billion AI agents; NVIDIA is deploying its Vera CPU to accelerate EDA tool optimization with Cadence and Synopsys. ISC achieved record Q2 revenue of 72.9 billion won on AI datacenter demand, while Intel's Crescent Island accelerator (Xe3P) leak reveals 160 GB LPDDR5X capacity.",
-          "key_facts": [
-            "AMD and South Korea science ministry established joint AI R&D center",
-            "Samsung chief inspecting new Vietnam R&D center",
-            "NVIDIA Vera CPU being optimized with Cadence and Synopsys for EDA",
-            "NVIDIA CEO: chip industry must grow 10x to support 100 billion AI agents",
-            "ISC Q2 revenue: 72.9 billion won (~$49.8 million) on AI datacenter boom",
-            "Intel Crescent Island Xe3P: 160 GB LPDDR5X capacity",
-            "Samsung and SK Hynix pursuing PhD-level talent recruitment",
-            "Semiconductor new hires in Korea up 47%",
-            "Tesla suing former employee over Project Dojo secrets"
-          ],
-          "implications": [
-            {
-              "keyword": "Talent War",
-              "text": "Korean firms (Samsung, SK Hynix) competing globally for advanced talent while Vietnam struggles with engineer shortages, reshaping regional semiconductor engineering hubs"
-            },
-            {
-              "keyword": "AI Scaling",
-              "text": "NVIDIA's 10x growth mandate and HBM emphasis signal sustained datacenter memory and compute demand acceleration through decade"
-            },
-            {
-              "keyword": "Design Automation",
-              "text": "NVIDIA Vera CPU deployment with EDA leaders tightens proprietary-to-commercial tool integration, enabling faster next-gen architecture cycles"
-            },
-            {
-              "keyword": "Intel Acceleration",
-              "text": "Crescent Island's high LPDDR5X allocation targets AI workload bandwidth requirements, positioning Intel in competitive HPC market"
-            }
-          ],
-          "counterpoint": "Korea talent influx may be temporary if local compensation structures do not sustain competitiveness against global tech giants' offers."
-        },
-        "en": {
-          "executive_summary": "Global semiconductor firms are intensifying talent recruitment in Korea while Vietnam faces chip design engineer shortages. NVIDIA CEO Huang stated the chip industry must grow 10x over the next decade to support 100 billion AI agents; NVIDIA is deploying its Vera CPU to accelerate EDA tool optimization with Cadence and Synopsys. ISC achieved record Q2 revenue of 72.9 billion won on AI datacenter demand, while Intel's Crescent Island accelerator (Xe3P) leak reveals 160 GB LPDDR5X capacity.",
-          "key_facts": [
-            "AMD and South Korea science ministry established joint AI R&D center",
-            "Samsung chief inspecting new Vietnam R&D center",
-            "NVIDIA Vera CPU being optimized with Cadence and Synopsys for EDA",
-            "NVIDIA CEO: chip industry must grow 10x to support 100 billion AI agents",
-            "ISC Q2 revenue: 72.9 billion won (~$49.8 million) on AI datacenter boom",
-            "Intel Crescent Island Xe3P: 160 GB LPDDR5X capacity",
-            "Samsung and SK Hynix pursuing PhD-level talent recruitment",
-            "Semiconductor new hires in Korea up 47%",
-            "Tesla suing former employee over Project Dojo secrets"
-          ],
-          "implications": [
-            {
-              "keyword": "Talent War",
-              "text": "Korean firms (Samsung, SK Hynix) competing globally for advanced talent while Vietnam struggles with engineer shortages, reshaping regional semiconductor engineering hubs"
-            },
-            {
-              "keyword": "AI Scaling",
-              "text": "NVIDIA's 10x growth mandate and HBM emphasis signal sustained datacenter memory and compute demand acceleration through decade"
-            },
-            {
-              "keyword": "Design Automation",
-              "text": "NVIDIA Vera CPU deployment with EDA leaders tightens proprietary-to-commercial tool integration, enabling faster next-gen architecture cycles"
-            },
-            {
-              "keyword": "Intel Acceleration",
-              "text": "Crescent Island's high LPDDR5X allocation targets AI workload bandwidth requirements, positioning Intel in competitive HPC market"
-            }
-          ],
-          "counterpoint": "Korea talent influx may be temporary if local compensation structures do not sustain competitiveness against global tech giants' offers."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-07-27",
-      "item_count": 21,
-      "generated_at": "2026-07-27T21:16:57.427953+00:00",
+      "date": "2026-07-28",
+      "item_count": 12,
+      "generated_at": "2026-07-28T21:13:17.656185+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Samsung secured a $200+ billion multi-year AI chip partnership with Broadcom through 2030, cementing foundry expansion for custom silicon. Google's Frozen V2 TPU integrates SRAM directly on-die, bypassing TSMC's CoWoS packaging for Gemini workloads. Enphase unveiled its Kestrel ASIC platform for sub-millisecond AI datacenter response, while Intel's 4 node gained its first external customer with Fortinet's SecurityProcessor 6.",
-          "key_facts": [
-            "Samsung-Broadcom $200+ billion AI chip deal through 2030",
-            "Google Frozen V2 TPU hardwires SRAM on-die, skips TSMC CoWoS",
-            "Enphase Kestrel ASIC platform targets sub-millisecond AI datacenter latency",
-            "Intel 4 first external customer: Fortinet SecurityProcessor 6",
-            "Synopsys certified on Intel 14A node",
-            "NVIDIA using Vera CPU for next-gen CPU/GPU design",
-            "Broadcom deepening custom AI silicon momentum"
-          ],
-          "implications": [
-            {
-              "keyword": "Foundry Consolidation",
-              "text": "Samsung-Broadcom megadeal signals major cloud and networking players locking in long-term custom silicon supply, reducing TSMC's AI SoC concentration risk"
-            },
-            {
-              "keyword": "Packaging Innovation",
-              "text": "Google's on-die SRAM integration reduces chiplet packaging complexity and cost, pressuring traditional EMIB/CoWoS demand"
-            },
-            {
-              "keyword": "Intel Foundry Traction",
-              "text": "Fortinet adoption on Intel 4 validates ecosystem maturity; Synopsys certification on 14A accelerates multi-customer design flow"
-            },
-            {
-              "keyword": "Vertical Design Acceleration",
-              "text": "Enphase and NVIDIA's proprietary ASIC/CPU designs underscore shift toward in-house silicon for latency-critical workloads"
-            }
-          ],
-          "counterpoint": "Samsung-Broadcom contract success depends on on-time 2nm GAA ramp; delays would favor TSMC's entrenched process lead."
-        },
-        "en": {
-          "executive_summary": "Samsung secured a $200+ billion multi-year AI chip partnership with Broadcom through 2030, cementing foundry expansion for custom silicon. Google's Frozen V2 TPU integrates SRAM directly on-die, bypassing TSMC's CoWoS packaging for Gemini workloads. Enphase unveiled its Kestrel ASIC platform for sub-millisecond AI datacenter response, while Intel's 4 node gained its first external customer with Fortinet's SecurityProcessor 6.",
-          "key_facts": [
-            "Samsung-Broadcom $200+ billion AI chip deal through 2030",
-            "Google Frozen V2 TPU hardwires SRAM on-die, skips TSMC CoWoS",
-            "Enphase Kestrel ASIC platform targets sub-millisecond AI datacenter latency",
-            "Intel 4 first external customer: Fortinet SecurityProcessor 6",
-            "Synopsys certified on Intel 14A node",
-            "NVIDIA using Vera CPU for next-gen CPU/GPU design",
-            "Broadcom deepening custom AI silicon momentum"
-          ],
-          "implications": [
-            {
-              "keyword": "Foundry Consolidation",
-              "text": "Samsung-Broadcom megadeal signals major cloud and networking players locking in long-term custom silicon supply, reducing TSMC's AI SoC concentration risk"
-            },
-            {
-              "keyword": "Packaging Innovation",
-              "text": "Google's on-die SRAM integration reduces chiplet packaging complexity and cost, pressuring traditional EMIB/CoWoS demand"
-            },
-            {
-              "keyword": "Intel Foundry Traction",
-              "text": "Fortinet adoption on Intel 4 validates ecosystem maturity; Synopsys certification on 14A accelerates multi-customer design flow"
-            },
-            {
-              "keyword": "Vertical Design Acceleration",
-              "text": "Enphase and NVIDIA's proprietary ASIC/CPU designs underscore shift toward in-house silicon for latency-critical workloads"
-            }
-          ],
-          "counterpoint": "Samsung-Broadcom contract success depends on on-time 2nm GAA ramp; delays would favor TSMC's entrenched process lead."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-07-27",
-      "item_count": 11,
-      "generated_at": "2026-07-27T21:16:57.427953+00:00",
+      "date": "2026-07-28",
+      "item_count": 9,
+      "generated_at": "2026-07-28T21:13:17.656185+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -212,9 +78,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-07-27",
-      "item_count": 26,
-      "generated_at": "2026-07-27T21:16:57.427953+00:00",
+      "date": "2026-07-28",
+      "item_count": 19,
+      "generated_at": "2026-07-28T21:13:17.656185+00:00",
       "content": {
         "ko": {},
         "en": {}
