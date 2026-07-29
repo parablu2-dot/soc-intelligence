@@ -2,6 +2,281 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Photonuclear Neutron Production in OpenMC: Verification Against MCNPX, FLUKA, and a First-Collision Analytical Solution",
+    "url": "https://arxiv.org/abs/2607.26045v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "The modeling of photonuclear reactions is increasingly important for applications involving high-energy photon fields, including accelerator-driven neutron sources, radiation shielding, medical physics, and fusion technologies. Although the Monte Carlo code OpenMC provides well-verified photoatomic transport capabilities, its photonuclear physics is currently available only in an unofficial development branch and requires independent verification before broader scientific use or possible integra",
+    "authors": [
+      "Lorenzo Loi",
+      "Andrea Missaglia",
+      "Carolina Introini",
+      "David Breitenmoser",
+      "Shaun D. Clarke",
+      "Sara A. Pozzi",
+      "Antonio Cammi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "MDTransformer: A Hardware-Software Co-Design of Mode-Division Photonic Transformer Accelerator with Inverse-Designed Coherent Crossbar",
+    "url": "https://arxiv.org/abs/2607.26016v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "Recently, photonic transformer accelerators (PTAs) have successfully achieved significant speedup and energy efficiency improvements over electronic accelerators for expediting Transformer inference. However, state-of-the-art rely on expensive multi-wavelength light generation and large dot-product units due to active phase-shifter components, thus making their approach inefficient and impractical. To address this, we propose MDTransformer, a novel hardware-software co-design of PTA based on mod",
+    "authors": [
+      "Solomon Micheal Serunjogi",
+      "Rachmad Vidya Wicaksana Putra",
+      "Ayat Taha",
+      "Muhammad Shafique",
+      "Mahmoud Rasras"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.AS",
+    "title": "Spacing Out: On the Reliability of Binaural Music Source Separation Metrics",
+    "url": "https://arxiv.org/abs/2607.25919v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "Despite the rising popularity of immersive audio, binaural music remains underexplored in music information retrieval (MIR), particularly regarding the task of music source separation (MSS). While existing stereo MSS models can process binaural audio, they often degrade the spatial quality of the separated stems and undermine listener immersion. Through a perceptual study comparing binaural and stereo MSS outputs, we evaluate how well objective spatial distortion metrics correlate with human per",
+    "authors": [
+      "Richa Namballa",
+      "Magdalena Fuentes"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Pressure-Induced Irreversible Disorder in $β^{\\prime}$-Mn$_3$(PO$_4$)$_2$: A High-Pressure X-ray Diffraction and Density-Functional Theory Study",
+    "url": "https://arxiv.org/abs/2607.25896v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "The high-pressure structural behavior of $β^\\prime$-Mn$_3$(PO$_4$)$_2$ was investigated using synchrotron X-ray diffraction up to 20 GPa combined with density-functional theory calculations. At ambient conditions, $β^\\prime$-Mn$_3$(PO$_4$)$_2$ crystallizes in a monoclinic structure that exhibits strongly anisotropic compression. The pressure dependence of the unit-cell volume was described using a third-order Birch--Murnaghan equation of state, and the principal axes of compressibility were dete",
+    "authors": [
+      "Ana Melissa P. Brito",
+      "Neha Bura",
+      "Pablo Botella",
+      "Robert Oliva",
+      "Alanna Khesley L. da Costa",
+      "Fabiana V. da Motta",
+      "Mauricio R. D. Bomio",
+      "Alfonso Munoz",
+      "Joao Elias Rodrigues",
+      "Daniel Errandonea"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Beam Selection for Delay-Doppler Visibility in Multi-Target MIMO-OFDM Sensing",
+    "url": "https://arxiv.org/abs/2607.25810v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "This paper studies leakage-aware beam selection for multi-target multiple-input multiple-output (MIMO)-orthogonal frequency-division multiplexing (OFDM) sensing. We focus on ensuring that each hypothesized target remains detectable at its own delay-Doppler (DD) bin despite leakage from other targets. For this, we derive a visibility metric that separates the desired focused power from pairwise leakage caused by the finite-grid OFDM ambiguity kernel, receive angular coupling, and transmit codeboo",
+    "authors": [
+      "Amirhossein Azarbahram",
+      "Onel L. A. López"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Integrating moment tensor potentials with finite-element modeling for heat transfer prediction in FLiBe-based molten salt systems",
+    "url": "https://arxiv.org/abs/2607.25803v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "Molten fluoride salts are promising heat-transfer media for advanced molten salt reactors (MSRs), where reliable thermophysical property determination is critical for component design and safety. We present an integrated multiscale framework that couples machine-learning-driven atomistic simulations with finite-element (FE) modeling to predict the heat-transfer performance of FLiBe-based salts in a linear heat exchanger. At the atomistic scale, Moment Tensor Potentials (MTPs), actively trained o",
+    "authors": [
+      "Mikhail Polovinkin",
+      "Ksenia Abramova",
+      "Oksana Rahmanova",
+      "Farit Valiev",
+      "Andrey Isakov",
+      "Andrey Goryachikh",
+      "Alexander Galashev",
+      "Yurii Zaikov",
+      "Dmitrii Maksimov",
+      "Alexander Shapeev",
+      "Nikita Rybin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Zeroth-Order Blind Interference Suppression for Multi-RIS-Aided Wireless Systems",
+    "url": "https://arxiv.org/abs/2607.25632v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "In this paper, we study measurement-driven signal-to-interference-plus-noise ratio (SINR) maximization for a multi-reconfigurable intelligent surface (RIS)-aided single-input single-output (SISO) system with unknown strong interference sources. Specifically, the objective is to optimize the reflection coefficients such that the SINR is maximized at the receiver. As the interference channels are unknown, such an optimization problem is a black-box optimization problem with an objective function w",
+    "authors": [
+      "Binyao Ma",
+      "Peilan Wang",
+      "Bin Wang",
+      "Jun Fang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Ferroelectricity and antiferroelectricity in the BaS-PbS system with the rocksalt structure",
+    "url": "https://arxiv.org/abs/2607.25591v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "The ferroelectric instability in superstructures, superlattices, quantum wires, and disordered solid solutions in the BaS--PbS system with the NaCl structure has been discovered and investigated using first-principles calculations within the density functional theory. The emergence of ferroelectricity in these structures is associated with the instability of TO phonons in linear --Pb--S--Pb--S-- chains, which arises as a result of stretching of the structures upon the introduction of large bariu",
+    "authors": [
+      "Alexander I. Lebedev"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "At-the-Roofline Sparse Tensor Contractions on Vector Processors for Transformer Inference",
+    "url": "https://arxiv.org/abs/2607.25504v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "Fine-grained weight pruning and activation sparsification have emerged as effective approaches for reducing the compute and memory cost of inference for Transformer models. In the moderate-sparsity regime, Gustavson's dataflow provides a natural execution model for exploiting both activation and weight sparsity on vector processors through metadata-driven indexed accumulation. However, existing RVV architectures lack native support for this pattern, forcing kernels to rely on software index deco",
+    "authors": [
+      "Bowen Wang",
+      "Chi Zhang",
+      "Diyou Shen",
+      "Renzo Andri",
+      "Navaneeth Kunhi Purayil",
+      "Luca Benini"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Beyond Prefill-Decode Disaggregation: Dissecting LLM Inference for Heterogeneous Platforms via Dynamic Operator Scheduling",
+    "url": "https://arxiv.org/abs/2607.25498v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "Prefill-decode disaggregation (PD) and roofline-based operator placement are common strategies for partitioning Large Language Model (LLM) inference across heterogeneous systems, but they are often insufficient in practice. End-to-end latency also depends on workload shape, runtime device contention, and persistent weight layout. We present DOPS (dynamic operator scheduling), a hardware-aware, closed-loop framework that jointly optimizes operator scheduling and blockwise weight layouts. DOPS con",
+    "authors": [
+      "Jiaqi Yang",
+      "Jiayi Li",
+      "Yihan Fu",
+      "Hongxiao Zhao",
+      "Zhan Chen",
+      "Qiuping Wu",
+      "Yuchao Yang",
+      "Bonan Yan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Stretch-free, shape-induced 3D Island-Bridge Networks for flexible TFTs on Silicon Planar Technology verified through Bending and Scalability to 9x9 Matrix",
+    "url": "https://arxiv.org/abs/2607.25477v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "This study presents a CMOS-compatible, fully integrated three-dimensional island-bridge concept for flexible electronics on silicon planar technology. By embedding metal bridges within trenches in a polyimide-passivated island matrix, the approach localizes mechanical stress to the bridges whereby active components on the islands are protected from mechanical stress, enabling high-performance thin-film transistors (TFTs) on flexible substrates. A concave, arc-shape forming fill in trenches betwe",
+    "authors": [
+      "Daniel Joch",
+      "Robert Kammel",
+      "Fabian Magerl",
+      "Mathias Rommel",
+      "Michael P. M. Jank"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Anisotropic domain wall velocity profiles in the creep regime: the interplay of chiral damping, stiffness and Dzyaloshinskii-Moriya interaction",
+    "url": "https://arxiv.org/abs/2607.25470v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "The asymmetric expansion of magnetic bubble domains in ultrathin ferromagnets provides a powerful route to probe the interfacial Dzyaloshinskii-Moriya interaction (DMI). While conventional analyses rely on domain wall velocities measured along selected directions as a function of in-plane field, recent approaches have highlighted the additional insight contained in the angular dependence of the velocity, $v(θ)$. Here, we develop an extended angular creep model that incorporates both the dispersi",
+    "authors": [
+      "Adriano Di Pietro",
+      "Alessandro Magni",
+      "Stefania Pizzini",
+      "Frowin Dörr",
+      "Yasser Shokr",
+      "Gianfranco Durin",
+      "Silvia Tacchi",
+      "Marco Madami",
+      "Giovanni Carlotti",
+      "Emily Darwin",
+      "Alexandra J. Huxtable",
+      "Christopher H. Marrows",
+      "Bryan J. Hickey",
+      "Michaela Kuepferling"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Covert Semantic Transmission in ISAC: Dual-Functional Waveform Design and Rectified Flow-Assisted Recovery",
+    "url": "https://arxiv.org/abs/2607.25354v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "Semantic integrated sensing and communication (ISAC) is envisioned as a promising paradigm for efficient and intelligent connectivity in future wireless networks. However, the open wireless channel exposes the dual-functional waveform to detection, which challenges the joint guarantee of covertness, sensing fidelity, and semantic accuracy. To address the challenge, we propose CoSMIC, a novel covertness-oriented semantic ISAC framework, where the sensing output is embedded into a dual-functional ",
+    "authors": [
+      "Yunfan Bai",
+      "Yuwen Qian",
+      "Cheng Zeng",
+      "Zhen Mei",
+      "Zhaohui Yang",
+      "Wei Zhu",
+      "Shuning Zhang",
+      "Feng Shu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "ContractHIL-HLS: Contract-Aligned Multi-Agent Workflow with Hardware-in-the-Loop Feedback for HLS Design",
+    "url": "https://arxiv.org/abs/2607.25283v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "This paper presents ContractHIL-HLS, a contract-aligned multi-agent workflow for practical high-level synthesis (HLS) engineering. The workflow makes three contributions. First, it introduces a structured contract as the semantic-alignment and task-execution artifact that translates natural language requirements into explicit interfaces, constraints, validation checks, and rollback rules. Second, it incorporates hardware information into the feedback loop by feeding HLS, Vivado, PYNQ runtime, po",
+    "authors": [
+      "Jingbo Zhang",
+      "Haoxiang Sun",
+      "Wenbo Wang",
+      "Wenbo Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "A Catalogue of Topological Moiré Bands in Twisted Semiconductors",
+    "url": "https://arxiv.org/abs/2607.25172v1",
+    "published_date": "2026-07-28",
+    "source": "arXiv",
+    "summary": "Twisted two-dimensional semiconductors provide a route to flat and topological moiré minibands, but systematic principles for organizing their material dependence have remained unclear. Here, we establish a high-throughput framework that integrates structural relaxation, first-principles electronic structure calculations, and moiré band topology. We apply this framework to 43 experimentally realized monolayers and 91 symmetry-inequivalent bilayer prototypes, yielding over 1,000 angle-resolved mo",
+    "authors": [
+      "Jiaheng Li",
+      "Yan Zhang",
+      "Jiaxuan Liu",
+      "Caiyuan Ye",
+      "Tiannian Zhu",
+      "Zhong Fang",
+      "Hongming Weng",
+      "Quansheng Wu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Growth and characterization of planar hexagonal Ge on CdS",
     "url": "https://arxiv.org/abs/2607.24685v1",
@@ -270,6 +545,60 @@
     "summary": "High dimensional statistical theory has established the importance of constant aspect ratio, when the number of dimensions ($d$) and samples ($n$) satisfy $n,d\\to\\infty$ with $n/d\\to γ\\in(0,\\infty)$, in understanding the limits of canonical estimation problems. In particular, for estimating the top eigenvector of a $d\\times d$ population covariance matrix from $n$ iid samples, the BBP phase transition gives a precise threshold -- a simple functional of the aspect ratio -- such that the top sampl",
     "authors": [
       "Apratim Dey"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Identifying Contact Barrier Types in Few-Layer MoS2 Devices Using Correlative IV, LBIC, and Bias-Dependent KPFM",
+    "url": "https://arxiv.org/abs/2607.25102v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "Electrical contacts between metals and two-dimensional (2D) semiconductors such as molybdenum disulfide (MoS2) critically govern device performance, yet their microscopic nature remains difficult to disentangle using any single characterization technique. Here we present an integrated experimental framework that combines current-voltage (IV) characterization, laser beam induced current (LBIC) mapping, and bias-dependent Kelvin probe force microscopy (KPFM) to comprehensively resolve the contact ",
+    "authors": [
+      "Ariane Ufer",
+      "Zeinab Eftekhari",
+      "Benjamin Mayer",
+      "Hendrik Lambers",
+      "Hubert J. Krenner",
+      "Rebecca Saive",
+      "Ursula Wurstbauer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "First-Principles Origins of Charge Transport in Molecular Semiconductors",
+    "url": "https://arxiv.org/abs/2607.25089v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "Charge transport governs organic transistors and photovoltaics, yet predicting it from atomic structure remains challenging. Electron--phonon interactions span disparate frequencies, strengths and spatial ranges, and collectively generate nonperturbative carrier dynamics. Existing methods regain tractability only by assuming a mechanism or reducing electron--phonon coupling to a few modes. We introduce a parameter-free framework that instead computes transport from ab initio electron--phonon Ham",
+    "authors": [
+      "Tong Jiang",
+      "Joonho Lee"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Citrine Informatics: Chemical & Materials Development Platform",
+    "url": "https://arxiv.org/abs/2607.25039v1",
+    "published_date": "2026-07-27",
+    "source": "arXiv",
+    "summary": "Data-driven materials discovery promises to compress the historically decades-long path from invention to deployment, yet translating individual successes into sustained industrial discovery programs remains difficult. Three obstacles recur: experimental data are scarce, costly, and published in formats that resist reuse; conventional accuracy metrics overstate model performance under the extrapolative conditions that define discovery; and realistic design spaces are bounded by physics, manufact",
+    "authors": [
+      "Maxwell C. Venetos",
+      "Steven J. Brown",
+      "Kenneth Kroenlein",
+      "Steven K. Kauwe",
+      "James E. Saal",
+      "Marco Musto",
+      "Matthew D. Gerboth",
+      "Kyle D. Miller",
+      "Gregory J. Mulholland"
     ]
   },
   {
