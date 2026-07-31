@@ -6,7 +6,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/machine-learning/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/machine-learning/</link>
 	<description>Official Machine Learning Blog of Amazon Web Services</description>
-	<lastBuildDate>Thu, 30 Jul 2026 17:22:32 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 31 Jul 2026 20:05:18 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -14,6 +14,383 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Announcing the Agentic Catalog Experience in Amazon Quick</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/announcing-the-agentic-catalog-experience-in-amazon-quick/</link>
+		
+		<dc:creator><![CDATA[Srikanth Baheti]]></dc:creator>
+		<pubDate>Fri, 31 Jul 2026 19:53:04 +0000</pubDate>
+				<category><![CDATA[Amazon Quick Suite]]></category>
+		<category><![CDATA[Announcements]]></category>
+		<category><![CDATA[Foundational (100)]]></category>
+		<guid isPermaLink="false">7566a36ce07e1d565d3c4c626b0957bbfa8d654a</guid>
+
+					<description>Amazon Quick introduces the Agentic Catalog Experience, an AI-powered workflow for data curators to discover upstream catalog assets in natural language and auto-create Datasets and Topics with inherited semantics. Now in preview for AWS Glue Data Catalog and Databricks Unity Catalog.</description>
+										<content:encoded>&lt;p&gt;As organizations embrace AI-powered analytics, the value of a natural language (Text2SQL) answer is only as good as the business context behind it. We’re entering a phase where semantic richness (table and column descriptions, and relationships) must flow directly from where it’s authored in upstream data catalogs and semantic tools into the AI products that serve end users. Products like Amazon Quick can no longer operate in isolation. They need to natively consume and reason over the definitions, relationships, and governance metadata that data teams curate in systems like AWS Glue Data Catalog and Databricks Unity Catalog. This shift from siloed metadata to connected, catalog-aware AI is what enables intelligent analytics at scale.&lt;/p&gt; 
+&lt;h2 id="the-challenge-bridging-the-last-mile"&gt;The challenge: Bridging the last mile&lt;/h2&gt; 
+&lt;h3 id="the-investment-is-done"&gt;The investment is done&lt;/h3&gt; 
+&lt;p&gt;Enterprise data teams have done the hard work. They have invested heavily in upstream catalog platforms such as AWS Glue, Databricks Unity Catalog, Snowflake Horizon, Collibra, and dbt. On these platforms, they meticulously define table descriptions, column semantics, primary and foreign key relationships, glossary terms, and metric definitions.&lt;/p&gt; 
+&lt;p&gt;Yet when it comes to enabling end users (such as sales managers, marketing directors, and finance leads) for production-ready AI and trusted dashboards, a significant gap remains.&lt;/p&gt; 
+&lt;h3 id="three-compounding-challenges"&gt;Three compounding challenges&lt;/h3&gt; 
+&lt;p&gt;When data curators (business intelligence engineers, analytics leads, and senior analysts) need to enable their business users in Amazon Quick, they face three compounding challenges:&lt;/p&gt; 
+&lt;ol&gt; 
+ &lt;li&gt;&lt;strong&gt;Limited discoverability&lt;/strong&gt;: With thousands of tables in enterprise catalogs, discovering the right upstream assets that are curated and approved for reporting is a needle-in-a-haystack problem. There’s no way to describe what you need and have the system find it.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Semantic fragmentation and manual recreation&lt;/strong&gt;: Rich metadata that already exists upstream (business descriptions on tables and columns, and primary and foreign key relationships) does not flow through. Curators must recreate assets from scratch, redefine descriptions, and reconcile definitions manually. Does “revenue” mean gross or net? Does “active customer” mean a purchase within 30 days or 90 days? These definitions exist upstream but require manual re-entry.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Time to insight in weeks, not hours&lt;/strong&gt;: The combination of manual discovery and manual recreation means that the time from data to actionable insights stretches from hours to weeks. Worse, when upstream definitions change, manually created semantics in Quick Datasets become stale, causing semantic drift that erodes trust in AI answers and dashboards over time.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h3 id="the-gap"&gt;The gap&lt;/h3&gt; 
+&lt;p&gt;The problem isn’t upstream. The metadata exists. The governance is defined. The relationships are mapped.&lt;/p&gt; 
+&lt;p&gt;The problem is the last mile: translating that rich catalog context into a curated, consumable experience that delivers grounded AI answers and deterministic dashboards end users can trust.&lt;/p&gt; 
+&lt;h2 id="introducing-the-agentic-catalog-experience-in-amazon-quick"&gt;Introducing the Agentic Catalog Experience in Amazon Quick&lt;/h2&gt; 
+&lt;p&gt;Today, we’re announcing the Agentic Catalog Experience in Amazon Quick, an AI-powered workflow that helps data curators rapidly define their context boundary, inherit upstream semantics, and enable end users for grounded Q&amp;amp;A and trusted dashboards at scale.&lt;/p&gt; 
+&lt;p&gt;At the heart of this experience is the Quick Agent, scoped to discovery, creation, and inheritance tasks within the catalog context. It uses the semantic context from the catalog connection to summarize the entire catalog at a glance, engage the customer in natural language conversation, surface the most relevant tables and relationships based on the customer’s use case, and assess metadata readiness. Then, with a single conversational confirmation, it auto-creates Catalog-Generated Datasets and Topics with targeted metadata inherited from the upstream catalog.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;No manual configuration. No context-switching. No weeks of setup.&lt;/strong&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;img class="size-full wp-image-136414 alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/AgenticCatalogExperience.png" alt="" width="925" height="1257"&gt;&lt;/p&gt; 
+&lt;h2 id="how-it-works"&gt;How it works&lt;/h2&gt; 
+&lt;h3 id="natural-language-asset-discovery"&gt;Natural language asset discovery&lt;/h3&gt; 
+&lt;p&gt;Instead of scrolling through thousands of tables to find the right ones, curators use natural language. With the Agentic Catalog Experience, curators describe what they need:&lt;/p&gt; 
+&lt;blockquote&gt;
+ &lt;p&gt;Curator: “I’m a Senior Analyst on the Finance team. I need tables for quarterly revenue reporting and cost analysis.”&lt;/p&gt;
+&lt;/blockquote&gt; 
+&lt;p&gt;The Quick Agent searches across your entire catalog to surface the most relevant tables instantly, using all available metadata including business descriptions, tags, Gold/Silver/Bronze classifications, quality scores, table health scores, and glossary terms. No more manual browsing. No more guessing.&lt;/p&gt; 
+&lt;h3 id="bulk-agentic-dataset-creation"&gt;Bulk agentic dataset creation&lt;/h3&gt; 
+&lt;p&gt;After the curator selects their tables, the Quick Agent creates catalog representations (Datasets) at scale in a single guided workflow. Your upstream catalog remains the source of truth because the default creation path is Direct Query. Datasets with inherited semantics are flagged with a clear “Semantics Inherited” badge, and their metadata is read-only. Authors can refresh inherited metadata on demand by choosing the sync button to stay aligned with their catalog.&lt;/p&gt; 
+&lt;blockquote&gt;
+ &lt;p&gt;Quick Agent: “Creating 6 Catalog-Generated Datasets now: &lt;code&gt;revenue_by_region&lt;/code&gt; created (DirectQuery, read-only metadata), &lt;code&gt;cost_centers&lt;/code&gt; created, and &lt;code&gt;gl_transactions&lt;/code&gt; created.”&lt;/p&gt;
+&lt;/blockquote&gt; 
+&lt;h3 id="semantic-and-relationship-inheritance"&gt;Semantic and relationship inheritance&lt;/h3&gt; 
+&lt;p&gt;The Quick Agent carries forward targeted metadata from your catalog into the assets it creates. Today, inheritance is deliberately focused on two key areas to avoid noise and keep Datasets clean:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Table and column definitions to Datasets&lt;/strong&gt;: Business descriptions and column definitions are inherited directly into the created Datasets, so that curators and end users have the semantic context they need.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Primary and foreign key relationships to Topics&lt;/strong&gt;: The Agent detects relationships and uses them to suggest and create multi-dataset constructs (Topics) with star and snowflake schema joins preconfigured.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: While all available metadata (Gold/Silver classifications, quality scores, tags, and health scores) is used during discovery to find the right tables, inheritance into Datasets is intentionally scoped to table and column definitions today. We plan to add more metadata types to Datasets over time.&lt;/p&gt; 
+&lt;blockquote&gt;
+ &lt;p&gt;Quick Agent: “I detected 3 relationships between these tables and created a Topic called ‘Finance Revenue Model’ with the star schema joins preconfigured. Table and column definitions have been inherited from the upstream catalog.”&lt;/p&gt;
+&lt;/blockquote&gt; 
+&lt;h3 id="immediate-consumption"&gt;Immediate consumption&lt;/h3&gt; 
+&lt;p&gt;The curated Datasets and Topics are ready for use immediately:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Ask questions&lt;/strong&gt;: Start a Q&amp;amp;A conversation with your new Datasets. The AI agent uses inherited business descriptions, glossary terms, and quality scores to deliver grounded answers.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Create dashboards&lt;/strong&gt;: Build deterministic visualizations with full semantic context already in place.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Share with end users&lt;/strong&gt;: Add Datasets to a Space and share them with business users for self-service Q&amp;amp;A.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;After creation, the metadata tied to these Datasets and Topics feeds into the Amazon Quick semantic store, which powers re-ranking and unified context for AI-powered Q&amp;amp;A. Getting from catalog connection to the first business question takes minutes, not weeks.&lt;/p&gt; 
+&lt;h2 id="architecture-consumer-not-catalog"&gt;Architecture: Consumer, not catalog&lt;/h2&gt; 
+&lt;p&gt;A key design principle underpins this experience: Amazon Quick is a consumer of upstream catalog metadata, not a dedicated catalog itself. This means:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;No data duplication&lt;/strong&gt;: Catalog-Generated Datasets use DirectQuery. No data is copied or moved.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Metadata consumed for context&lt;/strong&gt;: Inherited semantics are read-only in Amazon Quick and flow into the semantic store to power re-ranking and AI answer grounding. Your upstream catalog remains the authoritative source.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Manual semantic sync&lt;/strong&gt;: Authors can refresh inherited metadata on demand by choosing the sync button. Scheduled automatic sync is on the roadmap.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Extensibility with transparency&lt;/strong&gt;: Catalog-Generated Datasets show inherited semantics as read-only (marked as catalog representations). If an Author chooses to edit a Dataset, Amazon Quick provides a clear notification that editing creates a custom Dataset and that semantic sync no longer applies. This gives Authors full control while preserving catalog integrity by default.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h3 id="supported-catalogs-today"&gt;Supported catalogs today&lt;/h3&gt; 
+&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Catalog platform&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Authentication&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;AWS Glue Data Catalog&lt;/td&gt; 
+   &lt;td&gt;AWS Identity and Access Management (IAM) Role ARN&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Databricks Unity Catalog&lt;/td&gt; 
+   &lt;td&gt;OAuth 2.0 / Personal Access Token&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;p&gt;Support for additional catalog platforms is coming soon.&lt;/p&gt; 
+&lt;h3 id="what-gets-inherited"&gt;What gets inherited&lt;/h3&gt; 
+&lt;p&gt;Metadata inheritance is intentionally focused to keep Datasets clean and production-ready:&lt;/p&gt; 
+&lt;h4 id="into-datasets-table-and-column-definitions"&gt;Into Datasets (table and column definitions)&lt;/h4&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Table business and technical descriptions.&lt;/li&gt; 
+ &lt;li&gt;Column descriptions and display names.&lt;/li&gt; 
+ &lt;li&gt;Data types and nullability.&lt;/li&gt; 
+ &lt;li&gt;Glossary terms and synonyms.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h4 id="into-topics-relationships"&gt;Into Topics (relationships)&lt;/h4&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Primary and foreign key relationships.&lt;/li&gt; 
+ &lt;li&gt;Relationship definitions and cardinality.&lt;/li&gt; 
+ &lt;li&gt;Star and snowflake schema models.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2 id="the-end-user-experience"&gt;The end-user experience&lt;/h2&gt; 
+&lt;p&gt;Here’s what this means for the business users downstream:&lt;/p&gt; 
+&lt;blockquote&gt;
+ &lt;p&gt;A sales manager asks: “What were our Q4 sales by region?”&lt;/p&gt;
+&lt;/blockquote&gt; 
+&lt;p&gt;Behind the scenes, the AI agent:&lt;/p&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;Searches Catalog-Generated Datasets using business descriptions and glossary terms.&lt;/li&gt; 
+ &lt;li&gt;Identifies the &lt;code&gt;sales.revenue_by_product&lt;/code&gt; table (Gold, 98 percent quality).&lt;/li&gt; 
+ &lt;li&gt;Applies preconfigured joins from the Topic to combine relevant dimensions.&lt;/li&gt; 
+ &lt;li&gt;Respects personally identifiable information (PII) masking rules from catalog metadata.&lt;/li&gt; 
+ &lt;li&gt;Returns a grounded, trusted answer in seconds.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;No manual dataset configuration required. The curator defined the context boundary once with the Quick Agent, and every end user benefits immediately.&lt;/p&gt; 
+&lt;h3 id="unified-enterprise-context"&gt;Unified enterprise context&lt;/h3&gt; 
+&lt;p&gt;The Agentic Catalog Experience doesn’t exist in isolation. Combined with the broader platform capabilities of Amazon Quick (including integration with Slack, Outlook, documents, and knowledge bases), end users get the full enterprise context:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Structured data&lt;/strong&gt; from catalogs through Catalog-Generated Datasets.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Unstructured context&lt;/strong&gt; from documents, email messages, and conversations.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Business rules&lt;/strong&gt; from glossary terms and metric definitions.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;This unified context enables production-ready AI answers, grounded in your organization’s specific data and semantics.&lt;/p&gt; 
+&lt;h3 id="connecting-to-aws-glue-data-catalog"&gt;Connecting to AWS Glue Data Catalog&lt;/h3&gt; 
+&lt;p&gt;To get started with the Agentic Catalog Experience, create a data source connection to your AWS Glue Data Catalog in Amazon Quick. After you establish the connection, the Quick Agent guides you through discovery, schema exploration, and Topic creation in a single conversational workflow. In this walkthrough, we connect to a Glue Data Catalog and build a Financial Analytics Topic.&lt;/p&gt; 
+&lt;p&gt;In Amazon Quick, create a new data source. From the list of connection types, select &lt;strong&gt;Glue Data Catalog&lt;/strong&gt; (available in preview), and then choose &lt;strong&gt;Next&lt;/strong&gt;. This connection is for the metadata. With it, Amazon Quick can consume the table and column definitions and the relationships your teams have already curated in AWS Glue.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ML-21554-1.png" alt="Amazon Quick new data source page with Glue Data Catalog selected from the connection types" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 1: Selecting the Glue Data Catalog connection type in Amazon Quick&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;A Glue Data Catalog connection works together with an Amazon Athena connection. Glue provides the metadata, and Athena provides the query path to the data itself in Amazon Simple Storage Service (Amazon S3). Create the Athena data source as well, so that Amazon Quick can run queries against the underlying data. After you create both, the Data sources page shows the two entries side by side: the Glue Data Catalog source for the metadata and the Athena source for the data.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ML-21554-2.png" alt="Amazon Quick Data sources page showing the Glue Data Catalog and Amazon Athena connections side by side" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 2: The Glue Data Catalog and Athena data sources listed together&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Open the GDC-Demo data source detail page. Under &lt;strong&gt;Data connections&lt;/strong&gt;, you can see the linked Athena data source that Amazon Quick uses to query the data. Choose &lt;strong&gt;Explore data&lt;/strong&gt; to launch the Quick Agent scoped to this data source.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ML-21554-3.png" alt="GDC-Demo data source detail page with the linked Athena connection and the Explore data option" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 3: Launching the Quick Agent from the data source detail page&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;The Quick Agent panel opens on the right side of the screen, automatically scoped to the Glue Data Catalog data source. The “Specific data” mode is selected, with “GDC-Demo” pinned as the context boundary. As a result, the Agent surfaces only metadata from this specific catalog connection.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ML-21554-4.png" alt="Quick Agent panel scoped to the GDC-Demo Glue Data Catalog data source in Specific data mode" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 4: The Quick Agent scoped to a specific catalog connection&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Ask the Agent to explore your catalog. The Agent summarizes the available catalogs and databases at a glance, so you can quickly see what is curated in your Glue Data Catalog. For this post, we use the “fa-demo” database as our example, a Finance Analytics Demo star schema for banking analytics. This walkthrough illustrates how the feature works and is not an exact scenario, so you can apply the same steps to your own catalog.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ML-21554-5.png" alt="Quick Agent summarizing the catalogs and databases available in the Glue Data Catalog" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 5: The Agent summarizing available catalogs and databases&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Ask the Agent to explore the fa-demo database. The Agent identifies a classic star schema with 7 tables: 2 fact tables (&lt;code&gt;fact_transactions&lt;/code&gt; and &lt;code&gt;fact_loans&lt;/code&gt;) and 5 dimension tables (&lt;code&gt;dim_account&lt;/code&gt;, &lt;code&gt;dim_date_transactions&lt;/code&gt;, &lt;code&gt;dim_date_loans&lt;/code&gt;, &lt;code&gt;dim_merchant&lt;/code&gt;, and &lt;code&gt;dim_txn_category&lt;/code&gt;). All are stored as external tables in Amazon S3. The Agent recognizes the schema as covering customer account transactions and loan portfolios, with supporting dimensions for merchants, transaction categories, and date hierarchies.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ML-21554-6.png" alt="Quick Agent describing the fa-demo star schema with two fact tables and five dimension tables" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 6: The Agent identifying the fact and dimension tables in the fa-demo database&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Ask the Agent to create a star schema diagram for fa-demo. The Agent analyzes the tables, identifies the primary and foreign key relationships, and presents a complete logical data model with a schema summary. It highlights that &lt;code&gt;dim_account&lt;/code&gt; is the shared conformed dimension connecting both fact tables. Choose &lt;strong&gt;Create datasets &amp;amp; Topic&lt;/strong&gt; to let the Agent build everything automatically.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ML-21554-7.png" alt="Star schema diagram generated by the Quick Agent showing dim_account connecting both fact tables" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 7: The generated logical data model for the fa-demo schema&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;The Agent creates a fully configured Topic with all Datasets and relationships in place. In this example, it creates the “Financial Analytics” Topic with all seven Datasets from the fa-demo database and 6 preconfigured star schema joins. Each Dataset carries its inherited business description, and the join relationships between the fact and dimension tables are validated automatically. The Topic is immediately ready for natural language Q&amp;amp;A, so you can ask questions like “What is the total transaction amount by merchant category?” or “Show me delinquent loans by risk rating.”&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ML-21554-8.png" alt="Quick Agent showing the Financial Analytics Topic with seven Datasets and six preconfigured joins" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 8: The fully configured Financial Analytics Topic&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Now, let’s see how the Financial Analytics Topic created from the Glue Data Catalog works in action. With the Topic pinned as context, end users can ask questions in plain language and get grounded answers instantly. For example, a user can ask “Total transaction amount by merchant category” and the Agent returns a ranked breakdown with key highlights. The user can then follow up with “Delinquent loans by risk rating” to see a risk-level summary with insights. Because the Datasets and relationships were inherited from the catalog, every answer is backed by the trusted schema, joins, and business definitions defined upstream. This is the power of the Agentic Catalog Experience: curators define the context boundary once, and every end user can explore the data conversationally from there.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-21554/ML-21554-9.gif" alt="Animation of a user asking questions and the Quick Agent returning ranked answers from the Financial Analytics Topic" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 9: Asking natural language questions against the Financial Analytics Topic&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3 id="connecting-to-databricks-unity-catalog"&gt;Connecting to Databricks Unity Catalog&lt;/h3&gt; 
+&lt;p&gt;The same experience works with Databricks Unity Catalog. Here is a quick example that shows the full flow, from configuring the connection to creating Datasets and a Topic.&lt;/p&gt; 
+&lt;p&gt;Create a Databricks Unity Catalog data source, and then choose &lt;strong&gt;Explore data&lt;/strong&gt; to launch the Quick Agent. The Agent summarizes the catalog, and with a single confirmation it creates the Datasets and a Topic with the star schema joins already configured.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-21554/ML-21554-10.gif" alt="Animation of creating Databricks Unity Catalog Datasets and a Topic through the Quick Agent" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 10: Creating Datasets and a Topic from Databricks Unity Catalog&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;After the Topic is ready, end users can ask complex questions that span multiple related tables. In this example, the Agent answers “Top 5 brands by revenue per region” by joining across the Topic relationships, and returns a grounded, visual result.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ML-21554-11.gif" alt="Animation of the Quick Agent answering a multi-table question about top brands by revenue per region" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 11: Answering a multi-table question across Topic relationships&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2 id="the-result"&gt;The result&lt;/h2&gt; 
+&lt;p&gt;Curators deliver trusted data, full enterprise context, and production-ready AI answers and dashboards in a fraction of the time. End users get grounded answers they can trust, backed by Gold-standard data with full semantic lineage.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;From weeks of manual configuration to minutes of guided conversation.&lt;/strong&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;That’s the Agentic Catalog Experience in Amazon Quick.&lt;/em&gt;&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ML-21554-12.png" alt="Srikanth Baheti" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Srikanth Baheti&lt;/h3&gt; 
+  &lt;p&gt;Srikanth is a Senior Manager for Amazon QuickSight. He started his career as a consultant and worked for multiple private and government organizations. Later he worked for PerkinElmer Health and Sciences &amp;amp; eResearch Technology Inc, where he was responsible for designing and developing high traffic web applications and highly scalable and maintainable data pipelines for reporting platforms using AWS services and serverless computing.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ML-21554-13.png" alt="Vignessh Baskaran" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Vignessh Baskaran&lt;/h3&gt; 
+  &lt;p&gt;Vignessh is a Sr.&amp;nbsp;Technical Product Manager in Amazon Quick, where he owns AI-powered data products for connectivity, catalog &amp;amp; semantics, and data preparation. He has over a decade of experience in developing large-scale data and analytics solutions. Outside of work, he enjoys watching Cricket, playing Racquetball and exploring different cuisines in Seattle.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ML-21554-14.png" alt="Ashok Dasineni" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Ashok Dasineni&lt;/h3&gt; 
+  &lt;p&gt;Ashok is a Solutions Architect for Amazon Quick Suite. Before joining AWS, Ashok worked with clients and organizations in the banking and financial domain, focusing on fraud research and prevention. He designed and implemented innovative solutions to improve business process, reduce cost, and increase revenue, helping companies around the world achieve their highest potential through data.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ML-21554-15.png" alt="Salim Khan" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Salim Khan&lt;/h3&gt; 
+  &lt;p&gt;Salim is a Senior Worldwide Generative AI Solutions Architect for Amazon Quick at AWS. He has over 16 years of experience implementing enterprise business intelligence solutions. At AWS, Salim works with customers globally to design and implement AI-powered BI and generative AI capabilities on Amazon Quick. Prior to AWS, he worked as a BI consultant across industry verticals including Automotive, Healthcare, Entertainment, Consumer, Publishing, and Financial Services, delivering business intelligence, data warehousing, data integration, and master data management solutions.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Optimizing production agents with Amazon Bedrock AgentCore Observability</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/optimizing-production-agents-with-amazon-bedrock-agentcore-observability/</link>
+		
+		<dc:creator><![CDATA[Joshua Lacy]]></dc:creator>
+		<pubDate>Fri, 31 Jul 2026 15:33:11 +0000</pubDate>
+				<category><![CDATA[Advanced (300)]]></category>
+		<category><![CDATA[Amazon Bedrock AgentCore]]></category>
+		<category><![CDATA[Technical How-to]]></category>
+		<guid isPermaLink="false">64799e5f6577ed834ae5241ca5bcee136c4fc073</guid>
+
+					<description>As your AI agents move from prototype to production, the challenge shifts from getting them to work to keeping them fast and efficient. Learn how to use Amazon Bedrock AgentCore Observability and Amazon CloudWatch to find performance bottlenecks and diagnose memory issues in long-running agent sessions.</description>
+										<content:encoded>&lt;p&gt;As your AI agents move from prototype to production, the challenges shift from getting them to work to keeping them fast and efficient. In &lt;a href="https://aws.amazon.com/blogs/machine-learning/debugging-production-agents-with-amazon-bedrock-agentcore-observability/" target="_blank" rel="noopener"&gt;Part 1&lt;/a&gt; of this series, we walked through debugging two common agent failures: infinite loops and tool invocation errors. Those scenarios dealt with agents that were broken. In this post, we tackle a different challenge: agents that work correctly but perform poorly. Slow response times and unbounded memory growth are the most common operational issues that surface after you resolve the initial debugging problems. They don’t trigger error alerts, but they erode user trust and increase costs over time.&lt;/p&gt; 
+&lt;p&gt;Using &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/observability.html" target="_blank" rel="noopener"&gt;AgentCore Observability&lt;/a&gt;, a capability of Amazon Bedrock AgentCore, and &lt;a href="https://aws.amazon.com/cloudwatch/" target="_blank" rel="noopener"&gt;Amazon CloudWatch&lt;/a&gt;, you will learn how to identify performance bottlenecks across your agent’s execution path and diagnose memory issues in long-running sessions. You will also implement monitoring practices that catch degradation before users notice it. For additional information and best practices, review &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations.html" target="_blank" rel="noopener"&gt;AgentCore Evaluations&lt;/a&gt;, a capability of Amazon Bedrock AgentCore, and &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/insights.html" target="_blank" rel="noopener"&gt;AgentCore Insights&lt;/a&gt;.&lt;/p&gt; 
+&lt;h1&gt;Prerequisites&lt;/h1&gt; 
+&lt;p&gt;You need an AWS account with Amazon Bedrock AgentCore access, CloudWatch Transaction Search enabled, and a deployed agent. See Part 1 for full setup details.&lt;/p&gt; 
+&lt;h2 id="scenario-3-performance-bottlenecks"&gt;Scenario 3: Performance bottlenecks&lt;/h2&gt; 
+&lt;p&gt;Agents experience performance bottlenecks when they work correctly but respond too slowly. You expect sub-second responses but experience multi-second delays. Agents complete tasks successfully, but the latency makes them impractical for interactive use cases. This scenario is particularly challenging because &lt;em&gt;slow&lt;/em&gt; is subjective. What’s acceptable for a batch processing agent is unacceptable for a customer service chatbot. You must establish performance budgets for your specific use case, then systematically identify which components violate those budgets.&lt;/p&gt; 
+&lt;h3 id="symptoms-to-watch-for"&gt;Symptoms to watch for&lt;/h3&gt; 
+&lt;p&gt;Performance degradation often manifests gradually. Agents might start with acceptable 2-second response times, but as you add features, integrate more tools, or accumulate more memory, latency creeps to 5 seconds, then 10, then becomes unusable. P95 response times exceed your thresholds, users abandon sessions, but error rates stay low. The agent works correctly but responds too slowly.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-1.png" alt="CloudWatch session view showing three agent invocations with high 7.5-8.2 second span latency" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 1 — Session details showing multiple traces with consistently high latency. The three invocations took 7.5-8.2 seconds (average span latency), demonstrating a systemic performance bottleneck rather than occasional slowness. This pattern indicates the agent’s architecture needs optimization.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;To find bottlenecks, start by identifying high-latency requests. Query CloudWatch for agent invocations that exceed your performance budget:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, RequestId, Latency
+| filter Operation like /InvokeAgent/
+| filter Latency &amp;gt; 3000
+| sort Latency desc
+| limit 50&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;This query returns agent invocations that took longer than 3 seconds (adjust the threshold based on your requirements), sorted by latency. Pick a representative high-latency request and note its &lt;code&gt;RequestId&lt;/code&gt;.&lt;/p&gt; 
+&lt;p&gt;Next, analyze the request timeline to understand where time is spent:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, Operation, Duration, SpanName
+| filter RequestId = "&amp;lt;RequestId&amp;gt;"
+| sort @timestamp asc&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The query shows you the sequence of operations within the request and how long each took. Look for operations that consume disproportionate time. Common culprits include memory retrieval operations, tool invocations, token generation, and sequential operations that could run in parallel.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-2.png" alt="OpenTelemetry trace timeline with 17 spans across three sequential tool-execution cycles" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 2 — OpenTelemetry trace timeline showing 17 spans across three sequential execute_event_loop_cycle operations. The tools (customer_lookup, order_history) execute one after another rather than in parallel, with each cycle waiting for the previous one to complete. This sequential pattern compounds latency across each tool invocation.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Check memory retrieval latency specifically:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, MemoryRetrievalLatency, MemoryNamespace
+| filter RequestId = "&amp;lt;RequestId&amp;gt;"
+| stats avg(MemoryRetrievalLatency), max(MemoryRetrievalLatency) by MemoryNamespace&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;Memory retrieval should complete in under 200 milliseconds, representing the point where users begin perceiving noticeable delays in interactive applications. Higher latency suggests inefficient memory organization.&lt;/p&gt; 
+&lt;p&gt;Examine tool invocation latency to identify slow integrations:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, ToolName, ToolLatency
+| filter RequestId = "&amp;lt;RequestId&amp;gt;"
+| sort ToolLatency desc&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The query identifies which tools contribute most to overall latency. A single slow tool can bottleneck the entire agent workflow.&lt;/p&gt; 
+&lt;h3 id="root-cause-analysis"&gt;Root cause analysis&lt;/h3&gt; 
+&lt;p&gt;Performance bottlenecks typically stem from three root causes. &lt;em&gt;Slow tool execution&lt;/em&gt; occurs when external tools take seconds to respond because of poor optimization, overload, or network issues. Latencies compound with sequential calls, so a 2-second tool called three times becomes a 6-second bottleneck. &lt;em&gt;Excessive token generation&lt;/em&gt; is a factor because foundation models (FMs) produce tokens sequentially, meaning a 500-token response takes 5x longer than a 100-token one, impacting both latency and cost. Finally, &lt;em&gt;sequential processing&lt;/em&gt;, performing independent operations one at a time instead of in parallel, increases both cost and compute times.&lt;/p&gt; 
+&lt;h3 id="the-fix"&gt;The fix&lt;/h3&gt; 
+&lt;p&gt;For slow tool execution, implement caching, connection pooling, and proper database indexing to reduce response times. Set timeout limits and consider faster tool alternatives. If a tool consistently lags, profile it independently. The issue might be network latency, cold starts, or resource contention rather than the tool’s logic itself.&lt;/p&gt; 
+&lt;p&gt;For memory retrieval, replace single large namespaces with topic-specific partitions, such as preferences, history, and domain knowledge, to reduce search space. Summarize old conversations into compact entries rather than storing them verbatim, and set size limits per namespace, such as 100 preferences, 50 recent messages, or 500 domain facts.&lt;/p&gt; 
+&lt;p&gt;For token generation, optimize prompts to encourage brief, direct answers of 2–3 sentences unless more detail is requested. Add explicit length constraints and monitor token usage with alerts for unexpectedly long responses.&lt;/p&gt; 
+&lt;p&gt;For sequential processing, run independent tool calls in parallel. Sequential calls totaling 4.5s (2s + 1.5s + 1s) drop to only 2s when parallelized, often cutting latency by 50 percent or more with minimal effort. To verify your optimizations, re-run the latency query from the identifying bottlenecks section. Confirm that P95 response times now fall within your performance budget and that the trace timeline shows parallel execution where expected.&lt;/p&gt; 
+&lt;h2 id="scenario-4-memory-issues-in-long-running-sessions"&gt;Scenario 4: Memory issues in long-running sessions&lt;/h2&gt; 
+&lt;p&gt;Agents experience memory issues in long-running sessions when they maintain sessions where memory usage grows unbounded. Agents accumulate context, and eventually, agents hit token limits, lose important context, or exhaust available memory. Sessions fail unexpectedly, and you lose conversation state. This scenario is particularly problematic for agents that support extended workflows, such as customer service sessions, research assistants, or monitoring agents. Without proper memory management, these use cases become impractical.&lt;/p&gt; 
+&lt;h3 id="symptoms-to-watch-for-1"&gt;Symptoms to watch for&lt;/h3&gt; 
+&lt;p&gt;When abnormally long agent sessions exist, token usage grows linearly with session duration. Memory retrieval latency increases over time as memory stores grow. Sessions terminate unexpectedly with out-of-memory errors or context window exceeded errors.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-3.png" alt="Session details showing 6 traces and 15.7K tokens, with token usage rising each invocation" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 3 — Session details for the memorygrowth_Agent showing 6 traces, 15.7K total tokens consumed, and an average trace latency of 3,757 ms within a single session. Token usage grows with each successive invocation, demonstrating unbounded context accumulation. In production sessions spanning hours, this pattern leads to context window exhaustion and unexpected session failures.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;To identify long-running sessions with high memory usage:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, SessionId, SessionDuration, MemorySize, TokenUsage
+| filter SessionDuration &amp;gt; 3600
+| sort MemorySize desc
+| limit 20&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The query returns sessions lasting longer than one hour (3600 seconds), sorted by memory size. Pick a session with unusually high memory usage and note its &lt;code&gt;SessionId&lt;/code&gt;.&lt;/p&gt; 
+&lt;p&gt;Examine memory extraction patterns to verify consolidation is occurring:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, MemoryExtractionStatus, MemoryExtractionLatency, MemoriesExtracted
+| filter SessionId = "&amp;lt;SessionId&amp;gt;"
+| sort @timestamp asc&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-4.png" alt="CloudWatch Logs Insights showing 209 memory log entries spiking around 18:20 without consolidation" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 4 — CloudWatch Logs Insights showing 209 memory-related log entries concentrated around 18:20. The spike in memory operations indicates the agent storing information without consolidation. Each invocation adds new memory entries (through add_conversation_note and add_user_context tools) without pruning or summarizing old data, demonstrating the unbounded growth pattern.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Memory extraction should occur regularly throughout the session. If you see gaps where no extraction happens for extended periods, the agent isn’t consolidating memories properly.&lt;/p&gt; 
+&lt;p&gt;Check for memory extraction failures:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, ErrorMessage, MemoryExtractionStatus
+| filter SessionId = "&amp;lt;SessionId&amp;gt;"
+| filter MemoryExtractionStatus = "Failed"&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;Failed memory extraction stops agents from consolidating context, causing unbounded growth. Common failure reasons include token limits exceeded during summarization, invalid memory formats that can’t be processed, network timeouts when writing to memory storage, and permission errors that block memory updates.&lt;/p&gt; 
+&lt;p&gt;Analyze memory namespace organization:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, MemoryNamespace, MemoryCount, MemorySize
+| filter SessionId = "&amp;lt;SessionId&amp;gt;"
+| stats sum(MemoryCount) as TotalMemories, sum(MemorySize) as TotalSize by MemoryNamespace
+| sort TotalSize desc&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;Memories are distributed across namespaces. Poor namespace organization can lead to inefficient memory retrieval and consolidation. If you see a single namespace containing thousands of memories, that’s a red flag indicating your agent needs &lt;a href="https://aws.amazon.com/blogs/machine-learning/organizing-agents-memory-at-scale-namespace-design-patterns-in-agentcore-memory/" target="_blank" rel="noopener"&gt;better memory organization&lt;/a&gt;.&lt;/p&gt; 
+&lt;h3 id="root-cause-analysis-1"&gt;Root cause analysis&lt;/h3&gt; 
+&lt;p&gt;Memory issues typically stem from misconfigured settings, filter on inbuilt datetime metadata of the record. For a deeper understanding of how AgentCore memory works, see &lt;a href="https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-memory-building-context-aware-agents/" target="_blank" rel="noopener"&gt;AgentCore memory&lt;/a&gt;.&lt;/p&gt; 
+&lt;h3 id="the-fix-1"&gt;The fix&lt;/h3&gt; 
+&lt;p&gt;To resolve memory issues, verify your memory strategies include a consolidation configuration so AgentCore memory merges and summarizes records over time rather than accumulating them indefinitely. Organize records using namespace templates in your strategy definitions to make sure retrieval stays scoped to relevant context. Set &lt;code&gt;eventExpiryDuration&lt;/code&gt; to control how long raw events persist (between 7–365 days). For implementation details, see &lt;a href="https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-memory-building-context-aware-agents/" target="_blank" rel="noopener"&gt;AgentCore memory implementation&lt;/a&gt;.&lt;/p&gt; 
+&lt;h1&gt;Production best practices&lt;/h1&gt; 
+&lt;p&gt;Having covered the four failure scenarios across both parts, we now turn to production best practices that stop these issues before they occur. The troubleshooting workflows we’ve covered help you respond when things go wrong, but a well-architected observability strategy helps you proactively catch issues. The integration of AgentCore with CloudWatch provides the foundation for this proactive approach, giving you real-time visibility into agent health and performance.&lt;/p&gt; 
+&lt;p&gt;Turn on comprehensive instrumentation for production agents, memory systems, and gateways. Configure CloudWatch logs, CloudWatch metrics, and OpenTelemetry traces.&lt;/p&gt; 
+&lt;p&gt;Configure CloudWatch alarms for critical metrics. Set thresholds for error rates (5 percent), 95th percentile (P95) latency (3 seconds), and token usage per session. Don’t wait for users to report problems. Let CloudWatch alert you when metrics exceed acceptable thresholds.&lt;/p&gt; 
+&lt;p&gt;Create operational dashboards. Build a primary dashboard showing total invocations (last 24 hours), error rate (current compared to baseline), P50/P95/P99 latency, token usage trends, and active sessions count. Create per-agent dashboards showing agent-specific invocation patterns, tool usage breakdown, memory consumption trends, error types distribution, and cost per session. Review these dashboards daily to spot trends before they become problems.&lt;/p&gt; 
+&lt;p&gt;Invest in observability infrastructure before you need it. Build monitoring into your development process from day one. Share dashboards with product managers and stakeholders so everyone understands agent performance. When someone diagnoses a tricky production issue, share the approach with the team to build institutional knowledge about common failure patterns.&lt;/p&gt; 
+&lt;p&gt;To monitor tool accuracy at scale, you can use Amazon Bedrock &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluators.html" target="_blank" rel="noopener"&gt;AgentCore Evaluators&lt;/a&gt; to continuously and automatically assess agent behavior. Instead of manually reviewing traces after failures occur, Evaluators inspect agent sessions in real time, scoring them against predefined quality criteria. Amazon Bedrock &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/insights.html" target="_blank" rel="noopener"&gt;AgentCore Insights (preview)&lt;/a&gt; builds off Evaluators and provides triage analysis. Insights can provide failure analysis, user intent extraction, and execution summary.&lt;/p&gt; 
+&lt;h1&gt;Cleaning up&lt;/h1&gt; 
+&lt;p&gt;After testing the optimization techniques in this post, clean up resources to avoid unnecessary charges.&lt;/p&gt; 
+&lt;p&gt;For CloudWatch resources, delete test CloudWatch dashboards created during debugging, remove CloudWatch alarms set up for testing purposes, and consider archiving or deleting old CloudWatch log groups if no longer needed.&lt;/p&gt; 
+&lt;p&gt;For AgentCore resources, if you created test agents specifically for this tutorial, delete them through the &lt;a href="https://console.aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;AgentCore console&lt;/a&gt;. Remove any test memory namespaces created during memory optimization testing. Delete any temporary tool integrations used for performance testing.&lt;/p&gt; 
+&lt;p&gt;For cost optimization, review your Amazon CloudWatch Logs retention settings and adjust based on your compliance requirements. Consider using CloudWatch Logs data protection to cut storage costs for older logs.&lt;/p&gt; 
+&lt;p&gt;To delete CloudWatch log groups:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-bash"&gt;aws logs delete-log-group --log-group-name /aws/bedrock-agentcore/your-agent-name&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;To remove CloudWatch alarms:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-bash"&gt;aws cloudwatch delete-alarms --alarm-names your-alarm-name&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h1&gt;Conclusion&lt;/h1&gt; 
+&lt;p&gt;Performance bottlenecks and memory issues represent the most common operational challenges for production agents beyond the debugging scenarios covered in Part 1. With systematic diagnosis using CloudWatch traces and metrics, you can identify whether latency stems from slow tools, inefficient memory retrieval, excessive token generation, or sequential processing. For long-running sessions, monitoring memory growth patterns and implementing consolidation strategies keeps agents stable over extended interactions.&lt;/p&gt; 
+&lt;h3 id="next-steps"&gt;Next steps&lt;/h3&gt; 
+&lt;p&gt;Ready to put these techniques into practice? Start by turning on AgentCore Observability for your production agents if you haven’t already. This one-time setup provides the foundation for everything we’ve covered. Set up CloudWatch alarms for critical metrics. Create troubleshooting runbooks for your specific agents and workflows, documenting the queries you run, the thresholds that indicate problems, and the fixes you implement.&lt;/p&gt; 
+&lt;p&gt;Practice debugging in non-production environments. Deliberately introduce failures and practice diagnosing them using the workflows we’ve covered. Build muscle memory for troubleshooting before you need it in production. Share this knowledge with your team to help confirm everyone who operates your agents understands these debugging techniques and knows how to use the observability features of AgentCore.&lt;/p&gt; 
+&lt;p&gt;Production agents often fail for preventable reasons. With the right observability tools, systematic troubleshooting approaches, and a culture that treats every issue as a chance to improve, you can catch problems early, resolve them quickly, and build agents that earn lasting trust.&lt;/p&gt; 
+&lt;h3 id="learn-more"&gt;Learn more&lt;/h3&gt; 
+&lt;p&gt;For more information about AgentCore and observability features, visit the &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/observability-configure.html" target="_blank" rel="noopener"&gt;AgentCore documentation&lt;/a&gt;. To get started with AgentCore, visit the &lt;a href="https://console.aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;AgentCore console&lt;/a&gt;. For additional CloudWatch monitoring best practices, see the &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/" target="_blank" rel="noopener"&gt;CloudWatch User Guide&lt;/a&gt;.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-5.jpeg" alt="Joshua Lacy" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Joshua Lacy&lt;/h3&gt; 
+  &lt;p&gt;Joshua is a Solutions Architect at AWS in the Commercial Sector, supporting ISV customers. He has a passion for helping builders integrate AI into production applications and designing architectures that scale securely across multi-tenant environments. He specializes in agentic AI, Amazon Bedrock AgentCore, and generative AI application development.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-6.png" alt="Jenny Shen" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Jenny Shen&lt;/h3&gt; 
+  &lt;p&gt;Jenny is a Solutions Architect at AWS in the Telecom, Media and Entertainment space. She has a passion for helping customers build production-ready systems and finding ways to simplify how teams operate their cloud workloads. She specializes in CloudOps and AI/ML transformations.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Deploying Kimi K3 on AWS</title>
 		<link>https://aws.amazon.com/blogs/machine-learning/deploying-kimi-k3-on-aws/</link>
 					
@@ -237,7 +614,7 @@ print(response.choices[0].message.content)&lt;/code&gt;&lt;/pre&gt;
 &lt;footer&gt; 
  &lt;div class="blog-author-box"&gt; 
   &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img class="alignnone size-full wp-image-136257" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/image-2.jpeg" alt="" width="120" height="160"&gt;&lt;/p&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignnone size-full wp-image-136257" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/image-2.jpeg" alt="" width="120" height="160"&gt;&lt;/p&gt; 
   &lt;/div&gt; 
   &lt;p&gt;Andrew Smith is a Sr. Cloud Support Engineer in the SageMaker, Vision &amp;amp; Other team at AWS, based in Sydney, Australia. He supports customers using many AI/ML services on AWS with expertise in working with Amazon SageMaker. Outside of work, he enjoys spending time with friends and family as well as learning about different technologies.&lt;/p&gt; 
  &lt;/div&gt; 
@@ -5760,590 +6137,6 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 		
 		
 			</item>
-		<item>
-		<title>Building trade assistant: How Jefferies optimized front office trading operations with AI</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/building-trade-assistant-how-jefferies-optimized-front-office-trading-operations-with-ai/</link>
-		
-		<dc:creator><![CDATA[Sanjay Nagraj]]></dc:creator>
-		<pubDate>Thu, 23 Jul 2026 16:42:54 +0000</pubDate>
-				<category><![CDATA[Amazon Bedrock]]></category>
-		<category><![CDATA[Amazon Bedrock Knowledge Bases]]></category>
-		<category><![CDATA[Amazon Simple Storage Service (S3)]]></category>
-		<category><![CDATA[AWS Lambda]]></category>
-		<category><![CDATA[Customer Solutions]]></category>
-		<guid isPermaLink="false">cc479b57e1ea0c463df5c4d0bc58065791625e96</guid>
-
-					<description>In this post, we explore how Jefferies overcame these challenges with a solution built on Strands Agents, an agent harness SDK for building AI agents that can reason, plan, and act by orchestrating calls to foundation models (FMs) and external tools. The solution uses large language models (LLMs), Amazon Bedrock, and Amazon Bedrock Knowledge Bases. It also uses Model Context Protocol (MCP), an open standard that helps AI agents securely connect to diverse data sources and tools through a unified interface. We cover the solution overview, the rationale for selecting the underlying technology stack, lessons learned, and the business impact the solution created at Jefferies.</description>
-										<content:encoded>&lt;p&gt;If you manage a front office trading desk at investment banks, you know the challenge: traders need real-time insights into client behavior, trade patterns, and market trends from vast amounts of data to make split-second decisions. However, they rarely have the time during the day, nor the coding ability, to build and maintain systems capable of delivering those insights. With millions of rows of data spread across multiple visualization tools, achieving end-to-end visibility is difficult. Traditional approaches force traders to rely on subject matter experts for analysis and collaborate with IT teams to build custom dashboards. The process can take days or weeks. The result is a widening gap between the data available and the decisions it should be informing.&lt;/p&gt; 
-&lt;p&gt;&lt;a href="https://www.jefferies.com/" target="_blank" rel="noopener"&gt;Jefferies&lt;/a&gt;, a global full-service investment banking firm, recognized this challenge as an opportunity to apply agentic AI to optimize how its equities trading desks operate. By building an agentic AI trade assistant on AWS, Jefferies set out to put the power of real-time data analysis directly in traders’ hands without the requirement of coding, waiting in IT queues, and with no compromise on accuracy.&lt;/p&gt; 
-&lt;p&gt;In this post, we explore how Jefferies overcame these challenges with a solution built on &lt;a href="https://strandsagents.com/" target="_blank" rel="noopener"&gt;Strands Agents&lt;/a&gt;, an agent harness SDK for building AI agents that can reason, plan, and act by orchestrating calls to foundation models (FMs) and external tools. The solution uses &lt;a href="https://aws.amazon.com/what-is/large-language-model/" target="_blank" rel="noopener"&gt;large language models (LLMs)&lt;/a&gt;, &lt;a href="https://aws.amazon.com/bedrock" target="_blank" rel="noopener"&gt;Amazon Bedrock&lt;/a&gt;, and &lt;a href="https://aws.amazon.com/bedrock/knowledge-bases/" target="_blank" rel="noopener"&gt;Amazon Bedrock Knowledge Bases&lt;/a&gt;. It also uses &lt;a href="https://aws.amazon.com/blogs/machine-learning/unlocking-the-power-of-model-context-protocol-mcp-on-aws/" target="_blank" rel="noopener"&gt;Model Context Protocol (MCP)&lt;/a&gt;, an open standard that helps AI agents securely connect to diverse data sources and tools through a unified interface. We cover the solution overview, the rationale for selecting the underlying technology stack, lessons learned, and the business impact the solution created at Jefferies.&lt;/p&gt; 
-&lt;h2 id="solution-overview"&gt;Solution overview&lt;/h2&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/21/ML-20564-1.png" alt="Architecture of the Front Office trade assistant showing the domain-specific agent, MCP tools, and connected data sources" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;The Front Office trade assistant represents a shift in how Capital Markets’ Front Office Equity traders interact with data. At the core of the solution is a domain-specific agent that drives conversation with traders through natural language text. A set of MCP tools lets the agent connect with data sources, including trade data repositories, Financial Information Exchange (FIX) message files, and in-memory databases. When a trader submits a query to the trade assistant, Amazon Bedrock invokes an LLM (Anthropic Claude) to interpret the natural language intent, generate the corresponding SQL, and run it against underlying data sources to surface the response. The solution has a conversational interface, which allows traders to drill down on topics and explore data insights conversationally. The solution maintains conversation context to provide relevant insights and suggestions for deeper analysis over the entire lifetime of the session.&lt;/p&gt; 
-&lt;h2 id="how-the-solution-works"&gt;How the solution works&lt;/h2&gt; 
-&lt;p&gt;The solution integrates with Jefferies’ existing trading infrastructure through an eight-step process depicted in the following architecture diagram. From a security perspective, the solution uses &lt;a href="https://aws.amazon.com/bedrock/guardrails/" target="_blank" rel="noopener"&gt;Amazon Bedrock Guardrails&lt;/a&gt; to provide content moderation, personally identifiable information (PII) filtering to align the solution with Jefferies policies, and row-level data entitlements to help prevent accidental access to customer-sensitive data through intelligent access controls. It also uses conversation logging for audit trails to meet compliance requirements.&lt;/p&gt; 
-&lt;p&gt;The user interaction begins with the Jefferies front-end trading interface, which now includes an embedded AI assistant widget. When a trader poses a question, the request flows through a carefully orchestrated workflow.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/21/ML-20564-2.png" alt="Eight-step architecture of the trade assistant, from the Jefferies trading interface and authentication through the Query Agent, Amazon Bedrock, and data stores" width="800"&gt;&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;&lt;strong&gt;UI Widget:&lt;/strong&gt; First, the trader logs in using their credentials on Jefferies’ on-premises Business Intelligence system: Global Flow Monitor (GFM). Once a trader logs into GFM, they have a UI widget to interact with the Trade Assistant Agent.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;The Authentication Service&lt;/strong&gt; uses &lt;a href="https://aws.amazon.com/eks/" target="_blank" rel="noopener"&gt;Amazon Elastic Kubernetes Service (Amazon EKS)&lt;/a&gt;. The service verifies that only allowed traders can access sensitive trading data.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Bot Service&lt;/strong&gt; builds and manages the user session, maintaining context across multiple queries.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;The Query Agent (Strands)&lt;/strong&gt; serves as the intelligent orchestration layer of the solution. When a trader poses a natural language question, the agent first queries the Amazon Bedrock Knowledge Bases, which uses Amazon Titan Embeddings for semantic retrieval to surface relevant database schemas, table relationships, and query patterns. With this context, Claude Sonnet reasons over the trader’s intent and generates a syntactically correct SQL query. The agent then evaluates its available Model Context Protocol (MCP) tools to determine the right data source for execution, whether that’s the in-memory grid for real-time positions or a historical data store for time-series analysis.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Amazon Bedrock&lt;/strong&gt; provides the Query Agent with access to an LLM for planning and executing the agent’s steps. The LLM’s advanced reasoning capabilities enable natural language understanding, SQL generation, and multi-step tool orchestration. The team also chose Amazon Bedrock for its flexibility to choose different LLMs as the trade assistant evolves.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Amazon Bedrock Knowledge Bases&lt;/strong&gt; provides a managed Retrieval Augmented Generation (RAG) pipeline that stores embedded representations of the underlying data model metadata (table schemas, column definitions, and query patterns). When the Query Agent receives a trader’s question, it retrieves relevant schema context from the Knowledge Base to inform accurate SQL construction.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Query Executor&lt;/strong&gt; queries the underlying data once the Query Agent identifies the right data source and creates the SQL query. The query executor intercepts user requests and injects SQL filters to provide row-level security for data access. The LLM chooses the visualization to display, and we used a markdown UI library to render the visualizations.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Data Stores:&lt;/strong&gt; The actual data sources queried by the Query Executor, including in-memory, SQL databases, and FIX messages that contain the underlying trade and execution data.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;Let’s explore the rationale behind our selection of Strands Agents and MCP tools-based architecture.&lt;/p&gt; 
-&lt;h3 id="strands-agents"&gt;Strands Agents&lt;/h3&gt; 
-&lt;p&gt;&lt;a href="https://strandsagents.com/latest/documentation/docs/user-guide/concepts/model-providers/amazon-bedrock/" target="_blank" rel="noopener"&gt;Strands Agents&lt;/a&gt; is an open source agent harness SDK that takes a model-driven approach to building and running AI agents in a few lines of code. Strands scales from straightforward to complex agent use cases, and from local development to deployment in production. It simplifies agent development by embracing the capabilities of LLMs to plan, chain thoughts, call tools, and reflect. With Strands, developers can define a prompt and a list of tools in code to build an agent, then test it locally and deploy it to the cloud. Strands plans the agent’s next steps and executes tools using the advanced reasoning capabilities of models. For more complex agent use cases, developers can customize their agent’s behavior in Strands. For example, you can specify how tools are selected, customize how context is managed, choose where session state and memory are stored, and build multi-agent applications.&lt;/p&gt; 
-&lt;h3 id="model-context-protocol-mcp-tools"&gt;Model Context Protocol (MCP) tools&lt;/h3&gt; 
-&lt;p&gt;The solution implements a Model-Context-Protocol (MCP) tool-based architecture where each data source is exposed as a distinct tool that Strands Agents can invoke. This approach delivers three advantages that position the system for long-term success. First, the approach provides extensibility by enabling new data sources to be added as additional tools, requiring no restructuring of the core architecture, a design choice the team made deliberately to accommodate future functional expansion. Second, it provides separation of concerns by encapsulating the logic for interacting with each specific system within its own tool, which makes the overall architecture more maintainable and testable. Third, the design offers flexibility by allowing the Strands Agent to dynamically select which tools to use based on each query, enabling workflows that span multiple data sources.&lt;/p&gt; 
-&lt;h3 id="multi-source-data-processing"&gt;Multi-source data processing&lt;/h3&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/21/ML-20564-3.png" alt="Trade assistant interface showing a sector breakdown query and the generated pie chart visualization" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;The solution provides an intuitive user experience. A trader can type a question like the one on the screen: “Give me the sector breakdown for trading in the U.S.”&amp;nbsp;Behind the scenes, the assistant uses an LLM to generate the appropriate SQL query, runs it against the relevant data sources hosted in our in-memory data grid, and retrieves the results instantly.&lt;/p&gt; 
-&lt;p&gt;The trade assistant goes beyond simple data retrieval. It can generate dynamic visualizations, converting text queries into SQL that produces visual stories with charts and graphs. When traders need to compare today’s sector trading with yesterday’s activity, the assistant automatically generates pie charts with color-coded legends, making it straightforward to spot trends and anomalies quickly.&lt;/p&gt; 
-&lt;h2 id="lessons-learned"&gt;Lessons learned&lt;/h2&gt; 
-&lt;p&gt;Throughout the journey to deliver the Front Office trade assistant agent, the Jefferies team uncovered several key lessons that shaped its enterprise AI strategy and implementation roadmap. These insights serve as valuable guidance for capital markets organizations building agentic AI applications at scale.&lt;/p&gt; 
-&lt;p&gt;First, the team mitigated the risk of hallucinations by deliberately not relying on LLMs to generate visualizations. Instead, they implemented a hybrid approach in which the LLM handles natural language understanding and query generation while dedicated visualization engines render the actual charts and graphs. This separation of concerns preserves data accuracy while maintaining the conversational interface traders expect.&lt;/p&gt; 
-&lt;p&gt;Second, the team used in-memory databases to maximize response times. Traders require split-second insights into client behavior, trade patterns, and market trends. Without this architectural choice, queries against the underlying dataset would have introduced unacceptable latency for real-time trading decisions.&lt;/p&gt; 
-&lt;p&gt;Third, the team learned to expect user behavior to evolve. Real-world usage proved dynamic. Traders interacted with the system in unexpected ways, and their patterns shifted over time. Investing in observability and user feedback loops proved essential for adapting quickly to these changing behaviors. Finally, the team adopted a deliberate language strategy. They relied on Python for LLM interactions and rapid experimentation, given its rich artificial intelligence and machine learning (AI/ML) landscape. They implemented complex business processing in Java to capitalize on its performance characteristics for high-throughput data processing and integration with existing trading systems.&lt;/p&gt; 
-&lt;h2 id="business-impact"&gt;Business impact&lt;/h2&gt; 
-&lt;p&gt;Since launch, the trade assistant solution has delivered measurable efficiency gains across global sales and trading operations, allowing traders to redirect time toward client relationships and strategic decision-making rather than manual data wrangling. These efficiency gains translate directly into a competitive advantage, as trading desks can now dedicate more capacity to onboarding clients and deepening existing relationships. The solution delivers a personalized experience by adapting to each client’s query using MCP tools to access structured, unstructured, and in-memory data sources and dynamically generating graphs and charts in response. Beyond the trading desk, the solution has materially reduced the IT time and effort previously consumed by repetitive dashboard creation, freeing technology teams to focus on higher-value strategic initiatives. Perhaps most notably, the ability to securely query millions of rows of equities trading data using natural language has democratized data access. This fosters a data-driven culture where decisions are informed by real-time analytics rather than intuition or delayed reports.&lt;/p&gt; 
-&lt;h2 id="looking-ahead"&gt;Looking ahead&lt;/h2&gt; 
-&lt;p&gt;Jefferies’ roadmap signals the scalability and ambition of this agentic AI approach. The team plans to roll out the Trade Assistant globally for multiple product types and desks, enhance audit capabilities with code generation tools that use natural language processing (NLP), and add &lt;a href="https://aws.amazon.com/bedrock/agentcore/" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore&lt;/a&gt; features to their enterprise AI system. These investments show a commitment to expanding AI-powered capabilities across the organization. The integration with existing Equities business intelligence (BI) applications and the ability to query multiple structured, unstructured, and in-memory data sources positions Jefferies at the forefront of AI-driven trading innovation.&lt;/p&gt; 
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we walked through how Jefferies and AWS collaborated to build an agentic AI trade assistant that transforms how traders interact with equities data across global sales and trading operations. The Jefferies Equities Trade Assistant exemplifies how agentic AI is reshaping capital markets by turning every trader into a data scientist capable of extracting sophisticated insights through simple conversation. These agentic AI systems act as intelligent collaborators that understand context, learn from interactions, and proactively guide users toward better outcomes. The shift from reactive data retrieval to proactive intelligence marks a new era in trading operations. As this technology scales globally and across asset classes, it promises to redefine competitive advantage in front office operations for years to come.&lt;/p&gt; 
-&lt;p&gt;To get started building your own agentic AI applications, explore Strands Agents, learn more about the MCP integration patterns used in this solution, or contact your AWS account team to discuss engagement tailored to your use case.&lt;/p&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/21/ML-20564-4.jpg" alt="Sanjay Nagraj" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Sanjay Nagraj&lt;/h3&gt; 
-  &lt;p&gt;Sanjay is a technology leader leading the delivery of solutions in Equities Front Office. Key initiatives include leveraging the services available on the cloud to deliver hybrid solutions.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/21/ML-20564-5.jpeg" alt="Vipul Parekh" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Vipul Parekh&lt;/h3&gt; 
-  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/vipulparekh74/" target="_blank" rel="noopener"&gt;Vipul&lt;/a&gt; is a Senior Customer Solutions Manager at AWS, guiding FinTech and capital markets customers in accelerating their business transformation journey on the cloud. He is a generative AI ambassador and a member of the AWS AI/ML technical field community. Prior to joining AWS, Vipul played various roles in top financial services organizations, leading transformations.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/21/ML-20564-6.jpeg" alt="Saby Sahoo" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Saby Sahoo&lt;/h3&gt; 
-  &lt;p&gt;Saby is a senior solutions architect at AWS. Saby has 20+ years of experience in the design and implementation of IT solutions, data analytics, and AI/ML/GenAI.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Building multi-Region visualizations with Highcharts in Amazon Quick</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/building-multi-region-visualizations-with-highcharts-in-amazon-quick/</link>
-		
-		<dc:creator><![CDATA[Anupa Bhattacharyya]]></dc:creator>
-		<pubDate>Thu, 23 Jul 2026 16:40:59 +0000</pubDate>
-				<category><![CDATA[Amazon Quick Sight]]></category>
-		<category><![CDATA[Amazon Quick Suite]]></category>
-		<category><![CDATA[Expert (400)]]></category>
-		<category><![CDATA[Technical How-to]]></category>
-		<guid isPermaLink="false">961db7d61f2355044c084059d32c9681d1697de0</guid>
-
-					<description>This post shows you how to build multi-Region carrier performance dashboards in Quick Sight using Highcharts custom visualizations to overcome native chart limitations. You will learn how to maintain data sovereignty across AWS Regions while creating unified visualizations through the Quick Sight federated dataset capability. The solution includes production-ready chart configurations and addresses security, compliance, and scalability requirements.</description>
-										<content:encoded>&lt;p&gt;When your carrier performance data spans multiple regions, your dashboard must reconcile fundamentally different competitive structures within a single view. For example, in the US, you rank three carriers (Carrier 1–3) across 49 states and hundreds of metro markets. In the UK, you’re comparing four carriers (Carrier 4–7) across a separate set of national regions. The challenge you face is not only geographic but also structural.&lt;/p&gt; 
-&lt;p&gt;The differences in carrier count, market density, and regional detail between these two geographies mean that no single out-of-the-box chart type can tell your full story. You need visualizations that answer layered questions simultaneously: who leads, by how much, how consistently, and whether they are improving or declining.&lt;/p&gt; 
-&lt;p&gt;You will find that native &lt;a href="https://aws.amazon.com/quick/quicksight/" target="_blank" rel="noopener"&gt;Amazon Quick&lt;/a&gt; visualizations do not tell your full story when you try to answer these questions at scale. Amazon Quick Sight can’t encode which carrier or combination of carriers dominates each geographic tile. It can’t render a radar chart that profiles all seven carriers across seven performance categories simultaneously. And it can’t produce chart types such as bullet charts and dumbbell charts, which you need to surface the nuances in your data.&lt;/p&gt; 
-&lt;p&gt;Every time you try to approximate these visuals in native Quick Sight, you end up building separate dashboards per Region, using stacked bar workarounds for deltas, or averaging metrics that mask volatility between a carrier’s best and worst markets. These compromises add maintenance overhead and obscure the insights your stakeholders need to make confident, data-driven decisions.&lt;/p&gt; 
-&lt;p&gt;By embedding Highcharts as a custom visual in Quick Sight, you address these limitations with a single, unified JSON configuration. With its tilemap chart type and &lt;code&gt;colorAxis.dataClasses&lt;/code&gt;, you can encode carrier dominance (including multi-carrier ties) across multiple regions in one visual, with legend toggles for region filtering. Its polar line chart renders a true polygon radar for multi-carrier, multi-category comparison, giving you the full competitive profile.&lt;/p&gt; 
-&lt;p&gt;Beyond geographic and radar views, Highcharts unlocks the chart types your analysis demands. You can use bullet charts to show performance against a 100-point target with color-banded zones, dumbbell charts to expose the spread between a carrier’s best and worst metro market, and waterfall charts to break down period-over-period score deltas.&lt;/p&gt; 
-&lt;p&gt;This post shows you how to build multi-Region carrier performance dashboards in Quick Sight using Highcharts custom visualizations to overcome native chart limitations. You will learn how to maintain data sovereignty across AWS Regions while creating unified visualizations through the Quick Sight federated dataset capability. The solution includes production-ready chart configurations and addresses security, compliance, and scalability requirements.&lt;/p&gt; 
-&lt;h2 id="solution-overview"&gt;Solution overview&lt;/h2&gt; 
-&lt;p&gt;Your architecture depends on factors such as data residency requirements, latency needs, and compliance obligations. Two architectural patterns address this:&lt;/p&gt; 
-&lt;h3 id="option-1-single-aws-region"&gt;Option 1: Single AWS Region&lt;/h3&gt; 
-&lt;p&gt;With this approach, you store carrier data (for example, both US and UK) in one AWS Region (for example, &lt;code&gt;us-east-1&lt;/code&gt; or &lt;code&gt;eu-west-1&lt;/code&gt;), using a single &lt;a href="https://docs.aws.amazon.com/quick/latest/userguide/spice.html" target="_blank" rel="noopener"&gt;Quick Sight SPICE&lt;/a&gt; (Super-fast, Parallel, In-memory Calculation Engine) dataset with a country column to logically identify the data.&lt;/p&gt; 
-&lt;p&gt;While this architecture is simpler for you to manage with one dataset and one SPICE refresh, it carries a potential drawback: if you choose a US-based Region, your data physically resides outside the UK, which may conflict with the UK General Data Protection Regulation (GDPR) or data residency rules if your dataset contains personally identifiable information (PII).&lt;/p&gt; 
-&lt;h3 id="option-2-separate-aws-regions-per-country"&gt;Option 2: Separate AWS Regions per country&lt;/h3&gt; 
-&lt;p&gt;Sometimes, data sovereignty laws require you to physically store and process certain categories of data (particularly data about individuals, network usage patterns, and commercially sensitive performance metrics) within the legal jurisdiction where you collected the data. For example, for UK carrier data, the UK GDPR (retained post-Brexit) mandates that personal and operationally sensitive data about UK consumers and UK network performance must reside on infrastructure located within the UK or the broader European Economic Area. This means that you must place US carrier data in a US AWS Region (for example, &lt;code&gt;us-east-1&lt;/code&gt; or &lt;code&gt;us-west-2&lt;/code&gt;) and UK carrier data in an EU-adherent Region, with no co-mingling of raw data across those boundaries. The two datasets are sovereign. You can’t merge them into a single Amazon Simple Storage Service (Amazon S3) bucket without violating one or both jurisdictions’ requirements.&lt;/p&gt; 
-&lt;p&gt;Despite the data residing in separate AWS Regions, you can build a single unified Highcharts dashboard using &lt;a href="https://aws.amazon.com/quick/" target="_blank" rel="noopener"&gt;Quick&lt;/a&gt; architecture without moving raw data across borders. You use federated dataset joins at the Quick layer rather than at the storage layer: you ingest the aggregated US dataset (in &lt;code&gt;us-east-1&lt;/code&gt;) and the aggregated UK dataset (in &lt;code&gt;eu-west-2&lt;/code&gt;) into their respective regional SPICE instances, and the Data Prep capability of Amazon Quick appends them at data prep time into a single logical dataset. The resulting unified dataset feeds a single set of Highcharts configurations (tilemap, radar, bullet, dumbbell, waterfall, streamgraph) that render multi-Region carriers together. No raw sovereign data leaves its home Region. You federate only the aggregated RootScore, Rank, and ColorValue metrics computed within each Region into the unified view, satisfying data residency requirements while still enabling the combined visualizations your dashboard requires.&lt;/p&gt; 
-&lt;p&gt;While Option 1 suits most scenarios, the post walks you through Option 2 because it addresses the more complex requirements that telecommunications companies frequently encounter.&lt;/p&gt; 
-&lt;h2 id="solution-architecture"&gt;Solution architecture&lt;/h2&gt; 
-&lt;p&gt;The following diagram shows how the multi-Region architecture federates carrier performance data while&amp;nbsp;maintaining&amp;nbsp;data sovereignty. Two regional data pipelines, one in us-east-1 for US carrier data and one in eu-west-2 for UK carrier&amp;nbsp;data independently&amp;nbsp;aggregate performance metrics within their respective Regions. At the Quick layer, the Data Prep capability federates these aggregated datasets at query time into a single logical dataset. This unified dataset feeds the&amp;nbsp;Highcharts&amp;nbsp;custom visuals, enabling a combined multi-Region dashboard without moving raw data across borders&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/13/ML-21423-1.png" alt="Architecture diagram of US and UK data pipelines federated by Amazon Quick into a unified Highcharts dashboard" width="800"&gt;&lt;/p&gt; 
-&lt;h2 id="prerequisites"&gt;Prerequisites&lt;/h2&gt; 
-&lt;p&gt;Before you begin, make sure that you have the following:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;An &lt;a href="https://portal.aws.amazon.com/billing/signup#/start/email" target="_blank" rel="noopener"&gt;AWS account&lt;/a&gt; with access to Quick.&lt;/li&gt; 
- &lt;li&gt;Data sources configured across multiple AWS Regions.&lt;/li&gt; 
- &lt;li&gt;Basic familiarity with Quick Sight dashboards and data integration.&lt;/li&gt; 
- &lt;li&gt;Understanding of JSON configuration for Highcharts.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://aws.amazon.com/iam/" target="_blank" rel="noopener"&gt;AWS Identity and Access Management (IAM)&lt;/a&gt; permissions to access data sources across regions.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="data-preparation"&gt;Data preparation&lt;/h2&gt; 
-&lt;p&gt;To aggregate data from multiple regions, configure your data sources in Quick. This step helps you establish the connections that enable cross-Region data retrieval.&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;In the Quick console, navigate to &lt;strong&gt;Datasets&lt;/strong&gt; from the left navigation panel.&lt;/li&gt; 
- &lt;li&gt;Choose &lt;strong&gt;Create data source&lt;/strong&gt; to begin adding your first regional data source.&lt;/li&gt; 
- &lt;li&gt;Select your data source type (such as &lt;a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener"&gt;Amazon S3&lt;/a&gt;, &lt;a href="https://aws.amazon.com/rds/" target="_blank" rel="noopener"&gt;Amazon Relational Database Service (Amazon RDS)&lt;/a&gt;, or another data source of your choice).&lt;/li&gt; 
- &lt;li&gt;Enter the connection details for your first region, including endpoint URLs and authentication credentials.&lt;/li&gt; 
- &lt;li&gt;Choose &lt;strong&gt;Validate connection&lt;/strong&gt; to verify data accessibility.&lt;/li&gt; 
- &lt;li&gt;After validating the connection, choose &lt;strong&gt;Create data source&lt;/strong&gt;.&lt;/li&gt; 
- &lt;li&gt;Repeat steps 2–6 for each additional AWS Region that you want to include in your analysis.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;After configuring your regional data sources, you can proceed to combine them into a unified dataset.&lt;/p&gt; 
-&lt;h2 id="configure-data-aggregation-and-transformation"&gt;Configure data aggregation and transformation&lt;/h2&gt; 
-&lt;p&gt;After connecting your data sources, set up aggregation rules to combine data from multiple regions. This step helps maintain consistent data formatting and produces a unified analysis.&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Choose &lt;strong&gt;Datasets&lt;/strong&gt; under Quick.&lt;/li&gt; 
- &lt;li&gt;Choose &lt;strong&gt;Create dataset&lt;/strong&gt;.&lt;/li&gt; 
- &lt;li&gt;Select one of the data sources you registered in the previous section and its associated schema.&lt;/li&gt; 
- &lt;li&gt;Choose &lt;strong&gt;Edit/Preview data&lt;/strong&gt;.&lt;/li&gt; 
- &lt;li&gt;In the Data Preparation interface, choose &lt;strong&gt;Add data&lt;/strong&gt;.&lt;/li&gt; 
- &lt;li&gt;Select your second regional data source from the list.&lt;/li&gt; 
- &lt;li&gt;Choose &lt;strong&gt;Append&lt;/strong&gt; to stack the datasets vertically.&lt;/li&gt; 
- &lt;li&gt;Verify that column names match between datasets (rename if needed).&lt;/li&gt; 
- &lt;li&gt;Add a calculated field named &lt;code&gt;Region&lt;/code&gt; to identify data origin (for example, &lt;code&gt;IF(condition, 'US', 'UK')&lt;/code&gt;).&lt;/li&gt; 
- &lt;li&gt;Preview the combined dataset to verify row counts.&lt;/li&gt; 
- &lt;li&gt;Add calculated fields to normalize data formats across regions if needed. For example, convert timestamps to a common time zone.&lt;/li&gt; 
- &lt;li&gt;Choose &lt;strong&gt;Save &amp;amp; publish&lt;/strong&gt; to publish your aggregated dataset.&lt;/li&gt; 
- &lt;li&gt;After you publish the dataset, configure the refresh schedule for this dataset under &lt;strong&gt;Schedule refresh&lt;/strong&gt; to keep your aggregated data current. 
-  &lt;ol type="a"&gt; 
-   &lt;li&gt;Set the frequency based on your business requirements (hourly, daily, or weekly).&lt;/li&gt; 
-  &lt;/ol&gt; &lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;You can now create Highcharts visualizations using your aggregate dataset.&lt;/p&gt; 
-&lt;p&gt;To learn how to set up cross-region analytics data for your Highcharts visualizations, see &lt;a href="https://aws.amazon.com/blogs/big-data/build-a-multi-region-analytics-solution-with-amazon-redshift-amazon-s3-and-amazon-quicksight" target="_blank" rel="noopener"&gt;this walkthrough on building a multi-Region analytics solution&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2 id="dataset-overview"&gt;Dataset overview&lt;/h2&gt; 
-&lt;p&gt;The carrier performance dataset used in this walkthrough contains records spanning seven carriers across two countries (UK, USA). The dataset includes seven performance categories (Call, Data, Overall, Reliability, Responsiveness, Text, Video), with rankings and RootScore metrics across two measurement periods (2024-2H, 2025-1H).&lt;/p&gt; 
-&lt;p&gt;The dataset schema consists of the following attributes:&lt;/p&gt; 
-&lt;table style="height: 312px" border="1px" width="845" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Field&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;carrier&lt;/td&gt; 
-   &lt;td&gt;Carrier ID (for example, Carrier1 through Carrier7)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;category&lt;/td&gt; 
-   &lt;td&gt;Performance category (Call, Data, Overall, Reliability, Responsiveness, Text, Video)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;country&lt;/td&gt; 
-   &lt;td&gt;Country of measurement (USA, UK)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;rank&lt;/td&gt; 
-   &lt;td&gt;Competitive ranking (1–4) within that market and category&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;rootscore&lt;/td&gt; 
-   &lt;td&gt;Performance score (0–100 scale)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;product_period&lt;/td&gt; 
-   &lt;td&gt;Measurement period (2024-2H, 2025-1H)&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;The following table shows a representative sample from the dataset:&lt;/p&gt; 
-&lt;table style="height: 415px" border="1px" width="1148" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;carrier&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;category&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;country&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;rank&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;rootscore&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;product_period&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Carrier1&lt;/td&gt; 
-   &lt;td&gt;Call&lt;/td&gt; 
-   &lt;td&gt;USA&lt;/td&gt; 
-   &lt;td&gt;1.0&lt;/td&gt; 
-   &lt;td&gt;99.53&lt;/td&gt; 
-   &lt;td&gt;2024-2H&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Carrier1&lt;/td&gt; 
-   &lt;td&gt;Call&lt;/td&gt; 
-   &lt;td&gt;USA&lt;/td&gt; 
-   &lt;td&gt;1.0&lt;/td&gt; 
-   &lt;td&gt;98.08&lt;/td&gt; 
-   &lt;td&gt;2024-2H&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Carrier1&lt;/td&gt; 
-   &lt;td&gt;Call&lt;/td&gt; 
-   &lt;td&gt;USA&lt;/td&gt; 
-   &lt;td&gt;1.0&lt;/td&gt; 
-   &lt;td&gt;82.18&lt;/td&gt; 
-   &lt;td&gt;2024-2H&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Carrier1&lt;/td&gt; 
-   &lt;td&gt;Call&lt;/td&gt; 
-   &lt;td&gt;USA&lt;/td&gt; 
-   &lt;td&gt;1.0&lt;/td&gt; 
-   &lt;td&gt;99.99&lt;/td&gt; 
-   &lt;td&gt;2024-2H&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Carrier1&lt;/td&gt; 
-   &lt;td&gt;Call&lt;/td&gt; 
-   &lt;td&gt;USA&lt;/td&gt; 
-   &lt;td&gt;1.0&lt;/td&gt; 
-   &lt;td&gt;98.79&lt;/td&gt; 
-   &lt;td&gt;2024-2H&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Carrier1&lt;/td&gt; 
-   &lt;td&gt;Call&lt;/td&gt; 
-   &lt;td&gt;USA&lt;/td&gt; 
-   &lt;td&gt;1.0&lt;/td&gt; 
-   &lt;td&gt;98.37&lt;/td&gt; 
-   &lt;td&gt;2024-2H&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Carrier1&lt;/td&gt; 
-   &lt;td&gt;Call&lt;/td&gt; 
-   &lt;td&gt;USA&lt;/td&gt; 
-   &lt;td&gt;1.0&lt;/td&gt; 
-   &lt;td&gt;99.96&lt;/td&gt; 
-   &lt;td&gt;2024-2H&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Carrier1&lt;/td&gt; 
-   &lt;td&gt;Call&lt;/td&gt; 
-   &lt;td&gt;USA&lt;/td&gt; 
-   &lt;td&gt;1.0&lt;/td&gt; 
-   &lt;td&gt;99.12&lt;/td&gt; 
-   &lt;td&gt;2024-2H&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;h2 id="understanding-dynamic-field-well-bindings"&gt;Understanding dynamic field well bindings&lt;/h2&gt; 
-&lt;p&gt;The code blocks in this post show how data flows dynamically from the dataset by using placeholder tokens (&lt;code&gt;{{token}}&lt;/code&gt;) that map to specific dataset queries.&lt;/p&gt; 
-&lt;p&gt;Each code block includes two components:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;The field well mapping specifies which dataset fields (&lt;code&gt;carrier&lt;/code&gt;, &lt;code&gt;category&lt;/code&gt;, &lt;code&gt;rootscore&lt;/code&gt;, &lt;code&gt;rank&lt;/code&gt;, &lt;code&gt;product_period&lt;/code&gt;, &lt;code&gt;country&lt;/code&gt;) map to which field wells. These define how data flows from the dataset into the chart.&lt;/li&gt; 
- &lt;li&gt;The JSON template uses placeholder tokens (for example, &lt;code&gt;{{carrier_list}}&lt;/code&gt; and &lt;code&gt;{{avg_rootscore_period_1}}&lt;/code&gt;) that the Quick Sight field well engine resolves at render time. The mapping legend that follows each chart documents what each placeholder resolves to.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="highcharts-implementation-walkthrough"&gt;Highcharts implementation walkthrough&lt;/h2&gt; 
-&lt;p&gt;In this section, you walk through Highcharts visualizations that address the multi-Region carrier analysis requirements that native Quick Sight visuals can’t fulfill on their own. Before diving into the code, review the following requirements table. It maps each visualization to its Highcharts chart type, summarizes what the visual must accomplish, and explains why you cannot achieve the same result with built-in Quick Sight chart types. Each chart that follows includes a complete JSON configuration you can copy directly into your Quick Sight Highcharts custom visual, along with a rendered preview showing the expected output. Because every configuration binds dynamically to the Quick Sight field wells rather than hardcoding carrier names or region values, you can adapt these examples to your own dataset without rewriting the JSON. Only your lookup table needs to reflect your carriers and regions.&lt;/p&gt; 
-&lt;h3 id="requirements"&gt;Requirements&lt;/h3&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;#&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Visual name&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Highcharts type&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Requirement summary&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Why Highcharts&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;1&lt;/td&gt; 
-   &lt;td&gt;US Carrier Performance Radar&lt;/td&gt; 
-   &lt;td&gt;polar + line&lt;/td&gt; 
-   &lt;td&gt;Spider/polygon chart showing each US carrier’s average score across seven categories (Call, Data, Overall, Reliability, Responsiveness, Text, Video).&lt;/td&gt; 
-   &lt;td&gt;No polar or radar chart type in Quick Sight. You can’t create a multi-axis, multi-carrier overlay with a polygon grid natively.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;2&lt;/td&gt; 
-   &lt;td&gt;Overlapping Column Chart with Target Bubbles&lt;/td&gt; 
-   &lt;td&gt;column&lt;/td&gt; 
-   &lt;td&gt;Compare 2024-2H and 2025-1H RootScore for all seven carriers in a single view. The 2024-2H column renders a wider solid bar. The 2025-1H column overlaps it as a semitransparent overlay. Orange bubbles at y=100 mark the target, and a dashed red reference line reinforces the benchmark.&lt;/td&gt; 
-   &lt;td&gt;No similar chart type in Quick Sight. If you use stacked bar workarounds, you lose the delta narrative entirely.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;3&lt;/td&gt; 
-   &lt;td&gt;Variwide Chart: Win Share × Volume&lt;/td&gt; 
-   &lt;td&gt;variwide&lt;/td&gt; 
-   &lt;td&gt;Carrier1 win % as bar height. Total #1 wins in that category as bar width, thus two key performance indicators in one bar.&lt;/td&gt; 
-   &lt;td&gt;All Quick Sight bars have equal fixed width. You can’t encode a second dimension (market volume) into bar width.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;4&lt;/td&gt; 
-   &lt;td&gt;Streamgraph: Win Flow&lt;/td&gt; 
-   &lt;td&gt;streamgraph&lt;/td&gt; 
-   &lt;td&gt;Flowing stream width per carrier showing #1 Overall win count across periods and reveals competitive momentum.&lt;/td&gt; 
-   &lt;td&gt;No streamgraph type in Quick Sight. The organic flowing proportional share shape is exclusive to Highcharts.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;5&lt;/td&gt; 
-   &lt;td&gt;Hexagonal Tilemap for Market Share&lt;/td&gt; 
-   &lt;td&gt;tilemap&lt;/td&gt; 
-   &lt;td&gt;A hexagonal grid where each tile represents ~1% of markets won. Carriers fill the grid proportionally to their share, creating an immediately intuitive visual of competitive concentration.&lt;/td&gt; 
-   &lt;td&gt;Quick Sight built-in map visuals (filled maps, point maps) render geographic shapes or coordinates, not abstract hex grids. There’s no native “tilemap” or hex-bin chart type.&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;6&lt;/td&gt; 
-   &lt;td&gt;Combined US + UK Packed Bubble&lt;/td&gt; 
-   &lt;td&gt;packedbubble&lt;/td&gt; 
-   &lt;td&gt;All carriers in a single packed bubble configuration with distinct cluster regions per carrier.&lt;/td&gt; 
-   &lt;td&gt;No packed bubble type is available. You can’t group carriers into distinct cluster regions within one visual.&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;h3 id="create-a-highcharts-custom-visual"&gt;Create a Highcharts custom visual&lt;/h3&gt; 
-&lt;p&gt;To build each visualization, follow these steps:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Navigate to &lt;strong&gt;Analyses&lt;/strong&gt; and open your analysis.&lt;/li&gt; 
- &lt;li&gt;Add a Highcharts visual.&lt;/li&gt; 
- &lt;li&gt;Map the analysis to your prepared dataset.&lt;/li&gt; 
- &lt;li&gt;Update the JSON configuration in the format panel.&lt;/li&gt; 
- &lt;li&gt;Map your dataset fields to the field wells referenced in the JSON.&lt;/li&gt; 
- &lt;li&gt;Verify that the chart renders correctly.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h3 id="chart-1-average-overall-rootscore-2024-2h-compared-to-2025-1h"&gt;Chart 1: Average overall RootScore, 2024-2H compared to 2025-1H&lt;/h3&gt; 
-&lt;p&gt;The following chart compares the average overall&amp;nbsp;RootScore&amp;nbsp;for all seven carriers across two measurement periods (2024-2H and 2025-1H). Each carrier displays two overlapping&amp;nbsp;columns,&amp;nbsp;a wider solid bar for the earlier period and a semitransparent overlay for the later&amp;nbsp;period&amp;nbsp;so&amp;nbsp;you can&amp;nbsp;immediately&amp;nbsp;see period-over-period improvement or decline. Orange bubbles positioned at 100 mark the target score, and a dashed red reference line reinforces this benchmark. You can&amp;nbsp;observe&amp;nbsp;that Carriers 1–3 consistently score above 95 and approach the 100&amp;nbsp;target, while Carriers 5–7 remain below 90, highlighting a clear performance gap between the two groups.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/13/ML-21423-2.png" alt="Overlapping column chart of average RootScore for two periods across seven carriers, with a target line at 100" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Overlapping column chart comparing average overall RootScore for 2024-2H versus 2025-1H across seven carriers. Orange bubbles mark the target score of 100, with a dashed red reference line. Carriers 1–3 score above 95, while Carriers 5–7 score below 90.&lt;/em&gt;&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-json"&gt;{
-    "chart": { "type": "column" },
-    "title": { "text": "Avg Overall RootScore: {{period_1}} vs {{period_2}} by Carrier" },
-    "subtitle": { "text": "Overlapping columns with Target = 100 (bubble) --- All ({{country_list}})" },
-    "xAxis": {
-        "categories": {{carrier_list}},
-        "title": { "text": "Carrier" }
-    },
-    "yAxis": {
-        "min": 70, "max": 103,
-        "title": { "text": "Avg RootScore" },
-        "labels": { "format": "{value}" },
-        "plotLines": [{ "value": 100, "color": "#E53935", "dashStyle": "Dash", "width": 2, "label": { "text": "Target: 100", "align": "right", "style": { "color": "#E53935" } }, "zIndex": 5 }]
-    },
-    "tooltip": { "shared": false },
-    "plotOptions": {
-        "column": { "grouping": false, "shadow": false, "borderWidth": 0 },
-        "bubble": { "minSize": 20, "maxSize": 20, "zThreshold": 0 }
-    },
-    "series": [
-        { "type": "column", "name": "{{period_1}}", "data": {{avg_rootscore_period_1}}, "color": "#219FD7", "pointPadding": 0.3, "pointPlacement": 0, "tooltip": { "valueSuffix": "" } },
-        { "type": "column", "name": "{{period_2}}", "data": {{avg_rootscore_period_2}}, "color": "#E66AB4", "pointPadding": 0.4, "pointPlacement": 0, "opacity": 0.8, "tooltip": { "valueSuffix": "" } },
-        {
-            "type": "bubble", "name": "Target (100)",
-            "data": {{target_bubble_data}},
-            "color": "#FB8C00", "marker": { "symbol": "circle" },
-            "dataLabels": { "enabled": true, "format": "100", "style": { "fontWeight": "bold" } },
-            "tooltip": { "pointFormat": "&amp;lt;b&amp;gt;{point.name}&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;Target: 100&amp;lt;br/&amp;gt;Gap from {{period_1}}: {point.gap2024}&amp;lt;br/&amp;gt;Gap from {{period_2}}: {point.gap2025}" },
-            "zIndex": 10
-        }
-    ]
-}&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;&lt;strong&gt;Placeholder mapping legend:&lt;/strong&gt;&lt;/p&gt; 
-&lt;pre class="text"&gt;&lt;code&gt;{{carrier_list}} → DISTINCT(carrier) ORDER BY carrier → ["Carrier1", "Carrier2", "Carrier3", "Carrier4", "Carrier5", "Carrier6", "Carrier7"]
-{{period_1}} → First product_period value → "2024-2H"
-{{period_2}} → Latest product_period value → "2025-1H"
-{{country_list}} → DISTINCT(country) joined → "UK + USA"
-{{avg_rootscore_period_1}} → AVG(rootscore) WHERE category='Overall' AND product_period='2024-2H' GROUP BY carrier → [97.2, 95.66, 97.33, 93.97, 85.71, 82.56, 89.93]
-{{avg_rootscore_period_2}} → AVG(rootscore) WHERE category='Overall' AND product_period='2025-1H' GROUP BY carrier → [97.92, 96.53, 97.83, 94.65, 87.52, 85.06, 88.93]
-{{target_bubble_data}} → Per carrier: {x: idx, y: 100, z: 15, name: carrier, gap2024: 100-AVG, gap2025: 100-AVG}&lt;/code&gt;&lt;/pre&gt; 
-&lt;h3 id="chart-2-carrier-win-share-by-category"&gt;Chart 2: Carrier win share % by category&lt;/h3&gt; 
-&lt;p&gt;The following&amp;nbsp;variwide&amp;nbsp;chart encodes two dimensions of competitive performance in a single visualization. Bar height&amp;nbsp;represents&amp;nbsp;Carrier1’s win share percentage in each performance category, and bar width&amp;nbsp;represents&amp;nbsp;the total number of first-place rankings across all carriers in that category (market volume). This dual encoding lets you see not only where Carrier1 wins most&amp;nbsp;frequently, but also how competitive the category is overall. Categories where the bar is both tall and wide&amp;nbsp;indicate&amp;nbsp;strong Carrier1 dominance in high-volume markets. For example, the Call category shows the highest win share at approximately 48% with substantial market volume.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/13/ML-21423-3.png" alt="Variwide chart of Carrier1 win share by category, with bar height for win percentage and bar width for ranking volume" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Variwide chart showing Carrier1 win share percentage by category for 2025-1H. Bar height represents win percentage, bar width represents total number of first-place rankings. Call category shows highest win share at 48 percent, followed by Reliability at 43 percent.&lt;/em&gt;&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-json"&gt;{
-    "chart": { "type": "variwide" },
-    "title": { "text": "{{lead_carrier}} Win Share % by Category ({{period_2}})" },
-    "subtitle": { "text": "Bar height = {{lead_carrier}} win %. Bar width = total #1 rankings (market volume). Impossible in native Quick Sight." },
-    "xAxis": { "type": "category" },
-    "yAxis": { "title": { "text": "{{lead_carrier}} Win %" }, "max": 100 },
-    "legend": { "enabled": false },
-    "tooltip": { "pointFormat": "&amp;lt;b&amp;gt;{point.name}&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;{{lead_carrier}} Win%: &amp;lt;b&amp;gt;{point.y:.1f}%&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Total #1 wins in market: &amp;lt;b&amp;gt;{point.z}&amp;lt;/b&amp;gt;" },
-    "series": [{
-            "name": "{{lead_carrier}} Win %",
-            "color": "#219FD7",
-            "dataLabels": { "enabled": true, "format": "{point.y:.0f}%" },
-            "data": {{variwide_data}}
-        }]
-}&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;&lt;strong&gt;Placeholder mapping legend:&lt;/strong&gt;&lt;/p&gt; 
-&lt;pre class="text"&gt;&lt;code&gt;{{lead_carrier}} → First carrier (alphabetical) → "Carrier1"
-{{period_2}} → Latest product_period → "2025-1H"
-{{variwide_data}} → Per category: {name: cat, y: COUNT(rank=1 AND carrier=Carrier1)/COUNT(rank=1)*100, z: COUNT(rank=1)} WHERE product_period='2025-1H'
-→ [{"name": "Call", "y": 42.3, "z": 385}, {"name": "Data", "y": 23.8, "z": 290}, {"name": "Overall", "y": 32.0, "z": 303}, {"name": "Reliability", "y": 39.7, "z": 307}, {"name": "Responsiveness", "y": 18.2, "z": 319}, {"name": "SpCarrier4d", "y": 32.0, "z": 387}, {"name": "Text", "y": 33.5, "z": 520}, {"name": "Video", "y": 25.9, "z": 363}]&lt;/code&gt;&lt;/pre&gt; 
-&lt;h3 id="chart-3-win-flow-from-2024-2h-to-2025-1h-all-seven-carriers"&gt;Chart 3: Win flow from 2024-2H to 2025-1H (all seven carriers)&lt;/h3&gt; 
-&lt;p&gt;The following streamgraph shows how first-place overall rankings flow between the two measurement periods (2024-2H to 2025-1H) for all seven carriers. Each&amp;nbsp;carrier’s&amp;nbsp;stream width is proportional to its number of first-place overall rankings, so wider streams&amp;nbsp;indicate&amp;nbsp;greater competitive dominance. You can see competitive momentum&amp;nbsp;shifts ,&amp;nbsp;for example, Carrier3 maintains the widest stream across both periods (approximately 138&amp;nbsp;to 140 wins),&amp;nbsp;indicating&amp;nbsp;sustained dominance, while Carrier1 shows notable growth from 80 to 97 wins. This visualization type is not available in native Quick charts.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/13/ML-21423-4.png" alt="Streamgraph of carrier first-place win flow between two periods across seven carriers" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Streamgraph showing carrier 1 win flow from 2024-2H to 2025-1H for overall rankings across all seven carriers. Stream width represents number of first-place overall rankings. Carrier3 dominates with the widest stream, followed by Carrier1 showing growth from 80 to 97 wins.&lt;/em&gt;&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-json"&gt;{
-    "chart": { "type": "streamgraph" },
-    "title": { "text": "Carrier #1 Win Flow: {{period_1}} → {{period_2}} (Overall --- All {{carrier_count}} Carriers)" },
-    "subtitle": { "text": "Stream width = number of #1 Overall rankings (State + Metro + National). {{country_carrier_split}}" },
-    "xAxis": { "categories": {{period_list}}, "crosshair": true },
-    "yAxis": { "visible": false },
-    "legend": { "enabled": true },
-    "tooltip": { "shared": true },
-    "plotOptions": { "streamgraph": { "dataLabels": { "enabled": true, "format": "{series.name}" } } },
-    "series": {{stream_series}}
-}&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;&lt;strong&gt;Placeholder mapping legend:&lt;/strong&gt;&lt;/p&gt; 
-&lt;pre class="text"&gt;&lt;code&gt;{{period_1}} → "2024-2H"
-{{period_2}} → "2025-1H"
-{{carrier_count}} → COUNT(DISTINCT carrier) → 7
-{{period_list}} → ["2024-2H", "2025-1H"]
-{{country_carrier_split}} → "US: Carrier1-3 | UK: Carrier4-7"
-{{stream_series}} → Per carrier: {name: carrier, color: color, data: [COUNT(rank=1 AND category='Overall') per period]}
-→ [{"name": "Carrier1", "color": "#219FD7", "data": [80, 97]}, {"name": "Carrier2", "color": "#E66AB4", "data": [25, 45]}, {"name": "Carrier3", "color": "#FF4433", "data": [138, 140]}, {"name": "Carrier\...}&lt;/code&gt;&lt;/pre&gt; 
-&lt;h3 id="chart-4-performance-radar-chart-average-rootscore-by-category"&gt;Chart 4: Performance radar chart — average RootScore by category&lt;/h3&gt; 
-&lt;p&gt;The following radar chart (polar line chart) profiles all seven carriers simultaneously across seven performance categories: Call, Data, Overall, Reliability, Responsiveness, Text, and Video. Each carrier appears as a colored polygon whose vertices&amp;nbsp;represent&amp;nbsp;the carrier’s average&amp;nbsp;RootScore&amp;nbsp;in each category for 2025-1H. The polygon grid starts at a minimum score of 70, so you can compare the overall shape and symmetry of each carrier’s performance profile. Carriers with larger, more uniform polygons perform consistently well across all categories, while irregular shapes reveal category specific strengths or weaknesses.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/13/ML-21423-5.png" alt="Radar chart of seven carriers across seven performance categories for 2025-1H" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Radar chart showing carrier performance across categories (Call, Data, Overall, Reliability, Responsiveness, Text, Video) for 2025-1H. Seven colored polygons represent each carrier, with scores ranging from 70 to 100.&lt;/em&gt;&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-json"&gt;{
-    "chart": { "polar": true, "type": "line" },
-    "title": { "text": "Carrier Performance Radar -- Avg RootScore by Category ({{period_2}})" },
-    "subtitle": { "text": "Country Filter: {{country_list}}" },
-    "xAxis": { "categories": {{category_list}}, "tickmarkPlacement": "on", "lineWidth": 0 },
-    "yAxis": { "gridLineInterpolation": "polygon", "lineWidth": 0, "min": 70 },
-    "tooltip": { "shared": true },
-    "series": {{radar_series}}
-}&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;&lt;strong&gt;Placeholder mapping legend:&lt;/strong&gt;&lt;/p&gt; 
-&lt;pre class="text"&gt;&lt;code&gt;{{period_2}} → "2025-1H"
-{{country_list}} → "UK + USA"
-{{category_list}} → DISTINCT(category) → ["Call", "Data", "Overall", "Reliability", "Responsiveness", "SpCarrier4d", "Text", "Video"]
-{{radar_series}} → Per carrier: {name: carrier, data: [AVG(rootscore) per category], pointPlacement: "on"} WHERE product_period='2025-1H'&lt;/code&gt;&lt;/pre&gt; 
-&lt;h3 id="chart-5-performance-by-category"&gt;Chart 5: Performance by category&lt;/h3&gt; 
-&lt;p&gt;The following packed bubble chart groups all seven carriers into distinct visual clusters, where each bubble within a cluster&amp;nbsp;represents&amp;nbsp;a performance category. Bubble size corresponds to the carrier’s average&amp;nbsp;RootScore&amp;nbsp;in that category for 2025-1H ,&amp;nbsp;larger bubbles&amp;nbsp;indicate&amp;nbsp;higher scores. US carriers (Carriers 1–3) and UK carriers (Carriers 4–7) appear with&amp;nbsp;different color&amp;nbsp;schemes, making it easy to compare cross-region performance&amp;nbsp;at a glance. This chart type enables you to&amp;nbsp;identify&amp;nbsp;both the strongest overall performers (larger clusters) and category-specific outliers within each carrier’s profile.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/13/ML-21423-6.png" alt="Packed bubble chart grouping performance categories per carrier, with bubble size by average RootScore" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Packed bubble chart showing carrier performance by category for 2025-1H. Each carrier forms a distinct cluster of seven bubbles representing performance categories. Bubble size corresponds to average root score. US and UK carriers are shown with different color schemes.&lt;/em&gt;&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-json"&gt;{
-    "chart": { "type": "packedbubble" },
-    "title": { "text": "Carrier Performance by Category ({{period_2}})" },
-    "subtitle": { "text": "Bubble size = Average Root Score. Each group = one carrier. {{country_carrier_split}}" },
-    "tooltip": { "headerFormat": "", "pointFormat": "&amp;lt;b&amp;gt;{point.name}&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;Avg Score: &amp;lt;b&amp;gt;{point.value}&amp;lt;/b&amp;gt;" },
-    "plotOptions": {
-        "packedbubble": {
-            "minSize": "20%", "maxSize": "100%", "zMin": 0, "zMax": 100,
-            "layoutAlgorithm": { "gravitationalConstant": 0.05, "splitSeries": true, "seriesInteraction": false, "dragBetweenSeries": false, "parentNodeLimit": true },
-            "dataLabels": { "enabled": true, "format": "{point.name}", "style": { "textOutline": "none", "fontWeight": "normal" } }
-        }
-    },
-    "series": {{packed_bubble_series}}
-}&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;&lt;strong&gt;Placeholder mapping legend:&lt;/strong&gt;&lt;/p&gt; 
-&lt;pre class="text"&gt;&lt;code&gt;{{period_2}} → "2025-1H"
-{{country_carrier_split}} → "US: Carrier1-3 | UK: Carrier4-7"
-{{packed_bubble_series}} → Per carrier: {name: carrier, color: color, data: [{name: cat, value: AVG(rootscore)}]} WHERE product_period='2025-1H'&lt;/code&gt;&lt;/pre&gt; 
-&lt;h3 id="chart-6-carrier-market-share-all-markets-2025-1h"&gt;Chart 6: Carrier market share — all markets (2025-1H)&lt;/h3&gt; 
-&lt;p&gt;The following hexagonal&amp;nbsp;tilemap&amp;nbsp;provides an intuitive visual representation of carrier market share for 2025-1H. Each hexagon&amp;nbsp;represents&amp;nbsp;approximately 1% of total markets won, and hexagons are color-coded by carrier. The proportional fill creates an immediate sense of competitive&amp;nbsp;concentration,&amp;nbsp;you can see&amp;nbsp;at a glance&amp;nbsp;that Carrier3 (green) dominates with approximately 46.7% market share, followed by Carrier1 (blue) at 35.4%, Carrier4 (orange) at 9.7%, and Carrier2 (pink) at 7.7%. This abstract hex-grid approach is not possible with native Quick map visuals, which&amp;nbsp;render&amp;nbsp;only geographic shapes or coordinates.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/13/ML-21423-7.png" alt="Hexagonal tilemap of carrier market share, where each tile represents about one percent of markets won" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Hexagonal tilemap showing carrier market share for all markets in 2025-1H. Each hexagon represents approximately one percent of markets won, colored by carrier. Carrier3 (green) dominates with 46.7 percent market share, followed by Carrier1 (blue) at 35.4 percent, Carrier4 (orange) at 9.7 percent, and Carrier2 (pink) at 7.7 percent.&lt;/em&gt;&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-json"&gt;{
-    "chart": { "type": "tilemap" },
-    "title": { "text": "Carrier Market Share --- All Markets ({{period_2}})" },
-    "subtitle": { "text": "Each hexagon tile = ~1% of markets won; colored by carrier" },
-    "xAxis": { "visible": false },
-    "yAxis": { "visible": false },
-    "legend": { "enabled": true, "title": { "text": "Carrier" } },
-    "tooltip": { "headerFormat": "" },
-    "plotOptions": { "tilemap": { "tileShape": "hexagon", "dataLabels": { "enabled": false }, "pointPadding": 2 } },
-    "series": {{tilemap_series}}
-}&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;&lt;strong&gt;Placeholder mapping legend:&lt;/strong&gt;&lt;/p&gt; 
-&lt;pre class="text"&gt;&lt;code&gt;{{period_2}} → "2025-1H"
-{{tilemap_series}} → Per carrier (sorted by share DESC): tiles proportional to market share %
-→ Each tile = 1% of total markets won; arranged in 10-column hex grid
-→ Share derived from: COUNT(rank=1 AND category='Overall' AND product_period='2025-1H') GROUP BY carrier&lt;/code&gt;&lt;/pre&gt; 
-&lt;h2 id="security-without-sacrifice"&gt;Security without sacrifice&lt;/h2&gt; 
-&lt;p&gt;A common enterprise concern with custom visualizations is security, specifically the risk that users could inject arbitrary JavaScript into a dashboard to exfiltrate data or compromise your application.&lt;/p&gt; 
-&lt;p&gt;Your Highcharts configurations are treated as structured data, not executable code.&lt;/p&gt; 
-&lt;p&gt;The rendering engine in Amazon Quick validates the JSON schema before passing it to the Highcharts library. It strips custom functions, event handlers, and formatter callbacks at the parameter layer so you get rich interactivity (tooltips, zoom, drill-downs) without ever executing user-supplied code.&lt;/p&gt; 
-&lt;p&gt;This means your security team can approve a single Highcharts rendering policy once, and every visualization you build on that policy inherits the same security posture.&lt;/p&gt; 
-&lt;h2 id="extend-your-solution-with-amazon-quick-agentic-features"&gt;Extend your solution with Amazon Quick agentic features&lt;/h2&gt; 
-&lt;p&gt;Quick offers features that complement your multi-Region analytics dashboard and help you derive deeper insights from your data.&lt;/p&gt; 
-&lt;h3 id="using-chat-agents-for-natural-language-queries"&gt;Using chat agents for natural language queries&lt;/h3&gt; 
-&lt;p&gt;With &lt;strong&gt;&lt;a href="https://aws.amazon.com/quick/chat-agents/" target="_blank" rel="noopener"&gt;Amazon Quick chat agents&lt;/a&gt;&lt;/strong&gt;, a capability of Amazon Quick, you can interact with your multi-Region dashboard using natural language. You can ask questions such as:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;“What were the top performing carriers in last quarter?”&lt;/li&gt; 
- &lt;li&gt;“Show me the trend of carrier performance across all regions.”&lt;/li&gt; 
- &lt;li&gt;“Compare carrier performance between US and UK.”&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;The chat agent understands your dashboard context and generates visualizations or provides data summaries on demand, making it easier for your non-technical users to explore multi-Region data without learning query syntax or dashboard navigation.&lt;/p&gt; 
-&lt;h3 id="organizing-resources-with-spaces"&gt;Organizing resources with spaces&lt;/h3&gt; 
-&lt;p&gt;Create a dedicated space in &lt;a href="https://aws.amazon.com/quick/spaces/" target="_blank" rel="noopener"&gt;Quick Space&lt;/a&gt; for your multi-Region analytics project. Within this space:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Upload supporting documentation about regional data sources and business definitions.&lt;/li&gt; 
- &lt;li&gt;Store your Highcharts configuration files for version control and team collaboration.&lt;/li&gt; 
- &lt;li&gt;Organize related dashboards, datasets, and analyses artifacts in one location.&lt;/li&gt; 
- &lt;li&gt;Share the space with your team members so that everyone has access to the same resources and context.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;This centralized organization helps you maintain consistency across your analytics team and streamlines onboarding for new team members.&lt;/p&gt; 
-&lt;h3 id="automating-workflows-with-flows"&gt;Automating workflows with Flows&lt;/h3&gt; 
-&lt;p&gt;&lt;strong&gt;&lt;a href="https://aws.amazon.com/quick/flows/" target="_blank" rel="noopener"&gt;Amazon Quick Flows&lt;/a&gt;&lt;/strong&gt; can automate repetitive tasks related to your multi-Region analytics:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Automated reporting –&lt;/strong&gt;&amp;nbsp;Create a Flow that generates and distributes weekly multi-Region performance reports to stakeholders by email.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Alert notifications –&lt;/strong&gt;&amp;nbsp;Set up a Flow to monitor your key metrics across regions and send you alerts when thresholds are exceeded, so you can respond proactively to issues.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Data refresh coordination –&lt;/strong&gt;&amp;nbsp;Automate the process of refreshing data from multiple regional sources and updating your dashboards on a defined schedule.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Insight generation –&lt;/strong&gt;&amp;nbsp;Build a Flow that analyzes your regional performance variations and generates summary insights for your executive review.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Through these Amazon Quick features with your Highcharts visualizations, you create a comprehensive analytics solution that displays your data effectively and helps you collaborate on analyses, automate workflows, and interact with your multi-Region data using natural language.&lt;/p&gt; 
-&lt;h2 id="clean-up"&gt;Clean up&lt;/h2&gt; 
-&lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; Deletion of Quick resources is permanent and can’t be undone. Confirm that you have backups of any analyses, dashboards, or datasets you want to retain before proceeding. If you’re unsure whether a resource is used in production, consult with your team before deleting it.&lt;/p&gt; 
-&lt;p&gt;If you created resources specifically for testing this solution, you can delete them to avoid incurring ongoing charges:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;In the Quick console, navigate to &lt;strong&gt;Datasets&lt;/strong&gt; under Quick.&lt;/li&gt; 
- &lt;li&gt;Select any test datasets you created and choose &lt;strong&gt;Delete&lt;/strong&gt;. Confirm the deletion for each data source.&lt;/li&gt; 
- &lt;li&gt;Navigate to &lt;strong&gt;Dashboards&lt;/strong&gt; and delete any test dashboards you no longer need.&lt;/li&gt; 
- &lt;li&gt;Navigate to &lt;strong&gt;Analyses&lt;/strong&gt; and delete any test analyses you no longer need.&lt;/li&gt; 
- &lt;li&gt;Review your SPICE capacity usage and release any capacity you allocated to deleted datasets.&lt;/li&gt; 
- &lt;li&gt;If you created specific IAM roles or policies for this implementation, review them in the IAM console and remove those that you no longer require.&lt;/li&gt; 
- &lt;li&gt;Delete any test spaces, chat agents, or flows that you no longer need.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, you learned how to extend Amazon Quick with Highcharts custom visualizations to build multi-Region carrier performance dashboards that meet data sovereignty requirements. By federating aggregated datasets at the Quick layer, you maintain adherence with UK GDPR and US data residency rules while delivering unified visualizations across all carriers.&lt;/p&gt; 
-&lt;p&gt;The Highcharts chart types demonstrated address visualization requirements that native Quick charts can’t meet. Because these configurations bind dynamically to Quick field wells and use a central lookup table, your dashboards scale automatically as you add new carriers or Regions.&lt;/p&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/13/ML-21423-8.jpeg" alt="Anupa Bhattacharyya" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Anupa Bhattacharyya&lt;/h3&gt; 
-  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/anupabhattacharyya/" target="_blank" rel="noopener"&gt;Anupa&lt;/a&gt; is an Enterprise Support Lead at Amazon Web Services, helping enterprise customers navigate and accelerate their cloud journey. She brings over 15 years of expertise to craft strategic initiatives tailored to customer needs. Outside of work, she enjoys painting, traveling, family time, and savoring new cuisines.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/13/ML-21423-9.jpeg" alt="Praney Mahajan" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Praney Mahajan&lt;/h3&gt; 
-  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/pranaymahajan/" target="_blank" rel="noopener"&gt;Praney&lt;/a&gt; is an Enterprise Support Lead at AWS who partners with key enterprise customers as their strategic advisor. He is passionate about bridging technical solutions with business outcomes. He enjoys going on long drives with his family and playing cricket in his free time.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/13/ML-21423-10.png" alt="Vishnu Elangovan" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Vishnu Elangovan&lt;/h3&gt; 
-  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/vishnu-elangovan/" target="_blank" rel="noopener"&gt;Vishnu&lt;/a&gt; is Worldwide Agentic AI Solution Architect with over a decade of experience in Applied AI/ML and Deep Learning. He loves building and tinkering with scalable AI/ML solutions and considers himself a lifelong learner. Vishnu is a trusted thought leader in the AI/ML community, regularly speaking at leading AI conferences and sharing his expertise on Agentic AI at top-tier events.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
 	</channel>
 </rss>
 
@@ -6366,13 +6159,13 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 	<atom:link href="https://azure.microsoft.com/en-us/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://azure.microsoft.com/en-us/blog/</link>
 	<description>Get the latest Azure news, updates, and announcements from the Azure blog. From product updates to hot topics, hear from the Azure experts.</description>
-	<lastBuildDate>Fri, 24 Jul 2026 19:49:17 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 28 Jul 2026 17:19:41 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
-	<generator>https://wordpress.org/?v=6.9.4</generator>
+	<generator>https://wordpress.org/?v=6.9.5</generator>
 
 <image>
 	<url>https://azure.microsoft.com/en-us/blog/wp-content/uploads/2024/06/microsoft_logo-150x150.webp</url>
@@ -6382,6 +6175,296 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 	<height>32</height>
 </image> 
 	<item>
+		<title>What customers value most in Microsoft Databases—from reliability to AI readiness</title>
+		<link>https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/</link>
+					<comments>https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/#respond</comments>
+		
+		<dc:creator><![CDATA[Shireesh Thota]]></dc:creator>
+		<pubDate>Mon, 27 Jul 2026 15:00:00 +0000</pubDate>
+				<category><![CDATA[Databases]]></category>
+		<category><![CDATA[Hybrid + multicloud]]></category>
+		<category><![CDATA[Internet of things]]></category>
+		<category><![CDATA[Microsoft Fabric]]></category>
+		<category><![CDATA[PostgreSQL]]></category>
+		<category><![CDATA[SQL]]></category>
+		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=52984</guid>
+
+					<description><![CDATA[<p>Every day, customers trust Microsoft Databases to power their most critical applications, business processes, and AI-powered experiences.</p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/">What customers value most in Microsoft Databases—from reliability to AI readiness</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<aside class="table-of-contents-block accordion wp-block-bloginabox-theme-table-of-contents" id="accordion-62ecaea2-0abf-4361-8fc0-bff3b4f7b1a9" data-bi-aN="table-of-contents">
+	<button class="btn btn-collapse" type="button" aria-expanded="true" aria-controls="accordion-collapse-62ecaea2-0abf-4361-8fc0-bff3b4f7b1a9">
+		<span class="table-of-contents-block__label">In this article</span>
+		<span class="table-of-contents-block__current" aria-hidden="true"></span>
+
+		<svg class="table-of-contents-block__arrow" aria-label="Toggle arrow" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M15.7761 11L18 8.82043L9 0L0 8.82043L2.22394 11L9 4.35913L15.7761 11Z" fill="currentColor" />
+		</svg>
+	</button>
+	<div id="accordion-collapse-62ecaea2-0abf-4361-8fc0-bff3b4f7b1a9" class="table-of-contents-block__collapse-wrapper collapse show" data-parent="#accordion-62ecaea2-0abf-4361-8fc0-bff3b4f7b1a9">
+		<div class="table-of-contents-block__content">
+			<ol class="table-of-contents-block__list"><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#what-customers-consistently-value">What customers consistently value </a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#turning-customer-feedback-into-innovation">Turning customer feedback into innovation </a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#thank-you-to-our-customers-and-community">Thank you to our customers and community </a></li></ol>		</div>
+	</div>
+	<span class="table-of-contents-block__progress-bar"></span>
+</aside>
+
+
+
+<p class="wp-block-paragraph">Every day, customers trust Microsoft Databases to power their most critical applications, business processes, and AI-powered experiences. Continuous customer feedback provides valuable insights into how these technologies perform in production and where we should continue investing.</p>
+
+
+
+<p class="wp-block-paragraph">I’m honored to share that Microsoft Databases have received multiple 2026 PeerSpot Customer Choice / Tech Leader recognitions based on feedback from real practitioners using these technologies in production environments. </p>
+
+
+
+<p class="wp-block-paragraph">This year, <a href="https://customerchoiceawards.peerspot.com/awards/microsoft" target="_blank" rel="noreferrer noopener">PeerSpot recognized</a>:</p>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item"><strong>SQL Server</strong> as a Tech Leader in <strong>Database Management Systems (DBMS)</strong> (#1) and <strong>Relational Database Tools</strong> (#1) </li>
+
+
+
+<li class="wp-block-list-item"><strong>Azure SQL Database</strong> as a Tech Leader in <strong>Database as a Service (DBaaS)</strong> (#2)</li>
+
+
+
+<li class="wp-block-list-item"><strong>Azure Database for PostgreSQL</strong> as a Tech Leader in <strong>Open Source Databases</strong> (#1) </li>
+
+
+
+<li class="wp-block-list-item"><strong>Azure Cosmos DB</strong> as a Tech Leader in <strong>Managed NoSQL Databases</strong> (#1), <strong>NoSQL Databases</strong> (#1), and <strong>Vector Databases</strong> (#1) </li>
+</ul>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://customerchoiceawards.peerspot.com/awards/microsoft" target="_blank" rel="noopener noreferrer noreferrer noopener">Learn more about our PeerSpot awards</a></div>
+</div>
+
+
+
+<p class="wp-block-paragraph">Customer feedback across Microsoft Databases consistently highlights five themes: reliability, scalability, operational simplicity, developer productivity, and AI readiness. These are the same priorities shaping our investments across <a href="https://www.microsoft.com/en/sql-server" target="_blank" rel="noopener noreferrer">SQL Server</a>, <a href="https://azure.microsoft.com/en-us/products/azure-sql/database/" target="_blank" rel="noopener noreferrer">Azure SQL Database</a>, <a href="https://azure.microsoft.com/en-us/products/cosmos-db/" target="_blank" rel="noopener noreferrer">Azure Cosmos DB</a>, and <a href="https://azure.microsoft.com/en-us/products/postgresql/" target="_blank" rel="noopener noreferrer">Azure Database for PostgreSQL</a>. The PeerSpot recognition reinforces that customers see value not only in the performance of our databases today, but also in how they are helping organizations prepare for the next generation of AI-powered applications.</p>
+
+
+
+<h2 class="wp-block-heading" id="what-customers-consistently-value"><strong>What customers consistently value</strong> </h2>
+
+
+
+<h3 class="wp-block-heading" id="sql-server-trusted-reliability-for-mission-critical-workloads">SQL Server: Trusted reliability for mission-critical workloads </h3>
+
+
+
+<p class="wp-block-paragraph">For SQL Server customers, reliability, stability, and long-term data stewardship remain foundational requirements. Organizations continue to rely on SQL Server to support business-critical applications, analytics, and increasingly AI-enabled workflows. </p>
+
+
+
+<p class="wp-block-paragraph">Hemanth Reddy Vakiti, a data engineer at Cognizant,&nbsp;wrote that <a href="https://www.peerspot.com/products/sql-server-reviews?review_id=11107492" target="_blank" rel="noreferrer noopener"><strong>“The backup and recovery allow us to easily access previous 10 to 15 years of data”</strong></a>, citing SQL Server’s ability to handle large datasets and support secure role-based access.</p>
+
+
+
+<p class="wp-block-paragraph">Another SQL Server reviewer,&nbsp;Isseo Martinez&nbsp;from&nbsp;eGlobal,&nbsp;called out availability and stability, saying&nbsp;<a href="https://www.peerspot.com/products/sql-server-reviews?review_id=9505899" target="_blank" rel="noreferrer noopener"><strong>&#8220;We&nbsp;never have concerns about the database.”</strong></a> For&nbsp;many organizations, that confidence is the foundation for business-critical applications and long-term modernization strategies.&nbsp;</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://www.microsoft.com/en-us/sql-server/" target="_blank" rel="noopener noreferrer noreferrer noopener">Explore SQL Server 2025</a></div>
+</div>
+
+
+
+<h3 class="wp-block-heading" id="azure-sql-database-simplifying-modernization-with-cloud-scale-sql">Azure SQL Database: Simplifying modernization with cloud-scale SQL </h3>
+
+
+
+<p class="wp-block-paragraph">Customers regularly tell us they want the reliability and familiarity of SQL Server with the operational simplicity of a fully managed cloud service. Azure SQL Database helps organizations modernize applications, reduce infrastructure management, and scale with confidence. </p>
+
+
+
+<p class="wp-block-paragraph">Fredrick Weinshenk, a cloud engineer at healthcare IT firm Med Tech Solutions, wrote that <a href="https://www.peerspot.com/products/microsoft-azure-sql-database-reviews?review_id=7643726" target="_blank" rel="noreferrer noopener"><strong>“The ease of deployment and scalability are significant reasons we push our larger clients to Azure,”</strong></a> and described the platform as “reliable” and “solid.”</p>
+
+
+
+<p class="wp-block-paragraph">That feedback reflects a recurring need we hear from customers: modernize infrastructure, reduce operational burden, and retain the SQL skills, tools, and application patterns their teams already trust. </p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://azure.microsoft.com/en-us/products/azure-sql/database/" target="_blank" rel="noopener noreferrer noreferrer noopener">Explore Azure SQL Database</a></div>
+</div>
+
+
+
+<h3 class="wp-block-heading" id="azure-database-for-postgresql-open-source-flexibility-with-enterprise-reliability">Azure Database for PostgreSQL: Open-source flexibility with enterprise reliability </h3>
+
+
+
+<p class="wp-block-paragraph">Customers choose Azure Database for PostgreSQL because it combines the innovation of the PostgreSQL ecosystem with the operational benefits of a managed service. </p>
+
+
+
+<p class="wp-block-paragraph">Wesley Haakman, a principal architect at IT service provider Intercept, using the service across hundreds of customer scenarios, shared that “[the] organization’s database uptime has improved” and highlighted the ease of integration with other Azure services.</p>
+
+
+
+<p class="wp-block-paragraph">Sathish Palanisamy, data engineer at a large transportation company, said <a href="https://www.peerspot.com/products/azure-database-for-postgresql-reviews?review_id=10068732" target="_blank" rel="noreferrer noopener"><strong>&#8220;We&#8217;ve used Azure Database for PostgreSQL for four years, benefiting from its performance, scalability, ease of integration, and support, especially during migration from Oracle, while also reducing costs and enabling faster, secure, AI-driven innovation in our airline operations.&#8221;</strong></a></p>
+
+
+
+<p class="wp-block-paragraph">These reviews highlight the value customers place on flexibility, modernization, and a clear path to AI-powered innovation.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://azure.microsoft.com/en-us/products/postgresql/" target="_blank" rel="noopener noreferrer noreferrer noopener">Explore Azure Database for PostgreSQL</a></div>
+</div>
+
+
+
+<h3 class="wp-block-heading" id="azure-cosmos-db-global-scale-and-performance-for-modern-applications">Azure Cosmos DB: Global scale and performance for modern applications </h3>
+
+
+
+<p class="wp-block-paragraph">Customers building modern cloud-native and AI-powered applications consistently point to Azure Cosmos DB’s combination of low latency, elastic scalability, flexible data models, and search performance. </p>
+
+
+
+<p class="wp-block-paragraph">Kunal Mukerjee, former vice president of technology strategy at Docusign, said <a href="https://www.peerspot.com/product_reviews/microsoft-azure-cosmos-db-review-7643748-by-kunal-mukerjee?cop=p9665" target="_blank" rel="noreferrer noopener"><strong>“Cosmos DB has improved search result quality, throughput, and query latency. There are trade-offs to finding the sweet spot among all of these. Having a NoSQL solution that can do that in a 100 percent Azure shop is the best fit we could want.”</strong></a></p>
+
+
+
+<p class="wp-block-paragraph">Another customer, Yoni Nijs, CTO of Zero Friction, described using Azure Cosmos DB serverless for a highly unpredictable consumer portal and provisioned throughput with autoscale for a back-office application, noting that the configuration was <a href="https://www.peerspot.com/products/microsoft-azure-cosmos-db-reviews?review_id=7316875" target="_blank" rel="noreferrer noopener"><strong>“&#8230; very scalable and still cost-effective.”</strong></a></p>
+
+
+
+<p class="wp-block-paragraph">These are exactly the patterns&nbsp;AI&nbsp;applications demand:&nbsp;responsive global systems that can adapt to changing demand without sacrificing performance or cost efficiency.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://azure.microsoft.com/en-us/products/cosmos-db/" target="_blank" rel="noopener noreferrer noreferrer noopener">Explore Azure Cosmos DB</a></div>
+</div>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p class="wp-block-paragraph">Taken together, these reviews reinforce a clear message: organizations want databases that are not only secure and scalable, but also ready for the next generation of intelligent applications. </p>
+
+
+
+<h2 class="wp-block-heading" id="turning-customer-feedback-into-innovation"><strong>Turning customer feedback into innovation</strong> </h2>
+
+
+
+<p class="wp-block-paragraph">The themes customers highlighted are the same themes guiding our investments across the Microsoft Databases portfolio. Our goal is not simply to add new features, but to help customers solve real challenges: modernizing existing applications, building AI-powered experiences, reducing operational complexity, and scaling with confidence.</p>
+
+
+
+<h3 class="wp-block-heading" id="sql-server">SQL Server</h3>
+
+
+
+<p class="wp-block-paragraph">Relational databases continue to power many of the world&#8217;s most critical applications. With SQL Server 2025, we&#8217;re helping customers extend those applications into the AI era without changing the platforms, skills, or tools they already trust. Native vector support, in-database embedding generation, semantic search, and retrieval-augmented generation (RAG) capabilities make it easier to build intelligent applications while keeping data secure, governed, and close to operational workloads. </p>
+
+
+
+<h3 class="wp-block-heading" id="azure-sql-database">Azure SQL Database</h3>
+
+
+
+<p class="wp-block-paragraph">With&nbsp;Azure SQL Database,&nbsp;customers get a&nbsp;fully&nbsp;managed&nbsp;cloud-native SQL solution for modernizing and building AI applications.&nbsp;Azure&nbsp;SQL Database Hyperscale helps applications scale with demand and grow as needs evolve, while automatic tuning and elastic resource management improve performance and cost efficiency.&nbsp;Customers&nbsp;can build AI-powered experiences on operational data with AI retrieval and secure agent connectivity,&nbsp;with&nbsp;integrations&nbsp;across&nbsp;key AI and analytics solutions like&nbsp;<a href="https://azure.microsoft.com/en-us/products/ai-foundry/" target="_blank" rel="noopener noreferrer">Microsoft&nbsp;Foundry</a>&nbsp;and&nbsp;<a href="https://www.microsoft.com/en-us/microsoft-fabric" target="_blank" rel="noopener noreferrer">Microsoft&nbsp;Fabric</a>.&nbsp;</p>
+
+
+
+<p class="wp-block-paragraph">This helps&nbsp;their&nbsp;organization&nbsp;build a&nbsp;direct path from&nbsp;business-critical data&nbsp;to intelligent applications,&nbsp;without compromising the security, governance, and performance they expect from Microsoft&#8217;s SQL platforms.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading" id="azure-database-for-postgresql">Azure Database for PostgreSQL</h3>
+
+
+
+<p class="wp-block-paragraph">For PostgreSQL on Azure, our investments focus on helping customers modernize faster, accelerate AI development, and run mission-critical workloads with greater confidence. Highlights include the public preview of Azure HorizonDB, bringing AI-native capabilities such as integrated vector search, AI functions, AI pipelines, and model management to PostgreSQL; new migration and upgrade innovations including AI-assisted Oracle-to-PostgreSQL migration tooling; and performance improvements such as Premium SSD v2, cascading read replicas, and new high-performance infrastructure options for Azure Database for PostgreSQL. These innovations are helping organizations adopt AI capabilities while continuing to benefit from PostgreSQL&#8217;s open-source ecosystem. </p>
+
+
+
+<h3 class="wp-block-heading" id="azure-cosmos-db">Azure Cosmos DB</h3>
+
+
+
+<p class="wp-block-paragraph">For customers building AI-native applications, Azure Cosmos DB investments focus on helping developers move faster while simplifying operations at scale. Recent innovations include enhanced vector and hybrid search, semantic reranking, agent-focused development tools, Global Secondary Indexes, per-partition automatic failover, richer change feed capabilities, and improvements to local development through the Linux Emulator. Together, these investments help developers build responsive, AI-powered applications faster while maintaining performance, resilience, and operational efficiency. </p>
+
+
+
+<p class="wp-block-paragraph">Across the portfolio, our goal is consistent: help customers build applications faster, operate them more efficiently, and prepare for a future where AI is deeply integrated into every application experience. </p>
+
+
+
+<h2 class="wp-block-heading" id="thank-you-to-our-customers-and-community"><strong>Thank you to our customers and community</strong> </h2>
+
+
+
+<p class="wp-block-paragraph">These PeerSpot recognitions belong first and foremost to our customers and community. </p>
+
+
+
+<p class="wp-block-paragraph">Every review, product suggestion, support interaction, preview program discussion, and customer conversation helps shape the direction of Microsoft Databases. Your feedback helps other technology leaders make informed decisions, and it helps our teams build better products. </p>
+
+
+
+<p class="wp-block-paragraph">On behalf of everyone across the Microsoft Databases organization, thank you for your trust, your partnership, and your willingness to share your experiences. </p>
+
+
+
+<p class="wp-block-paragraph">I encourage you to read what your peers are saying, and, if Microsoft Databases are helping your organization innovate, consider sharing your own review.</p>
+
+
+
+<div class="is-style-inline-centered wp-block-bloginabox-theme-promotional">
+	
+<div class="promotional promotional--has-media promotional--media-right">
+	<div class="promotional__wrapper">
+		<div class="promotional__content-wrapper">
+			<div class="promotional__content">
+				
+
+<h3 class="wp-block-heading" id="microsoft-databases">Microsoft Databases</h3>
+
+
+
+<p class="wp-block-paragraph">Modernize or build AI-ready apps with intelligent cloud databases.</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://azure.microsoft.com/en-us/products/category/databases/" target="_blank" rel="noopener noreferrer noreferrer noopener">Get started</a></div>
+</div>
+
+			</div>
+		</div>
+					<div class="promotional__media-wrapper">
+				<div class="promotional__media">
+											<img decoding="async" width="1920" height="1280" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003.jpg" class="attachment-full size-full" alt="Two people sitting at desks and working at computers." loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003.jpg 1920w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-300x200.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-1024x683.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-768x512.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-1536x1024.jpg 1536w" sizes="auto, (max-width: 1920px) 100vw, 1920px" />									</div>
+			</div>
+			</div>
+</div>
+</div>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/">What customers value most in Microsoft Databases—from reliability to AI readiness</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>AT&#038;T and Microsoft scale trillion-token workloads with Microsoft Foundry and AMD</title>
 		<link>https://azure.microsoft.com/en-us/blog/att-and-microsoft-scale-trillion-token-workloads-with-microsoft-foundry-and-amd/</link>
 					<comments>https://azure.microsoft.com/en-us/blog/att-and-microsoft-scale-trillion-token-workloads-with-microsoft-foundry-and-amd/#respond</comments>
@@ -6935,7 +7018,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a66531a70376"></universal-media-player>
+		<universal-media-player id="ump-6a696a7d3fdbc"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6949,7 +7032,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a66531a70376", options);
+				ump("ump-6a696a7d3fdbc", options);
 			});
 		</script>
 	</div>
@@ -7503,7 +7586,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 
 
 <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://aka.ms/mhsmekm" target="_blank" rel="noopener noreferrer noreferrer noopener"><strong style="font-family: inherit;font-size: 15.008px;font-style: inherit;letter-spacing: 0.30016px;text-transform: inherit">Try <strong>External key management for Azure Key Vault Managed HSM</strong></strong></a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://aka.ms/mhsmekm" target="_blank" rel="noopener noreferrer noreferrer noopener"><strong style="font-family: inherit;font-size: 15.008px;font-style: inherit;letter-spacing: 0.30016px;text-transform: inherit"></strong><strong style="font-family: inherit;font-style: inherit;letter-spacing: 0.30016px;text-transform: inherit">Try external key management for Azure Key Vault Managed HSM</strong></a></div>
 </div>
 
 
@@ -7835,7 +7918,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a66531a870e3&quot;}" data-wp-interactive="core/image" data-wp-key="6a66531a870e3" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a696a7d4f182&quot;}" data-wp-interactive="core/image" data-wp-key="6a696a7d4f182" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -8181,7 +8264,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a66531a945be&quot;}" data-wp-interactive="core/image" data-wp-key="6a66531a945be" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a696a7d5b7bf&quot;}" data-wp-interactive="core/image" data-wp-key="6a696a7d5b7bf" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -8842,7 +8925,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a66531a9e4bd"></universal-media-player>
+		<universal-media-player id="ump-6a696a7d638d8"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -8856,7 +8939,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a66531a9e4bd", options);
+				ump("ump-6a696a7d638d8", options);
 			});
 		</script>
 	</div>
@@ -8912,7 +8995,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a66531a9ebbc"></universal-media-player>
+		<universal-media-player id="ump-6a696a7d63e41"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -8926,7 +9009,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a66531a9ebbc", options);
+				ump("ump-6a696a7d63e41", options);
 			});
 		</script>
 	</div>
@@ -8958,7 +9041,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a66531a9ee86"></universal-media-player>
+		<universal-media-player id="ump-6a696a7d64104"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -8972,7 +9055,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a66531a9ee86", options);
+				ump("ump-6a696a7d64104", options);
 			});
 		</script>
 	</div>
@@ -9025,247 +9108,6 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>The 2026 Agent Confidence Index: Where 300 builders see real momentum</title>
-		<link>https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/06/29/the-2026-agent-confidence-index-where-300-builders-see-real-momentum/</link>
-					<comments>https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/06/29/the-2026-agent-confidence-index-where-300-builders-see-real-momentum/#respond</comments>
-		
-		<dc:creator><![CDATA[Amanda Silver]]></dc:creator>
-		<pubDate>Mon, 29 Jun 2026 15:15:00 +0000</pubDate>
-				<category><![CDATA[AI + machine learning]]></category>
-		<category><![CDATA[AI]]></category>
-		<category><![CDATA[Microsoft Fabric]]></category>
-		<category><![CDATA[Microsoft IQ]]></category>
-		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=52418</guid>
-
-					<description><![CDATA[<p>At Microsoft, building trustworthy AI agents is as critical as building powerful ones. New research from the 2026 Agent Confidence Index shows where teams trust agents today—and why human judgment remains the defining skill in the age of AI.</p>
-<p>The post <a href="https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/06/29/the-2026-agent-confidence-index-where-300-builders-see-real-momentum/">The 2026 Agent Confidence Index: Where 300 builders see real momentum</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<p class="wp-block-paragraph">A couple of months ago, I sat across from my nine-year-old daughter&#8217;s teachers at a parent-teacher conference. They were kind but concerned. She takes her time on assignments, they said—often deep in thought. How would she do on timed tests next year? I told them I&nbsp;wasn&#8217;t&nbsp;worried. What they described as a problem is, to me, one of the most important things she can learn: the ability to take a hard problem and reason through it from beginning to end. In a world optimized&nbsp;for efficiency, qualities like patience, perseverance, and attention to detail are not deficiencies. They are the foundation of sound judgment, which will&nbsp;become the skills we need most.</p>
-
-
-
-<p class="wp-block-paragraph">The more time I spend working with AI, the more convinced I become: the question that matters for her future&nbsp;isn&#8217;t&nbsp;how quickly she can answer. It&#8217;s whether she has the judgment to know when an answer can be trusted.</p>
-
-
-
-<p class="wp-block-paragraph">I’ve&nbsp;spent decades at Microsoft watching this tension play out: first building tools for other developers, then working&nbsp;across AI as models moved from research curiosities to&nbsp;systems&nbsp;deployed&nbsp;at scale. Now we&#8217;re <a href="https://www.linkedin.com/pulse/same-mission-new-chapter-amanda-k-silver-nsgfc/" target="_blank" rel="noreferrer noopener">building Microsoft IQ</a>, where we’re&nbsp;exploring&nbsp;how&nbsp;an organization’s collective intelligence can become <a href="https://www.microsoft.com/en-us/ai/microsoft-iq?msockid=06bb933471b660601b26879d700c61c2" target="_blank" rel="noreferrer noopener">its greatest advantage</a>. Through every one of those chapters, one thing has remained true: it&#8217;s&nbsp;never enough for a system to be&nbsp;powerful,&nbsp;it&nbsp;must also be trustworthy.</p>
-
-
-
-<p class="wp-block-paragraph">Trust is what turns assistance into delegation.&nbsp;When we can trust an agent to do what we intend, within the limits we set,&nbsp;we can hand off the work we never wanted to spend our lives&nbsp;on: the repetitive tasks that drain attention, the mundane work&nbsp;that fills&nbsp;a day without moving anything meaningful forward, the dangerous work humans should not have to do, the work too vast for any individual or team. Agents should take on that toil, extend our reach, and give us back our time for the work that calls for something only&nbsp;humans&nbsp;bring.</p>
-
-
-
-<p class="wp-block-paragraph">My daughter&nbsp;doesn&#8217;t&nbsp;know any of this yet. But by the time she&#8217;s grown, most&nbsp;of the work that rewards speed and repetition will be work we delegate.&nbsp;What will matter&nbsp;then is exactly what gave her teachers pause: the&nbsp;patience&nbsp;to stay with a hard problem, reason through it, and decide&nbsp;when&nbsp;she’s&nbsp;reached&nbsp;a conclusion she can trust. The very thing&nbsp;they&nbsp;feared&nbsp;might&nbsp;hold her back&nbsp;could be&nbsp;exactly what the next era prizes most.</p>
-
-
-
-<p class="wp-block-paragraph">So no,&nbsp;I&#8217;m&nbsp;not worried about the timed test. I&nbsp;hope&nbsp;she grows up in a world where software carries the&nbsp;toil&nbsp;and people are freed&nbsp;for&nbsp;the work that is unmistakably ours—to think, to&nbsp;judge,&nbsp;to&nbsp;create,&nbsp;to&nbsp;care for one another. That is the future I want agents to make&nbsp;real.</p>
-
-
-
-<p class="wp-block-paragraph">But&nbsp;my&nbsp;hope is not&nbsp;evidence&nbsp;it will happen. The future I just described turns&nbsp;on&nbsp;a single question: can we trust agents to do the work? Trust is earned one task at a time. So, I went looking for&nbsp;evidence&nbsp;of where it&#8217;s been earned, and where it hasn&#8217;t.</p>
-
-
-
-<p class="wp-block-paragraph">For the past year, the conversation around AI agents has circled the same promise:&nbsp;eliminate&nbsp;toil so people can focus on what matters. But I&nbsp;keep coming back to sharper questions.&nbsp;What,&nbsp;exactly,&nbsp;is toilsome? Where does&nbsp;toil&nbsp;actually live in people’s work? What are the technical leaders closest to this shift willing to hand&nbsp;off—and what gives them the confidence to do it? To find out, we <a href="https://www.technologyreview.com/2026/06/29/1139635/agent-confidence-on-the-technical-frontier/" target="_blank" rel="noreferrer noopener">partnered with MIT Technology Review Insights</a>&nbsp;on new research that draws directly from the people building this frontier. Not the people talking about it,&nbsp;the people doing it. We surveyed 300 technical experts across AI, data, and cloud domains, spanning 12 industries and 4 regions of the world, asking them to rank their confidence across 101 of the top tasks. What we got back is&nbsp;the <a href="https://aka.ms/MITinsightreport" target="_blank" rel="noopener noreferrer">2026 Agent Confidence Index</a>,&nbsp;an honest map of where agents are delivering real value, so our community can see&nbsp;what’s&nbsp;working and move forward together with conviction.</p>
-
-
-
-<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://aka.ms/agentconfidenceindex" target="_blank" rel="noopener noreferrer noreferrer noopener">Explore the 2026 Agent Confidence Index report</a></div>
-</div>
-
-
-
-<h2 class="wp-block-heading" id="learn-from-where-confidence-is-highest"><strong>Learn from where confidence is highest</strong></h2>
-
-
-
-<p class="wp-block-paragraph">Across the 101 tasks measured, average confidence already lands at&nbsp;<strong>64 out of 100</strong>, and thirty tasks clear 70. The highest scores cluster on work that is both predictable and draining: the late nights, the interruptions, the low-value repetition. Automated report generation leads at 83.5. Boilerplate code generation for new features sits at 82.5, the hours a developer no longer spends rewriting the same patterns, freed for the work that challenges them. Certificate expiration monitoring and renewal, at 81.5, ends the scramble that pulls engineers off high-stakes problems for something entirely routine. Real-time data stream monitoring follows at 80.5, and release note generation from commit history at 79.5, the manual end-of-sprint commit review, gone. This is where frontier teams are already delegating to agents, regularly.</p>
-
-
-
-<p class="wp-block-paragraph">The pattern holds across every discipline. In developer and AI workflows it extends to API client maintenance and code identification; in cloud operations, to ticket routing and cost optimization; in data, to anomaly detection. Wherever it sits in the stack, this is work technical teams now trust agents to own.</p>
-
-
-
-<p class="wp-block-paragraph">What matters most here isn&#8217;t what the data says about the tasks, it&#8217;s what it says about the people delegating them. When technical experts believe in something deeply enough to hand it real work, that belief ripples outward. It becomes the recommendation they make to their leadership, the solution they build for their customers, and the culture they create for their teams.</p>
-
-
-
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a66531aab0cf&quot;}" data-wp-interactive="core/image" data-wp-key="6a66531aab0cf" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-2-2.png" alt="Chart showing trending AI agent tasks across AI, data, and cloud workflows. Highest-confidence use cases include automated report generation and distribution (84), certificate expiration monitoring and renewal (81.5), and boilerplate code generation for new features (82.5). Scores indicate strong confidence in automation for reporting, monitoring, code generation, and cloud operations tasks." class="wp-image-15378" /><button
-			class="lightbox-trigger"
-			type="button"
-			aria-haspopup="dialog"
-			aria-label="Enlarge"
-			data-wp-init="callbacks.initTriggerButton"
-			data-wp-on--click="actions.showLightbox"
-			data-wp-style--right="state.imageButtonRight"
-			data-wp-style--top="state.imageButtonTop"
-		>
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
-			</svg>
-		</button></figure>
-
-
-
-<h2 class="wp-block-heading" id="even-the-toughest-agent-tasks-are-gaining-traction"><strong>Even the toughest agent tasks are gaining traction</strong></h2>
-
-
-
-<p class="wp-block-paragraph">Here&#8217;s what strikes me most: the tasks ranked lower on <a href="https://aka.ms/agentconfidenceindex">the index</a> are still high in absolute terms. Service mesh configuration and troubleshooting sits at 37.5, database schema migration scripting at 46.5, memory leak detection at 48.5. These sit at the very frontier, the interconnected, high-stakes work where investment and innovation are concentrated right now.</p>
-
-
-
-<p class="wp-block-paragraph">Consider what they demand. Service mesh configuration touches many systems at once. Database migration carries real stakes, requiring precision across data, application, and infrastructure layers at the same time. Memory leak detection means diving deep into a system&#8217;s behavior under load, accounting for conditions that shift from one deployment to the next. These are the challenges that have separated great engineers from exceptional ones—and even here, experts see agents helping. Not carrying the work alone, but contributing where it used to be unthinkable. That confidence is still climbing, and that&#8217;s telling.</p>
-
-
-
-<p class="wp-block-paragraph">We&#8217;re shipping new capabilities constantly to support this momentum. Database migration tooling in <a href="https://github.com/features/ai/github-app">GitHub Copilot</a> now covers not just scripts but the full application and infrastructure migration story. The <a href="https://azure.microsoft.com/en-us/products/sre-agent">Azure Site Reliability Engineering (SRE) Agent</a> brings decades of experience operating Azure at scale and deep profiling capabilities directly into memory analysis and performance diagnosis.</p>
-
-
-
-<h2 class="wp-block-heading" id="why-human-judgment-remains-paramount"><strong>Why human judgment remains paramount</strong></h2>
-
-
-
-<p class="wp-block-paragraph">When we asked technical experts how they&#8217;re navigating agent adoption, <strong>59% named &#8220;keeping humans in the loop&#8221; as their top priority</strong>—ahead of better observability, ahead of governance documentation, and ahead of everything else. That&#8217;s a mark of maturity. Teams moving forward with clarity treat agent oversight as non-negotiable, regardless of how capabilities evolve.</p>
-
-
-
-<p class="wp-block-paragraph">The boundary itself is straightforward. Agents excel at well-specified, high-volume, reversible work: they synthesize data, automate known workflows, and surface anomalies at a speed and scale no human team could match. The moment a decision becomes high-stakes, context-dependent, or hard to undo, a human signs off. That isn&#8217;t a limitation of the technology, it&#8217;s the architecture of a trustworthy system.</p>
-
-
-
-<p class="wp-block-paragraph">What&#8217;s changing, and what remains underappreciated, is the skill it takes to draw that boundary well: the discipline of <a href="https://learn.microsoft.com/en-us/azure/foundry/how-to/evaluate-generative-ai-app">full-lifecycle evaluations</a> and <a href="https://learn.microsoft.com/en-us/azure/foundry/guardrails/guardrails-overview">guardrails</a>. Success means measuring agent output against intent and keeping behavior inside your business strategy. It&#8217;s new territory for most engineering teams, and it&#8217;s becoming table stakes for modern software faster than most organizations realize. The good news: the same tools generating the work can help you build the harness. <a href="https://docs.github.com/en/copilot/concepts/agents/github-copilot-app">Ask GitHub Copilot</a> to write the evals and it will. Frontier teams are already doing this, and it&#8217;s why they&#8217;re pulling ahead.</p>
-
-
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a66531aac3cb&quot;}" data-wp-interactive="core/image" data-wp-key="6a66531aac3cb" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-3-2.webp" alt="MIT Technology Review Insights survey chart titled &ldquo;Concerns are addressed by keeping humans in the loop and increasing observability.&rdquo; Respondents most frequently identified keeping humans in the loop (59%) and increasing observability/monitoring and tracing (53%) as key ways to address concerns around AI agents. Other approaches include creating privacy-governed documentation (42%), upskilling within one&rsquo;s craft (36%), addressing security and access control (33%), API and framework standardization (25%), identifying and communicating ROI (25%), scaling personal potential (16%), and accessing ecosystem support (11%)" class="wp-image-15379 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2019/02/1bbe5959-0e2e-4309-8079-3a71ce986e5e.webp"><button
-			class="lightbox-trigger"
-			type="button"
-			aria-haspopup="dialog"
-			aria-label="Enlarge"
-			data-wp-init="callbacks.initTriggerButton"
-			data-wp-on--click="actions.showLightbox"
-			data-wp-style--right="state.imageButtonRight"
-			data-wp-style--top="state.imageButtonTop"
-		>
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
-			</svg>
-		</button></figure>
-
-
-
-<h2 class="wp-block-heading" id="agents-are-opening-career-doors-for-engineering">Agents are opening career doors for engineering</h2>
-
-
-
-<p class="wp-block-paragraph">Across system reliability and site operations, evaluations and quality assurance, and data pipeline management, <strong>80% or more of respondents see meaningful career opportunity ahead</strong>. We believe this is one of the most significant moments in the history of building software, not because agents replace what technical people do, but because what&#8217;s left when they take on the toil is the work that defines a career: the judgment calls, the architectural vision, the reasoning to navigate complexity under pressure. That fluency will define the next generation of technical leadership.</p>
-
-
-
-<p class="wp-block-paragraph">We&#8217;re living this shift at Microsoft, right alongside our customers. Junior developers are using agents to explore codebases on their own and arriving at mentoring conversations with sharper, more sophisticated questions. Senior engineers are covering more ground because the repetitive work that used to fill their days is now delegated, and the work that&#8217;s left is harder, more interesting, and more consequential. Both are growing into more capable versions of themselves. For me, that&#8217;s the outcome I&#8217;ve always believed technology could deliver.</p>
-
-
-
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a66531ab46ca&quot;}" data-wp-interactive="core/image" data-wp-key="6a66531ab46ca" class="wp-block-image aligncenter wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/word-image-15364-4-2.png" alt="MIT Technology Review Insights survey chart showing confidence that AI agents will enhance careers across technology disciplines. System reliability and site operations has the highest confidence levels, while database administration and performance, security operations, and data integration roles show lower but still predominantly positive confidence. Across all roles, confidence significantly outweighs lack of confidence." class="wp-image-15380" /><button
-			class="lightbox-trigger"
-			type="button"
-			aria-haspopup="dialog"
-			aria-label="Enlarge"
-			data-wp-init="callbacks.initTriggerButton"
-			data-wp-on--click="actions.showLightbox"
-			data-wp-style--right="state.imageButtonRight"
-			data-wp-style--top="state.imageButtonTop"
-		>
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
-			</svg>
-		</button></figure>
-
-
-
-<h2 class="wp-block-heading" id="an-integrated-approach-to-intelligence-and-trust"><strong>An integrated approach to intelligence and trust</strong></h2>
-
-
-
-<p class="wp-block-paragraph">Designing more sophisticated agent systems has made one thing clear: agents thrive in well-integrated environments, working best when your whole stack draws on a single source of truth. The high-confidence tasks are the ones we&#8217;ve already figured out; the meaningful frontier is the harder, interconnected work,  and that&#8217;s exactly where observability, governance, security, and unified intelligence have to operate as one.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://www.microsoft.com/en-us/ai/microsoft-iq" target="_blank" rel="noopener noreferrer">Microsoft IQ</a> brings your <strong>enterprise context into a</strong> <strong>single, continuous intelligence layer</strong>. Within it, <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/" target="_blank" rel="noopener noreferrer">Work IQ</a> builds semantic understanding of how your business operates across email, calendar, meetings, chats, files, people, and collaboration patterns. Such depth of knowledge is the reason technical teams choose us and it’s what drives my focus and passion in learning how people actually work so their agents get them. My colleague Kim Manis, CVP of Product for Microsoft Fabric, has <a href="https://aka.ms/Confidence-Index-Data-Blog" target="_blank" rel="noopener noreferrer">written specifically about what this means for data professionals</a>, and the integral role of <a href="https://www.microsoft.com/en-us/microsoft-fabric/features/iq" target="_blank" rel="noreferrer noopener">Fabric IQ</a>.</p>
-
-
-
-<p class="wp-block-paragraph">It’s all part of the <a href="https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/" target="_blank" rel="noopener noreferrer">Microsoft Agent Platform</a>, which is becoming <strong>the operating system for enterprise AI at scale</strong>. From building in <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">GitHub</a> and contextualizing with <a href="https://www.microsoft.com/en-us/ai/microsoft-iq?msockid=06bb933471b660601b26879d700c61c2" target="_blank" rel="noopener noreferrer">Microsoft IQ</a>, to running in <a href="https://devblogs.microsoft.com/foundry/agent-service-build2026/" target="_blank" rel="noopener noreferrer">Microsoft Foundry</a> and governing in <a href="https://aka.ms/BUILD_SecurityBlog" target="_blank" rel="noopener noreferrer">Microsoft Agent 365</a>, Microsoft is uniquely positioned to help customers bring together data, models, agents, and human judgment into a continuously improving and secure system.</p>
-
-
-
-<p class="wp-block-paragraph">Frontier transformation is being led by builders like you.</p>
-
-
-
-<h3 class="wp-block-heading" id="next-steps"><strong>Next steps:</strong></h3>
-
-
-
-<ul class="wp-block-list">
-<li class="wp-block-list-item">Download <a href="https://aka.ms/MITinsightreport" target="_blank" rel="noopener noreferrer">The 2026 Agent Confidence Index</a> from our partners at MIT Technology Review Insights.It is a free, ungated deep dive into all 101 tasks, broken out by role and workflow, with the patterns and reasoning behind where confidence is strongest and the frontier is expanding.</li>
-
-
-
-<li class="wp-block-list-item">Join us at the <a href="https://www.ai.engineer/worldsfair/2026" target="_blank" rel="noopener noreferrer">AI Engineering World’s Fair</a> (June 29-July 2) where our very own <a href="https://www.linkedin.com/in/pabloc/" target="_blank" rel="noopener noreferrer">Pablo Castro</a> will keynote, and our teams will offer <a href="https://www.ai.engineer/worldsfair/schedule?q=Microsoft&amp;view=list" target="_blank" rel="noopener noreferrer">16 breakout sessions and 4 labs</a>. Swing by the Microsoft booth as well to explore an interactive 3D visualization of the Index data. We want to hear what’s working for you right now.</li>
-
-
-
-<li class="wp-block-list-item">Learn more about <a href="https://www.microsoft.com/en-us/ai/microsoft-iq" target="_blank" rel="noreferrer noopener">Microsoft IQ</a> and how it connects across <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/" target="_blank" rel="noopener noreferrer">Work IQ</a>, <a href="https://www.microsoft.com/en-us/microsoft-fabric/features/IQ" target="_blank" rel="noopener noreferrer">Fabirc IQ</a>, <a href="https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-foundry-iq?tabs=portal" target="_blank" rel="noopener noreferrer">Foundry IQ</a>, and the newly announced <a href="https://www.microsoft.com/en-us/webiq?msockid=06bb933471b660601b26879d700c61c2" target="_blank" rel="noopener noreferrer">Web IQ</a>. You can catch up on all the developer innovation from Microsoft Build through <a href="https://www.youtube.com/watch?v=FFMm454fxNA" target="_blank" rel="noopener noreferrer">Satya Nadella’s keynote</a>, <a href="https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/" target="_blank" rel="noopener noreferrer">Kyle Daigle’s blog post</a>, and the <a href="https://github.com/microsoft/Build-CLI" target="_blank" rel="noopener noreferrer">Microsoft Build CLI</a>.</li>
-</ul>
-
-
-
-<div class="is-style-inline-centered wp-block-bloginabox-theme-promotional">
-	
-<div class="promotional promotional--has-media promotional--media-right">
-	<div class="promotional__wrapper">
-		<div class="promotional__content-wrapper">
-			<div class="promotional__content">
-				
-
-<h2 class="wp-block-heading" id="what-s-working-in-agentic-ai">What’s Working in Agentic AI</h2>
-
-
-
-<p class="wp-block-paragraph">The 2026 Agent Confidence Index report reveals where agents are trusted, the challenges they face, and what leaders should do next</p>
-
-
-
-<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://aka.ms/agentconfidenceindex" target="_blank" rel="noopener noreferrer noreferrer noopener">Download the 2026 Agent Confidence Index report</a></div>
-</div>
-
-			</div>
-		</div>
-					<div class="promotional__media-wrapper">
-				<div class="promotional__media">
-											<img decoding="async" src="https://www.microsoft.com/en-us/microsoft-cloud/blog/wp-content/uploads/2026/06/CLO20b_Avery_Quinn_casual_office_001-scaled.jpg" alt="" loading="lazy" />
-									</div>
-			</div>
-			</div>
-</div>
-</div>
-<p>The post <a href="https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/06/29/the-2026-agent-confidence-index-where-300-builders-see-real-momentum/">The 2026 Agent Confidence Index: Where 300 builders see real momentum</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/06/29/the-2026-agent-confidence-index-where-300-builders-see-real-momentum/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
