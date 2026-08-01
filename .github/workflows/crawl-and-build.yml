@@ -68,6 +68,10 @@ jobs:
       - name: Export baseline notes
         run: python scripts/export_baseline_notes.py
 
+      # ── 5.55 narrative-trap 케이스(data/narrative_trap/cases/*.json, 수동 큐레이션) → JSON manifest ─
+      - name: Build narrative-trap index
+        run: python scripts/narrative_trap_case.py build-index
+
       # ── 5.6 version.json의 date 필드 build 시각으로 갱신 (version/maturity는 수동) ─
       - name: Stamp version date
         run: python scripts/stamp_version.py

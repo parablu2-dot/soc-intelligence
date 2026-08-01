@@ -1,0 +1,87 @@
+{
+  "generated_at": "2026-08-01T04:16:36.425587+00:00",
+  "tracks": {
+    "greenfield_fab": {
+      "label": "①원천기술~그린필드 팹",
+      "stages": [
+        [
+          "PoC/개념검증",
+          0,
+          3
+        ],
+        [
+          "Pilot 구축",
+          3,
+          5.5
+        ],
+        [
+          "메인라인 건설",
+          5.5,
+          7.5
+        ],
+        [
+          "수율안정화",
+          7.5,
+          10
+        ]
+      ],
+      "total_range": [
+        9.5,
+        12
+      ]
+    },
+    "logic_memory_new_product": {
+      "label": "②로직/메모리 신제품",
+      "stages": [
+        [
+          "기획~양산",
+          0,
+          4.5
+        ]
+      ],
+      "total_range": [
+        3,
+        4.5
+      ]
+    },
+    "advanced_package": {
+      "label": "③Advanced Package",
+      "stages": [
+        [
+          "기획",
+          0,
+          0.5
+        ],
+        [
+          "설계·공정파일럿 통합",
+          0.5,
+          2.0
+        ]
+      ],
+      "total_range": [
+        3,
+        4
+      ]
+    },
+    "node_vs_derivative": {
+      "label": "④세대노드 vs 파생변형",
+      "stages": [
+        [
+          "파생 변형(동일 세대)",
+          0,
+          1
+        ],
+        [
+          "신규 세대 노드",
+          0,
+          7
+        ]
+      ],
+      "total_range": [
+        0.67,
+        7
+      ]
+    }
+  },
+  "cases": []
+}

@@ -41,11 +41,11 @@ Crawl (crawlers/*, LLM 미개입) → Refine (정규화·dedupe·축 태깅) →
 ```
 GitHub Actions cron으로 스케줄 실행. 브라우저 런타임에서 외부 API 호출 없음.
 
-## 13개 모듈 (v2 Phase 1 통폐합 완료)
+## 14개 모듈 (v2 Phase 1 통폐합 + narrative-trap 추가)
 오늘의 요약 · 일일 리뷰 큐(5축 필터) · 크롤링 관제 · 파운드리 캐파 · 기사(영어/중문/한국어) ·
 SoC 생태계·다이나믹스 · 인재·채용 레이더 · 숫자 대시보드 · 벤치마크 성능(워크벤치+벤치마킹 통합) ·
-공정·패키징 매트릭스 · SoC 카테고리(5축) · 업체별 주요 전략 · 정보 획득 채널
-(삭제: 심층 벤치마킹, 경쟁 다이나믹스, 벤치마킹 모델, 대응 대시보드)
+공정·패키징 매트릭스 · SoC 카테고리(5축) · 업체별 주요 전략 · 정보 획득 채널 · 서사 함정 검증
+(삭제: 심층 벤치마킹, 경쟁 다이나믹스, 벤치마킹 모델, 대응 대시보드 / 추가: 서사 함정 검증 2026-08-01)
 
 ## 작업 규칙 (Claude Code 세션용)
 1. **크롤러 실행/수정은 스크립트 레벨에서** — 개별 크롤러 실행에 LLM 호출 넣지 않는다.
@@ -90,6 +90,25 @@ downstream 디바이스/칩셋 수요를 부품·기판(MLCC·substrate·module�
 - **렌더**: `site/js/app.js`의 `_baselineNotesPanel()` — `#review` 상단에 카드로 표시 (`_mdLite()` 경량 markdown 렌더)
 - **승격 워크플로**: 이 층은 "흐르는 것"(dashboard). 천이 읽고 판단을 얹으면 켜뮤 `#stub` Permanent로 graduate — 이 저장소에서는 원본을 수정하지 않음
 
+## 서사 함정 검증 (narrative-trap, 2026-08-01)
+
+회사 발표 서사("2027년 양산")와 표준 산업 트랙(그린필드 팹 9.5~12년 등) 사이의 시간축 괴리를 노출하는
+검증 레이어. baseline notes와 동일한 git-as-storage 패턴 — 크롤러 아님, LLM 미개입, Option B(수동) 우선.
+
+- **저장**: `data/narrative_trap/cases/*.json` (`NarrativeTrapCase` — `scripts/narrative_trap_case.py`).
+  `add` CLI는 골격만 생성(`case_id/title/track/announcement_date/gate_design/gate_yield`) — `narrative_gap`,
+  `trap_type`, `judgment`, `unconfirmed`, `sources`는 JSON 파일을 직접 열어 채운다(baseline notes 관례와 동일).
+- **표준 트랙**: `STANDARD_TRACKS` (그린필드 팹/로직·메모리 신제품/Advanced Package/세대노드 vs 파생변형,
+  2026-08-01 확정본) — 스크립트 안에 정의, 빌드 시 `data/refined/narrative_trap_cases.json`에 `tracks`로
+  동봉해 프론트가 재정의 없이 그대로 씀(단일 소스 유지).
+- **빌드**: `scripts/narrative_trap_case.py build-index` → `data/refined/narrative_trap_cases.json`
+  (`crawl-and-build.yml`의 "Build narrative-trap index" 스텝에서 매일 자동 실행).
+- **렌더**: `site/js/app.js`의 `modNarrativeTrap()` — 좌측 메뉴 "서사 함정 검증". 케이스별 게이트 상태
+  칩(`gate-pass`/`gate-fail`/`gate-unknown`, `site/css/style.css`)과 `_narrativeTrapTimelineSVG()`가
+  표준 트랙 스테이지를 소형 다중행 SVG로 그리고, 발표일 기준 경과년(`오늘(+N.Ny)`) 마커를 표시.
+- **다음 단계 (미착수)**: 기존 크롤러 파이프라인과 연결할 diff-extraction 훅(Option A — 신호에서
+  narrative-trap 후보를 자동 추출). 현재는 전량 수동 큐레이션.
+
 ## 현재 진행 상태
 - [x] 3축 구조 설계 → 5축으로 승격 (v2)
 - [x] CLAUDE.md 초안
@@ -102,6 +121,8 @@ downstream 디바이스/칩셋 수요를 부품·기판(MLCC·substrate·module�
 - [x] v2 Phase 3 — 데이터 갭 보완 (캐파 실소스, 한국어 소스, 채용 레이더)
 - [x] v2 Phase 3 정교화 — SK하이닉스·Micron·Tesla 채용 피드, FoundryCapacityRecord 51건 백필, Phase 0.5 스키마(BaselineFact/ProductLifecycleEvent/DistillationNote/diff_type), 일일 리뷰 큐 1차 증류 코멘트 UI
 - [x] Component-Intelligence axis — `BomImplication` 스키마 + 서버축 5개 규칙 PoC, baseline notes 레이어(저장+빌드+`#review` 렌더)
+- [x] 서사 함정 검증 — `NarrativeTrapCase` 스키마+CLI+build-index+SVG 타임라인 렌더, 14번째 모듈로 배선 완료 (branch `feat/narrative-trap`, main 미병합). 실 케이스 데이터는 0건 — 수동 큐레이션 필요
 - [ ] BaselineFact 실데이터 큐레이션 — `data/baseline/` 수동 입력 또는 별도 백필 스크립트
 - [ ] ProductLifecycleEvent 백필 — 회사당 1.5~6개 이벤트, 3년치 수동 큐레이션 예정
 - [ ] Component-Intelligence axis — Mobile AP/Custom SoC/Foundry/Packaging/신사업(Si Cap·Glass) 규칙 데이터 확장 (게이트 해제됨: Packaging/Custom SoC deep research 가능)
+- [ ] 서사 함정 검증 diff-extraction 훅(Option A) — 크롤러 신호에서 후보 자동 추출, 현재는 전량 수동
