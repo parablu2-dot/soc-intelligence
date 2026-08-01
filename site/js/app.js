@@ -106,6 +106,7 @@ const MODULES = [
   { id: 'categories', label: 'SoC 카테고리',             icon: '⊟' },
   { id: 'competitor', label: '업체별 주요 전략',          icon: '◉' },
   { id: 'channels',   label: '정보 획득 채널',            icon: '⛓' },
+  { id: 'narrative',  label: '서사 함정 검증',            icon: '⧉' },
   { id: 'control',    label: '크롤링 관제',             icon: '⚙' },
 ];
 
@@ -123,6 +124,8 @@ let sectorSummaries = {};  // {axis: {sector, content:{ko,en}, item_count, gener
 let summaryLang = 'ko';  // B-2: 섹터 요약 ko↔en 정적 토글 (클라이언트 메모리만, storage 미사용)
 let dailyTop5 = [];  // [{axis, company, headline, url, source, published_date, score}] — Phase 3 item 7
 let techSignals = [];  // TechSignal[] — data/refined/tech/*.json (axis/company 없음, arXiv 논문 + Google News zh, 20260717 후속)
+let narrativeTrapCases = [];  // NarrativeTrapCase[] — data/refined/narrative_trap_cases.json (수동 큐레이션, LLM 미개입)
+let narrativeTrapTracks = {}; // STANDARD_TRACKS — 위 JSON에 동봉되어 프론트-백엔드 재정의 없이 단일 소스 유지
 
 // ── 부트스트랩 ─────────────────────────────────────────────────────────────
 async function boot() {
@@ -184,9 +187,12 @@ async function loadAllData() {
   const techLoads = TECH_SOURCES.map(f =>
     fetch(`${DATA_BASE}/refined/tech/${f}`).then(r => r.ok ? r.json() : []).catch(() => [])
   );
+  const narrativeTrapLoad = fetch(`${DATA_BASE}/refined/narrative_trap_cases.json`)
+    .then(r => r.ok ? r.json() : null)
+    .catch(() => null);
 
-  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data, techResults] =
-    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load, Promise.all(techLoads)]);
+  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data, techResults, narrativeTrapData] =
+    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load, Promise.all(techLoads), narrativeTrapLoad]);
   allSignals = results.flat().sort((a, b) => b.published_date.localeCompare(a.published_date));
   capacityRecords = capData;
   companySummaries = sumData || {};
@@ -195,6 +201,8 @@ async function loadAllData() {
   sectorSummaries = sectorSumData?.sectors || {};
   dailyTop5 = top5Data?.top5 || [];
   techSignals = techResults.flat().sort((a, b) => (b.published_date || '').localeCompare(a.published_date || ''));
+  narrativeTrapCases = narrativeTrapData?.cases || [];
+  narrativeTrapTracks = narrativeTrapData?.tracks || {};
   document.getElementById('crawl-time').textContent =
     `신호 ${allSignals.length}건 · 캐파 ${capacityRecords.length}건 · ${new Date().toLocaleString('ko-KR')}`;
   document.getElementById('update-time').textContent =
@@ -264,6 +272,7 @@ function renderModule(id) {
     case 'categories': return modCategories();
     case 'competitor': return modCompetitor();
     case 'channels':   return modChannels();
+    case 'narrative':  return modNarrativeTrap();
     default: return '<p>알 수 없는 모듈</p>';
   }
 }
@@ -1015,6 +1024,81 @@ function _techSignalsPanel() {
       5축 경쟁사 추적과 분리된 별도 stratum(axis/company 없음) — 논문·중국어권 뉴스 원자료, 최근 20건
     </p>
     <div style="margin-bottom:24px">${rows}</div>`;
+}
+
+// ── 14. 서사 함정 검증 (narrative-trap, 수동 큐레이션 — data/narrative_trap/cases/*.json) ─
+// 회사 발표 서사와 표준 산업 트랙(STANDARD_TRACKS) 사이의 시간축 괴리를 SVG 타임라인으로 노출.
+function _gateChip(label, status) {
+  const cls = status === 'pass' ? 'gate-pass' : status === 'fail' ? 'gate-fail' : 'gate-unknown';
+  const symbol = status === 'pass' ? '✓' : status === 'fail' ? '✗' : '?';
+  return `<span class="chip ${cls}">${label} ${symbol} ${status}</span>`;
+}
+
+// 케이스 1건의 표준 트랙 스테이지를 SVG로 렌더 (스테이지별 행 — 트랙마다 구간이 겹칠 수 있어 Gantt 단일행 대신 소형 다중행 사용)
+function _narrativeTrapTimelineSVG(nCase, track) {
+  if (!track) return '<p style="color:var(--text-muted);font-size:12px">알 수 없는 트랙 — tracks 정의 없음</p>';
+  const stages = track.stages || [];
+  const maxYear = Math.max(track.total_range?.[1] || 0, ...stages.map(s => s[2]), 1);
+  const PAD_LEFT = 168, CHART_W = 420, ROW_H = 26, TOP = 8;
+  const svgW = PAD_LEFT + CHART_W + 16;
+  const svgH = TOP + stages.length * ROW_H + 20;
+  const x = yrs => PAD_LEFT + (yrs / maxYear) * CHART_W;
+
+  const announced = new Date(nCase.announcement_date);
+  const todayYrs = (Date.now() - announced.getTime()) / (365.25 * 86400000);
+  const todayX = Number.isFinite(todayYrs) ? Math.min(Math.max(x(todayYrs), PAD_LEFT), PAD_LEFT + CHART_W) : null;
+
+  const rows = stages.map(([label, start, end], i) => {
+    const y = TOP + i * ROW_H;
+    return `
+      <text x="0" y="${y + ROW_H * 0.65}" font-size="11" fill="var(--text-muted)">${label}</text>
+      <rect x="${x(start)}" y="${y + 4}" width="${Math.max(2, x(end) - x(start))}" height="${ROW_H - 12}"
+            rx="3" fill="var(--accent)" opacity="0.35"></rect>
+      <text x="${x(end) + 6}" y="${y + ROW_H * 0.65}" font-size="10" fill="var(--text-muted)">${start}~${end}y</text>`;
+  }).join('');
+
+  const todayLine = todayX !== null ? `
+    <line x1="${todayX}" y1="${TOP - 4}" x2="${todayX}" y2="${svgH - 14}" stroke="var(--red)" stroke-width="1.5" stroke-dasharray="4,3"></line>
+    <text x="${todayX}" y="${svgH - 4}" font-size="10" fill="var(--red)" text-anchor="middle">오늘(+${todayYrs.toFixed(1)}y)</text>` : '';
+
+  return `
+    <svg viewBox="0 0 ${svgW} ${svgH}" width="100%" style="max-width:${svgW}px;overflow:visible">
+      ${rows}
+      ${todayLine}
+    </svg>`;
+}
+
+function _narrativeTrapCard(nCase, tracks) {
+  const track = tracks[nCase.track];
+  return `
+    <div class="signal-card">
+      <div class="signal-meta">
+        <span class="chip">${nCase.case_id}</span>
+        <span class="chip">${track ? track.label : nCase.track}</span>
+        ${nCase.trap_type ? `<span class="chip chip-tag">${nCase.trap_type}</span>` : ''}
+      </div>
+      <div class="signal-headline">${nCase.title}</div>
+      <div class="signal-info">
+        <span>발표일 ${nCase.announcement_date}</span>
+        ${nCase.standard_eta_range ? `<span>표준 트랙 예상 ${nCase.standard_eta_range}</span>` : ''}
+      </div>
+      <div style="margin:8px 0">${_gateChip('설계', nCase.gate_design)} ${_gateChip('수율', nCase.gate_yield)}</div>
+      ${nCase.narrative_gap ? `<div class="signal-summary">"${nCase.narrative_gap}"</div>` : ''}
+      <div style="margin:10px 0;overflow-x:auto">${_narrativeTrapTimelineSVG(nCase, track)}</div>
+      ${nCase.judgment ? `<div style="font-size:12px;margin-bottom:8px"><strong>판단:</strong> ${nCase.judgment}</div>` : ''}
+      ${nCase.unconfirmed?.length ? `<div style="margin-bottom:8px">${nCase.unconfirmed.map(u => `<span class="chip gate-unknown">미확인: ${u}</span>`).join(' ')}</div>` : ''}
+      ${nCase.sources?.length ? `<div style="font-size:11px">${nCase.sources.map(s => `<a href="${s}" target="_blank" rel="noopener">${s}</a>`).join('<br>')}</div>` : ''}
+    </div>`;
+}
+
+function modNarrativeTrap() {
+  const cases = narrativeTrapCases;
+  const tracks = narrativeTrapTracks;
+  return `
+    ${header('서사 함정 검증', '발표 서사 vs 표준 산업 트랙 비교 — 수동 큐레이션 케이스 (data/narrative_trap/cases/)')}
+    ${cases.length
+      ? `<div class="signal-list">${cases.map(c => _narrativeTrapCard(c, tracks)).join('')}</div>`
+      : `<div class="empty"><h3>등록된 케이스 없음</h3><p>scripts/narrative_trap_case.py add 로 케이스를 추가하세요.</p></div>`}`;
 }
 
 // ── 이벤트 핸들러 ─────────────────────────────────────────────────────────
