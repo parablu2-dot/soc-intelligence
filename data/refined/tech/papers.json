@@ -2,6 +2,244 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "quant-ph",
+    "title": "On Optimal Measurement-State Preparation via Geometric Transport of the Squeezing Ellipse",
+    "url": "https://arxiv.org/abs/2607.28620v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "Preparation of optimal measurement states is a key requirement in quantum metrology utilizing squeezed states. We discuss a geometric framework that transforms an initially misaligned squeezed input into a measurement-optimal state in SU(2)-symmetric systems. Within this framework, the orientation of the squeezing ellipse constitutes an additional geometric degree of freedom and evolves as the mean state follows a controlled trajectory on the unit sphere. The resulting rotation of the ellipse is",
+    "authors": [
+      "Vsevolod Salakhutdinov",
+      "Nikolay Kalinin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "Wavefunction-based periodic quantum chemistry",
+    "url": "https://arxiv.org/abs/2607.28554v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "High-accuracy molecular quantum chemistry offers a promising toolbox for applications to condensed-phase systems, but this field is difficult to enter due to its combination of topics from molecular quantum chemistry, solid-state physics, and numerical methods. Aiming to ease this transition, we present a comprehensive, pedagogical tutorial on periodic quantum chemistry calculations, using both mean-field and correlated theories. The subtleties of periodic Coulomb interactions are discussed in d",
+    "authors": [
+      "Hong-Zhou Ye",
+      "Timothy C. Berkelbach"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Drumhead Surface States of Rhombohedral Graphite with Near Ideal Quantum Geometry Condition",
+    "url": "https://arxiv.org/abs/2607.28491v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "The ideal quantum geometry (IQG) condition of equal magnitude between quantum metric ($G(k)$) and Berry curvature ($Ω(k)$) as in $|Ω|$/Tr$G$=1 has been associated with realizing fractional Chern insulators for the flat band in few layers of rhombohedral graphene (RG). More recently the IQG condition has also been proposed for superconductivity in the flat band for thick RG layers. Using density functional theory and Wannier functions, we study the symmetry-protected topology of bulk RG, drumhead",
+    "authors": [
+      "Lin-Lin Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Real-time Pre-Correlation GNSS Interference Classification with Lightweight Learned Algorithms",
+    "url": "https://arxiv.org/abs/2607.28404v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "Radio-frequency interference (RFI) remains a significant threat to GNSS in safety-critical applications. Since no single mitigation method is effective for all interferers, reliable classification is needed to select appropriate countermeasures during operation. To prevent loss of lock, RFI classification must run in real time, typically on resource-constrained embedded platforms, necessitating lightweight algorithms. While prior works realize this with simple rule-based algorithms for detecting",
+    "authors": [
+      "Burak Soner",
+      "Can Aksoy",
+      "Erkin Halaçlı"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Improved Frequency Tracking with Adaptive Moments for Narrowband Interference Mitigation in GNSS",
+    "url": "https://arxiv.org/abs/2607.28395v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "Personal privacy devices (PPDs) typically emit strong tones or swept narrowband signals to jam nearby GNSS receivers and deliberately cause loss of lock. Excision methods deployed on receivers mitigate such interferers by tracking their instantaneous frequency and removing those components in either the time domain (e.g., notch filtering) or a transform domain (e.g., Fourier-domain excision). For effective mitigation without degrading the GNSS signal, the excision location must be precise; mispl",
+    "authors": [
+      "Burak Soner",
+      "Abdulkadir Uzun",
+      "Ekin Uzun"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Demystifying DRAM Read Disturbance: Bridging the Gap Between Experimental Characterization and Device-Level Modeling of RowHammer and RowPress Phenomena",
+    "url": "https://arxiv.org/abs/2607.28233v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "DRAM read disturbance, like RowHammer and RowPress, is a critical robustness issue where accessing DRAM can cause unintended bitflips in other unaccessed DRAM locations. DRAM read disturbance bitflips significantly impact the safe, secure, and reliable operation of DRAM-based computing systems. Many prior works experimentally characterize these bitflips and propose mitigations based on empirical results. Other device-level works study their underlying physical mechanisms, but these mechanisms do",
+    "authors": [
+      "Haocong Luo",
+      "Longda Zhou",
+      "Ataberk Olgun",
+      "İsmail Emir Yüksel",
+      "Nisa Bostanci",
+      "Zhigang Ji",
+      "Xing Wu",
+      "Onur Mutlu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "CRLB-Driven Beamforming and Power Allocation for Multi-BS Cooperative ISAC Networks",
+    "url": "https://arxiv.org/abs/2607.28224v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "This paper presents a Cramér-Rao lower bound (CRLB)-driven beamforming (BF) and power allocation (PA) framework for cooperative integrated sensing and communication (ISAC) networks, where a set of multi-antenna base stations (BSs) jointly serve multiple users and simultaneously perform multi-static target estimation. In our design, we investigate how the position error bound (PEB) and velocity error bound (VEB) can be exploited and incorporated into BF and PA optimization. The design leveraging ",
+    "authors": [
+      "Yanpeng Su",
+      "Maximilian Lübke",
+      "Mengyu Zhang",
+      "Norman Franchi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "When Linear RUL Labels Disagree with Vibration Degradation: A Stage-Aware Target and Dual-Scale Predictor Evaluated on XJTU-SY and IMS",
+    "url": "https://arxiv.org/abs/2607.28115v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "Remaining useful life (RUL) studies commonly treat the label as fixed, although clock-linear labels may decline while measured vibration remains nearly stable and then changes rapidly near failure. We separate target design from prediction. A development-only pipeline constructs an oriented vibration health indicator, identifies chronological early, middle, and late stages, and fits a continuous linear-quadratic-exponential degradation-state target. A compact CNN-LSTM and Transformer learn the t",
+    "authors": [
+      "Behrad Mousaei Shir-Mohammad",
+      "Seyed Reza Tavakoli",
+      "Mohammad Mohammadi",
+      "Siavash Ahmadi",
+      "Babak Hossein Khalaj",
+      "Mohammad Hossein Rohban"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Power-Efficient XL-MIMO Design for Mixed Near- and Far-Field SWIPT Systems",
+    "url": "https://arxiv.org/abs/2607.27992v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "This paper examines the power consumption (PC) efficiency of a mixed near- and far-field (MF) simultaneous wireless information and power transfer (SWIPT) system underpinned by a hybrid beamforming (HB)-based modular extra-large multiple-input-multiple output (XL-MIMO) array. Multiple information decoding (ID) and energy harvesting (EH) users are served by multiple constituent subarrays in both the near-field (NF) and far-field (FF) region of the transmit array. A novel decision method is propos",
+    "authors": [
+      "Muhammad Zeeshan Mumtaz",
+      "Mohammadali Mohammadi",
+      "Hien Quoc Ngo",
+      "Hyundong Shin",
+      "Michail Matthaiou"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "STM study of single phosphorus incorporation into silicon by heating PBr3 on Si(100)",
+    "url": "https://arxiv.org/abs/2607.27939v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "The objective of miniaturizing doped areas in silicon, with the ultimate goal of achieving atomic-precision doping, requires a fundamental understanding of the dopant incorporation process at the atomic level. We present a combined scanning tunneling microscopy (STM) and density functional theory (DFT) investigation of single phosphorus atom incorporation into the Si(100) surface. Phosphorus was supplied via PBr3 molecules, which completely dissociate on Si(100) at room temperature. By performin",
+    "authors": [
+      "Tatiana V. Pavlova",
+      "Vladimir M. Shevlyuga"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "High-Field EPR/ENDOR of N/Be Centers for Defect Engineering in 6H-SiC",
+    "url": "https://arxiv.org/abs/2607.27862v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "Silicon carbide (SiC) in its various structural modifications is widely used in power semiconductor electronics, operating under extreme conditions of high temperature, high voltage, and intense radiation. The discovery of spin defects (S>0) with unique optical and coherent properties has further positioned SiC as a promising platform for quantum technologies. Here, we investigate a 6H-SiC single crystal co-doped with nitrogen and beryllium at concentrations of 1018 cm-3, using continuous-wave a",
+    "authors": [
+      "Yuliya Ermakova",
+      "Ekaterina Dmitrieva",
+      "Margarita Sadovnikova",
+      "Fadis Murzakhanov",
+      "George Mamin",
+      "Sergey Nagalyuk",
+      "Evgeny Mokhov",
+      "Marat Gafurov"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.ET",
+    "title": "Nanoparticle Networks for Neuromorphic Computing",
+    "url": "https://arxiv.org/abs/2607.27844v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "Physical computing leverages complex dynamical systems for energy-efficient data processing. In this work, we present a neuromorphic architecture based on metallic nanoparticles interconnected by molecular junctions on a $\\text{SiO}_2$/Si substrate. We demonstrate that surrounding static control electrodes transform this nanoparticle network from a passive reservoir into a tunable nonlinear dynamical system. By analyzing how these electrodes route simple one-dimensional voltage inputs into multi",
+    "authors": [
+      "Jonas Mensing",
+      "Wilfred G. van der Wiel",
+      "Andreas Heuer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Finite-temperature bulk moduli from an EOS-based Grüneisen function",
+    "url": "https://arxiv.org/abs/2607.27803v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "An equation-of-state (EOS)-based construction of the Grüneisen function is developed and assessed through predictions of finite-temperature bulk moduli. In this approach, the volume dependence of the Grüneisen function is expressed analytically in terms of static EOS information, anchored by Debye temperatures obtained from elastic data sampled near equilibrium, and constrained by the infinite-compression limit. The resulting form requires as material-specific input only static energy-volume dat",
+    "authors": [
+      "Çetin Kılıç"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "LightRot: A Light-Weighted Rotation Scheme and Architecture for Accurate Low-Bit Large Language Model Inference",
+    "url": "https://arxiv.org/abs/2607.27704v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "As large language models (LLMs) continue to demonstrate exceptional capabilities across various domains, the challenge of achieving energy-efficient and accurate inference becomes increasingly critical. This work presents LightRot, a lightweight rotation scheme and dedicated hardware accelerator designed for low-bit LLM inference. The proposed architecture integrates Grouped Local Rotation (GLR) and Outlier Direction Aligning (ODA) algorithms with a hierarchical Fast Hadamard Transform (FHT)-bas",
+    "authors": [
+      "Sangjin Kim",
+      "Yuseon Choi",
+      "Jungjun Oh",
+      "Byeongcheol Kim",
+      "Hoi-Jun Yoo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "GyRot: Leveraging Hidden Synergy between Rotation and Fine-grained Group Quantization for Low-bit LLM Inference",
+    "url": "https://arxiv.org/abs/2607.27694v1",
+    "published_date": "2026-07-30",
+    "source": "arXiv",
+    "summary": "Low-bit quantization is essential for efficient LLM inference, and both rotation and fine-grained group quantization have shown individual promise. However, their combination often leads to accuracy degradation or hardware overhead due to a mismatch between the global nature of rotation and the localized behavior of group scaling. We propose GyRot, a quantization framework and hardware accelerator that bridges this gap through algorithm-hardware co-design. GyRot introduces Coarse Rotation, Fine ",
+    "authors": [
+      "Sangjin Kim",
+      "Yuseon Choi",
+      "Byeongcheol Kim",
+      "Jungjun Oh",
+      "Hoi-jun Yoo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "physics.app-ph",
     "title": "Photonuclear Neutron Production in OpenMC: Verification Against MCNPX, FLUKA, and a First-Collision Analytical Solution",
     "url": "https://arxiv.org/abs/2607.26045v1",
