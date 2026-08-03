@@ -1,80 +1,68 @@
 {
-  "date": "2026-08-02",
-  "generated_at": "2026-08-02T21:00:35.793828+00:00",
+  "date": "2026-08-03",
+  "generated_at": "2026-08-03T21:09:47.179821+00:00",
   "sectors": {
-    "hpc_datacenter": {
-      "sector": "HPC·Datacenter",
-      "date": "2026-08-02",
-      "item_count": 14,
-      "generated_at": "2026-08-02T21:00:35.793385+00:00",
+    "mobile_ap": {
+      "sector": "Mobile AP",
+      "date": "2026-08-03",
+      "item_count": 4,
+      "generated_at": "2026-08-03T21:09:47.178761+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Major semiconductor companies are expanding HPC/AI infrastructure with new R&D centers and talent initiatives. NVIDIA and AMD are establishing R&D centers in South Korea and Taiwan respectively, while SK hynix is fundamentally restructuring its hiring process to prioritize AI-era capabilities, removing educational requirements and introducing half-day deep-dive interviews focused on reasoning skills. Marvell is doubling headcount with a $250 million investment in India.",
+          "executive_summary": "TSMC is targeting 100,000 monthly wafers for its 2nm process by end-2026 driven by NVIDIA and AMD demand acceleration. MediaTek is adopting Intel EMIB-T alongside TSMC CoWoS for AI chips, while LB Semicon secured Qualcomm mass production approval and begins AI/automotive back-end processing in August.",
           "key_facts": [
-            "NVIDIA expanding AI efforts with new R&D center in South Korea",
-            "AMD setting up R&D center in Taiwan",
-            "SK hynix introducing half-day deep-dive interview format",
-            "SK hynix eliminating educational background restrictions in new hiring",
-            "SK hynix emphasizing AI competency assessment in recruitment",
-            "Marvell investing $250 million in India to double headcount over three years"
+            "TSMC 2nm target: 100,000 monthly wafers by end-2026",
+            "LB Semicon: Qualcomm mass production approval, AI and automotive chip back-end processing begins August",
+            "MediaTek: Adopts Intel EMIB-T and TSMC CoWoS for AI chips"
           ],
           "implications": [
             {
-              "keyword": "Talent War",
-              "text": "SK hynix's aggressive restructuring (performance bonuses in tens of millions, removal of credential barriers) signals intense competition for AI specialists across the HPC sector."
+              "keyword": "Manufacturing Acceleration",
+              "text": "NVIDIA and AMD are forcing foundry capacity expansion; TSMC ramping 2nm production ahead of previous expectations to maintain supply chain leadership."
             },
             {
-              "keyword": "R&D Localization",
-              "text": "NVIDIA and AMD's Korea/Taiwan R&D centers indicate strategic commitment to proximity with manufacturing and regional talent ecosystems."
-            },
-            {
-              "keyword": "Capability Shift",
-              "text": "SK hynix's focus on reasoning and AI competency over academic credentials marks a fundamental realignment of hiring criteria toward domain-specific skills."
-            },
-            {
-              "keyword": "Geographic Expansion",
-              "text": "Marvell's India investment reflects broader industry trend of diversifying manufacturing and engineering footprint beyond traditional Taiwan/Korea hubs."
+              "keyword": "Advanced Packaging Diversity",
+              "text": "MediaTek's dual adoption of Intel EMIB-T and TSMC CoWoS signals strategic hedging of chiplet/HBM integration approaches for competitive AI products."
             }
           ],
-          "counterpoint": "Large-scale hiring announcements do not guarantee successful execution or long-term retention in an oversupplied AI talent market."
+          "counterpoint": "Achieving 100,000 wafers/month at 2nm requires sustained yield improvements and equipment availability; delays in either could slip the timeline."
         },
         "en": {
-          "executive_summary": "Major semiconductor companies are expanding HPC/AI infrastructure with new R&D centers and talent initiatives. NVIDIA and AMD are establishing R&D centers in South Korea and Taiwan respectively, while SK hynix is fundamentally restructuring its hiring process to prioritize AI-era capabilities, removing educational requirements and introducing half-day deep-dive interviews focused on reasoning skills. Marvell is doubling headcount with a $250 million investment in India.",
+          "executive_summary": "TSMC is targeting 100,000 monthly wafers for its 2nm process by end-2026 driven by NVIDIA and AMD demand acceleration. MediaTek is adopting Intel EMIB-T alongside TSMC CoWoS for AI chips, while LB Semicon secured Qualcomm mass production approval and begins AI/automotive back-end processing in August.",
           "key_facts": [
-            "NVIDIA expanding AI efforts with new R&D center in South Korea",
-            "AMD setting up R&D center in Taiwan",
-            "SK hynix introducing half-day deep-dive interview format",
-            "SK hynix eliminating educational background restrictions in new hiring",
-            "SK hynix emphasizing AI competency assessment in recruitment",
-            "Marvell investing $250 million in India to double headcount over three years"
+            "TSMC 2nm target: 100,000 monthly wafers by end-2026",
+            "LB Semicon: Qualcomm mass production approval, AI and automotive chip back-end processing begins August",
+            "MediaTek: Adopts Intel EMIB-T and TSMC CoWoS for AI chips"
           ],
           "implications": [
             {
-              "keyword": "Talent War",
-              "text": "SK hynix's aggressive restructuring (performance bonuses in tens of millions, removal of credential barriers) signals intense competition for AI specialists across the HPC sector."
+              "keyword": "Manufacturing Acceleration",
+              "text": "NVIDIA and AMD are forcing foundry capacity expansion; TSMC ramping 2nm production ahead of previous expectations to maintain supply chain leadership."
             },
             {
-              "keyword": "R&D Localization",
-              "text": "NVIDIA and AMD's Korea/Taiwan R&D centers indicate strategic commitment to proximity with manufacturing and regional talent ecosystems."
-            },
-            {
-              "keyword": "Capability Shift",
-              "text": "SK hynix's focus on reasoning and AI competency over academic credentials marks a fundamental realignment of hiring criteria toward domain-specific skills."
-            },
-            {
-              "keyword": "Geographic Expansion",
-              "text": "Marvell's India investment reflects broader industry trend of diversifying manufacturing and engineering footprint beyond traditional Taiwan/Korea hubs."
+              "keyword": "Advanced Packaging Diversity",
+              "text": "MediaTek's dual adoption of Intel EMIB-T and TSMC CoWoS signals strategic hedging of chiplet/HBM integration approaches for competitive AI products."
             }
           ],
-          "counterpoint": "Large-scale hiring announcements do not guarantee successful execution or long-term retention in an oversupplied AI talent market."
+          "counterpoint": "Achieving 100,000 wafers/month at 2nm requires sustained yield improvements and equipment availability; delays in either could slip the timeline."
         }
+      }
+    },
+    "hpc_datacenter": {
+      "sector": "HPC·Datacenter",
+      "date": "2026-08-03",
+      "item_count": 14,
+      "generated_at": "2026-08-03T21:09:47.178761+00:00",
+      "content": {
+        "ko": {},
+        "en": {}
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-02",
-      "item_count": 2,
-      "generated_at": "2026-08-02T21:00:35.793385+00:00",
+      "date": "2026-08-03",
+      "item_count": 20,
+      "generated_at": "2026-08-03T21:09:47.178761+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -82,9 +70,9 @@
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-02",
-      "item_count": 7,
-      "generated_at": "2026-08-02T21:00:35.793385+00:00",
+      "date": "2026-08-03",
+      "item_count": 24,
+      "generated_at": "2026-08-03T21:09:47.178761+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -92,9 +80,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-02",
-      "item_count": 8,
-      "generated_at": "2026-08-02T21:00:35.793385+00:00",
+      "date": "2026-08-03",
+      "item_count": 25,
+      "generated_at": "2026-08-03T21:09:47.178761+00:00",
       "content": {
         "ko": {},
         "en": {}

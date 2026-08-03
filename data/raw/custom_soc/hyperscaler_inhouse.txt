@@ -6,7 +6,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/machine-learning/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/machine-learning/</link>
 	<description>Official Machine Learning Blog of Amazon Web Services</description>
-	<lastBuildDate>Fri, 31 Jul 2026 21:16:56 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 03 Aug 2026 17:24:15 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -14,6 +14,585 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>From weeks to minutes: How Formula 1® uses agentic AI on AWS to accelerate data operations</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/from-weeks-to-minutes-how-formula-1-uses-agentic-ai-on-aws-to-accelerate-data-operations/</link>
+		
+		<dc:creator><![CDATA[Subhro Bose]]></dc:creator>
+		<pubDate>Mon, 03 Aug 2026 17:24:15 +0000</pubDate>
+				<category><![CDATA[Amazon Bedrock AgentCore]]></category>
+		<category><![CDATA[Amazon SageMaker Unified Studio]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Customer Solutions]]></category>
+		<category><![CDATA[Intermediate (200)]]></category>
+		<category><![CDATA[Technical How-to]]></category>
+		<guid isPermaLink="false">c31d5a216c9f10149d2564008a4c1dd5818f023f</guid>
+
+					<description>Formula 1® partnered with AWS to build the Data Accelerator, using agentic AI on Amazon Bedrock AgentCore to transform its MarTech data platform. Learn how F1 cut data source onboarding from up to 8 weeks to about 40 minutes, automated schema evolution, and gained end-to-end observability across its fan-engagement data estate.</description>
+										<content:encoded>&lt;p&gt;Formula 1&lt;sup&gt;®&lt;/sup&gt;&amp;nbsp;(F1) engages an audience of over 800 million fans globally across digital platforms, F1 TV, social media, ticketing, and merchandise year-round. Races happen every two weeks. Fan engagement windows are measured in minutes and commercial decisions need to move at the speed of the grid. Behind the scenes, F1’s marketing technology (MarTech) platform, Customer 360, captures interactions across all of these touchpoints to power personalization, segmentation, and commercial strategy.&lt;/p&gt; 
+&lt;p&gt;However, the platform faced a significant operational challenge. According to Chris Roberts, Director of IT at Formula 1, “Our MarTech platform is the nervous system of F1’s fan engagement. But every new data source required 6 to 8 weeks of manual engineering. We had an 18-month backlog just to integrate 12 new sources.” The business was generating data faster than the engineering team could wire it up. As a result, Matt Kemp, F1 Head of Data Operations, set to improve efficiencies and data quality. “Manually ingesting data sources is time consuming, creates solution variances, and ultimately results in data integrity issues. I wanted a solution that was repeatable, robust and reliable. AWS worked backwards from our needs to implement an agentic solution that worked end to end, applying business logic at each step.”&lt;/p&gt; 
+&lt;p&gt;In early 2026, F1 and AWS worked together to build the Data Accelerator, a solution that uses agentic AI on Amazon Bedrock AgentCore to transform F1’s MarTech data platform from a manually maintained system into a self-managed, observable, and unified data estate. In this post, we show how the Data Accelerator reduced data source onboarding from up to 8 weeks to approximately 40 minutes of code generation plus hours of deployment. It also identified and fixed data source anomalies in production, tracked data platform operations and agent lineage in a single window, and opened a gateway for analysts, engineers, and scientists to collaborate. “For the first time, we have end-to-end visibility across the entire MarTech platform with data lineage and root cause analysis, not just dashboards full of alerts,” says Roberts.&lt;/p&gt; 
+&lt;h2 id="the-challenge"&gt;The challenge&lt;/h2&gt; 
+&lt;p&gt;F1’s Customer 360 platform ingests data from ticketing partners, streaming integrations, sponsor activation feeds, social media, and merchandise systems. Operating a data estate of this breadth and velocity surfaced three areas of friction the team set out to solve. First, onboarding each new data source was a heavily manual effort: engineers wrote schema mappings, built ingestion pipelines, configured data quality checks, defined General Data Protection Regulation (GDPR) classifications, and set governance policies by hand. This process took 6 to 8 weeks per source. Second, the platform had to keep pace with constantly evolving upstream feeds. Providers frequently changed column names, added fields, or restructured and rescheduled payloads without notice. Those changes often surfaced at the worst possible moment, such as mid race-weekend or during a mission-critical campaign launch. Third, visibility was fragmented. Logs were scattered across services with no unified data lineage. When a stakeholder questioned a metric, engineers spent hours manually tracing the issue across Amazon Simple Storage Service (Amazon S3) paths, Amazon Redshift control tables, Airflow logs, and DBT outputs.&lt;/p&gt; 
+&lt;h2 id="solution-overview"&gt;Solution overview&lt;/h2&gt; 
+&lt;p&gt;The Data Accelerator addressed these challenges through five workstreams delivered simultaneously:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Agentic data source onboarding using Amazon Bedrock AgentCore, hosting agents in its runtime containers.&lt;/li&gt; 
+ &lt;li&gt;Automated schema evolution detection and remediation.&lt;/li&gt; 
+ &lt;li&gt;Unified data access through Amazon SageMaker Unified Studio.&lt;/li&gt; 
+ &lt;li&gt;End-to-end observability with root cause analysis tool (RCA) and context graph.&lt;/li&gt; 
+ &lt;li&gt;Automated identification of a failure in observability dashboard and agentic operation if they could be fixed with code changes.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;A sixth workstream optimized the customer identity resolution algorithms that unify fan touchpoints across channels. The following sections describe each workstream in detail.&lt;/p&gt; 
+&lt;h2 id="agentic-data-source-onboarding"&gt;Agentic data source onboarding&lt;/h2&gt; 
+&lt;p&gt;The centerpiece of the Data Accelerator is a set of platform agents that take a Business Requirements Document (BRD) with limited information about the data source and produce a fully production-ready onboarding pipeline. This includes infrastructure code, data transformations, governance policies, and GDPR classification without a human writing a single line of boilerplate. The agents work in two phases:&lt;/p&gt; 
+&lt;h3 id="phase-1-configuration-generation"&gt;Phase 1: Configuration generation&lt;/h3&gt; 
+&lt;p&gt;When a new data source needs onboarding, a team member uploads a BRD to an Amazon S3 bucket. The upload triggers an AWS Lambda function, which invokes Amazon Bedrock AgentCore Runtime, a capability of Amazon Bedrock AgentCore. The agent reads the BRD and generates a set of configuration files. It then accesses GitHub through a GitHub App to push these files as a pull request to the standardized Git repository, and accesses Jira through its REST API to create a ticket referencing the PR. All agent conversations and actions are traced in Amazon CloudWatch through built-in AgentCore observability. The assigned engineer reviews, adjusts if necessary, and approves.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/28/ML-21186-1-1.png" alt="Phase 1 workflow showing a BRD upload triggering an agent that generates config files and opens a pull request" width="800" height="3555"&gt;
+ &lt;p class="wp-caption-text"&gt;Phase 1 workflow: a BRD upload triggers the agent to generate config files and open a pull request&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3 id="phase-2-full-pipeline-generation"&gt;Phase 2: Full pipeline generation&lt;/h3&gt; 
+&lt;p&gt;Once the configuration files are approved, a human triggers the next stage. The agent takes the approved configuration and generates three separate Pull Requests:&lt;/p&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;&lt;a href="https://aws.amazon.com/glue/" target="_blank" rel="noopener"&gt;AWS Glue&lt;/a&gt; application and infrastructure code.&lt;/li&gt; 
+ &lt;li&gt;DBT transformation framework.&lt;/li&gt; 
+ &lt;li&gt;Governance policies including GDPR tagging.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;All three PRs link to a single Jira ticket for traceability. Engineers review each one across the Infrastructure, DBT, and Governance repositories and approve.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/28/ML-21186-2-1.png" alt="Phase 2 workflow where the agent generates infrastructure, transformation, and governance pull requests linked to one Jira ticket" width="800" height="621"&gt;
+ &lt;p class="wp-caption-text"&gt;Phase 2 workflow: the agent generates infrastructure, transformation, and governance pull requests&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3 id="automated-gdpr-classification"&gt;Automated GDPR classification&lt;/h3&gt; 
+&lt;p&gt;What distinguishes this from a basic code generator is the integrated GDPR classification. The agent proactively analyzes every data column, determines whether it contains personal data, sensitive personal data, or pseudonymized data, and tags it with the appropriate GDPR category. These tags publish directly to the governance registry in SageMaker Unified Studio, giving the compliance team immediate visibility without manual review cycles.&lt;/p&gt; 
+&lt;h2 id="modular-skill-architecture"&gt;Modular skill architecture&lt;/h2&gt; 
+&lt;p&gt;The system is not a tightly coupled agent graph. A single agent operates with modular skill definitions, each encapsulating a distinct capability: schema mapping and data type inference, data quality validation, governance enforcement, and sensitive data classification. At runtime, the agent evaluates incoming requirements and activates the relevant skills, composing them through a multi-pass reasoning process. Pass-0 handles token management through scrubbing, Pass-1 summarizes tool outputs, and Pass-2 rolls up an overall assessment, refining accuracy and completeness progressively rather than relying on a one-shot response. New capabilities ship as new skill modules without changing the core agent loop, keeping the architecture maintainable and composable as the platform grows.&lt;/p&gt; 
+&lt;p&gt;The result is onboarding time dropped from 6 to 8 weeks to approximately 40 minutes of code generation plus hours of deployment and review. AI agents now handle 95% of the work autonomously.&lt;/p&gt; 
+&lt;h2 id="automated-schema-evolution"&gt;Automated schema evolution&lt;/h2&gt; 
+&lt;p&gt;Onboarding new data sources is one challenge, but keeping existing integrations healthy is another. Upstream providers frequently modify their data structures, from renaming a column to creating a new field. Previously, the F1 team discovered these changes when a pipeline failed, often during a live race weekend. The same agent architecture that handles onboarding now continuously monitors for upstream schema changes. When a provider modifies their data structure, the agent detects it through event-driven triggers using AWS Lambda and Amazon EventBridge. It assesses the downstream impact, identifying which pipelines are affected, and which consumers depend on the changed fields. It then generates the necessary code updates across all affected repositories and creates a Jira ticket with full context and linked PRs. Engineers receive a notification that explains what changed, describes the impact, and presents a proposed fix for review. End-to-end resolution now takes hours instead of days.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/28/ML-21186-3.png" alt="Schema evolution workflow where an agent detects an upstream change, assesses impact, and generates code updates with a Jira ticket" width="800" height="1424"&gt;
+ &lt;p class="wp-caption-text"&gt;Schema evolution agentic workflow&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2 id="unified-data-access-with-amazon-sagemaker-unified-studio"&gt;Unified data access with Amazon SageMaker Unified Studio&lt;/h2&gt; 
+&lt;p&gt;Before the Data Accelerator, working with Customer 360 data required navigating multiple disconnected environments. Data engineers curated pipelines in one account. Data scientists who wanted to model fan behavior needed access to a separate account, and analysts operated in a third world entirely. Nobody shared tooling or context, and getting from a question to an answer took days of coordination before any analysis could begin.&lt;/p&gt; 
+&lt;p&gt;The solution uses Amazon SageMaker Unified Studio as the foundation for a data mesh framework where a central governance account brokers data discovery and access across multiple producer teams. The key enabler: governance is codified as declarative configuration, not manual console operations. A single data source definition simultaneously publishes data to the catalog and provisions the access control needed for consumers to subscribe. This means agents can safely onboard new data products end-to-end, from storage to catalog to governed access, because the framework enforces security constraints by construction. No human needs to review IAM policies or AWS Lake Formation grants. The platform guarantees correctness structurally. This is what makes the “one front door” possible.&lt;/p&gt; 
+&lt;p&gt;Data engineers curate and govern datasets in one place, and data scientists find those same datasets in the same environment: governed, documented, and ready to model. A data scientist building a fan segmentation model or optimizing the customer identity algorithm doesn’t need to know where the data lives, who owns the pipeline, or which S3 prefix to use. They open Unified Studio, find the curated Customer 360 datasets, and start modeling. They get shared notebooks, consistent tooling, and governed access, because declarative governance made safe self-service possible without sacrificing control. The curation and the consumption finally live side by side.&lt;/p&gt; 
+&lt;h2 id="end-to-end-observability-with-rca-and-context-graph"&gt;End-to-end observability with RCA and context graph&lt;/h2&gt; 
+&lt;p&gt;A data platform is only as trustworthy as the team’s ability to answer one question: is the data correct right now? Before the Data Accelerator, answering that question meant logging into Apache Airflow, checking Amazon S3 paths, querying Amazon Redshift control tables, and reading DBT logs. “Nobody had the full view. When a stakeholder asked, ‘why does this number look wrong?’ the answer was always, ‘give us a few hours.’ The observability dashboard changes that entirely,” adds Roberts.&lt;/p&gt; 
+&lt;p&gt;The observability layer presents full data lineage from S3 Raw ingestion through Processed layers into Amazon Redshift DBT stages as a single interactive graph, color-coded for health. Users click on any node to drill down to individual sources and tables, each showing pass/fail status, last run time, and duration. If a pipeline fails, the lineage visualization shows exactly where the break occurred, and which downstream data is affected.&lt;/p&gt; 
+&lt;p&gt;Root cause analysis (RCA) is an agentic tool within F1’s platform that reads system logs and identifies failure points across the data estate. On its own, RCA can tell you what failed. We augment the RCA tool by passing through business context and system topology, codified as JSON. A missing file in S3 might be the error, but with the context graph, RCA tells you that the upstream provider rescheduled their delivery window, which is why the file wasn’t there when the pipeline ran. That’s the difference between knowing what failed and understanding why.&lt;/p&gt; 
+&lt;p&gt;For the first time, F1 has full lineage, causal root cause analysis, and business context definitions in one place, and the dashboard auto-refreshes every 15 minutes.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/28/ML-21186-4-1.png" alt="Data lineage graph with pipeline health color-coded across data sources and processing stages" width="800" height="1486"&gt;
+ &lt;p class="wp-caption-text"&gt;Data lineage visualization showing pipeline health across sources and stages&lt;/p&gt;
+&lt;/div&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/28/ML-21186-5-1.png" alt="Observability dashboard showing pipeline failure details including source, status, and timing" width="800" height="1107"&gt;
+ &lt;p class="wp-caption-text"&gt;Observability dashboard with failure details&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2 id="customer-identity-resolution"&gt;Customer identity resolution&lt;/h2&gt; 
+&lt;p&gt;The final workstream optimized the algorithms that resolve customer identity across F1’s fan touchpoints. A single fan might interact through the app, buy tickets on the website, watch on F1 TV, and engage on social media. Unifying those interactions into a single identity without false merges or missed matches is what makes effective personalization possible within the Fan Personalization Platform (FPP).&lt;/p&gt; 
+&lt;p&gt;F1 already had a working identity resolution process, but it was slow and struggled to scale with the growing volume of fan interactions across channels. Rather than re-architecting the pipeline or replacing components, the team focused on optimizing the existing resolution algorithm’s computational performance. By profiling execution bottlenecks and tuning the matching logic, the engagement reduced processing time by 50%, while keeping the entire resolution pipeline and its downstream integrations fully intact. No processes were changed, no accuracy trade-offs were made: the same algorithm now runs in half the time at F1’s production scale.&lt;/p&gt; 
+&lt;p&gt;With faster resolution, F1 can onboard any new data source and gather new customer data in half the existing time. Faster resolution means fresher unified profiles, which in turn means more timely and relevant personalization across every marketing channel.&lt;/p&gt; 
+&lt;p&gt;“The whole point is to deliver the right message to the right fan at the right time, whether that’s through email, the F1 app, ticketing, or social. Now that we can onboard sources in hours and resolve identities faster, we can actually deliver the personalized experiences our fans expect across every marketing channel,” says Kemp.&lt;/p&gt; 
+&lt;h2 id="security-and-governance-by-design"&gt;Security and governance by design&lt;/h2&gt; 
+&lt;p&gt;The Data Accelerator operates on the principle that AI proposes and humans review. The agents run on Amazon Bedrock AgentCore with long-term memory, retaining context across invocations. Development used Kiro for structured spec-driven development and Amazon Bedrock (Claude Sonnet 4.6) as the foundation model. The event-driven backbone uses AWS Lambda for compute, Amazon EventBridge for routing, Amazon Managed Workflows for Apache Airflow (MWAA) for workflow orchestration, and Amazon S3 as the raw data layer. All AI model access is governed through F1’s AI Gateway for unified access control, cost management, and audit logging. But the architecture is only half the story. The security posture is what makes this production-ready.&lt;/p&gt; 
+&lt;p&gt;The security posture includes:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Least privilege: fine-grained permissions, short-lived tokens with one-hour expiry, access limited to specific repositories and resources.&lt;/li&gt; 
+ &lt;li&gt;Full audit trail: every action is logged and attributed for compliance.&lt;/li&gt; 
+ &lt;li&gt;Human review: every generated Pull Request goes through engineer approval.&lt;/li&gt; 
+ &lt;li&gt;Automated testing: agents generate comprehensive tests for their own changes.&lt;/li&gt; 
+ &lt;li&gt;Rollback capabilities: issues surfaced post-merge can be reverted immediately.&lt;/li&gt; 
+ &lt;li&gt;Network isolation: the entire system runs within private subnets in Amazon Virtual Private Cloud (Amazon VPC) with no direct internet access.&lt;/li&gt; 
+ &lt;li&gt;Encrypted credentials: all secrets stored at rest in AWS Systems Manager Parameter Store.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;“What gave us confidence to put agentic AI in our production data pipelines was what we call ‘Human at the helm.’ The agents do the heavy lifting, but humans make the decisions. Every change goes through the same review process our engineers already use, so adoption was immediate.” says Roberts.&lt;/p&gt; 
+&lt;h2 id="the-impact"&gt;The impact&lt;/h2&gt; 
+&lt;p&gt;The Data Accelerator delivered measurable impact across F1’s MarTech operations:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Data source onboarding: reduced from 6 to 8 weeks to approximately 40 minutes of code generation plus hours of deployment and review.&lt;/li&gt; 
+ &lt;li&gt;Autonomous work: AI agents handle 95% of onboarding tasks without human intervention.&lt;/li&gt; 
+ &lt;li&gt;Time-to-value: approximately 99% reduction.&lt;/li&gt; 
+ &lt;li&gt;Schema evolution: end-to-end resolution in hours instead of days.&lt;/li&gt; 
+ &lt;li&gt;Integration backlog: 18-month backlog cleared in weeks.&lt;/li&gt; 
+ &lt;li&gt;Data engineers who previously spent their time writing boilerplate ingestion code and chasing schema breaks now focus on strategic initiatives that advance the business.&lt;/li&gt; 
+ &lt;li&gt;Implementation velocity: a single developer took the agentic solution from proof of concept to production release in 4 months.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;The reliability, consistency, and data integrity of the MarTech platform were improved, while the operational overhead was reduced: “The Data Accelerator didn’t just speed things up. It changed how we operate. Our data engineers went from writing boilerplate ingestion code to focusing on strategic initiatives. Issues can be identified and fixed before our end users even notice.” says Kemp.&lt;/p&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;The Data Accelerator’s success comes down to three principles: meeting developers where they already work, keeping them at the helm, and embedding governance like GDPR classification from day one rather than bolting it on after. These principles shaped a solution where F1 partnered with AWS to use agentic AI on Amazon Bedrock AgentCore to transform MarTech data operations. By combining automated data source onboarding, schema evolution detection, and unified data access through Amazon SageMaker Unified Studio, F1 reduced onboarding time by approximately 99% and eliminated an 18-month integration backlog in weeks.&lt;/p&gt; 
+&lt;p&gt;The approach is deliberately replicable. Any organization dealing with multi-source data onboarding, schema volatility, and governance requirements can apply the same architecture to their own environment. The agents are domain-agnostic, and they know how to onboard, classify, and monitor. The domain is interchangeable.&lt;/p&gt; 
+&lt;h2 id="getting-started"&gt;Getting started&lt;/h2&gt; 
+&lt;p&gt;To learn more about the AWS services used in this solution:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;a href="https://aws.amazon.com/bedrock/agentcore/" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://aws.amazon.com/sagemaker/unified-studio/" target="_blank" rel="noopener"&gt;Amazon SageMaker Unified Studio&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://kiro.dev/" target="_blank" rel="noopener"&gt;Kiro&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://aws.amazon.com/professional-services/" target="_blank" rel="noopener"&gt;AWS Professional Services&lt;/a&gt;.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2 id="acknowledgments"&gt;Acknowledgments&lt;/h2&gt; 
+&lt;p&gt;This outcome is the result of years of incremental improvements to the MarTech platform, delivered through a close partnership between F1 and AWS. Many contributors across both organizations have shaped the architecture and strengthened the foundations that made the Data Accelerator possible. We are grateful to the following thought leaders and developers for their dedication and expertise: Paula Marenco Aguilar, Nadeen Nilanka, Taye Aduewa, Marton Juhasz, Deepak Gulia, Alex Goff, Nick Morgan, and Seshadri Senthamaraikannan.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/28/ML-21186-6-1.png" alt="Subhro Bose" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Subhro Bose&lt;/h3&gt; 
+  &lt;p&gt;Subhro is a Senior Data &amp;amp; AI Architect at AWS and the creator of &lt;a href="https://github.com/awslabs/causalif" target="_blank" rel="noopener"&gt;CausalIF&lt;/a&gt;, an open-source causal inference library that brings causal inference to model reasoning with consistency of results, discovering why things happen in complex systems. His work spans agentic AI, self-healing platforms, and turning causal discovery into production-grade intelligence across logistics, finance, and compliance.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/28/ML-21186-7.jpeg" alt="Jerome Descreux" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Jerome Descreux&lt;/h3&gt; 
+  &lt;p&gt;Jerome is a Senior Delivery Manager within AWS Professional Services. He leads large scale transformation programs and strategic projects for major EMEA enterprise customers, across various industries including logistics, manufacturing, financial services, aviation, and sports.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/28/ML-21186-8-1.jpeg" alt="Matt Kemp" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Matt Kemp&lt;/h3&gt; 
+  &lt;p&gt;Matt leads CRM and Customer Data Operations at Formula 1, overseeing the data, insight and engagement capabilities that connect millions of fans with the sport. He has delivered large-scale digital transformation programmes and is championing the use of AI, machine learning and agentic technologies to drive innovation, operational efficiency and personalised fan experiences.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/28/ML-21186-9-1.png" alt="Arunraja Kumar" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Arunraja Kumar&lt;/h3&gt; 
+  &lt;p&gt;Arunraja is Senior Data Architect at Formula 1, responsible for shaping the data platform and architecture that powers fan engagement, insight and innovation across the sport. He led the technical transformation of F1’s Fan Personalisation Programme, evolving the platform into an AI-native, agentic ecosystem that enables scalable, real-time experiences and supports Formula 1’s ambition to deliver personalised engagement to more than one billion fans worldwide.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Automated Reasoning policy refinement in Amazon Bedrock</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/automated-reasoning-policy-refinement-in-amazon-bedrock/</link>
+		
+		<dc:creator><![CDATA[Nafi Diallo]]></dc:creator>
+		<pubDate>Mon, 03 Aug 2026 16:30:58 +0000</pubDate>
+				<category><![CDATA[Amazon Bedrock]]></category>
+		<category><![CDATA[Announcements]]></category>
+		<category><![CDATA[Intermediate (200)]]></category>
+		<guid isPermaLink="false">d495eca7aa31244e52ef472f69e6a18cc949f604</guid>
+
+					<description>Amazon Bedrock now supports automatic Automated Reasoning policy refinement. The refinement engine diagnoses failing tests and proposes formal-logic fixes for rule issues and language issues, and you approve every change before it takes effect. This post walks through both refinement modes with complete API and console workflows.</description>
+										<content:encoded>&lt;p&gt;Refining an Automated Reasoning policy in Amazon Bedrock has been a manual cycle of diagnose, hand-edit, retest, and repeat. Today, we are announcing automatic policy refinement, which automates the diagnose-and-fix work in that cycle. The refinement engine diagnoses failing tests and proposes formal-logic fixes. You approve every change before it takes effect.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html" target="_blank" rel="noopener"&gt;Automated Reasoning checks&lt;/a&gt; in Amazon Bedrock Guardrails use formal verification to prove answer correctness. On unambiguous translations from natural language to formal logic, they deliver up to 99% verification accuracy, as reported in the &lt;a href="https://aws.amazon.com/blogs/aws/minimize-ai-hallucinations-and-deliver-up-to-99-verification-accuracy-with-automated-reasoning-checks-now-available/" target="_blank" rel="noopener"&gt;GA announcement&lt;/a&gt;. To get started, you build an Automated Reasoning policy from a source document and validate it with test cases. Customers told us that this iterative tuning creates the biggest friction point in policy development.&lt;/p&gt; 
+&lt;p&gt;In this post, we walk through two new refinement modes: &lt;strong&gt;Iterative Refinement&lt;/strong&gt; for rule issues, and &lt;strong&gt;Ambiguous Variable Refinement&lt;/strong&gt; for language issues. For each mode, we show a complete API workflow (start, poll, retrieve) and a repeatable console workflow for turning failing policies into passing ones.&lt;/p&gt; 
+&lt;h2 id="what-automated-reasoning-checks-actually-are"&gt;What Automated Reasoning checks actually are&lt;/h2&gt; 
+&lt;p&gt;Automated Reasoning checks translate natural language into formal logic, then apply automated reasoning techniques to produce a finding: &lt;code&gt;VALID&lt;/code&gt;, &lt;code&gt;INVALID&lt;/code&gt;, &lt;code&gt;SATISFIABLE&lt;/code&gt;, &lt;code&gt;IMPOSSIBLE&lt;/code&gt;, or &lt;code&gt;TRANSLATION_AMBIGUOUS&lt;/code&gt;. For a full introduction to how policies work, refer to our &lt;a href="https://aws.amazon.com/blogs/aws/minimize-ai-hallucinations-and-deliver-up-to-99-verification-accuracy-with-automated-reasoning-checks-now-available/" target="_blank" rel="noopener"&gt;GA announcement post&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;For this post, the key concept is the &lt;strong&gt;two-step validation pipeline&lt;/strong&gt;. First, the &lt;strong&gt;translate&lt;/strong&gt; step maps natural-language input/output to variable assignments using the variable descriptions in your policy. Second, the &lt;strong&gt;validate&lt;/strong&gt; step applies your formal rules to those assignments. When a test fails, the root cause lives in one of those two steps, and each refinement mode targets a different one. Figure 1 traces that pipeline end to end.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/27/ML-21259-1.png" alt="How Automated Reasoning checks validate a response at runtime" width="800" height="1802"&gt;
+ &lt;p class="wp-caption-text"&gt;Figure 1: How Automated Reasoning checks validate a response at runtime. Automated Reasoning checks translate natural language into variables using the policy’s variable descriptions, then validate those variables against the policy’s formal rules to return a finding. This two-step pipeline is why refinement has two modes.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;&lt;strong&gt;Testing your policy.&lt;/strong&gt; You validate a policy by attaching tests: each test is input/output text plus the result you expect. Run tests individually or as a batch. Failures tell you exactly where the policy diverges from your intent.&lt;/p&gt; 
+&lt;h2 id="why-policies-need-refinement-two-failure-modes"&gt;Why policies need refinement: Two failure modes&lt;/h2&gt; 
+&lt;p&gt;Recall the two-step pipeline: &lt;strong&gt;translate&lt;/strong&gt; (natural language to variable assignments) and then &lt;strong&gt;validate&lt;/strong&gt; (formal logic to finding). A failed test means one of these steps produced something you didn’t expect. Automated Reasoning checks surface two distinct failure signals that map cleanly to each step.&lt;/p&gt; 
+&lt;h3 id="failure-mode-1-rule-issues-the-logic-is-wrong"&gt;Failure mode 1: Rule issues (the logic is wrong)&lt;/h3&gt; 
+&lt;p&gt;In a rule-issue failure, the translation works correctly: the right variables have the right values, but the validation result doesn’t match your expectation. The problem lives in your rules: a rule is too permissive, too restrictive, or missing entirely. Concretely, you expected &lt;code&gt;INVALID&lt;/code&gt; but got &lt;code&gt;SATISFIABLE&lt;/code&gt; because a missing or too-permissive rule lets a bad answer through. Or you expected &lt;code&gt;SATISFIABLE&lt;/code&gt; but got &lt;code&gt;INVALID&lt;/code&gt; because an overly strict rule blocks a correct answer.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Mental model:&lt;/strong&gt; The system understood the question perfectly but applied the wrong logic. You need to fix the &lt;em&gt;rules&lt;/em&gt;.&lt;/p&gt; 
+&lt;h3 id="failure-mode-2-translation-ambiguous-the-language-is-wrong"&gt;Failure mode 2: Translation ambiguous (the language is wrong)&lt;/h3&gt; 
+&lt;p&gt;When a test returns &lt;code&gt;TRANSLATION_AMBIGUOUS&lt;/code&gt;, the validation engine runs and produces different outcomes depending on which interpretation it follows. In some cases, the translation models disagreed on how to map the natural-language input to your policy’s variables, and each competing interpretation led to a different validation result. The finding surfaces two or more options, each with its own translation and conclusion, plus &lt;code&gt;differenceScenarios&lt;/code&gt; showing where the interpretations diverge in practice. Common root causes include overlapping variable definitions (“tenure” compared to “years of service”), vague descriptions, and inconsistent value formats (5 compared to 0.05 for “5%”).&lt;/p&gt; 
+&lt;h3 id="matching-mode-to-failure"&gt;Matching mode to failure&lt;/h3&gt; 
+&lt;p&gt;This table summarizes which refinement mode addresses which failure type:&lt;/p&gt; 
+&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Failure mode&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Root cause&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Refinement mode&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;What it does&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Rule issues&lt;/td&gt; 
+   &lt;td&gt;Logic is wrong&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Iterative Refinement&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Proposes rule or variable additions, edits, or deletions&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Translation ambiguous&lt;/td&gt; 
+   &lt;td&gt;Language is ambiguous&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Ambiguous Variable Refinement&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Proposes clearer variable descriptions that collapse multiple interpretations into one&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;p&gt;Use &lt;strong&gt;Ambiguous Variable Refinement&lt;/strong&gt; when the system cannot determine a single translation. The next two sections walk through each mode in turn: what it does, when to use it, how the review gate works, and how to launch it programmatically. We start with Iterative Refinement because rule-issue failures are the more common case.&lt;/p&gt; 
+&lt;h2 id="iterative-refinement-fixing-the-rules"&gt;Iterative Refinement: Fixing the rules&lt;/h2&gt; 
+&lt;p&gt;When tests fail because the logic is wrong (the translation is clean but the validation result doesn’t match your expectation), the problem lives in your rules. &lt;strong&gt;Iterative Refinement&lt;/strong&gt; (&lt;code&gt;ITERATIVELY_REFINE_POLICY&lt;/code&gt;) automates the diagnose-and-fix cycle so you don’t need to manually trace each rule, hypothesize a correction, and hand-edit formal logic.&lt;/p&gt; 
+&lt;p&gt;Consider a policy with 10–30 rules. Previously, a fix would take a subject matter expert multiple rounds of manual diagnosis and hand-editing of SMT-LIB formal logic. That work now compresses to a single review-and-approve step, with no formal logic written by hand.&lt;/p&gt; 
+&lt;h3 id="how-it-works"&gt;How it works&lt;/h3&gt; 
+&lt;p&gt;Iterative Refinement takes three inputs. The first is your existing policy definition (the current rules, variables, and types). The second is a source document containing the authoritative natural-language text that describes how things &lt;em&gt;should&lt;/em&gt; work. The third input is optional: natural language feedback with explicit instructions describing the change you want.&lt;/p&gt; 
+&lt;p&gt;For example, the feedback field might contain: &lt;em&gt;“Update the tenure requirement for parental leave from 12 months to 6 months, as specified in section 3 of the revised document.”&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Given these inputs, the refinement engine analyzes how the current rules diverge from the source document and your feedback. It proposes a set of candidate changes (new rules, edited rules, added variables) that bring the policy in line.&lt;/p&gt; 
+&lt;h3 id="the-convergence-loop"&gt;The convergence loop&lt;/h3&gt; 
+&lt;p&gt;Iterative Refinement, as the name suggests, iterates. Behind the scenes, the engine generates a candidate change, simulates its effect on your saved tests, checks whether the previously failing tests now pass, and adjusts if they don’t. This can involve several internal cycles for a single request, especially when a fix in one rule ripples into others. The iteration happens &lt;em&gt;internally&lt;/em&gt;, though: you don’t observe each intermediate attempt, and you don’t need to shepherd it. What you receive is the converged result: a proposed diff that shows exactly which rules changed, which variables changed, and how the change affects every test in your suite.&lt;/p&gt; 
+&lt;h3 id="the-review-gate"&gt;The review gate&lt;/h3&gt; 
+&lt;p&gt;After convergence, the &lt;strong&gt;Review policy changes&lt;/strong&gt; screen appears.&lt;/p&gt; 
+&lt;p&gt;You then select &lt;strong&gt;Accept changes&lt;/strong&gt; or &lt;strong&gt;Discard changes&lt;/strong&gt;. Accepting writes the changes to your DRAFT policy. Discarding leaves everything exactly as it was.&lt;/p&gt; 
+&lt;h3 id="prerequisites-and-when-to-use"&gt;Prerequisites and when to use&lt;/h3&gt; 
+&lt;p&gt;&lt;strong&gt;Iterative Refinement&lt;/strong&gt; requires at least one test attached to your policy. Without a failing test signal, there’s nothing to drive the refinement. Use this mode when the translation is correct (right variables, right values) but the validation result is unexpected. Do not use it when the finding is &lt;code&gt;TRANSLATION_AMBIGUOUS&lt;/code&gt;. That’s a language problem better addressed by &lt;strong&gt;Ambiguous Variable Refinement&lt;/strong&gt;.&lt;/p&gt; 
+&lt;h3 id="through-the-api"&gt;Through the API&lt;/h3&gt; 
+&lt;p&gt;Refinement runs as an asynchronous build workflow. Using the AWS SDK for Python (Boto3), the flow has four steps: export the current policy definition, start the workflow, poll for completion, and retrieve the proposed changes. Set &lt;code&gt;buildWorkflowType&lt;/code&gt; to &lt;code&gt;ITERATIVELY_REFINE_POLICY&lt;/code&gt;.&lt;/p&gt; 
+&lt;p&gt;The iterativeRefinementContent block accepts one to five source documents (required) and up to 4,000 characters of optional feedback:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;import boto3
+
+bedrock = boto3.client("bedrock")
+
+# Export the current policy definition (required input to the workflow).
+policy_definition = bedrock.export_automated_reasoning_policy_version(
+    policyArn=policy_arn,
+)["policyDefinition"]
+
+with open("hr-leave-policy.pdf", "rb") as f:
+    source_document = f.read()
+
+response = bedrock.start_automated_reasoning_policy_build_workflow(
+    policyArn=policy_arn,
+    buildWorkflowType="ITERATIVELY_REFINE_POLICY",
+    sourceContent={
+        "policyDefinition": policy_definition,
+        "workflowContent": {
+            "iterativeRefinementContent": {
+                "documents": [
+                    {
+                        "document": source_document,
+                        "documentName": "hr-leave-policy.pdf",
+                        "documentContentType": "pdf",
+                    }
+                ],
+                "feedback": "Update the tenure requirement from 12 to 6 months per section 3.",
+            }
+        },
+    },
+)
+
+build_workflow_id = response["buildWorkflowId"]&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The call returns immediately with a &lt;code&gt;buildWorkflowId&lt;/code&gt;, not the proposed changes. The workflow moves from &lt;code&gt;SCHEDULED&lt;/code&gt; to &lt;code&gt;BUILDING&lt;/code&gt; until it reaches &lt;code&gt;COMPLETED&lt;/code&gt;, &lt;code&gt;FAILED&lt;/code&gt;, or &lt;code&gt;CANCELLED&lt;/code&gt;. Convergence typically takes one to a few minutes, depending on policy size. Poll &lt;code&gt;get_automated_reasoning_policy_build_workflow&lt;/code&gt; until the status reaches a terminal state. Then retrieve the converged proposal with &lt;code&gt;get_automated_reasoning_policy_build_workflow_result_assets&lt;/code&gt;, requesting the &lt;code&gt;POLICY_DEFINITION&lt;/code&gt; asset to see the updated rules (and &lt;code&gt;BUILD_LOG&lt;/code&gt; for the action log):&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;import time
+
+while True:
+    workflow = bedrock.get_automated_reasoning_policy_build_workflow(
+        policyArn=policy_arn,
+        buildWorkflowId=build_workflow_id,
+    )
+    status = workflow["status"]
+    if status in ("COMPLETED", "FAILED", "CANCELLED"):
+        break
+    time.sleep(10)
+
+if status == "COMPLETED":
+    assets = bedrock.get_automated_reasoning_policy_build_workflow_result_assets(
+        policyArn=policy_arn,
+        buildWorkflowId=build_workflow_id,
+        assetType="POLICY_DEFINITION",
+    )
+    proposed_definition = assets["buildWorkflowAssets"]["policyDefinition"]&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The returned policy definition is the proposed DRAFT, the full new definition. To commit it, call &lt;code&gt;update_automated_reasoning_policy&lt;/code&gt; with this definition. To see what changed, diff it against the policy definition you exported before starting the workflow. The console Review policy changes screen wraps this same start-poll-retrieve sequence, rendering the diff behind the Accept changes and Discard changes buttons.&lt;/p&gt; 
+&lt;h2 id="ambiguous-variable-refinement-fixing-the-language"&gt;Ambiguous Variable Refinement: Fixing the language&lt;/h2&gt; 
+&lt;p&gt;Iterative Refinement handles rule issues, but not every failing test is a rule issue. When the translation itself is unstable, no amount of rule-editing will help. You need to fix the language the policy uses to describe its variables. That is what Ambiguous Variable Refinement does. It follows the same asynchronous start-poll-retrieve pattern and lands on the same review-and-accept screen. The difference is in the proposals. They center on variable descriptions and merges, with rule and type updates applied as needed to keep the policy consistent.&lt;/p&gt; 
+&lt;p&gt;When tests produce &lt;code&gt;TRANSLATION_AMBIGUOUS&lt;/code&gt; results (refer to failure mode 2 earlier in this post), competing translations lead to different validation outcomes. Ambiguity can also come from how the validated content itself is phrased. This section focuses on ambiguity in the policy variables.&lt;/p&gt; 
+&lt;h3 id="how-it-works-1"&gt;How it works&lt;/h3&gt; 
+&lt;p&gt;Translation ambiguity, because of policy variable issues, typically stems from a handful of root causes. Overlapping variables occur when two variables describe the same concept. For example, tenureMonths (“How long the employee has worked in months”) and monthsOfService (“The employee’s months of service”) both capture employment duration. As a result, translation models disagree on which one to use. Incomplete descriptions arise when a variable’s description is too vague to guide translation. Inconsistent value formatting creates ambiguity when the system can’t determine if “5%” should become interestRate = 5 or interestRate = 0.05. Logic baked into variable names creates confusion. A name like timelyReportingNotFeasible already contains a negation, so expressing the positive case requires negating a negative. Translation models often drop one of the two.&lt;/p&gt; 
+&lt;p&gt;These are only the most common patterns. Because detection works by exercising the policy’s variables in translation rather than checking against a fixed list of known problems, variable-level issues that causes translations to disagree can surface.&lt;/p&gt; 
+&lt;p&gt;When you run &lt;strong&gt;Ambiguous Variable Refinement&lt;/strong&gt;, it pinpoints which variable descriptions or overlapping definitions cause the disagreement, then proposes refined descriptions that collapse multiple interpretations into one precise definition.&lt;/p&gt; 
+&lt;p&gt;These refined descriptions incorporate unit conversion rules, synonyms, alternative phrasings, and explicit format guidance. This before/after example illustrates a typical proposal:&lt;/p&gt; 
+&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Before&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;After (proposed)&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;tenureMonths : “How long the employee has worked in months.”&lt;/td&gt; 
+   &lt;td&gt;tenureMonths : “The number of complete months the employee has been continuously employed. When users mention years of service, convert to months (for example, 2 years = 24 months). This variable captures references to employment duration, length of service, time at the company, or seniority.”&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;p&gt;If overlapping variables are detected, a merge may also be proposed: one variable is deleted and rules that reference it are updated to use the surviving variable.&lt;/p&gt; 
+&lt;h3 id="the-review-gate-1"&gt;The review gate&lt;/h3&gt; 
+&lt;p&gt;Just like &lt;strong&gt;Iterative Refinement&lt;/strong&gt;, you review the proposed changes before anything is applied.&lt;/p&gt; 
+&lt;p&gt;It also displays Test results, where tests that previously returned &lt;code&gt;TRANSLATION_AMBIGUOUS&lt;/code&gt; now produce a definitive &lt;code&gt;VALID&lt;/code&gt;, &lt;code&gt;INVALID&lt;/code&gt;, or &lt;code&gt;SATISFIABLE&lt;/code&gt; result. You select &lt;strong&gt;Accept changes&lt;/strong&gt; or &lt;strong&gt;Discard changes&lt;/strong&gt;. No change touches your DRAFT policy until you approve.&lt;/p&gt; 
+&lt;h3 id="when-to-use-it"&gt;When to use it&lt;/h3&gt; 
+&lt;p&gt;Use &lt;strong&gt;Ambiguous Variable Refinement&lt;/strong&gt; when tests produce &lt;code&gt;TRANSLATION_AMBIGUOUS&lt;/code&gt; results, or when you inspect a &lt;code&gt;VALID&lt;/code&gt;/&lt;code&gt;INVALID&lt;/code&gt; finding and discover that the translation assigned values to the wrong variables. Do not use it when the translation is correct but the validation result is unexpected. That’s a rule problem for &lt;strong&gt;Iterative Refinement&lt;/strong&gt;.&lt;/p&gt; 
+&lt;h3 id="through-the-api-1"&gt;Through the API&lt;/h3&gt; 
+&lt;p&gt;&lt;strong&gt;Ambiguous Variable Refinement&lt;/strong&gt; uses the same asynchronous start-poll-retrieve pattern. Set &lt;code&gt;buildWorkflowType&lt;/code&gt; to &lt;code&gt;RESOLVE_POLICY_AMBIGUITIES&lt;/code&gt;. This mode analyzes your policy’s variables directly and needs neither a source document nor attached tests, so workflowContent can be omitted. The current policy definition is still required in &lt;code&gt;sourceContent&lt;/code&gt;. Export it first with &lt;code&gt;export_automated_reasoning_policy_version&lt;/code&gt; as shown for &lt;strong&gt;Iterative Refinement&lt;/strong&gt; earlier:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;response = bedrock.start_automated_reasoning_policy_build_workflow(
+    policyArn=policy_arn,
+    buildWorkflowType="RESOLVE_POLICY_AMBIGUITIES",
+    sourceContent={
+        "policyDefinition": policy_definition,
+    },
+)
+
+build_workflow_id = response["buildWorkflowId"]&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;As with &lt;strong&gt;Iterative Refinement&lt;/strong&gt;, the response is a &lt;code&gt;buildWorkflowId&lt;/code&gt;. Poll &lt;code&gt;get_automated_reasoning_policy_build_workflow&lt;/code&gt; until the status reaches a terminal state. Then call &lt;code&gt;get_automated_reasoning_policy_build_workflow_result_assets&lt;/code&gt; with &lt;code&gt;assetType="POLICY_DEFINITION"&lt;/code&gt; to retrieve the proposed variable descriptions and merges:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;while True:
+    workflow = bedrock.get_automated_reasoning_policy_build_workflow(
+        policyArn=policy_arn,
+        buildWorkflowId=build_workflow_id,
+    )
+    status = workflow["status"]
+    if status in ("COMPLETED", "FAILED", "CANCELLED"):
+        break
+    time.sleep(10)
+
+if status == "COMPLETED":
+    assets = bedrock.get_automated_reasoning_policy_build_workflow_result_assets(
+        policyArn=policy_arn,
+        buildWorkflowId=build_workflow_id,
+        assetType="POLICY_DEFINITION",
+    )
+    proposed_definition = assets["buildWorkflowAssets"]["policyDefinition"]&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The changes remain a proposal until you accept them.&lt;/p&gt; 
+&lt;h2 id="you-approve-every-change-the-human-in-the-loop-gate"&gt;You approve every change: The human-in-the-loop gate&lt;/h2&gt; 
+&lt;p&gt;Both refinement modes share one non-negotiable property: &lt;strong&gt;no change takes effect until you say so.&lt;/strong&gt; The refinement engine has &lt;em&gt;suggestion authority.&lt;/em&gt; It can analyze, diagnose, and propose. You have &lt;em&gt;commit authority&lt;/em&gt;. You decide what reaches your DRAFT policy and, ultimately, production.&lt;/p&gt; 
+&lt;h3 id="the-five-step-loop"&gt;The five-step loop&lt;/h3&gt; 
+&lt;p&gt;Regardless of which refinement mode you use, the workflow follows the same five-step pattern. First, test: run your saved tests against the current policy. Second, check: identify which tests don’t match their expected result. Third, propose: the system generates candidate fixes for rules or variable descriptions. Fourth, review: you inspect the proposed diff and its impact on the tests. Fifth, apply: you accept the changes into DRAFT, or reject and nothing changes.&lt;/p&gt; 
+&lt;p&gt;After you accept, re-test to confirm the fix resolved the issue without breaking other tests. This creates a ratchet: each cycle either moves you closer to a passing policy or gives you new diagnostic information.&lt;/p&gt; 
+&lt;h3 id="what-the-review-screen-shows-you"&gt;What the review screen shows you&lt;/h3&gt; 
+&lt;p&gt;The review screen lets you understand the &lt;em&gt;ramifications&lt;/em&gt; of a change, not just the change itself. It answers two questions at once: what did the engine propose, and how does that proposal affect every test you care about?&lt;/p&gt; 
+&lt;p&gt;The proposal comes in three sections. &lt;strong&gt;Changes to rules&lt;/strong&gt; lists the rules added, edited, or deleted, with the formal-logic expression for each. &lt;strong&gt;Changes to variables&lt;/strong&gt; shows updated variable descriptions and added or deleted variables, with the previous wording alongside the proposed wording so you can compare the two directly. &lt;strong&gt;Changes to custom variable types&lt;/strong&gt; covers changes to the policy’s enumerated types.&lt;/p&gt; 
+&lt;p&gt;Alongside those changes, the screen shows a Test results section that lists the saved test with its previous and new outcome. Each row gives the expected finding and whether the test passed before and after. Choose View findings on a row to see the finding itself. This view is the single most important indicator on the screen. If your failing tests now pass and your passing tests still pass, you can accept with confidence.&lt;/p&gt; 
+&lt;h3 id="validate-with-the-fidelity-report"&gt;Validate with the Fidelity Report&lt;/h3&gt; 
+&lt;p&gt;After applying changes, generate a &lt;strong&gt;Fidelity Report&lt;/strong&gt; (&lt;code&gt;GENERATE_FIDELITY_REPORT&lt;/code&gt;) to validate that your updated policy still faithfully represents your source document. The report provides three measurements. The &lt;strong&gt;coverage score&lt;/strong&gt; (0.0–1.0) indicates how much of your source document is represented in the policy. The &lt;strong&gt;accuracy score&lt;/strong&gt; (0.0–1.0) indicates how faithfully the rules match the intent of the original document. &lt;strong&gt;Per-rule grounding&lt;/strong&gt; links each rule to the specific source-document statements that support it, with justifications.&lt;/p&gt; 
+&lt;p&gt;Compare Fidelity Reports before and after refinement. If your accuracy score drops, the proposed fix may have drifted from your source material, which is a signal to reject or iterate further.&lt;/p&gt; 
+&lt;h3 id="the-principle"&gt;The principle&lt;/h3&gt; 
+&lt;p&gt;Automatic refinement accelerates the &lt;em&gt;labor&lt;/em&gt; of diagnosing failures and generating candidate fixes. It does not accelerate the &lt;em&gt;authority&lt;/em&gt; to change what your guardrail enforces. Every fix remains a suggestion until you decide to accept it.&lt;/p&gt; 
+&lt;h2 id="steering-the-engine-source-documents-and-custom-feedback"&gt;Steering the engine: Source documents and custom feedback&lt;/h2&gt; 
+&lt;p&gt;You can steer both modes by providing context that guides the system toward the right fix faster.&lt;/p&gt; 
+&lt;h3 id="source-documents"&gt;Source documents&lt;/h3&gt; 
+&lt;p&gt;When you launch &lt;strong&gt;Iterative Refinement&lt;/strong&gt;, you supply a source document representing the ground truth your policy should encode. The console offers three modes for supplying it: &lt;strong&gt;Recently used&lt;/strong&gt; re-selects a previously uploaded doc, &lt;strong&gt;Upload&lt;/strong&gt; takes a new PDF or text file, and &lt;strong&gt;Enter text&lt;/strong&gt; accepts pasted content directly. The clearer and more focused the document, the more precise the proposals.&lt;/p&gt; 
+&lt;h3 id="custom-feedback-explicit-if-then-guidance"&gt;Custom feedback: Explicit if-then guidance&lt;/h3&gt; 
+&lt;p&gt;You can also provide &lt;strong&gt;natural language feedback&lt;/strong&gt; that tells the system exactly what to fix. Effective feedback is specific and testable. Vague feedback like “Fix the tenure rule” gives the engine too much latitude. Compare it with a specific, testable alternative: “If an employee is full-time and has worked for more than 6 months (not 12), they should be eligible for parental leave.”&lt;/p&gt; 
+&lt;p&gt;Your feedback acts as a constraint: the system generates changes that satisfy both the source document and your guidance. If the two conflict, the conflict is flagged for your review.&lt;/p&gt; 
+&lt;p&gt;You can provide both a source document and feedback together. When your document is dense, feedback focuses the system on the specific section that matters.&lt;/p&gt; 
+&lt;h2 id="end-to-end-walkthroughs"&gt;End-to-end walkthroughs&lt;/h2&gt; 
+&lt;p&gt;This section provides two walkthroughs, one for each refinement mode. Together they give you a repeatable workflow for both failure types.&lt;/p&gt; 
+&lt;h3 id="prerequisites"&gt;Prerequisites&lt;/h3&gt; 
+&lt;p&gt;To use automatic policy refinement with Automated Reasoning checks in Amazon Bedrock, make sure you have met the following prerequisites:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;An active AWS account.&lt;/li&gt; 
+ &lt;li&gt;Confirmation of AWS Regions where Automated Reasoning checks is available, and access to Amazon Bedrock in one of them.&lt;/li&gt; 
+ &lt;li&gt;IAM permissions to create, view, and refine Automated Reasoning policies and to work with Amazon Bedrock Guardrails.&lt;/li&gt; 
+ &lt;li&gt;An Automated Reasoning policy in your account, created from a source document that captures the rules you want to enforce. For step-by-step instructions, refer to &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/create-automated-reasoning-policy.html" target="_blank" rel="noopener"&gt;Create your Automated Reasoning policy&lt;/a&gt;. You need this policy to have at least one attached test — Iterative Refinement requires a failing test signal to drive its diagnosis. To add tests, refer to &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/test-automated-reasoning-policy.html" target="_blank" rel="noopener"&gt;Test an Automated Reasoning policy&lt;/a&gt;.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h3 id="walkthrough-a-fixing-a-rule-issue-with-iterative-refinement"&gt;Walkthrough A: Fixing a rule issue with Iterative Refinement&lt;/h3&gt; 
+&lt;p&gt;Your HR leave-eligibility policy has a failing test. The assistant reports that a &lt;strong&gt;part-time employee with 8 months of tenure qualifies for parental leave&lt;/strong&gt;. The test expects &lt;code&gt;INVALID&lt;/code&gt;, but the policy returns &lt;code&gt;VALID&lt;/code&gt;.&lt;/p&gt; 
+&lt;h4 id="step-1-validate-the-tests"&gt;Step 1: Validate the tests&lt;/h4&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;In the Amazon Bedrock console, navigate to &lt;strong&gt;Automated Reasoning&lt;/strong&gt; and open your policy.&lt;/li&gt; 
+ &lt;li&gt;Choose the &lt;strong&gt;Tests&lt;/strong&gt; tab, and then choose &lt;strong&gt;Validate all tests&lt;/strong&gt;. Figure 2 shows the results. Three of the four tests pass, and the parental-leave test fails with an unexpected &lt;code&gt;VALID&lt;/code&gt; finding.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/27/ML-21259-2.png" alt="Test results after validation (75% pass rate)." width="800" height="1654"&gt;
+ &lt;p class="wp-caption-text"&gt;Figure 2: The Tests tab after validation, with three of four tests passing (75%)&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h4 id="step-2-inspect-the-failing-finding"&gt;Step 2: Inspect the failing finding&lt;/h4&gt; 
+&lt;ol start="3" type="1"&gt; 
+ &lt;li&gt;Open the failing test’s finding and inspect the translation, shown in Figure 3. The variables are correctly captured: 
+  &lt;ol type="1"&gt; 
+   &lt;li&gt;monthsOfContinuousService = 8.&lt;/li&gt; 
+   &lt;li&gt;employmentStatus = &lt;code&gt;PART_TIME&lt;/code&gt;.&lt;/li&gt; 
+  &lt;/ol&gt; &lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/27/ML-21259-3.png" alt="The failing test’s finding and its translation." width="800" height="1704"&gt;
+ &lt;p class="wp-caption-text"&gt;Figure 3: The failing test’s finding, with the translation showing correctly captured variables&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;The finding is &lt;code&gt;VALID&lt;/code&gt; because the only supporting rule grants eligibility after 6 months of continuous service, and no rule excludes part-time employees. The translation is clean and the logic is wrong, so this is a rule issue.&lt;/p&gt; 
+&lt;h4 id="step-3-refine-the-policy"&gt;Step 3: Refine the policy&lt;/h4&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;Choose &lt;strong&gt;Refine policy&lt;/strong&gt;, then choose &lt;strong&gt;Automatically refine policy&lt;/strong&gt;.&lt;/li&gt; 
+ &lt;li&gt;Set the refinement type to &lt;strong&gt;Iterative Refinement&lt;/strong&gt;.&lt;/li&gt; 
+ &lt;li&gt;Provide a source document using any of the three modes: 
+  &lt;ol type="1"&gt; 
+   &lt;li&gt;&lt;strong&gt;Recently used&lt;/strong&gt;.&lt;/li&gt; 
+   &lt;li&gt;&lt;strong&gt;Upload (a new version)&lt;/strong&gt;.&lt;/li&gt; 
+   &lt;li&gt;&lt;strong&gt;Enter text&lt;/strong&gt; (paste the relevant paragraph).&lt;/li&gt; 
+  &lt;/ol&gt; &lt;/li&gt; 
+ &lt;li&gt;Optionally, add custom feedback to focus the fix, for example: “&lt;em&gt;Add a rule that explicitly makes part-time employees ineligible for parental leave.&lt;/em&gt;”&lt;/li&gt; 
+ &lt;li&gt;When your inputs are ready, choose &lt;strong&gt;Start&lt;/strong&gt;.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;Figure 4 shows the completed setup, with the refinement type selected, the source document attached, and the custom feedback entered.&lt;/p&gt; 
+&lt;div id="attachment_136315" style="width: 1440px" class="wp-caption alignleft"&gt;
+ &lt;img aria-describedby="caption-attachment-136315" loading="lazy" class="size-full wp-image-136315" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ml-21259-figure4.png" alt="Figure 4: Iterative Refinement setup with a source document and custom feedback" width="1430" height="540"&gt;
+ &lt;p id="caption-attachment-136315" class="wp-caption-text"&gt;Figure 4: Iterative Refinement setup with a source document and custom feedback&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h4 id="step-4-review-and-accept-the-changes"&gt;Step 4: Review and accept the changes&lt;/h4&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;When convergence completes, the &lt;strong&gt;Review policy changes&lt;/strong&gt; screen appears. Under&amp;nbsp;&lt;strong&gt;Changes to rules&lt;/strong&gt;, it lists two changes: one deleted rule and one added rule. The engine removed the rule that granted eligibility on continuous service alone: 
+  &lt;ul&gt; 
+   &lt;li style="list-style-type: none"&gt; 
+    &lt;ul&gt; 
+     &lt;li&gt;if &lt;code&gt;monthsOfContinuousService&lt;/code&gt; is at least 6, then &lt;code&gt;isEligibleForParentalLeave&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt;&lt;/li&gt; 
+    &lt;/ul&gt; &lt;/li&gt; 
+  &lt;/ul&gt; &lt;p&gt;And added a rule that excludes part-time employees:&lt;/p&gt; 
+  &lt;ul&gt; 
+   &lt;li style="list-style-type: none"&gt; 
+    &lt;ul&gt; 
+     &lt;li&gt;if &lt;code&gt;employmentStatus&lt;/code&gt; is equal to &lt;code&gt;PART_TIME&lt;/code&gt;, then &lt;code&gt;isEligibleForParentalLeave&lt;/code&gt; is false&lt;/li&gt; 
+    &lt;/ul&gt; &lt;/li&gt; 
+  &lt;/ul&gt; &lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;Under &lt;strong&gt;Test results&lt;/strong&gt;, the part-time test moves from &lt;strong&gt;Failed&lt;/strong&gt; to &lt;strong&gt;Passed&lt;/strong&gt;, and the other three tests remain Passed. Figure 5 shows the screen before you accept.&lt;/p&gt; 
+&lt;div id="attachment_136311" style="width: 798px" class="wp-caption alignnone"&gt;
+ &lt;img aria-describedby="caption-attachment-136311" loading="lazy" class="size-full wp-image-136311" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ml-21259-figure5.png" alt="Figure 5: The Review policy changes screen. Changes to rules lists the deleted tenure-only eligibility rule and the added part-time exclusion, and Test results shows the part-time test moving from Failed to Passed with no regressions." width="788" height="810"&gt;
+ &lt;p id="caption-attachment-136311" class="wp-caption-text"&gt;Figure 5: The Review policy changes screen. Changes to rules lists the deleted tenure-only eligibility rule and the added part-time exclusion, and Test results shows the part-time test moving from Failed to Passed with no regressions.&lt;/p&gt;
+&lt;/div&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Choose &lt;strong&gt;Accept changes&lt;/strong&gt;.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h4 id="step-5-confirm-the-fix"&gt;Step 5: Confirm the fix&lt;/h4&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;Return to the &lt;strong&gt;Tests&lt;/strong&gt; tab and choose &lt;strong&gt;Validate all tests&lt;/strong&gt; again.&lt;/li&gt; 
+ &lt;li&gt;Figure 6 shows the expected result. The previously failing test now passes, and the pass rate reaches 100%.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;div id="attachment_136316" style="width: 1440px" class="wp-caption alignleft"&gt;
+ &lt;img aria-describedby="caption-attachment-136316" loading="lazy" class="size-full wp-image-136316" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/ml-21259-figure5-1.png" alt="Figure 6: The Tests tab after refinement, with all four tests passing (100%)" width="1430" height="516"&gt;
+ &lt;p id="caption-attachment-136316" class="wp-caption-text"&gt;Figure 6: The Tests tab after refinement, with all four tests passing (100%)&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;&lt;strong&gt;If tests still fail or regressions appear&lt;/strong&gt;&lt;/p&gt; 
+&lt;p&gt;There is no guarantee that a single refinement cycle resolves all failures or avoids regressions. If the previously failing test still fails, or if other tests that previously passed are now failing:&lt;/p&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;Choose &lt;strong&gt;Discard changes&lt;/strong&gt;&amp;nbsp;on the review screen.&lt;/li&gt; 
+ &lt;li&gt;Add more specific custom feedback describing what the engine should fix differently. For example, &lt;em&gt;“The rule should exclude part-time employees entirely, not only reduce their eligibility window.”&lt;/em&gt;&lt;/li&gt; 
+ &lt;li&gt;Narrow the source document to the exact section covering the failing rule.&lt;/li&gt; 
+ &lt;li&gt;Run &lt;strong&gt;Iterative Refinement&lt;/strong&gt; again with these tighter inputs.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;If the test still won’t pass after two or three rounds, fall back to manual editing. Use the failing finding’s translation and rule trace as a guide to hand-edit the specific rule in the policy editor.&lt;/p&gt; 
+&lt;h4 id="step-6-report-and-deploy"&gt;Step 6: Report and deploy&lt;/h4&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;Select &lt;strong&gt;Generate Fidelity Report&lt;/strong&gt; and compare scores with the previous report.&lt;/li&gt; 
+ &lt;li&gt;When satisfied, create a &lt;strong&gt;numbered version&lt;/strong&gt; to deploy.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h3 id="walkthrough-b-fixing-a-language-issue-with-ambiguous-variable-refinement"&gt;Walkthrough B: Fixing a language issue with Ambiguous Variable Refinement&lt;/h3&gt; 
+&lt;p&gt;You have the same HR policy, but this time a test returns &lt;code&gt;TRANSLATION_AMBIGUOUS&lt;/code&gt;. The finding shows two options:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;One interpreted “2 years of service” as tenureMonths = 24.&lt;/li&gt; 
+ &lt;li&gt;The other as monthsOfService = 24.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;The two options reveal overlapping variables. Both tenureMonths and monthsOfService describe employment duration, and the translation models can’t agree on which to use. This overlap is the root cause of the ambiguity.&lt;/p&gt; 
+&lt;h4 id="step-1-refine-the-policy"&gt;Step 1: Refine the policy&lt;/h4&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;Choose &lt;strong&gt;Refine policy&lt;/strong&gt;, then &lt;strong&gt;Ambiguous Variable Refinement&lt;/strong&gt;.&lt;/li&gt; 
+ &lt;li&gt;As Figure 7 shows, no source document is required for this mode, so the setup is a single selection.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/27/ML-21259-6.png" alt="Ambiguous Variable Refinement setup." width="800" height="1560"&gt;
+ &lt;p class="wp-caption-text"&gt;Figure 7: Ambiguous Variable Refinement setup, with no source document required&lt;/p&gt;
+&lt;/div&gt; 
+&lt;ol start="3" type="1"&gt; 
+ &lt;li&gt;Choose &lt;strong&gt;Start&lt;/strong&gt;.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h4 id="step-2-review-and-accept-the-changes"&gt;Step 2: Review and accept the changes&lt;/h4&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;On the &lt;strong&gt;Review policy changes&lt;/strong&gt; screen, review the proposed variable merge: 
+  &lt;ol type="1"&gt; 
+   &lt;li&gt;monthsOfService is deleted.&lt;/li&gt; 
+   &lt;li&gt;Rules are updated to reference tenureMonths.&lt;/li&gt; 
+   &lt;li&gt;The description of tenureMonths expanded to: 
+    &lt;ul&gt; 
+     &lt;li&gt;&lt;em&gt;“The number of complete months the employee has been continuously employed. When users mention years of service, convert to months (for example, 2 years = 24 months). This variable captures all references to employment duration, length of service, time at the company, or seniority.”&lt;/em&gt;&lt;/li&gt; 
+    &lt;/ul&gt; &lt;/li&gt; 
+   &lt;li&gt;Under &lt;strong&gt;Test results&lt;/strong&gt;, the previously ambiguous test now produces a definitive &lt;code&gt;VALID&lt;/code&gt; result.&lt;/li&gt; 
+  &lt;/ol&gt; &lt;/li&gt; 
+ &lt;li&gt;Select &lt;strong&gt;Accept changes&lt;/strong&gt;.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h4 id="step-3-confirm-the-fix"&gt;Step 3: Confirm the fix&lt;/h4&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;Return to the &lt;strong&gt;Tests&lt;/strong&gt; tab and choose &lt;strong&gt;Validate all tests&lt;/strong&gt; again.&lt;/li&gt; 
+ &lt;li&gt;Figure 8 shows the confirmation. The test that previously returned &lt;code&gt;TRANSLATION_AMBIGUOUS&lt;/code&gt; now produces a definitive &lt;code&gt;VALID&lt;/code&gt; finding and passes.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/27/ML-21259-7.png" alt="Tests tab after the ambiguity refinement is applied." width="800" height="1588"&gt;
+ &lt;p class="wp-caption-text"&gt;Figure 8: Tests tab after the ambiguity refinement is applied&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h4 id="step-4-report-and-deploy"&gt;Step 4: Report and deploy&lt;/h4&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;Choose &lt;strong&gt;Generate Fidelity Report&lt;/strong&gt; and compare the scores with the previous report.&lt;/li&gt; 
+ &lt;li&gt;When you are satisfied with the results, create a numbered version to deploy.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h2 id="note"&gt;Note&lt;/h2&gt; 
+&lt;p&gt;In both refinement modes, there is no guarantee that the test will pass or the proposed changes don’t introduce regressions. If the test is not passing or other passing tests are now failing, you can discard changes and try again.&lt;/p&gt; 
+&lt;h2 id="best-practices-and-real-world-use-cases"&gt;Best practices and real-world use cases&lt;/h2&gt; 
+&lt;p&gt;The refinement engine works best when you give it a clear signal and a bounded change. The following practices show how, and the use cases show where they pay off.&lt;/p&gt; 
+&lt;h3 id="best-practices"&gt;Best practices&lt;/h3&gt; 
+&lt;p&gt;The following practices come from the two most common ways refinement goes sideways. Either you drive it with an ambiguous failure signal, or you let it change more of the policy than you intended.&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Read the translation before you pick a mode.&lt;/strong&gt; Open the failing finding and look at the variable assignments first. If the right variables have the right values but the result is wrong, that’s a rule issue for &lt;strong&gt;Iterative Refinement&lt;/strong&gt;. If the assignments are wrong, or the finding is &lt;code&gt;TRANSLATION_AMBIGUOUS&lt;/code&gt;, that’s a language issue for &lt;strong&gt;Ambiguous Variable Refinement&lt;/strong&gt;. Choosing the mode by symptom rather than by inspecting the translation is the most frequent cause of a refinement that “fixes” the wrong thing.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Scope the inputs to bound the change.&lt;/strong&gt; Refine against a source document scoped to a single part of your policy (for example, parental-leave eligibility). Pair it with specific if-then feedback when you need only one rule fixed. Focused inputs produce tighter, more reviewable proposals than pointing the engine at a 40-page handbook with vague guidance like “fix the tenure rule.”&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Trust Test results over the diff.&lt;/strong&gt; The review screen shows both the changed rules and their effect on every saved test. The Test results panel is the decision-maker: accept when your failing tests flip to passing and your passing tests stay green. A clean-looking diff that regresses a previously passing test is not a fix.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Compare Fidelity Reports before you version.&lt;/strong&gt; Refinement optimizes to make tests pass. That optimization can pull a rule away from what your source document actually says. After accepting, compare the accuracy score to the pre-refinement run. A drop signals drift, and is a reason to reject and iterate rather than re-run blindly. Once tests pass and the report holds, create a numbered version to promote the change to production.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h3 id="real-world-use-cases"&gt;Real-world use cases&lt;/h3&gt; 
+&lt;p&gt;These patterns apply across regulated industries. In HR eligibility scenarios, the employee handbook updates annually, and Iterative Refinement ingests the new document and proposes rule changes so the HR team can review without touching formal logic. In financial services, overlapping variables such as debtToIncomeRatio and DTI cause translation ambiguity across customer phrasings, and Ambiguous Variable Refinement consolidates them to support deterministic validation. When clinical protocols are revised, healthcare compliance teams upload the new guideline. Iterative Refinement proposes rule updates, and the team validates the proposal before pushing to production. In manufacturing QA, tolerances tighten over time, and the team refines policies iteratively while maintaining an audit trail through versioned snapshots and Fidelity Reports.&lt;/p&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Teams shipping generative AI into regulated domains have paid a hidden tax: policy maintenance.&lt;/p&gt; 
+&lt;p&gt;Automatic policy refinement changes the labor equation without changing the authority equation.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;The rules-vs-language dichotomy.&lt;/strong&gt; When the logic is wrong (rules that are too permissive, too strict, or missing), &lt;strong&gt;Iterative Refinement&lt;/strong&gt; proposes formal-logic fixes grounded in your source document and feedback. When the language is wrong (overlapping variables, vague descriptions, inconsistent formats), &lt;strong&gt;Ambiguous Variable Refinement&lt;/strong&gt; proposes precise variable definitions that collapse competing interpretations into one.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;The approval gate.&lt;/strong&gt; In both cases, the system suggests and you decide. Every proposed change surfaces on a review screen that shows the diff &lt;em&gt;and&lt;/em&gt; its impact on your saved tests. No change reaches your DRAFT policy, let alone production, without your explicit approval. Automatic in labor. Guided in authority.&lt;/p&gt; 
+&lt;h3 id="your-next-step"&gt;Your next step&lt;/h3&gt; 
+&lt;p&gt;If you don’t yet have an Automated Reasoning policy with attached tests, start by creating a policy from a source document and adding tests that cover your key scenarios. Refer to the &lt;a href="#prerequisites"&gt;Prerequisites&lt;/a&gt; section for links. With a policy and at least one failing test in hand, pick one failing test today and inspect the finding. If the translation is correct but the result is wrong, run &lt;strong&gt;Iterative Refinement&lt;/strong&gt; with a focused source document. If the result is &lt;code&gt;TRANSLATION_AMBIGUOUS&lt;/code&gt;, run &lt;strong&gt;Ambiguous Variable Refinement&lt;/strong&gt;.&lt;/p&gt; 
+&lt;p&gt;Accept the proposal, re-test, and compare Fidelity Reports before and after. You will have a tighter policy, verified to up to 99% accuracy on unambiguous translations (see the &lt;a href="https://aws.amazon.com/blogs/aws/minimize-ai-hallucinations-and-deliver-up-to-99-verification-accuracy-with-automated-reasoning-checks-now-available/" target="_blank" rel="noopener"&gt;GA announcement&lt;/a&gt;), without writing a single line of formal logic by hand.&lt;/p&gt; 
+&lt;h3 id="resources"&gt;Resources&lt;/h3&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Get started:&lt;/strong&gt; Explore the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning.html" target="_blank" rel="noopener"&gt;Automated Reasoning checks documentation&lt;/a&gt; for setup guidance, or open your existing policy in the &lt;a href="https://console.aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock console&lt;/a&gt; and select &lt;strong&gt;Refine policy&lt;/strong&gt;. To learn more about the service, visit &lt;a href="https://aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Hands-on walkthrough:&lt;/strong&gt; For a step-by-step guide, refer to &lt;a href="https://aws.amazon.com/blogs/machine-learning/minimize-generative-ai-hallucinations-with-amazon-bedrock-automated-reasoning-checks/" target="_blank" rel="noopener"&gt;How to minimize generative AI hallucinations with Automated Reasoning checks&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Rewriting chatbot:&lt;/strong&gt; Your chatbot can iteratively rewrite its answers using Automated Reasoning checks feedback, asking the user clarifying questions until it reaches a provably correct answer. Refer to the &lt;a href="https://aws.amazon.com/blogs/machine-learning/automated-reasoning-checks-rewriting-chatbot-reference-implementation/" target="_blank" rel="noopener"&gt;Automated Reasoning checks rewriting chatbot reference implementation&lt;/a&gt; and the &lt;a href="https://github.com/aws-samples/amazon-bedrock-samples/tree/main/responsible_ai/automated-reasoning-rewriting-chatbot" target="_blank" rel="noopener"&gt;sample code on GitHub&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Policy formalization agent:&lt;/strong&gt; An agent can walk a subject matter expert through the entire process of improving the Automated Reasoning policy in natural language. Refer to our &lt;a href="https://github.com/aws-samples/sample-automated-reasoning-formalization" target="_blank" rel="noopener"&gt;open-source sample&lt;/a&gt; of such an agent.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Code samples:&lt;/strong&gt; Explore the &lt;a href="https://github.com/aws-samples/amazon-bedrock-samples/tree/main/responsible_ai/bedrock-automated-reasoning-checks" target="_blank" rel="noopener"&gt;Automated Reasoning checks samples&lt;/a&gt; on GitHub.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Customer results:&lt;/strong&gt; &lt;a href="https://aws.amazon.com/solutions/case-studies/amazon-logistics-case-study/" target="_blank" rel="noopener"&gt;Amazon Logistics case study&lt;/a&gt; | &lt;a href="https://aws.amazon.com/solutions/case-studies/pitcrew-case-study/" target="_blank" rel="noopener"&gt;PitCrew case study&lt;/a&gt; | &lt;a href="https://www.pwc.com.au/alliances/amazon-web-services/operationalising-responsible-ai-in-education.html" target="_blank" rel="noopener"&gt;PwC Responsible AI in Education case study&lt;/a&gt; | &lt;a href="https://aws.amazon.com/ai/responsible-ai/" target="_blank" rel="noopener"&gt;AWS Responsible AI resources&lt;/a&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;More about Amazon Bedrock features:&lt;/strong&gt; &lt;a href="https://aws.amazon.com/bedrock/guardrails/" target="_blank" rel="noopener"&gt;Amazon Bedrock Guardrails&lt;/a&gt; | &lt;a href="https://aws.amazon.com/bedrock/agentcore/" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore&lt;/a&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Responsible AI guidance:&lt;/strong&gt; &lt;a href="https://docs.aws.amazon.com/wellarchitected/latest/responsible-ai-lens/responsible-ai-lens.html" target="_blank" rel="noopener"&gt;AWS Well-Architected Responsible AI Lens&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h3 id="about-the-99-accuracy-figure"&gt;About the 99% accuracy figure&lt;/h3&gt; 
+&lt;p&gt;The 99% figure cited in the introduction and conclusion refers to verification accuracy that measures the rate of correct findings (&lt;code&gt;VALID&lt;/code&gt;, &lt;code&gt;INVALID&lt;/code&gt;, or &lt;code&gt;SATISFIABLE&lt;/code&gt;) given an unambiguous translation from natural language to formal logic. It was first published in the GA announcement, &lt;a href="https://aws.amazon.com/blogs/aws/minimize-ai-hallucinations-and-deliver-up-to-99-verification-accuracy-with-automated-reasoning-checks-now-available/" target="_blank" rel="noopener"&gt;Minimize AI hallucinations and deliver up to 99% verification accuracy with Automated Reasoning checks: Now available&lt;/a&gt; (AWS News Blog, August 6, 2025).&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/27/ML-21259-8.png" alt="Nafi Diallo" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Nafi Diallo&lt;/h3&gt; 
+  &lt;p&gt;Nafi is a Senior Applied Scientist at Amazon Web Services, specialized in AI safety, Automated Reasoning, and guardrails implementation for trustworthy AI solutions. She brings deep experience evaluating and improving the reliability of generative AI and agentic systems on Amazon Bedrock. Nafi also serves as the Regional Lead for North America for the Women in AI and ML (WAIML) organization at AWS, where she supports chapter growth and advances WAIML’s mission across the region.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/27/ML-21259-9.png" alt="Ferhat Erata" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Ferhat Erata&lt;/h3&gt; 
+  &lt;p&gt;Ferhat is an Applied Scientist at AWS AI Labs, where he builds neuro-symbolic systems that combine large language models with formal reasoning to make generative and agentic AI verifiable. His work spans AI safety and security, autoformalization, and verified code generation, and he post-trains reasoning models with verifier feedback to align their outputs with formal specifications. Ferhat holds a PhD in Computer Science from Yale University and reviews for NeurIPS, ICML, AAAI, and ACL.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/27/ML-21259-10.png" alt="Fernando Galves" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Fernando Galves&lt;/h3&gt; 
+  &lt;p&gt;Fernando is a Senior Applied AI Architect at AWS, where he helps enterprises in financial services and other regulated industries take generative and agentic AI from experimentation to production. He specializes in AI security, governance, and evaluations, and his work with customers directly informs the security direction of AWS agentic AI services. With more than 25 years of experience across software engineering, cybersecurity, and machine learning, he previously built cloud-based biometric authentication and fraud prevention systems used by top-tier banks and retailers.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Announcing the Agentic Catalog Experience in Amazon Quick</title>
 		<link>https://aws.amazon.com/blogs/machine-learning/announcing-the-agentic-catalog-experience-in-amazon-quick/</link>
 		
@@ -44,7 +623,7 @@
 &lt;p&gt;Today, we’re announcing the Agentic Catalog Experience in Amazon Quick, an AI-powered workflow that helps data curators rapidly define their context boundary, inherit upstream semantics, and enable end users for grounded Q&amp;amp;A and trusted dashboards at scale.&lt;/p&gt; 
 &lt;p&gt;At the heart of this experience is the Quick Agent, scoped to discovery, creation, and inheritance tasks within the catalog context. It uses the semantic context from the catalog connection to summarize the entire catalog at a glance, engage the customer in natural language conversation, surface the most relevant tables and relationships based on the customer’s use case, and assess metadata readiness. Then, with a single conversational confirmation, it auto-creates Catalog-Generated Datasets and Topics with targeted metadata inherited from the upstream catalog.&lt;/p&gt; 
 &lt;p&gt;&lt;strong&gt;No manual configuration. No context-switching. No weeks of setup.&lt;/strong&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;img class="size-full wp-image-136414 alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/AgenticCatalogExperience.png" alt="" width="925" height="1257"&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;img loading="lazy" class="size-full wp-image-136414 alignnone" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/31/AgenticCatalogExperience.png" alt="" width="925" height="1257"&gt;&lt;/p&gt; 
 &lt;h2 id="how-it-works"&gt;How it works&lt;/h2&gt; 
 &lt;h3 id="natural-language-asset-discovery"&gt;Natural language asset discovery&lt;/h3&gt; 
 &lt;p&gt;Instead of scrolling through thousands of tables to find the right ones, curators use natural language. With the Agentic Catalog Experience, curators describe what they need:&lt;/p&gt; 
@@ -5002,1141 +5581,6 @@ client = BedrockOpenAI(
 		
 		
 			</item>
-		<item>
-		<title>Best practices for applying Amazon Bedrock Guardrails to code generation workflows</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/best-practices-for-applying-amazon-bedrock-guardrails-to-code-generation-workflows/</link>
-		
-		<dc:creator><![CDATA[Sandeep Singh]]></dc:creator>
-		<pubDate>Thu, 23 Jul 2026 23:03:44 +0000</pubDate>
-				<category><![CDATA[Amazon Bedrock Guardrails]]></category>
-		<category><![CDATA[Best Practices]]></category>
-		<category><![CDATA[Expert (400)]]></category>
-		<guid isPermaLink="false">df45dac76900a835b5c00ed07f954db778378994</guid>
-
-					<description>In this post, we explain how Amazon Bedrock Guardrails can be configured for code generation workflows with coding assistants to overcome these constraints. With these best practices, you can build an efficient blueprint helping you with effective capacity planning with robust safety coverage.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post continues our series on best practices with Amazon Bedrock Guardrails. For the previous post, see &lt;a href="https://aws.amazon.com/blogs/machine-learning/build-safe-generative-ai-applications-like-a-pro-best-practices-with-amazon-bedrock-guardrails/" target="_blank" rel="noopener"&gt;Build safe generative AI applications like a pro: best practices with Amazon Bedrock Guardrails&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;AI-powered coding assistants and code generation workflows, such as Claude Code, &lt;a href="https://aws.amazon.com/documentation-overview/kiro/" target="_blank" rel="noopener"&gt;Kiro&lt;/a&gt;, and &lt;a href="https://chatgpt.com/codex" target="_blank" rel="noopener"&gt;OpenAI Codex&lt;/a&gt;, are transforming how developers write software. These tools generate code in real time through streaming responses, often producing thousands of characters across extended sessions. As organizations adopt generative AI workflows with code at scale using these assistants, it is important that unsafe code patterns are detected and blocked whenever required. &lt;a href="https://aws.amazon.com/bedrock/guardrails/" target="_blank" rel="noopener"&gt;Amazon Bedrock Guardrails&lt;/a&gt; helps detect and filter unsafe and undesired code content with safeguards such as content filters for content moderation, prompt attack prevention with jailbreaks, prompt injection, and prompt leakage, sensitive information filters to redact and block personally identifiable information (PII), and more.&lt;/p&gt; 
-&lt;p&gt;However, coding workflows along with agentic loops have unique throughput characteristics including long streaming outputs, concurrent developer sessions, and repetitive context evaluation. Applying Amazon Bedrock Guardrails to workflows with these characteristics without proper configuration could potentially lead to constraints such as throttling errors, increased costs, and less than optimal latency. In this post, we explain how Amazon Bedrock Guardrails can be configured for code generation workflows with coding assistants to overcome these constraints. With these best practices, you can build an efficient blueprint helping you with effective capacity planning with robust safety coverage.&lt;/p&gt; 
-&lt;h2 id="why-guardrails-are-important-for-code-generation-workflows"&gt;Why guardrails are important for code generation workflows&lt;/h2&gt; 
-&lt;p&gt;Amazon Bedrock Guardrails offers comprehensive safeguards that detect and filter harmful and undesirable content from both user inputs and model responses, to help build safe generative AI applications. While these safeguards can be configured and implemented across a variety of applications, there are specific safeguards that can be used to protect harmful code patterns such as:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Detect prompt attacks&lt;/strong&gt; – block attempts to manipulate the model into generating malicious code or bypassing instructions.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Filter sensitive information&lt;/strong&gt; – can help block or mask sensitive information such as personally identifiable information (PII), custom regex in user inputs and model responses, catch hardcoded AWS access keys, database connection strings, or private keys before they appear in generated code.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Content moderation&lt;/strong&gt; – detect and filter harmful content in user prompts and model responses, including content that violates your organization’s acceptable use policies.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Block denied topics&lt;/strong&gt; – define custom topics that are used as a basis for blocking conversations related to prohibited activities, such as generating code to bypass authentication mechanisms or assisting with unauthorized access patterns.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;These safeguards are essential when AI-generated code is used in production systems.&lt;/p&gt; 
-&lt;h3 id="a-scenario-when-good-guardrails-go-sideways"&gt;A scenario: When good guardrails go sideways&lt;/h3&gt; 
-&lt;p&gt;A customer system team has just rolled out Claude Code on Amazon Bedrock to 15 developers. They’ve configured a guardrail with three safeguards: prompt attack detection to help prevent injection, a sensitive information filter to redact or block leaked credentials, and a content filter to block unsafe code patterns. Everything worked perfectly during the pilot with two developers. After a successful pilot, all 15 developers start their coding sessions simultaneously. Within minutes, their team starts reporting errors: &lt;code&gt;ThrottlingException&lt;/code&gt; responses from Amazon Bedrock model inference. Code completions stall mid-stream. Developers are frustrated, and their Slack channel lights up.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;What happened?&lt;/strong&gt; Each developer’s session generates roughly 5,000 characters of code per function on average. With the default streaming configuration, Amazon Bedrock evaluates guardrails for every 50 characters, triggering 100 API calls per function, per developer. Multiply across 15 concurrent sessions, and the system generates 1,500 evaluation requests per second. Worse, because they have 3 safeguards active, each evaluation consumes 3 text units instead of 1, tripling throughput consumption.&lt;/p&gt; 
-&lt;p&gt;The root cause wasn’t insufficient quota. It was an architectural mismatch. They applied a pattern designed for short conversational exchanges to a high-throughput code generation pipeline. This post provides architectural patterns to solve this problem.&lt;/p&gt; 
-&lt;h3 id="text-units-the-guardrails-currency"&gt;Text units: The guardrails currency&lt;/h3&gt; 
-&lt;p&gt;Before diving into architecture, it’s important to understand how guardrail consumption is calculated, because it’s the key to every optimization that follows.&lt;/p&gt; 
-&lt;p&gt;A text unit is defined as 1,000 characters in the text. An &lt;code&gt;ApplyGuardrail&lt;/code&gt; API call with 1,000 characters of text evaluated against 3 safeguards generates 3 text units of consumption.&lt;/p&gt; 
-&lt;p&gt;Critically, consumption is multiplicative. It scales with both content length and the number of active safeguards.&lt;/p&gt; 
-&lt;p&gt;For code generation workflows where outputs are typically verbose (thousands of characters per function), this multiplicative relationship is a critical factor in capacity planning. A guardrail configured with content filters, denied topics, and sensitive information filters is metered based on the number of text units processed by each safeguard or filter.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Content filters are charged as a single text unit per 1,000 characters regardless of how many categories (Hate, Insults, Sexual, Violence, Misconduct, Prompt Attack) are enabled within the filter. For example, if you enable all six content filter categories, it still counts as one text unit, not six. The multiplicative relationship applies across distinct policy types (content filters, denied topics, sensitive information filters), not across categories within a single policy type.&lt;/p&gt; 
-&lt;h2 id="the-challenge-code-generation-workflows-could-trigger-throttling"&gt;The challenge: Code generation workflows could trigger throttling&lt;/h2&gt; 
-&lt;p&gt;Traditional conversational AI workflows involve short, discrete user prompts and model responses. Code generation workflows differ in ways that directly impact guardrail architecture:&lt;/p&gt; 
-&lt;p&gt;The following table shows why code generation workflows are uniquely demanding:&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Characteristic&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Conversational AI&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Code Generation&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Output length&lt;/td&gt; 
-   &lt;td&gt;100-500 characters&lt;/td&gt; 
-   &lt;td&gt;5,000-50,000+ characters&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Session duration&lt;/td&gt; 
-   &lt;td&gt;Single turn or few turns&lt;/td&gt; 
-   &lt;td&gt;Extended multi-turn sessions&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Concurrent users&lt;/td&gt; 
-   &lt;td&gt;Typically, asynchronous&lt;/td&gt; 
-   &lt;td&gt;Teams coding simultaneously&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Context reuse&lt;/td&gt; 
-   &lt;td&gt;Minimal&lt;/td&gt; 
-   &lt;td&gt;System prompts, tool definitions, and prior code resent every turn&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Intermediate output&lt;/td&gt; 
-   &lt;td&gt;Minimal&lt;/td&gt; 
-   &lt;td&gt;Extensive chain-of-thought reasoning&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;These differences mean that an inline scanning approach, where guardrails evaluate every chunk of streamed output as it’s generated, creates a volume of evaluations that’s disproportionate to the actual safety value delivered.&lt;/p&gt; 
-&lt;h2&gt;&lt;b&gt;Best Practices: Architecture Patterns for Code Generation Workflows&lt;/b&gt;&lt;/h2&gt; 
-&lt;p&gt;To address these challenges, we recommend a set of architecture patterns that optimize guardrail usage for code generation workflows. Each pattern targets a specific aspect of the problem — from reducing evaluation frequency to selectively scanning only high-risk content. You can apply these patterns individually or combine them based on your workload characteristics and safety requirements.&lt;/p&gt; 
-&lt;h2 id="architecture-pattern-1-the-pre-commit-hook-model"&gt;Architecture pattern 1: The pre-commit hook model&lt;/h2&gt; 
-&lt;h3 id="understanding-inline-scanning-the-default-approach"&gt;Understanding inline scanning: the default approach&lt;/h3&gt; 
-&lt;p&gt;When you attach guardrails directly to model invocation using &lt;code&gt;guardrailConfig&lt;/code&gt; with the Converse or InvokeModel APIs, you’re using what’s known as &lt;em&gt;inline scanning&lt;/em&gt;. In this mode, Amazon Bedrock Guardrails automatically evaluates both the full input prompt and the streaming output against active safeguards continuously, in real time, as tokens are generated. For traditional conversational AI, this approach works well: prompts are short, responses are concise, and the evaluation overhead is negligible.&lt;/p&gt; 
-&lt;p&gt;But for code generation workflows, inline scanning becomes inefficient overhead. It adds cost and consumes quota without meaningfully improving your security posture. A coding assistant doesn’t produce only a brief response. It streams thousands of characters of code, interspersed with reasoning, comments, and iterative refinements. With inline evaluation active, every chunk of that output is scanned against every configured safeguard, including the static system prompt and previously generated context that hasn’t changed since the last evaluation. The result is redundant work: the same boilerplate instructions, tool definitions, and prior conversation history are re-evaluated turn after turn, consuming text units without adding safety value.&lt;/p&gt; 
-&lt;p&gt;The core best practice is to &lt;strong&gt;shift from continuous inline scanning to selective validation at strategic checkpoints&lt;/strong&gt;, analogous to a pre-commit hook in a Git workflow. Rather than scanning every token as it streams, validate content at well-defined boundaries where the risk profile changes.&lt;/p&gt; 
-&lt;h3 id="why-pre-commit-hook-thinking-works"&gt;Why “pre-commit hook” thinking works&lt;/h3&gt; 
-&lt;p&gt;Software developers don’t run linters, formatters, and security scanners after every line they type. They validate at commit time. They don’t validate every intermediate edit, every deleted line, or every half-written function, but validate the &lt;em&gt;finished result&lt;/em&gt; at the &lt;em&gt;moment it matters&lt;/em&gt;.&lt;/p&gt; 
-&lt;p&gt;In a Git workflow, a pre-commit hook is a script that runs automatically at a specific, well-defined boundary: the moment you attempt to commit code to your repository. It’s the last gate before your changes become part of the shared code base. At this checkpoint, you run your validations and tests all at once, against the final artifact that’s about to be persisted.&lt;/p&gt; 
-&lt;p&gt;This pattern works because it balances two competing needs: thoroughness (every committed change is fully validated) and efficiency (validation only happens when the risk profile changes, as code moves from “draft in progress” to “artifact being persisted”).&lt;/p&gt; 
-&lt;h3 id="applying-the-pattern-to-amazon-bedrock-guardrails"&gt;Applying the pattern to Amazon Bedrock Guardrails&lt;/h3&gt; 
-&lt;p&gt;The core best practice is to apply this same principle to Amazon Bedrock Guardrails: shift from continuous inline scanning to selective validation at strategic checkpoints.&lt;/p&gt; 
-&lt;p&gt;Think of your code generation pipeline as having natural commit points, moments where content transitions from one trust level to another:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;User input received&lt;/strong&gt; – Content enters your system from an untrusted source (validate here).&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Final code artifact assembled&lt;/strong&gt; – The model’s complete response is ready to be presented or saved (validate here).&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Code written to file or committed to repository&lt;/strong&gt; – AI-generated content is about to become persistent and potentially executable (validate here).&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Between these checkpoints, while the model is reasoning, generating intermediate tokens, or producing chain-of-thought explanations, the content is ephemeral. It hasn’t crossed a trust boundary. Scanning it continuously adds cost and consumes quota without meaningfully improving your security posture.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-21149-1.png" alt="Diagram showing guardrail validation at three trust boundaries in a code generation pipeline: user input, final code artifact, and code commit, with intermediate reasoning tokens skipped." width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Key principle&lt;/strong&gt;: Use the decoupled &lt;code&gt;ApplyGuardrail&lt;/code&gt; API to evaluate user-supplied inputs before they reach the model, and validate aggregated final code artifacts before they are committed, not every intermediate reasoning token.&lt;/p&gt; 
-&lt;h3 id="implementation-pre-commit-validation-for-file-operations"&gt;Implementation: pre-commit validation for file operations&lt;/h3&gt; 
-&lt;p&gt;For the highest-risk checkpoint, when AI-generated code is about to be written to a file or committed to a repository, perform comprehensive guardrail evaluation. This is the pre-commit hook pattern applied directly:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;import hashlib
-from pathlib import Path
-
-class CodeCommitGuardrail:
-    """
-    Validates all AI-generated code changes before they are persisted.
-    Analogous to running security scanners in a Git pre-commit hook.
-
-    Use this when:
-    - A coding assistant writes code to disk
-    - AI-generated changes are staged for commit
-    - Generated code is about to be deployed
-    """
-
-    def __init__(self, client, guardrail_id, guardrail_version):
-        self.client = client
-        self.guardrail_id = guardrail_id
-        self.guardrail_version = guardrail_version
-        self.validated_hashes = {}  # Cache: don't re-validate unchanged files
-
-    def validate_file_changes(self, staged_files: dict) -&amp;gt; dict:
-        """
-        Evaluate all staged AI-generated code changes before commit.
-
-        Args:
-            staged_files: Dict of {file_path: file_content} for all changed files
-
-        Returns:
-            Dict with 'safe' boolean and any violations found
-        """
-        violations = []
-        skipped = []
-
-        for file_path, content in staged_files.items():
-            # Skip files that haven't changed since last validation
-            content_hash = hashlib.sha256(content.encode()).hexdigest()
-            if self.validated_hashes.get(file_path) == content_hash:
-                skipped.append(file_path)
-                continue
-
-            # Evaluate in 1,000-char aligned chunks
-            file_violations = self._evaluate_file(file_path, content)
-
-            if file_violations:
-                violations.extend(file_violations)
-            else:
-                # Cache successful validation
-                self.validated_hashes[file_path] = content_hash
-
-        return {
-            'safe': len(violations) == 0,
-            'violations': violations,
-            'files_evaluated': len(staged_files) - len(skipped),
-            'files_skipped_cached': len(skipped)
-        }
-
-    def _evaluate_file(self, file_path: str, content: str) -&amp;gt; list:
-        """Evaluate a single file's content against guardrails."""
-        violations = []
-
-        for offset in range(0, len(content), 1000):
-            chunk = content[offset:offset + 1000]
-
-            response = self.client.apply_guardrail(
-                guardrailIdentifier=self.guardrail_id,
-                guardrailVersion=self.guardrail_version,
-                source='OUTPUT',
-                content=[{'text': {'text': chunk}}]
-            )
-
-            if response['action'] == 'GUARDRAIL_INTERVENED':
-                violations.append({
-                    'file': file_path,
-                    'offset': offset,
-                    'length': len(chunk),
-                    'assessments': response['assessments'],
-                    'snippet': chunk[:200] + '...' if len(chunk) &amp;gt; 200 else chunk
-                })
-
-        return violations
-
-
-# Example: Integration with a coding assistant's file-write operation
-def write_ai_generated_code(file_path: str, content: str, guardrail: CodeCommitGuardrail):
-    """
-    Wrapper for file writes that validates content before persisting.
-    """
-    result = guardrail.validate_file_changes({file_path: content})
-
-    if not result['safe']:
-        print(f"Guardrail blocked write to {file_path}")
-        for v in result['violations']:
-            print(f"  Violation at offset {v['offset']}: {v['assessments']}")
-        return False
-
-    # Safe to write
-    Path(file_path).write_text(content)
-    print(f"{file_path} validated and written successfully")
-    return True&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;h2 id="architecture-pattern-2-increase-the-streaming-interval-to-1000-characters"&gt;Architecture pattern 2: Increase the streaming interval to 1,000 characters&lt;/h2&gt; 
-&lt;p&gt;When you do need real-time streaming evaluation, for example interactive coding sessions where you want to halt generation immediately upon detecting a violation, optimize the streaming interval. Increasing the guardrail interval from the default 50 characters to 1,000 characters can reduce your API call volume by 20x. See the following configuration:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;# When using InvokeModelWithResponseStream with guardrails
-response = bedrock_runtime.invoke_model_with_response_stream(
-    modelId='anthropic.claude-sonnet-4-20250514',
-    body=json.dumps(request_body),
-    guardrailIdentifier='your-guardrail-id',
-    guardrailVersion='1',
-    # Key configuration: increase streaming interval
-    streamingConfigurations={
-        'guardrailStreamingInterval': 1000  # Default is 50!
-    }
-)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;&lt;strong&gt;Impact&lt;/strong&gt;: A 5,000-character function goes from 100 evaluations to 5. A 50,000-character file goes from 1,000 evaluations to 50.&lt;/p&gt; 
-&lt;h2 id="architecture-pattern-3-use-the-decoupled-applyguardrail-api-for-selective-evaluation"&gt;Architecture pattern 3: Use the decoupled ApplyGuardrail API for selective evaluation&lt;/h2&gt; 
-&lt;p&gt;With the standalone &lt;a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ApplyGuardrail.html" target="_blank" rel="noopener"&gt;ApplyGuardrail&lt;/a&gt; API, you can use Amazon Bedrock Guardrails irrespective of the foundation model. You can evaluate text without invoking the foundation model.&lt;/p&gt; 
-&lt;h3 id="pattern-input-only-validation-with-unguarded-inference"&gt;Pattern: Input-only validation with unguarded inference&lt;/h3&gt; 
-&lt;p&gt;When your primary concern is preventing prompt injection and blocking malicious inputs, validate only the dynamic user content before it reaches the model. In that case, invoke the model without inline guardrails:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;import boto3
-import json
-
-bedrock_runtime = boto3.client('bedrock-runtime')
-
-def process_coding_request(user_input: str, system_prompt: str, conversation_history: list):
-    """
-    Validate user input with guardrails, then invoke model without inline scanning.
-    The system prompt and conversation history are NOT re-evaluated every turn.
-    """
-
-    # Step 1: Evaluate ONLY the new dynamic user input
-    guardrail_response = bedrock_runtime.apply_guardrail(
-        guardrailIdentifier='your-guardrail-id',
-        guardrailVersion='1',
-        source='INPUT',
-        content=[
-            {
-                'text': {
-                    'text': user_input  # Only the new content - not the full prompt
-                }
-            }
-        ]
-    )
-
-    if guardrail_response['action'] == 'GUARDRAIL_INTERVENED':
-        return {
-            'blocked': True,
-            'message': guardrail_response['outputs'][0]['text'],
-            'assessments': guardrail_response['assessments']
-        }
-
-    # Step 2: Safe to proceed - invoke model WITHOUT inline guardrails
-    # The system prompt and history bypass redundant evaluation
-    messages = conversation_history + [{'role': 'user', 'content': user_input}]
-
-    response = bedrock_runtime.converse(
-        modelId='anthropic.claude-sonnet-4-20250514',
-        messages=messages,
-        system=[{'text': system_prompt}]
-        # Note: No guardrailConfig here - we've already validated input
-    )
-
-    return {
-        'blocked': False,
-        'response': response['output']['message']['content'][0]['text']
-    }&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;&lt;strong&gt;Why this matters for coding workflows:&lt;/strong&gt; In a typical coding session, the system prompt (often 2,000-5,000 characters of tool definitions and instructions) and conversation history (growing with each turn) are resent on every invocation. With inline evaluation, this static content is re-scanned every single turn. With the decoupled approach, you evaluate only the ~200-character user message that actually changed.&lt;/p&gt; 
-&lt;h3 id="pattern-output-only-validation-at-completion"&gt;Pattern: Output-only validation at completion&lt;/h3&gt; 
-&lt;p&gt;When you need to scan generated code for sensitive information (leaked credentials, hardcoded secrets) but trust that the user input is benign (for example, internal developer tools behind authentication), validate only the final output:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;def generate_and_validate_code(user_input: str, system_prompt: str):
-    """
-    Generate code without inline guardrails, then validate the complete output.
-    Ideal for detecting secrets, PII, or unsafe patterns in generated code.
-    """
-
-    # Step 1: Generate code without inline guardrail overhead
-    response = bedrock_runtime.converse(
-        modelId='anthropic.claude-sonnet-4-20250514',
-        messages=[{'role': 'user', 'content': user_input}],
-        system=[{'text': system_prompt}]
-    )
-
-    generated_code = response['output']['message']['content'][0]['text']
-
-    # Step 2: Validate the COMPLETE code artifact - not intermediate chunks
-    guardrail_response = bedrock_runtime.apply_guardrail(
-        guardrailIdentifier='your-guardrail-id',
-        guardrailVersion='1',
-        source='OUTPUT',
-        content=[
-            {
-                'text': {
-                    'text': generated_code
-                }
-            }
-        ]
-    )
-
-    if guardrail_response['action'] == 'GUARDRAIL_INTERVENED':
-        return {
-            'blocked': True,
-            'message': 'Generated code contains sensitive content that was blocked.',
-            'assessments': guardrail_response['assessments']
-        }
-
-    return {
-        'blocked': False,
-        'code': generated_code
-    }&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;h3 id="pattern-bidirectional-validation-with-selective-scope"&gt;Pattern: Bidirectional validation with selective scope&lt;/h3&gt; 
-&lt;p&gt;For maximum coverage, validate inputs for injection attacks and outputs for sensitive content while still avoiding the overhead of inline scanning:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;def secure_code_generation_pipeline(user_input: str, system_prompt: str, history: list):
-    """
-    Full bidirectional validation without inline scanning overhead.
-    Input: Check for prompt injection/manipulation
-    Output: Check for leaked secrets and unsafe patterns
-    """
-
-    # Step 1: Validate input for prompt injection
-    input_check = bedrock_runtime.apply_guardrail(
-        guardrailIdentifier='your-guardrail-id',
-        guardrailVersion='1',
-        source='INPUT',
-        content=[{'text': {'text': user_input}}]
-    )
-
-    if input_check['action'] == 'GUARDRAIL_INTERVENED':
-        return {'blocked': True, 'stage': 'input', 'reason': input_check['outputs'][0]['text']}
-
-    # Step 2: Generate code - no inline guardrails needed
-    messages = history + [{'role': 'user', 'content': user_input}]
-    response = bedrock_runtime.converse(
-        modelId='anthropic.claude-sonnet-4-20250514',
-        messages=messages,
-        system=[{'text': system_prompt}]
-    )
-    generated_code = response['output']['message']['content'][0]['text']
-
-    # Step 3: Validate output for sensitive information
-    output_check = bedrock_runtime.apply_guardrail(
-        guardrailIdentifier='your-guardrail-id',
-        guardrailVersion='1',
-        source='OUTPUT',
-        content=[{'text': {'text': generated_code}}]
-    )
-
-    if output_check['action'] == 'GUARDRAIL_INTERVENED':
-        return {'blocked': True, 'stage': 'output', 'reason': output_check['outputs'][0]['text']}
-
-    return {'blocked': False, 'code': generated_code}&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;h2 id="architecture-pattern-4-batch-output-to-text-unit-aligned-boundaries"&gt;Architecture pattern 4: Batch output to text unit aligned boundaries&lt;/h2&gt; 
-&lt;p&gt;Since a 600-character chunk still costs one full text unit (1,000 characters), &lt;strong&gt;always batch to multiples of 1,000 characters&lt;/strong&gt; to avoid partial-unit waste:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;import asyncio
-
-class GuardrailBatcher:
-    """Accumulates streaming output and evaluates at 1,000-char boundaries."""
-
-    def __init__(self, client, guardrail_id, guardrail_version):
-        self.client = client
-        self.guardrail_id = guardrail_id
-        self.guardrail_version = guardrail_version
-        self.buffer = ""
-        self.BATCH_SIZE = 1000  # Align to TextUnit boundary
-
-    async def process_chunk(self, chunk: str):
-        """Buffer chunks and evaluate when we hit a TextUnit boundary."""
-        self.buffer += chunk
-
-        while len(self.buffer) &amp;gt;= self.BATCH_SIZE:
-            # Extract exactly 1,000 characters for evaluation
-            batch = self.buffer[:self.BATCH_SIZE]
-            self.buffer = self.buffer[self.BATCH_SIZE:]
-
-            response = self.client.apply_guardrail(
-                guardrailIdentifier=self.guardrail_id,
-                guardrailVersion=self.guardrail_version,
-                source='OUTPUT',
-                content=[{'text': {'text': batch}}]
-            )
-
-            if response['action'] == 'GUARDRAIL_INTERVENED':
-                raise GuardrailViolation(response)
-
-    async def flush(self):
-        """Evaluate any remaining content at end of stream."""
-        if self.buffer:
-            response = self.client.apply_guardrail(
-                guardrailIdentifier=self.guardrail_id,
-                guardrailVersion=self.guardrail_version,
-                source='OUTPUT',
-                content=[{'text': {'text': self.buffer}}]
-            )
-            self.buffer = ""
-            return response&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;h2 id="architecture-pattern-5-risk-based-evaluation-depth"&gt;Architecture pattern 5: Risk-based evaluation depth&lt;/h2&gt; 
-&lt;p&gt;Not all generated code carries the same risk. Code that touches IAM policies, secrets, or authentication deserves more thorough scanning than UI layout code. Implement adaptive evaluation depth based on content signals:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;import re
-
-class RiskBasedGuardrail:
-    """
-    Adjusts guardrail evaluation strategy based on the risk profile
-    of the code being generated.
-
-    High-risk code: Full evaluation with all safeguards
-    Standard code: Lightweight evaluation (sensitive info only)
-    Low-risk code: Skip intermediate evaluation; validate at commit only
-    """
-
-    # Patterns that indicate high-risk code
-    HIGH_RISK_PATTERNS = [
-        r'iam[_\.]',                           # IAM policy manipulation
-        r'(access_key|secret_key|password)',   # Credential handling
-        r'(exec|eval|subprocess|os\.system)',  # Code execution
-        r'(BEGIN.*PRIVATE KEY)',               # Cryptographic keys
-        r'(security_group|nacl|firewall)',     # Network security
-        r'(grant|revoke|permission)',          # Authorization
-        r'(encrypt|decrypt|kms)',              # Encryption operations
-    ]
-
-    # Patterns that indicate low-risk code
-    LOW_RISK_PATTERNS = [
-        r'(\.css|style|className|fontSize)',   # Styling
-        r'(render|component|jsx|tsx)',         # UI components
-        r'(test|spec|mock|fixture)',           # Test files
-        r'(README|docs|comment)',              # Documentation
-    ]
-
-    def __init__(self, client, guardrail_id_full, guardrail_id_lightweight):
-        self.client = client
-        self.guardrail_id_full = guardrail_id_full                # All safeguards active
-        self.guardrail_id_lightweight = guardrail_id_lightweight  # Sensitive info only
-
-    def classify_risk(self, code: str, file_path: str = "") -&amp;gt; str:
-        """Determine risk level of generated code."""
-        combined = code + " " + file_path
-
-        for pattern in self.HIGH_RISK_PATTERNS:
-            if re.search(pattern, combined, re.IGNORECASE):
-                return 'HIGH'
-
-        for pattern in self.LOW_RISK_PATTERNS:
-            if re.search(pattern, combined, re.IGNORECASE):
-                return 'LOW'
-
-        return 'STANDARD'
-
-    def evaluate(self, code: str, file_path: str = "") -&amp;gt; dict:
-        """
-        Evaluate code with appropriate depth based on risk classification.
-        """
-        risk_level = self.classify_risk(code, file_path)
-
-        if risk_level == 'LOW':
-            # Low-risk: defer to commit-time validation
-            return {
-                'action': 'PASS',
-                'risk_level': 'LOW',
-                'evaluation': 'deferred_to_commit',
-                'reason': 'Content classified as low-risk (UI/tests/docs)'
-            }
-
-        # Choose guardrail based on risk
-        guardrail_id = (
-            self.guardrail_id_full if risk_level == 'HIGH'
-            else self.guardrail_id_lightweight
-        )
-
-        response = self.client.apply_guardrail(
-            guardrailIdentifier=guardrail_id,
-            guardrailVersion='1',
-            source='OUTPUT',
-            content=[{'text': {'text': code}}]
-        )
-
-        return {
-            'action': response['action'],
-            'risk_level': risk_level,
-            'evaluation': 'full' if risk_level == 'HIGH' else 'lightweight',
-            'assessments': response.get('assessments', [])
-        }
-
-
-# Example: Using risk-based evaluation in a coding pipeline
-risk_guardrail = RiskBasedGuardrail(
-    client=bedrock_runtime,
-    guardrail_id_full='guardrail-all-safeguards',
-    guardrail_id_lightweight='guardrail-sensitive-info-only'
-)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;# High-risk: IAM policy code → full evaluation (3 safeguards)
-# WARNING: The following is an example of an INSECURE anti-pattern used here
-# solely to demonstrate guardrail detection. Never use wildcard permissions
-# (Action: '*', Resource: '*') in production. Always follow the principle of
-# least privilege. See: https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege
-iam_code = """
-policy = iam.create_policy(
-    PolicyName='AdminAccess',
-    PolicyDocument=json.dumps({
-        'Statement': [{'Effect': 'Allow', 'Action': '*', 'Resource': '*'}]
-    })
-)
-"""
-result = risk_guardrail.evaluate(iam_code, "deploy/iam_policies.py")
-# → risk_level: HIGH, evaluation: full
-
-# Low-risk: React component → deferred to commit
-ui_code = """
-function Button({ label, onClick }) {
-    return &amp;lt;button className="btn-primary" onClick={onClick}&amp;gt;{label}&amp;lt;/button&amp;gt;;
-}
-"""
-result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
-# → risk_level: LOW, evaluation: deferred_to_commit&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;h2 id="architecture-pattern-6-multi-stage-agent-pipeline"&gt;Architecture pattern 6: Multi-stage agent pipeline&lt;/h2&gt; 
-&lt;p&gt;Agentic coding workflows (where the model uses tools, reasons over multiple steps, and produces intermediate outputs) require a different evaluation strategy than single-turn generation:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;class AgentPipelineGuardrail:
-    """
-    Guardrail architecture for multi-step agentic coding workflows.
-
-    Key insight: In an agent loop, the model may take 5-10 reasoning steps
-    (tool calls, observations, reflections) before producing final code.
-    Evaluating every intermediate step is wasteful - most contain internal
-    reasoning that never reaches the user or a file system.
-
-    Strategy:
-    - INPUT: Validate user request before agent starts
-    - INTERMEDIATE: Skip chain-of-thought and tool-use reasoning
-    - TOOL INPUTS: Validate when agent writes to file or executes code
-    - FINAL OUTPUT: Validate the complete response shown to the user
-    """
-
-    def __init__(self, client, guardrail_id, guardrail_version):
-        self.client = client
-        self.guardrail_id = guardrail_id
-        self.guardrail_version = guardrail_version
-
-    def run_agent_with_guardrails(self, user_request: str, agent):
-        """
-        Execute an agentic coding workflow with strategic guardrail placement.
-        """
-
-        # Gate 1: Validate user input BEFORE agent starts working
-        input_check = self._evaluate(user_request, 'INPUT')
-        if input_check['action'] == 'GUARDRAIL_INTERVENED':
-            return {'blocked': True, 'stage': 'input', 'response': input_check}
-
-        # Run the agent - NO guardrail evaluation during reasoning steps
-        agent_steps = []
-        final_output = None
-
-        for step in agent.run(user_request):
-            if step['type'] == 'thinking':
-                # Skip: internal reasoning doesn't need evaluation
-                agent_steps.append(step)
-                continue
-
-            elif step['type'] == 'tool_call':
-                # Gate 2: Validate ONLY dangerous tool inputs
-                if self._is_dangerous_tool(step['tool_name']):
-                    tool_check = self._evaluate(
-                        json.dumps(step['tool_input']), 'OUTPUT'
-                    )
-                    if tool_check['action'] == 'GUARDRAIL_INTERVENED':
-                        return {
-                            'blocked': True,
-                            'stage': f"tool_call:{step['tool_name']}",
-                            'response': tool_check
-                        }
-                agent_steps.append(step)
-
-            elif step['type'] == 'final_response':
-                final_output = step['content']
-
-        # Gate 3: Validate final output before showing to user
-        if final_output:
-            output_check = self._evaluate(final_output, 'OUTPUT')
-            if output_check['action'] == 'GUARDRAIL_INTERVENED':
-                return {'blocked': True, 'stage': 'output', 'response': output_check}
-
-        return {
-            'blocked': False,
-            'output': final_output,
-            'steps_taken': len(agent_steps),
-            'steps_evaluated': sum(
-                1 for s in agent_steps
-                if s['type'] == 'tool_call' and self._is_dangerous_tool(s.get('tool_name', ''))
-            )
-        }
-
-    def _is_dangerous_tool(self, tool_name: str) -&amp;gt; bool:
-        """Tools that write to disk or execute code need guardrail evaluation."""
-        dangerous_tools = {
-            'write_file', 'execute_code', 'run_command',
-            'create_file', 'edit_file', 'bash'
-        }
-        return tool_name in dangerous_tools
-
-    def _evaluate(self, content: str, source: str) -&amp;gt; dict:
-        return self.client.apply_guardrail(
-            guardrailIdentifier=self.guardrail_id,
-            guardrailVersion=self.guardrail_version,
-            source=source,
-            content=[{'text': {'text': content}}]
-        )&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;h2 id="the-complete-decision-framework"&gt;The complete decision framework&lt;/h2&gt; 
-&lt;p&gt;The following table shows the decision framework for various checkpoints:&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Checkpoint&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;What to validate&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;How&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Text unit impact&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;User input (each turn)&lt;/td&gt; 
-   &lt;td&gt;Dynamic user content only&lt;/td&gt; 
-   &lt;td&gt;ApplyGuardrail (source=INPUT)&lt;/td&gt; 
-   &lt;td&gt;Low – only new content evaluated&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Streaming output&lt;/td&gt; 
-   &lt;td&gt;Active content as it streams&lt;/td&gt; 
-   &lt;td&gt;Set interval to 1,000 chars&lt;/td&gt; 
-   &lt;td&gt;Potential 20x reduction compared to default&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Completed response&lt;/td&gt; 
-   &lt;td&gt;Final aggregated code artifact&lt;/td&gt; 
-   &lt;td&gt;ApplyGuardrail (source=OUTPUT)&lt;/td&gt; 
-   &lt;td&gt;One-time comprehensive pass&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Pre-commit / file save&lt;/td&gt; 
-   &lt;td&gt;AI-generated code changes&lt;/td&gt; 
-   &lt;td&gt;ApplyGuardrail (source=OUTPUT)&lt;/td&gt; 
-   &lt;td&gt;Comprehensive but infrequent&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Agent tool calls&lt;/td&gt; 
-   &lt;td&gt;Only dangerous tools (write/execute)&lt;/td&gt; 
-   &lt;td&gt;ApplyGuardrail (source=OUTPUT)&lt;/td&gt; 
-   &lt;td&gt;Targeted – skip benign tools&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Intermediate reasoning&lt;/td&gt; 
-   &lt;td&gt;Skip entirely&lt;/td&gt; 
-   &lt;td&gt;Don’t evaluate CoT tokens&lt;/td&gt; 
-   &lt;td&gt;Zero&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;h2 id="key-takeaways"&gt;Key takeaways&lt;/h2&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;&lt;strong&gt;Shift from inline scanning to selective evaluation&lt;/strong&gt; – Use the decoupled &lt;code&gt;ApplyGuardrail&lt;/code&gt; API to control exactly what gets scanned and when. Evaluate at trust boundaries, not continuously.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Set the streaming interval to 1,000 characters&lt;/strong&gt; – When streaming evaluation is needed, this single change can deliver up to a 20x reduction in evaluation frequency.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Evaluate only dynamic content&lt;/strong&gt; – Don’t re-evaluate system prompts, tool definitions, and conversation history every turn. Use hash-based caching for content that must be re-evaluated.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Apply risk-based evaluation depth&lt;/strong&gt; – Scan IAM policies and credential-handling code with the safeguards. Defer UI component scanning to commit time.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Skip intermediate reasoning tokens&lt;/strong&gt; – In agentic workflows, evaluate only when content crosses a trust boundary (user input, dangerous tool calls, final output).&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Batch to 1,000-character boundaries&lt;/strong&gt; – A 600-character chunk costs the same as 1,000 characters. Align your evaluations to text unit boundaries to reduce waste.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Guard at the commit boundary&lt;/strong&gt; – Like a Git pre-commit hook, perform comprehensive validation when AI-generated code is about to become persistent and executable.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we proposed best practices to optimize AI-assisted code generation workflows with Amazon Bedrock Guardrails. Here is the overall summary on how you can effectively implement Guardrails for your coding workflows.&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;&lt;strong&gt;Audit your current configuration:&lt;/strong&gt; Open the &lt;a href="https://console.aws.amazon.com/bedrock" target="_blank" rel="noopener"&gt;Amazon Bedrock console&lt;/a&gt; and review your existing guardrails. Check your streaming interval setting. If you haven’t changed it from the default 50 characters, you’re leaving a potential 20x efficiency gain on the table.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Check your account quotas:&lt;/strong&gt; Before scaling your coding workflows, verify your actual allocated limits in the &lt;a href="https://console.aws.amazon.com/servicequotas/home/services/bedrock/quotas" target="_blank" rel="noopener"&gt;AWS Service Quotas console&lt;/a&gt;. Don’t assume published defaults apply, especially for newer accounts. Refer to the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/bedrock.html" target="_blank" rel="noopener"&gt;Amazon Bedrock endpoints and quotas&lt;/a&gt; documentation for the latest regional limits.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Implement the decoupled ApplyGuardrail API:&lt;/strong&gt; Shift from inline evaluation to selective validation using the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_ApplyGuardrail.html" target="_blank" rel="noopener"&gt;ApplyGuardrail API&lt;/a&gt;. Review the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-streaming.html" target="_blank" rel="noopener"&gt;Configure streaming response behavior&lt;/a&gt; documentation to fine-tune your streaming interval.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Explore the full Guardrails feature set:&lt;/strong&gt; Dive into the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html" target="_blank" rel="noopener"&gt;Amazon Bedrock Guardrails documentation&lt;/a&gt; to learn about content filters, denied topics, sensitive information detection, and how to &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-create.html" target="_blank" rel="noopener"&gt;create&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-edit.html" target="_blank" rel="noopener"&gt;modify&lt;/a&gt; guardrails for your use case.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-21149-2.png" alt="Sandeep Singh" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Sandeep Singh&lt;/h3&gt; 
-  &lt;p&gt;Sandeep is a Senior Generative AI Data Scientist at AWS, helping large enterprises innovate with generative AI. He specializes in generative AI, Agentic AI, machine learning, and system design, delivering AI/ML-powered solutions to solve complex business problems across diverse industries.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-21149-3.png" alt="Denis Batalov" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Denis Batalov&lt;/h3&gt; 
-  &lt;p&gt;As a 21-year Amazon veteran and a PhD in Machine Learning, Denis worked on exciting projects such as Search Inside the Book, Amazon Mobile apps and Kindle Direct Publishing. Since 2013 he has helped AWS customers adopt AI/ML technology as a Solutions Architect. Currently, Denis is leading a team that helps customers build Gen AI applications with Amazon Bedrock and is also personally focusing on advancing the practice of Responsible AI by contributing to ISO and EU standardization efforts in that space. Denis is a frequent public speaker; you can follow him on &lt;a href="https://www.linkedin.com/in/denis-v-batalov-59a3111/" target="_blank" rel="noopener"&gt;LinkedIn&lt;/a&gt;.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-21149-4.png" alt="Shyam Srinivasan" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Shyam Srinivasan&lt;/h3&gt; 
-  &lt;p&gt;Shyam Srinivasan is a Principal Product Manager with the Amazon Bedrock team. He cares about making the world a better place through technology and loves being part of this journey. In his spare time, Shyam likes to run long distances, travel around the world, and experience new cultures with family and friends.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="size-full wp-image-90834 alignleft" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2024/10/28/rodzanto.jpg" alt="" width="100" height="127"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Antonio Rodriguez&lt;/h3&gt; 
-  &lt;p&gt;Antonio is a Principal Generative AI Specialist Solutions Architect at Amazon Web Services. He helps companies of all sizes solve their challenges, embrace innovation, and create new business opportunities with Amazon Bedrock. Apart from work, he loves to spend time with his family and play sports with his friends.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Evaluating AI Agents: A production blueprint with Strands and AgentCore</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-a-production-blueprint-with-strands-and-agentcore/</link>
-		
-		<dc:creator><![CDATA[Amit Deol]]></dc:creator>
-		<pubDate>Thu, 23 Jul 2026 17:00:20 +0000</pubDate>
-				<category><![CDATA[Advanced (300)]]></category>
-		<category><![CDATA[Amazon Bedrock]]></category>
-		<category><![CDATA[Amazon Bedrock AgentCore]]></category>
-		<category><![CDATA[AWS Cloud Development Kit]]></category>
-		<category><![CDATA[Strands Agents]]></category>
-		<category><![CDATA[Technical How-to]]></category>
-		<guid isPermaLink="false">410934ec87b141703e6c3bc069789dbcf4a5c5cd</guid>
-
-					<description>Together, Motorway and AWS built an end-to-end evaluation pipeline that reduced incorrect results from 1 in 8 queries to 1 in 50 and cut issue detection time from few hours to few minutes. The pipeline combines the Strands Agents SDK with Amazon Bedrock AgentCore, a fully managed service for deploying and operating AI agents at scale. In this post, you will learn how to build this pipeline for your own agents.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post was co-written with Motorway and the AWS Prototyping and AI Customer Engineering (PACE) team.&lt;/em&gt;&lt;/p&gt; 
-&lt;hr&gt; 
-&lt;p&gt;Motorway, a UK-based online car marketplace, runs a daily auction where up to 8,000 dealers bid on up to 2,500 vehicles. Motorway worked with AWS Prototyping and AI Customer Engineering (PACE) to build an AI-powered dealer stock search agent that transforms how dealers find vehicles, replacing hours of manual filtering with natural language queries.&lt;/p&gt; 
-&lt;h3 id="the-challenge"&gt;The challenge&lt;/h3&gt; 
-&lt;p&gt;The agent gives a confident-sounding response, but how do you prove it works reliably with real money on the line?&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Tool selection errors&lt;/strong&gt; cause wrong search results, eroding dealer trust.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Semantic search misinterpretations&lt;/strong&gt; return irrelevant results. A query like “Petrol, Hybrid and electric cars up to 5 years old” requires the agent to correctly parse multiple constraints.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Context drift&lt;/strong&gt; in multi-turn conversations loses dealer refinements.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Non-deterministic outputs&lt;/strong&gt; make single-trial testing unreliable.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h3 id="the-solution"&gt;The solution&lt;/h3&gt; 
-&lt;p&gt;Together, Motorway and AWS built an end-to-end evaluation pipeline that reduced incorrect results from 1 in 8 queries to 1 in 50 and cut issue detection time from few hours to few minutes.&lt;/p&gt; 
-&lt;p&gt;The pipeline combines the Strands Agents SDK with Amazon Bedrock AgentCore, a fully managed service for deploying and operating AI agents at scale. In this post, you will learn how to build this pipeline for your own agents:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;A two-phase evaluation strategy&lt;/strong&gt; spanning build-time testing with &lt;a href="https://github.com/strands-agents/evals" target="_blank" rel="noopener"&gt;strands-agents-evals&lt;/a&gt; (the open source evaluation library for Strands Agents) and production monitoring with &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations.html" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore Evaluations&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;A three-layer framework&lt;/strong&gt; for assessing tool usage, reasoning, and output quality.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;A five-stage deployment pipeline&lt;/strong&gt; with quality gates that block releases when metrics fall below thresholds.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;A &lt;a href="https://github.com/aws-samples/sample-evaluating-agents-on-aws-with-strands-and-agentcore" target="_blank" rel="noopener"&gt;companion repository&lt;/a&gt; provides a deployable blueprint that you can adapt for your own agents. Although the blueprint uses AWS services, the core principles are essential and system-agnostic requirements for any production-ready AI agent. These principles include the three-layer evaluation framework and the use of the pass^k metric for consistency.&lt;/p&gt; 
-&lt;h2 id="prerequisites"&gt;Prerequisites&lt;/h2&gt; 
-&lt;p&gt;You must have the following prerequisites to follow along with this post.&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;An &lt;a href="https://aws.amazon.com/free/" target="_blank" rel="noopener"&gt;AWS account&lt;/a&gt; with permissions for &lt;a href="https://aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock&lt;/a&gt;, &lt;a href="https://aws.amazon.com/lambda/" target="_blank" rel="noopener"&gt;AWS Lambda&lt;/a&gt;, &lt;a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener"&gt;Amazon Simple Storage Service (Amazon S3)&lt;/a&gt;, &lt;a href="https://aws.amazon.com/dynamodb/" target="_blank" rel="noopener"&gt;Amazon DynamoDB&lt;/a&gt;, &lt;a href="https://aws.amazon.com/eventbridge/" target="_blank" rel="noopener"&gt;Amazon EventBridge&lt;/a&gt;, &lt;a href="https://aws.amazon.com/cloudwatch/" target="_blank" rel="noopener"&gt;Amazon CloudWatch&lt;/a&gt;, and &lt;a href="https://aws.amazon.com/sns/" target="_blank" rel="noopener"&gt;Amazon Simple Notification Service (Amazon SNS)&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html" target="_blank" rel="noopener"&gt;AWS Cloud Development Kit (AWS CDK)&lt;/a&gt; v2 installed and bootstrapped.&lt;/li&gt; 
- &lt;li&gt;Python 3.14+.&lt;/li&gt; 
- &lt;li&gt;Access to Anthropic Claude models and Amazon Titan models through &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html" target="_blank" rel="noopener"&gt;Amazon Bedrock model access&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;Familiarity with Python, AWS CDK, and agent concepts (tool calling, multi-turn conversations).&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;&lt;strong&gt;Time to complete:&lt;/strong&gt; 30–45 minutes for initial deployment and 2–3 hours to customize for your domain.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Estimated costs:&lt;/strong&gt; Running the sample evaluation suite costs approximately $5–10 in Amazon Bedrock inference charges. Production monitoring costs vary based on sampling rate.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Security note:&lt;/strong&gt; The companion repository implements least-privilege AWS Identity and Access Management (IAM) roles, stores API keys in AWS Systems Manager Parameter Store (not environment variables), and uses typed parameters to help prevent injection attacks. See the &lt;a href="https://github.com/aws-samples/sample-evaluating-agents-on-aws-with-strands-and-agentcore/blob/main/README.md" target="_blank" rel="noopener"&gt;repository README&lt;/a&gt; for details.&lt;/p&gt; 
-&lt;h2 id="the-worked-example-a-dealer-stock-search-agent"&gt;The worked example: A dealer stock search agent&lt;/h2&gt; 
-&lt;p&gt;Motorway built the dealer stock search agent on the &lt;a href="https://strandsagents.com/" target="_blank" rel="noopener"&gt;Strands Agents SDK&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore&lt;/a&gt;. The agent exposes eight tools that combine structured filtering across over 89 vehicle attributes with vector similarity search powered by &lt;a href="https://docs.lancedb.com/" target="_blank" rel="noopener"&gt;LanceDB&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/titan-embedding-models.html" target="_blank" rel="noopener"&gt;Amazon Titan Text Embeddings V2&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;Dealers typically spent hours browsing through listings using CSVs and rigid filters. By introducing a conversational AI agent, dealers can now talk to the agent: “Find me diesel SUVs under 25k near my dealership” or “something sporty and automatic for a family.”&lt;/p&gt; 
-&lt;p&gt;With around 1,500 concurrent users during peak hours, getting agent behavior right isn’t optional. A tool selection error or semantic search misinterpretation directly impacts user trust. Figure 1 shows the end-to-end request flow: dealers submit natural language queries through a web interface, which routes to Amazon Bedrock AgentCore Runtime. The runtime orchestrates calls to eight different tools while using Amazon Bedrock models (Claude for reasoning, Amazon Titan for embeddings). Tool responses flow back through the runtime to generate the final dealer-facing results.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/19/ML-20515-1.png" alt="Figure 1: Agent Runtime Architecture" width="600"&gt;&lt;/p&gt; 
-&lt;h2 id="why-agent-evaluation-is-different"&gt;Why agent evaluation is different&lt;/h2&gt; 
-&lt;p&gt;Large language model (LLM) evaluation focuses on text generation quality: coherence, factual accuracy, response relevance. Agent evaluation assesses something fundamentally different. Think of it this way: LLM evaluation examines engine performance. Agent evaluation assesses how the whole car drives in traffic, in rain, or with a backseat full of passengers.&lt;/p&gt; 
-&lt;p&gt;Traditional LLM metrics don’t tell you whether the Motorway agent called the right search tool for “Grade 1 Suzuki models.” They don’t reveal if the agent passed correct filter parameters to LanceDB. And they miss whether a dealer refining results from a previous turn gets the right response.&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Evaluation dimension&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Why it matters for agents&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Task completion&lt;/td&gt; 
-   &lt;td&gt;Agents run multi-step workflows where partial completion is common&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Tool use correctness&lt;/td&gt; 
-   &lt;td&gt;Wrong tools or bad parameters can derail entire workflows&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Reasoning coherence&lt;/td&gt; 
-   &lt;td&gt;Flawed reasoning leads to unpredictable failures as conditions change&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Reliability and consistency&lt;/td&gt; 
-   &lt;td&gt;Non-determinism means the same input can produce different outcomes&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Safety and compliance&lt;/td&gt; 
-   &lt;td&gt;Autonomous agents can take actions with real-world consequences&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Cost and efficiency&lt;/td&gt; 
-   &lt;td&gt;An agent requiring 50 API calls per task may not be economically viable&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;A precise query like “Volkswagen Golf 7-12 years old” might work perfectly, but a colloquial variant like “I’m looking for an older VW” could fail if the semantic search layer isn’t properly evaluated.&lt;/p&gt; 
-&lt;h2 id="catch-issues-before-deployment-with-strands-agents-evals"&gt;Catch issues before deployment with strands-agents-evals&lt;/h2&gt; 
-&lt;p&gt;The blueprint implements evaluation across two phases that map to the &lt;a href="https://aws.amazon.com/blogs/machine-learning/operationalize-generative-ai-workloads-and-scale-to-hundreds-of-use-cases-with-amazon-bedrock-part-1-genaiops/" target="_blank" rel="noopener"&gt;GenAIOps lifecycle&lt;/a&gt;. Build-time evaluation catches issues before deployment, and production evaluation catches what synthetic tests miss. The following diagram (Figure 2) shows how the tool usage, reasoning, and output quality layers must pass before deployment. The framework evaluates agents across three layers:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Layer 1 (Tool Usage) validates correct tool selection and parameter passing with a greater than 95 percent threshold.&lt;/li&gt; 
- &lt;li&gt;Layer 2 (Reasoning) assesses logical decision-making with a greater than 85 percent threshold.&lt;/li&gt; 
- &lt;li&gt;Layer 3 (Output Quality) measures response helpfulness and accuracy with a greater than 90 percent threshold. All three layers must pass before deployment proceeds.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/19/ML-20515-2.png" alt="Figure 2: Three-layer evaluation framework with Layer 1 tool usage at greater than 95% threshold, Layer 2 reasoning at greater than 85% threshold, and Layer 3 output quality at greater than 90% threshold" width="600"&gt;&lt;/p&gt; 
-&lt;p&gt;During development and continuous integration and continuous deployment (CI/CD), the pipeline uses the &lt;a href="https://github.com/strands-agents/evals" target="_blank" rel="noopener"&gt;strands-agents-evals&lt;/a&gt; framework to catch issues before deployment. It provides output validation, trajectory evaluation, multi-turn conversation simulation, and automated experiment generation. Each is designed to work natively with agents built on the Strands Agents SDK. The framework provides three primitives:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;code&gt;Experiment&lt;/code&gt;: A collection of test cases run against the agent.&lt;/li&gt; 
- &lt;li&gt;&lt;code&gt;Case&lt;/code&gt;: Input query, expected output, and expected tool trajectory.&lt;/li&gt; 
- &lt;li&gt;&lt;code&gt;Evaluator&lt;/code&gt;: Scoring logic (deterministic or LLM-based).&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Structure your tests into layers. Layer 1 runs deterministic code-based graders for tool selection accuracy. Layers 2 and 3 use LLM-as-judge evaluators (using an LLM to score agent outputs) for reasoning and output quality.&lt;/p&gt; 
-&lt;p&gt;Custom &lt;code&gt;Evaluator&lt;/code&gt; subclasses handle domain-specific concerns. For the Motorway agent, these cover data freshness, dealer scoping, and safety guardrails. Your agent will have its own domain constraints.&lt;/p&gt; 
-&lt;h3 id="three-types-of-graders"&gt;Three types of graders&lt;/h3&gt; 
-&lt;p&gt;The evaluation framework uses three grader types, each suited to different evaluation needs.&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Grader type&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Layer&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;What it measures&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Trade-off&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Code-based deterministic&lt;/td&gt; 
-   &lt;td&gt;Layer 1&lt;/td&gt; 
-   &lt;td&gt;Tool selection, parameter passing, trajectory ordering&lt;/td&gt; 
-   &lt;td&gt;Fast, cheap, reproducible&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;LLM-as-judge (Claude Sonnet 4.6)&lt;/td&gt; 
-   &lt;td&gt;Layers 2–3&lt;/td&gt; 
-   &lt;td&gt;Reasoning quality, output helpfulness, goal success&lt;/td&gt; 
-   &lt;td&gt;Flexible; non-deterministic (controlled via pass^k)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Human review&lt;/td&gt; 
-   &lt;td&gt;Calibration&lt;/td&gt; 
-   &lt;td&gt;Edge cases and safety&lt;/td&gt; 
-   &lt;td&gt;Expensive; used to calibrate LLM judge prompts&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;In practice, grading what the agent produced catches more issues than grading the path it took. You care that the user got relevant results, not which tool the agent called first.&lt;/p&gt; 
-&lt;h3 id="three-layer-assessment-framework"&gt;Three-layer assessment framework&lt;/h3&gt; 
-&lt;p&gt;Build-time evaluation operates across three distinct layers, each with specific pass/fail thresholds.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Layer 1: Tool Usage (&amp;gt; 95 percent threshold).&lt;/strong&gt; Did the agent call the right tools with correct parameters?&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;“Diesel vehicles from £7,000 to £20,000” should use &lt;strong&gt;search_vehicles&lt;/strong&gt; with typed filters&lt;br&gt; (&lt;code&gt;fuel_type=diesel&lt;/code&gt;, &lt;code&gt;min_price=7000&lt;/code&gt;, &lt;code&gt;max_price=20000&lt;/code&gt;).&lt;/li&gt; 
- &lt;li&gt;“Modern hatchback with low mileage” should trigger &lt;strong&gt;hybrid_search&lt;/strong&gt;, combining semantic embeddings with structured filters.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;You measure this deterministically: &lt;code&gt;ToolSelectionGrader&lt;/code&gt; checks which tools were called, &lt;code&gt;TrajectoryOrderGrader&lt;/code&gt; verifies the call sequence.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Layer 2: Reasoning (&amp;gt; 85 percent threshold).&lt;/strong&gt; Was the decision-making process logical? The &lt;code&gt;HelpfulnessEvaluator&lt;/code&gt; and &lt;code&gt;TrajectoryEvaluator&lt;/code&gt; from strands-agents-evals use LLM-as-judge scoring to assess whether the agent’s reasoning holds together. An agent that arrives at the right response through illogical reasoning will fail unpredictably as conditions change.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Layer 3: Output Quality (&amp;gt; 90 percent threshold).&lt;/strong&gt; Was the response helpful, accurate, and actionable? The &lt;code&gt;OutputEvaluator&lt;/code&gt; and &lt;code&gt;GoalSuccessRateEvaluator&lt;/code&gt; from strands-agents-evals use LLM-as-judge evaluation to assess whether the user got a useful, well-formatted response.&lt;/p&gt; 
-&lt;p&gt;The three layers must pass before deployment. A failure in a layer blocks the pipeline.&lt;/p&gt; 
-&lt;h3 id="handling-non-determinism"&gt;Handling non-determinism&lt;/h3&gt; 
-&lt;p&gt;Because LLM outputs vary between runs, single-trial results can be misleading. The &lt;code&gt;run_all_layers()&lt;/code&gt; function in the companion repository accepts a &lt;code&gt;num_trials&lt;/code&gt; parameter to address this. Two metrics from the code generation research community help measure reliability:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;pass@k&lt;/strong&gt; measures the likelihood of succeeding at least once in k attempts. This metric is useful when finding one correct solution is sufficient.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;pass^k&lt;/strong&gt; (pass to the power of k) measures the probability of succeeding in k consecutive trials. This metric is useful when users expect reliable behavior every time.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;For customer-facing agents, pass^k matters most. An agent with a 75 percent per-trial success rate has only a 42 percent chance of passing three consecutive trials (0.75³). Users expect consistent quality on every interaction.&lt;/p&gt; 
-&lt;p&gt;In the companion code, &lt;code&gt;run_all_layers(task_fn, registry, num_trials=5)&lt;/code&gt; runs the evaluation layers with multi-trial support and gates deployment on pass^k. See the &lt;a href="https://github.com/aws-samples/sample-evaluating-agents-on-aws-with-strands-and-agentcore/blob/main/src/agentic_evaluation/run_experiment.py" target="_blank" rel="noopener"&gt;full implementation&lt;/a&gt;.&lt;/p&gt; 
-&lt;h3 id="test-case-management"&gt;Test case management&lt;/h3&gt; 
-&lt;p&gt;Test cases are organized by category:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Happy path&lt;/strong&gt;: Common queries that should succeed.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Edge cases&lt;/strong&gt;: Ambiguous queries, slang, multi-turn refinements.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Safety/Guardrails&lt;/strong&gt;: Queries the agent should refuse or redirect.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;When production monitoring detects an issue, that interaction becomes a new test case. Motorway’s suite grew from an initial 50 cases to 150 in three months, each grounded in real user behavior. Start with 20 to 50 cases and let production data grow the suite.&lt;/p&gt; 
-&lt;p&gt;Include negative cases where the agent should &lt;em&gt;not&lt;/em&gt; call certain tools. For example, a profile query should call the profile tool, not the search tool. A structured query should use structured search, not a raw SQL fallback. One-sided evals create one-sided optimization.&lt;/p&gt; 
-&lt;h3 id="multi-turn-conversation-testing"&gt;Multi-turn conversation testing&lt;/h3&gt; 
-&lt;p&gt;Single-turn evaluation misses a critical dimension: conversational coherence. Dealers naturally refine searches across multiple turns:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Turn 1: “Find me diesel SUVs.”&lt;/li&gt; 
- &lt;li&gt;Turn 2: “Now show me only the automatics.”&lt;/li&gt; 
- &lt;li&gt;Turn 3: “What about estates instead?”&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;The strands-agents-evals framework provides &lt;code&gt;ActorSimulator&lt;/code&gt; to generate realistic multi-turn interactions and &lt;code&gt;InteractionsEvaluator&lt;/code&gt;&amp;nbsp;to score context retention across turns. Multi-turn tests catch context drift, filter accumulation errors, and pronoun resolution failures that single-turn tests miss.&lt;/p&gt; 
-&lt;h2 id="monitor-production-behavior-with-agentcore-evaluations"&gt;Monitor production behavior with AgentCore Evaluations&lt;/h2&gt; 
-&lt;p&gt;After you deploy your Strands Agent to &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime.html" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore Runtime&lt;/a&gt;, &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations.html" target="_blank" rel="noopener"&gt;AgentCore Evaluations&lt;/a&gt; provides continuous monitoring. It integrates with Strands Agents through OpenTelemetry instrumentation (the industry-standard observability framework). Figure 3 illustrates the architecture in production, with observability traces sampled at 1–5 percent and with metrics aggregating to Amazon CloudWatch.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/19/ML-20515-3.png" alt="Figure 3: Production evaluation architecture with AgentCore Runtime, sampled OpenTelemetry traces feeding AgentCore Evaluations, and metrics on CloudWatch with Amazon SNS alerts" width="600"&gt;&lt;/p&gt; 
-&lt;h3 id="two-monitoring-approaches"&gt;Two monitoring approaches&lt;/h3&gt; 
-&lt;p&gt;AgentCore Evaluations offers two complementary modes:&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;On-demand evaluation&lt;/strong&gt; analyzes specific agent interactions by selecting spans from Amazon CloudWatch logs. This is useful for debugging issues or validating fixes.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Online evaluation&lt;/strong&gt; automatically samples live traffic and applies evaluators in the background. Configure a sampling rate (1–5 percent is recommended), select up to 10 evaluators, and let it run.&lt;/p&gt; 
-&lt;h3 id="built-in-and-custom-evaluators"&gt;Built-in and custom evaluators&lt;/h3&gt; 
-&lt;p&gt;AgentCore provides pre-configured evaluators for common scenarios. The following table shows the built-in evaluators and what they measure.&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Evaluator&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Level&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;What it measures&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;code&gt;Builtin.Helpfulness&lt;/code&gt;&lt;/td&gt; 
-   &lt;td&gt;TRACE&lt;/td&gt; 
-   &lt;td&gt;How helpful the agent’s response is (0–1 score across 7 levels)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;code&gt;Builtin.GoalSuccessRate&lt;/code&gt;&lt;/td&gt; 
-   &lt;td&gt;SESSION&lt;/td&gt; 
-   &lt;td&gt;Whether the user’s overall goal was achieved&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;code&gt;Builtin.ToolSelection&lt;/code&gt;&lt;/td&gt; 
-   &lt;td&gt;TOOL_CALL&lt;/td&gt; 
-   &lt;td&gt;Whether the agent selected appropriate tools&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;code&gt;Builtin.Correctness&lt;/code&gt;&lt;/td&gt; 
-   &lt;td&gt;TRACE&lt;/td&gt; 
-   &lt;td&gt;Factual accuracy of the response&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;For domain-specific requirements, you can create custom evaluators using an LLM-as-a-judge configuration. Every agent has domain constraints that built-in evaluators don’t cover, including data freshness, access scoping, forbidden actions, latency budgets, and cost limits.&lt;/p&gt; 
-&lt;p&gt;The companion repository includes five custom &lt;code&gt;Evaluator&lt;/code&gt; subclasses you can adapt:&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Evaluator&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;What it validates&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;code&gt;DataFreshnessEvaluator&lt;/code&gt;&lt;/td&gt; 
-   &lt;td&gt;Validates auction-cycle timestamps so the agent doesn’t surface stale inventory&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;code&gt;SafetyGuardrailEvaluator&lt;/code&gt;&lt;/td&gt; 
-   &lt;td&gt;Blocks the agent from attempting automated bidding actions&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;code&gt;DealerDataScopingEvaluator&lt;/code&gt;&lt;/td&gt; 
-   &lt;td&gt;Enforces dealer-scoped queries for data isolation&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;See the &lt;a href="https://github.com/aws-samples/sample-evaluating-agents-on-aws-with-strands-and-agentcore" target="_blank" rel="noopener"&gt;companion repository&lt;/a&gt; for &lt;code&gt;LatencyEvaluator&lt;/code&gt; and &lt;code&gt;CostEvaluator&lt;/code&gt; examples.&lt;/p&gt; 
-&lt;h3 id="key-metrics-to-track"&gt;Key metrics to track&lt;/h3&gt; 
-&lt;p&gt;The companion repository includes an AWS CDK stack that provisions CloudWatch dashboards and alarms. Track these metrics to monitor agent health.&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Metric&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Target&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Alert threshold&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Task completion rate&lt;/td&gt; 
-   &lt;td&gt;&amp;gt;95%&lt;/td&gt; 
-   &lt;td&gt;&amp;lt;80%&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Tool selection accuracy&lt;/td&gt; 
-   &lt;td&gt;&amp;gt;95%&lt;/td&gt; 
-   &lt;td&gt;&amp;lt;90%&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Helpfulness score (0-1)&lt;/td&gt; 
-   &lt;td&gt;&amp;gt;0.83&lt;/td&gt; 
-   &lt;td&gt;&amp;lt;0.58&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Response latency P50 / P99&lt;/td&gt; 
-   &lt;td&gt;&amp;lt;2s / &amp;lt;10s&lt;/td&gt; 
-   &lt;td&gt;&amp;gt;5s / &amp;gt;15s&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Hallucination rate&lt;/td&gt; 
-   &lt;td&gt;&amp;lt;2%&lt;/td&gt; 
-   &lt;td&gt;&amp;gt;5%&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Cost per interaction&lt;/td&gt; 
-   &lt;td&gt;Monitor trend&lt;/td&gt; 
-   &lt;td&gt;&amp;gt;2x baseline&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;h2 id="make-quality-checks-a-deployment-gate"&gt;Make quality checks a deployment gate&lt;/h2&gt; 
-&lt;p&gt;Evaluation should be a quality gate in your deployment pipeline, not an afterthought. Figure 4 shows the deployment pipeline with evaluation gates, spanning build-time evaluation, staging validation, shadow mode, A/B testing, and production rollout, with failures blocking deployment.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/19/ML-20515-4.png" alt="Figure 4: Five-stage deployment pipeline covering build-time evaluation, staging validation, shadow mode, A/B testing, and production rollout, with failures blocking deployment and feeding new test cases" width="600"&gt;&lt;/p&gt; 
-&lt;p&gt;The deployment pipeline follows five phases:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;&lt;strong&gt;Build-time evaluation&lt;/strong&gt;: Unit tests, tool correctness (&lt;code&gt;ToolSelectionGrader&lt;/code&gt; &amp;gt;95 percent), trajectory tests, and LLM-as-judge scoring (&lt;code&gt;HelpfulnessEvaluator&lt;/code&gt; &amp;gt;85 percent).&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Staging validation&lt;/strong&gt;: On-demand AgentCore evaluation with synthetic traffic against staging data.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Shadow mode&lt;/strong&gt;: Real production traffic processed in parallel without user impact. Run this for at least 4 hours with a 2 percent deviation threshold.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;A/B testing&lt;/strong&gt;: 5 percent of live traffic routes to the candidate agent for real outcome measurement.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Production rollout&lt;/strong&gt;: 100 percent traffic with continuous online evaluation and monitoring.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;You define thresholds for each phase: tool selection accuracy below 95 percent or task completion below 80 percent blocks deployment. For major releases, multi-trial evaluation with &lt;code&gt;num_trials=5&lt;/code&gt; gates on pass^k to catch non-deterministic failures.&lt;/p&gt; 
-&lt;h3 id="shadow-mode"&gt;Shadow mode&lt;/h3&gt; 
-&lt;p&gt;Between staging and production, run the candidate agent against real queries without affecting users. &lt;em&gt;Shadow mode&lt;/em&gt; receives a copy of production traffic, processes it through the candidate in parallel, and compares outcomes. Run shadow mode for at least 4 hours before proceeding to A/B testing. Define a deviation threshold (2 percent is a good starting point) that pauses deployment automatically.&lt;/p&gt; 
-&lt;p&gt;Shadow mode catches issues that the other stages miss:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Timeout handling under concurrent load.&lt;/li&gt; 
- &lt;li&gt;Domain terminology missing from synthetic tests.&lt;/li&gt; 
- &lt;li&gt;Tool call ordering that causes latency spikes under real traffic patterns.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="getting-started-a-phased-approach"&gt;Getting started: A phased approach&lt;/h2&gt; 
-&lt;p&gt;&lt;strong&gt;Phase 1: Build your test suite.&lt;/strong&gt; Start with 20–50 test cases drawn from real user queries. Include positive and negative cases. Test what the agent should do &lt;em&gt;and&lt;/em&gt; what it should refuse.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Phase 2: Configure build-time evaluation.&lt;/strong&gt; Match grader types to what you’re measuring: deterministic for tool selection, LLM-as-judge for reasoning and output quality.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Phase 3: Enable production monitoring.&lt;/strong&gt; Configure AgentCore Evaluations with a 1–5 percent sampling rate. Start low, then increase once you’ve confirmed evaluator costs are acceptable.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Phase 4: Close the feedback loop.&lt;/strong&gt; Turn production failures into test cases. When failures become regression tests, this feedback loop has consistently improved evaluation quality across teams.&lt;/p&gt; 
-&lt;h2 id="results-and-impact"&gt;Results and impact&lt;/h2&gt; 
-&lt;p&gt;Before implementing this evaluation pipeline, the agent had an 87% tool selection accuracy- which meant 1 in 8 dealer queries returned wrong results. The team was seeing 12 production incidents per month, and it took an average of 4 hours to detect issues after they started affecting dealers.&lt;/p&gt; 
-&lt;p&gt;After implementing the pipeline:&lt;/p&gt; 
-&lt;table style="height: 283px" border="1px" width="939" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Metric&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Before&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;After&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Tool selection accuracy&lt;/td&gt; 
-   &lt;td&gt;87%&lt;/td&gt; 
-   &lt;td&gt;98%&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Task completion rate&lt;/td&gt; 
-   &lt;td&gt;82%&lt;/td&gt; 
-   &lt;td&gt;96%&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Context retention (multi-turn)&lt;/td&gt; 
-   &lt;td&gt;71%&lt;/td&gt; 
-   &lt;td&gt;94%&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Production incidents (monthly)&lt;/td&gt; 
-   &lt;td&gt;12&lt;/td&gt; 
-   &lt;td&gt;2&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Mean time to detect issues&lt;/td&gt; 
-   &lt;td&gt;few hours&lt;/td&gt; 
-   &lt;td&gt;few minutes&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;The business impact: dealers now complete vehicle searches in minutes instead of few hours, with confidence that results are accurate and current.&lt;/p&gt; 
-&lt;h2 id="troubleshooting"&gt;Troubleshooting&lt;/h2&gt; 
-&lt;p&gt;See the &lt;a href="https://github.com/aws-samples/sample-evaluating-agents-on-aws-with-strands-and-agentcore/blob/main/README.md" target="_blank" rel="noopener"&gt;companion repository README&lt;/a&gt; for solutions to common issues including trajectory grader failures, LLM-as-judge variance, empty evaluation results, and cost threshold tuning.&lt;/p&gt; 
-&lt;h2 id="key-takeaways"&gt;Key takeaways&lt;/h2&gt; 
-&lt;p&gt;Keep these principles in mind when building your evaluation pipeline.&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Layer your evaluation&lt;/strong&gt;: Tool usage (&amp;gt;95 percent), reasoning (&amp;gt;85 percent), and output quality (&amp;gt;90 percent) catch different failure modes.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Gate on pass^k, not single trials&lt;/strong&gt;: A 75 percent per-trial success rate means only 42 percent reliability across three consecutive runs.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Turn production failures into test cases&lt;/strong&gt;: Let real user behavior grow your evaluation suite.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Shadow mode catches what synthetic tests miss&lt;/strong&gt;: Real traffic reveals timeout handling, rare terminology, and latency patterns.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Start monitoring at 1 percent sampling&lt;/strong&gt;: Scale gradually to manage evaluator costs.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;You’ve now seen how to build an evaluation pipeline for production AI agents on AWS, using Motorway’s dealer stock search agent as a worked example.&lt;/p&gt; 
-&lt;p&gt;The core lesson: a fluent response doesn’t mean the agent did the right thing. You must verify tool selection, parameter correctness, reasoning coherence, and consistency across repeated runs. By combining build-time testing with strands-agents-evals and production monitoring with AgentCore Evaluations, you can deploy agents with evidence that they work as designed.&lt;/p&gt; 
-&lt;p&gt;These patterns apply to most multi-tool, customer-facing agents: whether you’re building customer service agents that query knowledge bases and ticketing systems, financial advisory agents that pull portfolio data and market feeds, or healthcare triage agents that access patient records and scheduling tools.&lt;/p&gt; 
-&lt;p&gt;To get started:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;&lt;strong&gt;Clone the companion repository:&lt;/strong&gt; 
-  &lt;div class="hide-language"&gt; 
-   &lt;pre&gt;&lt;code class="language-bash"&gt;git clone https://github.com/aws-samples/sample-evaluating-agents-on-aws-with-strands-and-agentcore&lt;/code&gt;&lt;/pre&gt; 
-  &lt;/div&gt; &lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Navigate to the CDK project directory:&lt;/strong&gt; 
-  &lt;div class="hide-language"&gt; 
-   &lt;pre&gt;&lt;code class="language-bash"&gt;cd sample-evaluating-agents-on-aws-with-strands-and-agentcore/examples/vehicle-auction-agent/cdk&lt;/code&gt;&lt;/pre&gt; 
-  &lt;/div&gt; &lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Deploy the sample infrastructure:&lt;/strong&gt;&lt;br&gt; Follow the repository &lt;a href="https://github.com/aws-samples/sample-evaluating-agents-on-aws-with-strands-and-agentcore/blob/main/README.md#4-deploy-cdk-infrastructure" target="_blank" rel="noopener"&gt;README deployment steps&lt;/a&gt; to deploy the sample infrastructure. After deployment completes, verify the infrastructure by checking that all AWS CloudFormation stacks show &lt;code&gt;CREATE_COMPLETE&lt;/code&gt; status in the AWS CloudFormation console. You should see the CloudWatch dashboard and Lambda functions listed in their respective consoles.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Run the sample evaluation suite&lt;/strong&gt; against the included test cases to see the three-layer framework in action. Verify success by confirming: Layer 1 (Tool Usage) shows greater than 95% pass rate, Layer 2 (Reasoning) shows greater than 85% pass rate, and Layer 3 (Output Quality) shows greater than 90% pass rate. If a layer fails, check the CloudWatch logs for detailed error messages.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Customize the evaluators&lt;/strong&gt; for your domain. Start with the &lt;code&gt;DataFreshnessEvaluator&lt;/code&gt; and &lt;code&gt;SafetyGuardrailEvaluator&lt;/code&gt; as templates.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;To dive deeper, explore the &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore documentation&lt;/a&gt; and the &lt;a href="https://strandsagents.com/" target="_blank" rel="noopener"&gt;Strands Agents SDK&lt;/a&gt; on GitHub.&lt;/p&gt; 
-&lt;h2 id="clean-up-resources"&gt;Clean up resources&lt;/h2&gt; 
-&lt;p&gt;To avoid incurring ongoing charges, delete the resources created in this walkthrough:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Navigate to the CDK project directory: 
-  &lt;div class="hide-language"&gt; 
-   &lt;pre&gt;&lt;code class="language-bash"&gt;cd sample-evaluating-agents-on-aws-with-strands-and-agentcore/examples/vehicle-auction-agent/cdk&lt;/code&gt;&lt;/pre&gt; 
-  &lt;/div&gt; &lt;/li&gt; 
- &lt;li&gt;Destroy all deployed stacks: 
-  &lt;div class="hide-language"&gt; 
-   &lt;pre&gt;&lt;code class="language-bash"&gt;cdk destroy --all&lt;/code&gt;&lt;/pre&gt; 
-  &lt;/div&gt; &lt;/li&gt; 
- &lt;li&gt;Confirm the deletion when prompted.&lt;/li&gt; 
- &lt;li&gt;Verify in the AWS Management Console that the cleanup process removed all resources, including Lambda functions, S3 buckets, DynamoDB tables, CloudWatch log groups and dashboards, EventBridge rules, and SNS topics.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; S3 buckets that contain objects may require manual deletion. Export any evaluation data or logs that you need to retain before running the cleanup.&lt;/p&gt; 
-&lt;h2 id="resources"&gt;Resources&lt;/h2&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;a href="https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-for-production-a-practical-guide-to-strands-evals/" target="_blank" rel="noopener"&gt;Evaluating AI agents for production: A practical guide to Strands Evals&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://strandsagents.com/" target="_blank" rel="noopener"&gt;Strands Agents SDK&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://github.com/strands-agents/evals" target="_blank" rel="noopener"&gt;strands-agents-evals&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations.html" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore Evaluations&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-real-world-lessons-from-building-agentic-systems-at-amazon/" target="_blank" rel="noopener"&gt;Evaluating AI agents: Real-world lessons from Amazon&lt;/a&gt;.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/19/ML-20515-5.jpeg" alt="Amit Deol" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Amit Deol&lt;/h3&gt; 
-  &lt;p&gt;Amit is a Senior Prototyping Architect at AWS Prototyping and Cloud Engineering (PACE). He partners with AWS customers to experiment with new ideas and build production-ready solutions across generative AI, data and analytics, and real-time streaming. When he’s not prototyping, you’ll find him on long walks through the woods.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/19/ML-20515-6.jpeg" alt="Hin Yee Liu" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Hin Yee Liu&lt;/h3&gt; 
-  &lt;p&gt;Hin Yee is a Senior Prototype Engagement Manager at AWS. She leads customer engagements that accelerate the path from AI prototypes to production, helping teams adopt best practices for building and operating generative AI workloads on AWS.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="size-full wp-image-135726 alignleft" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/21/ryan.png" alt="" width="108" height="144"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Ryan Cormack&lt;/h3&gt; 
-  &lt;p&gt;Ryan Principal Engineer at Motorway and an AWS Community Builder. He leads development of AI-powered tools for dealers and has spoken at AWS Summit London on Motorway’s adoption of agentic AI.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
 	</channel>
 </rss>
 
@@ -7022,7 +6466,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a6eb6d32965b"></universal-media-player>
+		<universal-media-player id="ump-6a6a7715be451"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -7036,7 +6480,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a6eb6d32965b", options);
+				ump("ump-6a6a7715be451", options);
 			});
 		</script>
 	</div>
@@ -7813,6 +7257,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 		<item>
 		<title>Meet Brain: The AI system behind Azure reliability</title>
 		<link>https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/</link>
+					<comments>https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/#respond</comments>
 		
 		<dc:creator><![CDATA[Mark Russinovich]]></dc:creator>
 		<pubDate>Thu, 02 Jul 2026 16:00:00 +0000</pubDate>
@@ -7921,7 +7366,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a6eb6d33be5a&quot;}" data-wp-interactive="core/image" data-wp-key="6a6eb6d33be5a" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a6a7715dacdf&quot;}" data-wp-interactive="core/image" data-wp-key="6a6a7715dacdf" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -8196,12 +7641,15 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/">Meet Brain: The AI system behind Azure reliability</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
 ]]></content:encoded>
 					
+					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Proving application resilience on Azure with Chaos Studio</title>
 		<link>https://azure.microsoft.com/en-us/blog/proving-application-resilience-on-azure-with-chaos-studio/</link>
+					<comments>https://azure.microsoft.com/en-us/blog/proving-application-resilience-on-azure-with-chaos-studio/#respond</comments>
 		
 		<dc:creator><![CDATA[Mark Russinovich]]></dc:creator>
 		<pubDate>Wed, 01 Jul 2026 16:00:00 +0000</pubDate>
@@ -8264,7 +7712,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a6eb6d348408&quot;}" data-wp-interactive="core/image" data-wp-key="6a6eb6d348408" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a6a7715eaeec&quot;}" data-wp-interactive="core/image" data-wp-key="6a6a7715eaeec" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -8522,12 +7970,15 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/proving-application-resilience-on-azure-with-chaos-studio/">Proving application resilience on Azure with Chaos Studio</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
 ]]></content:encoded>
 					
+					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/proving-application-resilience-on-azure-with-chaos-studio/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Azure IaaS: How to design, build, and optimize cloud infrastructure for long-term cost efficiency</title>
 		<link>https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/</link>
+					<comments>https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/#respond</comments>
 		
 		<dc:creator><![CDATA[Maria Bledsoe]]></dc:creator>
 		<pubDate>Tue, 30 Jun 2026 16:00:00 +0000</pubDate>
@@ -8875,6 +8326,8 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/">Azure IaaS: How to design, build, and optimize cloud infrastructure for long-term cost efficiency</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
 ]]></content:encoded>
 					
+					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
 		
 		
 			</item>
@@ -8919,7 +8372,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a6eb6d354859"></universal-media-player>
+		<universal-media-player id="ump-6a6a77160370a"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -8933,7 +8386,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a6eb6d354859", options);
+				ump("ump-6a6a77160370a", options);
 			});
 		</script>
 	</div>
@@ -8989,7 +8442,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a6eb6d355268"></universal-media-player>
+		<universal-media-player id="ump-6a6a771603ed1"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -9003,7 +8456,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a6eb6d355268", options);
+				ump("ump-6a6a771603ed1", options);
 			});
 		</script>
 	</div>
@@ -9035,7 +8488,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a6eb6d35572a"></universal-media-player>
+		<universal-media-player id="ump-6a6a7716042ca"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -9049,7 +8502,7 @@ result = risk_guardrail.evaluate(ui_code, "src/components/Button.tsx")
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a6eb6d35572a", options);
+				ump("ump-6a6a7716042ca", options);
 			});
 		</script>
 	</div>
