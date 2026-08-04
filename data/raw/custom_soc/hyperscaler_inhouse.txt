@@ -6,7 +6,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/machine-learning/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/machine-learning/</link>
 	<description>Official Machine Learning Blog of Amazon Web Services</description>
-	<lastBuildDate>Mon, 03 Aug 2026 17:24:15 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 04 Aug 2026 19:03:21 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -14,6 +14,286 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Introducing Web Search on Amazon Bedrock for foundation model grounding</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/introducing-web-search-on-amazon-bedrock-for-foundation-model-grounding/</link>
+		
+		<dc:creator><![CDATA[Anuj Jauhari]]></dc:creator>
+		<pubDate>Tue, 04 Aug 2026 18:39:14 +0000</pubDate>
+				<category><![CDATA[Amazon Bedrock]]></category>
+		<category><![CDATA[Announcements]]></category>
+		<category><![CDATA[Intermediate (200)]]></category>
+		<guid isPermaLink="false">20c57cb78e0f1ebce99e757dfe0b084d51a3f9e2</guid>
+
+					<description>Today, we are introducing the general availability of Web Search on Amazon Bedrock. It is a server-side built-in tool that grounds model responses in current web knowledge. With Web Search, grounding becomes a native capability of Amazon Bedrock, with no third-party vendors to onboard, no external APIs to orchestrate, and no additional third party vendor security reviews to conduct. In this post, we walk through what Web Search on Amazon Bedrock is, why it matters, how to enable it using the OpenAI Responses API, and how to get started with the tool.</description>
+										<content:encoded>&lt;p&gt;When a foundation model needs to answer a question about last week’s earnings call, yesterday’s regulatory change, or this morning’s weather forecast, it needs knowledge it was never trained on. Grounding the model in current web knowledge closes that gap – whether it’s powering chatbots, coding assistants, CLI tools, or enterprise applications, grounding helps answer questions beyond the model’s training and reduces hallucinations. &amp;nbsp;Traditionally, connecting a model to web knowledge required developers to identify, integrate, and maintain a third-party Web Search provider, a process that delays project timelines and introduces data residency risks and operational overhead.&lt;/p&gt; 
+&lt;p&gt;At AWS New York Summit 2026, we announced the &lt;a href="https://aws.amazon.com/blogs/aws/announcing-web-search-on-amazon-bedrock-agentcore-ground-your-ai-agents-in-current-accurate-web-knowledge/" target="_blank" rel="noopener"&gt;general availability of Web Search on AgentCore&lt;/a&gt;. Today, we are extending it further with the general availability of Web Search on &lt;a href="https://aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock&lt;/a&gt;. It is a server-side built-in tool that grounds model responses in current web knowledge. With Web Search, grounding becomes a native capability of Amazon Bedrock, with no third-party vendors to onboard, no external APIs to orchestrate, and no additional third party vendor security reviews to conduct.&lt;/p&gt; 
+&lt;p&gt;In this post, we walk through what Web Search on Amazon Bedrock is, why it matters, how to enable it using the OpenAI Responses API, and how to get started with the tool.&lt;/p&gt; 
+&lt;h2 id="what-web-search-on-bedrock-provides"&gt;What Web Search on Amazon Bedrock provides&lt;/h2&gt; 
+&lt;p&gt;Web Search is designed for Amazon Bedrock model inference, with the following differentiators:&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Multi-source grounding approach:&lt;/strong&gt; Web Search is backed by a web index that Amazon operates, spanning billions of documents and refreshed continually. It combines this index with a built-in knowledge graph that anchors the entities in a domain along with the connections between them. When a question is factual in nature; say, who wrote a particular book or what year an event took place; Web Search uses the knowledge graph to answer with strong confidence, rather than leaving the model to infer the answer from extracted page text. That can help cut down on the small factual inaccuracies that tend to slip in whenever an agent assembles an answer from fragments on its own.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Context-efficient retrieval.&lt;/strong&gt; Rather than handing the model a raw page and hoping it finds the relevant part, Web Search performs semantic snippet extraction – pulling the passages from each web page that bear on the query and returning them in a form optimized for the model’s context window. The model sees the parts that matter, with fewer tokens spent on boilerplate. Retrieval is fast, so grounded responses can be delivered with minimal latency.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Single-parameter enablement.&lt;/strong&gt; Web Search becomes a single parameter in your existing OpenAI-compatible API call, removing the need for vendor onboarding, API keys, orchestration layers, and separate SDKs.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Helping with enterprise-grade compliance out of the box.&lt;/strong&gt; By default, Web Search on Bedrock offers zero data egress, so your data never leaves your AWS environment. As we introduce new capabilities, some future features may expose data only at your explicit request. For the latest information, please refer to the Amazon Bedrock documentation . Web Search operates entirely within Amazon Bedrock’s infrastructure, supporting customers’ compliance requirements.&lt;/p&gt; 
+&lt;h2 id="how-it-works"&gt;How it works&lt;/h2&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/17/ML-21265-1.png" alt="Diagram of the Web Search request lifecycle: the model identifies a knowledge gap, Bedrock formulates a query, retrieves content from the Amazon web index and knowledge graph, and returns a grounded response with citations" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;When Web Search is enabled in an API call, Bedrock handles the entire search lifecycle server-side. First, the model identifies that a query requires up-to-date web knowledge. Bedrock then formulates a search query, retrieves relevant content from Amazon’s web index and knowledge graph, and injects results – including relevant snippets, source URLs and titles – into the model’s context window. The model reasons over the retrieved content and generates a grounded response with source citations. The API returns the final response with structured citation annotations, including URL and page title for each referenced source. There’s no client-side tool-use loop to build, no external API responses to parse, and no retries or rate limits to manage – a single API call returns a grounded response.&lt;/p&gt; 
+&lt;h2 id="getting-started-with-the-openai-responses-api"&gt;Getting started with the OpenAI Responses API&lt;/h2&gt; 
+&lt;p&gt;The Responses API supports built-in tools natively, so Web Search can be called without defining a function schema or building a client-side loop. Enablement takes three steps: configure AWS credentials, point the OpenAI client at the bedrock-mantle endpoint, and add the Web Search tool to the request. At launch, Web Search is available for OpenAI models served through Amazon Bedrock’s next-generation inference engine.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt; Configure authentication and permissions. Web Search uses your existing AWS credentials – there are no separate API keys to provision. The environment must have AWS credentials available through the standard credential chain (an IAM role, the AWS CLI profile, or environment variables), which are used to authenticate requests to the bedrock-mantle endpoint. The calling identity needs two sets of permissions:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Inference permissions on Amazon Bedrock, so the model call itself succeeds. Attach the AmazonBedrockMantleInferenceAccess managed policy, or grant the specific inference actions your call requires.&lt;/li&gt; 
+ &lt;li&gt;Web Search tool permissions, so the model can call the tool during the request. At minimum grant bedrock-websearch:InvokeSearch; add bedrock-websearch:InvokeFetch to let the model read a result’s full page content. Live-web retrieval additionally requires bedrock-websearch:ExternalWebAccess, which is the default request behavior — if your identity doesn’t have it, set external_web_access: false on the tool. If InvokeSearch is denied, Web Search is effectively disabled and the model answers from its training data instead.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;Requests to the endpoint are authenticated with an AWS-issued bearer token, which you can mint from your existing AWS credentials using the aws-bedrock-token-generator package. This bearer token isn’t a separate API key; it’s a short-lived (up to 12 hours) credential derived from your existing AWS IAM identity via SigV4, packaged in the format the OpenAI client expects for its api_key parameter. No additional key management is required.&lt;/p&gt; 
+&lt;p&gt;Start from a standard call. A normal Responses API call, without grounding, looks like this:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;response = client.responses.create(
+    model="openai.gpt-5.4",
+    input="What were the key announcements at AWS re:Invent 2025?",
+)&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt; Enable Web Search. To ground that same call in web knowledge, add a single tools entry:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;div class="hide-language"&gt; 
+  &lt;pre&gt;&lt;code class="lang-code"&gt;tools=[{"type": "web_search", "external_web_access": False}]&lt;/code&gt;&lt;/pre&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The optional external_web_access field selects where Web Search retrieves from: Amazon’s pre-indexed web corpus, or live content fetched directly from the web. Today only indexed-web retrieval is served; live-web retrieval will be enabled in a future update, and the parameter is already in the API so your code won’t need to change. The default is true, which requires the &lt;code&gt;bedrock-websearch:ExternalWebAccess&lt;/code&gt; permission. The examples below set false, which needs no additional permission.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Step 3:&lt;/strong&gt; Read the grounded response with citations. Putting it together, here’s the complete end-to-end example, including how to extract the source citations:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;div class="hide-language"&gt; 
+  &lt;pre&gt;&lt;code class="lang-python"&gt;from openai import OpenAI
+from aws_bedrock_token_generator import provide_token
+
+REGION = "us-east-1"
+
+client = OpenAI(
+    base_url=f"https://bedrock-mantle.{REGION}.api.aws/openai/v1",
+    api_key=provide_token(region=REGION),
+)
+
+response = client.responses.create(
+    model="openai.gpt-5.4",
+    input="What were the key announcements at AWS re:Invent 2025?",
+    tools=[{"type": "web_search", "external_web_access": False}],
+)
+
+searches = [item for item in response.output if item.type == "web_search_call"]
+print(f"Retrieval steps: {len(searches)}")
+for call in searches:
+    if call.action.type == "search":
+        print(f"  search: {call.action.queries}")
+    elif call.action.type == "open_page":
+        print(f"  open_page: {call.action.url}")
+
+for item in response.output:
+    if item.type == "message":
+        for content in item.content:
+            if content.type == "output_text":
+                print(content.text)
+                for citation in content.annotations or []:
+                    if citation.type == "url_citation":
+                        print(f"  [{citation.title}] {citation.url}")&lt;/code&gt;&lt;/pre&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The above code produces the following output (abridged):&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="lang-code"&gt;Retrieval steps: 2
+  search: ['AWS re:Invent 2025 key announcements official AWS blog keynote recap']
+  open_page: https://aws.amazon.com/blogs/aws/top-announcements-of-aws-reinvent-2025
+The biggest AWS re:Invent 2025 announcements clustered around **AI agents, custom
+silicon/infrastructure, and developer productivity**. ...
+  [Top announcements of AWS re:Invent 2025 | AWS News Blog] https://aws.amazon.com/...
+  [AWS re:Invent 2025: Amazon announces Nova 2, Trainium3, frontier agents] https://...&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;In this sample, the request includes a Web Search entry in the tools array. Bedrock executes the search server-side and returns the grounded response in a single round-trip – there is no function schema to define and no client-side loop to manage.&lt;/p&gt; 
+&lt;p&gt;Each citation is a &lt;code&gt;url_citation&lt;/code&gt; object in the message content’s annotations array. Its wire shape:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="lang-code"&gt;{
+    "type": "url_citation",
+    "start_index": 120,
+    "end_index": 303,
+    "title": "Top announcements of AWS re:Invent 2025 | AWS News Blog",
+    "url": "https://aws.amazon.com/blogs/aws/top-announcements-of-aws-reinvent-2025"
+  }&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;&lt;code&gt;start_index&lt;/code&gt; and &lt;code&gt;end_index&lt;/code&gt; are character offsets into output_text, letting you render inline footnotes or highlight the exact span each citation supports.&lt;/p&gt; 
+&lt;h3 id="auditing-and-observability"&gt;Auditing and observability&lt;/h3&gt; 
+&lt;p&gt;Web Search is integrated with AWS CloudTrail out of the box. Every call to &lt;code&gt;bedrock-websearch:InvokeSearch&lt;/code&gt; and &lt;code&gt;bedrock-websearch:InvokeFetch&lt;/code&gt; is recorded as a management event, capturing the calling identity, timestamp, action, source identity (including any forward-access-session originator), and the account and Region context of the request. Access-denied outcomes are always logged, and each &lt;code&gt;AccessDeniedException&lt;/code&gt; event includes the specific condition key that caused the denial — which makes IAM misconfigurations easy to diagnose without turning on additional trails.&lt;/p&gt; 
+&lt;p&gt;By design, CloudTrail does not record the query text, the URLs returned by search, or the raw page content retrieved by fetch. Query text is treated the same way as an inference prompt and is never exposed in trail events. Combined with in-Region processing and zero data egress, this gives security and compliance teams a full audit trail of who used the tool when, without exposing what end users searched for.&lt;/p&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Web Search on Amazon Bedrock removes the undifferentiated heavy lifting of connecting foundation models to up-to-date web knowledge. It delivers context-efficient, multi-source grounded results with low-latency, and simple enablement through a single API parameter – so developers can add web grounding without managing vendors, orchestration, or compliance reviews.&lt;/p&gt; 
+&lt;p&gt;Web Search on Bedrock is generally available in US, with in-region query handling in &lt;code&gt;us-east-1&lt;/code&gt;, &lt;code&gt;us-east-2&lt;/code&gt; and &lt;code&gt;us-west-2&lt;/code&gt;. For pricing details, see the &lt;a href="https://aws.amazon.com/bedrock/pricing/"&gt;Amazon Bedrock pricing page&lt;/a&gt;. To get started, see the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/web-search.html"&gt;Web Search documentation&lt;/a&gt; for complete API references and examples.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/17/ML-21265-2.png" alt="Anuj Jauhari" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Anuj Jauhari&lt;/h3&gt; 
+  &lt;p&gt;Anuj is a Senior Product Marketing Manager, Technical at AWS, helping customers realize business outcomes with generative AI.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/17/ML-21265-3.jpg" alt="Vadim Omeltchenko" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Vadim Omeltchenko&lt;/h3&gt; 
+  &lt;p&gt;Vadim is a Senior AI/ML Solutions Architect who is passionate about helping AWS customers innovate in the cloud. His prior IT experience was predominantly on the ground.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/17/ML-21265-4.jpg" alt="Priya Holikatti" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Priya Holikatti&lt;/h3&gt; 
+  &lt;p&gt;Priya is a Senior Technical Product Manager at Amazon AGI, building web search capabilities that connect AI agents and models to real-time, trustworthy web knowledge.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/17/ML-21265-5.jpg" alt="Rashim Gupta" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Rashim Gupta&lt;/h3&gt; 
+  &lt;p&gt;Rashim Gupta is a Senior Manager of Technical Product Management for Amazon Bedrock at AWS, where he leads the team building the features customers use to develop and run production applications on Bedrock.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full wp-image-136481" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/03/omar-badge.jpg" alt="" width="120" height="160"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Omar Abdelwahab&lt;/h3&gt; 
+  &lt;p&gt;Omar is a Technical Product Marketing Manager at Amazon Web Services (AWS), Where he focuses on AI products including Agentic AI and Web Search. He holds a Ph.D. in Computer Science and enjoys working at the intersection of AI, technology, and go-to-market strategy to help customers build innovative applications.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Automated web insight extraction with Amazon Bedrock AgentCore</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/automated-web-insight-extraction-with-amazon-bedrock-agentcore/</link>
+		
+		<dc:creator><![CDATA[Louisa Liu]]></dc:creator>
+		<pubDate>Tue, 04 Aug 2026 16:02:21 +0000</pubDate>
+				<category><![CDATA[Advanced (300)]]></category>
+		<category><![CDATA[Amazon Bedrock]]></category>
+		<category><![CDATA[Amazon Bedrock AgentCore]]></category>
+		<category><![CDATA[Technical How-to]]></category>
+		<guid isPermaLink="false">485a2118fbcc1067573c0ef552a78db3ae5bc772</guid>
+
+					<description>Extracting insights from dozens of websites by hand quickly becomes overwhelming. This post shows how to build an automated web insight extraction solution with Amazon Bedrock AgentCore Browser, Amazon Bedrock, Amazon OpenSearch Serverless, and AWS Lambda that monitors RSS feeds, renders pages reliably, and makes AI-extracted insights searchable.</description>
+										<content:encoded>&lt;p&gt;Extracting insights from dozens of websites often means manually checking each one, a process that quickly becomes overwhelming. Design teams need to track competitor products, marketing teams want to monitor content trends, and product managers need to stay on top of market intelligence. But doing this manually means someone has to visit sites, copy content, and organize information before real analysis can begin. Rule-based scrapers offer some automation, but they are tightly coupled to page structure. A site redesign or a migration to a JavaScript-rendered frontend can silently break the pipeline for days before the team notices.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://aws.amazon.com/bedrock/agentcore/" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore&lt;/a&gt; is a platform to build, connect, and optimize agents at scale, with any framework or model. The solution in this post uses the AgentCore Browser, a capability of Amazon Bedrock AgentCore. This fully managed browser service renders JavaScript-heavy pages reliably, so your pipeline is more resilient when websites change.&lt;/p&gt; 
+&lt;p&gt;This post demonstrates how to deploy an automated insight extraction solution using Amazon Bedrock AgentCore Browser, Amazon Bedrock for AI-powered analysis, &lt;a href="https://aws.amazon.com/opensearch-service/features/serverless/" target="_blank" rel="noopener"&gt;Amazon OpenSearch Serverless&lt;/a&gt; for semantic search, and &lt;a href="https://aws.amazon.com/lambda/" target="_blank" rel="noopener"&gt;AWS Lambda&lt;/a&gt; for orchestration. You build a system that monitors RSS feeds, retrieves web content using the AgentCore managed browser, extracts insights with AI, and makes everything searchable through a web interface.&lt;/p&gt; 
+&lt;h3 id="use-cases"&gt;Use cases&lt;/h3&gt; 
+&lt;p&gt;This solution was built for design and product teams who need to track industry trends, but the architecture applies to broader scenarios:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Competitive intelligence&lt;/strong&gt;: Track competitor blogs, product announcements, and press releases. The AI can identify new features, pricing changes, or strategic shifts.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Market research&lt;/strong&gt;: Monitor industry news, analyst reports, and trade publications. Search for emerging trends or technologies relevant to your business.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Content curation&lt;/strong&gt;: Aggregate content from multiple sources and let the AI identify the most relevant pieces for your audience.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Compliance monitoring&lt;/strong&gt;: Watch regulatory websites and news sources for changes that might affect your business.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h3 id="what-you-will-learn"&gt;What you will learn&lt;/h3&gt; 
+&lt;p&gt;At the end of this post, you will understand how the event-driven architecture separates content collection from AI processing, how the browser automation in Amazon Bedrock AgentCore handles JavaScript-heavy pages, and how vector embeddings in Amazon OpenSearch Serverless power semantic search across your collected insights. The complete implementation is available in this &lt;a href="https://github.com/aws-samples/sample-intelligent-insights-extraction" target="_blank" rel="noopener"&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;If you are new to the services used in this solution, the following resources provide foundational context:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/browser-tool.html" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore Browser&lt;/a&gt;&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless.html" target="_blank" rel="noopener"&gt;Amazon OpenSearch Serverless developer guide&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2 id="solution-architecture"&gt;Solution architecture&lt;/h2&gt; 
+&lt;p&gt;The architecture follows an event-driven pattern that separates content collection from processing. The following diagram illustrates the end-to-end system, organized into three functional layers.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20018-1.png" alt="End-to-end architecture of the web insight extraction system across collection, processing, and access layers." width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 1 — Architecture diagram for the automated web insight extraction system&lt;/em&gt;&lt;/p&gt; 
+&lt;h3 id="how-the-solution-works"&gt;How the solution works&lt;/h3&gt; 
+&lt;p&gt;&lt;strong&gt;RSS feed collection:&lt;/strong&gt; An &lt;a href="https://aws.amazon.com/eventbridge/" target="_blank" rel="noopener"&gt;Amazon EventBridge&lt;/a&gt; schedule triggers an AWS Lambda function every 15 minutes to check configured RSS feeds for new articles and deduplicate against &lt;a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener"&gt;Amazon Simple Storage Service (Amazon S3).&lt;/a&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Browser-based content retrieval:&lt;/strong&gt; For each new article, the Lambda function opens a browser session through Amazon Bedrock AgentCore and connects to it using Playwright over the Chrome DevTools Protocol (CDP). Unlike standard HTTP requests, the remote browser renders the full page including JavaScript-heavy content, waits for dynamic elements to load, takes a screenshot, and downloads images. This is the step that makes the rest of the pipeline possible: without reliable page rendering, the AI extraction downstream would receive incomplete or broken content. The artifacts are uploaded to Amazon S3 in a structured format.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Event-driven processing:&lt;/strong&gt; Amazon S3 upload events publish messages to an &lt;a href="https://aws.amazon.com/sqs/" target="_blank" rel="noopener"&gt;Amazon Simple Queue Service (Amazon SQS)&lt;/a&gt; queue, and a second Lambda function extracts clean text from the raw HTML.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;AI-powered insight extraction:&lt;/strong&gt; Amazon Bedrock generates summaries, identifies themes and entities, extracts actionable insights, and creates vector embeddings from the cleaned content.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Indexing and semantic search:&lt;/strong&gt; The enriched results are indexed into Amazon OpenSearch Serverless, which supports both keyword and vector search.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;User and API access:&lt;/strong&gt; End users authenticate through &lt;a href="https://aws.amazon.com/pm/cognito/" target="_blank" rel="noopener"&gt;Amazon Cognito&lt;/a&gt; and access a React-based frontend on &lt;a href="https://aws.amazon.com/pm/ecs/" target="_blank" rel="noopener"&gt;Amazon Elastic Container Service (Amazon ECS)&lt;/a&gt; with &lt;a href="https://aws.amazon.com/fargate/" target="_blank" rel="noopener"&gt;AWS Fargate&lt;/a&gt;. For programmatic access, a Model Context Protocol (MCP) server on Amazon ECS with Fargate exposes the system through &lt;a href="https://aws.amazon.com/cloudfront/" target="_blank" rel="noopener"&gt;Amazon CloudFront&lt;/a&gt;. MCP is an open standard that lets AI assistants and tools connect to external data sources through a unified interface.&lt;/p&gt; 
+&lt;h2 id="solution-components"&gt;Solution components&lt;/h2&gt; 
+&lt;p&gt;The following sections describe the main components of the solution.&lt;/p&gt; 
+&lt;h3 id="content-collection-and-browser-automation"&gt;Content collection and browser automation&lt;/h3&gt; 
+&lt;p&gt;The RSS sync Lambda function does more than fetch feeds. It parses each RSS feed, filters for articles published within a configurable time window (24 hours by default), and deduplicates using a URL hash as a unique ID in Amazon S3. For new articles, the function opens a remote browser session through Amazon Bedrock AgentCore and connects via Playwright over CDP. This isn’t a headless browser running in Lambda. It is a managed browser service: AgentCore hosts the remote browser, and Playwright controls it through a WebSocket connection. The browser renders the full page, waits for JavaScript to load, and captures the complete rendered output. The function then extracts images from the page, downloads them, and uploads everything to Amazon S3 in a structured format:&lt;/p&gt; 
+&lt;pre class="text"&gt;&lt;code&gt;s3://bucket/
+└── example.com/
+    └── abc123def456/          # URL hash
+        ├── article.html       # Full HTML
+        ├── screenshot.png     # Page screenshot
+        ├── metadata.json      # Article metadata
+        └── images/            # Captured images
+            ├── image1.jpg
+            └── image2.jpg&lt;/code&gt;&lt;/pre&gt; 
+&lt;p&gt;The metadata.json file includes the original URL, title, timestamp, and references to downloaded assets. When the metadata file is uploaded to Amazon S3, it triggers the processing pipeline automatically.&lt;/p&gt; 
+&lt;p&gt;This separation means content collection and AI processing scale independently. If you’re monitoring dozens of RSS feeds, the collection Lambda function handles them concurrently while the Amazon SQS queue with a dead-letter queue provides automatic retries for processing failures.&lt;/p&gt; 
+&lt;h3 id="ai-powered-content-analysis"&gt;AI-powered content analysis&lt;/h3&gt; 
+&lt;p&gt;The idea extraction Lambda function preprocesses HTML to reduce token consumption, a step that significantly improves the consistency of AI-generated output.&lt;/p&gt; 
+&lt;p&gt;When it receives a message from Amazon SQS, it pulls the HTML from Amazon S3 and runs it through a preprocessing step. Large HTML files (over 1 MB) get simplified using html-to-text to avoid token limits. Smaller files use Mozilla’s Readability library, which does a better job of extracting the main content and identifying the primary image.&lt;/p&gt; 
+&lt;p&gt;The cleaned content then goes to Amazon Bedrock with a customizable prompt. You can use models supported by Amazon Bedrock. For model availability by AWS Region, refer to &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html" target="_blank" rel="noopener"&gt;Supported models by AWS Region in Amazon Bedrock&lt;/a&gt;. The prompt asks the AI to extract:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;A concise summary.&lt;/li&gt; 
+ &lt;li&gt;Key themes and topics.&lt;/li&gt; 
+ &lt;li&gt;Main entities (people, companies, products).&lt;/li&gt; 
+ &lt;li&gt;Relevant categories.&lt;/li&gt; 
+ &lt;li&gt;Actionable insights.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;The Lambda function also generates vector embeddings for semantic search, so you can find related content even when the exact words don’t match. The function writes everything to Amazon OpenSearch Serverless: the original content, AI-extracted metadata, and the embedding vector. The index is configured for both keyword and vector search. A query like “what are emerging design trends” returns relevant results even if those exact words don’t appear in the source content.&lt;/p&gt; 
+&lt;h3 id="responsible-ai-controls"&gt;Responsible AI controls&lt;/h3&gt; 
+&lt;p&gt;Because this pipeline sends third-party web content to a foundation model and publishes the AI-generated output to your team, production deployments should include safeguards around the extraction step. &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html" target="_blank" rel="noopener"&gt;Amazon Bedrock Guardrails&lt;/a&gt; lets you apply these controls without changing the extraction prompt:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Content filtering blocks harmful or inappropriate material that may appear in scraped web pages before it reaches your searchable index.&lt;/li&gt; 
+ &lt;li&gt;Denied topics and word filters keep the extracted insights within the scope your teams expect, which matters when source feeds are outside your control.&lt;/li&gt; 
+ &lt;li&gt;Contextual grounding checks validate that generated summaries and insights are grounded in the source article, reducing the risk of hallucinated claims being indexed as facts.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;Because the pipeline ingests content from external websites, treat the scraped text as untrusted input: guardrails act as a control point between raw web content and the insights your organization consumes.&lt;/p&gt; 
+&lt;h3 id="web-interface-and-programmatic-access"&gt;Web interface and programmatic access&lt;/h3&gt; 
+&lt;p&gt;The React-based frontend with Amazon Cognito authentication provides a search interface where teams can browse and explore insights. The MCP server provides an API layer for integration with other AI tools, supporting programmatic search and retrieval through Amazon CloudFront. MCP is an open standard that defines how AI assistants discover and call external tools, so other AI agents in your organization can query the insight database directly. Processing components run within an Amazon Virtual Private Cloud (Amazon VPC), with Amazon CloudWatch providing observability and AWS Identity and Access Management (IAM) enforcing least privilege access.&lt;/p&gt; 
+&lt;h2 id="lessons-learned"&gt;Lessons learned&lt;/h2&gt; 
+&lt;p&gt;Building a real-world insight extraction pipeline involves more than wiring together managed services. A few architectural decisions had outsized impact on cost, reliability, and output quality, and are worth calling out explicitly.&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;AgentCore Browser sessions are powerful but expensive.&lt;/strong&gt; In our test, each Playwright render through Amazon Bedrock AgentCore takes 10–30 seconds and costs significantly more than a plain HTTP request. URL hashing for deduplication (checking Amazon S3 before triggering a new AgentCore session) is essential to keep costs manageable at scale. The tradeoff is worth it: AgentCore reliably captures pages that would break a standard scraper, which is the foundation the rest of the pipeline depends on.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Raw HTML is a poor input for LLMs.&lt;/strong&gt; Clean HTML before you send it to Amazon Bedrock to reduce token consumption and improve the consistency of AI-extracted output. This preprocessing step is not an optimization. It’s a prerequisite for reliable results.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Semantic search broadens what you can find.&lt;/strong&gt; A keyword search for “furniture trends” returns exact matches, while vector search surfaces conceptually related content regardless of terminology. For competitive intelligence or market research, embeddings are what make the search interface genuinely useful.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;SQS decoupling is what makes the pipeline reliable.&lt;/strong&gt; Without it, a processing failure means the article is never analyzed. An Amazon SQS dead-letter queue between Amazon S3 and the extraction Lambda provides automatic retries, a small architectural change with significant reliability impact.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Amazon OpenSearch Serverless has a real cost floor.&lt;/strong&gt; The service requires minimum capacity units regardless of usage, which suits production workloads with consistent query volume. For lower-volume deployments, Amazon Relational Database Service (Amazon RDS) with pgvector supports the same vector search capabilities at a lower baseline cost and is worth considering as a starting point. See &lt;a href="https://aws.amazon.com/opensearch-service/pricing/" target="_blank" rel="noopener"&gt;Amazon OpenSearch Serverless pricing&lt;/a&gt; details.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2 id="clean-up"&gt;Clean up&lt;/h2&gt; 
+&lt;p&gt;To avoid ongoing charges, delete the resources you created.&lt;/p&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;Empty the Amazon S3 content bucket.&lt;/li&gt; 
+ &lt;li&gt;Run &lt;code&gt;cdk destroy&lt;/code&gt; from the project directory (or delete the stack in the AWS CloudFormation console).&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In this post, you learned how to build an automated insight extraction solution that transforms manual web monitoring into a searchable, AI-enriched knowledge base. The event-driven architecture decouples content collection from processing, Amazon Bedrock AgentCore handles JavaScript-heavy websites, and Amazon OpenSearch Serverless with vector embeddings powers semantic search beyond keyword matching.&lt;/p&gt; 
+&lt;p&gt;The complete source code, deployment guide, and configuration instructions are available in the &lt;a href="https://github.com/aws-samples/sample-intelligent-insights-extraction" target="_blank" rel="noopener"&gt;GitHub repository&lt;/a&gt;.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full wp-image-136515" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/03/Louisa-liu.jpeg" alt="" width="205" height="284"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Louisa Liu&lt;/h3&gt; 
+  &lt;p&gt;Louisa is a Solutions Architect at AWS, where she works directly with customers ranging from startups to established businesses. She helps them understand their business needs and guides projects from early architecture decisions through to production, putting the latest cloud and AI technologies to work in simple, scalable architectures.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full wp-image-136517" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/03/jiatin.jpg" alt="" width="576" height="768"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Jia Ting&lt;/h3&gt; 
+  &lt;p&gt;Jia is a Senior Solutions Architect at AWS Prototyping and AI Customer Engineering (PACE), specializing in big data and agentic AI prototyping solutions across diverse industries, with deep experience in gaming and automotive sectors.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full wp-image-136516" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/03/Michelle-Hong.jpg" alt="" width="576" height="768"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Michelle Hong&lt;/h3&gt; 
+  &lt;p&gt;Michelle, PhD, works as a Web3 Industry Solutions Architect at Amazon Web Services, where she helps customers build innovative applications using a variety of AWS components. She demonstrates her expertise in machine learning, particularly in natural language processing and agentic AI, to develop data-driven solutions that optimize business processes and improve customer experiences.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>From weeks to minutes: How Formula 1® uses agentic AI on AWS to accelerate data operations</title>
 		<link>https://aws.amazon.com/blogs/machine-learning/from-weeks-to-minutes-how-formula-1-uses-agentic-ai-on-aws-to-accelerate-data-operations/</link>
 		
@@ -48,7 +328,7 @@
 &lt;h3 id="phase-1-configuration-generation"&gt;Phase 1: Configuration generation&lt;/h3&gt; 
 &lt;p&gt;When a new data source needs onboarding, a team member uploads a BRD to an Amazon S3 bucket. The upload triggers an AWS Lambda function, which invokes Amazon Bedrock AgentCore Runtime, a capability of Amazon Bedrock AgentCore. The agent reads the BRD and generates a set of configuration files. It then accesses GitHub through a GitHub App to push these files as a pull request to the standardized Git repository, and accesses Jira through its REST API to create a ticket referencing the PR. All agent conversations and actions are traced in Amazon CloudWatch through built-in AgentCore observability. The assigned engineer reviews, adjusts if necessary, and approves.&lt;/p&gt; 
 &lt;div style="width: 810px" class="wp-caption alignnone"&gt;
- &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/28/ML-21186-1-1.png" alt="Phase 1 workflow showing a BRD upload triggering an agent that generates config files and opens a pull request" width="800" height="3555"&gt;
+ &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/28/ML-21186-1-1.png" alt="Phase 1 workflow showing a BRD upload triggering an agent that generates config files and opens a pull request" width="800" height="3555"&gt;
  &lt;p class="wp-caption-text"&gt;Phase 1 workflow: a BRD upload triggers the agent to generate config files and open a pull request&lt;/p&gt;
 &lt;/div&gt; 
 &lt;h3 id="phase-2-full-pipeline-generation"&gt;Phase 2: Full pipeline generation&lt;/h3&gt; 
@@ -4687,906 +4967,12 @@ print(message.content[1].text)&lt;/code&gt;&lt;/pre&gt;
 		
 		
 			</item>
-		<item>
-		<title>Build an explainable next-best-product recommendation system for banking on AWS</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/build-an-explainable-next-best-product-recommendation-system-for-banking-on-aws/</link>
-		
-		<dc:creator><![CDATA[Ayush Singh Chauhan]]></dc:creator>
-		<pubDate>Fri, 24 Jul 2026 15:42:11 +0000</pubDate>
-				<category><![CDATA[Advanced (300)]]></category>
-		<category><![CDATA[Amazon SageMaker AI]]></category>
-		<category><![CDATA[AWS Glue]]></category>
-		<category><![CDATA[Technical How-to]]></category>
-		<guid isPermaLink="false">aed1ba89e6cf49e75c72de98670971785d732274</guid>
-
-					<description>Learn the architecture and design decisions behind an explainable next-best-product recommendation system for banking, built with Amazon SageMaker AI and PyTorch. A multi-tower neural network with learned attention delivers accurate, per-customer recommendations while providing the explainability that banking regulators require.</description>
-										<content:encoded>&lt;p&gt;Building a deep learning-based explainable next-best-product recommendation system helps banking institutions predict which product a customer needs next. Banks hold vast amounts of customer data, including transaction histories, product ownership records, demographic profiles, and behavioral patterns. Translating this data into actionable, personalized product recommendations remains a significant challenge. Traditional rule-based systems and collaborative filtering approaches often fail to capture the complex temporal patterns in customer product adoption journeys.&lt;/p&gt; 
-&lt;p&gt;In this post, we present the architecture and design decisions behind a Next-Best-Product (NBP) recommendation system using &lt;a href="https://aws.amazon.com/sagemaker/ai/" target="_blank" rel="noopener"&gt;Amazon SageMaker AI&lt;/a&gt; and PyTorch. We explain the reasoning behind a multi-tower neural network architecture, how learned attention provides per-customer explainability, and how AWS services work together to take this solution from research to production. This is an architectural overview, not a step-by-step deployment guide. Whether you are building recommendation systems for financial services or other domains with heterogeneous customer data, the architectural patterns described here can help you design more accurate and interpretable models.&lt;/p&gt; 
-&lt;h2 id="prerequisites"&gt;Prerequisites&lt;/h2&gt; 
-&lt;p&gt;To follow along with the architectural patterns and code examples in this post, you need:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;An AWS account with permissions for SageMaker AI, &lt;a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener"&gt;Amazon Simple Storage Service (Amazon S3)&lt;/a&gt;, &lt;a href="https://aws.amazon.com/glue" target="_blank" rel="noopener"&gt;AWS Glue&lt;/a&gt;, and &lt;a href="https://aws.amazon.com/cloudwatch" target="_blank" rel="noopener"&gt;Amazon CloudWatch&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;This solution requires an &lt;a href="https://aws.amazon.com/iam/" target="_blank" rel="noopener"&gt;AWS Identity and Access Management (IAM)&lt;/a&gt; execution role with access to the following AWS services. Create policies with least-privilege permissions scoped to only the resources needed for this solution.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;SageMaker AI&lt;/strong&gt; – Create, describe, start, stop, and delete training jobs, processing jobs, batch transform jobs, models, endpoints, endpoint configurations, pipelines, experiments, and monitoring schedules. InvokeEndpoint for real-time inference.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Amazon S3&lt;/strong&gt; – Read and write access to the data bucket. Create and delete bucket. List, upload, download, and delete objects.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;AWS Glue&lt;/strong&gt; – Create, run, and delete ETL jobs. Create and delete crawlers. Create and delete Data Catalog databases and tables.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;CloudWatch&lt;/strong&gt; – Read and write access to log groups, log streams, and metrics. Delete log groups during cleanup.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;IAM&lt;/strong&gt; – Create and delete roles. Attach and detach policies. PassRole (restricted to the named execution role ARN, scoped to sagemaker.amazonaws.com and glue.amazonaws.com).&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;For guidance on writing least-privilege IAM policies for SageMaker AI, see Identity-based policy examples for &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/security_iam_id-based-policy-examples.html" target="_blank" rel="noopener"&gt;SageMaker AI&lt;/a&gt;.&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Familiarity with Python 3.11+ and &lt;a href="https://docs.pytorch.org/docs/2.12/index.html" target="_blank" rel="noopener"&gt;PyTorch&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;Required packages to create this recommender system: 
-  &lt;ul&gt; 
-   &lt;li&gt;Python 3.11+&lt;/li&gt; 
-   &lt;li&gt;PyTorch 2.9+&lt;/li&gt; 
-   &lt;li&gt;Pandas 2.3+&lt;/li&gt; 
-   &lt;li&gt;NumPy 2.3+&lt;/li&gt; 
-   &lt;li&gt;scikit-learn 1.7+&lt;/li&gt; 
-   &lt;li&gt;Dask 2025.11+&lt;/li&gt; 
-  &lt;/ul&gt; &lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;blockquote&gt;
- &lt;p&gt;We recommend using a virtual environment and scanning dependencies for known vulnerabilities using tools like pip-audit before deployment.&lt;/p&gt;
-&lt;/blockquote&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Basic understanding of deep learning concepts (embeddings, recurrent networks, attention mechanisms)&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Note: Deploying this solution creates billable AWS resources including SageMaker AI training jobs (ml.g5.12xlarge GPU instances), SageMaker AI endpoints, Amazon S3 storage, and AWS Glue jobs. Follow the clean up instructions at the end of this post to avoid ongoing charges.&lt;/p&gt; 
-&lt;h2 id="solution-overview"&gt;Solution overview&lt;/h2&gt; 
-&lt;p&gt;The solution uses a multi-tower deep learning architecture with four specialized neural network towers, each processing a different aspect of customer data. The towers are fused using a learned attention mechanism that provides both high accuracy and per-customer explainability.&lt;/p&gt; 
-&lt;p&gt;The following diagram illustrates the high-level architecture of the solution.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-19387-1.png" alt="Multi-tower architecture with four specialized neural network towers fused by a learned attention mechanism to produce explainable product recommendations" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;The architecture addresses a common challenge in banking: predicting which product a customer is most likely to purchase next from multiple product categories (such as credit cards, deposits, insurance, loans, and mortgages), while providing explainable results that satisfy regulatory requirements.&lt;/p&gt; 
-&lt;h2 id="tech-stack"&gt;Tech stack&lt;/h2&gt; 
-&lt;p&gt;The following table summarizes the technology choices and their roles in the solution.&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Component&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Technology&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Purpose&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;ETL &amp;amp; Data Processing&lt;/td&gt; 
-   &lt;td&gt;AWS Glue (PySpark)&lt;/td&gt; 
-   &lt;td&gt;Serverless Spark-based ETL for data unification, service mapping, feature engineering at scale&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Deep Learning Framework&lt;/td&gt; 
-   &lt;td&gt;PyTorch&lt;/td&gt; 
-   &lt;td&gt;Dynamic computation graphs, research-to-production flexibility, native GPU support&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Feature Engineering&lt;/td&gt; 
-   &lt;td&gt;Pandas, Dask, PyArrow&lt;/td&gt; 
-   &lt;td&gt;ML-specific feature engineering (sequence creation, windowed aggregations)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;ML Utilities&lt;/td&gt; 
-   &lt;td&gt;scikit-learn&lt;/td&gt; 
-   &lt;td&gt;Label encoding, standard scaling, train/test split, evaluation metrics&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Training Compute&lt;/td&gt; 
-   &lt;td&gt;SageMaker AI (ml.g5.12xlarge)&lt;/td&gt; 
-   &lt;td&gt;192 GB RAM, 4× NVIDIA A10G GPUs&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Data Storage&lt;/td&gt; 
-   &lt;td&gt;Amazon S3&lt;/td&gt; 
-   &lt;td&gt;Snappy-compressed Parquet files for raw, intermediate, and processed data&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Data Catalog&lt;/td&gt; 
-   &lt;td&gt;AWS Glue Data Catalog&lt;/td&gt; 
-   &lt;td&gt;Schema management, table metadata, crawlers for auto-discovery&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Model Registry&lt;/td&gt; 
-   &lt;td&gt;SageMaker AI model registry&lt;/td&gt; 
-   &lt;td&gt;Versioned model artifacts, approval workflows&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Inference&lt;/td&gt; 
-   &lt;td&gt;SageMaker AI Batch Transform / endpoint&lt;/td&gt; 
-   &lt;td&gt;Batch and near-real-time predictions&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Orchestration&lt;/td&gt; 
-   &lt;td&gt;Amazon SageMaker Pipelines&lt;/td&gt; 
-   &lt;td&gt;End-to-end ML pipeline orchestration&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Monitoring&lt;/td&gt; 
-   &lt;td&gt;CloudWatch&lt;/td&gt; 
-   &lt;td&gt;Training metrics, inference latency, model drift detection&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;h3 id="why-pytorch"&gt;Why PyTorch?&lt;/h3&gt; 
-&lt;p&gt;This solution uses PyTorch for dynamic computation graphs (needed for variable-length sequences with pack_padded_sequence), rapid iteration across multiple architectural phases, and native integration with SageMaker AI training jobs and inference containers.&lt;/p&gt; 
-&lt;h3 id="why-parquet-on-amazon-s3"&gt;Why Parquet on Amazon S3?&lt;/h3&gt; 
-&lt;p&gt;The solution stores data as Snappy-compressed Parquet on Amazon Simple Storage Service (Amazon S3). Parquet’s columnar format enables column pruning (reading a fraction of a wide file), predicate pushdown (skipping irrelevant row groups), 3-5× compression over CSV, and type preservation without re-parsing on every read.&lt;/p&gt; 
-&lt;h3 id="why-aws-glue-for-etl"&gt;Why AWS Glue for ETL?&lt;/h3&gt; 
-&lt;p&gt;The project uses AWS Glue jobs running on PySpark for serverless, auto scaling data processing. AWS Glue provides native Spark integration, the DynamicFrame API for flexible schemas, automatic Data Catalog registration, job bookmarks for incremental processing, and pay-per-DPU cost efficiency.&lt;/p&gt; 
-&lt;h2 id="data-pipeline-architecture"&gt;Data pipeline architecture&lt;/h2&gt; 
-&lt;p&gt;The data pipeline consists of two stages: an AWS Glue ETL job for data unification, followed by an Amazon SageMaker Processing job for ML-specific feature engineering.&lt;/p&gt; 
-&lt;h3 id="data-unification-with-aws-glue"&gt;Data unification with AWS Glue&lt;/h3&gt; 
-&lt;p&gt;Banking data typically arrives from multiple source systems with inconsistent schemas. The AWS Glue ETL job normalizes schemas, maps raw transaction types to unified service categories, combines all data into a single chronological record per customer, and engineers temporal features. The processed output is written as Parquet to Amazon S3 and registered in the AWS Glue Data Catalog.&lt;/p&gt; 
-&lt;h3 id="ml-specific-feature-engineering-with-amazon-sagemaker-processing"&gt;ML-specific feature engineering with Amazon SageMaker Processing&lt;/h3&gt; 
-&lt;p&gt;After the AWS Glue job produces the unified history, an Amazon SageMaker Processing job creates product adoption sequences per customer, computes time-windowed transaction aggregations (across 7, 30, 60, 180, and 365-day windows) using Dask for parallelism, and pads sequences to a fixed length for model input.&lt;/p&gt; 
-&lt;h3 id="handling-large-scale-data"&gt;Handling large scale data&lt;/h3&gt; 
-&lt;p&gt;For large datasets that exceed available memory, the solution uses a parallel chunked processing strategy with PyArrow for metadata inspection, ProcessPoolExecutor for parallel chunk processing, explicit garbage collection between batches, and incremental merging to avoid memory spikes.&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;import gc
-from concurrent.futures import ProcessPoolExecutor
-
-chunksize = 5_000_000
-n_workers = 4
-
-for batch_start in range(0, total_chunks, n_workers):
-    with ProcessPoolExecutor(max_workers=n_workers) as executor:
-        futures = [
-            executor.submit(process_chunk_range, input_path, output_path, i, start_row, end_row)
-            for i in range(batch_start, min(batch_start + n_workers, total_chunks))
-        ]
-        for future in futures:
-            future.result()
-    gc.collect()  # Force garbage collection between batches&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Note: When working with real customer data, see the &lt;a href="#security-considerations"&gt;Security considerations section&lt;/a&gt; for guidance on PII handling, regulatory compliance, and data governance.&lt;/p&gt; 
-&lt;h2 id="model-architecture"&gt;Model architecture&lt;/h2&gt; 
-&lt;p&gt;The model uses a multi-tower approach where each tower specializes in processing one type of customer data, followed by an attention-based fusion mechanism.&lt;/p&gt; 
-&lt;h3 id="why-multi-tower-over-a-single-network"&gt;Why multi-tower over a single network?&lt;/h3&gt; 
-&lt;p&gt;Different types of customer data have fundamentally different structures. Sequences are ordered lists of discrete IDs. Transactions are numerical aggregations. Demographics are a mix of categorical and numerical features. Behavioral segments are categorical codes.&lt;/p&gt; 
-&lt;p&gt;Forcing all these through the same layers wastes model capacity. Instead, the architecture uses four specialized towers, each designed for its data type:&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Tower&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Input Type&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Architecture&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Sequence Tower&lt;/td&gt; 
-   &lt;td&gt;Product adoption history (padded to fixed length)&lt;/td&gt; 
-   &lt;td&gt;nn.Embedding → 2-layer GRU → Fusion with active product count&lt;/td&gt; 
-   &lt;td&gt;64-dim vector&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Transaction Tower&lt;/td&gt; 
-   &lt;td&gt;Time-windowed transaction features&lt;/td&gt; 
-   &lt;td&gt;2-layer MLP (128 → 64) with ReLU and Dropout&lt;/td&gt; 
-   &lt;td&gt;64-dim vector&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Customer Tower&lt;/td&gt; 
-   &lt;td&gt;Demographics, income, family, account features&lt;/td&gt; 
-   &lt;td&gt;2-layer MLP (128 → 64) with ReLU and Dropout&lt;/td&gt; 
-   &lt;td&gt;64-dim vector&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Behavioral Tower&lt;/td&gt; 
-   &lt;td&gt;Segmentation codes, loyalty, usage patterns&lt;/td&gt; 
-   &lt;td&gt;2-layer MLP (128 → 64) with ReLU and Dropout&lt;/td&gt; 
-   &lt;td&gt;64-dim vector&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;h3 id="sequence-tower-capturing-temporal-patterns"&gt;Sequence Tower: Capturing temporal patterns&lt;/h3&gt; 
-&lt;p&gt;The Sequence Tower processes the customer’s product adoption history using a 2-layer Gated Recurrent Unit (GRU). This is the core architectural component because it captures the order in which customers adopt products, not just which products they own.&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;class SequenceTower(nn.Module):
-    def __init__(self, num_products, embedding_dim=32, hidden_dim=64, dropout=0.2):
-        super().__init__()
-        self.embedding = nn.Embedding(num_products + 1, embedding_dim, padding_idx=0)
-        self.gru = nn.GRU(
-            input_size=embedding_dim, hidden_size=hidden_dim,
-            num_layers=2, batch_first=True, dropout=dropout
-        )
-        self.active_count_layer = nn.Sequential(
-            nn.Linear(1, hidden_dim // 2), nn.ReLU(), nn.Dropout(dropout)
-        )
-        self.fusion = nn.Sequential(
-            nn.Linear(hidden_dim + hidden_dim // 2, hidden_dim),
-            nn.ReLU(), nn.Dropout(dropout)
-        )
-
-    def forward(self, sequence, seq_length, active_count):
-        embedded = self.embedding(sequence)
-        packed = nn.utils.rnn.pack_padded_sequence(
-            embedded, seq_length.cpu().clamp(min=1),
-            batch_first=True, enforce_sorted=False
-        )
-        _, hidden = self.gru(packed)
-        seq_features = hidden[-1]
-        active_features = self.active_count_layer(active_count)
-        return self.fusion(torch.cat([seq_features, active_features], dim=1))&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;h3 id="why-gru-over-lstm"&gt;Why GRU over LSTM?&lt;/h3&gt; 
-&lt;p&gt;GRU has two gates (reset, update) versus LSTM’s three (input, forget, output), resulting in approximately 33% fewer parameters. For short sequences (20 items or fewer), GRU performs comparably to LSTM while training faster. The update gate’s interpolation mechanism also creates a natural residual-like gradient path.&lt;/p&gt; 
-&lt;h3 id="why-pack_padded_sequence"&gt;Why pack_padded_sequence?&lt;/h3&gt; 
-&lt;p&gt;Customer sequences have variable lengths. Packing tells the GRU to ignore padding tokens, preventing the model from learning noise from zero-padded positions.&lt;/p&gt; 
-&lt;h2 id="tower-attention-mechanism-learned-fusion-with-explainability"&gt;Tower Attention Mechanism: Learned fusion with explainability&lt;/h2&gt; 
-&lt;p&gt;Instead of simple concatenation, the architecture uses a learned attention mechanism to fuse tower outputs. This is what provides per-customer explainability without requiring post-hoc interpretation methods like SHAP or LIME.&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;class TowerAttentionMechanism(nn.Module):
-    def __init__(self, hidden_dim=64, num_heads=4, dropout=0.1):
-        super().__init__()
-        self.tower_attention = nn.MultiheadAttention(
-            embed_dim=hidden_dim, num_heads=num_heads,
-            dropout=dropout, batch_first=True
-        )
-        self.context_weighting = nn.Sequential(
-            nn.Linear(hidden_dim * 4, 4), nn.Softmax(dim=1)
-        )
-
-    def forward(self, tower_outputs):
-        stacked = torch.stack(tower_outputs, dim=1)  # [batch, 4, 64]
-        attended, _ = self.tower_attention(stacked, stacked, stacked)
-        stacked = stacked + attended  # Residual connection
-        concat = torch.cat(tower_outputs, dim=1)  # [batch, 256]
-        tower_weights = self.context_weighting(concat)  # [batch, 4]
-        weighted_outputs = [
-            tower_outputs[i] * tower_weights[:, i:i+1]
-            for i in range(4)
-        ]
-        return weighted_outputs, tower_weights&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;The tower weights are per-customer. A customer with rich transaction history gets a high transaction tower weight, while a new customer with few transactions but clear demographics gets a high customer tower weight. This adaptivity improves accuracy and provides natural explainability for relationship managers and regulators.&lt;/p&gt; 
-&lt;h3 id="context-aware-fusion-residual-blocks-for-stable-training"&gt;Context-Aware Fusion: Residual blocks for stable training&lt;/h3&gt; 
-&lt;p&gt;The weighted tower outputs pass through a fusion network with residual connections. Residual connections help with gradient flow during training and allow the network to learn identity mappings when additional depth is not needed.&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;class ContextAwareFusion(nn.Module):
-    def __init__(self, hidden_dim=64, dropout=0.2):
-        super().__init__()
-        self.initial_projection = nn.Linear(hidden_dim * 4, hidden_dim)
-        self.fusion1 = nn.Sequential(
-            nn.Linear(hidden_dim, hidden_dim * 2), nn.LayerNorm(hidden_dim * 2),
-            nn.ReLU(), nn.Dropout(dropout), nn.Linear(hidden_dim * 2, hidden_dim)
-        )
-        self.layer_norm1 = nn.LayerNorm(hidden_dim)
-        self.fusion2 = nn.Sequential(
-            nn.Linear(hidden_dim, hidden_dim), nn.ReLU(), nn.Dropout(dropout)
-        )
-        self.layer_norm2 = nn.LayerNorm(hidden_dim)
-
-    def forward(self, weighted_outputs):
-        concat = torch.cat(weighted_outputs, dim=1)
-        projected = self.initial_projection(concat)
-        out1 = self.layer_norm1(projected + self.fusion1(projected))  # Residual
-        out2 = self.layer_norm2(out1 + self.fusion2(out1))  # Residual
-        return out2&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;h3 id="feature-importance-module-built-in-explainability"&gt;Feature Importance Module: Built-in explainability&lt;/h3&gt; 
-&lt;p&gt;Banking regulators require model explainability. Rather than relying on post-hoc methods, the architecture includes a Feature Importance Module that produces per-customer importance scores summing to 1.0 as part of the forward pass.&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;class FeatureImportanceModule(nn.Module):
-    def __init__(self, hidden_dim=64):
-        super().__init__()
-        self.feature_contribution = nn.Sequential(
-            nn.Linear(hidden_dim, 4), nn.Softmax(dim=1)
-        )
-
-    def forward(self, fused_features, tower_weights):
-        feature_importance = self.feature_contribution(fused_features)
-        return feature_importance * tower_weights&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;This produces outputs like: “For this customer, 40% of the recommendation was driven by their product sequence, 30% by transaction patterns, 20% by demographics, 10% by behavioral segment.” Relationship managers can use this to tailor their conversations with each customer.&lt;/p&gt; 
-&lt;h2 id="training-strategy"&gt;Training strategy&lt;/h2&gt; 
-&lt;p&gt;The following table summarizes the training configuration and the rationale behind each choice.&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Parameter&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Value&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Rationale&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Optimizer&lt;/td&gt; 
-   &lt;td&gt;Adam (lr=0.001, weight_decay=1e-5)&lt;/td&gt; 
-   &lt;td&gt;Adaptive per-parameter learning rates, light L2 regularization&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Loss&lt;/td&gt; 
-   &lt;td&gt;CrossEntropyLoss&lt;/td&gt; 
-   &lt;td&gt;Standard for multi-class classification, numerically stable&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;LR Scheduler&lt;/td&gt; 
-   &lt;td&gt;ReduceLROnPlateau (factor=0.5, patience=3)&lt;/td&gt; 
-   &lt;td&gt;Automatically halves LR when validation loss plateaus&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Gradient Clipping&lt;/td&gt; 
-   &lt;td&gt;max_norm=1.0&lt;/td&gt; 
-   &lt;td&gt;Prevents gradient explosion with GRU and attention&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Early Stopping&lt;/td&gt; 
-   &lt;td&gt;patience=5&lt;/td&gt; 
-   &lt;td&gt;Stops training when validation loss stops improving&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Batch Size&lt;/td&gt; 
-   &lt;td&gt;32&lt;/td&gt; 
-   &lt;td&gt;Fits comfortably in A10G’s VRAM&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Data Split&lt;/td&gt; 
-   &lt;td&gt;80% train / 10% validation / 10% test&lt;/td&gt; 
-   &lt;td&gt;Standard split for reproducibility&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;All random seeds are fixed (PyTorch, NumPy, CUDA) for full reproducibility across training runs.&lt;/p&gt; 
-&lt;p&gt;The training process uses SageMaker AI with ml.g5.12xlarge instances. The SageMaker AI Python SDK provides a PyTorch Estimator that packages the training code, provisions GPU instances, runs training, and stores model artifacts to Amazon S3 automatically.&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;from sagemaker.pytorch import PyTorch
-
-estimator = PyTorch(
-    entry_point='train.py',
-    source_dir='src/',
-    role=role,
-    instance_count=1,
-    instance_type='ml.g5.12xlarge',
-    framework_version='2.5.0',
-    py_version='py311',
-    hyperparameters={
-        'epochs': 50,
-        'batch_size': 32,
-        'learning_rate': 0.001,
-    },
-)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;h2 id="evaluation-metrics"&gt;Evaluation metrics&lt;/h2&gt; 
-&lt;p&gt;The model is evaluated using metrics that directly map to business value:&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Metric&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;What It Measures&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Business Relevance&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Top-1 Accuracy&lt;/td&gt; 
-   &lt;td&gt;Exact prediction accuracy&lt;/td&gt; 
-   &lt;td&gt;“Did the model predict the exact right product?”&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Top-3 Accuracy&lt;/td&gt; 
-   &lt;td&gt;Correct product in top 3&lt;/td&gt; 
-   &lt;td&gt;“Is the right product in the short list for the relationship manager?”&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Top-5 Accuracy&lt;/td&gt; 
-   &lt;td&gt;Correct product in top 5&lt;/td&gt; 
-   &lt;td&gt;“Is it in the recommendation carousel?”&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;MRR (Mean Reciprocal Rank)&lt;/td&gt; 
-   &lt;td&gt;Average reciprocal rank of correct product&lt;/td&gt; 
-   &lt;td&gt;“How high up is the correct product on average?”&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Weighted F1&lt;/td&gt; 
-   &lt;td&gt;Per-class precision/recall balance&lt;/td&gt; 
-   &lt;td&gt;“Does the model predict all product types well?”&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;The production model achieved strong performance across all metrics, with the correct product consistently appearing in the top-3 recommendations. The feature importance module confirmed that the sequence tower (product adoption history) contributes the most signal, followed by transaction patterns, customer demographics, and behavioral segmentation.&lt;/p&gt; 
-&lt;h2 id="inference-and-deployment"&gt;Inference and deployment&lt;/h2&gt; 
-&lt;p&gt;The inference pipeline supports both batch scoring and real-time predictions using SageMaker AI.&lt;/p&gt; 
-&lt;p&gt;For batch scoring, SageMaker AI Batch Transform processes the entire customer base nightly, generating top-k recommendations with explainability scores for each customer. Results are stored as JSON on Amazon S3 for consumption by CRM systems and relationship manager dashboards.&lt;/p&gt; 
-&lt;p&gt;For real-time predictions, a SageMaker AI real-time endpoint serves on-demand recommendations when a customer logs into the mobile banking app or a relationship manager opens a customer profile.&lt;/p&gt; 
-&lt;p&gt;Each recommendation includes:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Product ID and probability score.&lt;/li&gt; 
- &lt;li&gt;Feature importance breakdown: percentage contribution from each tower.&lt;/li&gt; 
- &lt;li&gt;Confidence indicator: based on probability distribution entropy.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;def generate_batch_recommendations(model, dataloader, top_k=5):
-    with torch.no_grad():
-        for batch in dataloader:
-            outputs, feature_importance = model(
-                batch['sequence'], batch['seq_length'],
-                batch['active_count'], batch['transaction'],
-                batch['customer'], batch['behavioral']
-            )
-            probabilities = F.softmax(outputs, dim=1).cpu().numpy()
-            # Generate top-k recommendations with explainability scores&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;For guidance on securing endpoints with IAM authentication, rate limiting, and virtual private cloud (VPC) isolation, see the &lt;a href="#security-considerations"&gt;Security considerations section&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;Note: The code snippets in this post illustrate architectural patterns and are not production-ready. For production, add input validation (tensor shapes, NaN checks, sequence length bounds etc.), error handling, and inference logging. Configure &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor.html" target="_blank" rel="noopener"&gt;Amazon SageMaker Model Monitor&lt;/a&gt; to alert on input distribution drift.&lt;/p&gt; 
-&lt;h2 id="key-design-decisions"&gt;Key design decisions&lt;/h2&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Why multi-tower over a single network?&lt;/strong&gt; A single network would need to simultaneously learn how to process sequences, aggregate transactions, encode demographics, and interpret behavioral segments. Separate towers let each specialize in its data type, then the attention-based fusion learns how to combine them optimally per customer.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Why GRU for production over Transformers?&lt;/strong&gt; Transformers excel on long sequences (100+). For sequences of 20 items or fewer, GRU is sufficient, provides clearer interpretability than transformer attention maps, avoids quadratic attention computation, and produces a smaller model (~5 MB compared to ~15 MB).&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Why learned tower weights instead of concatenation?&lt;/strong&gt; With concatenation, the model treats all towers equally for every customer. With learned attention weights, the model adapts per customer: a customer with rich transaction history gets high transaction tower weight, while a new customer gets high demographic tower weight.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Why time-windowed transaction features?&lt;/strong&gt; Different time windows capture different signals: 7 days captures immediate intent, 30 days captures monthly patterns, 180 days captures seasonal patterns, and 365 days captures annual patterns. A customer who suddenly increases transaction frequency in the last 7 days has different intent than one with steady activity over 365 days.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="operational-considerations"&gt;Operational considerations&lt;/h2&gt; 
-&lt;p&gt;All random seeds are fixed across PyTorch, NumPy, and CUDA for deterministic training. Model artifacts, hyperparameters, and data versions are tracked through Amazon SageMaker Experiments.&lt;/p&gt; 
-&lt;p&gt;Amazon SageMaker Model Monitor detects data drift (changes in input feature distributions), model drift (degradation in prediction quality), and potential bias (over-reliance on demographic features).&lt;/p&gt; 
-&lt;p&gt;The Amazon SageMaker Pipelines workflow retrains the model monthly with the latest customer data. The pipeline automates the full workflow: data processing, training, evaluation, and conditional deployment (deploying only if metrics improve over the current production model).&lt;/p&gt; 
-&lt;h2 id="security-considerations"&gt;Security considerations&lt;/h2&gt; 
-&lt;ul&gt; 
- &lt;li&gt;When deploying this solution with real banking data, implement least-privilege IAM roles scoped to only the required SageMaker AI, Amazon S3, AWS Glue, and CloudWatch actions.&lt;/li&gt; 
- &lt;li&gt;Encrypt data at rest using AWS Key Management Service (AWS KMS) customer managed keys on S3 buckets and SageMaker AI training volumes, and enforce TLS for all data in transit via S3 bucket policies.&lt;/li&gt; 
- &lt;li&gt;Deploy training jobs and endpoints in private VPC subnets with no internet gateway, use VPC endpoints (AWS PrivateLink) for AWS service communication, and set &lt;code&gt;enable_network_isolation=True&lt;/code&gt; on training jobs.&lt;/li&gt; 
- &lt;li&gt;Secure inference endpoints with AWS Signature Version 4 signing, and consider Amazon Cognito and Amazon API Gateway for consumer authentication and rate limiting.&lt;/li&gt; 
- &lt;li&gt;For data governance, assess regulatory obligations (PCI-DSS, GDPR, CCPA), implement data minimization, and define retention policies.&lt;/li&gt; 
- &lt;li&gt;Enable AWS CloudTrail for API audit logging and S3 versioning for model artifact integrity.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;For complete implementation guidance, see the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/security.html" target="_blank" rel="noopener"&gt;SageMaker AI security documentation&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2 id="clean-up"&gt;Clean up&lt;/h2&gt; 
-&lt;p&gt;To avoid ongoing AWS charges, delete the following resources after you finish evaluating this solution.&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;SageMaker AI endpoints and endpoint configurations.&lt;/li&gt; 
- &lt;li&gt;SageMaker AI models and training job output in Amazon S3.&lt;/li&gt; 
- &lt;li&gt;Amazon SageMaker Processing job output in Amazon S3.&lt;/li&gt; 
- &lt;li&gt;SageMaker AI Batch Transform jobs and configurations.&lt;/li&gt; 
- &lt;li&gt;Amazon SageMaker Pipelines definitions.&lt;/li&gt; 
- &lt;li&gt;Amazon SageMaker Model Monitor schedules.&lt;/li&gt; 
- &lt;li&gt;Amazon SageMaker Experiments trials and experiment data.&lt;/li&gt; 
- &lt;li&gt;Amazon S3 buckets containing training data, model artifacts, and batch transform results.&lt;/li&gt; 
- &lt;li&gt;AWS Glue ETL jobs and Data Catalog resources.&lt;/li&gt; 
- &lt;li&gt;CloudWatch log groups created by SageMaker AI and AWS Glue.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;You can delete these resources through the AWS Management Console or using the AWS Command Line Interface (AWS CLI).&lt;/p&gt; 
-&lt;p&gt;Warning: Deleting these resources is irreversible. Before proceeding:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Export any model artifacts or evaluation results you need to retain.&lt;/li&gt; 
- &lt;li&gt;Verify that deletion aligns with your data retention policies and regulatory requirements.&lt;/li&gt; 
- &lt;li&gt;Delete all S3 object versions if versioning is enabled.&lt;/li&gt; 
- &lt;li&gt;Remove IAM roles and policies created for this solution.&lt;/li&gt; 
- &lt;li&gt;Deleting S3 buckets permanently removes all training data, model artifacts, and batch transform results.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;This post showed how to build a Next-Best-Product recommendation system for banking using PyTorch and SageMaker AI. The multi-tower architecture with learned attention fusion achieves high prediction accuracy while providing the explainability required by banking regulators.&lt;/p&gt; 
-&lt;p&gt;The key takeaways are:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Specialized towers for different data types outperform monolithic architectures for heterogeneous banking data.&lt;/li&gt; 
- &lt;li&gt;GRU-based sequence processing captures temporal product adoption patterns that flat feature aggregation misses.&lt;/li&gt; 
- &lt;li&gt;Learned tower attention provides both accuracy gains and per-customer explainability without post-hoc interpretation methods.&lt;/li&gt; 
- &lt;li&gt;SageMaker AI provides the end-to-end infrastructure for training, model management, and inference at scale.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;You can adapt this multi-tower architecture to your own product catalog and customer data. To get started, explore the &lt;a href="https://aws.amazon.com/sagemaker/ai" target="_blank" rel="noopener"&gt;SageMaker AI documentation&lt;/a&gt;. For additional examples of PyTorch on AWS, see PyTorch on AWS. If you would like help building a recommendation system for your organization, contact an AWS representative.&lt;/p&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-19387-2.png" alt="Ayush Singh Chauhan" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Ayush Singh Chauhan&lt;/h3&gt; 
-  &lt;p&gt;Ayush is an Associate AI/ML Delivery Consultant with 4+ years of experience solving customer business problems across AI/ML, Agentic AI, and Generative AI domains.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-19387-3.png" alt="Nisha Gambhir" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Nisha Gambhir&lt;/h3&gt; 
-  &lt;p&gt;Nisha is a Senior AI/ML &amp;amp; Cloud Architect based out of India. She is passionate about helping customers design, architect and develop scalable applications using AI/ML. She loves working on latest technologies, providing simple and scalable solutions that drive positive business outcomes.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-19387-4.jpeg" alt="Marcin Czelej" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Marcin Czelej&lt;/h3&gt; 
-  &lt;p&gt;Marcin is a Machine Learning Engineer at AWS Generative AI Innovation and Delivery. He combines over 8 years of experience in C/C++ and assembler programming with extensive knowledge in machine learning and data science. This unique skill set allows him to deliver optimized and customised solutions across various industries. Marcin has successfully implemented AI advancements in sectors such as e-commerce, telecommunications, automotive, and the public sector, consistently creating value for customers.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Get started with OpenAI GPT-5.6 Sol, Terra, and Luna on Amazon Bedrock</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/get-started-with-openai-gpt-5-6-sol-terra-and-luna-on-amazon-bedrock/</link>
-		
-		<dc:creator><![CDATA[Zohreh Norouzi]]></dc:creator>
-		<pubDate>Fri, 24 Jul 2026 15:40:08 +0000</pubDate>
-				<category><![CDATA[Amazon Bedrock]]></category>
-		<category><![CDATA[Generative AI]]></category>
-		<category><![CDATA[How-To]]></category>
-		<category><![CDATA[Intermediate (200)]]></category>
-		<guid isPermaLink="false">b55df4bf2a464ecbce7f2c5865b99118d41c2af0</guid>
-
-					<description>OpenAI GPT-5.6 Sol, Terra, and Luna are now generally available on Amazon Bedrock. Learn how to select a model, run inference through the Responses API on the bedrock-mantle endpoint, reduce cost with prompt caching, connect the OpenAI Codex coding agent, and plan for quotas and scaling.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This post is co-written with Chris Dickens from OpenAI.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Developers building agentic coding, long-horizon reasoning, and high-volume inference workloads want frontier models they can call through familiar APIs, without operating separate model infrastructure. OpenAI &lt;a href="https://aws.amazon.com/blogs/machine-learning/openai-gpt-5-6-sol-terra-and-luna-are-now-generally-available-on-amazon-bedrock/" target="_blank" rel="noopener"&gt;GPT-5.6&lt;/a&gt; Sol, Terra, and Luna are now generally available on &lt;a href="https://aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock&lt;/a&gt;. The three models cover workloads from autonomous coding agents and long-horizon reasoning to high-volume, latency-sensitive inference, and they run with the security, Regional processing, and cost controls of AWS.&lt;/p&gt; 
-&lt;p&gt;You access all three models through the OpenAI Responses API on the bedrock-mantle endpoint. Sol is the flagship reasoning model, Terra balances performance and cost for everyday production work, and Luna is optimized for fast, low-cost inference, so you can right-size capability and cost for each workload. Pricing matches OpenAI first-party rates, and usage counts toward your existing AWS commitments.&lt;/p&gt; 
-&lt;p&gt;In this post, we show you how to select a model, run your first inference through the Responses API, reduce cost with prompt caching and measure cached-token usage, connect the OpenAI Codex coding agent, and plan for quotas and scaling. Your prompts and completions are not used to train any models, and are not shared with the model provider.&lt;/p&gt; 
-&lt;h2 id="the-gpt-5.6-family-on-amazon-bedrock"&gt;The GPT-5.6 family on Amazon Bedrock&lt;/h2&gt; 
-&lt;p&gt;GPT-5.6 introduces a naming system from OpenAI where the number identifies the generation and the names Sol, Terra, and Luna identify durable capability tiers that can advance on their own cadence. The following table summarizes the key specifications for each model on Amazon Bedrock.&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Model&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Model ID&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Best suited for&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;AWS Regions&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Sol&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;openai.gpt-5.6-sol&lt;/td&gt; 
-   &lt;td&gt;Autonomous coding, security research, scientific analysis, and deep multi-step reasoning&lt;/td&gt; 
-   &lt;td&gt;US East (N. Virginia), US East (Ohio)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Terra&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;openai.gpt-5.6-terra&lt;/td&gt; 
-   &lt;td&gt;General-purpose production workloads that balance reasoning, performance, and cost&lt;/td&gt; 
-   &lt;td&gt;US East (N. Virginia), US East (Ohio), US West (Oregon)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Luna&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;openai.gpt-5.6-luna&lt;/td&gt; 
-   &lt;td&gt;High-volume, latency-sensitive workloads such as classification, summarization, and routing&lt;/td&gt; 
-   &lt;td&gt;US East (N. Virginia), US East (Ohio), US West (Oregon)&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;All three models support text and image input, text output, a 272K-token context window, and the Responses API. They also support &lt;code&gt;none&lt;/code&gt;, &lt;code&gt;low&lt;/code&gt;, &lt;code&gt;medium&lt;/code&gt;, &lt;code&gt;high&lt;/code&gt;, &lt;code&gt;xhigh&lt;/code&gt;, and &lt;code&gt;max&lt;/code&gt; reasoning effort, so you can switch models without changing your API integration.&lt;/p&gt; 
-&lt;h2 id="accessing-gpt-5.6-through-the-bedrock-mantle-endpoint"&gt;Accessing GPT-5.6 through the bedrock-mantle endpoint&lt;/h2&gt; 
-&lt;p&gt;You access GPT-5.6 models through the OpenAI Responses API on the &lt;code&gt;bedrock-mantle&lt;/code&gt; endpoint. The base URL is &lt;code&gt;https://bedrock-mantle.{region}.api.aws&lt;/code&gt;, and the Responses API is served at &lt;code&gt;/openai/v1/responses&lt;/code&gt;. Replace &lt;code&gt;{region}&lt;/code&gt; with a supported AWS Region, such as &lt;code&gt;us-east-1&lt;/code&gt;. This &lt;code&gt;openai/v1&lt;/code&gt; path is specific to the OpenAI models. The endpoint works with the OpenAI Python and TypeScript SDKs. To run an existing OpenAI SDK application on Amazon Bedrock, replace the OpenAI base URL with the bedrock-mantle endpoint, use the corresponding Amazon Bedrock model ID, and authenticate with an &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-keys.html" target="_blank" rel="noopener"&gt;Amazon Bedrock API key&lt;/a&gt; or AWS credentials.&lt;/p&gt; 
-&lt;h3 id="security-and-data-handling"&gt;Security and data handling&lt;/h3&gt; 
-&lt;p&gt;Every model call runs under your &lt;a href="https://aws.amazon.com/iam/" target="_blank" rel="noopener"&gt;AWS Identity and Access Management (IAM)&lt;/a&gt; policies, inside your virtual private cloud (VPC), and is logged in &lt;a href="https://aws.amazon.com/cloudtrail/" target="_blank" rel="noopener"&gt;AWS CloudTrail&lt;/a&gt;. In-Region inference keeps requests within the AWS Region you specify, which helps teams meet data-residency requirements.&lt;/p&gt; 
-&lt;p&gt;GPT-5.6 Sol, Terra, and Luna are third-party models from OpenAI, made available on Amazon Bedrock and subject to &lt;a href="https://aws.amazon.com/legal/bedrock/third-party-models/" target="_blank" rel="noopener"&gt;the OpenAI terms&lt;/a&gt;. For these OpenAI models, classifier-flagged traffic is retained for up to 30 days for automated offline &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html" target="_blank" rel="noopener"&gt;abuse detection&lt;/a&gt;. Retained inputs and outputs are stored and processed by AWS and are not shared with the model provider unless you opt in. You control retention configuration through &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html" target="_blank" rel="noopener"&gt;data retention&lt;/a&gt; mode.&lt;/p&gt; 
-&lt;h2 id="get-started-with-gpt-5.6-on-amazon-bedrock"&gt;Get started with GPT-5.6 on Amazon Bedrock&lt;/h2&gt; 
-&lt;p&gt;Complete the following steps to start using GPT-5.6 on Amazon Bedrock.&lt;/p&gt; 
-&lt;h3 id="prerequisites"&gt;Prerequisites&lt;/h3&gt; 
-&lt;p&gt;To use GPT-5.6 models, you need an AWS account with permissions to run inference on the bedrock-mantle endpoint. One way to grant these is to attach the AWS managed policy AmazonBedrockMantleInferenceAccess to your IAM principal. It grants the read and inference-creation access the examples in this post need, including bedrock-mantle:CreateInference and bedrock-mantle:CallWithBearerToken.&lt;/p&gt; 
-&lt;p&gt;Install the OpenAI Python SDK, version 2.45.0 or later:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-bash"&gt;pip install "openai&amp;gt;=2.45.0"&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;You authenticate with an API key. There are two options for authenticating the OpenAI SDK.&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;&lt;strong&gt;Auto-refreshing short-term key:&lt;/strong&gt; The OpenAI SDK’s native BedrockOpenAI client takes a token provider that generates a short-term key from your AWS credentials and refreshes it before each request. The examples in this post use this client. 
-  &lt;div class="hide-language"&gt; 
-   &lt;pre&gt;&lt;code class="language-python"&gt;from aws_bedrock_token_generator import provide_token
-from openai import BedrockOpenAI
-region = "us-east-1"
-
-client = BedrockOpenAI(
-    aws_region=region,
-    bedrock_token_provider=lambda: provide_token(region=region),
-)&lt;/code&gt;&lt;/pre&gt; 
-  &lt;/div&gt; &lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Short-term key from an environment variable:&lt;/strong&gt; Set the key on AWS_BEARER_TOKEN_BEDROCK and pass it to the client. Because this key isn’t refreshed, it expires after at most 12 hours. For production, use the auto-refreshing option or store the key in AWS Secrets Manager. 
-  &lt;div class="hide-language"&gt; 
-   &lt;pre&gt;&lt;code class="language-python"&gt;import os
-from openai import OpenAI
-
-client = OpenAI(
-    base_url="https://bedrock-mantle.us-east-1.api.aws/openai/v1",
-    api_key=os.environ["AWS_BEARER_TOKEN_BEDROCK"],
-)&lt;/code&gt;&lt;/pre&gt; 
-  &lt;/div&gt; &lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h3 id="run-your-first-inference-with-the-responses-api"&gt;Run your first inference with the Responses API&lt;/h3&gt; 
-&lt;p&gt;Using the BedrockOpenAI client from the previous step, call GPT-5.6 Terra through the Responses API. The Responses API uses a single &lt;code&gt;input&lt;/code&gt; field and returns the generated text in &lt;code&gt;output_text&lt;/code&gt;.&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;response = client.responses.create(
-    model="openai.gpt-5.6-terra",
-    input="Explain the benefits of prompt caching for agentic workloads.",
-    max_output_tokens=512,
-    store=False,
-)
-
-print(response.output_text)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;To move an existing OpenAI SDK application to GPT-5.6 on Amazon Bedrock, update the base URL and the model ID.&lt;/p&gt; 
-&lt;h3 id="control-reasoning-effort"&gt;Control reasoning effort&lt;/h3&gt; 
-&lt;p&gt;GPT-5.6 models can spend additional reasoning tokens on complex, multi-step tasks before answering, which improves results but increases latency and cost. Set the level with the reasoning parameter. Sol, Terra, and Luna support &lt;code&gt;none&lt;/code&gt;, &lt;code&gt;low&lt;/code&gt;, &lt;code&gt;medium&lt;/code&gt;, &lt;code&gt;high&lt;/code&gt;, &lt;code&gt;xhigh&lt;/code&gt;, and &lt;code&gt;max&lt;/code&gt;. Match the level to the task.&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;response = client.responses.create(
-    model="openai.gpt-5.6-sol",
-    input="A train leaves at 3 PM at 60 km/h. Another leaves an hour later at "
-    "90 km/h from the same station. When does the second catch up?",
-    reasoning={"effort": "high"},
-)
-
-print(response.output_text)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;h3 id="call-tools"&gt;Call tools&lt;/h3&gt; 
-&lt;p&gt;GPT-5.6 supports tool calling, which lets the model request tools you define and use their results to complete a request. The following example demonstrates client-side tool calling, where your application runs the tool and returns the result to the model. It defines a get_weather tool and completes one round-trip. The model requests the tool, your application runs it and returns the result, and the model produces the final answer.&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;import json
-
-tools = [
-    {
-        "type": "function",
-        "name": "get_weather",
-        "description": "Get the current weather for a given location",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "location": {
-                    "type": "string",
-                    "description": "City and country (for example, Seattle, US)",
-                },
-                "unit": {
-                    "type": "string",
-                    "enum": ["celsius", "fahrenheit"],
-                    "description": "Temperature unit",
-                },
-            },
-            "required": ["location"],
-        },
-    }
-]
-
-# Step 1: Send the user request with the tool definition.
-input_list = [{"role": "user", "content": "What's the weather like in Seattle?"}]
-
-response = client.responses.create(
-    model="openai.gpt-5.6-terra",
-    input=input_list,
-    tools=tools,
-)
-
-# Step 2: Carry the model's output (including any reasoning items) into the next turn.
-input_list += response.output
-
-# Step 3: Run each requested function and append its result.
-for item in response.output:
-    if item.type == "function_call":
-        args = json.loads(item.arguments)
-        result = {
-            "location": args["location"],
-            "temperature": 64,
-            "condition": "Partly cloudy",
-        }
-        input_list.append(
-            {
-                "type": "function_call_output",
-                "call_id": item.call_id,
-                "output": json.dumps(result),
-            }
-        )
-
-# Step 4: Ask the model for the final response, incorporating the tool result.
-final_response = client.responses.create(
-    model="openai.gpt-5.6-terra",
-    input=input_list,
-    tools=tools,
-)
-
-print(final_response.output_text)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Because GPT-5.6 models reason before responding, pass the model’s output items (which can include reasoning) back in the next request, as the preceding example does when it appends &lt;code&gt;response.output&lt;/code&gt; to the &lt;code&gt;input&lt;/code&gt; list.&lt;/p&gt; 
-&lt;p&gt;For production deployments, use &lt;a href="https://aws.amazon.com/bedrock/guardrails/" target="_blank" rel="noopener"&gt;Amazon Bedrock Guardrails&lt;/a&gt; to implement safeguards customized to your use cases and responsible AI policies.&lt;/p&gt; 
-&lt;h3 id="try-gpt-5.6-on-the-console"&gt;Try GPT-5.6 on the console&lt;/h3&gt; 
-&lt;p&gt;GPT-5.6 models run on the next-generation inference engine, which has a &lt;a href="https://console.aws.amazon.com/bedrock-mantle/" target="_blank" rel="noopener"&gt;new Amazon Bedrock console experience&lt;/a&gt; optimized for the bedrock-mantle endpoint and its OpenAI-compatible and Anthropic-compatible APIs.&lt;/p&gt; 
-&lt;p&gt;This experience is project-based. You create a project, assign models, configure API keys, and evaluate models side by side before writing application code. Complete the following steps to try GPT-5.6 without leaving the console:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Open the &lt;a href="https://console.aws.amazon.com/bedrock-mantle/" target="_blank" rel="noopener"&gt;new Amazon Bedrock console&lt;/a&gt; in a Region where the models are available, such as US East (N. Virginia). If you are in the existing console, choose &lt;strong&gt;Try the new Bedrock console&lt;/strong&gt;.&lt;/li&gt; 
- &lt;li&gt;Create a project, or open an existing one.&lt;/li&gt; 
- &lt;li&gt;In the model catalog, review the available GPT, Claude, and open-weight models. You can compare up to three models side by side on capabilities, modalities, context window, pricing, and Regional availability.&lt;/li&gt; 
- &lt;li&gt;Choose a GPT-5.6 model to add it to your project.&lt;/li&gt; 
- &lt;li&gt;Start an evaluation, enter a prompt, and review the model’s response. You can select up to three models to compare responses to the same prompt.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;The following screenshot shows the model catalog in the new Amazon Bedrock console, where you can browse and compare GPT-5.6 and other models.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-21450-1.png" alt="Model catalog in the new Amazon Bedrock console showing GPT-5.6 and other models available for comparison" width="800"&gt;&lt;/p&gt; 
-&lt;h2 id="reduce-cost-with-gpt-5.6-prompt-caching"&gt;Reduce cost with GPT-5.6 prompt caching&lt;/h2&gt; 
-&lt;p&gt;Agentic and multi-step workloads repeat much of their context between calls. System instructions, tool definitions, and reference files often stay the same while only the latest input changes. GPT-5.6 supports prompt caching in two modes on Amazon Bedrock. Implicit caching is on by default, so eligible requests are cached automatically without code changes. Explicit caching lets you mark cache breakpoints for precise control over which parts of a prompt are cached. In both modes, prompt caching reduces the cost of repeatedly processing shared context as request volume grows.&lt;/p&gt; 
-&lt;p&gt;With a cache breakpoint, you mark the end of a reusable prompt prefix. On a subsequent request that shares that prefix, Amazon Bedrock reuses the processed context, and each call pays full price only for the new work. Cached input is billed at a 90% discount compared to uncached input tokens, and tokens written to cache are billed at 1.25 times the uncached input rate. For current rates, see the &lt;a href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noopener"&gt;Amazon Bedrock pricing page&lt;/a&gt;. Cached content stays available for reuse for at least 30 minutes, long enough to cover the burst of calls a single agent run generates. Each breakpoint requires a prefix of at least 1,024 tokens, and you can set up to four cache checkpoints per request. If a prefix is shorter than the minimum, the request still succeeds, but nothing is cached and &lt;code&gt;cached_tokens&lt;/code&gt; stays zero.&lt;/p&gt; 
-&lt;h3 id="explicit-caching-with-cache-breakpoints"&gt;Explicit caching with cache breakpoints&lt;/h3&gt; 
-&lt;p&gt;To cache a prefix, add a &lt;code&gt;prompt_cache_breakpoint&lt;/code&gt; to the content block that ends the reusable section, and set &lt;code&gt;prompt_cache_options&lt;/code&gt; to &lt;code&gt;explicit&lt;/code&gt; mode. Setting a consistent &lt;code&gt;prompt_cache_key&lt;/code&gt; across requests routes them to the same cache and improves match reliability. In the following example, the system instruction is cached, and the user’s question comes after the breakpoint so it can change without invalidating the cached prefix. The same request is sent twice to show a cache write followed by a cache read.&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;# Replace with your real system instructions and reference content.
-# The cached prefix must be at least 1,024 tokens, or nothing is cached.
-system_prompt = "You are a technical support agent for Example Corp. ...(1,024+ tokens)..."
-
-def ask(question):
-    return client.responses.create(
-        model="openai.gpt-5.6-terra",
-        prompt_cache_key="support-agent:system-prompt-v1",
-        prompt_cache_options={"mode": "explicit"},
-        input=[
-            {
-                "type": "message",
-                "role": "developer",
-                "content": [
-                    {
-                        "type": "input_text",
-                        "text": system_prompt,
-                        # Cache everything up to this breakpoint (the system instruction).
-                        "prompt_cache_breakpoint": {"mode": "explicit"},
-                    }
-                ],
-            },
-            {
-                "type": "message",
-                "role": "user",
-                "content": [{"type": "input_text", "text": question}],
-            },
-        ],
-    )
-
-# First call: writes the prefix to cache.
-first = ask("How do I configure single sign-on?")
-print("write:", first.usage.input_tokens_details.cache_write_tokens)
-
-# Second call with the same prefix and cache key: read the prefix from cache.
-second = ask("How do I reset a password?")
-print("read: ", second.usage.input_tokens_details.cached_tokens)
-print(second.output_text)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;The system_prompt here is an abbreviated placeholder. Replace it with real content of at least 1,024 tokens. With a large enough prefix, the first call reports a nonzero &lt;code&gt;cache_write_tokens&lt;/code&gt; and the second a nonzero &lt;code&gt;cached_tokens&lt;/code&gt;, confirming the prefix was reused. Explicit mode is a good fit for agentic loops with a large, stable prefix, where you want full control over what gets cached.&lt;/p&gt; 
-&lt;h3 id="implicit-caching"&gt;Implicit caching&lt;/h3&gt; 
-&lt;p&gt;If you don’t set &lt;code&gt;prompt_cache_options&lt;/code&gt;, GPT-5.6 uses implicit caching, the default mode. Amazon Bedrock places an automatic cache breakpoint on the latest message and honors any explicit breakpoints you add, so a stable prompt prefix can be reused across requests without any change to your input structure. This is the quickest way to benefit from caching. Keep static content (system instructions, tool definitions, reference documents) at the front of the prompt and variable content at the end, set a consistent &lt;code&gt;prompt_cache_key&lt;/code&gt; for related requests, and the endpoint reuses the processed prefix when it matches.&lt;/p&gt; 
-&lt;p&gt;The following example uses implicit caching. It sets no &lt;code&gt;prompt_cache_options&lt;/code&gt; and no breakpoint, and reuses the &lt;code&gt;system_prompt&lt;/code&gt; from the previous example (replace it with real content of at least 1,024 tokens) with a consistent &lt;code&gt;prompt_cache_key&lt;/code&gt;:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;response = client.responses.create(
-    model="openai.gpt-5.6-terra",
-    prompt_cache_key="support-agent:kb-v1",
-    input=[
-        {
-            "type": "message",
-            "role": "developer",
-            # Static content first so it forms a stable, cacheable prefix.
-            "content": [{"type": "input_text", "text": system_prompt}],
-        },
-        {
-            "type": "message",
-            "role": "user",
-            "content": [{"type": "input_text", "text": "How do I configure single sign-on?"}],
-        },
-    ],
-)
-
-print(response.output_text)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;The trade-off is control. In implicit mode, you don’t decide exactly where the cacheable boundary falls. Implicit caching suits chat and Retrieval Augmented Generation (RAG) workloads with a naturally stable prefix, while explicit caching suits agentic loops where you want to pin a large, known prefix and avoid unnecessary cache writes. Billing is the same in both modes. Cache reads receive the 90% discount, and cache writes are billed at 1.25 times the uncached input rate. For current rates, see the &lt;a href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noopener"&gt;Amazon Bedrock pricing page&lt;/a&gt;. To turn caching off for a request, set &lt;code&gt;prompt_cache_options&lt;/code&gt; to &lt;code&gt;explicit&lt;/code&gt; mode without adding any breakpoints.&lt;/p&gt; 
-&lt;h3 id="monitor-and-evaluate-your-cache-hit-rate"&gt;Monitor and evaluate your cache hit rate&lt;/h3&gt; 
-&lt;p&gt;Each response reports cache activity in the usage object. The &lt;code&gt;input_tokens_details.cached_tokens&lt;/code&gt; field is the number of input tokens read from cache, and &lt;code&gt;cache_write_tokens&lt;/code&gt; is the number written. Because &lt;code&gt;cached_tokens&lt;/code&gt; is already part of the total &lt;code&gt;input_tokens&lt;/code&gt;, you get the cached-input ratio by dividing &lt;code&gt;cached_tokens&lt;/code&gt; by &lt;code&gt;input_tokens&lt;/code&gt;:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;usage = response.usage
-details = usage.input_tokens_details
-
-cached = getattr(details, "cached_tokens", 0) or 0
-cache_write = getattr(details, "cache_write_tokens", 0) or 0
-
-total_input = usage.input_tokens
-hit_rate = cached / total_input if total_input else 0.0
-
-print(f"Cached tokens: {cached}")
-print(f"Written tokens: {cache_write}")
-print(f"Total input: {total_input}")
-print(f"Cache hit rate: {hit_rate:.1%}")&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;A cache hit appears in the usage object as &lt;code&gt;cached_tokens&lt;/code&gt; greater than zero and &lt;code&gt;cache_write_tokens&lt;/code&gt; of zero. A zero &lt;code&gt;cache_write_tokens&lt;/code&gt; alone doesn’t confirm a hit, since you also see it when nothing was cached. Cache hits aren’t guaranteed on every request, even with an identical prefix, so measure &lt;code&gt;cached_tokens&lt;/code&gt; across calls rather than expecting a hit on any single one.&lt;/p&gt; 
-&lt;p&gt;To track cache performance across many requests, aggregate &lt;code&gt;cached_tokens&lt;/code&gt; and &lt;code&gt;cache_write_tokens&lt;/code&gt; from each response in your application logging. The bedrock-mantle endpoint publishes account, project, and model token metrics to Amazon CloudWatch under the AWS/BedrockMantle namespace, but it does not publish a cache-specific metric, so the response usage object is the authoritative source for cache measurement.&lt;/p&gt; 
-&lt;h2 id="use-gpt-5.6-with-codex"&gt;Use GPT-5.6 with Codex&lt;/h2&gt; 
-&lt;p&gt;Codex is the OpenAI coding agent for developers. It works with local files, repositories, terminals, and development environments to write features, fix bugs, run tests, and open pull requests. You can run Codex from the command line (Codex CLI), as an IDE extension for Visual Studio Code and JetBrains, or in the ChatGPT desktop app. Each of these can route its model inference to Amazon Bedrock so it runs in your AWS account with In-Region processing and the access controls described earlier.&lt;/p&gt; 
-&lt;p&gt;To point Codex at Amazon Bedrock, set the model and provider in your &lt;code&gt;~/.codex/config.toml&lt;/code&gt; file. The new Amazon Bedrock console also includes a &lt;strong&gt;Clients&lt;/strong&gt; section that generates these connection instructions for you.&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-toml"&gt;model = "openai.gpt-5.6-sol"
-model_provider = "amazon-bedrock"
-[model_providers.amazon-bedrock.aws]
-region = "us-east-1"&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Codex authenticates with an API key or your AWS SDK credentials. If you set &lt;code&gt;AWS_BEARER_TOKEN_BEDROCK&lt;/code&gt;, Codex uses it first. Otherwise it falls back to the AWS SDK credential chain. The ChatGPT desktop app and the IDE extension might not inherit your shell environment, so place the variables they need in &lt;code&gt;~/.codex/.env&lt;/code&gt;:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-bash"&gt;AWS_BEARER_TOKEN_BEDROCK=&amp;lt;your-api-key&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Restart the app or extension after you change &lt;code&gt;~/.codex/config.toml&lt;/code&gt; or &lt;code&gt;~/.codex/.env&lt;/code&gt;. If you run the Codex CLI instead, you can export the same variable in your shell rather than using the &lt;code&gt;.env&lt;/code&gt; file. Codex routes inference through the bedrock-mantle endpoint in supported commercial AWS Regions. For coding tasks, higher reasoning effort suits complex refactoring and debugging, while a lower level keeps routine edits fast.&lt;/p&gt; 
-&lt;p&gt;The following screenshot shows Codex in the ChatGPT desktop app configured to run a GPT-5.6 model on Amazon Bedrock.&lt;/p&gt; 
-&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
- &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-21450-2.png" alt="Codex in the ChatGPT desktop app configured to run a GPT-5.6 model on Amazon Bedrock" width="800" height="1350"&gt;
- &lt;p class="wp-caption-text"&gt;Codex in the ChatGPT desktop app running GPT-5.6 on Amazon Bedrock&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;You can change the reasoning effort in the ChatGPT desktop app, choosing between Light, Medium, High, and Extra High for a task. The following screenshot shows the reasoning-effort selector.&lt;/p&gt; 
-&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
- &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-21450-3.png" alt="Reasoning-effort selector in the ChatGPT desktop app with Light, Medium, High, and Extra High options" width="800" height="1172"&gt;
- &lt;p class="wp-caption-text"&gt;Choosing the reasoning effort for a Codex task in the ChatGPT desktop app&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2 id="quotas-and-scaling"&gt;Quotas and scaling&lt;/h2&gt; 
-&lt;p&gt;When you invoke GPT-5.6 models, requests use on-demand inference on the Standard service tier, where you pay per token without reserving capacity.&lt;/p&gt; 
-&lt;p&gt;Inference on the bedrock-mantle endpoint is governed by two per-model, per-Region quotas, one for input tokens per minute and one for output tokens per minute. There is no requests-per-minute quota. Cached input tokens read through prompt caching do not count against the input-tokens-per-minute quota, which is one more reason caching helps at scale. If a token-per-minute quota is exceeded, the endpoint returns an HTTP 429 response. Handle transient throttling with exponential backoff and a bounded retry count, which the OpenAI SDK supports through its &lt;code&gt;max_retries&lt;/code&gt; setting. For more information, refer to &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/quotas-mantle.html" target="_blank" rel="noopener"&gt;Quotas for the bedrock-mantle endpoint&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;One recommended way to handle transient throttling is exponential backoff with a bounded retry count. The OpenAI SDK supports this through its &lt;code&gt;max_retries&lt;/code&gt; setting:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;from aws_bedrock_token_generator import provide_token
-from openai import BedrockOpenAI
-
-region = "us-east-1"
-
-client = BedrockOpenAI(
-    aws_region=region,
-    bedrock_token_provider=lambda: provide_token(region=region),
-    max_retries=6,
-)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;To reduce throttling on sustained high volume, spread large workloads across multiple minutes rather than firing them in tight bursts, and increase request rates gradually so throughput can track regional capacity.&lt;/p&gt; 
-&lt;h2 id="clean-up"&gt;Clean up&lt;/h2&gt; 
-&lt;p&gt;On-demand inference incurs charges only when you invoke a model, so there is no infrastructure to tear down. To avoid unintended charges:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;If you generated a short-term API key, it expires automatically within 12 hours. To revoke one sooner, delete the API key in the new Amazon Bedrock console. Deleting a key immediately revokes access for any application using it, so confirm no active applications depend on it first.&lt;/li&gt; 
- &lt;li&gt;Each model invocation incurs per-token charges. For current rates, refer to &lt;a href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noopener"&gt;Amazon Bedrock pricing&lt;/a&gt;.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we showed how to get started with OpenAI GPT-5.6 Sol, Terra, and Luna on Amazon Bedrock. We covered how to choose a variant, how to run inference through the Responses API on the bedrock-mantle endpoint, how to control reasoning effort and call tools, how to reduce cost with explicit prompt caching and measure your cache hit rate, and how to connect the OpenAI Codex coding agent. We also walked through quotas and scaling for the endpoint.&lt;/p&gt; 
-&lt;p&gt;To get started:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Open the &lt;a href="https://console.aws.amazon.com/bedrock-mantle/" target="_blank" rel="noopener"&gt;new Amazon Bedrock console&lt;/a&gt;, create a project, and evaluate a GPT-5.6 model against your prompts.&lt;/li&gt; 
- &lt;li&gt;Run the Responses API sample from this post against your own data.&lt;/li&gt; 
- &lt;li&gt;Add an explicit cache breakpoint to a repeated prompt prefix and measure the cache hit rate.&lt;/li&gt; 
- &lt;li&gt;Evaluate Sol, Terra, and Luna on your workloads to choose the variant that fits your cost and latency profile.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;For more information, refer to the following resources:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock documentation&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-openai.html" target="_blank" rel="noopener"&gt;OpenAI model cards on Amazon Bedrock&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-caching.html" target="_blank" rel="noopener"&gt;Prompt caching for faster model inference&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/quotas-mantle.html" target="_blank" rel="noopener"&gt;Quotas for the bedrock-mantle endpoint&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-keys.html" target="_blank" rel="noopener"&gt;Amazon Bedrock API keys&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noopener"&gt;Amazon Bedrock pricing&lt;/a&gt;&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;To discuss how GPT-5.6 on Amazon Bedrock can support your workloads, &lt;a href="https://aws.amazon.com/contact-us/" target="_blank" rel="noopener"&gt;contact an AWS Representative&lt;/a&gt;.&lt;/p&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-21450-4.jpg" alt="Zohreh Norouzi" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Zohreh Norouzi&lt;/h3&gt; 
-  &lt;p&gt;Zohreh is a Senior Security Solutions Architect at Amazon Web Services (AWS). She helps customers make good security choices and accelerate their journey to the AWS Cloud. She has been actively involved in AI security initiatives, using her expertise to help customers build secure AI solutions at scale.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-21450-5.jpg" alt="Koushik Kethamakka" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Koushik Kethamakka&lt;/h3&gt; 
-  &lt;p&gt;Koushik is a Principal Software Engineer at AWS, currently focused on inference at scale as part of Amazon Mantle, the foundational infrastructure for hosting large models across AWS. Previously at AWS, Koushik built Amazon Bedrock Evaluations and Amazon Bedrock Guardrails, focused on LLM evaluations and safety. Before that, he contributed to building AI/ML services including Amazon Lex and Amazon Bedrock, with expertise spanning product and system design, LLM hosting, evaluations, and fine-tuning. Prior to AWS, Koushik built real-time ML fraud prevention systems for Amazon.com. He holds an MS from the University of Houston.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-21450-6.jpg" alt="Saurabh Trikande" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Saurabh Trikande&lt;/h3&gt; 
-  &lt;p&gt;Saurabh is a Senior Product Manager for Amazon Bedrock and Amazon SageMaker Inference. He is passionate about working with customers and partners, motivated by the goal of democratizing AI. He focuses on deploying complex AI applications, inference with multi-tenant models, and cost optimizations.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-21450-7.jpg" alt="Kamalesh Palanisamy" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Kamalesh Palanisamy&lt;/h3&gt; 
-  &lt;p&gt;Kamalesh is a Software Engineer at AWS, focused on scalable model inference and safety orchestration for AWS Mantle. He works on model onboarding, inference optimization, and reliable serving infrastructure for large generative AI models.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/22/ML-21450-8.jpg" alt="Manish Rathaur" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Manish Rathaur&lt;/h3&gt; 
-  &lt;p&gt;Manish is a Senior Manager, Product for Amazon Bedrock.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-21450/ML-21450-9.jpeg" alt="Chris Dickens" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Chris Dickens&lt;/h3&gt; 
-  &lt;p&gt;Chris is a Member of Product Staff at OpenAI focused on the OpenAI APIs. His work includes collaboration with AWS on Amazon Bedrock to make OpenAI’s frontier models widely accessible to developers.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
 	</channel>
 </rss>
 
 ### SOURCE:Google AI Blog ###
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>AI</title><link>https://blog.google/innovation-and-ai/technology/ai/</link><description>AI</description><atom:link href="https://blog.google/innovation-and-ai/technology/ai/rss/" rel="self"/><language>en-us</language><lastBuildDate>Tue, 28 Jul 2026 16:00:00 +0000</lastBuildDate><image><url>https://blog.google/innovation-and-ai/technology/ai/static/blogv2/images/google.png</url><title>AI</title><link>https://blog.google/innovation-and-ai/technology/ai/</link></image><item><title>Gemini API Managed Agents: 3.6 Flash, hooks, and more</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/unnamed_2_vNnOv20.max-600x600.format-webp.webp" width="540"/><media:description>Managed Agents Gemini 3.6 Flash, Hooks and Triggers</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/unnamed_2_vNnOv20.max-600x600.format-webp.webp"&gt;We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><pubDate>Tue, 28 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Gemini API Managed Agents: 3.6 Flash, hooks, and more</title><description>We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Philipp Schmid</name><title>Member of the Technical Staff</title><department>Google DeepMind</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mariano Cocirio</name><title>Product Manager</title><department>Google DeepMind</department><company/></author></item><item><title>5 ways AI Mode in Search helps you enjoy the real world</title><link>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_real_world.max-600x600.format-webp.webp" width="540"/><media:description>Illustration of a black magnifying glass in a white circle on green grass surrounded by items related to fun activities like tennis and games</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_real_world.max-600x600.format-webp.webp"&gt;It might sound counterintuitive, but Search's AI tools can actually help you make the most of your time offline whether you want to book concert tickets or find the perf…</description><pubDate>Tue, 28 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways AI Mode in Search helps you enjoy the real world</title><description>It might sound counterintuitive, but Search's AI tools can actually help you make the most of your time offline whether you want to book concert tickets or find the perfect hiking boots.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>5 ways to host the ultimate dinner party with Google Search</title><link>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinner_parties.max-600x600.format-webp.webp" width="540"/><media:description>An illustrated black magnifying glass with a sparkle in a white circle surrounded by a dinner party tablescape</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinner_parties.max-600x600.format-webp.webp"&gt;These AI features can help you craft a menu, design a tablescape, and handle other party-planning tasks.</description><pubDate>Tue, 28 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways to host the ultimate dinner party with Google Search</title><description>These AI features can help you craft a menu, design a tablescape, and handle other party-planning tasks.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>3 Google updates from Galaxy Unpacked 2026</title><link>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp" width="540"/><media:description>Gentle Monster glasses, Warby Parker glasses, a prompt asking for the history behind a pictured building, and a prompt asking to book a table at a pictured restaurant</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp"&gt;We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.</description><pubDate>Wed, 22 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</guid><category>Gemini App</category><category>Android</category><category>Gemini Notebook</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>3 Google updates from Galaxy Unpacked 2026</title><description>We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Menaka Shroff</name><title>VP of Android Ecosystem Marketing</title><department/><company/></author></item><item><title>Connect more of your apps to Search</title><link>https://blog.google/products-and-platforms/products/search/connected-apps/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp" width="540"/><media:description>Connected apps rendering</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp"&gt;You’ll be able to securely link and interact with your go-to services directly in AI Mode.</description><pubDate>Thu, 16 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/connected-apps/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Connect more of your apps to Search</title><description>You’ll be able to securely link and interact with your go-to services directly in AI Mode.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/connected-apps/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Chips Mistry</name><title>Senior Product Manager</title><department>Search</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Biharck Araújo</name><title>Engineering Lead</title><department>Search</department><company/></author></item><item><title>Create, edit and star in videos with two Google Vids updates</title><link>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp" width="540"/><media:description>Text "Gemini Omni and Personal Avatars in Google Vids" surrounded by various images</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp"&gt;Gemini Omni and personal avatars in Google Vids make video creation easier than ever.</description><pubDate>Thu, 16 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</guid><category>Google Workspace</category><category>Google One</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Create, edit and star in videos with two Google Vids updates</title><description>Gemini Omni and personal avatars in Google Vids make video creation easier than ever.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Justin Luk</name><title>Product Manager</title><department/><company/></author></item><item><title>Celebrating 25 years of visual search innovation</title><link>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_25th_hero.max-600x600.format-webp.webp" width="540"/><media:description>Google Images logo surrounded by illustrations of people searching for different images</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_25th_hero.max-600x600.format-webp.webp"&gt;Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.</description><pubDate>Tue, 14 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Celebrating 25 years of visual search innovation</title><description>Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Brad Kellett</name><title>Senior Engineering Director</title><department>Search</department><company/></author></item><item><title>Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp" width="540"/><media:description>Managed agents feature bundle launch</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp"&gt;We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><pubDate>Tue, 07 Jul 2026 08:54:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</title><description>We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Philipp Schmid</name><title>Developer Relations Engineer</title><department>Google DeepMind</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mariano Cocirio</name><title>Product Manager</title><department>Google DeepMind</department><company/></author></item><item><title>The latest AI news we announced in June 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp" width="540"/><media:description>June Pixel Drop hero</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp"&gt;Here are Google’s latest AI updates from June 2026.</description><pubDate>Wed, 01 Jul 2026 18:15:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</guid><category>Search</category><category>NotebookLM</category><category>Android</category><category>Arts &amp; Culture</category><category>Google DeepMind</category><category>Developer tools</category><category>Learning &amp; Education</category><category>UK</category><category>AI</category><category>Pixel</category><category>Gemini App</category><category>Gemini models</category><category>Google Research</category><category>Safety &amp; Security</category><category>Google Nest</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>The latest AI news we announced in June 2026</title><description>Here are Google’s latest AI updates from June 2026.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.</title><link>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp"&gt;Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.</description><pubDate>Wed, 01 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</guid><category>Learning &amp; Education</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.</title><description/><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</url></og></item><item><title>Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers</title><link>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp" width="540"/><media:description>Four illustrated characters representing different professional roles, including a scientist, technician, explorer, and observer.</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp"&gt;Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.</description><pubDate>Tue, 30 Jun 2026 06:00:00 +0000</pubDate><guid>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</guid><category>UK</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers</title><description>Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.</description><site_name>Google</site_name><url>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Kate Alessi</name><title>Vice President and Managing Director</title><department/><company>Google UK &amp; Ireland</company></author></item><item><title>Ask an AI expert: What exactly is the full stack?</title><link>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp" width="540"/><media:description>An illustration depicting a full-stack AI infrastructure against a dark background</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp"&gt;A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.</description><pubDate>Mon, 29 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Ask an AI expert: What exactly is the full stack?</title><description>A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Molly McHugh-Johnson</name><title>Contributor</title><department/><company/></author></item><item><title>Our latest Google Finance upgrades, including a new app</title><link>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp" width="540"/><media:description>The Google Finance logo, surrounded by elements of the user interface</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp"&gt;The new Google Finance is coming out of beta and launching a new Android app.</description><pubDate>Thu, 25 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Our latest Google Finance upgrades, including a new app</title><description>The new Google Finance is coming out of beta and launching a new Android app.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Barine Tee</name><title>Principal Engineer</title><department>Search</department><company/></author></item><item><title>New research shows how AMIE, our medical AI, could help manage health conditions.</title><link>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp"&gt;Research in “Nature” shows our conversational AI system matches primary care physicians in complex disease management.</description><pubDate>Wed, 17 Jun 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</guid><category>Google Research</category><category>Google DeepMind</category><category>Health</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>New research shows how AMIE, our medical AI, could help manage health conditions.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mike Schaekermann</name><title>Research Lead</title><department/><company/></author></item><item><title>We’re strengthening our presence in Alabama through new investments and community support.</title><link>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</link><description>Google has announced a $1.5 billion investment for 2026 and 2027 to expand its data center campus in Jackson County, Alabama. Operating since 2019 on a repurposed former…</description><pubDate>Mon, 15 Jun 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</guid><category>Global Network</category><category>Creating opportunity</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>We’re strengthening our presence in Alabama through new investments and community support.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</url></og></item><item><title>Our new community investments in Virginia support local jobs and expand energy affordability.</title><link>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/VirginiaSocial.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/VirginiaSocial.max-600x600.format-webp.webp"&gt;We’re helping build the state’s next-generation workforce and investing in energy programs.</description><pubDate>Thu, 11 Jun 2026 20:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/</guid><category>Google.org</category><category>Global Network</category><category>Creating opportunity</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Our new community investments in Virginia support local jobs and expand energy affordability.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/</url></og></item><item><title>The latest AI news we announced in May 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/May_AI_Recap_still.max-600x600.format-webp.webp" width="540"/><media:description>May AI recap</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/May_AI_Recap_still.max-600x600.format-webp.webp"&gt;Here are Google’s latest AI updates from May 2026</description><pubDate>Fri, 05 Jun 2026 14:45:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/</guid><category>Search</category><category>Android</category><category>Google DeepMind</category><category>Google Labs</category><category>Quantum computing</category><category>Google Health</category><category>Shopping</category><category>Google Cloud</category><category>AI</category><category>Gemini App</category><category>Gemini models</category><category>Fitbit</category><category>Google Research</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>The latest AI news we announced in May 2026</title><description>Here are Google’s latest AI updates from May 2026</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Blog Team</name><title/><department/><company/></author></item><item><title>5 ways Google Search can level up your thrift and vintage shopping</title><link>https://blog.google/products-and-platforms/products/search/thrifting-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Thrifting_Header.max-600x600.format-webp.webp" width="540"/><media:description>A colorful, grain-textured collage of various items scattered across a light blue background. The items include a green bucket hat, a wooden clothes hanger, a blue-and-red striped collar, blue sunglasses, denim shorts, a yellow price tag, a red high-heele</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Thrifting_Header.max-600x600.format-webp.webp"&gt;Uncover second-hand scores with AI tools in Google Search and Shopping.</description><pubDate>Wed, 03 Jun 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/thrifting-tips/</guid><category>Search</category><category>Shopping</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways Google Search can level up your thrift and vintage shopping</title><description>Uncover second-hand scores with AI tools in Google Search and Shopping.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/thrifting-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Megan Stoner</name><title>Contributing writer</title><department/><company/></author></item><item><title>How we used Gemini to build Google I/O 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_IO.max-600x600.format-webp.webp" width="540"/><media:description>A collage of I/O-related images, including the Antigravity Coffee Co. pop-up, a colorful jellyfish and a still from the Timmy TPU video. The word AI repeats three times on the left of the image, and there are colorful icons, including a sparkle, as well.</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_IO.max-600x600.format-webp.webp"&gt;Learn how Googlers used AI to produce Google I/O 2026.</description><pubDate>Mon, 01 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/</guid><category>Gemini models</category><category>Google Labs</category><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>How we used Gemini to build Google I/O 2026</title><description>Learn how Googlers used AI to produce Google I/O 2026.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Marvin Chow</name><title>VP</title><department>Marketing</department><company/></author></item><item><title>Take our I/O 2026 quiz, vibe coded in Google AI Studio.</title><link>https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IOQuiz2026_social.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IOQuiz2026_social.max-600x600.format-webp.webp"&gt;We used Google AI Studio to vibe code a quiz about our top I/O 2026 announcements.</description><pubDate>Fri, 29 May 2026 19:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Take our I/O 2026 quiz, vibe coded in Google AI Studio.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Zahra Thompson</name><title>Contributing writer</title><department/><company/></author></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>AI</title><link>https://blog.google/innovation-and-ai/technology/ai/</link><description>AI</description><atom:link href="https://blog.google/innovation-and-ai/technology/ai/rss/" rel="self"/><language>en-us</language><lastBuildDate>Tue, 04 Aug 2026 13:00:00 +0000</lastBuildDate><image><url>https://blog.google/innovation-and-ai/technology/ai/static/blogv2/images/google.png</url><title>AI</title><link>https://blog.google/innovation-and-ai/technology/ai/</link></image><item><title>The latest AI news we announced in July 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/July_AI_Recap_still.max-600x600.format-webp.webp" width="540"/><media:description>July AI recap header</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/July_AI_Recap_still.max-600x600.format-webp.webp"&gt;Here are Google’s latest AI updates from July 2026</description><pubDate>Tue, 04 Aug 2026 13:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/</guid><category>Search</category><category>Android</category><category>Google DeepMind</category><category>Google Workspace</category><category>Google Cloud</category><category>AI</category><category>Gemini models</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>The latest AI news we announced in July 2026</title><description>Here are Google’s latest AI updates from July 2026</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>Inside our 353,000-person vibe coding course</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Vibe_coding_course_hero.max-600x600.format-webp.webp" width="540"/><media:description>Illustrations of a laptop, an AI spark, messages, code, and a 3-D cube</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Vibe_coding_course_hero.max-600x600.format-webp.webp"&gt;Kaggle’s AI Agents Intensive with Google brought learners together in a no-cost course to build and deploy the next frontier of AI.</description><pubDate>Mon, 03 Aug 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/</guid><category>Gemini models</category><category>Google Cloud</category><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Inside our 353,000-person vibe coding course</title><description>Kaggle’s AI Agents Intensive with Google brought learners together in a no-cost course to build and deploy the next frontier of AI.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Anant Nawalgaria</name><title>Group AI Product Manager, Founder of GenAI intensive</title><department/><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Brenda Flynn</name><title>Partnerships Lead</title><department>Kaggle</department><company/></author></item><item><title>Gemini API Managed Agents: 3.6 Flash, hooks, and more</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/unnamed_2_vNnOv20.max-600x600.format-webp.webp" width="540"/><media:description>Managed Agents Gemini 3.6 Flash, Hooks and Triggers</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/unnamed_2_vNnOv20.max-600x600.format-webp.webp"&gt;We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><pubDate>Tue, 28 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Gemini API Managed Agents: 3.6 Flash, hooks, and more</title><description>We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Philipp Schmid</name><title>Member of the Technical Staff</title><department>Google DeepMind</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mariano Cocirio</name><title>Product Manager</title><department>Google DeepMind</department><company/></author></item><item><title>5 ways AI Mode in Search helps you enjoy the real world</title><link>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_real_world.max-600x600.format-webp.webp" width="540"/><media:description>Illustration of a black magnifying glass in a white circle on green grass surrounded by items related to fun activities like tennis and games</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_real_world.max-600x600.format-webp.webp"&gt;It might sound counterintuitive, but Search's AI tools can actually help you make the most of your time offline whether you want to book concert tickets or find the perf…</description><pubDate>Tue, 28 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways AI Mode in Search helps you enjoy the real world</title><description>It might sound counterintuitive, but Search's AI tools can actually help you make the most of your time offline whether you want to book concert tickets or find the perfect hiking boots.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>5 ways to host the ultimate dinner party with Google Search</title><link>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinner_parties.max-600x600.format-webp.webp" width="540"/><media:description>An illustrated black magnifying glass with a sparkle in a white circle surrounded by a dinner party tablescape</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinner_parties.max-600x600.format-webp.webp"&gt;These AI features can help you craft a menu, design a tablescape, and handle other party-planning tasks.</description><pubDate>Tue, 28 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways to host the ultimate dinner party with Google Search</title><description>These AI features can help you craft a menu, design a tablescape, and handle other party-planning tasks.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>3 Google updates from Galaxy Unpacked 2026</title><link>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp" width="540"/><media:description>Gentle Monster glasses, Warby Parker glasses, a prompt asking for the history behind a pictured building, and a prompt asking to book a table at a pictured restaurant</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp"&gt;We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.</description><pubDate>Wed, 22 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</guid><category>Gemini App</category><category>Android</category><category>Gemini Notebook</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>3 Google updates from Galaxy Unpacked 2026</title><description>We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Menaka Shroff</name><title>VP of Android Ecosystem Marketing</title><department/><company/></author></item><item><title>Connect more of your apps to Search</title><link>https://blog.google/products-and-platforms/products/search/connected-apps/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp" width="540"/><media:description>Connected apps rendering</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp"&gt;You’ll be able to securely link and interact with your go-to services directly in AI Mode.</description><pubDate>Thu, 16 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/connected-apps/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Connect more of your apps to Search</title><description>You’ll be able to securely link and interact with your go-to services directly in AI Mode.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/connected-apps/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Chips Mistry</name><title>Senior Product Manager</title><department>Search</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Biharck Araújo</name><title>Engineering Lead</title><department>Search</department><company/></author></item><item><title>Create, edit and star in videos with two Google Vids updates</title><link>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp" width="540"/><media:description>Text "Gemini Omni and Personal Avatars in Google Vids" surrounded by various images</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp"&gt;Gemini Omni and personal avatars in Google Vids make video creation easier than ever.</description><pubDate>Thu, 16 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</guid><category>Google Workspace</category><category>Google One</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Create, edit and star in videos with two Google Vids updates</title><description>Gemini Omni and personal avatars in Google Vids make video creation easier than ever.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Justin Luk</name><title>Product Manager</title><department/><company/></author></item><item><title>Celebrating 25 years of visual search innovation</title><link>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_25th_hero.max-600x600.format-webp.webp" width="540"/><media:description>Google Images logo surrounded by illustrations of people searching for different images</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_25th_hero.max-600x600.format-webp.webp"&gt;Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.</description><pubDate>Tue, 14 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Celebrating 25 years of visual search innovation</title><description>Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Brad Kellett</name><title>Senior Engineering Director</title><department>Search</department><company/></author></item><item><title>Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp" width="540"/><media:description>Managed agents feature bundle launch</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp"&gt;We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><pubDate>Tue, 07 Jul 2026 08:54:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</title><description>We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Philipp Schmid</name><title>Developer Relations Engineer</title><department>Google DeepMind</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mariano Cocirio</name><title>Product Manager</title><department>Google DeepMind</department><company/></author></item><item><title>The latest AI news we announced in June 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp" width="540"/><media:description>June Pixel Drop hero</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp"&gt;Here are Google’s latest AI updates from June 2026.</description><pubDate>Wed, 01 Jul 2026 18:15:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</guid><category>Search</category><category>NotebookLM</category><category>Android</category><category>Arts &amp; Culture</category><category>Google DeepMind</category><category>Developer tools</category><category>Learning &amp; Education</category><category>UK</category><category>AI</category><category>Pixel</category><category>Gemini App</category><category>Gemini models</category><category>Google Research</category><category>Safety &amp; Security</category><category>Google Nest</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>The latest AI news we announced in June 2026</title><description>Here are Google’s latest AI updates from June 2026.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.</title><link>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp"&gt;Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.</description><pubDate>Wed, 01 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</guid><category>Learning &amp; Education</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.</title><description/><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</url></og></item><item><title>Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers</title><link>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp" width="540"/><media:description>Four illustrated characters representing different professional roles, including a scientist, technician, explorer, and observer.</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp"&gt;Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.</description><pubDate>Tue, 30 Jun 2026 06:00:00 +0000</pubDate><guid>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</guid><category>UK</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers</title><description>Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.</description><site_name>Google</site_name><url>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Kate Alessi</name><title>Vice President and Managing Director</title><department/><company>Google UK &amp; Ireland</company></author></item><item><title>Ask an AI expert: What exactly is the full stack?</title><link>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp" width="540"/><media:description>An illustration depicting a full-stack AI infrastructure against a dark background</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp"&gt;A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.</description><pubDate>Mon, 29 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Ask an AI expert: What exactly is the full stack?</title><description>A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Molly McHugh-Johnson</name><title>Contributor</title><department/><company/></author></item><item><title>Our latest Google Finance upgrades, including a new app</title><link>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp" width="540"/><media:description>The Google Finance logo, surrounded by elements of the user interface</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp"&gt;The new Google Finance is coming out of beta and launching a new Android app.</description><pubDate>Thu, 25 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Our latest Google Finance upgrades, including a new app</title><description>The new Google Finance is coming out of beta and launching a new Android app.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Barine Tee</name><title>Principal Engineer</title><department>Search</department><company/></author></item><item><title>New research shows how AMIE, our medical AI, could help manage health conditions.</title><link>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp"&gt;Research in “Nature” shows our conversational AI system matches primary care physicians in complex disease management.</description><pubDate>Wed, 17 Jun 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</guid><category>Google Research</category><category>Google DeepMind</category><category>Health</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>New research shows how AMIE, our medical AI, could help manage health conditions.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mike Schaekermann</name><title>Research Lead</title><department/><company/></author></item><item><title>We’re strengthening our presence in Alabama through new investments and community support.</title><link>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</link><description>Google has announced a $1.5 billion investment for 2026 and 2027 to expand its data center campus in Jackson County, Alabama. Operating since 2019 on a repurposed former…</description><pubDate>Mon, 15 Jun 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</guid><category>Global Network</category><category>Creating opportunity</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>We’re strengthening our presence in Alabama through new investments and community support.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</url></og></item><item><title>Our new community investments in Virginia support local jobs and expand energy affordability.</title><link>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/VirginiaSocial.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/VirginiaSocial.max-600x600.format-webp.webp"&gt;We’re helping build the state’s next-generation workforce and investing in energy programs.</description><pubDate>Thu, 11 Jun 2026 20:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/</guid><category>Google.org</category><category>Global Network</category><category>Creating opportunity</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Our new community investments in Virginia support local jobs and expand energy affordability.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virginia-community-investments/</url></og></item><item><title>The latest AI news we announced in May 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/May_AI_Recap_still.max-600x600.format-webp.webp" width="540"/><media:description>May AI recap</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/May_AI_Recap_still.max-600x600.format-webp.webp"&gt;Here are Google’s latest AI updates from May 2026</description><pubDate>Fri, 05 Jun 2026 14:45:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/</guid><category>Search</category><category>Android</category><category>Google DeepMind</category><category>Google Labs</category><category>Quantum computing</category><category>Google Health</category><category>Shopping</category><category>Google Cloud</category><category>AI</category><category>Gemini App</category><category>Gemini models</category><category>Fitbit</category><category>Google Research</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>The latest AI news we announced in May 2026</title><description>Here are Google’s latest AI updates from May 2026</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Blog Team</name><title/><department/><company/></author></item><item><title>5 ways Google Search can level up your thrift and vintage shopping</title><link>https://blog.google/products-and-platforms/products/search/thrifting-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Thrifting_Header.max-600x600.format-webp.webp" width="540"/><media:description>A colorful, grain-textured collage of various items scattered across a light blue background. The items include a green bucket hat, a wooden clothes hanger, a blue-and-red striped collar, blue sunglasses, denim shorts, a yellow price tag, a red high-heele</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Thrifting_Header.max-600x600.format-webp.webp"&gt;Uncover second-hand scores with AI tools in Google Search and Shopping.</description><pubDate>Wed, 03 Jun 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/thrifting-tips/</guid><category>Search</category><category>Shopping</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways Google Search can level up your thrift and vintage shopping</title><description>Uncover second-hand scores with AI tools in Google Search and Shopping.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/thrifting-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Megan Stoner</name><title>Contributing writer</title><department/><company/></author></item></channel></rss>
 
 ### SOURCE:Microsoft Azure Blog ###
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
@@ -5603,7 +4989,7 @@ client = BedrockOpenAI(
 	<atom:link href="https://azure.microsoft.com/en-us/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://azure.microsoft.com/en-us/blog/</link>
 	<description>Get the latest Azure news, updates, and announcements from the Azure blog. From product updates to hot topics, hear from the Azure experts.</description>
-	<lastBuildDate>Wed, 29 Jul 2026 21:17:09 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 03 Aug 2026 16:54:23 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -6466,7 +5852,7 @@ client = BedrockOpenAI(
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a6a7715be451"></universal-media-player>
+		<universal-media-player id="ump-6a71938885200"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6480,7 +5866,7 @@ client = BedrockOpenAI(
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a6a7715be451", options);
+				ump("ump-6a71938885200", options);
 			});
 		</script>
 	</div>
@@ -6534,11 +5920,11 @@ client = BedrockOpenAI(
 
 
 
-<p class="wp-block-paragraph">The following table outlines GPT-5.6 pricing for Sol, Terra, and Luna in Microsoft Foundry. Ask your sales rep about Data Zone and Priority Processing prices. Use this pricing information to compare model options and plan deployment costs:</p>
+<p class="wp-block-paragraph">The following table outlines GPT-5.6 pricing for Sol, Terra, and Luna in Microsoft Foundry. This pricing also reflects the latest discounts announced by OpenAI on 7/30. Ask your sales rep about Data Zone and Priority Processing prices. Use this pricing information to compare model options and plan deployment costs:</p>
 
 
 
-<figure class="wp-block-table aligncenter"><table class="has-fixed-layout"><tbody><tr><td class="has-text-align-center" data-align="center" rowspan="2"><strong>Model</strong></td><td class="has-text-align-center" data-align="center" rowspan="2"><strong>Deployment</strong></td><td class="has-text-align-center" data-align="center" colspan="4"><strong>Pricing (USD $/million tokens)</strong></td></tr><tr><td class="has-text-align-center" data-align="center"><strong>Input</strong></td><td class="has-text-align-center" data-align="center">Cached Input</td><td class="has-text-align-center" data-align="center">Cached Writes</td><td class="has-text-align-center" data-align="center"><strong>Output</strong></td></tr><tr><td class="has-text-align-center" data-align="center"><strong>GPT-5.6 Sol </strong><strong>(short context)</strong></td><td class="has-text-align-center" data-align="center"><strong>Standard Global</strong></td><td class="has-text-align-center" data-align="center"><strong>5.00</strong></td><td class="has-text-align-center" data-align="center">$0.50</td><td class="has-text-align-center" data-align="center">$6.25</td><td class="has-text-align-center" data-align="center"><strong>30.00</strong></td></tr><tr><td class="has-text-align-center" data-align="center"><strong>GPT-5.6 Terra </strong><strong>(short context)</strong></td><td class="has-text-align-center" data-align="center"><strong>Standard Global</strong></td><td class="has-text-align-center" data-align="center"><strong>2.50</strong></td><td class="has-text-align-center" data-align="center">$0.25</td><td class="has-text-align-center" data-align="center">$3.13</td><td class="has-text-align-center" data-align="center"><strong>15.00</strong></td></tr><tr><td class="has-text-align-center" data-align="center"><strong>GPT-5.6 Luna </strong><strong>(short context)</strong></td><td class="has-text-align-center" data-align="center"><strong>Standard Global</strong></td><td class="has-text-align-center" data-align="center"><strong>1.00</strong></td><td class="has-text-align-center" data-align="center">$0.10</td><td class="has-text-align-center" data-align="center">$1.25</td><td class="has-text-align-center" data-align="center"><strong>6.00</strong></td></tr></tbody></table></figure>
+<figure class="wp-block-table aligncenter"><table class="has-fixed-layout"><tbody><tr><td class="has-text-align-center" data-align="center" rowspan="2"><strong>Model</strong></td><td class="has-text-align-center" data-align="center" rowspan="2"><strong>Deployment</strong></td><td class="has-text-align-center" data-align="center" colspan="4"><strong>Pricing (USD $/million tokens)</strong></td></tr><tr><td class="has-text-align-center" data-align="center"><strong>Input</strong></td><td class="has-text-align-center" data-align="center">Cached Input</td><td class="has-text-align-center" data-align="center">Cached Writes</td><td class="has-text-align-center" data-align="center"><strong>Output</strong></td></tr><tr><td class="has-text-align-center" data-align="center"><strong>GPT-5.6 Sol </strong><strong>(short context)</strong></td><td class="has-text-align-center" data-align="center"><strong>Standard Global</strong></td><td class="has-text-align-center" data-align="center"><strong>5.00</strong></td><td class="has-text-align-center" data-align="center">$0.50</td><td class="has-text-align-center" data-align="center">$6.25</td><td class="has-text-align-center" data-align="center"><strong>30.00</strong></td></tr><tr><td class="has-text-align-center" data-align="center"><strong>GPT-5.6 Terra </strong><strong>(short context)</strong></td><td class="has-text-align-center" data-align="center"><strong>Standard Global</strong></td><td class="has-text-align-center" data-align="center"><strong>2.00</strong></td><td class="has-text-align-center" data-align="center">$0.20</td><td class="has-text-align-center" data-align="center">$2.50</td><td class="has-text-align-center" data-align="center"><strong>12.00</strong></td></tr><tr><td class="has-text-align-center" data-align="center"><strong>GPT-5.6 Luna </strong><strong>(short context)</strong></td><td class="has-text-align-center" data-align="center"><strong>Standard Global</strong></td><td class="has-text-align-center" data-align="center"><strong>0.20</strong></td><td class="has-text-align-center" data-align="center">$0.02</td><td class="has-text-align-center" data-align="center">$0.25</td><td class="has-text-align-center" data-align="center"><strong>1.20</strong></td></tr></tbody></table></figure>
 
 
 
@@ -7257,7 +6643,6 @@ client = BedrockOpenAI(
 		<item>
 		<title>Meet Brain: The AI system behind Azure reliability</title>
 		<link>https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/</link>
-					<comments>https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/#respond</comments>
 		
 		<dc:creator><![CDATA[Mark Russinovich]]></dc:creator>
 		<pubDate>Thu, 02 Jul 2026 16:00:00 +0000</pubDate>
@@ -7366,7 +6751,7 @@ client = BedrockOpenAI(
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a6a7715dacdf&quot;}" data-wp-interactive="core/image" data-wp-key="6a6a7715dacdf" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a719388988be&quot;}" data-wp-interactive="core/image" data-wp-key="6a719388988be" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7641,15 +7026,12 @@ client = BedrockOpenAI(
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/">Meet Brain: The AI system behind Azure reliability</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Proving application resilience on Azure with Chaos Studio</title>
 		<link>https://azure.microsoft.com/en-us/blog/proving-application-resilience-on-azure-with-chaos-studio/</link>
-					<comments>https://azure.microsoft.com/en-us/blog/proving-application-resilience-on-azure-with-chaos-studio/#respond</comments>
 		
 		<dc:creator><![CDATA[Mark Russinovich]]></dc:creator>
 		<pubDate>Wed, 01 Jul 2026 16:00:00 +0000</pubDate>
@@ -7712,7 +7094,7 @@ client = BedrockOpenAI(
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a6a7715eaeec&quot;}" data-wp-interactive="core/image" data-wp-key="6a6a7715eaeec" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a719388a3e9e&quot;}" data-wp-interactive="core/image" data-wp-key="6a719388a3e9e" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7970,15 +7352,12 @@ client = BedrockOpenAI(
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/proving-application-resilience-on-azure-with-chaos-studio/">Proving application resilience on Azure with Chaos Studio</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/proving-application-resilience-on-azure-with-chaos-studio/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
 		<item>
 		<title>Azure IaaS: How to design, build, and optimize cloud infrastructure for long-term cost efficiency</title>
 		<link>https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/</link>
-					<comments>https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/#respond</comments>
 		
 		<dc:creator><![CDATA[Maria Bledsoe]]></dc:creator>
 		<pubDate>Tue, 30 Jun 2026 16:00:00 +0000</pubDate>
@@ -8326,8 +7705,6 @@ client = BedrockOpenAI(
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/">Azure IaaS: How to design, build, and optimize cloud infrastructure for long-term cost efficiency</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
@@ -8372,7 +7749,7 @@ client = BedrockOpenAI(
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a6a77160370a"></universal-media-player>
+		<universal-media-player id="ump-6a719388acf5e"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -8386,7 +7763,7 @@ client = BedrockOpenAI(
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a6a77160370a", options);
+				ump("ump-6a719388acf5e", options);
 			});
 		</script>
 	</div>
@@ -8442,7 +7819,7 @@ client = BedrockOpenAI(
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a6a771603ed1"></universal-media-player>
+		<universal-media-player id="ump-6a719388ad4a8"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -8456,7 +7833,7 @@ client = BedrockOpenAI(
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a6a771603ed1", options);
+				ump("ump-6a719388ad4a8", options);
 			});
 		</script>
 	</div>
@@ -8488,7 +7865,7 @@ client = BedrockOpenAI(
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a6a7716042ca"></universal-media-player>
+		<universal-media-player id="ump-6a719388ad742"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -8502,7 +7879,7 @@ client = BedrockOpenAI(
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a6a7716042ca", options);
+				ump("ump-6a719388ad742", options);
 			});
 		</script>
 	</div>

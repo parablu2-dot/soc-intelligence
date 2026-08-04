@@ -1,68 +1,70 @@
 {
-  "date": "2026-08-03",
-  "generated_at": "2026-08-03T21:09:47.179821+00:00",
+  "date": "2026-08-04",
+  "generated_at": "2026-08-04T21:18:18.871466+00:00",
   "sectors": {
-    "mobile_ap": {
-      "sector": "Mobile AP",
-      "date": "2026-08-03",
-      "item_count": 4,
-      "generated_at": "2026-08-03T21:09:47.178761+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "TSMC is targeting 100,000 monthly wafers for its 2nm process by end-2026 driven by NVIDIA and AMD demand acceleration. MediaTek is adopting Intel EMIB-T alongside TSMC CoWoS for AI chips, while LB Semicon secured Qualcomm mass production approval and begins AI/automotive back-end processing in August.",
-          "key_facts": [
-            "TSMC 2nm target: 100,000 monthly wafers by end-2026",
-            "LB Semicon: Qualcomm mass production approval, AI and automotive chip back-end processing begins August",
-            "MediaTek: Adopts Intel EMIB-T and TSMC CoWoS for AI chips"
-          ],
-          "implications": [
-            {
-              "keyword": "Manufacturing Acceleration",
-              "text": "NVIDIA and AMD are forcing foundry capacity expansion; TSMC ramping 2nm production ahead of previous expectations to maintain supply chain leadership."
-            },
-            {
-              "keyword": "Advanced Packaging Diversity",
-              "text": "MediaTek's dual adoption of Intel EMIB-T and TSMC CoWoS signals strategic hedging of chiplet/HBM integration approaches for competitive AI products."
-            }
-          ],
-          "counterpoint": "Achieving 100,000 wafers/month at 2nm requires sustained yield improvements and equipment availability; delays in either could slip the timeline."
-        },
-        "en": {
-          "executive_summary": "TSMC is targeting 100,000 monthly wafers for its 2nm process by end-2026 driven by NVIDIA and AMD demand acceleration. MediaTek is adopting Intel EMIB-T alongside TSMC CoWoS for AI chips, while LB Semicon secured Qualcomm mass production approval and begins AI/automotive back-end processing in August.",
-          "key_facts": [
-            "TSMC 2nm target: 100,000 monthly wafers by end-2026",
-            "LB Semicon: Qualcomm mass production approval, AI and automotive chip back-end processing begins August",
-            "MediaTek: Adopts Intel EMIB-T and TSMC CoWoS for AI chips"
-          ],
-          "implications": [
-            {
-              "keyword": "Manufacturing Acceleration",
-              "text": "NVIDIA and AMD are forcing foundry capacity expansion; TSMC ramping 2nm production ahead of previous expectations to maintain supply chain leadership."
-            },
-            {
-              "keyword": "Advanced Packaging Diversity",
-              "text": "MediaTek's dual adoption of Intel EMIB-T and TSMC CoWoS signals strategic hedging of chiplet/HBM integration approaches for competitive AI products."
-            }
-          ],
-          "counterpoint": "Achieving 100,000 wafers/month at 2nm requires sustained yield improvements and equipment availability; delays in either could slip the timeline."
-        }
-      }
-    },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-08-03",
-      "item_count": 14,
-      "generated_at": "2026-08-03T21:09:47.178761+00:00",
+      "date": "2026-08-04",
+      "item_count": 11,
+      "generated_at": "2026-08-04T21:18:18.870700+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "SK하이닉스가 AI 인재 선발을 위해 자기소개서 폐지 및 반나절 심층면접, AI 역량 서식 도입 등 채용 방식을 전면 개편하고 있으며, 한국에서 AI 칩 붐에 힘입어 신입 반도체 채용이 47% 급증했다. 마이크론은 삼성, SK하이닉스와의 경쟁 속에서 한국 인재 확보에 나서고 있고, 퀄컴은 첸나이 설계 센터를 개설했으며 엔테그리스는 Q2에서 AI 칩 수요가 소재층까지 확대되고 있음을 보여주는 $883M 실적을 기록했다.",
+          "key_facts": [
+            "한국 신입 반도체 채용 47% 증가",
+            "SK하이닉스 채용 전형 대폭 개편: 반나절 심층면접, AI 역량 서식 도입",
+            "Micron, 삼성/SK하이닉스 경쟁 속 한국 인재 확보",
+            "Qualcomm 첸나이 설계 센터 개설",
+            "Entegris Q2 실적 $883M"
+          ],
+          "implications": [
+            {
+              "keyword": "AI 인재 확보 경쟁",
+              "text": "대형 반도체 기업들이 AI 역량 중심의 신입 채용 전형을 개편하면서 인재 확보 경쟁 심화"
+            },
+            {
+              "keyword": "공급망 다각화",
+              "text": "Micron의 한국 인재 확보 및 Qualcomm의 인도 설계 센터 개설은 미국 기업들의 한국-인도 설계/엔지니어링 거점 강화 의도"
+            },
+            {
+              "keyword": "소재 수요 확대",
+              "text": "Entegris 실적 호조는 AI 칩 제조 공정의 소재층까지 수요가 확대되고 있음을 시사"
+            }
+          ],
+          "counterpoint": "채용 급증이 지속 가능한 수요 증가에 기반한 것인지, 아니면 단기 AI 붐에 따른 일시적 채용인지 불명확"
+        },
+        "en": {
+          "executive_summary": "SK Hynix is overhauling its recruitment methods for AI talent, including abolishing self-introduction essays, introducing half-day in-depth interviews, and adopting AI competency forms. New semiconductor hiring in South Korea has surged 47% driven by the AI chip boom. Micron is securing Korean talent amid competition with Samsung and SK Hynix, Qualcomm opened a design center in Chennai, and Entegris reported $883M Q2 results, indicating AI chip demand is expanding to the materials layer.",
+          "key_facts": [
+            "South Korea new semiconductor hiring up 47%",
+            "SK Hynix overhauls recruitment process: half-day in-depth interviews, AI competency forms introduced",
+            "Micron securing Korean talent amid Samsung/SK Hynix competition",
+            "Qualcomm opens Chennai design center",
+            "Entegris Q2 results $883M"
+          ],
+          "implications": [
+            {
+              "keyword": "AI talent acquisition competition",
+              "text": "Major semiconductor companies intensifying talent competition as they redesign new hire selection processes centered on AI capabilities"
+            },
+            {
+              "keyword": "Supply chain diversification",
+              "text": "Micron's Korean talent acquisition and Qualcomm's India design center opening reflect US companies' intent to strengthen South Korea-India design and engineering hubs"
+            },
+            {
+              "keyword": "Expanded materials demand",
+              "text": "Entegris' strong Q2 results suggest AI chip manufacturing demand is expanding to the materials layer"
+            }
+          ],
+          "counterpoint": "Unclear whether hiring surge is based on sustained demand growth or temporary hiring driven by the short-term AI boom"
+        }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-03",
-      "item_count": 20,
-      "generated_at": "2026-08-03T21:09:47.178761+00:00",
+      "date": "2026-08-04",
+      "item_count": 21,
+      "generated_at": "2026-08-04T21:18:18.870700+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -70,9 +72,9 @@
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-03",
-      "item_count": 24,
-      "generated_at": "2026-08-03T21:09:47.178761+00:00",
+      "date": "2026-08-04",
+      "item_count": 16,
+      "generated_at": "2026-08-04T21:18:18.870700+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -80,9 +82,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-03",
-      "item_count": 25,
-      "generated_at": "2026-08-03T21:09:47.178761+00:00",
+      "date": "2026-08-04",
+      "item_count": 21,
+      "generated_at": "2026-08-04T21:18:18.870700+00:00",
       "content": {
         "ko": {},
         "en": {}
