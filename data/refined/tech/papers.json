@@ -2,6 +2,263 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Breaking Memory Bottlenecks in Quantum Control Systems for More Precise Experiments and Higher Throughput Computing",
+    "url": "https://arxiv.org/abs/2608.06318v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "As quantum computing continues to demonstrate promise and attract growing attention, there is an increasing need for more precise experiments to advance the development of quantum devices, as well as higher circuit throughput to validate more domain applications. However, this need is hindered by a memory bottleneck at the quantum control system layer, arising from limited on-chip BRAM capacity and the non-deterministic latency of DRAM. To break this bottleneck, we present Ant-Q, a memory hierar",
+    "authors": [
+      "Yicheng Guang",
+      "Neel Vora",
+      "Yilun Xu",
+      "Yueqi Chen",
+      "Gang Huang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Neural CRC Prediction for 5G NR URLLC",
+    "url": "https://arxiv.org/abs/2608.06230v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "We propose a neural cyclic redundancy check (CRC) predictor for the 5G New Radio (5G NR) physical uplink shared channel (PUSCH) that enables early link-adaptation decisions for Ultra-Reliable Low-Latency Communications (URLLC). The predictor combines a lightweight convolutional neural network (CNN) with a fixed front-end that extracts multi-scale time-frequency energy features from the received signal and least-squares channel estimates. We investigate two complementary front-end realizations - ",
+    "authors": [
+      "Prashanth Murthy"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Numerical Model of a Multiple-Input-Multiple-Output Distributed Acoustic Sensing System with Joint Phase and Birefringence Estimation",
+    "url": "https://arxiv.org/abs/2608.06198v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "In this work, we introduce and experimentally validate a numerical model for a Multiple-Input-Multiple-Output Distributed Acoustic Sensing (MIMO-DAS) system that accounts for dynamic perturbations of fiber birefringence and of the common optical phase of the backscattered signal (or polarization-averaged phase, shared by both polarization tributaries). The MIMO-DAS system probes the fiber using polarization-multiplexed constant-power coded sequences that are suited for coexistence of DAS with WD",
+    "authors": [
+      "Diane Prato",
+      "Mehran Mokhtari Sheramin",
+      "Renaud Gabet",
+      "Elie Awwad"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Exact DC Representation of Multi-Tier Offloading Product in SAGINs via Quantifier Elimination",
+    "url": "https://arxiv.org/abs/2608.05978v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "Task offloading in space--air--ground integrated networks (SAGIN) yields non-convex signomial or polynomial programs with cubic couplings. Sequential geometric programming (SGP) approximates them via exponential cone representations, which exceeds the second-order cone programming (SOCP) ceiling of embedded code generators such as CVXPYgen. We derive a difference-of-convex (DC) representation exactly certified over the reals by quantifier elimination and apply the convex--concave procedure (CCP)",
+    "authors": [
+      "Minh-Tuong Nguyen",
+      "Vo Phi Son",
+      "Dinh Thai Hoang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Automated Synthesis of Heterogeneous, Hierarchical, Scoped Coherence Protocols",
+    "url": "https://arxiv.org/abs/2608.05965v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "Processor design is converging on a new model of cache-coherent shared memory characterized by heterogeneity, hierarchy, and scopes. Protocols like CXL or AMBA CHI are used as global protocols to combine multiple clusters, each with its own cluster-level coherence protocols. Manually designing shims to interface between these cluster and global protocols is subtle and error-prone. Automatic synthesis, on the other hand, makes simplifying assumptions like the single-writer multiple-reader (SWMR) ",
+    "authors": [
+      "Fletch Rydell",
+      "An Qi Zhang",
+      "Nicolai Oswald",
+      "Andres Goens",
+      "Vijay Nagarajan",
+      "Daniel Sorin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "ASE2SPRKKR: a unified Python framework integrating the Spin-Polarized Relativistic Korringa-Kohn-Rostoker method into the Atomic Simulation Environment",
+    "url": "https://arxiv.org/abs/2608.05957v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "The Spin-Polarized Relativistic Korringa-Kohn-Rostoker (SPR-KKR) is an all-electron ab-initio multiple-scattering code that provides unique capabilities for treating chemical disorder, finite-temperature magnetism, relativistic effects, and spectroscopic properties of various types of solids through its fundamental formulation in terms of the single-particle Green's function rather than eigenstates. We present ASE2SPRKKR, a comprehensive Python interface that integrates SPR-KKR into the Atomic S",
+    "authors": [
+      "Ridha Eddhib",
+      "Matyáš Novák",
+      "Hubert Ebert",
+      "Aki Pulkkinen",
+      "Ján Minár"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Tuning the Optoelectronics of Mixed-Semiconductors through the interplay of Quantum confinement and Stoichiometry Engineering",
+    "url": "https://arxiv.org/abs/2608.05890v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "All-inorganic cesium lead bromide (CsPbBr3) nanocrystals (NCs) have established themselves as an emerging semiconductor for next-generation optoelectronic technologies due to their unique combination of properties, such as near unity photoluminescence quantum yields, narrow color pure emission, and exceptional defect tolerance. Although size-dependent optical signatures of these NCs are well reported, the complexity of mixed ionic-electronic transport remains largely unexplored. In this study, w",
+    "authors": [
+      "Kanha Ram Khator",
+      "Anupam Manna",
+      "Amlandeep Nayak",
+      "Pravat Nayek",
+      "Prasenjit Mal",
+      "Satyaprasad P Senanayak"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "An Open-Source Power Measurement Platform for System-Level Semiconductor Testing",
+    "url": "https://arxiv.org/abs/2608.05888v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "Accurate power measurement is not only essential for evaluating the energy efficiency of modern embedded and semiconductor systems, but power draw is an important proxy during stress testing. Industrial semiconductor test equipment, however, is often expensive and difficult to integrate into flexible experimental workflows.\n  This paper presents a compact and extensible hardware platform for automated system-level power measurement of embedded devices. The proposed setup integrates a Raspberry P",
+    "authors": [
+      "Linus Bantel",
+      "Sarah Rottacker",
+      "Dirk Pflüger"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "quant-ph",
+    "title": "Multi-cavity strong coupling to an electron spin ensemble: spectral and dark-state signatures",
+    "url": "https://arxiv.org/abs/2608.05765v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "Spin ensembles are considered as potential candidates for quantum memory and quantum enhanced sensing applications. Here, we explore the controlled coupling of multiple superconducting microwave cavities to a spin ensemble, which shows signatures of strong coupling and, due to the multi-mode character, the formation of dark states. In particular, the latter are of interest, as they provide a potential pathway to enhance memory times and enable protected storage of non-classical states in spin en",
+    "authors": [
+      "P. Oehrl",
+      "B. Pérez González",
+      "A. Dunaev",
+      "M. Althammer",
+      "T. S. Parvini",
+      "F. Piazza",
+      "M. Benito",
+      "H. Huebl"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Transverse quantum-state characterization of programmable electron optics",
+    "url": "https://arxiv.org/abs/2608.05749v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "Programmable electron optics -- electronically controlled phase plates -- underpin proposals from dose-efficient phase imaging to shaped-electron X-ray sources, nearly all assuming a pure, fully coherent delivered wave whose purity has never been measured. Here we reconstruct the transverse density matrix of a microelectromechanical electrostatic spiral phase plate by mixed-state ptychography, from one four-dimensional STEM scan per state and without added hardware. The delivered beam is substan",
+    "authors": [
+      "Shengbo You",
+      "Paolo Rosi",
+      "Enzo Rotunno",
+      "Alberto Roncaglia",
+      "Luca Belsito",
+      "Amir H. Tavabi",
+      "Rafal E. Dunin-Borkowski",
+      "Vincenzo Grillo",
+      "Philipp M. Pelz"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Zero-Instruction Sensor Reads: Register-Mapped Peripherals and Hardware PWM on a Five-Stage Soft Processor",
+    "url": "https://arxiv.org/abs/2608.05638v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "We present a case study in application-driven specialization of a five-stage soft processor, evaluated on the inner control loop of a reaction-wheel self-balancing bicycle. Starting from a custom 32-bit RISC core in the MIPS tradition, we specialize the design in two ways. First, two frequently accessed peripheral inputs are mapped directly into architectural register state, written every cycle by hardware and owned exclusively through the register file's write-port structure rather than by arbi",
+    "authors": [
+      "Nathanael Ren"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Magnetic susceptibility of diluted magnetic semiconductors at low carrier densities",
+    "url": "https://arxiv.org/abs/2608.05620v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "We calculate the static longitudinal and the transverse dynamic magnetic susceptibilities of (III,Mn)V diluted magnetic semiconductors, using the random phase approximation, for a simple impurity band model appropriate for the low charge carrier concentration regime. The magnetic susceptibilities are shown to depend sensitively on the amount of positional disorder of the Mn impurities. The results we obtain are consistent with previous studies of the spin wave spectrum and of the spatially inhom",
+    "authors": [
+      "Adel Kassaian",
+      "Mona Berciu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "math-ph",
+    "title": "On the synthesis of complete two-dimensional second-gradient continua: Tri-pantographic fabrics",
+    "url": "https://arxiv.org/abs/2608.05524v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "We introduce a notion of completeness for two-dimensional second-gradient elastic continua and propose a microstructural route toward its synthesis. A continuum is said to be complete if the Hessian of the stored energy with respect to the second-gradient variable is locally positive definite, so that every nonzero admissible increment of the placement second gradient is quadratically controlled in the highest-order part of the energy about each configuration. Starting from the Principle of Virt",
+    "authors": [
+      "Casey Rodriguez",
+      "Emilio Barchiesi",
+      "Simon R. Eugster",
+      "Ivan Giorgio",
+      "Francesco dell'Isola"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Channel Map-Based Channel Estimation for Near-Field UM-MIMO with Movable Planar Arrays",
+    "url": "https://arxiv.org/abs/2608.05520v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "Accurate channel estimation is essential for coherent transmission in ultra-massive multiple-input multiple-output (UM-MIMO) systems, where near-field propagation and high-dimensional spatial channels impose substantial signal processing challenges. Movable antenna architectures increase the estimation complexity further due to geometry-dependent channel variations. Existing approaches struggle to balance accuracy and complexity, motivating the use of environment-dependent propagation structures",
+    "authors": [
+      "Shuaifei Chen",
+      "Cheng-Xiang Wang",
+      "Chen Huang",
+      "Qianze Yang",
+      "Xiping Wu",
+      "Yunfei Chen",
+      "El-Hadi M. Aggoune"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "PLoRA: An NDP-Enhanced Pooled-Memory System for Cost-Efficient Multi-LoRA Serving",
+    "url": "https://arxiv.org/abs/2608.05483v1",
+    "published_date": "2026-08-06",
+    "source": "arXiv",
+    "summary": "Multi-LoRA serving is how one base model becomes thousands of specialized variants, one adapter per user, task, or agent, and the deployments can hold 1000-plus adapters. Serving them is hard because the workload inverts what GPUs provide: terabytes of memory against only tens of TFLOPS, and because every published system stages its adapters from CPU DRAM over PCIe, where each access pays a kernel stop and a host-run copy and capacity ends at the motherboard's DIMM slots. Meanwhile, memory-seman",
+    "authors": [
+      "Zhongkai Yu",
+      "Ohm Rishabh Venkatachalam",
+      "Zheng Wang",
+      "Yikai Li",
+      "Yichen Lin",
+      "Zihao Yu",
+      "Yuke Wang",
+      "Liu Liu",
+      "Xulong Tang",
+      "Shuyi Pei",
+      "Yangwook Kang",
+      "Yufei Ding"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "eess.SP",
     "title": "Near-Field Velocity Estimation and Doppler-Aware Localization in OFDM Massive MIMO",
     "url": "https://arxiv.org/abs/2608.05133v1",
@@ -404,6 +661,57 @@
       "Ashlee M. García",
       "Aaron M. Lindenberg",
       "Kunal Mukherjee"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Fine-Tuning Small Language Models for Reliable VASP INCAR Generation",
+    "url": "https://arxiv.org/abs/2608.05387v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Language models can prepare VASP INCAR files from natural-language requests, but so far only large proprietary cloud models come close to handling the tightly coupled, physics-sensitive settings reliably, a dependence that fits poorly with local, high-throughput materials workflows where privacy, cost, and offline deployment matter. We show that a small language model (SLM) can close this gap. The SLM is fine-tuned on reference VASP calculations and paired with VASPGuard, a deterministic post-pr",
+    "authors": [
+      "Xinyue Zhang",
+      "Jixiang Li",
+      "Bin Shao",
+      "Baishun Yang",
+      "Zhiyang Liu",
+      "Weichao Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "PowerScope: ML-based Intra-Cycle Power Estimation",
+    "url": "https://arxiv.org/abs/2608.05339v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Power estimation at sub-clock-cycle temporal resolutions is critical for tasks such as power delivery network (PDN) design, dynamic voltage droop analysis, and pre-silicon power side-channel security evaluation. Designers commonly rely on commercial post-layout gate-level power analysis tools for these tasks, but these flows are computationally expensive and scale poorly with design size and workload length. Machine learning (ML)-based power estimation frameworks have shown promise in accelerati",
+    "authors": [
+      "Jayanth Balasubramanian",
+      "Sujay Pandit",
+      "Radha Vaidya",
+      "Anand Raghunathan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding",
+    "url": "https://arxiv.org/abs/2608.05303v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "On-device deployment of Large Language Models (LLMs) has become essential for personalized edge applications. A primary bottleneck is external memory access (EMA) in feed-forward network (FFN) layers. Speculative decoding and mixture-of-experts (MoE) are promising solutions. Speculative decoding reduces the number of decoding stages by generating multiple tokens per stage, and MoE minimizes per-stage cost through sparse expert activation. However, there is an incompatibility when combining these",
+    "authors": [
+      "Sangwoo Ha",
+      "Hyunwoo Seo",
+      "Yurim Jo",
+      "Youngjin Moon",
+      "Hoi-Jun Yoo"
     ]
   },
   {

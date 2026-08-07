@@ -6,7 +6,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/machine-learning/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/machine-learning/</link>
 	<description>Official Machine Learning Blog of Amazon Web Services</description>
-	<lastBuildDate>Thu, 06 Aug 2026 18:57:55 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 07 Aug 2026 16:26:58 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -14,6 +14,626 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>How Cohere Health digitizes clinical policies using Amazon Bedrock AgentCore</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/how-cohere-health-digitizes-clinical-policies-using-amazon-bedrock-agentcore/</link>
+		
+		<dc:creator><![CDATA[Oleksiy Kononenko]]></dc:creator>
+		<pubDate>Fri, 07 Aug 2026 16:26:58 +0000</pubDate>
+				<category><![CDATA[Amazon Bedrock]]></category>
+		<category><![CDATA[Amazon Bedrock AgentCore]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Customer Solutions]]></category>
+		<guid isPermaLink="false">ab12dfa74d29d9af6fc346702f37866dfbb9aa5d</guid>
+
+					<description>In this post, you learn how Cohere Health built a multi-tenant agentic architecture on AgentCore using AgentCore Runtime’s secure MicroVM isolation, unified tool access through AgentCore Gateway, AgentCore Memory, and the Agent Skills open standard to rapidly scale policy digitization capabilities, while preserving transparency, version control, and human oversight.</description>
+										<content:encoded>&lt;p&gt;Prior authorization is the approval process health plans require before covering certain medical services or medications. It remains one of the most manual processes in healthcare, not because the medical reasoning for requiring approval is flawed, but because the policies that govern it are trapped in static, unstructured formats that resist automation. This content is at the core of day-to-day clinical operations impacting hundreds of millions of patients each year. However, the policy content varies by clinical area, geography, line of business, and health plan, and evolves as medicine and technology advances. Historically, health plans did not have a systematic way to manage, analyze, and optimize them. Digitizing these clinical policies into structured, machine-readable data using standard terminologies reduce a critical operational bottleneck by supporting more consistent, computable workflows and helping health plans modernize prior authorization operations at scale while maintaining appropriate clinical oversight.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://www.coherehealth.com/"&gt;Cohere Health&lt;sup&gt;(R)&lt;/sup&gt;&lt;/a&gt;, a clinical intelligence company that powers health plan operations, built &lt;a href="https://www.coherehealth.com/utilization-management/policy-studio"&gt;Cohere Policy Studio&lt;sup&gt;(TM)&lt;/sup&gt;&lt;/a&gt; using &lt;a href="https://aws.amazon.com/bedrock/agentcore/"&gt;Amazon Bedrock AgentCore&lt;/a&gt;, which provides the multi-tenant isolation required for their health plan customers and a managed agent runtime that accelerates deployment without rebuilding infrastructure. The application uses a flexible, multi-tenant agentic architecture to accelerate policy digitization with extensive workflow management and automatic version tracking.&lt;/p&gt; 
+&lt;p&gt;In this post, you learn how Cohere Health built a multi-tenant agentic architecture on AgentCore using &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html"&gt;AgentCore Runtime’s secure MicroVM isolation&lt;/a&gt;, unified tool access through &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway.html"&gt;AgentCore Gateway&lt;/a&gt;, &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory.html"&gt;AgentCore Memory&lt;/a&gt;, and the &lt;a href="https://agentskills.io"&gt;Agent Skills&lt;/a&gt; open standard to rapidly scale policy digitization capabilities, while preserving transparency, version control, and human oversight.&lt;/p&gt; 
+&lt;h2 id="challenge-the-policy-digitization-bottleneck"&gt;Challenge: The policy digitization bottleneck&lt;/h2&gt; 
+&lt;p&gt;Realizing the value of AI-assisted workflows in prior authorization depends on a foundational challenge: transforming the rules trapped in static documents and PDFs into structured, machine-readable data that AI systems can use more consistently, while medical professional remain responsible for clinical review where clinical judgment is required. Health plans face a complex challenge of managing clinical policies to support rapidly changing requirements. Automating policy digitization helps health plans adapt to these changes.&lt;/p&gt; 
+&lt;p&gt;Cohere Health identified three challenges in building an AI solution for this workflow:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Government regulations&lt;/strong&gt; – Per Centers for Medicare &amp;amp; Medicaid Services (CMS) &lt;a href="https://www.cms.gov/priorities/burden-reduction/overview/interoperability/policies-regulations/cms-interoperability-prior-authorization-final-rule-cms-0057-f" target="_blank" rel="noopener"&gt;regulations&lt;/a&gt;, health plans are required to support API-based electronic prior authorization by January 2027.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;America’s Health Insurance Plans (AHIP)&lt;/strong&gt; – The &lt;a href="https://www.coherehealth.com/thought-leadership/ahip-prior-authorization-commitments" target="_blank" rel="noopener"&gt;AHIP commitments&lt;/a&gt; require health plans to achieve 80 percent real-time approvals for electronic prior authorization submissions. Each line of business has unique requirements, increasing the need to quickly manage, audit, and deploy clinical policies.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Technical architecture demands&lt;/strong&gt; – The solution needed to ingest multiple input formats and produce different representations of each policy for different downstream consumers, each with its own feedback loop.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;AgentCore addresses these challenges with managed runtime infrastructure, session isolation, and unified tool access.&lt;/p&gt; 
+&lt;h2 id="solution-overview"&gt;Solution overview&lt;/h2&gt; 
+&lt;p&gt;The following diagram shows how Cohere Policy Studio connects AgentCore Runtime, Gateway, and Memory into a unified agentic system for policy digitization.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/25/ML-19805-1.png" alt="Cohere Policy Studio architecture showing AgentCore Runtime hosting a LangChain agent, AgentCore Gateway providing unified tool access, and AgentCore Memory maintaining session history, connected to policy skills and downstream decisioning systems" width="600"&gt;&lt;/p&gt; 
+&lt;p&gt;The Policy Studio application is built on AgentCore using the Agent Skills open standard. To scale out representations in Cohere Policy Studio, Cohere Health added new skills to an existing AgentCore Runtime that was already decomposing policies. This runtime had access to the policy skills, policy APIs as &lt;a href="https://modelcontextprotocol.io/docs/getting-started/intro"&gt;Model Context Protocol&lt;/a&gt; (MCP) tools through AgentCore Gateway, and session memory for policy analysts’ feedback loops, helping teams refine outputs within a governed, human-in-the-loop process.&lt;/p&gt; 
+&lt;p&gt;The team completed three tasks:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Deployed AgentCore Runtime with AgentCore Gateway and AgentCore Memory for a full agentic system using &lt;a href="https://www.langchain.com/" target="_blank" rel="noopener"&gt;LangChain&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;Configured AgentCore Gateway to fetch tools and skills.&lt;/li&gt; 
+ &lt;li&gt;Wrote skills with clinical policy experts and evaluated them using Cohere Health’s standardized observability process based on &lt;a href="https://arize.com/" target="_blank" rel="noopener"&gt;Arize AI&lt;/a&gt;.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;You can apply these same patterns to build your own multi-tenant agentic system.&lt;/p&gt; 
+&lt;h3 id="deploying-ai-agents-with-reusable-amazon-elastic-container-registry-amazon-ecr-base-images"&gt;Deploying AI agents with reusable Amazon Elastic Container Registry (Amazon ECR) base images&lt;/h3&gt; 
+&lt;p&gt;Cohere Health serves multiple health plans that require strict data isolation between tenants. AgentCore Runtime’s secure microVM isolation enforces this with dedicated compute, memory, and filesystem resources per session.&lt;/p&gt; 
+&lt;p&gt;When deploying multiple AI agent instances across teams, maintaining consistency while allowing customization is important. Each team needs its own agent configuration, but rebuilding the entire runtime environment for every deployment creates unnecessary overhead and drift. You can use the following base image pattern to deploy new agents to AgentCore Runtime microVMs with a minimal Dockerfile.&lt;/p&gt; 
+&lt;h4 id="base-image-and-consumer-pattern"&gt;Base image and consumer pattern&lt;/h4&gt; 
+&lt;p&gt;Cohere Health developed a two-tier deployment architecture that separates the stable runtime environment from team-specific configurations:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-dockerfile"&gt;FROM {account_id}.dkr.ecr.{aws_region}.amazonaws.com/cohere-agent:v1
+COPY agent_config.yaml /app/src/agent_config.yaml&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The &lt;code&gt;FROM&lt;/code&gt; line pulls the shared base image containing the LangChain agent framework and common dependencies. The &lt;code&gt;COPY&lt;/code&gt; line adds the team-specific &lt;code&gt;agent_config.yaml&lt;/code&gt;, which controls the following options:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Memory modes – Choose between stateless (&lt;code&gt;NO_MEMORY&lt;/code&gt;) or persistent (&lt;code&gt;AGENTCORE&lt;/code&gt;) conversation history.&lt;/li&gt; 
+ &lt;li&gt;Storage strategies – &lt;code&gt;full_trace&lt;/code&gt; for correction workflows or &lt;code&gt;conversation_only&lt;/code&gt; for clean history.&lt;/li&gt; 
+ &lt;li&gt;Session context caching – Automatically caches skill definitions and documents to avoid redundant Amazon Simple Storage Service (Amazon S3) fetches.&lt;/li&gt; 
+ &lt;li&gt;Prompt caching – Can help reduce costs and latency by caching system prompts and frequently used content.&lt;/li&gt; 
+ &lt;li&gt;Flexible tool configuration – Enable/disable tools per deployment.&lt;/li&gt; 
+ &lt;li&gt;Model configuration – Base model on Amazon Bedrock with configurable token limits, temperature, and other inference parameters.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://www.litellm.ai/" target="_blank" rel="noopener"&gt;LiteLLM&lt;/a&gt; configuration – Configure LiteLLM as the reverse proxy between the model and the agent.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;With the runtime deployed, the next step was connecting it to tools and skills.&lt;/p&gt; 
+&lt;h3 id="unified-tool-and-skill-access-with-agentcore-gateway"&gt;Unified tool and skill access with AgentCore Gateway&lt;/h3&gt; 
+&lt;p&gt;Cohere Health’s agents access multiple tool types, including AWS Lambda functions for fetching skills and documents, and internal APIs, maintained across different teams. AgentCore Gateway consolidates these behind a single authenticated endpoint, so teams add new tools without redeploying the agent.&lt;/p&gt; 
+&lt;h4 id="agentcore-gateway-architecture"&gt;AgentCore Gateway architecture&lt;/h4&gt; 
+&lt;p&gt;Cohere Health implemented this using AgentCore Gateway with separate targets for shared tools and project-specific tools.&lt;/p&gt; 
+&lt;h5 id="tool-lambda-function-structure"&gt;Tool Lambda function structure&lt;/h5&gt; 
+&lt;p&gt;AgentCore Gateway invokes an AWS Lambda function for each tool request. The function routes to the correct handler based on the tool name passed in the gateway context.&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;# jobs/generic-tools-lambda/app.py
+import json
+from tools.fetch_skill import handler as fetch_skill_handler
+
+# Routing dictionary for tool discovery
+TOOL_HANDLERS = {
+    "fetch_skill": fetch_skill_handler
+}
+
+def lambda_handler(event, context):
+    """Gateway-compliant Lambda handler with MCP routing"""
+
+    # Extract tool name from gateway context
+    tool_name = context.client_context.custom.get('bedrockAgentCoreToolName', '')
+
+    # Strip gateway prefix (gateway adds {target}__ to tool names)
+    if '__' in tool_name:
+        tool_name = tool_name.split('__', 1)[1]
+
+    # Route to appropriate handler
+    if tool_name not in TOOL_HANDLERS:
+        return {
+            "statusCode": 404,
+            "body": json.dumps({"error": f"Tool {tool_name} not found"})
+        }
+
+    try:
+        result = TOOL_HANDLERS[tool_name](event)
+        return {
+            "statusCode": 200,
+            "body": json.dumps(result)
+        }
+    except Exception as e:
+        return {
+            "statusCode": 500,
+            "body": json.dumps({"error": str(e)})
+        }&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h5 id="tool-implementation"&gt;Tool implementation&lt;/h5&gt; 
+&lt;p&gt;Each tool handler fetches data from a specific source. The following example retrieves a skill definition from Amazon S3.&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;# tools/fetch_skill.py
+import boto3
+import os
+
+def handler(event: dict) -&amp;gt; dict:
+    """Fetch skill definition from S3"""
+
+    skill_id = event.get('skill_id')
+    if not skill_id:
+        return {"error": "skill_id required"}
+
+    # Use environment variables for configuration
+    bucket = os.environ.get('SKILLS_BUCKET')
+    prefix = os.environ.get('SKILLS_PREFIX')
+
+    s3 = boto3.client('s3')
+
+    try:
+        response = s3.get_object(
+            Bucket=bucket,
+            Key=f"{prefix}/{skill_id}.yaml"
+        )
+        content = response['Body'].read().decode('utf-8')
+
+        return {"content": content}
+    except Exception as e:
+        return {"error": f"Failed to fetch skill: {str(e)}"}&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h5 id="agent-configuration"&gt;Agent configuration&lt;/h5&gt; 
+&lt;p&gt;The agent configuration defines which gateway targets the agent can access and how it authenticates.&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-yaml"&gt;# agent_config.yaml
+mcp:
+  gateway_url: {gateway_url}
+  allowed_targets:
+    - generic-tools    # AIP-maintained tools
+    - digitization-tools  # Project-specific tools
+  auth_mode: "bearer_token"&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;With the runtime and tools in place, Cohere Health turned to building the domain expertise layer.&lt;/p&gt; 
+&lt;h3 id="skills-development-and-evaluation"&gt;Skills development and evaluation&lt;/h3&gt; 
+&lt;p&gt;AI agents need domain-specific knowledge to perform specialized tasks effectively. Generic prompts produce inconsistent results, require extensive token usage, and lack the nuanced understanding that domain experts bring. Each new use case traditionally required rebuilding agent infrastructure from scratch, creating bottlenecks in deployment velocity. A modular skills framework addresses this by decoupling domain expertise from infrastructure. For Cohere Health, this means clinical policy experts can author and refine new skills directly, helping ensure the system supports policy workflows in ways that remain grounded in expert review and governance.&lt;/p&gt; 
+&lt;h4 id="modular-skills-framework"&gt;Modular skills framework&lt;/h4&gt; 
+&lt;p&gt;Teams deploy new capabilities through modular, versioned skill definitions without rebuilding the agent.&lt;/p&gt; 
+&lt;h4 id="development-workflow"&gt;Development workflow&lt;/h4&gt; 
+&lt;p&gt;Cohere Health follows a structured workflow to develop and validate each skill before it reaches production.&lt;/p&gt; 
+&lt;h5 id="evaluation-process"&gt;Evaluation process&lt;/h5&gt; 
+&lt;p&gt;Evaluating skills requires collaboration between machine learning engineering and data science. The process starts with reference datasets that contain ground truth outputs for each skill. The team defines success metrics (accuracy, completeness, and consistency) and runs an evaluation suite against these test cases. When a skill fails, the team analyzes the failure mode and iterates on the skill definition before retesting.&lt;/p&gt; 
+&lt;p&gt;After a skill passes the evaluation suite, data science reviews the results against acceptance criteria and approves the skill for production deployment.&lt;/p&gt; 
+&lt;p&gt;After deployment, Arize AI tracks effectiveness metrics in production. Clinical policy analysts annotate sample outputs to catch errors the automated metrics miss. The team monitors for skill degradation over time and uses these data points to prioritize optimization work.&lt;/p&gt; 
+&lt;h4 id="skill-versioning-and-deployment"&gt;Skill versioning and deployment&lt;/h4&gt; 
+&lt;p&gt;Skills move to production through a layered versioning scheme and a staged deployment pipeline.&lt;/p&gt; 
+&lt;h5 id="dual-layer-versioning"&gt;Dual-layer versioning&lt;/h5&gt; 
+&lt;p&gt;Skills use dual-layer versioning: semantic versioning for capability tracking and Amazon S3 object versioning for deployment history. The first layer tracks capability changes in &lt;code&gt;SKILL.md&lt;/code&gt;, with each version tagged in git (for example, &lt;code&gt;skill/policy_ingestion/v1.2.3&lt;/code&gt;). Amazon S3 object versioning provides the second layer, maintaining immutable history for every upload with rollback capability and separate non-prod/prod buckets.&lt;/p&gt; 
+&lt;h5 id="deployment-flow"&gt;Deployment flow&lt;/h5&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;Developer commits and opens a PR to develop.&lt;/li&gt; 
+ &lt;li&gt;Continuous integration and continuous delivery (CI/CD) packages &lt;code&gt;skill.tar.gz&lt;/code&gt; with metadata on merge.&lt;/li&gt; 
+ &lt;li&gt;The pipeline uploads to the Amazon S3 non-prod bucket and updates the manifest.&lt;/li&gt; 
+ &lt;li&gt;Evaluate in non-prod environment.&lt;/li&gt; 
+ &lt;li&gt;Open PR to main.&lt;/li&gt; 
+ &lt;li&gt;Deploy to prod with gradual rollout and monitoring.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h2 id="results-and-impact"&gt;Results and impact&lt;/h2&gt; 
+&lt;p&gt;Through this implementation, Cohere Health achieved measurable improvements across policy digitization speed, deployment velocity, and coverage.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Policy digitization efficiency:&lt;/strong&gt; Overall time spent on policy digitization reduced by 30 percent, from 2 hours 15 minutes to 1 hour 35 minutes per policy. Cohere Health has digitized thousands of policies to date using manual and semi-automated workflows. The agent-based framework targets further time reduction per policy as it scales across the existing policy library.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Deployment velocity:&lt;/strong&gt; Full agent deployments in the product decreased from 3–4 months to 2–6 weeks. The reusable ECR base image pattern lets teams stand up a new agent with a minimal Dockerfile, and the modular skills framework means new capabilities ship without rebuilding the agent runtime. The system abstracts DevOps concerns, so traditional machine learning (ML) and data science engineers can deploy agents without extensive coding experience. The policy digitization product runs a single-agent, multi-skill architecture with one agent, a primary skill with a sub-skill, and three reference injections.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Policy coverage:&lt;/strong&gt; Cohere Policy Studio represents policy content with verbatim text and a standard codified evidence layer, packaged together and available across original policy formats and sources.&lt;/p&gt; 
+&lt;blockquote&gt;
+ &lt;p&gt;&lt;em&gt;“Prior authorization policy review has always demanded an extraordinary level of clinical attention—every word in a policy document can carry downstream consequences for patients. But that attention has historically been split between interpretation and verification: not just understanding what a policy means clinically, but confirming which version of it governed a given decision, and whether that same version is what the health plan published to providers. Those aren’t administrative questions—they’re questions that bear directly on clinical integrity. Amazon Bedrock AgentCore gave us the architecture to address both simultaneously—AI-powered agentic workflows that assist with navigating the interpretive complexity of clinical language, with built-in memory and version tracking that make provenance a first-class concern rather than an afterthought. Structured, versioned policy outputs make the clinical basis of a decision traceable and reviewable by design, and AgentCore’s secure, multi-tenant runtime means we can deliver that capability across every health plan we serve without compromising isolation.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt; 
+&lt;p&gt;— Brian Covino, M.D., FAAOS, Chief Medical Officer, Cohere Health&lt;/p&gt; 
+&lt;p&gt;Apply these patterns to achieve similar results: reusable base images for consistent deployments, unified tool access through a single gateway, and modular skills that scale without rebuilding infrastructure.&lt;/p&gt; 
+&lt;h2 id="future-connecting-policies-through-a-knowledge-graph"&gt;Future: Connecting policies through a knowledge graph&lt;/h2&gt; 
+&lt;p&gt;Building on Cohere Policy Studio’s success with AgentCore, the next evolution introduces an intelligent knowledge graph which is already underway. Working with the AWS Generative AI Innovation Center, Cohere Health prototyped the foundational semantic layer mapping clinical policies to standardized ontologies (UMLS, SNOMED) to support greater interoperability using standardized healthcare terms. Using Amazon Neptune, this grounds policy concepts in a structure that AI can traverse and trace. That graph connects clinical policies with decisioning products across expanded indications.&lt;/p&gt; 
+&lt;h3 id="enhanced-architecture"&gt;Enhanced architecture&lt;/h3&gt; 
+&lt;p&gt;The knowledge graph layer sits between the policy representation engine and downstream decisioning systems, creating a semantic network that:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Maps relationships&lt;/strong&gt; between policies, clinical guidelines, medical codes (ICD-10, CPT, HCPCS), drug formularies, and prior authorization criteria across therapeutic areas.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Scales indication coverage&lt;/strong&gt; by identifying patterns and similarities across clinical domains, so that new policy types deploy rapidly without manual configuration.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Connects policy fragments&lt;/strong&gt; to multiple decisioning contexts, so that a single policy update propagates correctly across affected authorization workflows.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h3 id="key-capabilities"&gt;Key capabilities&lt;/h3&gt; 
+&lt;p&gt;As new policies are digitized through AgentCore, the knowledge graph is designed to help identify relevant connections, flag potential conflicts, and suggest reusable patterns to support reviewer and policy team workflows. The graph learns from policy structures across clinical areas, suggesting templates and accelerating time-to-deployment for new indication types from days to hours. Decisioning engines query the knowledge graph using natural language or Fast Healthcare Interoperability Resources (FHIR) resources to retrieve potentially relevant policy fragments with full provenance and version history. The graph also maintains bidirectional links between CMS requirements, AHIP commitments, and internal policy representations, supporting regulatory alignment at scale.&lt;/p&gt; 
+&lt;p&gt;These capabilities deliver comprehensive indication coverage without proportional engineering effort, real-time policy updates across connected decisioning products, automated conflict detection to help prevent inconsistent authorization outcomes, and sub-second policy retrieval for authorization requests.&lt;/p&gt; 
+&lt;p&gt;This knowledge graph foundation supports Cohere Health’s ability to help health plans achieve 80 percent of electronic prior authorization approvals in real time. The graph maintains the security, multi-tenancy, and audit capabilities established in the current AgentCore architecture.&lt;/p&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;In this post, you learned how Cohere Health used AgentCore and three architectural decisions to reduce AI agent deployment from months to weeks. Three patterns (reusable ECR base images, unified tool access through AgentCore Gateway, and modular skills development) helped Cohere Health support more scalable policy digitization workflows across formats while reducing digitization time by 30%.&lt;/p&gt; 
+&lt;p&gt;The ECR base image pattern alleviates redundant infrastructure work, so teams can deploy new agents with a minimal Dockerfile. Cohere Health can scale the AI system without rebuilding the runtime. The AgentCore Gateway architecture provides a single authenticated endpoint for the tools, whether they’re utilities based on AWS Lambda or OpenAPI services. The skills framework, built on the Agent Skills open standard, separates domain expertise from agent mechanics, supporting rapid iteration with continuous evaluation through Arize AI and clinical policy analysts.&lt;/p&gt; 
+&lt;p&gt;The future of healthcare AI depends on systems that can adapt quickly to changing requirements while maintaining reliability and security. With AgentCore and these architectural patterns, you can build that system today.&lt;/p&gt; 
+&lt;p&gt;To get started with these patterns in your own environment, explore the following resources:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Learn more about &lt;a href="https://www.coherehealth.com/" target="_blank" rel="noopener"&gt;Cohere Health&lt;/a&gt; and try &lt;a href="https://www.coherehealth.com/utilization-management/policy-studio" target="_blank" rel="noopener"&gt;Cohere Policy Studio&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;Read the &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/index.html" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore Developer Guide&lt;/a&gt; to deploy your first agent runtime.&lt;/li&gt; 
+ &lt;li&gt;Set up &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway.html" target="_blank" rel="noopener"&gt;AgentCore Gateway&lt;/a&gt; for unified tool access with MCP compatibility.&lt;/li&gt; 
+ &lt;li&gt;Adopt the &lt;a href="https://agentskills.io/home" target="_blank" rel="noopener"&gt;Agent Skills&lt;/a&gt; open standard for maintainable, versioned domain expertise.&lt;/li&gt; 
+ &lt;li&gt;Review the &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/develop-agents.html" target="_blank" rel="noopener"&gt;AgentCore interfaces guide&lt;/a&gt; to choose the right SDK and framework for your use case.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;Learn about Cohere Health’s other AgentCore deployment of a medical necessity review agentic assistant in this &lt;a href="https://youtu.be/YmXszEVI-x8?t=2280" target="_blank" rel="noopener"&gt;re:Invent session&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/25/ML-19805-2.png" alt="Cohere Review Resolve product features demonstrated during an AWS re:Invent session" width="600"&gt;&lt;/p&gt; 
+&lt;p&gt;If you’re a startup building production-ready AI agents, &lt;a href="https://aws.amazon.com/startups/credits/" target="_blank" rel="noopener"&gt;AWS Activate&lt;/a&gt; provides the credits, technical guidance, and architecture support to help you move from prototype to production. &lt;a href="https://aws.amazon.com/startups/" target="_blank" rel="noopener"&gt;Get started today&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;If you have feedback or questions about this post, leave a comment in the comments section.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/25/ML-19805-3.jpg" alt="Oleksiy Kononenko" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Oleksiy Kononenko&lt;/h3&gt; 
+  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/oleksiyk/" target="_blank" rel="noopener"&gt;Oleksiy&lt;/a&gt; is a Solutions Architect on the State and Local Government team at AWS, where he partners with government agencies to use cloud technologies to improve citizen services. With his previous Healthcare and Life Sciences Startups experience at AWS, he brings a unique builder’s perspective to architecting solutions that solve real-world problems. When not working with customers, you’ll find him exploring new tech or mountain biking.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/25/ML-19805-4.jpg" alt="Kenji Fujita" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Kenji Fujita&lt;/h3&gt; 
+  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/kenji-fujita-pcnu/" target="_blank" rel="noopener"&gt;Kenji&lt;/a&gt; is a Staff AI Platform Engineer at Cohere Health, where he has worked for the past six years. Throughout his tenure, he has developed many of the capabilities across the various platforms that the new agent framework is scaling out to support. You can find Kenji suffering while watching the Mets and running in his free time.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/25/ML-19805-5.png" alt="Vikas Mehta" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Vikas Mehta&lt;/h3&gt; 
+  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/vikas-mehta-vsm/" target="_blank" rel="noopener"&gt;Vikas&lt;/a&gt; is a Machine Learning Engineer at Cohere Health, where he started as a co-op during his MSCS at UMass Amherst. He is a contributor to the framework outlined in this post. When he’s not working, Vikas enjoys swimming, board games with friends, and exploring parks and restaurants around the city.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/25/ML-19805-6.png" alt="Anna Wang" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Anna Wang&lt;/h3&gt; 
+  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/builtbyanna/" target="_blank" rel="noopener"&gt;Anna&lt;/a&gt; is a Software Engineer at Cohere Health, where she started as an intern during her undergraduate studies at Tufts University. She is a contributor to the framework outlined in this post. Outside of work, Anna’s current obsessions are sourdough and distance running.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/25/ML-19805-7.jpg" alt="Ebad Ahmadzadeh" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Ebad Ahmadzadeh&lt;/h3&gt; 
+  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/ebadahmadzadeh/" target="_blank" rel="noopener"&gt;Ebad&lt;/a&gt; is a Principal Machine Learning Engineer at Cohere Health, where he has worked for the past four years. He led research and implementation for many of the ML products at the company. Ebad enjoys learning about music theory, spends time with his family, and goes on dog walks.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/06/25/ML-19805-8.jpg" alt="Adwait Patil" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Adwait Patil&lt;/h3&gt; 
+  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/adwait-patil-b8771815b/" target="_blank" rel="noopener"&gt;Adwait&lt;/a&gt; is a Machine Learning Engineer at Cohere Health, where he started as a co-op during his MSDS at Northeastern’s Khoury College of Computer Sciences. He has worked extensively on Cohere Policy Studio. Adwait can usually be found hiking or playing badminton or basketball, often using it as the perfect excuse to explore new food spots.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>How TReNDS automates root-cause analysis with Amazon Bedrock</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/how-trends-automates-root-cause-analysis-with-amazon-bedrock/</link>
+		
+		<dc:creator><![CDATA[Vitaly Omelchenko]]></dc:creator>
+		<pubDate>Fri, 07 Aug 2026 16:22:50 +0000</pubDate>
+				<category><![CDATA[Advanced (300)]]></category>
+		<category><![CDATA[Amazon Bedrock]]></category>
+		<guid isPermaLink="false">2a928f9693d6d62c930b66459b34bc9a6dc2b18a</guid>
+
+					<description>TReNDS, a research center at Georgia State University, built an agentic AI pipeline on Amazon Bedrock and the open-source Strands Agents SDK that automatically investigates production errors in real time, reducing root-cause analysis from 15 to 30 minutes of manual work to under 60 seconds.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;This is a guest post co-written with Vitaly Omelchenko from the TReNDS Center at Georgia State University.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;At the &lt;a href="https://trendscenter.org" target="_blank" rel="noopener"&gt;Center for Translational Research in Neuroimaging and Data Science (TReNDS)&lt;/a&gt;, a joint center of Georgia State University, Georgia Institute of Technology, and Emory University, we develop and apply advanced analytical methods and neuroinformatics tools for brain health research. We’ve been running our infrastructure on Amazon Web Services (AWS) since 2019, and over the years we’ve built a diverse set of applications, including research tools and APIs, all running on &lt;a href="https://aws.amazon.com/eks/" target="_blank" rel="noopener"&gt;Amazon Elastic Kubernetes Service (Amazon EKS)&lt;/a&gt; with logs shipped to &lt;a href="https://aws.amazon.com/cloudwatch/" target="_blank" rel="noopener"&gt;Amazon CloudWatch&lt;/a&gt; using &lt;a href="https://fluentbit.io/" target="_blank" rel="noopener"&gt;FluentBit&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;As our application grew, so did the volume of errors we needed to investigate. When we started exploring &lt;a href="https://aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock&lt;/a&gt;, we saw an opportunity we had wanted for a long time. We could automate the most time-consuming part of incident response, the root-cause investigation itself.&lt;/p&gt; 
+&lt;p&gt;In this post, we share the architecture we built and use in production at TReNDS. It combines &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/SubscriptionFilters.html" target="_blank" rel="noopener"&gt;Amazon CloudWatch subscription filters&lt;/a&gt;, &lt;a href="https://aws.amazon.com/lambda/" target="_blank" rel="noopener"&gt;AWS Lambda&lt;/a&gt;, the &lt;a href="https://strandsagents.com/latest/" target="_blank" rel="noopener"&gt;Strands Agents SDK&lt;/a&gt;, and Amazon Bedrock to detect errors in real time, enrich them with log context and source code from GitHub, and deliver AI-powered root-cause analysis to our team.&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;The architecture and recommendations in this post reflect our team’s experience at the TReNDS Center and do not represent official guidance from Georgia State University, Georgia Institute of Technology, or Emory University.&lt;/em&gt;&lt;/p&gt; 
+&lt;h2 id="the-problem-we-wanted-to-solve"&gt;The problem we wanted to solve&lt;/h2&gt; 
+&lt;p&gt;Like many teams, we had alerting and monitoring in place. We knew when things broke. However, knowing that something failed and understanding why it failed are different things. Our engineers still had to open Amazon CloudWatch Logs, read through stack traces, find the relevant source files, and mentally trace the execution path. For straightforward errors, this took 15–30 minutes. For complex issues spanning multiple services, much longer.&lt;/p&gt; 
+&lt;p&gt;We realized that this investigation process is exactly the kind of work a foundation model with the right tools can do. The model does more than summarize the error message. It investigates the error by pulling the surrounding log context, reading the source code, and producing a structured analysis. That is what we set out to build.&lt;/p&gt; 
+&lt;h2 id="architecture"&gt;Architecture&lt;/h2&gt; 
+&lt;p&gt;Here’s the architecture we arrived at:&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/29/ML-21106-1.png" alt="Amazon EKS logs flow through a CloudWatch subscription filter to an AWS Lambda Strands Agent on Amazon Bedrock, then to Amazon SNS" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 1 — Architecture for automated root-cause analysis&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Our applications on EKS send logs to CloudWatch using FluentBit. A CloudWatch subscription filter watches for error-level patterns (&lt;code&gt;ERROR&lt;/code&gt;, &lt;code&gt;Exception&lt;/code&gt;, &lt;code&gt;FATAL&lt;/code&gt;, &lt;code&gt;CRITICAL&lt;/code&gt;) and invokes a Lambda function when a match occurs. The Lambda runs a Strands Agent powered by Amazon Bedrock that investigates the error, then publishes the analysis to an Amazon Simple Notification Service (Amazon SNS) topic for delivery to our team.&lt;/p&gt; 
+&lt;p&gt;The core of the system is Amazon Bedrock. The foundation model (FM) does the actual reasoning about errors, code, and root causes. We use the Strands Agents SDK on top of Amazon Bedrock to handle tool-use orchestration. We define what tools are available, and the model decides when and how to call them. Given a stack trace, the agent might fetch the relevant source file, realize it needs more context, search for related error handling, and produce a structured analysis, without us hardcoding that investigation path.&lt;/p&gt; 
+&lt;p&gt;Because TReNDS works with health-related research data, data residency and compliance are important considerations. Amazon Bedrock processes requests within our AWS account, so log data and source code stay within the same environment as the rest of our application. The AI analysis doesn’t require sending data to external endpoints. This keeps data flows within boundaries we already manage. This is particularly important for our work, because TReNDS handles health-related research data that might fall under HIPAA requirements. For more on Health Insurance Portability and Accountability Act (HIPAA)-eligible AWS services, see the &lt;a href="https://aws.amazon.com/compliance/hipaa-eligible-services-reference/" target="_blank" rel="noopener"&gt;AWS HIPAA Eligible Services Reference&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;While our setup uses EKS and FluentBit, this pattern works with other applications that send logs to CloudWatch, including ECS, Lambda, EC2, or on-premises workloads using the CloudWatch Agent.&lt;/p&gt; 
+&lt;h2 id="prerequisites"&gt;Prerequisites&lt;/h2&gt; 
+&lt;p&gt;To implement this solution, you need the following:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;An AWS account with access to Amazon Bedrock (specifically Anthropic Claude Sonnet).&lt;/li&gt; 
+ &lt;li&gt;An Amazon EKS cluster with applications sending logs to CloudWatch through FluentBit.&lt;/li&gt; 
+ &lt;li&gt;CloudWatch log groups configured with subscription filters.&lt;/li&gt; 
+ &lt;li&gt;A GitHub repository containing your application source code.&lt;/li&gt; 
+ &lt;li&gt;The Strands Agents SDK installed (available through the official Lambda layer).&lt;/li&gt; 
+ &lt;li&gt;Familiarity with Python.&lt;/li&gt; 
+ &lt;li&gt;An Amazon SNS topic configured for notifications.&lt;/li&gt; 
+ &lt;li&gt;An AWS Lambda function with appropriate IAM permissions to access Amazon Bedrock, CloudWatch Logs, AWS Secrets Manager, and SNS.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2 id="building-tools-with-strands-agents-sdk"&gt;Building tools with Strands Agents SDK&lt;/h2&gt; 
+&lt;p&gt;The agent’s capabilities come from the tools we give it. Of all the tools we built, source code retrieval is the most critical. Stack traces reference file paths and line numbers, but without access to the actual implementation, the agent would be limited to log pattern matching. By giving the agent the ability to read source files, it can trace execution paths and identify the specific code that caused the failure. With the Strands Agents SDK, you define a custom tool by decorating a Python function with &lt;code&gt;@tool&lt;/code&gt;. Here’s the tool we built to fetch source code from our GitHub repositories:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;import base64
+import boto3
+import requests
+from strands import Agent, tool
+
+# Retrieve the GitHub token from AWS Secrets Manager
+secrets_client = boto3.client("secretsmanager")
+github_token = secrets_client.get_secret_value(
+    SecretId="trends/github-token"
+)["SecretString"]
+
+@tool
+def fetch_source_code(file_path: str, repo: str) -&amp;gt; str:
+    """Fetch a source file from a GitHub repository.
+
+    Args:
+        file_path: Path to the file in the repository
+        repo: Repository in 'owner/repo' format
+    """
+    response = requests.get(
+        f"https://api.github.com/repos/{repo}/contents/{file_path}",
+        headers={"Authorization": f"token {github_token}"}
+    )
+    if response.status_code != 200:
+        return f"Could not fetch {file_path} from {repo}: HTTP {response.status_code}"
+    content = base64.b64decode(response.json()["content"])
+    return content.decode("utf-8")&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The docstring and type hints matter. Strands uses them to tell the model what the tool does and what parameters it expects. The model then decides when to call this tool based on what it finds in the error. See the &lt;a href="https://strandsagents.com/latest/documentation/docs/user-guide/concepts/tools/custom-tools/" target="_blank" rel="noopener"&gt;custom tools documentation&lt;/a&gt; for more patterns.&lt;/p&gt; 
+&lt;p&gt;For deployment, we use the Strands Agents &lt;a href="https://strandsagents.com/latest/documentation/docs/user-guide/deploy/deploy_to_aws_lambda/" target="_blank" rel="noopener"&gt;official Lambda layer&lt;/a&gt;. There’s no need to bundle the SDK manually.&lt;/p&gt; 
+&lt;h2 id="how-the-pipeline-works"&gt;How the pipeline works&lt;/h2&gt; 
+&lt;p&gt;When an error occurs in one of our applications, the pipeline moves through four stages automatically. First, CloudWatch detects the error pattern and invokes our Lambda function with the compressed log data. The Lambda decodes the event, and the Strands Agent takes over from there. The agent fetches additional log context from the same container, retrieves relevant source code from GitHub, and reasons through the root cause. Finally, it publishes a structured analysis to SNS for delivery to our team. The following sections walk through each stage in detail.&lt;/p&gt; 
+&lt;h3 id="receiving-and-decoding-cloudwatch-events"&gt;Receiving and decoding CloudWatch events&lt;/h3&gt; 
+&lt;p&gt;CloudWatch subscription filters send base64-encoded, gzip-compressed log events to Lambda. Each invocation contains one or more log events that matched the filter pattern within a short time window. The Lambda handler decodes the information, extracts the log group name and matching events, and passes them to the agent for analysis. See the &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/SubscriptionFilters.html#LambdaFunctionExample" target="_blank" rel="noopener"&gt;CloudWatch Logs subscription filter documentation&lt;/a&gt; for the standard decoding pattern.&lt;/p&gt; 
+&lt;h3 id="fetching-extended-context"&gt;Fetching extended context&lt;/h3&gt; 
+&lt;p&gt;The subscription filter delivers the matching log line, but a single line is rarely enough. The CloudWatch event information includes the logStream, which identifies the specific container that produced the error. We built a second &lt;code&gt;@tool&lt;/code&gt; that fetches surrounding logs from the same stream. This gives the agent the full stacktrace and the request context that led to the failure, without noise from other concurrent requests:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;@tool
+def fetch_log_context(log_group: str, log_stream: str, timestamp: int,
+                      window_seconds: int = 30) -&amp;gt; str:
+    """Fetch log lines from the same log stream surrounding an error.
+
+    Args:
+        log_group: CloudWatch Log Group name
+        log_stream: Log stream that produced the error
+        timestamp: Error event timestamp in milliseconds
+        window_seconds: Time window before and after the error
+    """
+    response = logs_client.filter_log_events(
+        logGroupName=log_group,
+        logStreamNames=[log_stream],
+        startTime=timestamp - (window_seconds * 1000),
+        endTime=timestamp + (window_seconds * 1000),
+    )
+    events = response.get("events", [])
+    if not events:
+        return f"No log events found in {log_stream} within {window_seconds}s of the error."
+    return "\n".join(e["message"] for e in events)&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;By scoping to the log stream, we get a clean, chronological sequence of events from the same container. This includes the request that triggered the error, preceding warnings, and the full exception trace.&lt;/p&gt; 
+&lt;h3 id="agent-analysis"&gt;Agent analysis&lt;/h3&gt; 
+&lt;p&gt;The agent receives the error plus context, then autonomously decides what to investigate. Unlike a rule-based system that follows predefined decision trees, the agent interprets the error message, identifies file paths and class names in the stack trace, and determines which source files to retrieve. If the initial code review reveals that the error originates in a dependency or a shared utility, the agent follows that chain without additional prompting from us. We shaped the output format through the system prompt:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;SYSTEM_PROMPT = """You are a senior Site Reliability Engineer analyzing production errors.
+
+Given an error and its surrounding log context:
+1. Identify the root cause by analyzing the stacktrace
+2. Use fetch_source_code to read the relevant source files
+3. Provide a structured analysis with:
+   - Severity (CRITICAL/HIGH/MEDIUM/LOW)
+   - Root cause explanation
+   - Relevant source code context
+   - Suggested fix
+   - Related areas that may be affected
+"""&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The system prompt defines a structured output format but leaves the investigation strategy to the model. The agent decides which tools to call based on what it finds in the error. A stack trace with clear file paths triggers fetch_source_code calls. An error without a stack trace might lead the agent to search the code base for the error message string. This flexibility is the core value of the agentic approach. We did not need to anticipate every type of error our applications can produce.&lt;/p&gt; 
+&lt;p&gt;The Lambda handler ties everything together:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;agent = Agent(
+    model=BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514"),
+    system_prompt=SYSTEM_PROMPT,
+    tools=[fetch_source_code, search_github_code, fetch_log_context]
+)
+
+result = agent(
+    f"Analyze this error from {log_group}:\n\n{error_message}"
+)&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The handler creates an Agent instance with our chosen Amazon Bedrock model, the system prompt that defines the output format, and the list of available tools. It then passes the error message along with the log group name to the agent, which triggers the autonomous investigation loop.&lt;/p&gt; 
+&lt;h3 id="delivering-results"&gt;Delivering results&lt;/h3&gt; 
+&lt;p&gt;After the agent completes its analysis, we publish the result to an &lt;a href="https://aws.amazon.com/sns/" target="_blank" rel="noopener"&gt;Amazon SNS&lt;/a&gt; topic and fan out to email and Slack. Here’s what a typical notification looks like:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;Error Analysis — order-service
+
+Severity: HIGH
+Error: NullPointerException at OrderService.java:142
+
+Root Cause: The method processPayment() calls paymentGateway.charge()
+which can return null on gateway timeout, but line 142 accesses
+response.getTransactionId() without a null check.
+
+Source Context (OrderService.java:138-148):
+[relevant code shown]
+
+Suggested Fix: Add null check for gateway response before accessing
+fields. Consider retry mechanism for gateway timeouts.
+
+Related: Similar pattern in RefundService.java:89&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The agent autonomously investigated this error without human guidance. It read the relevant source code, identified the null check gap, and even flagged a similar pattern in another file. This demonstrates the value of the agentic approach. Rather than following a fixed checklist, the agent adapts its investigation strategy based on what it discovers at each step, much like an experienced engineer would.&lt;/p&gt; 
+&lt;h2 id="results"&gt;Results&lt;/h2&gt; 
+&lt;p&gt;Since deploying this system, we have seen a clear impact on how our team handles production errors. The most immediate change is speed. Investigation time dropped from 15 to 30 minutes down to under 60 seconds. Because the agent’s analysis includes a suggested fix, our engineers often receive a ready solution in their inbox. They can go straight to implementing the fix instead of spending time on diagnosis.&lt;/p&gt; 
+&lt;p&gt;The cost of running this system is negligible. Each analysis incurs only minimal Amazon Bedrock inference charges, typically involving two to three tool-use rounds per error. For our workload, this is a fraction of what the equivalent engineer time would cost.&lt;/p&gt; 
+&lt;p&gt;Our developers receive the agent’s analysis by email, and the feedback has been consistently positive. The analyses provide a clear starting point for resolution, even for errors the engineer has not encountered before. Engineers can quickly understand what happened and what to do about it without additional investigation.&lt;/p&gt; 
+&lt;p&gt;After a release, the same code path can produce repeated errors. Our deduplication, which uses Amazon DynamoDB, makes sure that only the first occurrence triggers an analysis. The rest are silently filtered, keeping inboxes clean and Amazon Bedrock costs low.&lt;/p&gt; 
+&lt;h2 id="choosing-the-right-amazon-bedrock-model"&gt;Choosing the right Amazon Bedrock model&lt;/h2&gt; 
+&lt;p&gt;Amazon Bedrock gives us access to a range of foundation models through a single API. We tested several to find the best fit for our error analysis use case, evaluating reasoning quality (understanding code and errors), tool use reliability (calling our GitHub and CloudWatch tools), latency, and cost per analysis.&lt;/p&gt; 
+&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Model&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Best For&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Tool Use&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Latency&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Relative Cost&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Anthropic Claude Sonnet&lt;/td&gt; 
+   &lt;td&gt;Complex multi-file reasoning, subtle code issues&lt;/td&gt; 
+   &lt;td&gt;Reliable&lt;/td&gt; 
+   &lt;td&gt;Fast&lt;/td&gt; 
+   &lt;td&gt;Medium&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Anthropic Claude Haiku&lt;/td&gt; 
+   &lt;td&gt;Straightforward errors, high-volume triage&lt;/td&gt; 
+   &lt;td&gt;Good&lt;/td&gt; 
+   &lt;td&gt;Fastest&lt;/td&gt; 
+   &lt;td&gt;Low&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Anthropic Claude Opus&lt;/td&gt; 
+   &lt;td&gt;Deep cross-service investigations&lt;/td&gt; 
+   &lt;td&gt;Reliable&lt;/td&gt; 
+   &lt;td&gt;Moderate&lt;/td&gt; 
+   &lt;td&gt;High&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Amazon Nova Pro&lt;/td&gt; 
+   &lt;td&gt;General-purpose analysis, cost-effective&lt;/td&gt; 
+   &lt;td&gt;Good&lt;/td&gt; 
+   &lt;td&gt;Fast&lt;/td&gt; 
+   &lt;td&gt;Low&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;Amazon Nova Lite&lt;/td&gt; 
+   &lt;td&gt;Simple error classification, budget workloads&lt;/td&gt; 
+   &lt;td&gt;Good&lt;/td&gt; 
+   &lt;td&gt;Fastest&lt;/td&gt; 
+   &lt;td&gt;Lowest&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;p&gt;We selected Claude Sonnet as our primary model. In our testing, it consistently produced the most accurate root-cause analyses. It can trace through multi-file call chains, identify subtle issues like missing null checks, and reason about concurrency problems. For teams with different cost or latency requirements, the other models in the table are strong alternatives for simpler error patterns.&lt;/p&gt; 
+&lt;p&gt;Switching models with Strands is a one-line change, which made our evaluation straightforward:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;# We tested multiple models by changing this single line.
+# Check Amazon Bedrock documentation for the latest available model IDs.
+model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Model IDs are updated regularly. See the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html" target="_blank" rel="noopener"&gt;Amazon Bedrock supported models documentation&lt;/a&gt; for current model IDs.&lt;/p&gt; 
+&lt;h2 id="next-steps"&gt;Next steps&lt;/h2&gt; 
+&lt;p&gt;We are exploring several extensions to this system. The first priority is connecting Retrieval Augmented Generation (RAG) with our internal runbooks.&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;By integrating &lt;a href="https://aws.amazon.com/bedrock/knowledge-bases/" target="_blank" rel="noopener"&gt;Amazon Bedrock Knowledge Bases&lt;/a&gt; with our internal runbooks and past incident reports, the agent will be able to reference TReNDS-specific procedures in its analysis.&lt;/li&gt; 
+ &lt;li&gt;We also plan to implement a tiered model strategy. Simple, known error patterns would route to Haiku for fast, low-cost triage, while complex or novel errors would escalate to Sonnet for deep analysis. This would optimize both cost and response time across our error volume.&lt;/li&gt; 
+ &lt;li&gt;Finally, we are working toward automated GitHub issue and pull request creation. When the agent identifies a potential fix, it would automatically create a GitHub issue with the analysis and open a pull request with the suggested code change, reducing the manual steps between diagnosis and resolution.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;As we scale this further, we’re also looking at &lt;a href="https://aws.amazon.com/bedrock/agentcore/" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore&lt;/a&gt; for managed agent runtime, observability, and identity management. See the &lt;a href="https://strandsagents.com/latest/documentation/docs/examples/" target="_blank" rel="noopener"&gt;Strands Agents examples&lt;/a&gt; for multi-agent and deployment patterns.&lt;/p&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;We built this system at TReNDS because we wanted every error in our application to get an instant, structured investigation instead of only an alert. Amazon Bedrock and the Strands Agents SDK made it straightforward to implement. We defined a few tools and wrote a system prompt. Now, we have an agent that reasons through production errors the same way an experienced engineer would. It delivers results in seconds.&lt;/p&gt; 
+&lt;p&gt;Adding a new capability means writing another &lt;code&gt;@tool&lt;/code&gt; function and a few lines of Python. Whether the need is a Jira integration, a GitHub PR with a suggested fix, or a tool that connects to a running pod for deeper investigation, the pattern is the same. The foundation model handles the reasoning and orchestration, and we connect it to the systems it needs.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/29/ML-21106-2.jpg" alt="Vitaly Omelchenko" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Vitaly Omelchenko&lt;/h3&gt; 
+  &lt;p&gt;Vitaly is a Full Stack Developer and DevOps Engineer at the Center for Translational Research in Neuroimaging and Data Science (TReNDS), where he designs and operates the cloud and AI infrastructure supporting large-scale neuroimaging and brain health research. He has been building production systems on AWS since 2019, and his current work centers on agentic AI – applying foundation models on Amazon Bedrock to automate software operations and accelerate research computing.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/29/ML-21106-3.png" alt="Chris Riddle" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Chris Riddle&lt;/h3&gt; 
+  &lt;p&gt;Chris is a senior solutions architect at Amazon Web Services (AWS) and supports R1 university customers. With 20-plus years of experience in technology and a decade in higher education, Chris helps researchers use AWS for their artificial intelligence/machine learning (AI/ML) and high performance computing (HPC) workloads.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/29/ML-21106-4.png" alt="Devin Hicks" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Devin Hicks&lt;/h3&gt; 
+  &lt;p&gt;Devin is a Solutions Architect at Amazon Web Services (AWS) supporting the University System of Georgia’s member institutions. With nearly a decade of experience in technology, Devin guides higher education customers towards scalable, secure, and cost-effective cloud solutions.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/29/ML-21106-5.png" alt="Vadim Omeltchenko" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Vadim Omeltchenko&lt;/h3&gt; 
+  &lt;p&gt;Vadim is a Sr.&amp;nbsp;Amazon Bedrock Go-to-Market Solutions Architect who is passionate about helping AWS customers innovate in the cloud.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Determining playoff clinching scenarios in the NHL using constraint programming</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/determining-playoff-clinching-scenarios-in-the-nhl-using-constraint-programming/</link>
+		
+		<dc:creator><![CDATA[Gili Rosenberg]]></dc:creator>
+		<pubDate>Fri, 07 Aug 2026 16:21:00 +0000</pubDate>
+				<category><![CDATA[Advanced (300)]]></category>
+		<category><![CDATA[Technical How-to]]></category>
+		<guid isPermaLink="false">7ea54833b1fa7768596b6ac5cedad2a18b1ed85b</guid>
+
+					<description>The AWS Generative AI Innovation Center built an automated system that uses constraint programming and custom tree search to determine, with mathematical certainty, when and how an NHL team clinches a playoff spot. The approach was validated against four full NHL seasons of officially published results.</description>
+										<content:encoded>&lt;p&gt;As the National Hockey League (NHL) regular season enters its final stretch each spring, one question dominates the minds of hockey fans: has my team clinched the playoffs? The answer is often surprisingly hard to discern. With 32 teams, complex tie-breaking rules, and hundreds of remaining games, determining whether a team is mathematically guaranteed a playoff spot is a serious combinatorial challenge.&lt;/p&gt; 
+&lt;p&gt;In this post, we describe how the &lt;a href="https://aws.amazon.com/ai/generative-ai/innovation-center/" target="_blank" rel="noopener"&gt;AWS Generative AI Innovation Center&lt;/a&gt; created an automated system that determines NHL playoff clinching scenarios. Our approach uses constraint programming (CP) and custom tree search to produce these scenarios, and we validated the results against those officially published by the NHL. For more details, see our &lt;a href="https://arxiv.org/abs/2605.13142" target="_blank" rel="noopener"&gt;scientific paper&lt;/a&gt;.&lt;/p&gt; 
+&lt;h2 id="background-what-it-means-to-clinch-the-playoffs"&gt;Background: what it means to clinch the playoffs&lt;/h2&gt; 
+&lt;p&gt;A team has &lt;em&gt;clinched the playoffs&lt;/em&gt; (or simply “clinched”) if it is guaranteed to make the playoffs regardless of the outcomes of any remaining games. As the season progresses, usually starting in March, the NHL publishes daily clinching scenarios for teams that could clinch based on that evening’s games. These scenarios take the form of statements like:&lt;/p&gt; 
+&lt;blockquote&gt;
+ &lt;p&gt;The Minnesota Wild will clinch the playoffs if any of the following holds: they get at least one point against the Anaheim Ducks, the St.&amp;nbsp;Louis Blues lose to the Utah Hockey Club in any fashion, or the Calgary Flames lose to the Vegas Golden Knights in any fashion.&lt;/p&gt;
+&lt;/blockquote&gt; 
+&lt;p&gt;Producing such scenarios manually has become increasingly time-consuming and error-prone as the league’s tie-breaking rules have grown more elaborate. Our work contributes an automated, mathematically rigorous alternative that is efficient for daily use.&lt;/p&gt; 
+&lt;h2 id="the-nhl-playoff-structure"&gt;The NHL playoff structure&lt;/h2&gt; 
+&lt;p&gt;The NHL’s 32 teams are divided into two conferences (Eastern and Western), each split into two divisions. Sixteen teams qualify for the playoffs: in each conference, the top three teams from each division qualify directly, and two additional “wild card” teams fill the remaining spots.&lt;/p&gt; 
+&lt;p&gt;Each game must produce a winner. If a game is tied after regulation, it goes to overtime, and then to a shootout if necessary. Games therefore have six possible outcomes from a given team’s perspective: regulation win (RW), overtime win (OTW), shootout win (SOW), shootout loss (SOL), overtime loss (OTL), and regulation loss (RL). Wins award 2 points, overtime/shootout losses award 1 point, and regulation losses award 0 points.&lt;/p&gt; 
+&lt;p&gt;When teams are tied on points, the NHL applies a cascade of seven tie-breakers:&lt;/p&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;Point percentage (that is, fewer games played).&lt;/li&gt; 
+ &lt;li&gt;Regulation wins.&lt;/li&gt; 
+ &lt;li&gt;Regulation wins plus Overtime wins.&lt;/li&gt; 
+ &lt;li&gt;Total wins.&lt;/li&gt; 
+ &lt;li&gt;Head-to-head points.&lt;/li&gt; 
+ &lt;li&gt;Goal differential, including shootout-deciding goals.&lt;/li&gt; 
+ &lt;li&gt;Goals scored, including shootout-deciding goals.&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;p&gt;These complex tie-breakers are a major reason why determining playoff clinch scenarios is computationally challenging.&lt;/p&gt; 
+&lt;h2 id="our-approach"&gt;Our approach&lt;/h2&gt; 
+&lt;p&gt;Our solution has two key components: the 0-day solver and the n-day lookahead solver.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;0-day solver:&lt;/strong&gt; The foundation of our approach is a constraint programming (CP) model that answers the question: &lt;em&gt;given the current standings, has a team already clinched the playoffs?&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;We formulate this as a feasibility problem: can we find outcomes to all remaining games such that the team in question misses the playoffs? If no such scenario exists, the team has clinched. This model is solved using the CP-SAT solver from Google OR-Tools, and accounts for the full complexity of the NHL’s tie-breaking rules.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;n-day lookahead:&lt;/strong&gt; With the 0-day solver in hand, we then ask: &lt;em&gt;which outcomes of the games of the next n days would cause a given team to clinch?&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;We answer this with a custom tree search, where each layer represents a game that occurs in the next n days, and each node represents a specific outcome of that game (see Figure 1). The tree search calls the 0-day solver at each node to determine if the accumulated outcomes are sufficient for clinching. Preprocessing, pruning strategies, and node-ordering heuristics keep the search tractable.&lt;/p&gt; 
+&lt;p&gt;For example, in Figure 1, the 0-day solver deduces that a team clinches the playoffs with a shootout win (SOW) in their next game, denoted with an ‘X’. That team then also clinches for any stronger result of that game (OTW or RW), as well as for any result of any other relevant game in the next n days. Green shading indicates nodes for which a clinch is proven without explicit evaluation.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-1.jpg" alt="Tree search diagram where a shootout win and stronger results for team k are shaded green as proven playoff clinches" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 1: Tree search for the n-day lookahead, where green nodes are proven clinches without explicit evaluation&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2 id="results"&gt;Results&lt;/h2&gt; 
+&lt;p&gt;We validated the clinch scenarios produced by our approach on four NHL regular seasons (2021–22 through 2024–25) using data from the NHL’s public API. All scenarios produced by our system matched exactly with those published by the NHL.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-2.jpg" alt="Box plot of elapsed solve time per date in seconds on a log scale across the 2021-2022 through 2024-2025 NHL seasons" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 2: Elapsed solve time per date across four NHL seasons&lt;/p&gt;
+&lt;/div&gt; 
+&lt;p&gt;Determining 1-day clinch scenarios required a median runtime on the order of minutes, offering significant speedups over manual approaches (see Figure 2). This efficiency comes from pruning: with the right pre-processing strategies, node ordering heuristics, and inference algorithms, most of the search tree does not need to be explored. In Figure 3, we demonstrate pruning efficiency values near 100% for most instances.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-3.jpg" alt="Box plot of pruning efficiency from 0 to 1 across the 2021-2022 through 2024-2025 NHL seasons, with medians near 1.0" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 3: Pruning efficiency across four NHL seasons&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h2 id="practical-value"&gt;Practical value&lt;/h2&gt; 
+&lt;p&gt;These methods have direct practical applications:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;For the NHL and media:&lt;/strong&gt; Automated, provably correct clinching scenarios that can be generated daily without manual effort, yielding significant time savings.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;For fans:&lt;/strong&gt; Richer engagement as the postseason approaches, with scenarios that explain exactly what needs to happen for their team to clinch the playoffs.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;For sports analytics:&lt;/strong&gt; A rigorous framework that can be extended to other milestones (division titles, elimination, specific seeds) and potentially adapted to other leagues.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;This work is part of the broader set of &lt;a href="https://aws.amazon.com/blogs/machine-learning/better-decisions-at-scale-how-mathematical-optimization-delivers-where-intuition-fails/" target="_blank" rel="noopener"&gt;mathematical optimization solutions&lt;/a&gt; delivered by AWS to customers across industries. From routing and scheduling to sports analytics, these techniques quickly deliver definitive answers where manual approaches would take significant time, effort, and specialized expertise.&lt;/p&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;Determining NHL playoff clinching scenarios is a computationally hard problem. The league’s layered qualification structure and tie-breaking rules create a combinatorial challenge that is difficult to solve manually. Our approach combines constraint programming with custom tree search to crack it efficiently and correctly, validated against four seasons of real NHL data.&lt;/p&gt; 
+&lt;p&gt;The framework is extensible: future work could extend the approach to other clinching and elimination scenarios within the NHL, or adapt it to other sports leagues with different structures and rules.&lt;/p&gt; 
+&lt;p&gt;If you have complex combinatorial problems and want to understand how optimization techniques could apply to your use case, reach out to your account manager to begin exploring with the &lt;a href="https://aws.amazon.com/ai/generative-ai/innovation-center/" target="_blank" rel="noopener"&gt;AWS Generative AI Innovation Center&lt;/a&gt;.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-4.png" alt="Gili Rosenberg" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Gili Rosenberg&lt;/h3&gt; 
+  &lt;p&gt;Gili is a Sr.&amp;nbsp;Applied Scientist at the Amazon Advanced Solutions Lab. Prior to joining AWS, Gili co-led the optimization team at 1QBit where he worked as a client-facing senior researcher for over 8 years. Gili has worked on many customer projects, predominantly in finance, materials, and automotives.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-5.jpeg" alt="Kyle Booth" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Kyle Booth&lt;/h3&gt; 
+  &lt;p&gt;Kyle is a Senior Applied Scientist at the Amazon Advanced Solutions Lab. He received his PhD in Operations Research from the University of Toronto. His research focuses on constraint programming and integer programming approaches to combinatorial optimization problems.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-6.jpeg" alt="Kyle Brubaker" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Kyle Brubaker&lt;/h3&gt; 
+  &lt;p&gt;Kyle was a Principal Applied Scientist at the Amazon Advanced Solutions Lab. He received an MSc in Biomedical Engineering from NYU, focusing on brain machine interfaces. He has an industry background in machine learning and ML engineering. (Affiliated with Amazon at time of contributions.)&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-7.jpeg" alt="Ruben Andrist" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Ruben Andrist&lt;/h3&gt; 
+  &lt;p&gt;Ruben is a Principal Applied Scientist in the Amazon Advanced Solutions Lab. He received a PhD in theoretical physics from ETH Zurich working on topological quantum error correction. Today his research is focused on quantum computing and heuristic optimization methods.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
 		<title>Securing AI agents with temporal policies in Amazon Bedrock AgentCore</title>
 		<link>https://aws.amazon.com/blogs/machine-learning/securing-ai-agents-with-temporal-policies-in-amazon-bedrock-agentcore/</link>
 		
@@ -3861,534 +4481,6 @@ if status == "COMPLETED":
 		
 		
 			</item>
-		<item>
-		<title>Optimizing production agents with Amazon Bedrock AgentCore Observability</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/optimizing-production-agents-with-amazon-bedrock-agentcore-observability/</link>
-		
-		<dc:creator><![CDATA[Joshua Lacy]]></dc:creator>
-		<pubDate>Fri, 31 Jul 2026 15:33:11 +0000</pubDate>
-				<category><![CDATA[Advanced (300)]]></category>
-		<category><![CDATA[Amazon Bedrock AgentCore]]></category>
-		<category><![CDATA[Technical How-to]]></category>
-		<guid isPermaLink="false">64799e5f6577ed834ae5241ca5bcee136c4fc073</guid>
-
-					<description>As your AI agents move from prototype to production, the challenge shifts from getting them to work to keeping them fast and efficient. Learn how to use Amazon Bedrock AgentCore Observability and Amazon CloudWatch to find performance bottlenecks and diagnose memory issues in long-running agent sessions.</description>
-										<content:encoded>&lt;p&gt;As your AI agents move from prototype to production, the challenges shift from getting them to work to keeping them fast and efficient. In &lt;a href="https://aws.amazon.com/blogs/machine-learning/debugging-production-agents-with-amazon-bedrock-agentcore-observability/" target="_blank" rel="noopener"&gt;Part 1&lt;/a&gt; of this series, we walked through debugging two common agent failures: infinite loops and tool invocation errors. Those scenarios dealt with agents that were broken. In this post, we tackle a different challenge: agents that work correctly but perform poorly. Slow response times and unbounded memory growth are the most common operational issues that surface after you resolve the initial debugging problems. They don’t trigger error alerts, but they erode user trust and increase costs over time.&lt;/p&gt; 
-&lt;p&gt;Using &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/observability.html" target="_blank" rel="noopener"&gt;AgentCore Observability&lt;/a&gt;, a capability of Amazon Bedrock AgentCore, and &lt;a href="https://aws.amazon.com/cloudwatch/" target="_blank" rel="noopener"&gt;Amazon CloudWatch&lt;/a&gt;, you will learn how to identify performance bottlenecks across your agent’s execution path and diagnose memory issues in long-running sessions. You will also implement monitoring practices that catch degradation before users notice it. For additional information and best practices, review &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations.html" target="_blank" rel="noopener"&gt;AgentCore Evaluations&lt;/a&gt;, a capability of Amazon Bedrock AgentCore, and &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/insights.html" target="_blank" rel="noopener"&gt;AgentCore Insights&lt;/a&gt;.&lt;/p&gt; 
-&lt;h1&gt;Prerequisites&lt;/h1&gt; 
-&lt;p&gt;You need an AWS account with Amazon Bedrock AgentCore access, CloudWatch Transaction Search enabled, and a deployed agent. See Part 1 for full setup details.&lt;/p&gt; 
-&lt;h2 id="scenario-3-performance-bottlenecks"&gt;Scenario 3: Performance bottlenecks&lt;/h2&gt; 
-&lt;p&gt;Agents experience performance bottlenecks when they work correctly but respond too slowly. You expect sub-second responses but experience multi-second delays. Agents complete tasks successfully, but the latency makes them impractical for interactive use cases. This scenario is particularly challenging because &lt;em&gt;slow&lt;/em&gt; is subjective. What’s acceptable for a batch processing agent is unacceptable for a customer service chatbot. You must establish performance budgets for your specific use case, then systematically identify which components violate those budgets.&lt;/p&gt; 
-&lt;h3 id="symptoms-to-watch-for"&gt;Symptoms to watch for&lt;/h3&gt; 
-&lt;p&gt;Performance degradation often manifests gradually. Agents might start with acceptable 2-second response times, but as you add features, integrate more tools, or accumulate more memory, latency creeps to 5 seconds, then 10, then becomes unusable. P95 response times exceed your thresholds, users abandon sessions, but error rates stay low. The agent works correctly but responds too slowly.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-1.png" alt="CloudWatch session view showing three agent invocations with high 7.5-8.2 second span latency" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Figure 1 — Session details showing multiple traces with consistently high latency. The three invocations took 7.5-8.2 seconds (average span latency), demonstrating a systemic performance bottleneck rather than occasional slowness. This pattern indicates the agent’s architecture needs optimization.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;To find bottlenecks, start by identifying high-latency requests. Query CloudWatch for agent invocations that exceed your performance budget:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, RequestId, Latency
-| filter Operation like /InvokeAgent/
-| filter Latency &amp;gt; 3000
-| sort Latency desc
-| limit 50&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;This query returns agent invocations that took longer than 3 seconds (adjust the threshold based on your requirements), sorted by latency. Pick a representative high-latency request and note its &lt;code&gt;RequestId&lt;/code&gt;.&lt;/p&gt; 
-&lt;p&gt;Next, analyze the request timeline to understand where time is spent:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, Operation, Duration, SpanName
-| filter RequestId = "&amp;lt;RequestId&amp;gt;"
-| sort @timestamp asc&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;The query shows you the sequence of operations within the request and how long each took. Look for operations that consume disproportionate time. Common culprits include memory retrieval operations, tool invocations, token generation, and sequential operations that could run in parallel.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-2.png" alt="OpenTelemetry trace timeline with 17 spans across three sequential tool-execution cycles" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Figure 2 — OpenTelemetry trace timeline showing 17 spans across three sequential execute_event_loop_cycle operations. The tools (customer_lookup, order_history) execute one after another rather than in parallel, with each cycle waiting for the previous one to complete. This sequential pattern compounds latency across each tool invocation.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Check memory retrieval latency specifically:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, MemoryRetrievalLatency, MemoryNamespace
-| filter RequestId = "&amp;lt;RequestId&amp;gt;"
-| stats avg(MemoryRetrievalLatency), max(MemoryRetrievalLatency) by MemoryNamespace&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Memory retrieval should complete in under 200 milliseconds, representing the point where users begin perceiving noticeable delays in interactive applications. Higher latency suggests inefficient memory organization.&lt;/p&gt; 
-&lt;p&gt;Examine tool invocation latency to identify slow integrations:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, ToolName, ToolLatency
-| filter RequestId = "&amp;lt;RequestId&amp;gt;"
-| sort ToolLatency desc&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;The query identifies which tools contribute most to overall latency. A single slow tool can bottleneck the entire agent workflow.&lt;/p&gt; 
-&lt;h3 id="root-cause-analysis"&gt;Root cause analysis&lt;/h3&gt; 
-&lt;p&gt;Performance bottlenecks typically stem from three root causes. &lt;em&gt;Slow tool execution&lt;/em&gt; occurs when external tools take seconds to respond because of poor optimization, overload, or network issues. Latencies compound with sequential calls, so a 2-second tool called three times becomes a 6-second bottleneck. &lt;em&gt;Excessive token generation&lt;/em&gt; is a factor because foundation models (FMs) produce tokens sequentially, meaning a 500-token response takes 5x longer than a 100-token one, impacting both latency and cost. Finally, &lt;em&gt;sequential processing&lt;/em&gt;, performing independent operations one at a time instead of in parallel, increases both cost and compute times.&lt;/p&gt; 
-&lt;h3 id="the-fix"&gt;The fix&lt;/h3&gt; 
-&lt;p&gt;For slow tool execution, implement caching, connection pooling, and proper database indexing to reduce response times. Set timeout limits and consider faster tool alternatives. If a tool consistently lags, profile it independently. The issue might be network latency, cold starts, or resource contention rather than the tool’s logic itself.&lt;/p&gt; 
-&lt;p&gt;For memory retrieval, replace single large namespaces with topic-specific partitions, such as preferences, history, and domain knowledge, to reduce search space. Summarize old conversations into compact entries rather than storing them verbatim, and set size limits per namespace, such as 100 preferences, 50 recent messages, or 500 domain facts.&lt;/p&gt; 
-&lt;p&gt;For token generation, optimize prompts to encourage brief, direct answers of 2–3 sentences unless more detail is requested. Add explicit length constraints and monitor token usage with alerts for unexpectedly long responses.&lt;/p&gt; 
-&lt;p&gt;For sequential processing, run independent tool calls in parallel. Sequential calls totaling 4.5s (2s + 1.5s + 1s) drop to only 2s when parallelized, often cutting latency by 50 percent or more with minimal effort. To verify your optimizations, re-run the latency query from the identifying bottlenecks section. Confirm that P95 response times now fall within your performance budget and that the trace timeline shows parallel execution where expected.&lt;/p&gt; 
-&lt;h2 id="scenario-4-memory-issues-in-long-running-sessions"&gt;Scenario 4: Memory issues in long-running sessions&lt;/h2&gt; 
-&lt;p&gt;Agents experience memory issues in long-running sessions when they maintain sessions where memory usage grows unbounded. Agents accumulate context, and eventually, agents hit token limits, lose important context, or exhaust available memory. Sessions fail unexpectedly, and you lose conversation state. This scenario is particularly problematic for agents that support extended workflows, such as customer service sessions, research assistants, or monitoring agents. Without proper memory management, these use cases become impractical.&lt;/p&gt; 
-&lt;h3 id="symptoms-to-watch-for-1"&gt;Symptoms to watch for&lt;/h3&gt; 
-&lt;p&gt;When abnormally long agent sessions exist, token usage grows linearly with session duration. Memory retrieval latency increases over time as memory stores grow. Sessions terminate unexpectedly with out-of-memory errors or context window exceeded errors.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-3.png" alt="Session details showing 6 traces and 15.7K tokens, with token usage rising each invocation" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Figure 3 — Session details for the memorygrowth_Agent showing 6 traces, 15.7K total tokens consumed, and an average trace latency of 3,757 ms within a single session. Token usage grows with each successive invocation, demonstrating unbounded context accumulation. In production sessions spanning hours, this pattern leads to context window exhaustion and unexpected session failures.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;To identify long-running sessions with high memory usage:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, SessionId, SessionDuration, MemorySize, TokenUsage
-| filter SessionDuration &amp;gt; 3600
-| sort MemorySize desc
-| limit 20&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;The query returns sessions lasting longer than one hour (3600 seconds), sorted by memory size. Pick a session with unusually high memory usage and note its &lt;code&gt;SessionId&lt;/code&gt;.&lt;/p&gt; 
-&lt;p&gt;Examine memory extraction patterns to verify consolidation is occurring:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, MemoryExtractionStatus, MemoryExtractionLatency, MemoriesExtracted
-| filter SessionId = "&amp;lt;SessionId&amp;gt;"
-| sort @timestamp asc&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-4.png" alt="CloudWatch Logs Insights showing 209 memory log entries spiking around 18:20 without consolidation" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Figure 4 — CloudWatch Logs Insights showing 209 memory-related log entries concentrated around 18:20. The spike in memory operations indicates the agent storing information without consolidation. Each invocation adds new memory entries (through add_conversation_note and add_user_context tools) without pruning or summarizing old data, demonstrating the unbounded growth pattern.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Memory extraction should occur regularly throughout the session. If you see gaps where no extraction happens for extended periods, the agent isn’t consolidating memories properly.&lt;/p&gt; 
-&lt;p&gt;Check for memory extraction failures:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, ErrorMessage, MemoryExtractionStatus
-| filter SessionId = "&amp;lt;SessionId&amp;gt;"
-| filter MemoryExtractionStatus = "Failed"&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Failed memory extraction stops agents from consolidating context, causing unbounded growth. Common failure reasons include token limits exceeded during summarization, invalid memory formats that can’t be processed, network timeouts when writing to memory storage, and permission errors that block memory updates.&lt;/p&gt; 
-&lt;p&gt;Analyze memory namespace organization:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, MemoryNamespace, MemoryCount, MemorySize
-| filter SessionId = "&amp;lt;SessionId&amp;gt;"
-| stats sum(MemoryCount) as TotalMemories, sum(MemorySize) as TotalSize by MemoryNamespace
-| sort TotalSize desc&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Memories are distributed across namespaces. Poor namespace organization can lead to inefficient memory retrieval and consolidation. If you see a single namespace containing thousands of memories, that’s a red flag indicating your agent needs &lt;a href="https://aws.amazon.com/blogs/machine-learning/organizing-agents-memory-at-scale-namespace-design-patterns-in-agentcore-memory/" target="_blank" rel="noopener"&gt;better memory organization&lt;/a&gt;.&lt;/p&gt; 
-&lt;h3 id="root-cause-analysis-1"&gt;Root cause analysis&lt;/h3&gt; 
-&lt;p&gt;Memory issues typically stem from misconfigured settings, filter on inbuilt datetime metadata of the record. For a deeper understanding of how AgentCore memory works, see &lt;a href="https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-memory-building-context-aware-agents/" target="_blank" rel="noopener"&gt;AgentCore memory&lt;/a&gt;.&lt;/p&gt; 
-&lt;h3 id="the-fix-1"&gt;The fix&lt;/h3&gt; 
-&lt;p&gt;To resolve memory issues, verify your memory strategies include a consolidation configuration so AgentCore memory merges and summarizes records over time rather than accumulating them indefinitely. Organize records using namespace templates in your strategy definitions to make sure retrieval stays scoped to relevant context. Set &lt;code&gt;eventExpiryDuration&lt;/code&gt; to control how long raw events persist (between 7–365 days). For implementation details, see &lt;a href="https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-memory-building-context-aware-agents/" target="_blank" rel="noopener"&gt;AgentCore memory implementation&lt;/a&gt;.&lt;/p&gt; 
-&lt;h1&gt;Production best practices&lt;/h1&gt; 
-&lt;p&gt;Having covered the four failure scenarios across both parts, we now turn to production best practices that stop these issues before they occur. The troubleshooting workflows we’ve covered help you respond when things go wrong, but a well-architected observability strategy helps you proactively catch issues. The integration of AgentCore with CloudWatch provides the foundation for this proactive approach, giving you real-time visibility into agent health and performance.&lt;/p&gt; 
-&lt;p&gt;Turn on comprehensive instrumentation for production agents, memory systems, and gateways. Configure CloudWatch logs, CloudWatch metrics, and OpenTelemetry traces.&lt;/p&gt; 
-&lt;p&gt;Configure CloudWatch alarms for critical metrics. Set thresholds for error rates (5 percent), 95th percentile (P95) latency (3 seconds), and token usage per session. Don’t wait for users to report problems. Let CloudWatch alert you when metrics exceed acceptable thresholds.&lt;/p&gt; 
-&lt;p&gt;Create operational dashboards. Build a primary dashboard showing total invocations (last 24 hours), error rate (current compared to baseline), P50/P95/P99 latency, token usage trends, and active sessions count. Create per-agent dashboards showing agent-specific invocation patterns, tool usage breakdown, memory consumption trends, error types distribution, and cost per session. Review these dashboards daily to spot trends before they become problems.&lt;/p&gt; 
-&lt;p&gt;Invest in observability infrastructure before you need it. Build monitoring into your development process from day one. Share dashboards with product managers and stakeholders so everyone understands agent performance. When someone diagnoses a tricky production issue, share the approach with the team to build institutional knowledge about common failure patterns.&lt;/p&gt; 
-&lt;p&gt;To monitor tool accuracy at scale, you can use Amazon Bedrock &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluators.html" target="_blank" rel="noopener"&gt;AgentCore Evaluators&lt;/a&gt; to continuously and automatically assess agent behavior. Instead of manually reviewing traces after failures occur, Evaluators inspect agent sessions in real time, scoring them against predefined quality criteria. Amazon Bedrock &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/insights.html" target="_blank" rel="noopener"&gt;AgentCore Insights (preview)&lt;/a&gt; builds off Evaluators and provides triage analysis. Insights can provide failure analysis, user intent extraction, and execution summary.&lt;/p&gt; 
-&lt;h1&gt;Cleaning up&lt;/h1&gt; 
-&lt;p&gt;After testing the optimization techniques in this post, clean up resources to avoid unnecessary charges.&lt;/p&gt; 
-&lt;p&gt;For CloudWatch resources, delete test CloudWatch dashboards created during debugging, remove CloudWatch alarms set up for testing purposes, and consider archiving or deleting old CloudWatch log groups if no longer needed.&lt;/p&gt; 
-&lt;p&gt;For AgentCore resources, if you created test agents specifically for this tutorial, delete them through the &lt;a href="https://console.aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;AgentCore console&lt;/a&gt;. Remove any test memory namespaces created during memory optimization testing. Delete any temporary tool integrations used for performance testing.&lt;/p&gt; 
-&lt;p&gt;For cost optimization, review your Amazon CloudWatch Logs retention settings and adjust based on your compliance requirements. Consider using CloudWatch Logs data protection to cut storage costs for older logs.&lt;/p&gt; 
-&lt;p&gt;To delete CloudWatch log groups:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-bash"&gt;aws logs delete-log-group --log-group-name /aws/bedrock-agentcore/your-agent-name&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;To remove CloudWatch alarms:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-bash"&gt;aws cloudwatch delete-alarms --alarm-names your-alarm-name&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;h1&gt;Conclusion&lt;/h1&gt; 
-&lt;p&gt;Performance bottlenecks and memory issues represent the most common operational challenges for production agents beyond the debugging scenarios covered in Part 1. With systematic diagnosis using CloudWatch traces and metrics, you can identify whether latency stems from slow tools, inefficient memory retrieval, excessive token generation, or sequential processing. For long-running sessions, monitoring memory growth patterns and implementing consolidation strategies keeps agents stable over extended interactions.&lt;/p&gt; 
-&lt;h3 id="next-steps"&gt;Next steps&lt;/h3&gt; 
-&lt;p&gt;Ready to put these techniques into practice? Start by turning on AgentCore Observability for your production agents if you haven’t already. This one-time setup provides the foundation for everything we’ve covered. Set up CloudWatch alarms for critical metrics. Create troubleshooting runbooks for your specific agents and workflows, documenting the queries you run, the thresholds that indicate problems, and the fixes you implement.&lt;/p&gt; 
-&lt;p&gt;Practice debugging in non-production environments. Deliberately introduce failures and practice diagnosing them using the workflows we’ve covered. Build muscle memory for troubleshooting before you need it in production. Share this knowledge with your team to help confirm everyone who operates your agents understands these debugging techniques and knows how to use the observability features of AgentCore.&lt;/p&gt; 
-&lt;p&gt;Production agents often fail for preventable reasons. With the right observability tools, systematic troubleshooting approaches, and a culture that treats every issue as a chance to improve, you can catch problems early, resolve them quickly, and build agents that earn lasting trust.&lt;/p&gt; 
-&lt;h3 id="learn-more"&gt;Learn more&lt;/h3&gt; 
-&lt;p&gt;For more information about AgentCore and observability features, visit the &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/observability-configure.html" target="_blank" rel="noopener"&gt;AgentCore documentation&lt;/a&gt;. To get started with AgentCore, visit the &lt;a href="https://console.aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;AgentCore console&lt;/a&gt;. For additional CloudWatch monitoring best practices, see the &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/" target="_blank" rel="noopener"&gt;CloudWatch User Guide&lt;/a&gt;.&lt;/p&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-5.jpeg" alt="Joshua Lacy" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Joshua Lacy&lt;/h3&gt; 
-  &lt;p&gt;Joshua is a Solutions Architect at AWS in the Commercial Sector, supporting ISV customers. He has a passion for helping builders integrate AI into production applications and designing architectures that scale securely across multi-tenant environments. He specializes in agentic AI, Amazon Bedrock AgentCore, and generative AI application development.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-6.png" alt="Jenny Shen" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Jenny Shen&lt;/h3&gt; 
-  &lt;p&gt;Jenny is a Solutions Architect at AWS in the Telecom, Media and Entertainment space. She has a passion for helping customers build production-ready systems and finding ways to simplify how teams operate their cloud workloads. She specializes in CloudOps and AI/ML transformations.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Deploying Kimi K3 on Amazon SageMaker HyperPod and Amazon EKS</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/deploying-kimi-k3-on-amazon-sagemaker-hyperpod-and-amazon-eks/</link>
-					
-		
-		<dc:creator><![CDATA[Vivek Gangasani]]></dc:creator>
-		<pubDate>Thu, 30 Jul 2026 17:22:32 +0000</pubDate>
-				<category><![CDATA[Amazon Elastic Kubernetes Service]]></category>
-		<category><![CDATA[Amazon SageMaker Lakehouse]]></category>
-		<category><![CDATA[Announcements]]></category>
-		<guid isPermaLink="false">31e07eff62e76a2062e28f358c55660a2c45d6f3</guid>
-
-					<description>This post walks through deploying Kimi K3 on AWS using two approaches: Amazon SageMaker HyperPod, and&amp;nbsp; Amazon Elastic Kubernetes Service (Amazon EKS) cluster.</description>
-										<content:encoded>&lt;p&gt;Open weight models have become powerful enough to handle complex tasks such as multi-step agentic workflows, advanced reasoning, and long-horizon coding. However, as these models grow in capability, they also grow in size and hosting multi-trillion parameter architectures requires purpose-built infrastructure, high-end GPU compute, and optimized serving frameworks. On July 27, 2026, Moonshot AI released Kimi K3, a 2.8 trillion parameter Mixture of Experts (MoE) model that represents the &lt;a href="https://platform.kimi.ai/docs/guide/kimi-k3-quickstart" target="_blank" rel="noopener noreferrer"&gt;first open-weight system&lt;/a&gt; to reach the 3 trillion parameter class. Kimi K3 delivers &lt;a href="https://artificialanalysis.ai/models/kimi-k2" target="_blank" rel="noopener noreferrer"&gt;frontier-level intelligence&lt;/a&gt; while making its weights publicly available, so that organizations can self-host one of the most capable models in existence on their own infrastructure.&lt;/p&gt; 
-&lt;p&gt;This post walks through deploying Kimi K3 on AWS using two approaches: Amazon SageMaker HyperPod, and Amazon Elastic Kubernetes Service (Amazon EKS) cluster.&lt;/p&gt; 
-&lt;h1&gt;&lt;strong&gt;About Kimi K3&lt;/strong&gt;&lt;/h1&gt; 
-&lt;p&gt;Kimi K3 is built on a differentiated architecture featuring Kimi Delta Attention (KDA), Gated Multi Head Latent Attention (MLA), and a Stable LatentMoE framework. The model distributes its 2.8 trillion parameters across 896 specialist experts, activating only 16 per token. This means approximately 104 billion parameters are active during any single forward pass, yielding a &lt;a href="https://platform.kimi.ai/docs/guide/kimi-k3-quickstart" target="_blank" rel="noopener noreferrer"&gt;2.5x improvement&lt;/a&gt; in scaling efficiency over its predecessor, Kimi K2.&lt;/p&gt; 
-&lt;table class="styled-table" border="1px" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;&lt;strong&gt;Attribute&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;&lt;strong&gt;Value&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;Total Parameters&lt;/td&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;2.8 Trillion&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;Active Parameters per Token&lt;/td&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;104 Billion&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;Architecture&lt;/td&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;Mixture of Experts (MoE)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;Expert Count&lt;/td&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;896 (16 activated per token)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;Context Window&lt;/td&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;1 Million Tokens&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;Modality&lt;/td&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;Native Multimodal (Text + Vision)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;Release Date&lt;/td&gt; 
-   &lt;td style="padding: 10px;border: 1px solid #dddddd"&gt;July 27, 2026&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;Kimi K3 excels at long-horizon coding tasks, agentic workflows, and complex reasoning. It supports native tool calling, structured output, and an always-on thinking mode for multi-step problem solving.&lt;/p&gt; 
-&lt;h1&gt;&lt;strong&gt;Model availability and format&lt;/strong&gt;&lt;/h1&gt; 
-&lt;p&gt;The open weights for Kimi K3 are available on Hugging Face under the model identifier moonshotai/Kimi-K3. The weights are distributed in &lt;strong&gt;MXFP4&lt;/strong&gt; (Microscaling Floating Point 4-bit) format, which provides an effective balance between model quality and memory efficiency for large-scale inference deployments.&lt;/p&gt; 
-&lt;p&gt;Given the model’s architecture and size, serving Kimi K3 requires a vLLM day-0 inference container for Kimi K3. At the time of writing, vllm commits for Kimi K3 are in &lt;code&gt;vllm/vllm-openai:kimi-k3&lt;/code&gt;. We expect these to be merged to the main vllm container in the upcoming releases. vLLM provides native support for MoE architectures, tensor parallelism, and the MXFP4 quantization format, making it the recommended serving engine for this model.&lt;/p&gt; 
-&lt;h1&gt;&lt;strong&gt;Infrastructure requirements&lt;/strong&gt;&lt;/h1&gt; 
-&lt;p&gt;Deploying a model of this scale requires substantial GPU compute. Kimi K3 requires a &lt;strong&gt;p6-b300&lt;/strong&gt; instance (&lt;code&gt;ml.p6-b300.48xlarge&lt;/code&gt;), which provides 8 NVIDIA B300 Blackwell Ultra GPUs with high-bandwidth interconnects necessary for efficient tensor-parallel inference across the full expert pool.&lt;/p&gt; 
-&lt;p&gt;AWS offers two primary mechanisms to procure this capacity:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;&lt;strong&gt;Flexible Training Plans (for SageMaker HyperPod): &lt;/strong&gt;Provide committed capacity reservations that can be allocated to your HyperPod cluster, so that GPU resources are available for sustained inference workloads.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Capacity Blocks:&lt;/strong&gt; Allow you to reserve EC2 GPU instances for a defined period, providing guaranteed access to p6-b300 capacity without long-term commitments. &lt;strong&gt;Amazon EKS &lt;/strong&gt;workloads consume these reservations by targeting the reserved capacity.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h1&gt;&lt;strong&gt;Option 1: Deploying on Amazon SageMaker HyperPod&lt;/strong&gt;&lt;/h1&gt; 
-&lt;p&gt;Amazon SageMaker HyperPod with the Inference Operator provides the simplest path to deploying Kimi K3. The Inference Operator is installed automatically as part of cluster creation, and it abstracts away the complexity of container orchestration, model loading, and endpoint management.&lt;/p&gt; 
-&lt;h2&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/h2&gt; 
-&lt;p&gt;Before deploying the model, complete the following two prerequisite steps to set up your infrastructure.&lt;/p&gt; 
-&lt;h3&gt;&lt;strong&gt;Step 1: Create a SageMaker HyperPod cluster with EKS orchestration&lt;/strong&gt;&lt;/h3&gt; 
-&lt;p&gt;Before deploying the model, you must provision a HyperPod cluster. Navigate to the Amazon SageMaker AI console and follow the cluster creation workflow:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;Open the SageMaker AI console and select &lt;strong&gt;HyperPod Clusters &amp;gt; Cluster Management &amp;gt; Create HyperPod cluster&lt;/strong&gt;.&lt;/li&gt; 
- &lt;li&gt;Choose &lt;strong&gt;Orchestrated by Amazon EKS&lt;/strong&gt; from the list.&lt;/li&gt; 
- &lt;li&gt;Select &lt;strong&gt;Quick setup&lt;/strong&gt; to provision a cluster with default networking, storage, and IAM resources, or choose &lt;strong&gt;Custom setup&lt;/strong&gt; to integrate with existing VPC, subnets, and security groups.&lt;/li&gt; 
- &lt;li&gt;Under &lt;strong&gt;Orchestration&lt;/strong&gt;, either create a new EKS cluster or attach an existing one. Verify that the &lt;strong&gt;Use default Helm charts and add-ons&lt;/strong&gt; option is selected so that the Inference Operator and other required operators are installed automatically.&lt;/li&gt; 
- &lt;li&gt;Under &lt;strong&gt;Instance groups&lt;/strong&gt;, add a worker group configured with the &lt;code&gt;ml.p6-b300.48xlarge&lt;/code&gt; instance type.&lt;/li&gt; 
- &lt;li&gt;Review the configuration and choose &lt;strong&gt;Submit&lt;/strong&gt; to begin provisioning.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;For the complete walkthrough, refer to the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-eks-operate-console-ui-create-cluster.html" target="_blank" rel="noopener noreferrer"&gt;Creating a SageMaker HyperPod cluster with Amazon EKS orchestration&lt;/a&gt; documentation.&lt;/p&gt; 
-&lt;h3&gt;&lt;strong&gt;Step 2: Procure capacity using a Flexible Training Plan&lt;/strong&gt;&lt;/h3&gt; 
-&lt;p&gt;The &lt;code&gt;ml.p6-b300.48xlarge&lt;/code&gt; instance type requires reserved capacity. A Flexible Training Plan provides a committed capacity reservation for your Blackwell GPU nodes, guaranteeing that p6-b300 instances are available to your cluster without contention from the general on-demand pool. Go to SageMaker Console, select a FTP block based on your timeline and instance count. To create or attach a training plan:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;In the instance group configuration, choose &lt;strong&gt;Training plan&lt;/strong&gt; as the capacity source.&lt;/li&gt; 
- &lt;li&gt;Select an existing plan that covers &lt;code&gt;ml.p6-b300.48xlarge&lt;/code&gt; capacity, or create a new reservation specifying the instance count and duration that you want.&lt;/li&gt; 
- &lt;li&gt;Set the &lt;strong&gt;Target Availability Zone&lt;/strong&gt; to match the zone where your training plan capacity is allocated.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;Once the cluster reaches an Active state with healthy p6-b300 nodes, you are ready to deploy the model.&lt;/p&gt; 
-&lt;h2&gt;&lt;strong&gt;Deploying the model&lt;/strong&gt;&lt;/h2&gt; 
-&lt;p&gt;To deploy Kimi K3 on HyperPod, apply the following &lt;code&gt;InferenceEndpointConfig&lt;/code&gt; manifest to your cluster:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="lang-code"&gt;apiVersion: inference.sagemaker.aws.amazon.com/v1
-kind: InferenceEndpointConfig
-metadata:
-  name: kimik3
-spec:
-  modelName: Kimi-K3
-  instanceType: ml.p6-b300.48xlarge
-  invocationEndpoint: v1/chat/completions
-  replicas: 1
-  modelSourceConfig:
-    huggingFaceModel:
-      modelId: moonshotai/Kimi-K3
-    modelSourceType: huggingface
-  worker:
-    image: vllm/vllm-openai:kimi-k3
-    modelInvocationPort:
-      containerPort: 8000
-      name: http
-    modelVolumeMount:
-      mountPath: /opt/ml/model
-      name: model-weights
-    resources:
-      limits:
-        nvidia.com/gpu: 8
-      requests:
-        nvidia.com/gpu: 8
-    args:
-      - "--model"
-      - "moonshotai/Kimi-K3"
-      - "--trust-remote-code"
-      - "--load-format"
-      - "fastsafetensors"
-      - "--enable-prefix-caching"
-      - "--enable-auto-tool-choice"
-      - "--tool-call-parser"
-      - "kimi_k3"
-      - "--reasoning-parser"
-      - "kimi_k3"
-      - "--served-model-name"
-      - "Kimi-K3"
-      - "--moe-backend"
-      - "auto"
-      - "--tensor-parallel-size"
-      - "8"
-      - "--no-enable-flashinfer-autotune"
-    environmentVariables:
-      - name: "VLLM_ENABLE_K3_LATENT_MOE_TAIL_FUSION"
-        value: "1"&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;This yaml is also provided in the &lt;a href="https://github.com/aws-samples/sagemaker-genai-hosting-examples/blob/main/SageMakerHyperpod/kimi-k3/kimi-k3.yaml" target="_blank" rel="noopener noreferrer"&gt;GitHub repository&lt;/a&gt;. Apply this configuration with:&lt;code&gt;kubectl apply -f kimi-k3.yaml&lt;/code&gt;&lt;/p&gt; 
-&lt;p&gt;The Inference Operator handles model download from Hugging Face, container scheduling, health checks, and endpoint readiness. Once the endpoint transitions to a ready state, it exposes an OpenAI compatible API at the configured invocation path.&lt;/p&gt; 
-&lt;h1&gt;&lt;strong&gt;Option 2: Deploying on Amazon EKS&lt;/strong&gt;&lt;/h1&gt; 
-&lt;p&gt;For teams that prefer to manage their own Kubernetes infrastructure, you can deploy Kimi K3 on a standalone Amazon EKS cluster and procure GPU capacity through &lt;strong&gt;EC2 Capacity Blocks&lt;/strong&gt;, which allow you to reserve p6-b300 instances for a defined duration without long-term commitments.&lt;/p&gt; 
-&lt;h2&gt;&lt;strong&gt;Key deployment steps&lt;/strong&gt;&lt;/h2&gt; 
-&lt;p&gt;The &lt;a href="https://github.com/awslabs/ai-on-eks-charts/blob/main/charts/inference-charts/values-kimi-k3-vllm-b300.yaml" target="_blank" rel="noopener noreferrer"&gt;AI on EKS&lt;/a&gt; project provides an inference-ready cluster recipe that automates the end-to-end provisioning. At a high level, the deployment involves the following stages:&lt;/p&gt; 
-&lt;h3&gt;&lt;strong&gt;1. Provision the EKS cluster&lt;/strong&gt;&lt;/h3&gt; 
-&lt;p&gt;Use the provided Terraform modules to create a GPU-optimized EKS cluster. This includes VPC networking, managed node groups, and the necessary IAM roles and policies for GPU workloads.&lt;/p&gt; 
-&lt;h3&gt;&lt;strong&gt;2. Reserve GPU capacity with Capacity Blocks&lt;/strong&gt;&lt;/h3&gt; 
-&lt;p&gt;Create a Capacity Block reservation for &lt;code&gt;p6-b300.48xlarge&lt;/code&gt; instances in your target Availability Zone. Capacity Blocks guarantee that the requested GPU nodes will be available for the reserved time window. Once the reservation becomes active, the instances join your EKS cluster as worker nodes.&lt;/p&gt; 
-&lt;h3&gt;&lt;strong&gt;3. Install GPU drivers and device plugin&lt;/strong&gt;&lt;/h3&gt; 
-&lt;p&gt;The recipe installs the NVIDIA device plugin and GPU drivers on the node group, so that Kubernetes can discover and schedule against the available GPUs.&lt;/p&gt; 
-&lt;h3&gt;&lt;strong&gt;4. Deploy the vLLM inference server&lt;/strong&gt;&lt;/h3&gt; 
-&lt;p&gt;A Helm chart or Kubernetes manifest deploys the vLLM container with Kimi K3 specific arguments, including tensor-parallel size of 8, the MXFP4 load format, MoE backend configuration. The model identifier points to the Hugging Face repository, or as an alternative, you can sync the model weights to Amazon Simple Storage Service (Amazon S3) for faster model loading. The serving arguments mirror those shown in the HyperPod configuration above.&lt;/p&gt; 
-&lt;h3&gt;&lt;strong&gt;5. Expose the inference endpoint&lt;/strong&gt;&lt;/h3&gt; 
-&lt;p&gt;A Kubernetes Service (type LoadBalancer or via an Ingress controller) exposes the vLLM server on port 8000, providing the OpenAI compatible &lt;code&gt;/v1/chat/completions&lt;/code&gt; endpoint to your applications.&lt;/p&gt; 
-&lt;h3&gt;&lt;strong&gt;6. Validate&lt;/strong&gt;&lt;/h3&gt; 
-&lt;p&gt;Confirm the deployment by sending a test request to the endpoint and verifying a successful model response.&lt;/p&gt; 
-&lt;p&gt;For the full deployment walkthrough, including Terraform modules, Helm values, and step-by-step instructions, refer to the &lt;a href="https://github.com/awslabs/ai-on-eks/tree/main/infra/solutions/inference-ready-cluster/recipes/kimi-k3" target="_blank" rel="noopener noreferrer"&gt;AI on EKS Kimi K3 recipe&lt;/a&gt;.&lt;/p&gt; 
-&lt;h1&gt;&lt;strong&gt;Invoking the endpoint&lt;/strong&gt;&lt;/h1&gt; 
-&lt;p&gt;Once deployed, the Kimi K3 endpoint exposes an OpenAI compatible chat completions API. You can invoke it using the OpenAI Python SDK or a simple curl command.&lt;/p&gt; 
-&lt;h2&gt;&lt;strong&gt;Using the OpenAI Python SDK&lt;/strong&gt;&lt;/h2&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="lang-powershell"&gt;from openai import OpenAI
-client = OpenAI(
-    base_url="http://&amp;lt;ENDPOINT_URL&amp;gt;:8000/v1",
-    api_key="not-needed"
-)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="lang-css"&gt;response = client.chat.completions.create(
-    model="Kimi-K3",
-    messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "Explain the benefits of mixture of experts architectures."}
-    ],
-    temperature=0.7,
-    max_tokens=1024
-)
-print(response.choices[0].message.content)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;h2&gt;&lt;strong&gt;Using curl&lt;/strong&gt;&lt;/h2&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="lang-css"&gt;curl -X POST http://&amp;lt;ENDPOINT_URL&amp;gt;:8000/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "Kimi-K3",
-    "messages": [
-      {"role": "system", "content": "You are a helpful assistant."},
-      {"role": "user", "content": "Explain the benefits of mixture of experts architectures."}
-    ],
-    "temperature": 0.7,
-    "max_tokens": 1024
-  }'&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Replace &lt;code&gt;&amp;lt;ENDPOINT_URL&amp;gt;&lt;/code&gt; with the service endpoint exposed by your HyperPod Inference Operator or EKS ingress configuration.&lt;/p&gt; 
-&lt;h1&gt;Clean up&lt;/h1&gt; 
-&lt;p&gt;To avoid ongoing charges, delete the resources you created during this walkthrough when you no longer need them.For SageMaker HyperPod deployments:&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;Delete the &lt;code&gt;InferenceEndpointConfig&lt;/code&gt; by running &lt;code&gt;kubectl delete -f kimi-k3.yaml&lt;/code&gt;.&lt;/li&gt; 
- &lt;li&gt;In the SageMaker AI console, navigate to HyperPod Clusters, select your cluster, and choose Delete.&lt;/li&gt; 
- &lt;li&gt;Release or cancel your Flexible Training Plan reservation if it is no longer needed.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;For Amazon EKS deployments:&lt;/p&gt; 
-&lt;ol start="4"&gt; 
- &lt;li&gt;Delete the vLLM deployment and associated Kubernetes services.&lt;/li&gt; 
- &lt;li&gt;Terminate the GPU node group or delete the EKS cluster using Terraform (&lt;code&gt;terraform destroy&lt;/code&gt;).&lt;/li&gt; 
- &lt;li&gt;Release your Capacity Block reservation if it has not yet expired.&lt;/li&gt; 
- &lt;li&gt;For pricing details on p6-b300 instances and Capacity Block reservations, refer to the Amazon EC2 pricing page.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;h1&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h1&gt; 
-&lt;p&gt;Kimi K3 represents a new frontier in open-weight model capabilities, and AWS provides the infrastructure and managed services to deploy it at scale. Whether you choose the streamlined HyperPod Inference Operator path or the flexibility of a self-managed EKS cluster, the combination of p6-b300 GPU instances, vLLM serving, and MXFP4 quantized weights delivers a deployment with built-in health checks, auto-recovery, and endpoint readiness verification for the world’s largest open model.To get started, here are some links&lt;/p&gt; 
-&lt;ol&gt; 
- &lt;li&gt;&lt;a href="https://github.com/aws-samples/sagemaker-genai-hosting-examples/blob/main/SageMakerHyperpod/kimi-k3/kimi-k3.yaml" target="_blank" rel="noopener noreferrer"&gt;SageMaker HyperPod Kimi K3 Example&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://github.com/awslabs/ai-on-eks/tree/main/infra/solutions/inference-ready-cluster/recipes/kimi-k3" target="_blank" rel="noopener noreferrer"&gt;AI on EKS Kimi K3 Recipe&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod-eks-operate-console-ui-create-cluster.html" target="_blank" rel="noopener noreferrer"&gt;Creating a SageMaker HyperPod Cluster (AWS Documentation)&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://huggingface.co/moonshotai/Kimi-K3" target="_blank" rel="noopener noreferrer"&gt;Kimi K3 on Hugging Face&lt;/a&gt;&lt;/li&gt; 
- &lt;li&gt;&lt;a href="https://docs.vllm.ai/" target="_blank" rel="noopener noreferrer"&gt;vLLM Documentation&lt;/a&gt;&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p style="clear: both"&gt;&lt;/p&gt; 
-&lt;hr style="width: 80%"&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignnone size-full wp-image-136257" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/image-2.jpeg" alt="" width="120" height="160"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;p&gt;Andrew Smith is a Sr. Cloud Support Engineer in the SageMaker, Vision &amp;amp; Other team at AWS, based in Sydney, Australia. He supports customers using many AI/ML services on AWS with expertise in working with Amazon SageMaker. Outside of work, he enjoys spending time with friends and family as well as learning about different technologies.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt;
-   &lt;img loading="lazy" class="alignnone size-full wp-image-136258" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/image-3.jpeg" alt="" width="120" height="160"&gt;
-  &lt;/div&gt; 
-  &lt;p&gt;Erez Zarum is a Senior Startups Solutions Architect at AWS. Erez is passionate about Containers and the AI/ML landscape, and his unique approach empowers Startups to accelerate AI/ML workloads on Amazon EKS.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignnone size-full wp-image-136256" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/image-1-4.jpeg" alt="" width="120" height="160"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/vivekgangasani/"&gt;Vivek Gangasani&lt;/a&gt;&amp;nbsp;is a Worldwide Leader for Solutions Architecture, SageMaker Inference. He leads Solution Architecture, Technical Go-to-Market (GTM) and Outbound Product strategy for SageMaker Inference. He also helps enterprises and startups deploy and optimize&amp;nbsp; a GenAI models and build AI workflows with SageMaker and GPUs. Currently, he is focused on developing strategies and content for optimizing inference performance and use-cases such as Agentic workflows, RAG etc. In his free time, Vivek enjoys hiking, watching movies, and trying different cuisines&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-					
-			
-		
-		
-			</item>
-		<item>
-		<title>How Yahoo enhances search retargeting using Amazon Bedrock</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/how-yahoo-enhances-search-retargeting-using-amazon-bedrock/</link>
-		
-		<dc:creator><![CDATA[Jessica Young]]></dc:creator>
-		<pubDate>Thu, 30 Jul 2026 16:40:36 +0000</pubDate>
-				<category><![CDATA[Amazon Bedrock]]></category>
-		<category><![CDATA[Customer Solutions]]></category>
-		<guid isPermaLink="false">09bd7931863bd59f564c816598e73d7e7a962684</guid>
-
-					<description>In this post, we demonstrate how Yahoo implemented Amazon Bedrock to enhance their Search Retargeting (SRT) capabilities in the Yahoo DSP ad tech suite. SRT is a core audience targeting solution that helps advertisers reach users based on their historical search behavior, bridging search intent with display, video, and native advertising. Beyond targeting keywords entered on Yahoo Search, SRT uses AI to identify and engage users who demonstrate intent through search activity both on Yahoo and across integrated partner systems.</description>
-										<content:encoded>&lt;p&gt;Connecting user search intent with relevant ad experiences across channels is a longstanding challenge in digital advertising. Advertisers need sophisticated ways to reach audiences based on their demonstrated interests and behaviors, particularly their search activity, which is one of the strongest signals of user intent. Traditional keyword expansion approaches often struggle with outdated vocabulary, limited semantic understanding, and inability to capture the nuanced meaning behind search queries.&lt;/p&gt; 
-&lt;p&gt;The &lt;a href="https://www.yahooinc.com/" target="_blank" rel="noopener"&gt;Yahoo&lt;/a&gt; omnichannel Demand-Side Platform (DSP) addresses these challenges by providing advertisers with advanced technology, premium supply access, vast scale, and trusted consumer relationships. A DSP lets advertisers purchase ad inventory across multiple exchanges and channels through a single interface. Yahoo DSP enhances this capability with sophisticated audience targeting powered by advertiser-defined rules, machine learning (ML), and generative AI.&lt;/p&gt; 
-&lt;p&gt;At the heart of this targeting is the concept of an audience segment: a group of users who share specific interests, demographics, or behaviors and can be targeted collectively in advertising campaigns. These segments are passed to targeting systems for ad serving, making sure that users are matched with the most relevant advertiser campaigns.&lt;/p&gt; 
-&lt;p&gt;In this post, we demonstrate how Yahoo implemented &lt;a href="https://aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock&lt;/a&gt; to enhance their Search Retargeting (SRT) capabilities in the Yahoo DSP ad tech suite. SRT is a core audience targeting solution that helps advertisers reach users based on their historical search behavior, bridging search intent with display, video, and native advertising. Beyond targeting keywords entered on Yahoo Search, SRT uses AI to identify and engage users who demonstrate intent through search activity both on Yahoo and across integrated partner systems.&lt;/p&gt; 
-&lt;h2&gt;Business challenges&lt;/h2&gt; 
-&lt;p&gt;Previously, the Yahoo SRT architecture used the Word2Vec embedding model combined with locality-sensitive hashing (LSH) to expand advertiser keywords. This multi-step process involved canonicalizing keywords, generating embeddings, indexing them, performing LSH searches, filtering sensitive terms, and ranking the results.&lt;/p&gt; 
-&lt;p&gt;However, the Word2Vec + LSH approach had several limitations:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Outdated vocabulary&lt;/strong&gt;: It didn’t always reflect current terms.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Phrase-based searches&lt;/strong&gt;: It focused on phrases rather than specific entities.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Syntactic similarity&lt;/strong&gt;: Expansion relied on syntactic rather than semantic meaning.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Zero expansion&lt;/strong&gt;: In some cases, it failed to generate any new keywords.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;We addressed these challenges by deploying generative AI–powered SRT keyword expansion using Amazon Bedrock and large language models (LLMs). This enhancement generates more relevant, semantically rich keyword expansions, helping advertisers reach larger and more precise audiences.&lt;/p&gt; 
-&lt;h2&gt;Solution overview&lt;/h2&gt; 
-&lt;p&gt;Before introducing the solution, it’s useful to review the legacy SRT workflow, illustrated in the following diagram. Advertisers begin by defining each segment through a set of target keywords. This metadata is stored in a SQL database. The backend system then performs keyword expansion, generating semantically related terms to increase audience reach and improve advertiser outcomes. Both the original and expanded keyword sets are persisted in an &lt;a href="https://aws.amazon.com/opensearch-service/" target="_blank" rel="noopener"&gt;Amazon OpenSearch Service&lt;/a&gt; cluster. Another workflow called Batch Scoring evaluates Yahoo users’ search histories against this segment metadata to determine segment membership.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/27/ML-18912-1.png" alt="Legacy SRT architecture diagram showing keyword expansion using Word2Vec and locality-sensitive hashing, with results stored in Amazon OpenSearch Service and consumed by the Batch Scoring workflow." width="600"&gt;&lt;/p&gt; 
-&lt;h2&gt;Modernized with generative AI&lt;/h2&gt; 
-&lt;p&gt;Recognizing the limitations of the legacy approach, our goal was to refresh keyword expansion with a modern generative AI solution. Amazon Bedrock made this work possible. By offering serverless access to a broad selection of leading foundation models (FMs), Amazon Bedrock helped our teams experiment with multiple LLMs, including Amazon Nova, Meta Llama, and Anthropic’s Claude, without building custom infrastructure.&lt;/p&gt; 
-&lt;p&gt;In evaluating new approaches, we also factored in critical considerations for computational advertising, including:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Filtering of sensitive keywords.&lt;/li&gt; 
- &lt;li&gt;Segment denylists.&lt;/li&gt; 
- &lt;li&gt;User privacy preferences.&lt;/li&gt; 
- &lt;li&gt;Policy compliance requirements.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;The following diagram illustrates the updated architecture using Amazon Bedrock and generative AI.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/27/ML-18912-2.png" alt="Updated SRT architecture diagram showing keyword expansion through Amazon Bedrock with a verification step that compares embeddings to filter low-similarity expansions before storing results in Amazon OpenSearch Service." width="600"&gt;&lt;/p&gt; 
-&lt;h2&gt;LLM selection and results&lt;/h2&gt; 
-&lt;p&gt;During the LLM selection and evaluation process, we prototyped and assessed several models using &lt;a href="https://aws.amazon.com/sagemaker/ai/studio/" target="_blank" rel="noopener"&gt;Amazon SageMaker Studio&lt;/a&gt;, including Amazon Titan, Meta Llama, and Anthropic’s Claude. Ultimately, Anthropic’s Claude 3.5 Sonnet v2 was selected as the most effective model for search keyword expansion, balancing both expansion ratio and semantic similarity.&lt;/p&gt; 
-&lt;p&gt;In the evaluation process, we observed hallucination behaviors from the LLMs. To reduce hallucinations and maintain quality, we introduced a verification step. Expanded keywords generated by the LLM are converted into embeddings and compared with the original set. Keywords falling below a similarity threshold are filtered out, making sure only the most relevant terms are retained. This validation step is central to maintaining accuracy and trust in the workflow.&lt;/p&gt; 
-&lt;p&gt;When deployed through Amazon Bedrock, Claude 3.5 Sonnet v2 demonstrated substantially superior expansion capabilities compared to the legacy LSH method, frequently generating hundreds or even thousands of keywords in cases where LSH produced none. The median broad expansion ratio improved fivefold, and the maximum expansion ratio doubled, even under strict similarity thresholds. See the following graph.&lt;/p&gt; 
-&lt;p&gt;Overall, generative AI–based keyword expansion increases the number of keywords retrieved and makes sure they are semantically relevant, significantly enhancing search user targeting.&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/27/ML-18912-3.png" alt="Line graph plotting LLM keyword expansion ratio against cosine similarity score, showing that the LLM-based approach maintains higher expansion ratios than LSH across all similarity thresholds." width="600"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;LLM keyword expansion ratio vs.&amp;nbsp;cosine similarity score.&lt;/em&gt;&lt;/p&gt; 
-&lt;h3&gt;Guardrailing keyword expansion in generative AI workflows&lt;/h3&gt; 
-&lt;p&gt;When we first designed our SRT keyword expansion workflow, we focused solely on the expansion step, taking seed keywords and generating a broader set of related terms using generative AI models. This approach worked, but it also introduced challenges:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;In some cases, the model over-expanded, producing a large set of keywords.&lt;/li&gt; 
- &lt;li&gt;Rare or ambiguous seed keywords sometimes resulted in unrelated or noisy expansions.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;This highlighted the need for a quality control mechanism. To address this, we introduced embedding generation and similarity scoring:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Embedding and similarity check. 
-  &lt;ul&gt; 
-   &lt;li&gt;For each expanded keyword, we generate an embedding.&lt;/li&gt; 
-   &lt;li&gt;We then compute a similarity score against the original keyword’s embedding.&lt;/li&gt; 
-   &lt;li&gt;Only keywords above a defined similarity threshold are retained.&lt;/li&gt; 
-   &lt;li&gt;This makes sure that expanded keywords remain semantically aligned with the original intent.&lt;/li&gt; 
-  &lt;/ul&gt; &lt;/li&gt; 
- &lt;li&gt;Sensitive keyword guardrails. 
-  &lt;ul&gt; 
-   &lt;li&gt;In addition to semantic filtering, we also apply checks for sensitive keywords.&lt;/li&gt; 
-   &lt;li&gt;Filtering happens before inference (to avoid expansion of undesirable terms) and after inference (to remove sensitive expansions).&lt;/li&gt; 
-  &lt;/ul&gt; &lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;By combining semantic similarity scoring with sensitive keyword filtering, we created a guardrailed keyword expansion pipeline. This approach preserves the breadth and creativity of generative AI–driven expansion while maintaining relevance, quality, and compliance.&lt;/p&gt; 
-&lt;h2&gt;Business value and impact&lt;/h2&gt; 
-&lt;p&gt;This generative AI–based enhanced keyword expansion capability launched in production in Q1 2025.&lt;/p&gt; 
-&lt;h3&gt;Value to advertisers&lt;/h3&gt; 
-&lt;p&gt;Advertisers benefit from significantly broader and more precise audience reach. The LLM-powered expansion logic increases the pool of candidate keywords while filtering for quality, leading to campaigns that align more closely with user intent. This translates into higher relevancy, stronger engagement, and improved conversion rates.&lt;/p&gt; 
-&lt;h3&gt;Value to Yahoo DSP&lt;/h3&gt; 
-&lt;p&gt;From a system perspective, the new system delivers substantial scale improvements:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;Up to 600 times increase in keyword expansion rates.&lt;/li&gt; 
- &lt;li&gt;Up to 5 times growth in addressable audience reach.&lt;/li&gt; 
- &lt;li&gt;Gains in campaign performance and conversions.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;By modernizing keyword expansion with LLMs, Yahoo DSP is better positioned to drive value for advertisers while strengthening its competitive edge in the programmatic environment.&lt;/p&gt; 
-&lt;h2&gt;Why Amazon Bedrock&lt;/h2&gt; 
-&lt;p&gt;Amazon Bedrock provided serverless access to multiple leading FMs, including Amazon Nova, Meta Llama, and Anthropic’s Claude, without requiring the Yahoo team to build or manage complex infrastructure. This capability helped us experiment rapidly, scale our workloads, and deploy flexibly.&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Breadth of models&lt;/strong&gt; – Amazon Bedrock helped us experiment quickly with multiple leading FMs.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;No infrastructure management&lt;/strong&gt; – Amazon Bedrock provides serverless access to LLMs, removing the need for model hosting, scaling, or patching.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Flexible inference options&lt;/strong&gt; – Amazon Bedrock provides both batch and real-time inference options for quick and flexible prototyping and decision making.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Straightforward model upgrades with Amazon Bedrock&lt;/strong&gt; – Switching to a newer or more advanced model version is a configuration change. Amazon Bedrock’s architecture abstracts away the underlying infrastructure and compatibility challenges, so teams can adopt updated models with minimal effort.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;In this post, we highlighted how SRT serves as a core product offering on Yahoo DSP and how we transformed keyword expansion using generative AI. By using Amazon Bedrock, our teams gained serverless access to multiple leading LLMs without the overhead of managing infrastructure. This capability helped us expand advertisers’ original keywords into semantically rich, high-quality sets, increasing both the size and precision of the targeting audience.&lt;/p&gt; 
-&lt;p&gt;Replacing the legacy Word2Vec and LSH workflow with Amazon Bedrock–powered LLMs delivered more accurate, contextually relevant keyword expansions. The new approach drives stronger campaign performance, higher conversion rates, and greater operational flexibility. Amazon Bedrock made this transformation possible, helping Yahoo DSP scale faster and more efficiently in AI-driven advertising.&lt;/p&gt; 
-&lt;p&gt;To learn more, see the &lt;a href="https://aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock detail page&lt;/a&gt; and the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html" target="_blank" rel="noopener"&gt;Amazon Bedrock User Guide&lt;/a&gt;. To start building, open the &lt;a href="https://console.aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock console&lt;/a&gt;.&lt;/p&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/27/ML-18912-4.png" alt="Jessica Young" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Jessica Young&lt;/h3&gt; 
-  &lt;p&gt;Jessica is a Director of Software Engineering at Yahoo, where she leads engineering teams building AI/ML solutions on large-scale distributed systems. She brings extensive hands-on experience building production AI/ML systems, with deep expertise in natural language processing, recommendation engines, and Big Data ecosystems. She is equally passionate about understanding machines and understanding people, driven by a deep curiosity for emerging technologies while remaining committed to fostering a people-first culture that values individuals not merely as resources, but as human beings.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/27/ML-18912-5.jpg" alt="Sujyothi Adiga" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Sujyothi Adiga&lt;/h3&gt; 
-  &lt;p&gt;Sujyothi is a Principal Software Development Engineer at Yahoo, with engineering experience across Yahoo Small Business, Search, and Yahoo Ads. She builds machine learning and AI-driven solutions for contextual and audience-based ad targeting systems, focusing on large-scale content understanding. Her work spans generative AI, model distillation, and distributed data pipelines using AWS services, including Amazon EMR, Amazon Bedrock, and Amazon SageMaker. She has helped architect end-to-end contextual targeting solutions for Yahoo Ads and has contributed to patent filings and peer-reviewed machine learning research in multilingual content classification.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/27/ML-18912-6.png" alt="Jonathan Ji" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Jonathan Ji&lt;/h3&gt; 
-  &lt;p&gt;Jonathan is a Principal Software Engineer at Yahoo DSP, where he leads teams that design, research, and build agentic AI assistant and search products. He partners closely with product, science, and engineering leaders to take generative AI from prototype to production. At Yahoo, he has developed innovative products and services powered by generative AI agents, large language models, MCP tools, text and image search, machine learning, sketch estimation, and large-scale processing and distributed query platforms.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/27/ML-18912-7.jpeg" alt="Daniel Li" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Daniel Li&lt;/h3&gt; 
-  &lt;p&gt;Daniel is a Senior Solutions Architect at Amazon Web Services, where he partners with strategic customers to design scalable cloud, data, and generative AI solutions. With over 20 years of experience spanning engineering and enterprise strategy, Daniel has led major cloud migration, modernization, and AI/ML initiatives, helping customers translate business goals into pragmatic technology roadmaps and accelerate their adoption of generative AI on AWS.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
 	</channel>
 </rss>
 
@@ -5274,7 +5366,7 @@ print(response.choices[0].message.content)&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a740a481a4a0"></universal-media-player>
+		<universal-media-player id="ump-6a7483600ab5a"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5288,7 +5380,7 @@ print(response.choices[0].message.content)&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a740a481a4a0", options);
+				ump("ump-6a7483600ab5a", options);
 			});
 		</script>
 	</div>
@@ -6173,7 +6265,7 @@ print(response.choices[0].message.content)&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a740a4829548&quot;}" data-wp-interactive="core/image" data-wp-key="6a740a4829548" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a7483601992c&quot;}" data-wp-interactive="core/image" data-wp-key="6a7483601992c" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6516,7 +6608,7 @@ print(response.choices[0].message.content)&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a740a4834060&quot;}" data-wp-interactive="core/image" data-wp-key="6a740a4834060" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a7483602b49d&quot;}" data-wp-interactive="core/image" data-wp-key="6a7483602b49d" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7171,7 +7263,7 @@ print(response.choices[0].message.content)&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a740a483c519"></universal-media-player>
+		<universal-media-player id="ump-6a7483603369b"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -7185,7 +7277,7 @@ print(response.choices[0].message.content)&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a740a483c519", options);
+				ump("ump-6a7483603369b", options);
 			});
 		</script>
 	</div>
@@ -7241,7 +7333,7 @@ print(response.choices[0].message.content)&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a740a483cadc"></universal-media-player>
+		<universal-media-player id="ump-6a74836033c90"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -7255,7 +7347,7 @@ print(response.choices[0].message.content)&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a740a483cadc", options);
+				ump("ump-6a74836033c90", options);
 			});
 		</script>
 	</div>
@@ -7287,7 +7379,7 @@ print(response.choices[0].message.content)&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a740a483cda8"></universal-media-player>
+		<universal-media-player id="ump-6a74836033f64"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -7301,7 +7393,7 @@ print(response.choices[0].message.content)&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a740a483cda8", options);
+				ump("ump-6a74836033f64", options);
 			});
 		</script>
 	</div>
