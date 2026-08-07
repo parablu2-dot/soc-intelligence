@@ -2,6 +2,413 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Near-Field Velocity Estimation and Doppler-Aware Localization in OFDM Massive MIMO",
+    "url": "https://arxiv.org/abs/2608.05133v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "In Orthogonal Frequency Division Multiplexing (OFDM)-based massive Multiple-Input Multiple-Output (MIMO) near-field (NF) sensing, target motion induces an antenna-dependent bistatic Doppler variation across the array aperture. Ignoring this spatial Doppler variation leads to a model mismatch that degrades NF localization. In this paper, we propose a low-complexity recursive framework for joint radial/transverse velocity estimation and Doppler-aware localization. Initialized by a constant-Doppler",
+    "authors": [
+      "Qing Zhang",
+      "Dario Tagliaferri",
+      "Robbert Beerten",
+      "Zhuangzhuang Cui",
+      "Yang Miao",
+      "Sofie Pollin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "astro-ph.IM",
+    "title": "CCAT: Characterization of the first science-grade MKID array for the Prime-Cam 850 GHz module",
+    "url": "https://arxiv.org/abs/2608.05072v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "The Fred Young Submillimeter Telescope (FYST) is a 6-meter crossed-Dragone telescope developed by the CCAT collaboration. Sited at 5600 m on Cerro Chajnantor in the Atacama Plateau of Chile, FYST aims to provide superior atmospheric transmission and a wide field of view for submillimeter observations. Prime-Cam is a first-generation instrument for FYST designed to house up to seven separate instrument modules. Among these, the 850 GHz module represents the highest-frequency band and is optimized",
+    "authors": [
+      "Anthony I. Huber",
+      "Jordan Wheeler",
+      "James Burgoyne",
+      "Scott Chapman",
+      "Jason Austermann",
+      "James Beall",
+      "Steve K. Choi",
+      "Doug Henke",
+      "Johannes Hubmayr",
+      "Ben Keller",
+      "Matthew Koc",
+      "Jeff van Lanen",
+      "Tilak Patel",
+      "Adrian Sinclair",
+      "Anna Vaskuri",
+      "Eve M. Vavagiakis",
+      "Michael Vissers",
+      "Ruixuan",
+      "Xie"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "Hardware Design and Security in the Era of Chiplets and LLMs",
+    "url": "https://arxiv.org/abs/2608.05063v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "The semiconductor industry is undergoing a dual revolution: the shift toward heterogeneous 2.5D chiplet systems and the integration of Large Language Models (LLMs) into Electronic Design Automation (EDA) flows. While these paradigms offer unprecedented benefits in yield, modularity, design productivity, etc., they radically expand the hardware attack surface. This paper provides a unified analysis of these frontiers, ranging from attacks on chiplet systems (including hardware stacks for LLM acce",
+    "authors": [
+      "Johann Knechtel",
+      "Ozgur Sinanoglu",
+      "Paul V. Gratz",
+      "Ramesh Karri"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "X-ray Thermal diffuse scattering from real-space displacement correlations",
+    "url": "https://arxiv.org/abs/2608.05051v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "We introduce a method for calculating X-ray thermal diffuse scattering based on the three-dimensional difference pair distribution function (3D-dPDF). Within the harmonic approximation the method is exact, as it includes all orders of multi-phonon scattering. A single Fourier transform delivers the diffuse intensity over large volumes of reciprocal space. We tested the method against experimental diffuse scattering measured on a silicon single crystal. With nothing refined beyond a scale and a b",
+    "authors": [
+      "Benjamin Fahl",
+      "Jonathan Bulled",
+      "Artem Korshunov",
+      "Dmitry Chernyshov",
+      "Yevheniia Kholina",
+      "Arkadiy Simonov"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "CheMLFlow: An Open-Source Platform for Cheminformatics and Materials Informatics Applications",
+    "url": "https://arxiv.org/abs/2608.04942v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "CheMLFlow is an open-source platform for building and executing end-to-end, high-throughput, and agentic workflows for scientific and technological applications. CheMLFlow targets a common bottleneck in scientific machine learning development, where researchers often need to assemble data acquisition, curation, representation, model training, validation, screening, interpretation, and reporting into a reproducible pipeline, even when their primary research contribution concerns only one stage. C",
+    "authors": [
+      "Brendan Smith",
+      "Susana Lopez-Moreno",
+      "Eric Dolores-Cuenca",
+      "Sangil Kim",
+      "Jose L. Mendoza-Cortes",
+      "Nijamudheen Abdulrahiman"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "LLM-Assisted Detection and Repair of Hardware Security Vulnerabilities in Verilog Designs",
+    "url": "https://arxiv.org/abs/2608.04907v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Hardware designs, like software, are susceptible to bugs that can introduce security vulnerabilities and create opportunities for malicious exploitation. Unlike software vulnerabilities, however, hardware flaws become permanently embedded in silicon after fabrication, making them difficult or impossible to patch. Many of these weaknesses are categorized under the Common Weakness Enumeration (CWE) framework and include improper access control, exposure of sensitive information, and unintended pri",
+    "authors": [
+      "Ethen Santana",
+      "Gabriel Gyaase",
+      "Hao Zheng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "The Neural Echo: A Signal Processing Perspective for Understanding Neural Networks",
+    "url": "https://arxiv.org/abs/2608.04864v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "We introduce the neural echo as a tool for understanding the behavior of neural networks. It generalizes the model-based concepts of impulse responses, diffusion echoes, and filter echoes to learning-based methods. It provides local, space-adaptive impulse responses and filter kernels for a neural network, its so-called echoes. These echoes depend on the input image and can be visualized to understand the learned dynamics of the network via an affine mapping. Neural echoes build a bridge from cl",
+    "authors": [
+      "Chongbiao Wang",
+      "Daniel Gaa",
+      "Joachim Weickert",
+      "Karl Schrader"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.comp-ph",
+    "title": "From populations to absolute binding affinities in molecular simulations: exact volumetric terms and practical estimators",
+    "url": "https://arxiv.org/abs/2608.04834v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "We present a statistical-mechanics framework for computing equilibrium binding constants $K$ in the dilute limit. From first principles, we derive a general expression relating $K$ to the relative populations of the bound and unbound states. Its transparency has twofold advantage: it makes the origin of the unbound-state volumetric term explicit, and it allows one to track exactly how an imposed volume restraint propagates through the expression. This makes $K$ directly computable, as restrained",
+    "authors": [
+      "Davide Mandelli",
+      "Emiliano Ippoliti",
+      "Charles Plate"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.str-el",
+    "title": "Ghost-RISB for Correlated Electron-Phonon Systems: Application to the Hubbard-Holstein Model",
+    "url": "https://arxiv.org/abs/2608.04816v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "We develop a generalization of the ghost-rotationally-invariant slave-boson (ghost-RISB) method that incorporates local phonon modes coupled to arbitrary on-site electronic degrees of freedom, enabling a nonperturbative treatment of electron-electron and electron-phonon interactions within an efficient variational framework. The method extends the ghost-orbital construction to capture dynamical self-energy effects and phonon-induced renormalizations beyond static slave-boson approaches. Benchmar",
+    "authors": [
+      "Samuele Giuli",
+      "Ricardo J. Campos-Lopes",
+      "Emin Moghadas",
+      "Massimo Capone"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Memristive Behavior and Mechanism in Solid-State Nanopores",
+    "url": "https://arxiv.org/abs/2608.04815v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Nanofluidic memristors whose conductance evolves through history-dependent ionic transport and dynamic interfacial processes are promising building blocks for ionic neuromorphic applications. However, most existing designs rely on biological nanopores, polymers, and two-dimensional materials, which limit scalable fabrication and poses challenges to integration of ionic computing circuits and systems. Here, we report memristive behaviors of silicon-based solid-state nanopores (SSNPs) fabricated b",
+    "authors": [
+      "Zhiwei Li",
+      "Ngan Hoang Pham",
+      "Shi-Li Zhang",
+      "Chenyu Wen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Atomic Scale Ordering of Sulfur Vacancies Enhances Charge Transport in Monolayer MoS$_2$",
+    "url": "https://arxiv.org/abs/2608.04742v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Defect engineering in two-dimensional semiconductors has primarily focused on controlling the nature and concentration of atomic defects. Here, we show that the spatial arrangement of defects can be equally decisive in determining electronic transport. Using sulfur vacancies in monolayer MoS$_2$ as a model system, we investigate the impact of vacancy ordering through density functional theory, density functional tight-binding calculations, and quantum transport simulations. We demonstrate that a",
+    "authors": [
+      "Alessandro Pecchia",
+      "Andrea Lorenzoni",
+      "Alexander Croy",
+      "Francesco Mercuri",
+      "Massimiliano Cavallini"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Performance Analysis of Double Perovskite-Based Solar Cells Using SCAPS-1D Simulation: A brief review",
+    "url": "https://arxiv.org/abs/2608.04736v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Lead-free double perovskites are among the rapidly developing next-generation solar cell technologies, providing the required low toxicity, stability, as well as high optoelectronic potential. So far, experimentally prepared lead-free perovskite solar cell devices are reported to have low power conversion efficiency (PCE) for practical application as compared to the lead-based perovskites. In recent years, numerical simulations have emerged as a cost-effective approach that plays a crucial role ",
+    "authors": [
+      "H. Laltlanmawii",
+      "Lalrem Kima",
+      "Mahabur Rahman",
+      "Md. Ferdous Rahman",
+      "Dilshod Nematov",
+      "S. Bhattarai",
+      "C. V. M. Chaturvedi",
+      "Yazen M. Alawaideh",
+      "A. Laref",
+      "D. P. Rai"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "A Systolic Array Architecture for Nonlinear Activation Functions and Softmax Computation using Chebyshev Polynomials",
+    "url": "https://arxiv.org/abs/2608.04734v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Neural Network Accelerators have gained popularity in recent years due to their greater efficiency than CPU-based platforms. Often, these accelerators utilize different hardware units for univariate activation functions, such as tanh, and the multivariate softmax, thereby missing opportunities for resource sharing between them. In this paper, we describe a novel systolic array-based activation unit architecture that supports multiple univariate activation functions as well as the softmax functio",
+    "authors": [
+      "Benedikt Schaible",
+      "Anirudh Suresh Bharadwaj",
+      "Ulf Schlichtmann",
+      "Jiang Hu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Active Learning Guided Design Space Refinement for Scalable Multi-Objective Bayesian Optimization in Materials Discovery",
+    "url": "https://arxiv.org/abs/2608.04651v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Advanced materials discovery increasingly relies on machine learning and Bayesian optimization to explore large discrete design spaces under limited evaluation budgets. However, conventional Bayesian optimization (BO) can become inefficient as candidate spaces grow, often evaluating low-value regions before reaching informative areas. We propose an active-learning (AL)-guided adaptive search-space refinement framework combined with multi-objective BO to accelerate materials optimization while pr",
+    "authors": [
+      "Alexandros Ntagiantas",
+      "Panagiotis Tsilimidos",
+      "George Giannakopoulos",
+      "Christoforos Rekatsinas",
+      "Panagiotis Krokidas"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Methods for traceable scanning magnetometry using single nitrogen vacancy centers in diamond: determining orientation, distance and localization",
+    "url": "https://arxiv.org/abs/2608.04632v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Individual, scannable nitrogen vacancy (NV) centers in single crystal diamond nanostructures enable nanoscale, quantitative imaging of magnetic stray fields. Nevertheless, important parameters like distance between the NV center and the sample and the orientation of the NV high symmetry axis are often not known precisely and enter data evaluation as free fitting parameters. We here use scanning NV imaging on micro-patterned, perpendicularly magnetized stripes and discs. From these measurements, ",
+    "authors": [
+      "Nikhita Khera",
+      "Ephraim Spindler",
+      "Yanis Abdedou",
+      "Marcel Gasser",
+      "Sandra Wolff",
+      "Bert Lägel",
+      "Robert Frömter",
+      "Mathias Weiler",
+      "Mathias Kläui",
+      "Elke Neu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Universal Function Approximation via Diffractive Optical Processors: Physical Limits, Error Bounds, and Learnability",
+    "url": "https://arxiv.org/abs/2608.04582v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "We present a unified theoretical framework connecting classical universal approximation theory, Fourier-feature approximation, and diffractive optical processors. We show that phase-encoded diffractive processors implement finite Fourier-feature expansions whose mathematical completeness follows from Fourier/Stone-Weierstrass arguments, while their physical realizability is governed by finite coefficient synthesis through optimized spatially varying coherent point-spread functions (PSFs). Our an",
+    "authors": [
+      "Md Sadman Sakib Rahman",
+      "Che-Yung Shen",
+      "Aydogan Ozcan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Photogalvanic second harmonic generation in Si3N4 for 1 Hz level on-chip metrology and spectroscopy",
+    "url": "https://arxiv.org/abs/2608.04555v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "The coherent photogalvanic (PG) effect induces an effective $χ^{(2)}$ nonlinearity in natively $χ^{(3)}$ silicon nitride integrated photonics, unlocking pathways toward chip-scale precision spectroscopy and optical clockworks via second harmonic generation (SHG). While quasi-phase-matched PG-SHG using spatially varying internal electric fields offers tuning flexibility, it is often accompanied by pump-power- and detuning-dependent frequency offsets.\n  Here, we investigate whether direct phase-ma",
+    "authors": [
+      "Andrei Diakonov",
+      "Roy Zektzer",
+      "Xiyuan Lu",
+      "Kartik Srinivasan",
+      "Liron Stern"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Nano-scale visualization of magnetic vortices in metal nanoparticles",
+    "url": "https://arxiv.org/abs/2608.04490v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Magnetic vortices in individual nanoparticles are fundamental spin structures that govern the properties of next-generation magnetic devices and biomedical applications. However, directly imaging their complete structure, from the circulating in-plane magnetization to the nanometer scale out-of-plane core, remains challenging. Here, direct and quantitative visualization of magnetic vortex structures in individual cobalt nanoparticles is achieved by integrating a time-reversal methodology with ti",
+    "authors": [
+      "Satoko Toyama",
+      "Yoshiki O. Murakami",
+      "Ayako Nishikawa",
+      "Takehito Seki",
+      "Akihito Kumamoto",
+      "Yuichi Ikuhara",
+      "Naoya Shibata"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "Architectural Implications of Agentic AI Workflows",
+    "url": "https://arxiv.org/abs/2608.04458v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Agentic AI is emerging in datacenters, but its architectural implications remain unexplored. We organize agentic workflows in a taxonomy and present its first architectural characterization with a production study at Microsoft Azure and a controlled study of open-source frameworks. We show that agentic execution is fragmented and heterogeneous. Requests expand into a workflow of LLM inferences, tool invocations, and orchestration decisions that repeatedly cross the CPU-GPU boundary. Our taxonomy",
+    "authors": [
+      "Jirong Yang",
+      "Peizhe Liu",
+      "Chaojie Zhang",
+      "Jovan Stojkovic"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "MCHA: A Memory-Centric Hierarchical Architecture for Parallel-Sequential Computing",
+    "url": "https://arxiv.org/abs/2608.04443v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Emerging workloads, such as Multi-Agent Reinforcement Learning (MARL), large-scale neuromorphic computing, and probabilistic graphical models, intrinsically exhibit parallel-sequential computing patterns. While these tasks demand massive parallelism to achieve high throughput, they are severely bottlenecked by irregular data access patterns centralized to main memory. Consequently, conventional architectures face fundamental limitations when executing these workloads, primarily manifesting as gl",
+    "authors": [
+      "Daijing Shi",
+      "Hongxiao Zhao",
+      "Yihan Fu",
+      "Zhan Chen",
+      "Jiayi Li",
+      "Yihang Zhu",
+      "Anjunyi Fan",
+      "Yaoyu Tao",
+      "Yuchao Yang",
+      "Bonan Yan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Deltoris: Enabling Real-time VLA Inference in Embodied AI via Bit-level Sparsity and Speculative Inference",
+    "url": "https://arxiv.org/abs/2608.04428v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Vision-language-action (VLA) models have emerged as a key component in embodied AI. Among existing approaches, diffusion-based VLA models achieve superior motion quality and generalization. However, diffusion-based VLA models are compute-intensive and must run at high control frequency, e.g., 50-200 Hz. Thus, it imposes strict latency and energy constraints on edge devices.\n  In this work, we present Deltoris, an algorithm-hardware co-design framework for efficient diffusion-based VLA inference.",
+    "authors": [
+      "Zheng Liu",
+      "Zeyu Guo",
+      "Zihan Liu",
+      "Anbang Wu",
+      "Han Zhao",
+      "Fangxin Liu",
+      "Zhezhi He",
+      "Yinhe Han",
+      "Jingwen Leng",
+      "Minyi Guo",
+      "Yiming Gan",
+      "Yu Feng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Monolithic integration of optically anisotropic GeSe-based films on GaAs by templated solid-phase epitaxy",
+    "url": "https://arxiv.org/abs/2608.04418v1",
+    "published_date": "2026-08-05",
+    "source": "arXiv",
+    "summary": "Layered IV-VI semiconductors such as GeSe exhibit strong in-plane optical anisotropy, making them promising candidates for polarization-sensitive photonic devices. However, realizing these properties in scalable platforms requires heteroepitaxial integration on technologically relevant substrates like GaAs. Direct growth of GeSe is complicated by its glass formation at low temperatures and high vapor pressure at elevated temperatures. To overcome this, we develop a method for ex-situ solid-phase",
+    "authors": [
+      "Kira J. Martin",
+      "Autumn Y. Lee",
+      "Pranav Mahaadev",
+      "Pooja D. Reddy",
+      "Kelly Xiao",
+      "Tri Nguyen",
+      "Ashlee M. García",
+      "Aaron M. Lindenberg",
+      "Kunal Mukherjee"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "physics.app-ph",
     "title": "Reduced Dark Current in Cd0.9Zn0.1Te Detector Arrays by Aluminium Oxide Passivation",
     "url": "https://arxiv.org/abs/2608.02516v1",

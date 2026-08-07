@@ -1,214 +1,270 @@
 {
-  "date": "2026-08-05",
-  "generated_at": "2026-08-05T21:15:53.173143+00:00",
+  "date": "2026-08-07",
+  "generated_at": "2026-08-07T00:58:28.570174+00:00",
   "sectors": {
-    "hpc_datacenter": {
-      "sector": "HPC·Datacenter",
-      "date": "2026-08-05",
-      "item_count": 16,
-      "generated_at": "2026-08-05T21:15:53.172286+00:00",
+    "mobile_ap": {
+      "sector": "Mobile AP",
+      "date": "2026-08-07",
+      "item_count": 2,
+      "generated_at": "2026-08-07T00:58:28.569382+00:00",
       "content": {
         "ko": {
-          "executive_summary": "SK Hynix and Samsung face severe semiconductor talent shortages amid record hiring initiatives. Industry leaders are restructuring recruitment processes, with SK Hynix eliminating education requirements and implementing half-day in-depth interviews to attract AI-era talent. Anthropic is expanding compute capacity through a $10B Volta partnership while building an in-house chip design team, and AMD has unveiled its largest global design center in India.",
+          "executive_summary": "Samsung showcased its latest AI memory innovations at FMS 2026, presenting an advanced DRAM/NAND portfolio and technology roadmap to address AI infrastructure demands. MediaTek continues expanding its reach from devices to data centers.",
           "key_facts": [
-            "SK Hynix reforming recruitment: eliminating education requirements, introducing half-day deep interviews, removing application essays",
-            "SK Hynix offering hundred-million-won performance bonuses for finance operations roles",
-            "Anthropic securing $10B Volta compute deal and hiring in-house chip design team",
-            "AMD unveils largest global design center in India",
-            "High Bandwidth Flash (HBF) emerging as potential AI memory wall solution",
-            "Google and AMD reshaping HBM market as Nvidia share declines; Korean suppliers competing"
+            "Samsung Electronics presented AI memory innovations at FMS 2026 in Santa Clara, California",
+            "Samsung's portfolio spans DRAM, NAND, enterprise storage, and advanced semiconductor technologies"
           ],
           "implications": [
             {
-              "keyword": "Talent Competition",
-              "text": "Korean chipmakers deploying aggressive recruitment innovations including skill-based hiring and premium bonuses to counter brain drain in AI era"
+              "keyword": "AI Memory Leadership",
+              "text": "Samsung reinforcing its position as a key supplier of memory solutions for AI infrastructure expansion"
             },
             {
-              "keyword": "HBM Market Shift",
-              "text": "Architectural changes driven by Google and AMD custom chips eroding Nvidia's dominance; Korean HBM suppliers face intensifying competition"
-            },
-            {
-              "keyword": "Vertical Integration",
-              "text": "Anthropic's in-house chip team and compute expansion signal AI companies moving beyond pure GPU reliance to custom silicon strategies"
-            },
-            {
-              "keyword": "Regional Dispersion",
-              "text": "AMD's India design center expands geographic footprint for AI semiconductor design outside traditional hubs"
+              "keyword": "Data Center Integration",
+              "text": "MediaTek's broadening reach into data center markets signals semiconductor providers' shift toward higher-margin HPC/AI segments"
             }
           ],
-          "counterpoint": "Recruitment reforms target HPC roles but may not address foundational talent pipeline gaps in semiconductor engineering education."
+          "counterpoint": "Limited detail on specific capacity commitments or differentiation versus competitors."
         },
         "en": {
-          "executive_summary": "SK Hynix and Samsung face severe semiconductor talent shortages amid record hiring initiatives. Industry leaders are restructuring recruitment processes, with SK Hynix eliminating education requirements and implementing half-day in-depth interviews to attract AI-era talent. Anthropic is expanding compute capacity through a $10B Volta partnership while building an in-house chip design team, and AMD has unveiled its largest global design center in India.",
+          "executive_summary": "Samsung showcased its latest AI memory innovations at FMS 2026, presenting an advanced DRAM/NAND portfolio and technology roadmap to address AI infrastructure demands. MediaTek continues expanding its reach from devices to data centers.",
           "key_facts": [
-            "SK Hynix reforming recruitment: eliminating education requirements, introducing half-day deep interviews, removing application essays",
-            "SK Hynix offering hundred-million-won performance bonuses for finance operations roles",
-            "Anthropic securing $10B Volta compute deal and hiring in-house chip design team",
-            "AMD unveils largest global design center in India",
-            "High Bandwidth Flash (HBF) emerging as potential AI memory wall solution",
-            "Google and AMD reshaping HBM market as Nvidia share declines; Korean suppliers competing"
+            "Samsung Electronics presented AI memory innovations at FMS 2026 in Santa Clara, California",
+            "Samsung's portfolio spans DRAM, NAND, enterprise storage, and advanced semiconductor technologies"
           ],
           "implications": [
             {
-              "keyword": "Talent Competition",
-              "text": "Korean chipmakers deploying aggressive recruitment innovations including skill-based hiring and premium bonuses to counter brain drain in AI era"
+              "keyword": "AI Memory Leadership",
+              "text": "Samsung reinforcing its position as a key supplier of memory solutions for AI infrastructure expansion"
             },
             {
-              "keyword": "HBM Market Shift",
-              "text": "Architectural changes driven by Google and AMD custom chips eroding Nvidia's dominance; Korean HBM suppliers face intensifying competition"
-            },
-            {
-              "keyword": "Vertical Integration",
-              "text": "Anthropic's in-house chip team and compute expansion signal AI companies moving beyond pure GPU reliance to custom silicon strategies"
-            },
-            {
-              "keyword": "Regional Dispersion",
-              "text": "AMD's India design center expands geographic footprint for AI semiconductor design outside traditional hubs"
+              "keyword": "Data Center Integration",
+              "text": "MediaTek's broadening reach into data center markets signals semiconductor providers' shift toward higher-margin HPC/AI segments"
             }
           ],
-          "counterpoint": "Recruitment reforms target HPC roles but may not address foundational talent pipeline gaps in semiconductor engineering education."
+          "counterpoint": "Limited detail on specific capacity commitments or differentiation versus competitors."
+        }
+      }
+    },
+    "hpc_datacenter": {
+      "sector": "HPC·Datacenter",
+      "date": "2026-08-07",
+      "item_count": 22,
+      "generated_at": "2026-08-07T00:58:28.569382+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "SK hynix is aggressively scaling AI and memory talent acquisition across the U.S. and Korea through specialized recruitment initiatives and innovation programs. AMD is establishing engineering infrastructure in Romania as part of broader geographic diversification.",
+          "key_facts": [
+            "SK hynix launched 'Talent hy-way' recruitment innovation program for international talent acquisition",
+            "SK hynix recruiting AI and fab setup personnel in the U.S. market",
+            "SK hynix introduced 'half-day deep interview' format prioritizing AI competency for new hire evaluation",
+            "SK hynix removed education pedigree requirements from hiring criteria",
+            "AMD opened design center in Iaşi, Romania",
+            "SK hynix subsidiary Solidigm hired IPO disclosure officer, signaling potential pre-IPO activity"
+          ],
+          "implications": [
+            {
+              "keyword": "Memory Talent War",
+              "text": "SK hynix's multi-pronged recruitment approach (international programs, AI-focused screening, education-blind criteria) reflects acute competition for AI/HPC engineering talent"
+            },
+            {
+              "keyword": "Capacity Confidence",
+              "text": "Aggressive hiring for U.S. AI and fab operations indicates SK hynix betting on sustained demand growth and geographic expansion"
+            },
+            {
+              "keyword": "Geographic Diversification",
+              "text": "AMD's Romania design center reflects efforts to reduce geopolitical risk and access Eastern European engineering talent pools"
+            },
+            {
+              "keyword": "Corporate Restructuring",
+              "text": "Solidigm IPO preparation may unlock capital for independent memory product development and competitive positioning"
+            }
+          ],
+          "counterpoint": "Heavy focus on recruitment headlines rather than concrete capacity additions or performance metrics."
+        },
+        "en": {
+          "executive_summary": "SK hynix is aggressively scaling AI and memory talent acquisition across the U.S. and Korea through specialized recruitment initiatives and innovation programs. AMD is establishing engineering infrastructure in Romania as part of broader geographic diversification.",
+          "key_facts": [
+            "SK hynix launched 'Talent hy-way' recruitment innovation program for international talent acquisition",
+            "SK hynix recruiting AI and fab setup personnel in the U.S. market",
+            "SK hynix introduced 'half-day deep interview' format prioritizing AI competency for new hire evaluation",
+            "SK hynix removed education pedigree requirements from hiring criteria",
+            "AMD opened design center in Iaşi, Romania",
+            "SK hynix subsidiary Solidigm hired IPO disclosure officer, signaling potential pre-IPO activity"
+          ],
+          "implications": [
+            {
+              "keyword": "Memory Talent War",
+              "text": "SK hynix's multi-pronged recruitment approach (international programs, AI-focused screening, education-blind criteria) reflects acute competition for AI/HPC engineering talent"
+            },
+            {
+              "keyword": "Capacity Confidence",
+              "text": "Aggressive hiring for U.S. AI and fab operations indicates SK hynix betting on sustained demand growth and geographic expansion"
+            },
+            {
+              "keyword": "Geographic Diversification",
+              "text": "AMD's Romania design center reflects efforts to reduce geopolitical risk and access Eastern European engineering talent pools"
+            },
+            {
+              "keyword": "Corporate Restructuring",
+              "text": "Solidigm IPO preparation may unlock capital for independent memory product development and competitive positioning"
+            }
+          ],
+          "counterpoint": "Heavy focus on recruitment headlines rather than concrete capacity additions or performance metrics."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-05",
-      "item_count": 19,
-      "generated_at": "2026-08-05T21:15:53.172286+00:00",
+      "date": "2026-08-07",
+      "item_count": 21,
+      "generated_at": "2026-08-07T00:58:28.569382+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Anthropic is assembling an in-house AI chip design team to reduce Claude inference costs by approximately 50% while maintaining partnerships with Nvidia, Google, and AWS. TSMC affiliate GUC posted record revenue as turnkey services exceed 80% market share, signaling a shift toward fabless-focused design models. Bernstein forecasts ASIC share of AI server chips to double by 2027.",
+          "executive_summary": "Anthropic is establishing an in-house chip design team to develop custom AI silicon for Claude, joining OpenAI in the AI-native chip race. Mirendil selected Google Cloud's AI Hypercomputer combining TPU and NVIDIA GPU infrastructure for training workloads.",
           "key_facts": [
-            "Anthropic building in-house chip team for Claude with targeted hiring of chip design engineers",
-            "Anthropic custom silicon co-design projected to cut Claude inference costs in half",
-            "TSMC affiliate GUC achieving record revenue; turnkey services surpass 80% penetration",
-            "Bernstein forecast: ASIC share to double by 2027 amid AI supply chain headwinds",
-            "Anthropic continuing partnerships with Nvidia, Google, and AWS despite in-house efforts"
+            "Anthropic confirmed in-house chip design team building for Claude AI chip development",
+            "Anthropic hiring engineers for tapeout and production ramp phases",
+            "Mirendil selected Google Cloud AI Hypercomputer with TPU and NVIDIA GPU training infrastructure",
+            "OpenAI previously developed Jalapeno chip, establishing precedent for AI company vertical integration"
           ],
           "implications": [
             {
-              "keyword": "Custom Silicon Strategy",
-              "text": "Anthropic joining trend of major AI companies pursuing proprietary chip designs to reduce inference cost and improve performance margins"
+              "keyword": "AI Vertical Integration",
+              "text": "Anthropic following OpenAI's model of custom silicon development to reduce NVIDIA dependency and optimize inference/training economics"
             },
             {
-              "keyword": "Turnkey Model Expansion",
-              "text": "GUC's 80%+ turnkey penetration indicates fabless model dominance; design teams outsourcing manufacturing and packaging reduces capital barriers"
+              "keyword": "Foundry Demand Shift",
+              "text": "AI companies moving beyond standard accelerator procurement toward bespoke chip design, creating new business opportunities for foundries and design tool vendors"
             },
             {
-              "keyword": "ASIC Proliferation",
-              "text": "Bernstein's doubling ASIC forecast by 2027 reflects diversification away from GPU-centric architectures as inference workloads grow"
+              "keyword": "Talent Consolidation",
+              "text": "AI labs hiring experienced silicon engineers signals sustained engineering skill shortage and competitive talent acquisition across the industry"
             },
             {
-              "keyword": "Supply Chain Consolidation",
-              "text": "Anthropic's dual strategy—in-house design plus Nvidia/Google partnerships—hedges against single-supplier dependencies for critical compute"
+              "keyword": "Hyperscaler Fragmentation",
+              "text": "Mirendil's hybrid TPU/GPU strategy reflects diversification away from single-vendor lock-in despite Google's first-party TPU offering"
             }
           ],
-          "counterpoint": "Anthropic's cost reduction claims remain unvalidated; technical complexity and time-to-market risks may delay custom silicon payoff versus continued GPU partnerships."
+          "counterpoint": "No timeline or technical specifications disclosed for Anthropic's custom chip; commercial impact remains speculative."
         },
         "en": {
-          "executive_summary": "Anthropic is assembling an in-house AI chip design team to reduce Claude inference costs by approximately 50% while maintaining partnerships with Nvidia, Google, and AWS. TSMC affiliate GUC posted record revenue as turnkey services exceed 80% market share, signaling a shift toward fabless-focused design models. Bernstein forecasts ASIC share of AI server chips to double by 2027.",
+          "executive_summary": "Anthropic is establishing an in-house chip design team to develop custom AI silicon for Claude, joining OpenAI in the AI-native chip race. Mirendil selected Google Cloud's AI Hypercomputer combining TPU and NVIDIA GPU infrastructure for training workloads.",
           "key_facts": [
-            "Anthropic building in-house chip team for Claude with targeted hiring of chip design engineers",
-            "Anthropic custom silicon co-design projected to cut Claude inference costs in half",
-            "TSMC affiliate GUC achieving record revenue; turnkey services surpass 80% penetration",
-            "Bernstein forecast: ASIC share to double by 2027 amid AI supply chain headwinds",
-            "Anthropic continuing partnerships with Nvidia, Google, and AWS despite in-house efforts"
+            "Anthropic confirmed in-house chip design team building for Claude AI chip development",
+            "Anthropic hiring engineers for tapeout and production ramp phases",
+            "Mirendil selected Google Cloud AI Hypercomputer with TPU and NVIDIA GPU training infrastructure",
+            "OpenAI previously developed Jalapeno chip, establishing precedent for AI company vertical integration"
           ],
           "implications": [
             {
-              "keyword": "Custom Silicon Strategy",
-              "text": "Anthropic joining trend of major AI companies pursuing proprietary chip designs to reduce inference cost and improve performance margins"
+              "keyword": "AI Vertical Integration",
+              "text": "Anthropic following OpenAI's model of custom silicon development to reduce NVIDIA dependency and optimize inference/training economics"
             },
             {
-              "keyword": "Turnkey Model Expansion",
-              "text": "GUC's 80%+ turnkey penetration indicates fabless model dominance; design teams outsourcing manufacturing and packaging reduces capital barriers"
+              "keyword": "Foundry Demand Shift",
+              "text": "AI companies moving beyond standard accelerator procurement toward bespoke chip design, creating new business opportunities for foundries and design tool vendors"
             },
             {
-              "keyword": "ASIC Proliferation",
-              "text": "Bernstein's doubling ASIC forecast by 2027 reflects diversification away from GPU-centric architectures as inference workloads grow"
+              "keyword": "Talent Consolidation",
+              "text": "AI labs hiring experienced silicon engineers signals sustained engineering skill shortage and competitive talent acquisition across the industry"
             },
             {
-              "keyword": "Supply Chain Consolidation",
-              "text": "Anthropic's dual strategy—in-house design plus Nvidia/Google partnerships—hedges against single-supplier dependencies for critical compute"
+              "keyword": "Hyperscaler Fragmentation",
+              "text": "Mirendil's hybrid TPU/GPU strategy reflects diversification away from single-vendor lock-in despite Google's first-party TPU offering"
             }
           ],
-          "counterpoint": "Anthropic's cost reduction claims remain unvalidated; technical complexity and time-to-market risks may delay custom silicon payoff versus continued GPU partnerships."
+          "counterpoint": "No timeline or technical specifications disclosed for Anthropic's custom chip; commercial impact remains speculative."
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-05",
-      "item_count": 19,
-      "generated_at": "2026-08-05T21:15:53.172286+00:00",
+      "date": "2026-08-07",
+      "item_count": 20,
+      "generated_at": "2026-08-07T00:58:28.569382+00:00",
       "content": {
         "ko": {
-          "executive_summary": "TSMC's 2nm monthly capacity reaching 100,000 wafers while Samsung Foundry sells out 4nm capacity through 2027 on AI demand surge. Korea maintains projected memory dominance through 2031 as HBM market evolves beyond Nvidia's sole control amid custom AI chip proliferation. Intel's Ohio fab accelerates construction via mandatory 50-hour weeks and performance incentives to attract skilled labor.",
+          "executive_summary": "Samsung Foundry targets 100% utilization as 4nm capacity is fully booked through 2026 amid surging AI chip orders; TSMC is scaling 3nm to 180,000 wafers/month and ramping 2nm toward 100,000 wafers to capture AI-driven demand. China's Big Fund III is pivoting from fab construction toward advanced packaging and AI chip development. Tesla's Terafab in Texas is progressing with $16.8B first-phase funding, signaling non-traditional entrants into chipmaking.",
           "key_facts": [
-            "TSMC 2nm monthly capacity target: 100,000 wafers",
-            "Samsung Foundry 4nm fully sold out through 2027",
-            "Korea projected to maintain memory semiconductor leadership through 2031",
-            "Nvidia HBM dominance weakening due to custom AI chip adoption by Google, AMD, others",
-            "Intel Ohio fab (Ohio One) implementing mandatory 50-hour weeks, 1.5x overtime pay, $300-400 weekly performance incentives",
-            "Qualcomm expanding Snapdragon platform from mobile AP to multi-device AI ecosystem (PC, wearables, automotive, XR)"
+            "Samsung Foundry 4nm capacity fully booked through 2026",
+            "Samsung targeting 100% utilization and pursuing TSMC spillover orders from China and India via 5nm",
+            "Anthropic eyeing Samsung 2nm for custom AI chips",
+            "TSMC boosting 3nm to 180,000 wafers monthly for AI demand",
+            "TSMC racing 2nm toward 100,000 wafers monthly",
+            "China's Big Fund Phase III shifting focus from fab-building to advanced packaging, equipment, and AI chips",
+            "Tesla Terafab Texas Phase 1: $16.8B investment with memory engineering hiring for DRAM push",
+            "POSTECH-Samsung joint research advancing 3D NAND technology barriers",
+            "Trump administration imposing 15% tariff on polysilicon derivatives, setting minimum import price at $21/kg"
           ],
           "implications": [
             {
-              "keyword": "Capacity Lock-In",
-              "text": "Samsung's 4nm sellout through 2027 indicates AI chip demand outpacing supply; competitive advantage to secured design partners while excluding new entrants"
+              "keyword": "Capacity Crunch",
+              "text": "Samsung and TSMC fully allocated through 2026 at advanced nodes, forcing new entrants (Tesla, custom chip startups) toward foundry alternatives or captive fabrication"
             },
             {
-              "keyword": "Memory Market Restructuring",
-              "text": "Korea's projected 2031 memory dominance at risk as HBM diversification (non-Nvidia custom chips) fragments supplier concentration and margins"
+              "keyword": "Market Share Shift",
+              "text": "Samsung's ability to capture TSMC spillover from China/India and pull high-margin 2nm custom AI orders demonstrates competitive recovery in advanced nodes"
             },
             {
-              "keyword": "U.S. Fab Acceleration",
-              "text": "Intel's Ohio fab labor intensity surge via overtime premiums and incentives reflects urgency to compete with TSMC/Samsung amid geopolitical supply chain restructuring"
+              "keyword": "China Pivot",
+              "text": "Big Fund III shifting from capex-heavy fabs to equipment/packaging indicates maturation of China's domestic advanced node ecosystem and focus on profitable subsectors"
             },
             {
-              "keyword": "Multi-Platform AI Fragmentation",
-              "text": "Qualcomm's AP dominance shifting toward AI-connected ecosystem strategy; signals platform competition moving beyond smartphone performance benchmarks"
+              "keyword": "Vertically Integrated Capacity",
+              "text": "Tesla's Terafab entry with DRAM focus suggests major systems companies building captive capacity for AI training infrastructure, reducing reliance on merchant foundries"
+            },
+            {
+              "keyword": "Supply Chain Protectionism",
+              "text": "15% polysilicon tariff and $21/kg minimum pricing could increase upstream material costs for all foundries and increase sourcing complexity"
             }
           ],
-          "counterpoint": "TSMC's 2nm ramp and Samsung's 4nm capacity claims depend on sustained customer demand; economic slowdown or design cycle delays could create overcapacity."
+          "counterpoint": "TSMC and Samsung's stated capacity targets assume sustained AI demand; any slowdown would result in significant excess inventory."
         },
         "en": {
-          "executive_summary": "TSMC's 2nm monthly capacity reaching 100,000 wafers while Samsung Foundry sells out 4nm capacity through 2027 on AI demand surge. Korea maintains projected memory dominance through 2031 as HBM market evolves beyond Nvidia's sole control amid custom AI chip proliferation. Intel's Ohio fab accelerates construction via mandatory 50-hour weeks and performance incentives to attract skilled labor.",
+          "executive_summary": "Samsung Foundry targets 100% utilization as 4nm capacity is fully booked through 2026 amid surging AI chip orders; TSMC is scaling 3nm to 180,000 wafers/month and ramping 2nm toward 100,000 wafers to capture AI-driven demand. China's Big Fund III is pivoting from fab construction toward advanced packaging and AI chip development. Tesla's Terafab in Texas is progressing with $16.8B first-phase funding, signaling non-traditional entrants into chipmaking.",
           "key_facts": [
-            "TSMC 2nm monthly capacity target: 100,000 wafers",
-            "Samsung Foundry 4nm fully sold out through 2027",
-            "Korea projected to maintain memory semiconductor leadership through 2031",
-            "Nvidia HBM dominance weakening due to custom AI chip adoption by Google, AMD, others",
-            "Intel Ohio fab (Ohio One) implementing mandatory 50-hour weeks, 1.5x overtime pay, $300-400 weekly performance incentives",
-            "Qualcomm expanding Snapdragon platform from mobile AP to multi-device AI ecosystem (PC, wearables, automotive, XR)"
+            "Samsung Foundry 4nm capacity fully booked through 2026",
+            "Samsung targeting 100% utilization and pursuing TSMC spillover orders from China and India via 5nm",
+            "Anthropic eyeing Samsung 2nm for custom AI chips",
+            "TSMC boosting 3nm to 180,000 wafers monthly for AI demand",
+            "TSMC racing 2nm toward 100,000 wafers monthly",
+            "China's Big Fund Phase III shifting focus from fab-building to advanced packaging, equipment, and AI chips",
+            "Tesla Terafab Texas Phase 1: $16.8B investment with memory engineering hiring for DRAM push",
+            "POSTECH-Samsung joint research advancing 3D NAND technology barriers",
+            "Trump administration imposing 15% tariff on polysilicon derivatives, setting minimum import price at $21/kg"
           ],
           "implications": [
             {
-              "keyword": "Capacity Lock-In",
-              "text": "Samsung's 4nm sellout through 2027 indicates AI chip demand outpacing supply; competitive advantage to secured design partners while excluding new entrants"
+              "keyword": "Capacity Crunch",
+              "text": "Samsung and TSMC fully allocated through 2026 at advanced nodes, forcing new entrants (Tesla, custom chip startups) toward foundry alternatives or captive fabrication"
             },
             {
-              "keyword": "Memory Market Restructuring",
-              "text": "Korea's projected 2031 memory dominance at risk as HBM diversification (non-Nvidia custom chips) fragments supplier concentration and margins"
+              "keyword": "Market Share Shift",
+              "text": "Samsung's ability to capture TSMC spillover from China/India and pull high-margin 2nm custom AI orders demonstrates competitive recovery in advanced nodes"
             },
             {
-              "keyword": "U.S. Fab Acceleration",
-              "text": "Intel's Ohio fab labor intensity surge via overtime premiums and incentives reflects urgency to compete with TSMC/Samsung amid geopolitical supply chain restructuring"
+              "keyword": "China Pivot",
+              "text": "Big Fund III shifting from capex-heavy fabs to equipment/packaging indicates maturation of China's domestic advanced node ecosystem and focus on profitable subsectors"
             },
             {
-              "keyword": "Multi-Platform AI Fragmentation",
-              "text": "Qualcomm's AP dominance shifting toward AI-connected ecosystem strategy; signals platform competition moving beyond smartphone performance benchmarks"
+              "keyword": "Vertically Integrated Capacity",
+              "text": "Tesla's Terafab entry with DRAM focus suggests major systems companies building captive capacity for AI training infrastructure, reducing reliance on merchant foundries"
+            },
+            {
+              "keyword": "Supply Chain Protectionism",
+              "text": "15% polysilicon tariff and $21/kg minimum pricing could increase upstream material costs for all foundries and increase sourcing complexity"
             }
           ],
-          "counterpoint": "TSMC's 2nm ramp and Samsung's 4nm capacity claims depend on sustained customer demand; economic slowdown or design cycle delays could create overcapacity."
+          "counterpoint": "TSMC and Samsung's stated capacity targets assume sustained AI demand; any slowdown would result in significant excess inventory."
         }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-05",
-      "item_count": 20,
-      "generated_at": "2026-08-05T21:15:53.172286+00:00",
+      "date": "2026-08-07",
+      "item_count": 19,
+      "generated_at": "2026-08-07T00:58:28.569382+00:00",
       "content": {
         "ko": {},
         "en": {}
