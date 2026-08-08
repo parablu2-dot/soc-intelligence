@@ -1613,283 +1613,6 @@ aws cloudformation wait stack-delete-complete \
 		
 			</item>
 		<item>
-		<title>Enforcing data residency with single-Region Claude Code on Amazon Bedrock</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/enforcing-data-residency-with-single-region-claude-code-on-amazon-bedrock/</link>
-		
-		<dc:creator><![CDATA[Zaid Barkat]]></dc:creator>
-		<pubDate>Thu, 06 Aug 2026 16:21:54 +0000</pubDate>
-				<category><![CDATA[Advanced (300)]]></category>
-		<category><![CDATA[Amazon Bedrock]]></category>
-		<category><![CDATA[Technical How-to]]></category>
-		<guid isPermaLink="false">b8993bf5d313f42edd0a51f097f3e27254e11086</guid>
-
-					<description>A regulated customer needed all Claude Code inference processed in a single AWS Region (London), not just in-geography. This post shows two ways to pin Claude Code on Amazon Bedrock to one Region: an application inference profile or the Mantle endpoint, paired with an IAM Region condition, plus how to verify compliance in AWS CloudTrail.</description>
-										<content:encoded>&lt;p&gt;A US-headquartered global organization recently came to us with a deceptively simple data-residency request: let their engineers use Claude Code. The requirement: Amazon Bedrock model inference had to be processed in London (the eu-west-2 AWS Region), not merely called from London. Their compliance team had drawn a hard line. Prompts, completions, and intermediate processing were required to stay inside a single AWS Region. Approximate compliance wasn’t on the table.&lt;/p&gt; 
-&lt;p&gt;We tried the newest path first (Anthropic’s Mantle endpoint on Amazon Bedrock) and encountered a limitation. Then we went back to the classic Amazon Bedrock Invoke API with an application inference profile. That combination, plus an &lt;a href="https://aws.amazon.com/iam/" target="_blank" rel="noopener"&gt;AWS Identity and Access Management (IAM)&lt;/a&gt; Region condition, satisfied the requirement.&lt;/p&gt; 
-&lt;p&gt;In this post, we show you both paths, why the choice depends on your Region, the AWS Identity and Access Management (IAM) policy that enforces them, and how to verify compliance in &lt;a href="https://aws.amazon.com/cloudtrail/" target="_blank" rel="noopener"&gt;AWS CloudTrail&lt;/a&gt;. The pattern applies to tools that target an &lt;a href="https://aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock&lt;/a&gt; model ID.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Important context:&lt;/strong&gt; for most Amazon Bedrock workloads, cross-Region inference (CRIS) is the right default. It smooths throughput, increases the capacity available to your application, and gives you access to newer models first. Use the single-Region patterns in this post only when your compliance requirement is a specific AWS Region rather than a geography. If “somewhere in the EU” satisfies your data residency need, an EU cross-Region profile is the more straightforward answer.&lt;/p&gt; 
-&lt;h2 id="prerequisites"&gt;Prerequisites&lt;/h2&gt; 
-&lt;p&gt;Before you begin, confirm that you have:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;An AWS account with &lt;a href="https://console.aws.amazon.com/bedrock/home#/modelaccess" target="_blank" rel="noopener"&gt;Amazon Bedrock model access&lt;/a&gt; enabled for the Claude models that you intend to use.&lt;/li&gt; 
- &lt;li&gt;IAM permissions for the identity Claude Code runs as, which differ by path: 
-  &lt;ul&gt; 
-   &lt;li&gt;Path 1 (Mantle): &lt;code&gt;bedrock-mantle:CreateInference&lt;/code&gt;, &lt;code&gt;bedrock-mantle:Get*&lt;/code&gt;, and &lt;code&gt;bedrock-mantle:List*&lt;/code&gt;.&lt;/li&gt; 
-   &lt;li&gt;Path 2 (classic Amazon Bedrock): &lt;code&gt;bedrock:CreateInferenceProfile&lt;/code&gt;, &lt;code&gt;bedrock:InvokeModel&lt;/code&gt;, and &lt;code&gt;bedrock:InvokeModelWithResponseStream&lt;/code&gt;.&lt;/li&gt; 
-   &lt;li&gt;Both paths: &lt;code&gt;iam:CreatePolicy&lt;/code&gt;, &lt;code&gt;iam:AttachRolePolicy&lt;/code&gt;, and &lt;code&gt;iam:PutRolePolicy&lt;/code&gt; to attach the Region-scoped policy to that role or user.&lt;/li&gt; 
-  &lt;/ul&gt; &lt;/li&gt; 
- &lt;li&gt;Claude Code v2.1.94 or later (Path 1 requires Mantle support, which was added in v2.1.94).&lt;/li&gt; 
- &lt;li&gt;AWS Command Line Interface (AWS CLI) installed and configured with credentials for the target Region.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="two-endpoints-two-paths"&gt;Two endpoints, two paths&lt;/h2&gt; 
-&lt;p&gt;Amazon Bedrock exposes Claude models through two distinct endpoints. The one that you use determines how you enforce data residency. It also determines which Regions you can enforce it in.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Classic Amazon Bedrock (bedrock-runtime)&lt;/strong&gt; is the original Amazon Bedrock Invoke API. Claude Code uses it when you set CLAUDE_CODE_USE_BEDROCK=1. Single-Region routing requires an inference profile. By default, the system-defined inference profiles are cross-Region. To keep a request in one Region, you create an application inference profile that points at the in-Region foundation model.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Mantle (bedrock-mantle)&lt;/strong&gt; is a newer Amazon Bedrock endpoint that serves Claude through Anthropic’s native API shape. Claude Code uses it when you set CLAUDE_CODE_USE_MANTLE=1. Single-Region routing is native. You set AWS_REGION, and Mantle resolves the endpoint to that Region directly with no application inference profile needed.&lt;/p&gt; 
-&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
- &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21331-1.png" alt="Two single-Region Claude Code paths: Path 1 through the Mantle endpoint in Ireland, and Path 2 through a classic Amazon Bedrock application inference profile in London, each flowing from developer through an IAM Region guardrail to an in-Region model and verified by CloudTrail" width="800"&gt;
- &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 1: Two paths for single-Region Claude Code&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;However, each endpoint has its own Regional availability and model lineup:&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Classic Amazon Bedrock&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Mantle&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Regions with in-Region Claude support&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;eu-west-2 (London) only&lt;/strong&gt; (for Claude Opus 4.6, Sonnet 4.6)&lt;/td&gt; 
-   &lt;td&gt;Ireland, Stockholm, Tokyo, Melbourne, US East (N. Virginia), US East (Ohio), US West (Oregon)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Model IDs&lt;/td&gt; 
-   &lt;td&gt;&lt;code&gt;anthropic.claude-opus-4-6-v1&lt;/code&gt;, &lt;code&gt;anthropic.claude-sonnet-4-6&lt;/code&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;code&gt;anthropic.claude-sonnet-5&lt;/code&gt;, &lt;code&gt;anthropic.claude-opus-4-8&lt;/code&gt;, &lt;code&gt;anthropic.claude-haiku-4-5&lt;/code&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Single-Region mechanism&lt;/td&gt; 
-   &lt;td&gt;Application inference profile + IAM condition&lt;/td&gt; 
-   &lt;td&gt;&lt;code&gt;AWS_REGION&lt;/code&gt; + IAM condition&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;Claude Code can run both endpoints in the same session (set both env vars). Model IDs starting with &lt;code&gt;anthropic.&lt;/code&gt; and no &lt;code&gt;us.&lt;/code&gt; prefix route to Mantle. Everything else goes to classic Invoke.&lt;/p&gt; 
-&lt;p&gt;Your Region drives the choice. Targeting London (eu-west-2)? Use Path 2. Mantle offers no in-Region routing there, and classic Amazon Bedrock supports in-Region inference for Claude Opus 4.6 and Sonnet 4.6. Targeting one of Ireland, Stockholm, Tokyo, Melbourne, US East (N. Virginia), US East (Ohio), or US West (Oregon)? Use Path 1. Mantle’s native routing works there and gives you access to newer models with less setup. Targeting a different Region? Neither pattern works today. Escalate to your AWS account team.&lt;/p&gt; 
-&lt;p&gt;For model availability by Region, refer to &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/models-region-compatibility.html" target="_blank" rel="noopener"&gt;Supported models by AWS Region&lt;/a&gt; in Amazon Bedrock.&lt;/p&gt; 
-&lt;h2 id="path-1-mantle-for-a-supported-single-region"&gt;Path 1: Mantle for a supported single Region&lt;/h2&gt; 
-&lt;p&gt;If your compliance requirement points at one of Mantle’s seven in-Region Regions (Ireland, Stockholm, Tokyo, Melbourne, US East (N. Virginia), US East (Ohio), or US West (Oregon)), Mantle is the more straightforward path. You get direct single-Region routing without creating any inference profiles, and access to newer models including Claude Sonnet 5.&lt;/p&gt; 
-&lt;p&gt;Configure Claude Code to use Mantle and pin it to your target Region:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-bash"&gt;# Route Claude Code through the Mantle endpoint
-
-# Ireland, an in-Region Mantle Region
-export CLAUDE_CODE_USE_MANTLE=1
-export AWS_REGION=eu-west-1
-# Pin the model family aliases to Mantle model IDs
-export ANTHROPIC_DEFAULT_OPUS_MODEL='anthropic.claude-opus-4-8'
-export ANTHROPIC_DEFAULT_SONNET_MODEL='anthropic.claude-sonnet-5'
-export ANTHROPIC_DEFAULT_HAIKU_MODEL='anthropic.claude-haiku-4-5'&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Run the &lt;code&gt;claude&lt;/code&gt; command and verify the &lt;code&gt;/status&lt;/code&gt; output. The provider should read &lt;code&gt;Amazon Bedrock (Mantle)&lt;/code&gt; and the Region should match. Mantle is available in Claude Code v2.1.94 and later.&lt;/p&gt; 
-&lt;p&gt;Setup summary: three environment variables, no additional AWS resources to provision beyond the IAM policy.&lt;/p&gt; 
-&lt;p&gt;Claude Code has no credentials of its own. Instead, it signs Amazon Bedrock calls with whatever AWS credentials are already in the developer’s environment. Attach this policy to that IAM principal: the role your developers assume (for example, through AWS IAM Identity Center) or the IAM user behind their local profile. It permits Amazon Bedrock calls only in your target Region:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-json"&gt;{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "AllowClaudeCodeMantleInIrelandOnly",
-      "Effect": "Allow",
-      "Action": [
-        "bedrock-mantle:CreateInference",
-        "bedrock-mantle:Get*",
-        "bedrock-mantle:List*"
-      ],
-      "Resource": "arn:aws:bedrock-mantle:eu-west-1:111122223333:project/*",
-      "Condition": {
-        "StringEquals": {
-          "aws:RequestedRegion": "eu-west-1"
-        }
-      }
-    }
-  ]
-}&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Replace &lt;code&gt;111122223333&lt;/code&gt; with your account ID. The &lt;code&gt;aws:RequestedRegion&lt;/code&gt; condition rejects any Mantle call not made against the Ireland endpoint, so even if a developer misconfigures &lt;code&gt;AWS_REGION&lt;/code&gt;, IAM refuses the call. That is the Region guardrail this post is about. Note that model pinning works differently on Mantle: the resource is a project, not a model, so the identity policy controls only Region. Your model choice comes from the &lt;code&gt;ANTHROPIC_DEFAULT_*_MODEL&lt;/code&gt; variables. To enforce an approved model list, use a &lt;a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html" target="_blank" rel="noopener"&gt;service control policy&lt;/a&gt;. That is the asymmetry with Path 2, where the foundation-model Amazon Resource Name (ARN) lets one identity policy pin both Region and models.&lt;/p&gt; 
-&lt;h2 id="path-2-application-inference-profile-for-regions-mantle-doesnt-cover"&gt;Path 2: Application inference profile for Regions Mantle doesn’t cover&lt;/h2&gt; 
-&lt;p&gt;Our customer’s compliance requirement was London specifically, and Mantle’s Regional availability table shows why that matters. &lt;strong&gt;eu-west-2 offers only Global and EU endpoints on Mantle, with no in-Region-only option.&lt;/strong&gt; The EU endpoint routes across the whole EU geography, so a request from London can be processed in Frankfurt, Ireland, or Paris. That is exactly what the customer needed to prevent.&lt;/p&gt; 
-&lt;p&gt;Classic Amazon Bedrock is the only option for London. Additionally, there is a constraint: in-Region availability on classic Amazon Bedrock is narrow.&lt;/p&gt; 
-&lt;p&gt;Per the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-opus-4-6.html" target="_blank" rel="noopener"&gt;Claude Opus 4.6&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-anthropic-claude-sonnet-4-6.html" target="_blank" rel="noopener"&gt;Claude Sonnet 4.6&lt;/a&gt; model cards, eu-west-2 is currently the only Region where these models offer in-Region inference. Opus 4.7 and 4.8 don’t. They are Geo-only on classic Amazon Bedrock. So, the London deployment is anchored on Claude Opus 4.6 and Sonnet 4.6.&lt;/p&gt; 
-&lt;p&gt;Some foundation models can’t be called directly by their model ID because Amazon Bedrock requires you to invoke them through an inference profile instead. So, when you point Claude Code straight at one of these model IDs, the call fails. Amazon Bedrock returns an error saying on-demand throughput isn’t supported and asks you to retry with the ID or ARN of an inference profile. But the system-defined inference profiles are the cross-Region ones (&lt;code&gt;eu.&lt;/code&gt; and &lt;code&gt;global.&lt;/code&gt; prefixes), which is exactly what we are trying to avoid.&lt;/p&gt; 
-&lt;p&gt;The solution is an &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-use.html" target="_blank" rel="noopener"&gt;application inference profile&lt;/a&gt;. This is a profile you create with a foundation-model ARN in one Region as its model source. Point it at the London foundation model ARN and you get a profile-shaped ARN that Claude Code accepts and that resolves to a single-Region model.&lt;/p&gt; 
-&lt;p&gt;Create one profile per model family:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-bash"&gt;aws bedrock create-inference-profile \
-  --region eu-west-2 \
-  --inference-profile-name "claude-code-opus-london" \
-  --model-source copyFrom="arn:aws:bedrock:eu-west-2::foundation-model/anthropic.claude-opus-4-6-v1"
-aws bedrock create-inference-profile \
-  --region eu-west-2 \
-  --inference-profile-name "claude-code-sonnet-london" \
-  --model-source copyFrom="arn:aws:bedrock:eu-west-2::foundation-model/anthropic.claude-sonnet-4-6"&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Each call returns an &lt;code&gt;inferenceProfileArn&lt;/code&gt; like &lt;code&gt;arn:aws:bedrock:eu-west-2:&amp;lt;account-id&amp;gt;:application-inference-profile/&amp;lt;id&amp;gt;&lt;/code&gt;. Save both. Claude Code uses them as models. Application inference profiles also give you per-profile cost and usage tracking in your AWS bill.&lt;/p&gt; 
-&lt;p&gt;Wire Claude Code to the profile ARNs:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-bash"&gt;# Route Claude Code through classic Bedrock in London
-export CLAUDE_CODE_USE_BEDROCK=1
-export AWS_REGION=eu-west-2
-# Map the model aliases to the London application inference profiles
-export ANTHROPIC_DEFAULT_OPUS_MODEL='arn:aws:bedrock:eu-west-2:&amp;lt;account-id&amp;gt;:application-inference-profile/&amp;lt;opus-id&amp;gt;'
-export ANTHROPIC_DEFAULT_SONNET_MODEL='arn:aws:bedrock:eu-west-2:&amp;lt;account-id&amp;gt;:application-inference-profile/&amp;lt;sonnet-id&amp;gt;'&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;For a team rollout, set these in a managed &lt;a href="https://code.claude.com/docs/en/settings" target="_blank" rel="noopener"&gt;settings file&lt;/a&gt; rather than each engineer’s shell, so the configuration is consistent and centrally controlled.&lt;/p&gt; 
-&lt;p&gt;Setup summary: 2 application inference profile creations (one per model family), four environment variables (&lt;code&gt;CLAUDE_CODE_USE_BEDROCK&lt;/code&gt;, &lt;code&gt;AWS_REGION&lt;/code&gt;, and the two &lt;code&gt;ANTHROPIC_DEFAULT_*_MODEL&lt;/code&gt; variables), plus the IAM policy. Roughly 5 minutes of additional provisioning per model family versus Path 1.&lt;/p&gt; 
-&lt;p&gt;The IAM policy looks similar to Path 1, but the &lt;code&gt;Resource&lt;/code&gt; list now includes the application inference profile ARNs, their backing foundation-model ARNs, and the IAM actions for Amazon Bedrock:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-json"&gt;{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "AllowClaudeCodeInLondonOnly",
-      "Effect": "Allow",
-      "Action": [
-        "bedrock:InvokeModel",
-        "bedrock:InvokeModelWithResponseStream",
-        "bedrock:GetInferenceProfile",
-        "bedrock:ListInferenceProfiles"
-      ],
-      "Resource": [
-        "arn:aws:bedrock:eu-west-2:&amp;lt;account-id&amp;gt;:application-inference-profile/&amp;lt;opus-id&amp;gt;",
-        "arn:aws:bedrock:eu-west-2:&amp;lt;account-id&amp;gt;:application-inference-profile/&amp;lt;sonnet-id&amp;gt;",
-        "arn:aws:bedrock:eu-west-2::foundation-model/anthropic.claude-opus-4-6-v1",
-        "arn:aws:bedrock:eu-west-2::foundation-model/anthropic.claude-sonnet-4-6"
-      ],
-      "Condition": {
-        "StringEquals": {
-          "aws:RequestedRegion": "eu-west-2"
-        }
-      }
-    }
-  ]
-}&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Verify end to end. Run &lt;code&gt;/status&lt;/code&gt; in Claude Code and confirm the provider reads &lt;code&gt;Amazon Bedrock&lt;/code&gt; and the Region is London.&lt;/p&gt; 
-&lt;h2 id="verifying-single-region-compliance"&gt;Verifying single-Region compliance&lt;/h2&gt; 
-&lt;p&gt;Every Claude Code Amazon Bedrock call must appear in the target Region’s &lt;a href="https://aws.amazon.com/cloudtrail/" target="_blank" rel="noopener"&gt;AWS CloudTrail&lt;/a&gt;, and nowhere else. How you query for it depends on which path you deployed, because the two endpoints log under different event names, different event sources, and different CloudTrail event types.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Path 2 (classic Amazon Bedrock):&lt;/strong&gt; Model invocations log as &lt;code&gt;InvokeModel&lt;/code&gt; under the &lt;code&gt;bedrock.amazonaws.com&lt;/code&gt; event source. Look them up in the event history:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-bash"&gt;aws cloudtrail lookup-events \
-  --region eu-west-2 \
-  --lookup-attributes AttributeKey=EventName,AttributeValue=InvokeModel&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;A compliant event contains three fields that matter:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-json"&gt;{
-  "eventName": "InvokeModel",
-  "eventSource": "bedrock.amazonaws.com",
-  "awsRegion": "eu-west-2",
-  "requestParameters": {
-    "modelId": "arn:aws:bedrock:eu-west-2:111122223333:application-inference-profile/opus-london"
-  }
-}&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;If no &lt;code&gt;InvokeModel&lt;/code&gt; events appear, model-invocation logging might be off. Enable Amazon Bedrock data events on your trail and retry.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;Path 1 (Mantle):&lt;/strong&gt; Mantle logs inference as &lt;code&gt;CreateInference&lt;/code&gt; under the &lt;code&gt;bedrock-mantle.amazonaws.com&lt;/code&gt; event source, and it is a &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/logging-cloudtrail-mantle.html" target="_blank" rel="noopener"&gt;CloudTrail data event&lt;/a&gt;. Before you can verify anything, enable &lt;code&gt;bedrock-mantle&lt;/code&gt; data events with an advanced event selector on a trail or event data store. Once logging is on, query the event data store in &lt;a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake.html" target="_blank" rel="noopener"&gt;AWS CloudTrail Lake&lt;/a&gt;:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-sql"&gt;SELECT eventName, awsRegion, element_at(requestParameters, 'model') AS model
-FROM &amp;lt;event-data-store-id&amp;gt;
-WHERE eventSource = 'bedrock-mantle.amazonaws.com'
-AND eventName = 'CreateInference'&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;A compliant Mantle event carries the target Region in &lt;code&gt;awsRegion&lt;/code&gt; and the pinned model in &lt;code&gt;requestParameters.model&lt;/code&gt;:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-json"&gt;{
-  "eventName": "CreateInference",
-  "eventSource": "bedrock-mantle.amazonaws.com",
-  "awsRegion": "eu-west-1",
-  "requestParameters": {
-    "model": "anthropic.claude-sonnet-5"
-  }
-}&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Regardless of path, three checks prove compliance. First, every event’s &lt;code&gt;awsRegion&lt;/code&gt; must match your target Region. Second, rerunning the same query in every other Region should return zero results. Third, any &lt;code&gt;errorCode: AccessDenied&lt;/code&gt; event should trace back to a deliberate test rather than a real client.&lt;/p&gt; 
-&lt;h2 id="choosing-the-right-path"&gt;Choosing the right path&lt;/h2&gt; 
-&lt;p&gt;Compare the two paths:&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Path 1 (Mantle)&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Path 2 (Classic Amazon Bedrock)&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Regions with in-Region Claude support&lt;/td&gt; 
-   &lt;td&gt;7&lt;/td&gt; 
-   &lt;td&gt;1 (London only)&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Models with in-Region support&lt;/td&gt; 
-   &lt;td&gt;Sonnet 5, Opus 4.8, Haiku 4.5&lt;/td&gt; 
-   &lt;td&gt;Opus 4.6, Sonnet 4.6&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;AWS resources to create&lt;/td&gt; 
-   &lt;td&gt;0&lt;/td&gt; 
-   &lt;td&gt;2 application inference profiles&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Environment variables to set&lt;/td&gt; 
-   &lt;td&gt;3&lt;/td&gt; 
-   &lt;td&gt;4&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Setup steps beyond IAM&lt;/td&gt; 
-   &lt;td&gt;Env vars only&lt;/td&gt; 
-   &lt;td&gt;2 CLI calls + env vars&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;Verify the current in-Region status on the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-anthropic.html" target="_blank" rel="noopener"&gt;Amazon Bedrock model cards&lt;/a&gt; before committing. Availability moves as new models land.&lt;/p&gt; 
-&lt;h2 id="clean-up"&gt;Clean up&lt;/h2&gt; 
-&lt;p&gt;If you want to remove the application inference profiles you created, delete them with the AWS CLI:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-bash"&gt;aws bedrock delete-inference-profile \
-  --region eu-west-2 \
-  --inference-profile-identifier &amp;lt;opus-profile-arn&amp;gt;
-aws bedrock delete-inference-profile \
-  --region eu-west-2 \
-  --inference-profile-identifier &amp;lt;sonnet-profile-arn&amp;gt;&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;Application inference profiles carry no ongoing charge on their own. Model invocation is the source of cost. Removing unused profiles keeps your account organized and reduces the surface area for accidental invocation. Path 1 requires no cleanup beyond detaching the IAM policy, since it creates no additional AWS resources.&lt;/p&gt; 
-&lt;h2 id="considerations-and-next-steps"&gt;Considerations and next steps&lt;/h2&gt; 
-&lt;p&gt;Treat this as a point-in-time snapshot. Regional availability changes as Anthropic and AWS bring new models to more Regions on both endpoints. Before you roll out, confirm the current in-Region status and exact model IDs for your chosen models on their model cards.&lt;/p&gt; 
-&lt;p&gt;Claude Code can run both endpoints in the same session. Set &lt;code&gt;CLAUDE_CODE_USE_BEDROCK=1&lt;/code&gt; and &lt;code&gt;CLAUDE_CODE_USE_MANTLE=1&lt;/code&gt; together, and model IDs matching the Mantle format route to Mantle while everything else routes to classic Invoke. That is useful during a migration or when different model families live on different endpoints.&lt;/p&gt; 
-&lt;p&gt;Single-Region data residency for an agentic coding tool might appear to require custom infrastructure. It does not. Depending on your Region, choose either Mantle’s native single-Region routing or a classic Amazon Bedrock application inference profile. Pair either with an IAM Region condition for a clean, auditable deployment of Claude Code.&lt;/p&gt; 
-&lt;p&gt;To get started, open the &lt;a href="https://console.aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock console&lt;/a&gt;, check the Regional availability tables for the models you need on both endpoints, and pick the path that fits your Region. Learn more about &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-use.html" target="_blank" rel="noopener"&gt;inference profiles&lt;/a&gt;, &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html" target="_blank" rel="noopener"&gt;cross-Region inference&lt;/a&gt;, and &lt;a href="https://code.claude.com/docs/en/amazon-bedrock" target="_blank" rel="noopener"&gt;Claude Code on Amazon Bedrock&lt;/a&gt; in their respective documentation.&lt;/p&gt; 
-&lt;h2 id="related-content"&gt;Related content&lt;/h2&gt; 
-&lt;ul&gt; 
- &lt;li&gt;For enterprise-scale Claude Code deployment with OpenID Connect (OIDC) federation, IAM Identity Center integration, and observability, see the &lt;a href="https://github.com/aws-samples/anthropic-on-aws/tree/main/claude-apps-gateway" target="_blank" rel="noopener"&gt;Claude Apps Gateway&lt;/a&gt; repository.&lt;/li&gt; 
- &lt;li&gt;For reference architectural patterns, look at the &lt;a href="https://docs.aws.amazon.com/solutions/claude-code-with-amazon-bedrock/" target="_blank" rel="noopener"&gt;Guidance for Claude Code on Amazon Bedrock&lt;/a&gt; in the AWS Solutions Library, which includes an accompanying &lt;a href="https://github.com/aws-solutions-library-samples/guidance-for-claude-code-with-amazon-bedrock?tab=readme-ov-file" target="_blank" rel="noopener"&gt;GitHub repository&lt;/a&gt;.&lt;/li&gt; 
- &lt;li&gt;For optimizing Claude Code cost and latency through prompt caching, see &lt;a href="https://aws.amazon.com/blogs/machine-learning/supercharge-your-development-with-claude-code-and-amazon-bedrock-prompt-caching/" target="_blank" rel="noopener"&gt;Supercharge your development with Claude Code and Amazon Bedrock prompt caching&lt;/a&gt;.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the author&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21331-2.jpeg" alt="Zaid Barkat" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Zaid Barkat&lt;/h3&gt; 
-  &lt;p&gt;Zaid is an Enterprise Solutions Architect on the AWS Government Technology team. He is a Claude Champion and an active member of the AI/ML Technical Field Community, focused on architectural patterns for agentic tools on AWS. Outside of work, he enjoys swimming and trying out new restaurants.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
 		<title>Agent Skills for Automated Reasoning policies in Amazon Bedrock</title>
 		<link>https://aws.amazon.com/blogs/machine-learning/agent-skills-for-automated-reasoning-policies-in-amazon-bedrock/</link>
 		
@@ -4481,6 +4204,159 @@ if status == "COMPLETED":
 		
 		
 			</item>
+		<item>
+		<title>Optimizing production agents with Amazon Bedrock AgentCore Observability</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/optimizing-production-agents-with-amazon-bedrock-agentcore-observability/</link>
+		
+		<dc:creator><![CDATA[Joshua Lacy]]></dc:creator>
+		<pubDate>Fri, 31 Jul 2026 15:33:11 +0000</pubDate>
+				<category><![CDATA[Advanced (300)]]></category>
+		<category><![CDATA[Amazon Bedrock AgentCore]]></category>
+		<category><![CDATA[Technical How-to]]></category>
+		<guid isPermaLink="false">64799e5f6577ed834ae5241ca5bcee136c4fc073</guid>
+
+					<description>As your AI agents move from prototype to production, the challenge shifts from getting them to work to keeping them fast and efficient. Learn how to use Amazon Bedrock AgentCore Observability and Amazon CloudWatch to find performance bottlenecks and diagnose memory issues in long-running agent sessions.</description>
+										<content:encoded>&lt;p&gt;As your AI agents move from prototype to production, the challenges shift from getting them to work to keeping them fast and efficient. In &lt;a href="https://aws.amazon.com/blogs/machine-learning/debugging-production-agents-with-amazon-bedrock-agentcore-observability/" target="_blank" rel="noopener"&gt;Part 1&lt;/a&gt; of this series, we walked through debugging two common agent failures: infinite loops and tool invocation errors. Those scenarios dealt with agents that were broken. In this post, we tackle a different challenge: agents that work correctly but perform poorly. Slow response times and unbounded memory growth are the most common operational issues that surface after you resolve the initial debugging problems. They don’t trigger error alerts, but they erode user trust and increase costs over time.&lt;/p&gt; 
+&lt;p&gt;Using &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/observability.html" target="_blank" rel="noopener"&gt;AgentCore Observability&lt;/a&gt;, a capability of Amazon Bedrock AgentCore, and &lt;a href="https://aws.amazon.com/cloudwatch/" target="_blank" rel="noopener"&gt;Amazon CloudWatch&lt;/a&gt;, you will learn how to identify performance bottlenecks across your agent’s execution path and diagnose memory issues in long-running sessions. You will also implement monitoring practices that catch degradation before users notice it. For additional information and best practices, review &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations.html" target="_blank" rel="noopener"&gt;AgentCore Evaluations&lt;/a&gt;, a capability of Amazon Bedrock AgentCore, and &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/insights.html" target="_blank" rel="noopener"&gt;AgentCore Insights&lt;/a&gt;.&lt;/p&gt; 
+&lt;h1&gt;Prerequisites&lt;/h1&gt; 
+&lt;p&gt;You need an AWS account with Amazon Bedrock AgentCore access, CloudWatch Transaction Search enabled, and a deployed agent. See Part 1 for full setup details.&lt;/p&gt; 
+&lt;h2 id="scenario-3-performance-bottlenecks"&gt;Scenario 3: Performance bottlenecks&lt;/h2&gt; 
+&lt;p&gt;Agents experience performance bottlenecks when they work correctly but respond too slowly. You expect sub-second responses but experience multi-second delays. Agents complete tasks successfully, but the latency makes them impractical for interactive use cases. This scenario is particularly challenging because &lt;em&gt;slow&lt;/em&gt; is subjective. What’s acceptable for a batch processing agent is unacceptable for a customer service chatbot. You must establish performance budgets for your specific use case, then systematically identify which components violate those budgets.&lt;/p&gt; 
+&lt;h3 id="symptoms-to-watch-for"&gt;Symptoms to watch for&lt;/h3&gt; 
+&lt;p&gt;Performance degradation often manifests gradually. Agents might start with acceptable 2-second response times, but as you add features, integrate more tools, or accumulate more memory, latency creeps to 5 seconds, then 10, then becomes unusable. P95 response times exceed your thresholds, users abandon sessions, but error rates stay low. The agent works correctly but responds too slowly.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-1.png" alt="CloudWatch session view showing three agent invocations with high 7.5-8.2 second span latency" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 1 — Session details showing multiple traces with consistently high latency. The three invocations took 7.5-8.2 seconds (average span latency), demonstrating a systemic performance bottleneck rather than occasional slowness. This pattern indicates the agent’s architecture needs optimization.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;To find bottlenecks, start by identifying high-latency requests. Query CloudWatch for agent invocations that exceed your performance budget:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, RequestId, Latency
+| filter Operation like /InvokeAgent/
+| filter Latency &amp;gt; 3000
+| sort Latency desc
+| limit 50&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;This query returns agent invocations that took longer than 3 seconds (adjust the threshold based on your requirements), sorted by latency. Pick a representative high-latency request and note its &lt;code&gt;RequestId&lt;/code&gt;.&lt;/p&gt; 
+&lt;p&gt;Next, analyze the request timeline to understand where time is spent:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, Operation, Duration, SpanName
+| filter RequestId = "&amp;lt;RequestId&amp;gt;"
+| sort @timestamp asc&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The query shows you the sequence of operations within the request and how long each took. Look for operations that consume disproportionate time. Common culprits include memory retrieval operations, tool invocations, token generation, and sequential operations that could run in parallel.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-2.png" alt="OpenTelemetry trace timeline with 17 spans across three sequential tool-execution cycles" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 2 — OpenTelemetry trace timeline showing 17 spans across three sequential execute_event_loop_cycle operations. The tools (customer_lookup, order_history) execute one after another rather than in parallel, with each cycle waiting for the previous one to complete. This sequential pattern compounds latency across each tool invocation.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Check memory retrieval latency specifically:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, MemoryRetrievalLatency, MemoryNamespace
+| filter RequestId = "&amp;lt;RequestId&amp;gt;"
+| stats avg(MemoryRetrievalLatency), max(MemoryRetrievalLatency) by MemoryNamespace&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;Memory retrieval should complete in under 200 milliseconds, representing the point where users begin perceiving noticeable delays in interactive applications. Higher latency suggests inefficient memory organization.&lt;/p&gt; 
+&lt;p&gt;Examine tool invocation latency to identify slow integrations:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, ToolName, ToolLatency
+| filter RequestId = "&amp;lt;RequestId&amp;gt;"
+| sort ToolLatency desc&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The query identifies which tools contribute most to overall latency. A single slow tool can bottleneck the entire agent workflow.&lt;/p&gt; 
+&lt;h3 id="root-cause-analysis"&gt;Root cause analysis&lt;/h3&gt; 
+&lt;p&gt;Performance bottlenecks typically stem from three root causes. &lt;em&gt;Slow tool execution&lt;/em&gt; occurs when external tools take seconds to respond because of poor optimization, overload, or network issues. Latencies compound with sequential calls, so a 2-second tool called three times becomes a 6-second bottleneck. &lt;em&gt;Excessive token generation&lt;/em&gt; is a factor because foundation models (FMs) produce tokens sequentially, meaning a 500-token response takes 5x longer than a 100-token one, impacting both latency and cost. Finally, &lt;em&gt;sequential processing&lt;/em&gt;, performing independent operations one at a time instead of in parallel, increases both cost and compute times.&lt;/p&gt; 
+&lt;h3 id="the-fix"&gt;The fix&lt;/h3&gt; 
+&lt;p&gt;For slow tool execution, implement caching, connection pooling, and proper database indexing to reduce response times. Set timeout limits and consider faster tool alternatives. If a tool consistently lags, profile it independently. The issue might be network latency, cold starts, or resource contention rather than the tool’s logic itself.&lt;/p&gt; 
+&lt;p&gt;For memory retrieval, replace single large namespaces with topic-specific partitions, such as preferences, history, and domain knowledge, to reduce search space. Summarize old conversations into compact entries rather than storing them verbatim, and set size limits per namespace, such as 100 preferences, 50 recent messages, or 500 domain facts.&lt;/p&gt; 
+&lt;p&gt;For token generation, optimize prompts to encourage brief, direct answers of 2–3 sentences unless more detail is requested. Add explicit length constraints and monitor token usage with alerts for unexpectedly long responses.&lt;/p&gt; 
+&lt;p&gt;For sequential processing, run independent tool calls in parallel. Sequential calls totaling 4.5s (2s + 1.5s + 1s) drop to only 2s when parallelized, often cutting latency by 50 percent or more with minimal effort. To verify your optimizations, re-run the latency query from the identifying bottlenecks section. Confirm that P95 response times now fall within your performance budget and that the trace timeline shows parallel execution where expected.&lt;/p&gt; 
+&lt;h2 id="scenario-4-memory-issues-in-long-running-sessions"&gt;Scenario 4: Memory issues in long-running sessions&lt;/h2&gt; 
+&lt;p&gt;Agents experience memory issues in long-running sessions when they maintain sessions where memory usage grows unbounded. Agents accumulate context, and eventually, agents hit token limits, lose important context, or exhaust available memory. Sessions fail unexpectedly, and you lose conversation state. This scenario is particularly problematic for agents that support extended workflows, such as customer service sessions, research assistants, or monitoring agents. Without proper memory management, these use cases become impractical.&lt;/p&gt; 
+&lt;h3 id="symptoms-to-watch-for-1"&gt;Symptoms to watch for&lt;/h3&gt; 
+&lt;p&gt;When abnormally long agent sessions exist, token usage grows linearly with session duration. Memory retrieval latency increases over time as memory stores grow. Sessions terminate unexpectedly with out-of-memory errors or context window exceeded errors.&lt;/p&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-3.png" alt="Session details showing 6 traces and 15.7K tokens, with token usage rising each invocation" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 3 — Session details for the memorygrowth_Agent showing 6 traces, 15.7K total tokens consumed, and an average trace latency of 3,757 ms within a single session. Token usage grows with each successive invocation, demonstrating unbounded context accumulation. In production sessions spanning hours, this pattern leads to context window exhaustion and unexpected session failures.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;To identify long-running sessions with high memory usage:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, SessionId, SessionDuration, MemorySize, TokenUsage
+| filter SessionDuration &amp;gt; 3600
+| sort MemorySize desc
+| limit 20&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The query returns sessions lasting longer than one hour (3600 seconds), sorted by memory size. Pick a session with unusually high memory usage and note its &lt;code&gt;SessionId&lt;/code&gt;.&lt;/p&gt; 
+&lt;p&gt;Examine memory extraction patterns to verify consolidation is occurring:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, MemoryExtractionStatus, MemoryExtractionLatency, MemoriesExtracted
+| filter SessionId = "&amp;lt;SessionId&amp;gt;"
+| sort @timestamp asc&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-4.png" alt="CloudWatch Logs Insights showing 209 memory log entries spiking around 18:20 without consolidation" width="800"&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;em&gt;Figure 4 — CloudWatch Logs Insights showing 209 memory-related log entries concentrated around 18:20. The spike in memory operations indicates the agent storing information without consolidation. Each invocation adds new memory entries (through add_conversation_note and add_user_context tools) without pruning or summarizing old data, demonstrating the unbounded growth pattern.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Memory extraction should occur regularly throughout the session. If you see gaps where no extraction happens for extended periods, the agent isn’t consolidating memories properly.&lt;/p&gt; 
+&lt;p&gt;Check for memory extraction failures:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, ErrorMessage, MemoryExtractionStatus
+| filter SessionId = "&amp;lt;SessionId&amp;gt;"
+| filter MemoryExtractionStatus = "Failed"&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;Failed memory extraction stops agents from consolidating context, causing unbounded growth. Common failure reasons include token limits exceeded during summarization, invalid memory formats that can’t be processed, network timeouts when writing to memory storage, and permission errors that block memory updates.&lt;/p&gt; 
+&lt;p&gt;Analyze memory namespace organization:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-plaintext"&gt;fields @timestamp, MemoryNamespace, MemoryCount, MemorySize
+| filter SessionId = "&amp;lt;SessionId&amp;gt;"
+| stats sum(MemoryCount) as TotalMemories, sum(MemorySize) as TotalSize by MemoryNamespace
+| sort TotalSize desc&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;Memories are distributed across namespaces. Poor namespace organization can lead to inefficient memory retrieval and consolidation. If you see a single namespace containing thousands of memories, that’s a red flag indicating your agent needs &lt;a href="https://aws.amazon.com/blogs/machine-learning/organizing-agents-memory-at-scale-namespace-design-patterns-in-agentcore-memory/" target="_blank" rel="noopener"&gt;better memory organization&lt;/a&gt;.&lt;/p&gt; 
+&lt;h3 id="root-cause-analysis-1"&gt;Root cause analysis&lt;/h3&gt; 
+&lt;p&gt;Memory issues typically stem from misconfigured settings, filter on inbuilt datetime metadata of the record. For a deeper understanding of how AgentCore memory works, see &lt;a href="https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-memory-building-context-aware-agents/" target="_blank" rel="noopener"&gt;AgentCore memory&lt;/a&gt;.&lt;/p&gt; 
+&lt;h3 id="the-fix-1"&gt;The fix&lt;/h3&gt; 
+&lt;p&gt;To resolve memory issues, verify your memory strategies include a consolidation configuration so AgentCore memory merges and summarizes records over time rather than accumulating them indefinitely. Organize records using namespace templates in your strategy definitions to make sure retrieval stays scoped to relevant context. Set &lt;code&gt;eventExpiryDuration&lt;/code&gt; to control how long raw events persist (between 7–365 days). For implementation details, see &lt;a href="https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-memory-building-context-aware-agents/" target="_blank" rel="noopener"&gt;AgentCore memory implementation&lt;/a&gt;.&lt;/p&gt; 
+&lt;h1&gt;Production best practices&lt;/h1&gt; 
+&lt;p&gt;Having covered the four failure scenarios across both parts, we now turn to production best practices that stop these issues before they occur. The troubleshooting workflows we’ve covered help you respond when things go wrong, but a well-architected observability strategy helps you proactively catch issues. The integration of AgentCore with CloudWatch provides the foundation for this proactive approach, giving you real-time visibility into agent health and performance.&lt;/p&gt; 
+&lt;p&gt;Turn on comprehensive instrumentation for production agents, memory systems, and gateways. Configure CloudWatch logs, CloudWatch metrics, and OpenTelemetry traces.&lt;/p&gt; 
+&lt;p&gt;Configure CloudWatch alarms for critical metrics. Set thresholds for error rates (5 percent), 95th percentile (P95) latency (3 seconds), and token usage per session. Don’t wait for users to report problems. Let CloudWatch alert you when metrics exceed acceptable thresholds.&lt;/p&gt; 
+&lt;p&gt;Create operational dashboards. Build a primary dashboard showing total invocations (last 24 hours), error rate (current compared to baseline), P50/P95/P99 latency, token usage trends, and active sessions count. Create per-agent dashboards showing agent-specific invocation patterns, tool usage breakdown, memory consumption trends, error types distribution, and cost per session. Review these dashboards daily to spot trends before they become problems.&lt;/p&gt; 
+&lt;p&gt;Invest in observability infrastructure before you need it. Build monitoring into your development process from day one. Share dashboards with product managers and stakeholders so everyone understands agent performance. When someone diagnoses a tricky production issue, share the approach with the team to build institutional knowledge about common failure patterns.&lt;/p&gt; 
+&lt;p&gt;To monitor tool accuracy at scale, you can use Amazon Bedrock &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluators.html" target="_blank" rel="noopener"&gt;AgentCore Evaluators&lt;/a&gt; to continuously and automatically assess agent behavior. Instead of manually reviewing traces after failures occur, Evaluators inspect agent sessions in real time, scoring them against predefined quality criteria. Amazon Bedrock &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/insights.html" target="_blank" rel="noopener"&gt;AgentCore Insights (preview)&lt;/a&gt; builds off Evaluators and provides triage analysis. Insights can provide failure analysis, user intent extraction, and execution summary.&lt;/p&gt; 
+&lt;h1&gt;Cleaning up&lt;/h1&gt; 
+&lt;p&gt;After testing the optimization techniques in this post, clean up resources to avoid unnecessary charges.&lt;/p&gt; 
+&lt;p&gt;For CloudWatch resources, delete test CloudWatch dashboards created during debugging, remove CloudWatch alarms set up for testing purposes, and consider archiving or deleting old CloudWatch log groups if no longer needed.&lt;/p&gt; 
+&lt;p&gt;For AgentCore resources, if you created test agents specifically for this tutorial, delete them through the &lt;a href="https://console.aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;AgentCore console&lt;/a&gt;. Remove any test memory namespaces created during memory optimization testing. Delete any temporary tool integrations used for performance testing.&lt;/p&gt; 
+&lt;p&gt;For cost optimization, review your Amazon CloudWatch Logs retention settings and adjust based on your compliance requirements. Consider using CloudWatch Logs data protection to cut storage costs for older logs.&lt;/p&gt; 
+&lt;p&gt;To delete CloudWatch log groups:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-bash"&gt;aws logs delete-log-group --log-group-name /aws/bedrock-agentcore/your-agent-name&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;p&gt;To remove CloudWatch alarms:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-bash"&gt;aws cloudwatch delete-alarms --alarm-names your-alarm-name&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h1&gt;Conclusion&lt;/h1&gt; 
+&lt;p&gt;Performance bottlenecks and memory issues represent the most common operational challenges for production agents beyond the debugging scenarios covered in Part 1. With systematic diagnosis using CloudWatch traces and metrics, you can identify whether latency stems from slow tools, inefficient memory retrieval, excessive token generation, or sequential processing. For long-running sessions, monitoring memory growth patterns and implementing consolidation strategies keeps agents stable over extended interactions.&lt;/p&gt; 
+&lt;h3 id="next-steps"&gt;Next steps&lt;/h3&gt; 
+&lt;p&gt;Ready to put these techniques into practice? Start by turning on AgentCore Observability for your production agents if you haven’t already. This one-time setup provides the foundation for everything we’ve covered. Set up CloudWatch alarms for critical metrics. Create troubleshooting runbooks for your specific agents and workflows, documenting the queries you run, the thresholds that indicate problems, and the fixes you implement.&lt;/p&gt; 
+&lt;p&gt;Practice debugging in non-production environments. Deliberately introduce failures and practice diagnosing them using the workflows we’ve covered. Build muscle memory for troubleshooting before you need it in production. Share this knowledge with your team to help confirm everyone who operates your agents understands these debugging techniques and knows how to use the observability features of AgentCore.&lt;/p&gt; 
+&lt;p&gt;Production agents often fail for preventable reasons. With the right observability tools, systematic troubleshooting approaches, and a culture that treats every issue as a chance to improve, you can catch problems early, resolve them quickly, and build agents that earn lasting trust.&lt;/p&gt; 
+&lt;h3 id="learn-more"&gt;Learn more&lt;/h3&gt; 
+&lt;p&gt;For more information about AgentCore and observability features, visit the &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/observability-configure.html" target="_blank" rel="noopener"&gt;AgentCore documentation&lt;/a&gt;. To get started with AgentCore, visit the &lt;a href="https://console.aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;AgentCore console&lt;/a&gt;. For additional CloudWatch monitoring best practices, see the &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/" target="_blank" rel="noopener"&gt;CloudWatch User Guide&lt;/a&gt;.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-5.jpeg" alt="Joshua Lacy" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Joshua Lacy&lt;/h3&gt; 
+  &lt;p&gt;Joshua is a Solutions Architect at AWS in the Commercial Sector, supporting ISV customers. He has a passion for helping builders integrate AI into production applications and designing architectures that scale securely across multi-tenant environments. He specializes in agentic AI, Amazon Bedrock AgentCore, and generative AI application development.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/30/ML-20467-6.png" alt="Jenny Shen" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Jenny Shen&lt;/h3&gt; 
+  &lt;p&gt;Jenny is a Solutions Architect at AWS in the Telecom, Media and Entertainment space. She has a passion for helping customers build production-ready systems and finding ways to simplify how teams operate their cloud workloads. She specializes in CloudOps and AI/ML transformations.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
 	</channel>
 </rss>
 
@@ -4503,7 +4379,7 @@ if status == "COMPLETED":
 	<atom:link href="https://azure.microsoft.com/en-us/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://azure.microsoft.com/en-us/blog/</link>
 	<description>Get the latest Azure news, updates, and announcements from the Azure blog. From product updates to hot topics, hear from the Azure experts.</description>
-	<lastBuildDate>Mon, 03 Aug 2026 16:54:23 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 06 Aug 2026 16:44:59 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -4519,6 +4395,248 @@ if status == "COMPLETED":
 	<height>32</height>
 </image> 
 	<item>
+		<title>Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools</title>
+		<link>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-augmented-code-modernization-tools/</link>
+					<comments>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-augmented-code-modernization-tools/#respond</comments>
+		
+		<dc:creator><![CDATA[Mike Hulme]]></dc:creator>
+		<pubDate>Thu, 06 Aug 2026 15:00:00 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[Containers]]></category>
+		<category><![CDATA[DevOps]]></category>
+		<category><![CDATA[Identity]]></category>
+		<category><![CDATA[Storage]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[Copilot]]></category>
+		<category><![CDATA[Gartner® Magic Quadrant™]]></category>
+		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=52873</guid>
+
+					<description><![CDATA[<p>GitHub Copilot and Azure are helping organizations modernize legacy applications, reduce technical debt, and prepare for AI innovation.</p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-augmented-code-modernization-tools/">Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<aside class="table-of-contents-block accordion wp-block-bloginabox-theme-table-of-contents" id="accordion-5e6ff3f4-8570-491b-8fa1-4a1cee0e80e3" data-bi-aN="table-of-contents">
+	<button class="btn btn-collapse" type="button" aria-expanded="true" aria-controls="accordion-collapse-5e6ff3f4-8570-491b-8fa1-4a1cee0e80e3">
+		<span class="table-of-contents-block__label">In this article</span>
+		<span class="table-of-contents-block__current" aria-hidden="true"></span>
+
+		<svg class="table-of-contents-block__arrow" aria-label="Toggle arrow" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M15.7761 11L18 8.82043L9 0L0 8.82043L2.22394 11L9 4.35913L15.7761 11Z" fill="currentColor" />
+		</svg>
+	</button>
+	<div id="accordion-collapse-5e6ff3f4-8570-491b-8fa1-4a1cee0e80e3" class="table-of-contents-block__collapse-wrapper collapse show" data-parent="#accordion-5e6ff3f4-8570-491b-8fa1-4a1cee0e80e3">
+		<div class="table-of-contents-block__content">
+			<ol class="table-of-contents-block__list"><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#cloud-native-modernization">Cloud-native modernization</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#the-problem-we-set-out-to-solve">The problem we set out to solve</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#how-it-works">How it works</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#where-we-believe-we-stand-apart">Where we believe we stand apart</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#the-results-that-make-it-real">The results that make it real</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#this-is-the-starting-line">This is the starting line</a></li></ol>		</div>
+	</div>
+	<span class="table-of-contents-block__progress-bar"></span>
+</aside>
+
+
+
+<p class="wp-block-paragraph">Microsoft has been named a <a href="https://www.gartner.com/reprints/?id=00ThR000008k1rGUAQ&amp;ct=260804&amp;st=sb" target="_blank" rel="noopener noreferrer">Leader in the inaugural 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools</a>, which recognizes software solutions that use specialized AI agents, generative AI, and deterministic analysis to accelerate the transformation of legacy systems. We are proud of our placement as a Leader in this first edition of the report.</p>
+
+
+
+<h2 class="wp-block-heading" id="cloud-native-modernization">Cloud-native modernization</h2>
+
+
+
+<p class="wp-block-paragraph">Microsoft’s conviction from the start has been that modernization should become one of the fastest, most trusted, and most predictable workflows organizations undertake, and agentic AI is what finally makes that possible. For years, modernization and innovation competed for the same budget, and modernization usually lost. Now the math has changed: modernization is no longer the tax teams pay before they can innovate, it is the fastest path to it, and the gateway to AI. Eliminating decades of technical debt is what lets teams embed intelligence directly into the proven, high-value systems that already run their business. This modern foundation turns the assets they depend on most into the platform for what comes next.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://www.gartner.com/reprints/?id=00ThR000008k1rGUAQ&amp;ct=260804&amp;st=sb" target="_blank" rel="noopener noreferrer">Read the report</a></div>
+</div>
+
+
+
+<p class="wp-block-paragraph">None of this is on the horizon; it is happening now. Modernization is shifting from a multi-year program into something teams finish in days or weeks.</p>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a756409a42d1&quot;}" data-wp-interactive="core/image" data-wp-key="6a756409a42d1" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp" alt="Gartner graph, including completeness of vision and ability to execute." class="wp-image-53126 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1536x864.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1.webp 1920w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp"><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<p class="wp-block-paragraph">Today, organizations are not just moving to the cloud or reducing technical debt, they are fundamentally rethinking their applications, their data, and their infrastructure because they know the decisions they make today will determine whether they are AI-ready tomorrow. Every modernization decision is now an AI decision.</p>
+
+
+
+<p class="wp-block-paragraph">Microsoft Azure was built for this moment. It provides the agentic foundation and engine for modernization and AI transformation, along with the governance and trust enterprises require, so modernization lowers security, data, and operational risk as much as it accelerates AI readiness. With agentic tooling and an end-to-end modernization solution powered by <a href="https://azure.microsoft.com/en-us/solutions/application-and-database-modernization/#Products-3" id="https://azure.microsoft.com/en-in/products/github/copilot" target="_blank" rel="noreferrer noopener">GitHub Copilot</a> and <a href="https://azure.microsoft.com/en-us/products/copilot" id="https://azure.microsoft.com/en-us/products/copilot" target="_blank" rel="noopener noreferrer">Azure Copilot</a>, Microsoft is accelerating the shift, not just leading it.</p>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a756409a5327&quot;}" data-wp-interactive="core/image" data-wp-key="6a756409a5327" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp" alt="Chart visualization of Agentic Modernization on Azure." class="wp-image-53127 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1536x863.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1.webp 1920w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp"><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<h2 class="wp-block-heading" id="the-problem-we-set-out-to-solve">The problem we set out to solve</h2>
+
+
+
+<p class="wp-block-paragraph">Every enterprise carries code it cannot afford to rewrite and cannot afford to ignore. Legacy .NET Framework applications, Java runtimes, aging dependencies, and accumulated security debt power critical business processes while also limiting an organization’s ability to move forward. For decades, modernization meant large teams, months of manual effort, and a real risk of breaking what already works. As a result, it got deferred, repeatedly, while technical debt compounded and the distance to the cloud grew.</p>
+
+
+
+<p class="wp-block-paragraph">We feel Gartner frames the opportunity perfectly: software engineering leaders can meaningfully reduce the time, effort, and risk of modernization by using AI-powered tools rather than manual approaches. That distance, between the cost of standing still and the cost of moving, is exactly where we put our focus. The goal was never to help teams modernize a little faster. It was to fundamentally change the economics of modernization.</p>
+
+
+
+<h2 class="wp-block-heading" id="how-it-works">How it works</h2>
+
+
+
+<p class="wp-block-paragraph">The engine behind this is <a href="https://azure.microsoft.com/en-us/solutions/application-and-database-modernization/#Products-3" id="https://azure.microsoft.com/en-in/products/github/copilot" target="_blank" rel="noreferrer noopener">GitHub Copilot</a> modernization, an agentic, end-to-end approach that helps teams assess, upgrade, and migrate applications to Azure, with AI handling repetitive tasks while developers remain firmly in control.</p>
+
+
+
+<p class="wp-block-paragraph">We deliver it through two layers that work together. The modernization agent, available through the Modernize CLI, enables architects and application owners to orchestrate assessment, planning, and framework-upgrade automation across many applications at once, then delivers robust application-specific plans to developers. Inside the IDE, developers use GitHub Copilot to execute those plans: upgrading runtimes and frameworks, migrating dependencies to Azure services, generating infrastructure-as-code, and deploying to production. Assessment, planning, transformation, validation, and deployment become one continuous, guided journey rather than a dozen disconnected steps.</p>
+
+
+
+<p class="wp-block-paragraph">What we chose not to automate matters just as much, and that is human judgment. Every recommendation is transparent, every change is reviewable, and every step is validated against your own tests and pipelines. This is modernization at machine speed, with the accountability enterprises require.</p>
+
+
+
+<h2 class="wp-block-heading" id="where-we-believe-we-stand-apart">Where we believe we stand apart</h2>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item"><strong>Breadth: </strong>Github Copilot modernization spans the languages that actually run the enterprise—.NET, Java, C++, and Python—rather than a single stack, so platform teams can standardize on one approach.</li>
+
+
+
+<li class="wp-block-list-item"><strong>Repeatable expertise: </strong>Predefined tasks capture best practices for common migration patterns, such as adopting managed identities, <a href="https://azure.microsoft.com/en-us/products/key-vault" target="_blank" rel="noopener noreferrer">Azure Key Vault</a>, Blob and File storage, or <a href="https://www.microsoft.com/en-in/security/business/identity-access/microsoft-entra-id" target="_blank" rel="noopener noreferrer">Microsoft Entra ID</a>. Then custom skills let teams turn their own proven code changes into reusable patterns, applying them consistently across projects and ensuring institutional knowledge stays within the organization.</li>
+
+
+
+<li class="wp-block-list-item"><strong>Trust built in: </strong>Security is part of the workflow, not a phase bolted on at the end. Copilot validates builds, migrates unit tests, scans for CVEs after upgrades, and applies fixes in agent mode—strengthening your security posture as you modernize, not after.</li>
+
+
+
+<li class="wp-block-list-item"><strong>Enterprise readiness</strong>: Modernizing one application is a project; modernizing an entire estate is a business imperative. What makes the difference at scale is consistency: the patterns that work become reusable tasks and skills any team can apply again, so a proven approach spreads across the portfolio instead of being reinvented app by app. It is what turns modernization from a string of one-off wins into a repeatable, governable practice.</li>
+
+
+
+<li class="wp-block-list-item"><strong>The destination, not just the journey: </strong>Modernization is continuous. Applications land on Azure—<a href="https://azure.microsoft.com/en-us/products/app-service" id="https://azure.microsoft.com/en-us/products/app-service" target="_blank" rel="noopener noreferrer">Azure App Service</a>, <a href="https://azure.microsoft.com/en-us/products/container-apps" id="https://azure.microsoft.com/en-us/products/container-apps" target="_blank" rel="noopener noreferrer">Azure Container Apps</a>, <a href="https://azure.microsoft.com/en-us/products/kubernetes-service" id="https://azure.microsoft.com/en-us/products/kubernetes-service" target="_blank" rel="noopener noreferrer">Azure Kubernetes Service</a>—and become ready to tap into the full system from silicon to software. This includes <a href="https://azure.microsoft.com/en-us/products/ai-foundry" id="https://azure.microsoft.com/en-us/products/ai-foundry" target="_blank" rel="noopener noreferrer">Microsoft Foundry</a>’s catalog of more than 11,000 models and <a href="https://www.microsoft.com/en-us/ai/microsoft-iq" id="https://www.microsoft.com/en-us/ai/microsoft-iq" target="_blank" rel="noopener noreferrer">Microsoft IQ</a>, the enterprise intelligence layer that grounds AI agents in your organization&#8217;s own data and knowledge. Teams don’t just retire technical debt; they unlock what’s next.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="the-results-that-make-it-real">The results that make it real</h2>
+
+
+
+<p class="wp-block-paragraph">The numbers coming back from teams already doing this work are what change the conversation. Customers using GitHub Copilot modernization capabilities <a href="https://github.com/solutions/use-case/app-modernization" target="_blank" rel="noopener noreferrer">report up to 70% less time spent on migration efforts and 50% less effort to upgrade applications</a>. Some have moved more than 500,000 lines of code in a matter of weeks, work that once would have consumed quarters. Adoption tracks the same story: <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.migrate-java-to-azure" target="_blank" rel="noopener noreferrer">more than 1.4 million developers have already installed the experience</a>.</p>
+
+
+
+<blockquote class="wp-block-quote is-style-default has-quote-default-font-size is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">GitHub Copilot’s modernization agent significantly saved time on our Java modernization effort from days down to mere hours at SAP Labs. It runs seamlessly at scale, significantly reducing manual complications for our developers. The modernization agent is now an essential pillar of our modernization effort.</p>
+<cite>—Dr Richard Cai, Managing Director, SAP Labs China</cite></blockquote>
+
+
+
+<h2 class="wp-block-heading" id="this-is-the-starting-line">This is the starting line</h2>
+
+
+
+<p class="wp-block-paragraph">Being named a Leader in this Magic Quadrant is an honor for us, and candidly it is an obligation. The teams that adopt AI-powered modernization now will spend the next decade building on modern, secure foundations, in the cloud or hybrid, while others are still untangling the past. We intend to keep widening that gap with deeper language and framework coverage, richer agentic automation, and an ever-shorter path from legacy code to production on Azure. </p>
+
+
+
+<p class="wp-block-paragraph">To every customer and partner who has modernized alongside us, thank you. You shaped this, and you are the reason for the recognition. </p>
+
+
+
+<p class="wp-block-paragraph">If you are ready to see what is possible, explore agentic modernization and start with a single application this week. You can also <a href="https://www.gartner.com/reprints/?id=00ThR000008k1rGUAQ&amp;ct=260804&amp;st=sb" target="_blank" rel="noopener noreferrer">read a complimentary copy of the report to see why Microsoft was named a Leader</a>.</p>
+
+
+
+<div class="is-style-inline wp-block-bloginabox-theme-promotional">
+	
+<div class="promotional promotional--has-media promotional--media-right">
+	<div class="promotional__wrapper">
+		<div class="promotional__content-wrapper">
+			<div class="promotional__content">
+				
+
+<h3 class="wp-block-heading" id="microsoft-named-a-leader">Microsoft named a Leader</h3>
+
+
+
+<p class="wp-block-paragraph">Learn more about the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://www.gartner.com/reprints/?id=00ThR000008k1rGUAQ&amp;ct=260804&amp;st=sb" target="_blank" rel="noopener noreferrer">Read the report</a></div>
+</div>
+
+			</div>
+		</div>
+					<div class="promotional__media-wrapper">
+				<div class="promotional__media">
+											<img decoding="async" width="2560" height="1707" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_team_at_work_office_001-scaled.jpg" class="attachment-full size-full" alt="Developers working in office." loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_team_at_work_office_001-scaled.jpg 2560w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_team_at_work_office_001-300x200.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_team_at_work_office_001-1024x683.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_team_at_work_office_001-768x512.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_team_at_work_office_001-1536x1024.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_team_at_work_office_001-2048x1365.jpg 2048w" sizes="auto, (max-width: 2560px) 100vw, 2560px" />									</div>
+			</div>
+			</div>
+</div>
+</div>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity" />
+
+
+
+<p class="wp-block-paragraph"><em>Gartner ® Magic Quadrant™ for AI-Augmented Code Modernization Tools, Prasanna Lakshmi Narasimha, Erin Khoo, Deacon D.K Wan, Wei Jin, 3 August 2026</em></p>
+
+
+
+<p class="wp-block-paragraph"><em>Gartner does not endorse any company, vendor, product or service depicted in its publications, and does not advise technology users to select only those vendors with the highest ratings or other designation. Gartner publications consist of the opinions of Gartner’s business and technology insights organization and should not be construed as statements of fact. Gartner disclaims all warranties, expressed or implied, with respect to this publication, including any warranties of merchantability or fitness for a particular purpose.</em> </p>
+
+
+
+<p class="wp-block-paragraph"><em>Gartner and Magic Quadrant are trademarks of Gartner, Inc., and/or its affiliates.</em> </p>
+
+
+
+<p class="wp-block-paragraph"><em>This graphic was published by Gartner, Inc. as part of a larger research document and should be evaluated in the context of the entire document. The Gartner document is available upon request from</em>: <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.gartner.com%2Freprints%2F%3Fid%3D00ThR000008k1rGUAQ%26ct%3D260804%26st%3Dsb&amp;data=05%7C02%7Cv-guseltsevg%40microsoft.com%7C275f43a4578e41883f3e08def3d765dc%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639216303671768060%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=LCz%2FIvXi0K0MTIvIhYBkWdn4x4v43ixJOtYDpIeU29A%3D&amp;reserved=0" target="_blank" rel="noreferrer noopener">https://www.gartner.com/reprints/?id=00ThR000008k1rGUAQ&amp;ct=260804&amp;st=sb</a></p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-augmented-code-modernization-tools/">Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-augmented-code-modernization-tools/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>What customers value most in Microsoft Databases—from reliability to AI readiness</title>
 		<link>https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/</link>
 					<comments>https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/#respond</comments>
@@ -5366,7 +5484,7 @@ if status == "COMPLETED":
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a7483600ab5a"></universal-media-player>
+		<universal-media-player id="ump-6a756409ba8ee"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5380,7 +5498,7 @@ if status == "COMPLETED":
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a7483600ab5a", options);
+				ump("ump-6a756409ba8ee", options);
 			});
 		</script>
 	</div>
@@ -5907,7 +6025,6 @@ if status == "COMPLETED":
 		<item>
 		<title>External key management for Azure Managed HSM is now in public preview</title>
 		<link>https://azure.microsoft.com/en-us/blog/external-key-management-for-azure-managed-hsm-is-now-in-public-preview/</link>
-					<comments>https://azure.microsoft.com/en-us/blog/external-key-management-for-azure-managed-hsm-is-now-in-public-preview/#respond</comments>
 		
 		<dc:creator><![CDATA[Salim Chawro]]></dc:creator>
 		<pubDate>Tue, 07 Jul 2026 16:00:00 +0000</pubDate>
@@ -6149,8 +6266,6 @@ if status == "COMPLETED":
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/external-key-management-for-azure-managed-hsm-is-now-in-public-preview/">External key management for Azure Managed HSM is now in public preview</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
 ]]></content:encoded>
 					
-					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/external-key-management-for-azure-managed-hsm-is-now-in-public-preview/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
 		
 		
 			</item>
@@ -6265,7 +6380,7 @@ if status == "COMPLETED":
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a7483601992c&quot;}" data-wp-interactive="core/image" data-wp-key="6a7483601992c" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a756409ca325&quot;}" data-wp-interactive="core/image" data-wp-key="6a756409ca325" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6608,7 +6723,7 @@ if status == "COMPLETED":
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a7483602b49d&quot;}" data-wp-interactive="core/image" data-wp-key="6a7483602b49d" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a756409d5b41&quot;}" data-wp-interactive="core/image" data-wp-key="6a756409d5b41" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7217,232 +7332,6 @@ if status == "COMPLETED":
 
 <p class="wp-block-paragraph"></p>
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/">Azure IaaS: How to design, build, and optimize cloud infrastructure for long-term cost efficiency</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Claude in Microsoft Foundry is now generally available</title>
-		<link>https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/</link>
-		
-		<dc:creator><![CDATA[Steve Sweetman]]></dc:creator>
-		<pubDate>Mon, 29 Jun 2026 17:00:00 +0000</pubDate>
-				<category><![CDATA[AI + machine learning]]></category>
-		<category><![CDATA[AI]]></category>
-		<category><![CDATA[Anthropic]]></category>
-		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=52421</guid>
-
-					<description><![CDATA[<p>Claude in Microsoft Foundry is now generally available, hosted on Azure, and running on NVIDIA GB300 Blackwell Ultra, giving teams a faster path from agent experimentation to production.</p>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/">Claude in Microsoft Foundry is now generally available</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<p class="wp-block-paragraph"><strong><em>Claude in Microsoft Foundry is the production path enterprises have been asking for: true frontier model choice, Azure-native controls, simplified procurement, and faster time to value.</em></strong></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity" />
-
-
-
-<p class="wp-block-paragraph">Most enterprise AI projects do not stall because of model quality. They stall because of everything around the model: procurement, governance, networking, and data. Claude in Microsoft Foundry is now generally available, hosted on Azure, giving teams a faster path from agent experimentation to production.</p>
-
-
-
-<p class="wp-block-paragraph">Enterprises can build with Claude through <a href="https://ms.portal.azure.com/auth/login/" target="_blank" rel="noopener noreferrer">their existing Azure account</a>, using the authentication, billing, networking, governance, and data controls their teams already trust. Instead of solving for infrastructure, teams can focus on building agentic applications that run their work with Claude, in the environment where they already operate.</p>
-
-
-
-<p class="wp-block-paragraph">This is a real step forward for customers&nbsp;building agentic applications and want to&nbsp;move&nbsp;from AI experimentation to production. <a href="https://claude.com/partners/microsoft-foundry" target="_blank" rel="noopener noreferrer">Claude brings leading capabilities</a> for coding, agentic workflows, and complex reasoning. Microsoft Foundry brings the enterprise&nbsp;harness&nbsp;to build, evaluate, deploy, and scale those&nbsp;agents&nbsp;on Azure. Together, they give teams a trusted path to&nbsp;production&nbsp;AI with frontier model quality and the Azure controls they already trust.</p>
-
-
-
-<p class="wp-block-paragraph">Today&#8217;s announcement builds on <a href="https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/" target="_blank" rel="noopener noreferrer">the strategic partnership Microsoft, NVIDIA, and Anthropic announced in November 2025</a> to expand enterprise access to Claude on NVIDIA accelerated computing. Claude runs on NVIDIA Blackwell Ultra systems, connected by InfiniBand networking, bringing the rack-scale AI infrastructure designed for inference performance and efficiency. </p>
-
-
-
-<figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
-	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a7483603369b"></universal-media-player>
-		<script type="module">
-			const currentTheme =
-				localStorage.getItem('blogInABoxCurrentTheme') ||
-				(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-			// Modify player theme based on localStorage value.
-			let options = {"autoplay":false,"hideControls":null,"language":"en-us","loop":false,"partnerName":"cloud-blogs","poster":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/image\/microsoftcorp\/1000123-ClaudeModels_tbmnl_en-us?wid=1280","title":"","sources":[{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/1000123-ClaudeModels-0x1080-6439k","type":"video\/mp4","quality":"HQ"},{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/1000123-ClaudeModels-0x720-3266k","type":"video\/mp4","quality":"HD"},{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/1000123-ClaudeModels-0x540-2160k","type":"video\/mp4","quality":"SD"},{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/1000123-ClaudeModels-0x360-958k","type":"video\/mp4","quality":"LO"}],"ccFiles":[{"url":"https:\/\/azure.microsoft.com\/en-us\/blog\/wp-json\/bloginabox\/v1\/get-captions?url=https%3A%2F%2Fwww.microsoft.com%2Fcontent%2Fdam%2Fmicrosoft%2Fbade%2Fvideos%2Fproducts-and-services%2Fen-us%2Fazure%2F1000123-claudemodels%2F1000123-ClaudeModels_cc_en-us.ttml","locale":"en-us","ccType":"TTML"}],"downloadableFiles":[{"url":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/1000123-ClaudeModels_transcript_en-us","locale":"en-us","mediaType":"transcript"},{"url":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/1000123-ClaudeModels_audio_en-us","locale":"en-us","mediaType":"audio"}]};
-
-			if (currentTheme) {
-				options.playButtonTheme = currentTheme;
-			}
-
-			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a7483603369b", options);
-			});
-		</script>
-	</div>
-	</figure>
-
-
-
-<h2 class="wp-block-heading" id="build-with-claude-through-your-azure-account"><strong>Build with Claude through your Azure account</strong></h2>
-
-
-
-<p class="wp-block-paragraph">Developers can access Claude through the Messages API and use core capabilities including prompt caching, extended thinking, and tool streaming. For teams building agents, <a href="https://azure.microsoft.com/en-us/products/ai-foundry/agent-service/" target="_blank" rel="noopener noreferrer">Foundry Agent Service</a> uses Claude as the reasoning core to orchestrate multi-step planning, tool use, and task execution across enterprise systems.</p>
-
-
-
-<p class="wp-block-paragraph">Inference is processed in Azure, and customers can choose between Global and US data zones, for teams with data residency requirements. Anthropic operates the inference and is the data processor and SLA provider. Because Claude is available natively through Foundry, teams can work inside the Azure environment they already use. They can authenticate with <a href="https://learn.microsoft.com/en-us/entra/identity/" target="_blank" rel="noopener noreferrer">Microsoft Entra ID</a>, apply Azure role-based access controls, manage access through existing governance policies, and track usage through familiar Azure management experiences.</p>
-
-
-
-<p class="wp-block-paragraph">For high-sensitivity workloads, <a href="https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/data-privacy?tabs=azure-portal" target="_blank" rel="noopener noreferrer">zero data retention</a> is also available, so prompts and completions are not retained by Anthropic after the API call completes. For commercial teams, it also simplifies how Claude is purchased and consumed. Claude usage is billed in Claude Consumption Units (CCU), a single, consolidated line on your Azure bill, with MACC drawdown and per-model detail in Foundry unchanged.</p>
-
-
-
-<p class="wp-block-paragraph">For many enterprises, that matters as much as model capability. The barrier to production isn&#8217;t only whether a model is powerful enough, it&#8217;s whether teams can procure it, govern it, secure it, and operate it at scale inside their existing cloud. With Claude in Foundry, they get frontier capabilities in an Azure environment that aligns with enterprise requirements for security, compliance posture, governance, and data residency.</p>
-
-
-
-<blockquote class="wp-block-quote has-quote-default-font-size is-layout-flow wp-block-quote-is-layout-flow">
-<p class="wp-block-paragraph">Running Anthropic’s models on Azure has given us the sustained throughput and reliability our enterprise customers expect. The combination of frontier model quality and enterprise-grade infrastructure is what makes Bolt viable for the Fortune 500.</p>
-<cite>—Gary Ballabio, Vice President, Partnerships, Bolt</cite></blockquote>
-
-
-
-<h2 class="wp-block-heading" id="customers-are-already-building-with-claude-in-foundry"><strong>Customers are already building with Claude&nbsp;in Foundry</strong></h2>
-
-
-
-<p class="wp-block-paragraph">Enterprises&nbsp;aren’t&nbsp;just running isolated&nbsp;pilots;&nbsp;they’re&nbsp;building production systems&nbsp;and agents&nbsp;that need throughput, reliability, governance, security, and scale.</p>
-
-
-
-<blockquote class="wp-block-quote has-quote-default-font-size is-layout-flow wp-block-quote-is-layout-flow">
-<p class="wp-block-paragraph">At NVIDIA, we use autonomous AI agents every day to help our teams move faster and think bigger. Anthropic’s Claude models bring strong reasoning, coding and enterprise capabilities that are valuable for complex technical work. With Claude now available in Microsoft Foundry running on NVIDIA GB300 GPUs, more organizations can run advanced, specialized AI agents with the performance, scale and security needed for production.</p>
-<cite>—Justin Boitano, Vice President and GM of Enterprise Computing, NVIDIA</cite></blockquote>
-
-
-
-<blockquote class="wp-block-quote has-quote-default-font-size is-layout-flow wp-block-quote-is-layout-flow">
-<p class="wp-block-paragraph">Our customers describe their tests in plain English, and Momentic runs through the interface to verify everything works before a release ships. We found Claude’s Opus models especially suited to this, and running them on Microsoft Foundry we now serve millions of tokens per minute with the reliability our customers depend on.</p>
-<cite>—Jeff An, Co-Founder and CEO, Momentic</cite></blockquote>
-
-
-
-<figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
-	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a74836033c90"></universal-media-player>
-		<script type="module">
-			const currentTheme =
-				localStorage.getItem('blogInABoxCurrentTheme') ||
-				(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-			// Modify player theme based on localStorage value.
-			let options = {"autoplay":false,"hideControls":null,"language":"en-us","loop":false,"partnerName":"cloud-blogs","poster":"https:\/\/azure.microsoft.com\/en-us\/blog\/wp-content\/uploads\/2026\/06\/Replit_Thumb-1-scaled.jpg","title":"","sources":[{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/4240300-ReplitOnMicrosoftFoundryWithClaude-0x1080-6439k","type":"video\/mp4","quality":"HQ"},{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/4240300-ReplitOnMicrosoftFoundryWithClaude-0x720-3266k","type":"video\/mp4","quality":"HD"},{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/4240300-ReplitOnMicrosoftFoundryWithClaude-0x540-2160k","type":"video\/mp4","quality":"SD"},{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/4240300-ReplitOnMicrosoftFoundryWithClaude-0x360-958k","type":"video\/mp4","quality":"LO"}],"ccFiles":[{"url":"https:\/\/azure.microsoft.com\/en-us\/blog\/wp-json\/bloginabox\/v1\/get-captions?url=https%3A%2F%2Fwww.microsoft.com%2Fcontent%2Fdam%2Fmicrosoft%2Fbade%2Fvideos%2Fproducts-and-services%2Fen-us%2Fazure%2F4240300-replitonmicrosoftfoundrywithclaude%2F4240300-ReplitOnMicrosoftFoundryWithClaude_cc_en-us.ttml","locale":"en-us","ccType":"TTML"}],"downloadableFiles":[{"url":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/4240300-ReplitOnMicrosoftFoundryWithClaude_transcript_en-us","locale":"en-us","mediaType":"transcript"},{"url":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/4240300-ReplitOnMicrosoftFoundryWithClaude_audio_en-us","locale":"en-us","mediaType":"audio"}]};
-
-			if (currentTheme) {
-				options.playButtonTheme = currentTheme;
-			}
-
-			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a74836033c90", options);
-			});
-		</script>
-	</div>
-	</figure>
-
-
-
-<h2 class="wp-block-heading" id="built-for-coding-agents-and-complex-reasoning"><strong>Built for coding, agents, and complex reasoning</strong></h2>
-
-
-
-<p class="wp-block-paragraph"><a href="https://ai.azure.com/catalog/publishers/anthropic" target="_blank" rel="noopener noreferrer">Claude models</a> are especially well-suited to some of the fastest-growing enterprise AI workloads. For software teams, Claude supports code generation, refactoring, debugging, test creation, and large-scale development workflows. For teams building agents, it powers multi-step reasoning, tool use, planning, and task execution. For business teams, it supports document-heavy analysis, research synthesis, and complex decision support.</p>
-
-
-
-<p class="wp-block-paragraph">In Microsoft Foundry, these capabilities connect to the broader <a href="https://azure.microsoft.com/en-us/products/" target="_blank" rel="noopener noreferrer">Azure ecosystem</a>. With Foundry Agent Service, teams orchestrate multi-step, goal-driven agents that use Claude as their reasoning core, planning, calling tools, and executing tasks across enterprise systems. Features like <strong><a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-router" target="_blank" rel="noopener noreferrer">model router</a></strong> enable customers to automatically route queries to the most appropriate Claude model, <strong>saving up to 50% while improving user satisfaction</strong>. All this governed and monitored by <a href="https://learn.microsoft.com/en-us/azure/foundry/control-plane/overview" target="_blank" rel="noopener noreferrer">Foundry Control Plane</a> which continuously runs evaluations to ensure agent responses match customer expectations, even blocking responses that violate rules before they reach users.</p>
-
-
-
-<blockquote class="wp-block-quote has-quote-default-font-size is-layout-flow wp-block-quote-is-layout-flow">
-<p class="wp-block-paragraph">Between Anthropic and Azure, we get the best capabilities in the world and we get the best security in the world. And that’s exactly what nuclear needs. It’s how we compressed a safety analysis that would have taken 200 human days into a single day.</p>
-<cite>—Matt Huang, Founding Product Lead, Everstar</cite></blockquote>
-
-
-
-<p class="wp-block-paragraph">And with <a href="https://www.microsoft.com/en-us/ai/microsoft-iq" target="_blank" rel="noopener noreferrer">Microsoft IQ</a>, agents have access to live enterprise context which radically improves value per token, and helps Foundry amplify the impact customers can have: tools like <strong>agent optimizer in Foundry Agent Service</strong> tune the prompts which define agents so they perform better regardless of what model is under the hood.</p>
-
-
-
-<figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
-	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a74836033f64"></universal-media-player>
-		<script type="module">
-			const currentTheme =
-				localStorage.getItem('blogInABoxCurrentTheme') ||
-				(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-			// Modify player theme based on localStorage value.
-			let options = {"autoplay":false,"hideControls":null,"language":"en-us","loop":false,"partnerName":"cloud-blogs","poster":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/image\/microsoftcorp\/4234700-AI-Skills-Studio_tbmnl_en-us?wid=1280","title":"","sources":[{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/4234700-AI-Skills-Studio-0x1080-6439k","type":"video\/mp4","quality":"HQ"},{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/4234700-AI-Skills-Studio-0x720-3266k","type":"video\/mp4","quality":"HD"},{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/4234700-AI-Skills-Studio-0x540-2160k","type":"video\/mp4","quality":"SD"},{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/4234700-AI-Skills-Studio-0x360-958k","type":"video\/mp4","quality":"LO"}],"ccFiles":[{"url":"https:\/\/azure.microsoft.com\/en-us\/blog\/wp-json\/bloginabox\/v1\/get-captions?url=https%3A%2F%2Fwww.microsoft.com%2Fcontent%2Fdam%2Fmicrosoft%2Fbade%2Fvideos%2Fproducts-and-services%2Fen-us%2Fazure%2F4234700-ai-skills-studio%2F4234700-AI-Skills-Studio_cc_en-us.ttml","locale":"en-us","ccType":"TTML"}],"downloadableFiles":[{"url":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/4234700-AI-Skills-Studio_transcript_en-us","locale":"en-us","mediaType":"transcript"},{"url":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/4234700-AI-Skills-Studio_audio_en-us","locale":"en-us","mediaType":"audio"}]};
-
-			if (currentTheme) {
-				options.playButtonTheme = currentTheme;
-			}
-
-			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a74836033f64", options);
-			});
-		</script>
-	</div>
-	</figure>
-
-
-
-<h2 class="wp-block-heading" id="a-stronger-foundation-for-enterprise-ai-on-azure"><strong>A stronger foundation for enterprise AI on Azure</strong></h2>
-
-
-
-<p class="wp-block-paragraph">The next phase of enterprise AI will be defined by production systems: coding agents, business process agents, research assistants, customer-facing applications, and domain-specific workflows that operate reliably at scale. That takes more than access to a model. It takes a platform.</p>
-
-
-
-<p class="wp-block-paragraph">With <a href="https://aka.ms/ClaudeGAdocumentation" target="_blank" rel="noopener noreferrer">Claude now generally available in Microsoft Foundry</a> and hosted on Azure, customers can build with Anthropic’s leading models, orchestrating them as agents with Foundry Agent Service and grounding them in enterprise knowledge with Microsoft IQ, while using the Azure controls, commitments, and infrastructure they already trust.</p>
-
-
-
-<div class="is-style-inline wp-block-bloginabox-theme-promotional">
-	
-<div class="promotional promotional--has-media promotional--media-right">
-	<div class="promotional__wrapper">
-		<div class="promotional__content-wrapper">
-			<div class="promotional__content">
-				
-
-<h2 class="wp-block-heading" id="try-claude-in-foundry-today">Try Claude in Foundry today</h2>
-
-
-
-<p class="wp-block-paragraph">Build with Anthropic&#8217;s leading models in the Azure ecosystem you know and trust.</p>
-
-
-
-<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://ai.azure.com/catalog/publishers/anthropic" target="_blank" rel="noopener noreferrer noreferrer noopener">Get started</a></div>
-</div>
-
-			</div>
-		</div>
-					<div class="promotional__media-wrapper">
-				<div class="promotional__media">
-											<img decoding="async" width="782" height="782" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2025/12/2-24-Sovereignty-Blog_1_v2b-Copy-2.jpg" class="attachment-full size-full" alt="Purple and blue waves." loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2025/12/2-24-Sovereignty-Blog_1_v2b-Copy-2.jpg 782w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2025/12/2-24-Sovereignty-Blog_1_v2b-Copy-2-300x300.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2025/12/2-24-Sovereignty-Blog_1_v2b-Copy-2-150x150.jpg 150w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2025/12/2-24-Sovereignty-Blog_1_v2b-Copy-2-768x768.jpg 768w" sizes="auto, (max-width: 782px) 100vw, 782px" />									</div>
-			</div>
-			</div>
-</div>
-</div>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/">Claude in Microsoft Foundry is now generally available</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
 ]]></content:encoded>
 					
 		
