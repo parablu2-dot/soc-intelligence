@@ -70,7 +70,7 @@ class NarrativeTrapCase:
     gate_yield: GateStatus = "미확인"   # 양산 feasibility (수율)
     standard_eta_range: str = ""        # 예: "2029~2031"
     narrative_gap: str = ""             # 압축 서사 요약 (1문장)
-    trap_type: str = ""                 # ①분모은폐형 ②침묵독해형 ③기업문서vs시장서사 등
+    trap_type: str = ""                 # ①분모은폐형 ②침묵독해형 ③기업문서vs시장서사 ④단일소스다중매체에코형(draft) 등 — 정의는 data/narrative_trap/trap_types.md 참고
     judgment: str = ""                  # 판단 (근거 포함)
     unconfirmed: list = field(default_factory=list)  # 미확인 항목 리스트
     sources: list = field(default_factory=list)

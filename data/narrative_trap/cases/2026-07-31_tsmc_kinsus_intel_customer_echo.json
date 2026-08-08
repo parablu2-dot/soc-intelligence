@@ -1,0 +1,22 @@
+{
+  "case_id": "2026-07-31_tsmc_kinsus_intel_customer_echo",
+  "title": "TSMC-Kinsus EMIB류 패키징 개발설 (Intel 고객이탈 방지 서사)",
+  "track": "advanced_package",
+  "announcement_date": "2026-07-31",
+  "gate_design": "미확인",
+  "gate_yield": "미확인",
+  "standard_eta_range": "",
+  "narrative_gap": "TSMC가 Kinsus와 EMIB류 패키징을 개발 중이라는 익명 소식통 보도(The Information)가, 'Intel로의 고객이탈 방지 목적'이라는 인과관계 서사로 확대되어 TrendForce·Crypto Briefing 등 10여개 매체에 같은 날(7/31) 동시다발로 재유통됨. 매체 수만 보면 교차검증된 것처럼 보이지만 사실관계 뿌리는 하나.",
+  "trap_type": "④단일소스 다중매체 에코형(draft) — 승격기준(독립사례 2건 이상) 미달, 현재 1/2건",
+  "judgment": "이 사건 자체가 유형④(단일소스 다중매체 에코형) 후보의 첫 관찰 사례. TSMC/Kinsus/Intel 중 어느 쪽도 공식 확인한 바 없고, 원출처(The Information)는 '두 명의 소식통(two people with direct knowledge)'을 인용한 익명 보도. TrendForce 기사의 '고객이탈 방지 목적'이라는 표현은 TSMC 공식 발언이 아니라 매체 측 해석성 프레이밍. 같은 날 Crypto Briefing이 별도 1차 소스 없이 반대 프레임('Intel의 기회')을 씌워 재보도했고, wccftech·TechTimes·BigGo·Investing.com·Tom's Hardware·Liberty Times·Stocktwits·TheStreet·Sammy Fans 등도 같은 날 유통. 부가 근거로 따라붙은 'Intel EMIB-T 수율 98%'(KeyBanc 공급망 체크 인용)도 별도 익명 소스라 검증되지 않음. 확정적 조작 판단은 아니며, '노출 빈도 = 신뢰도'라는 착시를 경계할 근거로 기록.",
+  "unconfirmed": [
+    "TSMC/Kinsus/Intel 중 어느 쪽도 공식 확인 없음",
+    "The Information 원문(페이월) 미접근 — 소식통 2명의 신뢰도·직위·이해관계 불명",
+    "Intel EMIB-T 수율 98%(KeyBanc 인용) 1차 출처 미확인",
+    "TrendForce/Crypto Briefing 외 재보도 매체들이 The Information 외 독립 취재원을 갖고 있는지 여부 미확인"
+  ],
+  "sources": [
+    "https://www.trendforce.com/news/2026/07/31/news-tsmc-reportedly-develops-emib-like-packaging-with-kinsus-to-prevent-potential-customer-shift-to-intel/",
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTE1lTzJuU0wwd0FpMnRmdXpBX2VlZWRwVG1jVjRpZEZ4UVlQaHRMNVB5aFQwWUFqSWxxbGxXczlpYV9oeFpHcnJqQVVRS2VkNnFxYW1rTktaUzVGeTRlY3hLX3kwLVFSU3ZPQmd2TGphNHh4Y2M?oc=5"
+  ]
+}
