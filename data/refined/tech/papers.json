@@ -2,6 +2,208 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "math.DS",
+    "title": "Effective Dynamics of Disclination Pairs",
+    "url": "https://arxiv.org/abs/2608.12233v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "The dissipative dynamics of a pair of wedge disclinations with opposite Frank angles confined to a circular domain is investigated under the assumption of radially symmetric motion. Two distinct dynamical regimes are identified: a diverging-disclination regime and an annihilating-dipole regime. The stationary points associated with both regimes are determined and fully characterized in terms of their stability, and quantitative estimates for the characteristic evolution times in their vicinity a",
+    "authors": [
+      "Nicolò Briatico",
+      "Pierluigi Cesana",
+      "Marco Morandotti"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Apnea Burden-Guided Framework: Enhancing Out-of-Distribution Generalization in PPG-Based Sleep Apnea Characterization",
+    "url": "https://arxiv.org/abs/2608.12229v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "Sleep apnea is a common sleep-related breathing disorder associated with substantial cardiovascular and metabolic risk. Although overnight polysomnography remains the reference standard for diagnosis, its complexity and cost limit its suitability for long-term preventive monitoring at home. In wearable systems, arterial blood oxygen saturation (SpO2) is commonly used as the main predictor, whereas additional morphological features of the photoplethysmographic (PPG) pulse wave are usually underex",
+    "authors": [
+      "Mantas Rinkevičius",
+      "Oskar Pfeffer",
+      "Amal Alissa",
+      "Nando Hegemann",
+      "Vaidotas Marozas"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Beam Routing through Excitons in Transition Metal Dichalcogenide Monolayers",
+    "url": "https://arxiv.org/abs/2608.12105v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "Routing light at the nanoscale typically relies on nanostructured surfaces to imprint directionality on the emission. Using low-temperature, angle-resolved cathodoluminescence spectroscopy, we show that the intrinsic excitonic transitions of a semiconductor can themselves produce routed emission. We probe monolayers of WSe$_2$, MoSe$_2$, and MoTe$_2$ and resolve the excitonic species of monolayer WSe$_2$ -- the bright exciton, the trion, and the spin-forbidden dark exciton -- through their disti",
+    "authors": [
+      "Yonas Lebsir",
+      "Jacob Terndrup Heiden",
+      "Jorge Barcia Rodríguez",
+      "Maria Papadopoulou",
+      "Kenji Watanabe",
+      "Takashi Taniguchi",
+      "N. Asger Mortensen",
+      "Sergii Morozov",
+      "Nicolas Ubrig"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Energy-Dependent Dechanneling in Cu: Insights from Monte Carlo Channeling Simulations",
+    "url": "https://arxiv.org/abs/2608.12017v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "Ion channeling and backscattering techniques are powerful tools for studying crystal lattice disorders and defect structures in crystalline materials. However, the accurate interpretation of channeling phenomena necessitates the utilization of simulation models that account for the intricate interactions between point defects, dislocations, and extended defect clusters. The present paper introduces a Monte Carlo method that reproduces experimental spectra over a wide range of analyzing beam ener",
+    "authors": [
+      "Przemyslaw Jozwik",
+      "Cyprian Mieszczynski",
+      "Renata Ratajczak",
+      "Andrzej Turos"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "TRACE: A Modular Framework for RIS-Assisted Channel Estimation and Differential Channel-Aware Reconfiguration",
+    "url": "https://arxiv.org/abs/2608.11798v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "Reconfigurable Intelligent Surface (RIS) research tightly couples channel-estimation, control and communication, yet existing implementations often rely on fixed algorithmic pipelines, making it difficult to compare alternative estimation, tracking and communication strategies under identical conditions and to study low-overhead RIS adaptation under time-varying channels. This paper addresses both challenges through two complementary contributions. First, it presents TRACE (Toolkit for RIS-assis",
+    "authors": [
+      "Smriti Kumar",
+      "Mansi Ambwani",
+      "Arzad Alam Kherani",
+      "Vimal Bhatia"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "RaStream: Edge-Deployable Streaming Human Mesh Recovery from mmWave Radar",
+    "url": "https://arxiv.org/abs/2608.11791v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "Millimeter-wave (mmWave) radar enables privacy-preserving human sensing for edge applications, but streaming SMPL-X recovery on edge devices requires accurate spatial evidence extraction and temporally stable predictions under lightweight causal inference. Sparse radar reflections make dense mesh recovery difficult, and heavy multi-scale spatial backbones can be costly for volumetric radar tensors while still diluting weak body evidence with background clutter. Frame-wise mesh estimates further ",
+    "authors": [
+      "Jiazhen Dong",
+      "Lei Liu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Deep-Learning-Accelerated Dopant Selection for High-k HfO2 Dielectrics: A Disorder-Resolved Study of Y, Si and Al",
+    "url": "https://arxiv.org/abs/2608.11725v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "Hafnium oxide (HfO2) is the cornerstone high-k dielectric in modern silicon technology. Since the constraints of silicon device fabrication rule out replacing the material itself, dopant incorporation is the principal means available to engineer its band gap and dielectric constant within existing process flows. However, dopant selection is still largely empirical due to the coupled interplay among thermodynamic stability, electronic insulation, and dielectric response. Here, we present a high-t",
+    "authors": [
+      "Zunair Masroor",
+      "Bonwook Gu",
+      "Wonjoong Kim",
+      "Trinh Ngoc Le",
+      "Summal Zoha",
+      "Han-Bo-Ram Lee"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Spec Sheets Are Not Kernels: An ISA- and Source-Level Audit of INT8 Availability on NVIDIA Blackwell Ultra",
+    "url": "https://arxiv.org/abs/2608.11693v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "NVIDIA's published specifications give the Blackwell Ultra GPU (B300) a dense-compute ratio of roughly 30:1 between FP8 and INT8 tensor-core throughput; its predecessors, H200 and B200, both provide 1:1. We audit what this deprioritization means in practice by tracing INT8 W8A8 support through four layers of the stack: the published specifications, the PTX ISA, NVIDIA's CUTLASS kernel library, and the two major open-source LLM serving engines (vLLM and SGLang). We find a consistent, layered with",
+    "authors": [
+      "Teng-Ruei Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "APEX: Adaptive Expert Prefetching for Memory-Efficient Edge MoE Inference",
+    "url": "https://arxiv.org/abs/2608.11688v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "Mixture-of-Experts (MoE) models are attractive for edge deployment because they provide high model capacity while activating only a small subset of parameters per token, improving compute efficiency. However, MoE inference at the edge is fundamentally limited by memory. Expert parameters are large and often reside in off-chip memory due to capacity, cost, and power constraints, putting expert loading to the critical path. We present APEX: Adaptive Expert Prefetching, a predictive resource manage",
+    "authors": [
+      "Alish Kanani",
+      "Layan Badawi",
+      "Umit Y. Ogras"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "First-principles cumulant approach to the vibronic structure of spin defects",
+    "url": "https://arxiv.org/abs/2608.11687v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "Color centers in wide-band-gap semiconductors are leading platforms for solid-state quantum technologies, yet a quantitative description of their vibronic structure has remained elusive due to the complexity of multi-phonon processes in localized defect states. Here we present a first-principles Green's function framework based on the retarded cumulant ansatz (RCA) to describe electron-phonon interactions in spin defects; our approach goes beyond the adiabatic and lowest-order perturbation theor",
+    "authors": [
+      "Jinsoo Park",
+      "Yu Jin",
+      "Arpan Kundu",
+      "Jorge O. Sofo",
+      "Giulia Galli"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "A Full-Stack Characterization of High-Bandwidth Flash for KV-Centric LLM Serving",
+    "url": "https://arxiv.org/abs/2608.11668v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "High-Bandwidth Flash (HBF) stacks NAND behind a wide, package-local interface, giving flash-scale capacity with far better read latency and bandwidth than an SSD. This makes it tempting to keep an SSD-style Mooncake KV-offloading stack and swap only the backing tier for HBF. We test that substitution with an extended TokenSim, four complete two-hour Qwen-Bailian production traces, five dense and mixture-of-experts models, and H100/B200 profiles. Serving gets worse, not better, and a cost-benefit",
+    "authors": [
+      "Zhuoran Li",
+      "Zhuohang Bian",
+      "Xin Huang",
+      "Yibo Zhao",
+      "Guangyu Sun",
+      "Youwei Zhuo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "A Frequency-Space Terahertz Transceiver Chip for Multi-Agent Communications and Spatial Awareness",
+    "url": "https://arxiv.org/abs/2608.11651v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "Future indoor embodied-intelligence systems require scalable hardware platforms that support both high-capacity multi-agent connectivity and mutual spatial awareness. The terahertz (THz) spectrum offers abundant bandwidth and inherent spatial selectivity for integrated sensing and communication (ISAC); however, conventional phased arrays and programmable metasurfaces rely on dense beamforming networks, element-level control, or external THz illumination, making scalable multibeam operation chall",
+    "authors": [
+      "Xiaoyue Xia",
+      "Zhicheng Lin",
+      "Hao Guo",
+      "Siran Wang",
+      "Jingyuan Zhang",
+      "Xinyu Fang",
+      "Ka Fai Chan",
+      "Shum Kam Man",
+      "Geng-Bo Wu",
+      "Chi Hou Chan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "quant-ph",
     "title": "Impact of strain and dark states on spectroscopic measurements of silicon-vacancy centers in diamond",
     "url": "https://arxiv.org/abs/2608.11168v1",

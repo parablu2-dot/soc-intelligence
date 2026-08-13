@@ -54,8 +54,8 @@
     <link rel="canonical" href="https://www.trendforce.com/news" />
     	<script src="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/bootstrap/css/bootstrap.css">
-	<script src="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/script.js?v=202608120930"></script>
-	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/style.css?v=202608120930">
+	<script src="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/script.js?v=202608130758"></script>
+	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/style.css?v=202608130758">
 	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/content-box.css">
 	<!-- <link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/image-box.css"> -->
 	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/animations.css">
@@ -65,8 +65,8 @@
 	<!-- <link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/php/contact-form.css"> -->
 	<!-- <link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/social.stream.css"> -->
 	<!-- <link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/jquery.flipster.min.css"> -->
-	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/skin.css?v=202608120930">
-    <link rel="stylesheet" href="/css/ad.css?v=202608120930">
+	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/skin.css?v=202608130758">
+    <link rel="stylesheet" href="/css/ad.css?v=202608130758">
 
 	<!-- Favicon  -->
 	<link rel="shortcut icon" type="image/x-icon" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/images/favicon.ico" />
@@ -80,7 +80,7 @@
 	<link rel="icon" type="image/png" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/images/favicon-32x32.png" sizes="32x32" />
 
 	<!-- blog-css  -->
-	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/style-blog.css?v=202608120930">
+	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/style-blog.css?v=202608130758">
 	<link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="TrendForce News &raquo; Feed" href="https://www.trendforce.com/news/feed/" />
 <link rel="alternate" type="application/rss+xml" title="TrendForce News &raquo; Comments Feed" href="https://www.trendforce.com/news/comments/feed/" />
@@ -197,65 +197,14 @@ img.emoji {
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </a>-->
 
-                    <!-- 登入前 user_icon -->
-                    <a class="sign-in-button hidden-sm user-state-guest" href="/login" rel="nofollow">
-                        Sign In
-                    </a>
-
-                    <!-- 登入後 user_icon -->
-                    <div class="header_account-container hidden-sm user-state-login" style="display: none">
-                        <a class="social-icon active" href="javascript:void(0)">
-                            <img src="/images/icon-account.svg" alt="user">
-                        </a>
-                        <div class="header_account-content">
-                            <p id="user-state-name"></p>
-                            <a href="/member/reportDownload" rel="nofollow">Member Center</a>
-                            <a href="/logout" rel="nofollow">SIGN OUT</a>
-                        </div>
-                    </div>
                 </div>
 
             </div>
 
-            <div class="hidden-md hidden-lg">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                </div>
-            </div>
         </div>
     </div>
 </div>
 
-<script>
-    jQuery('document').ready(function() {
-        const site_url = 'https://www.trendforce.com';
-
-        jQuery.ajax({
-            method: 'GET',
-            url: site_url + '/api/getAuthUser',
-            // dataType:'json',
-            xhrFields: {
-                withCredentials: true
-            },
-            success: function(response) {
-                console.log(response)
-                if (response.status != 200) {
-                    console.log('member site connect fail')
-                } else {
-                    console.log('member login')
-                    jQuery('.user-state-login').show();
-                    jQuery('.user-state-guest').hide();
-                    jQuery('#user-state-name').html(`Hi! ${response.info.member_email}`);
-                }
-            },
-            error: function() {
-                console.log('member site connect fail')
-            }
-        })
-    })
-</script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const searchContainer = document.querySelector('.header_search-container');
@@ -328,19 +277,6 @@ img.emoji {
     });
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const socialIcon = document.querySelector('.social-icon.active');
-    const accountContent = document.querySelector('.header_account-content');
-
-    socialIcon.addEventListener('mouseover', function () {
-      accountContent.style.display = 'flex';
-    });
-
-    accountContent.addEventListener('mouseleave', function () {
-      accountContent.style.display = 'none';
-    });
-  });
-
   // 語系Icon
   document.addEventListener("DOMContentLoaded", function () {
     const languageIcon = document.querySelector('.language-button.active');
@@ -359,55 +295,6 @@ img.emoji {
                 <div class="navbar-main site-navbar">
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
-            <div class="hidden-md hidden-lg">
-                <div class="header_mobile-social-icon">
-                    <a class="social-icon" href="https://www.linkedin.com/company/trendforce-corporation/" target="_blank">
-                        <img src="/images/icon-linkedin.svg" alt="linkedin">
-                    </a>
-                    <a class="social-icon" href="https://x.com/trendforce" target="_blank">
-                        <img src="/images/icon-x.svg" alt="x">
-                    </a>
-                    <a class="social-icon" href="https://www.facebook.com/TrendForce.Global/" target="_blank">
-                        <img src="/images/icon-facebook.svg" alt="facebook">
-                    </a>
-                </div>
-                <div class="header_mobile-functional-btn">
-                    <!--<div class="header_language-group">
-                        <li class="dropdown active current-active">
-                            <a class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-expanded="true">
-                                <img src="/images/icon-url.svg" alt="language">
-                                <span>Language</span>
-                            </a>
-
-                            <ul class="dropdown-menu fade-in" style="transition-duration: 300ms; animation-duration: 300ms; transition-timing-function: ease; transition-delay: 0ms;">
-                                <li><a href="https://www.trendforce.com.tw" rel="nofollow">繁體中文</a></li>
-                                <li><a href="https://www.trendforce.cn" rel="nofollow">简体中文</a></li>
-                            </ul>
-                        </li>
-                    </div>
-
-                    <a href="/api/cart/toList" target="_blank" rel="nofollow">
-                        <img src="/images/icon-shopping-cart.svg" alt="shopping cart">
-                        <span>Shopping Cart</span>
-                    </a>-->
-
-                    <a href="/login" class="user-state-guest">
-                        <img src="/images/icon-user.svg" alt="login">
-                        <span>Sign In</span>
-                    </a>
-
-                    <a class="primary user-state-login" href="/member/reportDownload" style="display: none">
-                        <img src="/images/icon-acc-g.svg" alt="member">
-                        <span>Member Center</span>
-                    </a>
-                    <a class="primary user-state-login" href="/logout" style="display: none">
-                        <img src="/images/icon-logout.svg" alt="logout">
-                        <span>SIGN OUT</span>
-                    </a>
-                </div>
-            </div>
-
             <ul class="nav navbar-nav header_navbar" style="display: none;">
                 <li class="dropdown visible-xs">
                     <a class="header_navbar-link-text" href="/about" data-toggle="dropdown"
@@ -857,20 +744,20 @@ img.emoji {
 		<div class="insight-carousel-content w-50 w-m-100">
 							<div class="w-50 w-m-100 w-s-100 insight-carousel-s-size-grid">
 																	<div class="insight-carousel-list insight-carousel-s-size">
-							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/11/news-tsmcs-5-5-reticle-cowos-reportedly-tops-99-yield-flags-memory-abf-as-ai-bottlenecks/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2025/07/02101953/TSMC-624x416.jpg" alt=""></a>
+							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/12/news-micron-can-meet-less-than-half-of-data-center-demand-as-customers-rush-to-secure-memory-at-very-high-prices/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2026/07/10101013/Micron-New-York-fab-624x351.jpg" alt=""></a>
 							<div class="insight-carousel-list-info">
 								<div class="insight-tag"><i class="fa fa-bookmark"></i><a>Semiconductors</a></div>
-								<a href="https://www.trendforce.com/news/2026/08/11/news-tsmcs-5-5-reticle-cowos-reportedly-tops-99-yield-flags-memory-abf-as-ai-bottlenecks/">
-									<h4 class="text-ellipsis-2">[News] TSMC’s 5.5-Reticle CoWoS Reportedly Tops 99% Yield; Flags Memory, ABF as AI Bottlenecks</h4>
+								<a href="https://www.trendforce.com/news/2026/08/12/news-micron-can-meet-less-than-half-of-data-center-demand-as-customers-rush-to-secure-memory-at-very-high-prices/">
+									<h4 class="text-ellipsis-2">[News] Micron Meets Less Than Half of Data Center Demand as Customers Rush to Secure Memory at “Very High” Prices</h4>
 								</a>
 							</div>
 						</div>
 																						<div class="insight-carousel-list insight-carousel-s-size">
-							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/11/news-samsung-reportedly-eyes-high-na-euv-for-1nm-around-2030-as-tsmc-also-takes-a-cautious-approach/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2025/12/16155453/ASML-High-NA-EUV-20251216--624x444.jpg" alt=""></a>
+							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/12/news-sk-hynix-reportedly-restarts-dalian-fab-2-targets-1h27-mass-production-and-50-china-nand-capacity-boost/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/12142353/SK-hynix-176-layer-NAND-20260812-624x377.jpg" alt=""></a>
 							<div class="insight-carousel-list-info">
 								<div class="insight-tag"><i class="fa fa-bookmark"></i><a>Semiconductors</a></div>
-								<a href="https://www.trendforce.com/news/2026/08/11/news-samsung-reportedly-eyes-high-na-euv-for-1nm-around-2030-as-tsmc-also-takes-a-cautious-approach/">
-									<h4 class="text-ellipsis-2">[News] Samsung Reportedly Eyes High-NA EUV for 1nm around 2030 as TSMC Also Takes a Cautious Approach</h4>
+								<a href="https://www.trendforce.com/news/2026/08/12/news-sk-hynix-reportedly-restarts-dalian-fab-2-targets-1h27-mass-production-and-50-china-nand-capacity-boost/">
+									<h4 class="text-ellipsis-2">[News] SK hynix Reportedly Restarts Dalian Fab 2, Targets 1H27 Mass Production and 50% China NAND Capacity Boost</h4>
 								</a>
 							</div>
 						</div>
@@ -886,11 +773,11 @@ img.emoji {
 							</div>
 						</div>
 																						<div class="insight-carousel-list insight-carousel-s-size">
-							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/11/news-china-ai-chip-maker-cambricons-1h26-net-profit-surges-123-moore-threads-eyes-hong-kong-listing/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2026/03/06113047/Cambricon-turned-profitable-in-2025-20260306-624x420.jpg" alt=""></a>
+							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/11/news-xiamen-sets-up-chinas-largest-gaas-satellite-solar-cell-production-base/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2026/02/03182221/Chip-FREEPIK-20260203-624x351.jpg" alt=""></a>
 							<div class="insight-carousel-list-info">
 								<div class="insight-tag"><i class="fa fa-bookmark"></i><a>Emerging Technologies</a></div>
-								<a href="https://www.trendforce.com/news/2026/08/11/news-china-ai-chip-maker-cambricons-1h26-net-profit-surges-123-moore-threads-eyes-hong-kong-listing/">
-									<h4 class="text-ellipsis-2">[News] China’s AI Chip Makers Make Waves: Cambricon 1H26 Net Profit Surges 123%, Moore Threads Eyes HK Listing</h4>
+								<a href="https://www.trendforce.com/news/2026/08/11/news-xiamen-sets-up-chinas-largest-gaas-satellite-solar-cell-production-base/">
+									<h4 class="text-ellipsis-2">[News] Xiamen Sets Up China's Largest GaAs Satellite Solar Cell Production Base</h4>
 								</a>
 							</div>
 						</div>
@@ -1087,12 +974,12 @@ img.emoji {
 					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
 						<div class="insight-list-item">
 															<p class="article-category">News</p>
-														<a href="https://www.trendforce.com/news/2026/08/12/news-micron-flags-hbm4e-as-start-of-custom-hbm-era-hbm-market-could-tilt-toward-dual-or-single-suppliers/" class="insight-list-item-img">
-																	<img width="300" height="180" src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/12154444/Micron-HBM4-300x180.png" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/08/12154444/Micron-HBM4-300x180.png 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12154444/Micron-HBM4-768x461.png 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12154444/Micron-HBM4-1024x614.png 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12154444/Micron-HBM4-624x374.png 624w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12154444/Micron-HBM4.png 1500w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
+														<a href="https://www.trendforce.com/news/2026/08/13/news-adi-reportedly-set-to-raise-prices-again-on-september-with-military-chips-facing-up-to-30-hike/" class="insight-list-item-img">
+																	<img width="300" height="169" src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/13152532/Analog-Devices-300x169.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/08/13152532/Analog-Devices-300x169.jpg 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/13152532/Analog-Devices-768x432.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/13152532/Analog-Devices-1024x576.jpg 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/13152532/Analog-Devices-624x351.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
 							<div class="insight-list-item-info">
 								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
-									2026-08-12
-									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/12/news-micron-flags-hbm4e-as-start-of-custom-hbm-era-hbm-market-could-tilt-toward-dual-or-single-suppliers/"><strong>[News] Micron Flags HBM4E as Start of Custom HBM Era; HBM Market Could Tilt Toward Dual-or-Single Suppliers</strong></a>
+									2026-08-13
+									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/13/news-adi-reportedly-set-to-raise-prices-again-on-september-with-military-chips-facing-up-to-30-hike/"><strong>[News] ADI Reportedly Set to Raise Prices Again on September, With Military Chips Facing Up to 30% Hike</strong></a>
 									</h2>
 																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
 																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
@@ -1100,13 +987,13 @@ img.emoji {
 																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
 									<div class="insight-list-item-summary">
                                         <div class="text-ellipsis-3">
-                                            <p>Memory giants are increasingly turning to custom HBM as the next growth engine. At the KeyBanc Technology Leadership Forum 2026, Micron EVP Sumit Sadana, according to Investing.com, said the shift toward custom HBM will begin with HBM4E, with the company planning to work with customers on custom SKU...</p>
+                                            <p>The chip price hike wave is extending into 2H26, with capacity expansion emerging as a key driver behind the latest increases. EE Times China, citing industry sources, reports that Analog Devices (ADI) has notified global distributors and direct customers of its second company-wide price adjustment ...</p>
                                         </div>
 										<div class="text-right"> 
-											<a href="https://www.trendforce.com/news/2026/08/12/news-micron-flags-hbm4e-as-start-of-custom-hbm-era-hbm-market-could-tilt-toward-dual-or-single-suppliers/" class="btn-text">View More</a>
+											<a href="https://www.trendforce.com/news/2026/08/13/news-adi-reportedly-set-to-raise-prices-again-on-september-with-military-chips-facing-up-to-30-hike/" class="btn-text">View More</a>
 										</div>
-										<!-- <p>Memory giants are increasingly turning to custom HBM as the next growth engine. At the KeyBanc Technology Leadership Forum 2026, Micron EVP Sumit Sadana, according to Investing.com, said the shift toward custom HBM will begin with HBM4E, with the company &hellip;</p>
-<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/12/news-micron-flags-hbm4e-as-start-of-custom-hbm-era-hbm-market-could-tilt-toward-dual-or-single-suppliers/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
+										<!-- <p>The chip price hike wave is extending into 2H26, with capacity expansion emerging as a key driver behind the latest increases. EE Times China, citing industry sources, reports that Analog Devices (ADI) has notified global distributors and direct customers of &hellip;</p>
+<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/13/news-adi-reportedly-set-to-raise-prices-again-on-september-with-military-chips-facing-up-to-30-hike/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
  -->
 									</div>
 								</div>
@@ -1124,63 +1011,27 @@ img.emoji {
 					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
 						<div class="insight-list-item">
 															<p class="article-category">News</p>
-														<a href="https://www.trendforce.com/news/2026/08/12/news-sk-hynix-reportedly-restarts-dalian-fab-2-targets-1h27-mass-production-and-50-china-nand-capacity-boost/" class="insight-list-item-img">
-																	<img width="300" height="181" src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/12142353/SK-hynix-176-layer-NAND-20260812-300x181.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/08/12142353/SK-hynix-176-layer-NAND-20260812-300x181.jpg 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12142353/SK-hynix-176-layer-NAND-20260812-768x464.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12142353/SK-hynix-176-layer-NAND-20260812-1024x618.jpg 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12142353/SK-hynix-176-layer-NAND-20260812-624x377.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
+														<a href="https://www.trendforce.com/news/2026/08/13/news-ai-agents-enter-chipmaking-sk-hynix-tests-back-end-deployment-samsung-cuts-soc-verification-to-2-days/" class="insight-list-item-img">
+																	<img width="300" height="200" src="https://img.trendforce.com/blog/wp-content/uploads/2026/04/24163706/Samsung-fab-300x200.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/04/24163706/Samsung-fab-300x200.jpg 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/04/24163706/Samsung-fab-768x512.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/04/24163706/Samsung-fab-1024x683.jpg 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/04/24163706/Samsung-fab-624x416.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
 							<div class="insight-list-item-info">
 								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
-									2026-08-12
-									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/12/news-sk-hynix-reportedly-restarts-dalian-fab-2-targets-1h27-mass-production-and-50-china-nand-capacity-boost/"><strong>[News] SK hynix Reportedly Restarts Dalian Fab 2, Targets 1H27 Mass Production and 50% China NAND Capacity Boost</strong></a>
+									2026-08-13
+									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/13/news-ai-agents-enter-chipmaking-sk-hynix-tests-back-end-deployment-samsung-cuts-soc-verification-to-2-days/"><strong>[News] AI Agents Enter Chipmaking: SK hynix Tests Back-End Deployment; Samsung Cuts SoC Verification to 2 Days</strong></a>
 									</h2>
 																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
-																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
+																																																	<a title="更多Emerging Technologies分類文章" href="https://www.trendforce.com/news/category/emerging-technologies/">Emerging Technologies</a>
+																																																													, 													<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
 																																														</div>
 																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
 									<div class="insight-list-item-summary">
                                         <div class="text-ellipsis-3">
-                                            <p>SK hynix is reportedly restarting investment in its second NAND flash plant in Dalian, China. According to Seoul Economic Daily, sources say the company’s NAND subsidiary Solidigm resumed investment in Dalian Fab 2 in the first half of this year and has completed construction of the fab building. ...</p>
+                                            <p>Samsung and SK hynix are accelerating the adoption of artificial intelligence (AI) agents in semiconductor manufacturing equipment. According to The Elec, SK hynix has begun a phased deployment of AI agents across its back-end production lines in Cheongju, though the specific equipment involved has ...</p>
                                         </div>
 										<div class="text-right"> 
-											<a href="https://www.trendforce.com/news/2026/08/12/news-sk-hynix-reportedly-restarts-dalian-fab-2-targets-1h27-mass-production-and-50-china-nand-capacity-boost/" class="btn-text">View More</a>
+											<a href="https://www.trendforce.com/news/2026/08/13/news-ai-agents-enter-chipmaking-sk-hynix-tests-back-end-deployment-samsung-cuts-soc-verification-to-2-days/" class="btn-text">View More</a>
 										</div>
-										<!-- <p>SK hynix is reportedly restarting investment in its second NAND flash plant in Dalian, China. According to Seoul Economic Daily, sources say the company’s NAND subsidiary Solidigm resumed investment in Dalian Fab 2 in the first half of this year &hellip;</p>
-<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/12/news-sk-hynix-reportedly-restarts-dalian-fab-2-targets-1h27-mass-production-and-50-china-nand-capacity-boost/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
- -->
-									</div>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-
-					<!-- </div> -->
-					<!-- </div> -->
-									<!-- <div class="list-item"> -->
-					<!-- <div class="row"> -->
-
-					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
-						<div class="insight-list-item">
-															<p class="article-category">Insights</p>
-														<a href="https://www.trendforce.com/news/2026/08/12/insights-memory-spot-price-update-dram-spot-trading-stays-subdued-as-pricing-gap-persists-ddr4-up-0-93/" class="insight-list-item-img">
-																	<img width="240" height="300" src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/12142122/DRAM%E5%A0%B1%E5%83%B90812-240x300.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/08/12142122/DRAM%E5%A0%B1%E5%83%B90812-240x300.jpg 240w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12142122/DRAM%E5%A0%B1%E5%83%B90812-768x960.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12142122/DRAM%E5%A0%B1%E5%83%B90812-819x1024.jpg 819w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12142122/DRAM%E5%A0%B1%E5%83%B90812-624x780.jpg 624w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12142122/DRAM%E5%A0%B1%E5%83%B90812.jpg 1080w" sizes="(max-width: 240px) 100vw, 240px" />                                							</a>
-							<div class="insight-list-item-info">
-								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
-									2026-08-12
-									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/12/insights-memory-spot-price-update-dram-spot-trading-stays-subdued-as-pricing-gap-persists-ddr4-up-0-93/"><strong>[Insights] Memory Spot Price Update: DRAM Spot Trading Stays Subdued as Pricing Gap Persists; DDR4 Up 0.93%</strong></a>
-									</h2>
-																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
-																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
-																																														</div>
-																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
-									<div class="insight-list-item-summary">
-                                        <div class="text-ellipsis-3">
-                                            <p>According to TrendForce’s latest memory spot price trend report, DRAM spot trading remains subdued as buyers and sellers remain far apart on pricing, with the average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) edging up 0.93%. In NAND flash, NAND spot trading remains sluggish, though 512G...</p>
-                                        </div>
-										<div class="text-right"> 
-											<a href="https://www.trendforce.com/news/2026/08/12/insights-memory-spot-price-update-dram-spot-trading-stays-subdued-as-pricing-gap-persists-ddr4-up-0-93/" class="btn-text">View More</a>
-										</div>
-										<!-- <p>According to TrendForce’s latest memory spot price trend report, DRAM spot trading remains subdued as buyers and sellers remain far apart on pricing, with the average spot price of mainstream chips (DDR4 1Gx8 3200MT/s) edging up 0.93%. In NAND flash, &hellip;</p>
-<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/12/insights-memory-spot-price-update-dram-spot-trading-stays-subdued-as-pricing-gap-persists-ddr4-up-0-93/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
+										<!-- <p>Samsung and SK hynix are accelerating the adoption of artificial intelligence (AI) agents in semiconductor manufacturing equipment. According to The Elec, SK hynix has begun a phased deployment of AI agents across its back-end production lines in Cheongju, though the &hellip;</p>
+<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/13/news-ai-agents-enter-chipmaking-sk-hynix-tests-back-end-deployment-samsung-cuts-soc-verification-to-2-days/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
  -->
 									</div>
 								</div>
@@ -1198,12 +1049,12 @@ img.emoji {
 					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
 						<div class="insight-list-item">
 															<p class="article-category">News</p>
-														<a href="https://www.trendforce.com/news/2026/08/12/news-ases-spil-breaks-ground-on-nearly-twd-100b-plant-in-douliu-to-boost-cowos-capacity-operations-set-for-2028/" class="insight-list-item-img">
-																	<img width="300" height="200" src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/12105041/SPIL-from-ASE-20260812-300x200.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/08/12105041/SPIL-from-ASE-20260812-300x200.jpg 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12105041/SPIL-from-ASE-20260812-768x512.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12105041/SPIL-from-ASE-20260812-1024x683.jpg 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12105041/SPIL-from-ASE-20260812-624x416.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
+														<a href="https://www.trendforce.com/news/2026/08/13/news-samsung-sk-hynixs-hbm4-push-puts-hbm-general-memory-pricing-in-the-spotlight-for-2h-earnings/" class="insight-list-item-img">
+																	<img width="300" height="197" src="https://img.trendforce.com/blog/wp-content/uploads/2026/03/20101237/SK-hynix-HBM4-300x197.png" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/03/20101237/SK-hynix-HBM4-300x197.png 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/03/20101237/SK-hynix-HBM4-768x505.png 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/03/20101237/SK-hynix-HBM4-1024x673.png 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/03/20101237/SK-hynix-HBM4-624x410.png 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
 							<div class="insight-list-item-info">
 								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
-									2026-08-12
-									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/12/news-ases-spil-breaks-ground-on-nearly-twd-100b-plant-in-douliu-to-boost-cowos-capacity-operations-set-for-2028/"><strong>[News] ASE’s SPIL Breaks Ground on Nearly TWD 100B Plant in Douliu to Boost CoWoS Capacity, Operations Set for 2028</strong></a>
+									2026-08-13
+									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/13/news-samsung-sk-hynixs-hbm4-push-puts-hbm-general-memory-pricing-in-the-spotlight-for-2h-earnings/"><strong>[News] Samsung, SK hynix&#8217;s HBM4 Push Puts HBM, General Memory Pricing in the Spotlight for 2H Earnings</strong></a>
 									</h2>
 																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
 																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
@@ -1211,13 +1062,13 @@ img.emoji {
 																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
 									<div class="insight-list-item-summary">
                                         <div class="text-ellipsis-3">
-                                            <p>Competition in AI advanced packaging is heating up, with ASE subsidiary SPIL accelerating capacity expansion. According to Commercial Times, SPIL broke ground on August 11 on a nearly TWD 100 billion, 6-hectare plant in Douliu, Yunlin, which will introduce CoWoS advanced packaging and begin first-ph...</p>
+                                            <p>With Samsung reportedly lifting HBM4 yields to around 80%, the race between South Korea’s two memory giants is set to intensify in the second half. While NVIDIA’s Vera Rubin remains a major HBM demand driver, MoneyToday Broadcasting (MTN) reports that customer diversification and rising general-...</p>
                                         </div>
 										<div class="text-right"> 
-											<a href="https://www.trendforce.com/news/2026/08/12/news-ases-spil-breaks-ground-on-nearly-twd-100b-plant-in-douliu-to-boost-cowos-capacity-operations-set-for-2028/" class="btn-text">View More</a>
+											<a href="https://www.trendforce.com/news/2026/08/13/news-samsung-sk-hynixs-hbm4-push-puts-hbm-general-memory-pricing-in-the-spotlight-for-2h-earnings/" class="btn-text">View More</a>
 										</div>
-										<!-- <p>Competition in AI advanced packaging is heating up, with ASE subsidiary SPIL accelerating capacity expansion. According to Commercial Times, SPIL broke ground on August 11 on a nearly TWD 100 billion, 6-hectare plant in Douliu, Yunlin, which will introduce CoWoS &hellip;</p>
-<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/12/news-ases-spil-breaks-ground-on-nearly-twd-100b-plant-in-douliu-to-boost-cowos-capacity-operations-set-for-2028/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
+										<!-- <p>With Samsung reportedly lifting HBM4 yields to around 80%, the race between South Korea’s two memory giants is set to intensify in the second half. While NVIDIA’s Vera Rubin remains a major HBM demand driver, MoneyToday Broadcasting (MTN) reports that &hellip;</p>
+<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/13/news-samsung-sk-hynixs-hbm4-push-puts-hbm-general-memory-pricing-in-the-spotlight-for-2h-earnings/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
  -->
 									</div>
 								</div>
@@ -1235,12 +1086,12 @@ img.emoji {
 					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
 						<div class="insight-list-item">
 															<p class="article-category">News</p>
-														<a href="https://www.trendforce.com/news/2026/08/12/news-micron-can-meet-less-than-half-of-data-center-demand-as-customers-rush-to-secure-memory-at-very-high-prices/" class="insight-list-item-img">
-																	<img width="300" height="169" src="https://img.trendforce.com/blog/wp-content/uploads/2026/07/10101013/Micron-New-York-fab-300x169.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/07/10101013/Micron-New-York-fab-300x169.jpg 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/07/10101013/Micron-New-York-fab-768x432.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/07/10101013/Micron-New-York-fab-1024x576.jpg 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/07/10101013/Micron-New-York-fab-624x351.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
+														<a href="https://www.trendforce.com/news/2026/08/13/news-intel-reportedly-hints-at-memory-reentry-eyes-cpu-memory-stacking-as-xbm-patent-emerges/" class="insight-list-item-img">
+																	<img width="300" height="300" src="https://img.trendforce.com/blog/wp-content/uploads/2026/06/09100800/Intel-Lip-Bu-Tan-300x300.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/06/09100800/Intel-Lip-Bu-Tan-300x300.jpg 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/06/09100800/Intel-Lip-Bu-Tan-150x150.jpg 150w, https://img.trendforce.com/blog/wp-content/uploads/2026/06/09100800/Intel-Lip-Bu-Tan-768x768.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/06/09100800/Intel-Lip-Bu-Tan-1024x1024.jpg 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/06/09100800/Intel-Lip-Bu-Tan-624x624.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
 							<div class="insight-list-item-info">
 								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
-									2026-08-12
-									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/12/news-micron-can-meet-less-than-half-of-data-center-demand-as-customers-rush-to-secure-memory-at-very-high-prices/"><strong>[News] Micron Meets Less Than Half of Data Center Demand as Customers Rush to Secure Memory at “Very High” Prices</strong></a>
+									2026-08-13
+									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/13/news-intel-reportedly-hints-at-memory-reentry-eyes-cpu-memory-stacking-as-xbm-patent-emerges/"><strong>[News] Intel Reportedly Hints at Memory Reentry, Eyes CPU-Memory Stacking as XBM Patent Emerges</strong></a>
 									</h2>
 																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
 																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
@@ -1248,13 +1099,50 @@ img.emoji {
 																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
 									<div class="insight-list-item-summary">
                                         <div class="text-ellipsis-3">
-                                            <p>Nearly six weeks after reporting an 81% quarterly operating margin, Micron struck an even more bullish tone at the KeyBanc Technology Leadership Forum 2026 on August 10. The company said customers remain eager to secure memory despite “very high” prices, with the tightest supply in data centers,...</p>
+                                            <p>Intel CEO Lip-Bu Tan has hinted at a potential return to the memory market as AI reshapes memory’s strategic importance. According to Tom’s Hardware, Tan said he had previously avoided investing in memory because of its commodity nature, but now believes the industry is ripe for innovation as ne...</p>
                                         </div>
 										<div class="text-right"> 
-											<a href="https://www.trendforce.com/news/2026/08/12/news-micron-can-meet-less-than-half-of-data-center-demand-as-customers-rush-to-secure-memory-at-very-high-prices/" class="btn-text">View More</a>
+											<a href="https://www.trendforce.com/news/2026/08/13/news-intel-reportedly-hints-at-memory-reentry-eyes-cpu-memory-stacking-as-xbm-patent-emerges/" class="btn-text">View More</a>
 										</div>
-										<!-- <p>Nearly six weeks after reporting an 81% quarterly operating margin, Micron struck an even more bullish tone at the KeyBanc Technology Leadership Forum 2026 on August 10. The company said customers remain eager to secure memory despite “very high” prices, &hellip;</p>
-<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/12/news-micron-can-meet-less-than-half-of-data-center-demand-as-customers-rush-to-secure-memory-at-very-high-prices/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
+										<!-- <p>Intel CEO Lip-Bu Tan has hinted at a potential return to the memory market as AI reshapes memory’s strategic importance. According to Tom’s Hardware, Tan said he had previously avoided investing in memory because of its commodity nature, but now &hellip;</p>
+<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/13/news-intel-reportedly-hints-at-memory-reentry-eyes-cpu-memory-stacking-as-xbm-patent-emerges/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
+ -->
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+					<!-- </div> -->
+					<!-- </div> -->
+									<!-- <div class="list-item"> -->
+					<!-- <div class="row"> -->
+
+					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
+						<div class="insight-list-item">
+															<p class="article-category">News</p>
+														<a href="https://www.trendforce.com/news/2026/08/13/news-navitas-sues-renesas-over-gan-patents-following-renesas-trade-secret-suit-as-ai-data-centers-boost-demand/" class="insight-list-item-img">
+																	<img width="300" height="169" src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/12180940/navitas-20260812-300x169.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/08/12180940/navitas-20260812-300x169.jpg 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12180940/navitas-20260812-768x432.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12180940/navitas-20260812-1024x577.jpg 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/12180940/navitas-20260812-624x351.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
+							<div class="insight-list-item-info">
+								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
+									2026-08-13
+									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/13/news-navitas-sues-renesas-over-gan-patents-following-renesas-trade-secret-suit-as-ai-data-centers-boost-demand/"><strong>[News] GaN Patent Battle Heats Up: Navitas Sues Renesas After Trade-Secret Claims</strong></a>
+									</h2>
+																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
+																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
+																																														</div>
+																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
+									<div class="insight-list-item-summary">
+                                        <div class="text-ellipsis-3">
+                                            <p>Competition in the compound semiconductor market is heating up, with the battle now extending to patents. According to Reuters, chipmaker Navitas has sued Japan-based rival Renesas in Texas federal court for allegedly infringing patents related to next-generation chip technologies. Navitas claims th...</p>
+                                        </div>
+										<div class="text-right"> 
+											<a href="https://www.trendforce.com/news/2026/08/13/news-navitas-sues-renesas-over-gan-patents-following-renesas-trade-secret-suit-as-ai-data-centers-boost-demand/" class="btn-text">View More</a>
+										</div>
+										<!-- <p>Competition in the compound semiconductor market is heating up, with the battle now extending to patents. According to Reuters, chipmaker Navitas has sued Japan-based rival Renesas in Texas federal court for allegedly infringing patents related to next-generation chip technologies. Navitas &hellip;</p>
+<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/13/news-navitas-sues-renesas-over-gan-patents-following-renesas-trade-secret-suit-as-ai-data-centers-boost-demand/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
  -->
 									</div>
 								</div>
@@ -1312,7 +1200,7 @@ img.emoji {
             </li>
 
             <li class="last ">
-                <a href="https://www.trendforce.com/news/page/1032/"><span>Last Page</span>
+                <a href="https://www.trendforce.com/news/page/1033/"><span>Last Page</span>
                     <i class="fa fa-angle-double-right"></i></a>
             </li>
         </ul>
@@ -1322,8 +1210,8 @@ img.emoji {
     <div class="list-nav">
         <ul class="pagination-sm pagination-maso pagination" data-page-items="6" data-pagination-anima="show-scale">
             <li class="page-note"><span>Page 1</span></li>
-            <li class="page-note"><span>1032 page(s)</span></li>
-            <li class="page-note"><span>5159 result(s)</span></li>
+            <li class="page-note"><span>1033 page(s)</span></li>
+            <li class="page-note"><span>5165 result(s)</span></li>
         </ul>
     </div>
 </div>
@@ -1504,5 +1392,5 @@ Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3
 
 Page Caching using disk: enhanced 
 
-Served from: www.trendforce.com @ 2026-08-12 17:30:28 by W3 Total Cache
+Served from: www.trendforce.com @ 2026-08-13 15:58:07 by W3 Total Cache
 -->

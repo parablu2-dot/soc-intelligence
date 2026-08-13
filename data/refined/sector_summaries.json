@@ -1,206 +1,62 @@
 {
-  "date": "2026-08-12",
-  "generated_at": "2026-08-12T20:51:16.151767+00:00",
+  "date": "2026-08-13",
+  "generated_at": "2026-08-13T20:49:39.956875+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-08-12",
-      "item_count": 3,
-      "generated_at": "2026-08-12T20:51:16.150755+00:00",
+      "date": "2026-08-13",
+      "item_count": 1,
+      "generated_at": "2026-08-13T20:49:39.956199+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Samsung accelerates SoC design in South Korea using Claude AI to narrow the gap with Qualcomm, while Qualcomm's NPU strategy positions it for a potential hardware supercycle. Competition between Intel and Qualcomm chip stocks remains elevated.",
-          "key_facts": [
-            "Samsung accelerates SoC design in South Korea with Claude",
-            "Qualcomm NPU play targeting hardware supercycle",
-            "Intel vs. Qualcomm competitive comparison"
-          ],
+          "executive_summary": "TSMC와 Sony의 CIS(이미지센서) 경쟁 구도가 중국의 부상하는 생태계와 충돌하면서 반도체 경쟁의 새로운 전선이 형성되고 있다.",
+          "key_facts": [],
           "implications": [
             {
-              "keyword": "Samsung SoC Strategy",
-              "text": "Claude AI-driven design acceleration aims to reduce Qualcomm's market leadership in mobile SoC design"
-            },
-            {
-              "keyword": "Qualcomm NPU Leadership",
-              "text": "On-device NPU capabilities may drive consumer hardware replacement cycle independent of cloud infrastructure"
-            },
-            {
-              "keyword": "Design Talent Competition",
-              "text": "AI-assisted design tools becoming critical differentiator for SoC architects"
+              "keyword": "CIS 경쟁 심화",
+              "text": "TSMC-Sony 연합과 중국 기업들 간의 이미지센서 시장 경쟁이 가속화될 것으로 예상"
             }
           ],
-          "counterpoint": "Samsung's progress against Qualcomm remains incremental; Qualcomm's dominant market position in mobile SoC shipments persists."
+          "counterpoint": ""
         },
         "en": {
-          "executive_summary": "Samsung accelerates SoC design in South Korea using Claude AI to narrow the gap with Qualcomm, while Qualcomm's NPU strategy positions it for a potential hardware supercycle. Competition between Intel and Qualcomm chip stocks remains elevated.",
-          "key_facts": [
-            "Samsung accelerates SoC design in South Korea with Claude",
-            "Qualcomm NPU play targeting hardware supercycle",
-            "Intel vs. Qualcomm competitive comparison"
-          ],
+          "executive_summary": "Competition dynamics between TSMC and Sony in CIS (image sensors) are colliding with China's rising ecosystem, forming a new front in semiconductor competition.",
+          "key_facts": [],
           "implications": [
             {
-              "keyword": "Samsung SoC Strategy",
-              "text": "Claude AI-driven design acceleration aims to reduce Qualcomm's market leadership in mobile SoC design"
-            },
-            {
-              "keyword": "Qualcomm NPU Leadership",
-              "text": "On-device NPU capabilities may drive consumer hardware replacement cycle independent of cloud infrastructure"
-            },
-            {
-              "keyword": "Design Talent Competition",
-              "text": "AI-assisted design tools becoming critical differentiator for SoC architects"
+              "keyword": "Intensifying CIS competition",
+              "text": "Image sensor market competition between the TSMC-Sony alliance and Chinese companies is expected to accelerate"
             }
           ],
-          "counterpoint": "Samsung's progress against Qualcomm remains incremental; Qualcomm's dominant market position in mobile SoC shipments persists."
+          "counterpoint": ""
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "item_count": 13,
-      "generated_at": "2026-08-12T20:51:16.150755+00:00",
+      "generated_at": "2026-08-13T20:49:39.956199+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "SK Hynix aggressively recruits talent for custom HBM and memory design with three-digit hiring numbers and removed education requirements, while Samsung expands US hiring ahead of Texas fab launches. Tesla discontinued its Dojo AI supercomputer project despite earlier strategic importance.",
-          "key_facts": [
-            "SK Hynix recruiting three-digit number of HBM design engineers",
-            "SK Hynix abolished education restrictions in new grad hiring",
-            "Samsung expanding US hiring ahead of Texas chip plant launch",
-            "SK Hynix introducing half-day deep interview hiring process",
-            "Gachon University offering targeted placement support for SK Hynix recruitment",
-            "Tesla shut down Dojo AI training supercomputer"
-          ],
-          "implications": [
-            {
-              "keyword": "Custom Memory Race",
-              "text": "SK Hynix intensifying HBM design capability to address data center customers' demand for specialized memory solutions beyond standard products"
-            },
-            {
-              "keyword": "Talent Acquisition Intensity",
-              "text": "Removal of education requirements signals shift to skills-based hiring in AI era and extreme talent competition in chip design"
-            },
-            {
-              "keyword": "US Capacity Expansion",
-              "text": "Samsung's Texas fab hiring wave signals imminent production ramp and strategic commitment to US semiconductor manufacturing"
-            },
-            {
-              "keyword": "Internal Compute Strategy Shift",
-              "text": "Tesla's Dojo discontinuation suggests cloud-based AI training solutions and third-party accelerators more cost-effective than proprietary supercomputer development"
-            }
-          ],
-          "counterpoint": "Dojo shutdown does not necessarily reflect broader data center chip demand; Tesla's capital reallocation may be company-specific."
-        },
-        "en": {
-          "executive_summary": "SK Hynix aggressively recruits talent for custom HBM and memory design with three-digit hiring numbers and removed education requirements, while Samsung expands US hiring ahead of Texas fab launches. Tesla discontinued its Dojo AI supercomputer project despite earlier strategic importance.",
-          "key_facts": [
-            "SK Hynix recruiting three-digit number of HBM design engineers",
-            "SK Hynix abolished education restrictions in new grad hiring",
-            "Samsung expanding US hiring ahead of Texas chip plant launch",
-            "SK Hynix introducing half-day deep interview hiring process",
-            "Gachon University offering targeted placement support for SK Hynix recruitment",
-            "Tesla shut down Dojo AI training supercomputer"
-          ],
-          "implications": [
-            {
-              "keyword": "Custom Memory Race",
-              "text": "SK Hynix intensifying HBM design capability to address data center customers' demand for specialized memory solutions beyond standard products"
-            },
-            {
-              "keyword": "Talent Acquisition Intensity",
-              "text": "Removal of education requirements signals shift to skills-based hiring in AI era and extreme talent competition in chip design"
-            },
-            {
-              "keyword": "US Capacity Expansion",
-              "text": "Samsung's Texas fab hiring wave signals imminent production ramp and strategic commitment to US semiconductor manufacturing"
-            },
-            {
-              "keyword": "Internal Compute Strategy Shift",
-              "text": "Tesla's Dojo discontinuation suggests cloud-based AI training solutions and third-party accelerators more cost-effective than proprietary supercomputer development"
-            }
-          ],
-          "counterpoint": "Dojo shutdown does not necessarily reflect broader data center chip demand; Tesla's capital reallocation may be company-specific."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-12",
-      "item_count": 18,
-      "generated_at": "2026-08-12T20:51:16.150755+00:00",
+      "date": "2026-08-13",
+      "item_count": 12,
+      "generated_at": "2026-08-13T20:49:39.956199+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Microsoft accelerates custom chip development with Maia 300 launch and MAI Code 1.1 Flash (73% price reduction), while expanding production to reduce capex dependency. Marvell commits $250 million to India R&D; AI ASICs show advantages over GPUs in inference scenarios; Nvidia's $500B financing deal threatens Google's custom chip economics.",
-          "key_facts": [
-            "Microsoft planning next-generation AI chip unveiling in September",
-            "Microsoft MAI Code 1.1 Flash offers 73% pricing reduction",
-            "Microsoft Maia 300 chip launch challenging $116 billion capex",
-            "Microsoft hiking production of custom AI chips",
-            "Marvell Technology commits $250 million to India chip R&D",
-            "Guohai Securities: AI ASICs advantageous for inference vs. GPUs",
-            "Nvidia $500B financing deal threatens Google custom chip business",
-            "Alphabet stock slips due to Nvidia financing competition"
-          ],
-          "implications": [
-            {
-              "keyword": "Custom Chip Economics",
-              "text": "Microsoft's accelerated Maia production and coding AI pricing cuts demonstrate TCO advantages justifying in-house chip development at scale"
-            },
-            {
-              "keyword": "Inference Specialization",
-              "text": "ASIC-based inference architectures gaining traction as differentiated alternative to GPU-centric approaches for production workloads"
-            },
-            {
-              "keyword": "Nvidia Financing Power",
-              "text": "Nvidia's $500B financing package for AI infrastructure strengthens ecosystem lock-in and pressures customer-side chip development ROI"
-            },
-            {
-              "keyword": "India Design Hub",
-              "text": "Marvell's $250 million India investment signals geographic diversification of custom chip R&D away from high-cost regions"
-            }
-          ],
-          "counterpoint": "Custom chip development still faces time-to-market risks and architectural flexibility constraints versus modular GPU platforms."
-        },
-        "en": {
-          "executive_summary": "Microsoft accelerates custom chip development with Maia 300 launch and MAI Code 1.1 Flash (73% price reduction), while expanding production to reduce capex dependency. Marvell commits $250 million to India R&D; AI ASICs show advantages over GPUs in inference scenarios; Nvidia's $500B financing deal threatens Google's custom chip economics.",
-          "key_facts": [
-            "Microsoft planning next-generation AI chip unveiling in September",
-            "Microsoft MAI Code 1.1 Flash offers 73% pricing reduction",
-            "Microsoft Maia 300 chip launch challenging $116 billion capex",
-            "Microsoft hiking production of custom AI chips",
-            "Marvell Technology commits $250 million to India chip R&D",
-            "Guohai Securities: AI ASICs advantageous for inference vs. GPUs",
-            "Nvidia $500B financing deal threatens Google custom chip business",
-            "Alphabet stock slips due to Nvidia financing competition"
-          ],
-          "implications": [
-            {
-              "keyword": "Custom Chip Economics",
-              "text": "Microsoft's accelerated Maia production and coding AI pricing cuts demonstrate TCO advantages justifying in-house chip development at scale"
-            },
-            {
-              "keyword": "Inference Specialization",
-              "text": "ASIC-based inference architectures gaining traction as differentiated alternative to GPU-centric approaches for production workloads"
-            },
-            {
-              "keyword": "Nvidia Financing Power",
-              "text": "Nvidia's $500B financing package for AI infrastructure strengthens ecosystem lock-in and pressures customer-side chip development ROI"
-            },
-            {
-              "keyword": "India Design Hub",
-              "text": "Marvell's $250 million India investment signals geographic diversification of custom chip R&D away from high-cost regions"
-            }
-          ],
-          "counterpoint": "Custom chip development still faces time-to-market risks and architectural flexibility constraints versus modular GPU platforms."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-12",
-      "item_count": 19,
-      "generated_at": "2026-08-12T20:51:16.150755+00:00",
+      "date": "2026-08-13",
+      "item_count": 8,
+      "generated_at": "2026-08-13T20:49:39.956199+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -208,9 +64,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-12",
-      "item_count": 32,
-      "generated_at": "2026-08-12T20:51:16.150755+00:00",
+      "date": "2026-08-13",
+      "item_count": 21,
+      "generated_at": "2026-08-13T20:49:39.956199+00:00",
       "content": {
         "ko": {},
         "en": {}
