@@ -2,6 +2,311 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.supr-con",
+    "title": "Insight into SRF cavity performance from simulations of Nb's surface oxide dissolution and diffusion",
+    "url": "https://arxiv.org/abs/2608.13540v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "We report simulations of the dissolution and diffusion of Nb's surface oxide layer in vacuum. While this chemical doping process is important for the surface preparation of Nb superconducting radio frequency (SRF) cavities - common components of particle accelerators - quantitatively linking the resulting oxygen distributions to superconducting performance remains challenging. In this work, we simulate the reaction-diffusion process numerically for treatment temperatures $T = 50^{\\circ}$C to $20",
+    "authors": [
+      "Ryan M. L. McFadden",
+      "Rowan Becker",
+      "Tobias Junginger"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "In-situ Adjoint Wave Control in Reconfigurable Non-Hermitian Nonlinear Systems",
+    "url": "https://arxiv.org/abs/2608.13503v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "Complex multipath environments are usually avoided in wave-based information processing because repeated scattering creates many interfering propagation paths, obscuring controllability and generating extreme sensitivity to perturbations. The addition of nonlinear mechanisms fundamentally alters the wave-control landscape by breaking the superposition principle that underpins most wave-management strategies. Here, we show that these two apparent impediments -- multipath complexity and nonlineari",
+    "authors": [
+      "John Guillamon",
+      "William Tuxbury",
+      "Cheng-Zhen Wang",
+      "Owen Miller",
+      "Zin Lin",
+      "Tsampikos Kottos"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "YAVIN: A Unified Architecture for Secure Edge Processing in Memory",
+    "url": "https://arxiv.org/abs/2608.13496v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "Secure, private multi-tenant execution spanning processors, memory, and accelerators remains one of the most significant challenges in modern edge computing systems. Simultaneously, processing-in-memory (PIM) has emerged as an effective approach for reducing the Von Neumann bottleneck by moving computation closer to data. Existing trusted execution environments (TEEs) establish trust only within the processor, protecting data while it traverses untrusted resources such as the memory bus. Consequ",
+    "authors": [
+      "Shouzhi Fang",
+      "William C. Tegge",
+      "Md Omar Faruque",
+      "Peipei Zhou",
+      "Endadul Hoque",
+      "Alex K. Jones"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "ROLoad-PMP: Securing Sensitive Operations for Kernels and Bare-Metal Firmware",
+    "url": "https://arxiv.org/abs/2608.13287v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "A common way for attackers to compromise victim systems is hijacking sensitive operations (e.g., control-flow transfers) with attacker-controlled inputs. Existing solutions in general only protect parts of these targets and have high performance overheads, which are impractical and hard to deploy on systems with limited resources (e.g., IoT devices) or for low-level software like kernels and bare-metal firmware. In this paper, we present a lightweight hardware-software co-design solution ROLoad-",
+    "authors": [
+      "Wende Tan",
+      "Chenyang Li",
+      "Yangyu Chen",
+      "Yuan Li",
+      "Chao Zhang",
+      "Jianping Wu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Potential Applications of HBF in LLM Serving Systems",
+    "url": "https://arxiv.org/abs/2608.13127v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "LLM serving is increasingly constrained by memory capacity as model weights, KV caches, and the number of served model variants continue to grow. This report examines High-Bandwidth Flash (HBF) as a capacity-oriented extension to HBM-based serving systems. We first discuss how HBF can be integrated into the GPU memory hierarchy without undermining the bandwidth expected by the compute die. We then model the system-level value of added capacity as expanded residency for read-mostly model-state ob",
+    "authors": [
+      "Yihan Yin",
+      "Yinlun Zhao",
+      "Zhixin Yun",
+      "Guanying Wu",
+      "Feng Zhu",
+      "Kai Tao",
+      "Shu Li",
+      "Fei Huang",
+      "Zhe Zhang",
+      "Shuangchen Li",
+      "Hongzhong Zheng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Giant exciton effects and magneto-excitonic coupling in V4S9X4 2D magnetic semiconductors",
+    "url": "https://arxiv.org/abs/2608.13093v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "Room-temperature spin-optoelectronic devices require a combination of robust ferromagnetism and giant exciton binding, a pairing mutually exclusive in conventional semiconductors due to magnetic localization that screens excitons. Cluster-assembled V4S9X4 (X = F, Cl, Br and I) monolayers overcome this bottleneck via a hierarchical design, that is, intra-cluster localized states host both local magnetic moments and strong electron-hole interactions, while inter-cluster coupling mediates long-rang",
+    "authors": [
+      "Yingjie Wei",
+      "Fan Zhang",
+      "Ying Zhao",
+      "Lixin Zhou",
+      "Yan Su",
+      "Yu Guo",
+      "Jijun Zhao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Why Do Prefetchers Fail? Let Agents Answer",
+    "url": "https://arxiv.org/abs/2608.13027v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "Hardware prefetchers are crucial to processor performance, yet their design remains labor-intensive and expert-driven. Architects inspect execution and memory-access traces, identify patterns, translate them into online hardware heuristics, and evaluate them in simulation, often with no guarantee of improvement. Human experts cannot systematically inspect billion-instruction traces across diverse real-world workloads.\n  We present a performance-anomaly-driven autoresearch flow that repeatedly as",
+    "authors": [
+      "Xiangfeng Sun",
+      "Ceyu Xu",
+      "Ningzhi Ai",
+      "Zeyu Zhu",
+      "Yiyang Yuan",
+      "Yuan Xie"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Elastic properties of cubic silicon carbide with Si vacancies",
+    "url": "https://arxiv.org/abs/2608.12967v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "We investigate how silicon vacancies modify the elastic response and mechanical stability of cubic 3C-SiC. Our approach employs path-integral molecular dynamics simulations, including the classical-nuclei limit, based on an efficient tight-binding Hamiltonian, whose accuracy is validated against density-functional-theory calculations. This framework enables a quantitative assessment of nuclear quantum effects arising from zero-point motion. Across a broad range of temperatures and hydrostatic pr",
+    "authors": [
+      "Carlos P. Herrero",
+      "Eduardo R. Hernandez",
+      "Gabriela Herrero-Saboya"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Dryas: A Reprogrammable Engine for High-Speed Interconnect Tracing and Analysis",
+    "url": "https://arxiv.org/abs/2608.12934v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "The proliferation of heterogeneous components in modern computing systems has been accompanied by new higher bandwidth and lower latency interconnects. These interfaces and protocols are enormously complex and the process of developing, debugging, and analyzing FPGA-based implementations requires significant engineering work. Moreover, once a functional implementation is completed, optimization of the controller and associated software requires processing potentially hundreds of gigabytes of tra",
+    "authors": [
+      "Manuel Bröchin",
+      "Tom Kuchler",
+      "Michael Giardino",
+      "David Cock",
+      "Timothy Roscoe"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Input-Correlated Supervision Noise Limits the Benefits of OTA Training for Learned Receivers",
+    "url": "https://arxiv.org/abs/2608.12918v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "While learned wireless receivers are typically studied using synthetic data, the impact of over-the-air (OTA) measurements for training remains unclear. We conducted a 5.88 GHz measurement campaign with a 5G/6G-like orthogonal frequency-division multiplexing (OFDM) system across diverse environments and mobility conditions, and trained a neural channel estimator and a capacity-matched end-to-end neural receiver using mixtures of measured and synthetic data. Increasing the OTA fraction revealed a",
+    "authors": [
+      "Riku Luostari",
+      "Dani Korpi",
+      "Olav Tirkkonen",
+      "Harri Holma"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Antenna Positioning and Beamforming Optimization in MA Enabled Secure ISAC Systems: A Gradient-Based Meta Learning Approach",
+    "url": "https://arxiv.org/abs/2608.12870v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "Integrated sensing and communications (ISAC) significantly improves spectral efficiency but introduces security risks regarding the interception of embedded communication signals. This paper proposes an movable antenna (MA)-enabled secure ISAC system that utilizes the spatial degrees of freedom of MA to mitigate these risks. Then, a problem is formulated to maximize the system secrecy rate by jointly optimizing antenna positioning, transmit beamforming, and artificial noise. However, the princip",
+    "authors": [
+      "Zhendong Li",
+      "Yujie Zhao",
+      "Zhou Su",
+      "Xiao Tang",
+      "Zhiqing Wei",
+      "Ying Wang",
+      "Wen Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Vertical Gallium Oxide Isolated Source Electrode Field Effect Transistors (ISEFET) Without Planarization or Mid-Gap Acceptor Blocking Layers",
+    "url": "https://arxiv.org/abs/2608.12797v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "We propose and demonstrate the first vertical Gallium oxide device architecture without the use of planarization etch back processes or mid-gap acceptor regions. The Isolated Source Electrode Field Effect Transistor (ISEFET) incorporates a dielectric blocking layer to access an isolated source pad extending from the top fin metal. Scaled multi-fin channels were formed by electron beam lithography with a width of 200 nm along with the source pads and then etched to a trench depth of ~1.2 um. The ",
+    "authors": [
+      "Akilesh Srikanth",
+      "Md Saklain Morshed",
+      "Chandan Joishi",
+      "Ahmad E. Islam",
+      "Siddharth Rajan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Finite-Temperature Thermodynamics of Cu(100) Oxidation: Missing-Row Reconstruction, Defect States, and Order-Disorder Transition from Nested Sampling",
+    "url": "https://arxiv.org/abs/2608.12787v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "Metal surfaces undergo structural, compositional, and morphological changes in response to their chemical environment. Tuning the surfaces' function and stability for a given application correspondingly necessitates an understanding of how this surface evolution couples to external conditions. Here, we demonstrate the feasibility of nested sampling simulations to obtain this coupling at first-principles predictive quality. By exploring the full configuration space, nested sampling estimates the ",
+    "authors": [
+      "Felix Riccius",
+      "Karsten Reuter",
+      "Hendrik H. Heenen",
+      "Jutta Rogal"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "A Unified Description of Electron-Phonon Coupling and Ion Migration in Metal Halide Perovskites",
+    "url": "https://arxiv.org/abs/2608.12765v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "The remarkable optoelectronic properties of metal halide perovskites are closely linked to their unusually soft and polar chemical bonds that enable both strong electron-phonon interactions and ion migration. Yet these two defining characteristics have largely been treated as independent consequences of the same underlying chemical bonding. Here we show that they originate from a common electronic-structure framework by developing a general description linking lattice dynamics, electron-phonon c",
+    "authors": [
+      "Bo Cai",
+      "Yan Yang",
+      "Yoshiki Sugai",
+      "Maddison Wiles",
+      "Dongxu He",
+      "Yang Yang",
+      "Junmin Xia",
+      "Shufen Chen",
+      "Carla Verdi",
+      "Siyu Chen",
+      "Nan Zhang",
+      "Ming-Gang Ju",
+      "Chao Liang",
+      "Julian A. Steele"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "A Contract-Grade Verifier for LLM-Generated GPU Kernels, and a Native Blackwell Backward for the Gated-Linear-Recurrence Family",
+    "url": "https://arxiv.org/abs/2608.12700v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "Systems that generate GPU kernels with language models report high correctness rates. Those rates come from a single loose test: run the kernel on a few random inputs at one fixed shape and accept it if the output is close to a reference. A kernel can pass that test and still be silently wrong. It can return an ordinary number where the true answer is a NaN or an infinity, differ from run to run, break when the shape changes, or accumulate in fp16 where the reference keeps an fp32 total. We buil",
+    "authors": [
+      "Rishi Shah",
+      "Rishav Shrestha"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "The Impact of Temporal Context Length and Encoding Strategies on Self-Supervised ECG Representation Learning",
+    "url": "https://arxiv.org/abs/2608.12695v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "Self-supervised electrocardiogram (ECG) models are often trained on a few seconds of ECG signal and, increasingly, on discretized token sequences. It remains unclear whether these choices sacrifice information needed for rhythm inference and longitudinal consistency in real-world ambulatory recordings. We present a controlled study on the Icentia11k single-lead dataset that varies (i) the input horizon (16 seconds, 1 minute, 5 minutes, and 10 minutes) and (ii) the front-end representation (conti",
+    "authors": [
+      "Ahmed Sameh",
+      "Ramzi Al-Sharawi",
+      "Yogatheesan Varatharajah"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Spec-Driven Hardware Evolution via Executable Contract Refinement and Proof-Guided RTL Update",
+    "url": "https://arxiv.org/abs/2608.12684v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "Hardware development is inherently evolutionary: major revisions typically begin by changing intended behavior and then updating a previously validated implementation, rather than regenerating RTL from scratch. Yet most recent LLM-based hardware research still frames the task primarily as prompt-to-RTL generation, offering limited support for semantic version evolution of trusted legacy designs. We present spec-driven hardware evolution, a contract-centered formulation for RTL version iteration.",
+    "authors": [
+      "Shibo Zhao",
+      "Yang Zhang",
+      "Mengxia Tao",
+      "Baoqi Zhang",
+      "Kezhi Li",
+      "Qiang Xu",
+      "Binwu Zhu",
+      "Hao Yan",
+      "Min Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "math.DS",
     "title": "Effective Dynamics of Disclination Pairs",
     "url": "https://arxiv.org/abs/2608.12233v1",
@@ -199,6 +504,32 @@
       "Shum Kam Man",
       "Geng-Bo Wu",
       "Chi Hou Chan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "GateTruth: Auditing the Rigor of RTL Design Benchmarks via Mutation Testing",
+    "url": "https://arxiv.org/abs/2608.12635v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "Benchmarks for evaluating large language models on register-transfer-level (RTL) hardware design have proliferated rapidly, yet none reports having applied mutation testing, an established hardware-verification technique for quantifying testbench quality, to ask whether its own testbenches are trustworthy. A testbench that never fails is not evidence of a correct design; it may simply never stimulate the logic that is actually broken. We introduce GateTruth, a mutation-testing engine and methodo",
+    "authors": [
+      "Meet Bhadra"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Feasibility and Convex Design of Probe-Position Matching in a Scanning X-Band Radar Array",
+    "url": "https://arxiv.org/abs/2608.12602v1",
+    "published_date": "2026-08-12",
+    "source": "arXiv",
+    "summary": "The probe position of a microstrip element is normally chosen from the isolated-element input resistance. This paper replaces that procedure with a decision available before any array optimisation. A single Floquet unit-cell solution at one arbitrary probe position is decomposed into a feed inductance, a transformer ratio carrying the probe position, and an array-loaded resonator. Three closed-form results follow. The set of input impedances reachable by probe position and resonant length is a d",
+    "authors": [
+      "William Khalili"
     ]
   },
   {

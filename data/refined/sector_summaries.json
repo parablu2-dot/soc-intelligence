@@ -1,62 +1,144 @@
 {
-  "date": "2026-08-13",
-  "generated_at": "2026-08-13T20:49:39.956875+00:00",
+  "date": "2026-08-14",
+  "generated_at": "2026-08-14T20:36:55.379906+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-08-13",
+      "date": "2026-08-14",
       "item_count": 1,
-      "generated_at": "2026-08-13T20:49:39.956199+00:00",
+      "generated_at": "2026-08-14T20:36:55.379285+00:00",
       "content": {
         "ko": {
-          "executive_summary": "TSMC와 Sony의 CIS(이미지센서) 경쟁 구도가 중국의 부상하는 생태계와 충돌하면서 반도체 경쟁의 새로운 전선이 형성되고 있다.",
-          "key_facts": [],
-          "implications": [
-            {
-              "keyword": "CIS 경쟁 심화",
-              "text": "TSMC-Sony 연합과 중국 기업들 간의 이미지센서 시장 경쟁이 가속화될 것으로 예상"
-            }
+          "executive_summary": "Snapdragon 8 Elite Gen 6 Pro delivers 20% performance improvement over current fastest Android smartphones in AnTuTu benchmarks.",
+          "key_facts": [
+            "Snapdragon 8 Elite Gen 6 Pro: 20% performance gain vs. fastest Android phone"
           ],
+          "implications": [],
           "counterpoint": ""
         },
         "en": {
-          "executive_summary": "Competition dynamics between TSMC and Sony in CIS (image sensors) are colliding with China's rising ecosystem, forming a new front in semiconductor competition.",
-          "key_facts": [],
-          "implications": [
-            {
-              "keyword": "Intensifying CIS competition",
-              "text": "Image sensor market competition between the TSMC-Sony alliance and Chinese companies is expected to accelerate"
-            }
+          "executive_summary": "Snapdragon 8 Elite Gen 6 Pro delivers 20% performance improvement over current fastest Android smartphones in AnTuTu benchmarks.",
+          "key_facts": [
+            "Snapdragon 8 Elite Gen 6 Pro: 20% performance gain vs. fastest Android phone"
           ],
+          "implications": [],
           "counterpoint": ""
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-08-13",
-      "item_count": 13,
-      "generated_at": "2026-08-13T20:49:39.956199+00:00",
+      "date": "2026-08-14",
+      "item_count": 9,
+      "generated_at": "2026-08-14T20:36:55.379285+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "삼성전자와 SK하이닉스가 HBM 중심 기술 확보를 위해 AI 인재와 설계 인력 채용에 집중하는 가운데, SK하이닉스는 맞춤형 메모리 개발을 위해 심층 신입면접을 도입하고 54개 직무에 경력직 채용을 추진하고 있다.",
+          "key_facts": [
+            "삼성전자: 반도체 AX 가속화 위한 AI 인재 채용",
+            "SK하이닉스: HBM 설계 중심 채용, 54개 직무 경력직 모집",
+            "SK하이닉스: 신입채용에 반나절 심층면접 도입",
+            "Samsung R&D center: COVID-19 확진자 발생"
+          ],
+          "implications": [
+            {
+              "keyword": "HBM 경쟁",
+              "text": "삼성-SK하이닉스 HBM 제품·투자·인력채용 전면전 심화, 고급 메모리 기술 우위 확보 경쟁 가속화"
+            },
+            {
+              "keyword": "인재 확보",
+              "text": "AI 및 HBM 설계 전문가 확보 경쟁 심화로 반도체 산업 인력 이동성 증대"
+            }
+          ],
+          "counterpoint": "Samsung R&D 센터의 코로나19 확진은 단기 운영 차질 초래 가능"
+        },
+        "en": {
+          "executive_summary": "Samsung Electronics and SK Hynix are focusing on hiring AI talent and design personnel to secure HBM-centered technology, with SK Hynix introducing in-depth interviews for new hires and recruiting experienced professionals across 54 job categories for custom memory development.",
+          "key_facts": [
+            "Samsung Electronics: Recruiting AI talent to accelerate semiconductor AX",
+            "SK Hynix: HBM design-focused hiring, recruiting experienced staff across 54 job categories",
+            "SK Hynix: Introducing half-day in-depth interviews for new graduate hiring",
+            "Samsung R&D center: COVID-19 confirmed cases reported"
+          ],
+          "implications": [
+            {
+              "keyword": "HBM competition",
+              "text": "Full-scale competition between Samsung and SK Hynix in HBM products, investments, and hiring intensifies, accelerating race to secure advanced memory technology dominance"
+            },
+            {
+              "keyword": "Talent acquisition",
+              "text": "Intensifying competition to secure AI and HBM design specialists increases talent mobility in semiconductor industry"
+            }
+          ],
+          "counterpoint": "COVID-19 cases at Samsung R&D center may cause short-term operational disruptions"
+        }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-13",
+      "date": "2026-08-14",
       "item_count": 12,
-      "generated_at": "2026-08-13T20:49:39.956199+00:00",
+      "generated_at": "2026-08-14T20:36:55.379285+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "마벨과 마이크로소프트 등 글로벌 기업들이 맞춤형 AI 칩 개발을 확대하는 가운데, SEMIFIVE는 H1 2026에 97% YoY 매출 증가를 기록했고 ASICLAND 상반기 매출은 전년도 통년 판매를 초월했으며, 알칩(Alchip)은 AI 래프 주도로 Q2 2026 EPS 예상치를 상회했다.",
+          "key_facts": [
+            "SEMIFIVE: H1 2026 YoY 97% 매출 성장",
+            "ASICLAND: H1 2026 매출 ₩113.7 billion (통년 매출 초과)",
+            "마이크로소프트: 2027년 30만+ AI 칩 계획",
+            "브로드콤(NASDAQ:AVGO): AI 반도체 수요 급증 가이드",
+            "알칩: Q2 2026 AI 증가 주도 실적 상회",
+            "Google Pixel 11 Tensor G6: 3nm 공정 유지 (2nm 기대 미충족)"
+          ],
+          "implications": [
+            {
+              "keyword": "맞춤형 반도체 시장",
+              "text": "AI 칩 수요 폭증으로 ASIC 턴키, 양산, IP 기반 맞춤형 솔루션 시장 본격 성장 시작"
+            },
+            {
+              "keyword": "파운드리 경쟁",
+              "text": "Dell'Oro 데이터센터 칩 예측 상향, ASIC/맞춤형 칩 위탁 제조 경쟁 심화"
+            },
+            {
+              "keyword": "공정 노드 트렌드",
+              "text": "Google Tensor G6 3nm 유지로 고급 AI 칩이 반드시 최신 노드 요구하지는 않음을 시사"
+            }
+          ],
+          "counterpoint": "Google이 2nm 기대를 3nm으로 유지함에 따라 극미세공정 전환 속도 둔화 신호"
+        },
+        "en": {
+          "executive_summary": "As global companies including Marvell and Microsoft expand custom AI chip development, SEMIFIVE recorded 97% YoY revenue growth in H1 2026, ASICLAND's first-half revenue exceeded full-year prior year sales, and Alchip surpassed Q2 2026 EPS guidance driven by AI ramp.",
+          "key_facts": [
+            "SEMIFIVE: H1 2026 YoY revenue growth of 97%",
+            "ASICLAND: H1 2026 revenue ₩113.7 billion (exceeded full-year sales)",
+            "Microsoft: Planning 300,000+ AI chips in 2027",
+            "Broadcom (NASDAQ:AVGO): Issued guidance on surging AI semiconductor demand",
+            "Alchip: Q2 2026 results exceeded guidance driven by AI growth",
+            "Google Pixel 11 Tensor G6: Maintains 3nm process (unmet 2nm expectations)"
+          ],
+          "implications": [
+            {
+              "keyword": "Custom semiconductor market",
+              "text": "Explosive growth in AI chip demand marks the beginning of full-scale expansion in turnkey ASIC, mass production, and IP-based custom solutions market"
+            },
+            {
+              "keyword": "Foundry competition",
+              "text": "Dell'Oro datacenters chip forecast raised, intensifying competition in ASIC/custom chip outsourced manufacturing"
+            },
+            {
+              "keyword": "Process node trend",
+              "text": "Google Tensor G6 maintaining 3nm suggests advanced AI chips do not necessarily require the latest process nodes"
+            }
+          ],
+          "counterpoint": "Google's retention of 3nm instead of 2nm signals slower transition pace to cutting-edge process technology"
+        }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-13",
-      "item_count": 8,
-      "generated_at": "2026-08-13T20:49:39.956199+00:00",
+      "date": "2026-08-14",
+      "item_count": 11,
+      "generated_at": "2026-08-14T20:36:55.379285+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -64,9 +146,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-13",
-      "item_count": 21,
-      "generated_at": "2026-08-13T20:49:39.956199+00:00",
+      "date": "2026-08-14",
+      "item_count": 17,
+      "generated_at": "2026-08-14T20:36:55.379285+00:00",
       "content": {
         "ko": {},
         "en": {}
