@@ -1,76 +1,164 @@
 {
   "date": "2026-08-15",
-  "generated_at": "2026-08-15T05:09:50.114713+00:00",
+  "generated_at": "2026-08-15T20:26:30.425485+00:00",
   "sectors": {
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
       "date": "2026-08-15",
-      "item_count": 2,
-      "generated_at": "2026-08-15T05:09:50.114497+00:00",
+      "item_count": 6,
+      "generated_at": "2026-08-15T20:26:30.425056+00:00",
       "content": {
         "ko": {
-          "executive_summary": "SK하이닉스가 채용을 앞두고 있으며, AI 칩 시장에서 NVIDIA 외 다른 반도체 기업들도 2026년 칩 판매에서 수익을 창출할 것으로 예상된다.",
+          "executive_summary": "SK하이닉스와 삼성이 AI 반도체 엔지니어 채용을 적극 추진하며 HBM 수요 증가에 대응하고 있다. 메모리 업계는 AI 칩 성장세에서 수익성을 확보하기 위해 인력 확충에 집중하고 있다.",
           "key_facts": [
-            "SK하이닉스 채용 예정",
-            "2026년 AI 칩 판매 시장 확대 전망"
+            "SK하이닉스 신입사원 수시채용 시작, 학력제한 전면 철폐",
+            "SK하이닉스 반나절 심층면접 도입",
+            "삼성 벵갈루루에서 AI 반도체 엔지니어 채용 추진",
+            "Micron vs. SK Hynix HBM 수요 경쟁 심화"
           ],
           "implications": [
             {
-              "keyword": "인력 확충",
-              "text": "SK하이닉스의 채용 계획은 HPC/데이터센터 수요 증가에 대응하기 위한 인력 확보 전략으로 해석됨"
+              "keyword": "인력확보 경쟁",
+              "text": "SK하이닉스, 삼성 등 메모리 업체들이 AI 수요 대응을 위해 채용 조건을 완화하며 인력 경쟁 심화"
             },
             {
-              "keyword": "시장 다양화",
-              "text": "NVIDIA 이외의 AI 칩 공급업체들의 부상으로 HPC 칩 시장 경쟁 심화 예상"
+              "keyword": "HBM 시장 확대",
+              "text": "AI 칩 성장으로 고대역폭 메모리 수요 급증, 메모리 업체들의 전략적 중요성 증대"
             }
           ],
-          "counterpoint": "구체적인 채용 규모, 직무, 또는 신제품 로드맵에 대한 상세 정보 부재"
+          "counterpoint": "채용 확대가 신제품 개발 및 생산 능력 향상으로 실제 시장 점유율 확보로 이어지는지 불확실."
         },
         "en": {
-          "executive_summary": "SK Hynix is planning hiring, and semiconductor companies other than NVIDIA are expected to generate revenue from AI chip sales in 2026.",
+          "executive_summary": "SK Hynix and Samsung are actively recruiting AI semiconductor engineers to address increased HBM demand. The memory industry is focusing on workforce expansion to secure profitability amid AI chip growth.",
           "key_facts": [
-            "SK Hynix hiring planned",
-            "Expansion of AI chip sales market expected in 2026"
+            "SK Hynix begins on-demand recruiting for new graduates, eliminating all educational requirements",
+            "SK Hynix implements half-day in-depth interviews",
+            "Samsung promoting AI semiconductor engineer recruitment in Bangalore",
+            "Intensified competition between Micron and SK Hynix over HBM demand"
           ],
           "implications": [
             {
-              "keyword": "Workforce Expansion",
-              "text": "SK Hynix's hiring plan is interpreted as a human resources strategy to respond to increased HPC/datacenter demand."
+              "keyword": "Talent acquisition competition",
+              "text": "Memory makers like SK Hynix and Samsung intensify talent competition by relaxing hiring conditions to address AI demand"
             },
             {
-              "keyword": "Market Diversification",
-              "text": "The rise of AI chip suppliers other than NVIDIA is expected to intensify competition in the HPC chip market."
+              "keyword": "HBM market expansion",
+              "text": "Surging high-bandwidth memory demand driven by AI chip growth increases strategic importance for memory makers"
             }
           ],
-          "counterpoint": "Lack of detailed information on specific hiring scale, job functions, or new product roadmaps."
+          "counterpoint": "It remains uncertain whether recruitment expansion translates into actual market share gains through new product development and production capability improvements."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
       "date": "2026-08-15",
-      "item_count": 3,
-      "generated_at": "2026-08-15T05:09:50.114497+00:00",
+      "item_count": 4,
+      "generated_at": "2026-08-15T20:26:30.425056+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Alchip Q2 2026에서 EPS 추정치를 상회하며 AI 증가세가 맞춤형 반도체 설계 수요를 견인하고 있다. 남한 반도체 데이터에 따르면 메모리 매출이 277% 증가했으나 로직 칩은 하락세를 보이고 있다.",
+          "key_facts": [
+            "Alchip Q2 2026 EPS 추정치 상회",
+            "남한 메모리 칩 매출 277% 증가",
+            "남한 로직 칩 매출 감소",
+            "Aigland ASIC 설계 솔루션 관련 소식"
+          ],
+          "implications": [
+            {
+              "keyword": "AI 드리븐 맞춤형 칩",
+              "text": "AI 애플리케이션에 최적화된 ASIC 설계 수요 급증, 맞춤형 반도체 설계 전문사 성장 기회 확대"
+            },
+            {
+              "keyword": "메모리vs로직 분화",
+              "text": "AI 워크로드가 대역폭 중심이므로 메모리 칩 수요는 급증하나 범용 로직 칩 수요는 약세"
+            }
+          ],
+          "counterpoint": "로직 칩 부진이 지속되면 설계사 산업 전체 성장이 저해될 가능성."
+        },
+        "en": {
+          "executive_summary": "Alchip exceeded EPS estimates in Q2 2026 as AI growth drives demand for custom semiconductor design. South Korea semiconductor data shows memory revenue increased 277% while logic chips declined.",
+          "key_facts": [
+            "Alchip Q2 2026 EPS exceeded estimates",
+            "South Korea memory chip revenue increased 277%",
+            "South Korea logic chip revenue declined",
+            "Aigland ASIC design solution updates"
+          ],
+          "implications": [
+            {
+              "keyword": "AI-driven custom chips",
+              "text": "Surging demand for ASIC designs optimized for AI applications expands growth opportunities for custom semiconductor design specialists"
+            },
+            {
+              "keyword": "Memory vs. logic divergence",
+              "text": "As AI workloads are bandwidth-centric, memory chip demand surges while general-purpose logic chip demand weakens"
+            }
+          ],
+          "counterpoint": "Continued logic chip weakness risks hindering overall growth in the design service industry."
+        }
       }
     },
     "foundry": {
       "sector": "Foundry",
       "date": "2026-08-15",
-      "item_count": 2,
-      "generated_at": "2026-08-15T05:09:50.114497+00:00",
+      "item_count": 4,
+      "generated_at": "2026-08-15T20:26:30.425056+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "인도가 칩 설계부터 AI 모델까지 자체 기술 스택 구축을 추진 중이며, $13B를 반도체 공장에 투자하고 있다. 정부가 2040년 전력수요 전망을 재산정하며 AI·반도체 메가프로젝트 반영을 계획 중이다.",
+          "key_facts": [
+            "인도 $13B 반도체 공장 및 원자로 투자",
+            "DLI 지원 Aheesa, VIHAAN 칩 첫 시도 성공",
+            "정부 2040년 전력수요 재전망 공개 예정",
+            "콥스랩 기업 AI LXP 구축 완료"
+          ],
+          "implications": [
+            {
+              "keyword": "인도의 반도체 자립화",
+              "text": "인도가 설계, 제조, AI 모델까지 통합 기술 스택 구축으로 글로벌 공급망 다각화 추진"
+            },
+            {
+              "keyword": "전력 인프라 요구",
+              "text": "AI·반도체 산업 확장에 따른 전력수요 급증으로 재생에너지 확대 필요성 대두"
+            },
+            {
+              "keyword": "Intel vs. TSMC 경쟁 동향",
+              "text": "파운드리 리더십 재편 논의 중, 차년도 Intel의 TSMC 추격 가능성 분석"
+            }
+          ],
+          "counterpoint": "인도의 자립화 추진에도 불구하고 설계 역량 및 고급 공정 기술 부족이 상용화까지의 장애물."
+        },
+        "en": {
+          "executive_summary": "India is pursuing development of its own technology stack from chip design through AI models while investing $13B in semiconductor fabrication plants. The government plans to revise 2040 power demand forecasts to reflect AI and semiconductor megaprojects.",
+          "key_facts": [
+            "India invests $13B in semiconductor plants and reactors",
+            "DLI-backed Aheesa and VIHAAN chips achieve first successful attempt",
+            "Government to release revised 2040 power demand forecast",
+            "Copslabs enterprise completes AI LXP development"
+          ],
+          "implications": [
+            {
+              "keyword": "India semiconductor self-sufficiency",
+              "text": "India pursues supply chain diversification through integrated technology stack spanning design, manufacturing, and AI models"
+            },
+            {
+              "keyword": "Power infrastructure requirements",
+              "text": "Surging power demand from AI and semiconductor industry expansion raises necessity for renewable energy expansion"
+            },
+            {
+              "keyword": "Intel vs. TSMC competitive dynamics",
+              "text": "Foundry leadership restructuring under discussion, with Intel's potential to catch up to TSMC analyzed for next year"
+            }
+          ],
+          "counterpoint": "Despite India's self-sufficiency push, insufficient design capabilities and advanced process technology remain barriers to commercialization."
+        }
       }
     },
     "packaging": {
       "sector": "Packaging",
       "date": "2026-08-15",
-      "item_count": 2,
-      "generated_at": "2026-08-15T05:09:50.114497+00:00",
+      "item_count": 16,
+      "generated_at": "2026-08-15T20:26:30.425056+00:00",
       "content": {
         "ko": {},
         "en": {}

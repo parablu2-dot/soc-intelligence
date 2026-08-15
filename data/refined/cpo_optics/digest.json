@@ -1,113 +1,12 @@
 {
   "axis": "cpo_optics",
   "sector": "CPO/광통신",
-  "date": "2026-08-15",
-  "generated_at": "2026-08-15T05:10:03.268081+00:00",
-  "item_count": 18,
+  "date": "2026-08-16",
+  "generated_at": "2026-08-15T20:26:30.566535+00:00",
+  "item_count": 0,
   "content": {
-    "ko": {
-      "executive_summary": "Co-packaged optics (CPO) technology is accelerating into mass production and broad ecosystem deployment, with NVIDIA's CPO switches reaching full-scale manufacturing and Coherent ramping 1.6T transceivers as CPO revenue scales. Industry interoperability standards are solidifying through OIF's multi-vendor demonstrations, while transceiver architectures—including Jabil's sub-13W 1.6T DR8 LRO with TFLN modulators and Credo DSP—are being optimized for AI data center power efficiency.",
-      "key_facts": [
-        "Jabil 1.6T DR8 LRO optical transceiver: under 13W power, 200G per lane today, architected for 400G, uses HyperLight TFLN modulator and Credo half-retimed DSP",
-        "NVIDIA CPO switches in full-scale mass production; TSMC and Foxconn lead supply chain",
-        "Coherent Q4 FY2026: 1.6T transceiver ramp, CPO revenue approaching scale",
-        "OIF ECOC 2026 demo (September 21–23, Malaga): 39 member companies, 448G/224G CEI, CMIS, Co-Packaging, Energy Efficient Interfaces",
-        "Sivers Semiconductors and SemiNex: $3.4M InP (Indium Phosphide) program for AI data centers",
-        "Lightmatter and partners launch CPO Architecture Initiative within Open Compute Project (OCP)",
-        "Focuslight launches pitch error measurement system for Fiber Array Unit (FAU) manufacturing",
-        "Coractive launches double-clad EYDF (Erbium-Ytterbium Doped Fiber) for high-power optical amplifier applications"
-      ],
-      "implications": [
-        {
-          "keyword": "Power Efficiency Imperative",
-          "text": "Sub-13W 1.6T transceiver targets directly address AI data center thermal constraints; architecture evolution toward half-retimed DSP and TFLN modulators signals shift from raw speed to power-per-bit optimization."
-        },
-        {
-          "keyword": "Supply Chain Consolidation",
-          "text": "TSMC and Foxconn dominance in CPO switch manufacturing establishes concentrated foundry/assembly ecosystem; limits alternative sourcing paths for hyperscalers."
-        },
-        {
-          "keyword": "Interoperability as Competitive Moat",
-          "text": "OIF's 39-company booth and CEI/CMIS standardization reduce lock-in risk for cloud providers; multi-vendor transceiver compatibility accelerates CPO adoption velocity."
-        },
-        {
-          "keyword": "Silicon Photonics Scaling",
-          "text": "InP-based programs (Sivers/SemiNex) and integrated photonics platforms (Taara) indicate continued diversification beyond silicon, suggesting competitive pressure on all-Si architectures."
-        },
-        {
-          "keyword": "Manufacturing Enablement",
-          "text": "Focuslight's pitch error measurement and Gastech's cable blowing innovation address FAU assembly and field installation bottlenecks; critical for CPO deployment speed."
-        }
-      ],
-      "counterpoint": "1.6T transceiver volume ramps remain dependent on AI infrastructure capex cycles; sustained hyperscaler ordering is not guaranteed if GPU/model architecture shifts reduce interconnect demand."
-    },
-    "en": {
-      "executive_summary": "Co-packaged optics (CPO) technology is accelerating into mass production and broad ecosystem deployment, with NVIDIA's CPO switches reaching full-scale manufacturing and Coherent ramping 1.6T transceivers as CPO revenue scales. Industry interoperability standards are solidifying through OIF's multi-vendor demonstrations, while transceiver architectures—including Jabil's sub-13W 1.6T DR8 LRO with TFLN modulators and Credo DSP—are being optimized for AI data center power efficiency.",
-      "key_facts": [
-        "Jabil 1.6T DR8 LRO optical transceiver: under 13W power, 200G per lane today, architected for 400G, uses HyperLight TFLN modulator and Credo half-retimed DSP",
-        "NVIDIA CPO switches in full-scale mass production; TSMC and Foxconn lead supply chain",
-        "Coherent Q4 FY2026: 1.6T transceiver ramp, CPO revenue approaching scale",
-        "OIF ECOC 2026 demo (September 21–23, Malaga): 39 member companies, 448G/224G CEI, CMIS, Co-Packaging, Energy Efficient Interfaces",
-        "Sivers Semiconductors and SemiNex: $3.4M InP (Indium Phosphide) program for AI data centers",
-        "Lightmatter and partners launch CPO Architecture Initiative within Open Compute Project (OCP)",
-        "Focuslight launches pitch error measurement system for Fiber Array Unit (FAU) manufacturing",
-        "Coractive launches double-clad EYDF (Erbium-Ytterbium Doped Fiber) for high-power optical amplifier applications"
-      ],
-      "implications": [
-        {
-          "keyword": "Power Efficiency Imperative",
-          "text": "Sub-13W 1.6T transceiver targets directly address AI data center thermal constraints; architecture evolution toward half-retimed DSP and TFLN modulators signals shift from raw speed to power-per-bit optimization."
-        },
-        {
-          "keyword": "Supply Chain Consolidation",
-          "text": "TSMC and Foxconn dominance in CPO switch manufacturing establishes concentrated foundry/assembly ecosystem; limits alternative sourcing paths for hyperscalers."
-        },
-        {
-          "keyword": "Interoperability as Competitive Moat",
-          "text": "OIF's 39-company booth and CEI/CMIS standardization reduce lock-in risk for cloud providers; multi-vendor transceiver compatibility accelerates CPO adoption velocity."
-        },
-        {
-          "keyword": "Silicon Photonics Scaling",
-          "text": "InP-based programs (Sivers/SemiNex) and integrated photonics platforms (Taara) indicate continued diversification beyond silicon, suggesting competitive pressure on all-Si architectures."
-        },
-        {
-          "keyword": "Manufacturing Enablement",
-          "text": "Focuslight's pitch error measurement and Gastech's cable blowing innovation address FAU assembly and field installation bottlenecks; critical for CPO deployment speed."
-        }
-      ],
-      "counterpoint": "1.6T transceiver volume ramps remain dependent on AI infrastructure capex cycles; sustained hyperscaler ordering is not guaranteed if GPU/model architecture shifts reduce interconnect demand."
-    }
+    "ko": {},
+    "en": {}
   },
-  "links": [
-    {
-      "headline": "Coherent Q4 FY 2026 Earnings: 1.6T Transceivers Ramp, CPO Revenue Approaches - The Futurum Group",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQYmlIZHp2bXY2aHNUWXVVbEJ2R2hKX2NoSFdrNVoycEZwM1RZUkM0ZTJwbDJFdHZha0tnNTd2cVktM2x0cFVqWVFWaG9yN093bE9jbXgxbS1tbHpUNGhiQlV1M283NjdNWHZjU29jVkZCa0VMZzBrd3BjTVNTX1dFbW9idWdMU1RyQUxzSEFLVWhLWTBLQURXeFkwUU9YWnlyVUhRQXFTQlpWbFpSN2c?oc=5",
-      "source": "Google News",
-      "published_date": "2026-08-14"
-    },
-    {
-      "headline": "NVIDIA’s CPO switches enter full-scale mass production, ushering AI data centers into the “silicon photonics era”! - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTzIzRm5HRDlna0xlYWtZQkJoWEhMSXFzdlpCZjJyRlNQOEhBNURpWDdqVno0Y3k4ZFpVd1ZzNlRiLXhibnlBQ2NjU0lram40LUtDT0NvbVhGNzlHZ19ieU9xeHVlZW9MQTJSYkFRN1UwLU1meE5ZZ09GLTIyNE9rUUgwOTRlNTQ2QUo2eGw2dnB2MDVNLUxtWkJ5UTVhbHdzYXBVZmxkWDA?oc=5",
-      "source": "Google News",
-      "published_date": "2026-08-14"
-    },
-    {
-      "headline": "Sivers Semiconductors and SemiNex target AI data centers with $3.4M InP program - eeNews Europe",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPSm94MmpUTUpybGQwQjBjVnllS0ZYakV4TzlXLXRVTXI4M0RCbEw0LXNqcXBNMndXYTRDcHV3ZFp0aHNGbkdsX2s4SWZCWkRlanFNYV9TMHJCUG0tT0E0MTRRMUZnNTRBVDRVRFlfLUpGUnp2OU9Hd0t0MWVIMTg2TjZ5Y1F1a09mNjh4YkRzYXB4VlhacVRfaFBHaFJMVEltVkpPb3hzRnlNdlptS3F3VA?oc=5",
-      "source": "Google News",
-      "published_date": "2026-08-14"
-    },
-    {
-      "headline": "Lightmatter, Industry Partners Launch CPO Architecture Initiative Within OCP - HPCwire",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQeDNuSjV0U0EwVGNwYzRwYlVyeXZtVTk3NlNmeTBEd2F0SHpwbE93blVsTDV3YlhqcGl2cUpWUXhQUmdpLUtURFlBVFFQeUxPcFBSVGJzWFFGUC1wVGg2VS1NZU9DeHV5YnZZZS1NZzlwYWlzQ2JTNF9yUXdUNzh3ZnZfNjVhakFjeWNrX0dISDJZLThqM2stbnRDU3BhazNQUkN6TS03YkdIbDNmTnFZalNkMA?oc=5",
-      "source": "Google News",
-      "published_date": "2026-08-14"
-    },
-    {
-      "headline": "Nvidia's CPO Switches Enter Full Mass Production; TSMC, Foxconn Lead Supply Chain Positioning - finance.biggo.com",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5PZDFWeWJCRzlWMWJTUnFQZ054MDZjWjBnUHd4dVlBVjJZTXoyOURzUjNtMWlrdU1scWZSNGxPd2lOeVllQk9MNEwyOHJ6ajc4UjFyb21qV2MtSzRISWpXLXU3U3lLSWNQSFJQdlR6UWxRa2VTOUE?oc=5",
-      "source": "Google News",
-      "published_date": "2026-08-14"
-    }
-  ]
+  "links": []
 }
