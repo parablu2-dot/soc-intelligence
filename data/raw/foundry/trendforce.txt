@@ -54,8 +54,8 @@
     <link rel="canonical" href="https://www.trendforce.com/news" />
     	<script src="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/bootstrap/css/bootstrap.css">
-	<script src="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/script.js?v=202608070903"></script>
-	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/style.css?v=202608070903">
+	<script src="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/script.js?v=202608140846"></script>
+	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/style.css?v=202608140846">
 	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/content-box.css">
 	<!-- <link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/image-box.css"> -->
 	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/animations.css">
@@ -65,8 +65,8 @@
 	<!-- <link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/php/contact-form.css"> -->
 	<!-- <link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/social.stream.css"> -->
 	<!-- <link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/js/jquery.flipster.min.css"> -->
-	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/skin.css?v=202608070903">
-    <link rel="stylesheet" href="/css/ad.css?v=202608070903">
+	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/skin.css?v=202608140846">
+    <link rel="stylesheet" href="/css/ad.css?v=202608140846">
 
 	<!-- Favicon  -->
 	<link rel="shortcut icon" type="image/x-icon" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/images/favicon.ico" />
@@ -80,7 +80,7 @@
 	<link rel="icon" type="image/png" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/images/favicon-32x32.png" sizes="32x32" />
 
 	<!-- blog-css  -->
-	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/style-blog.css?v=202608070903">
+	<link rel="stylesheet" href="https://www.trendforce.com/news/wp-content/themes/twentyten/tf_resources/css/style-blog.css?v=202608140846">
 	<link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="TrendForce News &raquo; Feed" href="https://www.trendforce.com/news/feed/" />
 <link rel="alternate" type="application/rss+xml" title="TrendForce News &raquo; Comments Feed" href="https://www.trendforce.com/news/comments/feed/" />
@@ -197,65 +197,14 @@ img.emoji {
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </a>-->
 
-                    <!-- 登入前 user_icon -->
-                    <a class="sign-in-button hidden-sm user-state-guest" href="/login" rel="nofollow">
-                        Sign In
-                    </a>
-
-                    <!-- 登入後 user_icon -->
-                    <div class="header_account-container hidden-sm user-state-login" style="display: none">
-                        <a class="social-icon active" href="javascript:void(0)">
-                            <img src="/images/icon-account.svg" alt="user">
-                        </a>
-                        <div class="header_account-content">
-                            <p id="user-state-name"></p>
-                            <a href="/member/reportDownload" rel="nofollow">Member Center</a>
-                            <a href="/logout" rel="nofollow">SIGN OUT</a>
-                        </div>
-                    </div>
                 </div>
 
             </div>
 
-            <div class="hidden-md hidden-lg">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                </div>
-            </div>
         </div>
     </div>
 </div>
 
-<script>
-    jQuery('document').ready(function() {
-        const site_url = 'https://www.trendforce.com';
-
-        jQuery.ajax({
-            method: 'GET',
-            url: site_url + '/api/getAuthUser',
-            // dataType:'json',
-            xhrFields: {
-                withCredentials: true
-            },
-            success: function(response) {
-                console.log(response)
-                if (response.status != 200) {
-                    console.log('member site connect fail')
-                } else {
-                    console.log('member login')
-                    jQuery('.user-state-login').show();
-                    jQuery('.user-state-guest').hide();
-                    jQuery('#user-state-name').html(`Hi! ${response.info.member_email}`);
-                }
-            },
-            error: function() {
-                console.log('member site connect fail')
-            }
-        })
-    })
-</script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const searchContainer = document.querySelector('.header_search-container');
@@ -328,19 +277,6 @@ img.emoji {
     });
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const socialIcon = document.querySelector('.social-icon.active');
-    const accountContent = document.querySelector('.header_account-content');
-
-    socialIcon.addEventListener('mouseover', function () {
-      accountContent.style.display = 'flex';
-    });
-
-    accountContent.addEventListener('mouseleave', function () {
-      accountContent.style.display = 'none';
-    });
-  });
-
   // 語系Icon
   document.addEventListener("DOMContentLoaded", function () {
     const languageIcon = document.querySelector('.language-button.active');
@@ -359,55 +295,6 @@ img.emoji {
                 <div class="navbar-main site-navbar">
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
-            <div class="hidden-md hidden-lg">
-                <div class="header_mobile-social-icon">
-                    <a class="social-icon" href="https://www.linkedin.com/company/trendforce-corporation/" target="_blank">
-                        <img src="/images/icon-linkedin.svg" alt="linkedin">
-                    </a>
-                    <a class="social-icon" href="https://x.com/trendforce" target="_blank">
-                        <img src="/images/icon-x.svg" alt="x">
-                    </a>
-                    <a class="social-icon" href="https://www.facebook.com/TrendForce.Global/" target="_blank">
-                        <img src="/images/icon-facebook.svg" alt="facebook">
-                    </a>
-                </div>
-                <div class="header_mobile-functional-btn">
-                    <!--<div class="header_language-group">
-                        <li class="dropdown active current-active">
-                            <a class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-expanded="true">
-                                <img src="/images/icon-url.svg" alt="language">
-                                <span>Language</span>
-                            </a>
-
-                            <ul class="dropdown-menu fade-in" style="transition-duration: 300ms; animation-duration: 300ms; transition-timing-function: ease; transition-delay: 0ms;">
-                                <li><a href="https://www.trendforce.com.tw" rel="nofollow">繁體中文</a></li>
-                                <li><a href="https://www.trendforce.cn" rel="nofollow">简体中文</a></li>
-                            </ul>
-                        </li>
-                    </div>
-
-                    <a href="/api/cart/toList" target="_blank" rel="nofollow">
-                        <img src="/images/icon-shopping-cart.svg" alt="shopping cart">
-                        <span>Shopping Cart</span>
-                    </a>-->
-
-                    <a href="/login" class="user-state-guest">
-                        <img src="/images/icon-user.svg" alt="login">
-                        <span>Sign In</span>
-                    </a>
-
-                    <a class="primary user-state-login" href="/member/reportDownload" style="display: none">
-                        <img src="/images/icon-acc-g.svg" alt="member">
-                        <span>Member Center</span>
-                    </a>
-                    <a class="primary user-state-login" href="/logout" style="display: none">
-                        <img src="/images/icon-logout.svg" alt="logout">
-                        <span>SIGN OUT</span>
-                    </a>
-                </div>
-            </div>
-
             <ul class="nav navbar-nav header_navbar" style="display: none;">
                 <li class="dropdown visible-xs">
                     <a class="header_navbar-link-text" href="/about" data-toggle="dropdown"
@@ -844,11 +731,11 @@ img.emoji {
     	<div class="insight-carousel-section">
 		<div class="insight-carousel-content w-50 w-m-100">
 							<div class="insight-carousel-list insight-carousel-l-size">
-					<a class="insight-carousel-list-img" href="https://insights.trendforce.com/p/humanoid-robots-china-supply-chain?utm_source=tf&utm_medium=affiliate&utm_campaign=humanoid-robots-china-supply-chain"><img src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/05161622/00_china-robotics-header.png" alt=""></a>
+					<a class="insight-carousel-list-img" href="https://insights.trendforce.com/p/china-high-end-ai-chip-autonomy?utm_source=tf&utm_medium=affiliate&utm_campaign=china-high-end-ai-chip-autonomy"><img src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/10135931/00_header-7.png" alt=""></a>
 					<div class="insight-carousel-list-info">
-						<div class="insight-tag"><i class="fa fa-bookmark"></i><a>Robotics</a></div>
-						<a href="https://insights.trendforce.com/p/humanoid-robots-china-supply-chain?utm_source=tf&utm_medium=affiliate&utm_campaign=humanoid-robots-china-supply-chain">
-							<h4 class="text-ellipsis-2">Humanoid Robots Part 2: China\'s Playbook for Building Its Own Robot Supply Chain</h4>
+						<div class="insight-tag"><i class="fa fa-bookmark"></i><a>Semiconductor</a></div>
+						<a href="https://insights.trendforce.com/p/china-high-end-ai-chip-autonomy?utm_source=tf&utm_medium=affiliate&utm_campaign=china-high-end-ai-chip-autonomy">
+							<h4 class="text-ellipsis-2">China\'s Aggressive Push for High-End AI Chip Autonomy</h4>
 						</a>
 					</div>
 				</div>
@@ -857,40 +744,40 @@ img.emoji {
 		<div class="insight-carousel-content w-50 w-m-100">
 							<div class="w-50 w-m-100 w-s-100 insight-carousel-s-size-grid">
 																	<div class="insight-carousel-list insight-carousel-s-size">
-							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/05/news-tsmc-reportedly-expands-outsourcing-of-key-cowos-front-end-step-to-osats-amid-rising-nvidia-asic-demand/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/05144013/TSMC-packaging-20260805_1-624x416.jpg" alt=""></a>
+							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/12/news-micron-can-meet-less-than-half-of-data-center-demand-as-customers-rush-to-secure-memory-at-very-high-prices/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2026/07/10101013/Micron-New-York-fab-624x351.jpg" alt=""></a>
 							<div class="insight-carousel-list-info">
 								<div class="insight-tag"><i class="fa fa-bookmark"></i><a>Semiconductors</a></div>
-								<a href="https://www.trendforce.com/news/2026/08/05/news-tsmc-reportedly-expands-outsourcing-of-key-cowos-front-end-step-to-osats-amid-rising-nvidia-asic-demand/">
-									<h4 class="text-ellipsis-2">[News] TSMC Reportedly Expands Outsourcing of Key CoWoS Front-End Step to OSATs Amid Rising NVIDIA, ASIC Demand</h4>
+								<a href="https://www.trendforce.com/news/2026/08/12/news-micron-can-meet-less-than-half-of-data-center-demand-as-customers-rush-to-secure-memory-at-very-high-prices/">
+									<h4 class="text-ellipsis-2">[News] Micron Meets Less Than Half of Data Center Demand as Customers Rush to Secure Memory at “Very High” Prices</h4>
 								</a>
 							</div>
 						</div>
 																						<div class="insight-carousel-list insight-carousel-s-size">
-							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/05/news-samsung-unveils-industry-first-400-layer-v10-bv-nand-memory-density-up-58-vs-v9/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/05111234/Samsung-V10-400-layers-NAND-20260805-624x416.jpg" alt=""></a>
+							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/12/news-sk-hynix-reportedly-restarts-dalian-fab-2-targets-1h27-mass-production-and-50-china-nand-capacity-boost/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/12142353/SK-hynix-176-layer-NAND-20260812-624x377.jpg" alt=""></a>
 							<div class="insight-carousel-list-info">
 								<div class="insight-tag"><i class="fa fa-bookmark"></i><a>Semiconductors</a></div>
-								<a href="https://www.trendforce.com/news/2026/08/05/news-samsung-unveils-industry-first-400-layer-v10-bv-nand-memory-density-up-58-vs-v9/">
-									<h4 class="text-ellipsis-2">[News] Samsung Unveils Industry-First 400+ Layer V10 BV-NAND; Memory Density Up 58% vs. V9</h4>
+								<a href="https://www.trendforce.com/news/2026/08/12/news-sk-hynix-reportedly-restarts-dalian-fab-2-targets-1h27-mass-production-and-50-china-nand-capacity-boost/">
+									<h4 class="text-ellipsis-2">[News] SK hynix Reportedly Restarts Dalian Fab 2, Targets 1H27 Mass Production and 50% China NAND Capacity Boost</h4>
 								</a>
 							</div>
 						</div>
 									</div>
 							<div class="w-50 w-m-100 w-s-100 insight-carousel-s-size-grid">
 																	<div class="insight-carousel-list insight-carousel-s-size">
-							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/06/news-samsung-reportedly-eyes-galaxy-s27s28-ddi-dual-sourcing-beyond-system-lsi-amid-rising-memory-costs/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2026/02/26155341/Samsung-Galaxy-S26-v5-624x468.jpg" alt=""></a>
+							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/11/news-apple-reportedly-plans-glass-heavy-2027-iphone-pro-amid-design-scrap-rumors-samsung-adds-1m-fold-8-units/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2025/09/10102144/Apple-iPhone-17-lineup-250909-624x351.jpg" alt=""></a>
 							<div class="insight-carousel-list-info">
 								<div class="insight-tag"><i class="fa fa-bookmark"></i><a>Consumer Electronics</a></div>
-								<a href="https://www.trendforce.com/news/2026/08/06/news-samsung-reportedly-eyes-galaxy-s27s28-ddi-dual-sourcing-beyond-system-lsi-amid-rising-memory-costs/">
-									<h4 class="text-ellipsis-2">[News] Samsung Reportedly Eyes Galaxy S27/S28 DDI Dual Sourcing Beyond System LSI Amid Rising Memory Costs</h4>
+								<a href="https://www.trendforce.com/news/2026/08/11/news-apple-reportedly-plans-glass-heavy-2027-iphone-pro-amid-design-scrap-rumors-samsung-adds-1m-fold-8-units/">
+									<h4 class="text-ellipsis-2">[News] Apple Reportedly Plans Glass-Heavy 2027 iPhone Pro amid Design Scrap Rumors; Samsung Adds 1M Fold 8 Units</h4>
 								</a>
 							</div>
 						</div>
 																						<div class="insight-carousel-list insight-carousel-s-size">
-							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/06/news-inp-shortage-emerges-as-ai-optical-interconnect-bottleneck/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/05191134/Lumentum-2026_-624x326.jpg" alt=""></a>
+							<a class="insight-carousel-list-img" href="https://www.trendforce.com/news/2026/08/11/news-xiamen-sets-up-chinas-largest-gaas-satellite-solar-cell-production-base/"><img src="https://img.trendforce.com/blog/wp-content/uploads/2026/02/03182221/Chip-FREEPIK-20260203-624x351.jpg" alt=""></a>
 							<div class="insight-carousel-list-info">
 								<div class="insight-tag"><i class="fa fa-bookmark"></i><a>Emerging Technologies</a></div>
-								<a href="https://www.trendforce.com/news/2026/08/06/news-inp-shortage-emerges-as-ai-optical-interconnect-bottleneck/">
-									<h4 class="text-ellipsis-2">[News] InP Shortage Emerges as AI Optical Interconnect Bottleneck</h4>
+								<a href="https://www.trendforce.com/news/2026/08/11/news-xiamen-sets-up-chinas-largest-gaas-satellite-solar-cell-production-base/">
+									<h4 class="text-ellipsis-2">[News] Xiamen Sets Up China's Largest GaAs Satellite Solar Cell Production Base</h4>
 								</a>
 							</div>
 						</div>
@@ -1087,174 +974,176 @@ img.emoji {
 					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
 						<div class="insight-list-item">
 															<p class="article-category">News</p>
-														<a href="https://www.trendforce.com/news/2026/08/07/news-chinas-robot-maker-unitree-heads-for-ipo-at-rmb-60-99b-valuation-backed-by-deepseek-and-tencent/" class="insight-list-item-img">
-																	<img width="300" height="169" src="https://img.trendforce.com/blog/wp-content/uploads/2026/05/26165211/Unitree-on-X-20260526-300x169.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/05/26165211/Unitree-on-X-20260526-300x169.jpg 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/05/26165211/Unitree-on-X-20260526-768x432.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/05/26165211/Unitree-on-X-20260526-1024x576.jpg 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/05/26165211/Unitree-on-X-20260526-624x351.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
+														<a href="https://www.trendforce.com/news/2026/08/14/news-samsung-may-repurpose-rd-line-for-foundry-targeting-2nm-hbm-base-dies-for-future-nvidia-demand/" class="insight-list-item-img">
+																	<img width="300" height="225" src="https://img.trendforce.com/blog/wp-content/uploads/2025/05/02160941/Samsung-HBM4-300x225.png" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2025/05/02160941/Samsung-HBM4-300x225.png 300w, https://img.trendforce.com/blog/wp-content/uploads/2025/05/02160941/Samsung-HBM4-768x576.png 768w, https://img.trendforce.com/blog/wp-content/uploads/2025/05/02160941/Samsung-HBM4-1024x769.png 1024w, https://img.trendforce.com/blog/wp-content/uploads/2025/05/02160941/Samsung-HBM4-624x468.png 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
 							<div class="insight-list-item-info">
 								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
-									2026-08-07
-									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/07/news-chinas-robot-maker-unitree-heads-for-ipo-at-rmb-60-99b-valuation-backed-by-deepseek-and-tencent/"><strong>[News] China&#8217;s Robot Maker Unitree Heads for IPO at RMB 60.99B Valuation, Backed by DeepSeek and Tencent</strong></a>
+									2026-08-14
+									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/14/news-samsung-may-repurpose-rd-line-for-foundry-targeting-2nm-hbm-base-dies-for-future-nvidia-demand/"><strong>[News] Samsung May Repurpose R&#038;D Line for Foundry, Targeting 2nm HBM Base Dies for Future NVIDIA Demand</strong></a>
+									</h2>
+																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
+																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
+																																														</div>
+																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
+									<div class="insight-list-item-summary">
+                                        <div class="text-ellipsis-3">
+                                            <p>Samsung is reportedly weighing a shift in plans for its new Giheung facility as it prepares for growing NVIDIA-driven HBM demand. According to ZDNet, sources say the company is considering repurposing NRD-K Line 2, currently under construction, from its original R&amp;D role into a foundry productio...</p>
+                                        </div>
+										<div class="text-right"> 
+											<a href="https://www.trendforce.com/news/2026/08/14/news-samsung-may-repurpose-rd-line-for-foundry-targeting-2nm-hbm-base-dies-for-future-nvidia-demand/" class="btn-text">View More</a>
+										</div>
+										<!-- <p>Samsung is reportedly weighing a shift in plans for its new Giheung facility as it prepares for growing NVIDIA-driven HBM demand. According to ZDNet, sources say the company is considering repurposing NRD-K Line 2, currently under construction, from its original &hellip;</p>
+<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/14/news-samsung-may-repurpose-rd-line-for-foundry-targeting-2nm-hbm-base-dies-for-future-nvidia-demand/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
+ -->
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+					<!-- </div> -->
+					<!-- </div> -->
+									<!-- <div class="list-item"> -->
+					<!-- <div class="row"> -->
+
+					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
+						<div class="insight-list-item">
+															<p class="article-category">News</p>
+														<a href="https://www.trendforce.com/news/2026/08/14/news-nanya-tech-reportedly-eyes-new-yunlin-pingtung-fabs-for-1d-dram-custom-memory-investment-to-top-nt300b/" class="insight-list-item-img">
+																	<img width="300" height="243" src="https://img.trendforce.com/blog/wp-content/uploads/2026/01/07104849/Nanya-Technology-20260107-300x243.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/01/07104849/Nanya-Technology-20260107-300x243.jpg 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/01/07104849/Nanya-Technology-20260107-768x622.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/01/07104849/Nanya-Technology-20260107-1024x829.jpg 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/01/07104849/Nanya-Technology-20260107-624x505.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
+							<div class="insight-list-item-info">
+								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
+									2026-08-14
+									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/14/news-nanya-tech-reportedly-eyes-new-yunlin-pingtung-fabs-for-1d-dram-custom-memory-investment-to-top-nt300b/"><strong>[News] Nanya Tech Reportedly Eyes Yunlin, Pingtung Fabs for 1d DRAM, Custom Memory, Investment to Top NT$300B</strong></a>
+									</h2>
+																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
+																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
+																																														</div>
+																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
+									<div class="insight-list-item-summary">
+                                        <div class="text-ellipsis-3">
+                                            <p>Taiwan’s memory makers are accelerating capacity expansion. According to UDN News, Nanya Technology reportedly plans to build new 12-inch wafer fabs in both Yunlin and Pingtung, targeting next-generation and customized DRAM. The investment is expected to exceed the NT$300 billion committed to Nan...</p>
+                                        </div>
+										<div class="text-right"> 
+											<a href="https://www.trendforce.com/news/2026/08/14/news-nanya-tech-reportedly-eyes-new-yunlin-pingtung-fabs-for-1d-dram-custom-memory-investment-to-top-nt300b/" class="btn-text">View More</a>
+										</div>
+										<!-- <p>Taiwan’s memory makers are accelerating capacity expansion. According to UDN News, Nanya Technology reportedly plans to build new 12-inch wafer fabs in both Yunlin and Pingtung, targeting next-generation and customized DRAM. The investment is expected to exceed the NT$300 billion committed &hellip;</p>
+<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/14/news-nanya-tech-reportedly-eyes-new-yunlin-pingtung-fabs-for-1d-dram-custom-memory-investment-to-top-nt300b/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
+ -->
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+					<!-- </div> -->
+					<!-- </div> -->
+									<!-- <div class="list-item"> -->
+					<!-- <div class="row"> -->
+
+					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
+						<div class="insight-list-item">
+															<p class="article-category">News</p>
+														<a href="https://www.trendforce.com/news/2026/08/14/news-smic-2q26-gross-margin-hits-25-3-eyes-26-28-in-3q-as-ai-spillover-pricing-momentum-build/" class="insight-list-item-img">
+																	<img width="300" height="182" src="https://img.trendforce.com/blog/wp-content/uploads/2025/11/17083323/SMIC-4-300x182.png" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2025/11/17083323/SMIC-4-300x182.png 300w, https://img.trendforce.com/blog/wp-content/uploads/2025/11/17083323/SMIC-4-768x467.png 768w, https://img.trendforce.com/blog/wp-content/uploads/2025/11/17083323/SMIC-4-624x379.png 624w, https://img.trendforce.com/blog/wp-content/uploads/2025/11/17083323/SMIC-4.png 925w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
+							<div class="insight-list-item-info">
+								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
+									2026-08-14
+									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/14/news-smic-2q26-gross-margin-hits-25-3-eyes-26-28-in-3q-as-ai-spillover-pricing-momentum-build/"><strong>[News] SMIC 2Q26 Gross Margin Hits 25.3%, Eyes 26%–28% in 3Q as AI Spillover, Pricing Momentum Build</strong></a>
+									</h2>
+																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
+																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
+																																														</div>
+																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
+									<div class="insight-list-item-summary">
+                                        <div class="text-ellipsis-3">
+                                            <p>SMIC announced its latest earnings. According to Star Market Daily, the company reported 2Q26 revenue of US$3.0 billion, up 20% QoQ. Gross profit reached US$760 million, up from US$504 million in 1Q26 and US$450 million in 2Q25. Gross margin rose 5.2 percentage points QoQ to 25.3%. The report notes ...</p>
+                                        </div>
+										<div class="text-right"> 
+											<a href="https://www.trendforce.com/news/2026/08/14/news-smic-2q26-gross-margin-hits-25-3-eyes-26-28-in-3q-as-ai-spillover-pricing-momentum-build/" class="btn-text">View More</a>
+										</div>
+										<!-- <p>SMIC announced its latest earnings. According to Star Market Daily, the company reported 2Q26 revenue of US$3.0 billion, up 20% QoQ. Gross profit reached US$760 million, up from US$504 million in 1Q26 and US$450 million in 2Q25. Gross margin rose &hellip;</p>
+<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/14/news-smic-2q26-gross-margin-hits-25-3-eyes-26-28-in-3q-as-ai-spillover-pricing-momentum-build/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
+ -->
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+					<!-- </div> -->
+					<!-- </div> -->
+									<!-- <div class="list-item"> -->
+					<!-- <div class="row"> -->
+
+					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
+						<div class="insight-list-item">
+															<p class="article-category">News</p>
+														<a href="https://www.trendforce.com/news/2026/08/14/news-sandisk-reportedly-tapes-out-first-hbf-product-targets-2027-samples-and-2028-production/" class="insight-list-item-img">
+																	<img width="300" height="169" src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/14103525/SanDisk-300x169.png" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/08/14103525/SanDisk-300x169.png 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/14103525/SanDisk-768x432.png 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/14103525/SanDisk-1024x576.png 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/14103525/SanDisk-624x351.png 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
+							<div class="insight-list-item-info">
+								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
+									2026-08-14
+									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/14/news-sandisk-reportedly-tapes-out-first-hbf-product-targets-2027-samples-and-2028-production/"><strong>[News] Sandisk Reportedly Tapes Out First HBF Product, Targets 2027 Samples and 2028 Production</strong></a>
+									</h2>
+																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
+																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
+																																														</div>
+																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
+									<div class="insight-list-item-summary">
+                                        <div class="text-ellipsis-3">
+                                            <p>Just days after unveiling the first High Bandwidth Flash (HBF) standard specifications with SK hynix in early August, Sandisk offered further details at its August 13 Investor Day. According to notes from Mizuho Securities and Goldman Sachs, the company has already taped out its first HBF product, w...</p>
+                                        </div>
+										<div class="text-right"> 
+											<a href="https://www.trendforce.com/news/2026/08/14/news-sandisk-reportedly-tapes-out-first-hbf-product-targets-2027-samples-and-2028-production/" class="btn-text">View More</a>
+										</div>
+										<!-- <p>Just days after unveiling the first High Bandwidth Flash (HBF) standard specifications with SK hynix in early August, Sandisk offered further details at its August 13 Investor Day. According to notes from Mizuho Securities and Goldman Sachs, the company has &hellip;</p>
+<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/14/news-sandisk-reportedly-tapes-out-first-hbf-product-targets-2027-samples-and-2028-production/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
+ -->
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+					<!-- </div> -->
+					<!-- </div> -->
+									<!-- <div class="list-item"> -->
+					<!-- <div class="row"> -->
+
+					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
+						<div class="insight-list-item">
+															<p class="article-category">News</p>
+														<a href="https://www.trendforce.com/news/2026/08/14/news-zj-innolight-subsidiary-takes-stake-in-pcb-giant-avary-holding/" class="insight-list-item-img">
+																	<img width="300" height="180" src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/13183648/ZJ-Innolight-optical-transceivers-20260813-300x180.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/08/13183648/ZJ-Innolight-optical-transceivers-20260813-300x180.jpg 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/13183648/ZJ-Innolight-optical-transceivers-20260813-768x461.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/13183648/ZJ-Innolight-optical-transceivers-20260813-1024x614.jpg 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/13183648/ZJ-Innolight-optical-transceivers-20260813-624x374.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
+							<div class="insight-list-item-info">
+								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
+									2026-08-14
+									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/14/news-zj-innolight-subsidiary-takes-stake-in-pcb-giant-avary-holding/"><strong>[News] ZJ InnoLight Subsidiary Takes Stake in PCB Giant Avary Holding</strong></a>
 									</h2>
 																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
 																																																	<a title="更多Emerging Technologies分類文章" href="https://www.trendforce.com/news/category/emerging-technologies/">Emerging Technologies</a>
-																																														</div>
+																																																													, 													<a title="更多Optical Semiconductors分類文章" href="https://www.trendforce.com/news/category/led/">Optical Semiconductors</a>
+																																																													, 													<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
+																							</div>
 																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
 									<div class="insight-list-item-summary">
                                         <div class="text-ellipsis-3">
-                                            <p>China's humanoid robotics industry is entering a new chapter as Unitree Robotics moves toward its long-awaited IPO. According to South China Morning Post, Unitree has priced its IPO at RMB 150.8 per share, valuing the company at RMB 60.99 billion (US$9 billion). The company will issue 40.45 million ...</p>
+                                            <p>On August 11, Avary Holding released its semi-annual report for 2026. The report shows that as of June 30, Zhongji Innolight (Shanghai) Investment (hereinafter referred to as "InnoLight Investment")—a wholly-owned subsidiary of Zhongji InnoLight (InnoLight)—held 24 million shares of Avary Holdin...</p>
                                         </div>
 										<div class="text-right"> 
-											<a href="https://www.trendforce.com/news/2026/08/07/news-chinas-robot-maker-unitree-heads-for-ipo-at-rmb-60-99b-valuation-backed-by-deepseek-and-tencent/" class="btn-text">View More</a>
+											<a href="https://www.trendforce.com/news/2026/08/14/news-zj-innolight-subsidiary-takes-stake-in-pcb-giant-avary-holding/" class="btn-text">View More</a>
 										</div>
-										<!-- <p>China&#8217;s humanoid robotics industry is entering a new chapter as Unitree Robotics moves toward its long-awaited IPO. According to South China Morning Post, Unitree has priced its IPO at RMB 150.8 per share, valuing the company at RMB 60.99 billion &hellip;</p>
-<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/07/news-chinas-robot-maker-unitree-heads-for-ipo-at-rmb-60-99b-valuation-backed-by-deepseek-and-tencent/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
- -->
-									</div>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-
-					<!-- </div> -->
-					<!-- </div> -->
-									<!-- <div class="list-item"> -->
-					<!-- <div class="row"> -->
-
-					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
-						<div class="insight-list-item">
-															<p class="article-category">News</p>
-														<a href="https://www.trendforce.com/news/2026/08/07/news-memory-giants-race-ahead-sk-hynix-targets-2029-yongin-y2-cleanroom-samsung-advances-pyeongtaek-p5-p5-fab-2/" class="insight-list-item-img">
-																	<img width="300" height="169" src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/07164049/SK-hynix-300x169.png" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/08/07164049/SK-hynix-300x169.png 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/07164049/SK-hynix-768x432.png 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/07164049/SK-hynix-1024x576.png 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/07164049/SK-hynix-624x351.png 624w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/07164049/SK-hynix.png 1600w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
-							<div class="insight-list-item-info">
-								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
-									2026-08-07
-									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/07/news-memory-giants-race-ahead-sk-hynix-targets-2029-yongin-y2-cleanroom-samsung-advances-pyeongtaek-p5-p5-fab-2/"><strong>[News] Memory Giants Race Ahead: SK hynix Targets 2029 Yongin Y2 Cleanroom; Samsung Advances P5, P5 Fab 2</strong></a>
-									</h2>
-																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
-																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
-																																														</div>
-																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
-									<div class="insight-list-item-summary">
-                                        <div class="text-ellipsis-3">
-                                            <p>Amid surging demand for AI memory, SK hynix is accelerating its capacity expansion strategy with a major investment push across both DRAM and NAND. The company announced today that its board has approved a combined investment of approximately 54.3 trillion won, including 35.2 trillion won for the Yo...</p>
-                                        </div>
-										<div class="text-right"> 
-											<a href="https://www.trendforce.com/news/2026/08/07/news-memory-giants-race-ahead-sk-hynix-targets-2029-yongin-y2-cleanroom-samsung-advances-pyeongtaek-p5-p5-fab-2/" class="btn-text">View More</a>
-										</div>
-										<!-- <p>Amid surging demand for AI memory, SK hynix is accelerating its capacity expansion strategy with a major investment push across both DRAM and NAND. The company announced today that its board has approved a combined investment of approximately 54.3 trillion &hellip;</p>
-<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/07/news-memory-giants-race-ahead-sk-hynix-targets-2029-yongin-y2-cleanroom-samsung-advances-pyeongtaek-p5-p5-fab-2/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
- -->
-									</div>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-
-					<!-- </div> -->
-					<!-- </div> -->
-									<!-- <div class="list-item"> -->
-					<!-- <div class="row"> -->
-
-					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
-						<div class="insight-list-item">
-															<p class="article-category">News</p>
-														<a href="https://www.trendforce.com/news/2026/08/07/news-tsmc-and-researchers-overcome-2d-semiconductor-bottleneck-with-epitaxial-interface-engineering/" class="insight-list-item-img">
-																	<img width="300" height="200" src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/07141527/TSMC-2D-transistor-20260807-300x200.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/08/07141527/TSMC-2D-transistor-20260807-300x200.jpg 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/07141527/TSMC-2D-transistor-20260807-768x512.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/07141527/TSMC-2D-transistor-20260807-1024x683.jpg 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/07141527/TSMC-2D-transistor-20260807-624x416.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
-							<div class="insight-list-item-info">
-								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
-									2026-08-07
-									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/07/news-tsmc-and-researchers-overcome-2d-semiconductor-bottleneck-with-epitaxial-interface-engineering/"><strong>[News] TSMC and Researchers Overcome 2D Semiconductor Bottleneck with Epitaxial Interface Engineering</strong></a>
-									</h2>
-																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
-																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
-																																														</div>
-																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
-									<div class="insight-list-item-summary">
-                                        <div class="text-ellipsis-3">
-                                            <p>As conventional silicon semiconductor technology approaches its physical limits, 2D semiconductors are increasingly viewed as a key enabler for extending Moore's Law. According to TechNews, citing Taiwan's National Science and Technology Council (NSTC), a research team led by Dr. Iuliana Radu of TSM...</p>
-                                        </div>
-										<div class="text-right"> 
-											<a href="https://www.trendforce.com/news/2026/08/07/news-tsmc-and-researchers-overcome-2d-semiconductor-bottleneck-with-epitaxial-interface-engineering/" class="btn-text">View More</a>
-										</div>
-										<!-- <p>As conventional silicon semiconductor technology approaches its physical limits, 2D semiconductors are increasingly viewed as a key enabler for extending Moore&#8217;s Law. According to TechNews, citing Taiwan&#8217;s National Science and Technology Council (NSTC), a research team led by Dr. Iuliana &hellip;</p>
-<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/07/news-tsmc-and-researchers-overcome-2d-semiconductor-bottleneck-with-epitaxial-interface-engineering/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
- -->
-									</div>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-
-					<!-- </div> -->
-					<!-- </div> -->
-									<!-- <div class="list-item"> -->
-					<!-- <div class="row"> -->
-
-					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
-						<div class="insight-list-item">
-															<p class="article-category">News</p>
-														<a href="https://www.trendforce.com/news/2026/08/07/news-winbond-says-customers-seek-ltas-through-2030-adata-expects-even-tighter-dram-supply-in-2027/" class="insight-list-item-img">
-																	<img width="300" height="169" src="https://img.trendforce.com/blog/wp-content/uploads/2026/02/11104047/Winbond-on-X-20260211-300x169.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/02/11104047/Winbond-on-X-20260211-300x169.jpg 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/02/11104047/Winbond-on-X-20260211-768x432.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/02/11104047/Winbond-on-X-20260211-1024x576.jpg 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/02/11104047/Winbond-on-X-20260211-624x351.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
-							<div class="insight-list-item-info">
-								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
-									2026-08-07
-									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/07/news-winbond-says-customers-seek-ltas-through-2030-adata-expects-even-tighter-dram-supply-in-2027/"><strong>[News] Winbond Says Customers Seek LTAs Through 2030; Adata Expects Even Tighter DRAM Supply in 2027</strong></a>
-									</h2>
-																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
-																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
-																																														</div>
-																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
-									<div class="insight-list-item-summary">
-                                        <div class="text-ellipsis-3">
-                                            <p>Winbond and Adata held earnings calls on Aug. 6, with investors closely watching their outlook for memory prices. According to Commercial Times, Winbond's President and Adata's chairman both remain bullish on the market, citing sustained demand from AI servers, data centers, enterprise storage, and ...</p>
-                                        </div>
-										<div class="text-right"> 
-											<a href="https://www.trendforce.com/news/2026/08/07/news-winbond-says-customers-seek-ltas-through-2030-adata-expects-even-tighter-dram-supply-in-2027/" class="btn-text">View More</a>
-										</div>
-										<!-- <p>Winbond and Adata held earnings calls on Aug. 6, with investors closely watching their outlook for memory prices. According to Commercial Times, Winbond&#8217;s President and Adata&#8217;s chairman both remain bullish on the market, citing sustained demand from AI servers, data &hellip;</p>
-<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/07/news-winbond-says-customers-seek-ltas-through-2030-adata-expects-even-tighter-dram-supply-in-2027/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
- -->
-									</div>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-
-					<!-- </div> -->
-					<!-- </div> -->
-									<!-- <div class="list-item"> -->
-					<!-- <div class="row"> -->
-
-					<div class="col-md-12 col-sm-12 col-xs-12 insight-list-wrapper">
-						<div class="insight-list-item">
-															<p class="article-category">News</p>
-														<a href="https://www.trendforce.com/news/2026/08/07/news-sk-hynixs-u-s-nand-unit-solidigm-reportedly-eyes-nasdaq-but-debt-and-aging-fabs-cloud-the-path/" class="insight-list-item-img">
-																	<img width="300" height="169" src="https://img.trendforce.com/blog/wp-content/uploads/2026/08/07111725/SK-hynix-Solidigm-1-300x169.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://img.trendforce.com/blog/wp-content/uploads/2026/08/07111725/SK-hynix-Solidigm-1-300x169.jpg 300w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/07111725/SK-hynix-Solidigm-1-768x432.jpg 768w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/07111725/SK-hynix-Solidigm-1-1024x576.jpg 1024w, https://img.trendforce.com/blog/wp-content/uploads/2026/08/07111725/SK-hynix-Solidigm-1-624x351.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />                                							</a>
-							<div class="insight-list-item-info">
-								<div class="insight-tag"><i class="fa fa fa-calendar"></i>
-									2026-08-07
-									<h2 class="text-ellipsis-2"><a class="title-link" href="https://www.trendforce.com/news/2026/08/07/news-sk-hynixs-u-s-nand-unit-solidigm-reportedly-eyes-nasdaq-but-debt-and-aging-fabs-cloud-the-path/"><strong>[News] SK hynix&#8217;s U.S. NAND Unit Solidigm Reportedly Eyes Nasdaq — But Debt and Aging Fabs Cloud the Path</strong></a>
-									</h2>
-																												<div class="insight-tag"><i class="fa fa-bookmark"></i>
-																																																	<a title="更多Semiconductors分類文章" href="https://www.trendforce.com/news/category/semiconductors/">Semiconductors</a>
-																																														</div>
-																		<!-- <h4 class="font-size-16 color-gray display-inline border-r-none"><i class="fa fa fa-file-o"></i>{{ $item->report_type }}</h4> -->
-									<div class="insight-list-item-summary">
-                                        <div class="text-ellipsis-3">
-                                            <p>SK hynix’s Nasdaq debut through American depositary receipts (ADRs) on July 10 may be just the beginning of its U.S. capital market expansion. According to Chosun Biz, the memory giant is exploring fundraising options to scale up its U.S. NAND subsidiary Solidigm, including a 5 trillion–10 trill...</p>
-                                        </div>
-										<div class="text-right"> 
-											<a href="https://www.trendforce.com/news/2026/08/07/news-sk-hynixs-u-s-nand-unit-solidigm-reportedly-eyes-nasdaq-but-debt-and-aging-fabs-cloud-the-path/" class="btn-text">View More</a>
-										</div>
-										<!-- <p>SK hynix’s Nasdaq debut through American depositary receipts (ADRs) on July 10 may be just the beginning of its U.S. capital market expansion. According to Chosun Biz, the memory giant is exploring fundraising options to scale up its U.S. NAND &hellip;</p>
-<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/07/news-sk-hynixs-u-s-nand-unit-solidigm-reportedly-eyes-nasdaq-but-debt-and-aging-fabs-cloud-the-path/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
+										<!-- <p>On August 11, Avary Holding released its semi-annual report for 2026. The report shows that as of June 30, Zhongji Innolight (Shanghai) Investment (hereinafter referred to as &#8220;InnoLight Investment&#8221;)—a wholly-owned subsidiary of Zhongji InnoLight (InnoLight)—held 24 million shares of Avary &hellip;</p>
+<div class="text-center"> <a href="https://www.trendforce.com/news/2026/08/14/news-zj-innolight-subsidiary-takes-stake-in-pcb-giant-avary-holding/" class="btn">Continue reading <span class="meta-nav">&rarr;</span></a></div>
  -->
 									</div>
 								</div>
@@ -1312,7 +1201,7 @@ img.emoji {
             </li>
 
             <li class="last ">
-                <a href="https://www.trendforce.com/news/page/1028/"><span>Last Page</span>
+                <a href="https://www.trendforce.com/news/page/1035/"><span>Last Page</span>
                     <i class="fa fa-angle-double-right"></i></a>
             </li>
         </ul>
@@ -1322,8 +1211,8 @@ img.emoji {
     <div class="list-nav">
         <ul class="pagination-sm pagination-maso pagination" data-page-items="6" data-pagination-anima="show-scale">
             <li class="page-note"><span>Page 1</span></li>
-            <li class="page-note"><span>1028 page(s)</span></li>
-            <li class="page-note"><span>5138 result(s)</span></li>
+            <li class="page-note"><span>1035 page(s)</span></li>
+            <li class="page-note"><span>5172 result(s)</span></li>
         </ul>
     </div>
 </div>
@@ -1504,5 +1393,5 @@ Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3
 
 Page Caching using disk: enhanced 
 
-Served from: www.trendforce.com @ 2026-08-07 17:03:36 by W3 Total Cache
+Served from: www.trendforce.com @ 2026-08-14 16:46:56 by W3 Total Cache
 -->
