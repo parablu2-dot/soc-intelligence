@@ -384,9 +384,11 @@ function modToday() {
 }
 
 // B-2: ko/en 정적 토글 — 런타임 번역·fetch 없음, 커밋된 content.{ko,en} 전환만. 상태는 메모리만(새로고침 시 ko로 복귀).
+// modToday()·modCpo() 둘 다 이 토글을 쓰므로 'today' 하드코딩 금지 — 현재 모듈로 재렌더해야
+// CPO 화면에서 눌렀을 때 오늘의 요약으로 튕겨나가지 않음(2026-08-16 버그 수정).
 window.toggleSummaryLang = function() {
   summaryLang = summaryLang === 'ko' ? 'en' : 'ko';
-  navigate('today');
+  navigate(currentModule);
 };
 
 // ── 2. 일일 리뷰 큐 (5축 + 카테고리 필터) ───────────────────────────────
