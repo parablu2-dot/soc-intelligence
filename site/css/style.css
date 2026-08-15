@@ -12,6 +12,7 @@
   --red: #f85149;
   --purple: #bc8cff;
   --orange: #ffa657;
+  --cyan: #39c5cf;
 
   --sidebar-w: 220px;
   --header-h: 52px;
@@ -32,6 +33,7 @@
   --red: #cf222e;
   --purple: #8250df;
   --orange: #bc4c00;
+  --cyan: #1b7c83;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -264,6 +266,7 @@ input.search-box:focus { border-color: var(--accent); }
 .chip-axis-hpc_datacenter { background: rgba(88,166,255,0.15); color: var(--accent); }
 .chip-axis-custom_soc   { background: rgba(188,140,255,0.15); color: var(--purple); }
 .chip-axis-foundry      { background: rgba(255,166,87,0.15); color: var(--orange); }
+.chip-axis-cpo_optics   { background: rgba(57,197,207,0.15); color: var(--cyan); }
 .chip-axis-packaging    { background: rgba(248,81,73,0.15); color: var(--red); }
 .chip-cat-news      { background: var(--surface2); color: var(--text-muted); }
 .chip-cat-process   { background: rgba(255,166,87,0.15); color: var(--orange); }

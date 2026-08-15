@@ -107,6 +107,9 @@ const MODULES = [
   { id: 'competitor', label: '업체별 주요 전략',          icon: '◉' },
   { id: 'channels',   label: '정보 획득 채널',            icon: '⛓' },
   { id: 'narrative',  label: '서사 함정 검증',            icon: '⧉' },
+  // cpo: 9번째 독립 축(2026-08-11 구독시스템) — 사용자 확인 후 공개 대시보드에도 노출(2026-08-15).
+  // DATA_SOURCES/5축 매트릭스·벤치마크·생태계에는 안 얹음(전용 데이터라 비교 대상 아님), 별도 fetch.
+  { id: 'cpo',        label: 'CPO/광통신',               icon: '❖' },
   { id: 'control',    label: '크롤링 관제',             icon: '⚙' },
 ];
 
@@ -126,6 +129,8 @@ let dailyTop5 = [];  // [{axis, company, headline, url, source, published_date, 
 let techSignals = [];  // TechSignal[] — data/refined/tech/*.json (axis/company 없음, arXiv 논문 + Google News zh, 20260717 후속)
 let narrativeTrapCases = [];  // NarrativeTrapCase[] — data/refined/narrative_trap_cases.json (수동 큐레이션, LLM 미개입)
 let narrativeTrapTracks = {}; // STANDARD_TRACKS — 위 JSON에 동봉되어 프론트-백엔드 재정의 없이 단일 소스 유지
+let cpoDigest = null;  // data/refined/cpo_optics/digest.json — 9번째 독립 축, DATA_SOURCES와 별도 fetch
+let cpoSignals = [];   // data/refined/cpo_optics/{ecoc,googlenews}.json 합본 (allSignals와 분리 유지)
 
 // ── 부트스트랩 ─────────────────────────────────────────────────────────────
 async function boot() {
@@ -190,9 +195,17 @@ async function loadAllData() {
   const narrativeTrapLoad = fetch(`${DATA_BASE}/refined/narrative_trap_cases.json`)
     .then(r => r.ok ? r.json() : null)
     .catch(() => null);
+  // cpo_optics: 9번째 독립 축 — DATA_SOURCES에는 안 넣음(5축 매트릭스/벤치마크/생태계와 무관한
+  // 전용 콘텐츠라 비교 대상이 아님), 별도 fetch로 modCpo() 전용 상태에만 채움.
+  const cpoDigestLoad = fetch(`${DATA_BASE}/refined/cpo_optics/digest.json`)
+    .then(r => r.ok ? r.json() : null)
+    .catch(() => null);
+  const cpoSignalLoads = ['ecoc.json', 'googlenews.json'].map(f =>
+    fetch(`${DATA_BASE}/refined/cpo_optics/${f}`).then(r => r.ok ? r.json() : []).catch(() => [])
+  );
 
-  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data, techResults, narrativeTrapData] =
-    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load, Promise.all(techLoads), narrativeTrapLoad]);
+  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data, techResults, narrativeTrapData, cpoDigestData, cpoSignalResults] =
+    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load, Promise.all(techLoads), narrativeTrapLoad, cpoDigestLoad, Promise.all(cpoSignalLoads)]);
   allSignals = results.flat().sort((a, b) => b.published_date.localeCompare(a.published_date));
   capacityRecords = capData;
   companySummaries = sumData || {};
@@ -203,6 +216,8 @@ async function loadAllData() {
   techSignals = techResults.flat().sort((a, b) => (b.published_date || '').localeCompare(a.published_date || ''));
   narrativeTrapCases = narrativeTrapData?.cases || [];
   narrativeTrapTracks = narrativeTrapData?.tracks || {};
+  cpoDigest = cpoDigestData;
+  cpoSignals = cpoSignalResults.flat().sort((a, b) => (b.published_date || '').localeCompare(a.published_date || ''));
   document.getElementById('crawl-time').textContent =
     `신호 ${allSignals.length}건 · 캐파 ${capacityRecords.length}건 · ${new Date().toLocaleString('ko-KR')}`;
   document.getElementById('update-time').textContent =
@@ -273,6 +288,7 @@ function renderModule(id) {
     case 'competitor': return modCompetitor();
     case 'channels':   return modChannels();
     case 'narrative':  return modNarrativeTrap();
+    case 'cpo':        return modCpo();
     default: return '<p>알 수 없는 모듈</p>';
   }
 }
@@ -285,6 +301,7 @@ function axisLabel(axis) {
     custom_soc: 'Custom SoC',
     foundry: 'Foundry',
     packaging: 'Packaging',
+    cpo_optics: 'CPO/광통신',
   }[axis] || axis;
 }
 
@@ -1099,6 +1116,31 @@ function modNarrativeTrap() {
     ${cases.length
       ? `<div class="signal-list">${cases.map(c => _narrativeTrapCard(c, tracks)).join('')}</div>`
       : `<div class="empty"><h3>등록된 케이스 없음</h3><p>scripts/narrative_trap_case.py add 로 케이스를 추가하세요.</p></div>`}`;
+}
+
+// ── 14. CPO/광통신 (9번째 독립 축, 2026-08-11 구독시스템) ──────────────────
+// 기존 5축과 별개 콘텐츠 — DATA_SOURCES/매트릭스/벤치마크/생태계 그래프와는 무관하게
+// data/refined/cpo_optics/*를 별도 fetch(loadAllData의 cpoDigest/cpoSignals)해서만 렌더.
+function modCpo() {
+  const links = cpoDigest?.links || [];
+  return `
+    ${header('CPO/광통신', 'ECOC 학회 피드 + OFC 포함 업계 뉴스 — 구독 고객 전용 다이제스트와 동일 소스')}
+    ${cpoDigest?.content
+      ? `<div style="margin-bottom:10px">
+          <button class="filter-btn" onclick="toggleSummaryLang()">${summaryLang === 'ko' ? 'KO → EN' : 'EN → KO'}</button>
+          <span style="font-size:11px;color:var(--text-muted);margin-left:8px">${cpoDigest.date} 기준 · ${cpoDigest.item_count}건</span>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:10px 12px;margin-bottom:16px">
+          ${_structuredSummaryHtml(cpoDigest.content[summaryLang])}
+        </div>`
+      : ''}
+    ${links.length ? `
+      <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:6px">▸ 관련 기사</div>
+      <ul style="margin:0 0 16px 16px;padding:0;font-size:12px;line-height:1.7">
+        ${links.map(lk => `<li><a href="${lk.url}" target="_blank" rel="noopener">${lk.headline}</a> <span style="color:var(--text-muted)">— ${lk.source} · ${lk.published_date}</span></li>`).join('')}
+      </ul>` : ''}
+    <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:6px">◈ 수집 신호 전체 (${cpoSignals.length}건)</div>
+    ${signalList(cpoSignals)}`;
 }
 
 // ── 이벤트 핸들러 ─────────────────────────────────────────────────────────
