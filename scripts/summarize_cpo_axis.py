@@ -112,7 +112,7 @@ def _generate_digest_content(items: list[dict], client) -> dict:
     )
     resp = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=1024,
+        max_tokens=2048,  # summarize_sectors.py와 동일 값 — 1024는 tool-call JSON이 잘릴 위험
         messages=[{"role": "user", "content": prompt}],
         tools=[tool_schema],
         tool_choice={"type": "tool", "name": "cpo_digest"},
@@ -151,7 +151,7 @@ def run() -> None:
         try:
             content = _generate_digest_content(items, client)
         except Exception as exc:
-            print(f"::warning::summarize_cpo_axis digest generation failed: {exc}")
+            print(f"::warning::summarize_cpo_axis digest generation failed: {type(exc).__name__}: {exc}")
     elif items:
         print("::warning::ANTHROPIC_API_KEY not set — CPO digest summary skipped (links만 생성)")
 
