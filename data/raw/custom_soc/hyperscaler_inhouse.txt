@@ -6,7 +6,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/machine-learning/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/machine-learning/</link>
 	<description>Official Machine Learning Blog of Amazon Web Services</description>
-	<lastBuildDate>Fri, 14 Aug 2026 19:12:41 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 14 Aug 2026 20:37:35 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -2483,7 +2483,7 @@ kubectl exec $POD2 -c $DEPLOY_NAME -- ls /mnt/curvine/l2cache/
 &lt;p&gt;According to OpenAI, security researchers used GPT-5.6 Cyber through Daybreak Red to identify two previously unknown vulnerabilities in V8, the JavaScript engine used by Chrome, which when chained together could enable memory corruption and a heap sandbox escape. The initial vulnerability was fixed and released as CVE-2026-15903, one of only four successful zero-day entries to V8 CTF in 2026.&lt;/p&gt; 
 &lt;h2 id="run-it-on-the-foundation-you-already-trust"&gt;Run it on the foundation you already trust&lt;/h2&gt; 
 &lt;p&gt;A cyber security workload feeds the model your most sensitive inputs: proprietary source code, unpatched vulnerability details, and live telemetry from production systems. Before any of that runs through a model, you need certainty about where it goes and who can see it.&lt;/p&gt; 
-&lt;p&gt;Both models run on the Amazon Bedrock next-generation inference engine built for high performance, security, and reliability. Zero-operator access (ZOA) is enforced at the chip, so even AWS operators cannot access your prompts and completions during inference. Everything is encrypted in transit and at rest with customer-managed AWS Key Management Service (AWS KMS) keys. Access is governed by your AWS Identity and Access Management (IAM) policies, logged in AWS CloudTrail, and routed through virtual private cloud (VPC) endpoints. You can set data perimeter policies at the organization level to prevent exfiltration across account and network boundaries.&lt;/p&gt; 
+&lt;p&gt;Both models run on the Amazon Bedrock next-generation inference engine built for high performance, security, and reliability. Zero-operator access (ZOA) is enforced at the chip, so even AWS operators cannot access your prompts and completions during inference. Data is encrypted in transit and at rest. Access is governed by your AWS Identity and Access Management (IAM) policies, logged in AWS CloudTrail, and routed through virtual private cloud (VPC) endpoints. You can set data perimeter policies at the organization level to prevent exfiltration across account and network boundaries.&lt;/p&gt; 
 &lt;p&gt;Your inference data is not used for model training, and neither model requires you to opt into sharing your data with OpenAI. For &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/abuse-detection.html" target="_blank" rel="noopener"&gt;automated abuse detection&lt;/a&gt;, classifier-flagged traffic is retained by AWS for up to 30 days and processed programmatically. Customers may request zero data retention through their AWS account team. See &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html#data-retention-zdr" target="_blank" rel="noopener"&gt;data retention for details&lt;/a&gt;.&lt;/p&gt; 
 &lt;h2 id="get-started"&gt;Get started&lt;/h2&gt; 
 &lt;p&gt;Daybreak Red: GPT-5.6 Cyber and Daybreak Blue: GPT-5.6 Sol are now available to eligible customers on Amazon Bedrock in the following &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/models-region-compatibility.html" target="_blank" rel="noopener"&gt;AWS Region&lt;/a&gt;: US East (Ohio). Access to the models requires enrollment in &lt;a href="https://openai.com/form/enterprise-trusted-access-for-cyber/" target="_blank" rel="noopener"&gt;Trusted Access for Cyber&lt;/a&gt; from OpenAI. To enroll, contact OpenAI or reach out to your AWS account team for guidance on eligibility. Once approved, work with your account team to request access on AWS. To learn more, see the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards-openai.html" target="_blank" rel="noopener"&gt;documentation&lt;/a&gt;.&lt;/p&gt; 
@@ -4504,7 +4504,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 	<atom:link href="https://azure.microsoft.com/en-us/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://azure.microsoft.com/en-us/blog/</link>
 	<description>Get the latest Azure news, updates, and announcements from the Azure blog. From product updates to hot topics, hear from the Azure experts.</description>
-	<lastBuildDate>Tue, 11 Aug 2026 22:03:35 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 13 Aug 2026 16:53:16 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -4520,6 +4520,261 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 	<height>32</height>
 </image> 
 	<item>
+		<title>The Economics of Agent Optimization: From pilots to measurable returns</title>
+		<link>https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-from-pilots-to-measurable-returns/</link>
+					<comments>https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-from-pilots-to-measurable-returns/#respond</comments>
+		
+		<dc:creator><![CDATA[Tina Schuchman]]></dc:creator>
+		<pubDate>Wed, 12 Aug 2026 16:00:00 +0000</pubDate>
+				<category><![CDATA[AI + machine learning]]></category>
+		<category><![CDATA[Management and governance]]></category>
+		<category><![CDATA[Migration]]></category>
+		<category><![CDATA[FinOps]]></category>
+		<category><![CDATA[The Economics of Agent Optimization]]></category>
+		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=53086</guid>
+
+					<description><![CDATA[<p>Learn how AI cost management helps organizations move from AI pilots to measurable ROI through greater visibility, governance, and optimization.</p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-from-pilots-to-measurable-returns/">The Economics of Agent Optimization: From pilots to measurable returns</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph"><em>This blog post is the first of a four-part series called <a href="https://azure.microsoft.com/en-us/blog/tag/the-economics-of-agent-optimization/" target="_blank" rel="noopener noreferrer">The Economics of Agent Optimization</a> which shares the strategies, capabilities, and proof points to help you optimize agent costs and run AI as a managed investment system on Microsoft Foundry.</em></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity" />
+
+
+
+<p class="wp-block-paragraph">The AI conversation in most enterprises has moved from the whiteboard to the budget review. Two years ago, the question was whether AI could work. The question leaders are asking now is sharper and less comfortable: is it paying for itself? </p>
+
+
+
+<p class="wp-block-paragraph">For the teams now in production—including more than 100,000 organizations <a href="https://ai.azure.com/home" target="_blank" rel="noopener noreferrer">building on Microsoft Foundry</a> that question has become urgent. Tokens have become the new unit of technology spend, and financial discipline (not model choice) is what decides whether a promising pilot ever scales. The money is already moving in: in a <a href="https://blogs.microsoft.com/blog/2025/11/11/bridging-the-ai-divide-how-frontier-firms-are-transforming-business/" target="_blank" rel="noreferrer noopener">Microsoft-commissioned IDC study</a> of more than 4,000 business leaders, 71% said they plan to increase AI budgets, funded from IT and non-IT sources alike. The budgets are growing. The question is whether the discipline grows with them.&nbsp;</p>
+
+
+
+<figure class="wp-block-pullquote has-electric-blue-300-color has-text-color has-link-color wp-elements-2614fd590e882918aba662d7868b0f7c" style="border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;padding-top:var(--wp--preset--spacing--md);padding-bottom:var(--wp--preset--spacing--md)"><blockquote><p><strong><em>71% of business leaders plan to increase their AI budgets</em></strong></p><cite>2025 IDC survey</cite></blockquote></figure>
+
+
+
+<p class="wp-block-paragraph">
+  The teams pulling ahead did not go looking for a cheaper model. They stopped running AI as a string of one-off pilots and started running it as a managed investment system: every request sized to its job, every agent improved as it runs, and every dollar bounded and accounted for. That shift, from buying intelligence to managing it, is the whole game. This series is about how the system works and why Microsoft Foundry is built to run it.
+</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://ai.azure.com/home" target="_blank" rel="noopener noreferrer">Start building on Microsoft Foundry</a></div>
+</div>
+
+
+
+<h2 class="wp-block-heading" id="understand-your-ai-costs-and-spending">Understand your AI costs and spending</h2>
+
+
+
+<p class="wp-block-paragraph">
+  Before you can manage AI spend, you need to understand what creates it. Cost is not determined only by the model you choose. It is also shaped by the application or agent built around that model.
+</p>
+
+
+
+<p class="wp-block-paragraph">
+  Every request includes input tokens, such as system prompts, conversation history, tool definitions, and retrieved content, as well as output tokens generated by the model. Because models are stateless, the full context is sent with every request. Costs can increase over time even when the user asks only a simple follow-up question.
+</p>
+
+
+
+<p class="wp-block-paragraph">
+  Agents introduce another layer of complexity. Instead of following a single path, an agent may evaluate options, retry actions, or call multiple tools before producing a response. A single user request can generate many model calls, making workflow design as important as model selection.
+</p>
+
+
+
+<h3 class="wp-block-heading" id="improve-ai-cost-visibility-across-teams">Improve AI cost visibility across teams</h3>
+
+
+
+<p class="wp-block-paragraph">
+  AI spend is difficult to manage when it appears as a single aggregate number. Teams need visibility into costs by application, agent, workflow, and model to understand what is driving usage and where optimization opportunities exist.
+</p>
+
+
+
+<p class="wp-block-paragraph">
+  Without that level of attribution, it becomes difficult to explain costs, prioritize improvements, or measure the impact of optimization efforts.
+</p>
+
+
+
+<h3 class="wp-block-heading" id="control-and-optimize-spend">Control and optimize spend</h3>
+
+
+
+<p class="wp-block-paragraph">
+  Visibility alone is not enough. AI workloads can scale quickly, and unexpected behavior can increase consumption in a short period of time. Organizations need controls that help manage spend before costs become a surprise.
+</p>
+
+
+
+<p class="wp-block-paragraph">
+  Optimization also requires more than selecting a lower-cost model. Most AI workloads contain a mix of requests with different requirements. Better outcomes come from matching requests to the right models, reducing unnecessary context, limiting unneeded tool use, and improving agent workflows so they operate more efficiently.
+</p>
+
+
+
+<h2 class="wp-block-heading" id="why-microsoft-is-the-platform-for-ai-finops">Why Microsoft is the platform for AI FinOps</h2>
+
+
+
+<p class="wp-block-paragraph">FinOps began as the discipline of bringing financial accountability to variable cloud&nbsp;spend,&nbsp;a shared operating model that puts engineering, finance, and product on one set of numbers. FinOps for AI comes down to four commitments:</p>
+
+
+
+<ol class="wp-block-list">
+<li class="wp-block-list-item">Make AI predictable to fund</li>
+
+
+
+<li class="wp-block-list-item">Efficient by design</li>
+
+
+
+<li class="wp-block-list-item">Optimized&nbsp;at scale</li>
+
+
+
+<li class="wp-block-list-item">Proven in value&nbsp;</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">Microsoft&#8217;s answer is a single, first-party approach to FinOps for AI that spans the entire lifecycle—plan, build, manage, and measure. Cost visibility and control are built into the products teams already use: Microsoft Foundry and GitHub where agents are built and run, <a href="https://azure.microsoft.com/en-us/products/cost-management/?ef_id=_k_Cj0KCQjw-MDTBhCgARIsAKAkdlTvgPpAWE0VF6esP6uE_g62gdg7V-YSoF9em5d7AwVduHjni5qiVQ4aAoFOEALw_wcB_k_&amp;OCID=AIDcmm2gz5ejpc_SEM__k_Cj0KCQjw-MDTBhCgARIsAKAkdlTvgPpAWE0VF6esP6uE_g62gdg7V-YSoF9em5d7AwVduHjni5qiVQ4aAoFOEALw_wcB_k_&amp;gad_source=1&amp;gad_campaignid=21496728177&amp;gbraid=0AAAAADcJh_sTdbGVz4yQLKUFm2AuSzSJ6&amp;gclid=Cj0KCQjw-MDTBhCgARIsAKAkdlTvgPpAWE0VF6esP6uE_g62gdg7V-YSoF9em5d7AwVduHjni5qiVQ4aAoFOEALw_wcB" target="_blank" rel="noopener noreferrer">Microsoft Cost Management</a> for allocation and chargeback, <a href="https://azure.microsoft.com/en-us/pricing/?ef_id=_k_Cj0KCQjw-MDTBhCgARIsAKAkdlRNGEoqyHl1k5hCpZA5Zn48ALL5otVcT5jfO5HLFk5a-a4XtWbf1mMaAo9qEALw_wcB_k_&amp;OCID=AIDcmm2gz5ejpc_SEM__k_Cj0KCQjw-MDTBhCgARIsAKAkdlRNGEoqyHl1k5hCpZA5Zn48ALL5otVcT5jfO5HLFk5a-a4XtWbf1mMaAo9qEALw_wcB_k_&amp;gad_source=1&amp;gad_campaignid=21496728177&amp;gbraid=0AAAAADcJh_sTdbGVz4yQLKUFm2AuSzSJ6&amp;gclid=Cj0KCQjw-MDTBhCgARIsAKAkdlRNGEoqyHl1k5hCpZA5Zn48ALL5otVcT5jfO5HLFk5a-a4XtWbf1mMaAo9qEALw_wcB" target="_blank" rel="noopener noreferrer">Azure pricing</a> offers for commitment-based savings, and <a href="https://azure.microsoft.com/en-us/products/api-management" target="_blank" rel="noopener noreferrer">Azure API Management</a> as the gateway that meters and governs AI traffic. <a href="https://www.microsoft.com/en-us/microsoft-agent-365" target="_blank" rel="noopener noreferrer">Microsoft Agent 365</a> extends the same discipline to the tenant—unifying agent cost management across Microsoft and third-party platforms with spending policies, budget caps, and departmental chargeback in one place. Together they give organizations something no point tool can: comprehensive, best-in-class cost management across the whole AI estate, from the first prompt to the board-level ROI number.</p>
+
+
+
+<p class="wp-block-paragraph">Foundry is where that approach gets specific, because it&#8217;s where agents are run and optimized. It runs AI as a managed investment system across one closed loop: <strong>optimize each request at runtime, optimize each agent workflow over time, and govern the spend continuously</strong>.</p>
+
+
+
+<h2 class="wp-block-heading" id="ai-cost-optimization-starts-with-visibility-1">AI cost optimization starts with visibility</h2>
+
+
+
+<p class="wp-block-paragraph">A managed investment system makes three decisions, each at a different speed. You&nbsp;optimize&nbsp;the request&nbsp;in&nbsp;the moment it runs. You optimize the agent workflow over days and weeks, as you learn what works. And you govern the spend continuously, with limits and budgets that never sleep. Foundry is built to make all three. Each move has its own set of Foundry capabilities, and the map below shows how they fit together. </p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-fixed-layout"><thead><tr><th><strong>The decision</strong></th><th><strong>What Foundry gives you</strong><span style="font-size: 14px"></span></th></tr></thead><tbody><tr><td><strong>Optimize the request, at runtime</strong><br><em>Right-size every&nbsp;call&nbsp;so simple work never pays frontier prices.</em><br></td><td><ul><li><strong>Model router for Microsoft Foundry</strong> routes each prompt across cost, quality, and balanced modes, so simple requests don&#8217;t pay frontier-model prices.</li></ul><br><ul><li><strong>Deployment and pricing options</strong>&nbsp;match each workload to its cost and latency needs, spanning Global, Data Zone, and&nbsp;Regional&nbsp;deployments&nbsp;and the Standard, Priority, Provisioned Throughput, and Batch processing modes.</li></ul><br><ul><li><strong>Prompt and semantic caching</strong> reuse repeated context instead of paying to recompute it.</li></ul><br><ul><li><strong>Fine-tuning</strong>&nbsp;lets a smaller tuned model match a larger one on your task, lowering the per-token rate and shortening prompts.</li></ul><br><ul><li><strong>Microsoft IQ </strong>provides a shared enterprise intelligence layer across how people work, how the business operates, institutional knowledge, and the web. Within that layer, Foundry IQ gives agents reusable, permission-aware knowledge bases and uses agentic retrieval to select only the most relevant context. This improves grounding while reducing unnecessary input tokens.</li></ul></td></tr><tr><td><strong>Optimize the workflow, over time</strong><br><em>Make each agent cheaper as it learns what works.</em>&nbsp;<br></td><td><ul><li><strong>Agent optimizer</strong>&nbsp;tests prompts, models, tools, and skills against your own evaluators and promotes the best configuration, often holding quality on a smaller, cheaper model.&nbsp;</li></ul><br><ul><li><strong>Toolboxes</strong> send only the tools a request needs instead of every definition.&nbsp;</li></ul><br><ul><li><strong>Memory </strong>(procedural, user, and session memory) carries context across turns without resending the full history.&nbsp;</li></ul></td></tr><tr><td><strong>Govern the spend, continuously </strong><br><em>Set limits and budgets that hold, so no agent can run away with the bill.</em>&nbsp;<br></td><td><ul><li><strong>Azure API Management&#8217;s AI Gateway</strong> can be deployed in front of your Foundry endpoints as a separate AI Gateway layer, applying token rate limits, quotas, and caching for teams that already standardize on Azure API Management. We are working to deliver more seamless and integrated AI Gateway functionalities in Foundry.</li></ul><br><ul><li><strong>Foundry in-platform budgets and enforcement</strong> will be available soon to bring spending limits and enforcement natively into Foundry, closer to where agents run. </li></ul><br><ul><li>Foundry gives you model- and deployment-level cost reporting today, with Azure Cost Management as the system of record for budgets, alerts, and billed costs. Richer attribution, down to the individual agent and session, is on the roadmap. </li></ul></td></tr></tbody></table></figure>
+
+
+
+<p class="wp-block-paragraph">Agent 365 will extend governance to the tenant, unifying cost management across Microsoft and third-party agents with spending policies, budget caps, and departmental chargeback.&nbsp; </p>
+
+
+
+<p class="wp-block-paragraph">
+  You can watch the runtime levers work live in our <a href="https://www.youtube.com/watch?v=mB0IyELzjRg">new Microsoft Mechanics episode on token economics</a>. 
+</p>
+
+
+
+<h2 class="wp-block-heading" id="the-four-questions-ai-leaders-should-be-asking">The four questions AI leaders should be asking</h2>
+
+
+
+<p class="wp-block-paragraph">
+  If you take one thing from this post, take these four questions into your next AI or budget review. Each has a concrete answer in Foundry. If you cannot answer one today, that is where to start.
+</p>
+
+
+
+<ol class="wp-block-list">
+<li class="wp-block-list-item"><strong>Do we know what we&#8217;re paying for?</strong><br>Spend should be visible by model, agent, and workflow, not hidden in a single invoice line. Foundry&#8217;s metering and traces make it easier to understand where costs originate.</li>
+
+
+
+<li class="wp-block-list-item"><strong>Are we paying the right amount for each request?</strong><br>Most requests do not need a frontier model. Model router, deployment and pricing options, caching, fine-tuning, and Foundry IQ help match each request to the capability it needs.</li>
+
+
+
+<li class="wp-block-list-item"><strong>Are our agents operating efficiently?</strong><br>Agent costs should improve over time as workflows become more effective. Agent optimizer and memory in <a href="https://azure.microsoft.com/en-us/products/ai-foundry/agent-service/" target="_blank" rel="noopener noreferrer">Foundry Agent Service</a> and <a href="https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/toolbox?pivots=python" target="_blank" rel="noopener noreferrer">Toolboxes in Foundry</a> help reduce unnecessary token usage and improve execution quality.</li>
+
+
+
+<li class="wp-block-list-item"><strong>Do our limits hold when usage spikes?</strong><br>Usage that expands rapidly needs controls that hold. Today, many teams put Azure API Management in front of their AI endpoints to enforce token rate limits and quotas at the AI Gateway layer. Native budgets and enforcement inside Foundry, plus tenant-wide controls through Agent 365, are where we are headed next.</li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">
+  The first question is about understanding AI spend. The next three are the areas this series explores in more detail: matching requests to the right models, improving agent efficiency, and applying governance controls to manage cost at scale.
+</p>
+
+
+
+<h2 class="wp-block-heading" id="get-started">Get started</h2>
+
+
+
+<p class="wp-block-paragraph">
+  This series will continue over the coming weeks, going one level deeper on each subsequent move: how to&nbsp;optimize&nbsp;the request at runtime, how to build agents that use tokens efficiently, and how to govern the spend as you scale.&nbsp;Each post pairs the thinking with the Foundry capabilities that make it real.
+</p>
+
+
+
+<p class="wp-block-paragraph">You don&#8217;t have to wait to start. The capabilities behind this framework are live in <a href="https://ai.azure.com/home" target="_blank" rel="noopener noreferrer">Microsoft Foundry</a> today: </p>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item">Learn more about the ways to <a href="https://learn.microsoft.com/en-us/azure/foundry/control-plane/how-to-optimize-cost-performance" target="_blank" rel="noopener noreferrer">optimize model cost and performance</a> in Microsoft Foundry.  </li>
+
+
+
+<li class="wp-block-list-item">Watch the <a href="https://www.youtube.com/watch?v=mB0IyELzjRg">token economics episode on&nbsp;<strong>Microsoft Mechanics</strong></a> for a hands-on look at the levers in action. </li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Follow along as the series&nbsp;unfolds and&nbsp;bring the four questions to your next review.</p>
+
+
+
+<div class="is-style-vertical wp-block-bloginabox-theme-promotional">
+	
+<div class="promotional">
+	<div class="promotional__wrapper">
+		<div class="promotional__content-wrapper">
+			<div class="promotional__content">
+				
+
+<h2 class="wp-block-heading" id="build-an-ai-investment-strategy-that-scales">Build an AI investment strategy that scales</h2>
+
+
+
+<p class="wp-block-paragraph">Foundry is the enterprise AI platform to build, ground, and govern AI apps and agents at scale.</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://ai.azure.com/home" target="_blank" rel="noopener noreferrer">Start building today</a></div>
+</div>
+
+			</div>
+		</div>
+			</div>
+</div>
+</div>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-from-pilots-to-measurable-returns/">The Economics of Agent Optimization: From pilots to measurable returns</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-from-pilots-to-measurable-returns/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools</title>
 		<link>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-augmented-code-modernization-tools/</link>
 					<comments>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-augmented-code-modernization-tools/#respond</comments>
@@ -4531,7 +4786,6 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 		<category><![CDATA[DevOps]]></category>
 		<category><![CDATA[Identity]]></category>
 		<category><![CDATA[Storage]]></category>
-		<category><![CDATA[AI]]></category>
 		<category><![CDATA[Copilot]]></category>
 		<category><![CDATA[Gartner® Magic Quadrant™]]></category>
 		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=52873</guid>
@@ -4540,8 +4794,8 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-ai-augmented-code-modernization-tools/">Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<aside class="table-of-contents-block accordion wp-block-bloginabox-theme-table-of-contents" id="accordion-5e6ff3f4-8570-491b-8fa1-4a1cee0e80e3" data-bi-aN="table-of-contents">
-	<button class="btn btn-collapse" type="button" aria-expanded="true" aria-controls="accordion-collapse-5e6ff3f4-8570-491b-8fa1-4a1cee0e80e3">
+<aside class="table-of-contents-block accordion wp-block-bloginabox-theme-table-of-contents" id="accordion-0f94137f-6864-4771-af25-a5f3b035efb2" data-bi-aN="table-of-contents">
+	<button class="btn btn-collapse" type="button" aria-expanded="true" aria-controls="accordion-collapse-0f94137f-6864-4771-af25-a5f3b035efb2">
 		<span class="table-of-contents-block__label">In this article</span>
 		<span class="table-of-contents-block__current" aria-hidden="true"></span>
 
@@ -4549,7 +4803,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 			<path d="M15.7761 11L18 8.82043L9 0L0 8.82043L2.22394 11L9 4.35913L15.7761 11Z" fill="currentColor" />
 		</svg>
 	</button>
-	<div id="accordion-collapse-5e6ff3f4-8570-491b-8fa1-4a1cee0e80e3" class="table-of-contents-block__collapse-wrapper collapse show" data-parent="#accordion-5e6ff3f4-8570-491b-8fa1-4a1cee0e80e3">
+	<div id="accordion-collapse-0f94137f-6864-4771-af25-a5f3b035efb2" class="table-of-contents-block__collapse-wrapper collapse show" data-parent="#accordion-0f94137f-6864-4771-af25-a5f3b035efb2">
 		<div class="table-of-contents-block__content">
 			<ol class="table-of-contents-block__list"><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#cloud-native-modernization">Cloud-native modernization</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#the-problem-we-set-out-to-solve">The problem we set out to solve</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#how-it-works">How it works</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#where-we-believe-we-stand-apart">Where we believe we stand apart</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#the-results-that-make-it-real">The results that make it real</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#this-is-the-starting-line">This is the starting line</a></li></ol>		</div>
 	</div>
@@ -4579,7 +4833,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 <p class="wp-block-paragraph">None of this is on the horizon; it is happening now. Modernization is shifting from a multi-year program into something teams finish in days or weeks.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a7c9773e533e&quot;}" data-wp-interactive="core/image" data-wp-key="6a7c9773e533e" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp" alt="Gartner graph, including completeness of vision and ability to execute." class="wp-image-53126 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1536x864.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1.webp 1920w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a7e6ebbacabb&quot;}" data-wp-interactive="core/image" data-wp-key="6a7e6ebbacabb" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp" alt="Gartner graph, including completeness of vision and ability to execute." class="wp-image-53126 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1536x864.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1.webp 1920w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -4603,7 +4857,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 <p class="wp-block-paragraph">Microsoft Azure was built for this moment. It provides the agentic foundation and engine for modernization and AI transformation, along with the governance and trust enterprises require, so modernization lowers security, data, and operational risk as much as it accelerates AI readiness. With agentic tooling and an end-to-end modernization solution powered by <a href="https://azure.microsoft.com/en-us/solutions/application-and-database-modernization/#Products-3" id="https://azure.microsoft.com/en-in/products/github/copilot" target="_blank" rel="noreferrer noopener">GitHub Copilot</a> and <a href="https://azure.microsoft.com/en-us/products/copilot" id="https://azure.microsoft.com/en-us/products/copilot" target="_blank" rel="noopener noreferrer">Azure Copilot</a>, Microsoft is accelerating the shift, not just leading it.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a7c9773e6423&quot;}" data-wp-interactive="core/image" data-wp-key="6a7c9773e6423" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp" alt="Chart visualization of Agentic Modernization on Azure." class="wp-image-53127 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1536x863.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1.webp 1920w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a7e6ebbad7b2&quot;}" data-wp-interactive="core/image" data-wp-key="6a7e6ebbad7b2" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp" alt="Chart visualization of Agentic Modernization on Azure." class="wp-image-53127 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1536x863.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1.webp 1920w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5594,7 +5848,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a7c977406111"></universal-media-player>
+		<universal-media-player id="ump-6a7e6ebbbedf6"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5608,7 +5862,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a7c977406111", options);
+				ump("ump-6a7e6ebbbedf6", options);
 			});
 		</script>
 	</div>
@@ -6478,7 +6732,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a7c977418b24&quot;}" data-wp-interactive="core/image" data-wp-key="6a7c977418b24" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a7e6ebbce62c&quot;}" data-wp-interactive="core/image" data-wp-key="6a7e6ebbce62c" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6819,7 +7073,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a7c977424032&quot;}" data-wp-interactive="core/image" data-wp-key="6a7c977424032" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a7e6ebbda8f1&quot;}" data-wp-interactive="core/image" data-wp-key="6a7e6ebbda8f1" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7075,359 +7329,6 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 </div>
 </div>
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/proving-application-resilience-on-azure-with-chaos-studio/">Proving application resilience on Azure with Chaos Studio</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Azure IaaS: How to design, build, and optimize cloud infrastructure for long-term cost efficiency</title>
-		<link>https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/</link>
-		
-		<dc:creator><![CDATA[Maria Bledsoe]]></dc:creator>
-		<pubDate>Tue, 30 Jun 2026 16:00:00 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[Management and governance]]></category>
-		<category><![CDATA[Storage]]></category>
-		<category><![CDATA[Azure IaaS]]></category>
-		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=52339</guid>
-
-					<description><![CDATA[<p>As organizations modernize infrastructure, migrate mission-critical workloads, build cloud-native applications, and scale AI—cost efficiency remains a foundational principle of cloud architectures.</p>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/">Azure IaaS: How to design, build, and optimize cloud infrastructure for long-term cost efficiency</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<aside class="table-of-contents-block accordion wp-block-bloginabox-theme-table-of-contents" id="accordion-01c1a6b4-f6ec-433b-bf06-bc18c5af1e6b" data-bi-aN="table-of-contents">
-	<button class="btn btn-collapse" type="button" aria-expanded="true" aria-controls="accordion-collapse-01c1a6b4-f6ec-433b-bf06-bc18c5af1e6b">
-		<span class="table-of-contents-block__label">In this article</span>
-		<span class="table-of-contents-block__current" aria-hidden="true"></span>
-
-		<svg class="table-of-contents-block__arrow" aria-label="Toggle arrow" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M15.7761 11L18 8.82043L9 0L0 8.82043L2.22394 11L9 4.35913L15.7761 11Z" fill="currentColor" />
-		</svg>
-	</button>
-	<div id="accordion-collapse-01c1a6b4-f6ec-433b-bf06-bc18c5af1e6b" class="table-of-contents-block__collapse-wrapper collapse show" data-parent="#accordion-01c1a6b4-f6ec-433b-bf06-bc18c5af1e6b">
-		<div class="table-of-contents-block__content">
-			<ol class="table-of-contents-block__list"><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#compute-matching-resources-to-workload-requirements">Compute: Matching resources to workload requirements</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#storage-balancing-performance-and-lifecycle-management">Storage: Balancing performance and lifecycle management</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#networking-improving-efficiency-without-compromising-resiliency">Networking: Improving efficiency without compromising resiliency</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#continuous-optimization-is-where-long-term-savings-happen">Continuous optimization is where long-term savings happen</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#continue-your-azure-iaas-optimization-journey">Continue your Azure IaaS optimization journey</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#create-a-resilient-infrastructure-with-azure">Create a resilient infrastructure with Azure</a></li></ol>		</div>
-	</div>
-	<span class="table-of-contents-block__progress-bar"></span>
-</aside>
-
-
-
-<p class="wp-block-paragraph"><em>This blog post is the third part of a blog series called <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazure.microsoft.com%2Fen-us%2Fblog%2Ftag%2Fazure-iaas%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C6e1c78a85c2040ce3c1108ded1fb3397%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639179074098601042%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=mnBTkxRVox%2F%2FXUsLjCQqgid0goRkY3S7s7WFEnDINaI%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer">Azure IaaS</a> which will share best practices and guidance to help you build a trusted infrastructure platform—from performance, resiliency, and security to scalability and cost efficiency.</em></p>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity" />
-
-
-
-<p class="wp-block-paragraph">As organizations modernize infrastructure, migrate mission-critical workloads, build cloud-native applications, and scale AI—<a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-principles-that-still-matter/" target="_blank" rel="noopener noreferrer">cost efficiency remains a foundational principle</a> of cloud architectures.</p>
-
-
-
-<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://aka.ms/azureIaaS" target="_blank" rel="noopener noreferrer">Discover the Benefits of Azure IaaS</a></div>
-</div>
-
-
-
-<p class="wp-block-paragraph">Yet cloud costs are rarely driven by a single decision. More often, across Azure Infrastructure-as-a-Service (IaaS) environments, they are the result of many compounded architectural choices across compute, storage, and networking. </p>
-
-
-
-<p class="wp-block-paragraph">Common examples include overprovisioning infrastructure when selecting a larger virtual machine than a workload requires or keeping infrequently accessed data on premium storage, building resilient architectures that introduce unnecessary overhead, or collecting and retaining more operational data than is needed. Individually, these decisions may seem minor, but over time they can significantly impact both cost and operational efficiency. </p>
-
-
-
-<p class="wp-block-paragraph">These challenges become even more important as organizations expand AI initiatives, modernize applications, and support growing performance and resiliency requirements. </p>
-
-
-
-<p class="wp-block-paragraph">
-  The opportunity lies in addressing these inefficiencies before they become entrenched. By making informed infrastructure decisions during planning, deployment, and ongoing operations, organizations can improve resource utilization, reduce total cost of ownership (TCO), and create a more scalable foundation for future growth.
-</p>
-
-
-
-<p class="wp-block-paragraph">In this blog, we&#8217;ll explore some of the most common infrastructure cost challenges organizations face today and examine how Azure IaaS capabilities across compute, storage, and networking can help improve efficiency, reduce TCO, and highlight resources available in the <a href="https://azure.microsoft.com/en-us/solutions/azure-iaas/#resource-center" target="_blank" rel="noopener noreferrer">Azure IaaS Resource Center</a> to help you make more informed decisions.</p>
-
-
-
-<p class="wp-block-paragraph">
-  Many of the most impactful optimization opportunities originate long before a workload enters production. To better understand where these opportunities exist, let&#8217;s examine common efficiency challenges (and solutions) across compute, storage, and networking.
-</p>
-
-
-
-<h2 class="wp-block-heading" id="compute-matching-resources-to-workload-requirements"><a id="post-52339-_Toc598210129"></a>Compute: Matching resources to workload requirements</h2>
-
-
-
-<p class="wp-block-paragraph">
-  Compute inefficiencies are often the easiest to identify because they directly affect both performance and infrastructure spend.
-</p>
-
-
-
-<p class="wp-block-paragraph">
-  The goal is not simply to select the lowest-cost compute option, but rather to align infrastructure resources with workload requirements while preserving flexibility for future growth.
-</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-us/products/virtual-machines">Azure provides a broad portfolio of virtual machine options</a>, enabling organizations to select the architecture, processor type, performance profile, and scale characteristics that best match workload needs; allowing organizations to align infrastructure investments with workload needs rather than paying for unused capacity. 
-</p>
-
-
-
-<p class="wp-block-paragraph">
-  Equally important is taking advantage of <a href="https://azure.microsoft.com/en-us/pricing">Azure&#8217;s flexible pricing options</a>. Depending on workload characteristics, organizations can combine Pay-As-You-Go pricing, <a href="https://azure.microsoft.com/en-us/pricing/offers/savings-plans">Azure savings plans</a>, <a href="https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/save-compute-costs-reservations">Azure Reservations</a>, and <a href="https://azure.microsoft.com/en-us/products/virtual-machines/spot">Azure Spot Virtual Machines</a> to better align costs with actual usage patterns.
-</p>
-
-
-
-<p class="wp-block-paragraph">
-  For highly scalable environments, services such as <a href="https://azure.microsoft.com/en-us/products/virtual-machine-scale-sets">Azure Virtual Machine Scale Sets</a> automatically balance compute demand with available capacity by scaling resources up or down in real time, ensuring the environment is right-sized while optimizing cost efficiency. <a href="https://azure.microsoft.com/en-us/products/compute-fleet">Azure Compute Fleet</a> help organizations intelligently balance capacity, availability, and price-performance across large deployments; reducing the operational complexity associated with managing infrastructure at scale.
-</p>
-
-
-
-<p class="wp-block-paragraph">
-  The result is a compute environment that is not only cost-efficient, but also better aligned to application requirements and business outcomes.
-</p>
-
-
-
-<h2 class="wp-block-heading" id="storage-balancing-performance-and-lifecycle-management"><a id="post-52339-_Toc646919671"></a>Storage: Balancing performance and lifecycle management</h2>
-
-
-
-<p class="wp-block-paragraph">
-  Storage inefficiencies often develop gradually, at times making them difficult to identify until environments reach significant scale. The key is to ensure that performance, capacity, and data access requirements remain aligned.
-</p>
-
-
-
-<h3 class="wp-block-heading" id="choose-the-right-storage-service-for-the-workload">Choose the right storage service for the workload</h3>
-
-
-
-<p class="wp-block-paragraph">Storage performance requirements vary dramatically across workloads. Some applications demand consistent low-latency block storage, while others prioritize storage capacity, durability, or long-term retention. Selecting the appropriate storage service and performance tier is critical to maximizing both efficiency and value.</p>
-
-
-
-<p class="wp-block-paragraph">
-  For example:
-</p>
-
-
-
-<ul class="wp-block-list">
-<li class="wp-block-list-item">Business applications may benefit from <a href="https://azure.microsoft.com/en-gb/products/storage/disks/" target="_blank" rel="noopener noreferrer">Premium SSD v2 offerings</a>.</li>
-
-
-
-<li class="wp-block-list-item">Business-critical transactional databases may require <a href="https://azure.microsoft.com/en-gb/products/storage/disks/" target="_blank" rel="noopener noreferrer">Ultra Disk</a> to meet stringent low-latency performance requirements.</li>
-
-
-
-<li class="wp-block-list-item">Large-scale block storage environments can benefit from consolidated architectures using <a href="https://azure.microsoft.com/en-us/products/storage/elastic-san">Azure Elastic Storage Area Network (SAN)</a>.</li>
-
-
-
-<li class="wp-block-list-item">Linux/Windows file shares, home directories, and shared storage scenarios may benefit from <a href="https://azure.microsoft.com/en-us/products/storage/files">Azure Files</a> or <a href="https://azure.microsoft.com/en-us/products/netapp">Azure NetApp Files</a>.</li>
-
-
-
-<li class="wp-block-list-item">Object storage workloads often benefit from the alignment between <a href="https://azure.microsoft.com/en-us/products/storage/blobs">Azure Blob Storage</a> tiers and data access patterns.</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="automate-data-lifecycle-management">Automate data lifecycle management</h3>
-
-
-
-<p class="wp-block-paragraph">Equally important is ensuring data remains on the appropriate storage tier throughout its lifecycle. In many environments, data access patterns change significantly over time, yet storage configurations remain static. This disconnect often results in organizations paying for performance they no longer need.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-us/products/storage/blobs">Azure Blob Storage</a> provides capabilities that help organizations automatically align storage costs with data access patterns. Automated tiering and lifecycle policies maintain low-latency access for frequently used data while optimizing costs by transitioning infrequently accessed data to lower-cost tiers.
-</p>
-
-
-
-<p class="wp-block-paragraph">The result is a storage strategy that continuously adapts as usage patterns evolve, without requiring ongoing manual intervention.</p>
-
-
-
-<h3 class="wp-block-heading" id="improve-visibility-across-your-storage-estate">Improve visibility across your storage estate</h3>
-
-
-
-<p class="wp-block-paragraph">Optimization starts with understanding where costs are being generated.</p>
-
-
-
-<p class="wp-block-paragraph">
-  Tools such as <a href="https://azure.microsoft.com/en-us/products/storage-discovery">Azure Storage Discovery</a> and <a href="https://azure.microsoft.com/en-us/products/storage-actions">Azure Storage Actions</a> can help organizations gain visibility into their storage environments, uncover optimization opportunities, and automate actions across large-scale deployments.
-</p>
-
-
-
-<p class="wp-block-paragraph">Rather than managing storage account by account, teams can identify patterns and <a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/" target="_blank" rel="noopener noreferrer">implement cost-saving actions</a> consistently across their entire data estate.</p>
-
-
-
-<p class="wp-block-paragraph">Together, these capabilities help organizations move beyond storage provisioning and toward ongoing storage optimization.</p>
-
-
-
-<h2 class="wp-block-heading" id="networking-improving-efficiency-without-compromising-resiliency"><a id="post-52339-_Toc155015881"></a>Networking: Improving efficiency without compromising resiliency</h2>
-
-
-
-<p class="wp-block-paragraph">Networking presents a unique optimization challenge because organizations must balance connectivity, performance, resiliency, and operational visibility.</p>
-
-
-
-<h3 class="wp-block-heading" id="achieve-resiliency-more-efficiently">Achieve resiliency more efficiently</h3>
-
-
-
-<p class="wp-block-paragraph">Historically, improving resiliency often requires duplicating infrastructure components, creating additional cost and management overhead. Today, organizations increasingly seek architectures that deliver resiliency while minimizing complexity and excess infrastructure.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-us/products/category/networking">Azure networking capabilities</a> help organizations evaluate these tradeoffs more effectively. Services such as <a href="https://learn.microsoft.com/en-us/azure/expressroute/metro">ExpressRoute Metro</a>, <a href="https://learn.microsoft.com/en-us/azure/reliability/reliability-nat-gateway">Zone Redundant NAT Gateway</a>, and scalable networking architectures provide opportunities to improve resiliency and scalability while maintaining operational efficiency.
-</p>
-
-
-
-<h3 class="wp-block-heading" id="reduce-operational-and-logging-expenses">Reduce operational and logging expenses</h3>
-
-
-
-<p class="wp-block-paragraph">Operational visibility is another important consideration. Network and firewall logs are essential for troubleshooting, security, and governance, but collecting every possible data point can create significant storage and operational costs over time.</p>
-
-
-
-<p class="wp-block-paragraph">Modern filtering and analytics capabilities help teams focus on the most relevant network data, reducing both storage consumption and investigation complexity.</p>
-
-
-
-<p class="wp-block-paragraph">This gives organizations the information they need while avoiding excessive log growth and long-term retention costs.</p>
-
-
-
-<p class="wp-block-paragraph">By implementing filtering, automation, and intelligent logging strategies, organizations can focus on the data that provides actionable insights while reducing unnecessary information collection and retention.</p>
-
-
-
-<h2 class="wp-block-heading" id="continuous-optimization-is-where-long-term-savings-happen"><a id="post-52339-_Toc1333105540"></a>Continuous optimization is where long-term savings happen</h2>
-
-
-
-<p class="wp-block-paragraph">Infrastructure efficiency is not achieved through a single migration, architecture review, or pricing decision.</p>
-
-
-
-<p class="wp-block-paragraph">As workloads evolve, usage patterns shift, and new platform capabilities become available, opportunities for optimization continuously emerge.</p>
-
-
-
-<p class="wp-block-paragraph">The organizations that realize the greatest value from cloud investments are often those that treat optimization as an ongoing operational discipline. They regularly evaluate infrastructure utilization, revisit architectural assumptions, automate lifecycle management processes, and adopt new capabilities that improve efficiency across their environments.</p>
-
-
-
-<p class="wp-block-paragraph">While individual improvements may appear incremental, the cumulative impact can be substantial. A right-sized virtual machine (VM), a more appropriate storage tier, an automated lifecycle policy, or a more efficient networking architecture may each deliver modest savings independently. Together, they create a more efficient, scalable, and resilient infrastructure foundation.</p>
-
-
-
-<p class="wp-block-paragraph">
-  Azure continues to deliver important capabilities such as <a href="https://azure.microsoft.com/en-us/products/copilot">Azure Copilot</a> to help customers optimize cloud costs by combining real-time insights, AI-driven recommendations, and automated optimization actions, empowering teams to quickly identify waste, right-size resources, and forecast spend with minimal effort.
-</p>
-
-
-
-<h2 class="wp-block-heading" id="continue-your-azure-iaas-optimization-journey"><a id="post-52339-_Toc561313402"></a>Continue your Azure IaaS optimization journey</h2>
-
-
-
-<p class="wp-block-paragraph">Whether you&#8217;re supporting AI workloads, modernizing existing applications, migrating existing workloads, or planning future growth, building efficiency into cloud architectures has never been more important.</p>
-
-
-
-<p class="wp-block-paragraph">The Azure IaaS Resource Center provides guidance, best practices, technical resources, and optimization strategies across compute, storage, and networking to help you design, build, and optimize Azure environments with confidence.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Visit the </strong><a href="https://azure.microsoft.com/en-us/solutions/azure-iaas/#resource-center" target="_blank" rel="noopener noreferrer"><strong>Azure IaaS Resource Center</strong></a> to explore cost optimization guidance, architectural best practices, product resources, and tools that can help you maximize value from your Azure infrastructure investments.</p>
-
-
-
-<p class="wp-block-paragraph">To go deeper, explore the <a href="https://azure.microsoft.com/en-us/solutions/azure-iaas/#resource-center" target="_blank" rel="noopener noreferrer">Azure IaaS Resource Center</a> for tutorials, best practices, and guidance across compute, storage, and networking to help you design and operate resilient infrastructure with greater confidence.</p>
-
-
-
-<div class="is-style-vertical wp-block-bloginabox-theme-promotional">
-	
-<div class="promotional promotional--has-media promotional--media-right">
-	<div class="promotional__wrapper">
-		<div class="promotional__content-wrapper">
-			<div class="promotional__content">
-				
-
-<h2 class="wp-block-heading" id="create-a-resilient-infrastructure-with-azure">Create a resilient infrastructure with Azure</h2>
-
-
-
-<p class="wp-block-paragraph">Visit the Azure IaaS Resource Center to start building a stronger, more efficient infrastructure today.</p>
-
-
-
-<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://aka.ms/azureIaaS" target="_blank" rel="noopener noreferrer">Get started with Azure</a></div>
-</div>
-
-			</div>
-		</div>
-					<div class="promotional__media-wrapper">
-				<div class="promotional__media">
-											<img decoding="async" width="2560" height="1440" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-scaled.jpg" class="attachment-full size-full" alt="" loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-scaled.jpg 2560w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-1024x576.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-768x432.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-1536x864.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-2048x1152.jpg 2048w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-DevTools-Dark-1-809x455.jpg 809w" sizes="auto, (max-width: 2560px) 100vw, 2560px" />									</div>
-			</div>
-			</div>
-</div>
-</div>
-
-
-
-<p class="wp-block-paragraph"><strong>Did you miss these posts in the <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazure.microsoft.com%2Fen-us%2Fblog%2Ftag%2Fazure-iaas%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C6e1c78a85c2040ce3c1108ded1fb3397%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639179074098680415%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=u6neb%2Bgif%2FtzS90yCe6CDAt8PdbAdFb%2BVuZQ5efReYI%3D&amp;reserved=0">Azure IaaS series</a>?</strong>
-</p>
-
-
-
-<ul class="wp-block-list">
-<li class="wp-block-list-item"><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazure.microsoft.com%2Fen-us%2Fblog%2Fazure-iaas-series-explore-new-resources-for-building-a-stronger-more-efficient-infrastructure%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C6e1c78a85c2040ce3c1108ded1fb3397%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639179074098705580%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=cEa4qf16a5y9kslgN2WdcDcMNGS5xejNtCA78rvkLb8%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer">Explore new resources for building a stronger, more efficient infrastructure</a></li>
-
-
-
-<li class="wp-block-list-item"><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazure.microsoft.com%2Fen-us%2Fblog%2Fazure-iaas-keep-critical-applications-running-with-built-in-resiliency-at-scale%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C6e1c78a85c2040ce3c1108ded1fb3397%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639179074098741750%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=pBzo%2F99PcF%2B4ulMr180xYzZj3w0Od%2F2E1MemFzOIDYY%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer">Keep critical applications running with built-in resiliency at scale</a></li>
-
-
-
-<li class="wp-block-list-item"><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazure.microsoft.com%2Fen-us%2Fblog%2Fazure-iaas-defense-in-depth-built-on-secure-by-design-principles%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C6e1c78a85c2040ce3c1108ded1fb3397%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639179074098766836%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=jIP%2FqztvMeyCR9iVdRQeuHgwiRRGTauwRusUp0MyLVY%3D&amp;reserved=0" target="_blank" rel="noreferrer noopener">Defense in depth built on secure-by-design principles</a>&nbsp;</li>
-
-
-
-<li class="wp-block-list-item"><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fazure.microsoft.com%2Fen-us%2Fblog%2Fazure-iaas-deploy-high-performance-workloads-with-a-system-level-approach%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C6e1c78a85c2040ce3c1108ded1fb3397%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639179074098993991%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=5M%2F1xvKA75ocpzKrGg%2Bmhxj9AVIKAPu3XLNfloKTsJI%3D&amp;reserved=0" target="_blank" rel="noreferrer noopener">Deploy high-performance workloads with a system-level approach</a>&nbsp;</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph"></p>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/">Azure IaaS: How to design, build, and optimize cloud infrastructure for long-term cost efficiency</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
 ]]></content:encoded>
 					
 		
