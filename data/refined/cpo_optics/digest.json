@@ -2,11 +2,81 @@
   "axis": "cpo_optics",
   "sector": "CPO/광통신",
   "date": "2026-08-15",
-  "generated_at": "2026-08-15T04:25:11.987892+00:00",
+  "generated_at": "2026-08-15T04:38:28.587351+00:00",
   "item_count": 19,
   "content": {
-    "ko": {},
-    "en": {}
+    "ko": {
+      "executive_summary": "CPO 및 광통신 시장이 AI 데이터센터 수요에 힘입어 가속화되고 있으며, Jabil의 1.6T DR8 LRO 광트랜시버(13W 미만)와 Coherent의 1.6T 트랜시버 량산, NVIDIA CPO 스위치 대량 생산 진입이 주요 모멘텀이다. 동시에 고정밀 FAU 검사 시스템(Focuslight), 이중 클래드 EYDF 광섬유(Coractive), 정밀 TDR 측정 장비(HYPERLABS) 등 주변 부품 및 검증 솔루션이 함께 성숙하고 있다. OIF의 ECOC 2026 39개 멀티벤더 인터옵 데모(224G/448G CEI, CMIS, 에너지 효율 인터페이스 포함)는 업계 표준화 진전을 반영한다.",
+      "key_facts": [
+        "Jabil 1.6T DR8 LRO 광트랜시버: 13W 미만 전력, 200G/차선, TFLN 모듈레이터(HyperLight) + Credo 반-리타이밍 DSP",
+        "Coherent Q4 FY2026: 1.6T 트랜시버 량산 진행, CPO 수익 접근 중",
+        "NVIDIA CPO 스위치: 전면 대량 생산 진입",
+        "Sivers Semiconductors & SemiNex: AI 데이터센터 목표 $3.4M InP 프로그램",
+        "OIF ECOC 2026 데모: 9월 21-23 말라가, 39개 회원사, 224G/448G CEI, CMIS, 공동패키징 포함",
+        "Focuslight: 고정밀 FAU(광섬유 배열 유닛) 피치 오류 측정 시스템 출시",
+        "Coractive: 고출력 광증폭기용 이중 클래드 EYDF(Erbium-Ytterbium Doped Fiber) 출시",
+        "HYPERLABS TDR11100: 30ps 라이즈타임, <0.5ps RMS 지터, mm 스케일 공간해상도"
+      ],
+      "implications": [
+        {
+          "keyword": "AI 데이터센터 전환",
+          "text": "1.6T 트랜시버 및 CPO 스위치의 대량 생산 진입이 고대역폭·저전력 요구사항을 충족하며 'silicon photonics era' 개막"
+        },
+        {
+          "keyword": "전력효율 경쟁",
+          "text": "Jabil 13W 미만 DR8 LRO 설계로 경쟁 기준이 상향되면서 TFLN 모듈레이터 및 고효율 DSP 채택 가속"
+        },
+        {
+          "keyword": "산업 표준화 진전",
+          "text": "OIF의 다중벤더 인터옵 시연(224G/448G CEI, CMIS, 에너지효율 인터페이스)으로 업계 호환성 기반 마련"
+        },
+        {
+          "keyword": "주변 부품 생태계 성숙",
+          "text": "고정밀 검사(FAU 피치 오류), 특수 광섬유(EYDF), 신호무결성 검증(TDR) 등 부품·장비 공급망 완비"
+        },
+        {
+          "keyword": "InP 반도체 투자",
+          "text": "Sivers & SemiNex의 $3.4M AI 데이터센터 InP 프로그램으로 GaAs 대체재 확보 경쟁 심화"
+        }
+      ],
+      "counterpoint": "대량 생산 단계로 진입한 만큼 200G→400G 아키텍처 확장(Jabil 노드)이 설계 검증 및 공급망 안정화 를 완전히 보장하지 못할 수 있으며, 표준 미확정 영역(특히 400G 이상 고속도)에서 벤더별 독점 설계 지속 가능성이 있음."
+    },
+    "en": {
+      "executive_summary": "The CPO and optical communication markets are accelerating on the back of AI datacenter demand, with Jabil's 1.6T DR8 LRO optical transceiver (sub-13W) and Coherent's 1.6T transceiver mass production, and NVIDIA CPO switch entering full-scale production as major catalysts. Concurrently, peripheral components and validation solutions—including high-precision FAU inspection systems (Focuslight), dual-clad EYDF fiber (Coractive), and precision TDR measurement equipment (HYPERLABS)—are maturing together. OIF's ECOC 2026 39-member multi-vendor interop demo (224G/448G CEI, CMIS, energy-efficient interface) reflects industry standardization progress.",
+      "key_facts": [
+        "Jabil 1.6T DR8 LRO optical transceiver: sub-13W power, 200G/lane, TFLN modulator (HyperLight) + Credo semi-retiming DSP",
+        "Coherent Q4 FY2026: 1.6T transceiver mass production underway, CPO revenue approaching",
+        "NVIDIA CPO switch: entering full-scale mass production",
+        "Sivers Semiconductors & SemiNex: $3.4M InP program targeting AI datacenters",
+        "OIF ECOC 2026 demo: September 21-23 Malaga, 39 member companies, 224G/448G CEI, CMIS, co-packaging included",
+        "Focuslight: launched high-precision FAU (fiber array unit) pitch error measurement system",
+        "Coractive: launched dual-clad EYDF (Erbium-Ytterbium Doped Fiber) for high-power optical amplifiers",
+        "HYPERLABS TDR11100: 30ps rise time, <0.5ps RMS jitter, mm-scale spatial resolution"
+      ],
+      "implications": [
+        {
+          "keyword": "AI datacenter transition",
+          "text": "Entry of 1.6T transceiver and CPO switch mass production meets high-bandwidth, low-power requirements, ushering in the 'silicon photonics era'"
+        },
+        {
+          "keyword": "Power efficiency competition",
+          "text": "Jabil's sub-13W DR8 LRO design raises competitive benchmarks, accelerating adoption of TFLN modulators and high-efficiency DSP"
+        },
+        {
+          "keyword": "Industry standardization progress",
+          "text": "OIF's multi-vendor interop demonstrations (224G/448G CEI, CMIS, energy-efficient interface) establish compatibility foundation across the industry"
+        },
+        {
+          "keyword": "Peripheral component ecosystem maturity",
+          "text": "High-precision inspection (FAU pitch error), specialized optical fiber (EYDF), signal integrity validation (TDR) complete the component and equipment supply chain"
+        },
+        {
+          "keyword": "InP semiconductor investment",
+          "text": "Sivers & SemiNex's $3.4M AI datacenter InP program intensifies competition for GaAs alternatives"
+        }
+      ],
+      "counterpoint": "With entry into mass production, the 200G-to-400G architecture scaling (Jabil node) may not fully assure design validation and supply chain stabilization, and proprietary vendor designs may persist in unconfirmed standard areas, particularly at speeds above 400G."
+    }
   },
   "links": [
     {
