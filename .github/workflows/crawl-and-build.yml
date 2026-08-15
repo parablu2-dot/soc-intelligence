@@ -5,6 +5,12 @@ on:
     # 매일 20:00 UTC (KST 05:00 익일) 자동 실행
     - cron: '0 20 * * *'
   workflow_dispatch:  # 수동 트리거 허용
+    inputs:
+      force_cpo_mail:
+        description: "CPO 구독 메일 주말에도 강제 발송 (테스트용, 평소엔 false)"
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   crawl:
@@ -113,6 +119,7 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           CPO_SUBSCRIBER_EMAILS: ${{ secrets.CPO_SUBSCRIBER_EMAILS }}
+          CPO_FORCE_SEND: ${{ inputs.force_cpo_mail }}
         run: python scripts/send_cpo_subscriber_mail.py
 
   deploy:

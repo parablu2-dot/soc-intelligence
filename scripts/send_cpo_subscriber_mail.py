@@ -57,6 +57,12 @@ def _is_kst_weekday() -> bool:
     return now_kst.weekday() < 5  # 0=Mon ... 4=Fri
 
 
+def _force_send() -> bool:
+    """workflow_dispatch 수동 테스트용 — 주말에도 발송 검증할 수 있게 게이트 우회.
+    cron(스케줄 실행)에는 이 env가 안 실리므로 평소 평일 게이팅은 그대로 유지됨."""
+    return os.environ.get("CPO_FORCE_SEND", "").lower() in ("1", "true", "yes")
+
+
 def _links_html(links: list[dict]) -> str:
     if not links:
         return ""
@@ -130,8 +136,9 @@ def run() -> None:
         print("::warning::SMTP_USER/SMTP_PASS/CPO_SUBSCRIBER_EMAILS 미설정 — CPO 메일 발송 스킵")
         return
 
-    if not _is_kst_weekday():
-        print("[send_cpo_subscriber_mail] KST 주말 — 평일 1회 스케줄이라 스킵")
+    if not _is_kst_weekday() and not _force_send():
+        print("[send_cpo_subscriber_mail] KST 주말 — 평일 1회 스케줄이라 스킵 "
+              "(CPO_FORCE_SEND=true로 테스트 발송 가능)")
         return
 
     try:
