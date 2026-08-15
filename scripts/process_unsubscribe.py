@@ -8,7 +8,7 @@ process_unsubscribe.py — CPO 구독 해지 토큰 처리 (2026-08-11 구독시
   자동화 로직 지금 안 만듦" 제약과 정합).
 - 운영자가 메일로 받은 토큰을 이 CLI(또는 동명 workflow_dispatch)에 입력하면 실제로 검증 후
   data/subscribers/subscribers.json의 해당 항목을 active=false로 갱신·커밋한다.
-- subscribers.json은 PII(이메일) 없이 customer_id/axis/schedule/unsubscribe_token/active만 담는다
+- subscribers.json은 PII(이메일) 없이 customer_id/axes/schedule/unsubscribe_token/active만 담는다
   (repo가 public이라 이메일은 GitHub secret CPO_SUBSCRIBER_EMAILS에만 존재 — subscribers.json과
   분리 보관).
 
@@ -48,7 +48,8 @@ def process_token(token: str) -> str:
             sub["active"] = False
             sub["unsubscribed_at"] = datetime.now(timezone.utc).isoformat()
             _save(subscribers)
-            return f"구독 해지 완료: customer_id={sub['customer_id']} axis={sub['axis']}"
+            axes = ",".join(sub.get("axes") or [sub.get("axis", "")])  # axes(신규)/axis(구버전) 모두 대응
+            return f"구독 해지 완료: customer_id={sub['customer_id']} axes={axes}"
     return "일치하는 토큰을 찾지 못했습니다 (이미 처리됐거나 잘못된 토큰일 수 있음)"
 
 
@@ -60,7 +61,8 @@ def cli():
 
     if args.list:
         for sub in _load():
-            print(f"[{sub['customer_id']}] axis={sub['axis']} schedule={sub['schedule']} "
+            axes = ",".join(sub.get("axes") or [sub.get("axis", "")])  # axes(신규)/axis(구버전) 모두 대응
+            print(f"[{sub['customer_id']}] axes={axes} schedule={sub['schedule']} "
                   f"active={sub.get('active', True)}")
         return
 
