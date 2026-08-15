@@ -38,6 +38,14 @@ _SOC_KEYWORDS_LOWER = [
     "半导体", "芯片", "晶圆", "代工", "制程", "先进封装", "封装",
     "台积电", "三星", "英伟达", "英特尔", "高通", "联发科", "海思",
     "存储芯片", "存储器", "人工智能芯片",
+    # CPO/광통신 키워드 — cpo_optics 축(2026-08-11 구독시스템) 전용. 기존 chip/foundry 어휘에는
+    # optics 용어가 없어 이게 없으면 is_soc_relevant()가 CPO 기사 대부분을 걸러냄.
+    "co-packaged optics", "silicon photonics", "optical interconnect",
+    "optical transceiver", "pluggable optics", "linear pluggable optics",
+    "near-packaged optics", "photonic integrated circuit", "coherent optics",
+    "optical engine", "vcsel", "1.6t", "800g transceiver", "wavelength division",
+    " ofc ", "ecoc",
+    "광통신", "광트랜시버", "실리콘포토닉스", "광인터커넥트",
 ]
 
 # 채용 관련 키워드 — infer_category에서 사용 (단일 단어 "engineer" 등 광범위한 용어 제외)

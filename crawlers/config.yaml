@@ -127,6 +127,18 @@ packaging:
     module: crawlers.packaging.googlenews
     class: PackagingGoogleNewsCrawler
 
+# 9번째 독립 축 (2026-08-11 구독시스템 구현 스펙) — 기존 5축과 별개, site/js/app.js·
+# summarize_sectors.py에는 의도적으로 배선하지 않음(단일 고객 전용 구독 메일링만 소비).
+cpo_optics:
+  ecoc:
+    enabled: true
+    module: crawlers.cpo_optics.ecoc
+    class: EcocCrawler
+  googlenews:
+    enabled: true
+    module: crawlers.cpo_optics.googlenews
+    class: CpoOpticsGoogleNewsCrawler
+
 # 공통 정책
 policy:
   # exclude_domains 제거함 — 3계층 distillation의 검증 노드가 출처 신뢰도를 개별 판단
@@ -174,6 +186,7 @@ axis_news_queries:
   custom_soc: 'ASIC OR "custom silicon" OR Trainium OR TPU OR Maia chip design'
   foundry: 'foundry "process node" OR "2nm" OR "3nm" OR "wafer capacity" TSMC OR "Samsung Foundry"'
   packaging: 'CoWoS OR chiplet OR "advanced packaging" OR UCIe semiconductor'
+  cpo_optics: '"co-packaged optics" OR CPO OR "silicon photonics" OR "optical interconnect" OR OFC OR ECOC AI datacenter'
 
 # 중국어(zh) 기술 뉴스 Google News 쿼리 — crawlers/tech/googlenews_zh.py가 읽음.
 # TechSignal은 axis 없음 — 5축 대신 SoC 도메인 전반을 포괄하는 단일 쿼리.

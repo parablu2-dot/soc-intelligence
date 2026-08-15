@@ -15,7 +15,8 @@ CONFIG_PATH = Path(__file__).parent / "config.yaml"
 
 # config.yaml의 크롤러 축만 순회 — dedup/eco_companies/axis_news_queries/hiring_targets/policy 등
 # 비-axis 섹션은 크롤러 스펙이 아니므로 제외(섞어서 순회하면 spec이 dict가 아니라 크래시).
-_CRAWLER_AXES = ["mobile_ap", "hpc_datacenter", "custom_soc", "foundry", "packaging"]
+# cpo_optics: 9번째 독립 축(2026-08-11) — 5축 대시보드/summarize_sectors.py와는 별도 소비처.
+_CRAWLER_AXES = ["mobile_ap", "hpc_datacenter", "custom_soc", "foundry", "packaging", "cpo_optics"]
 
 
 def load_config() -> dict:

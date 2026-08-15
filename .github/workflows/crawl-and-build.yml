@@ -60,6 +60,12 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/summarize_sectors.py
 
+      # ── 3.6 CPO(광통신) 9번째 축 전용 다이제스트 (2026-08-11 구독시스템, 5축 파이프라인과 분리) ─
+      - name: Run CPO axis digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/summarize_cpo_axis.py
+
       # ── 5. canonical → data/refined/ JSON export ──────────────
       - name: Export refined JSON
         run: python scripts/export_refined.py
@@ -97,6 +103,17 @@ jobs:
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           REVIEW_MAIL_TO: ${{ secrets.REVIEW_MAIL_TO }}
         run: python scripts/send_review_mail.py
+
+      # ── 7.5 CPO 구독자 메일링 (2026-08-11 구독시스템) — 평일 1회, 스크립트가 KST 요일 자체 판단 ─
+      # 실 고객 메일 발송 전 워크플로 검증 단계에서는 CPO_SUBSCRIBER_EMAILS secret 미설정 상태라
+      # 자동 스킵됨(send_cpo_subscriber_mail.py 가드) — 테스트/실 고객 전환은 별도 확인 후 진행.
+      - name: Send CPO subscriber email
+        continue-on-error: true
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          CPO_SUBSCRIBER_EMAILS: ${{ secrets.CPO_SUBSCRIBER_EMAILS }}
+        run: python scripts/send_cpo_subscriber_mail.py
 
   deploy:
     needs: crawl
