@@ -1,12 +1,115 @@
 {
   "axis": "cpo_optics",
   "sector": "CPO/광통신",
-  "date": "2026-08-16",
-  "generated_at": "2026-08-15T20:26:30.566535+00:00",
-  "item_count": 0,
+  "date": "2026-08-17",
+  "generated_at": "2026-08-16T20:27:29.223090+00:00",
+  "item_count": 23,
   "content": {
-    "ko": {},
-    "en": {}
+    "ko": {
+      "executive_summary": "Coherent's 1.6T transceivers are ramping volume while NVIDIA's Co-Packaged Optics switches enter full-scale mass production, signaling the market shift toward silicon photonics in AI data centers. Industry standardization efforts (OIF, OCP) and new component innovations—including Jabil's 1.6T DR8 LRO transceiver at 13W and Coractive's specialty fiber portfolio—are supporting the acceleration of CPO deployments across cloud infrastructure.",
+      "key_facts": [
+        "Jabil 1.6T DR8 LRO optical transceiver: <13W, 200G per lane, architected for 400G, uses HyperLight TFLN modulator",
+        "Coherent Q4 FY 2026: 1.6T transceiver ramp underway, CPO revenue approaching",
+        "NVIDIA CPO switches in full-scale mass production; TSMC and Foxconn lead supply chain",
+        "OIF multi-vendor interoperability demo at ECOC 2026 (Sept 21–23, Malaga): 39 members, 448G and 224G CEI",
+        "Sivers Semiconductors and SemiNex $3.4M InP program for AI data centers",
+        "Focuslight pitch error measurement system for high-channel-count Fiber Array Units (FAUs)",
+        "Coractive double-clad Erbium-Ytterbium Doped Fiber (EYDF) for high-power optical amplifiers",
+        "Taara silicon photonics module with optical phased array for wireless optical communication",
+        "Lightmatter CPO Architecture Initiative within OCP"
+      ],
+      "implications": [
+        {
+          "keyword": "Power Efficiency Leadership",
+          "text": "Sub-13W performance at 1.6T (Jabil) establishes power envelope expectations for AI datacenter CPOs; competing designs must demonstrate comparable efficiency to gain traction."
+        },
+        {
+          "keyword": "Volume Transition Risk",
+          "text": "NVIDIA mass production combined with Coherent ramp creates near-term supply chain bottleneck risk; TSMC/Foxconn positioning suggests constraint may ease in H2 2026, but validation required."
+        },
+        {
+          "keyword": "Standardization Acceleration",
+          "text": "OIF/OCP multi-vendor interop at ECOC signals market readiness for plug-and-play CPO ecosystem; 448G/224G CEI adoption could unlock competitive sourcing in 2026–2027."
+        },
+        {
+          "keyword": "Specialty Fiber & Modulator Dependencies",
+          "text": "EYDF and TFLN modulator launches indicate supply-chain consolidation around high-power amplifiers and linear-receive architectures; design flexibility may be constrained to leading-edge component vendors."
+        },
+        {
+          "keyword": "Manufacturing Precision Gap",
+          "text": "Focuslight's FAU pitch-error measurement addresses yield challenges in high-channel-count arrays; adoption signals quality bottleneck in transceiver assembly as volumes scale."
+        }
+      ],
+      "counterpoint": "OIF and OCP standardization remain industry-led initiatives; actual multi-vendor interop deployments in production networks are not yet confirmed, and proprietary CPO variants (e.g., NVIDIA, Coherent) may dominate near-term market share regardless of standard progress."
+    },
+    "en": {
+      "executive_summary": "Coherent's 1.6T transceivers are ramping volume while NVIDIA's Co-Packaged Optics switches enter full-scale mass production, signaling the market shift toward silicon photonics in AI data centers. Industry standardization efforts (OIF, OCP) and new component innovations—including Jabil's 1.6T DR8 LRO transceiver at 13W and Coractive's specialty fiber portfolio—are supporting the acceleration of CPO deployments across cloud infrastructure.",
+      "key_facts": [
+        "Jabil 1.6T DR8 LRO optical transceiver: <13W, 200G per lane, architected for 400G, uses HyperLight TFLN modulator",
+        "Coherent Q4 FY 2026: 1.6T transceiver ramp underway, CPO revenue approaching",
+        "NVIDIA CPO switches in full-scale mass production; TSMC and Foxconn lead supply chain",
+        "OIF multi-vendor interoperability demo at ECOC 2026 (Sept 21–23, Malaga): 39 members, 448G and 224G CEI",
+        "Sivers Semiconductors and SemiNex $3.4M InP program for AI data centers",
+        "Focuslight pitch error measurement system for high-channel-count Fiber Array Units (FAUs)",
+        "Coractive double-clad Erbium-Ytterbium Doped Fiber (EYDF) for high-power optical amplifiers",
+        "Taara silicon photonics module with optical phased array for wireless optical communication",
+        "Lightmatter CPO Architecture Initiative within OCP"
+      ],
+      "implications": [
+        {
+          "keyword": "Power Efficiency Leadership",
+          "text": "Sub-13W performance at 1.6T (Jabil) establishes power envelope expectations for AI datacenter CPOs; competing designs must demonstrate comparable efficiency to gain traction."
+        },
+        {
+          "keyword": "Volume Transition Risk",
+          "text": "NVIDIA mass production combined with Coherent ramp creates near-term supply chain bottleneck risk; TSMC/Foxconn positioning suggests constraint may ease in H2 2026, but validation required."
+        },
+        {
+          "keyword": "Standardization Acceleration",
+          "text": "OIF/OCP multi-vendor interop at ECOC signals market readiness for plug-and-play CPO ecosystem; 448G/224G CEI adoption could unlock competitive sourcing in 2026–2027."
+        },
+        {
+          "keyword": "Specialty Fiber & Modulator Dependencies",
+          "text": "EYDF and TFLN modulator launches indicate supply-chain consolidation around high-power amplifiers and linear-receive architectures; design flexibility may be constrained to leading-edge component vendors."
+        },
+        {
+          "keyword": "Manufacturing Precision Gap",
+          "text": "Focuslight's FAU pitch-error measurement addresses yield challenges in high-channel-count arrays; adoption signals quality bottleneck in transceiver assembly as volumes scale."
+        }
+      ],
+      "counterpoint": "OIF and OCP standardization remain industry-led initiatives; actual multi-vendor interop deployments in production networks are not yet confirmed, and proprietary CPO variants (e.g., NVIDIA, Coherent) may dominate near-term market share regardless of standard progress."
+    }
   },
-  "links": []
+  "links": [
+    {
+      "headline": "3 Under-the-Radar Chip Stocks Wall Street Is Sleeping On in August - 24/7 Wall St.",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNRDl2VWd6Qm1PVW1mdV9xV1BFd004TWI4VEl0Z1EtR3NlNXlUR1VqZjBRN1QzNWkxcE5Gd1k5MHhUWkFDZjdiQTdqenYwaWlKaUJNbWMwMHJEOGdBa3pTYlY0Z1VpOXBNcGRONUQ5NTU1djZZU3VCVWlTRmdCWHVGYzZaRExSdWRzTnhXLWpUZ0VReDlCZDdUMi1LOWNXcTdNMHhTUDdSWUpCaUFqdXBR?oc=5",
+      "source": "Google News",
+      "published_date": "2026-08-15"
+    },
+    {
+      "headline": "Aeva Technologies (AEVA) Is Down 12.5% After Pivot Into AI Data Center Optics And CFO Change - Has The Bull Case Changed? - simplywall.st",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPVnRMVElXbElFNGtoNDdkNTZUVGxUMzYwOExVbVpTQkZpM0VESU9BMWc3TVloSF9tZ01iUUlqb0otNFVTUDlEWTRZX2dSZWQzSlVlNTNGUUFsbTRnNG5teTlMOTdySWJYLXhWbnRSWERSM0lJLXZ2eFpTX0VlTkV5b1c4Rm1DVUtqY2ZSZWowT29yRDhmelEtdi1ZVlB1ZUsxZThTNmFfeGFtdGhVU3ctampqWV9XQURPWWsya2ltMExjTm05Z1l2Q1pma9IB0AFBVV95cUxOc3BOeEowcHp0bHdUMHZ5dERCZGl1X3F5SVlWVXFIZFlsNk1WNGpJNWpseVJVWHowRXJzWEhvOVkwYTdON2tQUW56bVFxODNyWWZnRVBKN3VmUWRnNk9ZUFNUeVJBenVsMzhMVVlzZHdCeTlYbmxyVkk1WFBaZFRaaV9CWjhBWEZUUVVEamdQSE50ZFRULWc4N1p0X3FzNnpxNmtTU3NnUDMyWGhRdWV3UVZyNVpBcER5NnNUOEU4STFtc1dRc2FCUWxZc1VUdjhS?oc=5",
+      "source": "Google News",
+      "published_date": "2026-08-15"
+    },
+    {
+      "headline": "WDM Coupler Modules Market To Double by 2035 on AI Data Center Interconnect Demand - News and Statistics - IndexBox",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOX2NUaWUxWEp1dkZSUXU1TllteGZka3dKM2JnUGNvQlhvR0QxZHhQUDdmUWxqRWNlVWhpRHdJVVhGR21scWdESGhXVXI1QW1MeFA5ZkVibGRlVFFBUk41TWhvQkVaSDkwOWxpYl94b09Ndk9uMmJnQ042ZVRJaDhFTnhSeDk5N3hHNF9EWHhuQlZVQVZLQWQyS29jVFRzXzIyVjRuV2g4X2d6Y2JaOVVQbTZWN3dpank2Y21XZEVFcWRFM29t?oc=5",
+      "source": "Google News",
+      "published_date": "2026-08-15"
+    },
+    {
+      "headline": "Kopin Bets on MicroLEDs for Defense Drones and AI Data Centers - MarketBeat",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNZGtLNFdnbF85S3E5OWVvZUdqZnYzTnUxajd1dDVycWFnbHBjYTNWZElCLTRWYmJ5VUdmUG1velJ1TjQ2OHUwRVFUWUw0c3RiYVd1NFZXSHFGSGpUQktLTXhUcTh3Rmw0VXE3cnVoQ3RRZUVqVndaT0ItNUZpRW04OUxjNEVITVNoLUNvRUVkYXRwYThFLVg5QURmUmc2YmZOMnZqdTd4SGpoMHZSMWJzbFpueGloUEE?oc=5",
+      "source": "Google News",
+      "published_date": "2026-08-15"
+    },
+    {
+      "headline": "Three under-the-radar chipmakers gain from AI d... - Pluang",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOUGdRTVdaaThEbjZITzVzeF9TcU9rYUl4Tlp2bDk2Rm9JMWFzbnJZTDFUYWc2TzhNZkp1VFFtdGxKOEh2dGstaTlvNHhYUUxOdW1iYzc1UnMxRzg3MkFSTTFNeG95VDA2dkFidE1zZlpTV2FnMHhVRmUwR2JpeHo3MUVGQXJEZXpk?oc=5",
+      "source": "Google News",
+      "published_date": "2026-08-15"
+    }
+  ]
 }
