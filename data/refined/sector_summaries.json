@@ -1,184 +1,182 @@
 {
-  "date": "2026-08-16",
-  "generated_at": "2026-08-16T20:27:14.900666+00:00",
+  "date": "2026-08-17",
+  "generated_at": "2026-08-17T20:33:19.548698+00:00",
   "sectors": {
-    "hpc_datacenter": {
-      "sector": "HPC·Datacenter",
-      "date": "2026-08-16",
-      "item_count": 8,
-      "generated_at": "2026-08-16T20:27:14.900256+00:00",
+    "mobile_ap": {
+      "sector": "Mobile AP",
+      "date": "2026-08-17",
+      "item_count": 2,
+      "generated_at": "2026-08-17T20:33:19.547970+00:00",
       "content": {
         "ko": {
-          "executive_summary": "SK Hynix과 Samsung이 HBM4 인재 확보를 위해 경쟁적 채용에 나서고 있으며, SK Hynix는 2,964% 보너스와 학력 제한 폐지 등 파격적 조건으로 설계 인력을 모집 중. Anthropic도 AI 칩 설계팀 신규 구성을 추진하면서 고급 메모리 및 AI 칩 설계 영역의 인재 쟁탈이 심화.",
+          "executive_summary": "Google 및 산업 참여사들이 2,000대 이상의 중고 스마트폰을 데이터센터 인프라로 재활용하는 디지털 업사이클링 추진 중.",
           "key_facts": [
-            "SK Hynix 기록적 2,964% 보너스 지급",
-            "SK Hynix 학력 제한 폐지 첫 신입 채용 진행",
-            "SK Hynix 반나절 심층면접 제도 도입",
-            "Samsung, SK Hynix HBM4 채용 전쟁으로 한국 칩 설계 인재 유출",
-            "Anthropic AI 칩 설계팀 채용 중"
+            "Google: 2,000대 중고 스마트폰으로 데이터센터 구축"
           ],
           "implications": [
             {
-              "keyword": "인재 경합",
-              "text": "HBM4/AI 칩 분야 설계 역량 확보 경쟁 심화로 업계 임금 및 복지 수준 상향 압력"
+              "keyword": "전자폐기물 감소",
+              "text": "스마트폰 재활용이 전자폐기물 문제 완화 및 순환경제 진전 가능"
             },
             {
-              "keyword": "채용 전략 변화",
-              "text": "SK Hynix의 학력 제한 폐지 및 집중 심층면접은 실무 역량 중심 선발로의 전환 신호"
-            },
-            {
-              "keyword": "글로벌 인재 수급",
-              "text": "Anthropic 등 미국 AI 칩 스타트업의 설계팀 구성으로 미국-한국 간 인재 유동성 증가"
+              "keyword": "엣지 컴퓨팅 확대",
+              "text": "기존 스마트폰 SoC의 병렬 처리 능력이 분산 컴퓨팅 및 로컬 AI 추론 용도로 활용 확대"
             }
           ],
-          "counterpoint": "채용 공고 증가가 실제 대규모 양산 능력 확대로 이어지기까지는 설계 완성과 양산 공정 확보에 시간 필요."
+          "counterpoint": "중고 기기의 신뢰성과 장기 가동성에 대한 검증 필요."
         },
         "en": {
-          "executive_summary": "SK Hynix and Samsung are engaged in competitive recruitment to secure HBM4 talent, with SK Hynix recruiting design personnel under unprecedented conditions including a 2,964% bonus and elimination of educational requirements. Anthropic is also forming a new AI chip design team, intensifying talent competition in advanced memory and AI chip design sectors.",
+          "executive_summary": "Google and industry participants are advancing digital upcycling by repurposing over 2,000 used smartphones as datacenter infrastructure.",
           "key_facts": [
-            "SK Hynix record-breaking 2,964% bonus payment",
-            "SK Hynix educational requirements waived for first-time hiring",
-            "SK Hynix half-day intensive interview process implemented",
-            "Samsung, SK Hynix HBM4 recruitment war causes Korean chip design talent outflow",
-            "Anthropic recruiting AI chip design team"
+            "Google: Establishing datacenters with 2,000 used smartphones"
           ],
           "implications": [
             {
-              "keyword": "Talent competition",
-              "text": "Intensifying competition for design capabilities in HBM4/AI chip sectors creates upward pressure on industry wages and benefits"
+              "keyword": "Reduction of electronic waste",
+              "text": "Smartphone recycling can mitigate electronic waste issues and advance the circular economy"
             },
             {
-              "keyword": "Recruitment strategy shift",
-              "text": "SK Hynix's elimination of educational requirements and intensive interview focus signals transition to practical competency-based selection"
-            },
-            {
-              "keyword": "Global talent supply",
-              "text": "US AI chip startups like Anthropic building design teams increases talent mobility between US and Korea"
+              "keyword": "Expansion of edge computing",
+              "text": "Parallel processing capabilities of existing smartphone SoCs are increasingly utilized for distributed computing and local AI inference"
             }
           ],
-          "counterpoint": "Time is needed for design completion and securing mass production processes before increased job postings translate into actual large-scale production capacity expansion."
+          "counterpoint": "Validation of reliability and long-term operational durability of used devices is necessary."
+        }
+      }
+    },
+    "hpc_datacenter": {
+      "sector": "HPC·Datacenter",
+      "date": "2026-08-17",
+      "item_count": 9,
+      "generated_at": "2026-08-17T20:33:19.547970+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "TSMC, SK하이닉스, Micron 등 주요 업체들이 AI 인재 확보와 설계 센터 확대에 전력 투입 중. TSMC는 뮌헨에 유럽 첫 설계센터 개설 예정(2025년 3분기).",
+          "key_facts": [
+            "TSMC: 뮌헨 설계센터 2025년 3분기 개설 계획",
+            "SK하이닉스: 신규 채용 전면 개편, 반나절 심층면접 도입",
+            "Micron: 2,000명 엔지니어 적극 채용",
+            "TSMC Arizona: 1H26 영업이익 663% YoY 증가"
+          ],
+          "implications": [
+            {
+              "keyword": "지역화 전략",
+              "text": "TSMC의 유럽 설계센터 개설은 자동차 및 AI 칩 설계 현지화 가속, 공급망 다각화"
+            },
+            {
+              "keyword": "인재 경쟁 심화",
+              "text": "삼성·SK하이닉스·Micron의 적극적 인재 확보 경쟁으로 AI 메모리/HBM 개발 경쟁 고조"
+            },
+            {
+              "keyword": "미국 제조 수익성",
+              "text": "TSMC Arizona의 높은 이익 증가율이 미국 정부 지원 및 현지 생산 확대의 타당성 입증"
+            }
+          ],
+          "counterpoint": "미국 지역 감가상각 부담이 중장기 수익성 개선을 제약할 수 있음."
+        },
+        "en": {
+          "executive_summary": "Major players including TSMC, SK Hynix, and Micron are focusing intensively on securing AI talent and expanding design centers. TSMC plans to open its first European design center in Munich in Q3 2025.",
+          "key_facts": [
+            "TSMC: Munich design center opening planned for Q3 2025",
+            "SK Hynix: Complete overhaul of new hiring, introduction of half-day in-depth interviews",
+            "Micron: Actively recruiting 2,000 engineers",
+            "TSMC Arizona: Operating profit increased 663% YoY in 1H26"
+          ],
+          "implications": [
+            {
+              "keyword": "Localization strategy",
+              "text": "TSMC's opening of European design center accelerates localization of automotive and AI chip design, diversifying the supply chain"
+            },
+            {
+              "keyword": "Intensifying talent competition",
+              "text": "Aggressive talent acquisition by Samsung, SK Hynix, and Micron heightens competition in AI memory and HBM development"
+            },
+            {
+              "keyword": "US manufacturing profitability",
+              "text": "TSMC Arizona's high profit growth rate validates US government support and expansion of local production"
+            }
+          ],
+          "counterpoint": "Depreciation burden in the US region may constrain medium to long-term profitability improvements."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-16",
-      "item_count": 7,
-      "generated_at": "2026-08-16T20:27:14.900256+00:00",
+      "date": "2026-08-17",
+      "item_count": 16,
+      "generated_at": "2026-08-17T20:33:19.547970+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Google이 AMD와 협력하여 강화학습용 온패키지 CPU 코어를 통합한 하이브리드 AI ASIC 차세대 TPU 개발을 추진 중. Microsoft의 Maia 300, Meta의 커스텀 실리콘, Broadcom의 고성능 AI 칩 수요 증가 등으로 Nvidia 독점 체제에 대한 도전이 가속화.",
+          "executive_summary": "Broadcom, Marvell 등 AI 커스텀 칩 업체들이 강한 수익 성장을 보이는 가운데, Microsoft Maia 300 공개(9월 예정), Google TPU v10 설계 확대 등 클라우드 업체 자체 칩 개발 가속. 액체냉각 채택률이 내년 60% 근처 도달 전망.",
           "key_facts": [
-            "Google AMD와 차세대 TPU 설계 협력 추진 중",
-            "Microsoft Maia 300 칩으로 Nvidia 지배력에 도전",
-            "Meta 커스텀 실리콘으로 Nvidia AI 우위에 대항",
-            "Broadcom 강한 AI 칩 커스텀 수요",
-            "Nvidia 2026년 8월 실적 발표 예정"
+            "Broadcom, Marvell: AI 커스텀 칩 매출 강한 성장",
+            "Microsoft: Maia 300 칩 9월 공개 예정",
+            "Google: AMD와 협력해 TPU v10 CPU 비중 증대 설계",
+            "Global Unichip Corp: 7월 매출 158% YoY 증가",
+            "액체냉각: 2026년 AI 칩 채택률 60% 근처 예상",
+            "SkyeChip: 1Q 순이익 RM13.9-14백만",
+            "China: 국내 리소그래피 장비 양산 진입으로 자급률 상향"
           ],
           "implications": [
             {
-              "keyword": "커스텀 AI ASIC 확산",
-              "text": "Google, Microsoft, Meta 등 주요 클라우드/AI 기업의 자체 칩 개발로 설계 아웃소싱 기회 증가"
+              "keyword": "하이퍼스케일러 자립화",
+              "text": "Microsoft, Google 등의 자체 칩 개발 확대로 NVIDIA 의존도 감소 및 칩 설계 표준화 가속"
             },
             {
-              "keyword": "설계 파트너십",
-              "text": "Google-AMD 협력은 팹리스-파운드리 간 AI 칩 설계 통합 모델의 표준화 가능성"
+              "keyword": "열관리 핵심화",
+              "text": "고밀도 AI 칩의 발열 관리가 시스템 성능의 결정 요소로 부상, 액체냉각 기술 채택 필수화"
             },
             {
-              "keyword": "Nvidia 지위 변화",
-              "text": "커스텀 ASIC 보급으로 범용 GPU 시장 점유율은 감소하나 고도화된 AI 가속 수요는 지속"
+              "keyword": "중국 반도체 자급",
+              "text": "국내 리소그래피 장비의 양산 진입이 중국의 반도체 독립성 강화, 글로벌 공급망 재편 신호"
             }
           ],
-          "counterpoint": "Google TPU와 Microsoft Maia 300은 주로 자사 데이터센터 최적화용으로, 범용 시장에서 Nvidia의 소프트웨어 에코시스템 우위는 단기간 지속될 가능성."
+          "counterpoint": "클라우드 업체의 자체 칩 개발은 초기 개발 비용과 검증 기간이 길어 수익성 증명까지 시간 소요."
         },
         "en": {
-          "executive_summary": "Google is advancing next-generation TPU development in collaboration with AMD, integrating on-package CPU cores for reinforcement learning in a hybrid AI ASIC. Challenges to Nvidia's monopoly are accelerating through Microsoft's Maia 300, Meta's custom silicon, and growing high-performance AI chip demand from Broadcom.",
+          "executive_summary": "While AI custom chip makers like Broadcom and Marvell show strong revenue growth, cloud providers are accelerating in-house chip development with Microsoft's Maia 300 launch (expected September) and Google's expanded TPU v10 design. Liquid cooling adoption rate is projected to reach around 60% next year.",
           "key_facts": [
-            "Google advancing next-generation TPU design collaboration with AMD",
-            "Microsoft Maia 300 chip challenging Nvidia's dominance",
-            "Meta custom silicon countering Nvidia's AI advantage",
-            "Broadcom strong AI chip customization demand",
-            "Nvidia earnings report scheduled for August 2026"
+            "Broadcom, Marvell: Strong revenue growth in AI custom chips",
+            "Microsoft: Maia 300 chip launch planned for September",
+            "Google: Expanded TPU v10 CPU ratio design in collaboration with AMD",
+            "Global Unichip Corp: July revenue increased 158% YoY",
+            "Liquid cooling: AI chip adoption rate expected near 60% in 2026",
+            "SkyeChip: 1Q net profit RM13.9-14 million",
+            "China: Moving toward mass production of domestic lithography equipment, improving self-sufficiency"
           ],
           "implications": [
             {
-              "keyword": "Custom AI ASIC proliferation",
-              "text": "Major cloud/AI companies including Google, Microsoft, and Meta developing proprietary chips increases design outsourcing opportunities"
+              "keyword": "Hyperscaler independence",
+              "text": "Expanded in-house chip development by Microsoft and Google reduces NVIDIA dependence and accelerates chip design standardization"
             },
             {
-              "keyword": "Design partnerships",
-              "text": "Google-AMD collaboration signals potential standardization of integrated design model between fabless and foundry companies for AI chips"
+              "keyword": "Thermal management becoming critical",
+              "text": "Heat management of high-density AI chips emerges as a determining factor in system performance, making liquid cooling technology adoption essential"
             },
             {
-              "keyword": "Nvidia's changing position",
-              "text": "Custom ASIC adoption may reduce general-purpose GPU market share but sustained demand for advanced AI acceleration remains"
+              "keyword": "Chinese semiconductor self-sufficiency",
+              "text": "Mass production entry of domestic lithography equipment strengthens China's semiconductor independence, signaling global supply chain restructuring"
             }
           ],
-          "counterpoint": "Google TPU and Microsoft Maia 300 are primarily optimized for their own datacenters, and Nvidia's software ecosystem advantage in the general-purpose market is likely to persist in the near term."
+          "counterpoint": "In-house chip development by cloud providers requires long initial development costs and validation periods, taking time to prove profitability."
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-16",
-      "item_count": 3,
-      "generated_at": "2026-08-16T20:27:14.900256+00:00",
+      "date": "2026-08-17",
+      "item_count": 16,
+      "generated_at": "2026-08-17T20:33:19.547970+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "KAIST가 반도체 잡음을 신호 처리에 활용하는 뉴로모픽 뉴런 칩 기술 개발을 발표하여 저전력 두뇌모사 반도체의 새로운 가능성 제시. 반도체 소재·부품·장비(소부장) 기업들의 내년 이익 증가율이 Samsung, SK Hynix를 상회할 것으로 전망.",
-          "key_facts": [
-            "KAIST 김경민 교수팀 뉴로모픽 뉴런 반도체 기술 개발",
-            "반도체 잡음을 정보 처리 자원으로 활용하는 신개념 기술",
-            "소재·부품·장비(소부장) 기업의 내년 이익 증가율 반도체 대형주 초과 예상",
-            "TSMC AI 반도체 성장의 핵심 플레이어 지위"
-          ],
-          "implications": [
-            {
-              "keyword": "뉴로모픽 반도체",
-              "text": "저전력 뇌 모방 칩 기술 개발로 모바일·IoT·엣지 AI 응용 시장 확대 가능성"
-            },
-            {
-              "keyword": "소부장 업황 개선",
-              "text": "Samsung·SK Hynix의 이익 성장률 둔화 반면 공급망 기업의 높은 성장률 기대로 투자처 재평가"
-            },
-            {
-              "keyword": "TSMC 역할",
-              "text": "AI 반도체 수요 증가로 파운드리의 고급 공정 기술과 용량 확보 전략의 전략적 중요성 상승"
-            }
-          ],
-          "counterpoint": "뉴로모픽 기술의 상용화 시간과 TSMC의 가동률 변동에 따라 소부장 성장 시나리오의 현실성 검증 필요."
-        },
-        "en": {
-          "executive_summary": "KAIST announced development of neuromorphic neuron chip technology utilizing semiconductor noise for signal processing, presenting new possibilities for low-power brain-inspired semiconductors. Materials, components, and equipment (MCE) companies are projected to achieve profit growth rates exceeding Samsung and SK Hynix next year.",
-          "key_facts": [
-            "KAIST Professor Kim Kyungmin's team develops neuromorphic neuron semiconductor technology",
-            "Novel technology leveraging semiconductor noise as information processing resource",
-            "MCE company profit growth rates next year expected to exceed semiconductor majors",
-            "TSMC key player in AI semiconductor growth"
-          ],
-          "implications": [
-            {
-              "keyword": "Neuromorphic semiconductors",
-              "text": "Low-power brain-mimicking chip technology development expands potential applications in mobile, IoT, and edge AI markets"
-            },
-            {
-              "keyword": "MCE sector improvement",
-              "text": "While Samsung and SK Hynix profit growth slows, supply chain companies' strong growth rates warrant investment re-evaluation"
-            },
-            {
-              "keyword": "TSMC's role",
-              "text": "Increasing AI semiconductor demand raises strategic importance of foundry's advanced process technology and capacity acquisition strategies"
-            }
-          ],
-          "counterpoint": "Validation of MCE growth scenarios requires verification contingent on neuromorphic technology commercialization timelines and TSMC capacity utilization fluctuations."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-16",
-      "item_count": 10,
-      "generated_at": "2026-08-16T20:27:14.900256+00:00",
+      "date": "2026-08-17",
+      "item_count": 17,
+      "generated_at": "2026-08-17T20:33:19.547970+00:00",
       "content": {
         "ko": {},
         "en": {}

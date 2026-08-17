@@ -6,7 +6,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/machine-learning/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/machine-learning/</link>
 	<description>Official Machine Learning Blog of Amazon Web Services</description>
-	<lastBuildDate>Fri, 14 Aug 2026 20:37:35 +0000</lastBuildDate>
+	<lastBuildDate>Mon, 17 Aug 2026 18:06:33 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -14,6 +14,449 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>NVIDIA Nemotron 3.5 Lightning now available in Amazon SageMaker JumpStart</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-lightning-now-available-in-amazon-sagemaker-jumpstart/</link>
+		
+		<dc:creator><![CDATA[Venu Kanamatareddy]]></dc:creator>
+		<pubDate>Mon, 17 Aug 2026 18:06:33 +0000</pubDate>
+				<category><![CDATA[Advanced (300)]]></category>
+		<category><![CDATA[Amazon SageMaker AI]]></category>
+		<category><![CDATA[Amazon SageMaker JumpStart]]></category>
+		<category><![CDATA[Announcements]]></category>
+		<guid isPermaLink="false">260b6c2a8563247ec9062f215bd15158f9de68e8</guid>
+
+					<description>NVIDIA Nemotron 3.5 Lightning, an open model built for high-volume agentic workloads, is now available in Amazon SageMaker JumpStart. This post shows how to deploy the 30B Mixture-of-Experts model (3B active), which delivers up to 4x higher throughput and up to 30% faster task completion for always-on agents.</description>
+										<content:encoded>&lt;p&gt;NVIDIA Nemotron 3.5 Lightning is designed for the fast, specialized model execution required by high-volume agentic workloads. With NVIDIA Nemotron 3.5 Lightning on Amazon SageMaker JumpStart, you can access an open model designed for high-volume agentic workloads.&lt;/p&gt; 
+&lt;p&gt;With this launch, you can deploy Nemotron 3.5 Lightning from &lt;a href="https://aws.amazon.com/sagemaker/ai/jumpstart/" target="_blank" rel="noopener"&gt;Amazon SageMaker JumpStart&lt;/a&gt; without configuring the serving infrastructure yourself. NVIDIA describes Lightning as the fastest open model in its class for powering always-on agents. It delivers up to 4x higher throughput and up to 30% faster task completion on high-volume agentic workloads. At 30B total parameters with only 3B active, it can run on a single supported GPU. Repetitive, specialized steps in agent workflows can therefore run without frontier-scale infrastructure. In this post, we show you how to deploy Nemotron 3.5 Lightning from SageMaker JumpStart.&lt;/p&gt; 
+&lt;h2 id="overview-of-nvidia-nemotron-3.5-lightning"&gt;Overview of NVIDIA Nemotron 3.5 Lightning&lt;/h2&gt; 
+&lt;p&gt;Nemotron 3.5 Lightning is a publicly available foundation model distilled from NVIDIA’s frontier Nemotron 3 Ultra and developed with the Nemotron Coalition. It uses a hybrid Mixture-of-Experts (MoE) architecture and is trained specifically for agentic tool use across popular agent harnesses. It is trained on open datasets and released as an open model, so you can customize it, own the resulting weights, and deploy it wherever your agents run.&lt;/p&gt; 
+&lt;p&gt;The following table summarizes the key specifications and performance characteristics of NVIDIA Nemotron 3.5 Lightning.&lt;/p&gt; 
+&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Specification&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Details&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Architecture&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Hybrid Mixture-of-Experts (MoE)&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;30B total / 3B active&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Context length&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Up to 1M tokens&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Input / Output&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Text in, text out&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Speculative decoding&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;DFlash&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Throughput&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Up to 4x higher for high-volume agentic workloads&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Task completion&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Up to 30% faster&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Distilled from&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;NVIDIA Nemotron 3 Ultra&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;h2 id="not-every-agent-step-needs-a-frontier-model"&gt;Not every agent step needs a frontier model&lt;/h2&gt; 
+&lt;p&gt;Always-on agents work continuously: they gather context, observe their environment, reason over what they know, and act. Many of these steps can involve model calls, but they do not all require the same level of capability. Planning a multi-stage workflow or orchestrating sub-agents can demand frontier-level reasoning. Classifying an alert, extracting fields from a form, or checking a record against a policy can often be handled by a smaller, specialized model. These tasks can account for a large share of call volume.&lt;/p&gt; 
+&lt;p&gt;In many cases, running all model-backed steps through a single large model can add frontier-model cost and latency to work that a smaller, specialized model can handle. A system-of-models approach can instead route each step to a model suited to the task.&lt;/p&gt; 
+&lt;p&gt;Nemotron 3.5 Lightning is built for the high-volume end of that system. Its MoE architecture activates 3B of 30B parameters per forward pass, helping maintain high throughput across long, multi-turn sessions. DFlash speculative decoding can further reduce per-token latency. The 1M-token context window allows an agent to carry accumulated state across a long-running session without repeated re-grounding.&lt;/p&gt; 
+&lt;p&gt;If &lt;a href="https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/" target="_blank" rel="noopener"&gt;NVIDIA NeMo Switchyard&lt;/a&gt; is part of your stack, it can route individual workflow steps across your chosen model pool. Lightning can be selected for high-volume specialized steps where its speed and domain-specific accuracy are a good fit.&lt;/p&gt; 
+&lt;h2 id="accuracy-across-reasoning-and-agentic-benchmarks"&gt;Accuracy across reasoning and agentic benchmarks&lt;/h2&gt; 
+&lt;p&gt;Across the published evaluations, NVFP4 remains close to BF16 on many tasks, as summarized in the following table. NVIDIA reports that the evaluation recipes and commands used to produce these results are published in &lt;a href="https://docs.nvidia.com/nemo/gym/about/" target="_blank" rel="noopener"&gt;NeMo Gym&lt;/a&gt;. Accuracy results were measured by NVIDIA under a consistent harness and may differ from vendors’ self-reported numbers.&lt;/p&gt; 
+&lt;p&gt;The following table compares the BF16 and NVFP4 variants of Nemotron 3.5 Lightning across key reasoning and agentic benchmarks.&lt;/p&gt; 
+&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Benchmark&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;BF16&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;NVFP4&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;MMLU Pro&lt;/td&gt; 
+   &lt;td&gt;81.94&lt;/td&gt; 
+   &lt;td&gt;81.62&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;GPQA Diamond&lt;/td&gt; 
+   &lt;td&gt;75.44&lt;/td&gt; 
+   &lt;td&gt;75.57&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;SWE-bench Verified&lt;/td&gt; 
+   &lt;td&gt;51.56&lt;/td&gt; 
+   &lt;td&gt;52.80&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;PinchBench&lt;/td&gt; 
+   &lt;td&gt;85.37&lt;/td&gt; 
+   &lt;td&gt;83.43&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;IFBench&lt;/td&gt; 
+   &lt;td&gt;71.88&lt;/td&gt; 
+   &lt;td&gt;72.88&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;AA-LCR&lt;/td&gt; 
+   &lt;td&gt;52.00&lt;/td&gt; 
+   &lt;td&gt;49.19&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;h2 id="customizing-for-domain-accuracy"&gt;Customizing for domain accuracy&lt;/h2&gt; 
+&lt;p&gt;Organizations can post-train the model with NVIDIA NeMo for domain-specific tools, workflows, and policies, then deploy the resulting model in their chosen environment. The SageMaker JumpStart model card for this launch does not expose JumpStart customization.&lt;/p&gt; 
+&lt;h2 id="enterprise-use-cases"&gt;Enterprise use cases&lt;/h2&gt; 
+&lt;p&gt;Lightning is built for the specialized, high-frequency work inside agent workflows:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;strong&gt;Personal agents&lt;/strong&gt;: Long-running assistants handling email, calendar, projects, and bookings, with the option to run locally for contextual data.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Financial services&lt;/strong&gt;: Extracting data from documents, checking policy rules, monitoring risk signals, and preparing structured summaries.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Cyber security operations&lt;/strong&gt;: Enriching alerts, classifying incidents, querying logs, validating controls, correlating indicators, and preparing findings for analysts.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Telecom&lt;/strong&gt;: Triaging network alarms, optimizing network configurations, and answering billing questions.&lt;/li&gt; 
+ &lt;li&gt;&lt;strong&gt;Retail&lt;/strong&gt;: Enriching product catalogs, resolving inventory and fulfillment exceptions, assisting product discovery, and handling order, return, and loyalty questions.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2 id="getting-started-with-sagemaker-jumpstart"&gt;Getting started with SageMaker JumpStart&lt;/h2&gt; 
+&lt;p&gt;You can deploy Nemotron 3.5 Lightning through Amazon SageMaker JumpStart without manually configuring the serving framework.&lt;/p&gt; 
+&lt;h3 id="prerequisites"&gt;Prerequisites&lt;/h3&gt; 
+&lt;p&gt;Before you begin, make sure you have:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;An AWS account.&lt;/li&gt; 
+ &lt;li&gt;Appropriately scoped permissions for SageMaker JumpStart.&lt;/li&gt; 
+ &lt;li&gt;Sufficient service quota for GPU instances (for example, &lt;code&gt;ml.g6e.12xlarge&lt;/code&gt;, &lt;code&gt;ml.p4d.24xlarge&lt;/code&gt;, or &lt;code&gt;ml.p5.48xlarge&lt;/code&gt;).&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; Deploying this model creates a SageMaker AI endpoint that incurs charges while running. For details, see &lt;a href="https://aws.amazon.com/sagemaker/ai/" target="_blank" rel="noopener"&gt;Amazon SageMaker AI pricing&lt;/a&gt;. Delete your endpoint when finished to avoid ongoing charges.&lt;/p&gt; 
+&lt;h3 id="deploy-using-sagemaker-studio"&gt;Deploy using SageMaker Studio&lt;/h3&gt; 
+&lt;ol type="1"&gt; 
+ &lt;li&gt;Open Amazon SageMaker Studio.&lt;/li&gt; 
+ &lt;li&gt;In the navigation pane, choose &lt;strong&gt;SageMaker JumpStart&lt;/strong&gt;.&lt;/li&gt; 
+ &lt;li&gt;Search for Nemotron 3.5 Lightning. &lt;p&gt;&lt;/p&gt;
+  &lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+   &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/14/ML-21710-1.png" alt="SageMaker JumpStart search results listing the Nemotron 3.5 Lightning model" width="800" height="518"&gt;
+   &lt;p class="wp-caption-text"&gt;Figure 1: Searching for Nemotron 3.5 Lightning in SageMaker JumpStart&lt;/p&gt;
+  &lt;/div&gt;&lt;/li&gt; 
+ &lt;li&gt;Select the model card. The NVFP4 model ID is &lt;code&gt;huggingface-reasoning-nemotron-3-5-lightning-30b-a3b-nvfp4&lt;/code&gt;. For BF16, use &lt;code&gt;huggingface-reasoning-nemotron-3-5-lightning-30b-a3b-bf16&lt;/code&gt;. 
+  &lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+   &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/14/ML-21710-2.png" alt="Nemotron 3.5 Lightning model card in SageMaker JumpStart showing the NVFP4 model ID" width="800" height="804"&gt;
+   &lt;p class="wp-caption-text"&gt;Figure 2: The Nemotron 3.5 Lightning model card in SageMaker JumpStart&lt;/p&gt;
+  &lt;/div&gt; &lt;p&gt;&lt;/p&gt;
+  &lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+   &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/14/ML-21710-3.png" alt="Additional Nemotron 3.5 Lightning model card details in SageMaker JumpStart" width="800" height="795"&gt;
+   &lt;p class="wp-caption-text"&gt;Figure 3: Model card details for Nemotron 3.5 Lightning&lt;/p&gt;
+  &lt;/div&gt;&lt;/li&gt; 
+ &lt;li&gt;Choose &lt;strong&gt;Deploy&lt;/strong&gt;.&lt;/li&gt; 
+ &lt;li&gt;Select your instance type (for example, &lt;code&gt;ml.g6e.24xlarge&lt;/code&gt;). &lt;p&gt;&lt;/p&gt;
+  &lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+   &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/14/ML-21710-4.png" alt="SageMaker JumpStart deployment settings with an instance type selected" width="800" height="581"&gt;
+   &lt;p class="wp-caption-text"&gt;Figure 4: Selecting an instance type for deployment&lt;/p&gt;
+  &lt;/div&gt;&lt;/li&gt; 
+ &lt;li&gt;Review the deployment settings. The defaults are sufficient for most use cases.&lt;/li&gt; 
+ &lt;li&gt;Choose &lt;strong&gt;Deploy&lt;/strong&gt; to create the endpoint.&lt;/li&gt; 
+ &lt;li&gt;Wait for the endpoint status to show InService before running inference. &lt;p&gt;&lt;/p&gt;
+  &lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+   &lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/14/ML-21710-5.png" alt="SageMaker endpoint status page showing the endpoint InService" width="800" height="563"&gt;
+   &lt;p class="wp-caption-text"&gt;Figure 5: Endpoint status showing InService&lt;/p&gt;
+  &lt;/div&gt;&lt;/li&gt; 
+&lt;/ol&gt; 
+&lt;h3 id="deploy-from-hugging-face"&gt;Deploy from Hugging Face&lt;/h3&gt; 
+&lt;p&gt;You can also deploy NVIDIA Nemotron 3.5 Lightning to Amazon SageMaker AI from its Hugging Face model page. On the Hugging Face model page, choose &lt;strong&gt;Deploy&lt;/strong&gt;, select &lt;strong&gt;Amazon SageMaker AI&lt;/strong&gt;, and then choose &lt;strong&gt;Deploy on SageMaker AI&lt;/strong&gt;. This opens the SageMaker AI deployment workflow, where you can configure and deploy the model.&lt;/p&gt; 
+&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
+ &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/14/ML-21710-6.png" alt="Hugging Face model page with the Amazon SageMaker AI deployment option selected" width="800"&gt;
+ &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 6: Deploying from the Hugging Face model page&lt;/p&gt;
+&lt;/div&gt; 
+&lt;h3 id="deploy-using-the-sagemaker-python-sdk"&gt;Deploy using the SageMaker Python SDK&lt;/h3&gt; 
+&lt;p&gt;With SageMaker JumpStart, you can access the NVFP4 and BF16 variants. The following example uses the NVFP4 model ID &lt;code&gt;huggingface-reasoning-nemotron-3-5-lightning-30b-a3b-nvfp4&lt;/code&gt;. For BF16, use &lt;code&gt;huggingface-reasoning-nemotron-3-5-lightning-30b-a3b-bf16&lt;/code&gt;.&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;from sagemaker.jumpstart.model import JumpStartModel
+
+model_id = "huggingface-reasoning-nemotron-3-5-lightning-30b-a3b-nvfp4"
+model_version = "*"
+
+model = JumpStartModel(model_id=model_id, model_version=model_version)
+predictor = model.deploy()&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h2 id="clean-up"&gt;Clean up&lt;/h2&gt; 
+&lt;p&gt;To avoid unnecessary charges, delete the SageMaker AI endpoint when you are done:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;pre&gt;&lt;code class="language-python"&gt;predictor.delete_endpoint()&lt;/code&gt;&lt;/pre&gt; 
+&lt;/div&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;NVIDIA Nemotron 3.5 Lightning brings fast, specialized agent execution to Amazon SageMaker JumpStart. NVIDIA reports up to 4x higher throughput and up to 30% faster task completion for high-volume specialized work. Its hybrid MoE architecture, 3B active parameters, DFlash speculative decoding, and 1M-token context are designed for high-volume agent workflows. Because the model is open and designed for customization, you can post-train it for your own tools and policies and retain control of the resulting model.&lt;/p&gt; 
+&lt;p&gt;Nemotron 3.5 Lightning can support specialized agent workloads across personal assistants, financial services, security operations, telecom, and retail. You can deploy it today from SageMaker JumpStart.&lt;/p&gt; 
+&lt;p&gt;Get started by searching for Nemotron 3.5 Lightning in &lt;a href="https://aws.amazon.com/sagemaker/ai/jumpstart/" target="_blank" rel="noopener"&gt;Amazon SageMaker JumpStart&lt;/a&gt;. For deployment guidance, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models-use.html" target="_blank" rel="noopener"&gt;JumpStart foundation model usage&lt;/a&gt; in the Amazon SageMaker AI Developer Guide.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/14/ML-21710-7.jpeg" alt="Venu Kanamatareddy" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Venu Kanamatareddy&lt;/h3&gt; 
+  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/venu-kanamatareddy-4395b8165/" target="_blank" rel="noopener"&gt;Venu&lt;/a&gt; is an AI Specialist Solutions Architect at Amazon Web Services, where he works with high-growth, AI-native startups to design, scale, and operationalize production-grade AI systems.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/17/Evan-Kravitz.png" alt="" width="200" height="258" class="alignleft size-full wp-image-137394"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Evan Kravitz&lt;/h3&gt; 
+  &lt;p&gt;Evan is a software engineer at Amazon Web Services, working on SageMaker JumpStart. He is interested in the confluence of machine learning with cloud computing. Evan received his undergraduate degree from Cornell University and master’s degree from the University of California, Berkeley. In 2021, he presented a paper on adversarial neural networks at the ICLR conference. In his free time, Evan enjoys cooking, traveling, and going on runs in New York City.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/e1822db470e60d090affd0956d743cb0e7cdf113/2023/02/06/Vivek-Gangasani-.png" alt="Vivek Gangasani" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Vivek Gangasani&lt;/h3&gt; 
+  &lt;p&gt;Vivek is a Senior Machine Learning Solutions Architect at Amazon Web Services. He works with Machine Learning startups to build and deploy AI/ML applications on AWS. He is currently focused on delivering solutions for MLOps, ML Inference and low-code ML. He has worked on projects in different domains, including Natural Language Processing and Computer Vision.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full wp-image-137393" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/17/naidile.png" alt="" width="192" height="216"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Naidile Murali&lt;/h3&gt; 
+  &lt;p&gt;Naidile is a Product Manager at AWS based in Bellevue, WA. She focuses on enhancing the AI/ML developer experience on Amazon SageMaker AI, including onboarding, IDE connectivity, and GPU capacity management. Prior to AWS, she worked as a software engineer at HSBC. Naidile holds an MBA from Georgetown University.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Build OpenClaw agents that transact with Amazon Bedrock AgentCore payments</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/build-openclaw-agents-that-transact-with-amazon-bedrock-agentcore-payments/</link>
+		
+		<dc:creator><![CDATA[Daniel Wirjo]]></dc:creator>
+		<pubDate>Mon, 17 Aug 2026 16:19:56 +0000</pubDate>
+				<category><![CDATA[Advanced (300)]]></category>
+		<category><![CDATA[Amazon Bedrock AgentCore]]></category>
+		<guid isPermaLink="false">09559dd685a47bca5e3b94a074ceb00bc15d872e</guid>
+
+					<description>Give an autonomous agent a wallet and spending guardrails so it can pay for paywalled APIs, MCP servers, and web content. This post connects OpenClaw to Amazon Bedrock AgentCore payments and the x402 protocol, using the aws-agents-pay plugin to make bounded, human-approved testnet payments.</description>
+										<content:encoded>&lt;p&gt;&lt;em&gt;This post is a collaboration between AWS and the &lt;a href="https://www.openclaw.org/" target="_blank" rel="noopener"&gt;OpenClaw Foundation&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;Autonomous agents that browse the web, call APIs, and query Model Context Protocol (MCP) servers can encounter services that require an HTTP 402 Payment Required response to be settled before access continues. To use those services without pausing for a human at every transaction, an agent needs a payment path that operates within limits approved in advance. A safe design keeps wallet-provider credentials and the authority to create or expand payment sessions outside the model-facing runtime. The runtime can still initiate approved payments within those limits.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/payments.html" target="_blank" rel="noopener"&gt;AgentCore payments&lt;/a&gt;, a capability of &lt;a href="https://aws.amazon.com/bedrock/agentcore/" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore&lt;/a&gt;, provides wallet integration, spending limits, and a consistent payment layer as agent payment protocols evolve. Protocols such as &lt;a href="https://github.com/coinbase/x402" target="_blank" rel="noopener"&gt;x402&lt;/a&gt; and &lt;a href="https://mpp.dev/" target="_blank" rel="noopener"&gt;Machine Payments Protocol (MPP)&lt;/a&gt; support programmatic payment flows between agents and services. In this post, you connect OpenClaw to a wallet and bounded payment session that a human provisions through a trusted administrative path, then use the &lt;code&gt;aws-agents-pay&lt;/code&gt; plugin for &lt;a href="https://openclaw.ai" target="_blank" rel="noopener"&gt;OpenClaw&lt;/a&gt; to initiate approved testnet payments.&lt;/p&gt; 
+&lt;h2 id="why-agents-need-payment-capabilities"&gt;Why agents need payment capabilities&lt;/h2&gt; 
+&lt;p&gt;Autonomous agents can act across multiple steps and services without a human reviewing each action. A long-running research or workflow agent might encounter a paid API or content endpoint while no operator is present. A bounded payment layer lets the agent continue within recipient, asset, network, per-payment, cumulative budget, and expiry limits that a human sets in advance.&lt;/p&gt; 
+&lt;p&gt;Some APIs, content services, compute services, and MCP tools use pay-per-use pricing. Individual transactions can be less than one dollar or fractions of a cent. Minimum card-processing fees can make transactions at that scale cost-prohibitive, while stablecoin payments can support small amounts and near-real-time settlement. This makes HTTP-native protocols such as x402 suitable for programmatic, agent-initiated payments.&lt;/p&gt; 
+&lt;p&gt;Implementing this directly requires wallet-provider integration, protected credential handling, payment authorization, deterministic limits, and payment observability. You also need to account for a model that can be manipulated by untrusted input. The design does not prevent prompt injection. Instead, it assumes untrusted input can manipulate the model and bounds the runtime’s authority by recipient, asset, network, per-payment amount, session budget, and expiry.&lt;/p&gt; 
+&lt;h2 id="solution-overview"&gt;Solution overview&lt;/h2&gt; 
+&lt;p&gt;AgentCore payments provides a consistent payment layer as agent payment protocols evolve. This OpenClaw integration demonstrates the pattern using x402 v2. It processes a merchant’s HTTP 402 challenge through a configured wallet provider and returns a signed authorization that the client uses to replay the request. &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/identity.html" target="_blank" rel="noopener"&gt;AgentCore Identity, a capability of Amazon Bedrock AgentCore,&lt;/a&gt; stores wallet-provider credentials. &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/observability.html" target="_blank" rel="noopener"&gt;AgentCore Observability, a capability of Amazon Bedrock AgentCore,&lt;/a&gt; can provide logs, metrics, and traces through Amazon CloudWatch and AWS X-Ray when telemetry delivery is configured.&lt;/p&gt; 
+&lt;p&gt;AgentCore payments supports a Coinbase wallet or a Stripe Privy wallet as the payment connection. Both provide an embedded stablecoin wallet. Subject to provider and geographic availability, you or your end users can fund the wallet through stablecoin or fiat using a debit card. Both providers use AgentCore Identity credential storage and per-session spending limits.&lt;/p&gt; 
+&lt;p&gt;This walkthrough uses &lt;a href="https://openclaw.ai/" target="_blank" rel="noopener"&gt;OpenClaw&lt;/a&gt;, an AI assistant that runs on your devices and connects models, tools, and messaging channels through a local Gateway. The &lt;a href="https://www.openclaw.org/" target="_blank" rel="noopener"&gt;OpenClaw Foundation&lt;/a&gt; maintains the project, and plugins extend what the assistant can do. The walkthrough separates human-run payment administration from the model-facing runtime. A human provisions the wallet, creates the payment session, approves recipients, and sets the budget in a trusted terminal. The &lt;code&gt;aws-agents-pay&lt;/code&gt; plugin exposes two model-visible tools: &lt;code&gt;get_payment_session_status&lt;/code&gt;, which checks the configured payment session, and &lt;code&gt;get_paid_content&lt;/code&gt;, which requests an approved paid URL and completes the payment within the configured policy. The runtime can initiate a payment within the approved session, but it cannot create, extend, or replace a session.&lt;/p&gt; 
+&lt;div style="width: 640px;" class="wp-video"&gt;
+ &lt;video class="wp-video-shortcode" id="video-137078-1" width="640" height="360" preload="metadata" controls="controls"&gt;
+  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ml-21616/ml-21616-Weather.mp4?_=1"&gt;
+ &lt;/video&gt;
+&lt;/div&gt; 
+&lt;p&gt;&lt;em&gt;Figure 1: The demo shows a chat with an AI assistant named “Bob” in the OpenClaw gateway application. The user asks “What’s the weather in Seattle right now?” then Bob executes a test payment of 0.001 USDC on Base Sepolia for a paid weather API&lt;/em&gt;&lt;/p&gt; 
+&lt;p&gt;A typical payment flow is:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;The agent calls &lt;code&gt;get_payment_session_status&lt;/code&gt; to confirm that an operator-provisioned session is usable.&lt;/li&gt; 
+ &lt;li&gt;The agent calls &lt;code&gt;get_paid_content&lt;/code&gt; for an approved URL. The plugin first performs a bounded network probe and receives an HTTP 402 response containing an x402 v2 challenge.&lt;/li&gt; 
+ &lt;li&gt;After receiving the challenge, the plugin verifies that the challenge resource has the same origin and path as the requested URL. It then validates the network, asset, recipient, and amount against the operator’s policy before it calls &lt;code&gt;ProcessPayment&lt;/code&gt;.&lt;/li&gt; 
+ &lt;li&gt;For a retry of the same payment request, the plugin reuses the same idempotency token rather than creating a second payment. Concurrent duplicate requests can still present a race, so avoid issuing the same payment concurrently.&lt;/li&gt; 
+ &lt;li&gt;The plugin waits until the signed authorization’s &lt;code&gt;validAfter&lt;/code&gt; time, then replays the original request with the payment signature.&lt;/li&gt; 
+ &lt;li&gt;With &lt;code&gt;returnBody&lt;/code&gt; enabled for this walkthrough, the plugin returns the paid response body, caps it at 10 KiB, and marks it as &lt;code&gt;untrusted: true&lt;/code&gt;. The plugin does not return the signed payment proof to the model.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;The current OpenClaw setup flow in the Agent Toolkit for AWS provides an example for Base Sepolia for testing and Base for production, and supports customization for other chains, including Ethereum, other EVM-compatible chains, and Solana.&lt;/p&gt; 
+&lt;h2 id="collaboration-with-openclaw"&gt;Collaboration with OpenClaw&lt;/h2&gt; 
+&lt;p&gt;AWS has been collaborating with the OpenClaw Foundation on this integration, including support for community events like &lt;a href="https://www.claw-con.com/" target="_blank" rel="noopener"&gt;ClawCon&lt;/a&gt;, and worked directly with the Foundation’s engineering team to bring AgentCore payments into the plugin framework.&lt;/p&gt; 
+&lt;blockquote&gt;
+ &lt;p&gt;&lt;em&gt;“Payments are a natural extension of what plugins already do in OpenClaw: give an agent a new capability through a well-defined tool, not a special case bolted on afterward. We’re grateful for AWS’s support of the OpenClaw ecosystem, from events like ClawCon to working directly with our team on this integration. Agents now get a production-grade path to pay for what they use, while builders keep the same conversational setup they expect from any other OpenClaw plugin. We’re looking forward to going deeper with AWS AgentCore as agentic payments become a bigger part of how agents operate on their own.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt; 
+&lt;p&gt;— Patrick Erichsen, Member of Technical Staff, OpenClaw Foundation&lt;/p&gt; 
+&lt;h2 id="implementation-steps-configure-openclaw-to-make-bounded-payments"&gt;Implementation steps: Configure OpenClaw to make bounded payments&lt;/h2&gt; 
+&lt;p&gt;The following sections walk you through the prerequisites, provisioning the wallet and payment session outside the agent loop, configuring an explicit payment policy, and making a bounded payment.&lt;/p&gt; 
+&lt;h3 id="prerequisites"&gt;Prerequisites&lt;/h3&gt; 
+&lt;p&gt;Make sure that you have the following prerequisites.&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;OpenClaw version 2026.3.24 or later: &lt;code&gt;npm install -g openclaw&lt;/code&gt;.&lt;/li&gt; 
+ &lt;li&gt;Node.js and npm.&lt;/li&gt; 
+ &lt;li&gt;An AWS account with access to AgentCore payments.&lt;/li&gt; 
+ &lt;li&gt;Separate AWS Identity and Access Management (IAM) roles for administration and runtime, following the &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/payments-iam-roles.html" target="_blank" rel="noopener"&gt;AgentCore payments IAM roles guide&lt;/a&gt;. The OpenClaw runtime role needs only the read operations required for status plus &lt;code&gt;ProcessPayment&lt;/code&gt;. It must not have session-write permissions.&lt;/li&gt; 
+ &lt;li&gt;Coinbase CDP or Stripe with Privy credentials, entered only in the interactive AgentCore CLI.&lt;/li&gt; 
+ &lt;li&gt;A Base Sepolia x402 v2 endpoint that you control or have independently approved. You can use the &lt;a href="https://docs.cdp.coinbase.com/x402/buyer/discover-services" target="_blank" rel="noopener"&gt;Coinbase x402 Bazaar&lt;/a&gt; to discover candidate services, but verify the endpoint, recipient, network, asset, and price before adding them to the payment policy.&lt;/li&gt; 
+ &lt;li&gt;The merchant recipient address and USDC asset contract verified from merchant documentation or another known-good source, independently of the HTTP 402 response.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; Security for this solution follows the &lt;a href="https://aws.amazon.com/compliance/shared-responsibility-model/" target="_blank" rel="noopener"&gt;AWS shared responsibility model&lt;/a&gt;. AWS is responsible for security of the cloud, while you’re responsible for security in the cloud. For this solution, your responsibilities include configuring IAM permissions, protecting wallet-provider credentials, and defining payment policies. Follow the &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/payments-iam-roles.html" target="_blank" rel="noopener"&gt;AgentCore payments IAM roles guidance&lt;/a&gt; to separate administrative, management, agent execution, and service operations.&lt;/p&gt; 
+&lt;p&gt;The following steps take you from installing the plugin to watching an agent pay for its first piece of paywalled content.&lt;/p&gt; 
+&lt;h3 id="install-the-plugin-from-clawhub"&gt;1. Install the plugin from ClawHub&lt;/h3&gt; 
+&lt;p&gt;Before continuing, confirm that the &lt;code&gt;@aws/aws-agents-pay&lt;/code&gt; package is available on ClawHub. Then install it:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;div class="code-toolbar"&gt; 
+  &lt;pre class="language-bash"&gt;&lt;code class="language-bash"&gt;openclaw plugins &lt;span class="token function"&gt;install&lt;/span&gt; clawhub:@aws/aws-agents-pay&lt;/code&gt;&lt;/pre&gt; 
+  &lt;div class="toolbar"&gt; 
+   &lt;div class="toolbar-item"&gt;
+    Bash
+   &lt;/div&gt; 
+  &lt;/div&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The package name is &lt;code&gt;@aws/aws-agents-pay&lt;/code&gt;, the installed plugin ID is &lt;code&gt;aws-agents-pay&lt;/code&gt;, and the bundled skill name is &lt;code&gt;agents-pay&lt;/code&gt;.&lt;/p&gt; 
+&lt;p&gt;To inspect the bundled setup guidance, run:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;div class="code-toolbar"&gt; 
+  &lt;pre class="language-bash"&gt;&lt;code class="language-bash"&gt;openclaw skills info agents-pay&lt;/code&gt;&lt;/pre&gt; 
+  &lt;div class="toolbar"&gt; 
+   &lt;div class="toolbar-item"&gt;
+    Bash
+   &lt;/div&gt; 
+  &lt;/div&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;p&gt;Inspect the installed plugin:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;div class="code-toolbar"&gt; 
+  &lt;pre class="language-bash"&gt;&lt;code class="language-bash"&gt;openclaw plugins inspect aws-agents-pay&lt;/code&gt;&lt;/pre&gt; 
+  &lt;div class="toolbar"&gt; 
+   &lt;div class="toolbar-item"&gt;
+    Bash
+   &lt;/div&gt; 
+  &lt;/div&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The model-visible runtime must expose only &lt;code&gt;get_payment_session_status&lt;/code&gt; and &lt;code&gt;get_paid_content&lt;/code&gt;. Stop if a setup, session-creation, shell, or other model-visible tool appears. An unexpected tool can indicate a different, outdated, or modified package.&lt;/p&gt; 
+&lt;h3 id="complete-the-human-supervised-payment-setup"&gt;2. Complete the human-supervised payment setup&lt;/h3&gt; 
+&lt;p&gt;Installing the plugin does not create the payment manager, connector, instrument, or payment session. Choose one of the following provisioning options. Both options use a trusted terminal under your AWS credentials, and session creation requires you to type &lt;code&gt;approve&lt;/code&gt; at an interactive TTY.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Option A – OpenClaw-assisted setup.&lt;/strong&gt; Ask OpenClaw: &lt;code&gt;Help me set up the agents-pay skill.&lt;/code&gt; OpenClaw can explain each step, but you must run the administrative commands and approve session creation yourself. OpenClaw guidance does not remove the interactive approval gate.&lt;/p&gt; 
+&lt;p&gt;&lt;strong&gt;Option B – Fully manual setup.&lt;/strong&gt; Follow the &lt;a href="https://github.com/aws/agent-toolkit-for-aws/blob/main/plugins/aws-agents/skills/agents-pay/references/openclaw-setup.md" target="_blank" rel="noopener"&gt;OpenClaw setup guide&lt;/a&gt; directly, without involving OpenClaw.&lt;/p&gt; 
+&lt;p&gt;For either option, follow the &lt;a href="https://github.com/aws/agent-toolkit-for-aws/blob/main/plugins/aws-agents/skills/agents-pay/references/openclaw-setup.md" target="_blank" rel="noopener"&gt;OpenClaw setup guide&lt;/a&gt; in a trusted, human-supervised terminal. The guide covers creating the AgentCore project, provisioning payment resources, running the setup wizard, and adding the generated configuration to OpenClaw. You must enter credentials and type &lt;code&gt;approve&lt;/code&gt; yourself.&lt;/p&gt; 
+&lt;h3 id="configure-the-plugin-with-an-explicit-policy"&gt;3. Configure the plugin with an explicit policy&lt;/h3&gt; 
+&lt;p&gt;Review the generated configuration before enabling the plugin. It must include the payment manager ARN, instrument ID, session ID, user ID, network, exact asset contract, approved recipients, and a positive per-payment ceiling.&lt;/p&gt; 
+&lt;p&gt;For the sandbox walkthrough, use the payment policy in Step 3 of the &lt;a href="https://github.com/awslabs/agentcore-samples/tree/main/01-features/08-agents-that-transact/01-payments-skills-and-cli/converse-with-openclaw-agent/#3-configure-trusted-policy" target="_blank" rel="noopener"&gt;companion code sample&lt;/a&gt;. It contains the Base Sepolia network, origin, recipient, USDC asset, payment limit, and &lt;code&gt;returnBody&lt;/code&gt; setting that match the test endpoint used in the next step.&lt;/p&gt; 
+&lt;p&gt;This sandbox endpoint is listed in the Coinbase x402 Bazaar, but this walkthrough calls a known URL directly. For a discovery-driven workflow, see the &lt;a href="https://github.com/awslabs/agentcore-samples/tree/main/01-features/08-agents-that-transact/00-getting-started/04-agent-with-coinbase-bazaar-via-gateway/" target="_blank" rel="noopener"&gt;Tutorial with Coinbase Bazaar&lt;/a&gt;.&lt;/p&gt; 
+&lt;p&gt;For a fixed merchant set, verify every address in &lt;code&gt;allowedRecipients&lt;/code&gt; out of band using merchant documentation or another known-good source. Don’t approve a recipient only because it appeared in an HTTP 402 response. For broader discovery scenarios, set &lt;code&gt;allowAnyRecipient: true&lt;/code&gt; to let the publisher select the beneficiary. This option trades recipient allowlisting for flexibility; origin, network, asset, per-payment, and session-budget controls still apply. For this walkthrough, keep &lt;code&gt;networkPreferences&lt;/code&gt; on Base Sepolia (&lt;code&gt;eip155:84532&lt;/code&gt;) and use the exact Base Sepolia USDC contract selected by the setup wizard.&lt;/p&gt; 
+&lt;p&gt;&lt;code&gt;maxPaymentAmountAtomic&lt;/code&gt; limits one payment in the asset’s smallest unit. For a six-decimal USDC asset, &lt;code&gt;100000&lt;/code&gt; represents 0.10 USDC. The payment session budget separately limits cumulative spend until the session expires or is exhausted. For this walkthrough, set &lt;code&gt;returnBody&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; so the agent can use the paid response. The plugin caps the response at 10 KiB and marks it as &lt;code&gt;untrusted: true&lt;/code&gt;. Publisher-controlled content can contain prompt-injection instructions, so leave &lt;code&gt;returnBody&lt;/code&gt; unset or set it to &lt;code&gt;false&lt;/code&gt; when the agent only needs response metadata and a digest. This setting doesn’t expose the signed payment proof.&lt;/p&gt; 
+&lt;p&gt;Wallet-provider secrets do not belong in the OpenClaw configuration. Treat the payment session ID, resource identifiers, recipient policy, and other configuration values as sensitive operational data because they describe and authorize the runtime’s payment path.&lt;/p&gt; 
+&lt;p&gt;Restart the gateway after saving &lt;code&gt;~/.openclaw/openclaw.json&lt;/code&gt;:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;div class="code-toolbar"&gt; 
+  &lt;pre class="language-bash"&gt;&lt;code class="language-bash"&gt;openclaw gateway restart&lt;/code&gt;&lt;/pre&gt; 
+  &lt;div class="toolbar"&gt; 
+   &lt;div class="toolbar-item"&gt;
+    Bash
+   &lt;/div&gt; 
+  &lt;/div&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;p&gt;If you use the protected &lt;code&gt;~/.x402/config.json&lt;/code&gt; path instead of inline plugin configuration, the plugin checks ownership and permissions on the directory and file and refuses to load an unsafe configuration.&lt;/p&gt; 
+&lt;h3 id="check-session-status-and-pay-for-content"&gt;4. Check session status and pay for content&lt;/h3&gt; 
+&lt;p&gt;Ask your OpenClaw agent to check whether the configured session is usable:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;div class="code-toolbar"&gt; 
+  &lt;pre class="language-plaintext"&gt;&lt;code class="language-plaintext"&gt;What's the status of my payment session?&lt;/code&gt;&lt;/pre&gt; 
+  &lt;div class="toolbar"&gt; 
+   &lt;div class="toolbar-item"&gt;
+    Plain text
+   &lt;/div&gt; 
+  &lt;/div&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;p&gt;If the session is unavailable, expired, or exhausted, stop. Use the trusted administrative path to review the situation and create a replacement session. The model-facing runtime cannot create or expand its own budget.&lt;/p&gt; 
+&lt;p&gt;The companion sample pins its payment policy to the Base Sepolia endpoint used in this walkthrough. Ask the agent to fetch it:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;div class="code-toolbar"&gt; 
+  &lt;pre class="language-plaintext"&gt;&lt;code class="language-plaintext"&gt;Fetch https://sandbox.node4all.com/v1/x402-test&lt;/code&gt;&lt;/pre&gt; 
+  &lt;div class="toolbar"&gt; 
+   &lt;div class="toolbar-item"&gt;
+    Plain text
+   &lt;/div&gt; 
+  &lt;/div&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;p&gt;The plugin performs a bounded probe, validates the returned challenge against the operator’s policy, calls AgentCore payments, waits until the signed authorization is valid, and replays the request. With &lt;code&gt;returnBody&lt;/code&gt; enabled for this walkthrough, the tool returns the paid response body with &lt;code&gt;content_returned: true&lt;/code&gt;, caps it at 10 KiB, and marks it as &lt;code&gt;untrusted: true&lt;/code&gt;. It does not return the signed payment proof.&lt;/p&gt; 
+&lt;p&gt;Treat merchant responses and all retrieved content as untrusted. This design doesn’t prevent prompt injection. It assumes the model can be manipulated and bounds payment authority through IAM separation, approved recipients and assets, a per-payment ceiling, a cumulative session budget, and an expiry. Enable &lt;code&gt;returnBody&lt;/code&gt; only when the agent needs the paid response, and treat that response as data rather than instructions.&lt;/p&gt; 
+&lt;p&gt;Ask for session status again:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;div class="code-toolbar"&gt; 
+  &lt;pre class="language-plaintext"&gt;&lt;code class="language-plaintext"&gt;What's my payment session status now?&lt;/code&gt;&lt;/pre&gt; 
+  &lt;div class="toolbar"&gt; 
+   &lt;div class="toolbar-item"&gt;
+    Plain text
+   &lt;/div&gt; 
+  &lt;/div&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;p&gt;Confirm that the reported remaining budget reflects the payment.&lt;/p&gt; 
+&lt;h3 id="clean-up"&gt;Clean up&lt;/h3&gt; 
+&lt;p&gt;Remove the plugin from OpenClaw and restart the gateway:&lt;/p&gt; 
+&lt;div class="hide-language"&gt; 
+ &lt;div class="code-toolbar"&gt; 
+  &lt;pre class="language-bash"&gt;&lt;code class="language-bash"&gt;openclaw plugins uninstall aws-agents-pay
+openclaw gateway restart&lt;/code&gt;&lt;/pre&gt; 
+  &lt;div class="toolbar"&gt; 
+   &lt;div class="toolbar-item"&gt;
+    Bash
+   &lt;/div&gt; 
+  &lt;/div&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;p&gt;Use the same trusted administrative path to remove the payment resources on AWS. Don’t expose infrastructure deletion or session creation to the model-facing runtime, and keep the runtime IAM role without those permissions.&lt;/p&gt; 
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
+&lt;p&gt;With AgentCore payments, an agent can access paywalled APIs, pay-per-use data feeds, and metered MCP tools within limits a human sets in advance. AgentCore payments handles wallet integration, spending limits, and payment orchestration. In this OpenClaw pattern, the human keeps wallet-provider credentials and authority over recipients, assets, per-payment limits, cumulative session budget, and expiry outside the model-facing runtime. The agent can initiate payments only within those approved bounds.&lt;/p&gt; 
+&lt;p&gt;&lt;a href="https://clawhub.ai/aws/plugins/aws-agents-pay" target="_blank" rel="noopener"&gt;Install the &lt;code&gt;aws-agents-pay&lt;/code&gt; plugin from ClawHub&lt;/a&gt;, then follow the &lt;a href="https://github.com/awslabs/agentcore-samples/tree/main/01-features/08-agents-that-transact/01-payments-skills-and-cli/converse-with-openclaw-agent/" target="_blank" rel="noopener"&gt;OpenClaw agent with AgentCore payments sample&lt;/a&gt; to provision the payment resources and complete an end-to-end x402 payment.&lt;/p&gt; 
+&lt;h2 id="resources"&gt;Resources&lt;/h2&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;&lt;a href="https://clawhub.ai/aws/plugins/aws-agents-pay" target="_blank" rel="noopener"&gt;ClawHub plugin: aws-agents-pay&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://github.com/awslabs/agentcore-samples/tree/main/01-features/08-agents-that-transact/01-payments-skills-and-cli/converse-with-openclaw-agent/" target="_blank" rel="noopener"&gt;Code sample: OpenClaw agent with AgentCore payments&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/payments.html" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore payments developer guide&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://github.com/coinbase/x402/blob/main/specs/x402-specification-v2.md" target="_blank" rel="noopener"&gt;x402 protocol specification&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://aws.amazon.com/compliance/shared-responsibility-model/" target="_blank" rel="noopener"&gt;AWS shared responsibility model&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/payments-iam-roles.html" target="_blank" rel="noopener"&gt;AgentCore payments IAM roles guidance&lt;/a&gt;.&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="https://github.com/aws-samples/sample-openclaw-on-aws" target="_blank" rel="noopener"&gt;Code sample: OpenClaw on AWS&lt;/a&gt;.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h3&gt;Acknowledgements&lt;/h3&gt; 
+&lt;p&gt;We’d like to thank &lt;a href="https://www.linkedin.com/in/madhu-samhitha/" target="_blank" rel="noopener"&gt;Madhu Samitha Vangara&lt;/a&gt; and &lt;a href="https://www.linkedin.com/in/isaac-lin-481756102/" target="_blank" rel="noopener"&gt;Isaac Lin&lt;/a&gt;, Solutions Architects at AWS, for their contributions to this solution.&lt;/p&gt; 
+&lt;hr&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/11/ML-21616-1.jpg" alt="Patrick Erichsen" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Patrick Erichsen&lt;/h3&gt; 
+  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/patrick-erichsen/" target="_blank" rel="noopener"&gt;Patrick&lt;/a&gt; is a Member of Technical Staff at the OpenClaw Foundation. Previously he was a founding engineer at Continue (YC W23), where he worked on coding agents. He’s interested in using AI as a tool to expand human creativity.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/01/26/ml19026-wirjo.jpeg" alt="Daniel Wirjo" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Daniel Wirjo&lt;/h3&gt; 
+  &lt;p&gt;&lt;a href="https://linkedin.com/in/wirjo" target="_blank" rel="noopener"&gt;Daniel&lt;/a&gt; is a Solutions Architect at AWS, focused on AI startups. As a former startup CTO, he enjoys collaborating with founders and engineering leaders to drive growth and innovation on AWS. Outside of work, Daniel enjoys taking walks with a coffee in hand, appreciating nature, and learning new ideas.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/11/ML-21616-2.jpg" alt="Peter Jiang" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Peter Jiang&lt;/h3&gt; 
+  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/peterjiangsde/" target="_blank" rel="noopener"&gt;Peter&lt;/a&gt; is a Senior Software Developer at AWS, based in Seattle, WA. He is a core member of the engineering team behind the Amazon Bedrock AgentCore payments initiative, which enables AI agents with payments capability. With over 8 years of experience in the financial and payments industry, Peter has launched multiple greenfield projects spanning banking, crypto, and agentic systems. Previously, he worked on ultra-low latency trading systems at Susquehanna International Group.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box"&gt; 
+  &lt;div class="blog-author-image"&gt; 
+   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/05/21/shriyanc-100x133.jpg" alt="Chethan Shriyan" width="100" height="100"&gt;&lt;/p&gt; 
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Chethan Shriyan&lt;/h3&gt; 
+  &lt;p&gt;&lt;a href="https://www.linkedin.com/in/chethanshriyan/" target="_blank" rel="noopener"&gt;Chethan&lt;/a&gt; is a Principal Product Manager, Technical at AWS, based in Seattle, WA. He brings nearly 13 years of experience in product and business management, including over 7 years at Amazon. He is passionate about building and delivering technology products that create meaningful impact in customers’ lives.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		<enclosure length="2471399" type="video/mp4" url="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ml-21616/ml-21616-Weather.mp4"/>
+
+			</item>
+		<item>
 		<title>Custom reward functions for multi-turn reinforcement learning with Amazon Nova Forge</title>
 		<link>https://aws.amazon.com/blogs/machine-learning/custom-reward-functions-for-multi-turn-reinforcement-learning-with-amazon-nova-forge/</link>
 		
@@ -4118,376 +4561,12 @@ mcp:
 		
 		
 			</item>
-		<item>
-		<title>How TReNDS automates root-cause analysis with Amazon Bedrock</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/how-trends-automates-root-cause-analysis-with-amazon-bedrock/</link>
-		
-		<dc:creator><![CDATA[Vitaly Omelchenko]]></dc:creator>
-		<pubDate>Fri, 07 Aug 2026 16:22:50 +0000</pubDate>
-				<category><![CDATA[Advanced (300)]]></category>
-		<category><![CDATA[Amazon Bedrock]]></category>
-		<guid isPermaLink="false">2a928f9693d6d62c930b66459b34bc9a6dc2b18a</guid>
-
-					<description>TReNDS, a research center at Georgia State University, built an agentic AI pipeline on Amazon Bedrock and the open-source Strands Agents SDK that automatically investigates production errors in real time, reducing root-cause analysis from 15 to 30 minutes of manual work to under 60 seconds.</description>
-										<content:encoded>&lt;p&gt;&lt;em&gt;This is a guest post co-written with Vitaly Omelchenko from the TReNDS Center at Georgia State University.&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;At the &lt;a href="https://trendscenter.org" target="_blank" rel="noopener"&gt;Center for Translational Research in Neuroimaging and Data Science (TReNDS)&lt;/a&gt;, a joint center of Georgia State University, Georgia Institute of Technology, and Emory University, we develop and apply advanced analytical methods and neuroinformatics tools for brain health research. We’ve been running our infrastructure on Amazon Web Services (AWS) since 2019, and over the years we’ve built a diverse set of applications, including research tools and APIs, all running on &lt;a href="https://aws.amazon.com/eks/" target="_blank" rel="noopener"&gt;Amazon Elastic Kubernetes Service (Amazon EKS)&lt;/a&gt; with logs shipped to &lt;a href="https://aws.amazon.com/cloudwatch/" target="_blank" rel="noopener"&gt;Amazon CloudWatch&lt;/a&gt; using &lt;a href="https://fluentbit.io/" target="_blank" rel="noopener"&gt;FluentBit&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;As our application grew, so did the volume of errors we needed to investigate. When we started exploring &lt;a href="https://aws.amazon.com/bedrock/" target="_blank" rel="noopener"&gt;Amazon Bedrock&lt;/a&gt;, we saw an opportunity we had wanted for a long time. We could automate the most time-consuming part of incident response, the root-cause investigation itself.&lt;/p&gt; 
-&lt;p&gt;In this post, we share the architecture we built and use in production at TReNDS. It combines &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/SubscriptionFilters.html" target="_blank" rel="noopener"&gt;Amazon CloudWatch subscription filters&lt;/a&gt;, &lt;a href="https://aws.amazon.com/lambda/" target="_blank" rel="noopener"&gt;AWS Lambda&lt;/a&gt;, the &lt;a href="https://strandsagents.com/latest/" target="_blank" rel="noopener"&gt;Strands Agents SDK&lt;/a&gt;, and Amazon Bedrock to detect errors in real time, enrich them with log context and source code from GitHub, and deliver AI-powered root-cause analysis to our team.&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;The architecture and recommendations in this post reflect our team’s experience at the TReNDS Center and do not represent official guidance from Georgia State University, Georgia Institute of Technology, or Emory University.&lt;/em&gt;&lt;/p&gt; 
-&lt;h2 id="the-problem-we-wanted-to-solve"&gt;The problem we wanted to solve&lt;/h2&gt; 
-&lt;p&gt;Like many teams, we had alerting and monitoring in place. We knew when things broke. However, knowing that something failed and understanding why it failed are different things. Our engineers still had to open Amazon CloudWatch Logs, read through stack traces, find the relevant source files, and mentally trace the execution path. For straightforward errors, this took 15–30 minutes. For complex issues spanning multiple services, much longer.&lt;/p&gt; 
-&lt;p&gt;We realized that this investigation process is exactly the kind of work a foundation model with the right tools can do. The model does more than summarize the error message. It investigates the error by pulling the surrounding log context, reading the source code, and producing a structured analysis. That is what we set out to build.&lt;/p&gt; 
-&lt;h2 id="architecture"&gt;Architecture&lt;/h2&gt; 
-&lt;p&gt;Here’s the architecture we arrived at:&lt;/p&gt; 
-&lt;p&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/29/ML-21106-1.png" alt="Amazon EKS logs flow through a CloudWatch subscription filter to an AWS Lambda Strands Agent on Amazon Bedrock, then to Amazon SNS" width="800"&gt;&lt;/p&gt; 
-&lt;p&gt;&lt;em&gt;Figure 1 — Architecture for automated root-cause analysis&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;Our applications on EKS send logs to CloudWatch using FluentBit. A CloudWatch subscription filter watches for error-level patterns (&lt;code&gt;ERROR&lt;/code&gt;, &lt;code&gt;Exception&lt;/code&gt;, &lt;code&gt;FATAL&lt;/code&gt;, &lt;code&gt;CRITICAL&lt;/code&gt;) and invokes a Lambda function when a match occurs. The Lambda runs a Strands Agent powered by Amazon Bedrock that investigates the error, then publishes the analysis to an Amazon Simple Notification Service (Amazon SNS) topic for delivery to our team.&lt;/p&gt; 
-&lt;p&gt;The core of the system is Amazon Bedrock. The foundation model (FM) does the actual reasoning about errors, code, and root causes. We use the Strands Agents SDK on top of Amazon Bedrock to handle tool-use orchestration. We define what tools are available, and the model decides when and how to call them. Given a stack trace, the agent might fetch the relevant source file, realize it needs more context, search for related error handling, and produce a structured analysis, without us hardcoding that investigation path.&lt;/p&gt; 
-&lt;p&gt;Because TReNDS works with health-related research data, data residency and compliance are important considerations. Amazon Bedrock processes requests within our AWS account, so log data and source code stay within the same environment as the rest of our application. The AI analysis doesn’t require sending data to external endpoints. This keeps data flows within boundaries we already manage. This is particularly important for our work, because TReNDS handles health-related research data that might fall under HIPAA requirements. For more on Health Insurance Portability and Accountability Act (HIPAA)-eligible AWS services, see the &lt;a href="https://aws.amazon.com/compliance/hipaa-eligible-services-reference/" target="_blank" rel="noopener"&gt;AWS HIPAA Eligible Services Reference&lt;/a&gt;.&lt;/p&gt; 
-&lt;p&gt;While our setup uses EKS and FluentBit, this pattern works with other applications that send logs to CloudWatch, including ECS, Lambda, EC2, or on-premises workloads using the CloudWatch Agent.&lt;/p&gt; 
-&lt;h2 id="prerequisites"&gt;Prerequisites&lt;/h2&gt; 
-&lt;p&gt;To implement this solution, you need the following:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;An AWS account with access to Amazon Bedrock (specifically Anthropic Claude Sonnet).&lt;/li&gt; 
- &lt;li&gt;An Amazon EKS cluster with applications sending logs to CloudWatch through FluentBit.&lt;/li&gt; 
- &lt;li&gt;CloudWatch log groups configured with subscription filters.&lt;/li&gt; 
- &lt;li&gt;A GitHub repository containing your application source code.&lt;/li&gt; 
- &lt;li&gt;The Strands Agents SDK installed (available through the official Lambda layer).&lt;/li&gt; 
- &lt;li&gt;Familiarity with Python.&lt;/li&gt; 
- &lt;li&gt;An Amazon SNS topic configured for notifications.&lt;/li&gt; 
- &lt;li&gt;An AWS Lambda function with appropriate IAM permissions to access Amazon Bedrock, CloudWatch Logs, AWS Secrets Manager, and SNS.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="building-tools-with-strands-agents-sdk"&gt;Building tools with Strands Agents SDK&lt;/h2&gt; 
-&lt;p&gt;The agent’s capabilities come from the tools we give it. Of all the tools we built, source code retrieval is the most critical. Stack traces reference file paths and line numbers, but without access to the actual implementation, the agent would be limited to log pattern matching. By giving the agent the ability to read source files, it can trace execution paths and identify the specific code that caused the failure. With the Strands Agents SDK, you define a custom tool by decorating a Python function with &lt;code&gt;@tool&lt;/code&gt;. Here’s the tool we built to fetch source code from our GitHub repositories:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;import base64
-import boto3
-import requests
-from strands import Agent, tool
-
-# Retrieve the GitHub token from AWS Secrets Manager
-secrets_client = boto3.client("secretsmanager")
-github_token = secrets_client.get_secret_value(
-    SecretId="trends/github-token"
-)["SecretString"]
-
-@tool
-def fetch_source_code(file_path: str, repo: str) -&amp;gt; str:
-    """Fetch a source file from a GitHub repository.
-
-    Args:
-        file_path: Path to the file in the repository
-        repo: Repository in 'owner/repo' format
-    """
-    response = requests.get(
-        f"https://api.github.com/repos/{repo}/contents/{file_path}",
-        headers={"Authorization": f"token {github_token}"}
-    )
-    if response.status_code != 200:
-        return f"Could not fetch {file_path} from {repo}: HTTP {response.status_code}"
-    content = base64.b64decode(response.json()["content"])
-    return content.decode("utf-8")&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;The docstring and type hints matter. Strands uses them to tell the model what the tool does and what parameters it expects. The model then decides when to call this tool based on what it finds in the error. See the &lt;a href="https://strandsagents.com/latest/documentation/docs/user-guide/concepts/tools/custom-tools/" target="_blank" rel="noopener"&gt;custom tools documentation&lt;/a&gt; for more patterns.&lt;/p&gt; 
-&lt;p&gt;For deployment, we use the Strands Agents &lt;a href="https://strandsagents.com/latest/documentation/docs/user-guide/deploy/deploy_to_aws_lambda/" target="_blank" rel="noopener"&gt;official Lambda layer&lt;/a&gt;. There’s no need to bundle the SDK manually.&lt;/p&gt; 
-&lt;h2 id="how-the-pipeline-works"&gt;How the pipeline works&lt;/h2&gt; 
-&lt;p&gt;When an error occurs in one of our applications, the pipeline moves through four stages automatically. First, CloudWatch detects the error pattern and invokes our Lambda function with the compressed log data. The Lambda decodes the event, and the Strands Agent takes over from there. The agent fetches additional log context from the same container, retrieves relevant source code from GitHub, and reasons through the root cause. Finally, it publishes a structured analysis to SNS for delivery to our team. The following sections walk through each stage in detail.&lt;/p&gt; 
-&lt;h3 id="receiving-and-decoding-cloudwatch-events"&gt;Receiving and decoding CloudWatch events&lt;/h3&gt; 
-&lt;p&gt;CloudWatch subscription filters send base64-encoded, gzip-compressed log events to Lambda. Each invocation contains one or more log events that matched the filter pattern within a short time window. The Lambda handler decodes the information, extracts the log group name and matching events, and passes them to the agent for analysis. See the &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/SubscriptionFilters.html#LambdaFunctionExample" target="_blank" rel="noopener"&gt;CloudWatch Logs subscription filter documentation&lt;/a&gt; for the standard decoding pattern.&lt;/p&gt; 
-&lt;h3 id="fetching-extended-context"&gt;Fetching extended context&lt;/h3&gt; 
-&lt;p&gt;The subscription filter delivers the matching log line, but a single line is rarely enough. The CloudWatch event information includes the logStream, which identifies the specific container that produced the error. We built a second &lt;code&gt;@tool&lt;/code&gt; that fetches surrounding logs from the same stream. This gives the agent the full stacktrace and the request context that led to the failure, without noise from other concurrent requests:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;@tool
-def fetch_log_context(log_group: str, log_stream: str, timestamp: int,
-                      window_seconds: int = 30) -&amp;gt; str:
-    """Fetch log lines from the same log stream surrounding an error.
-
-    Args:
-        log_group: CloudWatch Log Group name
-        log_stream: Log stream that produced the error
-        timestamp: Error event timestamp in milliseconds
-        window_seconds: Time window before and after the error
-    """
-    response = logs_client.filter_log_events(
-        logGroupName=log_group,
-        logStreamNames=[log_stream],
-        startTime=timestamp - (window_seconds * 1000),
-        endTime=timestamp + (window_seconds * 1000),
-    )
-    events = response.get("events", [])
-    if not events:
-        return f"No log events found in {log_stream} within {window_seconds}s of the error."
-    return "\n".join(e["message"] for e in events)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;By scoping to the log stream, we get a clean, chronological sequence of events from the same container. This includes the request that triggered the error, preceding warnings, and the full exception trace.&lt;/p&gt; 
-&lt;h3 id="agent-analysis"&gt;Agent analysis&lt;/h3&gt; 
-&lt;p&gt;The agent receives the error plus context, then autonomously decides what to investigate. Unlike a rule-based system that follows predefined decision trees, the agent interprets the error message, identifies file paths and class names in the stack trace, and determines which source files to retrieve. If the initial code review reveals that the error originates in a dependency or a shared utility, the agent follows that chain without additional prompting from us. We shaped the output format through the system prompt:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;SYSTEM_PROMPT = """You are a senior Site Reliability Engineer analyzing production errors.
-
-Given an error and its surrounding log context:
-1. Identify the root cause by analyzing the stacktrace
-2. Use fetch_source_code to read the relevant source files
-3. Provide a structured analysis with:
-   - Severity (CRITICAL/HIGH/MEDIUM/LOW)
-   - Root cause explanation
-   - Relevant source code context
-   - Suggested fix
-   - Related areas that may be affected
-"""&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;The system prompt defines a structured output format but leaves the investigation strategy to the model. The agent decides which tools to call based on what it finds in the error. A stack trace with clear file paths triggers fetch_source_code calls. An error without a stack trace might lead the agent to search the code base for the error message string. This flexibility is the core value of the agentic approach. We did not need to anticipate every type of error our applications can produce.&lt;/p&gt; 
-&lt;p&gt;The Lambda handler ties everything together:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;agent = Agent(
-    model=BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514"),
-    system_prompt=SYSTEM_PROMPT,
-    tools=[fetch_source_code, search_github_code, fetch_log_context]
-)
-
-result = agent(
-    f"Analyze this error from {log_group}:\n\n{error_message}"
-)&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;The handler creates an Agent instance with our chosen Amazon Bedrock model, the system prompt that defines the output format, and the list of available tools. It then passes the error message along with the log group name to the agent, which triggers the autonomous investigation loop.&lt;/p&gt; 
-&lt;h3 id="delivering-results"&gt;Delivering results&lt;/h3&gt; 
-&lt;p&gt;After the agent completes its analysis, we publish the result to an &lt;a href="https://aws.amazon.com/sns/" target="_blank" rel="noopener"&gt;Amazon SNS&lt;/a&gt; topic and fan out to email and Slack. Here’s what a typical notification looks like:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-plaintext"&gt;Error Analysis — order-service
-
-Severity: HIGH
-Error: NullPointerException at OrderService.java:142
-
-Root Cause: The method processPayment() calls paymentGateway.charge()
-which can return null on gateway timeout, but line 142 accesses
-response.getTransactionId() without a null check.
-
-Source Context (OrderService.java:138-148):
-[relevant code shown]
-
-Suggested Fix: Add null check for gateway response before accessing
-fields. Consider retry mechanism for gateway timeouts.
-
-Related: Similar pattern in RefundService.java:89&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;The agent autonomously investigated this error without human guidance. It read the relevant source code, identified the null check gap, and even flagged a similar pattern in another file. This demonstrates the value of the agentic approach. Rather than following a fixed checklist, the agent adapts its investigation strategy based on what it discovers at each step, much like an experienced engineer would.&lt;/p&gt; 
-&lt;h2 id="results"&gt;Results&lt;/h2&gt; 
-&lt;p&gt;Since deploying this system, we have seen a clear impact on how our team handles production errors. The most immediate change is speed. Investigation time dropped from 15 to 30 minutes down to under 60 seconds. Because the agent’s analysis includes a suggested fix, our engineers often receive a ready solution in their inbox. They can go straight to implementing the fix instead of spending time on diagnosis.&lt;/p&gt; 
-&lt;p&gt;The cost of running this system is negligible. Each analysis incurs only minimal Amazon Bedrock inference charges, typically involving two to three tool-use rounds per error. For our workload, this is a fraction of what the equivalent engineer time would cost.&lt;/p&gt; 
-&lt;p&gt;Our developers receive the agent’s analysis by email, and the feedback has been consistently positive. The analyses provide a clear starting point for resolution, even for errors the engineer has not encountered before. Engineers can quickly understand what happened and what to do about it without additional investigation.&lt;/p&gt; 
-&lt;p&gt;After a release, the same code path can produce repeated errors. Our deduplication, which uses Amazon DynamoDB, makes sure that only the first occurrence triggers an analysis. The rest are silently filtered, keeping inboxes clean and Amazon Bedrock costs low.&lt;/p&gt; 
-&lt;h2 id="choosing-the-right-amazon-bedrock-model"&gt;Choosing the right Amazon Bedrock model&lt;/h2&gt; 
-&lt;p&gt;Amazon Bedrock gives us access to a range of foundation models through a single API. We tested several to find the best fit for our error analysis use case, evaluating reasoning quality (understanding code and errors), tool use reliability (calling our GitHub and CloudWatch tools), latency, and cost per analysis.&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Model&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Best For&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Tool Use&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Latency&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Relative Cost&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Anthropic Claude Sonnet&lt;/td&gt; 
-   &lt;td&gt;Complex multi-file reasoning, subtle code issues&lt;/td&gt; 
-   &lt;td&gt;Reliable&lt;/td&gt; 
-   &lt;td&gt;Fast&lt;/td&gt; 
-   &lt;td&gt;Medium&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Anthropic Claude Haiku&lt;/td&gt; 
-   &lt;td&gt;Straightforward errors, high-volume triage&lt;/td&gt; 
-   &lt;td&gt;Good&lt;/td&gt; 
-   &lt;td&gt;Fastest&lt;/td&gt; 
-   &lt;td&gt;Low&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Anthropic Claude Opus&lt;/td&gt; 
-   &lt;td&gt;Deep cross-service investigations&lt;/td&gt; 
-   &lt;td&gt;Reliable&lt;/td&gt; 
-   &lt;td&gt;Moderate&lt;/td&gt; 
-   &lt;td&gt;High&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Amazon Nova Pro&lt;/td&gt; 
-   &lt;td&gt;General-purpose analysis, cost-effective&lt;/td&gt; 
-   &lt;td&gt;Good&lt;/td&gt; 
-   &lt;td&gt;Fast&lt;/td&gt; 
-   &lt;td&gt;Low&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;Amazon Nova Lite&lt;/td&gt; 
-   &lt;td&gt;Simple error classification, budget workloads&lt;/td&gt; 
-   &lt;td&gt;Good&lt;/td&gt; 
-   &lt;td&gt;Fastest&lt;/td&gt; 
-   &lt;td&gt;Lowest&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;We selected Claude Sonnet as our primary model. In our testing, it consistently produced the most accurate root-cause analyses. It can trace through multi-file call chains, identify subtle issues like missing null checks, and reason about concurrency problems. For teams with different cost or latency requirements, the other models in the table are strong alternatives for simpler error patterns.&lt;/p&gt; 
-&lt;p&gt;Switching models with Strands is a one-line change, which made our evaluation straightforward:&lt;/p&gt; 
-&lt;div class="hide-language"&gt; 
- &lt;pre&gt;&lt;code class="language-python"&gt;# We tested multiple models by changing this single line.
-# Check Amazon Bedrock documentation for the latest available model IDs.
-model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&gt;&lt;/pre&gt; 
-&lt;/div&gt; 
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Model IDs are updated regularly. See the &lt;a href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html" target="_blank" rel="noopener"&gt;Amazon Bedrock supported models documentation&lt;/a&gt; for current model IDs.&lt;/p&gt; 
-&lt;h2 id="next-steps"&gt;Next steps&lt;/h2&gt; 
-&lt;p&gt;We are exploring several extensions to this system. The first priority is connecting Retrieval Augmented Generation (RAG) with our internal runbooks.&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;By integrating &lt;a href="https://aws.amazon.com/bedrock/knowledge-bases/" target="_blank" rel="noopener"&gt;Amazon Bedrock Knowledge Bases&lt;/a&gt; with our internal runbooks and past incident reports, the agent will be able to reference TReNDS-specific procedures in its analysis.&lt;/li&gt; 
- &lt;li&gt;We also plan to implement a tiered model strategy. Simple, known error patterns would route to Haiku for fast, low-cost triage, while complex or novel errors would escalate to Sonnet for deep analysis. This would optimize both cost and response time across our error volume.&lt;/li&gt; 
- &lt;li&gt;Finally, we are working toward automated GitHub issue and pull request creation. When the agent identifies a potential fix, it would automatically create a GitHub issue with the analysis and open a pull request with the suggested code change, reducing the manual steps between diagnosis and resolution.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;As we scale this further, we’re also looking at &lt;a href="https://aws.amazon.com/bedrock/agentcore/" target="_blank" rel="noopener"&gt;Amazon Bedrock AgentCore&lt;/a&gt; for managed agent runtime, observability, and identity management. See the &lt;a href="https://strandsagents.com/latest/documentation/docs/examples/" target="_blank" rel="noopener"&gt;Strands Agents examples&lt;/a&gt; for multi-agent and deployment patterns.&lt;/p&gt; 
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;We built this system at TReNDS because we wanted every error in our application to get an instant, structured investigation instead of only an alert. Amazon Bedrock and the Strands Agents SDK made it straightforward to implement. We defined a few tools and wrote a system prompt. Now, we have an agent that reasons through production errors the same way an experienced engineer would. It delivers results in seconds.&lt;/p&gt; 
-&lt;p&gt;Adding a new capability means writing another &lt;code&gt;@tool&lt;/code&gt; function and a few lines of Python. Whether the need is a Jira integration, a GitHub PR with a suggested fix, or a tool that connects to a running pod for deeper investigation, the pattern is the same. The foundation model handles the reasoning and orchestration, and we connect it to the systems it needs.&lt;/p&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/29/ML-21106-2.jpg" alt="Vitaly Omelchenko" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Vitaly Omelchenko&lt;/h3&gt; 
-  &lt;p&gt;Vitaly is a Full Stack Developer and DevOps Engineer at the Center for Translational Research in Neuroimaging and Data Science (TReNDS), where he designs and operates the cloud and AI infrastructure supporting large-scale neuroimaging and brain health research. He has been building production systems on AWS since 2019, and his current work centers on agentic AI – applying foundation models on Amazon Bedrock to automate software operations and accelerate research computing.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/29/ML-21106-3.png" alt="Chris Riddle" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Chris Riddle&lt;/h3&gt; 
-  &lt;p&gt;Chris is a senior solutions architect at Amazon Web Services (AWS) and supports R1 university customers. With 20-plus years of experience in technology and a decade in higher education, Chris helps researchers use AWS for their artificial intelligence/machine learning (AI/ML) and high performance computing (HPC) workloads.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/29/ML-21106-4.png" alt="Devin Hicks" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Devin Hicks&lt;/h3&gt; 
-  &lt;p&gt;Devin is a Solutions Architect at Amazon Web Services (AWS) supporting the University System of Georgia’s member institutions. With nearly a decade of experience in technology, Devin guides higher education customers towards scalable, secure, and cost-effective cloud solutions.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/07/29/ML-21106-5.png" alt="Vadim Omeltchenko" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Vadim Omeltchenko&lt;/h3&gt; 
-  &lt;p&gt;Vadim is a Sr.&amp;nbsp;Amazon Bedrock Go-to-Market Solutions Architect who is passionate about helping AWS customers innovate in the cloud.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
-		<item>
-		<title>Determining playoff clinching scenarios in the NHL using constraint programming</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/determining-playoff-clinching-scenarios-in-the-nhl-using-constraint-programming/</link>
-		
-		<dc:creator><![CDATA[Gili Rosenberg]]></dc:creator>
-		<pubDate>Fri, 07 Aug 2026 16:21:00 +0000</pubDate>
-				<category><![CDATA[Advanced (300)]]></category>
-		<category><![CDATA[Technical How-to]]></category>
-		<guid isPermaLink="false">7ea54833b1fa7768596b6ac5cedad2a18b1ed85b</guid>
-
-					<description>The AWS Generative AI Innovation Center built an automated system that uses constraint programming and custom tree search to determine, with mathematical certainty, when and how an NHL team clinches a playoff spot. The approach was validated against four full NHL seasons of officially published results.</description>
-										<content:encoded>&lt;p&gt;As the National Hockey League (NHL) regular season enters its final stretch each spring, one question dominates the minds of hockey fans: has my team clinched the playoffs? The answer is often surprisingly hard to discern. With 32 teams, complex tie-breaking rules, and hundreds of remaining games, determining whether a team is mathematically guaranteed a playoff spot is a serious combinatorial challenge.&lt;/p&gt; 
-&lt;p&gt;In this post, we describe how the &lt;a href="https://aws.amazon.com/ai/generative-ai/innovation-center/" target="_blank" rel="noopener"&gt;AWS Generative AI Innovation Center&lt;/a&gt; created an automated system that determines NHL playoff clinching scenarios. Our approach uses constraint programming (CP) and custom tree search to produce these scenarios, and we validated the results against those officially published by the NHL. For more details, see our &lt;a href="https://arxiv.org/abs/2605.13142" target="_blank" rel="noopener"&gt;scientific paper&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2 id="background-what-it-means-to-clinch-the-playoffs"&gt;Background: what it means to clinch the playoffs&lt;/h2&gt; 
-&lt;p&gt;A team has &lt;em&gt;clinched the playoffs&lt;/em&gt; (or simply “clinched”) if it is guaranteed to make the playoffs regardless of the outcomes of any remaining games. As the season progresses, usually starting in March, the NHL publishes daily clinching scenarios for teams that could clinch based on that evening’s games. These scenarios take the form of statements like:&lt;/p&gt; 
-&lt;blockquote&gt;
- &lt;p&gt;The Minnesota Wild will clinch the playoffs if any of the following holds: they get at least one point against the Anaheim Ducks, the St.&amp;nbsp;Louis Blues lose to the Utah Hockey Club in any fashion, or the Calgary Flames lose to the Vegas Golden Knights in any fashion.&lt;/p&gt;
-&lt;/blockquote&gt; 
-&lt;p&gt;Producing such scenarios manually has become increasingly time-consuming and error-prone as the league’s tie-breaking rules have grown more elaborate. Our work contributes an automated, mathematically rigorous alternative that is efficient for daily use.&lt;/p&gt; 
-&lt;h2 id="the-nhl-playoff-structure"&gt;The NHL playoff structure&lt;/h2&gt; 
-&lt;p&gt;The NHL’s 32 teams are divided into two conferences (Eastern and Western), each split into two divisions. Sixteen teams qualify for the playoffs: in each conference, the top three teams from each division qualify directly, and two additional “wild card” teams fill the remaining spots.&lt;/p&gt; 
-&lt;p&gt;Each game must produce a winner. If a game is tied after regulation, it goes to overtime, and then to a shootout if necessary. Games therefore have six possible outcomes from a given team’s perspective: regulation win (RW), overtime win (OTW), shootout win (SOW), shootout loss (SOL), overtime loss (OTL), and regulation loss (RL). Wins award 2 points, overtime/shootout losses award 1 point, and regulation losses award 0 points.&lt;/p&gt; 
-&lt;p&gt;When teams are tied on points, the NHL applies a cascade of seven tie-breakers:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Point percentage (that is, fewer games played).&lt;/li&gt; 
- &lt;li&gt;Regulation wins.&lt;/li&gt; 
- &lt;li&gt;Regulation wins plus Overtime wins.&lt;/li&gt; 
- &lt;li&gt;Total wins.&lt;/li&gt; 
- &lt;li&gt;Head-to-head points.&lt;/li&gt; 
- &lt;li&gt;Goal differential, including shootout-deciding goals.&lt;/li&gt; 
- &lt;li&gt;Goals scored, including shootout-deciding goals.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;These complex tie-breakers are a major reason why determining playoff clinch scenarios is computationally challenging.&lt;/p&gt; 
-&lt;h2 id="our-approach"&gt;Our approach&lt;/h2&gt; 
-&lt;p&gt;Our solution has two key components: the 0-day solver and the n-day lookahead solver.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;0-day solver:&lt;/strong&gt; The foundation of our approach is a constraint programming (CP) model that answers the question: &lt;em&gt;given the current standings, has a team already clinched the playoffs?&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;We formulate this as a feasibility problem: can we find outcomes to all remaining games such that the team in question misses the playoffs? If no such scenario exists, the team has clinched. This model is solved using the CP-SAT solver from Google OR-Tools, and accounts for the full complexity of the NHL’s tie-breaking rules.&lt;/p&gt; 
-&lt;p&gt;&lt;strong&gt;n-day lookahead:&lt;/strong&gt; With the 0-day solver in hand, we then ask: &lt;em&gt;which outcomes of the games of the next n days would cause a given team to clinch?&lt;/em&gt;&lt;/p&gt; 
-&lt;p&gt;We answer this with a custom tree search, where each layer represents a game that occurs in the next n days, and each node represents a specific outcome of that game (see Figure 1). The tree search calls the 0-day solver at each node to determine if the accumulated outcomes are sufficient for clinching. Preprocessing, pruning strategies, and node-ordering heuristics keep the search tractable.&lt;/p&gt; 
-&lt;p&gt;For example, in Figure 1, the 0-day solver deduces that a team clinches the playoffs with a shootout win (SOW) in their next game, denoted with an ‘X’. That team then also clinches for any stronger result of that game (OTW or RW), as well as for any result of any other relevant game in the next n days. Green shading indicates nodes for which a clinch is proven without explicit evaluation.&lt;/p&gt; 
-&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
- &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-1.jpg" alt="Tree search diagram where a shootout win and stronger results for team k are shaded green as proven playoff clinches" width="800"&gt;
- &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 1: Tree search for the n-day lookahead, where green nodes are proven clinches without explicit evaluation&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2 id="results"&gt;Results&lt;/h2&gt; 
-&lt;p&gt;We validated the clinch scenarios produced by our approach on four NHL regular seasons (2021–22 through 2024–25) using data from the NHL’s public API. All scenarios produced by our system matched exactly with those published by the NHL.&lt;/p&gt; 
-&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
- &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-2.jpg" alt="Box plot of elapsed solve time per date in seconds on a log scale across the 2021-2022 through 2024-2025 NHL seasons" width="800"&gt;
- &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 2: Elapsed solve time per date across four NHL seasons&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Determining 1-day clinch scenarios required a median runtime on the order of minutes, offering significant speedups over manual approaches (see Figure 2). This efficiency comes from pruning: with the right pre-processing strategies, node ordering heuristics, and inference algorithms, most of the search tree does not need to be explored. In Figure 3, we demonstrate pruning efficiency values near 100% for most instances.&lt;/p&gt; 
-&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
- &lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-3.jpg" alt="Box plot of pruning efficiency from 0 to 1 across the 2021-2022 through 2024-2025 NHL seasons, with medians near 1.0" width="800"&gt;
- &lt;p class="wp-caption-text"&gt;&lt;br&gt;Figure 3: Pruning efficiency across four NHL seasons&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h2 id="practical-value"&gt;Practical value&lt;/h2&gt; 
-&lt;p&gt;These methods have direct practical applications:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;For the NHL and media:&lt;/strong&gt; Automated, provably correct clinching scenarios that can be generated daily without manual effort, yielding significant time savings.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;For fans:&lt;/strong&gt; Richer engagement as the postseason approaches, with scenarios that explain exactly what needs to happen for their team to clinch the playoffs.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;For sports analytics:&lt;/strong&gt; A rigorous framework that can be extended to other milestones (division titles, elimination, specific seeds) and potentially adapted to other leagues.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;This work is part of the broader set of &lt;a href="https://aws.amazon.com/blogs/machine-learning/better-decisions-at-scale-how-mathematical-optimization-delivers-where-intuition-fails/" target="_blank" rel="noopener"&gt;mathematical optimization solutions&lt;/a&gt; delivered by AWS to customers across industries. From routing and scheduling to sports analytics, these techniques quickly deliver definitive answers where manual approaches would take significant time, effort, and specialized expertise.&lt;/p&gt; 
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;Determining NHL playoff clinching scenarios is a computationally hard problem. The league’s layered qualification structure and tie-breaking rules create a combinatorial challenge that is difficult to solve manually. Our approach combines constraint programming with custom tree search to crack it efficiently and correctly, validated against four seasons of real NHL data.&lt;/p&gt; 
-&lt;p&gt;The framework is extensible: future work could extend the approach to other clinching and elimination scenarios within the NHL, or adapt it to other sports leagues with different structures and rules.&lt;/p&gt; 
-&lt;p&gt;If you have complex combinatorial problems and want to understand how optimization techniques could apply to your use case, reach out to your account manager to begin exploring with the &lt;a href="https://aws.amazon.com/ai/generative-ai/innovation-center/" target="_blank" rel="noopener"&gt;AWS Generative AI Innovation Center&lt;/a&gt;.&lt;/p&gt; 
-&lt;hr&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-4.png" alt="Gili Rosenberg" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Gili Rosenberg&lt;/h3&gt; 
-  &lt;p&gt;Gili is a Sr.&amp;nbsp;Applied Scientist at the Amazon Advanced Solutions Lab. Prior to joining AWS, Gili co-led the optimization team at 1QBit where he worked as a client-facing senior researcher for over 8 years. Gili has worked on many customer projects, predominantly in finance, materials, and automotives.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-5.jpeg" alt="Kyle Booth" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Kyle Booth&lt;/h3&gt; 
-  &lt;p&gt;Kyle is a Senior Applied Scientist at the Amazon Advanced Solutions Lab. He received his PhD in Operations Research from the University of Toronto. His research focuses on constraint programming and integer programming approaches to combinatorial optimization problems.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-6.jpeg" alt="Kyle Brubaker" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Kyle Brubaker&lt;/h3&gt; 
-  &lt;p&gt;Kyle was a Principal Applied Scientist at the Amazon Advanced Solutions Lab. He received an MSc in Biomedical Engineering from NYU, focusing on brain machine interfaces. He has an industry background in machine learning and ML engineering. (Affiliated with Amazon at time of contributions.)&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box"&gt; 
-  &lt;div class="blog-author-image"&gt; 
-   &lt;p&gt;&lt;img loading="lazy" class="alignleft size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/08/04/ML-21367-7.jpeg" alt="Ruben Andrist" width="100" height="100"&gt;&lt;/p&gt; 
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Ruben Andrist&lt;/h3&gt; 
-  &lt;p&gt;Ruben is a Principal Applied Scientist in the Amazon Advanced Solutions Lab. He received a PhD in theoretical physics from ETH Zurich working on topological quantum error correction. Today his research is focused on quantum computing and heuristic optimization methods.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		
-			</item>
 	</channel>
 </rss>
 
 ### SOURCE:Google AI Blog ###
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>AI</title><link>https://blog.google/innovation-and-ai/technology/ai/</link><description>AI</description><atom:link href="https://blog.google/innovation-and-ai/technology/ai/rss/" rel="self"/><language>en-us</language><lastBuildDate>Thu, 13 Aug 2026 16:45:00 +0000</lastBuildDate><image><url>https://blog.google/innovation-and-ai/technology/ai/static/blogv2/images/google.png</url><title>AI</title><link>https://blog.google/innovation-and-ai/technology/ai/</link></image><item><title>Bring your spreadsheet data to life with Sheets canvas</title><link>https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Sheets_canvas-blog-header-2784x.max-600x600.format-webp.webp" width="540"/><media:description>The video shows Sheets canvas in action.</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Sheets_canvas-blog-header-2784x.max-600x600.format-webp.webp"&gt;Sheets canvas turns data into interactive dashboards, custom study trackers, seating charts, and more, all with a simple prompt.</description><pubDate>Thu, 13 Aug 2026 16:45:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/</guid><category>Google Workspace</category><category>Google One</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Bring your spreadsheet data to life with Sheets canvas</title><description>Sheets canvas turns data into interactive dashboards, custom study trackers, seating charts, and more, all with a simple prompt.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Eric Birnbaum</name><title>Director, Product Management</title><department>Google Sheets</department><company/></author></item><item><title>AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.</title><link>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AIME_SIZZLE_THUMBNAIL.Aug10.max-600x600.format-webp.webp" width="540"/><media:description>AMIE promotional video</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AIME_SIZZLE_THUMBNAIL.Aug10.max-600x600.format-webp.webp"&gt;Google introduces AMIE for real-time clinical video consultations in simulated settings.</description><pubDate>Tue, 11 Aug 2026 17:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/</guid><category>Google Health</category><category>Google Research</category><category>Google DeepMind</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Anil Palepu</name><title>Research Lead</title><department/><company/></author></item><item><title>Evolve your marketing with new AI tools</title><link>https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Advisor_Header.max-600x600.format-webp.webp" width="540"/><media:description>Advisor UI in Google Ads and Google Analytics</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Advisor_Header.max-600x600.format-webp.webp"&gt;Learn how new AI and agentic experiences across Google Ads and Google Analytics can simplify your marketing workflow.</description><pubDate>Mon, 10 Aug 2026 14:30:00 +0000</pubDate><guid>https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/</guid><category>Google Ads</category><category>Analytics</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Evolve your marketing with new AI tools</title><description>Learn how new AI and agentic experiences across Google Ads and Google Analytics can simplify your marketing workflow.</description><site_name>Google</site_name><url>https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Josh Moser</name><title>Senior Director</title><department>Product Management</department><company/></author></item><item><title>The latest AI news we announced in July 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/July_AI_Recap_still.max-600x600.format-webp.webp" width="540"/><media:description>July AI recap header</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/July_AI_Recap_still.max-600x600.format-webp.webp"&gt;Here are Google’s latest AI updates from July 2026</description><pubDate>Tue, 04 Aug 2026 13:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/</guid><category>Search</category><category>Android</category><category>Google DeepMind</category><category>Google Workspace</category><category>Google Cloud</category><category>AI</category><category>Gemini models</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>The latest AI news we announced in July 2026</title><description>Here are Google’s latest AI updates from July 2026</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>Inside our 353,000-person vibe coding course</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Vibe_coding_course_hero.max-600x600.format-webp.webp" width="540"/><media:description>Illustrations of a laptop, an AI spark, messages, code, and a 3-D cube</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Vibe_coding_course_hero.max-600x600.format-webp.webp"&gt;Kaggle’s AI Agents Intensive with Google brought learners together in a no-cost course to build and deploy the next frontier of AI.</description><pubDate>Mon, 03 Aug 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/</guid><category>Gemini models</category><category>Google Cloud</category><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Inside our 353,000-person vibe coding course</title><description>Kaggle’s AI Agents Intensive with Google brought learners together in a no-cost course to build and deploy the next frontier of AI.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Anant Nawalgaria</name><title>Group AI Product Manager, Founder of GenAI intensive</title><department/><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Brenda Flynn</name><title>Partnerships Lead</title><department>Kaggle</department><company/></author></item><item><title>Gemini API Managed Agents: 3.6 Flash, hooks, and more</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/unnamed_2_vNnOv20.max-600x600.format-webp.webp" width="540"/><media:description>Managed Agents Gemini 3.6 Flash, Hooks and Triggers</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/unnamed_2_vNnOv20.max-600x600.format-webp.webp"&gt;We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><pubDate>Tue, 28 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Gemini API Managed Agents: 3.6 Flash, hooks, and more</title><description>We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Philipp Schmid</name><title>Member of the Technical Staff</title><department>Google DeepMind</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mariano Cocirio</name><title>Product Manager</title><department>Google DeepMind</department><company/></author></item><item><title>5 ways AI Mode in Search helps you enjoy the real world</title><link>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_real_world.max-600x600.format-webp.webp" width="540"/><media:description>Illustration of a black magnifying glass in a white circle on green grass surrounded by items related to fun activities like tennis and games</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_real_world.max-600x600.format-webp.webp"&gt;It might sound counterintuitive, but Search's AI tools can actually help you make the most of your time offline whether you want to book concert tickets or find the perf…</description><pubDate>Tue, 28 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways AI Mode in Search helps you enjoy the real world</title><description>It might sound counterintuitive, but Search's AI tools can actually help you make the most of your time offline whether you want to book concert tickets or find the perfect hiking boots.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>5 ways to host the ultimate dinner party with Google Search</title><link>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinner_parties.max-600x600.format-webp.webp" width="540"/><media:description>An illustrated black magnifying glass with a sparkle in a white circle surrounded by a dinner party tablescape</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinner_parties.max-600x600.format-webp.webp"&gt;These AI features can help you craft a menu, design a tablescape, and handle other party-planning tasks.</description><pubDate>Tue, 28 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways to host the ultimate dinner party with Google Search</title><description>These AI features can help you craft a menu, design a tablescape, and handle other party-planning tasks.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>3 Google updates from Galaxy Unpacked 2026</title><link>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp" width="540"/><media:description>Gentle Monster glasses, Warby Parker glasses, a prompt asking for the history behind a pictured building, and a prompt asking to book a table at a pictured restaurant</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp"&gt;We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.</description><pubDate>Wed, 22 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</guid><category>Gemini App</category><category>Android</category><category>Gemini Notebook</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>3 Google updates from Galaxy Unpacked 2026</title><description>We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Menaka Shroff</name><title>VP of Android Ecosystem Marketing</title><department/><company/></author></item><item><title>Connect more of your apps to Search</title><link>https://blog.google/products-and-platforms/products/search/connected-apps/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp" width="540"/><media:description>Connected apps rendering</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp"&gt;You’ll be able to securely link and interact with your go-to services directly in AI Mode.</description><pubDate>Thu, 16 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/connected-apps/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Connect more of your apps to Search</title><description>You’ll be able to securely link and interact with your go-to services directly in AI Mode.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/connected-apps/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Chips Mistry</name><title>Senior Product Manager</title><department>Search</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Biharck Araújo</name><title>Engineering Lead</title><department>Search</department><company/></author></item><item><title>Create, edit and star in videos with two Google Vids updates</title><link>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp" width="540"/><media:description>Text "Gemini Omni and Personal Avatars in Google Vids" surrounded by various images</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp"&gt;Gemini Omni and personal avatars in Google Vids make video creation easier than ever.</description><pubDate>Thu, 16 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</guid><category>Google Workspace</category><category>Google One</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Create, edit and star in videos with two Google Vids updates</title><description>Gemini Omni and personal avatars in Google Vids make video creation easier than ever.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Justin Luk</name><title>Product Manager</title><department/><company/></author></item><item><title>Celebrating 25 years of visual search innovation</title><link>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_25th_hero.max-600x600.format-webp.webp" width="540"/><media:description>Google Images logo surrounded by illustrations of people searching for different images</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_25th_hero.max-600x600.format-webp.webp"&gt;Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.</description><pubDate>Tue, 14 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Celebrating 25 years of visual search innovation</title><description>Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Brad Kellett</name><title>Senior Engineering Director</title><department>Search</department><company/></author></item><item><title>Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp" width="540"/><media:description>Managed agents feature bundle launch</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp"&gt;We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><pubDate>Tue, 07 Jul 2026 08:54:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</title><description>We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Philipp Schmid</name><title>Developer Relations Engineer</title><department>Google DeepMind</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mariano Cocirio</name><title>Product Manager</title><department>Google DeepMind</department><company/></author></item><item><title>The latest AI news we announced in June 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp" width="540"/><media:description>June Pixel Drop hero</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp"&gt;Here are Google’s latest AI updates from June 2026.</description><pubDate>Wed, 01 Jul 2026 18:15:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</guid><category>Search</category><category>NotebookLM</category><category>Android</category><category>Arts &amp; Culture</category><category>Google DeepMind</category><category>Developer tools</category><category>Learning &amp; Education</category><category>UK</category><category>AI</category><category>Pixel</category><category>Gemini App</category><category>Gemini models</category><category>Google Research</category><category>Safety &amp; Security</category><category>Google Nest</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>The latest AI news we announced in June 2026</title><description>Here are Google’s latest AI updates from June 2026.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.</title><link>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp"&gt;Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.</description><pubDate>Wed, 01 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</guid><category>Learning &amp; Education</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.</title><description/><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</url></og></item><item><title>Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers</title><link>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp" width="540"/><media:description>Four illustrated characters representing different professional roles, including a scientist, technician, explorer, and observer.</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp"&gt;Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.</description><pubDate>Tue, 30 Jun 2026 06:00:00 +0000</pubDate><guid>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</guid><category>UK</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers</title><description>Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.</description><site_name>Google</site_name><url>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Kate Alessi</name><title>Vice President and Managing Director</title><department/><company>Google UK &amp; Ireland</company></author></item><item><title>Ask an AI expert: What exactly is the full stack?</title><link>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp" width="540"/><media:description>An illustration depicting a full-stack AI infrastructure against a dark background</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp"&gt;A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.</description><pubDate>Mon, 29 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Ask an AI expert: What exactly is the full stack?</title><description>A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Molly McHugh-Johnson</name><title>Contributor</title><department/><company/></author></item><item><title>Our latest Google Finance upgrades, including a new app</title><link>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp" width="540"/><media:description>The Google Finance logo, surrounded by elements of the user interface</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp"&gt;The new Google Finance is coming out of beta and launching a new Android app.</description><pubDate>Thu, 25 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Our latest Google Finance upgrades, including a new app</title><description>The new Google Finance is coming out of beta and launching a new Android app.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Barine Tee</name><title>Principal Engineer</title><department>Search</department><company/></author></item><item><title>New research shows how AMIE, our medical AI, could help manage health conditions.</title><link>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp"&gt;Research in “Nature” shows our conversational AI system matches primary care physicians in complex disease management.</description><pubDate>Wed, 17 Jun 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</guid><category>Google Research</category><category>Google DeepMind</category><category>Health</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>New research shows how AMIE, our medical AI, could help manage health conditions.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mike Schaekermann</name><title>Research Lead</title><department/><company/></author></item><item><title>We’re strengthening our presence in Alabama through new investments and community support.</title><link>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</link><description>Google has announced a $1.5 billion investment for 2026 and 2027 to expand its data center campus in Jackson County, Alabama. Operating since 2019 on a repurposed former…</description><pubDate>Mon, 15 Jun 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</guid><category>Global Network</category><category>Creating opportunity</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>We’re strengthening our presence in Alabama through new investments and community support.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</url></og></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>AI</title><link>https://blog.google/innovation-and-ai/technology/ai/</link><description>AI</description><atom:link href="https://blog.google/innovation-and-ai/technology/ai/rss/" rel="self"/><language>en-us</language><lastBuildDate>Mon, 17 Aug 2026 08:00:00 +0000</lastBuildDate><image><url>https://blog.google/innovation-and-ai/technology/ai/static/blogv2/images/google.png</url><title>AI</title><link>https://blog.google/innovation-and-ai/technology/ai/</link></image><item><title>Get closer to the game with Gemini and Pixel</title><link>https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/football_multi-club_hero_nphU3P.max-600x600.format-webp.webp" width="540"/><media:description>Low-angle view of a soccer player kicking a ball mid-air against a bright blue sky, with grass flying from their cleats.</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/football_multi-club_hero_nphU3P.max-600x600.format-webp.webp"&gt;Google Gemini and Pixel partner with five global football clubs to elevate the fan matchday experience through AI and  Smartphone Technology.</description><pubDate>Mon, 17 Aug 2026 08:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/</guid><category>Gemini</category><category>AI</category><category>Google in Europe</category><category>Pixel</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Get closer to the game with Gemini and Pixel</title><description>Google Gemini and Pixel partner with five global football clubs to elevate the fan matchday experience through AI and  Smartphone Technology.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Eileen Mannion</name><title>VP, Marketing UKI and EMEA Devices and Services</title><department/><company/></author></item><item><title>Bring your spreadsheet data to life with Sheets canvas</title><link>https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Sheets_canvas-blog-header-2784x.max-600x600.format-webp.webp" width="540"/><media:description>The video shows Sheets canvas in action.</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Sheets_canvas-blog-header-2784x.max-600x600.format-webp.webp"&gt;Sheets canvas turns data into interactive dashboards, custom study trackers, seating charts, and more, all with a simple prompt.</description><pubDate>Thu, 13 Aug 2026 16:45:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/</guid><category>Google Workspace</category><category>Google One</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Bring your spreadsheet data to life with Sheets canvas</title><description>Sheets canvas turns data into interactive dashboards, custom study trackers, seating charts, and more, all with a simple prompt.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Eric Birnbaum</name><title>Director, Product Management</title><department>Google Sheets</department><company/></author></item><item><title>AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.</title><link>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AIME_SIZZLE_THUMBNAIL.Aug10.max-600x600.format-webp.webp" width="540"/><media:description>AMIE promotional video</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AIME_SIZZLE_THUMBNAIL.Aug10.max-600x600.format-webp.webp"&gt;Google introduces AMIE for real-time clinical video consultations in simulated settings.</description><pubDate>Tue, 11 Aug 2026 17:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/</guid><category>Google Health</category><category>Google Research</category><category>Google DeepMind</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Anil Palepu</name><title>Research Lead</title><department/><company/></author></item><item><title>Evolve your marketing with new AI tools</title><link>https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Advisor_Header.max-600x600.format-webp.webp" width="540"/><media:description>Advisor UI in Google Ads and Google Analytics</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Advisor_Header.max-600x600.format-webp.webp"&gt;Learn how new AI and agentic experiences across Google Ads and Google Analytics can simplify your marketing workflow.</description><pubDate>Mon, 10 Aug 2026 14:30:00 +0000</pubDate><guid>https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/</guid><category>Google Ads</category><category>Analytics</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Evolve your marketing with new AI tools</title><description>Learn how new AI and agentic experiences across Google Ads and Google Analytics can simplify your marketing workflow.</description><site_name>Google</site_name><url>https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Josh Moser</name><title>Senior Director</title><department>Product Management</department><company/></author></item><item><title>The latest AI news we announced in July 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/July_AI_Recap_still.max-600x600.format-webp.webp" width="540"/><media:description>July AI recap header</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/July_AI_Recap_still.max-600x600.format-webp.webp"&gt;Here are Google’s latest AI updates from July 2026</description><pubDate>Tue, 04 Aug 2026 13:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/</guid><category>Search</category><category>Android</category><category>Google DeepMind</category><category>Google Workspace</category><category>Google Cloud</category><category>AI</category><category>Gemini models</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>The latest AI news we announced in July 2026</title><description>Here are Google’s latest AI updates from July 2026</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>Inside our 353,000-person vibe coding course</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Vibe_coding_course_hero.max-600x600.format-webp.webp" width="540"/><media:description>Illustrations of a laptop, an AI spark, messages, code, and a 3-D cube</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Vibe_coding_course_hero.max-600x600.format-webp.webp"&gt;Kaggle’s AI Agents Intensive with Google brought learners together in a no-cost course to build and deploy the next frontier of AI.</description><pubDate>Mon, 03 Aug 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/</guid><category>Gemini models</category><category>Google Cloud</category><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Inside our 353,000-person vibe coding course</title><description>Kaggle’s AI Agents Intensive with Google brought learners together in a no-cost course to build and deploy the next frontier of AI.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Anant Nawalgaria</name><title>Group AI Product Manager, Founder of GenAI intensive</title><department/><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Brenda Flynn</name><title>Partnerships Lead</title><department>Kaggle</department><company/></author></item><item><title>Gemini API Managed Agents: 3.6 Flash, hooks, and more</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/unnamed_2_vNnOv20.max-600x600.format-webp.webp" width="540"/><media:description>Managed Agents Gemini 3.6 Flash, Hooks and Triggers</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/unnamed_2_vNnOv20.max-600x600.format-webp.webp"&gt;We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><pubDate>Tue, 28 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Gemini API Managed Agents: 3.6 Flash, hooks, and more</title><description>We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Philipp Schmid</name><title>Member of the Technical Staff</title><department>Google DeepMind</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mariano Cocirio</name><title>Product Manager</title><department>Google DeepMind</department><company/></author></item><item><title>5 ways AI Mode in Search helps you enjoy the real world</title><link>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_real_world.max-600x600.format-webp.webp" width="540"/><media:description>Illustration of a black magnifying glass in a white circle on green grass surrounded by items related to fun activities like tennis and games</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_real_world.max-600x600.format-webp.webp"&gt;It might sound counterintuitive, but Search's AI tools can actually help you make the most of your time offline whether you want to book concert tickets or find the perf…</description><pubDate>Tue, 28 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways AI Mode in Search helps you enjoy the real world</title><description>It might sound counterintuitive, but Search's AI tools can actually help you make the most of your time offline whether you want to book concert tickets or find the perfect hiking boots.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>5 ways to host the ultimate dinner party with Google Search</title><link>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinner_parties.max-600x600.format-webp.webp" width="540"/><media:description>An illustrated black magnifying glass with a sparkle in a white circle surrounded by a dinner party tablescape</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinner_parties.max-600x600.format-webp.webp"&gt;These AI features can help you craft a menu, design a tablescape, and handle other party-planning tasks.</description><pubDate>Tue, 28 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>5 ways to host the ultimate dinner party with Google Search</title><description>These AI features can help you craft a menu, design a tablescape, and handle other party-planning tasks.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>3 Google updates from Galaxy Unpacked 2026</title><link>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp" width="540"/><media:description>Gentle Monster glasses, Warby Parker glasses, a prompt asking for the history behind a pictured building, and a prompt asking to book a table at a pictured restaurant</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp"&gt;We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.</description><pubDate>Wed, 22 Jul 2026 13:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</guid><category>Gemini App</category><category>Android</category><category>Gemini Notebook</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>3 Google updates from Galaxy Unpacked 2026</title><description>We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Menaka Shroff</name><title>VP of Android Ecosystem Marketing</title><department/><company/></author></item><item><title>Connect more of your apps to Search</title><link>https://blog.google/products-and-platforms/products/search/connected-apps/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp" width="540"/><media:description>Connected apps rendering</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp"&gt;You’ll be able to securely link and interact with your go-to services directly in AI Mode.</description><pubDate>Thu, 16 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/connected-apps/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Connect more of your apps to Search</title><description>You’ll be able to securely link and interact with your go-to services directly in AI Mode.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/connected-apps/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Chips Mistry</name><title>Senior Product Manager</title><department>Search</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Biharck Araújo</name><title>Engineering Lead</title><department>Search</department><company/></author></item><item><title>Create, edit and star in videos with two Google Vids updates</title><link>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp" width="540"/><media:description>Text "Gemini Omni and Personal Avatars in Google Vids" surrounded by various images</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp"&gt;Gemini Omni and personal avatars in Google Vids make video creation easier than ever.</description><pubDate>Thu, 16 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</guid><category>Google Workspace</category><category>Google One</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Create, edit and star in videos with two Google Vids updates</title><description>Gemini Omni and personal avatars in Google Vids make video creation easier than ever.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Justin Luk</name><title>Product Manager</title><department/><company/></author></item><item><title>Celebrating 25 years of visual search innovation</title><link>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_25th_hero.max-600x600.format-webp.webp" width="540"/><media:description>Google Images logo surrounded by illustrations of people searching for different images</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_25th_hero.max-600x600.format-webp.webp"&gt;Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.</description><pubDate>Tue, 14 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Celebrating 25 years of visual search innovation</title><description>Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Brad Kellett</name><title>Senior Engineering Director</title><department>Search</department><company/></author></item><item><title>Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</title><link>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp" width="540"/><media:description>Managed agents feature bundle launch</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp"&gt;We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><pubDate>Tue, 07 Jul 2026 08:54:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more</title><description>We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Philipp Schmid</name><title>Developer Relations Engineer</title><department>Google DeepMind</department><company/></author><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mariano Cocirio</name><title>Product Manager</title><department>Google DeepMind</department><company/></author></item><item><title>The latest AI news we announced in June 2026</title><link>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp" width="540"/><media:description>June Pixel Drop hero</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp"&gt;Here are Google’s latest AI updates from June 2026.</description><pubDate>Wed, 01 Jul 2026 18:15:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</guid><category>Search</category><category>NotebookLM</category><category>Android</category><category>Arts &amp; Culture</category><category>Google DeepMind</category><category>Developer tools</category><category>Learning &amp; Education</category><category>UK</category><category>AI</category><category>Pixel</category><category>Gemini App</category><category>Gemini models</category><category>Google Research</category><category>Safety &amp; Security</category><category>Google Nest</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>The latest AI news we announced in June 2026</title><description>Here are Google’s latest AI updates from June 2026.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>News from Google Team</name><title/><department/><company/></author></item><item><title>New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.</title><link>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp"&gt;Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.</description><pubDate>Wed, 01 Jul 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</guid><category>Learning &amp; Education</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.</title><description/><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/education/nyc-ai-summit/</url></og></item><item><title>Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers</title><link>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp" width="540"/><media:description>Four illustrated characters representing different professional roles, including a scientist, technician, explorer, and observer.</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp"&gt;Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.</description><pubDate>Tue, 30 Jun 2026 06:00:00 +0000</pubDate><guid>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</guid><category>UK</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers</title><description>Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.</description><site_name>Google</site_name><url>https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Kate Alessi</name><title>Vice President and Managing Director</title><department/><company>Google UK &amp; Ireland</company></author></item><item><title>Ask an AI expert: What exactly is the full stack?</title><link>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp" width="540"/><media:description>An illustration depicting a full-stack AI infrastructure against a dark background</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp"&gt;A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.</description><pubDate>Mon, 29 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</guid><category>Developer tools</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Ask an AI expert: What exactly is the full stack?</title><description>A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.</description><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Molly McHugh-Johnson</name><title>Contributor</title><department/><company/></author></item><item><title>Our latest Google Finance upgrades, including a new app</title><link>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp" width="540"/><media:description>The Google Finance logo, surrounded by elements of the user interface</media:description><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp"&gt;The new Google Finance is coming out of beta and launching a new Android app.</description><pubDate>Thu, 25 Jun 2026 16:00:00 +0000</pubDate><guid>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</guid><category>Search</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>Our latest Google Finance upgrades, including a new app</title><description>The new Google Finance is coming out of beta and launching a new Android app.</description><site_name>Google</site_name><url>https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Barine Tee</name><title>Principal Engineer</title><department>Search</department><company/></author></item><item><title>New research shows how AMIE, our medical AI, could help manage health conditions.</title><link>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</link><media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp" width="540"/><description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp"&gt;Research in “Nature” shows our conversational AI system matches primary care physicians in complex disease management.</description><pubDate>Wed, 17 Jun 2026 15:00:00 +0000</pubDate><guid>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</guid><category>Google Research</category><category>Google DeepMind</category><category>Health</category><category>AI</category><og xmlns:og="http://ogp.me/ns#"><type>article</type><title>New research shows how AMIE, our medical AI, could help manage health conditions.</title><description/><site_name>Google</site_name><url>https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/</url></og><author xmlns:author="http://www.w3.org/2005/Atom"><name>Mike Schaekermann</name><title>Research Lead</title><department/><company/></author></item></channel></rss>
 
 ### SOURCE:Microsoft Azure Blog ###
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
@@ -4833,7 +4912,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 <p class="wp-block-paragraph">None of this is on the horizon; it is happening now. Modernization is shifting from a multi-year program into something teams finish in days or weeks.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a81c00bec346&quot;}" data-wp-interactive="core/image" data-wp-key="6a81c00bec346" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp" alt="Gartner graph, including completeness of vision and ability to execute." class="wp-image-53126 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1536x864.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1.webp 1920w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a811a58116e9&quot;}" data-wp-interactive="core/image" data-wp-key="6a811a58116e9" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp" alt="Gartner graph, including completeness of vision and ability to execute." class="wp-image-53126 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1536x864.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1.webp 1920w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-AppMod-Blog-Thumbnail-1-1-1024x576.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -4857,7 +4936,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 <p class="wp-block-paragraph">Microsoft Azure was built for this moment. It provides the agentic foundation and engine for modernization and AI transformation, along with the governance and trust enterprises require, so modernization lowers security, data, and operational risk as much as it accelerates AI readiness. With agentic tooling and an end-to-end modernization solution powered by <a href="https://azure.microsoft.com/en-us/solutions/application-and-database-modernization/#Products-3" id="https://azure.microsoft.com/en-in/products/github/copilot" target="_blank" rel="noreferrer noopener">GitHub Copilot</a> and <a href="https://azure.microsoft.com/en-us/products/copilot" id="https://azure.microsoft.com/en-us/products/copilot" target="_blank" rel="noopener noreferrer">Azure Copilot</a>, Microsoft is accelerating the shift, not just leading it.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a81c00bed276&quot;}" data-wp-interactive="core/image" data-wp-key="6a81c00bed276" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp" alt="Chart visualization of Agentic Modernization on Azure." class="wp-image-53127 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1536x863.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1.webp 1920w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a811a581296e&quot;}" data-wp-interactive="core/image" data-wp-key="6a811a581296e" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp" alt="Chart visualization of Agentic Modernization on Azure." class="wp-image-53127 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1536x863.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1.webp 1920w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ_AgenticModDiagram-1-1024x575.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5845,7 +5924,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6a81c00c0d51a"></universal-media-player>
+		<universal-media-player id="ump-6a811a582ee4d"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5859,7 +5938,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6a81c00c0d51a", options);
+				ump("ump-6a811a582ee4d", options);
 			});
 		</script>
 	</div>
@@ -6729,7 +6808,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a81c00c20f46&quot;}" data-wp-interactive="core/image" data-wp-key="6a81c00c20f46" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a811a5848b30&quot;}" data-wp-interactive="core/image" data-wp-key="6a811a5848b30" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1068" height="597" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg" alt="Brain flowchart, including data sources, processing, evaluation, and actions." class="wp-image-52567" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg 1068w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-300x168.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-1024x572.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2-768x429.jpeg 768w" sizes="(max-width: 1068px) 100vw, 1068px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7070,7 +7149,7 @@ model = BedrockModel(model_id="us.anthropic.claude-sonnet-4-20250514")&lt;/code&
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6a81c00c2deb7&quot;}" data-wp-interactive="core/image" data-wp-key="6a81c00c2deb7" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6a811a58594d4&quot;}" data-wp-interactive="core/image" data-wp-key="6a811a58594d4" class="wp-block-image wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png" alt="Illustration of a Chaos Studio workspace with cloud, database, and document icons, encircled by system‑failure scenarios including Zone Down, DNS Outage, and Database Failover." class="wp-image-98614" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"

@@ -2,6 +2,283 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "GPU implementation of mixed quantum-classical Liouville molecular dynamics without momentum jump",
+    "url": "https://arxiv.org/abs/2608.14544v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "We implemented on GPU a mixed quantum-classical Liouville molecular dynamics simulation based on a momentum-jump-free theory. The trajectory spawning that was previously implemented on CPU for sampling enhancement was eliminated to avoid the overhead of thread divergence and dynamic memory allocation on the GPU. This achieved a speedup of an order of magnitude compared to the CPU computation with spawning, as well as a linear scaling with respect to the number of sampling trajectories.",
+    "authors": [
+      "Koji Ando"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Sensing-Aided Ordered Reliability Bits Guessing Random Additive Noise Decoding",
+    "url": "https://arxiv.org/abs/2608.14479v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "Integrated sensing and communication (ISAC) is a key enabler for future wireless systems, providing environmental information that can support tasks beyond conventional data transmission. However, its impact on channel decoding remains less explored. This paper studies sensing-aided ordered reliability bits guessing random additive noise decoding (ORBGRAND) over single-input single-output narrowband fading channels. Environmental information is used to construct a geometry-based prior for the ch",
+    "authors": [
+      "Yu Ge",
+      "Lukas Rapp",
+      "Ken R. Duffy",
+      "Muriel Médard"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Orbital Hall Effect in Weyl Semimetals from quantum geometric band interference",
+    "url": "https://arxiv.org/abs/2608.14353v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "Orbital angular momentum (OAM) transport in solids, prominently manifested in the orbital Hall effect, has emerged as a fundamental phenomenon that can decisively exceed its spin-based counterparts. However, the microscopic mechanisms governing OAM dynamics remain only partially understood. In particular, the role of band geometry in orbital transport is still largely unresolved. Here we address this question in the TaAs family of Weyl semimetals, TaAs, TaP, NbAs, and NbP, whose well-established",
+    "authors": [
+      "Chiara Pacella",
+      "Maximilian Ünzelmann",
+      "Ahmed Osman",
+      "Tim Figgemeier",
+      "Friedrich Reinert",
+      "Angel Rubio",
+      "Domenico Di Sante"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Multi-Agent Reinforcement Learning for Joint Handover Management and Power Allocation in Multi-Orbit Satellite Networks",
+    "url": "https://arxiv.org/abs/2608.14335v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "Future sixth-generation non-terrestrial networks are expected to combine low Earth orbit (LEO), medium Earth orbit (MEO), and geostationary Earth orbit (GEO) satellites, whose complementary layers must be coordinated through joint user association, power allocation, and handover management under fast LEO dynamics. This paper studies this problem by formulating it as a mixed-integer nonlinear program and decomposing it into a multi-agent reinforcement learning (MARL) policy that selects the assoc",
+    "authors": [
+      "Yassine Afif",
+      "Ashutosh Balakrishnan",
+      "Philippe Martins",
+      "Mohammed Almekhlafi",
+      "Antoine Lesage-Landry",
+      "Gunes Karabulut Kurt"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths",
+    "url": "https://arxiv.org/abs/2608.14333v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "Modern mixture-of-experts (MoE) language models increasingly strain the capacity and cost efficiency of high-bandwidth memory (HBM), as rapidly growing expert weights must be provisioned close to GPUs. High-bandwidth flash (HBF) offers substantially greater capacity, but conventional designs typically deliver HBF-resident expert weights to the GPU through HBM, leaving an additional direct GPU-HBF connection underutilized. We explore an HBF organization that simultaneously exploits two independen",
+    "authors": [
+      "Seeyeon Kim",
+      "Juhyeong Jin",
+      "Joo-Young Kim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Pressure-driven structural phase transition unlocks multifunctionality in KMgX (X = P, As, Sb, and Bi) compounds: A first-principles study",
+    "url": "https://arxiv.org/abs/2608.14302v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "The search for materials with multifunctional properties has attracted significant attention due to their potential applications in various energy-related devices. Pressure-induced phase transitions provide an effective strategy for accessing different structural phases of a material without altering its chemical composition, thereby enabling the tuning of its physical properties and expanding its functional applications. In this work, we investigate the previously unexplored orthorhombic (Pnma)",
+    "authors": [
+      "Chetna Saini",
+      "Neha Sadanandan",
+      "Tashi Nautiyal",
+      "Hongbin Zhang",
+      "Vikrant Chaudhary",
+      "Hem C. Kandpal"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Lightweight Beam Index Map Using Coupled Gaussian Mixture Models",
+    "url": "https://arxiv.org/abs/2608.14301v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "This paper addresses the beam alignment problem in MIMO systems from a decentralized, mobile terminal (MT)-centric perspective. We propose a lightweight machine learning approach that leverages position information to perform beam selection without relying on exhaustive search or strong base station coordination. Specifically, we model the joint distribution of MT positions and channel observations using a coupled Gaussian mixture model (GMM), enabling the construction of a beam index map (BIM) ",
+    "authors": [
+      "Amar Kasibovic",
+      "Franz Weißer",
+      "Wolfgang Utschick"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Budget-Aware Federated Dual-Side Channel Estimation for Hybrid mmWave Massive MIMO",
+    "url": "https://arxiv.org/abs/2608.14182v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "This work studies communication-constrained federated dual-side channel state information (CSI) estimation in hybrid millimeter-wave (mmWave) massive multiple input multiple output (MIMO) systems. Accurate CSI recovery is challenging because hybrid beamforming yields compressed and noisy observations, while repeated model exchange in federated learning (FL) makes communication efficiency strongly dependent on estimator size. Rather than developing a new federated optimization algorithm, we focus",
+    "authors": [
+      "Jiawei Chen",
+      "Ruining Fan",
+      "Mouli Chakraborty",
+      "Avishek Nag",
+      "Anshu Mukherjee"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.supr-con",
+    "title": "Simplified Silicon Nitride Nanomembrane Circuits for van der Waals Integration",
+    "url": "https://arxiv.org/abs/2608.14158v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "Two-dimensional (2D) materials and van der Waals (vdW) heterostructures provide an exceptional platform for engineering quantum devices, yet realizing their potential requires electrical integration without compromising the pristine properties of atomically thin crystals through conventional nanofabrication. Transferable circuitry addresses this challenge by decoupling circuit fabrication from device assembly, enabling electrical contacting without directly processing the active material. Here, ",
+    "authors": [
+      "Tommaso Confalone",
+      "Vasilisa Gerega",
+      "Flavia Lo Sardo",
+      "Shreya Kumbhakar",
+      "Davide Massarotti",
+      "Francesco Tafuri",
+      "Shigeyuki Ishida",
+      "Hiroshi Eisaki",
+      "Kornelius Nielsch",
+      "Golam Haider",
+      "Nicola Poccia"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CL",
+    "title": "The conditional superiority of fast silicon sampling",
+    "url": "https://arxiv.org/abs/2608.14079v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "Silicon sampling can produce surprisingly good population estimates at times. Does doing it fast attenuate such fidelity? In this study, we extend and assess ongoing work in silicon sampling by comparing the algorithmic fidelity of \"fast\" and \"slow\" modes of silicon sampling among a nationally representative sample of Singaporean survey respondents. We find that silicon sampling with contemporary frontier models remains a method in early development to be used only with great caution. While sili",
+    "authors": [
+      "Nickolas Hock Yuen Lam",
+      "Ji Xuan Voo",
+      "Xiangyu Ma"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.str-el",
+    "title": "Observation of in-plane anomalous Nernst effect",
+    "url": "https://arxiv.org/abs/2608.14060v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "The Nernst effect, which enables the conversion of a heat current into a transverse voltage under magnetic field or spin magnetization, holds significant promise for energy harvesting and thermal management in future electronics. However, the conventional Nernst effect is fundamentally constrained by the orthogonality requirement that the applied field or spontaneous magnetization must be perpendicular to the plane defined by the temperature gradient and the induced voltage. Here we report that ",
+    "authors": [
+      "Tadashi Yoneda",
+      "Shinichi Nishihaya",
+      "Markus Kriener",
+      "Haruto Kaminakamura",
+      "Ming-Chun Jiang",
+      "Naohiro Tezuka",
+      "Yoshiya Murakami",
+      "Ryotaro Arita",
+      "Hiroaki Ishizuka",
+      "Masaki Uchida"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "quant-ph",
+    "title": "Circuit Depth Compression via Spectral Gap Amplification in Quantum Phase Estimation",
+    "url": "https://arxiv.org/abs/2608.14002v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "We show that quantum phase estimation (QPE) circuits can be significantly compressed in depth by preprocessing the input operator with a sigmoid spectral filter before estimation. For systems with small spectral gaps Delta_lambda, standard QPE requires m = ceil(log2(1/Delta_lambda)) precision qubits and depth Theta(2^m). Applying a soft-step transformation f(lambda; tau,w) amplifies the effective gap to Delta_f > Delta_lambda (for w < 1/4), reducing the required precision to m_f = ceil(log2(1/De",
+    "authors": [
+      "Sk Mujaffar Hossain",
+      "Satadeep Bhattacharjee"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Standard-Compliant Neuromorphic Integrated Sensing and Communications Aided by an Intelligent Reflecting Surface",
+    "url": "https://arxiv.org/abs/2608.13985v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "Neuromorphic computing enables event-driven, low-power inference and is therefore an attractive technology for jointly carrying out communication, sensing, and processing at resource-constrained wireless devices. Impulse radio ultra-wideband (IR-UWB) signaling, which is standardized in the IEEE 802.15.4 family and widely deployed for ranging and short-range communication, is naturally matched to neuromorphic processing, since both operate through sparse temporal events, or spikes. In this contex",
+    "authors": [
+      "Jiho Park",
+      "Jiechen Chen",
+      "Joonhyuk Kang",
+      "Osvaldo Simeone"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "Characterizing the Variance Envelope: A Multi-Dimensional Analysis of Spectre Telemetry Across Architectures and Workloads",
+    "url": "https://arxiv.org/abs/2608.13920v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "Hardware attacks like Spectre exploit built-in processor vulnerabilities, leaving anomalous footprints in Hardware Performance Counter (HPC) metrics. While machine learning can detect these footprints in controlled settings, static models fail in the real world when confronted with background system noise, diverse attack variants, and adversarial traffic pacing. To close this gap, this paper characterizes the \"variance envelope\"-the full range of how attack signatures shift- across Intel, ARM, a",
+    "authors": [
+      "Jaya Keshava Chandra Kotha",
+      "Jean-Luc Gaudiot"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Omni-Photonic Base Station: A Three-Functional-Domain Photonic Architecture for Evolutionary 6G Wireless Infrastructure",
+    "url": "https://arxiv.org/abs/2608.13909v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "6G mobile communications impose immersive communication demands for higher data rates and massive connectivity, while emerging integrated sensing-computing-intelligence scenarios require base stations to concurrently enhance computing capability, guarantee service latency, and realize sensing. We propose the Omni-Photonic Base Station-a progressive evolutionary architecture that introduces photonic technologies into three functional domains, namely baseband processing, fronthaul transmission, an",
+    "authors": [
+      "Dapeng Wang",
+      "Xiaoxiong Song",
+      "Ziling Fu",
+      "Wenyang Cheng",
+      "Jiayao Wang",
+      "Xiaogang Yan",
+      "Ze Wang",
+      "Min Zhang",
+      "Jingdi Liu",
+      "Nan Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Exploring High-Bandwidth Flash for Modern LLM Inference: Opportunities and Challenges",
+    "url": "https://arxiv.org/abs/2608.13868v1",
+    "published_date": "2026-08-14",
+    "source": "arXiv",
+    "summary": "This work investigates the potential benefits and technical challenges of using high-bandwidth flash (HBF) for large language model (LLM) inference. HBF has gained increasing attention as a promising solution to mitigate memory-capacity bottlenecks in modern LLM-serving systems, but its benefits and challenges remain largely uninvestigated. To address this gap, we thoroughly analyze HBF-based LLM-serving systems under diverse system configurations and operating scenarios in which HBF serves as a",
+    "authors": [
+      "Dowon Son",
+      "Yonggon Park",
+      "Hyunuk Cho",
+      "Hyungkyu Ham",
+      "Onur Mutlu",
+      "Sungjin Lee",
+      "Gwangsun Kim",
+      "Jisung Park"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.supr-con",
     "title": "Insight into SRF cavity performance from simulations of Nb's surface oxide dissolution and diffusion",
     "url": "https://arxiv.org/abs/2608.13540v1",
@@ -302,6 +579,79 @@
       "Binwu Zhu",
       "Hao Yan",
       "Min Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Strong photoresponse of edge two-dimensional electrons in a magnetic field",
+    "url": "https://arxiv.org/abs/2608.13811v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "Electrons in two-dimensional electron gases in the presence of an out-of-plane magnetic field propagate along the edge with a high velocity of the order of the Fermi velocity. Under microwave and terahertz radiation, photon absorption by these electrons provides a pathway to realising sensitive radiation detection. Here, we develop a detailed quantum theory of the photocurrent generated in such a system by an incident electromagnetic wave and propose an experimental geometry for observing the pr",
+    "authors": [
+      "Sergey A. Mikhailov",
+      "Wladislaw Michailow"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Compact Microstrip Triplexer Using Square Open-Loop Resonators with High Isolation for 5G Sub-6 GHz Applications",
+    "url": "https://arxiv.org/abs/2608.13804v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "The rapid proliferation of multi-standard 5G New Radio sub-6 GHz systems have intensified the demand for compact, high-isolation multiplexing components capable of simultaneously routing multiple frequency channels through a single shared antenna port without cross-band interference. This paper presents the design and full-wave electromagnetic simulation of a compact microstrip triplexer operating at 2.2, 2.6, and 3.0 GHz for 5G sub-6 GHz applications. The proposed triplexer employs square open-",
+    "authors": [
+      "Bhaskarareddy N C",
+      "Rashmi Ravi",
+      "Augustine O. Nwajana"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Multiscale Correlation of Morphological, Chemical, and Optical Properties in p-Type Porous Silicon",
+    "url": "https://arxiv.org/abs/2608.13802v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "We report a systematic study of the correlations among electrochemical processing conditions and the morphological, chemical, and optical properties of porous silicon (pSi). Twenty pSi samples were fabricated from boron-doped (100) crystalline silicon by varying current density, etching time, and hydrofluoric-acid concentration. Scanning electron microscopy, Fourier-transform infrared spectroscopy, and photoluminescence were used to characterize the resulting structures. The two-dimensional poro",
+    "authors": [
+      "Arturo Ramírez-Porras",
+      "Isaac Prado-Bermúdez"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "PPAPlace: Differentiable Cross-Stage Objectives for Chip Placement Optimization",
+    "url": "https://arxiv.org/abs/2608.13790v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "Macro placement significantly affects a chip's post-route performance, power, and area (PPA). Most placement methods optimize half-perimeter wirelength (HPWL) as the primary objective. However, recent benchmarking shows a near-zero correlation between HPWL and post-route timing metrics such as the worst negative slack (WNS) and total negative slack (TNS). As a result, all six evaluated artificial intelligence (AI) placers degraded PPA relative to the hierarchical baseline. Recent efforts have tr",
+    "authors": [
+      "Ruogu Chen",
+      "Jie Han"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Thickness-dependent secondary-electron emission from suspended MoS$_2$ membranes in the helium ion microscope",
+    "url": "https://arxiv.org/abs/2608.13688v1",
+    "published_date": "2026-08-13",
+    "source": "arXiv",
+    "summary": "Secondary-electron (SE) emission in the helium ion microscope (HIM) becomes sensitive to membrane thickness when the sample is thin enough for He-ion transmission and when the SEs emitted from the bottom surface are collected. We correlated the total SE intensity of suspended, nanometer-thick MoS$_2$ flakes on lacey carbon with thickness measured independently by electron energy-loss spectroscopy. The response peaks at 40-55 nm, with an apparent back-to-front SE signal ratio reaching 4.7. The pe",
+    "authors": [
+      "Cyan Kim",
+      "David Lister",
+      "Philip Jackle",
+      "Karen L. Kavanagh"
     ]
   },
   {
