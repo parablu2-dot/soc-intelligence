@@ -1,182 +1,236 @@
 {
-  "date": "2026-08-17",
-  "generated_at": "2026-08-17T20:33:19.548698+00:00",
+  "date": "2026-08-18",
+  "generated_at": "2026-08-18T20:31:19.999543+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-08-17",
-      "item_count": 2,
-      "generated_at": "2026-08-17T20:33:19.547970+00:00",
+      "date": "2026-08-18",
+      "item_count": 1,
+      "generated_at": "2026-08-18T20:31:19.998776+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Google 및 산업 참여사들이 2,000대 이상의 중고 스마트폰을 데이터센터 인프라로 재활용하는 디지털 업사이클링 추진 중.",
+          "executive_summary": "Qualcomm's Advanced Snapdragon mobile portfolio is being evaluated for its potential to drive profit growth, though earnings impact remains under assessment.",
           "key_facts": [
-            "Google: 2,000대 중고 스마트폰으로 데이터센터 구축"
+            "Qualcomm Advanced Snapdragon Portfolio"
           ],
-          "implications": [
-            {
-              "keyword": "전자폐기물 감소",
-              "text": "스마트폰 재활용이 전자폐기물 문제 완화 및 순환경제 진전 가능"
-            },
-            {
-              "keyword": "엣지 컴퓨팅 확대",
-              "text": "기존 스마트폰 SoC의 병렬 처리 능력이 분산 컴퓨팅 및 로컬 AI 추론 용도로 활용 확대"
-            }
-          ],
-          "counterpoint": "중고 기기의 신뢰성과 장기 가동성에 대한 검증 필요."
+          "implications": [],
+          "counterpoint": "Limited detail on specific portfolio features or market traction provided in available sources."
         },
         "en": {
-          "executive_summary": "Google and industry participants are advancing digital upcycling by repurposing over 2,000 used smartphones as datacenter infrastructure.",
+          "executive_summary": "Qualcomm's Advanced Snapdragon mobile portfolio is being evaluated for its potential to drive profit growth, though earnings impact remains under assessment.",
           "key_facts": [
-            "Google: Establishing datacenters with 2,000 used smartphones"
+            "Qualcomm Advanced Snapdragon Portfolio"
           ],
-          "implications": [
-            {
-              "keyword": "Reduction of electronic waste",
-              "text": "Smartphone recycling can mitigate electronic waste issues and advance the circular economy"
-            },
-            {
-              "keyword": "Expansion of edge computing",
-              "text": "Parallel processing capabilities of existing smartphone SoCs are increasingly utilized for distributed computing and local AI inference"
-            }
-          ],
-          "counterpoint": "Validation of reliability and long-term operational durability of used devices is necessary."
+          "implications": [],
+          "counterpoint": "Limited detail on specific portfolio features or market traction provided in available sources."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-08-17",
-      "item_count": 9,
-      "generated_at": "2026-08-17T20:33:19.547970+00:00",
+      "date": "2026-08-18",
+      "item_count": 6,
+      "generated_at": "2026-08-18T20:31:19.998776+00:00",
       "content": {
         "ko": {
-          "executive_summary": "TSMC, SK하이닉스, Micron 등 주요 업체들이 AI 인재 확보와 설계 센터 확대에 전력 투입 중. TSMC는 뮌헨에 유럽 첫 설계센터 개설 예정(2025년 3분기).",
+          "executive_summary": "Global semiconductor talent shortage is intensifying with aggressive hiring across major regions. Israel's tech employment hit record highs driven by defense and chip hiring; India faces a 1 million-person talent gap; China and South Korea are competing aggressively for design and engineering talent through specialized training programs.",
           "key_facts": [
-            "TSMC: 뮌헨 설계센터 2025년 3분기 개설 계획",
-            "SK하이닉스: 신규 채용 전면 개편, 반나절 심층면접 도입",
-            "Micron: 2,000명 엔지니어 적극 채용",
-            "TSMC Arizona: 1H26 영업이익 663% YoY 증가"
+            "Israel: Defense and chip hiring push tech employment to record levels",
+            "India: 1 million-person global talent gap in semiconductor sector",
+            "China: New courses and higher pay to address chip talent shortage",
+            "SK Haimdachi: Recruiting design talent for custom memory products; partnering with Gacheon University 'hy-way class' program",
+            "Industry concern: SK Haimdachi talent acquisition creating competitive poaching pressure"
           ],
           "implications": [
             {
-              "keyword": "지역화 전략",
-              "text": "TSMC의 유럽 설계센터 개설은 자동차 및 AI 칩 설계 현지화 가속, 공급망 다각화"
+              "keyword": "Talent Arbitrage",
+              "text": "Major players (SK Haimdachi, Chinese fabs) are using higher compensation and targeted recruitment to poach engineering talent, increasing wage pressure industry-wide."
             },
             {
-              "keyword": "인재 경쟁 심화",
-              "text": "삼성·SK하이닉스·Micron의 적극적 인재 확보 경쟁으로 AI 메모리/HBM 개발 경쟁 고조"
+              "keyword": "Regional Fragmentation",
+              "text": "Severe talent gaps vary by region (India 1M gap, China implementing emergency upskilling), forcing fabs to localize R&D and design centers near talent pools."
             },
             {
-              "keyword": "미국 제조 수익성",
-              "text": "TSMC Arizona의 높은 이익 증가율이 미국 정부 지원 및 현지 생산 확대의 타당성 입증"
+              "keyword": "Supply-Chain Risk",
+              "text": "Sustained talent shortages threaten advanced node yields and new product ramps, particularly for custom memory and HPC designs requiring specialized expertise."
             }
           ],
-          "counterpoint": "미국 지역 감가상각 부담이 중장기 수익성 개선을 제약할 수 있음."
+          "counterpoint": "Significant wage inflation from competitive hiring may reduce sector profitability and delay node transitions if wage pressure outpaces revenue growth."
         },
         "en": {
-          "executive_summary": "Major players including TSMC, SK Hynix, and Micron are focusing intensively on securing AI talent and expanding design centers. TSMC plans to open its first European design center in Munich in Q3 2025.",
+          "executive_summary": "Global semiconductor talent shortage is intensifying with aggressive hiring across major regions. Israel's tech employment hit record highs driven by defense and chip hiring; India faces a 1 million-person talent gap; China and South Korea are competing aggressively for design and engineering talent through specialized training programs.",
           "key_facts": [
-            "TSMC: Munich design center opening planned for Q3 2025",
-            "SK Hynix: Complete overhaul of new hiring, introduction of half-day in-depth interviews",
-            "Micron: Actively recruiting 2,000 engineers",
-            "TSMC Arizona: Operating profit increased 663% YoY in 1H26"
+            "Israel: Defense and chip hiring push tech employment to record levels",
+            "India: 1 million-person global talent gap in semiconductor sector",
+            "China: New courses and higher pay to address chip talent shortage",
+            "SK Haimdachi: Recruiting design talent for custom memory products; partnering with Gacheon University 'hy-way class' program",
+            "Industry concern: SK Haimdachi talent acquisition creating competitive poaching pressure"
           ],
           "implications": [
             {
-              "keyword": "Localization strategy",
-              "text": "TSMC's opening of European design center accelerates localization of automotive and AI chip design, diversifying the supply chain"
+              "keyword": "Talent Arbitrage",
+              "text": "Major players (SK Haimdachi, Chinese fabs) are using higher compensation and targeted recruitment to poach engineering talent, increasing wage pressure industry-wide."
             },
             {
-              "keyword": "Intensifying talent competition",
-              "text": "Aggressive talent acquisition by Samsung, SK Hynix, and Micron heightens competition in AI memory and HBM development"
+              "keyword": "Regional Fragmentation",
+              "text": "Severe talent gaps vary by region (India 1M gap, China implementing emergency upskilling), forcing fabs to localize R&D and design centers near talent pools."
             },
             {
-              "keyword": "US manufacturing profitability",
-              "text": "TSMC Arizona's high profit growth rate validates US government support and expansion of local production"
+              "keyword": "Supply-Chain Risk",
+              "text": "Sustained talent shortages threaten advanced node yields and new product ramps, particularly for custom memory and HPC designs requiring specialized expertise."
             }
           ],
-          "counterpoint": "Depreciation burden in the US region may constrain medium to long-term profitability improvements."
+          "counterpoint": "Significant wage inflation from competitive hiring may reduce sector profitability and delay node transitions if wage pressure outpaces revenue growth."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-17",
-      "item_count": 16,
-      "generated_at": "2026-08-17T20:33:19.547970+00:00",
+      "date": "2026-08-18",
+      "item_count": 17,
+      "generated_at": "2026-08-18T20:31:19.998776+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Broadcom, Marvell 등 AI 커스텀 칩 업체들이 강한 수익 성장을 보이는 가운데, Microsoft Maia 300 공개(9월 예정), Google TPU v10 설계 확대 등 클라우드 업체 자체 칩 개발 가속. 액체냉각 채택률이 내년 60% 근처 도달 전망.",
+          "executive_summary": "Custom AI chip competition is accelerating: Google is partnering with AMD for next-gen hybrid TPU co-development; Nvidia is pivoting to capital moat strategies as competition intensifies; custom ASIC specialists (Asicland, SkyeChip, MediaTek, Iridium) are capturing niche markets with varied execution. Cerebras and other new entrants are challenging incumbent datacenter chip dominance.",
           "key_facts": [
-            "Broadcom, Marvell: AI 커스텀 칩 매출 강한 성장",
-            "Microsoft: Maia 300 칩 9월 공개 예정",
-            "Google: AMD와 협력해 TPU v10 CPU 비중 증대 설계",
-            "Global Unichip Corp: 7월 매출 158% YoY 증가",
-            "액체냉각: 2026년 AI 칩 채택률 60% 근처 예상",
-            "SkyeChip: 1Q 순이익 RM13.9-14백만",
-            "China: 국내 리소그래피 장비 양산 진입으로 자급률 상향"
+            "Google partnering with AMD for next-gen hybrid TPU",
+            "AWS Trainium: AWS custom training chip offering",
+            "MediaTek: Widening ASIC services; growing market share",
+            "Asicland: Surpassed full-year 2025 sales in first 6 months; returned to profit with 5 billion won H1 operating profit",
+            "SkyeChip: 1Q results trailed forecasts; earnings lumpy based on project milestones",
+            "Cerebras: Challenging Nvidia in datacenter chip market",
+            "NEXA CORE: Showcasing Chip-to-Application AI Hub; deepening AI chip development partnership via ICDeC",
+            "Iridium: Making PNT ASIC commercially available (military/aerospace positioning)"
           ],
           "implications": [
             {
-              "keyword": "하이퍼스케일러 자립화",
-              "text": "Microsoft, Google 등의 자체 칩 개발 확대로 NVIDIA 의존도 감소 및 칩 설계 표준화 가속"
+              "keyword": "Hyperscaler Vertical Integration",
+              "text": "Google-AMD hybrid TPU partnership signals hyperscalers are diversifying silicon sourcing away from Nvidia; custom SoC co-design with foundry partners is becoming standard playbook."
             },
             {
-              "keyword": "열관리 핵심화",
-              "text": "고밀도 AI 칩의 발열 관리가 시스템 성능의 결정 요소로 부상, 액체냉각 기술 채택 필수화"
+              "keyword": "ASIC Specialist Boom",
+              "text": "Asicland's 6-month revenue surge and profit recovery demonstrates strong crypto/AI workload demand; SkyeChip's lumpy earnings reflect project-dependent revenue model typical of custom chip houses."
             },
             {
-              "keyword": "중국 반도체 자급",
-              "text": "국내 리소그래피 장비의 양산 진입이 중국의 반도체 독립성 강화, 글로벌 공급망 재편 신호"
+              "keyword": "Nvidia Competitive Pressure",
+              "text": "Nvidia's shift to capital moat strategy (stacking software/ecosystem) indicates recognition of mounting chip competition from Cerebras, custom hyperscaler designs, and AMD partnerships."
+            },
+            {
+              "keyword": "Niche Market Fragmentation",
+              "text": "Iridium's commercial PNT ASIC availability and NEXA CORE's AI chip development platform indicate ASIC market is fragmenting into vertical application silos (defense, AI inference, custom training)."
             }
           ],
-          "counterpoint": "클라우드 업체의 자체 칩 개발은 초기 개발 비용과 검증 기간이 길어 수익성 증명까지 시간 소요."
+          "counterpoint": "SkyeChip's disappointing 1Q results and project-milestone-dependent earnings highlight execution and market adoption risks that offset otherwise strong ASIC sector momentum."
         },
         "en": {
-          "executive_summary": "While AI custom chip makers like Broadcom and Marvell show strong revenue growth, cloud providers are accelerating in-house chip development with Microsoft's Maia 300 launch (expected September) and Google's expanded TPU v10 design. Liquid cooling adoption rate is projected to reach around 60% next year.",
+          "executive_summary": "Custom AI chip competition is accelerating: Google is partnering with AMD for next-gen hybrid TPU co-development; Nvidia is pivoting to capital moat strategies as competition intensifies; custom ASIC specialists (Asicland, SkyeChip, MediaTek, Iridium) are capturing niche markets with varied execution. Cerebras and other new entrants are challenging incumbent datacenter chip dominance.",
           "key_facts": [
-            "Broadcom, Marvell: Strong revenue growth in AI custom chips",
-            "Microsoft: Maia 300 chip launch planned for September",
-            "Google: Expanded TPU v10 CPU ratio design in collaboration with AMD",
-            "Global Unichip Corp: July revenue increased 158% YoY",
-            "Liquid cooling: AI chip adoption rate expected near 60% in 2026",
-            "SkyeChip: 1Q net profit RM13.9-14 million",
-            "China: Moving toward mass production of domestic lithography equipment, improving self-sufficiency"
+            "Google partnering with AMD for next-gen hybrid TPU",
+            "AWS Trainium: AWS custom training chip offering",
+            "MediaTek: Widening ASIC services; growing market share",
+            "Asicland: Surpassed full-year 2025 sales in first 6 months; returned to profit with 5 billion won H1 operating profit",
+            "SkyeChip: 1Q results trailed forecasts; earnings lumpy based on project milestones",
+            "Cerebras: Challenging Nvidia in datacenter chip market",
+            "NEXA CORE: Showcasing Chip-to-Application AI Hub; deepening AI chip development partnership via ICDeC",
+            "Iridium: Making PNT ASIC commercially available (military/aerospace positioning)"
           ],
           "implications": [
             {
-              "keyword": "Hyperscaler independence",
-              "text": "Expanded in-house chip development by Microsoft and Google reduces NVIDIA dependence and accelerates chip design standardization"
+              "keyword": "Hyperscaler Vertical Integration",
+              "text": "Google-AMD hybrid TPU partnership signals hyperscalers are diversifying silicon sourcing away from Nvidia; custom SoC co-design with foundry partners is becoming standard playbook."
             },
             {
-              "keyword": "Thermal management becoming critical",
-              "text": "Heat management of high-density AI chips emerges as a determining factor in system performance, making liquid cooling technology adoption essential"
+              "keyword": "ASIC Specialist Boom",
+              "text": "Asicland's 6-month revenue surge and profit recovery demonstrates strong crypto/AI workload demand; SkyeChip's lumpy earnings reflect project-dependent revenue model typical of custom chip houses."
             },
             {
-              "keyword": "Chinese semiconductor self-sufficiency",
-              "text": "Mass production entry of domestic lithography equipment strengthens China's semiconductor independence, signaling global supply chain restructuring"
+              "keyword": "Nvidia Competitive Pressure",
+              "text": "Nvidia's shift to capital moat strategy (stacking software/ecosystem) indicates recognition of mounting chip competition from Cerebras, custom hyperscaler designs, and AMD partnerships."
+            },
+            {
+              "keyword": "Niche Market Fragmentation",
+              "text": "Iridium's commercial PNT ASIC availability and NEXA CORE's AI chip development platform indicate ASIC market is fragmenting into vertical application silos (defense, AI inference, custom training)."
             }
           ],
-          "counterpoint": "In-house chip development by cloud providers requires long initial development costs and validation periods, taking time to prove profitability."
+          "counterpoint": "SkyeChip's disappointing 1Q results and project-milestone-dependent earnings highlight execution and market adoption risks that offset otherwise strong ASIC sector momentum."
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-17",
-      "item_count": 16,
-      "generated_at": "2026-08-17T20:33:19.547970+00:00",
+      "date": "2026-08-18",
+      "item_count": 20,
+      "generated_at": "2026-08-18T20:31:19.998776+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "TSMC reinforces process leadership with angstrom-class (sub-2nm) breakthroughs; Samsung and SK Haimdachi are aggressively upgrading yield-critical infrastructure and investing in advanced nodes. Taiwan government is distributing AI dividend (44 billion won per capita) from semiconductor GDP gains. South Korea's advanced foundry ecosystem is consolidating around TSMC competition and custom memory differentiation.",
+          "key_facts": [
+            "TSMC A16 platform: First-to-market angstrom-class CMOS with back-power rail (SPR) technology",
+            "Samsung DS: Upgrading semiconductor analysis labs with next-gen defect detection equipment",
+            "SK Haimdachi: Upgrading analysis infrastructure for yield management",
+            "Taiwan government: Distributing 1 trillion+ TWD AI dividend (44 million won per capita) from HPC/AI/cloud sector growth",
+            "HANMI Semiconductor: Investing 91.4 million USD in Plant 8 due to AI chip equipment demand surge; new 6230-pyeong factory acquisition with 130 billion won total investment; Q2 2027 production ramp",
+            "TSMC CoWoS alternative: COUPE packaging platform positioned as post-CoWoS game-changer for advanced packaging",
+            "Samsung-TCL LCD: Razor-thin 0.1% market share gap (Samsung 13.7%, TCL 13.8% in June)"
+          ],
+          "implications": [
+            {
+              "keyword": "Advanced Node Race",
+              "text": "TSMC's A16 back-power rail (SPR) success demonstrates continued leadership in angstrom-class process maturity; Samsung/SK infrastructure upgrades are defensive plays to catch up in yield-critical metrics."
+            },
+            {
+              "keyword": "Capacity Constraints",
+              "text": "HANMI's 1.3 billion won Plant 8 investment and 2027 Q2 ramp indicates AI semiconductor equipment shortages persisting through 2027; dedicated backend capacity expansion is becoming critical competitive advantage."
+            },
+            {
+              "keyword": "Government Industrial Policy",
+              "text": "Taiwan's AI dividend announcement reflects semiconductors' outsized GDP contribution to Taiwan economy; South Korea's memory/foundry upgrades are government-backed supply-chain security initiatives."
+            },
+            {
+              "keyword": "Packaging Differentiation",
+              "text": "TSMC's COUPE positioning as post-CoWoS solution indicates advanced packaging (chiplet interconnect, HBM integration) is becoming key cost/performance differentiator as process node scaling slows."
+            }
+          ],
+          "counterpoint": "Samsung-TCL LCD margin compression (0.1% share gap) and global TV shipment decline suggest foundry/memory players' profitability remains under pressure from demand volatility outside AI/HPC."
+        },
+        "en": {
+          "executive_summary": "TSMC reinforces process leadership with angstrom-class (sub-2nm) breakthroughs; Samsung and SK Haimdachi are aggressively upgrading yield-critical infrastructure and investing in advanced nodes. Taiwan government is distributing AI dividend (44 billion won per capita) from semiconductor GDP gains. South Korea's advanced foundry ecosystem is consolidating around TSMC competition and custom memory differentiation.",
+          "key_facts": [
+            "TSMC A16 platform: First-to-market angstrom-class CMOS with back-power rail (SPR) technology",
+            "Samsung DS: Upgrading semiconductor analysis labs with next-gen defect detection equipment",
+            "SK Haimdachi: Upgrading analysis infrastructure for yield management",
+            "Taiwan government: Distributing 1 trillion+ TWD AI dividend (44 million won per capita) from HPC/AI/cloud sector growth",
+            "HANMI Semiconductor: Investing 91.4 million USD in Plant 8 due to AI chip equipment demand surge; new 6230-pyeong factory acquisition with 130 billion won total investment; Q2 2027 production ramp",
+            "TSMC CoWoS alternative: COUPE packaging platform positioned as post-CoWoS game-changer for advanced packaging",
+            "Samsung-TCL LCD: Razor-thin 0.1% market share gap (Samsung 13.7%, TCL 13.8% in June)"
+          ],
+          "implications": [
+            {
+              "keyword": "Advanced Node Race",
+              "text": "TSMC's A16 back-power rail (SPR) success demonstrates continued leadership in angstrom-class process maturity; Samsung/SK infrastructure upgrades are defensive plays to catch up in yield-critical metrics."
+            },
+            {
+              "keyword": "Capacity Constraints",
+              "text": "HANMI's 1.3 billion won Plant 8 investment and 2027 Q2 ramp indicates AI semiconductor equipment shortages persisting through 2027; dedicated backend capacity expansion is becoming critical competitive advantage."
+            },
+            {
+              "keyword": "Government Industrial Policy",
+              "text": "Taiwan's AI dividend announcement reflects semiconductors' outsized GDP contribution to Taiwan economy; South Korea's memory/foundry upgrades are government-backed supply-chain security initiatives."
+            },
+            {
+              "keyword": "Packaging Differentiation",
+              "text": "TSMC's COUPE positioning as post-CoWoS solution indicates advanced packaging (chiplet interconnect, HBM integration) is becoming key cost/performance differentiator as process node scaling slows."
+            }
+          ],
+          "counterpoint": "Samsung-TCL LCD margin compression (0.1% share gap) and global TV shipment decline suggest foundry/memory players' profitability remains under pressure from demand volatility outside AI/HPC."
+        }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-17",
-      "item_count": 17,
-      "generated_at": "2026-08-17T20:33:19.547970+00:00",
+      "date": "2026-08-18",
+      "item_count": 20,
+      "generated_at": "2026-08-18T20:31:19.998776+00:00",
       "content": {
         "ko": {},
         "en": {}
