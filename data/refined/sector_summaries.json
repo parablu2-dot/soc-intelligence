@@ -1,236 +1,78 @@
 {
-  "date": "2026-08-18",
-  "generated_at": "2026-08-18T20:31:19.999543+00:00",
+  "date": "2026-08-19",
+  "generated_at": "2026-08-19T20:35:49.141929+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-08-18",
+      "date": "2026-08-19",
       "item_count": 1,
-      "generated_at": "2026-08-18T20:31:19.998776+00:00",
+      "generated_at": "2026-08-19T20:35:49.141156+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Qualcomm's Advanced Snapdragon mobile portfolio is being evaluated for its potential to drive profit growth, though earnings impact remains under assessment.",
+          "executive_summary": "Snapdragon X2 Elite Extreme demonstrates significant performance leadership with up to 87% CPU advantage and 2.4x AI performance multiplier versus Intel and AMD competitors in retail laptop segments.",
           "key_facts": [
-            "Qualcomm Advanced Snapdragon Portfolio"
+            "Snapdragon X2 Elite Extreme: 87% CPU lead over Intel/AMD",
+            "Snapdragon X2 Elite Extreme: 2.4x AI performance advantage"
           ],
-          "implications": [],
-          "counterpoint": "Limited detail on specific portfolio features or market traction provided in available sources."
+          "implications": [
+            {
+              "keyword": "Market positioning",
+              "text": "Qualcomm establishes dominant performance narrative for AI-capable laptops, challenging x86 incumbents in premium mobile computing"
+            }
+          ],
+          "counterpoint": ""
         },
         "en": {
-          "executive_summary": "Qualcomm's Advanced Snapdragon mobile portfolio is being evaluated for its potential to drive profit growth, though earnings impact remains under assessment.",
+          "executive_summary": "Snapdragon X2 Elite Extreme demonstrates significant performance leadership with up to 87% CPU advantage and 2.4x AI performance multiplier versus Intel and AMD competitors in retail laptop segments.",
           "key_facts": [
-            "Qualcomm Advanced Snapdragon Portfolio"
+            "Snapdragon X2 Elite Extreme: 87% CPU lead over Intel/AMD",
+            "Snapdragon X2 Elite Extreme: 2.4x AI performance advantage"
           ],
-          "implications": [],
-          "counterpoint": "Limited detail on specific portfolio features or market traction provided in available sources."
+          "implications": [
+            {
+              "keyword": "Market positioning",
+              "text": "Qualcomm establishes dominant performance narrative for AI-capable laptops, challenging x86 incumbents in premium mobile computing"
+            }
+          ],
+          "counterpoint": ""
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-08-18",
-      "item_count": 6,
-      "generated_at": "2026-08-18T20:31:19.998776+00:00",
+      "date": "2026-08-19",
+      "item_count": 10,
+      "generated_at": "2026-08-19T20:35:49.141156+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Global semiconductor talent shortage is intensifying with aggressive hiring across major regions. Israel's tech employment hit record highs driven by defense and chip hiring; India faces a 1 million-person talent gap; China and South Korea are competing aggressively for design and engineering talent through specialized training programs.",
-          "key_facts": [
-            "Israel: Defense and chip hiring push tech employment to record levels",
-            "India: 1 million-person global talent gap in semiconductor sector",
-            "China: New courses and higher pay to address chip talent shortage",
-            "SK Haimdachi: Recruiting design talent for custom memory products; partnering with Gacheon University 'hy-way class' program",
-            "Industry concern: SK Haimdachi talent acquisition creating competitive poaching pressure"
-          ],
-          "implications": [
-            {
-              "keyword": "Talent Arbitrage",
-              "text": "Major players (SK Haimdachi, Chinese fabs) are using higher compensation and targeted recruitment to poach engineering talent, increasing wage pressure industry-wide."
-            },
-            {
-              "keyword": "Regional Fragmentation",
-              "text": "Severe talent gaps vary by region (India 1M gap, China implementing emergency upskilling), forcing fabs to localize R&D and design centers near talent pools."
-            },
-            {
-              "keyword": "Supply-Chain Risk",
-              "text": "Sustained talent shortages threaten advanced node yields and new product ramps, particularly for custom memory and HPC designs requiring specialized expertise."
-            }
-          ],
-          "counterpoint": "Significant wage inflation from competitive hiring may reduce sector profitability and delay node transitions if wage pressure outpaces revenue growth."
-        },
-        "en": {
-          "executive_summary": "Global semiconductor talent shortage is intensifying with aggressive hiring across major regions. Israel's tech employment hit record highs driven by defense and chip hiring; India faces a 1 million-person talent gap; China and South Korea are competing aggressively for design and engineering talent through specialized training programs.",
-          "key_facts": [
-            "Israel: Defense and chip hiring push tech employment to record levels",
-            "India: 1 million-person global talent gap in semiconductor sector",
-            "China: New courses and higher pay to address chip talent shortage",
-            "SK Haimdachi: Recruiting design talent for custom memory products; partnering with Gacheon University 'hy-way class' program",
-            "Industry concern: SK Haimdachi talent acquisition creating competitive poaching pressure"
-          ],
-          "implications": [
-            {
-              "keyword": "Talent Arbitrage",
-              "text": "Major players (SK Haimdachi, Chinese fabs) are using higher compensation and targeted recruitment to poach engineering talent, increasing wage pressure industry-wide."
-            },
-            {
-              "keyword": "Regional Fragmentation",
-              "text": "Severe talent gaps vary by region (India 1M gap, China implementing emergency upskilling), forcing fabs to localize R&D and design centers near talent pools."
-            },
-            {
-              "keyword": "Supply-Chain Risk",
-              "text": "Sustained talent shortages threaten advanced node yields and new product ramps, particularly for custom memory and HPC designs requiring specialized expertise."
-            }
-          ],
-          "counterpoint": "Significant wage inflation from competitive hiring may reduce sector profitability and delay node transitions if wage pressure outpaces revenue growth."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-18",
-      "item_count": 17,
-      "generated_at": "2026-08-18T20:31:19.998776+00:00",
+      "date": "2026-08-19",
+      "item_count": 26,
+      "generated_at": "2026-08-19T20:35:49.141156+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Custom AI chip competition is accelerating: Google is partnering with AMD for next-gen hybrid TPU co-development; Nvidia is pivoting to capital moat strategies as competition intensifies; custom ASIC specialists (Asicland, SkyeChip, MediaTek, Iridium) are capturing niche markets with varied execution. Cerebras and other new entrants are challenging incumbent datacenter chip dominance.",
-          "key_facts": [
-            "Google partnering with AMD for next-gen hybrid TPU",
-            "AWS Trainium: AWS custom training chip offering",
-            "MediaTek: Widening ASIC services; growing market share",
-            "Asicland: Surpassed full-year 2025 sales in first 6 months; returned to profit with 5 billion won H1 operating profit",
-            "SkyeChip: 1Q results trailed forecasts; earnings lumpy based on project milestones",
-            "Cerebras: Challenging Nvidia in datacenter chip market",
-            "NEXA CORE: Showcasing Chip-to-Application AI Hub; deepening AI chip development partnership via ICDeC",
-            "Iridium: Making PNT ASIC commercially available (military/aerospace positioning)"
-          ],
-          "implications": [
-            {
-              "keyword": "Hyperscaler Vertical Integration",
-              "text": "Google-AMD hybrid TPU partnership signals hyperscalers are diversifying silicon sourcing away from Nvidia; custom SoC co-design with foundry partners is becoming standard playbook."
-            },
-            {
-              "keyword": "ASIC Specialist Boom",
-              "text": "Asicland's 6-month revenue surge and profit recovery demonstrates strong crypto/AI workload demand; SkyeChip's lumpy earnings reflect project-dependent revenue model typical of custom chip houses."
-            },
-            {
-              "keyword": "Nvidia Competitive Pressure",
-              "text": "Nvidia's shift to capital moat strategy (stacking software/ecosystem) indicates recognition of mounting chip competition from Cerebras, custom hyperscaler designs, and AMD partnerships."
-            },
-            {
-              "keyword": "Niche Market Fragmentation",
-              "text": "Iridium's commercial PNT ASIC availability and NEXA CORE's AI chip development platform indicate ASIC market is fragmenting into vertical application silos (defense, AI inference, custom training)."
-            }
-          ],
-          "counterpoint": "SkyeChip's disappointing 1Q results and project-milestone-dependent earnings highlight execution and market adoption risks that offset otherwise strong ASIC sector momentum."
-        },
-        "en": {
-          "executive_summary": "Custom AI chip competition is accelerating: Google is partnering with AMD for next-gen hybrid TPU co-development; Nvidia is pivoting to capital moat strategies as competition intensifies; custom ASIC specialists (Asicland, SkyeChip, MediaTek, Iridium) are capturing niche markets with varied execution. Cerebras and other new entrants are challenging incumbent datacenter chip dominance.",
-          "key_facts": [
-            "Google partnering with AMD for next-gen hybrid TPU",
-            "AWS Trainium: AWS custom training chip offering",
-            "MediaTek: Widening ASIC services; growing market share",
-            "Asicland: Surpassed full-year 2025 sales in first 6 months; returned to profit with 5 billion won H1 operating profit",
-            "SkyeChip: 1Q results trailed forecasts; earnings lumpy based on project milestones",
-            "Cerebras: Challenging Nvidia in datacenter chip market",
-            "NEXA CORE: Showcasing Chip-to-Application AI Hub; deepening AI chip development partnership via ICDeC",
-            "Iridium: Making PNT ASIC commercially available (military/aerospace positioning)"
-          ],
-          "implications": [
-            {
-              "keyword": "Hyperscaler Vertical Integration",
-              "text": "Google-AMD hybrid TPU partnership signals hyperscalers are diversifying silicon sourcing away from Nvidia; custom SoC co-design with foundry partners is becoming standard playbook."
-            },
-            {
-              "keyword": "ASIC Specialist Boom",
-              "text": "Asicland's 6-month revenue surge and profit recovery demonstrates strong crypto/AI workload demand; SkyeChip's lumpy earnings reflect project-dependent revenue model typical of custom chip houses."
-            },
-            {
-              "keyword": "Nvidia Competitive Pressure",
-              "text": "Nvidia's shift to capital moat strategy (stacking software/ecosystem) indicates recognition of mounting chip competition from Cerebras, custom hyperscaler designs, and AMD partnerships."
-            },
-            {
-              "keyword": "Niche Market Fragmentation",
-              "text": "Iridium's commercial PNT ASIC availability and NEXA CORE's AI chip development platform indicate ASIC market is fragmenting into vertical application silos (defense, AI inference, custom training)."
-            }
-          ],
-          "counterpoint": "SkyeChip's disappointing 1Q results and project-milestone-dependent earnings highlight execution and market adoption risks that offset otherwise strong ASIC sector momentum."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-18",
-      "item_count": 20,
-      "generated_at": "2026-08-18T20:31:19.998776+00:00",
+      "date": "2026-08-19",
+      "item_count": 25,
+      "generated_at": "2026-08-19T20:35:49.141156+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "TSMC reinforces process leadership with angstrom-class (sub-2nm) breakthroughs; Samsung and SK Haimdachi are aggressively upgrading yield-critical infrastructure and investing in advanced nodes. Taiwan government is distributing AI dividend (44 billion won per capita) from semiconductor GDP gains. South Korea's advanced foundry ecosystem is consolidating around TSMC competition and custom memory differentiation.",
-          "key_facts": [
-            "TSMC A16 platform: First-to-market angstrom-class CMOS with back-power rail (SPR) technology",
-            "Samsung DS: Upgrading semiconductor analysis labs with next-gen defect detection equipment",
-            "SK Haimdachi: Upgrading analysis infrastructure for yield management",
-            "Taiwan government: Distributing 1 trillion+ TWD AI dividend (44 million won per capita) from HPC/AI/cloud sector growth",
-            "HANMI Semiconductor: Investing 91.4 million USD in Plant 8 due to AI chip equipment demand surge; new 6230-pyeong factory acquisition with 130 billion won total investment; Q2 2027 production ramp",
-            "TSMC CoWoS alternative: COUPE packaging platform positioned as post-CoWoS game-changer for advanced packaging",
-            "Samsung-TCL LCD: Razor-thin 0.1% market share gap (Samsung 13.7%, TCL 13.8% in June)"
-          ],
-          "implications": [
-            {
-              "keyword": "Advanced Node Race",
-              "text": "TSMC's A16 back-power rail (SPR) success demonstrates continued leadership in angstrom-class process maturity; Samsung/SK infrastructure upgrades are defensive plays to catch up in yield-critical metrics."
-            },
-            {
-              "keyword": "Capacity Constraints",
-              "text": "HANMI's 1.3 billion won Plant 8 investment and 2027 Q2 ramp indicates AI semiconductor equipment shortages persisting through 2027; dedicated backend capacity expansion is becoming critical competitive advantage."
-            },
-            {
-              "keyword": "Government Industrial Policy",
-              "text": "Taiwan's AI dividend announcement reflects semiconductors' outsized GDP contribution to Taiwan economy; South Korea's memory/foundry upgrades are government-backed supply-chain security initiatives."
-            },
-            {
-              "keyword": "Packaging Differentiation",
-              "text": "TSMC's COUPE positioning as post-CoWoS solution indicates advanced packaging (chiplet interconnect, HBM integration) is becoming key cost/performance differentiator as process node scaling slows."
-            }
-          ],
-          "counterpoint": "Samsung-TCL LCD margin compression (0.1% share gap) and global TV shipment decline suggest foundry/memory players' profitability remains under pressure from demand volatility outside AI/HPC."
-        },
-        "en": {
-          "executive_summary": "TSMC reinforces process leadership with angstrom-class (sub-2nm) breakthroughs; Samsung and SK Haimdachi are aggressively upgrading yield-critical infrastructure and investing in advanced nodes. Taiwan government is distributing AI dividend (44 billion won per capita) from semiconductor GDP gains. South Korea's advanced foundry ecosystem is consolidating around TSMC competition and custom memory differentiation.",
-          "key_facts": [
-            "TSMC A16 platform: First-to-market angstrom-class CMOS with back-power rail (SPR) technology",
-            "Samsung DS: Upgrading semiconductor analysis labs with next-gen defect detection equipment",
-            "SK Haimdachi: Upgrading analysis infrastructure for yield management",
-            "Taiwan government: Distributing 1 trillion+ TWD AI dividend (44 million won per capita) from HPC/AI/cloud sector growth",
-            "HANMI Semiconductor: Investing 91.4 million USD in Plant 8 due to AI chip equipment demand surge; new 6230-pyeong factory acquisition with 130 billion won total investment; Q2 2027 production ramp",
-            "TSMC CoWoS alternative: COUPE packaging platform positioned as post-CoWoS game-changer for advanced packaging",
-            "Samsung-TCL LCD: Razor-thin 0.1% market share gap (Samsung 13.7%, TCL 13.8% in June)"
-          ],
-          "implications": [
-            {
-              "keyword": "Advanced Node Race",
-              "text": "TSMC's A16 back-power rail (SPR) success demonstrates continued leadership in angstrom-class process maturity; Samsung/SK infrastructure upgrades are defensive plays to catch up in yield-critical metrics."
-            },
-            {
-              "keyword": "Capacity Constraints",
-              "text": "HANMI's 1.3 billion won Plant 8 investment and 2027 Q2 ramp indicates AI semiconductor equipment shortages persisting through 2027; dedicated backend capacity expansion is becoming critical competitive advantage."
-            },
-            {
-              "keyword": "Government Industrial Policy",
-              "text": "Taiwan's AI dividend announcement reflects semiconductors' outsized GDP contribution to Taiwan economy; South Korea's memory/foundry upgrades are government-backed supply-chain security initiatives."
-            },
-            {
-              "keyword": "Packaging Differentiation",
-              "text": "TSMC's COUPE positioning as post-CoWoS solution indicates advanced packaging (chiplet interconnect, HBM integration) is becoming key cost/performance differentiator as process node scaling slows."
-            }
-          ],
-          "counterpoint": "Samsung-TCL LCD margin compression (0.1% share gap) and global TV shipment decline suggest foundry/memory players' profitability remains under pressure from demand volatility outside AI/HPC."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-18",
+      "date": "2026-08-19",
       "item_count": 20,
-      "generated_at": "2026-08-18T20:31:19.998776+00:00",
+      "generated_at": "2026-08-19T20:35:49.141156+00:00",
       "content": {
         "ko": {},
         "en": {}
