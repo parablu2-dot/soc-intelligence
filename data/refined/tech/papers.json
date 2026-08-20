@@ -2,6 +2,194 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "JANUS: A Multi-modal Foundation Neural Sampler for Disordered Materials",
+    "url": "https://arxiv.org/abs/2608.19116v1",
+    "published_date": "2026-08-19",
+    "source": "arXiv",
+    "summary": "Many problems in disordered materials require sampling beyond fixed composition and volume, where coupled changes in atomic identities and structure create a prohibitively expensive discrete-continuous sampling problem. Here we introduce JANUS, a multimodal neural sampler that couples continuous and masked discrete diffusion through an equivariant graph neural network trained directly from energy evaluations, without pre-generated equilibrium data. In benchmark Ising and isobaric $ΔμNPT$ alloy s",
+    "authors": [
+      "Denis Blessing",
+      "Mouyang Cheng",
+      "Maximilian Schebek",
+      "Jutta Rogal",
+      "Mingda Li",
+      "Carles Domingo-Enrich",
+      "Yuanqi Du"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Robust and Efficient Feature Extraction for Spike Sorting via the Walsh-Hadamard Transform",
+    "url": "https://arxiv.org/abs/2608.19048v1",
+    "published_date": "2026-08-19",
+    "source": "arXiv",
+    "summary": "Implantable neural interfaces require low-power real-time signal processing to remain within strict thermal and bandwidth constraints, motivating lightweight feature extraction methods for on-chip spike sorting. This work presents the Walsh-Hadamard Transform (WHT) as a hardware-efficient feature extraction method for neural spike classification. WHT can be implemented using only adders, subtractors, and registers without coefficient memory. WHT performance is compared against the Compressed Had",
+    "authors": [
+      "Emily Yang",
+      "Liyuan Guo",
+      "Seyed Mohammad Ali Zeinolabedin",
+      "Meng Zhang",
+      "Ke Yang",
+      "Matthieu Couriol",
+      "Christian Mayr",
+      "Pierre-Emmanuel Gaillardon"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "APEX: A Dual-Sparsity Accelerator for Precise and Efficient SNN Inference",
+    "url": "https://arxiv.org/abs/2608.19046v1",
+    "published_date": "2026-08-19",
+    "source": "arXiv",
+    "summary": "Spiking Neural Networks (SNNs) have emerged as an energy-efficient alternative to Artificial Neural Networks (ANNs), leveraging sparse accumulate operations in the place of power-hungry multiply-and-accumulate operations. ANN-SNN conversion is a widely adopted approach to realize deep SNNs with accuracy comparable to that of ANNs. The Quantization-Clip-Floor-Shift (QCFS) activation minimizes conversion error, yet requires a large number of inference timesteps to match the source ANN accuracy on ",
+    "authors": [
+      "Devgokul Bawa Venkatesh",
+      "Sreeram Radhakrishnan",
+      "Rajshekhar Rakshit",
+      "Gopalakrishnan Srinivasan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "Universal Machine-learning Molecular Dynamics at the Speed of Empirical Potentials",
+    "url": "https://arxiv.org/abs/2608.19041v1",
+    "published_date": "2026-08-19",
+    "source": "arXiv",
+    "summary": "No interatomic potential has offered universality across chemistry, near-first-principles accuracy and the speed of empirical potentials at once. Here we introduce DPA4C, an equivariant potential whose architecture and compressed CUDA operators are co-designed under deployment constraints to pursue accuracy and efficiency together. Five variants spanning a 49-fold parameter range form the high-throughput end of the measured accuracy--throughput frontier. The largest variant approaches the accura",
+    "authors": [
+      "Tiancheng Li",
+      "Jianming Xue",
+      "Linfeng Zhang",
+      "Duo Zhang",
+      "Han Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "The role of weak interfaces in the tensile deformation and fracture of particle-filled polymers studied by phase-field model",
+    "url": "https://arxiv.org/abs/2608.19031v1",
+    "published_date": "2026-08-19",
+    "source": "arXiv",
+    "summary": "Weak particle-matrix interfaces play a critical role in the tensile fracture of particle-filled polymer composites, but how they govern progressive debonding, fracture localization, and the resulting changes in macroscopic mechanical properties remains insufficiently understood. In this study, a cohesive-zone phase-field model incorporating a hyperelastic polymer matrix and a smeared interface is employed to investigate the coupled evolution of interfacial debonding and matrix fracture in partic",
+    "authors": [
+      "Xu Chen",
+      "Ya Duan",
+      "Xiaoying Zhuang",
+      "Timon Rabczuk"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Ultrafast order-selective electron imaging and spectroscopy",
+    "url": "https://arxiv.org/abs/2608.18925v1",
+    "published_date": "2026-08-19",
+    "source": "arXiv",
+    "summary": "Ultrafast pump-probe spectroscopies in energy and momentum have become indispensable for probing non-equilibrium dynamics in quantum materials, revealing pathways in ultrafast energy conversion and light-induced phase transitions. Different modalities uniquely access the coupled lattice, charge, and spin degrees of freedom that underpin the functionality of these materials. However, investigating technologically relevant nanoscale devices also requires high spatial resolution. Although electron ",
+    "authors": [
+      "Jan Philipp Bange",
+      "Till Domröse",
+      "Claus Ropers",
+      "Stefan Mathias",
+      "Marcel Reutzel",
+      "."
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "math.NA",
+    "title": "A shifted energy barrier approach for phase-field modeling of tensile-dominated brittle fracture",
+    "url": "https://arxiv.org/abs/2608.18766v1",
+    "published_date": "2026-08-19",
+    "source": "arXiv",
+    "summary": "The classical AT1 phase-field model contains an intrinsic energy barrier for crack nucle ation, which makes the predicted strength depend on the fracture toughness and the regularization length. For tensile-dominated brittle fracture, this barrier is shifted by mapping the Rankine criterion, evaluated on the effective stress, onto a state-dependent active-energy threshold. The prescribed tensile strength then controls crack nucleation, while the AT1 crack-density functional, stiffness degradatio",
+    "authors": [
+      "Yaode Yina",
+      "Luigi Greco",
+      "Hongjun Yua",
+      "Simone Morganti"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Revisiting the topological properties of XMg2Bi2 (X = Ca, Sr, Ba, Yb and Eu)",
+    "url": "https://arxiv.org/abs/2608.18729v1",
+    "published_date": "2026-08-19",
+    "source": "arXiv",
+    "summary": "Density functional theory is known to underestimate band gaps in semiconductors and to over- estimate inverted band gaps, frequently exaggerating the predicted size of the topological phase diagram of materials. Employing hybrid functionals and calculating the topological invariants, we revisit the topological properties of compounds crystallizing in the CaAl2Si2-type and demonstrate that the overestimation of the inverted band gaps is particularly pronounced in compounds with this crystal struc",
+    "authors": [
+      "Antoni Facca",
+      "Xujia Gong",
+      "Amar Fakhredine",
+      "Carmine Autieri",
+      "Asiyeh Shokri"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Thickness-dependent degradation and optical access in epitaxial 2H-MoTe2 protected by metallic capping layers",
+    "url": "https://arxiv.org/abs/2608.18629v1",
+    "published_date": "2026-08-19",
+    "source": "arXiv",
+    "summary": "We investigate degradation pathways and surface protection strategies for epitaxial 2H-MoTe2 films grown by molecular beam epitaxy on GaAs(111)B substrates. Using X-ray photoelectron spectroscopy, scanning tunneling microscopy, atomic force microscopy (AFM), Kelvin probe microscopy (KPM), Raman spectroscopy, and density functional theory (DFT) calculations, we analyse the structural, chemical, and electronic evolution of MoTe2 films protected by Co and Ni capping layers. XPS shows that the metal",
+    "authors": [
+      "Wojciech Ryś",
+      "Iaroslav Lutsyk",
+      "Michał Piskorski",
+      "Maxime Le Ster",
+      "Maciej Rogala",
+      "Paweł Dąbrowski",
+      "Paweł Krukowski",
+      "Katarzyna Ranoszek-Soliwoda",
+      "Jarosław Grobelny",
+      "Zuzanna Ogorzałek-Sory",
+      "Wojciech Pacuski",
+      "Janusz Sadowski",
+      "Marta Gryglas-Borysiewicz",
+      "Karol Szałowski",
+      "Paweł J. Kowalczyk"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Room-Temperature Polarity Control of the Anomalous Nernst Effect in a High-Magnetic-Anisotropy Topological Nodal-Line MnAlGe",
+    "url": "https://arxiv.org/abs/2608.18462v1",
+    "published_date": "2026-08-19",
+    "source": "arXiv",
+    "summary": "Controlling the polarity of anomalous Nernst thermopower is a promising strategy for enhancing the performances of thermoelectric applications. However, realizing such control at room temperature (RT) in topological ferromagnets with high magnetic anisotropy (Ku) remains challenging. Here, we report RT polarity control of the anomalous Nernst effect (ANE) in quasi-two-dimensional nodal-line MnAlGe epitaxial thin films through Al/Ge compositional tuning while preserving robust high Ku. This polar",
+    "authors": [
+      "Nanhe Kumar Gupta",
+      "Keisuke Masudaa",
+      "Masaaki Kakoki",
+      "Benugopal Bairagya",
+      "Satoki Tazawaa",
+      "Weinan Zhoua",
+      "Hirofumi Sutoa",
+      "Ryo Toyama",
+      "Akio Kimura",
+      "Yuya Sakuraba"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mes-hall",
     "title": "Electronic Reconstruction at the Quasicrystal-Moiré Crossover in Twisted Bilayer Graphene",
     "url": "https://arxiv.org/abs/2608.18052v1",
@@ -268,6 +456,80 @@
     "authors": [
       "Soheil Gholami Shahrouz",
       "Vaughn Betz"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Localized Excitons and Exciton-Phonon Coupling in Antiferromagnetic AgCrP2S6",
+    "url": "https://arxiv.org/abs/2608.18394v1",
+    "published_date": "2026-08-18",
+    "source": "arXiv",
+    "summary": "AgCrP2S6 combines a low-symmetry thiophosphate framework with an antiferromagnetic Cr sublattice and nonmagnetic Ag sites, providing a setting in which covalency and magnetic localization compete in the low-energy optical response. We combine single-crystal x-ray diffraction, Raman spectroscopy, lattice-dynamical calculations, and self-consistent vertex corrected Feynman diagrammatic many-body approaches to determine the structural, electronic, and excitonic properties of bulk AgCrP2S6. The mate",
+    "authors": [
+      "Jessica McDivitt",
+      "Dimitar Pashov",
+      "Mark van Schilfgaarde",
+      "Justin C. Johnson",
+      "Jeffrey L. Blackburn",
+      "Anna A. Berseneva",
+      "Swagata Acharya"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Isolating the natural edges of bilayer graphene in gate-defined mesoscopic devices",
+    "url": "https://arxiv.org/abs/2608.18384v1",
+    "published_date": "2026-08-18",
+    "source": "arXiv",
+    "summary": "We introduce a graphite-gated architecture for bilayer graphene devices in which the active device is completely isolated from the natural graphene edges. Using a single patterned graphite-gate layer, we realize a fully electrostatically defined Hall-bar. Longitudinal and Hall measurements reveal mesoscopic transport features, including Hall-effect quenching and magnetoresistance peaks associated with boundary scattering. The dependence of the mesoscopic features on the carrierdensity shows that",
+    "authors": [
+      "Francesco Blanda",
+      "Grazia Raciti",
+      "Thilo Glatzel",
+      "Aurin Strathmann",
+      "Fabrizio Volante",
+      "Kenji Watanabe",
+      "Takashi Taniguchi",
+      "Ilaria Zardo",
+      "Thomas Ihn",
+      "Klaus Ensslin",
+      "Andrea Hofmann"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "MAGMA: Mixture-Model Adaptive Gaussian Model Acceleration",
+    "url": "https://arxiv.org/abs/2608.18366v1",
+    "published_date": "2026-08-18",
+    "source": "arXiv",
+    "summary": "Conventional FPGA-based Gaussian Mixture Model (GMM) accelerators use offline-trained, fixed parameters, limiting their ability to adapt to evolving scene statistics in long-lived edge systems. We present MAGMA, a fully synthesizable fixed-point FPGA architecture that performs concurrent GMM inference and online Expectation-Maximization (EM) parameter adaptation from a streaming RGB pixel input. MAGMA combines a pipelined inference datapath with a background update engine using hardware-friendly",
+    "authors": [
+      "Peter Forcha",
+      "Harshitha Kajekusumadhar",
+      "Mbua Peter",
+      "Muhammed Kawser",
+      "Audrey Cyriell Mo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.geo-ph",
+    "title": "SeisEvo: Evolution of Seismic Data Reconstruction Algorithms by Agents",
+    "url": "https://arxiv.org/abs/2608.18272v1",
+    "published_date": "2026-08-18",
+    "source": "arXiv",
+    "summary": "Classical seismic data reconstruction relies on manually designed structural priors and iterative operators, whose coupled design space is far larger than manual trial and error can explore systematically. Deep-learning methods encode the reconstruction rules in learned weights rather than in an explicit operator that can be inspected and modified. We propose SeisEvo (Seismic Algorithm Evolution), which does not optimize a single reconstruction result but searches for the algorithm that produces",
+    "authors": [
+      "Yingjie Xu",
+      "Siwei Yu",
+      "Jianwei Ma"
     ]
   },
   {

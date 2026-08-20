@@ -1,68 +1,188 @@
 {
-  "date": "2026-08-19",
-  "generated_at": "2026-08-19T20:35:49.141929+00:00",
+  "date": "2026-08-20",
+  "generated_at": "2026-08-20T20:37:04.068101+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-08-19",
+      "date": "2026-08-20",
       "item_count": 1,
-      "generated_at": "2026-08-19T20:35:49.141156+00:00",
+      "generated_at": "2026-08-20T20:37:04.067047+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Snapdragon X2 Elite Extreme demonstrates significant performance leadership with up to 87% CPU advantage and 2.4x AI performance multiplier versus Intel and AMD competitors in retail laptop segments.",
+          "executive_summary": "Snapdragon 8 Elite Gen 6 Pro desoldered samples are already circulating for $42 before official launch, with images suggesting Samsung's HPB-style heatsink solution adoption.",
           "key_facts": [
-            "Snapdragon X2 Elite Extreme: 87% CPU lead over Intel/AMD",
-            "Snapdragon X2 Elite Extreme: 2.4x AI performance advantage"
+            "Snapdragon 8 Elite Gen 6 Pro desoldered units: $42",
+            "Possible heatsink design similar to Samsung HPB"
           ],
           "implications": [
             {
-              "keyword": "Market positioning",
-              "text": "Qualcomm establishes dominant performance narrative for AI-capable laptops, challenging x86 incumbents in premium mobile computing"
+              "keyword": "Supply Chain Leakage",
+              "text": "Early sample availability indicates potential production ramp or quality control testing units entering secondary channels ahead of official announcement."
+            },
+            {
+              "keyword": "Thermal Architecture",
+              "text": "Adoption of HPB-style heatsinks mirrors Samsung's advanced packaging approach, potentially signaling competitive thermal management standards in flagship SoC."
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "Desoldered samples may represent engineering samples or defective units rather than production-intent devices."
         },
         "en": {
-          "executive_summary": "Snapdragon X2 Elite Extreme demonstrates significant performance leadership with up to 87% CPU advantage and 2.4x AI performance multiplier versus Intel and AMD competitors in retail laptop segments.",
+          "executive_summary": "Snapdragon 8 Elite Gen 6 Pro desoldered samples are already circulating for $42 before official launch, with images suggesting Samsung's HPB-style heatsink solution adoption.",
           "key_facts": [
-            "Snapdragon X2 Elite Extreme: 87% CPU lead over Intel/AMD",
-            "Snapdragon X2 Elite Extreme: 2.4x AI performance advantage"
+            "Snapdragon 8 Elite Gen 6 Pro desoldered units: $42",
+            "Possible heatsink design similar to Samsung HPB"
           ],
           "implications": [
             {
-              "keyword": "Market positioning",
-              "text": "Qualcomm establishes dominant performance narrative for AI-capable laptops, challenging x86 incumbents in premium mobile computing"
+              "keyword": "Supply Chain Leakage",
+              "text": "Early sample availability indicates potential production ramp or quality control testing units entering secondary channels ahead of official announcement."
+            },
+            {
+              "keyword": "Thermal Architecture",
+              "text": "Adoption of HPB-style heatsinks mirrors Samsung's advanced packaging approach, potentially signaling competitive thermal management standards in flagship SoC."
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "Desoldered samples may represent engineering samples or defective units rather than production-intent devices."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-08-19",
-      "item_count": 10,
-      "generated_at": "2026-08-19T20:35:49.141156+00:00",
+      "date": "2026-08-20",
+      "item_count": 21,
+      "generated_at": "2026-08-20T20:37:04.067047+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "SK hynix is ramping nationwide hiring and revamping recruitment to focus on AI-era talent, including eliminating educational requirements and introducing half-day interviews to assess fundamental problem-solving ability. Nvidia plans a Shanghai R&D center to strengthen China presence, while enterprise leaders show broad robotics adoption expectations despite readiness gaps.",
+          "key_facts": [
+            "SK hynix: nationwide briefings with 4,000 applicants, four hub locations (Seoul, Daegu, Cheongju, Gwangju)",
+            "SK hynix eliminating education requirements for new recruits",
+            "SK hynix implementing half-day interview format for AI talent",
+            "Six in ten senior leaders expect robot fleet operations within five years",
+            "67% of leaders believe readiness for mixed human-robot workforce by 2030",
+            "Nvidia establishing Shanghai R&D Center",
+            "74% of leaders predict full-scale robotics could double operational output"
+          ],
+          "implications": [
+            {
+              "keyword": "AI Talent Competition",
+              "text": "SK hynix overhaul signals intense competition for AI specialists; educational meritocracy elimination reflects fundamental shift in hiring philosophy toward applied problem-solving capability."
+            },
+            {
+              "keyword": "Enterprise Robotics Deployment Gap",
+              "text": "60% of leaders expect robot fleet deployments within five years, but only 40% report readiness; this signals upcoming bottleneck in workforce training and operational integration."
+            },
+            {
+              "keyword": "China Strategic Focus",
+              "text": "Nvidia Shanghai R&D expansion reflects critical role of China market in HPC ecosystem development despite geopolitical constraints."
+            }
+          ],
+          "counterpoint": "High expectations for robotics adoption may not translate to actual capex and integration spending if operational readiness barriers prove more severe than anticipated."
+        },
+        "en": {
+          "executive_summary": "SK hynix is ramping nationwide hiring and revamping recruitment to focus on AI-era talent, including eliminating educational requirements and introducing half-day interviews to assess fundamental problem-solving ability. Nvidia plans a Shanghai R&D center to strengthen China presence, while enterprise leaders show broad robotics adoption expectations despite readiness gaps.",
+          "key_facts": [
+            "SK hynix: nationwide briefings with 4,000 applicants, four hub locations (Seoul, Daegu, Cheongju, Gwangju)",
+            "SK hynix eliminating education requirements for new recruits",
+            "SK hynix implementing half-day interview format for AI talent",
+            "Six in ten senior leaders expect robot fleet operations within five years",
+            "67% of leaders believe readiness for mixed human-robot workforce by 2030",
+            "Nvidia establishing Shanghai R&D Center",
+            "74% of leaders predict full-scale robotics could double operational output"
+          ],
+          "implications": [
+            {
+              "keyword": "AI Talent Competition",
+              "text": "SK hynix overhaul signals intense competition for AI specialists; educational meritocracy elimination reflects fundamental shift in hiring philosophy toward applied problem-solving capability."
+            },
+            {
+              "keyword": "Enterprise Robotics Deployment Gap",
+              "text": "60% of leaders expect robot fleet deployments within five years, but only 40% report readiness; this signals upcoming bottleneck in workforce training and operational integration."
+            },
+            {
+              "keyword": "China Strategic Focus",
+              "text": "Nvidia Shanghai R&D expansion reflects critical role of China market in HPC ecosystem development despite geopolitical constraints."
+            }
+          ],
+          "counterpoint": "High expectations for robotics adoption may not translate to actual capex and integration spending if operational readiness barriers prove more severe than anticipated."
+        }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-19",
-      "item_count": 26,
-      "generated_at": "2026-08-19T20:35:49.141156+00:00",
+      "date": "2026-08-20",
+      "item_count": 24,
+      "generated_at": "2026-08-20T20:37:04.067047+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Google is consolidating custom silicon strategy through major partnerships: $12.18 billion warrant deal with Marvell for AI chips with Korea-bound supply shift, and Waymo's custom 5nm 1,000 TOPS robotaxi chip entering mass production. Waymo is actively reducing reliance on Nvidia acceleration, while Anthropic has pre-committed $250 million to Fractile for unshipped silicon.",
+          "key_facts": [
+            "Google-Marvell partnership: up to $12.18 billion in warrants",
+            "Marvell equity tied to Korea-bound supply shift",
+            "Waymo custom chip: 5nm, 1,000 TOPS, mass production commenced",
+            "Waymo chip performance comparable to Nvidia's latest systems",
+            "Anthropic pre-revenue contract: $250 million commitment to Fractile",
+            "Waymo reducing Nvidia reliance through custom silicon",
+            "Wedbush analyzing rumored Google-AMD chip partnership"
+          ],
+          "implications": [
+            {
+              "keyword": "GPU-to-ASIC Shift",
+              "text": "Google's dual strategy (Marvell partnership + Waymo custom chip) signals broader industry move from GPU generalists to task-specific silicon; significant margin pressure on Nvidia in workload-optimized segments."
+            },
+            {
+              "keyword": "Supply Diversification",
+              "text": "Marvell warrant structure linking equity to Korea production suggests Google securing geographic redundancy and hedging Taiwan-only concentration risk for AI acceleration."
+            },
+            {
+              "keyword": "Pre-Revenue Financing",
+              "text": "Anthropic's $250M commitment to Fractile's unshipped silicon indicates confidence in custom silicon viability and willingness to fund unproven startups—normalizing pre-production capital allocation."
+            },
+            {
+              "keyword": "Autonomous Vehicle Silicon",
+              "text": "Waymo's in-house chip development directly competes with Nvidia's automotive acceleration offerings; mass production signals viable alternative for Level 4+ autonomous platforms."
+            }
+          ],
+          "counterpoint": "Google's custom chip investments risk duplicating design and verification complexity; time-to-production delays could erode competitive advantage if Nvidia or AMD accelerators improve workload fit faster."
+        },
+        "en": {
+          "executive_summary": "Google is consolidating custom silicon strategy through major partnerships: $12.18 billion warrant deal with Marvell for AI chips with Korea-bound supply shift, and Waymo's custom 5nm 1,000 TOPS robotaxi chip entering mass production. Waymo is actively reducing reliance on Nvidia acceleration, while Anthropic has pre-committed $250 million to Fractile for unshipped silicon.",
+          "key_facts": [
+            "Google-Marvell partnership: up to $12.18 billion in warrants",
+            "Marvell equity tied to Korea-bound supply shift",
+            "Waymo custom chip: 5nm, 1,000 TOPS, mass production commenced",
+            "Waymo chip performance comparable to Nvidia's latest systems",
+            "Anthropic pre-revenue contract: $250 million commitment to Fractile",
+            "Waymo reducing Nvidia reliance through custom silicon",
+            "Wedbush analyzing rumored Google-AMD chip partnership"
+          ],
+          "implications": [
+            {
+              "keyword": "GPU-to-ASIC Shift",
+              "text": "Google's dual strategy (Marvell partnership + Waymo custom chip) signals broader industry move from GPU generalists to task-specific silicon; significant margin pressure on Nvidia in workload-optimized segments."
+            },
+            {
+              "keyword": "Supply Diversification",
+              "text": "Marvell warrant structure linking equity to Korea production suggests Google securing geographic redundancy and hedging Taiwan-only concentration risk for AI acceleration."
+            },
+            {
+              "keyword": "Pre-Revenue Financing",
+              "text": "Anthropic's $250M commitment to Fractile's unshipped silicon indicates confidence in custom silicon viability and willingness to fund unproven startups—normalizing pre-production capital allocation."
+            },
+            {
+              "keyword": "Autonomous Vehicle Silicon",
+              "text": "Waymo's in-house chip development directly competes with Nvidia's automotive acceleration offerings; mass production signals viable alternative for Level 4+ autonomous platforms."
+            }
+          ],
+          "counterpoint": "Google's custom chip investments risk duplicating design and verification complexity; time-to-production delays could erode competitive advantage if Nvidia or AMD accelerators improve workload fit faster."
+        }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-19",
-      "item_count": 25,
-      "generated_at": "2026-08-19T20:35:49.141156+00:00",
+      "date": "2026-08-20",
+      "item_count": 23,
+      "generated_at": "2026-08-20T20:37:04.067047+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -70,9 +190,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-19",
-      "item_count": 20,
-      "generated_at": "2026-08-19T20:35:49.141156+00:00",
+      "date": "2026-08-20",
+      "item_count": 18,
+      "generated_at": "2026-08-20T20:37:04.067047+00:00",
       "content": {
         "ko": {},
         "en": {}
