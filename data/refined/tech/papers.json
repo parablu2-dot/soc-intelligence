@@ -2,6 +2,413 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Spin-torque microwave detectors of positive rectangular pulse signals",
+    "url": "https://arxiv.org/abs/2608.20323v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "We analyze the performance of a spin-torque microwave detector (STMD) driven by positive rectangular current pulses $I(t)$ of various amplitudes $I_0$, durations $τ$, and repetition periods $T$ and reveal two distinct regimes of STMD operation. In the first (linear) regime, the time-averaged voltage across the detector, $U_{\\rm dc}$, changes linearly with the pulse amplitude $I_0$ and depends on the ratio $τ/T$: $U_{\\rm dc} \\sim I_0 (τ/T)$. This regime is observed for a wide range of pulse ampli",
+    "authors": [
+      "V. Prokopenko",
+      "O. Shtanko",
+      "I. Sotnyk",
+      "O. Prokopenko"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Acoustic Resonance Distribution for Core-Shell Scatterers",
+    "url": "https://arxiv.org/abs/2608.20254v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Acoustic metamaterials can exhibit unusual effective properties through mechanisms such as energy localization and resonant behavior in their constituent building blocks. Here, we investigate the internal acoustic energy of fluid core-shell spheres and map how resonances emerge from the interplay between material contrasts and shell geometry. The resulting phase diagram reveals an organized resonant landscape across distinct impedance-contrast regimes. From this structure, we obtain two compact ",
+    "authors": [
+      "Naruna E. Rodrigues",
+      "Gilberto Nakamura",
+      "Odemir M. Bruno",
+      "Alexandre S. Martinez"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Wideband MIMO Beampattern Synthesis using Adaptive Frequency Modulated Waveforms",
+    "url": "https://arxiv.org/abs/2608.20214v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Multiple-Input Multiple-Output (MIMO) arrays transmit unique waveforms on each of their elements increasing the degrees of freedom available to synthesize novel transmit beampatterns. The wideband MIMO beampattern shape is determined by the structure of the MIMO Cross Spectral Density Matrix (CSDM) whose elements are the cross-spectra between each waveform in the set as a function of frequency. This paper demonstrates a model for synthesizing wideband MIMO beampatterns using Multi-Tone Sinusoida",
+    "authors": [
+      "David A. Hague"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Three-dimensional imaging of oxygen dopant distribution in Sr$_2$CuO$_{3+δ}$ by electron ptychography",
+    "url": "https://arxiv.org/abs/2608.20199v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Oxygen dopants play a critical role in tuning the properties of cuprate superconductors, yet it is challenging to visualize them at the atomic scale. Here, we use multislice electron ptychography to directly image oxygen dopants in a Sr2CuO3+delta film. We observe oxygen dopants at interstitial sites between the Cu-O chains, with a strong preference for clustering in tensile-strained regions, which are often associated with dislocations and interfacial steps. These findings indicate that the oxy",
+    "authors": [
+      "Hongbin Yang",
+      "Jinkwon Kim",
+      "Desheng Ma",
+      "Dasol Yoon",
+      "Darrell G. Schlom",
+      "David A. Muller"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "A Resource-Efficient CNN-Based EEG Auditory Attention Decoding ASIC",
+    "url": "https://arxiv.org/abs/2608.20198v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Following a target speaker in a noisy environment, commonly known as the cocktail party problem, remains particularly challenging for cochlear implant (CI) users. Recent studies have explored EEG-based auditory attention decoding (AAD) using neural networks to enhance hearing assistance. This paper presents a resource-efficient ASIC for real-time EEG-based auditory attention decoding by integrating a quantized CNN inference engine and a Pearson-correlation classifier. The proposed architecture e",
+    "authors": [
+      "Qier Ma",
+      "Richard George",
+      "Stefan Scholze",
+      "Jehn Constantin",
+      "Tobias Reichenbach",
+      "Christian Mayr"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "A Standardized Framework for Machine Learning in Power System Protection",
+    "url": "https://arxiv.org/abs/2608.20181v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Studies of machine-learning-based power-system protection increasingly report near-perfect scores, yet the meaning of those scores depends strongly on the evaluation setting. Protection task, physical scope, measurements, timing, targets, preprocessing, and validation often vary jointly and remain incompletely specified. This paper proposes a standardization-oriented framework that treats evaluation design as part of the scientific contribution. It defines seven required study dimensions: protec",
+    "authors": [
+      "Julian Oelhaf",
+      "Georg Kordowich",
+      "Paula Andrea Pérez-Toro",
+      "Christian Bergler",
+      "Johann Jäger",
+      "Andreas Maier",
+      "Siming Bayer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "quant-ph",
+    "title": "Architecture and Compilation Co-Design for High-Rate Quantum Product Codes on Neutral Atom Arrays",
+    "url": "https://arxiv.org/abs/2608.20164v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Achieving fault-tolerant quantum computing at a practical scale demands quantum error correction (QEC) codes with high encoding rates. Quantum low-density parity-check (qLDPC) codes emerge as a promising candidate, especially given the rise of neutral atom arrays that provide dynamic long-range connectivity via atom movements. In general, synthesizing valid and efficient physical execution plans for QEC is a provably hard combinatorial problem, forming a critical compilation bottleneck that wors",
+    "authors": [
+      "Adrian Liu",
+      "Wan-Hsuan Lin",
+      "Daniel Bochen Tan",
+      "Qian Xu",
+      "Jason Cong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Low-complexity Soft-decision LLR Calculations for Next-generation IM-DD Systems with RIN",
+    "url": "https://arxiv.org/abs/2608.20102v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "The demand for higher speeds in intra-data center interconnects will eventually require high-order pulse amplitude modulation (PAM) combined with soft-decision (SD) forward error correction (FEC). The laser relative intensity noise (RIN) is an important noise impairment that limits the performance of high-speed intensity-modulation (IM) and direct-detection (DD) systems, as it induces a channel with signal-dependent noise. In this paper, we show that an accurate calculation of the log-likelihood",
+    "authors": [
+      "Felipe Villenas",
+      "Yunus Can Gültekin",
+      "Alex Alvarado"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Mid-infrared distributed-feedback lasing from black phosphorus under nanosecond excitation",
+    "url": "https://arxiv.org/abs/2608.20096v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Mid-infrared (MIR) light sources compatible with silicon photonics are highly desirable for environmental sensing and free-space optical communications. Conventional GaSb-based quantum-well and interband-cascade lasers, however, rely on complex epitaxial heterostructures, complicating their integration with silicon photonic platforms. Here, we demonstrate a room-temperature MIR surface-emitting distributed-feedback (DFB) laser using black phosphorus (b-P) as the active gain medium. By determinis",
+    "authors": [
+      "Julien Brodeur",
+      "Laure Sène",
+      "Stéphane Kéna-Cohen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Amorphous and Nanocrystalline Topological Semimetal YPtBi/W/CoFeB Heterostructures for BEOL-Compatible Spin-Orbit Torque Devices",
+    "url": "https://arxiv.org/abs/2608.20021v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Spin-orbit torque (SOT) devices require spin-source materials that combine efficient charge-to-spin conversion with back-end-of-line (BEOL) thermal compatibility. Here, we show that YPtBi/W/CoFeB heterostructures deposited directly on Si/SiOx remain predominantly amorphous or weakly nanocrystalline from room temperature to 400 °C while preserving a large effective damping-like SOT response. Anomalous Hall and harmonic Hall measurements, together with X-ray diffraction, cross-sectional transmissi",
+    "authors": [
+      "Quang Le",
+      "Brian R. York",
+      "Cherngye Hwang",
+      "Xiaoyong Liu",
+      "Tsann Lin",
+      "Xiaoyu Xu",
+      "Yudi Wang",
+      "Jia Li",
+      "Mazin Osman",
+      "Katherine Le",
+      "Maher Osman",
+      "Son Le",
+      "Lei Xu",
+      "Maki Maeda",
+      "Tuo Fan",
+      "Yu Tao",
+      "Hisashi Takano",
+      "Sho Kagami",
+      "Ohiro Fujie",
+      "Pham Nam Hai"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.soft",
+    "title": "Role of topology in scaling laws for studying mechanics in open-porous solids: Moving beyond classical Gibson-Ashby scaling",
+    "url": "https://arxiv.org/abs/2608.20003v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "The elastic modulus of porous materials is commonly described using power-law scaling relations with relative density, where the scaling exponent is often interpreted in terms of the underlying deformation mechanism. However, in highly disordered porous networks, changes in density are generally accompanied by changes in network topology, which can substantially modify the apparent scaling behavior. In this paper, we propose a topology-informed framework that separates the intrinsic mechanical c",
+    "authors": [
+      "Ameya Rege"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Experimental Verification of Fast Voltage Droop Correction Circuits",
+    "url": "https://arxiv.org/abs/2608.19954v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Due to the trend towards minimizing guard bands for energy saving purposes, voltage droops are a key limiting factor for the operational frequency of today's VLSI circuits. Adapting clock frequencies dynamically presents the challenge of metastability in the device that detects and stores the existence of voltage droops. We present an implementation of a fast all-digital circuit for adaptive response to droops using the IHP 130 nm process. The description of the design is presented in an accompa",
+    "authors": [
+      "Shreyas Srinivas",
+      "Ian W. Jones",
+      "Carsten Schulze",
+      "Milos Krstic",
+      "Christoph Lenzen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Building atomistic models of heterointerfaces with optimal transport",
+    "url": "https://arxiv.org/abs/2608.19933v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Heterogeneous interfaces underpin technologies from microelectronics to energy conversion and storage, but their configurational complexity precludes exhaustive first-principles screening of interface registries. Although data-driven approaches can alleviate this burden, they remain limited by sparse interface datasets. Here, we introduce an energy-independent workflow that represents coherent interfaces as attributed graphs, quantifies their similarity to parent bulk environments using the fuse",
+    "authors": [
+      "Yuxuan Tang",
+      "Keith T. Butler"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Interpretable Feature Learning for RF Fingerprinting via Polar MKANs",
+    "url": "https://arxiv.org/abs/2608.19881v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Radio frequency (RF) fingerprinting authenticates wireless devices from hardware-induced I/Q impairments, typically with deep learning feature extractors that are accurate but opaque, limiting their use in security critical settings. We propose Polar Monotonic Kolmogorov-Arnold Networks (Polar MKAN), a block partitioned monotonic encoder on polar inputs in which each latent dimension depends exclusively on magnitude or phase, yielding channel separation and monotone responses by construction. On",
+    "authors": [
+      "Mikhail Krasnov",
+      "Ljupcho Milosheski",
+      "Carolina Fortuna"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "A 39pJ/b 7.3Gbps 1.3mm$^2$ Multi-Subcarrier Massive MU-MIMO-OFDM Detector Exploiting Beamspace Sparsity and Frequency-Domain Correlation in 22FDX",
+    "url": "https://arxiv.org/abs/2608.19865v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "We present the first multi-subcarrier massive multi-user (MU) multiple-input multiple-output (MIMO) orthogonal frequency-division multiplexing (OFDM) data detector reported in the open literature. By exploiting the channel's beamspace sparsity and frequency-domain (FD) correlation, we achieve up to 3x area and power reduction. Our design supports U=8 user equipments and B=64 basestation antennas, computes soft outputs for QPSK to 256-QAM, and processes 16 subcarriers in parallel. The fabricated ",
+    "authors": [
+      "Abhishek Kumar",
+      "Seyed Hadi Mirfarshbafan",
+      "Oscar Castañeda",
+      "Christoph Studer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Applying the Spectral Method for Modeling Linear Filters: Bessel, Papoulis, and Legendre Filters",
+    "url": "https://arxiv.org/abs/2608.19840v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "This paper proposes a new technique for computer simulation of linear filters. It allows simulating continuous-time linear filters based on the spectral method for analyzing linear control systems. Applying the spectral method implies that the input and output signals are represented by ordered sets of expansion coefficients in a chosen basis, and the filter itself is specified by a two-dimensional nonstationary transfer function. The described technique is tested on Bessel, Papoulis, and Legend",
+    "authors": [
+      "Konstantin A. Rybakov"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Energy-Efficient Visual Inspection with FFT-Based CNNs and Adaptive Floating-Point Quantization",
+    "url": "https://arxiv.org/abs/2608.19837v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "This paper investigates reduced-precision floating-point arithmetic for FFT-based CNN inference on an industrial CPU-FPGA platform. We combine FFT-based convolution with adaptive post-training FP8 quantization and evaluate two FPGA-oriented optimization methods: progressive bias adjustment (PBA) within the FFT and layer-wise exponent-bias selection across the CNN. The methods are implemented in a LeNet-5 accelerator using serial radix-$2^2$ SDF FFT modules and evaluated on an industrial fault de",
+    "authors": [
+      "Lukas Krupp",
+      "Marco Groß",
+      "Michael Graichen",
+      "Kim Ulrich",
+      "Norbert Wehn"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Band-Selective Microwave Cavity Optimization Using Differentiable FDTD: Gradient-Guided Search Versus Structured Random Search",
+    "url": "https://arxiv.org/abs/2608.19820v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "We compare gradient-based inverse design with structured random search for dielectric-loaded microwave cavities using an in-house JAX-based differentiable FDTD solver. The benchmark fixes material fraction, filtered density representation, initialization, band-energy objective, and measured selection wall time. Each selected design is evaluated in a separate 8000-step FDTD simulation. Across four target bands, three prescribed material fractions, and six seeds, gradient optimization achieves a h",
+    "authors": [
+      "Hasan Yiğit",
+      "Kutlu Karayahşi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Controlling catalyst agglomeration in high-density unordered III-V nanowire growth using Au colloid solutions",
+    "url": "https://arxiv.org/abs/2608.19805v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "III-V semiconductor nanowires (NWs) are a promising platform for optoelectronic and photoelectrochemical applications, where device performance strongly depends on NW density and spatial arrangement. While ordered arrays provide precise control, their fabrication requires complex and costly lithographic techniques. Unordered growth offers a scalable alternative but is limited by insufficient control over catalyst distribution and particle agglomeration.\n  Here, we investigate the density scaling",
+    "authors": [
+      "Chris Yannic Bohlemann",
+      "Pavithira Manoharan",
+      "Helene Reichel",
+      "Kai Daniel Hanke",
+      "Peter Kleinschmidt",
+      "Thomas Hannappel",
+      "Juliane Koch"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Constitutive modelling of open-porous neo-Hookean solids",
+    "url": "https://arxiv.org/abs/2608.19793v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Open-porous materials exhibit pronounced compressibility, nonlinear densification, and power-law scaling of stiffness with density. In this work, we propose a thermodynamically consistent compressible neo-Hookean constitutive model for open-porous solids in which porosity serves as the primary governing variable. The strain-energy density is formulated to couple distortional elasticity of the solid skeleton with a volumetric response governed by deformation-induced porosity evolution, including ",
+    "authors": [
+      "Ameya Rege"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Experimental Realization of Topological Surface Acoustic Wave Resonances under Surface Liquid Loading for Micro-volume sample Sensings",
+    "url": "https://arxiv.org/abs/2608.19772v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Surface acoustic wave (SAW) sensors, owing to their high operating frequencies, compatibility with planar micro-fabrication, and exceptional sensitivity to surface perturbations, are widely used in lab -on-a-chip and biomedical diagnostic applications. However, conventional SAW sensors operating in liquid environments suffer from substantial energy dissipation, which markedly reduces their quality factors (Q factors) and limits sensing reliability. Here, we design and fabricate a topological SAW",
+    "authors": [
+      "Bowei Wu",
+      "Tingfeng Ma",
+      "Hanbang Deng",
+      "Shuanghuizhi Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Mirror Chern insulators in two-dimensional altermagnetic Tc$_2$Cl$_2$O and Tc$_2$Br$_2$O",
+    "url": "https://arxiv.org/abs/2608.19725v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "The interplay between altermagnetism and crystalline band topology provides an intriguing avenue for realizing unconventional topological phases with distinctive spin-dependent properties. Here, based on first-principles calculations and theoretical analysis, we identify monolayer $\\mathrm{Tc}_2X_2\\mathrm{O}$ ($X$ = Cl, Br) as a family of two-dimensional altermagnetic mirror Chern insulators. In the absence of spin--orbit coupling (SOC), both monolayers exhibit robust altermagnetism with mirror-",
+    "authors": [
+      "Rong Wang",
+      "Ruo-Yu Ning",
+      "Zhi-Hua Yan",
+      "Si Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Automated Estimation of MBIST Area and Test Time in Heterogeneous Memory IPs via Stacked Ensemble Framework",
+    "url": "https://arxiv.org/abs/2608.19705v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Embedded memories occupy a large portion of modern System-on-Chip (SoC) designs, especially in high-performance applications such as artificial intelligence and edge computing. Memory Built-In Self-Test (MBIST) is commonly used to ensure memory reliability, but it introduces additional area and test time overhead. Accurate early estimation of these overheads is important during design planning, yet conventional methods rely on full Register Transfer Level (RTL) synthesis and test pattern generat",
+    "authors": [
+      "Chee Jin Teoh",
+      "Ab Al-Hadi Ab Rahman",
+      "Johnny Kee Hui Wong",
+      "Premkumar A/L Kesavan Prabagaran",
+      "Muhammad Nadzir Marsono",
+      "Nuzhat Khan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "A Thread-Register Decoupled GPU Execution Model for Efficient Tensor Computation",
+    "url": "https://arxiv.org/abs/2608.19628v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Modern GPUs increasingly integrate Tensor Cores into the execution pipeline. Although aggregate tensor throughput continues to grow, aided by an operand supply that has evolved from register-based in Ampere to redundancy-free, memory-based in Hopper and Blackwell, efficiently orchestrating the complete tensor compute pipeline for the modern AI workloads remains challenging. We identify the fundamental bottlenecks as fixed parallelism and coarse-grained scheduling, both of which are exposed by mo",
+    "authors": [
+      "Zihan Liu",
+      "Jingwen Leng",
+      "Yangjie Zhou",
+      "Yitong Ding",
+      "Guanlin Zhu",
+      "Yilu Huang",
+      "Chiheng Jin",
+      "Chen Zhang",
+      "Shixuan Sun",
+      "Yu Feng",
+      "Anbang Wu",
+      "Minyi Guo",
+      "Jian Weng",
+      "Jiajin Tu",
+      "Junsong Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "JANUS: A Multi-modal Foundation Neural Sampler for Disordered Materials",
     "url": "https://arxiv.org/abs/2608.19116v1",
