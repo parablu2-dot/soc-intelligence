@@ -2,6 +2,208 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.SE",
+    "title": "AI with Authority, from Application to Silicon",
+    "url": "https://arxiv.org/abs/2608.21356v1",
+    "published_date": "2026-08-21",
+    "source": "arXiv",
+    "summary": "For sixty years, machine verification has been a major cost overhead, affordable only for exceptional artifacts. Here we report that generative AI inverts this relationship: at AI speed, machine verification is not only economical but essential to productivity --- it is the incorruptible referee that lets one person safely direct autonomous machine work at scale. In five weeks, one researcher on consumer AI subscriptions directed a small fleet of AI agents from application code, through a verifi",
+    "authors": [
+      "Jason Hickey"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Dirac Surface States and Nonlocal Quantum Tunneling in Topological Semiconductor Mo$_2$SeTe$_3$ for High-Performance Tunnel FETs",
+    "url": "https://arxiv.org/abs/2608.21333v1",
+    "published_date": "2026-08-21",
+    "source": "arXiv",
+    "summary": "A first-principles and device-level study of the quasi-two-dimensional transition-metal chalcogenide Mo$_2$SeTe$_3$ is performed. The material is found to be a weak topological semiconductor with a finite bulk band gap and symmetry-protected Dirac surface states, indicating strong potential for next-generation low-power quantum electronic devices. An SOC-driven band inversion accompanied by an indirect semiconducting gap of approximately 0.75 eV is observed. Topological nontriviality is rigorous",
+    "authors": [
+      "Zafar Sadik Mehrub",
+      "Suvodip Kundu Arnob",
+      "Md. Tareq Mahmud",
+      "Nazmul Hasan",
+      "Alamgir Kabir"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Chemical Control of Electronic Structure and Topology in Tellurium-Encapsulated Silicene",
+    "url": "https://arxiv.org/abs/2608.21295v1",
+    "published_date": "2026-08-21",
+    "source": "arXiv",
+    "summary": "We investigate chemical control of the electronic, optical, and topological properties of two-dimensional \\ce{Si2X2Te2} (\\ce{X} = \\ce{B}, \\ce{Al}, \\ce{Ga}, and \\ce{In}) monolayers using first-principles calculations. All compounds are dynamically stable semiconductors, with their vibrational and electronic properties evolving systematically upon group-III substitution. Hybrid-functional calculations including spin--orbit coupling reveal predominantly $p$-orbital band edges and increasingly prono",
+    "authors": [
+      "Gabriel Elyas Gama Araujo",
+      "Andre Luis de Oliveira Batista",
+      "Willian Oliveira Santos",
+      "Alexandre Amaral Leitao",
+      "Alexandre Cavalheiro Dias",
+      "Andreia Luisa da Rosa"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Assessing Triple Modular Redundancy for Wide-Link, Low-Latency NoC Routers: Reliability and Physical Design Challenges",
+    "url": "https://arxiv.org/abs/2608.21288v1",
+    "published_date": "2026-08-21",
+    "source": "arXiv",
+    "summary": "Protecting the Network-on-Chip (NoC) of physical-AI tile-based accelerators deployed in harsh environments against single-event effects (SEEs) is paramount for preventing NoC failures that can lead to deadlocks and silent data corruption (SDC). Prior work on reliable NoCs has largely focused on narrow links (e.g., 32-bit), deeply pipelined routers, and single-event upsets (SEUs). However, the state of the art has evolved toward low-latency NoC routers with ultra-wide links, implemented on advanc",
+    "authors": [
+      "Chen Wu",
+      "Michael Rogenmoser",
+      "Luca Benini",
+      "Angelo Garofalo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "SPICE: Speculative Prefetching with Low-Rank Expert Surrogates and Heterogeneous Orchestration for MoE Inference Acceleration",
+    "url": "https://arxiv.org/abs/2608.21240v1",
+    "published_date": "2026-08-21",
+    "source": "arXiv",
+    "summary": "Mixture-of-Experts (MoE) models are increasingly used in LLMs because sparse activation decouples model capacity from compute cost. However, the large expert parameter footprint often exceeds GPU memory capacity, making inference latency dominated by the host-to-device PCIe transfers for expert loading. To address these challenges, this paper presents SPICE, a speculative prefetching framework for MoE offloading that combines lightweight expert prediction with confidence-aware CPU-GPU orchestrat",
+    "authors": [
+      "Yongxiang Lyu",
+      "Ning Li",
+      "Bonian Jia"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Event-triggered Implicit Perturbation for Zeroth-Order Fine-Tuning of Spiking Transformers",
+    "url": "https://arxiv.org/abs/2608.21223v1",
+    "published_date": "2026-08-21",
+    "source": "arXiv",
+    "summary": "Zeroth-order (ZO) optimization estimates gradients using only forward-pass evaluations, making it suitable for fine-tuning non-differentiable, event-driven spiking neural networks (SNNs). However, its deployment on in-memory computing (IMC) accelerators is constrained by the repeated read-modify-write (RMW) operations arising from explicit weight perturbation and the prohibitive hardware footprint of random number generators (RNGs) for statistically independent per-weight perturbations. To addre",
+    "authors": [
+      "Tengteng Lei",
+      "Prabodh Katti",
+      "Rashi Dutt",
+      "Houssem Sifaou",
+      "Tan Peng",
+      "Osvaldo Simeone",
+      "Kai Xu",
+      "Bipin Rajendran"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Symmetry-engineering ferroelectricity in silicon dioxides",
+    "url": "https://arxiv.org/abs/2608.21149v1",
+    "published_date": "2026-08-21",
+    "source": "arXiv",
+    "summary": "It is a long-established rule for classical ferroelectricity that any ferroelectric crystal must adopt one of the 10 specific polar point groups. Here we predict a unique type of ferroelectricity that can be generated in some crystals belonging to nonpolar noncentrosymmetric groups. This principle can be applicable to many systems including silicon dioxides, the most widely used dielectric materials. Most of their crystalline phases do not belong the polar groups, while the nonlinear Si-O-Si con",
+    "authors": [
+      "Yin Dai",
+      "Menghao Wu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Electric-Field-Induced Second Harmonic Generation at a Reconfigurable LaAlO$_3$/SrTiO$_3$ Nanojunction",
+    "url": "https://arxiv.org/abs/2608.21065v1",
+    "published_date": "2026-08-21",
+    "source": "arXiv",
+    "summary": "Electrically tunable nonlinear optical responses at the nanoscale remain challenging to achieve because conventional nonlinear materials lack the combination of large susceptibility, nanoscale confinement, and in situ reconfigurability. Here we report electric-field-induced second harmonic (EFISH) generation from a nanoscale tunnel junction defined by conductive atomic force microscope lithography at the LaAlO$_3$/SrTiO$_3$ interface. A conducting channel written at the interface is interrupted ",
+    "authors": [
+      "Pubudu Wijesinghe",
+      "Melanie Dieterlen",
+      "Kyoungjun Lee",
+      "Ahmed Omran",
+      "Aswini Ramankutty",
+      "Chang-Beom Eom",
+      "Patrick Irvin",
+      "Jeremy Levy"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Scalable photoexcitation-induced molecular dynamics with machine-learned Hamiltonians",
+    "url": "https://arxiv.org/abs/2608.20994v1",
+    "published_date": "2026-08-21",
+    "source": "arXiv",
+    "summary": "Ultrafast photoexcitation offers a controllable route to steer structural dynamics in solids, yet predicting how nonequilibrium electronic excitation drives lattice motion across extended spatial and temporal scales remains a major computational challenge. Here we introduce time-dependent ab-initio propagation with electronic machine learning (TDAP-eML), a framework that explicitly incorporates electronic evolution into scalable simulations of photoexcitation-induced lattice dynamics. By integra",
+    "authors": [
+      "Leyu Cai",
+      "Yunzhe Jia",
+      "Daqiang Chen",
+      "Sheng Meng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Systematic and accurate anharmonic formation free energies of metastable defects via a constrained Bayesian Adaptive Biasing Force framework",
+    "url": "https://arxiv.org/abs/2608.20902v1",
+    "published_date": "2026-08-21",
+    "source": "arXiv",
+    "summary": "Computing the formation free energies of metastable defects at finite temperature remains challenging due to anharmonicity, the multiplicity of basins and the frequent occurrence of migration events. Using the previously introduced constrained Bayesian Adaptive Biasing Force method (BABFc), we establish a practical thermodynamic integration framework for computing restricted anharmonic formation free energies associated with individual metastable defect basins. We demonstrate that BABFc can be e",
+    "authors": [
+      "Clovis Lapointe",
+      "Anruo Zhong",
+      "Manuel Athènes",
+      "Mihai-Cosmin Marinica"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "First-principles design of main-group dimer defects in ZnO as candidate quantum defects",
+    "url": "https://arxiv.org/abs/2608.20837v1",
+    "published_date": "2026-08-21",
+    "source": "arXiv",
+    "summary": "Zinc oxide (ZnO), a wide-band-gap semiconductor with mature growth techniques, is a promising host for optically active quantum spins. Yet, optically active quantum defects in ZnO remain largely unexplored. Here, we identify and characterize a family of double substitutional impurities in ZnO, formed by main-group donor-acceptor (DA) pairs, as candidates for optically active quantum defects. Using hybrid density functional theory (DFT), we systematically investigate double substitutional DA comp",
+    "authors": [
+      "Taejoon Park",
+      "Erik Alfredo Perez",
+      "Shimin Zhang",
+      "Yuan Ping",
+      "Hosung Seo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Electromagnetic Twin: Completing the Wireless World from Sparse Channel Evidence",
+    "url": "https://arxiv.org/abs/2608.20813v1",
+    "published_date": "2026-08-21",
+    "source": "arXiv",
+    "summary": "Acquiring dense channel information over many locations and beams incurs considerable pilot and processing overhead. Radio maps and channel knowledge maps (CKMs) reduce this overhead by reusing site-specific channel information, but their contents must be refreshed when new measurements or environmental observations become available. This paper introduces an \\emph{electromagnetic twin} as an updatable digital representation that uses sparse channel evidence to reconstruct the wireless state requ",
+    "authors": [
+      "Tuo Wu",
+      "Jie Tang",
+      "Kangda Zhi",
+      "Junteng Yao",
+      "Maged Elkashlan",
+      "Kin-Fai Tong",
+      "George K. Karagiannidis",
+      "Jinhong Yuan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "physics.app-ph",
     "title": "Spin-torque microwave detectors of positive rectangular pulse signals",
     "url": "https://arxiv.org/abs/2608.20323v1",
@@ -404,6 +606,57 @@
       "Jian Weng",
       "Jiajin Tu",
       "Junsong Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Faults That Fortify: CNN Adversarial Robustness via GPU Undervolting",
+    "url": "https://arxiv.org/abs/2608.20572v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Convolutional Neural Networks (CNNs) face a dual challenge: vulnerability to adversarial attacks and prohibitive training cost. Adversarial training is effective but expensive, a burden that grows as learning shifts to the energy-constrained edge. This paper addresses both through GPU undervolting during training. Reducing supply voltage introduces stochastic perturbations that act as implicit regularization, improving robustness while lowering power. We characterize undervolting-induced faults ",
+    "authors": [
+      "Behnam Omidi",
+      "Ahmad Tahmasivand",
+      "Husam Alsyouri",
+      "Saba Al-Sayouri",
+      "Chongzhou Fang",
+      "Ihsen Alouani",
+      "Khaled N. Khasawneh"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Revealing the Role of Confined Molecular H$_2$ in the Passivation of Defective Silicon Using First-Principles Simulations",
+    "url": "https://arxiv.org/abs/2608.20514v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "The passivation of silicon dangling bonds by hydrogen is a crucial requirement for silicon-based optoelectronic technology, especially for solar cells. Recent experiments on intense light soaking of silicon heterojunction solar cells unveiled interesting dynamical aspects of hydrogen passivation that are linked to Si-H bond breaking and repassivation. These processes take place predominantly in porous regions near the amorphous/crystalline interface, where hydrogen can exist in molecular form. T",
+    "authors": [
+      "Hania Azzam",
+      "Tobias Binninger",
+      "Benedikt Fischer",
+      "Uwe Rau",
+      "Michael Eikerling"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Electrostatic Influence of Diamond Heat-Spreaders on GaN FET Performance",
+    "url": "https://arxiv.org/abs/2608.20506v1",
+    "published_date": "2026-08-20",
+    "source": "arXiv",
+    "summary": "Diamond, with its exceptional thermal conductivity, is widely explored as a heat spreader to improve thermal management in GaN-based power and RF electronics. In this work, we use Sentaurus TCAD to model AlGaN/GaN HEMTs with integrated diamond heat spreaders, incorporating advanced physical models such as thermal boundary resistance (TBR) and temperature-dependent bandgap narrowing. While diamond significantly enhances heat dissipation, our simulations reveal an important but often overlooked tr",
+    "authors": [
+      "Lincoln Hogan",
+      "MD Mazharul Islam",
+      "Ahmedullah Aziz"
     ]
   },
   {
