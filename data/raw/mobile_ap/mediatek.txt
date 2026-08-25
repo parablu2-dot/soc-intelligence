@@ -26,7 +26,7 @@
     
 
     
-  <script id="hs-search-input__valid-content-types" type="application/json" nonce="j/8xeJvJygkWq2hYsiMKyw==">
+  <script id="hs-search-input__valid-content-types" type="application/json" nonce="NZkIL922P12jiGP22tVt6w==">
     [
       
         "SITE_PAGE",
@@ -50,22 +50,15 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 </style>
 
 
-<style>
 
-  .body-wrapper.hs-blog-listing .header-lang-switcher .lang_list_class a.lang_switcher_link[lang="zh-cn"] {
-    display: none;
-  }
 
-  .view_all_tag {
-    display: none;
-  }
-  .categories_wrapper .widget-module ul li a span {
-    display: none;
-  }
 
-</style>
 
-<link rel="stylesheet" href="https://www.mediatek.com/hubfs/hub_generated/template_assets/1/161694198809/1787570662169/template_main.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://www.mediatek.com/hubfs/hub_generated/template_assets/1/161694198809/1787665358231/template_main.min.css">
 <link rel="stylesheet" href="https://www.mediatek.com/hubfs/hub_generated/template_assets/1/178264772918/1786016969352/template_magnific_popup.min.css">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -79,10 +72,247 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
   
 </style>
 
-<link rel="stylesheet" href="https://www.mediatek.com/hubfs/hub_generated/module_assets/1/173093983897/1777118870544/module_blog-pagination.min.css">
+<link rel="stylesheet" href="https://www.mediatek.com/hubfs/hub_generated/module_assets/1/211134118691/1787639521621/module_blog-archive-filter-v2.min.css">
 <link rel="stylesheet" href="https://www.mediatek.com/hubfs/hub_generated/module_assets/1/173094700356/1744255127259/module_blog_site_search.min.css">
-<link rel="stylesheet" href="https://www.mediatek.com/hubfs/hub_generated/module_assets/1/173402324324/1780054313385/module_blog-archive-filter.min.css">
-<link rel="stylesheet" href="https://www.mediatek.com/hubfs/hub_generated/module_assets/1/173095118375/1755666861763/module_blog_recent_posts.min.css">
+<link rel="stylesheet" href="https://www.mediatek.com/hubfs/hub_generated/module_assets/1/173093983897/1777118870544/module_blog-pagination.min.css">
+<link rel="stylesheet" href="https://www.mediatek.com/hubfs/hub_generated/module_assets/1/211163153945/1787555844866/module_tek_talk_slider-v2.css">
+
+
+<style>
+
+  .tek_talk_slider-personal-compute.tek_talk_slider_wrapper .section_title p{
+    font-size:16px;
+  }
+
+
+  
+  .tek_talk_slider-personal-compute{
+    background-color:rgba( 241, 242, 242, 1.0);
+  }
+  
+
+  
+  @media screen and (min-width:768px){
+    .tek_talk_slider-personal-compute{
+      padding-top: 90px;
+padding-bottom: 90px;
+margin-top: 90px;
+
+    }
+  }
+  
+
+  
+  @media screen and (max-width:767px){
+    .tek_talk_slider-personal-compute{
+      padding-top: 64px;
+padding-right: 0px;
+padding-bottom: 120px;
+padding-left: 0px;
+margin-top: 64px;
+
+    }
+  }
+  
+
+  @media screen and (max-width: 767px){
+    .tek_talk_slider.tek_talk_slider_wrapper .section_title p {
+      font-size: 18px;
+      text-align: left;
+    }
+  }
+
+</style>
+
+
+
+
+<style>
+
+  .tek_talk_slider-data-center.tek_talk_slider_wrapper .section_title p{
+    font-size:16px;
+  }
+
+
+  
+  .tek_talk_slider-data-center{
+    background-color:rgba( 255, 255, 255, 1.0);
+  }
+  
+
+  
+  @media screen and (min-width:768px){
+    .tek_talk_slider-data-center{
+      padding-top: 90px;
+padding-bottom: 90px;
+
+    }
+  }
+  
+
+  
+  @media screen and (max-width:767px){
+    .tek_talk_slider-data-center{
+      padding-top: 64px;
+padding-right: 0px;
+padding-bottom: 120px;
+padding-left: 0px;
+
+    }
+  }
+  
+
+  @media screen and (max-width: 767px){
+    .tek_talk_slider.tek_talk_slider_wrapper .section_title p {
+      font-size: 18px;
+      text-align: left;
+    }
+  }
+
+</style>
+
+
+
+
+<style>
+
+  .tek_talk_slider-edge-cloud.tek_talk_slider_wrapper .section_title p{
+    font-size:16px;
+  }
+
+
+  
+  .tek_talk_slider-edge-cloud{
+    background-color:rgba( 241, 242, 242, 1.0);
+  }
+  
+
+  
+  @media screen and (min-width:768px){
+    .tek_talk_slider-edge-cloud{
+      padding-top: 90px;
+padding-bottom: 90px;
+
+    }
+  }
+  
+
+  
+  @media screen and (max-width:767px){
+    .tek_talk_slider-edge-cloud{
+      padding-top: 64px;
+padding-right: 0px;
+padding-bottom: 120px;
+padding-left: 0px;
+
+    }
+  }
+  
+
+  @media screen and (max-width: 767px){
+    .tek_talk_slider.tek_talk_slider_wrapper .section_title p {
+      font-size: 18px;
+      text-align: left;
+    }
+  }
+
+</style>
+
+
+
+
+<style>
+
+  .tek_talk_slider-auto.tek_talk_slider_wrapper .section_title p{
+    font-size:16px;
+  }
+
+
+  
+  .tek_talk_slider-auto{
+    background-color:rgba( 255, 255, 255, 1.0);
+  }
+  
+
+  
+  @media screen and (min-width:768px){
+    .tek_talk_slider-auto{
+      padding-top: 90px;
+padding-bottom: 90px;
+
+    }
+  }
+  
+
+  
+  @media screen and (max-width:767px){
+    .tek_talk_slider-auto{
+      padding-top: 64px;
+padding-right: 0px;
+padding-bottom: 120px;
+padding-left: 0px;
+
+    }
+  }
+  
+
+  @media screen and (max-width: 767px){
+    .tek_talk_slider.tek_talk_slider_wrapper .section_title p {
+      font-size: 18px;
+      text-align: left;
+    }
+  }
+
+</style>
+
+
+
+
+<style>
+
+  .tek_talk_slider-conn.tek_talk_slider_wrapper .section_title p{
+    font-size:16px;
+  }
+
+
+  
+  .tek_talk_slider-conn{
+    background-color:rgba( 241, 242, 242, 1.0);
+  }
+  
+
+  
+  @media screen and (min-width:768px){
+    .tek_talk_slider-conn{
+      padding-top: 90px;
+padding-bottom: 90px;
+
+    }
+  }
+  
+
+  
+  @media screen and (max-width:767px){
+    .tek_talk_slider-conn{
+      padding-top: 64px;
+padding-right: 0px;
+padding-bottom: 120px;
+padding-left: 0px;
+
+    }
+  }
+  
+
+  @media screen and (max-width: 767px){
+    .tek_talk_slider.tek_talk_slider_wrapper .section_title p {
+      font-size: 18px;
+      text-align: left;
+    }
+  }
+
+</style>
+
+
 
     
 
@@ -92,14 +322,14 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 <meta name="google-site-verification" content="ljbeBr-s82925qDO_ZEJrA3QJnN9TjbxDkYEhekULHc">
 
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" nonce="NZkIL922P12jiGP22tVt6w=="></script>
 
-<script src="https://code.jquery.com/jquery-migrate-3.4.1.min.js" integrity="sha512-jWvlRVCKHDgni4rXgMN1iuSKJeThLu5EM3WqVgMdmzVvjJDyLU8lEUD6P2VgOvQFIxZeM8ri4tYvx47BBuPXMQ==" crossorigin="anonymous" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
-
-
+<script src="https://code.jquery.com/jquery-migrate-3.4.1.min.js" integrity="sha512-jWvlRVCKHDgni4rXgMN1iuSKJeThLu5EM3WqVgMdmzVvjJDyLU8lEUD6P2VgOvQFIxZeM8ri4tYvx47BBuPXMQ==" crossorigin="anonymous" nonce="NZkIL922P12jiGP22tVt6w=="></script>
 
 
-<script nonce="j/8xeJvJygkWq2hYsiMKyw==">
+
+
+<script nonce="NZkIL922P12jiGP22tVt6w==">
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);
@@ -136,7 +366,7 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 </script>
 
 <!-- Google Tag Manager -->
-<script nonce="j/8xeJvJygkWq2hYsiMKyw==">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<script nonce="NZkIL922P12jiGP22tVt6w==">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -145,8 +375,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-840382713" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
-<script nonce="j/8xeJvJygkWq2hYsiMKyw==">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-840382713" nonce="NZkIL922P12jiGP22tVt6w=="></script>
+<script nonce="NZkIL922P12jiGP22tVt6w==">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -709,9 +939,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div class="header_bottom">
   <div class="container full-width">
     <div class="breadcrumbs">
+      
       
       <div id="hs_cos_wrapper_breadcrumbs" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="breadcrumbs-wrapper">
   <span id="hs_cos_wrapper_breadcrumbs_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div class="hs-breadcrumb-menu-wrapper" id="hs_menu_wrapper_breadcrumbs_" role="navigation" data-sitemap-name="default" data-menu-id="163233743108">
@@ -725,25 +966,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </div>
       
+      
     </div>
   </div>
 </div>
 
+<main id="main-content" class="body-container-wrapper tek_blog cm-blog-layout  en_page">
 
-<main id="main-content" class="body-container-wrapper tek_blog">
+  
   <div class="body-container body-container--blog-index">
 
-    <div class="banner-container-wrapper">
-      <div id="hs_cos_wrapper_hero_banner" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
-<div class="hero-banner txt_white enable-border hero_banner">
+    <div class="banner-container-wrapper cm-blog-banner">
+      <div id="hs_cos_wrapper_hero_banner_v2" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<div class="hero-banner txt_white hero_banner_v2">
   
   <div class="hero_banner_img">
     <picture>
-      <source media="(max-width: 767px)" srcset="https://728015.fs1.hubspotusercontent-na1.net/hub/728015/hubfs/MediaTek%20Assets/Images/Blog/Tek-Talk-Mob.jpg?width=400&amp;height=600&amp;length=1000&amp;name=Tek-Talk-Mob.jpg">
-      <source media="(min-width:768px) and (max-width:1024px)" srcset="https://728015.fs1.hubspotusercontent-na1.net/hubfs/728015/MediaTek_Mar_2024/images/Tek-Talk%20(1).jpg">
-      <source media="(min-width:1025px) and (max-width:1349px)" srcset="https://728015.fs1.hubspotusercontent-na1.net/hubfs/728015/MediaTek_Mar_2024/images/Tek-Talk.jpg">
-      <source media="(min-width:1350px)" srcset="https://728015.fs1.hubspotusercontent-na1.net/hubfs/728015/MediaTek_Mar_2024/images/Tek-Talk.jpg">
-      <img src="https://www.mediatek.com/hubfs/MediaTek_Mar_2024/images/Tek-Talk.jpg" alt="Tek Talk" title="Tek Talk" decoding="async" fetchpriority="high" loading="eager">
+      <source media="(max-width: 767px)" srcset="https://728015.fs1.hubspotusercontent-na1.net/hub/728015/hubfs/MediaTek%20Assets/Images/Banners/Making-connection-Mobile.jpg?width=400&amp;height=600&amp;length=1000&amp;name=Making-connection-Mobile.jpg">
+      <source media="(min-width:768px) and (max-width:1024px)" srcset="https://728015.fs1.hubspotusercontent-na1.net/hubfs/728015/Hero-Banner-L1-L2-TABLET.jpg">
+      <source media="(min-width:1025px) and (max-width:1349px)" srcset="https://728015.fs1.hubspotusercontent-na1.net/hubfs/728015/MediaTek%20Assets/Images/Banners/Hero%20Banner%20Blog%20Page%20Desktop.jpg">
+      <source media="(min-width:1350px)" srcset="https://728015.fs1.hubspotusercontent-na1.net/hubfs/728015/MediaTek%20Assets/Images/Banners/Hero%20Banner%20Blog%20Page%20Desktop.jpg">
+      <img src="https://www.mediatek.com/hubfs/MediaTek%20Assets/Images/Banners/Hero%20Banner%20Blog%20Page%20Desktop.jpg" alt="Hero Banner Blog Page Desktop" title="Hero Banner Blog Page Desktop" decoding="async" fetchpriority="high" loading="eager">
     </picture>
   </div>
   
@@ -770,8 +1013,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <div class="categories_wrapper">
       <div class="page-center">
+        <div class="inner">
+          <div class="left">
+            <div class="view_all_tag">
 
-        <span id="hs_cos_wrapper_posts_by_topic" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_post_filter" style="" data-hs-cos-general-type="widget" data-hs-cos-type="post_filter"><div class="block">
+
+              <a href="https://www.mediatek.com/tek-talk-blogs" target="_self">
+                
+                View All
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 11.89">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: none;
+                        stroke: #1d1d1b;
+                        stroke-miterlimit: 10;
+                        stroke-width: 0.8px;
+                      }
+                    </style>
+                  </defs>
+                  <g>
+                    <rect class="cls-1" x="0.4" y="0.4" width="4.63" height="4.63" rx="1.06"></rect>
+                    <rect class="cls-1" x="6.96" y="0.4" width="4.63" height="4.63" rx="1.06"></rect>
+                    <rect class="cls-1" x="0.4" y="6.85" width="4.63" height="4.63" rx="1.06"></rect>
+                    <rect class="cls-1" x="6.96" y="6.85" width="4.63" height="4.63" rx="1.06"></rect>
+                  </g>
+                </svg>
+              </a>
+
+            </div>
+            <div class="post-by-topic">
+              <span id="hs_cos_wrapper_posts_by_topic" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_post_filter" style="" data-hs-cos-general-type="widget" data-hs-cos-type="post_filter"><div class="block">
   <h3></h3>
   <div class="widget-module">
     <ul>
@@ -841,7 +1114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </li>
       
         <li>
-          <a href="https://www.mediatek.com/tek-talk-blogs/tag/iot">IoT <span class="filter-link-count" dir="ltr">(66)</span></a>
+          <a href="https://www.mediatek.com/tek-talk-blogs/tag/iot">IoT <span class="filter-link-count" dir="ltr">(67)</span></a>
         </li>
       
         <li>
@@ -886,981 +1159,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </span>
 
-
-
-        
-
-
-      </div>
-    </div>
-    <div class="view_all_tag">
-      <li>
-        
-        <a href="https://www.mediatek.com/tek-talk-blogs" target="_self">View All 
-          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 11.89"><defs><style>.cls-1{fill:none;stroke:#1d1d1b;stroke-miterlimit:10;stroke-width:0.8px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="cls-1" x="0.4" y="0.4" width="4.63" height="4.63" rx="1.06"></rect><rect class="cls-1" x="6.96" y="0.4" width="4.63" height="4.63" rx="1.06"></rect><rect class="cls-1" x="0.4" y="6.85" width="4.63" height="4.63" rx="1.06"></rect><rect class="cls-1" x="6.96" y="6.85" width="4.63" height="4.63" rx="1.06"></rect></g></g></svg>
-        </a>
-      </li>
-    </div>
-
-    <div class="blog-with-sidebar-wrapper">
-      <div class="page-center">
-        <div class="blg_sid_main">
-          <div class="blog-listing-content">
-            <div class="blog-listing-wrapper">
-              <div id="hs_cos_wrapper_blog_listings" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="main_blog_listing" id="blog-listing">
-  <section class="blog-index">
-
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-    <article class="blog-index__post" aria-label="Blog post summary: Inside MediaTek’s Push Into Cloud and Data Center" id="insidemediatek’spushintocloudanddatacenter">
-      <div class="blog-index__post-inner-card">
-        
-        <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/inside-mediateks-push-into-cloud-and-data-center">
-          <img src="https://www.mediatek.com/hubfs/Sever-1.png" alt="Inside MediaTek’s Push Into Cloud and Data Center" loading="lazy">	
-        </a>
-        
-        <div class="blog-index__post-content  blog-index__post-content--small">
-
-          
-          
-          
-          <div class="blog-post__tags">
-            
-            <a class="blog-post__tag-link data center" href="https://www.mediatek.com/tek-talk-blogs/tag/data-center">Data Center</a>
-            
-          </div>
-          
-          
-          
-
-
-          
-          
-          <h2><a href="https://www.mediatek.com/tek-talk-blogs/inside-mediateks-push-into-cloud-and-data-center">Inside MediaTek’s Push Into Cloud and Data Center</a></h2>
-          
-          
-
-          <div class="post_date">
-            <p>
               
-              August 24, 2026
-              
-            </p>
-          </div>
-
-          <div class="post_summary">
-            
-            
-            
-            
-            
-            <p>
-              Cloud and data centers are among the biggest growth opportunities in the AI era. In this latest Inside Tek video, Corporate Vice President Eric Fisher explains how MediaTek is expanding its presence across cloud infrastructure, AI data centers, and high-speed I/O technologies to support...
-            </p>
-            
-            
-            
-            
-          </div>
-
-          <div class="blog-post__meta-section no-min">
-
-            
-            <div class="blog-post__read-more">
-              <a href="https://www.mediatek.com/tek-talk-blogs/inside-mediateks-push-into-cloud-and-data-center">
-                
-                Read more
-                
-              </a>
             </div>
-            
+            <div class="blog-archive-filter_wrapper">
+              <div id="hs_cos_wrapper_blog-archive-filter-v2" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
 
-          </div>
-        </div>
-      </div>
-    </article>
 
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
 
 
-    <article class="blog-index__post" aria-label="Blog post summary: Dream Faster. This Is Why." id="dreamfaster.thisiswhy.">
-      <div class="blog-index__post-inner-card">
-        
-        <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/dream-faster-this-is-why">
-          <img src="https://www.mediatek.com/hubfs/Mediatek_Youtube%20Thumbnail%201_DF_1920x1080_0726.jpg" alt="Dream Faster. This Is Why." loading="lazy">	
-        </a>
-        
-        <div class="blog-index__post-content  blog-index__post-content--small">
 
-          
-          
-          
-          <div class="blog-post__tags">
-            
-            <a class="blog-post__tag-link corporate" href="https://www.mediatek.com/tek-talk-blogs/tag/corporate">Corporate</a>
-            
-          </div>
-          
-          
-          
-
-
-          
-          
-          <h2><a href="https://www.mediatek.com/tek-talk-blogs/dream-faster-this-is-why">Dream Faster. This Is Why.</a></h2>
-          
-          
-
-          <div class="post_date">
-            <p>
-              
-              August 20, 2026
-              
-            </p>
-          </div>
-
-          <div class="post_summary">
-            
-            
-            
-            
-            
-            <p>
-              MediaTek powers the devices, infrastructure, and experiences that define life. Dream Faster is how we tell that story. By Rahul Sandil, Vice President and General Manager, Global Corporate MARCOM, MediaTek
-            </p>
-            
-            
-            
-            
-          </div>
-
-          <div class="blog-post__meta-section no-min">
-
-            
-            <div class="blog-post__read-more">
-              <a href="https://www.mediatek.com/tek-talk-blogs/dream-faster-this-is-why">
-                
-                Read more
-                
-              </a>
-            </div>
-            
-
-          </div>
-        </div>
-      </div>
-    </article>
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-    <article class="blog-index__post" aria-label="Blog post summary: Powering the Confidence in the Classroom, and Beyond" id="poweringtheconfidenceintheclassroomandbeyond">
-      <div class="blog-index__post-inner-card">
-        
-        <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/powering-the-confidence-in-school">
-          <img src="https://www.mediatek.com/hubfs/Powering-the-Confidence-in-School.jpg" alt="Powering the Confidence in the Classroom and Beyond" loading="lazy">	
-        </a>
-        
-        <div class="blog-index__post-content  blog-index__post-content--small">
-
-          
-          
-          
-          <div class="blog-post__tags">
-            
-            <a class="blog-post__tag-link corporate" href="https://www.mediatek.com/tek-talk-blogs/tag/corporate">Corporate</a>
-            
-          </div>
-          
-          
-          
-
-
-          
-          
-          <h2><a href="https://www.mediatek.com/tek-talk-blogs/powering-the-confidence-in-school">Powering the Confidence in the Classroom, and Beyond</a></h2>
-          
-          
-
-          <div class="post_date">
-            <p>
-              
-              August 19, 2026
-              
-            </p>
-          </div>
-
-          <div class="post_summary">
-            
-            
-            
-            
-            
-            <p>
-              MediaTek has partnered with ShengLi High School in Hsinchu, Taiwan, to donate devices that provides students and teachers new tools for learning. But this isn't just a hardware sponsorship; it also comes with hands-on technical support, reflecting a shared commitment to advancing education...
-            </p>
-            
-            
-            
-            
-          </div>
-
-          <div class="blog-post__meta-section no-min">
-
-            
-            <div class="blog-post__read-more">
-              <a href="https://www.mediatek.com/tek-talk-blogs/powering-the-confidence-in-school">
-                
-                Read more
-                
-              </a>
-            </div>
-            
-
-          </div>
-        </div>
-      </div>
-    </article>
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-    <article class="blog-index__post" aria-label="Blog post summary: From Devices to Data Centers: Inside MediaTek’s Broad Reach" id="fromdevicestodatacenters:insidemediatek’sbroadreach">
-      <div class="blog-index__post-inner-card">
-        
-        <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/from-devices-to-data-centers-inside-mediateks-broad-reach">
-          <img src="https://www.mediatek.com/hubfs/Rahul%20Sandil.png" alt="From Devices to Data Centers: Inside MediaTek’s Broad Reach" loading="lazy">	
-        </a>
-        
-        <div class="blog-index__post-content  blog-index__post-content--small">
-
-          
-          
-          
-          <div class="blog-post__tags">
-            
-            <a class="blog-post__tag-link corporate" href="https://www.mediatek.com/tek-talk-blogs/tag/corporate">Corporate</a>
-            
-            <a class="blog-post__tag-link exec talk" href="https://www.mediatek.com/tek-talk-blogs/tag/exec-talk">Exec Talk</a>
-            
-          </div>
-          
-          
-          
-
-
-          
-          
-          <h2><a href="https://www.mediatek.com/tek-talk-blogs/from-devices-to-data-centers-inside-mediateks-broad-reach">From Devices to Data Centers: Inside MediaTek’s Broad Reach</a></h2>
-          
-          
-
-          <div class="post_date">
-            <p>
-              
-              August 6, 2026
-              
-            </p>
-          </div>
-
-          <div class="post_summary">
-            
-            
-            
-            
-            
-            <p>
-              From everyday devices to advanced data center solutions, MediaTek plays a key role across multiple layers of the tech ecosystem. MediaTek's Rahul Sandil explains how that breadth enables smarter and more connected experiences. By combining cross-domain knowledge with a hands-on approach,...
-            </p>
-            
-            
-            
-            
-          </div>
-
-          <div class="blog-post__meta-section no-min">
-
-            
-            <div class="blog-post__read-more">
-              <a href="https://www.mediatek.com/tek-talk-blogs/from-devices-to-data-centers-inside-mediateks-broad-reach">
-                
-                Read more
-                
-              </a>
-            </div>
-            
-
-          </div>
-        </div>
-      </div>
-    </article>
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-    <article class="blog-index__post" aria-label="Blog post summary: How Edge AI is Transforming IoT Applications Across Industries" id="howedgeaiistransformingiotapplicationsacrossindustries">
-      <div class="blog-index__post-inner-card">
-        
-        <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/how-edge-ai-is-transforming-iot-applications-across-industries">
-          <img src="https://www.mediatek.com/hubfs/%23264-How%20Edge%20AI%20is%20Transforming%20IoT%20Applications%20Across%20Industries.png" alt="How Edge AI is Transforming IoT Applications Across Industries" loading="lazy">	
-        </a>
-        
-        <div class="blog-index__post-content  blog-index__post-content--small">
-
-          
-          
-          
-          <div class="blog-post__tags">
-            
-            <a class="blog-post__tag-link iot" href="https://www.mediatek.com/tek-talk-blogs/tag/iot">IoT</a>
-            
-            <a class="blog-post__tag-link genio" href="https://www.mediatek.com/tek-talk-blogs/tag/genio">Genio</a>
-            
-          </div>
-          
-          
-          
-
-
-          
-          
-          <h2><a href="https://www.mediatek.com/tek-talk-blogs/how-edge-ai-is-transforming-iot-applications-across-industries">How Edge AI is Transforming IoT Applications Across Industries</a></h2>
-          
-          
-
-          <div class="post_date">
-            <p>
-              
-              August 3, 2026
-              
-            </p>
-          </div>
-
-          <div class="post_summary">
-            
-            
-            
-            
-            
-            <p>
-              By Sameer Sharma, AVP of MediaTek's Internet of Things Business (Americas &amp; Europe)
-            </p>
-            
-            
-            
-            
-          </div>
-
-          <div class="blog-post__meta-section no-min">
-
-            
-            <div class="blog-post__read-more">
-              <a href="https://www.mediatek.com/tek-talk-blogs/how-edge-ai-is-transforming-iot-applications-across-industries">
-                
-                Read more
-                
-              </a>
-            </div>
-            
-
-          </div>
-        </div>
-      </div>
-    </article>
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-    <article class="blog-index__post" aria-label="Blog post summary: The AI Compute Module: Where Systems Become Silicon" id="theaicomputemodule:wheresystemsbecomesilicon">
-      <div class="blog-index__post-inner-card">
-        
-        <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/the-ai-compute-module-where-systems-become-silicon">
-          <img src="https://www.mediatek.com/hubfs/MTK_XPU01-5.jpg" alt="The AI Compute Module: Where Systems Become Silicon" loading="lazy">	
-        </a>
-        
-        <div class="blog-index__post-content  blog-index__post-content--small">
-
-          
-          
-          
-          <div class="blog-post__tags">
-            
-            <a class="blog-post__tag-link ai" href="https://www.mediatek.com/tek-talk-blogs/tag/ai">AI</a>
-            
-            <a class="blog-post__tag-link data center" href="https://www.mediatek.com/tek-talk-blogs/tag/data-center">Data Center</a>
-            
-          </div>
-          
-          
-          
-
-
-          
-          
-          <h2><a href="https://www.mediatek.com/tek-talk-blogs/the-ai-compute-module-where-systems-become-silicon">The AI Compute Module: Where Systems Become Silicon</a></h2>
-          
-          
-
-          <div class="post_date">
-            <p>
-              
-              July 27, 2026
-              
-            </p>
-          </div>
-
-          <div class="post_summary">
-            
-            
-            
-            
-            
-            <p>
-              The new building block of AI infrastructure co-optimizes compute, memory, packaging, and interconnect into a single optimized engine - by Jerry Chang, Sr. Director, Head of Marketing, Americas and Europe
-            </p>
-            
-            
-            
-            
-          </div>
-
-          <div class="blog-post__meta-section no-min">
-
-            
-            <div class="blog-post__read-more">
-              <a href="https://www.mediatek.com/tek-talk-blogs/the-ai-compute-module-where-systems-become-silicon">
-                
-                Read more
-                
-              </a>
-            </div>
-            
-
-          </div>
-        </div>
-      </div>
-    </article>
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-    <article class="blog-index__post" aria-label="Blog post summary: MediaTek and NVIDIA Explore the Rise of Custom AI Models" id="mediatekandnvidiaexploretheriseofcustomaimodels">
-      <div class="blog-index__post-inner-card">
-        
-        <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/mediatek-and-nvidia-explore-the-rise-of-custom-ai-models">
-          <img src="https://www.mediatek.com/hubfs/MediaTek%20and%20NVIDIA%20Explore%20the%20Rise%20of%20Custom%20AI%20Models.png" alt="MediaTek and NVIDIA Explore the Rise of Custom AI Models" loading="lazy">	
-        </a>
-        
-        <div class="blog-index__post-content  blog-index__post-content--small">
-
-          
-          
-          
-          <div class="blog-post__tags">
-            
-            <a class="blog-post__tag-link ai" href="https://www.mediatek.com/tek-talk-blogs/tag/ai">AI</a>
-            
-          </div>
-          
-          
-          
-
-
-          
-          
-          <h2><a href="https://www.mediatek.com/tek-talk-blogs/mediatek-and-nvidia-explore-the-rise-of-custom-ai-models">MediaTek and NVIDIA Explore the Rise of Custom AI Models</a></h2>
-          
-          
-
-          <div class="post_date">
-            <p>
-              
-              July 23, 2026
-              
-            </p>
-          </div>
-
-          <div class="post_summary">
-            
-            
-            
-            
-            
-            <p>
-              Featuring Rahul Sandil and PD Rajput of MediaTek, and Fredrik Hamberger of NVIDIA, this Inside Tek episode explores the latest computing trends shaping today's AI landscape, including the rise of AI models that are purpose-built for specific use cases and can be processed locally on edge...
-            </p>
-            
-            
-            
-            
-          </div>
-
-          <div class="blog-post__meta-section no-min">
-
-            
-            <div class="blog-post__read-more">
-              <a href="https://www.mediatek.com/tek-talk-blogs/mediatek-and-nvidia-explore-the-rise-of-custom-ai-models">
-                
-                Read more
-                
-              </a>
-            </div>
-            
-
-          </div>
-        </div>
-      </div>
-    </article>
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-    <article class="blog-index__post" aria-label="Blog post summary: How AI Is Changing What We Expect From Devices" id="howaiischangingwhatweexpectfromdevices">
-      <div class="blog-index__post-inner-card">
-        
-        <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/how-ai-is-changing-what-we-expect-from-devices">
-          <img src="https://www.mediatek.com/hubfs/%23262-How%20AI%20Is%20Changing%20What%20We%20Expect%20From%20Devices.png" alt="How AI Is Changing What We Expect From Devices" loading="lazy">	
-        </a>
-        
-        <div class="blog-index__post-content  blog-index__post-content--small">
-
-          
-          
-          
-          <div class="blog-post__tags">
-            
-            <a class="blog-post__tag-link ai" href="https://www.mediatek.com/tek-talk-blogs/tag/ai">AI</a>
-            
-            <a class="blog-post__tag-link personal computing" href="https://www.mediatek.com/tek-talk-blogs/tag/personal-computing">Personal Computing</a>
-            
-          </div>
-          
-          
-          
-
-
-          
-          
-          <h2><a href="https://www.mediatek.com/tek-talk-blogs/how-ai-is-changing-what-we-expect-from-devices">How AI Is Changing What We Expect From Devices</a></h2>
-          
-          
-
-          <div class="post_date">
-            <p>
-              
-              July 21, 2026
-              
-            </p>
-          </div>
-
-          <div class="post_summary">
-            
-            
-            
-            
-            
-            <p>
-              By Adam King, VP &amp; General Manager of Personal Devices Business Unit at MediaTek. Follow Adam's newsletter to learn more about the latest Innovation Talk.
-            </p>
-            
-            
-            
-            
-          </div>
-
-          <div class="blog-post__meta-section no-min">
-
-            
-            <div class="blog-post__read-more">
-              <a href="https://www.mediatek.com/tek-talk-blogs/how-ai-is-changing-what-we-expect-from-devices">
-                
-                Read more
-                
-              </a>
-            </div>
-            
-
-          </div>
-        </div>
-      </div>
-    </article>
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-    <article class="blog-index__post" aria-label="Blog post summary: Advancing Wireless Performance for the AI Era" id="advancingwirelessperformancefortheaiera">
-      <div class="blog-index__post-inner-card">
-        
-        <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/advancing-wireless-performance-for-the-ai-era">
-          <img src="https://www.mediatek.com/hubfs/InsideTek_Blog%20%26%20Article_james%20Chen.png" alt="Advancing Wireless Performance for the AI Era" loading="lazy">	
-        </a>
-        
-        <div class="blog-index__post-content  blog-index__post-content--small">
-
-          
-          
-          
-          <div class="blog-post__tags">
-            
-            <a class="blog-post__tag-link wifi" href="https://www.mediatek.com/tek-talk-blogs/tag/wifi">WiFi</a>
-            
-          </div>
-          
-          
-          
-
-
-          
-          
-          <h2><a href="https://www.mediatek.com/tek-talk-blogs/advancing-wireless-performance-for-the-ai-era">Advancing Wireless Performance for the AI Era</a></h2>
-          
-          
-
-          <div class="post_date">
-            <p>
-              
-              July 9, 2026
-              
-            </p>
-          </div>
-
-          <div class="post_summary">
-            
-            
-            
-            
-            
-            <p>
-              AI is reshaping real-world Wi-Fi usage as devices increasingly send data for image, text, and video processing.
-            </p>
-            
-            
-            
-            
-          </div>
-
-          <div class="blog-post__meta-section no-min">
-
-            
-            <div class="blog-post__read-more">
-              <a href="https://www.mediatek.com/tek-talk-blogs/advancing-wireless-performance-for-the-ai-era">
-                
-                Read more
-                
-              </a>
-            </div>
-            
-
-          </div>
-        </div>
-      </div>
-    </article>
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-    <article class="blog-index__post" aria-label="Blog post summary: MediaTek Brings AI into Everyday Life" id="mediatekbringsaiintoeverydaylife">
-      <div class="blog-index__post-inner-card">
-        
-        <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/mediatek-brings-al-into-everyday-life">
-          <img src="https://www.mediatek.com/hubfs/MediaTek%20Assets/Images/Blog/MediaTek%20Brings%20Al%20into%20Everyday%20Life.png" alt="MediaTek Brings AI into Everyday Life" loading="lazy">	
-        </a>
-        
-        <div class="blog-index__post-content  blog-index__post-content--small">
-
-          
-          
-          
-          <div class="blog-post__tags">
-            
-            <a class="blog-post__tag-link events" href="https://www.mediatek.com/tek-talk-blogs/tag/events">Events</a>
-            
-          </div>
-          
-          
-          
-
-
-          
-          
-          <h2><a href="https://www.mediatek.com/tek-talk-blogs/mediatek-brings-al-into-everyday-life">MediaTek Brings AI into Everyday Life</a></h2>
-          
-          
-
-          <div class="post_date">
-            <p>
-              
-              July 2, 2026
-              
-            </p>
-          </div>
-
-          <div class="post_summary">
-            
-            
-            
-            
-            
-            <p>
-              The future of intelligence is already here, and MediaTek is making it part of everyday life. At COMPUTEX 2026, MediaTek demonstrated how AI is evolving beyond individual devices to become part of everyday life.
-            </p>
-            
-            
-            
-            
-          </div>
-
-          <div class="blog-post__meta-section no-min">
-
-            
-            <div class="blog-post__read-more">
-              <a href="https://www.mediatek.com/tek-talk-blogs/mediatek-brings-al-into-everyday-life">
-                
-                Read more
-                
-              </a>
-            </div>
-            
-
-          </div>
-        </div>
-      </div>
-    </article>
-
-    
-    
-
-  </section>
-</div></div>
-            </div>
-            <div class="blog-pagination-wrapper">
-              <div id="hs_cos_wrapper_blog_pagination" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="blog-pagination ">
-  
-  
-  
-
-  
-
-  <div class="blog-pagination-center">
-    
-    
-    
-    <a class="active" href="https://www.mediatek.com/tek-talk-blogs/page/1">1</a>
-    
-    
-    
-    
-    <a href="https://www.mediatek.com/tek-talk-blogs/page/2">2</a>
-    
-    
-    
-    
-    <a href="https://www.mediatek.com/tek-talk-blogs/page/3">3</a>
-    
-    
-    
-    
-    <a href="https://www.mediatek.com/tek-talk-blogs/page/4">4</a>
-    
-    
-    
-    
-    <a href="https://www.mediatek.com/tek-talk-blogs/page/5">5</a>
-    
-    
-  </div>
-  
-  <div class="blog-pagination-right">
-    <a class="next-link" href="https://www.mediatek.com/tek-talk-blogs/page/2" id="prev-page"><i class="fa-solid fa-chevron-right"></i></a>
-  </div>
-  
-</div></div>
-            </div>
-          </div>
-
-          <div class="blog-sidebar">
-            <div class="blog_sid_inn">
-              <div class="search_input">
-                <div id="hs_cos_wrapper_search_input" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
-
-
-
-
-  
-
-
-
-
-<div class="hs-search-field">
-    <div class="hs-search-field__bar">
-      <form data-hs-do-not-collect="true" action="/hs-search-results">
-        
-        <input type="text" class="hs-search-field__input" name="term" autocomplete="off" aria-label="Search" placeholder="Search">
-
-        
-          <input type="hidden" name="type" value="SITE_PAGE">
-        
-        
-        
-          <input type="hidden" name="type" value="BLOG_POST">
-          <input type="hidden" name="type" value="LISTING_PAGE">
-        
-        
-
-        
-          <button aria-label="Search"><span id="hs_cos_wrapper_search_input_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" aria-hidden="true"><g id="search1_layer"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" /></g></svg></span></button>
-        
-      </form>
-    </div>
-    <ul class="hs-search-field__suggestions"></ul>
-</div></div>
-              </div>
-
-              
-              <div class="blog-archive-filter_wrapper">
-                <div id="hs_cos_wrapper_blog-archive-filter" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
 
 
 
@@ -2189,7 +1499,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="cate-item cate-2026">
       <a class="archive_link" href="https://www.mediatek.com/tek-talk-blogs/archive/2026" data-year="2026">2026</a>
     </li>
-     <li class="cate-item cate-2025">
+    <li class="cate-item cate-2025">
       <a class="archive_link" href="https://www.mediatek.com/tek-talk-blogs/archive/2025" data-year="2025">2025</a>
     </li>
     <li class="cate-item cate-2024">
@@ -2218,137 +1528,3024 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </li>
   </ul>
 </div></div>
-              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="search_input">
+              <div id="hs_cos_wrapper_search_input" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
 
-              <div class="recent_post_wrapper">
-                <div id="hs_cos_wrapper_blog_recent_posts" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="blog_recent-post-wrapper">
-  <div class="sec_title">
-    <h3>
-      Most Recent
-    </h3>
-  </div>
+
+
 
   
-  <div class="recent_posts">
-    
-    <div class="rec_post_item">
-      <div class="rec_post_item_inner">
-        <div class="post_image">
-          <img src="https://www.mediatek.com/hs-fs/hubfs/Sever-1.png?length=300&amp;name=Sever-1.png" alt="inside_mediatek’s_push_into_cloud_and_data_center" loading="lazy">
-        </div>
-        <div class="post_content">
-          <h4>
-            <a href="https://www.mediatek.com/tek-talk-blogs/inside-mediateks-push-into-cloud-and-data-center">Inside MediaTek’s Push Into Cloud and Data Center</a>
-          </h4>
-          <span class="date">
-            
-            August 24, 2026
-            
-          </span>
-        </div>
 
-      </div>
-    </div>
-    
-    <div class="rec_post_item">
-      <div class="rec_post_item_inner">
-        <div class="post_image">
-          <img src="https://www.mediatek.com/hs-fs/hubfs/Mediatek_Youtube%20Thumbnail%201_DF_1920x1080_0726.jpg?length=300&amp;name=Mediatek_Youtube%20Thumbnail%201_DF_1920x1080_0726.jpg" alt="dream_faster._this_is_why." loading="lazy">
-        </div>
-        <div class="post_content">
-          <h4>
-            <a href="https://www.mediatek.com/tek-talk-blogs/dream-faster-this-is-why">Dream Faster. This Is Why.</a>
-          </h4>
-          <span class="date">
-            
-            August 20, 2026
-            
-          </span>
-        </div>
 
-      </div>
-    </div>
-    
-    <div class="rec_post_item">
-      <div class="rec_post_item_inner">
-        <div class="post_image">
-          <img src="https://www.mediatek.com/hs-fs/hubfs/Powering-the-Confidence-in-School.jpg?length=300&amp;name=Powering-the-Confidence-in-School.jpg" alt="powering_the_confidence_in_the_classroom,_and_beyond" loading="lazy">
-        </div>
-        <div class="post_content">
-          <h4>
-            <a href="https://www.mediatek.com/tek-talk-blogs/powering-the-confidence-in-school">Powering the Confidence in the Classroom, and Beyond</a>
-          </h4>
-          <span class="date">
-            
-            August 19, 2026
-            
-          </span>
-        </div>
 
-      </div>
-    </div>
-    
-  </div>
-</div></div>
-              </div>
 
-              <div class="social_links_wrapper">
-                <div id="hs_cos_wrapper_social_links" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="social_links">
-  <div class="page-center">
-    <div class="soc_links_main">
-      
-      <div class="soc_links_item">
+<div class="hs-search-field">
+    <div class="hs-search-field__bar">
+      <form data-hs-do-not-collect="true" action="/hs-search-results">
         
-        <div class="soc_cont">
-          
+        <input type="text" class="hs-search-field__input" name="term" autocomplete="off" aria-label="Search" placeholder="Search">
 
-          
-          <a href="" target="_blank" rel="noopener">
-            
-          </a>
+        
+          <input type="hidden" name="type" value="SITE_PAGE">
+        
+        
+        
+          <input type="hidden" name="type" value="BLOG_POST">
+          <input type="hidden" name="type" value="LISTING_PAGE">
+        
+        
 
-          
-
-          
-        </div>
-      </div>
-      
+        
+          <button aria-label="Search"><span id="hs_cos_wrapper_search_input_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" aria-hidden="true"><g id="search1_layer"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" /></g></svg></span></button>
+        
+      </form>
     </div>
-  </div>
+    <ul class="hs-search-field__suggestions"></ul>
 </div></div>
-              </div>
-              <div class="post_main_content blog_sid_soc">
-                <h3 class="sid_soc_title">
-                  
-                  Social
-                   
-                </h3>
-                <div class="social_share">
-                  <div class="facebook_share share-item">
-                    <a href="https://www.facebook.com/MediaTek" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                  </div>
-                  
-                  <div class="instagram_share share-item">
-                    <a href="https://www.instagram.com/mediatek_inc/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                  </div>
-                  <div class="linkedin_share share-item">
-                    <a data-site="email" href="https://www.linkedin.com/company/17763" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                  </div>
-                  <div class="youtube_share share-item">
-                    <a data-site="youtube" href="https://www.youtube.com/mediatek" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                  </div>
-                  <div class="threads_share share-item">
-                    <a data-site="youtube" href="https://www.threads.net/@mediatek_inc" target="_blank"><i class="fa-brands fa-threads"></i></a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="blog-with-sidebar-wrapper">
+      <div class="page-center">
+        <div class="sec-head">
+          
+          
+          
+          <h2>Latest Blogs</h2>
+
+          
+
+        </div>
+        <div class="blg_sid_main">
+          <div class="blog-listing-content">
+            <div class="blog-listing-wrapper">
+              <div id="hs_cos_wrapper_blog_listings_v2" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="main_blog_listing cm-blog-listing" id="blog-listing">
+
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <article class="blog-index__post" aria-label="Blog post summary: MediaTek MT8875: Our Next-Gen 5G IoT Platform for GenAI Applications" id="mediatekmt8875:ournext-gen5giotplatformforgenaiapplications">
+    <div class="blog-index__post-inner-card">
+      
+      <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/mediatek-mt8875-our-next-gen-5g-iot-platform-for-genai-applications">
+        <img src="https://www.mediatek.com/hubfs/MT8875_black_center.png" alt="MediaTek MT8875: Our Next-Gen 5G IoT Platform for GenAI Applications" loading="lazy">	
+      </a>
+      
+      <div class="blog-index__post-content  blog-index__post-content--small">
+
+        
+        
+        
+        <div class="blog-post__tags">
+          
+          <a class="blog-post__tag-link iot" href="https://www.mediatek.com/tek-talk-blogs/tag/iot">IoT</a>
+          
+        </div>
+        
+        
+        
+
+
+        
+        
+        <div class="post-title">
+          <h2><a href="https://www.mediatek.com/tek-talk-blogs/mediatek-mt8875-our-next-gen-5g-iot-platform-for-genai-applications">MediaTek MT8875: Our Next-Gen 5G IoT Platform for GenAI Applications</a></h2>
+        </div>
+        
+        
+        
+
+        <div class="author-date">
+          <div class="author-name">
+            <a href="https://www.mediatek.com/tek-talk-blogs/author/mediatek-inc" rel="author">
+              MediaTek Inc.</a>
+          </div>
+          <p class="pipe">&nbsp;|&nbsp;</p>
+          <div class="post_date">
+            <p>
+              
+              August 25, 2026
+              
+            </p>
+          </div>
+        </div>
+
+
+        
+
+        
+      </div>
+    </div>
+  </article>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <article class="blog-index__post" aria-label="Blog post summary: Inside MediaTek’s Push Into Cloud and Data Center" id="insidemediatek’spushintocloudanddatacenter">
+    <div class="blog-index__post-inner-card">
+      
+      <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/inside-mediateks-push-into-cloud-and-data-center">
+        <img src="https://www.mediatek.com/hubfs/Sever-1.png" alt="Inside MediaTek’s Push Into Cloud and Data Center" loading="lazy">	
+      </a>
+      
+      <div class="blog-index__post-content  blog-index__post-content--small">
+
+        
+        
+        
+        <div class="blog-post__tags">
+          
+          <a class="blog-post__tag-link data center" href="https://www.mediatek.com/tek-talk-blogs/tag/data-center">Data Center</a>
+          
+        </div>
+        
+        
+        
+
+
+        
+        
+        <div class="post-title">
+          <h2><a href="https://www.mediatek.com/tek-talk-blogs/inside-mediateks-push-into-cloud-and-data-center">Inside MediaTek’s Push Into Cloud and Data Center</a></h2>
+        </div>
+        
+        
+        
+
+        <div class="author-date">
+          <div class="author-name">
+            <a href="https://www.mediatek.com/tek-talk-blogs/author/mediatek-inc" rel="author">
+              MediaTek Inc.</a>
+          </div>
+          <p class="pipe">&nbsp;|&nbsp;</p>
+          <div class="post_date">
+            <p>
+              
+              August 24, 2026
+              
+            </p>
+          </div>
+        </div>
+
+
+        
+
+        
+      </div>
+    </div>
+  </article>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <article class="blog-index__post" aria-label="Blog post summary: Dream Faster. This Is Why." id="dreamfaster.thisiswhy.">
+    <div class="blog-index__post-inner-card">
+      
+      <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/dream-faster-this-is-why">
+        <img src="https://www.mediatek.com/hubfs/Mediatek_Youtube%20Thumbnail%201_DF_1920x1080_0726.jpg" alt="Dream Faster. This Is Why." loading="lazy">	
+      </a>
+      
+      <div class="blog-index__post-content  blog-index__post-content--small">
+
+        
+        
+        
+        <div class="blog-post__tags">
+          
+          <a class="blog-post__tag-link corporate" href="https://www.mediatek.com/tek-talk-blogs/tag/corporate">Corporate</a>
+          
+        </div>
+        
+        
+        
+
+
+        
+        
+        <div class="post-title">
+          <h2><a href="https://www.mediatek.com/tek-talk-blogs/dream-faster-this-is-why">Dream Faster. This Is Why.</a></h2>
+        </div>
+        
+        
+        
+
+        <div class="author-date">
+          <div class="author-name">
+            <a href="https://www.mediatek.com/tek-talk-blogs/author/mediatek-inc" rel="author">
+              MediaTek Inc.</a>
+          </div>
+          <p class="pipe">&nbsp;|&nbsp;</p>
+          <div class="post_date">
+            <p>
+              
+              August 20, 2026
+              
+            </p>
+          </div>
+        </div>
+
+
+        
+
+        
+      </div>
+    </div>
+  </article>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <article class="blog-index__post" aria-label="Blog post summary: Powering the Confidence in the Classroom, and Beyond" id="poweringtheconfidenceintheclassroomandbeyond">
+    <div class="blog-index__post-inner-card">
+      
+      <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/powering-the-confidence-in-school">
+        <img src="https://www.mediatek.com/hubfs/Powering-the-Confidence-in-School.jpg" alt="Powering the Confidence in the Classroom and Beyond" loading="lazy">	
+      </a>
+      
+      <div class="blog-index__post-content  blog-index__post-content--small">
+
+        
+        
+        
+        <div class="blog-post__tags">
+          
+          <a class="blog-post__tag-link corporate" href="https://www.mediatek.com/tek-talk-blogs/tag/corporate">Corporate</a>
+          
+        </div>
+        
+        
+        
+
+
+        
+        
+        <div class="post-title">
+          <h2><a href="https://www.mediatek.com/tek-talk-blogs/powering-the-confidence-in-school">Powering the Confidence in the Classroom, and Beyond</a></h2>
+        </div>
+        
+        
+        
+
+        <div class="author-date">
+          <div class="author-name">
+            <a href="https://www.mediatek.com/tek-talk-blogs/author/mediatek-inc" rel="author">
+              MediaTek Inc.</a>
+          </div>
+          <p class="pipe">&nbsp;|&nbsp;</p>
+          <div class="post_date">
+            <p>
+              
+              August 19, 2026
+              
+            </p>
+          </div>
+        </div>
+
+
+        
+
+        
+      </div>
+    </div>
+  </article>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <article class="blog-index__post" aria-label="Blog post summary: From Devices to Data Centers: Inside MediaTek’s Broad Reach" id="fromdevicestodatacenters:insidemediatek’sbroadreach">
+    <div class="blog-index__post-inner-card">
+      
+      <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/from-devices-to-data-centers-inside-mediateks-broad-reach">
+        <img src="https://www.mediatek.com/hubfs/Rahul%20Sandil.png" alt="From Devices to Data Centers: Inside MediaTek’s Broad Reach" loading="lazy">	
+      </a>
+      
+      <div class="blog-index__post-content  blog-index__post-content--small">
+
+        
+        
+        
+        <div class="blog-post__tags">
+          
+          <a class="blog-post__tag-link corporate" href="https://www.mediatek.com/tek-talk-blogs/tag/corporate">Corporate</a>
+          
+          <a class="blog-post__tag-link exec talk" href="https://www.mediatek.com/tek-talk-blogs/tag/exec-talk">Exec Talk</a>
+          
+        </div>
+        
+        
+        
+
+
+        
+        
+        <div class="post-title">
+          <h2><a href="https://www.mediatek.com/tek-talk-blogs/from-devices-to-data-centers-inside-mediateks-broad-reach">From Devices to Data Centers: Inside MediaTek’s Broad Reach</a></h2>
+        </div>
+        
+        
+        
+
+        <div class="author-date">
+          <div class="author-name">
+            <a href="https://www.mediatek.com/tek-talk-blogs/author/rahul-sandil" rel="author">
+              Rahul Sandil</a>
+          </div>
+          <p class="pipe">&nbsp;|&nbsp;</p>
+          <div class="post_date">
+            <p>
+              
+              August 6, 2026
+              
+            </p>
+          </div>
+        </div>
+
+
+        
+
+        
+      </div>
+    </div>
+  </article>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <article class="blog-index__post" aria-label="Blog post summary: How Edge AI is Transforming IoT Applications Across Industries" id="howedgeaiistransformingiotapplicationsacrossindustries">
+    <div class="blog-index__post-inner-card">
+      
+      <a class="blog-index__post-image" href="https://www.mediatek.com/tek-talk-blogs/how-edge-ai-is-transforming-iot-applications-across-industries">
+        <img src="https://www.mediatek.com/hubfs/%23264-How%20Edge%20AI%20is%20Transforming%20IoT%20Applications%20Across%20Industries.png" alt="How Edge AI is Transforming IoT Applications Across Industries" loading="lazy">	
+      </a>
+      
+      <div class="blog-index__post-content  blog-index__post-content--small">
+
+        
+        
+        
+        <div class="blog-post__tags">
+          
+          <a class="blog-post__tag-link iot" href="https://www.mediatek.com/tek-talk-blogs/tag/iot">IoT</a>
+          
+          <a class="blog-post__tag-link genio" href="https://www.mediatek.com/tek-talk-blogs/tag/genio">Genio</a>
+          
+        </div>
+        
+        
+        
+
+
+        
+        
+        <div class="post-title">
+          <h2><a href="https://www.mediatek.com/tek-talk-blogs/how-edge-ai-is-transforming-iot-applications-across-industries">How Edge AI is Transforming IoT Applications Across Industries</a></h2>
+        </div>
+        
+        
+        
+
+        <div class="author-date">
+          <div class="author-name">
+            <a href="https://www.mediatek.com/tek-talk-blogs/author/sameer-sharma" rel="author">
+              Sameer Sharma</a>
+          </div>
+          <p class="pipe">&nbsp;|&nbsp;</p>
+          <div class="post_date">
+            <p>
+              
+              August 3, 2026
+              
+            </p>
+          </div>
+        </div>
+
+
+        
+
+        
+      </div>
+    </div>
+  </article>
+  
+  
+
+</div></div>
+            </div>
+            <div class="blog-pagination-wrapper">
+              <div id="hs_cos_wrapper_blog_pagination" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="blog-pagination ">
+  
+  
+  
+
+  
+
+  <div class="blog-pagination-center">
+    
+    
+    
+    <a class="active" href="https://www.mediatek.com/tek-talk-blogs/page/1">1</a>
+    
+    
+    
+    
+    <a href="https://www.mediatek.com/tek-talk-blogs/page/2">2</a>
+    
+    
+    
+    
+    <a href="https://www.mediatek.com/tek-talk-blogs/page/3">3</a>
+    
+    
+    
+    
+    <a href="https://www.mediatek.com/tek-talk-blogs/page/4">4</a>
+    
+    
+    
+    
+    <a href="https://www.mediatek.com/tek-talk-blogs/page/5">5</a>
+    
+    
+  </div>
+  
+  <div class="blog-pagination-right">
+    <a class="next-link" href="https://www.mediatek.com/tek-talk-blogs/page/2" id="prev-page"><i class="fa-solid fa-chevron-right"></i></a>
+  </div>
+  
+</div></div>
+            </div>
+          </div>
+
+          
+
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-with-tags personal-compute">
+      <div id="hs_cos_wrapper_tek_talk_slider-personal-compute" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<div class="tek_talk_slider_wrapper tek_talk_slider-personal-compute cm_light cus_dark hs-skip-lang-url-rewrite ct" id="tek-talk">
+
+  <div class="page-center">
+
+    
+    <div class="section_title">
+      <h2>
+        Personal Computing
+      </h2>
+      
+      <p style="">
+        Explore the technologies shaping the future of personal computing, from AI-powered PCs and local AI to next-generation devices and experiences.
+      </p>
+      
+    </div>
+    
+    <div class="tek_talk_swiper">
+      <div class="tek_talk_swiper_container tek_talkSwiper">
+        
+
+        
+
+        
+        
+
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/how-ai-is-changing-what-we-expect-from-devices" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/%23262-How%20AI%20Is%20Changing%20What%20We%20Expect%20From%20Devices.png?width=650&amp;height=650&amp;length=600&amp;name=%23262-How%20AI%20Is%20Changing%20What%20We%20Expect%20From%20Devices.png" alt="How AI Is Changing What We Expect From Devices">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="ai">AI</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="personal computing">Personal Computing</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    How AI Is Changing What We Expect From Devices
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    July 21, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/running-ai-agents-locally-on-dgx-spark" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/How%20MediaTek%20is%20Leading%20the%20Next%20Generation%20of%20AI%20Chromebooks.png?width=650&amp;height=650&amp;length=600&amp;name=How%20MediaTek%20is%20Leading%20the%20Next%20Generation%20of%20AI%20Chromebooks.png" alt="Running AI Agents Locally on DGX Spark">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="ai">AI</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="personal computing">Personal Computing</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    Running AI Agents Locally on DGX Spark
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    June 24, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/an-ai-supercomputer-on-your-desk-mediatek-and-nvidia-discuss-dgx-spark" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Static%20Images/An-AI-Supercomputer-on-Your-Desk-MediaTek-and-NVIDIA-Discuss-DGX-Spark-final.png?width=650&amp;height=650&amp;length=600&amp;name=An-AI-Supercomputer-on-Your-Desk-MediaTek-and-NVIDIA-Discuss-DGX-Spark-final.png" alt="An AI Supercomputer on Your Desk: MediaTek and NVIDIA Discuss DGX Spark">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="ai">AI</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="personal computing">Personal Computing</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    An AI Supercomputer on Your Desk: MediaTek and NVIDIA Discuss DGX Spark
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    June 11, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/mediatek-is-collaborating-with-nvidia-to-power-the-next-wave-of-windows-pc-experiences-with-the-new-nvidia-rtx-spark" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/Blog%20new.jpg?width=650&amp;height=650&amp;length=600&amp;name=Blog%20new.jpg" alt="MediaTek is Collaborating with NVIDIA to Power the Next Wave of Windows PC Experiences with the new NVIDIA RTX Spark™">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="partnership">Partnership</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="personal computing">Personal Computing</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    MediaTek is Collaborating with NVIDIA to Power the Next Wave of Windows PC Experiences with the new NVIDIA RTX Spark™
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    June 1, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/navigating-the-ai-wave-in-education-with-help-from-google-and-mediatek" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/Google-ASUS-MediaTek-CM30-6.jpg?width=650&amp;height=650&amp;length=600&amp;name=Google-ASUS-MediaTek-CM30-6.jpg" alt="Navigating the AI Wave in Education with Help from Google and MediaTek">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="chromebook">Chromebook</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="personal computing">Personal Computing</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    Navigating the AI Wave in Education with Help from Google and MediaTek
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    May 28, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/signal-65-investigates-the-architectural-advantage-of-the-mediatek-kompanio-ultra-910" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/MediaTek%20Kompanio%20Ultra.jpg?width=650&amp;height=650&amp;length=600&amp;name=MediaTek%20Kompanio%20Ultra.jpg" alt="Signal65 investigates the architectural advantages of the MediaTek Kompanio Ultra 910">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="chromebook">Chromebook</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="personal computing">Personal Computing</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    Signal65 investigates the architectural advantages of the MediaTek Kompanio Ultra 910
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    May 19, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/a-new-era-of-ai-computing-with-googlebook-mediatek" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/Dimensity_Googlebook_blog.jpg?width=650&amp;height=650&amp;length=600&amp;name=Dimensity_Googlebook_blog.jpg" alt="A New Era of AI Computing with Googlebook x MediaTek">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="personal computing">Personal Computing</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    A New Era of AI Computing with Googlebook x MediaTek
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    May 14, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/chromeos-performance-leadership-the-mediatek-kompanio-ultra-910-advantage" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/All-Day%20Power%20MediaTek%E2%80%99s%20Battery%20Life%20Advantage%20Across%20Every%20Segment.png?width=650&amp;height=650&amp;length=600&amp;name=All-Day%20Power%20MediaTek%E2%80%99s%20Battery%20Life%20Advantage%20Across%20Every%20Segment.png" alt="ChromeOS performance leadership: The MediaTek Kompanio Ultra 910 Advantage">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="chromebook">Chromebook</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="personal computing">Personal Computing</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    ChromeOS performance leadership: The MediaTek Kompanio Ultra 910 Advantage
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    May 7, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+</div>
+    </div>
+    <div class="slider-with-tags data">
+      <div id="hs_cos_wrapper_tek_talk_slider-data-center" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<div class="tek_talk_slider_wrapper tek_talk_slider-data-center cm_light cus_dark hs-skip-lang-url-rewrite ct" id="tek-talk">
+
+  <div class="page-center">
+
+    
+    <div class="section_title">
+      <h2>
+        Data Center
+      </h2>
+      
+      <p style="">
+        Discover how advanced silicon, AI infrastructure and innovative computing technologies are shaping the future of the modern data center.
+      </p>
+      
+    </div>
+    
+    <div class="tek_talk_swiper">
+      <div class="tek_talk_swiper_container tek_talkSwiper">
+        
+
+        
+
+        
+        
+
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/inside-mediateks-push-into-cloud-and-data-center" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/Sever-1.png?width=650&amp;height=650&amp;length=600&amp;name=Sever-1.png" alt="Inside MediaTek’s Push Into Cloud and Data Center">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="data center">Data Center</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    Inside MediaTek’s Push Into Cloud and Data Center
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    August 24, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/the-ai-compute-module-where-systems-become-silicon" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MTK_XPU01-5.jpg?width=650&amp;height=650&amp;length=600&amp;name=MTK_XPU01-5.jpg" alt="The AI Compute Module: Where Systems Become Silicon">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="ai">AI</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="data center">Data Center</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    The AI Compute Module: Where Systems Become Silicon
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    July 27, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/the-data-center-rack-is-the-new-standard-for-ai-compute" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/Sever-1.png?width=650&amp;height=650&amp;length=600&amp;name=Sever-1.png" alt="The Data Center Rack Is the New Standard for AI Compute">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="data center">Data Center</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    The Data Center Rack Is the New Standard for AI Compute
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    June 30, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/from-silicon-to-scale-inside-mediateks-ai-data-center-solution" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/silicon-to-scale.jpg?width=650&amp;height=650&amp;length=600&amp;name=silicon-to-scale.jpg" alt="From Silicon to Scale: Inside MediaTek's AI Data Center Solution">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="data center">Data Center</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    From Silicon to Scale: Inside MediaTek's AI Data Center Solution
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    June 24, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/the-great-divergence-when-ai-outpaced-moores-law" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/V3B-244---The-Great-Divergence-When-AI-Outpaced-Moores-Law_yaxis-1.png?width=650&amp;height=650&amp;length=600&amp;name=V3B-244---The-Great-Divergence-When-AI-Outpaced-Moores-Law_yaxis-1.png" alt="The Great Divergence: When AI Outpaced Moore’s Law">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="ai">AI</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="data center">Data Center</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    The Great Divergence: When AI Outpaced Moore’s Law
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    May 11, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/demystifying-custom-silicon-in-the-data-center" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/Demystifying%20Custom%20Silicon%20in%20the%20Data%20Center-1.png?width=650&amp;height=650&amp;length=600&amp;name=Demystifying%20Custom%20Silicon%20in%20the%20Data%20Center-1.png" alt="Demystifying Custom Silicon in the Data Center">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="data center">Data Center</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    Demystifying Custom Silicon in the Data Center
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    April 23, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/mediatek-receives-isscc-anantha-p-chandrakasan-distinguished-technical-paper-award" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/MediaTek%20receives%20ISSCC%20Anantha%20P.%20Chandrakasan%20Distinguished%20Technical%20Paper%20Award_.jpg?width=650&amp;height=650&amp;length=600&amp;name=MediaTek%20receives%20ISSCC%20Anantha%20P.%20Chandrakasan%20Distinguished%20Technical%20Paper%20Award_.jpg" alt="MediaTek receives ISSCC Anantha P. Chandrakasan Distinguished Technical Paper Award">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="corporate">Corporate</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="data center">Data Center</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    MediaTek receives ISSCC Anantha P. Chandrakasan Distinguished Technical Paper Award
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    February 16, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/why-advanced-packaging-is-critical-for-ai-innovation-mediatek-explains" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/%23217%20-%20Why%20Advanced%20Packaging%20is%20Critical%20for%20AI%20Innovation_%20MediaTek%20Explains%20-%20Shahar%20Noy.png?width=650&amp;height=650&amp;length=600&amp;name=%23217%20-%20Why%20Advanced%20Packaging%20is%20Critical%20for%20AI%20Innovation_%20MediaTek%20Explains%20-%20Shahar%20Noy.png" alt="Why Advanced Packaging is Critical for AI Innovation: MediaTek Explains">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="data center">Data Center</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    Why Advanced Packaging is Critical for AI Innovation: MediaTek Explains
+                  </h3>
+                </div>
+
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    February 9, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+</div>
+    </div>
+    <div class="slider-with-tags edge">
+      <div id="hs_cos_wrapper_tek_talk_slider-edge-cloud" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<div class="tek_talk_slider_wrapper tek_talk_slider-edge-cloud cm_light cus_dark hs-skip-lang-url-rewrite ct" id="tek-talk">
+
+  <div class="page-center">
+
+    
+    <div class="section_title">
+      <h2>
+        Edge to Cloud
+      </h2>
+      
+      <p style="">
+        See how intelligent technologies connect devices, edge computing and the cloud to enable smarter, faster and more connected experiences.
+      </p>
+      
+    </div>
+    
+    <div class="tek_talk_swiper">
+      <div class="tek_talk_swiper_container tek_talkSwiper">
+        
+
+        
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+        
+
+        
+        
+
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/mediatek-mt8875-our-next-gen-5g-iot-platform-for-genai-applications" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MT8875_black_center.png?width=650&amp;height=650&amp;length=600&amp;name=MT8875_black_center.png" alt="MediaTek MT8875: Our Next-Gen 5G IoT Platform for GenAI Applications">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="iot">IoT</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    MediaTek MT8875: Our Next-Gen 5G IoT Platform for GenAI Applications
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    August 25, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/how-edge-ai-is-transforming-iot-applications-across-industries" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/%23264-How%20Edge%20AI%20is%20Transforming%20IoT%20Applications%20Across%20Industries.png?width=650&amp;height=650&amp;length=600&amp;name=%23264-How%20Edge%20AI%20is%20Transforming%20IoT%20Applications%20Across%20Industries.png" alt="How Edge AI is Transforming IoT Applications Across Industries">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="iot">IoT</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="genio">Genio</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    How Edge AI is Transforming IoT Applications Across Industries
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    August 3, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/how-mediatek-is-making-the-iiot-smarter" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/How-MediaTek-is-Making.png?width=650&amp;height=650&amp;length=600&amp;name=How-MediaTek-is-Making.png" alt="How MediaTek is Making the IIoT Smarter">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="iot">IoT</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="genio">Genio</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    How MediaTek is Making the IIoT Smarter
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    July 1, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/mediatek-genio-pro-5100-powering-real-time-vision-intelligence-at-the-edge" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/Inside%20Tek_Sameer%20Sharma_Blog%20%26%20Article.png?width=650&amp;height=650&amp;length=600&amp;name=Inside%20Tek_Sameer%20Sharma_Blog%20&amp;%20Article.png" alt="MediaTek Genio Pro 5100: Powering Real-Time Vision Intelligence at the Edge">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="iot">IoT</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="genio">Genio</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    MediaTek Genio Pro 5100: Powering Real-Time Vision Intelligence at the Edge
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    June 25, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/the-mediatek-kompanio-ultra-910-advantage-in-3-key-areas" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/MediaTek%20Kompanio%20Ultra.jpg?width=650&amp;height=650&amp;length=600&amp;name=MediaTek%20Kompanio%20Ultra.jpg" alt="The MediaTek Kompanio Ultra 910 Advantage in 3 Key Areas">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="chromebook">Chromebook</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    The MediaTek Kompanio Ultra 910 Advantage in 3 Key Areas
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    June 11, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/enabling-more-intelligent-better-connected-healthcare-experiences" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/Enabling-More-Intelligent-Better-Connected-Healthcare-Experiences.jpg?width=650&amp;height=650&amp;length=600&amp;name=Enabling-More-Intelligent-Better-Connected-Healthcare-Experiences.jpg" alt="Enabling More Intelligent, Better Connected Healthcare Experiences">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="iot">IoT</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="genio">Genio</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    Enabling More Intelligent, Better Connected Healthcare Experiences
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    June 8, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/navigating-the-ai-wave-in-education-with-help-from-google-and-mediatek" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/Google-ASUS-MediaTek-CM30-6.jpg?width=650&amp;height=650&amp;length=600&amp;name=Google-ASUS-MediaTek-CM30-6.jpg" alt="Navigating the AI Wave in Education with Help from Google and MediaTek">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="chromebook">Chromebook</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="personal computing">Personal Computing</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    Navigating the AI Wave in Education with Help from Google and MediaTek
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    May 28, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/signal-65-investigates-the-architectural-advantage-of-the-mediatek-kompanio-ultra-910" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/MediaTek%20Kompanio%20Ultra.jpg?width=650&amp;height=650&amp;length=600&amp;name=MediaTek%20Kompanio%20Ultra.jpg" alt="Signal65 investigates the architectural advantages of the MediaTek Kompanio Ultra 910">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="chromebook">Chromebook</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="personal computing">Personal Computing</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    Signal65 investigates the architectural advantages of the MediaTek Kompanio Ultra 910
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    May 19, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+
+        
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+</div>
+    </div>
+    <div class="slider-with-tags auto">
+      <div id="hs_cos_wrapper_tek_talk_slider-auto" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<div class="tek_talk_slider_wrapper tek_talk_slider-auto cm_light cus_dark hs-skip-lang-url-rewrite ct" id="tek-talk">
+
+  <div class="page-center">
+
+    
+    <div class="section_title">
+      <h2>
+        Automotive
+      </h2>
+      
+      <p style="">
+        Explore the technologies powering the next generation of connected, intelligent and AI-defined vehicles.
+      </p>
+      
+    </div>
+    
+    <div class="tek_talk_swiper">
+      <div class="tek_talk_swiper_container tek_talkSwiper">
+        
+
+        
+
+         
+         
+         
+         
+         
+         
+         
+         
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+        
+
+        
+        
+
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/mediatek-and-tencent-cloud-sign-mou-to-co-create-edge-device-cloud-collaborative-intelligent-cockpits" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/MediaTek%20and%20Tencent%20Cloud%20Sign%20MOU%20to%20Co-Create%20Edge-Device-Cloud%20Collaborative%20Intelligent%20Cockpits_Blog.png?width=650&amp;height=650&amp;length=600&amp;name=MediaTek%20and%20Tencent%20Cloud%20Sign%20MOU%20to%20Co-Create%20Edge-Device-Cloud%20Collaborative%20Intelligent%20Cockpits_Blog.png" alt="MediaTek and Tencent Cloud Sign MOU to Co-Create Edge-Device-Cloud Collaborative Intelligent Cockpits">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="automotive">Automotive</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    MediaTek and Tencent Cloud Sign MOU to Co-Create Edge-Device-Cloud Collaborative Intelligent Cockpits
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    June 8, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/the-mediatek-technologies-powering-next-generation-vehicles" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/Blog%20card%20image%20OP5.jpg?width=650&amp;height=650&amp;length=600&amp;name=Blog%20card%20image%20OP5.jpg" alt="The MediaTek Technologies Powering Next Generation AI-Defined Vehicles">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="automotive">Automotive</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    The MediaTek Technologies Powering Next Generation AI-Defined Vehicles
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    April 10, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/mediatek-at-mwc-2026-ai-automotive" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/MediaTek-MWC%2026.png?width=650&amp;height=650&amp;length=600&amp;name=MediaTek-MWC%2026.png" alt="MWC 2026 - Where AI meets Automotive">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="automotive">Automotive</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    MWC 2026 - Where AI meets Automotive
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    March 5, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/iaa-mobility-2025-mediatek-accelerates-automotive-experiences" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/mediatek-iaa-2025.png?width=650&amp;height=650&amp;length=600&amp;name=mediatek-iaa-2025.png" alt="IAA Mobility 2025: MediaTek accelerates automotive experiences">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="automotive">Automotive</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    IAA Mobility 2025: MediaTek accelerates automotive experiences
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    September 9, 2025
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/the-future-of-intelligent-vehicles" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/Exec%20Talk%20MediaTeks%20Dr.%20JC%20Hsu%20chats%20with%20GSMAs%20Julian%20Gorman.jpg?width=650&amp;height=650&amp;length=600&amp;name=Exec%20Talk%20MediaTeks%20Dr.%20JC%20Hsu%20chats%20with%20GSMAs%20Julian%20Gorman.jpg" alt="The future of intelligent vehicles">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="exec talk">Exec Talk</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="automotive">Automotive</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    The future of intelligent vehicles
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    June 18, 2025
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/dimensity-auto-connect-mt2739" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/MediaTek%20unveils%20flagship%20Dimensity%20Auto%20C-X1%20and%20MT2739.jpg?width=650&amp;height=650&amp;length=600&amp;name=MediaTek%20unveils%20flagship%20Dimensity%20Auto%20C-X1%20and%20MT2739.jpg" alt="Dimensity Auto Connect MT2739: 5G-Advanced and satellite connectivity for automotive">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="automotive">Automotive</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    Dimensity Auto Connect MT2739: 5G-Advanced and satellite connectivity for automotive
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    May 7, 2025
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/dimensity-auto-cockpit-platform-c-x1" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/MediaTek%20unveils%20flagship%20Dimensity%20Auto%20C-X1%20and%20MT2739.jpg?width=650&amp;height=650&amp;length=600&amp;name=MediaTek%20unveils%20flagship%20Dimensity%20Auto%20C-X1%20and%20MT2739.jpg" alt="Dimensity Auto Cockpit Platform C-X1">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="automotive">Automotive</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    Dimensity Auto Cockpit Platform C-X1
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    May 4, 2025
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/the-fast-lane-to-the-future-with-mediatek-dimensity-auto" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/What%20are%20Multimodal%20Gen-AI%20Automotive%20Cockpit%20Platforms.jpg?width=650&amp;height=650&amp;length=600&amp;name=What%20are%20Multimodal%20Gen-AI%20Automotive%20Cockpit%20Platforms.jpg" alt="What are multimodal Gen-AI automotive cockpit platforms?">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="automotive">Automotive</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    What are multimodal Gen-AI automotive cockpit platforms?
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    April 7, 2025
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+
+        
+
+        
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+</div>
+    </div>
+    <div class="slider-with-tags mobile">
+      <div id="hs_cos_wrapper_tek_talk_slider-conn" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<div class="tek_talk_slider_wrapper tek_talk_slider-conn cm_light cus_dark hs-skip-lang-url-rewrite ct" id="tek-talk">
+
+  <div class="page-center">
+
+    
+    <div class="section_title">
+      <h2>
+        Mobile
+      </h2>
+      
+      <p style="">
+        Discover the innovations behind powerful, intelligent and immersive mobile experiences, from flagship smartphones to next-generation connectivity.
+      </p>
+      
+    </div>
+    
+    <div class="tek_talk_swiper">
+      <div class="tek_talk_swiper_container tek_talkSwiper">
+        
+
+        
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+        
+
+        
+        
+
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/mainstream-to-premium-smartphones-get-a-fresh-set-of-mediatek-dimensity-chipsets" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Static%20Images/Mainstream-to-Premium-Smartphones-Get-a-Fresh-Set-of-MediaTek-Dimensity-Chipsets.png?width=650&amp;height=650&amp;length=600&amp;name=Mainstream-to-Premium-Smartphones-Get-a-Fresh-Set-of-MediaTek-Dimensity-Chipsets.png" alt="Mainstream to Premium Smartphones Get a Fresh Set of MediaTek Dimensity Chipsets">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="smartphones">Smartphones</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="dimensity">Dimensity</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    Mainstream to Premium Smartphones Get a Fresh Set of MediaTek Dimensity Chipsets
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    May 15, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/mediatek-dimensity-8500-powerful-performance-for-ultra-fast-play" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Dimensity%208500%20-%20Powerful%20Performance%20for%20Ultra-Fast%20Play.png?width=650&amp;height=650&amp;length=600&amp;name=MediaTek%20Dimensity%208500%20-%20Powerful%20Performance%20for%20Ultra-Fast%20Play.png" alt="MediaTek Dimensity 8500 - Powerful Performance for Ultra-Fast Play">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="dimensity">Dimensity</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    MediaTek Dimensity 8500 - Powerful Performance for Ultra-Fast Play
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    March 19, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/mediatek-dimensity-9500s-the-power-to-outlast-all-others" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Dimensity%209500s%20-%20The%20Power%20To%20Outlast%20All%20Others-1.png?width=650&amp;height=650&amp;length=600&amp;name=MediaTek%20Dimensity%209500s%20-%20The%20Power%20To%20Outlast%20All%20Others-1.png" alt="MediaTek Dimensity 9500s - The Power To Outlast All Others">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="smartphones">Smartphones</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="dimensity">Dimensity</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    MediaTek Dimensity 9500s - The Power To Outlast All Others
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    March 17, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/dimensity-9500-wins-innovative-product-and-solution-at-gti-awards-2026" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/GTI_Award_2026_9500.jpg?width=650&amp;height=650&amp;length=600&amp;name=GTI_Award_2026_9500.jpg" alt="MediaTek Dimensity 9500 wins Innovative Product and Solution at GTI Awards 2026">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="dimensity">Dimensity</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    MediaTek Dimensity 9500 wins Innovative Product and Solution at GTI Awards 2026
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    March 4, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/mwc-2026-extreme-zoom-smartphones-and-privacy-first-ai-glasses" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/mediatek-mwc-extreme-zoom-camera.png?width=650&amp;height=650&amp;length=600&amp;name=mediatek-mwc-extreme-zoom-camera.png" alt="MWC 2026 - Extreme Zoom Smartphones and Privacy-first AI Glasses">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="smartphones">Smartphones</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="dimensity">Dimensity</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    MWC 2026 - Extreme Zoom Smartphones and Privacy-first AI Glasses
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    March 3, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/mediatek-and-nte-neverness-to-everness-announce-deep-collaboration-to-advance-mobile-gaming-performance" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/NTE_collab_blog.jpg?width=650&amp;height=650&amp;length=600&amp;name=NTE_collab_blog.jpg" alt="MediaTek and NTE advance mobile gaming performance">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="smartphones">Smartphones</span>
+                  
+                  
+                  , 
+                  
+                  
+                  
+                  <span class="dimensity">Dimensity</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    MediaTek and NTE advance mobile gaming performance
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    January 23, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/motion-track-focus-every-video-frame" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/Crystal%20clear%20zoom%20%26%20enhance%20for%20smartphones.png?width=650&amp;height=650&amp;length=600&amp;name=Crystal%20clear%20zoom%20&amp;%20enhance%20for%20smartphones.png" alt="Motion tracking &amp; focusing every video frame">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="dimensity">Dimensity</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    Motion tracking &amp; focusing every video frame
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    January 19, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="tek_slide rec_tags_post">
+          <div class="tek_slide_inner">
+            <a href="https://www.mediatek.com/tek-talk-blogs/mediatek-dimensity-9500s-and-dimensity-8500-launch" target="_self">
+              
+              <div class="tek_slide_image">
+                
+                <img src="https://www.mediatek.com/hs-fs/hubfs/MediaTek%20Assets/Images/Blog/9500s%20and%20Dimensity%208500%20launch_.png?width=650&amp;height=650&amp;length=600&amp;name=9500s%20and%20Dimensity%208500%20launch_.png" alt="MediaTek Dimensity 9500s and Dimensity 8500 launch">
+              </div>
+              
+              <div class="tek_slide_content">
+
+                <div class="tek_slide_date">
+
+                  
+                  <span class="dimensity">Dimensity</span>
+                  
+                   
+
+                </div>
+                <div class="tek_slide_title">
+                  <h3>
+                    MediaTek Dimensity 9500s and Dimensity 8500 launch
+                  </h3>
+                </div>
+                <div class="tek_slide_date tag">
+                  <p>
+                    
+                    January 19, 2026
+                    
+                  </p>
+                </div>
+                <div class="tek_slid_sub">
+                  <p>
+                    
+                    <span>
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+
+        
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+</div>
+    </div>
+    
   </div>
 </main>
+
+
+
 
 
       
@@ -2616,29 +4813,630 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
     
 <!-- HubSpot performance collection script -->
-<script defer src="/hs/hsstatic/content-cwv-embed/static-1.1293/embed.js" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
+<script defer src="/hs/hsstatic/content-cwv-embed/static-1.1293/embed.js" nonce="NZkIL922P12jiGP22tVt6w=="></script>
 
 
-<script nonce="j/8xeJvJygkWq2hYsiMKyw==">
+<script nonce="NZkIL922P12jiGP22tVt6w==">
 
+  // js for adding text inside archive heading
+  //   document.addEventListener("DOMContentLoaded", function () {
+  //     const heading = document.querySelector(".cm-blog-layout .inner .left .blog-archive-filter_wrapper .arc_yr_fil h3");
+  //     const list = document.querySelector(".cm-blog-layout .inner .left .blog-archive-filter_wrapper .arc_yr_fil ul");
+  //     const items = document.querySelectorAll(".cm-blog-layout .inner .left .blog-archive-filter_wrapper .arc_yr_fil ul li a");
+
+  //     // Toggle accordion
+  //     heading.addEventListener("click", function () {
+  //       list.classList.toggle("active");
+  //     });
+
+  //     // Handle item click
+  //     items.forEach(item => {
+  //       item.addEventListener("click", function (e) {
+  //         //         e.preventDefault(); // remove if you want redirect
+
+  //         const text = this.textContent.trim();
+
+  //         // Set selected text to heading
+  //         heading.textContent = text;
+
+  //         // Close accordion
+  //         list.classList.remove("active");
+  //       });
+  //     });
+  //   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const heading = document.querySelector(
+      ".cm-blog-layout .categories_wrapper .inner .left .post-by-topic .block h3"
+    );
+
+    if (heading) {
+      // clear existing text (optional)
+      heading.innerHTML = "";
+
+      // create span
+      const span = document.createElement("span");
+      span.classList.add("heading-text");
+      span.textContent = "Category";
+
+      // append span inside h3
+      heading.appendChild(span);
+    }
+  });
+
+  //   js for appending svg icon under category heading
+
+  window.addEventListener('load', function () {
+    const catLink = document.querySelector(
+      '.cm-blog-layout .categories_wrapper .inner .left .post-by-topic h3'
+    );
+
+    if (catLink && !catLink.querySelector('.chevron-icon')) {
+      catLink.insertAdjacentHTML('beforeend', `
+    <span class="chevron-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+        <path d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/>
+  </svg>
+  </span>
+  `);
+    }
+  });
+
+  //   js for rotate svg icon under category
+
+//   window.addEventListener('load', function () {
+//     const heading = document.querySelector('.cm-blog-layout .categories_wrapper .inner .left .post-by-topic h3');
+//     const list = document.querySelector('.cm-blog-layout .categories_wrapper .inner .left .post-by-topic .widget-module ul');
+
+//     if (!heading || !list) return;
+
+//     const svg = heading.querySelector('svg');
+//     if (!svg) return;
+
+//     heading.addEventListener('click', function () {
+//       // wait a tick so class gets applied first
+//       setTimeout(() => {
+//         if (list.classList.contains('active')) {
+//           svg.style.transform = 'rotate(180deg)';
+//         } else {
+//           svg.style.transform = 'rotate(0deg)';
+//         }
+//       }, 0);
+//     });
+//   });
+
+
+  //   append svg icon inside archive heading
+
+  window.addEventListener('load', function () {
+    const catLink = document.querySelector(
+      '.cm-blog-layout .inner .left .blog-archive-filter_wrapper .arc_yr_fil h3'
+    );
+
+    if (catLink && !catLink.querySelector('.chevron-icon')) {
+      catLink.insertAdjacentHTML('beforeend', `
+    <span class="chevron-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+        <path d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/>
+  </svg>
+  </span>
+  `);
+    }
+  });
+
+  //   js for rotate svg icon under arhive
+
+//   window.addEventListener('load', function () {
+//     const headingTwo = document.querySelector('.cm-blog-layout .inner .left .blog-archive-filter_wrapper .arc_yr_fil h3');
+//     const listTwo = document.querySelector('.cm-blog-layout .categories_wrapper .inner .left .blog-archive-filter_wrapper .arc_yr_fil ul#year-filter');
+
+//     if (!headingTwo || !listTwo) return;
+
+//     const svgTwo = headingTwo.querySelector('svg');
+//     if (!svgTwo) return;
+
+//     headingTwo.addEventListener('click', function () {
+//       // wait a tick so class gets applied first
+//       setTimeout(() => {
+//         if (listTwo.classList.contains('active')) {
+//           svgTwo.style.transform = 'rotate(180deg)';
+//         } else {
+//           svgTwo.style.transform = 'rotate(0deg)';
+//         }
+//       }, 0);
+//     });
+//   });
+
+
+
+//   document.addEventListener("DOMContentLoaded", function () {
+
+//     // Select BOTH dropdowns
+//     const dropdowns = document.querySelectorAll(
+//       ".cm-blog-layout .categories_wrapper .inner .left .post-by-topic, .cm-blog-layout .inner .left .blog-archive-filter_wrapper .arc_yr_fil"
+//     );
+
+//     // Close all dropdowns
+//     function closeAll() {
+//       dropdowns.forEach(drop => {
+//         const list = drop.querySelector("ul");
+//         list && list.classList.remove("active");
+//       });
+//     }
+
+//     dropdowns.forEach(drop => {
+//       const heading = drop.querySelector("h3");
+//       const list = drop.querySelector("ul");
+//       const items = drop.querySelectorAll("ul li a");
+
+//       if (!heading || !list) return;
+
+//       // Detect text container (category vs archive)
+//       const textSpan =
+//             heading.querySelector(".heading-text") ||
+//             heading.querySelector(".head_text");
+
+//       // TOGGLE
+//       heading.addEventListener("click", function () {
+//         const isOpen = list.classList.contains("active");
+
+//         closeAll(); // 🔑 close others first
+
+//         if (!isOpen) {
+//           list.classList.add("active");
+//         }
+//       });
+
+//       // ITEM CLICK
+//       items.forEach(item => {
+//         item.addEventListener("click", function (e) {
+//           // prevent only for category (because archive should redirect)
+//           if (drop.classList.contains("block")) {
+//             e.preventDefault();
+//           }
+
+//           const text = this.textContent.trim();
+
+//           // update only text, not icon
+//           if (textSpan) {
+//             textSpan.textContent = text;
+//           } else {
+//             heading.textContent = text;
+//           }
+
+//           closeAll();
+//         });
+//       });
+//     });
+
+//   });
+  
+  
+//   document.addEventListener("DOMContentLoaded", function () {
+
+//   // Select both dropdowns
+//   const dropdowns = document.querySelectorAll(
+//     ".cm-blog-layout .categories_wrapper .inner .left .post-by-topic, " +
+//     ".cm-blog-layout .inner .left .blog-archive-filter_wrapper .arc_yr_fil"
+//   );
+
+//   // Close all dropdowns and reset their SVG arrows
+//   function closeAll() {
+//     dropdowns.forEach(drop => {
+//       const list = drop.querySelector("ul");
+//       const svg = drop.querySelector("h3 svg");
+
+//       if (list) {
+//         list.classList.remove("active");
+//       }
+
+//       if (svg) {
+//         svg.style.transform = "rotate(0deg)";
+//       }
+//     });
+//   }
+
+//   dropdowns.forEach(drop => {
+
+//     const heading = drop.querySelector("h3");
+//     const list = drop.querySelector("ul");
+//     const svg = heading ? heading.querySelector("svg") : null;
+//     const items = drop.querySelectorAll("ul li a");
+
+//     if (!heading || !list) return;
+
+//     // Detect text container
+//     const textSpan =
+//       heading.querySelector(".heading-text") ||
+//       heading.querySelector(".head_text");
+
+//     // Toggle dropdown
+//     heading.addEventListener("click", function () {
+
+//       const isOpen = list.classList.contains("active");
+
+//       // Close all dropdowns and reset all arrows
+//       closeAll();
+
+//       // If this dropdown was closed, open it
+//       if (!isOpen) {
+//         list.classList.add("active");
+
+//         if (svg) {
+//           svg.style.transform = "rotate(180deg)";
+//         }
+//       }
+//     });
+
+//     // Item click
+//     items.forEach(item => {
+//       item.addEventListener("click", function (e) {
+
+//         // Prevent default only for category dropdown
+//         if (drop.classList.contains("block")) {
+//           e.preventDefault();
+//         }
+
+//         const text = this.textContent.trim();
+
+//         // Update only the text, not the SVG
+//         if (textSpan) {
+//           textSpan.textContent = text;
+//         }
+
+//         // Close all and reset arrows
+//         closeAll();
+//       });
+//     });
+
+//   });
+
+// });
+  
+  
+  document.addEventListener("DOMContentLoaded", function () {
+
+  // Select both dropdowns
+  const dropdowns = document.querySelectorAll(
+    ".cm-blog-layout .categories_wrapper .inner .left .post-by-topic, " +
+    ".cm-blog-layout .inner .left .blog-archive-filter_wrapper .arc_yr_fil"
+  );
+
+  // Close all dropdowns
+  function closeAll() {
+    dropdowns.forEach(drop => {
+      const list = drop.querySelector("ul");
+      const heading = drop.querySelector("h3");
+
+      // Remove active class from all ULs
+      if (list) {
+        list.classList.remove("active");
+      }
+
+      // Remove menu-open class from all headings
+      if (heading) {
+        heading.classList.remove("menu-open");
+      }
+    });
+  }
+
+  dropdowns.forEach(drop => {
+
+    const heading = drop.querySelector("h3");
+    const list = drop.querySelector("ul");
+    const items = drop.querySelectorAll("ul li a");
+
+    if (!heading || !list) return;
+
+    // Detect text container
+    const textSpan =
+      heading.querySelector(".heading-text") ||
+      heading.querySelector(".head_text");
+
+    // Toggle dropdown
+    heading.addEventListener("click", function () {
+
+      const isOpen = list.classList.contains("active");
+
+      // Close both dropdowns first
+      closeAll();
+
+      // If clicked dropdown was previously closed, open it
+      if (!isOpen) {
+
+        // Add active class to the UL
+        list.classList.add("active");
+
+        // Add menu-open class to the clicked H3
+        heading.classList.add("menu-open");
+      }
+    });
+
+    // Item click
+    items.forEach(item => {
+      item.addEventListener("click", function (e) {
+
+        // Prevent default only for category dropdown
+        if (drop.querySelector(".block")) {
+          e.preventDefault();
+        }
+
+        const text = this.textContent.trim();
+
+        // Update only the text
+        if (textSpan) {
+          textSpan.textContent = text;
+        }
+
+        // Close dropdowns
+        closeAll();
+      });
+    });
+
+  });
+
+});
+
+
+
+
+  //   jQuery(function ($) {
+
+  //     const layout = '.cm-blog-layout';
+
+  //     function loadYearArchive(url) {
+  //       if (!url) return;
+
+  //       $.ajax({
+  //         url: url,
+  //         type: 'GET',
+  //         dataType: 'html',
+  //         cache: false
+  //       }).done(function (html) {
+
+  //         const $response = $('<div>').append($.parseHTML(html));
+
+  //         // ✅ Update posts
+  //         const $newPosts = $response.find('#blog-listing').html();
+  //         if ($newPosts) {
+  //           $('#blog-listing').html($newPosts);
+  //         }
+
+  //         // ✅ Update pagination (FIXED)
+  //         const $newPagination = $response.find('.blog-pagination').html();
+
+  //         if ($newPagination) {
+  //           $('.blog-pagination').html($newPagination);
+  //           $('.blog-pagination-wrapper').show();
+  //         } else {
+  //           $('.blog-pagination-wrapper').hide();
+  //         }
+
+  //       });
+  //     }
+
+  //     // ✅ Year click
+  //     $(document).on('click', layout + ' .arc_yr_fil #year-filter a', function (e) {
+
+  //       e.preventDefault(); // stop page reload ONLY
+
+  //       const url = $(this).attr('href');
+  //       const text = $(this).text().trim();
+
+  //       loadYearArchive(url);
+
+  //       // Active class
+  //       $(layout + ' .arc_yr_fil li').removeClass('act_tab');
+  //       $(this).closest('li').addClass('act_tab');
+
+  //       // Update heading text
+  //       $(layout + ' .arc_yr_fil .head_text').text(text);
+
+  //       // ✅ CLOSE DROPDOWN (keep animation working)
+  //       $(this).closest('#year-filter').slideUp(300);
+
+  //     });
+
+  //     // ✅ Pagination click
+  //     $(document).on('click', layout + ' .blog-pagination a', function (e) {
+
+  //       e.preventDefault();
+
+  //       const url = $(this).attr('href');
+  //       loadYearArchive(url);
+
+  //     });
+
+  //   });
+
+  jQuery(function ($) {
+    const layout = '.cm-blog-layout';
+
+    function loadCustomBlog(url) {
+      $.ajax({
+        url: url,
+        type: 'GET',
+        dataType: 'html',
+        cache: false
+      }).done(function (html) {
+        const $res = $('<div>').append($.parseHTML(html));
+
+        const newPosts = $res.find('#blog-listing').html();
+        const newPagination = $res.find('.blog-pagination').html();
+
+        if (newPosts) {
+          $('#blog-listing').html(newPosts);
+        }
+
+        if (newPagination) {
+          $('.blog-pagination').html(newPagination).show();
+        } else {
+          $('.blog-pagination-wrapper').hide();
+        }
+
+        window.history.pushState({}, '', url);
+      });
+    }
+
+    // Year filter opens in new tab
+    //     $(document).on('click', layout + ' .arc_yr_fil #year-filter a', function () {
+    //       const url = $(this).attr('href');
+    //       window.open(url, '_blank', 'noopener');
+    //       return false;
+    //     });
+
+    // Pagination stays AJAX only for current page
+    $(document).on('click', layout + ' .blog-pagination a', function (e) {
+      e.preventDefault();
+      loadCustomBlog($(this).attr('href'));
+    });
+  });
+
+  //   jQuery(function ($) {
+  //     const layout = '.cm-blog-layout';
+
+  //     function loadTagPosts(url) {
+  //       if (!url) return;
+
+  //       $.ajax({
+  //         url: url,
+  //         type: 'GET',
+  //         dataType: 'html',
+  //         cache: false
+  //       }).done(function (html) {
+  //         const $response = $('<div>').append($.parseHTML(html));
+
+  //         const $newListing = $response.find('#blog-listing').first();
+  //         const $newPagination = $response.find('.blog-pagination-wrapper').first();
+
+  //         if ($newListing.length) {
+  //           $('#blog-listing').html($newListing.html());
+  //         }
+
+  //         if ($newPagination.length) {
+  //           $('.blog-pagination-wrapper').html($newPagination.html()).show();
+  //         } else {
+  //           $('.blog-pagination-wrapper').hide();
+  //         }
+
+  //         window.history.pushState({}, '', url);
+  //       });
+  //     }
+
+  //     $(document).on('click', layout + ' .post-by-topic a', function (e) {
+  //       e.preventDefault();
+  //       e.stopImmediatePropagation();
+
+  //       const url = $(this).attr('href');
+  //       loadTagPosts(url);
+
+  //       $(this).closest('li').addClass('act_tab').siblings().removeClass('act_tab');
+  //       return false;
+  //     });
+  //   });
+
+  jQuery(function ($) {
+    const layout = '.cm-blog-layout';
+
+    function loadTagPosts(url, clickedEl) {
+      if (!url) return;
+
+      $.ajax({
+        url: url,
+        type: 'GET',
+        dataType: 'html',
+        cache: false
+      }).done(function (html) {
+
+        const $response = $('<div>').append($.parseHTML(html));
+
+        const $newListing = $response.find('#blog-listing').first();
+        const $newPagination = $response.find('.blog-pagination-wrapper').first();
+
+        if ($newListing.length) {
+          $('#blog-listing').html($newListing.html());
+        }
+
+        if ($newPagination.length) {
+          $('.blog-pagination-wrapper').html($newPagination.html()).show();
+        } else {
+          $('.blog-pagination-wrapper').hide();
+        }
+
+        // ✅ FIX: Reset heading from "2023 Blogs" → "Latest Blogs"
+        const $heading = $('.cm-blog-layout .sec-head h2');
+
+        $heading.text('Latest Blogs');
+
+        // remove archive class like archive-2023
+        $heading.removeClass(function (i, className) {
+          return (className.match(/archive-\d+/g) || []).join(' ');
+        });
+
+        // (optional) if you want tag name instead:
+        // const tagText = clickedEl.text().trim();
+        // $heading.text(tagText + ' Blogs');
+
+        window.history.pushState({}, '', url);
+      });
+    }
+
+    $(document).on('click', layout + ' .post-by-topic a', function (e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+
+      const url = $(this).attr('href');
+
+      loadTagPosts(url, $(this)); // 👈 pass clicked element
+
+      $(this).closest('li').addClass('act_tab').siblings().removeClass('act_tab');
+
+      return false;
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const img = document.querySelector(".author-page .auth_bio_det .author-img img");
+
+    if (img) {
+      // Remove responsive image attributes
+      img.removeAttribute("srcset");
+      img.removeAttribute("sizes");
+
+      // Remove width and height parameters from the image URL
+      const url = new URL(img.src);
+
+      url.searchParams.delete("width");
+      url.searchParams.delete("height");
+
+      img.src = url.toString();
+
+      // Set image dimensions to 180px
+      img.setAttribute("width", "180");
+      img.setAttribute("height", "180");
+
+      img.style.width = "180px";
+      img.style.height = "180px";
+    }
+  });
 
 </script>
 
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
-<script src="https://www.mediatek.com/hubfs/hub_generated/template_assets/1/161694198838/1786016976662/template_magnific_popup.min.js" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
-<script src="https://www.mediatek.com/hubfs/hub_generated/template_assets/1/161694198837/1786016979405/template_wow.min.js" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
-<script src="https://www.mediatek.com/hubfs/hub_generated/template_assets/1/161692443007/1786016974472/template_slick.min.js" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
-<script src="https://www.mediatek.com/hubfs/hub_generated/template_assets/1/161694187402/1786016969370/template_main.min.js" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
-<script nonce="j/8xeJvJygkWq2hYsiMKyw==">
+<script src="//cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" nonce="NZkIL922P12jiGP22tVt6w=="></script>
+<script src="https://www.mediatek.com/hubfs/hub_generated/template_assets/1/161694198838/1786016976662/template_magnific_popup.min.js" nonce="NZkIL922P12jiGP22tVt6w=="></script>
+<script src="https://www.mediatek.com/hubfs/hub_generated/template_assets/1/161694198837/1786016979405/template_wow.min.js" nonce="NZkIL922P12jiGP22tVt6w=="></script>
+<script src="https://www.mediatek.com/hubfs/hub_generated/template_assets/1/161692443007/1786016974472/template_slick.min.js" nonce="NZkIL922P12jiGP22tVt6w=="></script>
+<script src="https://www.mediatek.com/hubfs/hub_generated/template_assets/1/161694187402/1786016969370/template_main.min.js" nonce="NZkIL922P12jiGP22tVt6w=="></script>
+<script nonce="NZkIL922P12jiGP22tVt6w==">
 var hsVars = hsVars || {}; hsVars['language'] = 'en';
 </script>
 
-<script src="/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
-<script src="https://7052064.fs1.hubspotusercontent-na1.net/hubfs/7052064/hub_generated/module_assets/1/-2712622/1787596097356/module_search_input.min.js" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
+<script src="/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js" nonce="NZkIL922P12jiGP22tVt6w=="></script>
+<script src="https://7052064.fs1.hubspotusercontent-na1.net/hubfs/7052064/hub_generated/module_assets/1/-2712622/1787596097356/module_search_input.min.js" nonce="NZkIL922P12jiGP22tVt6w=="></script>
 
 
-<script nonce="j/8xeJvJygkWq2hYsiMKyw==">
+<script nonce="NZkIL922P12jiGP22tVt6w==">
   console.log(
   [...document.querySelectorAll(".hs-breadcrumb-menu li a")].map((item, index) => ({
     position: index + 1,
@@ -2648,7 +5446,7 @@ var hsVars = hsVars || {}; hsVars['language'] = 'en';
 );
 </script>
 
-<script nonce="j/8xeJvJygkWq2hYsiMKyw==">
+<script nonce="NZkIL922P12jiGP22tVt6w==">
   $(document).ready(function(){
     const chs_home = $('html[lang="zh-cn"] .test_menu .breadcrumbs ul.hs-breadcrumb-menu > li.first-crumb > a');
     const cht_home = $('html[lang="zh-tw"] .test_menu .breadcrumbs ul.hs-breadcrumb-menu > li.first-crumb > a');
@@ -2666,20 +5464,62 @@ var hsVars = hsVars || {}; hsVars['language'] = 'en';
 </script>
 
 
-<script src="https://www.mediatek.com/hubfs/hub_generated/module_assets/1/173094700356/1744255127259/module_blog_site_search.min.js" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
-<script src="https://www.mediatek.com/hubfs/hub_generated/module_assets/1/173402324324/1780054313385/module_blog-archive-filter.min.js" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
+<script src="https://www.mediatek.com/hubfs/hub_generated/module_assets/1/173094700356/1744255127259/module_blog_site_search.min.js" nonce="NZkIL922P12jiGP22tVt6w=="></script>
+
+<script nonce="NZkIL922P12jiGP22tVt6w==">
+
+  $('.tek_talkSwiper').slick({
+
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows:true,
+    prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa-solid fa-chevron-left'></i></button>",
+    nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa-solid fa-chevron-right'></i></button>",
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 1050,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows:false,
+          dots:true,
+          centerMode: true,
+          centerPadding: '30px',
+          infinite: true
+        }}
+    ]
+  });
+
+
+</script>
+
 
     <!--[if lte IE 8]>
     <script charset="utf-8" src="https://js.hsforms.net/forms/v2-legacy.js"></script>
     <![endif]-->
 
-<script data-hs-allowed="true" src="/_hcms/forms/v2.js" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
+<script data-hs-allowed="true" src="/_hcms/forms/v2.js" nonce="NZkIL922P12jiGP22tVt6w=="></script>
 
-    <script data-hs-allowed="true" nonce="j/8xeJvJygkWq2hYsiMKyw==">
+    <script data-hs-allowed="true" nonce="NZkIL922P12jiGP22tVt6w==">
         var options = {
             portalId: '728015',
             formId: 'afd29ec0-e531-4714-97fc-99bddc45f567',
-            formInstanceId: '7226',
+            formInstanceId: '1451',
             
             pageId: '173098658230',
             
@@ -2745,7 +5585,7 @@ var hsVars = hsVars || {}; hsVars['language'] = 'en';
 
 
 <!-- Start of HubSpot Analytics Code -->
-<script type="text/javascript" nonce="j/8xeJvJygkWq2hYsiMKyw==">
+<script type="text/javascript" nonce="NZkIL922P12jiGP22tVt6w==">
 var _hsq = _hsq || [];
 _hsq.push(["setContentType", "listing-page"]);
 _hsq.push(["setCanonicalUrl", "https:\/\/www.mediatek.com\/tek-talk-blogs"]);
@@ -2763,14 +5603,14 @@ _hsq.push(["setContentMetadata", {
 }]);
 </script>
 
-<script type="text/javascript" id="hs-script-loader" async defer src="/hs/scriptloader/728015.js" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
+<script type="text/javascript" id="hs-script-loader" async defer src="/hs/scriptloader/728015.js" nonce="NZkIL922P12jiGP22tVt6w=="></script>
 <!-- End of HubSpot Analytics Code -->
 
 
-<script type="text/javascript" nonce="j/8xeJvJygkWq2hYsiMKyw==">
+<script type="text/javascript" nonce="NZkIL922P12jiGP22tVt6w==">
 var hsVars = {
-    render_id: "4aa8398c-2189-4522-8664-43007f745aaf",
-    ticks: 1787597218225,
+    render_id: "3b9cfae4-723a-4435-8e9a-908e2273bde9",
+    ticks: 1787665058313,
     page_id: 173098658231,
     
     content_group_id: 173098658230,
@@ -2789,13 +5629,18 @@ var hsVars = {
 </script>
 
 
-<script defer src="/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js" nonce="j/8xeJvJygkWq2hYsiMKyw=="></script>
+<script defer src="/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js" nonce="NZkIL922P12jiGP22tVt6w=="></script>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6ZB69WT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-
+<style>
+  .tek_blog.cm-blog-layout .blg_sid_main .blog-index__post .post-title {
+    flex: 1;
+    height: auto;
+  }
+</style>
 
   
 </body></html>
