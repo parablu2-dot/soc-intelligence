@@ -2,6 +2,285 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Coherent Direct D-MIMO Localization",
+    "url": "https://arxiv.org/abs/2608.24880v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "Distributed multiple-input multiple-output (D-MIMO) is envisioned as a key deployment architecture for future wireless systems, offering improved coverage and robustness through spatial separation, and favorable geometry for localization and sensing. Its greatest potential for localization lies in joint coherent processing across distributed antenna panels. However, stringent frequency-synchronization and phase-calibration requirements, together with multimodal likelihood functions, hinder the e",
+    "authors": [
+      "Benjamin J. B. Deutschmann",
+      "Lukas D'Angelo",
+      "Erik Leitinger",
+      "Klaus Witrisal"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Effects of Quantum Noise and Source Blurring on Dark-Field Signal Retrieval in X-ray Speckle-Based Imaging",
+    "url": "https://arxiv.org/abs/2608.24806v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "X-ray speckle-based dark-field imaging offers high sensitivity to sub-pixel structural features, yet its quantitative reliability in clinical and preclinical settings remains constrained by low photon flux and finite focal spot sizes. However, how hardware-induced noise and source blurring propagate through retrieval algorithms to degrade signal integrity is not fully understood. Here, we systematically evaluate algorithm robustness quantified by signal linearity, sensitivity, and bias under pho",
+    "authors": [
+      "Hunwoo Lee",
+      "Jingcheng Yuan",
+      "Mini Das"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Multiscale Modelling of Ferroelectrics using a Physics-Informed Neural Network Driven by Molecular Dynamics Data: Parameter Identification and Field Reconstruction",
+    "url": "https://arxiv.org/abs/2608.24733v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "In multiscale modeling of ferroelectrics, combining atomistic simulation with continuum-scale phase-field models (PFM) remains a fundamental challenge. A key difficulty lies in faithfully capturing discrete atomic-level information within a continuum modeling framework, while accurately representing material behavior at the mesoscale. In this paper, a Physics-Informed Neural Network (PINN) driven by molecular dynamics (MD) data is used. The loss function of the network consists of a supervised t",
+    "authors": [
+      "Xuejian Wang",
+      "Frank Wendler",
+      "Hikaru Auzuma",
+      "Michael Zaiser",
+      "Shuji Ogata",
+      "Ryo Kobayashi",
+      "Lei Zeng",
+      "Xingchen Tan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "An Efficient W-/D-Band Power Amplifier in a 130 nm SiGe BiCMOS Process",
+    "url": "https://arxiv.org/abs/2608.24687v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "This paper presents a wideband power amplifier (PA) designed and implemented in Infineon Technologies' 130-nm SiGe BiCMOS process for upper W-band and lower D-band applications. A complete load-pull simulation methodology is carried out, and a band pass filter (BPF)-based matching strategy is employed for the design of the output and inter-stage matching networks. The fabricated PA prototype achieves a small-signal gain 3-dB bandwidth of 71-133 GHz. Moreover, it maintains a relatively flat gain ",
+    "authors": [
+      "Han Zhou",
+      "Yu Yan",
+      "Haojie Chang",
+      "Herbert Zirath"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "An Ultra-Compact Differential V-Band Power Amplifier Using EDMOS Transistors With 18.1 dBm P1dB and 21% PAE in 22nm FD-SOI CMOS",
+    "url": "https://arxiv.org/abs/2608.24686v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "This paper presents a compact, fully differential, two-stage millimeter-wave (mm-wave) cascode power amplifier (PA) designed and implemented in a 22nm FD-SOI CMOS process (22FDX+). The PA employs the newly introduced extended-drain MOS (EDMOS) device in 22FDX+, together with a carefully engineered device core and transformer baluns. At 50 GHz, the prototype achieves 18.8 dBm saturated output power (PSAT), 18.1 dBm 1-dB compression output power P1dB, and 21% power-added efficiency (PAE) at P1dB. ",
+    "authors": [
+      "Han Zhou",
+      "Torgil Kjellberg",
+      "Haojie Chang",
+      "Christian Fager"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Maia 200: A Software Defined Dataflow System for Large-scale AI Acceleration",
+    "url": "https://arxiv.org/abs/2608.24664v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "We introduce Maia 200, an advanced AI accelerator delivering high performance-10 145 Tflop/s FP4 and 5072 Tflop/s FP8 within a 750W TDP and 7 TB/s HBM bandwidth. Maia exemplifies a new class of Software Defined Locally Accessed Dataflow Architectures (SDLA), which explicitly program dataflow engines to orchestrate highly specialized memories and data movement engines. This approach shifts the focus from today's thread-centric to data-movement-centric architecture, improving efficiency and scalab",
+    "authors": [
+      "Sherry Xu",
+      "Marco Heddes",
+      "Jackson Peng",
+      "Tom Savell",
+      "Monica Tang",
+      "Prashant Ranjan",
+      "Jesse Benson",
+      "Ofer Dekel",
+      "Saurabh Dighe",
+      "Anupama Kurpad",
+      "Artour Levin",
+      "Matthew Mattina",
+      "George Petre",
+      "Cheng Tang",
+      "Yuan Yu",
+      "Li Zhang",
+      "Torsten Hoefler"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Thermal Tuning Overhead in Wafer-Scale Optical Interconnects for LLM MoE Training: A Cross-Layer Analysis and Ferroelectric-Based Mitigation",
+    "url": "https://arxiv.org/abs/2608.24637v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "The rapid scaling of large language models (LLMs), particularly mixture-of-experts (MoE) architectures, has intensified interconnect demands because expert-parallel execution is communication-intensive. Wafer-scale optical interconnects based on dense wavelength-division multiplexing (DWDM) offer a promising path to higher bandwidth; however, conventional microring-resonator (MRR)-based links rely on thermo-optic tuning and are therefore vulnerable to workload-induced thermal fluctuations. In th",
+    "authors": [
+      "Seongwon Yoon",
+      "Pin-Jun Chen",
+      "Shimeng Yu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "A Transformer for Joint Multi-Receiver Pilotless Wi-Fi Decoding",
+    "url": "https://arxiv.org/abs/2608.24584v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "In this paper we discuss the development of a fully pilotless multi-access-point Wi-Fi receiver. This is based on a self-attention Transformer that operates on per-(access point, subcarrier) tokens and outputs bit-wise logits for a standard low-density parity-check decoder. In realistic ray-traced indoor channels, pilotless decoding becomes feasible as soon as some spatial diversity is available. While a single-access point configuration does not attain practical error rates, when compared to an",
+    "authors": [
+      "Xavier Tardy",
+      "Grégoire Lefebvre",
+      "Apostolos Kountouris",
+      "Haïfa Farès",
+      "Amor Nafkha"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "math.NA",
+    "title": "Randomized Block Davidson Eigensolvers for Plane-Wave Density-Functional Theory",
+    "url": "https://arxiv.org/abs/2608.24529v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "Iterative diagonalization is the dominant cost of plane-wave density-functional theory (DFT), with search-space orthogonalization scaling particularly quickly with problem size and the number of target states. We present a randomized block Davidson-type eigensolver that replaces Euclidean orthogonalization with randomized Gram-Schmidt in a sketched inner product, requiring only a single pass over the basis while keeping its conditioning bounded independently of the input vectors. This modificati",
+    "authors": [
+      "Moritz Gubler",
+      "Taejun Park",
+      "Augustin Bussy",
+      "Johannes Laute",
+      "Nicola Marzari",
+      "Iurii Timrov",
+      "Laura Grigori"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Time-Window Noise2Noise: A Self-Supervised Method for Blind Denoising of Vibration and Impact Signals in Mechanical Systems",
+    "url": "https://arxiv.org/abs/2608.24443v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "Vibration and impact measurements in mechanical systems are invariably corrupted by noise, which degrades every quantity derived from them, such as modal parameters and contact forces. Classical filters attenuate noise only when its statistics are known a priori and often fail at very low signal-to-noise ratio (SNR) or under spectrally coloured noise. This work presents Time-Window Noise2Noise (TWN2N), a self-supervised method for blind denoising of signals produced by deterministic mechanical s",
+    "authors": [
+      "Vinicius S. Vianna",
+      "Tiago H. Machado",
+      "Ilmar F. Santos"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "A hidden low-temperature transformation pathway in compositionally complex materials",
+    "url": "https://arxiv.org/abs/2608.24357v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "Most compositionally complex materials (CCMs, frequently referred to as high entropy alloys) are metastable and their attractive properties often belong to kinetically trapped states. However, pathways towards lower-free-energy phase states governing long-term stability, can remain hidden because diffusion-controlled atomic redistribution is too slow to be revealed at experimentally accessible timescales. This blind spot is acute in CCM design: enormous compositional spaces are screened for perf",
+    "authors": [
+      "Yujiao Li",
+      "Elaheh Akbarnejad",
+      "Quentin Bizot",
+      "Aleksander Kostka",
+      "Natalia Pukhareva",
+      "Ridha Zerdoumi",
+      "Alan Savan",
+      "Matous Mrovec",
+      "Ralf Drautz",
+      "Baptiste Gault",
+      "Dierk Raabe",
+      "Alfred Ludwig"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.supr-con",
+    "title": "Josephson effect in bipolar magnetic semiconductors",
+    "url": "https://arxiv.org/abs/2608.24322v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "We theoretically investigate equilibrium currents in a one-dimensional Josephson junction incorporating a bipolar magnetic semiconductor (BMS). We show that the intrinsic exchange splitting of the spin-resolved bands enables purely electrical control of the $0$--$π$ transition through gate-tunable modulation of the BMS chemical potential, eliminating the need for an external magnetic field. This provides a viable route toward electrically tunable $π$-junction behavior and highlights the potentia",
+    "authors": [
+      "Polireddi Naveen",
+      "Abhiram Soori"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Excitonic fingerprints of magnetic configurations and switching in multilayer CrSBr",
+    "url": "https://arxiv.org/abs/2608.24216v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "The coupling between electronic states and magnetism provides a route towards optical readout and control of magnetic information. In the magnetic semiconductor CrSBr, excitons are coupled to magnetic order, making their optical response sensitive to the underlying magnetization. Here, we show that the energy and oscillator strength of bulk and surface excitons provide distinct spectroscopic fingerprints of magnetic configurations and switching pathways. We distinguish domain-wall-mediated magne",
+    "authors": [
+      "Lukas Krelle",
+      "Ryan Tan",
+      "Jakob Conradi",
+      "Priyanka Mondal",
+      "Wenze Lan",
+      "Kseniia Mosina",
+      "Regine von Klitzing",
+      "Zdenek Sofer",
+      "Bernhard Urbaszek"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Depth-Resolved Evolution of Buried Polar Topologies in a PbTiO3/SrTiO3 Superlattice",
+    "url": "https://arxiv.org/abs/2608.24182v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "Polar topologies in complex oxides gives rise to a rich spectrum of emergent functionalities and are fundamentally governed by three-dimensional (3D) atomic structures. However, direct experimental determination of buried 3D polar configurations remains a longstanding challenge because conventional (scanning) transmission electron microscopy ((S)TEM) provides primarily projected structural information with limited depth sensitivity. Here, we combine depth-sectioning low-angle annular dark-field ",
+    "authors": [
+      "Xinxin Hu",
+      "Penghan Lu",
+      "Noa Varela-Dominguez",
+      "Anthony Edgeton",
+      "Chang Beom-Eom",
+      "Francisco Rivadulla",
+      "José Santiso",
+      "Yingzhuo Lun",
+      "Zhihua Sun",
+      "Rafal Dunin-Borkowski",
+      "Gustau Catalan",
+      "Jordi Arbiol"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Receive Diversity for Differential Binary Noise Modulation",
+    "url": "https://arxiv.org/abs/2608.23950v1",
+    "published_date": "2026-08-25",
+    "source": "arXiv",
+    "summary": "Differential binary noise (DBN) modulation encodes information in the polarity transition of a reused noise realization, dispensing channel state information and carrier-phase recovery. This letter proposes single-input multiple-output (SIMO) reception for DBN via post-correlation decision-statistic combining, followed by one zero-threshold decision. The combined statistic is a Hermitian quadratic form in complex Gaussian vectors, yielding an exact conditional bit error probability (BEP) with no",
+    "authors": [
+      "Paulo V. B. Tomé",
+      "André A. dos Anjos",
+      "Hugerles S. Silva",
+      "Daniel C. Araújo",
+      "Robson D. Vieira",
+      "Ertugrul Basar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Large Jahn-Teller shifts and splittings observed in halide perovskite CsPbBr3",
     "url": "https://arxiv.org/abs/2608.23510v1",
@@ -265,6 +544,47 @@
       "Huiling Yang",
       "Zhanwei Wang",
       "Kaibin Huang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "Differential Learning for Robust Prediction of Thermal Stability with Application to Energetic Materials",
+    "url": "https://arxiv.org/abs/2608.23874v1",
+    "published_date": "2026-08-24",
+    "source": "arXiv",
+    "summary": "Predicting thermal stability during handling and storage is essential for the design of safe and reliable energetic materials. However, experimental measurements vary significantly across laboratories due to differences in protocols and analysis methods, making it difficult to train reliable predictive models. We address this challenge through differential learning. Rather than predicting absolute decomposition temperatures, we instead train message passing neural networks to predict relative di",
+    "authors": [
+      "Megan C. Davis",
+      "R. Seaton Ullberg",
+      "Jeremy N. Schroeder",
+      "Andrew H. Salij",
+      "Marc J. Cawkwell",
+      "Christopher J. Snyder",
+      "Ivana Matanovic",
+      "Wilton J. M. Kort-Kamp"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Spectrally Programmable Spin-Polarized Photocurrents in WSe$_2$-NiPS$_3$ Magnetic van der Waals Heterostructures",
+    "url": "https://arxiv.org/abs/2608.23832v1",
+    "published_date": "2026-08-24",
+    "source": "arXiv",
+    "summary": "Efficient generation and control of spin-polarized currents in semiconductors remain central challenges for spin-based electronics, particularly due to impedance mismatch and the reliance on magnetic fields or ferromagnetic contacts. Here, we introduce a materials platform for spectrally programmable spin transport based on a van der Waals heterostructure combining the antiferromagnetic semiconductor NiPS$_3$ with WSe$_2$. In a p-n diode architecture, circularly polarized excitation produces pro",
+    "authors": [
+      "Rajesh Kumar Yadav",
+      "Michal Poplinger",
+      "Adi Levi",
+      "Adi Harchol",
+      "Nirman Chakraborty",
+      "Thomas Brumme",
+      "Thomas Heine",
+      "Efrat Lifshitz",
+      "Doron Naveh"
     ]
   },
   {

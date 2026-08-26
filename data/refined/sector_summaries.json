@@ -1,124 +1,68 @@
 {
-  "date": "2026-08-25",
-  "generated_at": "2026-08-25T20:39:13.829611+00:00",
+  "date": "2026-08-26",
+  "generated_at": "2026-08-26T22:55:21.193097+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-08-25",
-      "item_count": 1,
-      "generated_at": "2026-08-25T20:39:13.828580+00:00",
+      "date": "2026-08-26",
+      "item_count": 2,
+      "generated_at": "2026-08-26T22:55:21.192122+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Samsung Exynos 2700이 내부 벤치마크에서 Snapdragon 8 Elite Gen 6을 초과 성능을 보였다.",
+          "executive_summary": "Qualcomm unveiled a 5GHz Oryon CPU for its next-generation flagship Snapdragon platform. Apple launched its M6 chip on TSMC's 2nm process with 30% AI GPU compute boost versus M5, while the M5 Ultra combines four dies.",
           "key_facts": [
-            "Samsung Exynos 2700",
-            "Snapdragon 8 Elite Gen 6"
+            "Qualcomm: 5GHz Oryon CPU for next-gen Snapdragon",
+            "Apple M6: 2nm process (TSMC), 30% AI GPU compute boost vs M5",
+            "Apple M5 Ultra: Multi-die configuration"
           ],
           "implications": [
             {
-              "keyword": "Mobile SoC 경쟁 심화",
-              "text": "Samsung이 flagship 모바일 프로세서에서 Qualcomm과의 성능 격차를 좁히며 시장 입지 강화"
+              "keyword": "Process Leadership",
+              "text": "2nm adoption in mobile flagship SoCs signals acceleration of advanced node penetration from foundry leaders."
             },
             {
-              "keyword": "내부 벤치마크 신뢰도",
-              "text": "유출된 내부 테스트 결과는 실제 시장 성능과 차이 가능성 있음"
+              "keyword": "Performance Scaling",
+              "text": "CPU frequency (5GHz) and GPU compute improvements (30%) represent continued architectural optimization at node maturity."
             }
           ],
-          "counterpoint": "벤치마크 결과는 아직 검증되지 않은 누출 정보로, 공식 출시 후 독립 테스트 필요."
+          "counterpoint": "Headline data lacks detail on M5 Ultra die count, yield, or cost implications; Oryon performance specifications versus competing platforms unavailable."
         },
         "en": {
-          "executive_summary": "Samsung Exynos 2700 showed superior performance to Snapdragon 8 Elite Gen 6 in internal benchmarks.",
+          "executive_summary": "Qualcomm unveiled a 5GHz Oryon CPU for its next-generation flagship Snapdragon platform. Apple launched its M6 chip on TSMC's 2nm process with 30% AI GPU compute boost versus M5, while the M5 Ultra combines four dies.",
           "key_facts": [
-            "Samsung Exynos 2700",
-            "Snapdragon 8 Elite Gen 6"
+            "Qualcomm: 5GHz Oryon CPU for next-gen Snapdragon",
+            "Apple M6: 2nm process (TSMC), 30% AI GPU compute boost vs M5",
+            "Apple M5 Ultra: Multi-die configuration"
           ],
           "implications": [
             {
-              "keyword": "Intensifying Mobile SoC Competition",
-              "text": "Samsung narrows the performance gap with Qualcomm in flagship mobile processors, strengthening its market position"
+              "keyword": "Process Leadership",
+              "text": "2nm adoption in mobile flagship SoCs signals acceleration of advanced node penetration from foundry leaders."
             },
             {
-              "keyword": "Credibility of Internal Benchmarks",
-              "text": "Leaked internal test results may differ from actual market performance"
+              "keyword": "Performance Scaling",
+              "text": "CPU frequency (5GHz) and GPU compute improvements (30%) represent continued architectural optimization at node maturity."
             }
           ],
-          "counterpoint": "Benchmark results are unverified leaked information, requiring independent testing after official launch."
+          "counterpoint": "Headline data lacks detail on M5 Ultra die count, yield, or cost implications; Oryon performance specifications versus competing platforms unavailable."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-08-25",
-      "item_count": 20,
-      "generated_at": "2026-08-25T20:39:13.828580+00:00",
+      "date": "2026-08-26",
+      "item_count": 7,
+      "generated_at": "2026-08-26T22:55:21.192122+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "AI 슈퍼사이클 수요에 따라 반도체 대형사들이 채용 확대 중이며, SK하이닉스는 2026년 신입 채용에서 학력 제한을 완전 폐지하고 역량 중심 선발로 전환했다. SK하이닉스는 전국 채용설명회와 반나절 심층면접을 통해 AI 시대 인재 확보에 나섰으며, UNIST와 협력해 반도체 인재 양성을 강화하고 있다.",
-          "key_facts": [
-            "SK하이닉스 2026년 신입사원 채용 학력 제한 전면 철폐",
-            "SK하이닉스 전국 4개 거점 채용설명회 참석 4000여명",
-            "SK하이닉스 반나절 면접 도입",
-            "Samsung·SK하이닉스 UNIST 협력 인재 양성",
-            "Tesla AI chip executive가 DencityAI로 이직",
-            "Intel Eric Demers 영입으로 그래픽스·AI 전략 강화"
-          ],
-          "implications": [
-            {
-              "keyword": "인재 확보 경쟁 심화",
-              "text": "AI 반도체 수요 급증으로 대형 업체들의 공격적 채용 확대, 학력 제한 폐지 등 혁신적 인사 제도 도입"
-            },
-            {
-              "keyword": "능력 중심 선발 체계",
-              "text": "SK하이닉스의 학력 제한 폐지는 산업 내 채용 관행 변화 신호로, 타사도 추진 가능성 높음"
-            },
-            {
-              "keyword": "AI 시대 인재 수급",
-              "text": "대학과의 협력 강화로 중장기 인재 파이프라인 구축, 산학협력 모델 확산 예상"
-            },
-            {
-              "keyword": "HPC/데이터센터 경영진 이동",
-              "text": "Tesla와 Intel의 AI 칩 인력 확보 경쟁으로 업계 내 리더십 재편 진행 중"
-            }
-          ],
-          "counterpoint": "채용 확대 공시에도 불구하고 실제 채용 규모와 시기에 대한 구체적 수치 부재."
-        },
-        "en": {
-          "executive_summary": "In response to AI supercycle demand, major semiconductor companies are expanding hiring, and SK Hynix has completely eliminated educational background restrictions in its 2026 new graduate recruitment and switched to competency-based selection. SK Hynix is securing talent for the AI era through nationwide recruitment briefings and half-day in-depth interviews, and is strengthening semiconductor talent development through collaboration with UNIST.",
-          "key_facts": [
-            "SK Hynix completely eliminates educational background restrictions in 2026 new graduate recruitment",
-            "Around 4,000 attendees at SK Hynix nationwide recruitment briefings at 4 locations",
-            "SK Hynix introduces half-day interview format",
-            "Samsung and SK Hynix collaborate with UNIST on talent development",
-            "Tesla AI chip executive joins DencityAI",
-            "Intel recruits Eric Demers to strengthen graphics and AI strategy"
-          ],
-          "implications": [
-            {
-              "keyword": "Intensifying Talent Competition",
-              "text": "Surging AI semiconductor demand leads major players to aggressively expand hiring and introduce innovative HR practices such as eliminating educational background restrictions"
-            },
-            {
-              "keyword": "Competency-Based Selection System",
-              "text": "SK Hynix's elimination of educational background restrictions signals a change in industry recruitment practices, with high likelihood of other companies following suit"
-            },
-            {
-              "keyword": "Talent Supply in the AI Era",
-              "text": "Strengthened university collaboration builds mid-to-long-term talent pipeline, with industry-academia partnership models expected to expand"
-            },
-            {
-              "keyword": "HPC/Datacenter Leadership Movement",
-              "text": "Competition for AI chip talent between Tesla and Intel is driving ongoing reshuffling of industry leadership"
-            }
-          ],
-          "counterpoint": "Despite recruitment expansion announcements, specific figures on actual hiring scale and timing are absent."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-25",
-      "item_count": 28,
-      "generated_at": "2026-08-25T20:39:13.828580+00:00",
+      "date": "2026-08-26",
+      "item_count": 30,
+      "generated_at": "2026-08-26T22:55:21.192122+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -126,9 +70,9 @@
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-25",
+      "date": "2026-08-26",
       "item_count": 20,
-      "generated_at": "2026-08-25T20:39:13.828580+00:00",
+      "generated_at": "2026-08-26T22:55:21.192122+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -136,9 +80,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-25",
-      "item_count": 24,
-      "generated_at": "2026-08-25T20:39:13.828580+00:00",
+      "date": "2026-08-26",
+      "item_count": 20,
+      "generated_at": "2026-08-26T22:55:21.192122+00:00",
       "content": {
         "ko": {},
         "en": {}
