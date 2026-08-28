@@ -3,6 +3,293 @@
     "lens": "tech",
     "source_class": "paper",
     "category": "eess.SP",
+    "title": "Property-Specific Recoverability from Contact PPG to Camera rPPG under Heterogeneous Observation Conditions",
+    "url": "https://arxiv.org/abs/2608.27392v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "Camera-derived remote photoplethysmography (rPPG) is commonly validated through endpoint accuracy, but endpoint performance does not establish whether other physiological properties of source contact photoplethysmography (PPG) remain preserved recording by recording. We evaluated property-specific PPG-to-rPPG recoverability on 655 recordings from the Multi-Domain Mobile Video Physiology Dataset using CHROM as a fixed camera-rPPG observation pathway. The pathway reproduced the published CHROM cor",
+    "authors": [
+      "Timothy Oladunni",
+      "Farouk Ganiyu-Adewumi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Scalable, Simple, and Versatile Encapsulation of 2D Materials and Devices",
+    "url": "https://arxiv.org/abs/2608.27383v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "Air-sensitive 2D materials present a fundamental challenge for device integration. Encapsulation is often required to preserve intrinsic properties, yet conventional protection strategies often fail for thicker layers and complicate fabrication. Here, we demonstrate that electron-beam (e-beam) evaporated aluminum oxide ($\\mathrm{AlO}_x$) serves as both an effective encapsulation layer and a platform for direct device fabrication. Unlike transfer-based approaches, this scalable method is compatib",
+    "authors": [
+      "Gabriel Natale",
+      "Uma Chirkova",
+      "Flávio Henriques Feres",
+      "Ran Jing",
+      "Michael Geiwitz",
+      "Wenyao Liu",
+      "Emma Low",
+      "Josh Leeman",
+      "Kyung-Mo Kim",
+      "Leslie M. Schoop",
+      "Mohamed Shehabeldin",
+      "Qiong Ma",
+      "Michael A. Susner",
+      "Pijush Bhattacharya",
+      "Genda Gu",
+      "Katherine Lee",
+      "James Hone",
+      "Mengkun Liu",
+      "Kenneth S. Burch"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Temperature dependence of the charge density from first principles: application to the (222) forbidden reflection in silicon",
+    "url": "https://arxiv.org/abs/2608.27361v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "Forbidden reflections (FRs) in X-ray diffraction have inherently weak intensity and have long been studied, in particular in semiconductors like silicon. They serve as sensitive probes of symmetry breaking, local strain, impurities, and weak charge redistribution. Despite extensive experimental work, the theory of their temperature dependence has typically relied on simplified models. While atomic Debye-Waller factors work well on allowed reflections, their applicability to the valence charge be",
+    "authors": [
+      "Jean Paul Nery",
+      "Raveena Gupta",
+      "Olle Hellman",
+      "Philip B. Allen",
+      "Matthieu J. Verstraete"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Grain Boundary Phase Transitions Enable Diffusionless Climb of Disconnections",
+    "url": "https://arxiv.org/abs/2608.27314v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "Dislocation-grain boundary (GB) interactions govern the mechanical response of polycrystalline materials by controlling dislocation absorption, transmission, and interfacial plasticity. While disconnection climb is conventionally understood to require the absorption or emission of point defects supplied through long range bulk diffusion, GBs possess intrinsic configurational degrees of freedom associated with their atomic structure, or microstate, that may provide an alternative mechanism. Here,",
+    "authors": [
+      "Md Sharier Nazim",
+      "Giacomo Po",
+      "Nikhil Chandra Admal"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "3D Cloud Component Analysis of Atomic Structures",
+    "url": "https://arxiv.org/abs/2608.27304v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "We present a method for decomposing atomic structures into physically meaningful components by converting discrete atomic coordinates into continuous three-dimensional density fields. Each element is represented by a Gaussian-smeared density map with values ranging from 0 to 1, computed efficiently through a bin-then-blur approach with periodic boundary conditions. The sum of all element densities, truncated at unity, defines the material region; its complement defines the vacuum. Every voxel is",
+    "authors": [
+      "Pai Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CV",
+    "title": "Vision-centric generative AI models: A software-hardware perspective",
+    "url": "https://arxiv.org/abs/2608.27199v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "Vision generative artificial intelligence (AI) has emerged as one of the most rapidly advancing areas of deep learning. The explosion of multimodal models has made them widely associated with text-to-image applications running on large datacentres. However, vision generative models are equally needed in applications that operate under strict hardware constraints at the edge, including autonomous vehicles, agricultural sensors, and mobile devices. In this Perspective, we argue that progress in vi",
+    "authors": [
+      "Eleni Tselepi",
+      "Cristian Sestito",
+      "Shady Agwa",
+      "Themis Prodromakis"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "LLMs in Digital EDA: A perspective on shifting roles from Generation to Orchestration",
+    "url": "https://arxiv.org/abs/2608.27184v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "Electronic design automation (EDA) has advanced engineering productivity through successive generations of tooling that progressively automate synthesis, optimisation, and verification. Large language models (LLMs) extend this trajectory by enabling direct translation from design intent to hardware implementations. In most of the EDA literature, LLM-based solutions are typically assisting siloed design stages or tasks, however this obscured the drivers by which capability emerges and systems sca",
+    "authors": [
+      "Matthew Youngman",
+      "Cristian Sestito",
+      "Themis Prodromakis"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "ElemCo.jl: A Julia package for electron-correlation methods",
+    "url": "https://arxiv.org/abs/2608.27177v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "We present ElemCo.jl, an open-source Julia package for molecular electronic structure and properties calculations with a particular emphasis on Coupled Cluster and Distinguishable Cluster methods. The package provides a high-level, macro-based user interface which makes routine calculations accessible to users with no prior Julia experience. A newly developed visualizer, JLmol, assists in the graphical preparation of ElemCo.jl input files and displays results such as molecular orbitals. ElemCo.j",
+    "authors": [
+      "Daniel Kats",
+      "Charlotte Rickert",
+      "Thomas Schraivogel",
+      "Kristoffer Simula",
+      "Denis Usvyat",
+      "Fangcheng Wu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Over-The-Air Extreme Learning Machines with Nonlinear Stacked Intelligent Metasurfaces",
+    "url": "https://arxiv.org/abs/2608.27137v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "The recently envisioned goal-oriented communications paradigm requires machine learning inference to be performed directly on wirelessly transferred data. This paper presents an eXtremely Large (XL) Multiple-Input Multiple-Output (MIMO) system that operates as an Extreme Learning Machine (ELM) to execute Over-The-Air (OTA) binary classification. To reduce hardware complexity, the receiver is equipped with cascaded metasurfaces terminating in a single radio-frequency chain. A front metasurface la",
+    "authors": [
+      "Kyriakos Stylianopoulos",
+      "Mattia Fabiani",
+      "Giulia Torcolacci",
+      "Davide Dardari",
+      "George C. Alexandropoulos"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Atomic-scale composition of the ternary III-V semiconductor (Al,Ga)Sb visualized by cross-sectional scanning tunneling microscopy",
+    "url": "https://arxiv.org/abs/2608.27013v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "Cross-sectional scanning tunneling microscopy at 5 K is used to investigate cation mixing in (Al,Ga)Sb layers grown by molecular beam epitaxy, via direct atom counting at the (1-10) and (110) cleavage planes. Electronic contrast between Al and Ga surface cations enables statistical analysis of the metal sublattice along the non-equivalent <110> directions within the zincblende (001) surface and along the [001] growth direction. The cation distribution is found to be random both along the growth ",
+    "authors": [
+      "Hitesh Kumar",
+      "Vladimir Kaganer",
+      "Zijin Lei",
+      "Rüdiger Schott",
+      "Werner Wegscheider",
+      "Stefan Fölsch"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Magnon-induced phononic Chern insulator",
+    "url": "https://arxiv.org/abs/2608.27011v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "High-frequency artificial phononic crystals offer a low-loss platform compatible with on-chip integration, yet realizing Chern phononic phases at GHz frequencies remains challenging. Here, we propose a magnon-induced phononic Chern insulator in a honeycomb phononic crystal hybridized with ferromagnetic islands at the hexagon centers. A circularly polarized Kittel mode couples to the surrounding phonons with a phase winding, which breaks time-reversal symmetry and opens a full Chern gap. In the l",
+    "authors": [
+      "Rui-Chang Shen",
+      "Yihao Yang",
+      "Haoran Xue"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Topology-Controlled Phonon Dielectric Response Beyond Density Scaling in Metal-Organic Frameworks",
+    "url": "https://arxiv.org/abs/2608.27008v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "Effective-medium theory treats material porosity as passive dilution. Using ab initio density functional theory and high-resolution synchrotron terahertz (THz) spectroscopy on isochemical zeolitic-imidazolate frameworks, we show that while the electronic permittivity obeys Clausius-Mossotti density scaling, the phonon contribution violates the conventional density scaling rules. Identical Born charges rule out the role of local chemistry. Instead, the framework connectivity localizes the THz res",
+    "authors": [
+      "Debayan Mondal",
+      "Jiahao Ye",
+      "Lorenzo Donà",
+      "Jin-Chong Tan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Hall effect in viscous flows of two-dimensional electrons in samples with edges of arbitrary roughness",
+    "url": "https://arxiv.org/abs/2608.26979v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "In ultra-clean conductors, fast inter-particle collisions can lead to the formation of a viscous electron fluid and realization of the hydrodynamic transport regime. Here we develop a theory of hydrodynamic magnetotransport of two-dimensional (2D) electrons in samples with low densities of defects and edges of arbitrary roughness. Within our model the roughness is described by a single parameter with the dimension of speed in the boundary conditions on sample edges. The electron-fluid flow profi",
+    "authors": [
+      "A. V. Gert",
+      "P. S. Alekseev"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Scalable conformal electronics based on roll-to-roll exfoliated van der Waals semiconductors",
+    "url": "https://arxiv.org/abs/2608.26968v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "Integrating electronic devices onto surfaces with complex topography such as skin, textiles, and biological tissues requires fabrication strategies that combine mechanical conformability with high electronic performance and scalable manufacturing. While two-dimensional (2D) semiconductors are promising materials for such applications, their integration into conformal electronic systems remains challenging because scalable liquid-phase processing typically yields films with limited electronic per",
+    "authors": [
+      "Yigit Sozen",
+      "Esteban Zamora-Amo",
+      "Juan J. Riquelme",
+      "Andres Castellanos-Gomez"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Decoupled domain-texture switching from magnetic easy axis in kagome ferromagnet EuTi3Bi4",
+    "url": "https://arxiv.org/abs/2608.26954v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "Magnetic anisotropy defines the easy axis of a magnetic material and governs the spatial arrangement of its domains. To date, anisotropy engineering has focused on reorienting the easy axis or tuning the anisotropy energy, both of which demand substantial energy input. Here, we demonstrate that magnetic domain textures can be switched without reorienting the easy axis, as observed in a kagome ferromagnet EuTi3Bi4 crystal. Using low-temperature magnetic force microscopy, we observe that the prefe",
+    "authors": [
+      "Yunhao Wang",
+      "Shiyu Zhu",
+      "Guohao Xi",
+      "Runnong Zhou",
+      "Ruwen Wang",
+      "Jianfeng Guo",
+      "Jiali Liu",
+      "Zichao Chen",
+      "Kailin Xu",
+      "Cong Wang",
+      "Chengmin Shen",
+      "Jiang Xiao",
+      "Haitao Yang",
+      "Xiaoli Dong",
+      "Wei Ji",
+      "Hong-Jun Gao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "The Effect of Geometry on Thermodynamic Response",
+    "url": "https://arxiv.org/abs/2608.26898v1",
+    "published_date": "2026-08-27",
+    "source": "arXiv",
+    "summary": "At the nano- and microscale, various patterns influence and shape thermal and optical response, making them essential for the survival of various biological species. In addition, controlling thermal radiation is vital for a broad range of applications, such as thermal management, spectroscopy, optoelectronics, and energy conversion technologies. For this reason, there is strong pressure to elucidate the physics of thermal radiation at the nanoscale. In this article, we provide evidence that comp",
+    "authors": [
+      "Bojana Bokic",
+      "Sébastien R. Mouchet",
+      "Biljana Stankov",
+      "Sanja Ostojic",
+      "Nicolas Roy",
+      "Darko Vasiljevic",
+      "Yin Chang",
+      "Marija Radmilovic-Radjenovic",
+      "Branislav Radjenovic",
+      "Thierry Verbiest",
+      "Mohamed Hatifi",
+      "Branko Kolaric"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
     "title": "Coherent Direct D-MIMO Localization",
     "url": "https://arxiv.org/abs/2608.24880v1",
     "published_date": "2026-08-25",

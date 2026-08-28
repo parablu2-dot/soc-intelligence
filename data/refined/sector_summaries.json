@@ -1,88 +1,254 @@
 {
-  "date": "2026-08-26",
-  "generated_at": "2026-08-26T22:55:21.193097+00:00",
+  "date": "2026-08-28",
+  "generated_at": "2026-08-28T04:15:14.352441+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-08-26",
-      "item_count": 2,
-      "generated_at": "2026-08-26T22:55:21.192122+00:00",
+      "date": "2026-08-28",
+      "item_count": 4,
+      "generated_at": "2026-08-28T04:15:14.351499+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Qualcomm unveiled a 5GHz Oryon CPU for its next-generation flagship Snapdragon platform. Apple launched its M6 chip on TSMC's 2nm process with 30% AI GPU compute boost versus M5, while the M5 Ultra combines four dies.",
+          "executive_summary": "Qualcomm unveiled its fourth-generation Oryon CPU as the first mobile chip reaching 5GHz, positioning its upcoming Snapdragon as the fastest in its class. Xiaomi introduced the XRING O2 chip, establishing a third competitor alongside Snapdragon and MediaTek in the mobile processor market.",
           "key_facts": [
-            "Qualcomm: 5GHz Oryon CPU for next-gen Snapdragon",
-            "Apple M6: 2nm process (TSMC), 30% AI GPU compute boost vs M5",
-            "Apple M5 Ultra: Multi-die configuration"
+            "Qualcomm fourth-generation Oryon CPU reaches 5GHz",
+            "Qualcomm Snapdragon positioning as fastest in class",
+            "Xiaomi XRING O2 chip revealed"
           ],
           "implications": [
             {
-              "keyword": "Process Leadership",
-              "text": "2nm adoption in mobile flagship SoCs signals acceleration of advanced node penetration from foundry leaders."
+              "keyword": "Performance race",
+              "text": "5GHz achievement marks new performance threshold in mobile SoCs; intensifying competition for flagship performance leadership"
             },
             {
-              "keyword": "Performance Scaling",
-              "text": "CPU frequency (5GHz) and GPU compute improvements (30%) represent continued architectural optimization at node maturity."
+              "keyword": "Market fragmentation",
+              "text": "Xiaomi's in-house chip design reduces dependence on external SoC vendors and signals vertical integration trend among smartphone OEMs"
             }
           ],
-          "counterpoint": "Headline data lacks detail on M5 Ultra die count, yield, or cost implications; Oryon performance specifications versus competing platforms unavailable."
+          "counterpoint": "Actual performance gains from higher clock speeds depend on thermal management and real-world workload efficiency, not just frequency metrics."
         },
         "en": {
-          "executive_summary": "Qualcomm unveiled a 5GHz Oryon CPU for its next-generation flagship Snapdragon platform. Apple launched its M6 chip on TSMC's 2nm process with 30% AI GPU compute boost versus M5, while the M5 Ultra combines four dies.",
+          "executive_summary": "Qualcomm unveiled its fourth-generation Oryon CPU as the first mobile chip reaching 5GHz, positioning its upcoming Snapdragon as the fastest in its class. Xiaomi introduced the XRING O2 chip, establishing a third competitor alongside Snapdragon and MediaTek in the mobile processor market.",
           "key_facts": [
-            "Qualcomm: 5GHz Oryon CPU for next-gen Snapdragon",
-            "Apple M6: 2nm process (TSMC), 30% AI GPU compute boost vs M5",
-            "Apple M5 Ultra: Multi-die configuration"
+            "Qualcomm fourth-generation Oryon CPU reaches 5GHz",
+            "Qualcomm Snapdragon positioning as fastest in class",
+            "Xiaomi XRING O2 chip revealed"
           ],
           "implications": [
             {
-              "keyword": "Process Leadership",
-              "text": "2nm adoption in mobile flagship SoCs signals acceleration of advanced node penetration from foundry leaders."
+              "keyword": "Performance race",
+              "text": "5GHz achievement marks new performance threshold in mobile SoCs; intensifying competition for flagship performance leadership"
             },
             {
-              "keyword": "Performance Scaling",
-              "text": "CPU frequency (5GHz) and GPU compute improvements (30%) represent continued architectural optimization at node maturity."
+              "keyword": "Market fragmentation",
+              "text": "Xiaomi's in-house chip design reduces dependence on external SoC vendors and signals vertical integration trend among smartphone OEMs"
             }
           ],
-          "counterpoint": "Headline data lacks detail on M5 Ultra die count, yield, or cost implications; Oryon performance specifications versus competing platforms unavailable."
+          "counterpoint": "Actual performance gains from higher clock speeds depend on thermal management and real-world workload efficiency, not just frequency metrics."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-08-26",
-      "item_count": 7,
-      "generated_at": "2026-08-26T22:55:21.192122+00:00",
+      "date": "2026-08-28",
+      "item_count": 18,
+      "generated_at": "2026-08-28T04:15:14.351499+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "NVIDIA shipped Vera, its first CPU built for agents, scaling across the AI ecosystem. SK Hynix aggressively recruits talent for HBM design and US capacity expansion, overhauling hiring to prioritize problem-solving ability over credentials; the company is breaking ground on its US HBM fab while signaling willingness to invest further where power and talent exist.",
+          "key_facts": [
+            "NVIDIA Vera CPU shipping at scale",
+            "SK Hynix broke ground on US HBM factory",
+            "SK Hynix eliminated educational credential requirements in hiring",
+            "SK Hynix recruiting for HBM design and US-based roles",
+            "Lucid hiring supply chain and mechanical engineering staff in Taiwan"
+          ],
+          "implications": [
+            {
+              "keyword": "Talent acquisition urgency",
+              "text": "SK Hynix's radical hiring pivot—from credential-based to half-day deep interviews emphasizing problem-solving—reflects acute demand for AI and memory design engineers; 4,000+ applicants at regional info sessions show strong talent attraction"
+            },
+            {
+              "keyword": "Capacity expansion strategy",
+              "text": "SK Hynix's willingness to invest further in US locations signals confidence in long-term AI memory demand and potential hedging against supply chain risk through geographic diversification"
+            },
+            {
+              "keyword": "Agent-centric compute",
+              "text": "NVIDIA's Vera CPU launch targets emerging agent workloads, expanding its ecosystem beyond traditional HPC and datacenter GPU markets"
+            }
+          ],
+          "counterpoint": "SK Hynix's ambitious US HBM timeline (mass production by 2028) and supply-through-2030 guidance assume sustained AI spending and no major demand disruptions."
+        },
+        "en": {
+          "executive_summary": "NVIDIA shipped Vera, its first CPU built for agents, scaling across the AI ecosystem. SK Hynix aggressively recruits talent for HBM design and US capacity expansion, overhauling hiring to prioritize problem-solving ability over credentials; the company is breaking ground on its US HBM fab while signaling willingness to invest further where power and talent exist.",
+          "key_facts": [
+            "NVIDIA Vera CPU shipping at scale",
+            "SK Hynix broke ground on US HBM factory",
+            "SK Hynix eliminated educational credential requirements in hiring",
+            "SK Hynix recruiting for HBM design and US-based roles",
+            "Lucid hiring supply chain and mechanical engineering staff in Taiwan"
+          ],
+          "implications": [
+            {
+              "keyword": "Talent acquisition urgency",
+              "text": "SK Hynix's radical hiring pivot—from credential-based to half-day deep interviews emphasizing problem-solving—reflects acute demand for AI and memory design engineers; 4,000+ applicants at regional info sessions show strong talent attraction"
+            },
+            {
+              "keyword": "Capacity expansion strategy",
+              "text": "SK Hynix's willingness to invest further in US locations signals confidence in long-term AI memory demand and potential hedging against supply chain risk through geographic diversification"
+            },
+            {
+              "keyword": "Agent-centric compute",
+              "text": "NVIDIA's Vera CPU launch targets emerging agent workloads, expanding its ecosystem beyond traditional HPC and datacenter GPU markets"
+            }
+          ],
+          "counterpoint": "SK Hynix's ambitious US HBM timeline (mass production by 2028) and supply-through-2030 guidance assume sustained AI spending and no major demand disruptions."
+        }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-26",
-      "item_count": 30,
-      "generated_at": "2026-08-26T22:55:21.192122+00:00",
+      "date": "2026-08-28",
+      "item_count": 22,
+      "generated_at": "2026-08-28T04:15:14.351499+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "OpenAI's Jalapeño ASIC achieved efficiency and throughput gains over NVIDIA's Blackwell in benchmarks and was developed end-to-end using AI-driven design methods. Anthropic is in talks with MatX to accelerate chip design, while Google secured a $12.2 billion chip supply deal with Marvell, signaling major foundational AI model providers now designing or sourcing custom silicon at scale.",
+          "key_facts": [
+            "OpenAI Jalapeño ASIC benchmarks show efficiency vs. Blackwell",
+            "OpenAI Jalapeño designed end-to-end by AI",
+            "Architect Labs built AI-designed chip in two weeks",
+            "Anthropic in talks with MatX on chip design acceleration",
+            "Google $12.2 billion chip deal with Marvell",
+            "Keysight EDA reduced ASIC design cycles by over 50%"
+          ],
+          "implications": [
+            {
+              "keyword": "AI-driven chip design",
+              "text": "Multiple vendors (OpenAI, Architect Labs) now demonstrating AI-designed chips in weeks rather than months, compressing traditional ASIC design cycles and lowering barriers to custom silicon entry"
+            },
+            {
+              "keyword": "Custom silicon economics",
+              "text": "Google's $12.2B Marvell deal and OpenAI/Anthropic design initiatives show hyperscalers and AI labs moving rapidly toward proprietary silicon to reduce costs and optimize for inference workloads"
+            },
+            {
+              "keyword": "GPU efficiency pressure",
+              "text": "Jalapeño's published efficiency gains relative to Blackwell highlight that OpenAI sees advantage in clean-sheet general-purpose AI accelerator design over GPU adaptation for inference"
+            },
+            {
+              "keyword": "Cost optimization via NVIDIA MPS",
+              "text": "75% GPU infrastructure reduction achievable with NVIDIA MPS on ASR inference demonstrates continued optimization of GPU utilization for cost-sensitive inference at scale"
+            }
+          ],
+          "counterpoint": "OpenAI and Anthropic custom silicon projects remain early-stage; production volume, yield, and cost competitiveness versus mature GPU offerings remain unproven."
+        },
+        "en": {
+          "executive_summary": "OpenAI's Jalapeño ASIC achieved efficiency and throughput gains over NVIDIA's Blackwell in benchmarks and was developed end-to-end using AI-driven design methods. Anthropic is in talks with MatX to accelerate chip design, while Google secured a $12.2 billion chip supply deal with Marvell, signaling major foundational AI model providers now designing or sourcing custom silicon at scale.",
+          "key_facts": [
+            "OpenAI Jalapeño ASIC benchmarks show efficiency vs. Blackwell",
+            "OpenAI Jalapeño designed end-to-end by AI",
+            "Architect Labs built AI-designed chip in two weeks",
+            "Anthropic in talks with MatX on chip design acceleration",
+            "Google $12.2 billion chip deal with Marvell",
+            "Keysight EDA reduced ASIC design cycles by over 50%"
+          ],
+          "implications": [
+            {
+              "keyword": "AI-driven chip design",
+              "text": "Multiple vendors (OpenAI, Architect Labs) now demonstrating AI-designed chips in weeks rather than months, compressing traditional ASIC design cycles and lowering barriers to custom silicon entry"
+            },
+            {
+              "keyword": "Custom silicon economics",
+              "text": "Google's $12.2B Marvell deal and OpenAI/Anthropic design initiatives show hyperscalers and AI labs moving rapidly toward proprietary silicon to reduce costs and optimize for inference workloads"
+            },
+            {
+              "keyword": "GPU efficiency pressure",
+              "text": "Jalapeño's published efficiency gains relative to Blackwell highlight that OpenAI sees advantage in clean-sheet general-purpose AI accelerator design over GPU adaptation for inference"
+            },
+            {
+              "keyword": "Cost optimization via NVIDIA MPS",
+              "text": "75% GPU infrastructure reduction achievable with NVIDIA MPS on ASR inference demonstrates continued optimization of GPU utilization for cost-sensitive inference at scale"
+            }
+          ],
+          "counterpoint": "OpenAI and Anthropic custom silicon projects remain early-stage; production volume, yield, and cost competitiveness versus mature GPU offerings remain unproven."
+        }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-26",
-      "item_count": 20,
-      "generated_at": "2026-08-26T22:55:21.192122+00:00",
+      "date": "2026-08-28",
+      "item_count": 9,
+      "generated_at": "2026-08-28T04:15:14.351499+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "TSMC maintains foundry leadership while advanced packaging competence becomes a critical differentiator; NVIDIA's supply commitments reached $279B amid memory cost surges and new bandwidth gains. SK Hynix broke ground on Indiana HBM packaging, targeting 3Q29 HBM4E and signaling tight supply through 2030. Capacity pressures mount with VIS Fab 3 fire impacting 8-inch nodes and potential new cost/bandwidth trade-offs in advanced packaging alternatives.",
+          "key_facts": [
+            "TSMC tops foundry rankings",
+            "NVIDIA supply commitments $279B",
+            "NVIDIA NVHBM bandwidth increase 30%",
+            "SK Hynix HBM4E target 3Q29",
+            "Kioxia plans JPY 1T+ NAND fab for 2029 or later",
+            "SK Hynix supply remains tight through 2030",
+            "VIS Fab 3 fire pressures 8-inch capacity"
+          ],
+          "implications": [
+            {
+              "keyword": "Capacity constraints extend",
+              "text": "SK Hynix CEO guidance on tight HBM supply through 2030, combined with VIS fab disruptions, indicates sustained supply/demand imbalance favoring memory suppliers"
+            },
+            {
+              "keyword": "Foundry competition intensifies",
+              "text": "TSMC leadership reinforced but rising memory costs and supply commitments signal NVIDIA and other customers exploring diversification to reduce single-source risk"
+            },
+            {
+              "keyword": "Advanced packaging becomes critical",
+              "text": "HBM4E roadmaps and emerging alternatives (HBF) show packaging density and bandwidth evolution as key differentiator as process node scaling slows"
+            },
+            {
+              "keyword": "Tariff risk",
+              "text": "Trump tariff considerations on end products could dampen consumer demand and downstream chip orders, impacting foundry utilization"
+            }
+          ],
+          "counterpoint": "HBF alternative packaging reportedly trails HBM in bandwidth (~60%) and cost advantage remains uncertain, limiting near-term disruption of HBM-centric strategies."
+        },
+        "en": {
+          "executive_summary": "TSMC maintains foundry leadership while advanced packaging competence becomes a critical differentiator; NVIDIA's supply commitments reached $279B amid memory cost surges and new bandwidth gains. SK Hynix broke ground on Indiana HBM packaging, targeting 3Q29 HBM4E and signaling tight supply through 2030. Capacity pressures mount with VIS Fab 3 fire impacting 8-inch nodes and potential new cost/bandwidth trade-offs in advanced packaging alternatives.",
+          "key_facts": [
+            "TSMC tops foundry rankings",
+            "NVIDIA supply commitments $279B",
+            "NVIDIA NVHBM bandwidth increase 30%",
+            "SK Hynix HBM4E target 3Q29",
+            "Kioxia plans JPY 1T+ NAND fab for 2029 or later",
+            "SK Hynix supply remains tight through 2030",
+            "VIS Fab 3 fire pressures 8-inch capacity"
+          ],
+          "implications": [
+            {
+              "keyword": "Capacity constraints extend",
+              "text": "SK Hynix CEO guidance on tight HBM supply through 2030, combined with VIS fab disruptions, indicates sustained supply/demand imbalance favoring memory suppliers"
+            },
+            {
+              "keyword": "Foundry competition intensifies",
+              "text": "TSMC leadership reinforced but rising memory costs and supply commitments signal NVIDIA and other customers exploring diversification to reduce single-source risk"
+            },
+            {
+              "keyword": "Advanced packaging becomes critical",
+              "text": "HBM4E roadmaps and emerging alternatives (HBF) show packaging density and bandwidth evolution as key differentiator as process node scaling slows"
+            },
+            {
+              "keyword": "Tariff risk",
+              "text": "Trump tariff considerations on end products could dampen consumer demand and downstream chip orders, impacting foundry utilization"
+            }
+          ],
+          "counterpoint": "HBF alternative packaging reportedly trails HBM in bandwidth (~60%) and cost advantage remains uncertain, limiting near-term disruption of HBM-centric strategies."
+        }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-26",
-      "item_count": 20,
-      "generated_at": "2026-08-26T22:55:21.192122+00:00",
+      "date": "2026-08-28",
+      "item_count": 31,
+      "generated_at": "2026-08-28T04:15:14.351499+00:00",
       "content": {
         "ko": {},
         "en": {}
