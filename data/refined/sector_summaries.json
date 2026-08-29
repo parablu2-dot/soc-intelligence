@@ -1,254 +1,144 @@
 {
-  "date": "2026-08-28",
-  "generated_at": "2026-08-28T04:15:14.352441+00:00",
+  "date": "2026-08-29",
+  "generated_at": "2026-08-29T02:50:04.933488+00:00",
   "sectors": {
-    "mobile_ap": {
-      "sector": "Mobile AP",
-      "date": "2026-08-28",
-      "item_count": 4,
-      "generated_at": "2026-08-28T04:15:14.351499+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "Qualcomm unveiled its fourth-generation Oryon CPU as the first mobile chip reaching 5GHz, positioning its upcoming Snapdragon as the fastest in its class. Xiaomi introduced the XRING O2 chip, establishing a third competitor alongside Snapdragon and MediaTek in the mobile processor market.",
-          "key_facts": [
-            "Qualcomm fourth-generation Oryon CPU reaches 5GHz",
-            "Qualcomm Snapdragon positioning as fastest in class",
-            "Xiaomi XRING O2 chip revealed"
-          ],
-          "implications": [
-            {
-              "keyword": "Performance race",
-              "text": "5GHz achievement marks new performance threshold in mobile SoCs; intensifying competition for flagship performance leadership"
-            },
-            {
-              "keyword": "Market fragmentation",
-              "text": "Xiaomi's in-house chip design reduces dependence on external SoC vendors and signals vertical integration trend among smartphone OEMs"
-            }
-          ],
-          "counterpoint": "Actual performance gains from higher clock speeds depend on thermal management and real-world workload efficiency, not just frequency metrics."
-        },
-        "en": {
-          "executive_summary": "Qualcomm unveiled its fourth-generation Oryon CPU as the first mobile chip reaching 5GHz, positioning its upcoming Snapdragon as the fastest in its class. Xiaomi introduced the XRING O2 chip, establishing a third competitor alongside Snapdragon and MediaTek in the mobile processor market.",
-          "key_facts": [
-            "Qualcomm fourth-generation Oryon CPU reaches 5GHz",
-            "Qualcomm Snapdragon positioning as fastest in class",
-            "Xiaomi XRING O2 chip revealed"
-          ],
-          "implications": [
-            {
-              "keyword": "Performance race",
-              "text": "5GHz achievement marks new performance threshold in mobile SoCs; intensifying competition for flagship performance leadership"
-            },
-            {
-              "keyword": "Market fragmentation",
-              "text": "Xiaomi's in-house chip design reduces dependence on external SoC vendors and signals vertical integration trend among smartphone OEMs"
-            }
-          ],
-          "counterpoint": "Actual performance gains from higher clock speeds depend on thermal management and real-world workload efficiency, not just frequency metrics."
-        }
-      }
-    },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-08-28",
-      "item_count": 18,
-      "generated_at": "2026-08-28T04:15:14.351499+00:00",
+      "date": "2026-08-29",
+      "item_count": 12,
+      "generated_at": "2026-08-29T02:50:04.932738+00:00",
       "content": {
         "ko": {
-          "executive_summary": "NVIDIA shipped Vera, its first CPU built for agents, scaling across the AI ecosystem. SK Hynix aggressively recruits talent for HBM design and US capacity expansion, overhauling hiring to prioritize problem-solving ability over credentials; the company is breaking ground on its US HBM fab while signaling willingness to invest further where power and talent exist.",
+          "executive_summary": "SK하이닉스는 2029년 미국에서 HBM 생산을 시작하며 기술·인재·공급망 확보에 나서고, 신입채용 기준을 학력 제한 폐지로 전환했다. 메타는 AI 인재 확보를 위해 연 1천만 달러 이상의 급여를 제시하는 한편 신규 채용에는 제약을 두고 있으며, NVIDIA와 구글의 AI 칩 주도권 싸움이 710억 달러 규모의 데이터센터 인프라 시장에서 확대되고 있다.",
           "key_facts": [
-            "NVIDIA Vera CPU shipping at scale",
-            "SK Hynix broke ground on US HBM factory",
-            "SK Hynix eliminated educational credential requirements in hiring",
-            "SK Hynix recruiting for HBM design and US-based roles",
-            "Lucid hiring supply chain and mechanical engineering staff in Taiwan"
+            "SK하이닉스 2029년 미국 HBM 생산 개시",
+            "SK하이닉스 신입채용 학력제한 폐지",
+            "메타 AI 인재 급여 연 1천만 달러 이상",
+            "NVIDIA 중국 반독점 조사 중에도 적극 채용",
+            "삼성 US Qualcomm 협력 및 채용 계획",
+            "AI 칩 시장 데이터센터 인프라 규모 710억 달러"
           ],
           "implications": [
             {
-              "keyword": "Talent acquisition urgency",
-              "text": "SK Hynix's radical hiring pivot—from credential-based to half-day deep interviews emphasizing problem-solving—reflects acute demand for AI and memory design engineers; 4,000+ applicants at regional info sessions show strong talent attraction"
+              "keyword": "공급망 현지화",
+              "text": "SK하이닉스의 미국 HBM 생산 진출은 지정학적 리스크 완화와 미국 고객 확보 전략"
             },
             {
-              "keyword": "Capacity expansion strategy",
-              "text": "SK Hynix's willingness to invest further in US locations signals confidence in long-term AI memory demand and potential hedging against supply chain risk through geographic diversification"
+              "keyword": "AI 인재 경쟁",
+              "text": "메타·NVIDIA·구글 등 거대 기업의 고가 인재 포섭으로 업계 우수 인력 집중화 심화"
             },
             {
-              "keyword": "Agent-centric compute",
-              "text": "NVIDIA's Vera CPU launch targets emerging agent workloads, expanding its ecosystem beyond traditional HPC and datacenter GPU markets"
+              "keyword": "채용 기준 변화",
+              "text": "SK하이닉스 학력 무관 신입채용 도입은 기술 근로자 부족 시대의 인사 패러다임 전환 신호"
             }
           ],
-          "counterpoint": "SK Hynix's ambitious US HBM timeline (mass production by 2028) and supply-through-2030 guidance assume sustained AI spending and no major demand disruptions."
+          "counterpoint": "메타의 채용 제약과 NVIDIA의 반독점 조사 진행 중 채용 확대는 시장 신호의 불일치를 시사."
         },
         "en": {
-          "executive_summary": "NVIDIA shipped Vera, its first CPU built for agents, scaling across the AI ecosystem. SK Hynix aggressively recruits talent for HBM design and US capacity expansion, overhauling hiring to prioritize problem-solving ability over credentials; the company is breaking ground on its US HBM fab while signaling willingness to invest further where power and talent exist.",
+          "executive_summary": "SK Hynix will begin HBM production in the United States in 2029, while securing technology, talent, and supply chain, and has shifted its new hire recruitment criteria to eliminate educational background restrictions. Meta is offering annual salaries exceeding $10 million to secure AI talent while placing constraints on new hiring, while competition between NVIDIA and Google for AI chip leadership is expanding in the $71 billion datacenter infrastructure market.",
           "key_facts": [
-            "NVIDIA Vera CPU shipping at scale",
-            "SK Hynix broke ground on US HBM factory",
-            "SK Hynix eliminated educational credential requirements in hiring",
-            "SK Hynix recruiting for HBM design and US-based roles",
-            "Lucid hiring supply chain and mechanical engineering staff in Taiwan"
+            "SK Hynix to begin HBM production in the U.S. in 2029",
+            "SK Hynix eliminates educational background restrictions for new hires",
+            "Meta AI talent salary exceeds $10 million annually",
+            "NVIDIA actively hiring despite ongoing antitrust investigation in China",
+            "Samsung to collaborate with U.S. Qualcomm and plans hiring",
+            "AI chip market datacenter infrastructure scale: $71 billion"
           ],
           "implications": [
             {
-              "keyword": "Talent acquisition urgency",
-              "text": "SK Hynix's radical hiring pivot—from credential-based to half-day deep interviews emphasizing problem-solving—reflects acute demand for AI and memory design engineers; 4,000+ applicants at regional info sessions show strong talent attraction"
+              "keyword": "Supply chain localization",
+              "text": "SK Hynix's entry into U.S. HBM production is a strategy to mitigate geopolitical risk and secure American customers"
             },
             {
-              "keyword": "Capacity expansion strategy",
-              "text": "SK Hynix's willingness to invest further in US locations signals confidence in long-term AI memory demand and potential hedging against supply chain risk through geographic diversification"
+              "keyword": "AI talent competition",
+              "text": "High-value talent recruitment by major companies such as Meta, NVIDIA, and Google is intensifying the concentration of top industry talent"
             },
             {
-              "keyword": "Agent-centric compute",
-              "text": "NVIDIA's Vera CPU launch targets emerging agent workloads, expanding its ecosystem beyond traditional HPC and datacenter GPU markets"
+              "keyword": "Changes in hiring criteria",
+              "text": "SK Hynix's introduction of education-neutral new hire recruitment signals a paradigm shift in HR practices during an era of technical worker shortage"
             }
           ],
-          "counterpoint": "SK Hynix's ambitious US HBM timeline (mass production by 2028) and supply-through-2030 guidance assume sustained AI spending and no major demand disruptions."
+          "counterpoint": "Meta's hiring constraints and NVIDIA's hiring expansion amid antitrust investigation suggest a mismatch in market signals."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-28",
-      "item_count": 22,
-      "generated_at": "2026-08-28T04:15:14.351499+00:00",
+      "date": "2026-08-29",
+      "item_count": 13,
+      "generated_at": "2026-08-29T02:50:04.932738+00:00",
       "content": {
         "ko": {
-          "executive_summary": "OpenAI's Jalapeño ASIC achieved efficiency and throughput gains over NVIDIA's Blackwell in benchmarks and was developed end-to-end using AI-driven design methods. Anthropic is in talks with MatX to accelerate chip design, while Google secured a $12.2 billion chip supply deal with Marvell, signaling major foundational AI model providers now designing or sourcing custom silicon at scale.",
+          "executive_summary": "메타·구글·아마존이 NVIDIA 독주에 대항하여 맞춤형 AI 칩 개발을 확대하고 있으며, Anthropic은 MatX 인수 추진 철회 후 칩 설계 파트너십으로 전략을 전환했다. 브로드컴과 OpenAI는 Jalapeño 추론 칩을 공개했고, 한국의 Semifive도 턴키형 ASIC 플랫폼으로 AI 칩 설계를 가속화하고 있다.",
           "key_facts": [
-            "OpenAI Jalapeño ASIC benchmarks show efficiency vs. Blackwell",
-            "OpenAI Jalapeño designed end-to-end by AI",
-            "Architect Labs built AI-designed chip in two weeks",
-            "Anthropic in talks with MatX on chip design acceleration",
-            "Google $12.2 billion chip deal with Marvell",
-            "Keysight EDA reduced ASIC design cycles by over 50%"
+            "메타 커스텀 칩에 네트워킹 기능 온칩 집적",
+            "Anthropic MatX $7억 인수 추진 철회",
+            "Anthropic 칩 설계 파트너십으로 전략 변경",
+            "Broadcom·OpenAI Jalapeño 추론 칩 공개",
+            "Semifive 턴키형 ASIC 플랫폼 출시",
+            "Marvell Q2 데이터센터·맞춤형 실리콘 강세",
+            "2026년 고객사들의 커스텀 칩 경쟁 본격화"
           ],
           "implications": [
             {
-              "keyword": "AI-driven chip design",
-              "text": "Multiple vendors (OpenAI, Architect Labs) now demonstrating AI-designed chips in weeks rather than months, compressing traditional ASIC design cycles and lowering barriers to custom silicon entry"
+              "keyword": "NVIDIA 독주 완화",
+              "text": "하이퍼스케일러의 맞춤형 칩 개발로 추론 칩 시장에서 공급 다원화 추세"
             },
             {
-              "keyword": "Custom silicon economics",
-              "text": "Google's $12.2B Marvell deal and OpenAI/Anthropic design initiatives show hyperscalers and AI labs moving rapidly toward proprietary silicon to reduce costs and optimize for inference workloads"
+              "keyword": "설계 파트너십 모델",
+              "text": "Anthropic의 인수 철회와 파트너십 전환은 칩 개발 비용 최적화 및 위험 분산 전략"
             },
             {
-              "keyword": "GPU efficiency pressure",
-              "text": "Jalapeño's published efficiency gains relative to Blackwell highlight that OpenAI sees advantage in clean-sheet general-purpose AI accelerator design over GPU adaptation for inference"
-            },
-            {
-              "keyword": "Cost optimization via NVIDIA MPS",
-              "text": "75% GPU infrastructure reduction achievable with NVIDIA MPS on ASR inference demonstrates continued optimization of GPU utilization for cost-sensitive inference at scale"
+              "keyword": "한국 설계 생태계",
+              "text": "Semifive의 턴키 플랫폼은 국내 AI 칩 설계 역량 강화 및 스타트업 진입장벽 낮춤"
             }
           ],
-          "counterpoint": "OpenAI and Anthropic custom silicon projects remain early-stage; production volume, yield, and cost competitiveness versus mature GPU offerings remain unproven."
+          "counterpoint": "커스텀 칩 개발 주기가 길어 2026년 이후 대량 출시까지는 NVIDIA의 시장 지배력이 유지될 가능성."
         },
         "en": {
-          "executive_summary": "OpenAI's Jalapeño ASIC achieved efficiency and throughput gains over NVIDIA's Blackwell in benchmarks and was developed end-to-end using AI-driven design methods. Anthropic is in talks with MatX to accelerate chip design, while Google secured a $12.2 billion chip supply deal with Marvell, signaling major foundational AI model providers now designing or sourcing custom silicon at scale.",
+          "executive_summary": "Meta, Google, and Amazon are expanding custom AI chip development in response to NVIDIA's market dominance, while Anthropic has withdrawn from MatX acquisition and shifted strategy to chip design partnerships. Broadcom and OpenAI have unveiled the Jalapeño inference chip, and South Korea's Semifive is accelerating AI chip design through a turnkey ASIC platform.",
           "key_facts": [
-            "OpenAI Jalapeño ASIC benchmarks show efficiency vs. Blackwell",
-            "OpenAI Jalapeño designed end-to-end by AI",
-            "Architect Labs built AI-designed chip in two weeks",
-            "Anthropic in talks with MatX on chip design acceleration",
-            "Google $12.2 billion chip deal with Marvell",
-            "Keysight EDA reduced ASIC design cycles by over 50%"
+            "Meta integrates networking functionality on-chip in custom chips",
+            "Anthropic withdraws from $700 million MatX acquisition",
+            "Anthropic shifts strategy to chip design partnerships",
+            "Broadcom and OpenAI unveil Jalapeño inference chip",
+            "Semifive launches turnkey ASIC platform",
+            "Marvell Q2 strength in datacenter and custom silicon",
+            "2026: Full-scale competition among customers' custom chips"
           ],
           "implications": [
             {
-              "keyword": "AI-driven chip design",
-              "text": "Multiple vendors (OpenAI, Architect Labs) now demonstrating AI-designed chips in weeks rather than months, compressing traditional ASIC design cycles and lowering barriers to custom silicon entry"
+              "keyword": "Easing NVIDIA dominance",
+              "text": "Custom chip development by hyperscalers is creating supply diversification trends in the inference chip market"
             },
             {
-              "keyword": "Custom silicon economics",
-              "text": "Google's $12.2B Marvell deal and OpenAI/Anthropic design initiatives show hyperscalers and AI labs moving rapidly toward proprietary silicon to reduce costs and optimize for inference workloads"
+              "keyword": "Design partnership model",
+              "text": "Anthropic's withdrawal from acquisition and shift to partnership is a strategy to optimize chip development costs and mitigate risks"
             },
             {
-              "keyword": "GPU efficiency pressure",
-              "text": "Jalapeño's published efficiency gains relative to Blackwell highlight that OpenAI sees advantage in clean-sheet general-purpose AI accelerator design over GPU adaptation for inference"
-            },
-            {
-              "keyword": "Cost optimization via NVIDIA MPS",
-              "text": "75% GPU infrastructure reduction achievable with NVIDIA MPS on ASR inference demonstrates continued optimization of GPU utilization for cost-sensitive inference at scale"
+              "keyword": "Korean design ecosystem",
+              "text": "Semifive's turnkey platform strengthens domestic AI chip design capabilities and lowers barriers to entry for startups"
             }
           ],
-          "counterpoint": "OpenAI and Anthropic custom silicon projects remain early-stage; production volume, yield, and cost competitiveness versus mature GPU offerings remain unproven."
+          "counterpoint": "Long custom chip development cycles may allow NVIDIA to maintain market dominance until full-scale production begins after 2026."
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-28",
+      "date": "2026-08-29",
       "item_count": 9,
-      "generated_at": "2026-08-28T04:15:14.351499+00:00",
+      "generated_at": "2026-08-29T02:50:04.932738+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "TSMC maintains foundry leadership while advanced packaging competence becomes a critical differentiator; NVIDIA's supply commitments reached $279B amid memory cost surges and new bandwidth gains. SK Hynix broke ground on Indiana HBM packaging, targeting 3Q29 HBM4E and signaling tight supply through 2030. Capacity pressures mount with VIS Fab 3 fire impacting 8-inch nodes and potential new cost/bandwidth trade-offs in advanced packaging alternatives.",
-          "key_facts": [
-            "TSMC tops foundry rankings",
-            "NVIDIA supply commitments $279B",
-            "NVIDIA NVHBM bandwidth increase 30%",
-            "SK Hynix HBM4E target 3Q29",
-            "Kioxia plans JPY 1T+ NAND fab for 2029 or later",
-            "SK Hynix supply remains tight through 2030",
-            "VIS Fab 3 fire pressures 8-inch capacity"
-          ],
-          "implications": [
-            {
-              "keyword": "Capacity constraints extend",
-              "text": "SK Hynix CEO guidance on tight HBM supply through 2030, combined with VIS fab disruptions, indicates sustained supply/demand imbalance favoring memory suppliers"
-            },
-            {
-              "keyword": "Foundry competition intensifies",
-              "text": "TSMC leadership reinforced but rising memory costs and supply commitments signal NVIDIA and other customers exploring diversification to reduce single-source risk"
-            },
-            {
-              "keyword": "Advanced packaging becomes critical",
-              "text": "HBM4E roadmaps and emerging alternatives (HBF) show packaging density and bandwidth evolution as key differentiator as process node scaling slows"
-            },
-            {
-              "keyword": "Tariff risk",
-              "text": "Trump tariff considerations on end products could dampen consumer demand and downstream chip orders, impacting foundry utilization"
-            }
-          ],
-          "counterpoint": "HBF alternative packaging reportedly trails HBM in bandwidth (~60%) and cost advantage remains uncertain, limiting near-term disruption of HBM-centric strategies."
-        },
-        "en": {
-          "executive_summary": "TSMC maintains foundry leadership while advanced packaging competence becomes a critical differentiator; NVIDIA's supply commitments reached $279B amid memory cost surges and new bandwidth gains. SK Hynix broke ground on Indiana HBM packaging, targeting 3Q29 HBM4E and signaling tight supply through 2030. Capacity pressures mount with VIS Fab 3 fire impacting 8-inch nodes and potential new cost/bandwidth trade-offs in advanced packaging alternatives.",
-          "key_facts": [
-            "TSMC tops foundry rankings",
-            "NVIDIA supply commitments $279B",
-            "NVIDIA NVHBM bandwidth increase 30%",
-            "SK Hynix HBM4E target 3Q29",
-            "Kioxia plans JPY 1T+ NAND fab for 2029 or later",
-            "SK Hynix supply remains tight through 2030",
-            "VIS Fab 3 fire pressures 8-inch capacity"
-          ],
-          "implications": [
-            {
-              "keyword": "Capacity constraints extend",
-              "text": "SK Hynix CEO guidance on tight HBM supply through 2030, combined with VIS fab disruptions, indicates sustained supply/demand imbalance favoring memory suppliers"
-            },
-            {
-              "keyword": "Foundry competition intensifies",
-              "text": "TSMC leadership reinforced but rising memory costs and supply commitments signal NVIDIA and other customers exploring diversification to reduce single-source risk"
-            },
-            {
-              "keyword": "Advanced packaging becomes critical",
-              "text": "HBM4E roadmaps and emerging alternatives (HBF) show packaging density and bandwidth evolution as key differentiator as process node scaling slows"
-            },
-            {
-              "keyword": "Tariff risk",
-              "text": "Trump tariff considerations on end products could dampen consumer demand and downstream chip orders, impacting foundry utilization"
-            }
-          ],
-          "counterpoint": "HBF alternative packaging reportedly trails HBM in bandwidth (~60%) and cost advantage remains uncertain, limiting near-term disruption of HBM-centric strategies."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-28",
-      "item_count": 31,
-      "generated_at": "2026-08-28T04:15:14.351499+00:00",
+      "date": "2026-08-29",
+      "item_count": 18,
+      "generated_at": "2026-08-29T02:50:04.932738+00:00",
       "content": {
         "ko": {},
         "en": {}
