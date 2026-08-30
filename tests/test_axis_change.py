@@ -32,10 +32,10 @@ def test_valid_token_updates_axes():
     ])
     try:
         result = m.process_token("TOK1", ["foundry", "pmic"])
-        assert "축 변경 완료" in result
+        assert "변경 완료" in result
         saved = json.loads(m.SUBSCRIBERS_PATH.read_text(encoding="utf-8"))
         assert saved[0]["axes"] == ["foundry", "pmic"]
-        assert "axes_changed_at" in saved[0]
+        assert "settings_changed_at" in saved[0]
     finally:
         m.SUBSCRIBERS_PATH = orig
 
@@ -76,7 +76,41 @@ def test_empty_axes_rejected():
          "unsubscribe_token": "TOK1", "active": True},
     ])
     try:
-        result = m.process_token("TOK1", [])
+        result = m.process_token("TOK1", axes=[])
         assert "최소 1개 이상" in result
     finally:
         m.SUBSCRIBERS_PATH = orig
+
+
+def test_days_only_change_leaves_axes_untouched():
+    orig = m.SUBSCRIBERS_PATH
+    m.SUBSCRIBERS_PATH = _with_temp_subscribers([
+        {"customer_id": "test-op", "axes": ["hpc_datacenter"], "schedule": "weekday",
+         "unsubscribe_token": "TOK1", "active": True},
+    ])
+    try:
+        result = m.process_token("TOK1", days=["mon", "wed", "fri"])
+        assert "변경 완료" in result
+        saved = json.loads(m.SUBSCRIBERS_PATH.read_text(encoding="utf-8"))
+        assert saved[0]["delivery_days"] == ["mon", "wed", "fri"]
+        assert saved[0]["axes"] == ["hpc_datacenter"]  # 안 건드림
+    finally:
+        m.SUBSCRIBERS_PATH = orig
+
+
+def test_invalid_day_rejected():
+    orig = m.SUBSCRIBERS_PATH
+    m.SUBSCRIBERS_PATH = _with_temp_subscribers([
+        {"customer_id": "test-op", "axes": ["hpc_datacenter"], "schedule": "weekday",
+         "unsubscribe_token": "TOK1", "active": True},
+    ])
+    try:
+        result = m.process_token("TOK1", days=["funday"])
+        assert "알 수 없는 요일" in result
+    finally:
+        m.SUBSCRIBERS_PATH = orig
+
+
+def test_neither_axes_nor_days_rejected():
+    result = m.process_token("TOK1")
+    assert "최소 하나는 지정" in result

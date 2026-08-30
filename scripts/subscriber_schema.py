@@ -33,6 +33,11 @@ PERSONAS = ("exec", "leader", "staff")
 SCHEDULES = ("daily", "weekly", "monthly")
 _LEGACY_SCHEDULE_MAP = {"weekday": "daily"}  # 기존 CPO 구독 레코드 호환
 
+# 구독자별 수신 요일 선택 (2026-08-30 추가) — send_subscriber_mail.py/process_axis_change.py 공용.
+# subscribers.json의 delivery_days 필드가 이 중 일부를 담는다. 필드가 없으면 기존 동작(평일 전체)
+# 그대로 유지(레거시 폴백, Phase 1과 동일 원칙).
+DELIVERY_DAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+
 # ── 역할 유형 → domain_scope 매핑 (기획 §2 표 그대로) ───────────────────────────
 # NAND는 구조적으로 고립 축(표에서 드러난 발견, §2 후반부) — adjacent가 얇은 게 정상.
 ROLE_TYPE_DOMAIN_SCOPE: dict[str, dict[str, list[str]]] = {

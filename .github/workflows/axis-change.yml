@@ -1,19 +1,24 @@
 name: process-axis-change
 
-# 구독 축 변경 토큰 처리 (2026-08-30, process-unsubscribe.yml과 동일 패턴).
-# 이메일 "구독 축 변경" 링크는 mailto:라 자동 트리거가 안 됨 — 운영자가 메일로 받은 토큰+원하는
-# 축 목록을 여기 input으로 넣어 수동 실행한다.
+# 구독 설정(축·수신 요일) 변경 토큰 처리 (2026-08-30, process-unsubscribe.yml과 동일 패턴).
+# 이메일 "구독 설정 변경" 링크는 mailto:라 자동 트리거가 안 됨 — 운영자가 메일로 받은 토큰+
+# 원하는 값을 여기 input으로 넣어 수동 실행한다. axes/days는 각각 선택(둘 다 비우면 스크립트가
+# 에러 메시지로 알려줌 — required:false라 워크플로 UI에서 강제할 수 없어 스크립트 쪽에서 검증).
 
 on:
   workflow_dispatch:
     inputs:
       token:
-        description: "구독 축 변경 요청 메일에 담긴 unsubscribe_token"
+        description: "구독 설정 변경 요청 메일에 담긴 unsubscribe_token"
         required: true
         type: string
       axes:
-        description: "콤마로 구분된 새 축 목록 (예: hpc_datacenter,packaging,pmic)"
-        required: true
+        description: "콤마로 구분된 새 축 목록 (선택, 예: hpc_datacenter,packaging,pmic)"
+        required: false
+        type: string
+      days:
+        description: "콤마로 구분된 새 수신 요일 (선택, 예: mon,wed,fri)"
+        required: false
         type: string
 
 jobs:
@@ -31,8 +36,11 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Process axis change token
-        run: python scripts/process_axis_change.py --token "${{ inputs.token }}" --axes "${{ inputs.axes }}"
+      - name: Process subscription change token
+        run: |
+          python scripts/process_axis_change.py --token "${{ inputs.token }}" \
+            ${{ inputs.axes != '' && format('--axes "{0}"', inputs.axes) || '' }} \
+            ${{ inputs.days != '' && format('--days "{0}"', inputs.days) || '' }}
 
       - name: Commit if changed
         run: |

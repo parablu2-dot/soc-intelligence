@@ -14,8 +14,9 @@ axis(단수) 필드를 axes(복수, 리스트)로 바꿔 구독자별 임의 축
     이미 매일 전체 방문자용으로 생성되는 공개 산출물을 그대로 재사용(중복 LLM 호출 없음).
     관련 기사 링크는 data/refined/{axis}/*.json을 직접 읽어 최신순 상위 N개 선정.
 
-스케줄: 이 고객 전용 "평일 1회". 크론 자체(crawl-and-build.yml)는 매일 20:00 UTC(KST 05:00 익일)
-실행되므로, 이 스크립트가 KST 기준 평일 여부를 직접 판단해 주말엔 조용히 스킵한다(신규 cron 불필요).
+스케줄: 크론 자체(crawl-and-build.yml)는 매일 20:00 UTC(KST 05:00 익일) 실행되고, 이 스크립트가
+구독자별 delivery_days(2026-08-30 추가, 없으면 기본값=평일 전체)를 KST 기준으로 판단해 해당
+안 되는 구독자만 조용히 스킵한다(신규 cron 불필요, 구독자마다 다른 요일 조합 가능).
 
 구독자 정보:
   - data/subscribers/subscribers.json (git 커밋, PII 없음) — customer_id/axes/schedule/
@@ -46,7 +47,7 @@ except ImportError:  # pragma: no cover
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from scripts.subscriber_schema import AXES_ACTIVE  # noqa: E402 — sys.path 조정 후 import 필요
+from scripts.subscriber_schema import AXES_ACTIVE, DELIVERY_DAYS  # noqa: E402
 
 DATA_REFINED = ROOT / "data" / "refined"
 SUBSCRIBERS_PATH = ROOT / "data" / "subscribers" / "subscribers.json"
@@ -75,17 +76,35 @@ def _load_json(path: Path) -> dict:
         return {}
 
 
-def _is_kst_weekday() -> bool:
+def _kst_now() -> datetime:
     if ZoneInfo is not None:
-        now_kst = datetime.now(ZoneInfo("Asia/Seoul"))
-    else:  # pragma: no cover — 방어적 폴백
-        now_kst = datetime.utcnow()
-    return now_kst.weekday() < 5  # 0=Mon ... 4=Fri
+        return datetime.now(ZoneInfo("Asia/Seoul"))
+    return datetime.utcnow()  # pragma: no cover — 방어적 폴백
+
+
+def _is_kst_weekday() -> bool:
+    return _kst_now().weekday() < 5  # 0=Mon ... 4=Fri
+
+
+def _kst_weekday_abbr() -> str:
+    return DELIVERY_DAYS[_kst_now().weekday()]
+
+
+def _is_delivery_day(sub: dict) -> bool:
+    """구독자별 수신 요일 결정 (2026-08-30 추가).
+
+    subscribers.json에 delivery_days(예: ["mon","wed","fri"])가 있으면 그 요일에만 발송한다
+    (process_axis_change.py --days로 구독자가 직접 변경 가능). 필드가 없는 기존 구독자는
+    무수정으로 기존 동작(평일 전체) 그대로 — Phase 1 스키마 확장과 동일한 레거시 폴백 원칙."""
+    days = sub.get("delivery_days")
+    if days:
+        return _kst_weekday_abbr() in [d.lower() for d in days]
+    return _is_kst_weekday()
 
 
 def _force_send() -> bool:
-    """workflow_dispatch 수동 테스트용 — 주말에도 발송 검증할 수 있게 게이트 우회.
-    cron(스케줄 실행)에는 이 env가 안 실리므로 평소 평일 게이팅은 그대로 유지됨."""
+    """workflow_dispatch 수동 테스트용 — 요일 게이트를 전부 우회.
+    cron(스케줄 실행)에는 이 env가 안 실리므로 평소 요일별 게이팅은 그대로 유지됨."""
     return os.environ.get("CPO_FORCE_SEND", "").lower() in ("1", "true", "yes")
 
 
@@ -133,9 +152,11 @@ def _axis_display_order(sub: dict, axes: list[str]) -> list[str]:
 
 
 def _axis_block_html(label: str, content: dict, links: list[dict]) -> str:
+    """2026-08-30: 한국어만 발송 — 대시보드/daily review mail은 en 미러를 계속 생성하지만
+    (다른 소비처가 씀, 재계산 아님), 이 구독자 메일은 ko만 렌더한다. content['en']은 그대로
+    존재하되 여기서 안 씀 — summarize_*.py 쪽 EN 생성 로직은 건드릴 필요 없음."""
     ko = content.get("ko") or {}
-    en = content.get("en") or {}
-    if not ko and not en and not links:
+    if not ko and not links:
         return ""
 
     def summary_block(c: dict) -> str:
@@ -167,25 +188,28 @@ def _axis_block_html(label: str, content: dict, links: list[dict]) -> str:
     return f"""\
 <div style="margin-bottom:20px">
   <div style="font-size:13px;font-weight:700;color:#58a6ff;margin-bottom:6px">◆ {label}</div>
-  <div style="font-size:11px;font-weight:600;color:#8b949e;margin-bottom:2px">한국어</div>
   {summary_block(ko)}
-  {f'<div style="font-size:11px;font-weight:600;color:#8b949e;margin:8px 0 2px">English</div>{summary_block(en)}' if en else ''}
   {f'<div style="font-size:11px;font-weight:600;color:#8b949e;margin-top:8px">관련 기사</div>{links_html}' if links_html else ''}
 </div>"""
 
 
-def _axis_change_mailto(smtp_user: str, unsubscribe_token: str, current_axes: list[str]) -> str:
-    """구독 축 변경 요청용 mailto 링크 (2026-08-30, process_unsubscribe.py의 mailto+토큰 패턴 재사용).
+def _axis_change_mailto(smtp_user: str, unsubscribe_token: str, current_axes: list[str],
+                         current_days: list[str] | None) -> str:
+    """구독 설정(축/수신 요일) 변경 요청용 mailto 링크 (2026-08-30, process_unsubscribe.py의
+    mailto+토큰 패턴 재사용).
 
     unsubscribe_token을 그대로 재사용한다 — 별도 change_token을 신설하지 않음(토큰 종류가
     늘어나면 subscribers.json 스키마·메일 템플릿이 같이 늘어나는데, 지금은 토큰 하나로 해지/
     변경 둘 다 식별 가능하면 충분). 실제 반영은 process_axis_change.py(수동 workflow_dispatch)가
     담당 — 자동 처리 백엔드 없음(unsubscribe와 동일 YAGNI 판단, 1~2고객 규모)."""
-    subject = f"SoC Intelligence 축 변경 요청: {unsubscribe_token}"
+    subject = f"SoC Intelligence 구독 설정 변경 요청: {unsubscribe_token}"
+    days_line = ", ".join(current_days) if current_days else "평일 전체(월~금, 기본값)"
     body = (
-        f"현재 구독 축: {', '.join(current_axes)}\n\n"
-        f"선택 가능한 축: {', '.join(AXES_ACTIVE)}\n\n"
-        "원하시는 축 조합을 콤마로 구분해 이 메일에 답장해주세요."
+        f"현재 구독 축: {', '.join(current_axes)}\n"
+        f"현재 수신 요일: {days_line}\n\n"
+        f"선택 가능한 축: {', '.join(AXES_ACTIVE)}\n"
+        f"선택 가능한 요일: {', '.join(DELIVERY_DAYS)}\n\n"
+        "원하시는 축 조합과(또는) 수신 요일을 이 메일에 답장으로 알려주세요."
     )
     # urlencode()는 공백을 '+'로 인코딩하는데 mailto: body에서는 메일 클라이언트마다 '+'를
     # 리터럴로 남기는 경우가 있어(RFC 6068은 percent-encoding을 요구) quote()로 직접 인코딩.
@@ -193,7 +217,8 @@ def _axis_change_mailto(smtp_user: str, unsubscribe_token: str, current_axes: li
     return f"mailto:{smtp_user}?{query}"
 
 
-def _build_html(axes: list[str], date_str: str, smtp_user: str, unsubscribe_token: str) -> tuple[str, bool]:
+def _build_html(axes: list[str], date_str: str, smtp_user: str, unsubscribe_token: str,
+                 delivery_days: list[str] | None = None) -> tuple[str, bool]:
     """(html, has_content) 반환 — has_content=False면 보낼 내용이 없다는 뜻."""
     blocks = []
     has_content = False
@@ -205,7 +230,7 @@ def _build_html(axes: list[str], date_str: str, smtp_user: str, unsubscribe_toke
             blocks.append(block)
 
     unsubscribe_mailto = f"mailto:{smtp_user}?subject=SoC Intelligence 구독 해지 요청: {unsubscribe_token}"
-    axis_change_mailto = _axis_change_mailto(smtp_user, unsubscribe_token, axes)
+    axis_change_mailto = _axis_change_mailto(smtp_user, unsubscribe_token, axes, delivery_days)
 
     html = f"""\
 <div style="font-family:-apple-system,Segoe UI,Arial,sans-serif;background:#0d1117;color:#e6edf3;padding:20px;max-width:640px;margin:0 auto">
@@ -213,7 +238,7 @@ def _build_html(axes: list[str], date_str: str, smtp_user: str, unsubscribe_toke
   <div style="color:#8b949e;font-size:12px;margin-bottom:16px">{date_str}</div>
   {"".join(blocks)}
   <div style="margin-top:20px;padding-top:12px;border-top:1px solid #30363d;font-size:11px;color:#8b949e">
-    <a href="{axis_change_mailto}" style="color:#8b949e">구독 축 변경</a>
+    <a href="{axis_change_mailto}" style="color:#8b949e">구독 설정 변경(축·요일)</a>
     &nbsp;·&nbsp;
     <a href="{unsubscribe_mailto}" style="color:#8b949e">구독 해지</a>
   </div>
@@ -232,8 +257,9 @@ def _write_status(status: str, detail: str, sent: int = 0, skipped: int = 0,
     STATUS_PATH.parent.mkdir(parents=True, exist_ok=True)
     STATUS_PATH.write_text(json.dumps({
         "checked_at": datetime.now(timezone.utc).isoformat(),
-        "status": status,          # "sent" | "no_secrets" | "weekend_skip" | "bad_email_json" |
+        "status": status,          # "sent" | "sent_zero" | "no_secrets" | "bad_email_json" |
                                     # "no_active_subscribers" | "smtp_connect_failed"
+                                    # (개별 스킵 사유는 per_subscriber[].result — 예: not_delivery_day)
         "detail": detail,
         "sent": sent,
         "skipped": skipped,
@@ -249,12 +275,6 @@ def run() -> None:
     if not (smtp_user and smtp_pass and emails_raw):
         print("::warning::SMTP_USER/SMTP_PASS/CPO_SUBSCRIBER_EMAILS 미설정 — 구독자 메일 발송 스킵")
         _write_status("no_secrets", "SMTP_USER/SMTP_PASS/CPO_SUBSCRIBER_EMAILS 중 하나 이상 미설정")
-        return
-
-    if not _is_kst_weekday() and not _force_send():
-        print("[send_subscriber_mail] KST 주말 — 평일 1회 스케줄이라 스킵 "
-              "(CPO_FORCE_SEND=true로 테스트 발송 가능)")
-        _write_status("weekend_skip", "KST 기준 주말이라 평일 1회 스케줄 스킵")
         return
 
     try:
@@ -279,12 +299,34 @@ def run() -> None:
     sent, skipped = 0, 0
     per_subscriber: list[dict] = []
 
+    # 2026-08-30: 요일 게이트를 전역 1회 판단에서 구독자별 판단으로 이동 — delivery_days를
+    # 구독자마다 다르게 가질 수 있어짐(process_axis_change.py --days). force면 전원 통과.
+    force = _force_send()
+    today_abbr = _kst_weekday_abbr()
+    eligible = []
+    for sub in subscribers:
+        if force or _is_delivery_day(sub):
+            eligible.append(sub)
+        else:
+            skipped += 1
+            per_subscriber.append({
+                "customer_id": sub.get("customer_id", ""), "result": "not_delivery_day",
+                "note": f"오늘({today_abbr})은 이 구독자의 수신 요일이 아님 "
+                        f"(delivery_days={sub.get('delivery_days') or '기본값(평일 전체)'})",
+            })
+
+    if not eligible:
+        print(f"[send_subscriber_mail] 오늘({today_abbr})을 수신일로 둔 구독자 없음 — 스킵")
+        _write_status("sent_zero", f"오늘({today_abbr})을 수신일로 둔 구독자 없음",
+                      sent=0, skipped=skipped, per_subscriber=per_subscriber)
+        return
+
     try:
         with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
             server.starttls()
             server.login(smtp_user, smtp_pass)
 
-            for sub in subscribers:
+            for sub in eligible:
                 customer_id = sub.get("customer_id", "")
                 mail_to = email_map.get(customer_id)
                 if not mail_to:
@@ -298,6 +340,7 @@ def run() -> None:
                     ordered_axes = _axis_display_order(sub, sub["axes"])
                     html, has_content = _build_html(
                         ordered_axes, date_str, smtp_user, sub.get("unsubscribe_token", ""),
+                        delivery_days=sub.get("delivery_days"),
                     )
                     if not has_content:
                         print(f"[send_subscriber_mail] customer_id={customer_id}: "
