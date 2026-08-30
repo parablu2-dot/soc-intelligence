@@ -47,7 +47,6 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_REFINED = ROOT / "data" / "refined"
 SUBSCRIBERS_PATH = ROOT / "data" / "subscribers" / "subscribers.json"
 
-_CPO_AXIS = "cpo_optics"
 _MAX_LINKS_PER_AXIS = 5
 
 # 고객이 실제 쓴 표현 그대로 — 대시보드의 일반 축 라벨(axisLabel(), "HPC·DC"/"Packaging")과는
@@ -103,14 +102,29 @@ def _axis_links(axis: str, limit: int = _MAX_LINKS_PER_AXIS) -> list[dict]:
 
 
 def _gather_axis_content(axis: str) -> tuple[dict, list[dict], int]:
-    """축 하나의 (content{ko,en}, links, item_count)를 반환. 소스가 cpo_optics냐 아니냐로 분기."""
-    if axis == _CPO_AXIS:
-        digest = _load_json(DATA_REFINED / "cpo_optics" / "digest.json")
+    """축 하나의 (content{ko,en}, links, item_count)를 반환.
+
+    2026-08-30 일반화: cpo_optics 하나만 하드코딩하던 분기를 "축 폴더에 digest.json이 있으면
+    그걸 쓴다"는 규칙으로 바꿈 — hbm/pmic처럼 5축 공개 파이프라인과 분리된 축이 늘어나도
+    (summarize_{axis}_axis.py 패턴, cpo_optics 선례) 이 함수를 다시 손댈 필요가 없다."""
+    digest_path = DATA_REFINED / axis / "digest.json"
+    if digest_path.exists():
+        digest = _load_json(digest_path)
         return digest.get("content") or {}, digest.get("links") or [], digest.get("item_count", 0)
 
     sector_data = _load_json(DATA_REFINED / "sector_summaries.json")
     info = (sector_data.get("sectors") or {}).get(axis) or {}
     return info.get("content") or {}, _axis_links(axis), info.get("item_count", 0)
+
+
+def _axis_display_order(sub: dict, axes: list[str]) -> list[str]:
+    """표시 순서 조정 훅 (Phase 4, 2026-08-30 기획 §7.2).
+
+    관심도 반영은 "표시 순서만" — 축을 목록에서 제거하지 않는다(시계열 유지 원칙). 지금은
+    구독자별 관심도 데이터가 전혀 없으므로 항등 함수로 둔다(기본값=구독 시점 등록 순서 그대로).
+    나중에 관심도 데이터(열람 로그 등)가 쌓이면 이 함수 내부 정렬 로직만 채우면 되고,
+    호출부(run())는 변경할 필요가 없다."""
+    return list(axes)
 
 
 def _axis_block_html(label: str, content: dict, links: list[dict]) -> str:
@@ -227,8 +241,9 @@ def run() -> None:
                     skipped += 1
                     continue
                 try:
+                    ordered_axes = _axis_display_order(sub, sub["axes"])
                     html, has_content = _build_html(
-                        sub["axes"], date_str, smtp_user, sub.get("unsubscribe_token", ""),
+                        ordered_axes, date_str, smtp_user, sub.get("unsubscribe_token", ""),
                     )
                     if not has_content:
                         print(f"[send_subscriber_mail] customer_id={customer_id}: "
