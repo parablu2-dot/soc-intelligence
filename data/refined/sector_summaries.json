@@ -1,58 +1,60 @@
 {
   "date": "2026-08-30",
-  "generated_at": "2026-08-30T13:08:31.284059+00:00",
+  "generated_at": "2026-08-30T13:24:37.897890+00:00",
   "sectors": {
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
       "date": "2026-08-30",
-      "item_count": 3,
-      "generated_at": "2026-08-30T13:08:31.283818+00:00",
+      "item_count": 4,
+      "generated_at": "2026-08-30T13:24:37.897575+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Vietnam emerges as a semiconductor hub with Qualcomm planning its third-largest global AI R&D center there. SK하닉스 expands HBM production to Indiana, citing talent and incentives, while chipmakers gain competitive advantage over big tech as AI infrastructure demand accelerates.",
+          "executive_summary": "Qualcomm is establishing its third-largest global AI R&D center in Vietnam while SK Hynix is expanding HBM production in Indiana to access talent and incentives. NVIDIA's strong quarterly results confirm chipmakers have displaced traditional big tech as the primary AI era winners, with Broadcom also expanding its AI position through custom silicon and VMware integration.",
           "key_facts": [
-            "Qualcomm planning third-largest global AI R&D center in Vietnam",
-            "SK하닉스 establishing HBM manufacturing in Indiana",
-            "NVIDIA's quarterly results confirm chipmakers as primary AI era beneficiaries"
+            "Qualcomm plans third-largest global AI R&D center in Vietnam",
+            "SK Hynix establishing HBM manufacturing in Indiana",
+            "NVIDIA confirms chipmaker dominance over big tech in AI era",
+            "Broadcom expanding AI position via custom silicon and VMware"
           ],
           "implications": [
             {
-              "keyword": "Geopolitical Diversification",
-              "text": "Semiconductor manufacturing shifting to Vietnam and US, reducing China-centric supply chains and responding to incentive programs"
+              "keyword": "Geographic Diversification",
+              "text": "Chipmakers shifting R&D and manufacturing hubs to Vietnam and US Midwest to reduce supply chain concentration and access regional incentives."
             },
             {
-              "keyword": "HBM Supply Chain",
-              "text": "SK하닉스' Indiana expansion addresses strategic HBM demand for AI accelerators and reduces geographic concentration risk"
+              "keyword": "Market Leadership",
+              "text": "Semiconductor specialists outpacing traditional tech giants as primary beneficiaries of AI infrastructure buildout."
             },
             {
-              "keyword": "Chipmaker Market Position",
-              "text": "Chipmakers capturing disproportionate AI infrastructure value versus hyperscale cloud providers"
+              "keyword": "Vertical Integration",
+              "text": "Broadcom's custom silicon strategy combined with VMware acquisition demonstrates move toward end-to-end AI solutions."
             }
           ],
-          "counterpoint": "Geopolitical incentives may create overcapacity if AI infrastructure spending normalizes"
+          "counterpoint": "Expansion into Vietnam and US construction timelines may face regulatory or geopolitical headwinds."
         },
         "en": {
-          "executive_summary": "Vietnam emerges as a semiconductor hub with Qualcomm planning its third-largest global AI R&D center there. SK Hynix expands HBM production to Indiana, citing talent and incentives, while chipmakers gain competitive advantage over big tech as AI infrastructure demand accelerates.",
+          "executive_summary": "Qualcomm is establishing its third-largest global AI R&D center in Vietnam while SK Hynix is expanding HBM production in Indiana to access talent and incentives. NVIDIA's strong quarterly results confirm chipmakers have displaced traditional big tech as the primary AI era winners, with Broadcom also expanding its AI position through custom silicon and VMware integration.",
           "key_facts": [
-            "Qualcomm planning third-largest global AI R&D center in Vietnam",
+            "Qualcomm plans third-largest global AI R&D center in Vietnam",
             "SK Hynix establishing HBM manufacturing in Indiana",
-            "NVIDIA's quarterly results confirm chipmakers as primary AI era beneficiaries"
+            "NVIDIA confirms chipmaker dominance over big tech in AI era",
+            "Broadcom expanding AI position via custom silicon and VMware"
           ],
           "implications": [
             {
-              "keyword": "Geopolitical Diversification",
-              "text": "Semiconductor manufacturing shifting to Vietnam and US, reducing China-centric supply chains and responding to incentive programs"
+              "keyword": "Geographic Diversification",
+              "text": "Chipmakers shifting R&D and manufacturing hubs to Vietnam and US Midwest to reduce supply chain concentration and access regional incentives."
             },
             {
-              "keyword": "HBM Supply Chain",
-              "text": "SK Hynix' Indiana expansion addresses strategic HBM demand for AI accelerators and reduces geographic concentration risk"
+              "keyword": "Market Leadership",
+              "text": "Semiconductor specialists outpacing traditional tech giants as primary beneficiaries of AI infrastructure buildout."
             },
             {
-              "keyword": "Chipmaker Market Position",
-              "text": "Chipmakers capturing disproportionate AI infrastructure value versus hyperscale cloud providers"
+              "keyword": "Vertical Integration",
+              "text": "Broadcom's custom silicon strategy combined with VMware acquisition demonstrates move toward end-to-end AI solutions."
             }
           ],
-          "counterpoint": "Geopolitical incentives may create overcapacity if AI infrastructure spending normalizes"
+          "counterpoint": "Expansion into Vietnam and US construction timelines may face regulatory or geopolitical headwinds."
         }
       }
     },
@@ -60,110 +62,30 @@
       "sector": "Custom SoC",
       "date": "2026-08-30",
       "item_count": 5,
-      "generated_at": "2026-08-30T13:08:31.283818+00:00",
+      "generated_at": "2026-08-30T13:24:37.897575+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "NVIDIA dominates custom AI accelerator market with record $96B revenue in Q2 2026, though emerging competitive pressures emerge from OpenAI's Jalapeño claiming superior performance against Blackwell, and divergent market valuations between Broadcom and AMD suggest uncertainty about alternative chip winners.",
-          "key_facts": [
-            "NVIDIA Q2 2026 revenue: $96B",
-            "OpenAI Jalapeño positioned as superior to NVIDIA Blackwell accelerators",
-            "Market pricing Broadcom and AMD differently despite same AI boom exposure"
-          ],
-          "implications": [
-            {
-              "keyword": "Custom Silicon Threat",
-              "text": "Hyperscaler internal designs (OpenAI Jalapeño) emerging as performance alternative to NVIDIA, though NVIDIA CEO expresses 100% confidence in continued institutional adoption"
-            },
-            {
-              "keyword": "Competitive Fragmentation",
-              "text": "Broadcom and AMD valuations diverging suggests market differentiation by data center design-in likelihood or margin profiles"
-            },
-            {
-              "keyword": "Market Concentration",
-              "text": "NVIDIA's $96B quarterly revenue reflects continued dominance despite custom silicon and competitive pressure from Broadcom, AMD"
-            }
-          ],
-          "counterpoint": "NVIDIA's confidence in sustained market share may underestimate custom silicon adoption curves if performance parity is achieved"
-        },
-        "en": {
-          "executive_summary": "NVIDIA dominates custom AI accelerator market with record $96B revenue in Q2 2026, though emerging competitive pressures emerge from OpenAI's Jalapeño claiming superior performance against Blackwell, and divergent market valuations between Broadcom and AMD suggest uncertainty about alternative chip winners.",
-          "key_facts": [
-            "NVIDIA Q2 2026 revenue: $96B",
-            "OpenAI Jalapeño positioned as superior to NVIDIA Blackwell accelerators",
-            "Market pricing Broadcom and AMD differently despite same AI boom exposure"
-          ],
-          "implications": [
-            {
-              "keyword": "Custom Silicon Threat",
-              "text": "Hyperscaler internal designs (OpenAI Jalapeño) emerging as performance alternative to NVIDIA, though NVIDIA CEO expresses 100% confidence in continued institutional adoption"
-            },
-            {
-              "keyword": "Competitive Fragmentation",
-              "text": "Broadcom and AMD valuations diverging suggests market differentiation by data center design-in likelihood or margin profiles"
-            },
-            {
-              "keyword": "Market Concentration",
-              "text": "NVIDIA's $96B quarterly revenue reflects continued dominance despite custom silicon and competitive pressure from Broadcom, AMD"
-            }
-          ],
-          "counterpoint": "NVIDIA's confidence in sustained market share may underestimate custom silicon adoption curves if performance parity is achieved"
-        }
+        "ko": {},
+        "en": {}
+      }
+    },
+    "foundry": {
+      "sector": "Foundry",
+      "date": "2026-08-30",
+      "item_count": 3,
+      "generated_at": "2026-08-30T13:24:37.897575+00:00",
+      "content": {
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
       "date": "2026-08-30",
       "item_count": 4,
-      "generated_at": "2026-08-30T13:08:31.283818+00:00",
+      "generated_at": "2026-08-30T13:24:37.897575+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "AI-driven data center demand shatters traditional memory industry boom-bust cycles, with Micron reporting 50% supply deficit. India advances semiconductor ecosystem from electronics manufacturing to integrated chip production, while advanced packaging research in SiC and wafer handling technologies supports broader infrastructure modernization.",
-          "key_facts": [
-            "Micron: Data center memory demand exceeds supply by 50%",
-            "India transitioning to semiconductor manufacturing focus beyond electronics assembly",
-            "Wafer handling equipment market outlook through 2035",
-            "TU Wien/Silvaco research on aluminum dopant activation in 4H-SiC"
-          ],
-          "implications": [
-            {
-              "keyword": "Memory Supply Shortage",
-              "text": "50% demand-supply imbalance in data center DRAM/HBM extends pricing power and capital expenditure cycles for memory suppliers"
-            },
-            {
-              "keyword": "Regional Manufacturing Expansion",
-              "text": "India's semiconductor ambitions create new packaging and assembly capacity outside traditional Taiwan-South Korea duopoly"
-            },
-            {
-              "keyword": "Advanced Packaging Technology",
-              "text": "SiC packaging research and wafer handling improvements support next-generation power and RF applications in data center infrastructure"
-            }
-          ],
-          "counterpoint": "50% supply deficit may be temporary if hyperscaler CapEx cycles normalize or custom silicon reduces HBM demand intensity"
-        },
-        "en": {
-          "executive_summary": "AI-driven data center demand shatters traditional memory industry boom-bust cycles, with Micron reporting 50% supply deficit. India advances semiconductor ecosystem from electronics manufacturing to integrated chip production, while advanced packaging research in SiC and wafer handling technologies supports broader infrastructure modernization.",
-          "key_facts": [
-            "Micron: Data center memory demand exceeds supply by 50%",
-            "India transitioning to semiconductor manufacturing focus beyond electronics assembly",
-            "Wafer handling equipment market outlook through 2035",
-            "TU Wien/Silvaco research on aluminum dopant activation in 4H-SiC"
-          ],
-          "implications": [
-            {
-              "keyword": "Memory Supply Shortage",
-              "text": "50% demand-supply imbalance in data center DRAM/HBM extends pricing power and capital expenditure cycles for memory suppliers"
-            },
-            {
-              "keyword": "Regional Manufacturing Expansion",
-              "text": "India's semiconductor ambitions create new packaging and assembly capacity outside traditional Taiwan-South Korea duopoly"
-            },
-            {
-              "keyword": "Advanced Packaging Technology",
-              "text": "SiC packaging research and wafer handling improvements support next-generation power and RF applications in data center infrastructure"
-            }
-          ],
-          "counterpoint": "50% supply deficit may be temporary if hyperscaler CapEx cycles normalize or custom silicon reduces HBM demand intensity"
-        }
+        "ko": {},
+        "en": {}
       }
     }
   }
