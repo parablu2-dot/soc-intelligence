@@ -1,0 +1,25 @@
+{
+  "_comment": "eco-intelligence(8축) ↔ SOC 10축 매핑. 2026-08-30 기획 문서 §5 확정본 그대로.",
+  "_eco_repo": "github.com/parablu2-dot/eco-intelligence",
+  "_eco_axes": [
+    "geopolitics", "polarization", "fed_policy", "productivity_ai",
+    "us_investment", "rates_fx", "commodities_energy", "market_signals"
+  ],
+  "macro_layer": {
+    "_comment": "전 축에 동시 작용 — Weekly Report 상단 고정 블록 1회만 생성, 축마다 반복 안 함.",
+    "axes": ["fed_policy", "rates_fx", "polarization"]
+  },
+  "tag_layer": {
+    "_comment": "해당 SOC 축 항목에만 부착. dram/nand는 AXES_ACTIVE에 없어 생성 단계에서 자동 스킵됨(scripts/subscriber_schema.py의 _filter_active와 동일 원칙).",
+    "geopolitics": ["foundry", "packaging", "hbm"],
+    "productivity_ai": ["hpc_datacenter", "custom_soc", "hbm", "cpo_optics"],
+    "us_investment": ["foundry", "packaging"],
+    "commodities_energy": ["pmic", "foundry"],
+    "market_signals": ["dram", "nand", "hbm"]
+  },
+  "cpo_generation_shared_with": {
+    "_comment": "CPO의 실제 거시 동인은 productivity_ai(HPC·DC와 동일, AI 데이터센터 스케일아웃) — commodities_energy 아님(초안에서 철회, §5.3). 매크로 레이어 생성은 hpc_datacenter와 묶어 1회만 하되, 리포트 표면에서는 cpo_optics를 독립 칸으로 유지한다(생성 로직 효율화와 표시 구조는 분리).",
+    "generate_with_axis": "hpc_datacenter",
+    "display_as_independent": "cpo_optics"
+  }
+}

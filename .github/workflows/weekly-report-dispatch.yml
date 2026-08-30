@@ -1,0 +1,46 @@
+name: weekly-report-dispatch
+
+# 2026-08-30 페르소나 Verifier 기획 §7.3 — 금요일 밤 생성분을 토요일 오전에 발송.
+# 이 워크플로는 LLM을 호출하지 않는다 — weekly-report-generate.yml이 이미 만든
+# data/refined/weekly_report/latest.json을 페르소나별로 렌더링해 보내기만 한다.
+#
+# 안전장치: 2026-08-30 기준 subscribers.json에 schedule=weekly인 레코드가 없다(Phase 1에서
+# 기존 레코드를 강제 변환하지 않기로 결정했기 때문). 따라서 이 워크플로가 활성화돼도 실제
+# 이메일이 나가지 않는다 — 실 리더/경영진 구독자 등록은 영업 접촉 확정 후 별도 진행.
+
+on:
+  schedule:
+    # 토요일 00:00 UTC = 토요일 09:00 KST (오전)
+    - cron: '0 0 * * SAT'
+  workflow_dispatch:
+    inputs:
+      force_send:
+        description: "schedule=weekly 없이도 강제 발송 시도 (테스트용, 평소엔 false)"
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Send weekly report
+        continue-on-error: true
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          CPO_SUBSCRIBER_EMAILS: ${{ secrets.CPO_SUBSCRIBER_EMAILS }}
+          WEEKLY_FORCE_SEND: ${{ inputs.force_send }}
+        run: python scripts/send_weekly_report_mail.py

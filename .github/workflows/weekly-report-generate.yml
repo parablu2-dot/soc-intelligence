@@ -1,0 +1,44 @@
+name: weekly-report-generate
+
+# 2026-08-30 페르소나 Verifier 기획 §7.3 — "금요일 심야 생성 → 토요일 오전 발송".
+# 신규 파이프라인(Phase 0 탐색 결과: 이전에 Weekly Report 자체가 없었음).
+# 생성(이 워크플로, 금요일 밤)과 발송(weekly-report-dispatch.yml, 토요일 아침)을 분리해
+# 발송 단계는 순수 정적 파일 읽기만 하도록 유지(runtime-token-zero).
+
+on:
+  schedule:
+    # 금요일 14:50 UTC = 금요일 23:50 KST (심야)
+    - cron: '50 14 * * FRI'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate weekly report
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/generate_weekly_report.py
+
+      - name: Commit weekly report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/refined/weekly_report/
+          git diff --staged --quiet || git commit -m "chore: weekly report $(date -u +'%Y-%m-%d')"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push

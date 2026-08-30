@@ -46,6 +46,13 @@ _SOC_KEYWORDS_LOWER = [
     "optical engine", "vcsel", "1.6t", "800g transceiver", "wavelength division",
     " ofc ", "ecoc",
     "광통신", "광트랜시버", "실리콘포토닉스", "광인터커넥트",
+    # PMIC 키워드 — pmic 축(2026-08-30 페르소나 Verifier 기획 §8) 전용. 기존 chip/foundry 어휘엔
+    # 아날로그·전력관리 용어가 없어 이게 없으면 is_soc_relevant()가 PMIC 기사 대부분을 걸러냄.
+    "pmic", "power management ic", "power ic", "analog ic", "bcd process",
+    "voltage regulator", "power delivery", "legacy node", "mature process", "mature node",
+    "texas instruments", "analog devices", "infineon", "onsemi", "on semiconductor",
+    "stmicroelectronics", "ddr5 module", "jedec",
+    "전력관리반도체", "아날로그반도체", "레거시 공정", "성숙 공정",
 ]
 
 # 채용 관련 키워드 — infer_category에서 사용 (단일 단어 "engineer" 등 광범위한 용어 제외)
