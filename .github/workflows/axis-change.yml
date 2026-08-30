@@ -1,0 +1,44 @@
+name: process-axis-change
+
+# 구독 축 변경 토큰 처리 (2026-08-30, process-unsubscribe.yml과 동일 패턴).
+# 이메일 "구독 축 변경" 링크는 mailto:라 자동 트리거가 안 됨 — 운영자가 메일로 받은 토큰+원하는
+# 축 목록을 여기 input으로 넣어 수동 실행한다.
+
+on:
+  workflow_dispatch:
+    inputs:
+      token:
+        description: "구독 축 변경 요청 메일에 담긴 unsubscribe_token"
+        required: true
+        type: string
+      axes:
+        description: "콤마로 구분된 새 축 목록 (예: hpc_datacenter,packaging,pmic)"
+        required: true
+        type: string
+
+jobs:
+  axis-change:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # git push를 위해 필요
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Process axis change token
+        run: python scripts/process_axis_change.py --token "${{ inputs.token }}" --axes "${{ inputs.axes }}"
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/subscribers/subscribers.json
+          git diff --staged --quiet || git commit -m "chore: process axis change request"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push

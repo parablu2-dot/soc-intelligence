@@ -33,6 +33,7 @@ import json
 import os
 import smtplib
 import sys
+import urllib.parse
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime, timezone
@@ -44,6 +45,9 @@ except ImportError:  # pragma: no cover
     ZoneInfo = None
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from scripts.subscriber_schema import AXES_ACTIVE  # noqa: E402 — sys.path 조정 후 import 필요
+
 DATA_REFINED = ROOT / "data" / "refined"
 SUBSCRIBERS_PATH = ROOT / "data" / "subscribers" / "subscribers.json"
 STATUS_PATH = ROOT / "data" / "refined" / "subscriber_mail_status.json"
@@ -170,6 +174,25 @@ def _axis_block_html(label: str, content: dict, links: list[dict]) -> str:
 </div>"""
 
 
+def _axis_change_mailto(smtp_user: str, unsubscribe_token: str, current_axes: list[str]) -> str:
+    """구독 축 변경 요청용 mailto 링크 (2026-08-30, process_unsubscribe.py의 mailto+토큰 패턴 재사용).
+
+    unsubscribe_token을 그대로 재사용한다 — 별도 change_token을 신설하지 않음(토큰 종류가
+    늘어나면 subscribers.json 스키마·메일 템플릿이 같이 늘어나는데, 지금은 토큰 하나로 해지/
+    변경 둘 다 식별 가능하면 충분). 실제 반영은 process_axis_change.py(수동 workflow_dispatch)가
+    담당 — 자동 처리 백엔드 없음(unsubscribe와 동일 YAGNI 판단, 1~2고객 규모)."""
+    subject = f"SoC Intelligence 축 변경 요청: {unsubscribe_token}"
+    body = (
+        f"현재 구독 축: {', '.join(current_axes)}\n\n"
+        f"선택 가능한 축: {', '.join(AXES_ACTIVE)}\n\n"
+        "원하시는 축 조합을 콤마로 구분해 이 메일에 답장해주세요."
+    )
+    # urlencode()는 공백을 '+'로 인코딩하는데 mailto: body에서는 메일 클라이언트마다 '+'를
+    # 리터럴로 남기는 경우가 있어(RFC 6068은 percent-encoding을 요구) quote()로 직접 인코딩.
+    query = f"subject={urllib.parse.quote(subject)}&body={urllib.parse.quote(body)}"
+    return f"mailto:{smtp_user}?{query}"
+
+
 def _build_html(axes: list[str], date_str: str, smtp_user: str, unsubscribe_token: str) -> tuple[str, bool]:
     """(html, has_content) 반환 — has_content=False면 보낼 내용이 없다는 뜻."""
     blocks = []
@@ -182,6 +205,7 @@ def _build_html(axes: list[str], date_str: str, smtp_user: str, unsubscribe_toke
             blocks.append(block)
 
     unsubscribe_mailto = f"mailto:{smtp_user}?subject=SoC Intelligence 구독 해지 요청: {unsubscribe_token}"
+    axis_change_mailto = _axis_change_mailto(smtp_user, unsubscribe_token, axes)
 
     html = f"""\
 <div style="font-family:-apple-system,Segoe UI,Arial,sans-serif;background:#0d1117;color:#e6edf3;padding:20px;max-width:640px;margin:0 auto">
@@ -189,6 +213,8 @@ def _build_html(axes: list[str], date_str: str, smtp_user: str, unsubscribe_toke
   <div style="color:#8b949e;font-size:12px;margin-bottom:16px">{date_str}</div>
   {"".join(blocks)}
   <div style="margin-top:20px;padding-top:12px;border-top:1px solid #30363d;font-size:11px;color:#8b949e">
+    <a href="{axis_change_mailto}" style="color:#8b949e">구독 축 변경</a>
+    &nbsp;·&nbsp;
     <a href="{unsubscribe_mailto}" style="color:#8b949e">구독 해지</a>
   </div>
 </div>"""
