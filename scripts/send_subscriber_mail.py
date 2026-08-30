@@ -35,7 +35,7 @@ import smtplib
 import sys
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 try:
@@ -46,6 +46,7 @@ except ImportError:  # pragma: no cover
 ROOT = Path(__file__).resolve().parents[1]
 DATA_REFINED = ROOT / "data" / "refined"
 SUBSCRIBERS_PATH = ROOT / "data" / "subscribers" / "subscribers.json"
+STATUS_PATH = ROOT / "data" / "refined" / "subscriber_mail_status.json"
 
 _MAX_LINKS_PER_AXIS = 5
 
@@ -194,6 +195,26 @@ def _build_html(axes: list[str], date_str: str, smtp_user: str, unsubscribe_toke
     return html, has_content
 
 
+def _write_status(status: str, detail: str, sent: int = 0, skipped: int = 0,
+                   per_subscriber: list[dict] | None = None) -> None:
+    """실행 결과를 data/refined/에 커밋 대상 파일로 남긴다 (2026-08-30 추가).
+
+    이유: 이 스크립트는 워크플로 전체를 안 죽이려고 항상 exit 0으로 끝나고, GitHub Actions
+    step도 continue-on-error라 "success"로 찍힌다 — 즉 조용히 스킵돼도 Actions 탭에서는
+    구분이 안 된다(실제로 첫 고객이 2주째 메일을 못 받은 원인 파악이 로그 접근 권한 없이는
+    불가능했던 문제). 이 파일이 매일 커밋되므로 git으로 원인을 바로 확인할 수 있다."""
+    STATUS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    STATUS_PATH.write_text(json.dumps({
+        "checked_at": datetime.now(timezone.utc).isoformat(),
+        "status": status,          # "sent" | "no_secrets" | "weekend_skip" | "bad_email_json" |
+                                    # "no_active_subscribers" | "smtp_connect_failed"
+        "detail": detail,
+        "sent": sent,
+        "skipped": skipped,
+        "per_subscriber": per_subscriber or [],
+    }, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def run() -> None:
     smtp_user = os.environ.get("SMTP_USER")
     smtp_pass = os.environ.get("SMTP_PASS")
@@ -201,17 +222,20 @@ def run() -> None:
 
     if not (smtp_user and smtp_pass and emails_raw):
         print("::warning::SMTP_USER/SMTP_PASS/CPO_SUBSCRIBER_EMAILS 미설정 — 구독자 메일 발송 스킵")
+        _write_status("no_secrets", "SMTP_USER/SMTP_PASS/CPO_SUBSCRIBER_EMAILS 중 하나 이상 미설정")
         return
 
     if not _is_kst_weekday() and not _force_send():
         print("[send_subscriber_mail] KST 주말 — 평일 1회 스케줄이라 스킵 "
               "(CPO_FORCE_SEND=true로 테스트 발송 가능)")
+        _write_status("weekend_skip", "KST 기준 주말이라 평일 1회 스케줄 스킵")
         return
 
     try:
         email_map: dict = json.loads(emails_raw)
     except Exception as exc:
         print(f"::warning::CPO_SUBSCRIBER_EMAILS JSON 파싱 실패: {exc}")
+        _write_status("bad_email_json", f"CPO_SUBSCRIBER_EMAILS JSON 파싱 실패: {exc}")
         return
 
     subscribers_raw = json.loads(SUBSCRIBERS_PATH.read_text(encoding="utf-8")) if SUBSCRIBERS_PATH.exists() else []
@@ -222,10 +246,12 @@ def run() -> None:
     ]
     if not subscribers:
         print("[send_subscriber_mail] 활성 구독자 없음 — 스킵")
+        _write_status("no_active_subscribers", "axes/schedule=weekday/active 조건을 만족하는 구독자 없음")
         return
 
     date_str = datetime.now(ZoneInfo("Asia/Seoul")).date().isoformat() if ZoneInfo else ""
     sent, skipped = 0, 0
+    per_subscriber: list[dict] = []
 
     try:
         with smtplib.SMTP("smtp.gmail.com", 587, timeout=30) as server:
@@ -239,6 +265,8 @@ def run() -> None:
                     print(f"::warning::customer_id={customer_id}에 대한 이메일이 "
                           f"CPO_SUBSCRIBER_EMAILS에 없음 — 스킵")
                     skipped += 1
+                    per_subscriber.append({"customer_id": customer_id, "result": "no_email_mapped",
+                                            "note": "CPO_SUBSCRIBER_EMAILS에 이 customer_id 키가 없음"})
                     continue
                 try:
                     ordered_axes = _axis_display_order(sub, sub["axes"])
@@ -249,6 +277,8 @@ def run() -> None:
                         print(f"[send_subscriber_mail] customer_id={customer_id}: "
                               f"구독 축 전부 최근 수집분 없음 — 스킵")
                         skipped += 1
+                        per_subscriber.append({"customer_id": customer_id, "result": "no_content",
+                                                "note": "구독 축 전부 오늘자 콘텐츠 없음"})
                         continue
                     msg = MIMEMultipart("alternative")
                     msg["Subject"] = f"SoC Intelligence — 맞춤 브리핑 — {date_str}"
@@ -257,15 +287,20 @@ def run() -> None:
                     msg.attach(MIMEText(html, "html", "utf-8"))
                     server.sendmail(smtp_user, [mail_to], msg.as_string())
                     sent += 1
+                    per_subscriber.append({"customer_id": customer_id, "result": "sent"})
                     print(f"[send_subscriber_mail] sent to customer_id={customer_id} axes={sub['axes']}")
                 except Exception as exc:
                     print(f"::warning::customer_id={customer_id} 발송 실패: {exc}")
                     skipped += 1
+                    per_subscriber.append({"customer_id": customer_id, "result": "send_failed", "note": str(exc)})
     except Exception as exc:
         print(f"::warning::send_subscriber_mail SMTP 연결 실패: {exc}")
+        _write_status("smtp_connect_failed", str(exc))
         return
 
     print(f"[send_subscriber_mail] sent={sent} skipped={skipped}")
+    _write_status("sent" if sent else "sent_zero", f"sent={sent} skipped={skipped}",
+                  sent=sent, skipped=skipped, per_subscriber=per_subscriber)
 
 
 if __name__ == "__main__":
