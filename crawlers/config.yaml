@@ -139,6 +139,15 @@ cpo_optics:
     module: crawlers.cpo_optics.googlenews
     class: CpoOpticsGoogleNewsCrawler
 
+# 10번째 축 (2026-08-30 페르소나 Verifier 기획 §8) — CPO와 동일하게 5축 대시보드/
+# summarize_sectors.py에는 배선하지 않고 별도 digest(scripts/summarize_pmic_axis.py) 전용 소비처.
+# 전용 쿼리 이유는 crawlers/pmic/googlenews.py 참고 — 기존 축 쿼리 공유 시 수집량 0 수렴 위험.
+pmic:
+  googlenews:
+    enabled: true
+    module: crawlers.pmic.googlenews
+    class: PmicGoogleNewsCrawler
+
 # 공통 정책
 policy:
   # exclude_domains 제거함 — 3계층 distillation의 검증 노드가 출처 신뢰도를 개별 판단
@@ -187,6 +196,8 @@ axis_news_queries:
   foundry: 'foundry "process node" OR "2nm" OR "3nm" OR "wafer capacity" TSMC OR "Samsung Foundry"'
   packaging: 'CoWoS OR chiplet OR "advanced packaging" OR UCIe semiconductor'
   cpo_optics: '"co-packaged optics" OR CPO OR "silicon photonics" OR "optical interconnect" OR OFC OR ECOC AI datacenter'
+  # 3갈래(§8-1): 중국 파운드리 레거시 라인 전환 / 아날로그 업체(TI·ADI·Infineon) 실적·가동률 / JEDEC DDR5 모듈
+  pmic: '"power management IC" OR PMIC OR ("legacy node" OR "mature process") ("China foundry" OR SMIC) OR "Texas Instruments" earnings OR "Analog Devices" earnings OR Infineon earnings OR "JEDEC DDR5" OR "DDR5 module"'
 
 # 중국어(zh) 기술 뉴스 Google News 쿼리 — crawlers/tech/googlenews_zh.py가 읽음.
 # TechSignal은 axis 없음 — 5축 대신 SoC 도메인 전반을 포괄하는 단일 쿼리.

@@ -72,6 +72,13 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/summarize_cpo_axis.py
 
+      # ── 3.7 PMIC(전력관리반도체) 10번째 축 전용 다이제스트 (2026-08-30 페르소나 Verifier
+      # 기획 §8, BOM/공급안정성 렌즈 — CPO와 동일하게 5축 파이프라인과 분리) ─
+      - name: Run PMIC axis digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/summarize_pmic_axis.py
+
       # ── 5. canonical → data/refined/ JSON export ──────────────
       - name: Export refined JSON
         run: python scripts/export_refined.py
