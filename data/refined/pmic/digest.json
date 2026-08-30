@@ -1,67 +1,69 @@
 {
   "axis": "pmic",
   "sector": "PMIC",
-  "date": "2026-08-30",
-  "generated_at": "2026-08-30T13:24:56.006891+00:00",
+  "date": "2026-08-31",
+  "generated_at": "2026-08-30T22:30:22.295291+00:00",
   "item_count": 8,
   "content": {
     "ko": {
-      "executive_summary": "PMIC demand is being reshaped by AI workload displacement toward mature-node capacity. SMIC and Huahong are capturing 8-inch BCD and analog volumes as TSMC/Samsung deprioritize legacy nodes, with SMIC reporting record Q2 revenue, record inquiries, and 3.6x net profit growth. Leadtrend's gross margin rebounded to 33.6% as AI crowds out mature-process capacity, signaling pricing power and utilization tightness in the PMIC supply chain.",
+      "executive_summary": "PMIC/BCD foundry capacity is experiencing demand compression as AI workloads crowd out mature-node allocation at leading-edge fabs (TSMC, Samsung), creating a window for mature-node specialists (SMIC, Hua Hong) to capture legacy product orders and gain pricing power. SMIC reports record revenue and margin expansion driven by China-onshoring trends and foreign client reallocation, though US equipment export restrictions introduce supply-chain friction for node capacity scaling.",
       "key_facts": [
-        "SMIC Q2 net profit up 3.6x; Q2 China revenue surged 22%",
-        "SMIC reports record revenue and record foreign-client inquiries",
-        "Leadtrend FY2026 Q1 net profit up 182% QoQ; gross margin 33.6%",
-        "TSMC, Samsung shift focus to advanced nodes; SMIC/Huahong seizing 8-inch demand",
-        "SMIC flags US equipment supply delays despite record revenue"
+        "SMIC April-June net profit increased 3.6-fold on AI demand and localization momentum",
+        "Leadtrend gross margin rebounded to 33.6% as AI crowds out mature process capacity",
+        "SMIC China revenue surged 22% in Q2",
+        "SMIC reports record revenue with foreign clients shifting orders back to China",
+        "TSMC and Samsung shifting to advanced nodes, creating 8-inch demand opening for SMIC and Hua Hong",
+        "SMIC flagged US equipment supply delays"
       ],
       "implications": [
         {
-          "keyword": "Capacity Utilization",
-          "text": "AI workloads crowding out mature-process capacity at foundries; PMIC/analog fabs (SMIC, Huahong) seeing accelerated demand and margin expansion as TSMC/Samsung vacate legacy nodes."
+          "keyword": "Supply-Chain Reallocation",
+          "text": "Tier-1 fab retreat from mature nodes (TSMC, Samsung focus on advanced nodes) is accelerating BCD/8-inch capacity capture by China specialists, reducing global competitive pressure on pricing and easing supply-tightness for PMIC designers."
         },
         {
-          "keyword": "Pricing Dynamics",
-          "text": "Gross margin rebound to 33.6% at Leadtrend and record profitability at SMIC indicate sustained pricing power for mature-node PMICs amid supply tightness."
+          "keyword": "Pricing & Margin Expansion",
+          "text": "Leadtrend's 33.6% gross margin rebound and SMIC's record revenue signals demand elasticity recovery in mature-node PMIC; customers onshoring to China and consolidating supply chains are accepting higher ASPs."
         },
         {
-          "keyword": "BOM Stability Risk",
-          "text": "SMIC reports US equipment supply delays; geopolitical/sanctions headwinds on fabs serving foreign clients may constrain future capacity ramps and supply continuity."
+          "keyword": "Geopolitical Risk to Capacity Growth",
+          "text": "SMIC's flagged US equipment delays are a headwind for scaling 8-inch capacity; continued export restrictions could constrain mature-node supply growth and cede long-term advantage to non-US fabs in automotive/server-grade PMIC qualification pipelines."
         },
         {
-          "keyword": "Supply Reshore Trend",
-          "text": "Foreign OEMs shifting PMIC orders back to China (SMIC) as onshore capacity expands; may reduce geographic diversification in PMIC supply base over 12–18 months."
+          "keyword": "Automotive/Server Certification Backlog",
+          "text": "No explicit certification/qualification news in headlines; opportunity to monitor whether China fabs (SMIC, Hua Hong) are pursuing automotive-grade or server-grade PMIC credentials to lock in higher-margin segments."
         }
       ],
-      "counterpoint": "AI-driven mature-node demand surge may be temporary or capacity-driven; Leadtrend's margin rebound tied to inventory normalization, not structural pricing, and US equipment restrictions could reverse SMIC's record trajectory if wafer-start constraints tighten."
+      "counterpoint": "PMIC demand surge may be temporary if AI capex cycle moderates; mature-node specialists lack advanced-node optionality, leaving them exposed to inventory corrections or design-win losses if high-end OEMs resume internal advanced-node PMIC development."
     },
     "en": {
-      "executive_summary": "PMIC demand is being reshaped by AI workload displacement toward mature-node capacity. SMIC and Huahong are capturing 8-inch BCD and analog volumes as TSMC/Samsung deprioritize legacy nodes, with SMIC reporting record Q2 revenue, record inquiries, and 3.6x net profit growth. Leadtrend's gross margin rebounded to 33.6% as AI crowds out mature-process capacity, signaling pricing power and utilization tightness in the PMIC supply chain.",
+      "executive_summary": "PMIC/BCD foundry capacity is experiencing demand compression as AI workloads crowd out mature-node allocation at leading-edge fabs (TSMC, Samsung), creating a window for mature-node specialists (SMIC, Hua Hong) to capture legacy product orders and gain pricing power. SMIC reports record revenue and margin expansion driven by China-onshoring trends and foreign client reallocation, though US equipment export restrictions introduce supply-chain friction for node capacity scaling.",
       "key_facts": [
-        "SMIC Q2 net profit up 3.6x; Q2 China revenue surged 22%",
-        "SMIC reports record revenue and record foreign-client inquiries",
-        "Leadtrend FY2026 Q1 net profit up 182% QoQ; gross margin 33.6%",
-        "TSMC, Samsung shift focus to advanced nodes; SMIC/Huahong seizing 8-inch demand",
-        "SMIC flags US equipment supply delays despite record revenue"
+        "SMIC April-June net profit increased 3.6-fold on AI demand and localization momentum",
+        "Leadtrend gross margin rebounded to 33.6% as AI crowds out mature process capacity",
+        "SMIC China revenue surged 22% in Q2",
+        "SMIC reports record revenue with foreign clients shifting orders back to China",
+        "TSMC and Samsung shifting to advanced nodes, creating 8-inch demand opening for SMIC and Hua Hong",
+        "SMIC flagged US equipment supply delays"
       ],
       "implications": [
         {
-          "keyword": "Capacity Utilization",
-          "text": "AI workloads crowding out mature-process capacity at foundries; PMIC/analog fabs (SMIC, Huahong) seeing accelerated demand and margin expansion as TSMC/Samsung vacate legacy nodes."
+          "keyword": "Supply-Chain Reallocation",
+          "text": "Tier-1 fab retreat from mature nodes (TSMC, Samsung focus on advanced nodes) is accelerating BCD/8-inch capacity capture by China specialists, reducing global competitive pressure on pricing and easing supply-tightness for PMIC designers."
         },
         {
-          "keyword": "Pricing Dynamics",
-          "text": "Gross margin rebound to 33.6% at Leadtrend and record profitability at SMIC indicate sustained pricing power for mature-node PMICs amid supply tightness."
+          "keyword": "Pricing & Margin Expansion",
+          "text": "Leadtrend's 33.6% gross margin rebound and SMIC's record revenue signals demand elasticity recovery in mature-node PMIC; customers onshoring to China and consolidating supply chains are accepting higher ASPs."
         },
         {
-          "keyword": "BOM Stability Risk",
-          "text": "SMIC reports US equipment supply delays; geopolitical/sanctions headwinds on fabs serving foreign clients may constrain future capacity ramps and supply continuity."
+          "keyword": "Geopolitical Risk to Capacity Growth",
+          "text": "SMIC's flagged US equipment delays are a headwind for scaling 8-inch capacity; continued export restrictions could constrain mature-node supply growth and cede long-term advantage to non-US fabs in automotive/server-grade PMIC qualification pipelines."
         },
         {
-          "keyword": "Supply Reshore Trend",
-          "text": "Foreign OEMs shifting PMIC orders back to China (SMIC) as onshore capacity expands; may reduce geographic diversification in PMIC supply base over 12–18 months."
+          "keyword": "Automotive/Server Certification Backlog",
+          "text": "No explicit certification/qualification news in headlines; opportunity to monitor whether China fabs (SMIC, Hua Hong) are pursuing automotive-grade or server-grade PMIC credentials to lock in higher-margin segments."
         }
       ],
-      "counterpoint": "AI-driven mature-node demand surge may be temporary or capacity-driven; Leadtrend's margin rebound tied to inventory normalization, not structural pricing, and US equipment restrictions could reverse SMIC's record trajectory if wafer-start constraints tighten."
+      "counterpoint": "PMIC demand surge may be temporary if AI capex cycle moderates; mature-node specialists lack advanced-node optionality, leaving them exposed to inventory corrections or design-win losses if high-end OEMs resume internal advanced-node PMIC development."
     }
   },
   "links": [
