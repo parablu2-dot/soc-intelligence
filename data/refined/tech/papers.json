@@ -2,6 +2,237 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Switchable chiral antiferromagnetism through nonlinear magnetic susceptibility",
+    "url": "https://arxiv.org/abs/2608.28546v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "Antiferromagnets (AFM) have attracted considerable attention in recent years because a number of nontrivial, technologically relevant properties associated with time-reversal symmetry (TRS) breaking are discovered in many materials. However, time-reversal (TR) partners of AFM states are generally challenging to be selected deterministically except in a few cases with nonzero net magnetization. Recently, it has been shown that the TR partners of the kagome spin ice ground state in HoAgGe with str",
+    "authors": [
+      "Hua Chen",
+      "Philipp Gegenwart"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Automated Dislocation Detection in Electron Channelling Contrast Imaging: A Comparative Study of Rule-Based, Neural Network, and Deep Learning Approaches",
+    "url": "https://arxiv.org/abs/2608.28495v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "Quantifying threading dislocations in semiconductor materials via electron channelling contrast imaging (ECCI) is heavily bottlenecked by slow manual analysis. This work benchmarks three automated detection pipelines on ECCI micrographs of gallium nitride (GaN) against a statistical ground truth. A classical rule-based computer vision approach proved unreliable due to extensive per-image tuning requirements, while a convolutional neural network (CNN)-based multi-stage classification and locator ",
+    "authors": [
+      "A. Holmes",
+      "C. Trager-Cowan",
+      "J. Bruckbauer",
+      "B. Hourahine"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "High-performance silicon-metal laser welding resisting extreme conditions",
+    "url": "https://arxiv.org/abs/2608.28423v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "Reliable material joining is essential for countless industrial applications. While femtosecond laser welding provides a route beyond conventional bonding methods, demonstrations of silicon-metal joints are rare due to nonlinear propagation effects and have so far been limited to shear joining strengths of a few MPa. Here, we demonstrate high-strength silicon-Kovar laser welding using sub-nanosecond pulses. By optimizing the focal position, the welding pattern, the laser polarization, and the me",
+    "authors": [
+      "Jiawei Yin",
+      "Markus Blothe",
+      "Hagen P. Kohl",
+      "Christina Schütze",
+      "Stefan Nolte",
+      "Maxime Chambonneau"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Neuromorphic architectures as numerical solvers for computational neuroscience",
+    "url": "https://arxiv.org/abs/2608.28387v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "Neuromorphic computing is closely associated with spiking neuronal networks. However, an alternative class of so-called \"rate-based\" models arising from computational neuroscience and machine learning forgoes spiking interactions and instead relies on continuous coupling between neurons. Existing neuromorphic implementations designed around spike-based interactions are not well-suited for emulating such models. Here view the distributed simulation of these models as message-passing algorithms on",
+    "authors": [
+      "Jakob Jordan",
+      "Ole Richter",
+      "Congyang Li",
+      "Mihai A. Petrovici",
+      "Rajit Manohar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "False-CSI Attacks in Power-Domain NOMA for 6G: A Threat Taxonomy and System-Level Impacts",
+    "url": "https://arxiv.org/abs/2608.28351v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "Power-domain non-orthogonal multiple access (NOMA) remains a widely studied technique for improving spectral efficiency and supporting dense connectivity in beyond-5G and 6G networks. Its main operating mechanisms, however, depend on the integrity of channel-state information (CSI). Power allocation, user ordering, pairing, clustering, and beamforming can all be distorted when the CSI consumed by the base station is deliberately biased rather than merely noisy. This article examines false CSI as",
+    "authors": [
+      "Samira Jafarli",
+      "Aysha Ebrahim",
+      "Suleyman Uludag"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Gen-TAS: A Generative AI-Aided Hardware-Software Task Allocation Framework for FPGA-GPP Heterogeneous Systems",
+    "url": "https://arxiv.org/abs/2608.28160v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "FPGA-GPP heterogeneous systems combine software flexibility with the performance and energy efficiency of reconfigurable hardware. However, determining which application tasks should execute on the GPP or FPGA requires extensive expertise and design-space exploration, particularly when user objectives vary across latency, communication, resource utilisation, and power. This paper proposes Gen-TAS, a knowledge-grounded LLM framework for user-specific FPGA-GPP task allocation. By combining task-gr",
+    "authors": [
+      "Mary Kong",
+      "Yuqin Zhao",
+      "Semih Vazgecen",
+      "Cristian Sestito",
+      "Themis Prodromakis"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Beating the nonreciprocal isolation limit of integrated circulators by Floquet leakage interference",
+    "url": "https://arxiv.org/abs/2608.28130v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "Time-modulation using semiconductor switches is a promising route to magnetless integrated nonreciprocal devices, as they can offer large modulation depths and high speeds. Yet, chip-scale devices are capped by the finite off-state capacitance of the switches, which induces detrimental leakage of the input wave to the isolated port, imposing a ceiling on the nonreciprocal isolation. Such leakage has largely constrained the development of nonreciprocal integrated systems at high frequency. Here, ",
+    "authors": [
+      "Zhe Zhang",
+      "Haoye Qin",
+      "Junda Wang",
+      "Qiaolu Chen",
+      "Zhechen Zhang",
+      "Alireza Mafi",
+      "Ahsan Altaf",
+      "Romain Fleury"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Experimental and Signal Processing Techniques for Fault Diagnosis on a Small Horizontal-Axis Wind Turbine Generator",
+    "url": "https://arxiv.org/abs/2608.28105v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "Small HAWT is a technology characterized by non-trivial critical points, basically because it is targeted for domestic use and therefore cheap manufacturing and control must conjugate with good efficiency under possibly complex flow conditions (especially in urban environment). Therefore, dynamical control optimization and noise and vibration mitigation are pressing issues for this kind of technology. Despite it is peculiar of small HAWTs that the generator constitutes a non-negligible fraction ",
+    "authors": [
+      "Francesco Natili",
+      "Francesco Castellani",
+      "Davide Astolfi",
+      "Matteo Becchetti"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Band-like Carriers in a Soft, Anharmonic Lattice: Lead-Halide Perovskites",
+    "url": "https://arxiv.org/abs/2608.28104v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "Lead-halide perovskites APbX3 present a striking dichotomy: they exhibit band-like electronic transport despite their exceptionally soft and anharmonic lattices. Optically and electrically, they resemble conventional direct-gap semiconductors, exhibiting light carrier masses and steep absorption onsets, whereas their lattices display liquid-like dynamics, including overdamped octahedral motions, quasielastic Raman central peaks, and exceptionally low thermal conductivities. Solution-processed fi",
+    "authors": [
+      "Young Mi Lee",
+      "Inhee Maeng",
+      "Jinwoo Park",
+      "Seung-Jae Oh",
+      "Min-Cherl Jung"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "Great Expectations: Benchmarking the Real-World Performance of RVV 1.0 in HPC",
+    "url": "https://arxiv.org/abs/2608.28097v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "Following the ratification of the RISC-V Vector Extension (RVV 1.0), new commercially available silicon has been adopting the extension. This paper revisits the question of RISC-V viability for High-Performance-Computing (HPC) by benchmarking the latest RVV 1.0-capable hardware (SiFive X280 (Tenstorrent Blackhole), SpacemiT X60 (K1) and X100/A100 (K3), and T-Head C920v2 (Sophon SG2044)). We assess these platforms using standard HPC benchmarks (BLAS, FFTW, HPL, HPCG) and synthetic workloads (STRE",
+    "authors": [
+      "Stepan Nassyr",
+      "Prateek Chawla",
+      "Daniel Seibel",
+      "Jayesh Badwaik",
+      "Kaveh Haghighi Mood",
+      "Andreas Herten"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "ODMA-based MIMO Massive Unsourced Random Access with Soft-Output Polar Codes",
+    "url": "https://arxiv.org/abs/2608.28085v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "This paper investigates the design of the on-off division multiple access (ODMA) transmission scheme for multiple-input multiple-output (MIMO) massive unsourced random access (URA) systems with soft-output (SO) polar codes. First, a three-segment pilot-uncoupled coding scheme is introduced under the ODMA framework, which reduces the coding rate of the data segment without increasing the transmission overhead, improving the overall system performance. Building upon this architecture, a hierarchic",
+    "authors": [
+      "Tianya Li",
+      "Xiaoran Zhang",
+      "Nan Hu",
+      "Yongpeng Wu",
+      "Wenjun Zhang",
+      "Xiang-Gen Xia",
+      "Chengshan Xiao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+    "url": "https://arxiv.org/abs/2608.28048v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "Large language models (LLMs) place unprecedented and still-growing demands on the hardware that trains and serves them. This review surveys the full landscape of AI hardware accelerators for LLMs, including general-purpose GPUs, custom ASICs such as TPUs, Trainium, Groq, and Cerebras, reconfigurable FPGAs, processing-in-memory and near-memory architectures, and emerging neuromorphic and photonic approaches across cloud and edge deployment. Using the transformer's computational structure and roof",
+    "authors": [
+      "Siddharth Patel",
+      "Rohit Singh"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.soft",
+    "title": "How a polymer filling enhances the rate and selectivity of colloid permeation across mesopores",
+    "url": "https://arxiv.org/abs/2608.27995v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "Polymer-functionalised mesopores are an emerging technology for colloid separation, sensing and delivery. Their potential is strikingly illustrated in living cells, where nuclear pore complexes (NPCs) control biocolloid transport between the nucleus and the cytosol. Even colloids much smaller than the biopolymer-filled NPC channel are effectively blocked, but some larger colloids with distinct surface features rapidly permeate. Simplistically, one may expect any polymer filling to obstruct and s",
+    "authors": [
+      "Mikhail Y. Laktionov",
+      "Frans A. M. Leermakers",
+      "Ralf P. Richter",
+      "Leonid I. Klushin",
+      "Oleg V. Borisov"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.soft",
+    "title": "Steady shear rheology of a granular crystal containing a single dislocation",
+    "url": "https://arxiv.org/abs/2608.27930v1",
+    "published_date": "2026-08-28",
+    "source": "arXiv",
+    "summary": "Monodisperse granular particles can form crystals whose yielding behavior is strongly affected by dislocations and differs markedly from that of conventional amorphous granular materials. Yet the rate dependence of their post-yield steady rheology remains unclear. We use the discrete element method to study steady shear in a granular crystal containing a single dislocation. We find that the steady shear-to-normal stress ratio $μ_b$ is organized by the scaled dislocation velocity $v_d/v_s$, rathe",
+    "authors": [
+      "Fumiaki Nakai"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "eess.SP",
     "title": "Property-Specific Recoverability from Contact PPG to Camera rPPG under Heterogeneous Observation Conditions",
     "url": "https://arxiv.org/abs/2608.27392v1",

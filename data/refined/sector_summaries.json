@@ -1,128 +1,66 @@
 {
-  "date": "2026-08-30",
-  "generated_at": "2026-08-30T22:29:59.947232+00:00",
+  "date": "2026-08-31",
+  "generated_at": "2026-08-31T23:50:02.127937+00:00",
   "sectors": {
-    "hpc_datacenter": {
-      "sector": "HPC·Datacenter",
-      "date": "2026-08-30",
-      "item_count": 6,
-      "generated_at": "2026-08-30T22:29:59.946941+00:00",
+    "mobile_ap": {
+      "sector": "Mobile AP",
+      "date": "2026-08-31",
+      "item_count": 2,
+      "generated_at": "2026-08-31T23:50:02.126839+00:00",
       "content": {
         "ko": {
-          "executive_summary": "AI 칩 수요가 고성장을 견인하면서 NVIDIA와 Broadcom이 시장 주도권을 강화하고 있다. Qualcomm의 베트남 AI R&D센터 설립 및 SK하이닉스의 인디애나 HBM 생산 계획은 지정학적 공급망 재편을 반영한다.",
+          "executive_summary": "Qualcomm는 AI가 데이터센터를 떠나 엣지로 확산되면서 새로운 기회가 시작된다고 주장하고 있다. 모바일 AP 부문에서 AI 칩 수요가 증가하고 있다.",
           "key_facts": [
-            "Qualcomm, 베트남에 글로벌 3대 규모 AI R&D센터 계획",
-            "SK하이닉스, 인디애나에서 HBM 생산 개시",
-            "NVIDIA 분기 실적 확인으로 칩메이커가 빅테크를 제치고 AI시대 수혜자로 부상",
-            "Broadcom, 커스텀 실리콘 및 VMware를 통해 AI 포지션 확장",
-            "Google, AI 인재 재채용(Boomerang Strategy) 진행"
+            "Qualcomm이 엣지 AI 기회를 강조"
           ],
           "implications": [
             {
-              "keyword": "공급망 다각화",
-              "text": "미국 외 베트남, 인디애나 등 지역에서의 R&D·제조 확대로 지정학적 리스크 분산"
-            },
-            {
-              "keyword": "칩메이커 우위",
-              "text": "AI 인프라 수요 급증으로 NVIDIA, Broadcom 등 반도체 제조사의 수익성 및 시장 지위 강화"
-            },
-            {
-              "keyword": "인재 확보 경쟁",
-              "text": "Google의 재채용 전략과 SK하이닉스의 채용설명회 호황으로 AI·반도체 분야 우수 인력 확보 경쟁 심화"
+              "keyword": "엣지 AI 확산",
+              "text": "데이터센터 AI에서 모바일/엣지 디바이스로의 전환으로 모바일 AP 칩 수요 증대"
             }
           ],
-          "counterpoint": "Qualcomm의 R&D센터 설립이 근기간 수익 기여도는 제한적일 수 있음."
+          "counterpoint": "제시된 헤드라인이 정량적 데이터와 구체적 제품 로드맵 부족."
         },
         "en": {
-          "executive_summary": "AI chip demand is driving high growth, with NVIDIA and Broadcom strengthening their market leadership. Qualcomm's establishment of an AI R&D center in Vietnam and SK Hynix's plan for HBM production in Indiana reflect geopolitical supply chain realignment.",
+          "executive_summary": "Qualcomm argues that new opportunities are emerging as AI spreads from data centers to the edge. AI chip demand in the mobile AP segment is increasing.",
           "key_facts": [
-            "Qualcomm plans to establish one of the three largest global AI R&D centers in Vietnam",
-            "SK Hynix begins HBM production in Indiana",
-            "NVIDIA's quarterly earnings confirmation positions chipmakers as surpassing Big Tech and emerging as beneficiaries of the AI era",
-            "Broadcom expands AI position through custom silicon and VMware",
-            "Google pursues AI talent re-hiring (Boomerang Strategy)"
+            "Qualcomm emphasizes edge AI opportunities"
           ],
           "implications": [
             {
-              "keyword": "Supply chain diversification",
-              "text": "Expansion of R&D and manufacturing in regions outside the US such as Vietnam and Indiana to diversify geopolitical risks"
-            },
-            {
-              "keyword": "Chipmaker advantage",
-              "text": "Surging AI infrastructure demand strengthens profitability and market position of semiconductor manufacturers such as NVIDIA and Broadcom"
-            },
-            {
-              "keyword": "Talent acquisition competition",
-              "text": "Google's re-hiring strategy and SK Hynix's thriving recruitment events intensify competition for top talent in AI and semiconductor sectors"
+              "keyword": "Edge AI expansion",
+              "text": "Shift from data center AI to mobile/edge devices increases demand for mobile AP chips"
             }
           ],
-          "counterpoint": "Qualcomm's R&D center establishment may have limited near-term revenue contribution."
+          "counterpoint": "Presented headlines lack quantitative data and specific product roadmap."
         }
+      }
+    },
+    "hpc_datacenter": {
+      "sector": "HPC·Datacenter",
+      "date": "2026-08-31",
+      "item_count": 37,
+      "generated_at": "2026-08-31T23:50:02.126839+00:00",
+      "content": {
+        "ko": {},
+        "en": {}
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-30",
-      "item_count": 7,
-      "generated_at": "2026-08-30T22:29:59.946941+00:00",
+      "date": "2026-08-31",
+      "item_count": 15,
+      "generated_at": "2026-08-31T23:50:02.126839+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "NVIDIA가 분기 매출 96억 달러 기록하며 AI 칩 시장 지배력을 확보한 가운데, OpenAI의 Jalapeño가 Blackwell을 능가한다는 평가와 NSA의 커스텀 칩 보안 지침 발표가 주목된다. AMD와 Broadcom의 가격 책정 차이가 같은 AI 붐을 서로 다르게 평가하는 시장 심리를 반영한다.",
-          "key_facts": [
-            "NVIDIA Q2 2026 매출 96억 달러 기록",
-            "OpenAI Jalapeño가 NVIDIA Blackwell 성능 능가 평가",
-            "AMD, 차세대 1조 달러 칩 기업 후보 검토",
-            "NVIDIA CEO Huang, 커스텀 실리콘 확산에도 칩 구매 지속 '100% 확신' 표명",
-            "NSA, 커스텀 칩 공급망 방어 신규 보안 지침 발표"
-          ],
-          "implications": [
-            {
-              "keyword": "경쟁 구도 변화",
-              "text": "OpenAI 등 클라우드/AI 기업의 커스텀 칩 개발 진행 중에도 NVIDIA의 절대 우위 지속"
-            },
-            {
-              "keyword": "보안 리스크 관리",
-              "text": "NSA 지침으로 커스텀 칩 개발사들이 공급망 보안 및 사보타주 방지에 대한 규제 압력 증가"
-            },
-            {
-              "keyword": "밸류에이션 불일치",
-              "text": "Broadcom과 AMD가 동일 AI 시장 성장을 보고도 시장이 다르게 평가하는 포지셔닝 차이 반영"
-            }
-          ],
-          "counterpoint": "NVIDIA의 우위 지속 주장에도 불구하고 OpenAI 등 대형 고객의 커스텀 칩 전환 압력 지속."
-        },
-        "en": {
-          "executive_summary": "NVIDIA records quarterly revenue of $9.6 billion, securing dominance in the AI chip market, while OpenAI's Jalapeño is assessed to surpass NVIDIA's Blackwell and the NSA releases new security guidelines for custom chips. The pricing differences between AMD and Broadcom reflect divergent market sentiment toward the same AI boom.",
-          "key_facts": [
-            "NVIDIA Q2 2026 revenue reaches $9.6 billion",
-            "OpenAI Jalapeño assessed to surpass NVIDIA Blackwell performance",
-            "AMD under review as candidate for next-generation trillion-dollar chip company",
-            "NVIDIA CEO Huang expresses '100% confidence' that chip purchases will continue despite custom silicon proliferation",
-            "NSA announces new security guidelines for custom chip supply chain defense"
-          ],
-          "implications": [
-            {
-              "keyword": "Competitive landscape shift",
-              "text": "NVIDIA's absolute advantage persists despite custom chip development by cloud/AI companies such as OpenAI"
-            },
-            {
-              "keyword": "Security risk management",
-              "text": "NSA guidelines increase regulatory pressure on custom chip developers regarding supply chain security and sabotage prevention"
-            },
-            {
-              "keyword": "Valuation mismatch",
-              "text": "Reflects positioning differences where the market evaluates Broadcom and AMD differently despite both reporting the same AI market growth"
-            }
-          ],
-          "counterpoint": "Despite claims of NVIDIA's sustained advantage, sustained conversion pressure from major customers like OpenAI toward custom chips."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-30",
-      "item_count": 4,
-      "generated_at": "2026-08-30T22:29:59.946941+00:00",
+      "date": "2026-08-31",
+      "item_count": 30,
+      "generated_at": "2026-08-31T23:50:02.126839+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -130,9 +68,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-30",
-      "item_count": 5,
-      "generated_at": "2026-08-30T22:29:59.946941+00:00",
+      "date": "2026-08-31",
+      "item_count": 18,
+      "generated_at": "2026-08-31T23:50:02.126839+00:00",
       "content": {
         "ko": {},
         "en": {}

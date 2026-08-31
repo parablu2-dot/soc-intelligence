@@ -1,101 +1,12 @@
 {
   "axis": "pmic",
   "sector": "PMIC",
-  "date": "2026-08-31",
-  "generated_at": "2026-08-30T22:30:22.295291+00:00",
-  "item_count": 8,
+  "date": "2026-09-01",
+  "generated_at": "2026-08-31T23:50:02.315438+00:00",
+  "item_count": 0,
   "content": {
-    "ko": {
-      "executive_summary": "PMIC/BCD foundry capacity is experiencing demand compression as AI workloads crowd out mature-node allocation at leading-edge fabs (TSMC, Samsung), creating a window for mature-node specialists (SMIC, Hua Hong) to capture legacy product orders and gain pricing power. SMIC reports record revenue and margin expansion driven by China-onshoring trends and foreign client reallocation, though US equipment export restrictions introduce supply-chain friction for node capacity scaling.",
-      "key_facts": [
-        "SMIC April-June net profit increased 3.6-fold on AI demand and localization momentum",
-        "Leadtrend gross margin rebounded to 33.6% as AI crowds out mature process capacity",
-        "SMIC China revenue surged 22% in Q2",
-        "SMIC reports record revenue with foreign clients shifting orders back to China",
-        "TSMC and Samsung shifting to advanced nodes, creating 8-inch demand opening for SMIC and Hua Hong",
-        "SMIC flagged US equipment supply delays"
-      ],
-      "implications": [
-        {
-          "keyword": "Supply-Chain Reallocation",
-          "text": "Tier-1 fab retreat from mature nodes (TSMC, Samsung focus on advanced nodes) is accelerating BCD/8-inch capacity capture by China specialists, reducing global competitive pressure on pricing and easing supply-tightness for PMIC designers."
-        },
-        {
-          "keyword": "Pricing & Margin Expansion",
-          "text": "Leadtrend's 33.6% gross margin rebound and SMIC's record revenue signals demand elasticity recovery in mature-node PMIC; customers onshoring to China and consolidating supply chains are accepting higher ASPs."
-        },
-        {
-          "keyword": "Geopolitical Risk to Capacity Growth",
-          "text": "SMIC's flagged US equipment delays are a headwind for scaling 8-inch capacity; continued export restrictions could constrain mature-node supply growth and cede long-term advantage to non-US fabs in automotive/server-grade PMIC qualification pipelines."
-        },
-        {
-          "keyword": "Automotive/Server Certification Backlog",
-          "text": "No explicit certification/qualification news in headlines; opportunity to monitor whether China fabs (SMIC, Hua Hong) are pursuing automotive-grade or server-grade PMIC credentials to lock in higher-margin segments."
-        }
-      ],
-      "counterpoint": "PMIC demand surge may be temporary if AI capex cycle moderates; mature-node specialists lack advanced-node optionality, leaving them exposed to inventory corrections or design-win losses if high-end OEMs resume internal advanced-node PMIC development."
-    },
-    "en": {
-      "executive_summary": "PMIC/BCD foundry capacity is experiencing demand compression as AI workloads crowd out mature-node allocation at leading-edge fabs (TSMC, Samsung), creating a window for mature-node specialists (SMIC, Hua Hong) to capture legacy product orders and gain pricing power. SMIC reports record revenue and margin expansion driven by China-onshoring trends and foreign client reallocation, though US equipment export restrictions introduce supply-chain friction for node capacity scaling.",
-      "key_facts": [
-        "SMIC April-June net profit increased 3.6-fold on AI demand and localization momentum",
-        "Leadtrend gross margin rebounded to 33.6% as AI crowds out mature process capacity",
-        "SMIC China revenue surged 22% in Q2",
-        "SMIC reports record revenue with foreign clients shifting orders back to China",
-        "TSMC and Samsung shifting to advanced nodes, creating 8-inch demand opening for SMIC and Hua Hong",
-        "SMIC flagged US equipment supply delays"
-      ],
-      "implications": [
-        {
-          "keyword": "Supply-Chain Reallocation",
-          "text": "Tier-1 fab retreat from mature nodes (TSMC, Samsung focus on advanced nodes) is accelerating BCD/8-inch capacity capture by China specialists, reducing global competitive pressure on pricing and easing supply-tightness for PMIC designers."
-        },
-        {
-          "keyword": "Pricing & Margin Expansion",
-          "text": "Leadtrend's 33.6% gross margin rebound and SMIC's record revenue signals demand elasticity recovery in mature-node PMIC; customers onshoring to China and consolidating supply chains are accepting higher ASPs."
-        },
-        {
-          "keyword": "Geopolitical Risk to Capacity Growth",
-          "text": "SMIC's flagged US equipment delays are a headwind for scaling 8-inch capacity; continued export restrictions could constrain mature-node supply growth and cede long-term advantage to non-US fabs in automotive/server-grade PMIC qualification pipelines."
-        },
-        {
-          "keyword": "Automotive/Server Certification Backlog",
-          "text": "No explicit certification/qualification news in headlines; opportunity to monitor whether China fabs (SMIC, Hua Hong) are pursuing automotive-grade or server-grade PMIC credentials to lock in higher-margin segments."
-        }
-      ],
-      "counterpoint": "PMIC demand surge may be temporary if AI capex cycle moderates; mature-node specialists lack advanced-node optionality, leaving them exposed to inventory corrections or design-win losses if high-end OEMs resume internal advanced-node PMIC development."
-    }
+    "ko": {},
+    "en": {}
   },
-  "links": [
-    {
-      "headline": "SMIC Q2 China Revenue Surges 22%! - Gasgoo",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYzkwOWFEemE1aWY0X2dQM3FPNzdrZmdUckVCeXA0WkRPU0dlYVdUVHpHb2YybkptMWg2WE5KNEx4UFVlZG5Kc2RFMGNtemlpcDBEX0hYenNqLURPN1ZrMzNxY3QzSWV3dmNqVVJ6SzQ5dmhrbThMZ1BvWkhIWUlROGU4cFg2U3AxSzl1Mk03Yzg4dTlSbWxINA?oc=5",
-      "source": "Google News",
-      "published_date": "2026-08-15"
-    },
-    {
-      "headline": "SMIC's April-June Net Profit Soars 3.6-Fold on AI Demand and Localization Push, Record Inquiries - finance.biggo.com",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBYVFp0OTgxNzB4ci1rUjZqTGF5WlNmVEJUYkd5VmdORVQ1TnhJaVNtZVNFMlFkeWlNVXA5a1c4TlRJeTBPeGdqRzhob3dwM3ZfTEFCbmVkandTR3FEaGQ1XzZSS3pYaXZsM3BSa0YxOXNWak1TZUE?oc=5",
-      "source": "Google News",
-      "published_date": "2026-08-13"
-    },
-    {
-      "headline": "[Leadtrend FY2026 Q1 Earnings Call] Net Profit Soars 182% QoQ, EPS NT$0.37; Gross Margin Rebounds to 33.6% as AI Crowds Out Mature Process Capacity and NB Total Solution Fires on All Cylinders - finance.biggo.com",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBpZ0oxaUV5TmRELVZiYm9MMlhlTUR3VExlWGhzaTEweWlnd3hTY2k5bFdKSDRtRGI0Q1NaUzRwX2R4aUhzYWJGdWJoZHVuVzdHZHZSMlA1OVBNYzdFRWpuUmtR?oc=5",
-      "source": "Google News",
-      "published_date": "2026-06-23"
-    },
-    {
-      "headline": "China’s SMIC says foreign clients shifting orders back to China - 927thevan.com",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMGhCTG93S1FoRXBtVFB3Q2VHVUlpbUpSdlUxZ1NPNnlidy1fQ1UyNFRTS0RmRW1Pb21iRVVvUE5DcnVNR2hWNVhwT1NodjJ1QXQ3c3UzTHhGdjlXLWlkZGowQjQ0NzRqbXJrU05iSXJIUkpwVGM1N2E3OVZIYjR5SUZoOEd2ZTY3MWl1MEJDSjZGbFBVckRJdmtjNXM?oc=5",
-      "source": "Google News",
-      "published_date": "2026-05-14"
-    },
-    {
-      "headline": "TSMC, Samsung shift to advanced nodes; China’s SMIC, Hua Hong seize 8-inch demand - CHOSUNBIZ - Chosunbiz",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5CSFVHMXdVRy1UcDRvbHNwTWNTNV9zTHlqTmxQTkM4UTljMmxWUkVhWHlVbGwxZlFaN0gzZVhQUm4tMWlCVzRveVM1OXREM1VUcnBaTm1SMDhvWXByQnpnT0Fzd09EVXhTSTlZV2lBSzhlQTRjLUlKcnJ30gGOAUFVX3lxTFB0aGNDZGMxRkx1QmQ0c2V1bmpOMWY2UGpsdGRSLXY1S202M3Z1clA2REYtQjFpQ0Fqa2VLZzVmNGVHQXUtUW9GbDBmSDlIVklqUExTY2k1Sy1SNFlhYXNJdF9wMGM5Y3VQcjR3T3BNNWV1VzVqQXlhbnprN1JpcThKSFgxeC1NQ1p0VmVYNGc?oc=5",
-      "source": "Google News",
-      "published_date": "2026-01-19"
-    }
-  ]
+  "links": []
 }
