@@ -1,56 +1,76 @@
 {
-  "date": "2026-08-31",
-  "generated_at": "2026-08-31T23:50:02.127937+00:00",
+  "date": "2026-09-01",
+  "generated_at": "2026-09-01T22:34:12.099626+00:00",
   "sectors": {
-    "mobile_ap": {
-      "sector": "Mobile AP",
-      "date": "2026-08-31",
-      "item_count": 2,
-      "generated_at": "2026-08-31T23:50:02.126839+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "Qualcomm는 AI가 데이터센터를 떠나 엣지로 확산되면서 새로운 기회가 시작된다고 주장하고 있다. 모바일 AP 부문에서 AI 칩 수요가 증가하고 있다.",
-          "key_facts": [
-            "Qualcomm이 엣지 AI 기회를 강조"
-          ],
-          "implications": [
-            {
-              "keyword": "엣지 AI 확산",
-              "text": "데이터센터 AI에서 모바일/엣지 디바이스로의 전환으로 모바일 AP 칩 수요 증대"
-            }
-          ],
-          "counterpoint": "제시된 헤드라인이 정량적 데이터와 구체적 제품 로드맵 부족."
-        },
-        "en": {
-          "executive_summary": "Qualcomm argues that new opportunities are emerging as AI spreads from data centers to the edge. AI chip demand in the mobile AP segment is increasing.",
-          "key_facts": [
-            "Qualcomm emphasizes edge AI opportunities"
-          ],
-          "implications": [
-            {
-              "keyword": "Edge AI expansion",
-              "text": "Shift from data center AI to mobile/edge devices increases demand for mobile AP chips"
-            }
-          ],
-          "counterpoint": "Presented headlines lack quantitative data and specific product roadmap."
-        }
-      }
-    },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-08-31",
+      "date": "2026-09-01",
       "item_count": 37,
-      "generated_at": "2026-08-31T23:50:02.126839+00:00",
+      "generated_at": "2026-09-01T22:34:12.098591+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Intel is positioning three architectures for Agentic AI—Diamond Rapids CPU, Crescent Island GPU, and Wildcat Lake SoC—while expanding Xeon 6+ and networking portfolios for data center and edge deployment. The company continues processor evolution with Core Series 3 (130+ customers), Arc G-Series for handheld gaming, and Panther Lake initiatives, signaling broad platform coverage from client to enterprise infrastructure.",
+          "key_facts": [
+            "Intel Diamond Rapids processor, Crescent Island GPU, Wildcat Lake SoC for Agentic AI",
+            "Xeon 6+ with networking and AI systems integration",
+            "Intel Ethernet E835 Controllers for cloud, edge, enterprise data centers",
+            "130+ customers selecting Intel Series 3 Processors for edge devices",
+            "Intel Arc G-Series for handheld PC gaming",
+            "Core Ultra 200HX Plus Series mobile processors",
+            "Core Ultra 200S Plus Series desktop processors",
+            "Panther Lake processor roadmap announced"
+          ],
+          "implications": [
+            {
+              "keyword": "Agentic AI Orchestration",
+              "text": "Intel's three-architecture strategy targets fundamental shift in AI workload distribution, positioning orchestration at Xeon, efficiency at GPU, and intelligence at edge—requiring revised system architecture and power/thermal management expectations."
+            },
+            {
+              "keyword": "Client-to-Edge Continuum",
+              "text": "Core Series 3, Arc G-Series, and Core Ultra expansion across mobile and desktop suggest Intel pursuing integrated client-edge experience, potentially competing with custom SoCs for AI-adjacent applications."
+            },
+            {
+              "keyword": "Networking Integration",
+              "text": "E835 Ethernet controllers and Xeon 6+ networking bundling indicate Intel standardizing interconnect fabric for data center, relevant for multi-node orchestration in agentic systems."
+            }
+          ],
+          "counterpoint": "Volume adoption of Series 3 processors (130+ customers) and handheld gaming wins have not yet translated to published market share gains against established competitors."
+        },
+        "en": {
+          "executive_summary": "Intel is positioning three architectures for Agentic AI—Diamond Rapids CPU, Crescent Island GPU, and Wildcat Lake SoC—while expanding Xeon 6+ and networking portfolios for data center and edge deployment. The company continues processor evolution with Core Series 3 (130+ customers), Arc G-Series for handheld gaming, and Panther Lake initiatives, signaling broad platform coverage from client to enterprise infrastructure.",
+          "key_facts": [
+            "Intel Diamond Rapids processor, Crescent Island GPU, Wildcat Lake SoC for Agentic AI",
+            "Xeon 6+ with networking and AI systems integration",
+            "Intel Ethernet E835 Controllers for cloud, edge, enterprise data centers",
+            "130+ customers selecting Intel Series 3 Processors for edge devices",
+            "Intel Arc G-Series for handheld PC gaming",
+            "Core Ultra 200HX Plus Series mobile processors",
+            "Core Ultra 200S Plus Series desktop processors",
+            "Panther Lake processor roadmap announced"
+          ],
+          "implications": [
+            {
+              "keyword": "Agentic AI Orchestration",
+              "text": "Intel's three-architecture strategy targets fundamental shift in AI workload distribution, positioning orchestration at Xeon, efficiency at GPU, and intelligence at edge—requiring revised system architecture and power/thermal management expectations."
+            },
+            {
+              "keyword": "Client-to-Edge Continuum",
+              "text": "Core Series 3, Arc G-Series, and Core Ultra expansion across mobile and desktop suggest Intel pursuing integrated client-edge experience, potentially competing with custom SoCs for AI-adjacent applications."
+            },
+            {
+              "keyword": "Networking Integration",
+              "text": "E835 Ethernet controllers and Xeon 6+ networking bundling indicate Intel standardizing interconnect fabric for data center, relevant for multi-node orchestration in agentic systems."
+            }
+          ],
+          "counterpoint": "Volume adoption of Series 3 processors (130+ customers) and handheld gaming wins have not yet translated to published market share gains against established competitors."
+        }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-08-31",
-      "item_count": 15,
-      "generated_at": "2026-08-31T23:50:02.126839+00:00",
+      "date": "2026-09-01",
+      "item_count": 16,
+      "generated_at": "2026-09-01T22:34:12.098591+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -58,9 +78,9 @@
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-08-31",
-      "item_count": 30,
-      "generated_at": "2026-08-31T23:50:02.126839+00:00",
+      "date": "2026-09-01",
+      "item_count": 11,
+      "generated_at": "2026-09-01T22:34:12.098591+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -68,9 +88,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-08-31",
-      "item_count": 18,
-      "generated_at": "2026-08-31T23:50:02.126839+00:00",
+      "date": "2026-09-01",
+      "item_count": 30,
+      "generated_at": "2026-09-01T22:34:12.098591+00:00",
       "content": {
         "ko": {},
         "en": {}

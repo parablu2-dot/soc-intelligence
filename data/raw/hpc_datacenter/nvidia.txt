@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 27 Aug 2026 23:17:19 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 01 Sep 2026 21:46:09 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,69 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=7.0.4</generator>
 	<item>
+		<title>NVIDIA and CrowdStrike Strengthen Agentic Cybersecurity Frontier</title>
+		<link>https://blogs.nvidia.com/blog/nvidia-crowdstrike-fal-con-2026/</link>
+		
+		<dc:creator><![CDATA[Brian Caulfield]]></dc:creator>
+		<pubDate>Tue, 01 Sep 2026 21:19:20 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Corporate]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Cybersecurity]]></category>
+		<category><![CDATA[Nemotron]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=98014</guid>
+
+					<description><![CDATA[“We’re at an inflection point in cybersecurity,” Jensen Huang told a sold-out crowd at CrowdStrike’s Fal.Con 2026 in Las Vegas Tuesday. Attacks are now automated. Defense has to be, too.  The NVIDIA founder and CEO joined CrowdStrike CEO and founder George Kurtz to announce CrowdStrike SafeMind, its agentic cybersecurity system developed by the CrowdStrike Cyber [&#8230;]]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><span style="font-weight: 400;">“We’re at an inflection point in cybersecurity,” Jensen Huang told a sold-out crowd at CrowdStrike’s Fal.Con 2026 in Las Vegas Tuesday. Attacks are now automated. Defense has to be, too. </span></p>
+<p><span style="font-weight: 400;">The NVIDIA founder and CEO joined CrowdStrike CEO and founder George Kurtz to announce CrowdStrike </span><a target="_blank" href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-launches-frontier-models-for-cybersecurity-with-nvidia/"><span style="font-weight: 400;">SafeMind</span></a><span style="font-weight: 400;">, its agentic cybersecurity system developed by the CrowdStrike Cyber Superintelligence Lab. </span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">“This is the beginning of a new age of cybersecurity,” Huang told the crowd of 10,000 security professionals. “On the one hand, the adversaries are going to be more armed than ever. On the other hand, all of you are going to be more armed than ever.” </span></p>
+<p><span style="font-weight: 400;">SafeMind combines CrowdStrike’s purpose-built, beyond frontier-capable models and customized agentic harnesses, with defensive models built on </span><a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/"><span style="font-weight: 400;">NVIDIA Nemotron</span></a><span style="font-weight: 400;">, in a continuous coevolution loop where offense and defense repeatedly challenge and improve each other. </span></p>
+<p><span style="font-weight: 400;">CrowdStrike also announced CrowdStrike Falcon IQ to operationalize Project QuiltWorks through agentic workload automation and expanded its CrowdStrike Guardian AI safety solution.</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">“We have asymmetric advantages because we have a large community of cybersecurity experts who want to work with each other and keep the world safe,” Huang told the crowd. </span></p>
+<p><span style="font-weight: 400;">CrowdStrike’s annual conference drew security leaders from financial services, healthcare, the public sector and critical infrastructure.</span></p>
+<p><span style="font-weight: 400;">“The real gap that I saw was that the attackers had frontier AI, and the defenders didn’t,” Kurtz told them. “And that changes now.”</span></p>
+<h2><strong>SafeMind</strong></h2>
+<p><span style="font-weight: 400;">CrowdStrike built SafeMind’s defensive model using NVIDIA Nemotron open models, post-trained with CrowdStrike’s cyber experience and threat data. The SafeMind models are paired with proprietary cybersecurity harnesses optimized to work as an agentic stack.</span></p>
+<p><span style="font-weight: 400;">The result ships natively in the CrowdStrike Falcon platform as SafeMind, CrowdStrike’s agentic cybersecurity system. SafeMind brings offensive and defensive AI together in a continuous coevolution loop, where each side adapts to and strengthens the other. This process continuously hardens the security of the customer environment until attacks are unsuccessful.</span></p>
+<p><span style="font-weight: 400;">“Your decade and a half of security data that we can train on — we can take a frontier model and make it essentially a super AGI that is incredibly good at cybersecurity,” Huang told Kurtz.</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">“Together with NVIDIA, we built cybersecurity’s first complete agentic system for cybersecurity, including the first frontier models and harness purpose-built for defenders,” Kurtz said. “This isn’t a copilot baked into someone else’s intelligence. It’s not a chatbot with a security skin. It is a frontier-class model built and trained by CrowdStrike on our data in partnership with NVIDIA.”</span></p>
+<p><span style="font-weight: 400;">NVIDIA Nemotron 3 Ultra orchestrates the defensive agent harness. A fine-tuned Nemotron 3 Super powers SafeMind’s rule-generation sub-agent. </span></p>
+<p><span style="font-weight: 400;">By post-training Nemotron with CrowdStrike data, CrowdStrike internal evaluations showed that the Blue Solano model — based on Nemotron 3 Super — delivered higher accuracy rates than leading frontier models at 99% lower cost. </span></p>
+<p><span style="font-weight: 400;">While SafeMind can operate as a complete system, the models can be used independently to empower defenders to stay ahead of the adversary. Security experts can also pair their own models with CrowdStrike’s custom harnesses, giving customers the flexibility to use the right models and capabilities for their environment.</span></p>
+<p><span style="font-weight: 400;">“The harness is essentially the exoskeleton of the large language model,” Huang said. “The large language model is the brain. The exoskeleton turns it into an agent — and this exoskeleton doesn’t have to be the same shape and capability for every domain.”</span></p>
+<h2><strong>When AI Is the Defense</strong></h2>
+<p><span style="font-weight: 400;">AI-enabled attacks rose 89% in the past year, and the fastest eCrime breakout time has reached 27 seconds, </span><a target="_blank" href="https://www.crowdstrike.com/en-us/global-threat-report/"><span style="font-weight: 400;">according to CrowdStrike</span></a><span style="font-weight: 400;">. Human-speed response isn’t defense. It’s documentation.</span></p>
+<p><span style="font-weight: 400;">“There are many applications in the world where you must have the ability to fine-tune, to post-train — to create an AI that is super good at a particular domain,” Huang said. “Nemotron was created for precisely that. Completely free. Incredibly fast. You have the ability to have an asymmetric advantage against whatever comes your way.”</span></p>
+<p><span style="font-weight: 400;">With open Nemotron as the base, CrowdStrike’s security teams post-trained on their own threat data without sending it to an outside provider, and customized the AI to their environment. </span></p>
+<p><span style="font-weight: 400;">That’s not possible with a closed frontier model, and in security, the ability to inspect what’s defending matters. </span></p>
+<h2><strong>Red vs. Blue</strong></h2>
+<p><a target="_blank" href="https://developer.nvidia.com/blog/building-an-adaptive-agentic-cybersecurity-system-with-nvidia-nemotron/"><span style="font-weight: 400;">NVIDIA announced its work testing the CrowdStrike SafeMind models and harnesses</span></a><span style="font-weight: 400;"> in a high-fidelity cyber agent environment running as a simulation of the NVIDIA network. </span></p>
+<p><span style="font-weight: 400;">The testing runs SafeMind in an offensive-defensive loop for adversarial coevolution. An offensive red-team agent finds the exploit, a blue-team defensive agent closes it and the findings become actionable detections to block attacks. </span></p>
+<p><span style="font-weight: 400;">The red-agent harness runs Recon, Assault and Compromise sub-agents executing attack paths inside the cyber agent environment. The blue-agent harness monitors via Falcon sensors, generates detection candidates, validates them and promotes them. </span></p>
+<p><span style="font-weight: 400;">CrowdStrike built the test environment with NVIDIA: a digital twin of NVIDIA’s own accelerated computing infrastructure, validated against NVIDIA’s real threat landscape.</span></p>
+<p><span style="font-weight: 400;">“The basic framework of SafeMind — an adversarial model acting on a digital twin of the environment, with a defender model in a continuous cat-and-mouse loop, eventually learning how to secure itself — this basic framework applies to robotics, edge computing, enterprise computing and just about everything,” Huang said.</span></p>
+<p><span style="font-weight: 400;">CrowdStrike also announced </span><a target="_blank" href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-falcon-iq-operationalizes-project-quiltworks-at-machine-speed/"><span style="font-weight: 400;">Falcon IQ</span></a><span style="font-weight: 400;">. NVIDIA Nemotron models help to power the agentic engine at the heart of Charlotte AI AgentWorks, CrowdStrike’s no-code agent development platform where Falcon IQ runs. </span></p>
+<p><span style="font-weight: 400;">Falcon IQ uses more than 50 agents working together as a unified agentic workforce to automate the most time-intensive workflows in assessment, prioritization and remediation. </span></p>
+<p><span style="font-weight: 400;">Partners use Falcon IQ to deliver customized findings, recommendations and executive outputs to customers. Charlotte AI AgentWorks enables every Falcon user to build their own agentic security workforce.</span></p>
+<h2><strong>The Full Stack</strong></h2>
+<p><span style="font-weight: 400;">CrowdStrike has thousands of customer organizations generating trillions of daily security events. </span></p>
+<p><span style="font-weight: 400;">With NVIDIA’s full-stack accelerated computing platform, the collaboration runs from the chips up through the models to the harnesses acting on what those models find. For Kurtz, that’s the point. </span></p>
+<p><span style="font-weight: 400;">“The crowd in CrowdStrike,” Kurtz added, “is the asymmetry that puts the defenders in a unique position to defeat the adversary.”</span></p>
+]]></content:encoded>
+					
+		
+		
+				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/09/crowdstrike-nvidia-stage-scaled.jpg" type="image/jpeg" width="2048" height="1366">
+			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/09/crowdstrike-nvidia-stage-842x450.jpg" width="842" height="450" />
+			<media:title type="html"><![CDATA[NVIDIA and CrowdStrike Strengthen Agentic Cybersecurity Frontier]]></media:title>
+			<media:description type="html"></media:description>
+		</media:content>
+	</item>
+		<item>
 		<title>GeForce NOW Gives Gamers More Ways to Play at Gamescom 2026</title>
 		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-gamescom-2026/</link>
 		
@@ -1054,95 +1117,6 @@
 				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/08/5559253-Firebird-AI-Factory-Armenia-social-1920x1080-1.jpg" type="image/jpeg" width="1920" height="1080">
 			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/08/5559253-Firebird-AI-Factory-Armenia-social-1920x1080-1-842x450.jpg" width="842" height="450" />
 			<media:title type="html"><![CDATA[Firebird Launches CIS Region’s Largest AI Factory in Armenia]]></media:title>
-			<media:description type="html"></media:description>
-		</media:content>
-	</item>
-		<item>
-		<title>GeForce NOW Shakes Up August With 26 New Games</title>
-		<link>https://blogs.nvidia.com/blog/geforce-now-thursday-august-2026-games-list/</link>
-		
-		<dc:creator><![CDATA[GeForce NOW Community]]></dc:creator>
-		<pubDate>Thu, 06 Aug 2026 13:00:11 +0000</pubDate>
-				<category><![CDATA[Gaming]]></category>
-		<category><![CDATA[Cloud Gaming]]></category>
-		<category><![CDATA[GeForce NOW]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=97219</guid>
-
-					<description><![CDATA[August is here, bringing 26 new games for GeForce NOW members.  Command the seas in World of Warships: Legends and discover what’s next in the GeForce NOW library, starting with the eight newly added games this week.  In addition, GeForce NOW is at the QuakeCon gaming conference this week in Grapevine, Texas, with hands-on experiences [&#8230;]]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><span style="font-weight: 400;">August is here, bringing </span><span style="font-weight: 400;">26</span><span style="font-weight: 400;"> new games for </span><a target="_blank" href="https://www.nvidia.com/en-us/geforce-now/?ncid=pa-srch-goog-673352&amp;gad_source=1&amp;gad_campaignid=23934057100&amp;gbraid=0AAAAAD4XAoHSofL_CPpaIr9uFrF02N7jt&amp;gclid=Cj0KCQjwjvfSBhDpARIsAEiOpStACsgBUICz1GewLLzYhRZe6mu6buGzvUkKyzTrwn7QX9pUeqVRUgcaAv6rEALw_wcB"><span style="font-weight: 400;">GeForce NOW</span></a><span style="font-weight: 400;"> members. </span></p>
-<p><span style="font-weight: 400;">Command the seas in </span><i><span style="font-weight: 400;">World of Warships: Legends</span></i><span style="font-weight: 400;"> and discover what’s next in the </span><a target="_blank" href="https://www.nvidia.com/en-us/geforce-now/games/"><span style="font-weight: 400;">GeForce NOW library</span></a><span style="font-weight: 400;">, starting with the </span><span style="font-weight: 400;">eight</span><span style="font-weight: 400;"> newly added games this week. </span></p>
-<p><span style="font-weight: 400;">In addition, GeForce NOW is at the </span><a target="_blank" href="https://www.nvidia.com/en-us/geforce/news/quakecon-2026-win-geforce-rtx-gpus-and-more"><span style="font-weight: 400;">QuakeCon gaming conference</span></a><span style="font-weight: 400;"> this week in Grapevine, Texas, with hands-on experiences awaiting attendees.</span></p>
-<h2><b>Return to QuakeCon </b></h2>
-<p><span style="font-weight: 400;">Visit the NVIDIA booth at QuakeCon to experience GeForce RTX 5080-powered </span><a target="_blank" href="https://www.nvidia.com/en-us/geforce-now/?ncid=pa-srch-goog-673352&amp;gad_source=1&amp;gad_campaignid=23934057100&amp;gbraid=0AAAAAD4XAoHSofL_CPpaIr9uFrF02N7jt&amp;gclid=CjwKCAjwsfzSBhB5EiwAOGyqSVNFcIXRB5-kXwMmwo541qvDl8DX3NfSkPWp_0ckB1wVWH93L26-zBoCNuwQAvD_BwE"><span style="font-weight: 400;">Ultimate</span></a><span style="font-weight: 400;"> cloud gaming in action, with demos showcasing stunning visuals at up to 5K 120 frames per second on an ultrawide display, as well as seamless gameplay on the Lenovo Legion Go S handheld device.</span></p>
-<p><span style="font-weight: 400;">Conference attendees can see how thousands of PC games, including fan-favorite Bethesda titles, can move effortlessly across laptops, Macs, handhelds, mobile devices, TVs and more — letting members pick up where they left off on nearly any supported screen.</span></p>
-<p><span style="font-weight: 400;">Gamers not at the show can try out Ultimate cloud gaming in action with a </span><a target="_blank" href="https://www.nvidia.com/en-us/geforce-now/premium-memberships/"><span style="font-weight: 400;">day pass</span></a><span style="font-weight: 400;"> and jump into Bethesda titles from any device.</span></p>
-<h2><b>All Games on Deck</b></h2>
-<figure id="attachment_97224" aria-describedby="caption-attachment-97224" style="width: 1200px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-large wp-image-97224" src="https://blogs.nvidia.com/wp-content/uploads/2026/08/GFN_Thursday-World_of_Warships_Legends-1680x840.jpg" alt="World of Warships Legends on GeForce NOW" width="1200" height="600" srcset="https://blogs.nvidia.com/wp-content/uploads/2026/08/GFN_Thursday-World_of_Warships_Legends-1680x840.jpg 1680w, https://blogs.nvidia.com/wp-content/uploads/2026/08/GFN_Thursday-World_of_Warships_Legends-960x480.jpg 960w, https://blogs.nvidia.com/wp-content/uploads/2026/08/GFN_Thursday-World_of_Warships_Legends-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2026/08/GFN_Thursday-World_of_Warships_Legends-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2026/08/GFN_Thursday-World_of_Warships_Legends-630x315.jpg 630w, https://blogs.nvidia.com/wp-content/uploads/2026/08/GFN_Thursday-World_of_Warships_Legends.jpg 2048w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /><figcaption id="caption-attachment-97224" class="wp-caption-text"><em>Sail the seas from nearly any screen.</em></figcaption></figure>
-<p><i><span style="font-weight: 400;">World of Warships: Legends</span></i><span style="font-weight: 400;"> drops anchor on GeForce NOW this week, bringing free-to-play naval combat. Captains can command destroyers, cruisers and battleships across massive multiplayer battles while exploring the latest update, featuring the Pacific Hammer Campaign, a new line of U.S. destroyers and more.</span></p>
-<p><span style="font-weight: 400;">Chart a course straight into the latest content across devices today without any installs needed, and check out all the games available this week:</span></p>
-<ul>
-<li><i><span style="font-weight: 400;">Big Walk</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/1478500?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> Aug. 4)</span></li>
-<li><i><span style="font-weight: 400;">Beacon Pines</span></i><span style="font-weight: 400;"> (Free on </span><a target="_blank" href="https://www.epicgames.com/store/p/beacon-pines-629fc3?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Epic Games Store</span></a><span style="font-weight: 400;"> Aug. 6)</span></li>
-<li><i><span style="font-weight: 400;">Sovereign Tower</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/4113940?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> Aug. 6)</span></li>
-<li><i><span style="font-weight: 400;">Expeditions: Samurai</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/2212910?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> Aug. 7)</span></li>
-<li><i><span style="font-weight: 400;">The Adventures of Elliot: The Millennium Tales</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://www.xbox.com/games/store/the-adventures-of-elliot-the-millennium-tales/9nlvwpmqbp3g?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Xbox</span></a><span style="font-weight: 400;">, available on the Microsoft Store)</span></li>
-<li><i><span style="font-weight: 400;">The Incident at Galley House</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/3641000?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Machine Party</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/4108000?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">World of Warships: Legends</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/2964090?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-</ul>
-<p><span style="font-weight: 400;">And look forward to the games coming throughout the month:</span></p>
-<ul>
-<li><i><span style="font-weight: 400;">Pax Autocratica</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/1067360?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> Aug. 10)</span></li>
-<li><i><span style="font-weight: 400;">Car Wash Simulator</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/992840?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> Aug. 10)</span></li>
-<li><i><span style="font-weight: 400;">Clawed</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/3394840?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> Aug. 13)</span></li>
-<li><i><span style="font-weight: 400;">Hell Let Loose: Vietnam</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/3079210?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> Aug. 13)</span></li>
-<li><i><span style="font-weight: 400;">Sandustry</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/2764460?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> and </span><a target="_blank" href="https://www.xbox.com/games/store/sandustry-game-preview/9pph71dv44t7?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Xbox</span></a><span style="font-weight: 400;">, available on Game Pass, Aug. 13)</span></li>
-<li><i><span style="font-weight: 400;">The Sinking City 2</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/2825860?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> Aug. 18)</span></li>
-<li><i><span style="font-weight: 400;">Mortal Shell II</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/2584270?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> Aug. 20)</span></li>
-<li><i><span style="font-weight: 400;">Gallipoli</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/3065940?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">, Aug. 20)</span></li>
-<li><i><span style="font-weight: 400;">Aliens: Fireteam Elite 2</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/3448650?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> Aug. 25)</span></li>
-<li><i><span style="font-weight: 400;">Resonance: A Plague Tale Legacy</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/2713000?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> and </span><a target="_blank" href="https://www.xbox.com/games/store/resonance-a-plague-tale-legacy/9ppbncxp0096?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Xbox</span></a><span style="font-weight: 400;">, available on Game Pass, Aug. 27)</span></li>
-<li><i><span style="font-weight: 400;">Breathedge 2</span></i><span style="font-weight: 400;"> (New release on </span><a target="_blank" href="https://store.steampowered.com/app/2412960?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> Aug. 30)</span></li>
-<li><i><span style="font-weight: 400;">World of Warships: Legends</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/2964090?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">High on Life</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/1583230?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">High on Life 2</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/2069250?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> and </span><a target="_blank" href="https://www.xbox.com/games/store/high-on-life-2/9nf6xpsbttgb?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Xbox</span></a><span style="font-weight: 400;">, available on Game Pass)</span></li>
-<li><i><span style="font-weight: 400;">Paradise Killer</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/1160220?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Misery</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/2119830?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Pratfall</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/4244510?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Starvester</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/4194800?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-</ul>
-<h2><b>Extra Joy From July</b></h2>
-<p><span style="font-weight: 400;">In addition to the dozen games </span><a href="https://blogs.nvidia.com/blog/geforce-now-thursday-july-2026-games-list/"><span style="font-weight: 400;">announced</span></a><span style="font-weight: 400;"> last month, </span><span style="font-weight: 400;">15</span><span style="font-weight: 400;"> more joined the GeForce NOW library. </span></p>
-<ul>
-<li><i><span style="font-weight: 400;">Breath of Fire IV</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/4249150/Breath_of_Fire_IV/"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Call of Duty: Black Ops 6</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.ubisoft.com/ubisoftplus/cloud?addinfo=&amp;maltcode=geforcenow_convst_AFL_geforcenow_vg__STORE____&amp;ucid=AFL-ID_152062"><span style="font-weight: 400;">Ubisoft Connect</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">CloverPit</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://www.xbox.com/games/store/cloverpit/9p8v7hr160b4?utm_campaign=geforce_now&amp;utm_source=nvidia"><span style="font-weight: 400;">Xbox</span></a><span style="font-weight: 400;">, available on Game Pass)</span></li>
-<li><i><span style="font-weight: 400;">Dinoblade</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/3440070/Dinoblade/"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Dino Crisis</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/4249130/Dino_Crisis/"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Dino Crisis 2</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/4249140/Dino_Crisis_2/"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Esports Manager 2026</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/2749950/Esports_Manager_2026/"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Funnel Runners</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/3712080/Funnel_Runners/"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Granblue Fantasy: Relink &#8211; Endless Ragnarok Demo</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/4196050?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Halo: Campaign Evolved</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/2806050/Halo_Campaign_Evolved/"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;"> and </span><a target="_blank" href="https://www.xbox.com/en-US/games/store/halo-campaign-evolved/9n683tdt5m7r?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Xbox</span></a><span style="font-weight: 400;">, available on Game Pass)</span></li>
-<li><i><span style="font-weight: 400;">Mistfall Hunter</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/3282300/Mistfall_Hunter/"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Onimusha: Way of the Sword DEMO</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/agecheck/app/3974650/"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Pathogenic</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/3808690?utm_campaign=geforce_now&amp;utm_source=nvidia"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">Sudden Attack Zero Point</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/3576070?utm_campaign=geforce_now&amp;utm_source=nvidia"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-<li><i><span style="font-weight: 400;">The Life and Suffering of Prince Jerian</span></i><span style="font-weight: 400;"> (</span><a target="_blank" href="https://store.steampowered.com/app/2936290?utm_source=nvidia&amp;utm_campaign=geforce_now"><span style="font-weight: 400;">Steam</span></a><span style="font-weight: 400;">)</span></li>
-</ul>
-<p><i><span style="font-weight: 400;">Mistfall Hunter</span></i><span style="font-weight: 400;"> didn’t make it this month. Stay tuned to GFN Thursday for the latest updates.</span></p>
-<p><span style="font-weight: 400;">What are you planning to play this weekend? Let us know on </span><a target="_blank" href="https://www.twitter.com/nvidiagfn"><span style="font-weight: 400;">X</span></a><span style="font-weight: 400;"> or in the comments below.</span></p>
-<blockquote class="twitter-tweet" data-width="550" data-dnt="true">
-<p lang="en" dir="ltr">Share a game screenshot or clip that perfectly sums up your day so far.</p>
-<p>&mdash; <img src="https://s.w.org/images/core/emoji/17.0.2/72x72/1f329.png" alt="🌩" class="wp-smiley" style="height: 1em; max-height: 1em;" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a target="_blank" href="https://x.com/NVIDIAGFN/status/2084670701114441979?ref_src=twsrc%5Etfw">August 4, 2026</a></p></blockquote>
-<p><script async src="https://platform.x.com/widgets.js" charset="utf-8"></script></p>
-]]></content:encoded>
-					
-		
-		
-				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/08/gfn-thursday-8-6-nv-blog-1280x680-logo.jpg" type="image/jpeg" width="1280" height="680">
-			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/08/gfn-thursday-8-6-nv-blog-1280x680-logo-842x450.jpg" width="842" height="450" />
-			<media:title type="html"><![CDATA[GeForce NOW Shakes Up August With 26 New Games]]></media:title>
 			<media:description type="html"></media:description>
 		</media:content>
 	</item>
