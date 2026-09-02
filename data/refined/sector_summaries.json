@@ -1,96 +1,230 @@
 {
-  "date": "2026-09-01",
-  "generated_at": "2026-09-01T22:34:12.099626+00:00",
+  "date": "2026-09-02",
+  "generated_at": "2026-09-02T22:32:35.252936+00:00",
   "sectors": {
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-09-01",
-      "item_count": 37,
-      "generated_at": "2026-09-01T22:34:12.098591+00:00",
+      "date": "2026-09-02",
+      "item_count": 20,
+      "generated_at": "2026-09-02T22:32:35.252264+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Intel is positioning three architectures for Agentic AI—Diamond Rapids CPU, Crescent Island GPU, and Wildcat Lake SoC—while expanding Xeon 6+ and networking portfolios for data center and edge deployment. The company continues processor evolution with Core Series 3 (130+ customers), Arc G-Series for handheld gaming, and Panther Lake initiatives, signaling broad platform coverage from client to enterprise infrastructure.",
+          "executive_summary": "전 지역에서 반도체 인재 부족이 심화되면서 2030년까지 글로벌 칩 인재 부족이 100만명에 달할 전망. SK하이닉스는 학력 제한을 없애고 AI 맞춤 전형을 도입하는 등 채용 기준을 혁신하며 대규모 신규 채용을 진행 중이며, TSMC는 2nm 및 1.4nm 이하 칩 연구를 위한 새로운 R&D센터를 개설했다.",
           "key_facts": [
-            "Intel Diamond Rapids processor, Crescent Island GPU, Wildcat Lake SoC for Agentic AI",
-            "Xeon 6+ with networking and AI systems integration",
-            "Intel Ethernet E835 Controllers for cloud, edge, enterprise data centers",
-            "130+ customers selecting Intel Series 3 Processors for edge devices",
-            "Intel Arc G-Series for handheld PC gaming",
-            "Core Ultra 200HX Plus Series mobile processors",
-            "Core Ultra 200S Plus Series desktop processors",
-            "Panther Lake processor roadmap announced"
+            "Global chip talent shortage expected to reach 1 million by 2030",
+            "SK Hynix launches August massive hiring without education requirements",
+            "TSMC opened new R&D center for 2nm, 1.4nm and smaller chipset research",
+            "Samsung R&D Center in Ukraine reportedly hit by Russian missile",
+            "Tesla's Dojo Supercomputer project lead departs",
+            "Synapse Design joins TSMC Design Center Alliance"
           ],
           "implications": [
             {
-              "keyword": "Agentic AI Orchestration",
-              "text": "Intel's three-architecture strategy targets fundamental shift in AI workload distribution, positioning orchestration at Xeon, efficiency at GPU, and intelligence at edge—requiring revised system architecture and power/thermal management expectations."
+              "keyword": "Talent Strategy",
+              "text": "SK Hynix removes educational barriers and implements AI-driven recruitment with half-day deep interviews to compete for engineering talent"
             },
             {
-              "keyword": "Client-to-Edge Continuum",
-              "text": "Core Series 3, Arc G-Series, and Core Ultra expansion across mobile and desktop suggest Intel pursuing integrated client-edge experience, potentially competing with custom SoCs for AI-adjacent applications."
+              "keyword": "Technology Roadmap",
+              "text": "TSMC's new R&D center targets sub-1.4nm node development, signaling aggressive technology advancement beyond current 2nm production"
             },
             {
-              "keyword": "Networking Integration",
-              "text": "E835 Ethernet controllers and Xeon 6+ networking bundling indicate Intel standardizing interconnect fabric for data center, relevant for multi-node orchestration in agentic systems."
+              "keyword": "Regional Vulnerability",
+              "text": "Geopolitical risks materialize with damage to Samsung's R&D center in Ukraine, exposing supply chain concentration risks"
+            },
+            {
+              "keyword": "India Bridge",
+              "text": "India positioned as talent bridge to offset global shortage with 100 million shortfall by 2030"
             }
           ],
-          "counterpoint": "Volume adoption of Series 3 processors (130+ customers) and handheld gaming wins have not yet translated to published market share gains against established competitors."
+          "counterpoint": "India's ability to deliver engineering talent at scale within compressed timelines remains uncertain despite positioning as talent solution."
         },
         "en": {
-          "executive_summary": "Intel is positioning three architectures for Agentic AI—Diamond Rapids CPU, Crescent Island GPU, and Wildcat Lake SoC—while expanding Xeon 6+ and networking portfolios for data center and edge deployment. The company continues processor evolution with Core Series 3 (130+ customers), Arc G-Series for handheld gaming, and Panther Lake initiatives, signaling broad platform coverage from client to enterprise infrastructure.",
+          "executive_summary": "Global chip talent shortage expected to reach 1 million by 2030 as semiconductor talent scarcity intensifies across all regions. SK Hynix is revolutionizing hiring criteria through large-scale recruitment without education requirements and implementation of AI-customized selection processes, while TSMC opened a new R&D center for research on 2nm and sub-1.4nm chips.",
           "key_facts": [
-            "Intel Diamond Rapids processor, Crescent Island GPU, Wildcat Lake SoC for Agentic AI",
-            "Xeon 6+ with networking and AI systems integration",
-            "Intel Ethernet E835 Controllers for cloud, edge, enterprise data centers",
-            "130+ customers selecting Intel Series 3 Processors for edge devices",
-            "Intel Arc G-Series for handheld PC gaming",
-            "Core Ultra 200HX Plus Series mobile processors",
-            "Core Ultra 200S Plus Series desktop processors",
-            "Panther Lake processor roadmap announced"
+            "Global chip talent shortage expected to reach 1 million by 2030",
+            "SK Hynix launches large-scale hiring without education requirements",
+            "TSMC opened new R&D center for 2nm, 1.4nm and smaller chipset research",
+            "Samsung R&D Center in Ukraine reportedly hit by Russian missile",
+            "Tesla's Dojo Supercomputer project lead departs",
+            "Synapse Design joins TSMC Design Center Alliance"
           ],
           "implications": [
             {
-              "keyword": "Agentic AI Orchestration",
-              "text": "Intel's three-architecture strategy targets fundamental shift in AI workload distribution, positioning orchestration at Xeon, efficiency at GPU, and intelligence at edge—requiring revised system architecture and power/thermal management expectations."
+              "keyword": "Talent Strategy",
+              "text": "SK Hynix removes educational barriers and implements AI-driven recruitment with half-day deep interviews to compete for engineering talent"
             },
             {
-              "keyword": "Client-to-Edge Continuum",
-              "text": "Core Series 3, Arc G-Series, and Core Ultra expansion across mobile and desktop suggest Intel pursuing integrated client-edge experience, potentially competing with custom SoCs for AI-adjacent applications."
+              "keyword": "Technology Roadmap",
+              "text": "TSMC's new R&D center targets sub-1.4nm node development, signaling aggressive technology advancement beyond current 2nm production"
             },
             {
-              "keyword": "Networking Integration",
-              "text": "E835 Ethernet controllers and Xeon 6+ networking bundling indicate Intel standardizing interconnect fabric for data center, relevant for multi-node orchestration in agentic systems."
+              "keyword": "Regional Vulnerability",
+              "text": "Geopolitical risks materialize with damage to Samsung's R&D center in Ukraine, exposing supply chain concentration risks"
+            },
+            {
+              "keyword": "India Bridge",
+              "text": "India positioned as talent bridge to offset global shortage with 100 million shortfall by 2030"
             }
           ],
-          "counterpoint": "Volume adoption of Series 3 processors (130+ customers) and handheld gaming wins have not yet translated to published market share gains against established competitors."
+          "counterpoint": "India's ability to deliver engineering talent at scale within compressed timelines remains uncertain despite positioning as talent solution."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-09-01",
-      "item_count": 16,
-      "generated_at": "2026-09-01T22:34:12.098591+00:00",
+      "date": "2026-09-02",
+      "item_count": 9,
+      "generated_at": "2026-09-02T22:32:35.252264+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Google가 AI 칩 개발 속도를 높이기 위해 TPU 양산 파트너 확보에 나서고 있으며, 메모리가 서버 BOM의 75%를 차지한다는 메모리 병목 현상 해결에 집중. DeepSeek 등 중국 경쟁사들이 빠른 속도로 칩을 출시하면서 NVIDIA의 우위에 의문이 제기되고 있다.",
+          "key_facts": [
+            "Google CTO visits Taiwan to line up TPU mass production partners",
+            "Memory comprises 75% of server BOM according to Google analysis",
+            "Google speeds up chip rollout to maintain AI leadership",
+            "DeepSeek and peers churning out chips at frantic pace",
+            "Nine-month AI chip tape-out cycle highlighted as competitive advantage",
+            "Alphabet funds both NVLink Fusion and UALink interconnect technologies",
+            "Ex-Google engineer sentenced to nearly 1 year for stealing AI chip secrets for China",
+            "Intel attracting MediaTek, Broadcom, Meta for AI chip packaging amid TSMC shortage"
+          ],
+          "implications": [
+            {
+              "keyword": "Memory Bottleneck",
+              "text": "Memory Wall emerging as critical bottleneck with 75% server BOM allocation; TPU-software dual strategy required to address throughput constraints"
+            },
+            {
+              "keyword": "Tape-Out Speed",
+              "text": "Nine-month chip design-to-production cycle becoming critical competitive metric; faster iteration enables market responsiveness"
+            },
+            {
+              "keyword": "Foundry Diversification",
+              "text": "Google hedging interconnect technology bets by funding competing standards; Intel emerging as alternative packaging provider to TSMC for major players"
+            },
+            {
+              "keyword": "Competitive Pressure",
+              "text": "Chinese custom chip development acceleration (DeepSeek) testing NVIDIA's historical dominance; indigenous chip programs now viable at scale"
+            },
+            {
+              "keyword": "IP Security",
+              "text": "Theft of advanced AI chip design secrets highlights espionage risks in cutting-edge semiconductor development"
+            }
+          ],
+          "counterpoint": "DeepSeek's chip output volume and performance parity versus NVIDIA's integrated software-hardware stack remain unverified in production deployments."
+        },
+        "en": {
+          "executive_summary": "Google is securing TPU mass production partners to accelerate AI chip development, focusing on resolving the memory bottleneck where memory comprises 75% of server BOM. As Chinese competitors like DeepSeek rapidly deploy chips, questions arise about NVIDIA's competitive advantage.",
+          "key_facts": [
+            "Google CTO visits Taiwan to line up TPU mass production partners",
+            "Memory comprises 75% of server BOM according to Google analysis",
+            "Google speeds up chip rollout to maintain AI leadership",
+            "DeepSeek and peers churning out chips at frantic pace",
+            "Nine-month AI chip tape-out cycle highlighted as competitive advantage",
+            "Alphabet funds both NVLink Fusion and UALink interconnect technologies",
+            "Ex-Google engineer sentenced to nearly 1 year for stealing AI chip secrets for China",
+            "Intel attracting MediaTek, Broadcom, Meta for AI chip packaging amid TSMC shortage"
+          ],
+          "implications": [
+            {
+              "keyword": "Memory Bottleneck",
+              "text": "Memory Wall emerging as critical bottleneck with 75% server BOM allocation; TPU-software dual strategy required to address throughput constraints"
+            },
+            {
+              "keyword": "Tape-Out Speed",
+              "text": "Nine-month chip design-to-production cycle becoming critical competitive metric; faster iteration enables market responsiveness"
+            },
+            {
+              "keyword": "Foundry Diversification",
+              "text": "Google hedging interconnect technology bets by funding competing standards; Intel emerging as alternative packaging provider to TSMC for major players"
+            },
+            {
+              "keyword": "Competitive Pressure",
+              "text": "Chinese custom chip development acceleration (DeepSeek) testing NVIDIA's historical dominance; indigenous chip programs now viable at scale"
+            },
+            {
+              "keyword": "IP Security",
+              "text": "Theft of advanced AI chip design secrets highlights espionage risks in cutting-edge semiconductor development"
+            }
+          ],
+          "counterpoint": "DeepSeek's chip output volume and performance parity versus NVIDIA's integrated software-hardware stack remain unverified in production deployments."
+        }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-09-01",
-      "item_count": 11,
-      "generated_at": "2026-09-01T22:34:12.098591+00:00",
+      "date": "2026-09-02",
+      "item_count": 8,
+      "generated_at": "2026-09-02T22:32:35.252264+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "TSMC가 고급 패키징 검증 기지를 고雄 바이푸 산업단지에 설립하여 AI 칩 생산 효율성 강화에 집중하고 있으며, 대만이 올해 반도체 생산량 목표를 NT$8조로 설정. 한미반도체는 대만 파운드리의 양산 라인에 2.5D AI 시스템반도체 패키징 장비를 공급하기 시작했다.",
+          "key_facts": [
+            "TSMC establishes advanced packaging verification base at Baipu Industrial Park in Kaohsiung",
+            "Taiwan targets NT$8 trillion semiconductor output this year",
+            "Han-Mi Semiconductor supplies 2.5D packaging equipment to Taiwan foundry for AI system chips; first Korean equipment to pass qualification",
+            "Taiwan concentrates advanced semiconductor backend R&D hub in Kaohsiung with TSMC presence",
+            "TSMC expands Kaohsiung supplier campus to boost AI chip production",
+            "Tongtai brings machine tool capabilities to wafer processing",
+            "TRUMPF enables integrated chip cooling for next-generation AI chips"
+          ],
+          "implications": [
+            {
+              "keyword": "Advanced Packaging Hub",
+              "text": "Kaohsiung emerging as Taiwan's strategic advanced packaging and backend R&D center; TSMC vertical integration accelerates verification and time-to-market"
+            },
+            {
+              "keyword": "Korean Supplier Entry",
+              "text": "Han-Mi Semiconductor's 2.5D packaging equipment qualification breakthrough opens foundry supply chain to Korean equipment makers; first Korean equipment to pass TSMC/foundry production validation"
+            },
+            {
+              "keyword": "Thermal Management",
+              "text": "Integrated chip cooling solutions (TRUMPF) becoming critical for next-generation AI chips as power density increases exponentially"
+            },
+            {
+              "keyword": "Supply Chain Diversification",
+              "text": "Taiwan's NT$8 trillion output target supported by domestic equipment and component suppliers; reduces China/Japan dependency"
+            }
+          ],
+          "counterpoint": "Han-Mi's equipment order volume remains undisclosed and estimated below public reporting thresholds; scaling to volume production unconfirmed."
+        },
+        "en": {
+          "executive_summary": "TSMC is establishing an advanced packaging verification base at Baipu Industrial Park in Kaohsiung to strengthen AI chip production efficiency, while Taiwan sets its semiconductor output target at NT$8 trillion this year. Han-Mi Semiconductor has begun supplying 2.5D AI system chip packaging equipment to Taiwan foundries.",
+          "key_facts": [
+            "TSMC establishes advanced packaging verification base at Baipu Industrial Park in Kaohsiung",
+            "Taiwan targets NT$8 trillion semiconductor output this year",
+            "Han-Mi Semiconductor supplies 2.5D packaging equipment to Taiwan foundry for AI system chips; first Korean equipment to pass qualification",
+            "Taiwan concentrates advanced semiconductor backend R&D hub in Kaohsiung with TSMC presence",
+            "TSMC expands Kaohsiung supplier campus to boost AI chip production",
+            "Tongtai brings machine tool capabilities to wafer processing",
+            "TRUMPF enables integrated chip cooling for next-generation AI chips"
+          ],
+          "implications": [
+            {
+              "keyword": "Advanced Packaging Hub",
+              "text": "Kaohsiung emerging as Taiwan's strategic advanced packaging and backend R&D center; TSMC vertical integration accelerates verification and time-to-market"
+            },
+            {
+              "keyword": "Korean Supplier Entry",
+              "text": "Han-Mi Semiconductor's 2.5D packaging equipment qualification breakthrough opens foundry supply chain to Korean equipment makers; first Korean equipment to pass TSMC/foundry production validation"
+            },
+            {
+              "keyword": "Thermal Management",
+              "text": "Integrated chip cooling solutions (TRUMPF) becoming critical for next-generation AI chips as power density increases exponentially"
+            },
+            {
+              "keyword": "Supply Chain Diversification",
+              "text": "Taiwan's NT$8 trillion output target supported by domestic equipment and component suppliers; reduces China/Japan dependency"
+            }
+          ],
+          "counterpoint": "Han-Mi's equipment order volume remains undisclosed and estimated below public reporting thresholds; scaling to volume production unconfirmed."
+        }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-09-01",
-      "item_count": 30,
-      "generated_at": "2026-09-01T22:34:12.098591+00:00",
+      "date": "2026-09-02",
+      "item_count": 13,
+      "generated_at": "2026-09-02T22:32:35.252264+00:00",
       "content": {
         "ko": {},
         "en": {}

@@ -2,6 +2,357 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.supr-con",
+    "title": "Understanding the superconducting proximity effect in semiconductors through quantum oscillations",
+    "url": "https://arxiv.org/abs/2609.01593v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "Superconductor-semiconductor hybrids host emergent states of matter and offer a platform for new qubits, but the superconducting metal shunts electrical transport, which rules out conventional semiconductor characterization and leaves the hybrid parameters to speculation. Here we determine density, mass, $g$-factor, mobility and subband occupation beneath the superconductor, from Shubnikov-de Haas oscillations of a buried InAs quantum well under Al, Sn, V, Nb, Ta and Re films, with a Dingle anal",
+    "authors": [
+      "Milo Coombs",
+      "Teun A. J. van Schijndel",
+      "Yu Wu",
+      "Jason T. Dong",
+      "Yilmaz Gul",
+      "Julian Choi",
+      "Christopher J. Palmstrøm",
+      "Greg P. Mazur"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "A Constrained Kuramoto Gradient-Flow System Can Perform High-Accuracy Finite-Time Inference",
+    "url": "https://arxiv.org/abs/2609.01539v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "A central question in physical inference is whether strongly constrained dynamical systems can realize accurate input--output maps through their own finite-time evolution. We study this question in Kuramoto phase networks, whose deterministic dynamics form an input-conditioned gradient flow and whose predictions are read directly from output oscillators. As a constructive training approach, we develop a two-stage teacher--student procedure. A neural teacher is first converted into an explicit ph",
+    "authors": [
+      "Yi Cheng",
+      "Zongli Lin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Performance Characterization of SPEC CPU 2026 on AMD EPYC 9755 Processor",
+    "url": "https://arxiv.org/abs/2609.01527v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "SPEC CPU 2026 is the first major update to the industry-standard CPU benchmark suite since 2017. This paper presents the first microarchitecture based performance characterization of the new suite, conducted on AMD EPYC \"Zen 5\", also the first SPEC CPU characterization study on this microarchitecture. Using a multi-lens methodology spanning pipeline efficiency, control flow behavior, cache hierarchy pressure, and instruction mix, we analyze both SPECrate and SPECspeed suites. We introduce scale ",
+    "authors": [
+      "Kunal Kashyap",
+      "Rajiv Ramanathan",
+      "Shayantika Bhattacharya"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "A relational fabrication-to-modeling database for memristor devices",
+    "url": "https://arxiv.org/abs/2609.01500v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "Resistive random access memory (RRAM) devices, also known as memristors, are highly dependent on fabrication, location on the wafer, and measurement protocols. However, openly available large-scale memristor datasets remain scarce, particularly those that combine experimental metadata with electrical measurements and preserve explicit links across the experimental workflow. Here, we present a comprehensive relational database of automated electrical characterization data from oxide-based memrist",
+    "authors": [
+      "Lai Gan",
+      "Guoyang Huang",
+      "Deepika Yadav",
+      "Spyros Stathopoulos",
+      "Ben D. Rowlinson",
+      "Themis Prodromakis"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Polar nanoregions and reentrant-like ferroelectric behavior in SrTiO$_3$",
+    "url": "https://arxiv.org/abs/2609.01446v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "Recent real-space imaging in quantum paraelectric SrTiO$_3$ [Nature 656, 54 (2026)] reveals that local polar textures do not continuously grow upon cooling, but reach a maximum intensity at intermediate temperatures around 60-65~K and weaken again toward the quantum paraelectric ground state. Such a reentrant-like weakening of local polar textures challenges the conventional paradigm in which ordering tendencies generally strengthen as thermal fluctuations are suppressed. Here we employ a self-c",
+    "authors": [
+      "Yuan-Jie Sun",
+      "Fei Yang",
+      "Long-Qing Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Satellite Swarms for Direct-to-Cell Networks: A Distribution-Performance Trade-off Analysis",
+    "url": "https://arxiv.org/abs/2609.01380v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "This work investigates 2D distributed satellite swarm configurations for direct-to-cell (D2C) applications. Unlike previous studies, which primarily considered swarms as deployment alternatives to monolithic arrays, this paper focuses on exploiting the increased spatial resolution enabled by large distributed apertures. Simulation results show that, for the considered scenarios, increasing the level of antenna distribution across satellite platforms enlarges the effective aperture and improves t",
+    "authors": [
+      "Xavier Artiga",
+      "Marius Caus",
+      "Ana I. Pérez-Neira",
+      "Yerassyl Akhmetkaziyev",
+      "Malte Schellmann"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Simulating Continuous-Rotation 3D Electron Diffraction: A Multislice and Bloch Wave Framework",
+    "url": "https://arxiv.org/abs/2609.01378v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "To improve the agreement between measured and calculated intensities of three-dimensional electron diffraction (3D ED) experiments, a simulation pipeline is needed to assess and quantify the influence of various structural and experimental parameters. We present a computational pipeline, built upon the abTEM Python package, to simulate continuous-rotation 3D electron diffraction data based on either the Bloch wave or the multislice formalism. Multislice calculations in arbitrary orientations are",
+    "authors": [
+      "Małgorzata K. Cabaj",
+      "Jacob Madsen",
+      "Toma Susi",
+      "Lukáš Palatinus",
+      "Paul B. Klar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Thickness-Dependent Orbital-to-Spin Torque Signatures in Cr/Gd/Co Thin Films",
+    "url": "https://arxiv.org/abs/2609.01302v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "We studied orbital-torque generation in Cr(10nm)/Gd($t_{\\mathrm{Gd}}$)/Co(3nm)/TaO$_x$ and the inverted stack Co(3nm)/Gd($t_{\\mathrm{Gd}}$)/Cr(10nm) with $t_{\\mathrm{Gd}}$ from 0 to $5\\,\\mathrm{nm}$ by combining electrical harmonic Hall measurements with magnetometry. A detailed understanding of the magnetometric data is obtained by cross-sectional chemical composition mapping. The data show temperature-dependent magnetic compensation points, while elemental analysis provides evidence of pronoun",
+    "authors": [
+      "Tiago de Oliveira Schneider",
+      "Michel Heidkamp",
+      "Luana Caron",
+      "Inga Ennen",
+      "Matthias Opel",
+      "Alexey Arzumanov",
+      "Lambert Alff",
+      "Markus Meinert"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Freshness-Aware Constrained Sensing-Aided Beam Prediction with Knowledge Distillation",
+    "url": "https://arxiv.org/abs/2609.01225v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "Beam prediction leveraging environmental data reduces over-the-air beam training overhead. Existing frameworks, however, assume continuous access to fresh sensory data, an assumption that breaks down under sensing budget constraints or sensor failures. To make this more practical, this paper proposes a sensing-aided beam prediction framework that operates under an average sensing rate constraint. We incorporate the age of information (AoI) directly into the beam prediction pipeline as a syntheti",
+    "authors": [
+      "Abolfazl Zakeri",
+      "Nhan Thanh Nguyen",
+      "Ahmed Alkhateeb",
+      "Markku Juntti"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Geometry-Controlled Magnetic and Electronic Landscapes in Anisotropic van der Waals Materials",
+    "url": "https://arxiv.org/abs/2609.01223v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "Electronic structure in van der Waals materials is commonly engineered through composition, strain, electrostatic gating and heterostructure assembly. Here we introduce geometronics, a concept in which substrate geometry locally reorients an anisotropic crystal, transforming homogeneous external perturbation into programmable magnetic and electronic landscapes. We demonstrate this concept using a bilayer of the antiferromagnetic semiconductor CrSBr transferred onto an inverted pyramidal nanoinde",
+    "authors": [
+      "Maciej Śmiertka",
+      "Ewelina Cybula",
+      "Oliwia Janikowska",
+      "Bartosz Hołyński",
+      "Gayatri",
+      "Grzegorz Krasucki",
+      "Mariusz Hasiak",
+      "Kseniia Mosina",
+      "Zdenek Sofer",
+      "Adam Babiński",
+      "Maciej R Molas",
+      "Paulina Plochocka",
+      "Michał Baranowski"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Recent Developments in Transformer Inference Deployment on FPGA Platforms: A Survey",
+    "url": "https://arxiv.org/abs/2609.01212v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "With the rapid and continuous growth in the incorporation of machine learning models based on the Transformer architecture, capable deployment is in high demand. In this context, capable deployment refers to operational performance aspects, e.g., throughput and latency, as well as efficiency aspects, e.g., energy consumption. When it comes to the task of inference using such models, purpose-built hardware accelerators provide a lucrative alternative to common deployment choices, such as Central ",
+    "authors": [
+      "Arjan Blankestijn",
+      "Uraz Odyurt",
+      "Amirreza Yousefzadeh"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Generalized Tan-Arlery-Rabaste-Lehmann-Ovarlez Lower Bound on Ambiguity Function of a Set of Sequences With Mismatched Filters",
+    "url": "https://arxiv.org/abs/2609.01112v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "In this paper, a lower bound on the maximum ambiguity function (AF) sidelobes of a set of unimodular sequences is formulated for the desired low-ambiguity-zone (LAZ). Our main idea is to introduce a set of mismatched filters associated to a set of unimodular sequences and two weight vectors for the delay and Doppler shifts, respectively. The length of mismatched filter maybe different to the length of unimodular sequence. The proposed lower bound on the maximum AF sidelobes for the desired LAZ c",
+    "authors": [
+      "Shibsankar Das"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Pressure-regulated mechanochemistry at lithium metal-sulfide electrolyte interfaces",
+    "url": "https://arxiv.org/abs/2609.01088v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "Stack pressure is commonly treated as a means of maintaining physical contact in all-solid-state lithium-metal batteries, but it can also alter the chemistry of reactive solid-solid interfaces. Here, using pressure-aware, charge-resolved machine-learning molecular dynamics validated against DFT, we determine how pressure magnitude and loading geometry regulate interphase formation at Li||Li6PS5Cl interfaces. The response is nonmonotonic: compression at 1 kbar accelerates PS4 decomposition and Li",
+    "authors": [
+      "Kunik Jang",
+      "Jaehwan Choi",
+      "Jang Wook Choi",
+      "Yousung Jung"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Hardware Acceleration of Block-Diffusion LLM for Edge Devices",
+    "url": "https://arxiv.org/abs/2609.01084v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "Single-stream (batch-one) edge inference cannot amortize weight traffic across requests. Full-attention diffusion LLMs recompute the entire sequence at every step; native block diffusion makes completed blocks immutable and exactly cacheable, yet refinement still streams prefix KV and FFN weights. We co-design WIFiV-LPDDR, a wide-I/O LPDDR system for precision-tagged reads, BRQ-KV for a canonical low-rank-plus-INT8-residual prefix with query-dependent per-entry precision, and DAT-FFN for drift-m",
+    "authors": [
+      "Wei-Hsing Huang",
+      "Kiseok Lee",
+      "Ming-Yen Lee",
+      "Weiyu Sun",
+      "Cheng-Jhih Shih",
+      "Gayatri Tanksali",
+      "Arpit Khandelwal",
+      "Pin-Jun Chen",
+      "Yingyan Celine Lin",
+      "Shimeng Yu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Text-guided flow matching enables sample-efficient crystal structure generation",
+    "url": "https://arxiv.org/abs/2609.01076v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "Crystal generators can now propose periodic structures, but their control interfaces remain poorly matched to the mixed descriptors used in materials design. Text provides a compact way to combine composition, symmetry, prototype and property cues, yet it has not been clear whether such information can steer flow-based crystal generation. Here we introduce TFMat, a text-conditioned flow-matching framework that uses structured materials language as a semantic prior for a CrystalFlow generator. Ac",
+    "authors": [
+      "Wentao Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Numerical study of the grain-growth-induced non-parabolic kinetics of a solid-state reaction",
+    "url": "https://arxiv.org/abs/2609.01002v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "Non-parabolic growth of reaction layers is frequently observed in solid-state diffusion couples, but the relationship between microstructural evolution and the resulting kinetics remains incompletely understood. This effect is commonly attributed to grain growth, which can progressively reduce the contribution of fast grain-boundary diffusion, causing the effective diffusivity of a polycrystalline product layer to evolve during reaction. This work develops a moving-boundary diffusion model to de",
+    "authors": [
+      "Ya. A. Nikiforov",
+      "S. A. Chizhik",
+      "N. I. Baklanova"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Element priors and target support shape chemical transfer in materials graph networks",
+    "url": "https://arxiv.org/abs/2609.00915v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "Materials graph neural networks must often transfer to chemical regions weakly represented in training data. Such transfer can rely on predefined relations among elements or supervised evidence from target-containing structures, but these pathways are usually entangled. Here, held-out-element splits and incremental target support separate their roles. Without target-containing training structures, formation-energy errors depend strongly on the element representation, particularly for H, O and F.",
+    "authors": [
+      "Ran Zhao",
+      "Kangming Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Sharp Minimax Limits and Compatibility Spectra for Critical Near-DFT Index-Only Frequency Estimation",
+    "url": "https://arxiv.org/abs/2609.00914v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "An $M$-channel discrete Fourier transform (DFT) channelizer routes an on-grid sinusoid to a single output. When each frame reports only one energy-proportional channel index, signed sub-bin frequency estimation becomes nonregular: dark-channel probability is quadratic in the offset, whereas orientation enters cubically. We study $N$ independent labeled reports under a known uniform-replacement probability $ε_N$ and a single deterministic unitary shared by all frequencies and frames, constrained ",
+    "authors": [
+      "Armon Rasooli",
+      "Mohammad Sadegh Narimani"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Algorithm-Hardware Co-Design of a Lightweight PCG Equalizer with a Fixed Step Size for Massive MIMO",
+    "url": "https://arxiv.org/abs/2609.00890v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "Coarse quantization in massive multiple-input multiple-output (MIMO) systems reduces power but causes clipping distortions. The Bayesian Expectation-Maximization (BEM) algorithm can recover clipped signals, but its matrix inversion and dynamic step-size evaluation are hardware bottlenecks. We propose a hardware-friendly one-step correction that uses the initial Jacobi-preconditioned Conjugate Gradient (PCG) direction with a fixed relaxation parameter. The resulting symbol-level update has an ult",
+    "authors": [
+      "Junshuo Wang",
+      "Shuting Liu",
+      "Shihan Wang",
+      "Yan Tian",
+      "Jienan Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Large Exchange Magnetostriction in a Kagome Antiferromagnet at Room Temperature",
+    "url": "https://arxiv.org/abs/2609.00887v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "The pursuit of high-performance magnetostrictive materials is crucial for advancing technologies in sensing, actuation, and microelectromechanical systems. Although pronounced magnetostrictive effects have been observed in a few ferromagnets, a systematic exploration of magnetostriction across a broader range of antiferromagnets remains limited. Here, we report the observation of large magnetostriction in the kagome antiferromagnet YMn6Sn6. Under a magnetic field, the system undergoes a field-in",
+    "authors": [
+      "Jie Du",
+      "Liang Yao",
+      "Hang Li",
+      "Xiaodong Zhou",
+      "Yuan Yao",
+      "Xuekui Xi",
+      "Yong-Chang Lau",
+      "Wenhong Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism",
+    "url": "https://arxiv.org/abs/2609.00857v1",
+    "published_date": "2026-09-01",
+    "source": "arXiv",
+    "summary": "LLM inference has become an essential service, yet it imposes unprecedented demands on memory bandwidth, computational density, and communication efficiency. While IMC is a promising solution to the memory wall issue, the heterogeneous data dynamicity of LLM requires complementary resources to handle intermediate data generated during run-time. Furthermore, the massive number of parameters in LLM necessitates scale-up architectures where on-chip data movement is often the primary performance bot",
+    "authors": [
+      "Yimin Wang",
+      "Yue Jiet Chong",
+      "Xuanyao Fong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Strain-Tunable Spin Relaxation in Germanium from First Principles",
     "url": "https://arxiv.org/abs/2608.31169v1",
