@@ -2,6 +2,185 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Repairing PBE-Spurious Metallicity for HSE06-Level Screening of 2D Photocatalysts for Green Hydrogen Production",
+    "url": "https://arxiv.org/abs/2609.02883v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "Semilocal PBE calculations can remove viable photocatalysts before screening by labeling narrow-gap semiconductors as metals. We address this failure mode in the Computational 2D Materials Database (C2DB) by combining leakage-aware repair of PBE-spurious metallicity with HSE06--PBE $Δ$-learning. Stage~I classifies HSE06-unknown PBE metals using structural, chemical, magnetic, and stability descriptors, while excluding HSE06/GW quantities and PBE electronic shortcuts. Stage~II learns $E_g^{HSE} -",
+    "authors": [
+      "Ritam Chakraborty",
+      "Arpan Das"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "First Principle Analysis of the Magnetism and Electronic Structure of Fe2XSi (X=Ti, V)",
+    "url": "https://arxiv.org/abs/2609.02800v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "The electronic, magnetic, and mechanical properties of Fe2XSi, where X is titanium (Ti) and vanadium (V), are investigated using computational methods. Volume optimization reveals that the ground state of Fe2TiSi is a nonmagnetic narrow-band gap semiconductor, and that of Fe2VSi is a ferrimagnetic metal. The negative formation energies of both materials confirm the stability of their crystal structures. Mechanical properties confirm the static stability of the crystal structure and suggest that ",
+    "authors": [
+      "Hanieh Kachooee",
+      "Cindy Kim",
+      "Jason Carbajal",
+      "K. Hettiarachchilage",
+      "N. Haldolaarachchige"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "A Dry-Contact Ear-EEG System With Continuous Electrode-Skin Impedance Mismatch Monitoring for Motion Artifact Cancellation Using DRL Stimulus",
+    "url": "https://arxiv.org/abs/2609.02777v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "Dry-contact ear-electroencephalography (Ear-EEG) enables wearable neural monitoring. However, motion induced electrode-skin impedance (ESI) mismatches between electrodes can severely degrade signal quality. To the best of our knowledge, this paper presents the first proof-of-concept dry-contact EarEEG system that uses a driven-right-leg (DRL) stimulus for continuous ESI mismatch monitoring, enabling online adaptive motion artifact cancellation. A 1 kHz sinusoidal stimulus is injected through the",
+    "authors": [
+      "Lohan Atapattu",
+      "Sajitha Madugalle",
+      "Imasha Nethmal",
+      "Erandee Jayathilaka",
+      "Avishka Herath",
+      "Kithmin Wickremasinghe",
+      "Simon L. Kappel",
+      "Nilan Udayanga",
+      "Chamira U. S. Edussooriya"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "H3DNAS: Hardware-Aware ONNX-Native 3D Point Cloud Model Compression",
+    "url": "https://arxiv.org/abs/2609.02684v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "Deploying 3D point cloud models on edge hardware such as the NVIDIA Jetson Orin Nano is severely constrained by compute and memory budgets. Existing compression methods require access to the model's original source code, rendering them inapplicable to the Open Neural Network Exchange (ONNX) binaries commonly distributed by vendors and model repositories. We present \\textbf{H3DNAS}, a hardware-aware model compression framework that operates directly on ONNX computational graphs without requiring ",
+    "authors": [
+      "Anchit Mulye",
+      "Rhythm Baghel",
+      "Sujay Kumar Ingle",
+      "Hardik Jain"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Molecular-dynamics-based modal analysis of heat transport in quasi-one-dimensional systems from a symmetry-adapted perspective",
+    "url": "https://arxiv.org/abs/2609.02397v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "Detailed analysis of thermal conductivity results obtained from molecular dynamics (MD) trajectories conventionally relies on knowledge of the harmonic vibrational modes of the system. Such is the case in methods like Green--Kubo modal analysis (GKMA) and homogeneous nonequilibrium modal analysis (HNEMA). This approach faces several shortcomings that become especially important when dealing with nanostructures. Chief among them is scalability, followed by the ambiguity associated to the degenera",
+    "authors": [
+      "Yu-Jie Cen",
+      "Sandro Wieser",
+      "Georg K. H. Madsen",
+      "Jesús Carrete"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Atlas: Algorithm-Hardware Co-Design for On-Device City-Scale 3D Gaussian Splatting in VR",
+    "url": "https://arxiv.org/abs/2609.02352v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "3D Gaussian splatting (3DGS) has drawn significant attention in the architectural community recently. However, enabling city scale 3DGS on mobile VR devices remains challenging, as the memory requirement of large scale scenes far exceeds the memory capacity of today's mobile GPUs. This paper presents Atlas, an on device city scale 3DGS rendering framework that enables scalable rendering without runtime Internet access. The key insight is that although the full 3DGS model is massive, each frame o",
+    "authors": [
+      "He Zhu",
+      "Zheng Liu",
+      "Xingyang Li",
+      "Anbang Wu",
+      "Zihan Liu",
+      "Ruyang Li",
+      "Hui Wei",
+      "Yaqian Zhao",
+      "Jingwen Leng",
+      "Minyi Guo",
+      "Yu Feng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "math.OC",
+    "title": "A simple derivation of the Kalman filter",
+    "url": "https://arxiv.org/abs/2609.02332v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "In this lecture note, we present a concise and self-contained derivation of the discrete-time Kalman filter equations that requires only a basic understanding of least squares estimation. The treatment is designed to minimize mathematical overhead while preserving both rigor and generality.",
+    "authors": [
+      "Marco Chiani",
+      "Giovanni Petris",
+      "Moe Z. Win"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.RO",
+    "title": "Hardware-Accelerated Instance Segmentation for Resource-Constrained Space Robotics with Criticality Analysis",
+    "url": "https://arxiv.org/abs/2609.02219v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "Autonomous lunar missions require real-time per- ception under three coupled constraints: extreme low-light conditions, limited onboard compute, and radiation-induced hardware faults that can silently corrupt inference. We present a deployment-oriented instance segmentation framework for resource-constrained lunar robotics that jointly addresses quan- tization calibration and system-level fault exposure under strict compute constraints. First, we introduce Activation Variance Informative Samplin",
+    "authors": [
+      "Siddhant Shete",
+      "Hilmi Dogu Kücüker",
+      "Udo Frese",
+      "Frank Kirchner"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Scalable Bayesian Optimization of Composite Functions for Image-Based Inverse Problems in Materials Characterization",
+    "url": "https://arxiv.org/abs/2609.02126v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "Estimating physical parameters from scientific images is a common inverse problem in materials characterization that often relies on expensive physics-based simulations. In electron microscopy, specimen thickness and crystal mistilt are critical parameters that govern how electrons scatter through the sample, and therefore the accuracy of any atomic-scale structure recovered from it. They are commonly inferred by matching experimental position-averaged convergent-beam electron diffraction (PACBE",
+    "authors": [
+      "Dasol Yoon",
+      "Poompol Buathong",
+      "Chia-Hao Lee",
+      "Yujia Zhang",
+      "David A. Muller",
+      "Peter I. Frazier"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Nanoporous Copper Films as Platform for UV-SERS: Sensitivity and Ability to Perform Chiral Discrimination",
+    "url": "https://arxiv.org/abs/2609.02061v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "Surface enhanced Raman spectroscopy (SERS) in the ultraviolet (UV) region offers important advantages for biomolecular detection, including resonance enhancement and reduced fluorescence interference. However, the development of UV SERS substrates that combine low cost, reproducibility, and chemical stability remains challenging. Here, we employ a dry synthesis approach to fabricate nanoporous Cu and copper oxide (CuO) films on silicon substrates and systematically evaluate their UV SERS perform",
+    "authors": [
+      "Huaizhou Jin",
+      "Anastasiia Sapunova",
+      "Yanqiu Zou",
+      "Ali Douaki",
+      "German Lanzavecchia",
+      "Nicolo Maccaferri",
+      "Costantino De Angelis",
+      "Roman Krahne",
+      "Zhenrong Zheng",
+      "Shangzhong Jin",
+      "Denis Garoli"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.supr-con",
     "title": "Understanding the superconducting proximity effect in semiconductors through quantum oscillations",
     "url": "https://arxiv.org/abs/2609.01593v1",
