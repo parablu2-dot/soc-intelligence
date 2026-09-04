@@ -1,0 +1,503 @@
+{
+  "week_of": "2026-08-30",
+  "generated_through": "2026-09-05",
+  "generated_at": "2026-09-04T17:53:27.137500+00:00",
+  "macro": {
+    "fed_policy": [],
+    "rates_fx": [],
+    "polarization": [
+      "CBO, 상원 HELP 위원회 보고 'S. 3010, 21st Century Dyslexia Act' 비용추계 발간",
+      "CBO, Bay Area Ridge 국립경관트레일 타당성 조사 법안(S. 3720) 비용 추계 발간 - 양극화 지표와 직접 관련성 낮음",
+      "CBO, S. 252 'Guidance Out Of Darkness Act' 상원 국토안보위 보고안에 대한 비용추계 발간",
+      "CBO, 'Truman Scholarship Clean House Act'(H.R. 7894) 비용추계 발간",
+      "CBO, 경화광물에 취득지 광물임대법 적용 확대하는 H.R. 3872 비용추계 발표"
+    ]
+  },
+  "axes": {
+    "mobile_ap": {
+      "ko": {
+        "executive_summary": "Qualcomm is consolidating mobile AI inferencing through architectural integration: Adreno Neural Fusion embeds dedicated AI cores directly into the GPU fabric, achieving 40% power-efficiency gain over discrete compute paths. This substrate-level coupling at the GPU-AI boundary shifts competitive advantage from system-on-chip partitioning toward unified execution, positioning Qualcomm ahead of rivals still relying on separate neural accelerators for mobile workloads.",
+        "key_facts": [
+          "Qualcomm Adreno Neural Fusion integrates AI cores directly into mobile GPUs",
+          "40% power efficiency improvement claimed vs. conventional mobile AI architectures",
+          "Architecture targets edge AI inference in smartphones, departing from data-center-first AI strategies"
+        ],
+        "implications": [
+          {
+            "keyword": "Power Budget Arbitrage",
+            "text": "Direct GPU-AI coupling reduces memory round-trips and context switching overhead; competitors (MediaTek, Huawei) still using discrete tensor blocks face higher interconnect latency and voltage/frequency scaling penalties at isopower."
+          },
+          {
+            "keyword": "OEM Integration Velocity",
+            "text": "Unified AI-GPU programming model lowers software friction for OEMs; reduces incentive to adopt third-party neural accelerators, hardening Qualcomm's system-level moat in flagship and mid-tier tiers."
+          },
+          {
+            "keyword": "Design Feasibility Gate",
+            "text": "Tighter GPU-AI coupling may increase verification complexity and die-area contention; yield impact depends on process node maturity (assumed 4nm or better for mass production viability)."
+          }
+        ],
+        "counterpoint": "Power-efficiency gains depend on workload mix; generic GPU tasks not AI-bound may see no benefit or slight overhead from added on-die complexity, limiting real-world margin in non-AI-heavy use cases.",
+        "feasibility_observation": "Architectural coupling at the GPU-AI interface suggests design feasibility is intact (no gate blockers stated); mass-production feasibility will hinge on yield at advanced nodes—claim of 40% efficiency requires tight integration that has not yet been verified in volume.",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "Qualcomm is consolidating mobile AI inferencing through architectural integration: Adreno Neural Fusion embeds dedicated AI cores directly into the GPU fabric, achieving 40% power-efficiency gain over discrete compute paths. This substrate-level coupling at the GPU-AI boundary shifts competitive advantage from system-on-chip partitioning toward unified execution, positioning Qualcomm ahead of rivals still relying on separate neural accelerators for mobile workloads.",
+        "key_facts": [
+          "Qualcomm Adreno Neural Fusion integrates AI cores directly into mobile GPUs",
+          "40% power efficiency improvement claimed vs. conventional mobile AI architectures",
+          "Architecture targets edge AI inference in smartphones, departing from data-center-first AI strategies"
+        ],
+        "implications": [
+          {
+            "keyword": "Power Budget Arbitrage",
+            "text": "Direct GPU-AI coupling reduces memory round-trips and context switching overhead; competitors (MediaTek, Huawei) still using discrete tensor blocks face higher interconnect latency and voltage/frequency scaling penalties at isopower."
+          },
+          {
+            "keyword": "OEM Integration Velocity",
+            "text": "Unified AI-GPU programming model lowers software friction for OEMs; reduces incentive to adopt third-party neural accelerators, hardening Qualcomm's system-level moat in flagship and mid-tier tiers."
+          },
+          {
+            "keyword": "Design Feasibility Gate",
+            "text": "Tighter GPU-AI coupling may increase verification complexity and die-area contention; yield impact depends on process node maturity (assumed 4nm or better for mass production viability)."
+          }
+        ],
+        "counterpoint": "Power-efficiency gains depend on workload mix; generic GPU tasks not AI-bound may see no benefit or slight overhead from added on-die complexity, limiting real-world margin in non-AI-heavy use cases.",
+        "feasibility_observation": "Architectural coupling at the GPU-AI interface suggests design feasibility is intact (no gate blockers stated); mass-production feasibility will hinge on yield at advanced nodes—claim of 40% efficiency requires tight integration that has not yet been verified in volume.",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "hpc_datacenter": {
+      "ko": {
+        "executive_summary": "HPC datacenter competition is reshaping around geographic talent arbitrage and localized R&D footprints rather than pure chip architecture. NVIDIA, Samsung, Broadcom, and AMD are simultaneously expanding design centers across Vietnam, India, Taiwan, Japan, and the US, signaling a shift from centralized design to distributed, region-specific optimization—likely driven by regulatory pressure, AI customization demand, and semiconductor supply chain regionalization. This geographic dispersion fragments the traditional packaging and protocol integration work that once accrued value at centralized design hubs.",
+        "key_facts": [
+          "NVIDIA opened first R&D center in Vietnam for AI optimization",
+          "Samsung established integrated chip R&D center in Japan",
+          "AMD inaugurated largest global design center in India",
+          "SK Hynix manufacturing HBM in Indiana (US talent/incentives cited)",
+          "Samsung expanded Austin R&D center for tech talent retention",
+          "Broadcom growing AI position via custom silicon and VMware acquisition",
+          "Qualcomm planning third-largest global AI R&D center in Vietnam",
+          "NVIDIA R&D center in Taiwan on schedule",
+          "Samsung opened 220 million USD R&D center in Vietnam",
+          "Samsung Heavy Industries sold Pangyo R&D center for 400B won"
+        ],
+        "implications": [
+          {
+            "keyword": "Protocol boundary fragmentation",
+            "text": "Distributed R&D centers reduce integration velocity at traditional interconnect layers (HBM-GPU, fabric-to-accelerator); local teams optimize for region-specific power/thermal/regulatory constraints rather than unified interface standards."
+          },
+          {
+            "keyword": "Custom silicon leverage",
+            "text": "Broadcom's custom silicon positioning via VMware integration and NVIDIA/Qualcomm/Samsung R&D proliferation lower barriers to bespoke SoC design, eroding pure chipset margin capture and favoring OEM-vendor co-design."
+          },
+          {
+            "keyword": "Talent geography as moat",
+            "text": "SK Hynix, Samsung, and AMD explicitly cite local talent pools (Indiana, Austin, India, Vietnam) as R&D anchor; HPC packaging/interposer work migrating from Seoul/Taiwan design clusters to distributed nodes weakens traditional Korean/Taiwanese consolidation."
+          },
+          {
+            "keyword": "Regulatory regionalization",
+            "text": "Multiple new centers in Vietnam, Japan signal compliance with US/ASML export controls; design work split geographically to ring-fence sensitive IP and maintain market access across competing blocs."
+          }
+        ],
+        "counterpoint": "R&D center openings are pre-revenue capacity-building; no announcements of production volume milestones, yield wins, or protocol ratification yet—talent attraction may not translate to competitive design breakthroughs.",
+        "feasibility_observation": "SK Hynix HBM production in Indiana and Samsung's Japan integrated chip center represent non-trivial yield/manufacturing process transfer; no public feasibility setbacks reported this week, but new geographic nodes typically face 12–18 month ramp-to-volume.",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "HPC datacenter competition is reshaping around geographic talent arbitrage and localized R&D footprints rather than pure chip architecture. NVIDIA, Samsung, Broadcom, and AMD are simultaneously expanding design centers across Vietnam, India, Taiwan, Japan, and the US, signaling a shift from centralized design to distributed, region-specific optimization—likely driven by regulatory pressure, AI customization demand, and semiconductor supply chain regionalization. This geographic dispersion fragments the traditional packaging and protocol integration work that once accrued value at centralized design hubs.",
+        "key_facts": [
+          "NVIDIA opened first R&D center in Vietnam for AI optimization",
+          "Samsung established integrated chip R&D center in Japan",
+          "AMD inaugurated largest global design center in India",
+          "SK Hynix manufacturing HBM in Indiana (US talent/incentives cited)",
+          "Samsung expanded Austin R&D center for tech talent retention",
+          "Broadcom growing AI position via custom silicon and VMware acquisition",
+          "Qualcomm planning third-largest global AI R&D center in Vietnam",
+          "NVIDIA R&D center in Taiwan on schedule",
+          "Samsung opened 220 million USD R&D center in Vietnam",
+          "Samsung Heavy Industries sold Pangyo R&D center for 400B won"
+        ],
+        "implications": [
+          {
+            "keyword": "Protocol boundary fragmentation",
+            "text": "Distributed R&D centers reduce integration velocity at traditional interconnect layers (HBM-GPU, fabric-to-accelerator); local teams optimize for region-specific power/thermal/regulatory constraints rather than unified interface standards."
+          },
+          {
+            "keyword": "Custom silicon leverage",
+            "text": "Broadcom's custom silicon positioning via VMware integration and NVIDIA/Qualcomm/Samsung R&D proliferation lower barriers to bespoke SoC design, eroding pure chipset margin capture and favoring OEM-vendor co-design."
+          },
+          {
+            "keyword": "Talent geography as moat",
+            "text": "SK Hynix, Samsung, and AMD explicitly cite local talent pools (Indiana, Austin, India, Vietnam) as R&D anchor; HPC packaging/interposer work migrating from Seoul/Taiwan design clusters to distributed nodes weakens traditional Korean/Taiwanese consolidation."
+          },
+          {
+            "keyword": "Regulatory regionalization",
+            "text": "Multiple new centers in Vietnam, Japan signal compliance with US/ASML export controls; design work split geographically to ring-fence sensitive IP and maintain market access across competing blocs."
+          }
+        ],
+        "counterpoint": "R&D center openings are pre-revenue capacity-building; no announcements of production volume milestones, yield wins, or protocol ratification yet—talent attraction may not translate to competitive design breakthroughs.",
+        "feasibility_observation": "SK Hynix HBM production in Indiana and Samsung's Japan integrated chip center represent non-trivial yield/manufacturing process transfer; no public feasibility setbacks reported this week, but new geographic nodes typically face 12–18 month ramp-to-volume.",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "custom_soc": {
+      "ko": {
+        "executive_summary": "Nvidia's dominance in custom AI silicon remains structurally unchallenged despite growing hyperscaler custom-silicon initiatives; its $3.5B MediaTek investment signals aggressive lock-in at the interposer and reference-design layer to preempt competitive forking. Broadcom, Marvell, and Arm are gaining design-stage traction in custom datacenter workloads, but none have yet demonstrated production volume or cost-parity sufficient to displace Nvidia's installed-base advantage—the competitive arbitrage now sits at hardware-software co-optimization and supply-chain standardization, not raw compute.",
+        "key_facts": [
+          "Nvidia Q2 2026 revenue $96B",
+          "Nvidia invested $3.5B in MediaTek",
+          "AWS ordered 2M additional Nvidia GPUs",
+          "Qualcomm and Arm expanding datacenter push",
+          "Apple deployed 2nm M6 custom silicon",
+          "MediaTek won Google TPU design partnership",
+          "Broadcom and Marvell profiting from custom AI silicon demand",
+          "NSA issued security blueprint for custom chip supply-chain protection"
+        ],
+        "implications": [
+          {
+            "keyword": "Reference-design capture",
+            "text": "Nvidia's $3.5B MediaTek stake locks in chiplet interposer standards and software abstractions; competitors (Broadcom, Marvell, Qualcomm) must now reverse-engineer or license around this design layer to reach production parity."
+          },
+          {
+            "keyword": "Hyperscaler custom silicon",
+            "text": "Apple's 2nm M6, MediaTek's Google TPU win, and AWS's 2M GPU order show parallel tracks: internal ASICs for bespoke workloads, but continued Nvidia dependency for flexible acceleration—custom silicon gains *margin* not *displacement*."
+          },
+          {
+            "keyword": "Arm ISA expansion",
+            "text": "Arm and Qualcomm pushing into datacenter signals ISA-level competition, but without Nvidia's CUDA/cuDNN + driver ecosystem lock-in, adoption remains niche (networking, inference at edge); cost and software maturity gaps persist."
+          },
+          {
+            "keyword": "Supply-chain control",
+            "text": "NSA security blueprint and US Korea chip investment pressure indicate geopolitical fragmentation risk; custom silicon becomes *national-security asset*, raising switching costs for non-allied vendors (Qualcomm, Arm face regulatory friction)."
+          }
+        ],
+        "counterpoint": "OpenAI Jalapeño claims performance parity to Nvidia Blackwell on accelerators; if validated at scale, custom silicon economics flip to favor hyperscaler in-house production, eroding Nvidia's pricing power within 12–18 months.",
+        "feasibility_observation": "MediaTek's Google TPU partnership and Apple's 2nm M6 production demonstrate yield and performance maturity at custom-silicon scale; Broadcom and Marvell show no yield/feasibility setbacks this week, suggesting ecosystem readiness—but volume constraints and software immaturities remain production gates for competitors.",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "Nvidia's dominance in custom AI silicon remains structurally unchallenged despite growing hyperscaler custom-silicon initiatives; its $3.5B MediaTek investment signals aggressive lock-in at the interposer and reference-design layer to preempt competitive forking. Broadcom, Marvell, and Arm are gaining design-stage traction in custom datacenter workloads, but none have yet demonstrated production volume or cost-parity sufficient to displace Nvidia's installed-base advantage—the competitive arbitrage now sits at hardware-software co-optimization and supply-chain standardization, not raw compute.",
+        "key_facts": [
+          "Nvidia Q2 2026 revenue $96B",
+          "Nvidia invested $3.5B in MediaTek",
+          "AWS ordered 2M additional Nvidia GPUs",
+          "Qualcomm and Arm expanding datacenter push",
+          "Apple deployed 2nm M6 custom silicon",
+          "MediaTek won Google TPU design partnership",
+          "Broadcom and Marvell profiting from custom AI silicon demand",
+          "NSA issued security blueprint for custom chip supply-chain protection"
+        ],
+        "implications": [
+          {
+            "keyword": "Reference-design capture",
+            "text": "Nvidia's $3.5B MediaTek stake locks in chiplet interposer standards and software abstractions; competitors (Broadcom, Marvell, Qualcomm) must now reverse-engineer or license around this design layer to reach production parity."
+          },
+          {
+            "keyword": "Hyperscaler custom silicon",
+            "text": "Apple's 2nm M6, MediaTek's Google TPU win, and AWS's 2M GPU order show parallel tracks: internal ASICs for bespoke workloads, but continued Nvidia dependency for flexible acceleration—custom silicon gains *margin* not *displacement*."
+          },
+          {
+            "keyword": "Arm ISA expansion",
+            "text": "Arm and Qualcomm pushing into datacenter signals ISA-level competition, but without Nvidia's CUDA/cuDNN + driver ecosystem lock-in, adoption remains niche (networking, inference at edge); cost and software maturity gaps persist."
+          },
+          {
+            "keyword": "Supply-chain control",
+            "text": "NSA security blueprint and US Korea chip investment pressure indicate geopolitical fragmentation risk; custom silicon becomes *national-security asset*, raising switching costs for non-allied vendors (Qualcomm, Arm face regulatory friction)."
+          }
+        ],
+        "counterpoint": "OpenAI Jalapeño claims performance parity to Nvidia Blackwell on accelerators; if validated at scale, custom silicon economics flip to favor hyperscaler in-house production, eroding Nvidia's pricing power within 12–18 months.",
+        "feasibility_observation": "MediaTek's Google TPU partnership and Apple's 2nm M6 production demonstrate yield and performance maturity at custom-silicon scale; Broadcom and Marvell show no yield/feasibility setbacks this week, suggesting ecosystem readiness—but volume constraints and software immaturities remain production gates for competitors.",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "foundry": {
+      "ko": {
+        "executive_summary": "Foundry competitors are bifurcating on subsidy-backed capacity and technical differentiation. GlobalFoundries anchors U.S. onshoring via $300M DoC award for silicon photonics while securing post-quantum cryptography and RF/antenna packaging niches; Intel completes RAMP-C and pivots to 18A with advanced packaging at U.S. sites. South Korea's Honam region (Gwangju/Jeonnam) positions AI-semiconductor-energy convergence as alternative hub, betting on ESS demand (up to 1GW in third central contract) and 모두의AI infrastructure to pull downstream demand. The interface advantage now flows to whoever integrates packaging (GF's 9SW/SLATE, Intel's U.S. packaging alliance with Lens) with geopolitical supply resilience.",
+        "key_facts": [
+          "GlobalFoundries: $300M U.S. Department of Commerce award for silicon photonics leadership",
+          "GF partnerships: SEALSQ (post-quantum cryptography), MOSIS 2.0, 9SW/SLATE advanced packaging",
+          "Intel: 18A node debut on Core Ultra Series 3, RAMP-C program completed, partnership with Lens Technology for AI-era packaging",
+          "Intel Ireland fab equity: 49% repurchase announced",
+          "South Korea: Third ESS central contract market forecast up to ~1GW (from prior 500MW), driven by Honam AI datacenter + renewable expansion",
+          "SKT/Kakao/KT 모두의AI: 10M MAU target, Nvidia GPU allocation across 3 consortiums",
+          "U.S. Foundry School: Trump administration initiative for semiconductor/manufacturing workforce",
+          "Honam AI hub strategy: energy-AI-semiconductor-mobility-space value chain linkage"
+        ],
+        "implications": [
+          {
+            "keyword": "Subsidy-driven capacity race",
+            "text": "CHIPS Act ($300M to GF for photonics) and U.S. government foundry/packaging initiatives (Foundry School, RAMP-C completion, Intel equity buyback) signal continued U.S. state backing for onshore capacity. This directly competes with Korea's regional AI-hub strategy, raising capex sustainability questions outside subsidy support."
+          },
+          {
+            "keyword": "Packaging as competitive moat",
+            "text": "GF's 9SW/SLATE and Intel's advanced packaging with Lens Technology shift differentiation away from node geometry toward chiplet/interposer integration. This favors capital-intensive, IP-dense players and creates switching costs at the assembly boundary."
+          },
+          {
+            "keyword": "Demand-pull via infrastructure",
+            "text": "Korea's ESS+AI datacenter+모두의AI play targets demand-side integration to justify regional fab/packaging investment. If Honam ESS and Nvidia GPU allocation materialize, it locks downstream packaging demand; if ESS stalls, the rationale weakens."
+          },
+          {
+            "keyword": "Geopolitical supply-chain hedging",
+            "text": "Post-quantum cryptography partnerships (GF–SEALSQ) and Foundry School workforce pipeline suggest both U.S. and Korea are building domestic-preferential value chains, reducing cross-border packaging and IP licensing."
+          }
+        ],
+        "counterpoint": "Material provided emphasizes announced partnerships and subsidy awards but lacks concrete capacity/yield ramp dates, yield data, or customer design-win confirmation. GF's silicon photonics and post-quantum work remain early-stage; Intel's 18A volume and Lens packaging timeline are not specified. Korea's ESS third-market scaling remains conditional on renewable/datacenter deployment.",
+        "feasibility_observation": "No explicit design or yield feasibility changes reported this week. GF completes RAMP-C (confirming U.S. trusted-node capability post-Sept 2021 launch) and Intel announces 18A Core Ultra Series 3 in client compute, suggesting design validation underway; manufacturing feasibility (yield, supply-chain for advanced packaging with Lens) not quantified.",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "Foundry competitors are bifurcating on subsidy-backed capacity and technical differentiation. GlobalFoundries anchors U.S. onshoring via $300M DoC award for silicon photonics while securing post-quantum cryptography and RF/antenna packaging niches; Intel completes RAMP-C and pivots to 18A with advanced packaging at U.S. sites. South Korea's Honam region (Gwangju/Jeonnam) positions AI-semiconductor-energy convergence as alternative hub, betting on ESS demand (up to 1GW in third central contract) and 모두의AI infrastructure to pull downstream demand. The interface advantage now flows to whoever integrates packaging (GF's 9SW/SLATE, Intel's U.S. packaging alliance with Lens) with geopolitical supply resilience.",
+        "key_facts": [
+          "GlobalFoundries: $300M U.S. Department of Commerce award for silicon photonics leadership",
+          "GF partnerships: SEALSQ (post-quantum cryptography), MOSIS 2.0, 9SW/SLATE advanced packaging",
+          "Intel: 18A node debut on Core Ultra Series 3, RAMP-C program completed, partnership with Lens Technology for AI-era packaging",
+          "Intel Ireland fab equity: 49% repurchase announced",
+          "South Korea: Third ESS central contract market forecast up to ~1GW (from prior 500MW), driven by Honam AI datacenter + renewable expansion",
+          "SKT/Kakao/KT 모두의AI: 10M MAU target, Nvidia GPU allocation across 3 consortiums",
+          "U.S. Foundry School: Trump administration initiative for semiconductor/manufacturing workforce",
+          "Honam AI hub strategy: energy-AI-semiconductor-mobility-space value chain linkage"
+        ],
+        "implications": [
+          {
+            "keyword": "Subsidy-driven capacity race",
+            "text": "CHIPS Act ($300M to GF for photonics) and U.S. government foundry/packaging initiatives (Foundry School, RAMP-C completion, Intel equity buyback) signal continued U.S. state backing for onshore capacity. This directly competes with Korea's regional AI-hub strategy, raising capex sustainability questions outside subsidy support."
+          },
+          {
+            "keyword": "Packaging as competitive moat",
+            "text": "GF's 9SW/SLATE and Intel's advanced packaging with Lens Technology shift differentiation away from node geometry toward chiplet/interposer integration. This favors capital-intensive, IP-dense players and creates switching costs at the assembly boundary."
+          },
+          {
+            "keyword": "Demand-pull via infrastructure",
+            "text": "Korea's ESS+AI datacenter+모두의AI play targets demand-side integration to justify regional fab/packaging investment. If Honam ESS and Nvidia GPU allocation materialize, it locks downstream packaging demand; if ESS stalls, the rationale weakens."
+          },
+          {
+            "keyword": "Geopolitical supply-chain hedging",
+            "text": "Post-quantum cryptography partnerships (GF–SEALSQ) and Foundry School workforce pipeline suggest both U.S. and Korea are building domestic-preferential value chains, reducing cross-border packaging and IP licensing."
+          }
+        ],
+        "counterpoint": "Material provided emphasizes announced partnerships and subsidy awards but lacks concrete capacity/yield ramp dates, yield data, or customer design-win confirmation. GF's silicon photonics and post-quantum work remain early-stage; Intel's 18A volume and Lens packaging timeline are not specified. Korea's ESS third-market scaling remains conditional on renewable/datacenter deployment.",
+        "feasibility_observation": "No explicit design or yield feasibility changes reported this week. GF completes RAMP-C (confirming U.S. trusted-node capability post-Sept 2021 launch) and Intel announces 18A Core Ultra Series 3 in client compute, suggesting design validation underway; manufacturing feasibility (yield, supply-chain for advanced packaging with Lens) not quantified.",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "packaging": {
+      "ko": {
+        "executive_summary": "Packaging value concentration is shifting from standalone assembly vendors toward integrated chiplet ecosystems and regional supply-chain localization. SK hynix's Indiana groundbreaking signals HBM packaging moving away from Asia-centric sourcing; simultaneous advances in photonics-aware chiplet design (Semiconductor Engineering) and CMP slurry specialization (Qnity's Stackplane platform) indicate that competitive advantage now accrues at multi-layer chiplet interfaces rather than simple substrate bonding. India's Semicon 2.0 (₹1.27 lakh crore) and Duksan Hi-Metal's strategic technology status both target advanced packaging ecosystems, yet sustained equipment supply constraints (3–5 years per Applied Materials) may throttle localization gains.",
+        "key_facts": [
+          "Micron CEO: AI-driven data center demand exceeds memory supply by 50%",
+          "SK hynix groundbreaking in Indiana for HBM supply-chain localization",
+          "Qnity launches Stackplane CMP slurry platform for advanced packaging",
+          "India's Semicon 2.0: ₹1.27 lakh crore semiconductor ecosystem push, advanced packaging eligible",
+          "Duksan Hi-Metal wins National Strategic Technology Status for advanced packaging",
+          "Semiconductor equipment shortage expected 3–5 years; Applied Materials reports continuous capacity requests",
+          "Photonics integration forces chiplet architecture rethink (Semiconductor Engineering)",
+          "China's chip packaging gains momentum from AI-driven demand"
+        ],
+        "implications": [
+          {
+            "keyword": "HBM Localization",
+            "text": "SK hynix Indiana site breaks Asia supply-chain monopoly; other memory OEMs (Samsung, Micron) likely to follow, fragmenting packaging know-how across regions."
+          },
+          {
+            "keyword": "Chiplet Interface Complexity",
+            "text": "Photonics-aware chiplet design and CMP slurry specialization elevate packaging from commodity assembly to IP-intensive engineering; winners will be process-control and materials vendors (KLA, Camtek, Nova, Qnity), not traditional OSAT."
+          },
+          {
+            "keyword": "Regional Capacity Race",
+            "text": "India (Semicon 2.0), US (Foundry School), and South Korea (Duksan strategic status) all targeting advanced packaging infrastructure; equipment bottleneck (3–5 years) throttles execution and rewards early movers."
+          },
+          {
+            "keyword": "Demand-Supply Imbalance",
+            "text": "50% supply deficit for AI-memory drives premium pricing in packaging services; incumbents (TSMC advanced packaging, ASE) have near-term margin protection but face new entrant pressure from state-backed ecosystems."
+          }
+        ],
+        "counterpoint": "China's packaging momentum and India/US localization initiatives target design maturity and cost reduction over next 2–3 years, but lack proven yields at node-advanced geometries; SK hynix Indiana is greenfield and unvalidated for high-volume HBM output.",
+        "feasibility_observation": "Mass-production feasibility for advanced chiplet packaging and HBM localization in non-TSMC regions remains unproven; SK hynix Indiana groundbreaking and equipment shortage (3–5 year lead time) indicate design timelines may slip or yields may require extended ramp, directly impacting 2026–2027 production targets cited in India's Semicon 2.0 and Malaysia conference roadmaps.",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "Packaging value concentration is shifting from standalone assembly vendors toward integrated chiplet ecosystems and regional supply-chain localization. SK hynix's Indiana groundbreaking signals HBM packaging moving away from Asia-centric sourcing; simultaneous advances in photonics-aware chiplet design (Semiconductor Engineering) and CMP slurry specialization (Qnity's Stackplane platform) indicate that competitive advantage now accrues at multi-layer chiplet interfaces rather than simple substrate bonding. India's Semicon 2.0 (₹1.27 lakh crore) and Duksan Hi-Metal's strategic technology status both target advanced packaging ecosystems, yet sustained equipment supply constraints (3–5 years per Applied Materials) may throttle localization gains.",
+        "key_facts": [
+          "Micron CEO: AI-driven data center demand exceeds memory supply by 50%",
+          "SK hynix groundbreaking in Indiana for HBM supply-chain localization",
+          "Qnity launches Stackplane CMP slurry platform for advanced packaging",
+          "India's Semicon 2.0: ₹1.27 lakh crore semiconductor ecosystem push, advanced packaging eligible",
+          "Duksan Hi-Metal wins National Strategic Technology Status for advanced packaging",
+          "Semiconductor equipment shortage expected 3–5 years; Applied Materials reports continuous capacity requests",
+          "Photonics integration forces chiplet architecture rethink (Semiconductor Engineering)",
+          "China's chip packaging gains momentum from AI-driven demand"
+        ],
+        "implications": [
+          {
+            "keyword": "HBM Localization",
+            "text": "SK hynix Indiana site breaks Asia supply-chain monopoly; other memory OEMs (Samsung, Micron) likely to follow, fragmenting packaging know-how across regions."
+          },
+          {
+            "keyword": "Chiplet Interface Complexity",
+            "text": "Photonics-aware chiplet design and CMP slurry specialization elevate packaging from commodity assembly to IP-intensive engineering; winners will be process-control and materials vendors (KLA, Camtek, Nova, Qnity), not traditional OSAT."
+          },
+          {
+            "keyword": "Regional Capacity Race",
+            "text": "India (Semicon 2.0), US (Foundry School), and South Korea (Duksan strategic status) all targeting advanced packaging infrastructure; equipment bottleneck (3–5 years) throttles execution and rewards early movers."
+          },
+          {
+            "keyword": "Demand-Supply Imbalance",
+            "text": "50% supply deficit for AI-memory drives premium pricing in packaging services; incumbents (TSMC advanced packaging, ASE) have near-term margin protection but face new entrant pressure from state-backed ecosystems."
+          }
+        ],
+        "counterpoint": "China's packaging momentum and India/US localization initiatives target design maturity and cost reduction over next 2–3 years, but lack proven yields at node-advanced geometries; SK hynix Indiana is greenfield and unvalidated for high-volume HBM output.",
+        "feasibility_observation": "Mass-production feasibility for advanced chiplet packaging and HBM localization in non-TSMC regions remains unproven; SK hynix Indiana groundbreaking and equipment shortage (3–5 year lead time) indicate design timelines may slip or yields may require extended ramp, directly impacting 2026–2027 production targets cited in India's Semicon 2.0 and Malaysia conference roadmaps.",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "cpo_optics": {
+      "ko": {
+        "executive_summary": "CPO (co-packaged optics) has transitioned from concept to production-path certainty this week, with TSMC publicly committing to mass production in H2 2027 and targeting >50% silicon photonics penetration by that date. The competitive lens shifts to the packaging integration boundary: TER, Credo, and emerging chiplets face pressure from mature players (CSCO, VRT) while thermal management and manufacturing yield become the critical gating factors for datacenter scale-out.",
+        "key_facts": [
+          "TSMC: silicon photonics penetration target >50% by 2027, mass production H2 2027",
+          "TSMC vice president: silicon photonics expected to dominate AI growth",
+          "Credo: joining consortium for optical connections integrated with AI chips",
+          "THine: new VCSEL drivers and TIAs targeting ultra-low-latency, lower-power scale-up networks",
+          "RAONTECH: supplying optical components for global AI datacenter deployments",
+          "EV Group: addressing manufacturing challenges for next-generation CPO production",
+          "400G/lane optical interconnects moving into rack-level architectures",
+          "AI fabric interconnect maturity emerging as key production variable"
+        ],
+        "implications": [
+          {
+            "keyword": "Manufacturing Gate",
+            "text": "EV Group's public focus on CPO manufacturing challenges signals yield/thermal management as near-term bottleneck; companies controlling advanced packaging/assembly (TSMC, EV Group ecosystem) gain leverage over pure optical vendors."
+          },
+          {
+            "keyword": "Integration Boundary Shift",
+            "text": "Optical engine placement moving from line-card to co-packaged at chip boundary increases design complexity for system architects; Credo and THine compete on chiplet-level interfacing, not standalone optics."
+          },
+          {
+            "keyword": "Datacenter Standardization",
+            "text": "400G/lane and CPO maturity as key variables means vendors must target specific rack/fabric topologies; TER, CSCO, VRT compete on compatibility and thermal trade-offs, not raw bandwidth."
+          },
+          {
+            "keyword": "TSMC Control Point",
+            "text": "Mass production roadmap H2 2027 positions TSMC as gating node for CPO adoption; chiplet partners (Credo, THine, RAONTECH) are subordinate to TSMC's process cadence and co-design rules."
+          }
+        ],
+        "counterpoint": "TSMC's >50% penetration target by 2027 assumes datacenter architect adoption and thermal solution maturity ahead of that date; no reported customer lock-in commitments yet.",
+        "feasibility_observation": "Mass-production feasibility appears to be advancing: TSMC committed to H2 2027 production start, EV Group publicly addressing manufacturing bottlenecks (implying solutions emerging), and THine releasing product (VCSEL drivers, TIAs) for scale-up networks. No yield gatings or performance cliffs reported.",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {}
+    },
+    "dram": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "nand": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "hbm": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "pmic": {
+      "ko": {
+        "executive_summary": "PMIC supply dynamics shifted materially as AI-driven capacity demand crowd-outs traditional mature-node (8-inch) fabs: SMIC and Hua Hong seized 8-inch allocation as TSMC/Samsung prioritize advanced nodes, while SMIC's record China revenue (+22% Q2) and gross margin recovery signals pricing power and utilization gains in commodity segments. However, US equipment export restrictions—now impacting SMIC fabrication—introduce regulatory supply friction that may cap sustained cost competitiveness.",
+        "key_facts": [
+          "SMIC Q2 net profit surged 3.6x on AI localization and record inquiries",
+          "SMIC Q2 China revenue +22% QoQ",
+          "Leadtrend (PMIC specialist) Q1 FY2026 net profit +182% QoQ, gross margin 33.6%",
+          "TSMC/Samsung capacity shift from mature nodes; SMIC/Hua Hong capturing 8-inch allocations",
+          "SMIC flags US equipment supply delays; foreign clients returning orders to China fabs"
+        ],
+        "implications": [
+          {
+            "keyword": "BOM cost",
+            "text": "SMIC and Chinese mature-node capacity glut + localization inflow stabilize or reduce PMIC bill-of-materials pricing for CN-based OEMs; non-China vendors face longer lead times and potential price pressure to compete."
+          },
+          {
+            "keyword": "Supply capacity",
+            "text": "8-inch fab utilization swinging from underutilized to near-full as AI workloads displace consumer/NB demand; PMIC availability stabilizes for automotive/industrial grade customers routed through Chinese suppliers."
+          },
+          {
+            "keyword": "Regulatory/export friction",
+            "text": "US equipment bans will constrain SMIC's long-term yield/process maturity on mature-node PMIC (BCD, analog), potentially requiring higher scrap rates or longer ramp cycles and indirectly limiting pricing power within 24–36 months."
+          }
+        ],
+        "counterpoint": "Leadtrend margin expansion (33.6%) on AI crowding-out suggests mature-process PMIC still commands premium pricing; supply tightness may persist if AI capacity pull remains stronger than historical seasonal cycles.",
+        "feasibility_observation": "해당 없음",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {}
+    }
+  },
+  "item_counts": {
+    "mobile_ap": 3,
+    "hpc_datacenter": 129,
+    "custom_soc": 66,
+    "foundry": 66,
+    "packaging": 79,
+    "cpo_optics": 32,
+    "hbm": 13,
+    "pmic": 8
+  }
+}

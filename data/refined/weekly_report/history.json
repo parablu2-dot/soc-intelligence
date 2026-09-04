@@ -1,0 +1,42 @@
+{
+  "mobile_ap": {
+    "date": "2026-09-05",
+    "executive_summary": "Qualcomm is consolidating mobile AI inferencing through architectural integration: Adreno Neural Fusion embeds dedicated AI cores directly into the GPU fabric, achieving 40% power-efficiency gain over discrete compute paths. This substrate-level coupling at the GPU-AI boundary shifts competitive advantage from system-on-chip partitioning toward unified execution, positioning Qualcomm ahead of rivals still relying on separate neural accelerators for mobile workloads."
+  },
+  "hpc_datacenter": {
+    "date": "2026-09-05",
+    "executive_summary": "HPC datacenter competition is reshaping around geographic talent arbitrage and localized R&D footprints rather than pure chip architecture. NVIDIA, Samsung, Broadcom, and AMD are simultaneously expanding design centers across Vietnam, India, Taiwan, Japan, and the US, signaling a shift from centralized design to distributed, region-specific optimization—likely driven by regulatory pressure, AI customization demand, and semiconductor supply chain regionalization. This geographic dispersion fragments the traditional packaging and protocol integration work that once accrued value at centralized design hubs."
+  },
+  "custom_soc": {
+    "date": "2026-09-05",
+    "executive_summary": "Nvidia's dominance in custom AI silicon remains structurally unchallenged despite growing hyperscaler custom-silicon initiatives; its $3.5B MediaTek investment signals aggressive lock-in at the interposer and reference-design layer to preempt competitive forking. Broadcom, Marvell, and Arm are gaining design-stage traction in custom datacenter workloads, but none have yet demonstrated production volume or cost-parity sufficient to displace Nvidia's installed-base advantage—the competitive arbitrage now sits at hardware-software co-optimization and supply-chain standardization, not raw compute."
+  },
+  "foundry": {
+    "date": "2026-09-05",
+    "executive_summary": "Foundry competitors are bifurcating on subsidy-backed capacity and technical differentiation. GlobalFoundries anchors U.S. onshoring via $300M DoC award for silicon photonics while securing post-quantum cryptography and RF/antenna packaging niches; Intel completes RAMP-C and pivots to 18A with advanced packaging at U.S. sites. South Korea's Honam region (Gwangju/Jeonnam) positions AI-semiconductor-energy convergence as alternative hub, betting on ESS demand (up to 1GW in third central contract) and 모두의AI infrastructure to pull downstream demand. The interface advantage now flows to whoever integrates packaging (GF's 9SW/SLATE, Intel's U.S. packaging alliance with Lens) with geopolitical supply resilience."
+  },
+  "packaging": {
+    "date": "2026-09-05",
+    "executive_summary": "Packaging value concentration is shifting from standalone assembly vendors toward integrated chiplet ecosystems and regional supply-chain localization. SK hynix's Indiana groundbreaking signals HBM packaging moving away from Asia-centric sourcing; simultaneous advances in photonics-aware chiplet design (Semiconductor Engineering) and CMP slurry specialization (Qnity's Stackplane platform) indicate that competitive advantage now accrues at multi-layer chiplet interfaces rather than simple substrate bonding. India's Semicon 2.0 (₹1.27 lakh crore) and Duksan Hi-Metal's strategic technology status both target advanced packaging ecosystems, yet sustained equipment supply constraints (3–5 years per Applied Materials) may throttle localization gains."
+  },
+  "cpo_optics": {
+    "date": "2026-09-05",
+    "executive_summary": "CPO (co-packaged optics) has transitioned from concept to production-path certainty this week, with TSMC publicly committing to mass production in H2 2027 and targeting >50% silicon photonics penetration by that date. The competitive lens shifts to the packaging integration boundary: TER, Credo, and emerging chiplets face pressure from mature players (CSCO, VRT) while thermal management and manufacturing yield become the critical gating factors for datacenter scale-out."
+  },
+  "dram": {
+    "date": "2026-09-05",
+    "executive_summary": "변화 없음"
+  },
+  "nand": {
+    "date": "2026-09-05",
+    "executive_summary": "변화 없음"
+  },
+  "hbm": {
+    "date": "2026-09-05",
+    "executive_summary": "변화 없음"
+  },
+  "pmic": {
+    "date": "2026-09-05",
+    "executive_summary": "PMIC supply dynamics shifted materially as AI-driven capacity demand crowd-outs traditional mature-node (8-inch) fabs: SMIC and Hua Hong seized 8-inch allocation as TSMC/Samsung prioritize advanced nodes, while SMIC's record China revenue (+22% Q2) and gross margin recovery signals pricing power and utilization gains in commodity segments. However, US equipment export restrictions—now impacting SMIC fabrication—introduce regulatory supply friction that may cap sustained cost competitiveness."
+  }
+}
