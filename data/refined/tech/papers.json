@@ -2,6 +2,252 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.CR",
+    "title": "AI-Assisted Design of a Post-Quantum Cryptographic Accelerator: A Deployed-Silicon Case Study",
+    "url": "https://arxiv.org/abs/2609.04058v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "Post-quantum migration is mandated on published timelines, and silicon that ships with a defect cannot be patched remotely. The standard acceptance gate cannot detect an entire class of ML-DSA defects. Signing resamples until a candidate meets its norm bounds, so the executed path varies with the message, whereas known-answer tests (KATs) sample fixed values and reach only the depths their seeds trigger. Our accelerator passed its full KAT regression while carrying a norm check that outran block",
+    "authors": [
+      "Jungmin Park",
+      "Eunha Kim",
+      "Wooseop Kim",
+      "Seongjoon Cho",
+      "Byungho Cha"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "THz-SynC: Collective Synthesis with Contextual-Bandit-Assisted Coordination for Reconfigurable Hybrid Optical-THz AI Datacenters",
+    "url": "https://arxiv.org/abs/2609.04025v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "Terahertz (THz) wireless interconnects offer high-capacity, low-latency, and energy-efficient rack-to-rack links capable of on-demand connectivity reconfiguration, serving as a promising complement to optical fabrics for communication-intensive distributed AI training datacenters. However, co-optimizing optical and THz resources to minimize collective completion time and transmission energy remains challenging due to dynamic optical congestion, THz channel fluctuations, and heterogeneous compute",
+    "authors": [
+      "Jingting Jiang",
+      "Chong Han"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Hierarchical automation of scanning probe microscopy through agentic orchestration and algorithmic control",
+    "url": "https://arxiv.org/abs/2609.04015v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "Rapid advances in agentic artificial intelligence enable scientific systems to interpret open-ended objectives, combine heterogeneous information, invoke specialized tools, and revise experimental strategies as evidence accumulates. However, physical experimentation also contains many tasks for which agentic reasoning provides little advantage and can reduce reliability. Quantitative analysis, optimization, spatial targeting, validation, and instrument execution are often better posed as determi",
+    "authors": [
+      "Boris N. Slautin",
+      "Sheryl L. Sanchez",
+      "Aidan Swanger",
+      "Yu Liu",
+      "Gerd Duscher",
+      "Vladimir V. Shvartsman",
+      "Mahshid Ahmadi",
+      "Sergei V. Kalinin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "RobustSeiz: An Open-Source Framework for Benchmarking the Robustness of EEG Seizure Detection Models",
+    "url": "https://arxiv.org/abs/2609.04007v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "Despite strong performance on held-out electroencephalography (EEG) data, seizure detectors may fail under real-world acquisition variability, artifacts, and adversarial inputs. We introduce RobustSeiz, an open-source, model-agnostic framework that provides a standardized, reproducible protocol for stress-testing and comparing seizure detectors under controlled, clinically motivated distribution shifts before deployment. We standardize four public scalp-EEG corpora (CHB-MIT, TUSZ, Siena, and Sei",
+    "authors": [
+      "Mohammad Mohammadi",
+      "Alireza Zarei"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Low-Complexity Sequential Detection Framework for Single-Channel Co-Frequency Signal Separation",
+    "url": "https://arxiv.org/abs/2609.03986v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "Practical separation of single-channel co-frequency signals (SCCFSs) is hindered by the prohibitive computational complexity of benchmark algorithms.\n  To address this issue, we propose a low-complexity separation framework based on sequential detection (SD), in which signal separation is cast as a sequential path search over a trellis.\n  To support both hard-decision detection and log-likelihood ratio (LLR) extraction, we develop two algorithms within this framework: the SD-based separation (SD",
+    "authors": [
+      "Heng Wang",
+      "Kexian Gong",
+      "Peng Sun",
+      "Wei Wang",
+      "Hua Jiang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Heesch Nodal Lines in Inadmissible Achiral Antiferromagnets",
+    "url": "https://arxiv.org/abs/2609.03772v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "Recently, a new class of Weyl semimetals in antiferromagnets named Heesch Weyl semimetals was discovered, which have inadmissible chiral magnetic point group symmetries (inadmissible magnetic point groups are incompatible with ferromagnetic order) and distinctive surface Fermi arcs. In Heesch Weyl semimetals, the Weyl points are pinned at high symmetry momenta with two-dimensional irreducible corepresentations in the Brillouin zone. As the Weyl points are pinned, the Weyl points with opposite to",
+    "authors": [
+      "Xing-Yao Guo",
+      "Chung-Yuen Chan",
+      "Zi-Ting Sun",
+      "Kam Tuen Law"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Ion-Engineered Insulator-to-Semiconductor Transition in Natural 2D Biotite",
+    "url": "https://arxiv.org/abs/2609.03757v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "Naturally occurring layered silicates offer an abundant yet unexplored class of 2D materials, but their insulating nature limits their functional utility. Here, we demonstrate a chemical strategy that transforms liquid-phase-exfoliated biotite nanosheets into a tunable 2D semiconductor through controlled NaOH treatment. The resulting insulator-to-semiconductor transition originates from Na incorporation, defect generation, and local structural reconstruction while largely preserving the layered ",
+    "authors": [
+      "Dipanwita Mitra",
+      "Raphael B. de Oliveira",
+      "Guilherme S. L. Fabris",
+      "Debkanta Ghosh",
+      "AyonJyoti Karmakar",
+      "Raphael M. Tromer",
+      "Marcelo L. Pereira Junior",
+      "Douglas S. Galvão",
+      "Chandra Sekhar Tiwary",
+      "Prasanta Kumar Datta"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Generalized s-d model for Wannier-Mott excitons in layered magnetic semiconductors",
+    "url": "https://arxiv.org/abs/2609.03744v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "The recent discovery of excitons coupled to the magnetic order, and the consequent strong magneto-optic responses, in some van der Waals magnetic semiconductors has triggered intense activity at the interface of magnetism and semiconductor optics. Here, we present an analytically tractable minimal model that describes magnetic order, electrons, holes, and excitons within a unified framework, thereby capturing a wide range of phenomena. It treats the magnetic order and itinerant carriers to be co",
+    "authors": [
+      "Sonu Verma",
+      "Bashab Dey",
+      "Akashdeep Kamra"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "AI-Driven Analysis of the Effects of Recreational Activities to Well-Being using Physiological Responses: A survey",
+    "url": "https://arxiv.org/abs/2609.03692v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "Well-being is a broader concept ensuring psychological, social, physical, and cognitive health. Recreational activities are one of the major approaches to facilitate well-being. There are various recreational activities in each of the domains in which well-being can be measured. Although well-being is often assessed using subjective scales, physiological responses such as heart rate, heart rate variability, skin responses and brain activity data provide objective ways to estimate the level of we",
+    "authors": [
+      "Aditi Site",
+      "Tarmo Lipping"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "LevelSyn: Physical-Aware Logic Synthesis via Level-Asynchronous Graph Neural Networks",
+    "url": "https://arxiv.org/abs/2609.03594v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "As integrated circuit technology scales into the nanometer regime, the traditional disconnect between logic synthesis and physical design has led to significant PPA (Power, Performance, and Area) degradation and prolonged design closure cycles. Traditional logic synthesis relies on non-physical Wire Load Models (WLMs), while recent spectral-based placement predictors often neglect the inherent hierarchical logic depth and signal flow of netlists, which leads to low-fidelity spatial estimations. ",
+    "authors": [
+      "Jingyi Zhou",
+      "Zhengyuan Shi",
+      "Ziyang Zheng",
+      "Qiang Xu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "SALTED: a symmetry-adapted machine-learning program for predicting electron-densities in molecules and materials",
+    "url": "https://arxiv.org/abs/2609.03576v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "SALTED provides an open-source Python package for machine learning the quantum-mechanical electron density, $n(\\mathbf{r})$, in molecular and condensed-phase systems based on input atomic coordinates and species. The program adopts a linear atom-centered decomposition of the electron density, which makes it highly transferable across diverse atomistic configurations sharing similar chemical environments. Because of this representation choice, SALTED is naturally interfaced with state-of-the-art ",
+    "authors": [
+      "Zekun Lou",
+      "Alan M. Lewis",
+      "Théophane Bernhard",
+      "Lukas Seifert",
+      "Agustin Salcedo",
+      "Florian Kleemiss",
+      "Mariana Rossi",
+      "Andrea Grisafi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "LeanGRPO: Eliminating Redundant Recomputation in Diffusion RL",
+    "url": "https://arxiv.org/abs/2609.03528v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "Diffusion reinforcement learning (RL) has recently achieved significant success in post-training image and video generative models. However, most diffusion RL methods, including DanceGRPO and FlowGRPO, recompute selected timesteps with gradient tracking after rollout. Under on-policy training with the same backend for rollout and update, this recomputation is mathematically redundant. Intuitively, the rollout and policy update steps can reuse the same feed-forward backbone to avoid redundant com",
+    "authors": [
+      "Sijie Wang",
+      "Zhiqiang Tan",
+      "Xinrui Yang",
+      "Shaohuai Shi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "FlowTT: Exploiting Computation Flow Reuse in Irregular Tensor-Train Embedding",
+    "url": "https://arxiv.org/abs/2609.03459v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "Tensor-Train (TT) decomposition effectively compresses large embedding tables in recommendation models, but TT-based embedding lookup remains inefficient because partially shared computation flows across input indices are not fully reused and intermediate results are repeatedly materialized off-chip between sequential TT-core contractions. We present FlowTT, a flow-aware GPU execution framework that reformulates TT gather as a set of prefix-shared irregular computation flows. FlowTT combines flo",
+    "authors": [
+      "Jongmin Seok",
+      "Chae Eun Rhee"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Polaron Self-Trapping Rates from First Principles",
+    "url": "https://arxiv.org/abs/2609.03336v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "Polaron formation, also known as self-trapping, is a process akin to nonradiative carrier capture at point defects or impurities. In this work, we develop the formalism to determine how long it takes to form a small hole or electron polaron from first principles. We employ an accurate, fully first-principles approach based on a Koopmans compliant hybrid functional. The self-trapping rate is the product of two components: the nonradiative capture coefficient, which we evaluate using a one-dimensi",
+    "authors": [
+      "Mark E. Turiansky",
+      "Joel B. Varley",
+      "Audrius Alkauskas",
+      "Chris G. Van de Walle"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Generalized Hankel/Toeplitz matrix for array signal processing",
+    "url": "https://arxiv.org/abs/2609.03325v1",
+    "published_date": "2026-09-03",
+    "source": "arXiv",
+    "summary": "In this paper, we introduce generalized Hankel/Toeplitz matrices (GHM/GTM) and the associated generalized Vandermonde decomposition for nonuniform array signal processing and multi-dimensional super-resolution. The proposed framework was discovered from the study of resolution limit theory and extends the classical Hankel/Toeplitz structure by allowing substantially more flexible sampling geometries while preserving the underlying low-rank Vandermonde factorization. Through devising an optimal a",
+    "authors": [
+      "Wenchong Huang",
+      "Kunpeng Li",
+      "Ping Liu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Repairing PBE-Spurious Metallicity for HSE06-Level Screening of 2D Photocatalysts for Green Hydrogen Production",
     "url": "https://arxiv.org/abs/2609.02883v1",
@@ -176,6 +422,111 @@
       "Zhenrong Zheng",
       "Shangzhong Jin",
       "Denis Garoli"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "A Strategy Toward Room Temperature Topological Hall Effect via Local Moment Magnetism",
+    "url": "https://arxiv.org/abs/2609.03223v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "Topological spin textures in local moment systems hold great promise for technological applications due to their large magnetic moments, strong spin-orbit coupling (SOC), and high tunability. Finding new spin textures that are stable near room temperature is paramount to maximizing their potential for applications. Here, we provide a strategy for realizing topological spin textures at high temperatures by identifying rare earth ($R$) magnets ordering at or near room temperature. We demonstrate t",
+    "authors": [
+      "Karthik Rao",
+      "Kevin Allen",
+      "Yuxiang Gao",
+      "Arushi",
+      "Sanu Mishra",
+      "Birender Singh",
+      "Kenneth S. Burch",
+      "Liangzi Deng",
+      "Shanta R. Saha",
+      "Johnpierre Paglione",
+      "Minseong Lee",
+      "Vivien Zapf",
+      "Emilia Morosan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Underwater Acoustic Channel Library",
+    "url": "https://arxiv.org/abs/2609.03207v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "The development of communication systems critically depends on realistic channel models, yet there are no widely accepted standards in the underwater acoustic communications community. The situation is in stark contrast to terrestrial radio communications, where channel models have been standardized and are widely available. To address this gap, we present an open-access library of underwater acoustic channels derived from field experiments conducted across geographically distinct locations and ",
+    "authors": [
+      "Zhengnan Li",
+      "Mandar Chitre",
+      "Diego A. Cuji",
+      "James Preisig",
+      "Andrew C. Singer",
+      "Milica Stojanovic",
+      "Paul van Walree"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.ET",
+    "title": "RACE-AIMC: Selective Inference for Heterogeneous Analog In-Memory Accelerators at the Edge",
+    "url": "https://arxiv.org/abs/2609.03149v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "Analog in-memory computing (AIMC) speeds up neural-network inference by doing the arithmetic directly inside a memory array, instead of shuttling weights back and forth between memory and a processor. This saves energy, but the physical devices that store the weights are imperfect: programming errors, electrical noise, limited-resolution converters, and outright broken cells all distort the computation, and every physical chip is distorted in its own way. A designer with several such chips avail",
+    "authors": [
+      "Osama Yousuf",
+      "Martin Lueker-Boden"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.NI",
+    "title": "Feasible but Not Safe: Constraint Violations and Report-Channel Attacks in Learned Cell-Free ISAC Association",
+    "url": "https://arxiv.org/abs/2609.03147v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "Learning-based schedulers have been proposed to provide real-time user, target, and access point (AP) association in distributed cell-free integrated sensing and communication systems. In a typical approach, a graph neural network (GNN), trained on labels from a mixed-integer linear program, maps lightweight per-AP statistics to decisions on AP clustering, user and target scheduling, and mode selection in one forward pass. Such solutions assume that hard constraints, enforced only as soft traini",
+    "authors": [
+      "Mehdi Zafari",
+      "Iman Mohammadi",
+      "A. Lee Swindlehurst"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.str-el",
+    "title": "Antiferromagnetism-altered plasmon dynamics",
+    "url": "https://arxiv.org/abs/2609.03138v1",
+    "published_date": "2026-09-02",
+    "source": "arXiv",
+    "summary": "The interaction between plasmons and magnons is a long-sought phenomenon with implications for fundamental physics and spintronics applications. In three-dimensional systems, this coupling is suppressed by the large mismatch in energy scales, but two-dimensional (2D) plasmons with gapless dispersion can overlap with magnons over a broad spectral range. Despite numerous theoretical predictions, experimental observation of magnon-plasmon interaction has remained elusive. In this work, we study a f",
+    "authors": [
+      "Yifan Su",
+      "Suheng Xu",
+      "Rocco A. Vitalone",
+      "Ziyu Liu",
+      "Emil Viñas Boström",
+      "Na Wu",
+      "Chun-Ying Huang",
+      "Zhuquan Zhang",
+      "Jaehoon Jung",
+      "Daniel G. Chica",
+      "Vinícius da Silveira Lan Avelar",
+      "Yiping Wang",
+      "Takashi Taniguchi",
+      "Kenji Watanabe",
+      "James C. Hone",
+      "Xiaoyang Zhu",
+      "Cory R. Dean",
+      "Xavier Roy",
+      "Angel Rubio",
+      "D. N. Basov"
     ]
   },
   {

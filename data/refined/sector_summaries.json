@@ -1,252 +1,158 @@
 {
-  "date": "2026-09-03",
-  "generated_at": "2026-09-03T22:29:05.687889+00:00",
+  "date": "2026-09-04",
+  "generated_at": "2026-09-04T22:15:46.426837+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-09-03",
+      "date": "2026-09-04",
       "item_count": 1,
-      "generated_at": "2026-09-03T22:29:05.687191+00:00",
+      "generated_at": "2026-09-04T22:15:46.426295+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Qualcomm has integrated AI cores directly into its Adreno GPU architecture via Neural Fusion technology, achieving 40% better power efficiency for mobile AI workloads.",
+          "executive_summary": "Apple's A20 Pro is tipped to feature a 7-core GPU and 96-bit memory bus, representing a significant upgrade in graphics capability and memory bandwidth for next-generation flagship processors.",
           "key_facts": [
-            "Qualcomm Adreno Neural Fusion",
-            "40% power efficiency improvement"
+            "Apple A20 Pro: 7-core GPU",
+            "96-bit memory bus configuration"
           ],
           "implications": [
             {
-              "keyword": "Mobile AI Performance",
-              "text": "On-device AI acceleration without dedicated co-processors reduces latency and privacy concerns for mobile applications."
+              "keyword": "GPU Performance",
+              "text": "7-core GPU represents substantial graphics performance increase, enabling more demanding gaming and AI inference workloads on mobile"
             },
             {
-              "keyword": "Power Optimization",
-              "text": "GPU-integrated neural engines lower thermal and battery drain, enabling longer runtimes for AI-heavy apps."
+              "keyword": "Memory Architecture",
+              "text": "96-bit memory bus expands bandwidth for faster data throughput, supporting higher-resolution displays and compute-intensive applications"
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "Specifications are based on tipsters and not officially confirmed by Apple."
         },
         "en": {
-          "executive_summary": "Qualcomm has integrated AI cores directly into its Adreno GPU architecture via Neural Fusion technology, achieving 40% better power efficiency for mobile AI workloads.",
+          "executive_summary": "Apple's A20 Pro is tipped to feature a 7-core GPU and 96-bit memory bus, representing a significant upgrade in graphics capability and memory bandwidth for next-generation flagship processors.",
           "key_facts": [
-            "Qualcomm Adreno Neural Fusion",
-            "40% power efficiency improvement"
+            "Apple A20 Pro: 7-core GPU",
+            "96-bit memory bus configuration"
           ],
           "implications": [
             {
-              "keyword": "Mobile AI Performance",
-              "text": "On-device AI acceleration without dedicated co-processors reduces latency and privacy concerns for mobile applications."
+              "keyword": "GPU Performance",
+              "text": "7-core GPU represents substantial graphics performance increase, enabling more demanding gaming and AI inference workloads on mobile"
             },
             {
-              "keyword": "Power Optimization",
-              "text": "GPU-integrated neural engines lower thermal and battery drain, enabling longer runtimes for AI-heavy apps."
+              "keyword": "Memory Architecture",
+              "text": "96-bit memory bus expands bandwidth for faster data throughput, supporting higher-resolution displays and compute-intensive applications"
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "Specifications are based on tipsters and not officially confirmed by Apple."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-09-03",
-      "item_count": 31,
-      "generated_at": "2026-09-03T22:29:05.687191+00:00",
+      "date": "2026-09-04",
+      "item_count": 4,
+      "generated_at": "2026-09-04T22:15:46.426295+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Samsung Heavy Industries is expanding its Busan R&D center as a regional offshore hub with hiring through 2028, while Nvidia inaugurated an expanded Beersheva facility and AMD established a Tel Aviv R&D center. Simultaneously, SK Hynix is conducting aggressive talent recruitment targeting HBM expertise, triggering a semiconductor industry talent war with Samsung and Micron.",
+          "executive_summary": "SK하이닉스는 HPC/데이터센터 수요 견조에 대응해 전남광주 지역에서 채용설명회를 개최하며 인재 확보를 적극 추진 중이며, Anthropic은 Google Cloud TPU 확대 사용으로 AI 인프라 투자를 강화하고 있다.",
           "key_facts": [
-            "Samsung Heavy Industries expanding Busan R&D center through 2028",
-            "Nvidia expanded Beersheva R&D center",
-            "AMD establishing Tel Aviv R&D center",
-            "SK Hynix 100 million won recruitment drive",
-            "Samsung expanding Austin operations",
-            "Samsung pursuing $220M R&D center in Hanoi"
+            "SK하이닉스: 전남광주 채용설명회 개최",
+            "SK하이닉스: 채용 기준에서 학벌 제외(ability-based recruiting)",
+            "Anthropic: Google Cloud TPU 및 서비스 확대 사용"
           ],
           "implications": [
             {
-              "keyword": "Geographic Diversification",
-              "text": "HPC/datacenter players are establishing regional R&D hubs across Asia-Pacific, Middle East, and North America to localize talent pipelines and reduce geopolitical risk."
+              "keyword": "인재 수급",
+              "text": "반도체 업계 채용 열풍 속에서 SK하이닉스는 차별화된 인재 확보 전략으로 실무 능력 중심의 채용 기준 변화 주도"
             },
             {
-              "keyword": "Talent Scarcity",
-              "text": "Competitive recruitment for HBM and advanced memory expertise signals acute shortage of specialized engineers, with SK Hynix drawing Samsung employees through premium compensation."
-            },
-            {
-              "keyword": "Supply Chain Localization",
-              "text": "R&D center expansion in Vietnam, India, and other SE Asian markets indicates movement toward regionalized innovation ecosystems beyond traditional hubs."
+              "keyword": "AI 인프라 투자",
+              "text": "Anthropic의 Google Cloud TPU 확대는 엔터프라이즈 AI 워크로드 수요 증가가 고성능 데이터센터 인프라 수요 견인 중임을 시사"
             }
           ],
-          "counterpoint": "Expansion announcements do not guarantee capacity timelines; geopolitical restrictions on talent movement and investment may slow execution."
+          "counterpoint": "채용 규모 구체 수치 미공개로 인재 수요 규모 파악 제한적"
         },
         "en": {
-          "executive_summary": "Samsung Heavy Industries is expanding its Busan R&D center as a regional offshore hub with hiring through 2028, while Nvidia inaugurated an expanded Beersheva facility and AMD established a Tel Aviv R&D center. Simultaneously, SK Hynix is conducting aggressive talent recruitment targeting HBM expertise, triggering a semiconductor industry talent war with Samsung and Micron.",
+          "executive_summary": "SK Hynix is actively securing talent by holding recruitment briefings in Jeonnam Gwangju region in response to robust HPC/datacenter demand, while Anthropic is strengthening AI infrastructure investment through expanded use of Google Cloud TPU.",
           "key_facts": [
-            "Samsung Heavy Industries expanding Busan R&D center through 2028",
-            "Nvidia expanded Beersheva R&D center",
-            "AMD establishing Tel Aviv R&D center",
-            "SK Hynix 100 million won recruitment drive",
-            "Samsung expanding Austin operations",
-            "Samsung pursuing $220M R&D center in Hanoi"
+            "SK Hynix: Recruitment briefing held in Jeonnam Gwangju",
+            "SK Hynix: Educational background excluded from hiring criteria (ability-based recruiting)",
+            "Anthropic: Expanded use of Google Cloud TPU and services"
           ],
           "implications": [
             {
-              "keyword": "Geographic Diversification",
-              "text": "HPC/datacenter players are establishing regional R&D hubs across Asia-Pacific, Middle East, and North America to localize talent pipelines and reduce geopolitical risk."
+              "keyword": "Talent Acquisition",
+              "text": "Amid a semiconductor industry hiring surge, SK Hynix is leading a shift in hiring standards focused on practical competency through differentiated talent acquisition strategy"
             },
             {
-              "keyword": "Talent Scarcity",
-              "text": "Competitive recruitment for HBM and advanced memory expertise signals acute shortage of specialized engineers, with SK Hynix drawing Samsung employees through premium compensation."
-            },
-            {
-              "keyword": "Supply Chain Localization",
-              "text": "R&D center expansion in Vietnam, India, and other SE Asian markets indicates movement toward regionalized innovation ecosystems beyond traditional hubs."
+              "keyword": "AI Infrastructure Investment",
+              "text": "Anthropic's expanded Google Cloud TPU usage indicates that growing enterprise AI workload demand is driving demand for high-performance datacenter infrastructure"
             }
           ],
-          "counterpoint": "Expansion announcements do not guarantee capacity timelines; geopolitical restrictions on talent movement and investment may slow execution."
+          "counterpoint": "Limited visibility on talent demand scale due to SK Hynix not disclosing specific hiring numbers"
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-09-03",
-      "item_count": 19,
-      "generated_at": "2026-09-03T22:29:05.687191+00:00",
+      "date": "2026-09-04",
+      "item_count": 1,
+      "generated_at": "2026-09-04T22:15:46.426295+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Broadcom's custom AI chip revenue surged 221% to $16.7B, establishing AI silicon as a core franchise rather than a tactical hedge. Google is accelerating next-generation TPU mass production while the custom AI ASIC market expands at 24.0% CAGR. Hyperscalers are systematically building proprietary silicon capabilities, with Nvidia investing $3.5B in Taiwan to support this ecosystem.",
+          "executive_summary": "NVIDIA Cosmos 3 기반 Physical AI 모델 팩토리를 Amazon SageMaker HyperPod 클러스터에서 구축·운영함으로써 합성 데이터 생성, 학습 후 처리, 폐루프 평가를 지속 파이프라인으로 통합 처리하는 새로운 워크플로우 구현.",
           "key_facts": [
-            "Broadcom custom AI chip revenue up 221% to $16.7B",
-            "Custom AI ASIC market CAGR 24.0%",
-            "Google accelerating next-gen TPU mass production",
-            "Nvidia investing $3.5B in Taiwan",
-            "Marvell custom silicon challenging Synopsys",
-            "SEEQC signing MoU for Taiwan quantum cryo-chip supply chain",
-            "Chunghwa Precision ramping ASIC testing"
+            "NVIDIA Cosmos 3 기반 Physical AI 모델 팩토리",
+            "Amazon SageMaker HyperPod 클러스터 활용",
+            "Amazon EKS 위 GPU 최적화 배포"
           ],
           "implications": [
             {
-              "keyword": "Hyperscaler Vertical Integration",
-              "text": "Cloud providers and large tech firms are shifting from COTS to custom silicon to optimize TCO and differentiate AI workloads, creating captive demand for foundries."
+              "keyword": "Custom AI 칩 설계",
+              "text": "Physical AI 모델 팩토리를 지속 운영하기 위해 고처리량 GPU 클러스터 필요성 증대로 custom SoC 가속기 수요 확대"
             },
             {
-              "keyword": "Market Structure Change",
-              "text": "Custom silicon is becoming a sustainable, high-margin revenue stream for fabless IDMs, reducing dependency on commodity GPU/CPU sales."
-            },
-            {
-              "keyword": "Design Ecosystem Growth",
-              "text": "Increased ASIC demand is driving workforce development (UAlbany certificate), EDA partnerships (proteanTecs/MegaChips), and design-center alliances (eInfochips/TSMC)."
+              "keyword": "MLOps 인프라",
+              "text": "합성 데이터 생성부터 평가까지 폐루프 파이프라인 자동화가 선호되면서 엔터프라이즈급 지속 학습 시스템 구축 가속화"
             }
           ],
-          "counterpoint": "Broadcom Q4 guidance disappointed despite Q3 AI chip surge, suggesting revenue growth may decelerate or face execution challenges."
+          "counterpoint": ""
         },
         "en": {
-          "executive_summary": "Broadcom's custom AI chip revenue surged 221% to $16.7B, establishing AI silicon as a core franchise rather than a tactical hedge. Google is accelerating next-generation TPU mass production while the custom AI ASIC market expands at 24.0% CAGR. Hyperscalers are systematically building proprietary silicon capabilities, with Nvidia investing $3.5B in Taiwan to support this ecosystem.",
+          "executive_summary": "A Physical AI model factory based on NVIDIA Cosmos 3 is built and operated on Amazon SageMaker HyperPod clusters, implementing a new workflow that integrates synthetic data generation, post-training processing, and closed-loop evaluation as a continuous pipeline.",
           "key_facts": [
-            "Broadcom custom AI chip revenue up 221% to $16.7B",
-            "Custom AI ASIC market CAGR 24.0%",
-            "Google accelerating next-gen TPU mass production",
-            "Nvidia investing $3.5B in Taiwan",
-            "Marvell custom silicon challenging Synopsys",
-            "SEEQC signing MoU for Taiwan quantum cryo-chip supply chain",
-            "Chunghwa Precision ramping ASIC testing"
+            "NVIDIA Cosmos 3-based Physical AI model factory",
+            "Amazon SageMaker HyperPod cluster utilization",
+            "GPU-optimized deployment on Amazon EKS"
           ],
           "implications": [
             {
-              "keyword": "Hyperscaler Vertical Integration",
-              "text": "Cloud providers and large tech firms are shifting from COTS to custom silicon to optimize TCO and differentiate AI workloads, creating captive demand for foundries."
+              "keyword": "Custom AI Chip Design",
+              "text": "Increased need for high-throughput GPU clusters to operate Physical AI model factories continuously is expanding demand for custom SoC accelerators"
             },
             {
-              "keyword": "Market Structure Change",
-              "text": "Custom silicon is becoming a sustainable, high-margin revenue stream for fabless IDMs, reducing dependency on commodity GPU/CPU sales."
-            },
-            {
-              "keyword": "Design Ecosystem Growth",
-              "text": "Increased ASIC demand is driving workforce development (UAlbany certificate), EDA partnerships (proteanTecs/MegaChips), and design-center alliances (eInfochips/TSMC)."
+              "keyword": "MLOps Infrastructure",
+              "text": "Closed-loop pipeline automation from synthetic data generation through evaluation is accelerating enterprise-grade continuous learning system deployment"
             }
           ],
-          "counterpoint": "Broadcom Q4 guidance disappointed despite Q3 AI chip surge, suggesting revenue growth may decelerate or face execution challenges."
+          "counterpoint": ""
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-09-03",
-      "item_count": 13,
-      "generated_at": "2026-09-03T22:29:05.687191+00:00",
+      "date": "2026-09-04",
+      "item_count": 18,
+      "generated_at": "2026-09-04T22:15:46.426295+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Micron is doubling HBM production capacity to reach 6 wan wafers/month by year-end, closing the gap with Samsung and SK Hynix. Chinese OEMs (Xiaomi) are bundling custom semiconductors with AI, appliances, and EVs into ecosystem plays for European markets. TSMC substrate capacity is becoming a critical bottleneck as equipment demand surges 90%, while Broadcom targets $115B AI revenue in FY27.",
-          "key_facts": [
-            "Micron expanding HBM capacity 2x to ~6 wan wafers/month by end of year",
-            "Micron prior HBM output 4-5 wan wafers/month",
-            "Xiaomi integrating custom chips, AI, smart appliances, and EVs for European expansion",
-            "Broadcom targeting $115B AI revenue FY27 (~2x FY26)",
-            "TSMC equipment demand up 90% in half year",
-            "Korean utility requesting Samsung/SK Hynix prepay ~5 years power bills (KRW 25T)",
-            "AUO selling Singapore plant to Western Digital for NT$8.75B",
-            "Sumitomo initiating InP epitaxial wafer mass production",
-            "Galaxy S27 Ultra may use Exynos 2700 in some markets"
-          ],
-          "implications": [
-            {
-              "keyword": "HBM Supply Dynamics",
-              "text": "Micron's capacity ramp challenges Samsung/SK duopoly, increasing supply optionality for AI cloud customers but potentially pressuring margins industry-wide."
-            },
-            {
-              "keyword": "Substrate Bottleneck",
-              "text": "TSMC and substrate suppliers face severe capacity constraints as AI chiplet demand accelerates, risking yield and delivery delays for advanced nodes."
-            },
-            {
-              "keyword": "Chinese Ecosystem Competition",
-              "text": "Xiaomi's vertical integration of semiconductors, software, and consumer devices threatens European OEM margins and creates differentiated go-to-market leverage."
-            },
-            {
-              "keyword": "Foundry Utilization Risk",
-              "text": "Power prepayment requests from utilities and plant consolidation (AUO-WD) signal tight cash flow and capacity utilization constraints, pressuring foundry capex flexibility."
-            }
-          ],
-          "counterpoint": "Xiaomi and other Chinese players still face regulatory and supply-chain fragmentation barriers in Western markets; ecosystem integration advantage remains unproven at scale."
-        },
-        "en": {
-          "executive_summary": "Micron is doubling HBM production capacity to reach 6 wan wafers/month by year-end, closing the gap with Samsung and SK Hynix. Chinese OEMs (Xiaomi) are bundling custom semiconductors with AI, appliances, and EVs into ecosystem plays for European markets. TSMC substrate capacity is becoming a critical bottleneck as equipment demand surges 90%, while Broadcom targets $115B AI revenue in FY27.",
-          "key_facts": [
-            "Micron expanding HBM capacity 2x to ~6 wan wafers/month by end of year",
-            "Micron prior HBM output 4-5 wan wafers/month",
-            "Xiaomi integrating custom chips, AI, smart appliances, and EVs for European expansion",
-            "Broadcom targeting $115B AI revenue FY27 (~2x FY26)",
-            "TSMC equipment demand up 90% in half year",
-            "Korean utility requesting Samsung/SK Hynix prepay ~5 years power bills (KRW 25T)",
-            "AUO selling Singapore plant to Western Digital for NT$8.75B",
-            "Sumitomo initiating InP epitaxial wafer mass production",
-            "Galaxy S27 Ultra may use Exynos 2700 in some markets"
-          ],
-          "implications": [
-            {
-              "keyword": "HBM Supply Dynamics",
-              "text": "Micron's capacity ramp challenges Samsung/SK duopoly, increasing supply optionality for AI cloud customers but potentially pressuring margins industry-wide."
-            },
-            {
-              "keyword": "Substrate Bottleneck",
-              "text": "TSMC and substrate suppliers face severe capacity constraints as AI chiplet demand accelerates, risking yield and delivery delays for advanced nodes."
-            },
-            {
-              "keyword": "Chinese Ecosystem Competition",
-              "text": "Xiaomi's vertical integration of semiconductors, software, and consumer devices threatens European OEM margins and creates differentiated go-to-market leverage."
-            },
-            {
-              "keyword": "Foundry Utilization Risk",
-              "text": "Power prepayment requests from utilities and plant consolidation (AUO-WD) signal tight cash flow and capacity utilization constraints, pressuring foundry capex flexibility."
-            }
-          ],
-          "counterpoint": "Xiaomi and other Chinese players still face regulatory and supply-chain fragmentation barriers in Western markets; ecosystem integration advantage remains unproven at scale."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-09-03",
-      "item_count": 15,
-      "generated_at": "2026-09-03T22:29:05.687191+00:00",
+      "date": "2026-09-04",
+      "item_count": 16,
+      "generated_at": "2026-09-04T22:15:46.426295+00:00",
       "content": {
         "ko": {},
         "en": {}
