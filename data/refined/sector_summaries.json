@@ -1,161 +1,301 @@
 {
-  "date": "2026-09-04",
-  "generated_at": "2026-09-04T22:15:46.426837+00:00",
+  "date": "2026-09-05",
+  "generated_at": "2026-09-05T22:03:07.786857+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-09-04",
+      "date": "2026-09-05",
       "item_count": 1,
-      "generated_at": "2026-09-04T22:15:46.426295+00:00",
+      "generated_at": "2026-09-05T22:03:07.786538+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Apple's A20 Pro is tipped to feature a 7-core GPU and 96-bit memory bus, representing a significant upgrade in graphics capability and memory bandwidth for next-generation flagship processors.",
+          "executive_summary": "Snapdragon 8 Elite Gen 6 Pro chipset leaked die images reveal a significantly larger SoC design incorporating a new heatsink architecture optimized for effective DRAM cooling.",
           "key_facts": [
-            "Apple A20 Pro: 7-core GPU",
-            "96-bit memory bus configuration"
+            "Snapdragon 8 Elite Gen 6 Pro features new heatsink implementation for DRAM thermal management"
           ],
           "implications": [
             {
-              "keyword": "GPU Performance",
-              "text": "7-core GPU represents substantial graphics performance increase, enabling more demanding gaming and AI inference workloads on mobile"
+              "keyword": "Thermal Design",
+              "text": "Enhanced heatsink integration suggests higher power density management requirements in next-generation flagship mobile processors"
             },
             {
-              "keyword": "Memory Architecture",
-              "text": "96-bit memory bus expands bandwidth for faster data throughput, supporting higher-resolution displays and compute-intensive applications"
+              "keyword": "Die Size Growth",
+              "text": "Larger SoC footprint indicates increased integration of AI accelerators and memory subsystems"
             }
           ],
-          "counterpoint": "Specifications are based on tipsters and not officially confirmed by Apple."
+          "counterpoint": "Die leak provides limited visibility into actual performance improvements or yield implications."
         },
         "en": {
-          "executive_summary": "Apple's A20 Pro is tipped to feature a 7-core GPU and 96-bit memory bus, representing a significant upgrade in graphics capability and memory bandwidth for next-generation flagship processors.",
+          "executive_summary": "Snapdragon 8 Elite Gen 6 Pro chipset leaked die images reveal a significantly larger SoC design incorporating a new heatsink architecture optimized for effective DRAM cooling.",
           "key_facts": [
-            "Apple A20 Pro: 7-core GPU",
-            "96-bit memory bus configuration"
+            "Snapdragon 8 Elite Gen 6 Pro features new heatsink implementation for DRAM thermal management"
           ],
           "implications": [
             {
-              "keyword": "GPU Performance",
-              "text": "7-core GPU represents substantial graphics performance increase, enabling more demanding gaming and AI inference workloads on mobile"
+              "keyword": "Thermal Design",
+              "text": "Enhanced heatsink integration suggests higher power density management requirements in next-generation flagship mobile processors"
             },
             {
-              "keyword": "Memory Architecture",
-              "text": "96-bit memory bus expands bandwidth for faster data throughput, supporting higher-resolution displays and compute-intensive applications"
+              "keyword": "Die Size Growth",
+              "text": "Larger SoC footprint indicates increased integration of AI accelerators and memory subsystems"
             }
           ],
-          "counterpoint": "Specifications are based on tipsters and not officially confirmed by Apple."
+          "counterpoint": "Die leak provides limited visibility into actual performance improvements or yield implications."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-09-04",
-      "item_count": 4,
-      "generated_at": "2026-09-04T22:15:46.426295+00:00",
+      "date": "2026-09-05",
+      "item_count": 7,
+      "generated_at": "2026-09-05T22:03:07.786538+00:00",
       "content": {
         "ko": {
-          "executive_summary": "SK하이닉스는 HPC/데이터센터 수요 견조에 대응해 전남광주 지역에서 채용설명회를 개최하며 인재 확보를 적극 추진 중이며, Anthropic은 Google Cloud TPU 확대 사용으로 AI 인프라 투자를 강화하고 있다.",
+          "executive_summary": "HPC and datacenter ecosystem showing significant R&D infrastructure expansion: Samsung Heavy Industries expanding Busan R&D center following U.S. FLNG contract win, Nvidia establishing Shanghai R&D presence, and talent competition intensifying with SK hynix removing degree requirements. Infrastructure stress also evident as Tesla Dojo supercomputer reportedly caused power grid disruption in Palo Alto. Intel aggressively recruiting foundry executives to compete with TSMC and Samsung.",
           "key_facts": [
-            "SK하이닉스: 전남광주 채용설명회 개최",
-            "SK하이닉스: 채용 기준에서 학벌 제외(ability-based recruiting)",
-            "Anthropic: Google Cloud TPU 및 서비스 확대 사용"
+            "Samsung Heavy Industries expanding Busan R&D center",
+            "Nvidia opening Shanghai R&D center",
+            "TSE establishing Semiconductor Test Design Center in Daegu",
+            "SK hynix dropping degree requirements for AI hiring",
+            "Tesla Dojo supercomputer caused power grid trip in Palo Alto",
+            "Intel recruiting executives from competing foundries"
           ],
           "implications": [
             {
-              "keyword": "인재 수급",
-              "text": "반도체 업계 채용 열풍 속에서 SK하이닉스는 차별화된 인재 확보 전략으로 실무 능력 중심의 채용 기준 변화 주도"
+              "keyword": "Regional Competition",
+              "text": "South Korean (Busan, Daegu) and Chinese (Shanghai) R&D center investments signal intensified regional AI infrastructure competition"
             },
             {
-              "keyword": "AI 인프라 투자",
-              "text": "Anthropic의 Google Cloud TPU 확대는 엔터프라이즈 AI 워크로드 수요 증가가 고성능 데이터센터 인프라 수요 견인 중임을 시사"
+              "keyword": "Talent War",
+              "text": "SK hynix removing credential barriers demonstrates extreme competition for AI engineering talent in HPC space"
+            },
+            {
+              "keyword": "Foundry Consolidation",
+              "text": "Intel's executive recruitment from TSMC and Samsung indicates preparation for aggressive foundry market repositioning"
+            },
+            {
+              "keyword": "Infrastructure Constraints",
+              "text": "Tesla Dojo power grid incident highlights emerging power delivery challenges for hyperscale AI computing infrastructure"
             }
           ],
-          "counterpoint": "채용 규모 구체 수치 미공개로 인재 수요 규모 파악 제한적"
+          "counterpoint": "Palo Alto grid incident is isolated event; industrial power infrastructure typically handles supercomputer loads with proper planning."
         },
         "en": {
-          "executive_summary": "SK Hynix is actively securing talent by holding recruitment briefings in Jeonnam Gwangju region in response to robust HPC/datacenter demand, while Anthropic is strengthening AI infrastructure investment through expanded use of Google Cloud TPU.",
+          "executive_summary": "HPC and datacenter ecosystem showing significant R&D infrastructure expansion: Samsung Heavy Industries expanding Busan R&D center following U.S. FLNG contract win, Nvidia establishing Shanghai R&D presence, and talent competition intensifying with SK hynix removing degree requirements. Infrastructure stress also evident as Tesla Dojo supercomputer reportedly caused power grid disruption in Palo Alto. Intel aggressively recruiting foundry executives to compete with TSMC and Samsung.",
           "key_facts": [
-            "SK Hynix: Recruitment briefing held in Jeonnam Gwangju",
-            "SK Hynix: Educational background excluded from hiring criteria (ability-based recruiting)",
-            "Anthropic: Expanded use of Google Cloud TPU and services"
+            "Samsung Heavy Industries expanding Busan R&D center",
+            "Nvidia opening Shanghai R&D center",
+            "TSE establishing Semiconductor Test Design Center in Daegu",
+            "SK hynix dropping degree requirements for AI hiring",
+            "Tesla Dojo supercomputer caused power grid trip in Palo Alto",
+            "Intel recruiting executives from competing foundries"
           ],
           "implications": [
             {
-              "keyword": "Talent Acquisition",
-              "text": "Amid a semiconductor industry hiring surge, SK Hynix is leading a shift in hiring standards focused on practical competency through differentiated talent acquisition strategy"
+              "keyword": "Regional Competition",
+              "text": "South Korean (Busan, Daegu) and Chinese (Shanghai) R&D center investments signal intensified regional AI infrastructure competition"
             },
             {
-              "keyword": "AI Infrastructure Investment",
-              "text": "Anthropic's expanded Google Cloud TPU usage indicates that growing enterprise AI workload demand is driving demand for high-performance datacenter infrastructure"
+              "keyword": "Talent War",
+              "text": "SK hynix removing credential barriers demonstrates extreme competition for AI engineering talent in HPC space"
+            },
+            {
+              "keyword": "Foundry Consolidation",
+              "text": "Intel's executive recruitment from TSMC and Samsung indicates preparation for aggressive foundry market repositioning"
+            },
+            {
+              "keyword": "Infrastructure Constraints",
+              "text": "Tesla Dojo power grid incident highlights emerging power delivery challenges for hyperscale AI computing infrastructure"
             }
           ],
-          "counterpoint": "Limited visibility on talent demand scale due to SK Hynix not disclosing specific hiring numbers"
+          "counterpoint": "Palo Alto grid incident is isolated event; industrial power infrastructure typically handles supercomputer loads with proper planning."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-09-04",
-      "item_count": 1,
-      "generated_at": "2026-09-04T22:15:46.426295+00:00",
+      "date": "2026-09-05",
+      "item_count": 3,
+      "generated_at": "2026-09-05T22:03:07.786538+00:00",
       "content": {
         "ko": {
-          "executive_summary": "NVIDIA Cosmos 3 기반 Physical AI 모델 팩토리를 Amazon SageMaker HyperPod 클러스터에서 구축·운영함으로써 합성 데이터 생성, 학습 후 처리, 폐루프 평가를 지속 파이프라인으로 통합 처리하는 새로운 워크플로우 구현.",
+          "executive_summary": "Custom SoC market shows divergent momentum: HBM technology undergoing major transformations, SK hynix-LG chip design partnership talks collapsed, yet Google-Marvell custom AI chip collaboration gaining investor attention.",
           "key_facts": [
-            "NVIDIA Cosmos 3 기반 Physical AI 모델 팩토리",
-            "Amazon SageMaker HyperPod 클러스터 활용",
-            "Amazon EKS 위 GPU 최적화 배포"
+            "SK hynix and LG chip design talks ended without agreement",
+            "Marvell stock surged on Google custom AI chip collaboration rumors",
+            "HBM technology experiencing groundbreaking transformations"
           ],
           "implications": [
             {
-              "keyword": "Custom AI 칩 설계",
-              "text": "Physical AI 모델 팩토리를 지속 운영하기 위해 고처리량 GPU 클러스터 필요성 증대로 custom SoC 가속기 수요 확대"
+              "keyword": "HBM Evolution",
+              "text": "Major HBM technology transformations indicate continued capacity expansion and architectural improvements for AI workloads"
             },
             {
-              "keyword": "MLOps 인프라",
-              "text": "합성 데이터 생성부터 평가까지 폐루프 파이프라인 자동화가 선호되면서 엔터프라이즈급 지속 학습 시스템 구축 가속화"
+              "keyword": "Strategic Partnerships",
+              "text": "Failed SK hynix-LG collaboration suggests custom SoC development remains strategically competitive rather than collaborative"
+            },
+            {
+              "keyword": "Market Momentum",
+              "text": "Google-Marvell custom chip talks indicate accelerating corporate AI SoC demand and OEM engagement in semiconductor design"
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "Google-Marvell collaboration is based on unconfirmed buzz and may not progress to production design."
         },
         "en": {
-          "executive_summary": "A Physical AI model factory based on NVIDIA Cosmos 3 is built and operated on Amazon SageMaker HyperPod clusters, implementing a new workflow that integrates synthetic data generation, post-training processing, and closed-loop evaluation as a continuous pipeline.",
+          "executive_summary": "Custom SoC market shows divergent momentum: HBM technology undergoing major transformations, SK hynix-LG chip design partnership talks collapsed, yet Google-Marvell custom AI chip collaboration gaining investor attention.",
           "key_facts": [
-            "NVIDIA Cosmos 3-based Physical AI model factory",
-            "Amazon SageMaker HyperPod cluster utilization",
-            "GPU-optimized deployment on Amazon EKS"
+            "SK hynix and LG chip design talks ended without agreement",
+            "Marvell stock surged on Google custom AI chip collaboration rumors",
+            "HBM technology experiencing groundbreaking transformations"
           ],
           "implications": [
             {
-              "keyword": "Custom AI Chip Design",
-              "text": "Increased need for high-throughput GPU clusters to operate Physical AI model factories continuously is expanding demand for custom SoC accelerators"
+              "keyword": "HBM Evolution",
+              "text": "Major HBM technology transformations indicate continued capacity expansion and architectural improvements for AI workloads"
             },
             {
-              "keyword": "MLOps Infrastructure",
-              "text": "Closed-loop pipeline automation from synthetic data generation through evaluation is accelerating enterprise-grade continuous learning system deployment"
+              "keyword": "Strategic Partnerships",
+              "text": "Failed SK hynix-LG collaboration suggests custom SoC development remains strategically competitive rather than collaborative"
+            },
+            {
+              "keyword": "Market Momentum",
+              "text": "Google-Marvell custom chip talks indicate accelerating corporate AI SoC demand and OEM engagement in semiconductor design"
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "Google-Marvell collaboration is based on unconfirmed buzz and may not progress to production design."
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-09-04",
-      "item_count": 18,
-      "generated_at": "2026-09-04T22:15:46.426295+00:00",
+      "date": "2026-09-05",
+      "item_count": 7,
+      "generated_at": "2026-09-05T22:03:07.786538+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Samsung foundry division faces labor relations challenge with union advertising in Times Square, while also advancing 2nm AI chip development with Arm and positioning Galaxy S27 with Snapdragon. Chinese foundry equipment suppliers accelerating backward integration from front-end to advanced packaging (hybrid bonding, dicing, wafer thinning), and Xiaomi revealing 2nd-gen CyberOne humanoid with 98% task success rate.",
+          "key_facts": [
+            "Samsung DX division union advertised on Times Square emphasizing 'Great products begin with people'",
+            "Samsung and Arm partnering to develop 2nm on-device AI chip with potential OpenAI customer",
+            "Galaxy S27 Pro and Ultra confirmed to use Snapdragon processors",
+            "Chinese equipment makers (Naura, AMEC, Huahaitech) expanding from front-end to back-end packaging equipment",
+            "Xiaomi CyberOne 2nd generation: 170cm height, 66kg, 66 DOF, 98% task success rate in EV factory deployment"
+          ],
+          "implications": [
+            {
+              "keyword": "Labor Relations",
+              "text": "Samsung foundry workforce activism indicates talent retention and working conditions becoming competitive differentiators in advanced node competition"
+            },
+            {
+              "keyword": "Advanced Node Strategy",
+              "text": "Samsung-Arm 2nm AI chip development and Galaxy S27 Snapdragon integration demonstrates continued premium device positioning"
+            },
+            {
+              "keyword": "China Equipment Autonomy",
+              "text": "Chinese suppliers expanding into advanced packaging amid U.S. export restrictions accelerates complete domestic semiconductor supply chain independence"
+            },
+            {
+              "keyword": "AI Infrastructure",
+              "text": "Xiaomi humanoid deployment with 98% success validates factory automation AI readiness for semiconductor manufacturing workflows"
+            }
+          ],
+          "counterpoint": "OpenAI customer rumor for Samsung-Arm 2nm chip lacks confirmation; Chinese packaging equipment capabilities still lag leading-edge performance."
+        },
+        "en": {
+          "executive_summary": "Samsung foundry division faces labor relations challenge with union advertising in Times Square, while also advancing 2nm AI chip development with Arm and positioning Galaxy S27 with Snapdragon. Chinese foundry equipment suppliers accelerating backward integration from front-end to advanced packaging (hybrid bonding, dicing, wafer thinning), and Xiaomi revealing 2nd-gen CyberOne humanoid with 98% task success rate.",
+          "key_facts": [
+            "Samsung DX division union advertised on Times Square emphasizing 'Great products begin with people'",
+            "Samsung and Arm partnering to develop 2nm on-device AI chip with potential OpenAI customer",
+            "Galaxy S27 Pro and Ultra confirmed to use Snapdragon processors",
+            "Chinese equipment makers (Naura, AMEC, Huahaitech) expanding from front-end to back-end packaging equipment",
+            "Xiaomi CyberOne 2nd generation: 170cm height, 66kg, 66 DOF, 98% task success rate in EV factory deployment"
+          ],
+          "implications": [
+            {
+              "keyword": "Labor Relations",
+              "text": "Samsung foundry workforce activism indicates talent retention and working conditions becoming competitive differentiators in advanced node competition"
+            },
+            {
+              "keyword": "Advanced Node Strategy",
+              "text": "Samsung-Arm 2nm AI chip development and Galaxy S27 Snapdragon integration demonstrates continued premium device positioning"
+            },
+            {
+              "keyword": "China Equipment Autonomy",
+              "text": "Chinese suppliers expanding into advanced packaging amid U.S. export restrictions accelerates complete domestic semiconductor supply chain independence"
+            },
+            {
+              "keyword": "AI Infrastructure",
+              "text": "Xiaomi humanoid deployment with 98% success validates factory automation AI readiness for semiconductor manufacturing workflows"
+            }
+          ],
+          "counterpoint": "OpenAI customer rumor for Samsung-Arm 2nm chip lacks confirmation; Chinese packaging equipment capabilities still lag leading-edge performance."
+        }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-09-04",
-      "item_count": 16,
-      "generated_at": "2026-09-04T22:15:46.426295+00:00",
+      "date": "2026-09-05",
+      "item_count": 5,
+      "generated_at": "2026-09-05T22:03:07.786538+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Semiconductor packaging materials and supplies benefiting from sustained fab expansion demand, with thermal management and material science supporting 5-8% CAGR forecasts through 2035. TSMC's rapid fab buildout (20 fabs) facing construction labor constraints that could create competitive window for Samsung.",
+          "key_facts": [
+            "Wool Mineral Fiber Board market projected 5-7% CAGR through 2035 driven by semiconductor fab boom",
+            "Ceramic Nozzle Inserts market forecast 6-8% CAGR through 2035 on semiconductor miniaturization demand",
+            "Transparent Glaze market demand accelerating through 2035 on advanced packaging and EV electronics",
+            "TSMC building 20 fabs but facing construction worker shortage",
+            "AI semiconductor stocks under pressure from Fed policy environment"
+          ],
+          "implications": [
+            {
+              "keyword": "Supply Chain Bottleneck",
+              "text": "TSMC construction worker shortage creates near-term manufacturing delay risk and potential competitive opening for Samsung and Intel capacity"
+            },
+            {
+              "keyword": "Advanced Packaging Demand",
+              "text": "Consistent 5-8% CAGR across thermal (mineral fiber) and precision (ceramic nozzle) materials validates chiplet and 3D packaging adoption trajectories"
+            },
+            {
+              "keyword": "Dual-Market Exposure",
+              "text": "Transparent glaze growth tied to both semiconductor packaging miniaturization and EV electronics indicates packaging supply chains integrated across automotive and compute sectors"
+            },
+            {
+              "keyword": "Valuation Pressure",
+              "text": "AI semiconductor stocks facing Fed-driven sentiment headwinds may suppress packaging material supplier equity valuations despite strong underlying demand"
+            }
+          ],
+          "counterpoint": "Construction labor constraints at TSMC are cyclical; alternative workforce sourcing or automation can mitigate delays."
+        },
+        "en": {
+          "executive_summary": "Semiconductor packaging materials and supplies benefiting from sustained fab expansion demand, with thermal management and material science supporting 5-8% CAGR forecasts through 2035. TSMC's rapid fab buildout (20 fabs) facing construction labor constraints that could create competitive window for Samsung.",
+          "key_facts": [
+            "Wool Mineral Fiber Board market projected 5-7% CAGR through 2035 driven by semiconductor fab boom",
+            "Ceramic Nozzle Inserts market forecast 6-8% CAGR through 2035 on semiconductor miniaturization demand",
+            "Transparent Glaze market demand accelerating through 2035 on advanced packaging and EV electronics",
+            "TSMC building 20 fabs but facing construction worker shortage",
+            "AI semiconductor stocks under pressure from Fed policy environment"
+          ],
+          "implications": [
+            {
+              "keyword": "Supply Chain Bottleneck",
+              "text": "TSMC construction worker shortage creates near-term manufacturing delay risk and potential competitive opening for Samsung and Intel capacity"
+            },
+            {
+              "keyword": "Advanced Packaging Demand",
+              "text": "Consistent 5-8% CAGR across thermal (mineral fiber) and precision (ceramic nozzle) materials validates chiplet and 3D packaging adoption trajectories"
+            },
+            {
+              "keyword": "Dual-Market Exposure",
+              "text": "Transparent glaze growth tied to both semiconductor packaging miniaturization and EV electronics indicates packaging supply chains integrated across automotive and compute sectors"
+            },
+            {
+              "keyword": "Valuation Pressure",
+              "text": "AI semiconductor stocks facing Fed-driven sentiment headwinds may suppress packaging material supplier equity valuations despite strong underlying demand"
+            }
+          ],
+          "counterpoint": "Construction labor constraints at TSMC are cyclical; alternative workforce sourcing or automation can mitigate delays."
+        }
       }
     }
   }
