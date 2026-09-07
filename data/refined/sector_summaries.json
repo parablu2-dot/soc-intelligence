@@ -1,219 +1,91 @@
 {
-  "date": "2026-09-06",
-  "generated_at": "2026-09-06T22:03:06.579057+00:00",
+  "date": "2026-09-07",
+  "generated_at": "2026-09-07T22:39:48.966172+00:00",
   "sectors": {
-    "hpc_datacenter": {
-      "sector": "HPC·Datacenter",
-      "date": "2026-09-06",
-      "item_count": 5,
-      "generated_at": "2026-09-06T22:03:06.578773+00:00",
+    "mobile_ap": {
+      "sector": "Mobile AP",
+      "date": "2026-09-07",
+      "item_count": 3,
+      "generated_at": "2026-09-07T22:39:48.965603+00:00",
       "content": {
         "ko": {
-          "executive_summary": "EnSilica joined TSMC's Design Center Alliance to expand HPC design capabilities. SK Hynix overhauled recruitment by eliminating application essays and introducing half-day deep interviews focused on critical thinking over credentials, reflecting AI-era talent prioritization.",
+          "executive_summary": "Samsung is testing both Exynos 2700 and Snapdragon processors for the Galaxy S27 series, with the Exynos variant in the Ultra model poised to strengthen Samsung's chip independence. Huawei's Kirin 9050 Pro has launched with LogicFolding technology moving from roadmap to production silicon.",
           "key_facts": [
-            "EnSilica enters TSMC Design Center Alliance",
-            "SK Hynix eliminated application essays (자소서 폐지)",
-            "SK Hynix introduced half-day deep interview format (반나절 심층면접)"
+            "Galaxy S27 testing includes both Exynos and Snapdragon variants",
+            "Exynos 2700 confirmed for Galaxy S27 Ultra",
+            "Huawei Kirin 9050 Pro launched with LogicFolding technology"
           ],
           "implications": [
             {
-              "keyword": "Design Ecosystem",
-              "text": "TSMC's Design Center Alliance expansion strengthens third-party ecosystem for specialized HPC chip development."
+              "keyword": "Samsung Chip Independence",
+              "text": "Dual processor strategy in flagship S27 series reduces reliance on Qualcomm while validating Exynos maturity at premium tier."
             },
             {
-              "keyword": "Talent Strategy",
-              "text": "SK Hynix's recruitment shift signals industry-wide pivot toward problem-solving capability over traditional credentials in AI talent acquisition."
+              "keyword": "Huawei's AI Optimization",
+              "text": "LogicFolding implementation in production silicon signals competitive advancement in chip architecture efficiency."
             }
           ],
-          "counterpoint": "Nvidia commentary on strategic ambiguity raises questions about unified messaging in HPC competitive positioning."
+          "counterpoint": "Exynos has historically faced performance and reliability concerns versus Snapdragon in flagship markets."
         },
         "en": {
-          "executive_summary": "EnSilica joined TSMC's Design Center Alliance to expand HPC design capabilities. SK Hynix overhauled recruitment by eliminating application essays and introducing half-day deep interviews focused on critical thinking over credentials, reflecting AI-era talent prioritization.",
+          "executive_summary": "Samsung is testing both Exynos 2700 and Snapdragon processors for the Galaxy S27 series, with the Exynos variant in the Ultra model poised to strengthen Samsung's chip independence. Huawei's Kirin 9050 Pro has launched with LogicFolding technology moving from roadmap to production silicon.",
           "key_facts": [
-            "EnSilica enters TSMC Design Center Alliance",
-            "SK Hynix eliminated application essays",
-            "SK Hynix introduced half-day deep interview format"
+            "Galaxy S27 testing includes both Exynos and Snapdragon variants",
+            "Exynos 2700 confirmed for Galaxy S27 Ultra",
+            "Huawei Kirin 9050 Pro launched with LogicFolding technology"
           ],
           "implications": [
             {
-              "keyword": "Design Ecosystem",
-              "text": "TSMC's Design Center Alliance expansion strengthens third-party ecosystem for specialized HPC chip development."
+              "keyword": "Samsung Chip Independence",
+              "text": "Dual processor strategy in flagship S27 series reduces reliance on Qualcomm while validating Exynos maturity at premium tier."
             },
             {
-              "keyword": "Talent Strategy",
-              "text": "SK Hynix's recruitment shift signals industry-wide pivot toward problem-solving capability over traditional credentials in AI talent acquisition."
+              "keyword": "Huawei's AI Optimization",
+              "text": "LogicFolding implementation in production silicon signals competitive advancement in chip architecture efficiency."
             }
           ],
-          "counterpoint": "Nvidia commentary on strategic ambiguity raises questions about unified messaging in HPC competitive positioning."
+          "counterpoint": "Exynos has historically faced performance and reliability concerns versus Snapdragon in flagship markets."
         }
+      }
+    },
+    "hpc_datacenter": {
+      "sector": "HPC·Datacenter",
+      "date": "2026-09-07",
+      "item_count": 5,
+      "generated_at": "2026-09-07T22:39:48.965603+00:00",
+      "content": {
+        "ko": {},
+        "en": {}
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-09-06",
-      "item_count": 3,
-      "generated_at": "2026-09-06T22:03:06.578773+00:00",
+      "date": "2026-09-07",
+      "item_count": 7,
+      "generated_at": "2026-09-07T22:39:48.965603+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Major software companies are investing in custom AI chips despite current hardware limitations. Huawei's Kirin 2026 research addresses thermal constraints via Tau scaling law, while Broadcom is capturing AI spending beyond GPU-centric architectures.",
-          "key_facts": [
-            "Software giants pursuing custom AI chip development",
-            "Huawei Kirin 2026 focuses on thermal bottleneck mitigation",
-            "Huawei leveraging Tau scaling law for performance optimization",
-            "Broadcom expanding presence in non-GPU AI infrastructure"
-          ],
-          "implications": [
-            {
-              "keyword": "Vertical Integration",
-              "text": "Software companies' custom chip investments signal long-term commitment to silicon differentiation despite existing GPU maturity."
-            },
-            {
-              "keyword": "Thermal Design",
-              "text": "Huawei's Tau scaling approach indicates thermal management becoming critical differentiator in 2026+ AI chip roadmaps."
-            },
-            {
-              "keyword": "Market Segmentation",
-              "text": "Broadcom's non-GPU AI positioning creates alternative revenue streams as industry moves beyond homogeneous accelerator architectures."
-            }
-          ],
-          "counterpoint": "Custom chip ROI remains unproven given rapid GPU technology evolution and software stack maturity."
-        },
-        "en": {
-          "executive_summary": "Major software companies are investing in custom AI chips despite current hardware limitations. Huawei's Kirin 2026 research addresses thermal constraints via Tau scaling law, while Broadcom is capturing AI spending beyond GPU-centric architectures.",
-          "key_facts": [
-            "Software giants pursuing custom AI chip development",
-            "Huawei Kirin 2026 focuses on thermal bottleneck mitigation",
-            "Huawei leveraging Tau scaling law for performance optimization",
-            "Broadcom expanding presence in non-GPU AI infrastructure"
-          ],
-          "implications": [
-            {
-              "keyword": "Vertical Integration",
-              "text": "Software companies' custom chip investments signal long-term commitment to silicon differentiation despite existing GPU maturity."
-            },
-            {
-              "keyword": "Thermal Design",
-              "text": "Huawei's Tau scaling approach indicates thermal management becoming critical differentiator in 2026+ AI chip roadmaps."
-            },
-            {
-              "keyword": "Market Segmentation",
-              "text": "Broadcom's non-GPU AI positioning creates alternative revenue streams as industry moves beyond homogeneous accelerator architectures."
-            }
-          ],
-          "counterpoint": "Custom chip ROI remains unproven given rapid GPU technology evolution and software stack maturity."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-09-06",
-      "item_count": 5,
-      "generated_at": "2026-09-06T22:03:06.578773+00:00",
+      "date": "2026-09-07",
+      "item_count": 13,
+      "generated_at": "2026-09-07T22:39:48.965603+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Samsung increased OLED TV output by approximately 16% year-over-year, narrowing the output gap with LG Electronics to around 1 million units as both compete in premium segments amid Chinese LCD mass-market pressure. AI ecosystem consolidation emerged as competitive focus beyond discrete product categories.",
-          "key_facts": [
-            "Samsung OLED TV shipments estimated at 2.31 million units for current year",
-            "Samsung OLED TV output increased from 1.99 million units prior year",
-            "Samsung-LG gap narrowing to approximately 1 million unit range",
-            "Samsung presented 'AI Living' strategy across entertainment, home, and self-care domains",
-            "大德電子 (Daedeok Electronics) implementing Scope 1-3 carbon verification through 2026"
-          ],
-          "implications": [
-            {
-              "keyword": "Premium Segment Intensity",
-              "text": "OLED competition between Samsung and LG intensifying as Chinese manufacturers dominate LCD tier, forcing Korean vendors into higher-margin segments."
-            },
-            {
-              "keyword": "Ecosystem Competition",
-              "text": "IFA 2026 signals shift from product-level competition to integrated AI ecosystem offerings, requiring cross-functional device coordination."
-            },
-            {
-              "keyword": "Supply Chain Sustainability",
-              "text": "PCB suppliers adopting Scope 3 carbon tracking signals downstream ESG compliance requirements propagating through semiconductor supply chain."
-            }
-          ],
-          "counterpoint": "Samsung's OLED ramp relies on yield improvement continuation; margin sustainability depends on Chinese pricing discipline."
-        },
-        "en": {
-          "executive_summary": "Samsung increased OLED TV output by approximately 16% year-over-year, narrowing the output gap with LG Electronics to around 1 million units as both compete in premium segments amid Chinese LCD mass-market pressure. AI ecosystem consolidation emerged as competitive focus beyond discrete product categories.",
-          "key_facts": [
-            "Samsung OLED TV shipments estimated at 2.31 million units for current year",
-            "Samsung OLED TV output increased from 1.99 million units prior year",
-            "Samsung-LG gap narrowing to approximately 1 million unit range",
-            "Samsung presented 'AI Living' strategy across entertainment, home, and self-care domains",
-            "Daedeok Electronics implementing Scope 1-3 carbon verification through 2026"
-          ],
-          "implications": [
-            {
-              "keyword": "Premium Segment Intensity",
-              "text": "OLED competition between Samsung and LG intensifying as Chinese manufacturers dominate LCD tier, forcing Korean vendors into higher-margin segments."
-            },
-            {
-              "keyword": "Ecosystem Competition",
-              "text": "IFA 2026 signals shift from product-level competition to integrated AI ecosystem offerings, requiring cross-functional device coordination."
-            },
-            {
-              "keyword": "Supply Chain Sustainability",
-              "text": "PCB suppliers adopting Scope 3 carbon tracking signals downstream ESG compliance requirements propagating through semiconductor supply chain."
-            }
-          ],
-          "counterpoint": "Samsung's OLED ramp relies on yield improvement continuation; margin sustainability depends on Chinese pricing discipline."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-09-06",
-      "item_count": 3,
-      "generated_at": "2026-09-06T22:03:06.578773+00:00",
+      "date": "2026-09-07",
+      "item_count": 15,
+      "generated_at": "2026-09-07T22:39:48.965603+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Tungsten hexafluoride (WF₆) gas emerging as critical supply bottleneck for advanced AI chip fabrication. Semiconductor demand driving forecasted 4-6% CAGR growth in wafer inspection (focused ultrasonic probes) and 1.9 million tonne market for hexamethylenetetramine formaldehyde releaser by 2035.",
-          "key_facts": [
-            "WF₆ gas identified as new critical bottleneck for AI chip manufacturing",
-            "Focused ultrasonic probes market projected 4-6% CAGR through 2035",
-            "Hexamethylenetetramine formaldehyde releaser market forecast 1.9 million tonnes by 2035"
-          ],
-          "implications": [
-            {
-              "keyword": "Process Material Constraints",
-              "text": "WF₆ supply limitations could become yield-limiting factor for advanced node AI chip production, requiring supply chain diversification."
-            },
-            {
-              "keyword": "Inspection Scaling",
-              "text": "Rising inspection probe demand reflects manufacturing complexity increase at advanced nodes, critical for maintaining AI chip quality and reliability."
-            },
-            {
-              "keyword": "Chemical Supply Chain",
-              "text": "Hexamethylenetetramine growth trajectory tied to semiconductor precursor material demand, indicating packaging process material consolidation around specialty chemicals."
-            }
-          ],
-          "counterpoint": "Market forecasts assume continued adoption rates; alternative process chemistries could displace current material roadmaps."
-        },
-        "en": {
-          "executive_summary": "Tungsten hexafluoride (WF₆) gas emerging as critical supply bottleneck for advanced AI chip fabrication. Semiconductor demand driving forecasted 4-6% CAGR growth in wafer inspection (focused ultrasonic probes) and 1.9 million tonne market for hexamethylenetetramine formaldehyde releaser by 2035.",
-          "key_facts": [
-            "WF₆ gas identified as new critical bottleneck for AI chip manufacturing",
-            "Focused ultrasonic probes market projected 4-6% CAGR through 2035",
-            "Hexamethylenetetramine formaldehyde releaser market forecast 1.9 million tonnes by 2035"
-          ],
-          "implications": [
-            {
-              "keyword": "Process Material Constraints",
-              "text": "WF₆ supply limitations could become yield-limiting factor for advanced node AI chip production, requiring supply chain diversification."
-            },
-            {
-              "keyword": "Inspection Scaling",
-              "text": "Rising inspection probe demand reflects manufacturing complexity increase at advanced nodes, critical for maintaining AI chip quality and reliability."
-            },
-            {
-              "keyword": "Chemical Supply Chain",
-              "text": "Hexamethylenetetramine growth trajectory tied to semiconductor precursor material demand, indicating packaging process material consolidation around specialty chemicals."
-            }
-          ],
-          "counterpoint": "Market forecasts assume continued adoption rates; alternative process chemistries could displace current material roadmaps."
-        }
+        "ko": {},
+        "en": {}
       }
     }
   }
