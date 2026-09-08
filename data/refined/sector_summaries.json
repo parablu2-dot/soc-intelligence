@@ -1,88 +1,234 @@
 {
-  "date": "2026-09-07",
-  "generated_at": "2026-09-07T22:39:48.966172+00:00",
+  "date": "2026-09-08",
+  "generated_at": "2026-09-08T22:32:55.485688+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-09-07",
-      "item_count": 3,
-      "generated_at": "2026-09-07T22:39:48.965603+00:00",
+      "date": "2026-09-08",
+      "item_count": 1,
+      "generated_at": "2026-09-08T22:32:55.484769+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Samsung is testing both Exynos 2700 and Snapdragon processors for the Galaxy S27 series, with the Exynos variant in the Ultra model poised to strengthen Samsung's chip independence. Huawei's Kirin 9050 Pro has launched with LogicFolding technology moving from roadmap to production silicon.",
+          "executive_summary": "Qualcomm announced a multi-generational product collaboration with Amazon to develop next-generation AI data center infrastructure, signaling deepened partnership in custom silicon for large-scale deployments.",
           "key_facts": [
-            "Galaxy S27 testing includes both Exynos and Snapdragon variants",
-            "Exynos 2700 confirmed for Galaxy S27 Ultra",
-            "Huawei Kirin 9050 Pro launched with LogicFolding technology"
+            "Qualcomm and Amazon: multi-generational AI data center infrastructure partnership"
           ],
           "implications": [
             {
-              "keyword": "Samsung Chip Independence",
-              "text": "Dual processor strategy in flagship S27 series reduces reliance on Qualcomm while validating Exynos maturity at premium tier."
-            },
-            {
-              "keyword": "Huawei's AI Optimization",
-              "text": "LogicFolding implementation in production silicon signals competitive advancement in chip architecture efficiency."
+              "keyword": "Custom Silicon Strategy",
+              "text": "Qualcomm expanding beyond mobile into data center AI accelerators through major cloud customer partnerships"
             }
           ],
-          "counterpoint": "Exynos has historically faced performance and reliability concerns versus Snapdragon in flagship markets."
+          "counterpoint": ""
         },
         "en": {
-          "executive_summary": "Samsung is testing both Exynos 2700 and Snapdragon processors for the Galaxy S27 series, with the Exynos variant in the Ultra model poised to strengthen Samsung's chip independence. Huawei's Kirin 9050 Pro has launched with LogicFolding technology moving from roadmap to production silicon.",
+          "executive_summary": "Qualcomm announced a multi-generational product collaboration with Amazon to develop next-generation AI data center infrastructure, signaling deepened partnership in custom silicon for large-scale deployments.",
           "key_facts": [
-            "Galaxy S27 testing includes both Exynos and Snapdragon variants",
-            "Exynos 2700 confirmed for Galaxy S27 Ultra",
-            "Huawei Kirin 9050 Pro launched with LogicFolding technology"
+            "Qualcomm and Amazon: multi-generational AI data center infrastructure partnership"
           ],
           "implications": [
             {
-              "keyword": "Samsung Chip Independence",
-              "text": "Dual processor strategy in flagship S27 series reduces reliance on Qualcomm while validating Exynos maturity at premium tier."
-            },
-            {
-              "keyword": "Huawei's AI Optimization",
-              "text": "LogicFolding implementation in production silicon signals competitive advancement in chip architecture efficiency."
+              "keyword": "Custom Silicon Strategy",
+              "text": "Qualcomm expanding beyond mobile into data center AI accelerators through major cloud customer partnerships"
             }
           ],
-          "counterpoint": "Exynos has historically faced performance and reliability concerns versus Snapdragon in flagship markets."
+          "counterpoint": ""
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-09-07",
+      "date": "2026-09-08",
       "item_count": 5,
-      "generated_at": "2026-09-07T22:39:48.965603+00:00",
+      "generated_at": "2026-09-08T22:32:55.484769+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Tesla resumes Dojo supercomputer development with Morgan Stanley projecting $500 billion market value uplift potential. Meanwhile, Samsung opened an advanced semiconductor packaging R&D center in Yokohama, and SK Hiwix is recruiting non-semiconductor-major talent for fab operations.",
+          "key_facts": [
+            "Tesla: Dojo supercomputer development resumed; Morgan Stanley projects $500 billion market value increase potential",
+            "Samsung: Advanced Semiconductor Packaging R&D Center opened in Yokohama",
+            "SK Hiwix: Recruiting fab operations talent beyond semiconductor majors"
+          ],
+          "implications": [
+            {
+              "keyword": "Vertical Integration",
+              "text": "Tesla's internal supercomputer development positions the company to reduce reliance on external AI infrastructure providers"
+            },
+            {
+              "keyword": "Packaging Capability",
+              "text": "Samsung's Yokohama facility strengthens advanced packaging infrastructure for HPC and AI applications"
+            },
+            {
+              "keyword": "Talent Strategy",
+              "text": "SK Hiwix broadening recruitment criteria indicates pressure to fill fab leadership roles amid competitive talent market"
+            }
+          ],
+          "counterpoint": "Tesla Dojo remains internally-focused and unproven at scale compared to established hyperscaler AI infrastructure."
+        },
+        "en": {
+          "executive_summary": "Tesla resumes Dojo supercomputer development with Morgan Stanley projecting $500 billion market value uplift potential. Meanwhile, Samsung opened an advanced semiconductor packaging R&D center in Yokohama, and SK Hiwix is recruiting non-semiconductor-major talent for fab operations.",
+          "key_facts": [
+            "Tesla: Dojo supercomputer development resumed; Morgan Stanley projects $500 billion market value increase potential",
+            "Samsung: Advanced Semiconductor Packaging R&D Center opened in Yokohama",
+            "SK Hiwix: Recruiting fab operations talent beyond semiconductor majors"
+          ],
+          "implications": [
+            {
+              "keyword": "Vertical Integration",
+              "text": "Tesla's internal supercomputer development positions the company to reduce reliance on external AI infrastructure providers"
+            },
+            {
+              "keyword": "Packaging Capability",
+              "text": "Samsung's Yokohama facility strengthens advanced packaging infrastructure for HPC and AI applications"
+            },
+            {
+              "keyword": "Talent Strategy",
+              "text": "SK Hiwix broadening recruitment criteria indicates pressure to fill fab leadership roles amid competitive talent market"
+            }
+          ],
+          "counterpoint": "Tesla Dojo remains internally-focused and unproven at scale compared to established hyperscaler AI infrastructure."
+        }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-09-07",
-      "item_count": 7,
-      "generated_at": "2026-09-07T22:39:48.965603+00:00",
+      "date": "2026-09-08",
+      "item_count": 23,
+      "generated_at": "2026-09-08T22:32:55.484769+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Qualcomm secured multi-generational deal with Amazon for custom AI inference silicon and 1.6T optical interconnects; Google demonstrated TPU cost advantage up to 50% better performance-per-dollar versus NVIDIA; and SEMIFIVE began volume production of HyperAccel's Bertha AI inference chip on Samsung 4nm. Meta's Iris AI chip shipping and non-GPU AI accelerator market expansion signal sustained competitive fragmentation in AI silicon.",
+          "key_facts": [
+            "Qualcomm and Amazon: multi-generational custom AI inference silicon and 1.6T optical interconnects deal",
+            "Google TPU: up to 50% better performance-per-dollar than NVIDIA",
+            "SEMIFIVE: volume production of HyperAccel Bertha AI inference chip on Samsung 4nm process",
+            "Meta Iris AI chip: shipping in 2026",
+            "NVIDIA market share: 85% in 2026 projection",
+            "Google Ironwood TPU: $12/hour pricing (2026)"
+          ],
+          "implications": [
+            {
+              "keyword": "Custom Silicon Proliferation",
+              "text": "Amazon, Google, and Meta each deploying custom AI accelerators signals OEMs reducing dependence on NVIDIA and driving architectural diversity"
+            },
+            {
+              "keyword": "Cost Competitiveness",
+              "text": "Google TPU and Ironwood pricing pressure indicates accelerating price-performance competition in inference workloads"
+            },
+            {
+              "keyword": "Foundry Capacity",
+              "text": "SEMIFIVE volume production on Samsung 4nm demonstrates Korean foundries capturing AI accelerator manufacturing share"
+            },
+            {
+              "keyword": "Market Consolidation",
+              "text": "NVIDIA retaining 85% share despite multiple custom silicon entrants reflects staying power in training and enterprise GPU markets"
+            }
+          ],
+          "counterpoint": "NVIDIA's 85% market share dominance persists despite custom silicon competition; custom chips remain largely restricted to first-party OEM deployments."
+        },
+        "en": {
+          "executive_summary": "Qualcomm secured multi-generational deal with Amazon for custom AI inference silicon and 1.6T optical interconnects; Google demonstrated TPU cost advantage up to 50% better performance-per-dollar versus NVIDIA; and SEMIFIVE began volume production of HyperAccel's Bertha AI inference chip on Samsung 4nm. Meta's Iris AI chip shipping and non-GPU AI accelerator market expansion signal sustained competitive fragmentation in AI silicon.",
+          "key_facts": [
+            "Qualcomm and Amazon: multi-generational custom AI inference silicon and 1.6T optical interconnects deal",
+            "Google TPU: up to 50% better performance-per-dollar than NVIDIA",
+            "SEMIFIVE: volume production of HyperAccel Bertha AI inference chip on Samsung 4nm process",
+            "Meta Iris AI chip: shipping in 2026",
+            "NVIDIA market share: 85% in 2026 projection",
+            "Google Ironwood TPU: $12/hour pricing (2026)"
+          ],
+          "implications": [
+            {
+              "keyword": "Custom Silicon Proliferation",
+              "text": "Amazon, Google, and Meta each deploying custom AI accelerators signals OEMs reducing dependence on NVIDIA and driving architectural diversity"
+            },
+            {
+              "keyword": "Cost Competitiveness",
+              "text": "Google TPU and Ironwood pricing pressure indicates accelerating price-performance competition in inference workloads"
+            },
+            {
+              "keyword": "Foundry Capacity",
+              "text": "SEMIFIVE volume production on Samsung 4nm demonstrates Korean foundries capturing AI accelerator manufacturing share"
+            },
+            {
+              "keyword": "Market Consolidation",
+              "text": "NVIDIA retaining 85% share despite multiple custom silicon entrants reflects staying power in training and enterprise GPU markets"
+            }
+          ],
+          "counterpoint": "NVIDIA's 85% market share dominance persists despite custom silicon competition; custom chips remain largely restricted to first-party OEM deployments."
+        }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-09-07",
-      "item_count": 13,
-      "generated_at": "2026-09-07T22:39:48.965603+00:00",
+      "date": "2026-09-08",
+      "item_count": 25,
+      "generated_at": "2026-09-08T22:32:55.484769+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Samsung expanded High-NA EUV roadmap with ASML partnership, targeting 2028 D-RAM production adoption and joining large-format photomask consortium. Samsung and Mistral AI launched semiconductor-specialized AI development partnership. ASML expanded High-NA EUV orders with TSMC, Samsung, and Intel; Huawei backed China's DUV push with 12 systems targeted by end-2026 and SMIC testing underway.",
+          "key_facts": [
+            "Samsung and ASML: High-NA EUV collaboration; 2028 D-RAM production target; Large Size Mask Consortium participation for 12-inch photomask",
+            "Samsung and Mistral AI: semiconductor-specialized AI model co-development partnership",
+            "ASML: High-NA EUV pilot 12-inch photomask line set for 2031",
+            "Huawei: backing China DUV strategy; 12 systems targeted by end-2026; SMIC testing underway",
+            "KOSPI: semiconductor rebound; 7000 level regained in 15 trading days"
+          ],
+          "implications": [
+            {
+              "keyword": "Process Technology Leadership",
+              "text": "Samsung's 2028 High-NA EUV adoption for DRAM differentiates advanced logic/memory roadmap and signals intent to compete with TSMC on node cadence"
+            },
+            {
+              "keyword": "AI-Driven Design",
+              "text": "Samsung-Mistral partnership embedding domain-specific AI into semiconductor design and manufacturing workflow to improve yield and precision"
+            },
+            {
+              "keyword": "Geopolitical Supply Chains",
+              "text": "Huawei-backed DUV push and SMIC testing indicate China accelerating domestic advanced node capability and reducing ASML dependence"
+            },
+            {
+              "keyword": "Equipment Ecosystem",
+              "text": "ASML expanding High-NA orders with TSMC/Samsung/Intel and 2031 pilot line strengthens photomask infrastructure for next-generation lithography"
+            }
+          ],
+          "counterpoint": "China's DUV timeline and SMIC yields remain unproven; High-NA EUV adoption in 2028 is aggressive and faces mask delivery and tool readiness risks."
+        },
+        "en": {
+          "executive_summary": "Samsung expanded High-NA EUV roadmap with ASML partnership, targeting 2028 D-RAM production adoption and joining large-format photomask consortium. Samsung and Mistral AI launched semiconductor-specialized AI development partnership. ASML expanded High-NA EUV orders with TSMC, Samsung, and Intel; Huawei backed China's DUV push with 12 systems targeted by end-2026 and SMIC testing underway.",
+          "key_facts": [
+            "Samsung and ASML: High-NA EUV collaboration; 2028 D-RAM production target; Large Size Mask Consortium participation for 12-inch photomask",
+            "Samsung and Mistral AI: semiconductor-specialized AI model co-development partnership",
+            "ASML: High-NA EUV pilot 12-inch photomask line set for 2031",
+            "Huawei: backing China DUV strategy; 12 systems targeted by end-2026; SMIC testing underway",
+            "KOSPI: semiconductor rebound; 7000 level regained in 15 trading days"
+          ],
+          "implications": [
+            {
+              "keyword": "Process Technology Leadership",
+              "text": "Samsung's 2028 High-NA EUV adoption for DRAM differentiates advanced logic/memory roadmap and signals intent to compete with TSMC on node cadence"
+            },
+            {
+              "keyword": "AI-Driven Design",
+              "text": "Samsung-Mistral partnership embedding domain-specific AI into semiconductor design and manufacturing workflow to improve yield and precision"
+            },
+            {
+              "keyword": "Geopolitical Supply Chains",
+              "text": "Huawei-backed DUV push and SMIC testing indicate China accelerating domestic advanced node capability and reducing ASML dependence"
+            },
+            {
+              "keyword": "Equipment Ecosystem",
+              "text": "ASML expanding High-NA orders with TSMC/Samsung/Intel and 2031 pilot line strengthens photomask infrastructure for next-generation lithography"
+            }
+          ],
+          "counterpoint": "China's DUV timeline and SMIC yields remain unproven; High-NA EUV adoption in 2028 is aggressive and faces mask delivery and tool readiness risks."
+        }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-09-07",
-      "item_count": 15,
-      "generated_at": "2026-09-07T22:39:48.965603+00:00",
+      "date": "2026-09-08",
+      "item_count": 22,
+      "generated_at": "2026-09-08T22:32:55.484769+00:00",
       "content": {
         "ko": {},
         "en": {}
