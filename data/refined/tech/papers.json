@@ -2,6 +2,274 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.MS",
+    "title": "Ozaki 2.5: Engineering the Deconstruction Path of fp64-Emulated Dense Matrix Multiplication on FP8 Tensor Cores",
+    "url": "https://arxiv.org/abs/2609.09095v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "FP8 Ozaki II emulates FP64 matrix multiplication by tensor-core products over a CRT residue system; converting the operands into residue planes (the deconstruction term in the Tensor-Memory Equilibrium model of the companion paper \"FP8 is All You Need, Part 1\") costs integer-pipe and memory resources before tensor instructions issue. This paper engineers that path; every result is a model projection pending measurement. First, a deconstruction-aware model: on the NVIDIA Rubin GPU the emulated ra",
+    "authors": [
+      "Satoshi Matsuoka"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Water, vacancies, and competing exchange interactions in Prussian blue analogues: a neutron diffraction study of field and dehydration-driven magnetic transitions",
+    "url": "https://arxiv.org/abs/2609.08976v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "We report a neutron diffraction study of the structural and magnetic properties of a family of ferro- and ferrimagnetic Prussian blue analogues (PBAs), $A_4$[Fe(CN)$_6$]$_{2.7}$ ($A$ = Co, Mn, Ni), Rb$_2$Ni$_4$[Fe(CN)$_6$]$_{3.3}$, and Mn$_4$[Cr(CN)$_6$]$_{2.7}$, as a function of temperature (2--450~K) and applied magnetic field. All bimetallic compounds of the Fm$\\overline{3}$m family exhibit a broad diffuse feature at low scattering angle, which we identify, through comparison with the cation-",
+    "authors": [
+      "N. S. Dhami",
+      "C. V. Colin",
+      "V. Nassif",
+      "O. Fabelo",
+      "T. Nait",
+      "A. Bleuzen",
+      "A. Bordage",
+      "V. Balédent"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "Towards Standardized Evaluation of GPU Memory Safety with GMSBench",
+    "url": "https://arxiv.org/abs/2609.08871v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "As GPUs become increasingly integral to high-performance computing and machine learning, ensuring memory safety in GPU programs has become crucial for reliable and secure execution. However, evaluating GPU memory safety techniques remains challenging due to the lack of comprehensive and standardized benchmarks. In this paper, we present GMSBench, a GPU memory safety benchmark designed to evaluate a broad range of memory safety violations across different GPU memory spaces and execution scenarios",
+    "authors": [
+      "Saurabh Singh",
+      "Jaewon Lee",
+      "Seonjin Na",
+      "Hyesoon Kim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Non-perturbative theory of valley splitting in Si qubits from variational wave function: periodic effects of shear strain and asymptotic freedom in the wiggle-well potential",
+    "url": "https://arxiv.org/abs/2609.08839v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "Valley splitting sets the energy scale at which spin and valley degrees of freedom hybridize in silicon quantum-well qubits, but its sensitivity to interface structure makes it difficult to predict. Using the valleyor basis, we formulate a two-band effective-mass model for intervalley coupling in a finite quantum well and develop an analytical framework for treating non-perturbative effects of shear strain and wiggle-well potentials. For a $z$-independent coupling $V_sτ_2$, corresponding to unif",
+    "authors": [
+      "Johannes L. P. Steinschuld",
+      "Hendrik J. Bluhm",
+      "Seyed Akbar Jafari"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Study on Thickness and Temperature Dependence of Thermoelectric Properties in SnS Nanofilms",
+    "url": "https://arxiv.org/abs/2609.08734v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "SnS as an environmentally friendly, cost-effective, and earth-abundant narrow-bandgap semiconductor material, has demonstrated significant application potential in the field of medium-temperature thermoelectric conversion. However, the thermoelectric performance of its bulk counterpart is inherently constrained by intrinsic point defects (e.g., vacancies) and the material's specific band structure. Low-dimensional engineering has emerged as a pivotal strategy for overcoming these limitations and",
+    "authors": [
+      "Liqi Chen",
+      "Ziyang Wang",
+      "Donghao Li",
+      "Jingye Wang",
+      "Ning Zhao",
+      "Jun Zhou",
+      "Jie Zhu",
+      "Dawei Tang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SY",
+    "title": "NL-FRA: A MATLAB package for nonlinear frequency response analysis",
+    "url": "https://arxiv.org/abs/2609.08723v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "Nonlinear Output Frequency Response Functions (NOFRFs) provide a one-dimensional frequency-domain representation of nonlinear dynamics, enabling direct decomposition of an output spectrum into contributions from different orders of nonlinearity. NL-FRA (NonLinear Frequency Response Analysis) is an open-source MATLAB package implementing a data-driven Least Squares (LS) method for estimating NOFRFs directly from system input-output data. It provides an integrated workflow for NOFRF estimation, va",
+    "authors": [
+      "Rajintha Gunawardena",
+      "Zi-Qiang Lang",
+      "Fei He"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Wafer-Level 1/f Noise Characterization of Scaled P-Type Nanosheets and Comparison with Planar HKMG Transistors",
+    "url": "https://arxiv.org/abs/2609.08674v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "We present a comprehensive wafer-level 1/f noise study of scaled Gate-All-Around (GAA) p-type nanosheet transistors and benchmark them against large-area planar High- \\k{appa} Metal Gate (HKMG) devices to assess the impact of device architecture on reliability. By statistically analyzing noise data from 188 nanosheets, we extract the effective trap density in the dielectric and compare it to that of planar transistors with identical gate stack, comparable processing thermal budgets, and no speci",
+    "authors": [
+      "Ruben Asanovski",
+      "Anabela Veloso",
+      "Ben Kaczer",
+      "Naoto Horiguchi",
+      "Jacopo Franco"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Pulse-Burst Excitation Reveals Time-Dose Reciprocity Breakdown in Mixed-Halide Perovskites",
+    "url": "https://arxiv.org/abs/2609.08632v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "Time-dose reciprocity, commonly associated with the Bunsen-Roscoe law, states that the response of a photosensitive system depends only on the total exposure dose, regardless of how that energy is delivered over time. Light-sensitive processes in mixed-halide perovskites, such as photoinduced halide segregation, often exhibit threshold-like behavior that may violate this principle and enable material-state control by photon timing. We test this using pulse-burst excitation, which introduces an a",
+    "authors": [
+      "Alexandr Marunchenko",
+      "Shivam Singh",
+      "Daniel Lizotte",
+      "Bhaskar De",
+      "Yana Vaynzof",
+      "Ivan G. Scheblykin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Efficient Deep Learning Adaptation for Cross-Environment RSS-Based Indoor Localization",
+    "url": "https://arxiv.org/abs/2609.08629v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "Received signal strength (RSS)-based indoor localization has attracted increasing attention due to its low cost and compatibility with existing wireless infrastructures. However, RSS measurements are highly sensitive to environmental variations, making it challenging for deep learning-based localization models to generalize across different physical configurations. Driven by these challenges, this paper proposes a scenario-adaptive RSS localization framework based on backbone reuse and efficient",
+    "authors": [
+      "Cien Zhang",
+      "Jiaming Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Polymorph Engineering of the Layered Rare-Earth Magnet GdAlGe",
+    "url": "https://arxiv.org/abs/2609.08601v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "The recent advances in research on layered magnets have established them as invaluable materials for spintronic applications and precursors to 2D magnets. The problem is that the number of such materials available for experimentation is still low. To tackle the problem, one may employ phase engineering; in particular, the interplay between the phase stability and dimensionality provides great opportunities for design of layered magnets. Here, this interrelation is harnessed to produce epitaxial ",
+    "authors": [
+      "Dmitry V. Averyanov",
+      "Ivan S. Sokolov",
+      "Alexander N. Taldenkov",
+      "Oleg E. Parfenov",
+      "Alexey N. Mihalyuk",
+      "Ivan A. Yakovlev",
+      "Igor A. Karateev",
+      "Oleg A. Kondratev",
+      "Andrey M. Tokmachev",
+      "Vyacheslav G. Storchak"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "The Hidden Cost of Alloying: Disorder-Driven Transport Collapse in TMDs",
+    "url": "https://arxiv.org/abs/2609.08597v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "Alloying in two dimensional semiconductors is widely used to tune bandgaps, yet its implications for charge and energy transport remain poorly understood. Here, we investigate MoS2xSe2(1-x) alloys as a model system to study the interplay between composition, thickness, and disorder. Optical transitions and valence band dispersions evolve continuously with both stoichiometry and number of layers, with negligible bandgap bowing and a composition dependent attenuation of thickness driven renormaliz",
+    "authors": [
+      "Michele Pisarra",
+      "Clara Rebanal",
+      "Enrique Arévalo Rodríguez",
+      "Marc Meléndez",
+      "Elena Blundo",
+      "Giacomo Amadore",
+      "Jonathan J. Finley",
+      "Fabián Calleja",
+      "Marc G. Cuxart",
+      "Jesús Álvarez",
+      "Ma-ría José Capitán",
+      "Fernando J. Urbanos",
+      "Julia García Pérez",
+      "Ramón Bernardo Gavito",
+      "Daniel Granados",
+      "Ji Dai",
+      "Massimo Tallarida",
+      "Antonello Sindona",
+      "Fernando Martín",
+      "Ferry Prins",
+      "Iolanda Di Bernardo",
+      "Amadeo L. Vázquez de Parga"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "A Foundation Model for Large-Scale Wireless Network Planning , Operation and Optimization",
+    "url": "https://arxiv.org/abs/2609.08482v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "Wireless cellular networks provide critical infrastructure for communication, transportation and industry, making reliable connectivity essential to modern society. Delivering this connectivity requires accurate models of the radio environment shaped jointly by network infrastructure and their surroundings. Such models underpin base-station deployment, network operation and parameter optimization, yet city-scale radio environments remain difficult to capture. Physics-based tools require detailed",
+    "authors": [
+      "Xinyu Qin",
+      "Wenqiang Pu",
+      "Hongcheng Dong",
+      "Bingsheng Peng",
+      "Ye Xue",
+      "Linzhi Shen",
+      "Qi Yan",
+      "Tsung-Hui Chang",
+      "Zhi-Quan Luo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Thermal response of an in-situ STEM MEMS chip under rapid pulse heating",
+    "url": "https://arxiv.org/abs/2609.08473v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "In-situ rapid solidification studies demand measurements of thermal histories with high temporal resolution. We present a simple, effective setup to quantify the cooling response of an uncoated commercial Protochips Fusion MEMS chip in an in-situ scanning transmission electron microscopy (STEM) context. We drive user-defined temperature programs via an arbitrary waveform generator (AWG), while recording the voltage drops across a series shunt to reconstruct chip resistance and temperature at sub",
+    "authors": [
+      "Phillip Dumitraschkewitz",
+      "Thomas Kremmer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "PAPR-Aware Multimodal Token Transmission in MLLM-Based Multiuser Networks",
+    "url": "https://arxiv.org/abs/2609.08464v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "Task-oriented semantic communication (SemCom) empowered by multimodal large language models (MLLMs) has recently emerged as a promising paradigm for efficiently transmitting multimodal information, yet transmitting token embeddings over OFDM channels faces critical challenges due to hardware impairments, particularly the high peak-to-average power ratio (PAPR) that severely degrades energy efficiency under nonlinear power amplifiers. In this paper, we propose a novel PAPR-aware task-oriented mul",
+    "authors": [
+      "Molka Trabelsi",
+      "Rafik Zayani"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "FlexSpIM: An Event-Based Digital Compute-In-Memory Accelerator with Flexible Operand Resolution and Layer-Wise Hybrid Stationarity",
+    "url": "https://arxiv.org/abs/2609.08446v1",
+    "published_date": "2026-09-08",
+    "source": "arXiv",
+    "summary": "Compute-in-memory (CIM) accelerators for spiking neural networks (SNNs) offer a promising solution for achieving $μ$s-level inference latency and ultra-low energy in edge vision applications. However, their limited flexibility at both circuit and system levels restricts their deployment across diverse workloads. This work introduces FlexSpIM, a digital CIM architecture supporting arbitrary operand resolution and shape within a unified storage for weights and neuron states (i.e., membrane potenti",
+    "authors": [
+      "Nicolas Chauvaux",
+      "Adrian Kneip",
+      "Charlotte Frenkel"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "From Electronic Structure to Environmental Remediation: Adsorption of Ionized Glyphosate on COOH-Modified Carbon Nanotube",
     "url": "https://arxiv.org/abs/2609.05392v1",
