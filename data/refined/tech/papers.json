@@ -2,6 +2,248 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.PF",
+    "title": "PASCAL: A Phase-Aware Shared-Cache Model for Parallel Scans",
+    "url": "https://arxiv.org/abs/2609.10515v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "In modern AI Accelerators and GPGPUs, many concurrent cores repeatedly access the same shared data. This pattern occurs in attention, where different query tiles share the same K/V block, GEMM, where every tile in a row reads the same panel, and many other operators. We name this pattern parallel scan. Due to a significant amount of data reuse in this pattern, the cache is expected to capture as much data reuse as possible and largely reduce requests sent to the main memory for both performance ",
+    "authors": [
+      "Zhongchun Zhou",
+      "Chengtao Lai",
+      "Songtao Mao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Learning with Covariance Matrices: Principal Component Analysis Meets Learning with Graphs",
+    "url": "https://arxiv.org/abs/2609.10490v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "This feature article provides an overview of the theoretical foundations for coVariance neural networks (VNNs), i.e., graph neural networks (GNNs) operating on covariance matrices as graphs. Covariance matrices are ubiquitous across domains, and hence, the deployment of GNNs often leverages graphs of pairwise statistical dependencies. Existing theoretical contributions on GNNs consider abstract graph representations and cannot accommodate the data-driven nuances associated with covariance matric",
+    "authors": [
+      "Saurabh Sihag",
+      "Andrea Cavallo",
+      "Elvin Isufi",
+      "Gonzalo Mateos",
+      "Alejandro Ribeiro"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Deep Learning-Based Detection of Electrical Faults and Power Quality Disturbances in Aerospace Power Systems",
+    "url": "https://arxiv.org/abs/2609.10479v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "More Electric Aircraft require fast and reliable monitoring of high-frequency electrical networks, yet most power quality disturbance and fault diagnosis methods are developed for conventional 50 or 60 Hz grids. This work presents a hardware-aware deep learning framework for multiclass detection of electrical faults and power quality disturbances in a 400 Hz aerospace power system. A high-fidelity simulation model inspired by the Boeing 787 electrical architecture generates voltage and current w",
+    "authors": [
+      "Ian C. Guzmán",
+      "Radu Babiceanu",
+      "Berker Peköz"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "WannierNLQG: A Julia package for nonlinear optical responses and quantum geometry from Wannier tight-binding models",
+    "url": "https://arxiv.org/abs/2609.10411v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "Nonlinear optical responses and quantum geometry are central to modern condensed matter physics and are deeply intertwined. We introduce WannierNLQG, an extensible Julia framework for computing nonlinear optical responses and quantum geometric quantities from Wannier tight-binding models. Its gauge-consistent, degeneracy-aware architecture accommodates perturbative responses at arbitrary order and additional quantum geometric quantities. The current release evaluates ordinary, spin, and photon-d",
+    "authors": [
+      "Zhuocheng Lu",
+      "Zhichao Guo",
+      "Yuanyuan Xua",
+      "Jiacheng Yao",
+      "Hua Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Structural and Electronic Properties of Bulk $β$(2H)-GaSe from First-Principles DFT Calculations with van der Waals Corrections",
+    "url": "https://arxiv.org/abs/2609.10301v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "Gallium selenide (GaSe) is a layered III-VI semiconductor whose bulk crystal serves as the essential energetic reference for modeling the isolated monolayer. We present a systematic density-functional-theory (DFT) study of the centrosymmetric $β$(2H)-GaSe polymorph, employing the GGA-PBE functional supplemented with a semiempirical Grimme DFT-D2 dispersion correction to accurately capture the weak van der Waals interlayer coupling. The optimized in-plane lattice parameter agrees well with experi",
+    "authors": [
+      "Julián A. Aros-González",
+      "Camilo A. Huertas-Archila",
+      "Miguel J. Espitia-Rico"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Surrogate-Assisted Inverse Design and Temperature-Dependent Electrothermal Analysis of an All-Oxide Narrowband Thermophotovoltaic Emitter",
+    "url": "https://arxiv.org/abs/2609.10252v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "A narrowband emitter aligning with the bandgap of the underlying solar cell is essential for improving the spectral efficiency and thermal stability of thermophotovoltaic (TPV) systems. Emitters based on oxide materials present a promising solution to the optical and mechanical performance degradation of traditional emitters, which employ metal-dielectric structures that experience metal oxidation and structural deterioration at high temperatures. Here, we presented a surrogate-assisted inverse-",
+    "authors": [
+      "Bibekananda Nath",
+      "Kawshik Nath",
+      "Ahmed Zubair"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Spatial sparse sampling-based iterative optimization framework for GNSS Direct Position Estimation",
+    "url": "https://arxiv.org/abs/2609.10241v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "Direct position estimation (DPE), a promising technique in Global Navigation Satellite Systems (GNSS) receivers, enables estimation of position, velocity, and time (PVT) solutions directly from correlator outputs. The conventional grid search (GS)-based DPE is computationally intensive, as it relies solely on locating the peak of the cross ambiguity function (CAF), and it does not fully leverage the PVT information present in the correlation values. This paper proposes an iterative optimization ",
+    "authors": [
+      "Wei Gao",
+      "Rong Yang",
+      "Jihong Huang",
+      "Xingqun Zhan",
+      "Yonggang Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Beyond Impedance Additivity: A Systematic Nonlinear Perspective on Memristor Associations",
+    "url": "https://arxiv.org/abs/2609.10194v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "We investigate the validity of the superposition principle and impedance additivity in AC circuits containing a memristive device connected in series with a resistor, capacitor, or inductor. While the series association of impedances is a cornerstone of linear circuit theory, its applicability to memory-bearing nonlinear systems remains largely unexplored. Using a state-dependent memristive model, we numerically analyze the stationary current response under sinusoidal excitation and characterize",
+    "authors": [
+      "Luiz A. Meneghetti",
+      "Leonardo K. Castelano",
+      "Antônio Sérgio dos Santos",
+      "Soumen Pradhan",
+      "Fabian Hartmann",
+      "Ovidiu Lipan",
+      "Sven Höfling",
+      "Victor Lopez-Richard"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Sequential Transmit Covariance Optimization for Wireless Tracking Exploiting Observation History",
+    "url": "https://arxiv.org/abs/2609.10124v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "This paper studies a multiple-input multiple-output (MIMO) radar tracking system, where a multi-antenna base station (BS) aims to track the location of a moving target over multiple time slots based on the observed echo signals, initial prior probability density function (PDF) of the target state, and state evolution model. By exploiting the realized observation history in the past time slots, the BS sequentially updates the predictive state information and designs the transmit covariance matrix",
+    "authors": [
+      "Kaiyue Hou",
+      "Shuowen Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "AutoTrans: AI-Assisted Automatic Translation of Security Assertions for RISC-V Processors",
+    "url": "https://arxiv.org/abs/2609.10057v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "Reusing a set of verified security assertions across RISC-V processor targets remains one of the most expensive bottlenecks in hardware security verification. Manual translation takes hours per assertion. Raw LLM translation is fast but unreliable, introducing signal hallucination, where the model invents port names absent from the target RTL and produces outputs that may vary across model updates or even within the same model version. This paper presents AutoTrans, an automated framework that a",
+    "authors": [
+      "Sharjeel Imtiaz",
+      "Uljana Reinsalu",
+      "Tara Ghasempouri"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "quant-ph",
+    "title": "Accelerating A*-Based Algorithms for Decoding Quantum Low-Density Parity-Check Codes",
+    "url": "https://arxiv.org/abs/2609.10056v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "Quantum low-density parity-check (QLDPC) codes represent a promising approach for error correction in quantum computing. The recently proposed Tesseract decoder uses the A* search algorithm that guarantees finding the most likely error pattern. However, practical implementations of Tesseract often involve an extremely large graph, and the inherently sequential nature of the search results in high computational overhead and long runtime. To improve decoding efficiency, we propose a two-stage deco",
+    "authors": [
+      "Lamia Yous",
+      "Francisco Garcia Herrero",
+      "Mark F. Flanagan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "Analytic Gradients and Nonadiabatic Couplings for Device-Resident DMRG-QD-NEVPT2 Through Conical Intersections on a Consumer GPU",
+    "url": "https://arxiv.org/abs/2609.09990v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "Nonadiabatic dynamics through a conical intersection needs both static and dynamic correlation and, at every geometry, an excited-state gradient and interstate nonadiabatic coupling (NACME); analytic multireference derivatives at this level have been cluster-scale. We report device-resident \\mbox{DMRG-QD-NEVPT2} with analytic derivatives, on B2PLYP double-hybrid Kohn--Sham orbitals: a density-matrix-renormalization-group reference supplies the static correlation, and quasi-degenerate NEVPT2 adds",
+    "authors": [
+      "Rubén Darío Guerrero"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Strong Impact of Halide Ordering on Structural Phase Transitions in Mixed Perovskites",
+    "url": "https://arxiv.org/abs/2609.09956v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "Mixed halide perovskites are highly versatile semiconductors with applications in photovoltaics, light-emitting diodes, and photodetectors. Understanding their thermodynamic phase behavior is central to guiding compositional design and improving device stability. Here, we train machine-learned interatomic potentials (MLIPs) on density functional theory reference data for CsxRb1-xPbBr3yI3-3y, CsxRb1-xPbBr3yCl3-3y, and CsxRb1-xPbCl3yI3-3y halide perovskites, enabling large-scale hybrid Monte Carlo",
+    "authors": [
+      "Felix Uddén",
+      "Erik Fransson",
+      "Julia Wiktor",
+      "Benjamin M. Gallant",
+      "Dominik J. Kubicki",
+      "Paul Erhart"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "AMEND: Audited Margins Enable Nonblocking Drops in GPU-PIM LLM Decoding",
+    "url": "https://arxiv.org/abs/2609.09823v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "Autoregressive large language model (LLM) decoding re-reads a growing key-value (KV) cache at every step, so long-context attention is bound by graphics processing unit (GPU) memory bandwidth. Block-sparse attention skips low-contribution KV blocks, but a selector that decides after the current query-key (QK) product, such as max-relative block thresholding (BLASST), still reads every K block, and a processing-in-memory (PIM) filter that decides from the current query places a serial PIM stage o",
+    "authors": [
+      "Zuxiong Tan",
+      "Will Wei-Jen Wang",
+      "Wei Shao",
+      "Ali Karkehabadi",
+      "Houman Homayoun",
+      "Avesta Sasan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution",
+    "url": "https://arxiv.org/abs/2609.09800v1",
+    "published_date": "2026-09-09",
+    "source": "arXiv",
+    "summary": "Serving a large language model (LLM) is limited by memory capacity. High-Bandwidth Flash (HBF) stacks NAND flash inside the accelerator package, one tier below high-bandwidth memory (HBM); the specification was published on August 3, 2026, and the first inference devices are expected to sample in early 2027. Decisions about capacity and data placement cannot wait for silicon. No existing method settles those decisions: a storage simulator replaying a recorded access sequence never executes the w",
+    "authors": [
+      "Yanpeng Hu",
+      "Yiwei Yang",
+      "Yuanwu Zhu",
+      "Yusheng Zheng",
+      "Wei Zhang",
+      "Andi Quinn"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.MS",
     "title": "Ozaki 2.5: Engineering the Deconstruction Path of fp64-Emulated Dense Matrix Multiplication on FP8 Tensor Cores",
     "url": "https://arxiv.org/abs/2609.09095v1",
