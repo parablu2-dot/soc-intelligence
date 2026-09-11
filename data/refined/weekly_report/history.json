@@ -1,42 +1,42 @@
 {
   "mobile_ap": {
-    "date": "2026-09-05",
-    "executive_summary": "Qualcomm is consolidating mobile AI inferencing through architectural integration: Adreno Neural Fusion embeds dedicated AI cores directly into the GPU fabric, achieving 40% power-efficiency gain over discrete compute paths. This substrate-level coupling at the GPU-AI boundary shifts competitive advantage from system-on-chip partitioning toward unified execution, positioning Qualcomm ahead of rivals still relying on separate neural accelerators for mobile workloads."
+    "date": "2026-09-12",
+    "executive_summary": "Mobile AP competitive surface is fragmenting along AI inference architecture and manufacturing partnership lines. Huawei's Kirin 9050 Pro operationalizes LogicFolding silicon-level optimization, Samsung courts both Snapdragon and in-house Exynos 2700 for S27 variants while partnering with Mistral AI on semiconductor engineering, and Qualcomm deepens data-center AI positioning through AWS collaboration—signaling a shift where mobile AI performance now trades against ecosystem lock-in and regional supply chain resilience rather than pure GPU-core density."
   },
   "hpc_datacenter": {
-    "date": "2026-09-05",
-    "executive_summary": "HPC datacenter competition is reshaping around geographic talent arbitrage and localized R&D footprints rather than pure chip architecture. NVIDIA, Samsung, Broadcom, and AMD are simultaneously expanding design centers across Vietnam, India, Taiwan, Japan, and the US, signaling a shift from centralized design to distributed, region-specific optimization—likely driven by regulatory pressure, AI customization demand, and semiconductor supply chain regionalization. This geographic dispersion fragments the traditional packaging and protocol integration work that once accrued value at centralized design hubs."
+    "date": "2026-09-12",
+    "executive_summary": "변화 없음"
   },
   "custom_soc": {
-    "date": "2026-09-05",
-    "executive_summary": "Nvidia's dominance in custom AI silicon remains structurally unchallenged despite growing hyperscaler custom-silicon initiatives; its $3.5B MediaTek investment signals aggressive lock-in at the interposer and reference-design layer to preempt competitive forking. Broadcom, Marvell, and Arm are gaining design-stage traction in custom datacenter workloads, but none have yet demonstrated production volume or cost-parity sufficient to displace Nvidia's installed-base advantage—the competitive arbitrage now sits at hardware-software co-optimization and supply-chain standardization, not raw compute."
+    "date": "2026-09-12",
+    "executive_summary": "Nvidia's 85% market grip persists as infrastructure moat, but the competitive surface is fragmenting at the interposer layer—Qualcomm's multi-generational Amazon deal and Google's claimed 50% TPU inference cost advantage signal hyperscalers are now willing to co-engineer silicon boundaries rather than merely accept Nvidia's reference designs. Broadcom, Realtek (3nm ASIC orders secured), and emerging players like HyperAccel/SEMIFIVE are capturing peripheral AI workloads (inference, transmission), but none yet threaten Nvidia's core training-to-inference stack integration or its installed-base lock-in at the hardware-software boundary."
   },
   "foundry": {
-    "date": "2026-09-05",
-    "executive_summary": "Foundry competitors are bifurcating on subsidy-backed capacity and technical differentiation. GlobalFoundries anchors U.S. onshoring via $300M DoC award for silicon photonics while securing post-quantum cryptography and RF/antenna packaging niches; Intel completes RAMP-C and pivots to 18A with advanced packaging at U.S. sites. South Korea's Honam region (Gwangju/Jeonnam) positions AI-semiconductor-energy convergence as alternative hub, betting on ESS demand (up to 1GW in third central contract) and 모두의AI infrastructure to pull downstream demand. The interface advantage now flows to whoever integrates packaging (GF's 9SW/SLATE, Intel's U.S. packaging alliance with Lens) with geopolitical supply resilience."
+    "date": "2026-09-12",
+    "executive_summary": "변화 없음"
   },
   "packaging": {
-    "date": "2026-09-05",
-    "executive_summary": "Packaging value concentration is shifting from standalone assembly vendors toward integrated chiplet ecosystems and regional supply-chain localization. SK hynix's Indiana groundbreaking signals HBM packaging moving away from Asia-centric sourcing; simultaneous advances in photonics-aware chiplet design (Semiconductor Engineering) and CMP slurry specialization (Qnity's Stackplane platform) indicate that competitive advantage now accrues at multi-layer chiplet interfaces rather than simple substrate bonding. India's Semicon 2.0 (₹1.27 lakh crore) and Duksan Hi-Metal's strategic technology status both target advanced packaging ecosystems, yet sustained equipment supply constraints (3–5 years per Applied Materials) may throttle localization gains."
+    "date": "2026-09-12",
+    "executive_summary": "변화 없음"
   },
   "cpo_optics": {
-    "date": "2026-09-05",
-    "executive_summary": "CPO (co-packaged optics) has transitioned from concept to production-path certainty this week, with TSMC publicly committing to mass production in H2 2027 and targeting >50% silicon photonics penetration by that date. The competitive lens shifts to the packaging integration boundary: TER, Credo, and emerging chiplets face pressure from mature players (CSCO, VRT) while thermal management and manufacturing yield become the critical gating factors for datacenter scale-out."
+    "date": "2026-09-12",
+    "executive_summary": "CPO production timelines and funding intensity sharply accelerate: Ayar Labs secured $650M in 2026 funding for manufacturing scale, TSMC leads a 30-firm silicon photonics alliance addressing AI power crisis, and MIT breakthroughs on wafer-scale photonics flexibility hint at lower-cost integration paths. The competitive frontier has shifted from packaging feasibility to capital availability and supply-chain orchestration; players without heavy venture/foundry backing (Ayar, Crealights) now race against established optical vendors (Coherent, VIAVI, Keysight) who leverage testing and measurement infrastructure to capture the integration boundary."
   },
   "dram": {
-    "date": "2026-09-05",
+    "date": "2026-09-12",
     "executive_summary": "변화 없음"
   },
   "nand": {
-    "date": "2026-09-05",
+    "date": "2026-09-12",
     "executive_summary": "변화 없음"
   },
   "hbm": {
-    "date": "2026-09-05",
-    "executive_summary": "변화 없음"
+    "date": "2026-09-12",
+    "executive_summary": "HBM supply concentration intensifies as Samsung redirects half its 4nm capacity to HBM4 production while SK hynix transitions to 1c DRAM process by 1Q27, effectively narrowing the qualified vendor base. AMD's supply constraint acknowledgment and price escalation across Chinese AI chipmakers (Huawei 950DT up 50%) signal tightening availability beyond 2026. Synaptics' EDA integration with Ansys targets chip-to-system design parity, but remains marginal to the core capacity constraint dominating competitive positioning."
   },
   "pmic": {
-    "date": "2026-09-05",
-    "executive_summary": "PMIC supply dynamics shifted materially as AI-driven capacity demand crowd-outs traditional mature-node (8-inch) fabs: SMIC and Hua Hong seized 8-inch allocation as TSMC/Samsung prioritize advanced nodes, while SMIC's record China revenue (+22% Q2) and gross margin recovery signals pricing power and utilization gains in commodity segments. However, US equipment export restrictions—now impacting SMIC fabrication—introduce regulatory supply friction that may cap sustained cost competitiveness."
+    "date": "2026-09-12",
+    "executive_summary": "SMIC's 40.6 billion yuan internal restructuring (SMIC North buyout) clears regulatory hurdles, consolidating 8-inch mature-node capacity under single entity to optimize fab utilization and cost structure amid AI-driven capacity crowdout. This consolidation signals SMIC's strategic pivot to lock supply leverage in commodity BCD segments, but regulatory friction from US export restrictions remains a structural cost headwind that could limit margin sustainability."
   }
 }
