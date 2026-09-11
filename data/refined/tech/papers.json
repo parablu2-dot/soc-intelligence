@@ -2,6 +2,426 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.str-el",
+    "title": "Effective Ionic Valence and Local Magnetic Moment in Kagome Superconductors",
+    "url": "https://arxiv.org/abs/2609.11927v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "In order to understand the unexpected similarity and the correlated behavior in kagome superconductor families AV$_3$Sb$_5$ (A = K, Rb, Cs) and ATi$_3$Bi$_5$ (A = Rb, Cs), we investigate the Hartree-scale local electronic structure of these systems. Our result indicates that V and Ti ions are both of 2+ valence such that the corresponding itinerant carrier densities are similar, and the difference in electron count is instead reflected in their quantum fluctuating ionic magnetic moments. However",
+    "authors": [
+      "Ruoshi Jiang",
+      "Zi-Jian Lang",
+      "Yuzki Oey",
+      "Andrea Capa Salinas",
+      "Stephen D. Wilson",
+      "Yongwei Li",
+      "Ilya Shipulin",
+      "Yiwen Zhang",
+      "Deng Hu",
+      "Zhiwei Wang",
+      "Hans-Henning Klauss",
+      "Zurab Guguchia",
+      "Vadim Grinenko",
+      "Wei Ku"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "AccelForge: Comprehensive Modeling and Co-Design Framework for AI Accelerators",
+    "url": "https://arxiv.org/abs/2609.11906v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "Tensor algebra workloads, of which deep neural networks are prominent examples, are energy-intensive workloads in modern datacenter and edge deployments, making accelerators necessary to achieve energy efficiency and high throughput. To quickly evaluate and iterate on accelerator designs, we need an accelerator modeling framework that captures salient attributes of devices, circuits, architectures, workloads, as well as optimizing the mapping of the workload onto the hardware.\n  In this paper, w",
+    "authors": [
+      "Tanner Andrulis",
+      "Michael Gilbert",
+      "Vivienne Sze",
+      "Joel S. Emer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CV",
+    "title": "3D Point Splatting for mmWave Radar Novel View Synthesis",
+    "url": "https://arxiv.org/abs/2609.11894v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "Solving novel view synthesis (NVS) for millimeter-wave (mmWave) radar requires a renderer that is physically faithful, complex-valued, and multi-viewpoint-tractable. No prior method achieves these three properties simultaneously. Differentiable Monte Carlo (MC) ray tracers implement the radar forward model directly with explicit material modeling and complex outputs, but do not scale to the multi-view optimization NVS demands. Optical-NVS ports of NeRF, hash grids, and 3D Gaussians train fast bu",
+    "authors": [
+      "Adnan Armouti",
+      "Yixuan Gao",
+      "Rajalakshmi Nandakumar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "High-Temperature ferromagnetism from site-selective filling in (Fe,Ni)$_{6-δ}$GeTe$_2$",
+    "url": "https://arxiv.org/abs/2609.11862v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "The discovery of high-temperature ferromagnetism in the metallic van der Waals (vdW) system Fe$_N$GeTe$_2$ has brought two-dimensional (2D) magnets into technologically relevant temperature scales. Specifically at N = 5, dilution of magnetic moments by nickel substitution counterintuitively achieves a record high Curie temperature of 478~K. Unraveling the origin of this nickel-substitution-induced enhancement is complicated by the compound's structural complexity, coexistent itinerant and local ",
+    "authors": [
+      "Tyler L. Werner",
+      "Jonathan T. Reichanadter",
+      "Xiang Chen",
+      "Pranab K. Nag",
+      "Luna Y. Liu",
+      "Yu-Tsun Shao",
+      "Hongrui Zhang",
+      "Mingyang Guo",
+      "Wenxin Li",
+      "Zhibo Kang",
+      "Han Wu",
+      "Makoto Hashimoto",
+      "Donghui Lu",
+      "Turgut Yilmaz",
+      "Elio Vescovo",
+      "Sung-Kwan Mo",
+      "Barat Achinuq",
+      "Alexei Fedorov",
+      "Jacob C. Ruff",
+      "Ming Yi",
+      "Qiong Ma",
+      "David A. Muller",
+      "Eduardo H. da Silva Neto",
+      "Robert J. Birgeneau",
+      "Jeffrey B. Neaton",
+      "Yu He"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.ET",
+    "title": "A Time-Based Readout for Vector-Matrix Multiplication in Fully Analog Memristive SNNs",
+    "url": "https://arxiv.org/abs/2609.11713v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "Artificial neural networks rely on vector-matrix multiplications (VMMs), whose implementation in von Neumann architectures is dominated by costly data movement between memory and processing units. Spiking neural networks (SNNs) mitigate this bottleneck by performing in-memory, analog VMMs using memristive crossbar arrays. However, conventional current-mode readout circuits incur significant area and power overhead.\n  This work proposes a fully analog readout architecture based on voltage-to-time",
+    "authors": [
+      "Elia Mateu-Barriendos",
+      "Álvaro Gómez-Pau",
+      "Josep Rius",
+      "Daniel Arumí",
+      "Rosa Rodríguez-Montañés",
+      "Salvador Manich"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.ET",
+    "title": "From Grid to Chip: Power Architecture, Stability, and Flexibility of AI Data Centers",
+    "url": "https://arxiv.org/abs/2609.11649v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "The rapid growth of artificial intelligence (AI) computing is transforming data centers into large, dynamic electrical loads. Their deployment is primarily constrained by energy availability and grid-connection capacity, which is further aggravated by the ability of power-delivery architectures, control systems, and computing workloads to operate reliably during fast grid disturbances. This article presents a technological perspective on AI data centers as grid-interactive computing systems. Fir",
+    "authors": [
+      "Yubo Song",
+      "Rui Kong",
+      "Takuro Umihara",
+      "Pooya Davari",
+      "Frede Blaabjerg",
+      "Subham Sahoo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "PHAT: PHotonic Accelerator for TFHE",
+    "url": "https://arxiv.org/abs/2609.11613v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "Fully Homomorphic Encryption (FHE) enables secure computation on encrypted data, making it a promising solution for privacy-preserving applications in the cloud. Among various FHE schemes, FHE over the Torus (TFHE) stands out due to its support for arbitrary operations. However, its high computation and communication overhead, particularly in the Fast Fourier Transform (FFT) operations required during bootstrapping, limits its practicality for real-world applications. Conventional electronic acc",
+    "authors": [
+      "Guowei Yang",
+      "Farbin Fayza",
+      "Beren Aydoğan",
+      "Carlos A. Ríos Ocampo",
+      "Ayse K. Coskun",
+      "Ajay Joshi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "Breaking Water at Graphene Defects",
+    "url": "https://arxiv.org/abs/2609.11602v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "Water dissociation at solid surfaces underpins processes ranging from corrosion and catalysis to electrochemistry and photovoltaics. Defects often serve as reactive sites for dissociation, yet how solvation influences water dissociation at such sites remains poorly understood. Here, we use state-of-the-art machine-learned interatomic potentials to explore water dissociation at defective graphene-water interfaces. We show that solvation qualitatively changes the reaction mechanism at a graphene s",
+    "authors": [
+      "Samuel G. H. Brookes",
+      "IniOluwa C. Popoola",
+      "Fabian Berger",
+      "Kara D. Fong",
+      "Angelos Michaelides",
+      "Christoph Schran"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "Entwine: Coordinating Tiled Computation and Fine-Grained Communication across GPUs",
+    "url": "https://arxiv.org/abs/2609.11562v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "Modern high-performance GPU computations partition tensors into tiles to exploit data reuse and parallelism. Individual tile computations complete earlier than the full tensor computation, creating opportunities to overlap computation and communication. However, a mismatch between computation and communication progress can limit these opportunities. Communication stalls when no data is ready, and may lag when data arrives in bursts. Communication can also slow computation by consuming shared res",
+    "authors": [
+      "Kai Ma",
+      "Quanfeng Lv",
+      "Jingguo Ge",
+      "Bowei Dai",
+      "Kefan Ruan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Bottom-up Synthesis of Metastable 2D Hexagonal Copper(I) Iodide on Monolayer and within Bilayer Graphene",
+    "url": "https://arxiv.org/abs/2609.11459v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "Copper(I) iodide (CuI) is a wide-bandgap semiconductor crystallizing in the 3D $γ$-phase under ambient conditions; its layered van der Waals bulk phase $β$-CuI is stable only between 643 and 673 K. The two-dimensional (2D) h-CuI form has been obtained via liquid-phase exfoliation of mechanochemically prepared precursors and via encapsulation between graphene sheets, whereas bottom-up growth of 2D h-CuI on open surfaces has not yet been demonstrated. Here, we report a vapor-phase synthesis of h-C",
+    "authors": [
+      "David Kaiser",
+      "Guobin Jia",
+      "Janis Köster",
+      "Sadegh Ghaderzadeh",
+      "Christian E. Halbig",
+      "Siegfried Eigler",
+      "Andrey Turchanin",
+      "Benjamin Dietzek-Ivanšić",
+      "Arkady V. Krasheninnikov",
+      "Jonathan Plentz",
+      "Elena Besley",
+      "Ute Kaiser"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Vacancy Order and Physical Properties of a Ternary Compound Fe0.68Pd0.80Te with an α-Fe1+xTe-Type Structure",
+    "url": "https://arxiv.org/abs/2609.11441v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "We report the identification and characterization of a new compound Fe0.68Pd0.80Te with an α-Fe1+xTe prototype structure. Different from the Fe-square net and minor occupancy of interstitial Fe-sites in Fe1+xTe, Fe0.68Pd0.80Te is featured by a Pdsquare net and near 68% occupancy of the corresponding interstitial Fe-sites. Furthermore, noncontact atomic force microscopy and X-ray diffraction provide evidence for the existence of a 3*3*3 Pd-vacancy order in this layered material. A spin-glass grou",
+    "authors": [
+      "Bingxian Shi",
+      "Manyu Wang",
+      "Chenglin Shang",
+      "Yanyan Geng",
+      "Yangyang Fan",
+      "Xiaoxiao Pei",
+      "Li Huang",
+      "Daye Xu",
+      "Juanjuan Liu",
+      "Jinchen Wang",
+      "Hongxia Zhang",
+      "Hongliang Wang",
+      "Lijie Hao",
+      "Rui Xu",
+      "Zhongyi Lu",
+      "Zhihai Cheng",
+      "Peng Cheng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Optimizing GEDI Simulator Configuration for European Temperate Forests",
+    "url": "https://arxiv.org/abs/2609.11440v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "Accurate estimation of aboveground biomass density is essential for quantifying forest carbon stocks. NASA's GEDI mission provides valuable canopy structure data, but its sparse sampling necessitates the use of simulators to calibrate biomass models at field inventory locations. The widely used simulator of Hancock et al. (2019) emulates GEDI waveforms from airborne LiDAR point clouds, yet it has never been validated over European temperate forests. Here, we compare approximately 9,500 pairs of ",
+    "authors": [
+      "Selim Behloul",
+      "Nikola Besic",
+      "Steven Hancock",
+      "Cedric Vega",
+      "Sylvie Durrieu",
+      "Jean-Pierre Renaud",
+      "Ibrahim Fayad",
+      "Philippe Ciais"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Influence of magnetic fields on the performance of spin-orbit torque magnetic random-access memory",
+    "url": "https://arxiv.org/abs/2609.11397v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "Spin-orbit torque magnetic random-access memory (SOT-MRAM) offers high speed, ultrahigh endurance, and compatibility with advanced semiconductor processes, making it a promising candidate for next-generation nonvolatile memory. However, intrinsic bias fields in magnetic tunnel junctions (MTJs), originating from reference-layer stray fields and interlayer coupling, cause asymmetric critical switching currents and increased energy consumption. Existing compensation approaches usually introduce add",
+    "authors": [
+      "Jiaxin Liu",
+      "Yuqing Zhou",
+      "Guoyi Shi",
+      "Kaiming Cai"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "PATTON: Enabling Commodity PIM for Production LLM Serving",
+    "url": "https://arxiv.org/abs/2609.11392v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "Processing-in-Memory (PIM) is promising for accelerating memory-bound decode attention, but attention acceleration alone is insufficient for production LLM serving, where engines dynamically allocate, populate, share, cache, and reclaim logical KV cache blocks. Supporting this lifecycle on commodity PIM requires efficient physical memory allocation, block-to-address mapping, and command generation. For the Value cache, these requirements create a fundamental conflict among GEMV efficiency, singl",
+    "authors": [
+      "Hangyeol Kim",
+      "Sanghyun Lee",
+      "Teokkyu Suh",
+      "Joo-Young Kim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Interface-Controlled Phase Stability in Polymorphic HfO$_2$ Revealed by Machine-Learning Atomistic Simulations",
+    "url": "https://arxiv.org/abs/2609.11307v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "HfO$_2$ exhibits rich polymorphism, and competition among different phases underpins many of its functional properties. Yet bulk free-energy relations alone cannot explain phase selection at mixed-phase boundaries, where interface orientation and structural continuity constrain collective rearrangements. Here, using machine-learning atomistic simulations and a Hf-centered local phase classification scheme, we show that crystallographic interface matching redirects phase competition and accessibl",
+    "authors": [
+      "Xudong Zhu",
+      "Junhong Li",
+      "Lixin He"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "A Two-Mirror Faceted Projection System for EUV Lithography",
+    "url": "https://arxiv.org/abs/2609.11299v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "We propose an all-reflective two-mirror projection system for extreme ultraviolet (EUV) lithography operating at exposure wavelengths of $13.5$~nm (Mo/Si) and $11.2$~nm (Ru/Be), delivering a fourfold ($4\\times$) demagnification of the periodic mask pattern at a numerical aperture approaching unity ($\\mathrm{NA}_{\\max} \\approx 0.993$). In contrast to conventional EUV projection objectives that incorporate 6--10 aspheric mirrors with an overall optical throughput of less than $15\\%$, the proposed ",
+    "authors": [
+      "Vasiliy A. Es'kin",
+      "Egor V. Ivanov",
+      "Olga V. Martynova"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Bio-inspired Learning and Decision-Making with Probabilistic In-Memory Computing Hardware: Part 2",
+    "url": "https://arxiv.org/abs/2609.11288v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "This report extends our previous work (Part 1), which introduced an energy-based model for learning and decision-making under uncertainty. The model leverages stochastic Langevin dynamics to continuously evolve approximate probability distributions over neuron states and model weights. However, as noted in Part 1 and confirmed through GPU-based implementations, large-scale probabilistic energy-based models of this nature face significant scalability challenges due to excessive execution latency.",
+    "authors": [
+      "Thomas Dalgaty",
+      "Eiji Kawasaki",
+      "Miguel de Prado",
+      "Tommaso Salvatori",
+      "Germain Haugou",
+      "Eric Flamand"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Exact Bayesian Tracking of Dynamic Network Topologies",
+    "url": "https://arxiv.org/abs/2609.11263v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "Tracking the temporal evolution of network topologies is a fundamental challenge in social networks, epidemiology, and sensor systems, among others. This paper develops an exact Bayesian tracker for unweighted, directed graphs using nodal signal observations. This framework yields the full posterior probability distribution over network states at each time step, naturally enabling uncertainty quantification, prediction, and principled decision-making. We model the network dynamics as a Markov pr",
+    "authors": [
+      "Victor M. Tenorio",
+      "Elvin Isufi",
+      "Geert Leus",
+      "Antonio G. Marques"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Enhancing charge stability of Ge quantum well heterostructures via SiGe layer composition engineering",
+    "url": "https://arxiv.org/abs/2609.11214v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "Composition modulation is a powerful technique for designing materials with tailored properties, fueling the development of advanced semiconductor devices. In this work, we have implemented this technique into Ge quantum well heterostructures, offering a promising avenue to address the critical challenge of charge stability in spin qubit devices. Harnessing the atomic-scale precision of molecular beam epitaxy, we have engineered the band structure of the SiGe top barrier via graded composition m",
+    "authors": [
+      "Ding-Ming Huang",
+      "Jun-Hang Liu",
+      "Han Gao",
+      "Jie-Yin Zhang",
+      "Jian-Huan Wang",
+      "Fang-Ze Liu",
+      "Xin-Yu Zhou",
+      "Yi Luo",
+      "Bin-Xiao Fu",
+      "Xiao-Fei Liu",
+      "Ji-Yin Wang",
+      "Jian-Jun Zhang",
+      "H. Q. Xu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "X-RACE: XAI-assisted Recurrent neural network Attribution for Channel Estimation",
+    "url": "https://arxiv.org/abs/2609.11211v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "Deep learning models, notably Long Short-Term Memory (LSTM), have demonstrated promising performance in channel estimation for high-mobility vehicular environments. However, their black-box nature and architectural overhead limit trustworthiness and efficiency. Classical explainable AI (XAI) methods rely on costly iterative processes, offering only input-level filtering without addressing architectural fine-tuning. To overcome these limitations, this paper proposes the XAI-assisted Recurrent neu",
+    "authors": [
+      "Abdul Karim Gizzini",
+      "Yahia Medjahdi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Interplay of spin-lattice and electronic coupling far above Neel ordering in 2D antiferromagnetic CrPS4 and its interface manifestation",
+    "url": "https://arxiv.org/abs/2609.11203v1",
+    "published_date": "2026-09-10",
+    "source": "arXiv",
+    "summary": "A short-range spin correlation driven, strongly intercoupled spin-phonon-electronic state far above TN (~38K) is identified in the low dimensional van der Waals antiferromagnet CrPS4. Temperature-dependent Raman spectroscopy reveals spin-phonon coupling persisting up to T*~120K, concomitant with local lattice distortion. The setting of vibronic progression in photoluminescence spectra suggests the strengthening of electron-phonon coupling around T*. Furthermore, both the electrical transport and",
+    "authors": [
+      "Divya Jangra",
+      "Binoy Krishna De",
+      "Mukesh Kumar Dasoundhi",
+      "Sourav Chowdhury",
+      "Pragati Sharma",
+      "Kartick Biswas",
+      "Arup Basak",
+      "Dheeraj Kumar Gupta",
+      "Koushik chakraborty",
+      "Praveen Kumar Velpula",
+      "Pavan Nukala",
+      "U. Chandni",
+      "Arvind Kumar yogi",
+      "Mukul Gupta",
+      "Markus Hucker",
+      "Vasant G. Sathe"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.PF",
     "title": "PASCAL: A Phase-Aware Shared-Cache Model for Parallel Scans",
     "url": "https://arxiv.org/abs/2609.10515v1",
