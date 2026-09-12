@@ -1,262 +1,86 @@
 {
-  "date": "2026-09-11",
-  "generated_at": "2026-09-11T22:24:40.355565+00:00",
+  "date": "2026-09-12",
+  "generated_at": "2026-09-12T22:03:10.393736+00:00",
   "sectors": {
-    "mobile_ap": {
-      "sector": "Mobile AP",
-      "date": "2026-09-11",
-      "item_count": 2,
-      "generated_at": "2026-09-11T22:24:40.354875+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "Qualcomm dominates mobile chip design through its established position in the sector. Samsung has cleared technical hurdles for manufacturing Qualcomm's 2nm chips but negotiations are stalled over pricing agreements.",
-          "key_facts": [
-            "Qualcomm dominates mobile chip design",
-            "Samsung passed technical requirements for Qualcomm 2nm manufacturing",
-            "Price disagreement blocking 2nm chip deal"
-          ],
-          "implications": [
-            {
-              "keyword": "Samsung 2nm Capacity",
-              "text": "Technical validation of Samsung's 2nm process is complete, but commercial deployment remains uncertain pending pricing resolution"
-            },
-            {
-              "keyword": "Qualcomm Sourcing",
-              "text": "Unable to secure alternative 2nm capacity at acceptable cost, creating procurement risk for next-generation flagship SoCs"
-            }
-          ],
-          "counterpoint": "Samsung's technical capability does not guarantee commercial success if pricing remains uncompetitive against TSMC alternatives."
-        },
-        "en": {
-          "executive_summary": "Qualcomm dominates mobile chip design through its established position in the sector. Samsung has cleared technical hurdles for manufacturing Qualcomm's 2nm chips but negotiations are stalled over pricing agreements.",
-          "key_facts": [
-            "Qualcomm dominates mobile chip design",
-            "Samsung passed technical requirements for Qualcomm 2nm manufacturing",
-            "Price disagreement blocking 2nm chip deal"
-          ],
-          "implications": [
-            {
-              "keyword": "Samsung 2nm Capacity",
-              "text": "Technical validation of Samsung's 2nm process is complete, but commercial deployment remains uncertain pending pricing resolution"
-            },
-            {
-              "keyword": "Qualcomm Sourcing",
-              "text": "Unable to secure alternative 2nm capacity at acceptable cost, creating procurement risk for next-generation flagship SoCs"
-            }
-          ],
-          "counterpoint": "Samsung's technical capability does not guarantee commercial success if pricing remains uncompetitive against TSMC alternatives."
-        }
-      }
-    },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-09-11",
-      "item_count": 2,
-      "generated_at": "2026-09-11T22:24:40.354875+00:00",
+      "date": "2026-09-12",
+      "item_count": 4,
+      "generated_at": "2026-09-12T22:03:10.393356+00:00",
       "content": {
         "ko": {
-          "executive_summary": "South Korean AI chip startup HyperExcel raised ₩200 billion ($148.2 million) in Series B funding, achieving ₩800 billion valuation with Krafton leading ₩50 billion of the investment. Market focus remains on semiconductor stocks benefiting from accelerating AI demand.",
+          "executive_summary": "대만 반도체 산업이 월 47,000명의 인재 부족 위기에 직면하고 있으며, SK하이닉스를 포함한 업체들이 채용 기준을 완화하고 AI 기반 채용 방식 도입으로 대응하고 있다. 반도체 생산 확대에 따른 인력 수급 긴장이 심화되는 상황이다.",
           "key_facts": [
-            "HyperExcel Series B: ₩200 billion ($148.2 million)",
-            "HyperExcel post-money valuation: ₩800 billion",
-            "Krafton investment: ₩50 billion",
-            "South Korea-based AI chip startup"
+            "대만 월간 인재 부족: 47,000명",
+            "SK하이닉스: AI 활용 경험 기반 채용 전환",
+            "SK하이닉스: 신입·경력 전방위 인재 확보 추진"
           ],
           "implications": [
             {
-              "keyword": "AI Chip Ecosystem Expansion",
-              "text": "Korean venture backing of HyperExcel signals regional diversification of AI accelerator design beyond NVIDIA dominance"
+              "keyword": "인력 수급",
+              "text": "반도체 산업의 급속한 확장으로 인한 구조적 인재 부족이 심화되고 있으며, 채용 기준 완화와 AI 기반 채용 프로세스 혁신이 필수적인 대응 수단"
             },
             {
-              "keyword": "Gaming-Semiconductor Convergence",
-              "text": "Krafton's investment links gaming infrastructure to AI compute, suggesting custom silicon demand from content delivery and simulation workloads"
+              "keyword": "산업 역량",
+              "text": "대만 반도체 제조 역량 확대가 인력 제약에 의해 제한될 수 있으며, 경험 없는 신규 인력의 대량 유입으로 인한 생산성 및 품질 관리 리스크"
+            },
+            {
+              "keyword": "채용 혁신",
+              "text": "전공 제한 철폐와 AI 기반 평가 도입으로 채용 시스템이 재편되고 있으며, 이는 새로운 인재 발굴 통로 개설의 의미"
             }
           ],
-          "counterpoint": "Series B funding at this valuation stage indicates limited commercial traction compared to established AI chip vendors."
+          "counterpoint": "채용 기준 완화가 대규모 인력 수급을 가능하게 할 수 있으나, 미숙한 인력의 급증으로 인한 교육 부담과 생산 공정의 안정성 저하 위험이 존재한다."
         },
         "en": {
-          "executive_summary": "South Korean AI chip startup HyperExcel raised ₩200 billion ($148.2 million) in Series B funding, achieving ₩800 billion valuation with Krafton leading ₩50 billion of the investment. Market focus remains on semiconductor stocks benefiting from accelerating AI demand.",
+          "executive_summary": "Taiwan's semiconductor industry faces a critical talent shortage of 47,000 workers monthly, with companies including SK Hynix responding by relaxing hiring standards and adopting AI-based recruitment methods. Labor supply tensions are intensifying as semiconductor production expands.",
           "key_facts": [
-            "HyperExcel Series B: ₩200 billion ($148.2 million)",
-            "HyperExcel post-money valuation: ₩800 billion",
-            "Krafton investment: ₩50 billion",
-            "South Korea-based AI chip startup"
+            "Taiwan monthly talent shortage: 47,000 workers",
+            "SK Hynix: Transition to AI-driven recruitment based on practical experience",
+            "SK Hynix: Pursuing talent acquisition across all levels, from entry-level to experienced professionals"
           ],
           "implications": [
             {
-              "keyword": "AI Chip Ecosystem Expansion",
-              "text": "Korean venture backing of HyperExcel signals regional diversification of AI accelerator design beyond NVIDIA dominance"
+              "keyword": "Labor Supply",
+              "text": "Structural talent shortages resulting from rapid semiconductor industry expansion are intensifying, and relaxed hiring standards and AI-based recruitment process innovation have become essential response measures."
             },
             {
-              "keyword": "Gaming-Semiconductor Convergence",
-              "text": "Krafton's investment links gaming infrastructure to AI compute, suggesting custom silicon demand from content delivery and simulation workloads"
+              "keyword": "Industry Capacity",
+              "text": "Taiwan's semiconductor manufacturing capacity expansion may be constrained by labor limitations, and large-scale influx of inexperienced new workers creates risks to productivity and quality control."
+            },
+            {
+              "keyword": "Recruitment Innovation",
+              "text": "The hiring system is being restructured through removal of major restrictions and adoption of AI-based evaluation, opening new channels for talent discovery."
             }
           ],
-          "counterpoint": "Series B funding at this valuation stage indicates limited commercial traction compared to established AI chip vendors."
+          "counterpoint": "Relaxed hiring standards may enable large-scale workforce procurement, but risks exist from surging numbers of inexperienced workers increasing training burden and reducing production process stability."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-09-11",
-      "item_count": 14,
-      "generated_at": "2026-09-11T22:24:40.354875+00:00",
+      "date": "2026-09-12",
+      "item_count": 6,
+      "generated_at": "2026-09-12T22:03:10.393356+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Meta Iris AI chip enters production targeting 14GW capacity by 2027, while Broadcom reports AI chip sales tripling amid growing custom silicon demand from hyperscalers. Nvidia, Qualcomm, Marvell, and Waymo are all expanding custom silicon portfolios, with Qualcomm securing a 10-year AWS deal and Marvell targeting a $30B optical networking opportunity.",
-          "key_facts": [
-            "Meta Iris AI chip: production phase, 14GW target by 2027",
-            "Broadcom AI chip sales: more than 3x growth",
-            "Fabless top-10 firms: 73% Q2 2026 revenue surge",
-            "Waymo: custom 5nm autonomous vehicle chip",
-            "Qualcomm: 10-year AWS AI chip deal",
-            "Marvell: $30B optical networking opportunity",
-            "Marvell: $270 Piper Sandler price target on AI custom silicon",
-            "Defiance AIFR ETF: first U.S.-listed foundry-focused ETF",
-            "TSMC 1.4nm: pilot production possible April 2027"
-          ],
-          "implications": [
-            {
-              "keyword": "Hyperscaler Vertical Integration",
-              "text": "Meta, Amazon, and autonomous vehicle makers shifting to in-house silicon, reducing reliance on merchant foundries and increasing custom SOC demand"
-            },
-            {
-              "keyword": "AI Silicon Supply Diversification",
-              "text": "Broadcom, Marvell, Qualcomm, and Nvidia competing directly in custom silicon, fragmenting the unified NVIDIA market position"
-            },
-            {
-              "keyword": "Optical Interconnect Bottleneck",
-              "text": "Marvell's focus on $30B optical networking reflects AI datacenter constraints shifting from compute to intra-cluster fabric and I/O"
-            },
-            {
-              "keyword": "Process Node Competition",
-              "text": "TSMC 1.4nm ahead of schedule reinforces foundry roadmap pressure; Samsung 2nm stuck on pricing, limiting dual sourcing options"
-            }
-          ],
-          "counterpoint": "Rapid fabless revenue growth (73%) may reflect cyclical capex spending rather than sustained demand, with risk of correction if AI infrastructure investment plateaus."
-        },
-        "en": {
-          "executive_summary": "Meta Iris AI chip enters production targeting 14GW capacity by 2027, while Broadcom reports AI chip sales tripling amid growing custom silicon demand from hyperscalers. Nvidia, Qualcomm, Marvell, and Waymo are all expanding custom silicon portfolios, with Qualcomm securing a 10-year AWS deal and Marvell targeting a $30B optical networking opportunity.",
-          "key_facts": [
-            "Meta Iris AI chip: production phase, 14GW target by 2027",
-            "Broadcom AI chip sales: more than 3x growth",
-            "Fabless top-10 firms: 73% Q2 2026 revenue surge",
-            "Waymo: custom 5nm autonomous vehicle chip",
-            "Qualcomm: 10-year AWS AI chip deal",
-            "Marvell: $30B optical networking opportunity",
-            "Marvell: $270 Piper Sandler price target on AI custom silicon",
-            "Defiance AIFR ETF: first U.S.-listed foundry-focused ETF",
-            "TSMC 1.4nm: pilot production possible April 2027"
-          ],
-          "implications": [
-            {
-              "keyword": "Hyperscaler Vertical Integration",
-              "text": "Meta, Amazon, and autonomous vehicle makers shifting to in-house silicon, reducing reliance on merchant foundries and increasing custom SOC demand"
-            },
-            {
-              "keyword": "AI Silicon Supply Diversification",
-              "text": "Broadcom, Marvell, Qualcomm, and Nvidia competing directly in custom silicon, fragmenting the unified NVIDIA market position"
-            },
-            {
-              "keyword": "Optical Interconnect Bottleneck",
-              "text": "Marvell's focus on $30B optical networking reflects AI datacenter constraints shifting from compute to intra-cluster fabric and I/O"
-            },
-            {
-              "keyword": "Process Node Competition",
-              "text": "TSMC 1.4nm ahead of schedule reinforces foundry roadmap pressure; Samsung 2nm stuck on pricing, limiting dual sourcing options"
-            }
-          ],
-          "counterpoint": "Rapid fabless revenue growth (73%) may reflect cyclical capex spending rather than sustained demand, with risk of correction if AI infrastructure investment plateaus."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-09-11",
-      "item_count": 14,
-      "generated_at": "2026-09-11T22:24:40.354875+00:00",
+      "date": "2026-09-12",
+      "item_count": 5,
+      "generated_at": "2026-09-12T22:03:10.393356+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Samsung HBM market share projected to reach 40% by Q4 2026 with HBM4 sales tripling in Q3; 2nm process yield improvements supporting potential foundry profitability turnaround. Samsung-Qualcomm 2nm deal remains stalled over pricing despite technical validation, while TSMC 1.4nm pilot production may begin April 2027. Huawei challenged NVIDIA and Broadcom with 7.2Tbps near-packaged optics, and Samsung-CXMT jointly supply LPDDR5X for Chinese AI phones.",
-          "key_facts": [
-            "Samsung HBM Q2 market share: 33%",
-            "Samsung HBM Q4 2026 projected: 40%",
-            "Samsung HBM4 Q3 sales growth: 3x+ YoY",
-            "Samsung 2nm deal: pricing disagreement stalling Qualcomm orders",
-            "Samsung 2nm deal potential slip: 2027",
-            "TSMC 1.4nm pilot: possible April 2027",
-            "Huawei near-packaged optics: 7.2Tbps",
-            "Samsung-CXMT: LPDDR5X supply for Chinese AI phones",
-            "Samsung Foundry-Cadence: 2nm AI/datacenter design platform partnership"
-          ],
-          "implications": [
-            {
-              "keyword": "Samsung Memory-Foundry Leverage",
-              "text": "HBM market share surge combined with 2nm yield gains positions Samsung as dual threat to TSMC, but pricing disputes suggest cost structure challenges"
-            },
-            {
-              "keyword": "2nm Pricing Pressure",
-              "text": "Qualcomm-Samsung disagreement indicates 2nm economics remain above customer willingness-to-pay; TSMC maintains pricing power while process stabilizes"
-            },
-            {
-              "keyword": "Advanced Optics Arms Race",
-              "text": "Huawei 7.2Tbps module breaks NVIDIA-Broadcom CPO monopoly, signaling Chinese semiconductor ecosystem acceleration in AI interconnect"
-            },
-            {
-              "keyword": "Chinese AI Supply Chain Localization",
-              "text": "Samsung-CXMT LPDDR5X supply to Chinese AI phones demonstrates memory tier expansion for domestic flagship chips"
-            },
-            {
-              "keyword": "TSMC 1.4nm Acceleration",
-              "text": "Early 1.4nm pilot production maintains TSMC roadmap leadership and limits Samsung differentiation window for next-gen nodes"
-            }
-          ],
-          "counterpoint": "Samsung's rising HBM share and 2nm yield improvements may not translate to foundry profitability if customer volume commitments remain contingent on price concessions."
-        },
-        "en": {
-          "executive_summary": "Samsung HBM market share projected to reach 40% by Q4 2026 with HBM4 sales tripling in Q3; 2nm process yield improvements supporting potential foundry profitability turnaround. Samsung-Qualcomm 2nm deal remains stalled over pricing despite technical validation, while TSMC 1.4nm pilot production may begin April 2027. Huawei challenged NVIDIA and Broadcom with 7.2Tbps near-packaged optics, and Samsung-CXMT jointly supply LPDDR5X for Chinese AI phones.",
-          "key_facts": [
-            "Samsung HBM Q2 market share: 33%",
-            "Samsung HBM Q4 2026 projected: 40%",
-            "Samsung HBM4 Q3 sales growth: 3x+ YoY",
-            "Samsung 2nm deal: pricing disagreement stalling Qualcomm orders",
-            "Samsung 2nm deal potential slip: 2027",
-            "TSMC 1.4nm pilot: possible April 2027",
-            "Huawei near-packaged optics: 7.2Tbps",
-            "Samsung-CXMT: LPDDR5X supply for Chinese AI phones",
-            "Samsung Foundry-Cadence: 2nm AI/datacenter design platform partnership"
-          ],
-          "implications": [
-            {
-              "keyword": "Samsung Memory-Foundry Leverage",
-              "text": "HBM market share surge combined with 2nm yield gains positions Samsung as dual threat to TSMC, but pricing disputes suggest cost structure challenges"
-            },
-            {
-              "keyword": "2nm Pricing Pressure",
-              "text": "Qualcomm-Samsung disagreement indicates 2nm economics remain above customer willingness-to-pay; TSMC maintains pricing power while process stabilizes"
-            },
-            {
-              "keyword": "Advanced Optics Arms Race",
-              "text": "Huawei 7.2Tbps module breaks NVIDIA-Broadcom CPO monopoly, signaling Chinese semiconductor ecosystem acceleration in AI interconnect"
-            },
-            {
-              "keyword": "Chinese AI Supply Chain Localization",
-              "text": "Samsung-CXMT LPDDR5X supply to Chinese AI phones demonstrates memory tier expansion for domestic flagship chips"
-            },
-            {
-              "keyword": "TSMC 1.4nm Acceleration",
-              "text": "Early 1.4nm pilot production maintains TSMC roadmap leadership and limits Samsung differentiation window for next-gen nodes"
-            }
-          ],
-          "counterpoint": "Samsung's rising HBM share and 2nm yield improvements may not translate to foundry profitability if customer volume commitments remain contingent on price concessions."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-09-11",
-      "item_count": 20,
-      "generated_at": "2026-09-11T22:24:40.354875+00:00",
+      "date": "2026-09-12",
+      "item_count": 10,
+      "generated_at": "2026-09-12T22:03:10.393356+00:00",
       "content": {
         "ko": {},
         "en": {}

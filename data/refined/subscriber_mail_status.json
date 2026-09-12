@@ -1,19 +1,19 @@
 {
-  "checked_at": "2026-09-11T22:24:42.895596+00:00",
+  "checked_at": "2026-09-12T22:03:13.201802+00:00",
   "status": "sent_zero",
-  "detail": "오늘(sat)을 수신일로 둔 구독자 없음",
+  "detail": "오늘(sun)을 수신일로 둔 구독자 없음",
   "sent": 0,
   "skipped": 2,
   "per_subscriber": [
     {
       "customer_id": "test-op",
       "result": "not_delivery_day",
-      "note": "오늘(sat)은 이 구독자의 수신 요일이 아님 (delivery_days=기본값(평일 전체))"
+      "note": "오늘(sun)은 이 구독자의 수신 요일이 아님 (delivery_days=기본값(평일 전체))"
     },
     {
       "customer_id": "customer_id",
       "result": "not_delivery_day",
-      "note": "오늘(sat)은 이 구독자의 수신 요일이 아님 (delivery_days=기본값(평일 전체))"
+      "note": "오늘(sun)은 이 구독자의 수신 요일이 아님 (delivery_days=기본값(평일 전체))"
     }
   ]
 }
