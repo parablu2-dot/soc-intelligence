@@ -1,224 +1,100 @@
 {
-  "date": "2026-09-14",
-  "generated_at": "2026-09-14T23:25:26.034595+00:00",
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T22:53:20.314206+00:00",
   "sectors": {
-    "hpc_datacenter": {
-      "sector": "HPC·Datacenter",
-      "date": "2026-09-14",
-      "item_count": 7,
-      "generated_at": "2026-09-14T23:25:26.034042+00:00",
+    "mobile_ap": {
+      "sector": "Mobile AP",
+      "date": "2026-09-15",
+      "item_count": 9,
+      "generated_at": "2026-09-15T22:53:20.313247+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Vendors are making aggressive talent moves to support AI and GPU roadmaps: Intel is recruiting game developers ahead of Alchemist GPU launch and poaching AMD talent, while NVIDIA is hiring for Linux gaming optimization. SK하이닉스 has reformed hiring practices to focus on AI experience over credentials. Meanwhile, AI chip stocks are experiencing sharp selloffs.",
+          "executive_summary": "MediaTek launched the Dimensity 9600 Pro, a 2nm flagship mobile chip manufactured by TSMC that narrowly beats Qualcomm's A20 Pro in multi-core performance and cuts power consumption by 61%. The new SoC targets the premium smartphone market, particularly in devices like the Oppo Find X10 Pro Max, while Qualcomm is reconsidering Samsung as a potential foundry partner for next-generation Snapdragon chips.",
           "key_facts": [
-            "Perplexity Portable Computer now available on Windows with NVIDIA RTX acceleration",
-            "SK하이닉스 eliminated education and age restrictions for new graduate hiring",
-            "Intel launching Alchemist gaming GPU with targeted developer recruitment",
-            "NVIDIA hiring for Linux gaming performance optimization",
-            "AI chip stocks facing significant selling pressure"
+            "MediaTek Dimensity 9600 Pro uses TSMC 2nm process",
+            "Dimensity 9600 Pro narrowly beats A20 Pro in multi-core performance",
+            "Dimensity 9600 Pro reduces power consumption by 61%",
+            "Oppo Find X10 Pro Max integrates Dimensity 9600 Pro",
+            "Qualcomm reconsidering Samsung as foundry for next-gen Snapdragon"
           ],
           "implications": [
             {
-              "keyword": "GPU Ecosystem Race",
-              "text": "Intel's aggressive game developer hiring and NVIDIA's Linux gaming focus signal intensifying competition for gaming and edge AI workloads beyond traditional data center segments."
+              "keyword": "Competitive Positioning",
+              "text": "MediaTek narrows the flagship performance gap with Qualcomm, leveraging early 2nm access to compete in premium segment."
             },
             {
-              "keyword": "Talent War Escalation",
-              "text": "Competitors recruiting from rival foundries (Intel/AMD poaching) and competing on AI skills rather than credentials reflects critical shortage of GPU-savvy engineers in high-demand market."
+              "keyword": "Foundry Strategy",
+              "text": "Qualcomm exploring Samsung as alternative to primary foundry partnerships, signaling diversification amid supply chain concerns."
             },
             {
-              "keyword": "Valuation Pressure",
-              "text": "AI chip stock selloffs despite robust hiring suggest market concerns about demand sustainability or competitive landscape consolidation."
+              "keyword": "TSMC Leadership",
+              "text": "TSMC 2nm advantage enables MediaTek to achieve first-to-market flagship positioning before Qualcomm competitors."
             }
           ],
-          "counterpoint": "Headlines focus on hiring and product launches but lack specifics on engineering pipeline success rates or actual developer adoption metrics."
+          "counterpoint": "Dimensity 9500 performance scores were lowered by 8.5%, raising questions about benchmark credibility in marketing materials."
         },
         "en": {
-          "executive_summary": "Vendors are making aggressive talent moves to support AI and GPU roadmaps: Intel is recruiting game developers ahead of Alchemist GPU launch and poaching AMD talent, while NVIDIA is hiring for Linux gaming optimization. SK Hynix has reformed hiring practices to focus on AI experience over credentials. Meanwhile, AI chip stocks are experiencing sharp selloffs.",
+          "executive_summary": "MediaTek launched the Dimensity 9600 Pro, a 2nm flagship mobile chip manufactured by TSMC that narrowly beats Qualcomm's A20 Pro in multi-core performance and cuts power consumption by 61%. The new SoC targets the premium smartphone market, particularly in devices like the Oppo Find X10 Pro Max, while Qualcomm is reconsidering Samsung as a potential foundry partner for next-generation Snapdragon chips.",
           "key_facts": [
-            "Perplexity Portable Computer now available on Windows with NVIDIA RTX acceleration",
-            "SK Hynix eliminated education and age restrictions for new graduate hiring",
-            "Intel launching Alchemist gaming GPU with targeted developer recruitment",
-            "NVIDIA hiring for Linux gaming performance optimization",
-            "AI chip stocks facing significant selling pressure"
+            "MediaTek Dimensity 9600 Pro uses TSMC 2nm process",
+            "Dimensity 9600 Pro narrowly beats A20 Pro in multi-core performance",
+            "Dimensity 9600 Pro reduces power consumption by 61%",
+            "Oppo Find X10 Pro Max integrates Dimensity 9600 Pro",
+            "Qualcomm reconsidering Samsung as foundry for next-gen Snapdragon"
           ],
           "implications": [
             {
-              "keyword": "GPU Ecosystem Race",
-              "text": "Intel's aggressive game developer hiring and NVIDIA's Linux gaming focus signal intensifying competition for gaming and edge AI workloads beyond traditional data center segments."
+              "keyword": "Competitive Positioning",
+              "text": "MediaTek narrows the flagship performance gap with Qualcomm, leveraging early 2nm access to compete in premium segment."
             },
             {
-              "keyword": "Talent War Escalation",
-              "text": "Competitors recruiting from rival foundries (Intel/AMD poaching) and competing on AI skills rather than credentials reflects critical shortage of GPU-savvy engineers in high-demand market."
+              "keyword": "Foundry Strategy",
+              "text": "Qualcomm exploring Samsung as alternative to primary foundry partnerships, signaling diversification amid supply chain concerns."
             },
             {
-              "keyword": "Valuation Pressure",
-              "text": "AI chip stock selloffs despite robust hiring suggest market concerns about demand sustainability or competitive landscape consolidation."
+              "keyword": "TSMC Leadership",
+              "text": "TSMC 2nm advantage enables MediaTek to achieve first-to-market flagship positioning before Qualcomm competitors."
             }
           ],
-          "counterpoint": "Headlines focus on hiring and product launches but lack specifics on engineering pipeline success rates or actual developer adoption metrics."
+          "counterpoint": "Dimensity 9500 performance scores were lowered by 8.5%, raising questions about benchmark credibility in marketing materials."
         }
+      }
+    },
+    "hpc_datacenter": {
+      "sector": "HPC·Datacenter",
+      "date": "2026-09-15",
+      "item_count": 9,
+      "generated_at": "2026-09-15T22:53:20.313247+00:00",
+      "content": {
+        "ko": {},
+        "en": {}
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-09-14",
-      "item_count": 14,
-      "generated_at": "2026-09-14T23:25:26.034042+00:00",
+      "date": "2026-09-15",
+      "item_count": 19,
+      "generated_at": "2026-09-15T22:53:20.313247+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Custom chip design and ASIC adoption are accelerating across AI infrastructure, with startups and established players showcasing advanced design tools, multi-agent AI platforms, and next-generation silicon photonics capabilities. Google TPU economics show 1-year payback, strengthening the case for custom silicon; Blackstone plans major investment in Google AI chips.",
-          "key_facts": [
-            "Ninth Wave built multi-agent AI assistant on Amazon Bedrock for finance onboarding",
-            "Alchip Technologies showcasing advanced ASIC design at AI Infra Summit 2026",
-            "Lorentz Solution and NVIDIA jointly presenting 3D EM extraction for ultra-high-speed silicon photonics at TSMC OIP 2026",
-            "Cognichip launched ACI Enterprise full-stack intelligence infrastructure for chip design",
-            "Google TPU payback period: 1 year; Bank of America projects Marvell 55% upside on ASIC/optical interconnect growth",
-            "QBit Semiconductor QB88XX series targets physical AI and drone markets with integrated robot control",
-            "Blackstone planning tens of billions investment in Google AI chips"
-          ],
-          "implications": [
-            {
-              "keyword": "ASIC Economics Inflection",
-              "text": "1-year TPU payback combined with Blackstone's multi-billion investment signals ASIC/custom silicon has crossed profitability threshold, validating hyperscaler internal fab strategies."
-            },
-            {
-              "keyword": "Design Tool Consolidation",
-              "text": "Emergence of full-stack design intelligence (Cognichip, Lorentz/NVIDIA) and cloud-native simulation (Amazon Bedrock) are lowering barriers for design-centric startups competing with traditional IDMs."
-            },
-            {
-              "keyword": "Silicon Photonics & Optical I/O",
-              "text": "TSMC OIP presentations and Marvell analyst support highlight optical interconnect as critical differentiator for next-gen AI infrastructure, driving new capability requirements in design and verification."
-            },
-            {
-              "keyword": "Emerging Domain-Specific Silicon",
-              "text": "QBit's robot control silicon and Positron AI's inference acceleration chips show fragmentation into specialized markets beyond general-purpose AI, opening new ASIC addressable spaces."
-            }
-          ],
-          "counterpoint": "Blackstone and analyst projections lack detail on actual capital deployment timeline and competitive response from incumbent ASIC providers."
-        },
-        "en": {
-          "executive_summary": "Custom chip design and ASIC adoption are accelerating across AI infrastructure, with startups and established players showcasing advanced design tools, multi-agent AI platforms, and next-generation silicon photonics capabilities. Google TPU economics show 1-year payback, strengthening the case for custom silicon; Blackstone plans major investment in Google AI chips.",
-          "key_facts": [
-            "Ninth Wave built multi-agent AI assistant on Amazon Bedrock for finance onboarding",
-            "Alchip Technologies showcasing advanced ASIC design at AI Infra Summit 2026",
-            "Lorentz Solution and NVIDIA jointly presenting 3D EM extraction for ultra-high-speed silicon photonics at TSMC OIP 2026",
-            "Cognichip launched ACI Enterprise full-stack intelligence infrastructure for chip design",
-            "Google TPU payback period: 1 year; Bank of America projects Marvell 55% upside on ASIC/optical interconnect growth",
-            "QBit Semiconductor QB88XX series targets physical AI and drone markets with integrated robot control",
-            "Blackstone planning tens of billions investment in Google AI chips"
-          ],
-          "implications": [
-            {
-              "keyword": "ASIC Economics Inflection",
-              "text": "1-year TPU payback combined with Blackstone's multi-billion investment signals ASIC/custom silicon has crossed profitability threshold, validating hyperscaler internal fab strategies."
-            },
-            {
-              "keyword": "Design Tool Consolidation",
-              "text": "Emergence of full-stack design intelligence (Cognichip, Lorentz/NVIDIA) and cloud-native simulation (Amazon Bedrock) are lowering barriers for design-centric startups competing with traditional IDMs."
-            },
-            {
-              "keyword": "Silicon Photonics & Optical I/O",
-              "text": "TSMC OIP presentations and Marvell analyst support highlight optical interconnect as critical differentiator for next-gen AI infrastructure, driving new capability requirements in design and verification."
-            },
-            {
-              "keyword": "Emerging Domain-Specific Silicon",
-              "text": "QBit's robot control silicon and Positron AI's inference acceleration chips show fragmentation into specialized markets beyond general-purpose AI, opening new ASIC addressable spaces."
-            }
-          ],
-          "counterpoint": "Blackstone and analyst projections lack detail on actual capital deployment timeline and competitive response from incumbent ASIC providers."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-09-14",
-      "item_count": 21,
-      "generated_at": "2026-09-14T23:25:26.034042+00:00",
+      "date": "2026-09-15",
+      "item_count": 22,
+      "generated_at": "2026-09-15T22:53:20.313247+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "TSMC is scaling 2nm and 3nm capacity aggressively (22% 2nm boost, 16%+ 3nm boost by mid-2027) and doubling CoWoS advanced packaging by 2028 to meet surging AI demand. Samsung and SK하이닉스 are diversifying supplier relationships and technology portfolios; Samsung rejected a 25 trillion won early power payment scheme, while Chinese fabs are rapidly increasing domestic equipment adoption to 35% installation basis.",
-          "key_facts": [
-            "TSMC targeting 22% increase in 2nm capacity, 16%+ increase in 3nm by mid-2027",
-            "TSMC planning to double CoWoS advanced packaging capacity by 2028",
-            "Chinese domestic semiconductor equipment installation share at 35%, sales share at 23%",
-            "Samsung and SK하이닉스 rejected Korean Electric Power's 25 trillion won early payment proposal",
-            "Samsung advancing 매터 1.6 smart home standard adoption for SmartThings platform expansion",
-            "Cubic Cell developed holography-based inspection for glass substrate TGV (Through Glass Via) defects at micrometer resolution",
-            "Naver Ventures invested in Positron AI Series C round (875 million USD) for inference acceleration",
-            "Samsung providing 1.3 trillion won early supplier payments ahead of Chuseok holiday",
-            "Kepler claims HBM alternative without EUV using GlobalFoundries 28nm, targeting 2027 production",
-            "China's high-purity quartz qualified for 300mm DRAM production, boosting material localization"
-          ],
-          "implications": [
-            {
-              "keyword": "Foundry Capacity Race",
-              "text": "TSMC's 2nm/3nm expansion and CoWoS doubling lock in lead over Samsung at advanced nodes; Chinese domestic equipment push forces TSMC and peers to rationalize supply chains."
-            },
-            {
-              "keyword": "Korean Power Dynamics",
-              "text": "SK하이닉스/Samsung rejection of prepayment signals pushback on utility financing schemes, indicating semiconductor giants' leverage over national infrastructure despite government pressure."
-            },
-            {
-              "keyword": "HBM/Memory Supply Competition",
-              "text": "Kepler's HBM alternative using mature nodes and China's DRAM-qualified quartz suggest emerging alternatives to EUV-dependent HBM supply, potentially fragmenting high-end memory market."
-            },
-            {
-              "keyword": "Chinese Self-Sufficiency Acceleration",
-              "text": "35% domestic equipment installation and qualified local quartz for 300mm DRAM represent tangible progress toward supply chain independence, compressing competitive windows for non-Chinese vendors."
-            },
-            {
-              "keyword": "Advanced Packaging Criticality",
-              "text": "Glass substrate inspection tools and CoWoS doubling underscore packaging as key bottleneck for AI chip scaling, elevating material and equipment suppliers."
-            }
-          ],
-          "counterpoint": "TSMC capacity targets are forward guidance subject to demand realization; Chinese equipment quality and reliability at scale remain unverified relative to incumbent suppliers."
-        },
-        "en": {
-          "executive_summary": "TSMC is scaling 2nm and 3nm capacity aggressively (22% 2nm boost, 16%+ 3nm boost by mid-2027) and doubling CoWoS advanced packaging by 2028 to meet surging AI demand. Samsung and SK Hynix are diversifying supplier relationships and technology portfolios; Samsung rejected a 25 trillion won early power payment scheme, while Chinese fabs are rapidly increasing domestic equipment adoption to 35% installation basis.",
-          "key_facts": [
-            "TSMC targeting 22% increase in 2nm capacity, 16%+ increase in 3nm by mid-2027",
-            "TSMC planning to double CoWoS advanced packaging capacity by 2028",
-            "Chinese domestic semiconductor equipment installation share at 35%, sales share at 23%",
-            "Samsung and SK Hynix rejected Korean Electric Power's 25 trillion won early payment proposal",
-            "Samsung advancing Matter 1.6 smart home standard adoption for SmartThings platform expansion",
-            "Cubic Cell developed holography-based inspection for glass substrate TGV (Through Glass Via) defects at micrometer resolution",
-            "Naver Ventures invested in Positron AI Series C round ($875 million USD) for inference acceleration",
-            "Samsung providing 1.3 trillion won early supplier payments ahead of Chuseok holiday",
-            "Kepler claims HBM alternative without EUV using GlobalFoundries 28nm, targeting 2027 production",
-            "China's high-purity quartz qualified for 300mm DRAM production, boosting material localization"
-          ],
-          "implications": [
-            {
-              "keyword": "Foundry Capacity Race",
-              "text": "TSMC's 2nm/3nm expansion and CoWoS doubling lock in lead over Samsung at advanced nodes; Chinese domestic equipment push forces TSMC and peers to rationalize supply chains."
-            },
-            {
-              "keyword": "Korean Power Dynamics",
-              "text": "SK Hynix/Samsung rejection of prepayment signals pushback on utility financing schemes, indicating semiconductor giants' leverage over national infrastructure despite government pressure."
-            },
-            {
-              "keyword": "HBM/Memory Supply Competition",
-              "text": "Kepler's HBM alternative using mature nodes and China's DRAM-qualified quartz suggest emerging alternatives to EUV-dependent HBM supply, potentially fragmenting high-end memory market."
-            },
-            {
-              "keyword": "Chinese Self-Sufficiency Acceleration",
-              "text": "35% domestic equipment installation and qualified local quartz for 300mm DRAM represent tangible progress toward supply chain independence, compressing competitive windows for non-Chinese vendors."
-            },
-            {
-              "keyword": "Advanced Packaging Criticality",
-              "text": "Glass substrate inspection tools and CoWoS doubling underscore packaging as key bottleneck for AI chip scaling, elevating material and equipment suppliers."
-            }
-          ],
-          "counterpoint": "TSMC capacity targets are forward guidance subject to demand realization; Chinese equipment quality and reliability at scale remain unverified relative to incumbent suppliers."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-09-14",
-      "item_count": 16,
-      "generated_at": "2026-09-14T23:25:26.034042+00:00",
+      "date": "2026-09-15",
+      "item_count": 21,
+      "generated_at": "2026-09-15T22:53:20.313247+00:00",
       "content": {
         "ko": {},
         "en": {}

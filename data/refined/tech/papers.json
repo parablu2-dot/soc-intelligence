@@ -2,6 +2,454 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "eess.AS",
+    "title": "Acoustic Image Source Interpolation with Optimal Transport Barycenter",
+    "url": "https://arxiv.org/abs/2609.15981v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Room impulse responses can be estimated via the image source model (ISM) using the image source point cloud (ISPC) of a physical source. However, because the source movement changes the ISPC, estimating the ISPC at a new source position typically requires repeated acoustic measurements. We propose an optimal transport (OT) barycenter framework to interpolate the ISPC of a new source location from ISPCs of known sources. The method jointly estimates image-source associations and the ISPC at the n",
+    "authors": [
+      "Yuyang Liu",
+      "Rumeshika Pallewela",
+      "Jesper Brunnström",
+      "Isabel Haasler",
+      "Filip Elvander"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Multiscale Visibility Theory: A Task-Relative Operator-Geometric Framework for Observation, Robustness, and Detectability",
+    "url": "https://arxiv.org/abs/2609.15948v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Multiscale Visibility Theory (MVT) is introduced as a task-relative operator-geometric framework for determining how prescribed information survives and remains accessible through a structured observation architecture. Rather than evaluating observation quality by transform magnitude, output energy, rank, or signal prominence alone, MVT measures the accessibility of a specified task direction or task subspace through the row space of the composite operator A_A = R_E W_rho H_beta P_Omega. Unlike ",
+    "authors": [
+      "Tahir Cetin Akinci"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "Toward Predictive Hydride Bond Energetics with Neural-Network Wavefunctions",
+    "url": "https://arxiv.org/abs/2609.15898v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Accurate prediction of transition-metal hydride (TM-H) bond dissociation energies (BDEs) remains challenging because of strong electron correlation, relativistic effects, and nuclear quantum contributions. Here, we assess the performance of neural-network variational Monte Carlo (NN-VMC) based on the Psiformer ansatz for systems with increasing complexity (LiH, OH, TiH and NiH), and compare it against CCSDT(Q)/CBS as well as available theoretical and experimental data. Throughout this study, bot",
+    "authors": [
+      "Aqsa Shaikh",
+      "Lubos Mitas",
+      "P. Ganesh",
+      "Jaron T. Krogel"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "Cnuas: A Software-Defined AI/HPC Rack-scale Emulation Platform and Hyperscale Data Center Facility Twin",
+    "url": "https://arxiv.org/abs/2609.15889v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Modern AI and HPC systems integrate accelerators, high-speed networks, and management controllers at rack scale. Developing software for this infrastructure typically requires access to scarce, costly hardware, while software abstractions can obscure how workloads depend on resources across servers and accelerators. This paper presents Cnuas, an open-source, experimental rack-scale emulation platform whose baseline architecture follows the Open Compute Project (OCP) Open Rack v3 specifications. ",
+    "authors": [
+      "Weqaar Janjua",
+      "Eoin OConnell",
+      "Mihai Penica"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "High-Temperature Hydrogen Sensors Based on Gallium Oxide Heterojunction Diodes",
+    "url": "https://arxiv.org/abs/2609.15881v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Long-term, high temperature operation of Ga2O3 devices is a crucial hurdle that must be overcome before widespread adoption of the technology can be achieved, but is largely absent from the overall body of work. Demonstrations up to this point show devices are either limited by material or dopant instability that leads to performance degradation with time. Herein, Ga2O3-based hydrogen sensors employing Pt Schottky and Cr2O3/Ga2O3 p-n diodes (Mg- and N-doped) were fabricated and evaluated for lon",
+    "authors": [
+      "William A. Callahan",
+      "Kingsley Egbo",
+      "Anna Sacchi",
+      "Michelle Smeaton",
+      "Michael Walker",
+      "Anna Staerz",
+      "Ryan O'Hayre",
+      "Andriy Zakutayev"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Private Information Retrieval With Arbitrary Privacy Requirements: Introduction and Capacity Results",
+    "url": "https://arxiv.org/abs/2609.15875v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "In this paper, we introduce the problem of private information retrieval (PIR) under arbitrary privacy requirements, in a graph-based storage system. This formulation is motivated by the server storage limitations, abundance of data (messages) and heterogeneous data privacy requirements. Under the arbitrary privacy requirement, each message has to be retrieved privately from a pre-specified subset of servers, where the subset always includes the servers storing it. Thus, each server is associate",
+    "authors": [
+      "Mohamed Nomeir",
+      "Shreya Meel",
+      "Sennur Ulukus"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "CoFi-CLM: A Coarse-to-Fine Channel Language Model for Finite-Bit CSI Feedback",
+    "url": "https://arxiv.org/abs/2609.15865v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "In frequency-division duplex massive multiple-input multiple-output (MIMO) systems, the user equipment (UE) must convey high-dimensional downlink channel state information (CSI) under a stringent finite-bit feedback budget. Deep learning (DL) has emerged as a powerful tool for CSI compression due to its ability to capture complex channel correlations and learn compact CSI representations. However, recovering fine-scale channel structure from limited feedback remains challenging. To address this ",
+    "authors": [
+      "Chao Zhang",
+      "Cheng Luo",
+      "Luping Xiang",
+      "Kun Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Task-Directed Residual AddUNet:Perfect-Reconstruction Routing for Full-Rate Representations",
+    "url": "https://arxiv.org/abs/2609.15857v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "This paper establishes a perfect-reconstruction (PR) interpretation of AddUNet and its full-rate realization, and introduces a Residual Full-Rate PR architecture for task-directed representation learning. The survivor--skip structure of a constrained additive U-Net is shown to be exactly equivalent to a critically sampled multirate PR filter bank. The full-rate formulation removes the complementary-subband restrictions of the critically sampled system while preserving PR. A Residual Full-Rate PR",
+    "authors": [
+      "Vikram R. Lakkavalli"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.str-el",
+    "title": "Chiral Antiferromagnetism from Momentum-Space Resonance in a 2D Semiconductor",
+    "url": "https://arxiv.org/abs/2609.15854v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Understanding the principles governing the emergence of chiral quantum phases is a fundamental challenge, not only for uncovering new mechanisms of quantum-state formation but also for realizing giant electronic responses and transport phenomena arising from chirality and topology. While Fermi-surface instabilities in metals can stabilize complex ordered states through multiple competing scattering channels, their microscopic origin is often obscured by the complexity of the underlying electroni",
+    "authors": [
+      "R. Okuma",
+      "T. Ikenobe",
+      "Y. Fujisawa",
+      "K. Yamagami",
+      "H. C. H. Wu",
+      "T. Nakamura",
+      "Y. Ihara",
+      "H. Ishikawa",
+      "H. Suwa",
+      "H. Ishizuka",
+      "Y. Akagi",
+      "T. Kaneko",
+      "C. H. Hsu",
+      "Y. Obata",
+      "N. Tomoda",
+      "M. Dronova",
+      "K. Nagasawa",
+      "H. Saito",
+      "D. Ueta",
+      "H. Sagayama",
+      "J. Yamaura",
+      "M. Arita",
+      "K. Yogendra",
+      "S. Ideta",
+      "K. Kindo",
+      "T. Nakajima",
+      "S. J. Blundell",
+      "T. Kondo",
+      "K. Shimada",
+      "Y. Okamoto",
+      "Y. Okada"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CE",
+    "title": "Block-modular grey-box identification of a short-stroke seawater-pump power take-off for wave energy: loss decomposition and multi-regime validation",
+    "url": "https://arxiv.org/abs/2609.15835v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Physically interpretable power take-off models support wave-energy development at every stage. For the seawater-pump class, few have been identified on a real machine and validated at the system level. This paper presents a block-modular grey-box model of a short-stroke seawater pump, identified from bench data alone. The pump decomposes into chamber, relief valve, piston seal and tip check valve, each structured by component physics, and the few parameters are identified block by block from ter",
+    "authors": [
+      "Mahdi Tayyebati",
+      "Amir Hamza Siddiqui",
+      "Mian Masoud",
+      "Kristian Glejbøl",
+      "Christian Berggreen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Spatiotemporal programming via asymmetric dielectric engineering for nonvolatile 2D optoelectronics",
+    "url": "https://arxiv.org/abs/2609.15771v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Ambipolar two dimensional (2D) semiconductors integrated with floating-gate architectures offer a promising platform for nonvolatile, reconfigurable electronics. However, the switching between p-n and n-p junction polarities has conventionally required complex multi-gate designs, hindering the scalability and integration density. Here, we demonstrate a spatiotemporal programming strategy using a dual-floating-gate architecture with a symmetry broken tunneling dielectric. An asymmetric dielectric",
+    "authors": [
+      "Xiaoguang Luo",
+      "Xiaolong Zhang",
+      "Honglei Chen",
+      "Jiaming Wang",
+      "Fan Liu",
+      "Jiongtao Zhang",
+      "Junqiang Zhang",
+      "Yihan Yin",
+      "Jinpeng Xu",
+      "Lei Ying",
+      "Renjing Xu",
+      "Yingchun Cheng",
+      "Xuetao Gan",
+      "Wei Huang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash",
+    "url": "https://arxiv.org/abs/2609.15636v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "An MoE appliance for trillion-parameter models at low concurrency must host terabytes of weights on one node and serve prefill and decode with fixed resources. Combining operator analysis of two trillion-parameter MoE models, a measured expert routing trace, and agentic serving traces over multiple turns, we explore a design space spanning High-Bandwidth Flash (HBF) and DRAM configurations, bandwidth exposure, and near-data compute. We find that state bandwidth and HBF transport form two largely",
+    "authors": [
+      "Pengfei Xia",
+      "Tuo Hao",
+      "Shengwei Li",
+      "Jinjing Chen",
+      "Shiru Wei",
+      "Wenjun Zou",
+      "Rui Zhang",
+      "Hui Zang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "DeepSeek-V4-Flash on AMD gfx90a: Correctness Recovery and Inference Performance Engineering",
+    "url": "https://arxiv.org/abs/2609.15627v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "We present the enablement, correctness recovery, and performance engineering of DeepSeek-V4-Flash inference on AMD Instinct MI250 GPUs using the gfx90a/CDNA2 architecture. The system integrates native safetensors loading, tensor and expert parallelism, FP4 routed mixture-of-experts computation, FP8 dense projections, sparse attention, HIP graph execution, and OpenAI-compatible serving within SGLang. An initially fast execution path was found to be numerically incorrect because of a routed-expert",
+    "authors": [
+      "Siming Huang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Mobility- and Feedback-Aware Multi-Level Conflict-Triggered Hybrid Beamforming for Multi-User mmWave UAV Systems",
+    "url": "https://arxiv.org/abs/2609.15458v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "This paper investigates hybrid beamforming for multi-user large multiple-input multiple-output millimeter-wave unmanned aerial vehicle (UAV) downlink systems under mobility-induced channel aging and delayed beam-training feedback. Analog beam selection from compact delayed reports is a partial-observation decision, while additional candidate evaluations consume processing time and reduce the useful payload interval. We propose a mobility- and feedback-aware multi-level refinement strategy, terme",
+    "authors": [
+      "Thuan Van Le",
+      "Nguyen Cong Luong",
+      "Xingwang Li",
+      "Vo Nguyen Quoc Bao",
+      "Ngo Hoang Tu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Effect of Near-surface Thermal Spikes on Radiation Hardness of Gallium Oxide",
+    "url": "https://arxiv.org/abs/2609.15429v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Gallium oxide (Ga$_{2}$O$_{3}$) stands out as an extraordinary high radiation-tolerant semiconductor, because its lattice displacements induce polymorph transitions, holding material crystalline instead of leading to amorphization. Meanwhile, under extremely severe irradiation conditions many crystals become amorphous, often starting from surfaces where the translation symmetry breaks. Here, we show that the surface amorphization may prevail over the crystallisation in Ga$_{2}$O$_{3}$, however o",
+    "authors": [
+      "Tomás Fernández Bouvier",
+      "Umutcan Bektas",
+      "Alexander Azarov",
+      "Ru He",
+      "Nico Klingner",
+      "René Hübner",
+      "Paul Chekhonin",
+      "Aleksi Leino",
+      "Kai Nordlund",
+      "Javier García Fernández",
+      "Andrej Kuznetsov",
+      "Gregor Hlawacek",
+      "Flyura Djurabekova"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Data-Aided Variational Bayesian Inference for CSI Estimation over Doubly-Selective DCO-OTFS MIMO VLC Systems with Affine-Precoded Superimposed Training Sequences",
+    "url": "https://arxiv.org/abs/2609.15420v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "An orthogonal affine-precoded superimposed training sequences (AP-STS)-based architecture is developed for the cyclic prefix (CP)-aided multiple input multiple output (MIMO) direct-current-biased orthogonal time frequency space (DCO-OTFS) visible light communication (VLC) systems relying on arbitrary transmitter-receiver pulse shaping. The data and pilot symbol matrices are affine-precoded (AP) and superimposed in the delay-Doppler (DD)-domain for each transmit light-emitting diode (LED), follow",
+    "authors": [
+      "Shubham Saxena",
+      "Suraj Srivastava",
+      "Aditya K. Jagannatham"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Statistical Inference-Based Channel Estimation for LD-Driven Visible Light O-OFDM Systems in the Presence of Relative Intensity and Input-Signal-Dependent Shot Noise",
+    "url": "https://arxiv.org/abs/2609.15406v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Laser diode (LD)-based luminaires are gaining increasing attention in automotive applications and are expected to extend to residential and commercial environments, creating opportunities for high-bandwidth visible light communication (VLC) systems. However, practical LD-based VLC links are impaired by input-signal-dependent shot noise (ISDSN), relative intensity noise (RIN), and thermal noise, which affect reliable channel estimation (CE). This work investigates their joint impact on receiver-s",
+    "authors": [
+      "Shubham Saxena",
+      "Karra Sreeman Reddy",
+      "Suraj Srivastava",
+      "Subrahmanya Swamy Peruru",
+      "Aditya K. Jagannatham",
+      "Lajos Hanzo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Sparse Channel Estimation and Signal Recovery for Reduced-PAPR Visible Light Optical OFDM Systems Relying on Bayesian Learning",
+    "url": "https://arxiv.org/abs/2609.15356v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "A multipath CIR estimator is proposed, followed by sparse frequency-domain (FD) signal detection, which harnesses the simultaneous-sparsity innate in the multipath CIR and FD signals across measurement vectors, conceived for optical OFDM (O-OFDM) utilized for visible light communication (VLC) systems having reduced peak-to-average power ratio. At the outset, we derive the input-output relationships for the asymmetrically clipped O-OFDM (ACO-OFDM) as well as for the direct current-biased O-OFDM (",
+    "authors": [
+      "Shubham Saxena",
+      "Suraj Srivastava",
+      "Aditya K. Jagannatham",
+      "Lajos Hanzo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "LLM-enabled Behavior Driven Development Workflow for Formally Verified Hardware Designs",
+    "url": "https://arxiv.org/abs/2609.15318v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Recently, the use of Large Language Models (LLMs) for different tasks in the Electronic Design Automation (EDA) life-cycle has been studied extensively, but an integrated view is lacking. Specifications are the foundation of this life-cycle, but they suffer from ambiguity when written in natural language, which especially affects the quality of LLM output. Formal specifications mitigate these ambiguities, but they come with their own challenges. On the other hand, Controlled Natural Language (CN",
+    "authors": [
+      "Luca Müller",
+      "Qian Liu",
+      "Rolf Drechsler"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads",
+    "url": "https://arxiv.org/abs/2609.15311v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "As AI becomes increasingly ubiquitous, modern AI systems are shaped by a tight software-hardware co-design loop. Later GPUs expose features such as asynchronous data movement, tensor core pipelines, and fine-grained synchronization that high-performance kernels aggressively exploit, while emerging application behaviors increasingly influence the next generation of hardware design. Unfortunately, the latest open-source simulators for NVIDIA GPUs focus on architectures and software stacks from rou",
+    "authors": [
+      "Siying Yu",
+      "Yixun Hong",
+      "Guozhi Qiu",
+      "Jingci Liu",
+      "Feng Gu",
+      "Chenbo Geng",
+      "Zhengrong Wang",
+      "Chen Zhang",
+      "Bei Yu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Benchmarking Machine-Learning Interatomic Potentials for Dynamical Stability in Inorganic Semiconductor Nanocrystals: A CdSe Case Study",
+    "url": "https://arxiv.org/abs/2609.15299v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Machine-learning interatomic potentials (MLIPs) enable nanosecond-scale atomistic simulations of inorganic semiconductor nanocrystals, but low errors on held-out configurations do not necessarily guarantee stable molecular dynamics. We benchmark five graph-neural-network MLIPs, SchNet, PaiNN, NequIP, Allegro and MACE, for dynamical stability in a chloride-passivated cadmium selenide nanocluster containing 149 atoms. The models were trained under harmonized conditions on 1,000 configurations and ",
+    "authors": [
+      "M. Usman",
+      "M. Suleymanova",
+      "Z. U. Abideen",
+      "M. Fernández-Pendás",
+      "I. Infante"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.str-el",
+    "title": "Twinning of domains and spin anisotropy in K$_5$Fe$_4$Ag$_6$Te$_{10}$",
+    "url": "https://arxiv.org/abs/2609.15290v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "The Fe-based superconductors are derived from metallic parent compounds with nematic and stripe magnetic orders, which lead to two types of magnetic domains. Recently it was found that K$_5$Fe$_4$Ag$_6$Te$_{10}$ (KFAT), an Fe-based semiconductor, exhibits similar nematic and stripe magnetic orders, and is thus an analogue to the Fe-based superconductors in the limit of localized electrons. In this work, the superstructure and magnetic domains of KFAT are elucidated by fully mapping the reciproca",
+    "authors": [
+      "Jiayu Guo",
+      "Hengyang Zhong",
+      "Dongsheng Yuan",
+      "Xuejuan Gui",
+      "Youzhe Chen",
+      "Nathan Giles-Donovan",
+      "Naomi Kawamura",
+      "Masaaki Matsuda",
+      "Yaohua Liu",
+      "Feng Ye",
+      "Rongyan Chen",
+      "Robert J. Birgeneau",
+      "Xingye Lu",
+      "Jincheng Wang",
+      "Yu Song"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.supr-con",
+    "title": "Growth of superconducting boron doped diamond on 4inch silicon wafers",
+    "url": "https://arxiv.org/abs/2609.15282v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Superconducting boron-doped diamond (BDD) films were grown on 4-inch silicon wafers by microwave plasma chemical vapour deposition using gas-phase B/C ratios ranging from 6536 to 36421 ppm. Surface morphology, boron incorporation and superconducting properties were investigated as a function of gas-phase boron concentration. No systematic variation in apparent lateral grain size was observed across the series. Superconductivity was observed in all films except that grown at a B/C ratio of 6536 p",
+    "authors": [
+      "Soumen Mandal",
+      "Oliver A Williams"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CV",
+    "title": "A 25-$μ$s/inf Event-driven Graph Neural Network Processor with Spatiotemporal Caching and Spline Convolution for Ultra-low-latency AI at the Edge",
+    "url": "https://arxiv.org/abs/2609.15241v1",
+    "published_date": "2026-09-14",
+    "source": "arXiv",
+    "summary": "Dynamic-vision-sensor (DVS) cameras generate events on a per-pixel basis with a $μ$s-level temporal resolution, calling for new algorithm-hardware co-design approaches compared to standard frame-based vision. While event-driven graph neural networks (EV-GNNs) emerge as a promising algorithmic solution, they raise new HW challenges by mixing dense-regular compute operations and sparse-irregular memory accesses. We present ETHEREAL, the first EV-GNN accelerator that scales to 640$\\times$480 resolu",
+    "authors": [
+      "Adrian Kneip",
+      "Martin Lefebvre",
+      "Daniel Gehrig",
+      "Victoria Catalán Pastor",
+      "Davide Scaramuzza",
+      "Marian Verhelst",
+      "Charlotte Frenkel"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.str-el",
     "title": "Effective Ionic Valence and Local Magnetic Moment in Kagome Superconductors",
     "url": "https://arxiv.org/abs/2609.11927v1",
