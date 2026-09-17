@@ -2,6 +2,291 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "Floquet-Plasmon Enhanced Charge Transfer at Catalytic Interfaces",
+    "url": "https://arxiv.org/abs/2609.19117v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Plasmonic excitation of metallic nanostructures can generate energetic carriers capable of transferring charge into nearby adsorbed molecules, providing a possible pathway for driving chemical transformations. In many theoretical descriptions of this process, charge transfer is determined by the equilibrium electronic structure of the molecule and substrate together with the time-dependent carrier distribution produced during plasmon decay. However, the intense transient electric fields associat",
+    "authors": [
+      "Annabelle Canestraight",
+      "Phillip Christopher",
+      "Vojtech Vlcek"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "Analog Pin Directionality as an Exfiltration Attack Surface in Mixed-Signal ICs",
+    "url": "https://arxiv.org/abs/2609.19111v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Mixed-signal SoCs rely on nominally input-only analog pins to acquire off-chip signals, but the directionality of these interfaces is generally treated as a functional property rather than explicitly verified as a security property. This work identifies and experimentally demonstrates a directionality-based class of analog and mixed-signal (AMS) exfiltration attacks in which data-dependent circuit-offset modulation converts a nominally input-only pin into an outbound information channel. We anal",
+    "authors": [
+      "Ramana Ranganatham",
+      "Chirag Adiga",
+      "Michael Zuzak",
+      "Tejasvi Das"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Locus: A Framework for Exploring and Optimizing Point Addition Hardware for Zero-Knowledge Proofs",
+    "url": "https://arxiv.org/abs/2609.18846v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Zero-Knowledge Proofs (ZKPs) are critical for privacy-preserving and verifiable computation, but their cryptographic primitives impose high computational overheads. One such primitive is point addition (PADD) on elliptic curves. Several prior works have implemented PADDs in hardware, but only for a few specific elliptic curves and design points, leaving a large design space unexplored, and lacking systematic guidance on hardware design trade-offs. To address this gap, we present Locus, a framewo",
+    "authors": [
+      "Gaurav Kuwar",
+      "Alhad Daftardar",
+      "Jianqiao Mo",
+      "Siddharth Garg",
+      "Brandon Reagen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Epitaxial inversion of spontaneous polarization in ε-Ga2O3",
+    "url": "https://arxiv.org/abs/2609.18843v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Polar wide bandgap semiconductors offer the unique capability to manipulate internal electric fields and induce two-dimensional electron gases (2DEG). The emerging orthorhombic ε-Ga2O3 is a promising candidate owing to its large spontaneous polarization (Psp). However, exploiting this material is hindered by fundamental ambiguities surrounding its absolute Psp vectors and the inability to govern its epitaxial direction. Here we show the resolution of the absolute Psp vectors in ε-Ga2O3 and contr",
+    "authors": [
+      "Yan Wang",
+      "Zhigao Xie",
+      "Weihua Tang",
+      "Chee Keong Tan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Quantifying the Effect of HCLs on a Fixed-Microarchitecture MXFP4 Accelerator",
+    "url": "https://arxiv.org/abs/2609.18792v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Hardware Construction Languages (HCLs) aim to improve hardware design productivity while generating register-transfer-level (RTL) circuits without changing the designer's microarchitecture. However, most comparisons between HCLs are either qualitative or evaluate quality of results (QoR) across different designs, making it difficult to separate language effects from design effects. This paper compares the most widely used HCLs using the same fixed design, the OCP MXFP4 block dot product, a quant",
+    "authors": [
+      "Daniele Passaretti",
+      "Sajjad Tamimi",
+      "Nicola Dall'Ora"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution",
+    "url": "https://arxiv.org/abs/2609.18675v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Large language models (LLMs) require increasing memory capacity to accommodate growing model weights and KV caches. High-Bandwidth Flash (HBF) offers high memory density and aggregate read bandwidth through massive plane-level parallelism, making it an attractive option for LLM serving. However, serving LLMs entirely from HBF introduces three challenges: fine-grained KV reads create placement and access imbalance, incremental writes interfere with foreground reads, and mixed KV lifetimes amplify",
+    "authors": [
+      "Shuzhang Zhong",
+      "Weikai Xu",
+      "Yifan Zhou",
+      "Tongbin Zhao",
+      "Tenghao Zhao",
+      "Yifei Kang",
+      "Cunyin Chang",
+      "Shu Li",
+      "Guangyu Sun",
+      "Meng Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Automated Instruction Encoding Synthesis for Modern GPU ISA Compression",
+    "url": "https://arxiv.org/abs/2609.18662v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Modern GPU kernels increasingly stress the instruction supply path, while fixed instruction containers can leave substantial footprint slack. This paper presents an automated encoding-synthesis framework that treats instruction layout as a constrained slot-assignment problem over a validated instruction-form field specification. The formulation separates semantic field identity from physical bit positions and supports tied, pinned, and free placement constraints, making it applicable when recurr",
+    "authors": [
+      "Mingyuan Ma",
+      "Hu He"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Adaptive Substrate Support Based on Thin-Film Piezoelectric Actuators",
+    "url": "https://arxiv.org/abs/2609.18653v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Advanced lithography scanners require extreme substrate flatness in the range of nanometers to prevent focus errors. Such a flatness is challenging to reach and maintain using static substrate supports. Active correction concepts using bulk piezoelectric or linear actuators become prohibitive due to wiring and volume limitations, considering the thousands of pillars required. In this work, we present to our knowledge the first ever demonstration of an active substrate support concept based on th",
+    "authors": [
+      "Ertuğ Şimşek",
+      "Bas Jansen",
+      "Marcelo Ackermann",
+      "Muharrem Bayraktar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Hypothesis-Driven Autonomous Materials Synthesis with Multimodal LLM Agents",
+    "url": "https://arxiv.org/abs/2609.18598v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Self-driving laboratories can explore synthesis conditions autonomously, but their decision-making layer is typically a black-box optimizer, and the output is a set of optimized samples, with the measurements reduced to predefined scalar objectives and the reasons behind success left unarticulated. Here we present SynAgent, a framework in which large language model agents operate an automated experimental system and maintain an explicit, revisable understanding of the synthesis process as the ca",
+    "authors": [
+      "Izumi Takahara",
+      "Kazunori Nishio",
+      "Akira Aiba",
+      "Shigeru Kobayashi",
+      "Takao Nakajima",
+      "Taro Hitosugi",
+      "Teruyasu Mizoguchi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Nonempirical Time-Dependent Density Functional Theory Framework for Nonlocal Exchange--Correlation Potentials",
+    "url": "https://arxiv.org/abs/2609.18584v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Advanced, orbital-dependent exchange--correlation (XC) functionals can significantly improve the description of electronic structural properties, but they substantially worsen spectral properties that are computed within standard linear-response time-dependent density functional theory frameworks. This is not a failure of the underlying Kohn-Sham states, but due to a formal inconsistency in the treatment of the dynamic density response when the non-locality of the XC potential is not taken into ",
+    "authors": [
+      "Zhandos A. Moldabekov",
+      "Michele Pavanello",
+      "Thomas D. Gawne",
+      "Jan Vorberger",
+      "Tobias Dornheim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "ERAF4XRD: A multimodal agentic framework for constructing validated experimental X-ray diffraction databases from scientific literature",
+    "url": "https://arxiv.org/abs/2609.18583v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "The scientific literature contains decades of experimental measurements that remain difficult to access as structured data for modern AI and data-driven research. Much of this information is distributed across figures, captions, text, and tables, requiring experimental data and their context to be identified, connected, and verified before they can be reused. Here we introduce ERAF4XRD (Experiment Reader Agentic Framework for X-Ray Diffraction), a fully automated multimodal (i.e., image and text",
+    "authors": [
+      "Afnan Mostafa",
+      "William Ratcliff",
+      "Simon J. L. Billinge",
+      "Niaz Abdolrahim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "QUBO Formulations of the Downlink MIMO Scheduling Problem in 5G Base Stations",
+    "url": "https://arxiv.org/abs/2609.18580v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Quantum computers can potentially solve large-scale combinatorial problems very efficiently when the problems are first converted into the quadratic unconstrained binary optimization (QUBO) format. Scheduling in fifth generation (5G) base stations is a practical combinatorial problem that cannot be solved optimally in real-time using classical computing. We formulate the downlink (DL) multiple-input multiple-output (MIMO) scheduling at 5G base stations as QUBO and analyze the QUBO formulation sc",
+    "authors": [
+      "Olli Apilo",
+      "Jorma Kilpi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Layer-Dependent Vibrational and Optical Properties of $\\mathrm{Mo}{0.58}\\mathrm{W}{0.42}\\mathrm{Se}_2$ Alloy",
+    "url": "https://arxiv.org/abs/2609.18572v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Semiconducting Mo$_x$W$_{1-x}$Se$_2$ alloys provide a versatile platform for tailoring the optical properties of two-dimensional materials through both composition and layer thickness. Here, we systematically investigate mechanically exfoliated Mo$_{0.58}$W$_{0.42}$Se$_2$ flakes ranging from monolayer (1L) to nine layers by combining Raman scattering (RS), photoluminescence (PL), reflectance contrast (RC) spectroscopy, and first-principles phonon calculations. Thirteen RS peaks are identified, i",
+    "authors": [
+      "Szymon Socha",
+      "Tomasz Wozniak",
+      "Elena Blundo",
+      "Malgorzata Brzoska",
+      "Grzegorz Krasucki",
+      "Piotr Wrobel",
+      "Antonio Polimeni",
+      "Adam Babinski",
+      "Maciej R. Molas",
+      "Katarzyna Olkowska-Pucko"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Massive MIMO ISAC Under Target-Angle Uncertainty: CRLB Outage Analysis and Robust Resource Allocation",
+    "url": "https://arxiv.org/abs/2609.18467v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "In integrated sensing and communications (ISAC), the same spectral and hardware resources are shared for two functionalities. Most ISAC designs assume perfect target-angle information neglecting angle estimation errors, which introduce steering-vector mismatches, degrade sensing accuracy, and may invalidate deterministic sensing guarantees. This paper investigates monostatic massive multiple-input-multiple-output (MIMO) ISAC systems under imperfect target-angle estimates. We derive closed-form e",
+    "authors": [
+      "Smriti Uniyal",
+      "Tianyu Fang",
+      "Van-Dinh Nguyen",
+      "Hien Quoc Ngo",
+      "Markku Juntti",
+      "Nhan Thanh Nguyen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Semantic CSI Feedback for Beam Selection: When Task-Aware Embeddings from Sparse Pilots Outperform Full-Bandwidth Reconstruction",
+    "url": "https://arxiv.org/abs/2609.18368v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Classical CSI feedback in FDD massive MIMO transmits a compressed reconstruction of the channel, optimizing fidelity to the original signal regardless of the downstream task. We propose a semantic communication perspective: instead of reconstructing the channel, the UE transmits a learned \\emph{semantic embedding} optimized end-to-end for beam selection at the gNB. Comparing reconstruction-oriented feedback (CsiNet) against task-aware semantic feedback across two input domains and three observat",
+    "authors": [
+      "Cristian J. Vaca-Rubio",
+      "Konstantinos Vandikas",
+      "Aneta Vulgarakis Feljan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Physically Consistent Modeling of Dispersive Time-Modulated Reconfigurable Intelligent Surfaces for Wideband OFDM",
+    "url": "https://arxiv.org/abs/2609.18360v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "The elements of a reconfigurable intelligent surface (RIS) are commonly modeled either as frequency-selective time-invariant reflectors or as instantaneous time-varying reflection coefficients. In practice, however, time-modulated metasurfaces exhibit both frequency selectivity and periodic time variation. We develop a physically consistent linear periodically time-varying (LPTV) model that jointly captures these effects and characterizes their impact on wideband orthogonal frequency-division mu",
+    "authors": [
+      "Ivan Iudice",
+      "Donatella Darsena",
+      "Giacinto Gelli",
+      "Vincenzo Galdi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Wavelength-Multiplexed Nonlinear Computing with a Single-Layer Diffractive Optical Processor",
+    "url": "https://arxiv.org/abs/2609.18155v1",
+    "published_date": "2026-09-16",
+    "source": "arXiv",
+    "summary": "Diffractive optical processors provide a promising platform for high-throughput, low-latency analog computing by exploiting engineered wave propagation to transform optical fields. However, implementing nonlinear mappings in optical hardware remains challenging. Here, we introduce a wavelength-multiplexed encoding-and-decoding (E+D) diffractive processor that exploits multiple illumination wavelengths to enhance the nonlinear function-approximation capability of a compact single-layer diffractiv",
+    "authors": [
+      "Yongkang Cheng",
+      "Che-Yung Shen",
+      "Yuntian Wang",
+      "Shiqi Chen",
+      "Aydogan Ozcan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Enhanced thermal stability of SiGeSn by suppressing surface-mediated degradation",
     "url": "https://arxiv.org/abs/2609.17504v1",
