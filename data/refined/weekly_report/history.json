@@ -1,42 +1,42 @@
 {
   "mobile_ap": {
-    "date": "2026-09-12",
-    "executive_summary": "Mobile AP competitive surface is fragmenting along AI inference architecture and manufacturing partnership lines. Huawei's Kirin 9050 Pro operationalizes LogicFolding silicon-level optimization, Samsung courts both Snapdragon and in-house Exynos 2700 for S27 variants while partnering with Mistral AI on semiconductor engineering, and Qualcomm deepens data-center AI positioning through AWS collaboration—signaling a shift where mobile AI performance now trades against ecosystem lock-in and regional supply chain resilience rather than pure GPU-core density."
+    "date": "2026-09-19",
+    "executive_summary": "MediaTek's Dimensity 9600 Pro on TSMC 2nm operationalizes node leadership into flagship-tier multi-core performance parity against Qualcomm A20 Pro, while Qualcomm reconsidering Samsung foundry partnership signals defensive supply-chain diversification rather than architectural innovation. The competitive interface has shifted from pure core density to process-node access: TSMC's 2nm monopoly in mobile AP production now gates competitive performance claims, forcing Qualcomm and Samsung into manufacturing partnerships that decouple design wins from in-house fabrication."
   },
   "hpc_datacenter": {
-    "date": "2026-09-12",
-    "executive_summary": "변화 없음"
+    "date": "2026-09-19",
+    "executive_summary": "HPC/datacenter competition this week pivoted sharply toward talent acquisition and ecosystem lock-in, with Samsung/SK Hynix dismantling credential barriers (age/education requirements) to poach AI-specialized engineers while Intel, NVIDIA, and TSMC escalate parallel hiring drives. The real competitive interface has shifted from die-level performance to human capital and software-stack integration: NVIDIA's GPU-Linux developer recruiting and TSMC's new global R&D center signal that second-order advantage now accrues to whoever secures domain expertise and locks downstream software ecosystems, not just wafer capacity. d-Matrix's integration into NVIDIA's ecosystem despite Samsung/SK backing underscores that independent chip startups struggle without GPU-vendor patronage."
   },
   "custom_soc": {
-    "date": "2026-09-12",
-    "executive_summary": "Nvidia's 85% market grip persists as infrastructure moat, but the competitive surface is fragmenting at the interposer layer—Qualcomm's multi-generational Amazon deal and Google's claimed 50% TPU inference cost advantage signal hyperscalers are now willing to co-engineer silicon boundaries rather than merely accept Nvidia's reference designs. Broadcom, Realtek (3nm ASIC orders secured), and emerging players like HyperAccel/SEMIFIVE are capturing peripheral AI workloads (inference, transmission), but none yet threaten Nvidia's core training-to-inference stack integration or its installed-base lock-in at the hardware-software boundary."
+    "date": "2026-09-19",
+    "executive_summary": "변화 없음"
   },
   "foundry": {
-    "date": "2026-09-12",
+    "date": "2026-09-19",
     "executive_summary": "변화 없음"
   },
   "packaging": {
-    "date": "2026-09-12",
-    "executive_summary": "변화 없음"
+    "date": "2026-09-19",
+    "executive_summary": "TSMC's CoWoS capacity doubling to 260,000 wafers by 2028 signals sustained advanced packaging supply pressure and creates explicit spillover to Intel and OSAT providers (Amkor, ASE, SPIL), shifting competitive leverage toward ecosystem breadth over single-vendor dominance. Samsung's new packaging R&D facility and glass-core substrate infrastructure expansion (CKST distribution via FCS Group across Taiwan/Southeast Asia) indicate regional diversification of advanced-packaging capability outside TSMC's traditional stronghold, though execution risk remains on yield ramp for AI packages at scale."
   },
   "cpo_optics": {
-    "date": "2026-09-12",
-    "executive_summary": "CPO production timelines and funding intensity sharply accelerate: Ayar Labs secured $650M in 2026 funding for manufacturing scale, TSMC leads a 30-firm silicon photonics alliance addressing AI power crisis, and MIT breakthroughs on wafer-scale photonics flexibility hint at lower-cost integration paths. The competitive frontier has shifted from packaging feasibility to capital availability and supply-chain orchestration; players without heavy venture/foundry backing (Ayar, Crealights) now race against established optical vendors (Coherent, VIAVI, Keysight) who leverage testing and measurement infrastructure to capture the integration boundary."
+    "date": "2026-09-19",
+    "executive_summary": "Silicon photonics and optical interconnect architecture have shifted from research feasibility to foundry capacity competition. Tower Semiconductor, GlobalFoundries, and MACOM are displacing traditional optical vendors by positioning chiplet-class integration at the AI data-center transmission boundary; the Ethernet Alliance 1.6T interoperability demo and projected $125B optical transceiver TAM by 2035 signal that token-per-watt constraints now drive optical-first design-ins rather than GPU density alone."
   },
   "dram": {
-    "date": "2026-09-12",
+    "date": "2026-09-19",
     "executive_summary": "변화 없음"
   },
   "nand": {
-    "date": "2026-09-12",
+    "date": "2026-09-19",
     "executive_summary": "변화 없음"
   },
   "hbm": {
-    "date": "2026-09-12",
-    "executive_summary": "HBM supply concentration intensifies as Samsung redirects half its 4nm capacity to HBM4 production while SK hynix transitions to 1c DRAM process by 1Q27, effectively narrowing the qualified vendor base. AMD's supply constraint acknowledgment and price escalation across Chinese AI chipmakers (Huawei 950DT up 50%) signal tightening availability beyond 2026. Synaptics' EDA integration with Ansys targets chip-to-system design parity, but remains marginal to the core capacity constraint dominating competitive positioning."
+    "date": "2026-09-19",
+    "executive_summary": "Samsung's operational pivot from conventional DRAM to HBM packaging at Cheonan—coupled with Hanmi's equipment orders for HBM TC bonders—signals downstream packaging consolidation, but Kepler's announced 28nm non-EUV HBM path (GlobalFoundries, 2027) presents the first viable alternative to vertically integrated supplier dominance. The competitive axis has shifted from die capacity scarcity to packaging choke-point: qualified tool suppliers and bonding process IP now arbitrate qualified vendor entry more tightly than wafer fab access."
   },
   "pmic": {
-    "date": "2026-09-12",
-    "executive_summary": "SMIC's 40.6 billion yuan internal restructuring (SMIC North buyout) clears regulatory hurdles, consolidating 8-inch mature-node capacity under single entity to optimize fab utilization and cost structure amid AI-driven capacity crowdout. This consolidation signals SMIC's strategic pivot to lock supply leverage in commodity BCD segments, but regulatory friction from US export restrictions remains a structural cost headwind that could limit margin sustainability."
+    "date": "2026-09-19",
+    "executive_summary": "변화 없음"
   }
 }
