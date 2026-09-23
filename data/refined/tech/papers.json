@@ -2,6 +2,321 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Nonlinear Spin Polarization Enables Néel Order Switching in Centrosymmetric Altermagnets",
+    "url": "https://arxiv.org/abs/2609.26709v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Deterministic electrical switching of the Néel order remains challenging in centrosymmetric altermagnets, where linear current-induced spin polarization is forbidden by inversion symmetry. Here, we establish a nonlinear route to Néel order control. Spin group symmetry shows that, in the nonrelativistic limit, the nonlinear spin polarization is constrained along the Néel vector, with a staggered response allowed in $8$ of the $10$ nontrivial spin-Laue groups. Although this Néel spin polarization ",
+    "authors": [
+      "Sunit Das",
+      "Sayan Sarkar",
+      "Amit Agarwal"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Disentangling Surface Charge and Electrolyte Effects on Interfacial Water at Electrified Pt(111)",
+    "url": "https://arxiv.org/abs/2609.26685v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "The structure of interfacial water at electrified metal electrodes is known to affect electrocatalysis, and experiments highlight its sensitivity to electrolyte ion identity and applied bias. To disentangle generic charge-controlled structural changes from ion-specific effects, we compare ab initio molecular dynamics water structures at electrified Pt(111) generated with two very different biasing schemes: an explicit ion imbalance in the double layer and homogeneously distributed partially char",
+    "authors": [
+      "Thorben Eggert",
+      "Lang Li",
+      "Yair Litman",
+      "Karsten Reuter",
+      "Nicolas G. Hoermann",
+      "Clotilde S. Cucinotta"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Agent-E2MD: Autonomous Translation of Interatomic Potential Equations into Physically Validated Pair Styles for Molecular Dynamics in LAMMPS",
+    "url": "https://arxiv.org/abs/2609.26657v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Interatomic potentials underpin MD and govern predictive atomistic-model fidelity for metals, semiconductors, oxides, liquids, and reactive systems. A potential has limited practical value until reliably implemented in production MD code. Slow, expertise-intensive implementation requires more than equation-to-C++ translation: it must select the neighbor-list architecture, evaluate and distribute many-body derivatives, manage interprocessor communication, and preserve host-code energy, force, and",
+    "authors": [
+      "Bilvin Varughese",
+      "Orcun Yildiz",
+      "Aditya Koneru",
+      "Henry Chan",
+      "Tom Peterka",
+      "Subramanian Sankaranarayanan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Dynamic Slack-Aware Clocking for Near-Threshold Tensor Processing Units (TPUs)",
+    "url": "https://arxiv.org/abs/2609.26644v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Operating Tensor Processing Units (TPUs) in the near-threshold computing (NTC) region significantly reduces energy consumption but introduces high delay sensitivity to process variation and data activity. Conventional designs typically rely on a conservative, fixed global clock to ensure safety, which leaves large portions of timing margin unexploited as most operations finish well before the clock edge. We propose Dynamic Slack-Aware Clocking (DSAC), a proactive framework that replaces worst-ca",
+    "authors": [
+      "Muhammad Usman Nadeem",
+      "Sanghamitra Roy",
+      "Koushik Chakraborty"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Prediction-Aware Structured Resource Control for Partitioned IRS-Assisted Mobile IoT Uplinks With Semi-Blind Cascaded-Channel Acquisition",
+    "url": "https://arxiv.org/abs/2609.26601v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Intelligent reflecting surface (IRS)-assisted mobile Internet of Things uplinks require joint control of channel aging, costly cascaded channel state information (CSI) acquisition, and coupled IRS/radio resources. This investigation develops a unified prediction-aware deterministic framework for partitioned IRS-assisted massive multiple-input multiple-output (mMIMO) uplinks. Direct channels are recursively tracked, whereas cascaded channels are selectively refreshed by differential semi-blind ac",
+    "authors": [
+      "Hediyeh Soltanizadeh",
+      "Ardavan Rahimian"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Microstructure, tensile behavior and cyclic bendability of directly extruded biodegradable Zn, Zn-Mg and Zn-Mg-Sr wires",
+    "url": "https://arxiv.org/abs/2609.26582v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Zinc-based alloys are promising biodegradable implants, yet the trade-off between strength, ductility, and bendability in thin-wire form remains poorly understood. To address this, pure Zn (PZ), Zn-0.15Mg (ZM), and Zn-0.8Mg-0.2Sr (ZMS) wires of ~290 um diameter were produced by direct extrusion, and their microstructure, texture, tensile, and bending behavior were characterized. Mg2Zn11 and SrZn13 phases promoted particle-stimulated nucleation, refining the grain size from 35.8 um in PZ to 6.8 a",
+    "authors": [
+      "L. Hlodák",
+      "K. Tesař",
+      "M. Lebeda",
+      "J. Duchoň",
+      "J. Kubásek",
+      "J. Čech",
+      "A. Školáková",
+      "J. Pinc"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Toki: Profiling HBM Performance on FPGA Systems with RISC-V Soft Cores and PCIe Host DMA Traffic",
+    "url": "https://arxiv.org/abs/2609.26551v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Programmable RISC-V soft cores are becoming more widespread in data-center scenarios, making it crucial to design efficient systems that deploy them on FPGA chips with HBM memory. Toki, released as open source, is the first hardware-software framework that enables profiling the performance of HBM on FPGA accelerator cards by jointly considering (i) the execution of workloads on RISC-V soft cores instantiated on the FPGA and (ii) the injection of memory traffic from the host system via DMA over P",
+    "authors": [
+      "Andrea Galimberti",
+      "Andrea Motta",
+      "Gianni Antichi",
+      "Davide Zoni"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "A Gram-Attention Learning Framework for Spatially Non-Stationary Channel Estimation",
+    "url": "https://arxiv.org/abs/2609.26437v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "As next-generation wireless systems migrate to high-frequency bands, extremely large-scale multiple-input multiple-output (XL-MIMO) is indispensable for combating severe path loss. However, the received path energy along the extremely large array aperture (ELAA) may exhibit spatial non-stationarity, rendering the conventional discrete Fourier transform (DFT) codebook inadequate for channel estimation (CE) due to its full-array angular representation. To address this mismatch, we propose a novel ",
+    "authors": [
+      "Jiannan Wang",
+      "Xianghao Yu",
+      "Chenshu Wu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "ESupNNet: An Error Supervising Neural Network architecture for error detection against soft errors in parameters",
+    "url": "https://arxiv.org/abs/2609.26374v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "This work presents a novel approach to detect misclassification errors in CNNs caused by soft errors in their parameters. We propose an architecture that uses inter-class relations induced by the CNN that needs protection. The architecture has minimal resources overhead and does not require modifying the CNN, which makes it a competent solution that can be used with other error protection techniques. We have validated the architecture with five different combinations of modern dataset-model pair",
+    "authors": [
+      "Jorge Cano-Paez",
+      "Luis Entrena",
+      "Almudena Lindoso"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Interplay of Composition, Crystallinity, and Chemical Structure in CoHCF and NiHCF Thin Films Prepared at Different Temperatures",
+    "url": "https://arxiv.org/abs/2609.25997v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Understanding how growth conditions govern structural order and ion transport in Prussian blue analogues (PBAs) thin films is essential for optimizing their electrochemical performance. Here, cobalt and nickel hexacyanoferrate (CoHCF and NiHCF) thin films were electrodeposited potentiostatically at temperatures between 20 and 60 degrees C. A combination of cyclic voltammetry, scanning electron microscopy, X-ray diffraction, and Raman spectroscopy was employed to elucidate the interplay between c",
+    "authors": [
+      "Larissa de O. Garcia",
+      "Michael Pohlitz",
+      "Mohammed F. Kalady",
+      "Christian K. Muller"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Information in Polarization, Energy from Optical Power: Stokes-Orthogonal Inter-Satellite Links",
+    "url": "https://arxiv.org/abs/2609.25986v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Joint information and energy transfer over inter satellite free space optical links is commonly based on explicit resource splitting, which couples communication reliability and energy delivery. This paper proposes a constant total power Stokes orthogonal architecture that conveys information through polarization while preserving the received optical power for photovoltaic conversion. Complementary polarization branches support balanced information detection through their AC components, while th",
+    "authors": [
+      "Meysam Ghanbari",
+      "Mohammad Taghi Dabiri",
+      "Mazen O. Hasna",
+      "Khalid A. Qaraqe"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "LUNA: Luneburg-Lens-Aided Reconfigurable Array for 6G-and-Advanced Wireless Networks",
+    "url": "https://arxiv.org/abs/2609.25979v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "This article introduces the LUneburg-lens-aided recoNfigurable Array (LUNA), an antenna architecture that unifies multiple-input multiple-output (MIMO) and network-controlled repeater (NCR) functionalities in the Luneburg lens-enabled hardware platform. A Luneburg lens, fabricated from graded-index dielectric materials, passively converts the radiation of a low-gain feed into a highly directional beam without active phase shifting, while a dense passive feed bank and a reconfigurable feed-select",
+    "authors": [
+      "Ziwei Wan",
+      "Zhen Gao",
+      "Shuping Dang",
+      "Michail Matthaiou",
+      "Zhaocheng Wang",
+      "Sheng Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "MIMO-OFDM AI Receiver Based on Incrementally Conditioned Diffusion with Soft Decision",
+    "url": "https://arxiv.org/abs/2609.25923v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Conventional iterative receiver usually begins with channel estimation using sparse pilot observations and follows with data detection based on the channel estimates, and then updates channel estimation using decision feedback, and so on. In Artificial Intelligence (AI)-based receiver design, it is also crucial to make use of such progressively enriched data observations to enhance the generative channel estimation. However, the statistical characteristics and reliability of the data decisions a",
+    "authors": [
+      "Weijie Zhou",
+      "Zhaoyang Zhang",
+      "Zhixian Kong",
+      "Zhaohui Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Risk-Aware Online Conformal State Probing",
+    "url": "https://arxiv.org/abs/2609.25889v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "AI-based autonomous agents, typically hosted at data centers, must acquire state information from robots or edge devices in order to issue informed control decisions. Managing uncertainty about the state is particularly consequential in safety-critical settings, in which average-case guarantees are insufficient. In this context, we study a sequential decision maker process that jointly decides which actions to take and when to probe given access to an arbitrary state prediction model. We propose",
+    "authors": [
+      "Pietro Talli",
+      "Petar Popovski",
+      "Osvaldo Simeone"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Decoupling Logical Masks from GPU Execution for Dynamic Block-Sparse Attention",
+    "url": "https://arxiv.org/abs/2609.25869v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Attention computation makes inference expensive in video diffusion transformers (vDiTs), which generate videos through iterative denoising. Block-sparse attention (BSA) reduces\n  this cost by computing only blocks selected by a logical mask, which specifies attention interactions to compute. However, coupling logical block geometry to execution choices\n  limits adaptation to varying masks and graphics processing units (GPUs), while runtime kernel specialization can incur preparation overhead tha",
+    "authors": [
+      "Shanghao Liu",
+      "Xiaoyun Yu",
+      "Wanting Li",
+      "Wenqi Jiang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Cryogenic Voltage Control of Magnetism in Silicon-Integrated \\newline SrTiO$_3$/Fe Heterostructures",
+    "url": "https://arxiv.org/abs/2609.25851v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Cryogenic electronics forms a rapidly emerging research domain for high-performance and power-efficient computing applications. Incorporating nanomagnetic components in cryogenic circuitry adds highly valuable functionality, facilitating downscaling, reducing energy consumption and introducing time-reversal symmetry breaking. Furthermore, low-temperature environments enhance magnetic stability and switching efficiency at nanoscale dimensions, reinforcing the potential of cryogenic nanomagnets. T",
+    "authors": [
+      "Stijn Reniers",
+      "Emile Fourneau",
+      "Andries Boelen",
+      "Xing-Jian Liu",
+      "Ekaterina Gorokh",
+      "Lukas Nulens",
+      "Vivek Kumar",
+      "Luca Ceccon",
+      "Christian Haffner",
+      "Clement Merckling",
+      "Jun-Yi Ge",
+      "Bertrand Dupé",
+      "Alejandro V. Silhanek",
+      "Kristiaan Temst",
+      "Joris Van de Vondel"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Common-Loss Parameter-Efficiency Analysis of MLP and KAN Neural Receivers for Digital Communications",
+    "url": "https://arxiv.org/abs/2609.25847v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Classical coherent binary phase-shift keying (BPSK) reception over additive white Gaussian noise (AWGN) channels is analytically well understood, and the optimum hard-decision detector is known. Therefore, the aim of using neural receivers in this study is not to replace the classical AWGN-BPSK detector. Instead, the AWGN-BPSK setting is deliberately selected as a theoretically verifiable benchmark for analyzing how compactly neural receiver architectures can represent a known decision behavior.",
+    "authors": [
+      "Sude Ertan",
+      "Osman Tokluoglu",
+      "Enver Cavus"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "From Least Squares to Deep Learning: Benchmarking Indoor Positioning on the HYMN Multi-Technology Dataset",
+    "url": "https://arxiv.org/abs/2609.25835v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Indoor positioning benchmarks rarely co-locate multiple technologies with high-accuracy ground truth, limiting cross-method and cross-technology comparison. We evaluate four range-based positioning methods on fused Ultra-wideband, Bluetooth Low Energy, and WiFi ranges recorded at 48 reference points in an industrial facility with available ground truth. The evaluated methods range from least-squares positioning, with and without robust weighting, through a Bayesian grid filter to a ResNet regres",
+    "authors": [
+      "Paul Schwarzbach",
+      "Muhammad Ammad"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Hot-Cold Tiering of HBM and High Bandwidth Flash for Agentic LLM Serving",
+    "url": "https://arxiv.org/abs/2609.25782v1",
+    "published_date": "2026-09-22",
+    "source": "arXiv",
+    "summary": "Large language model (LLM) serving is increasingly agentic, with multi-turn sessions that idle between actions yet must retain their full context. Limited GPU memory capacity forces inactive KV states to be evicted, so resuming a session incurs either costly recomputation or slow interconnect transfers. To address this, high bandwidth flash (HBF)-an on-package 3D-NAND memory offering orders-of-magnitude greater capacity than high bandwidth memory (HBM) at comparable read bandwidth-has emerged as",
+    "authors": [
+      "Jongjin Baek",
+      "Won Ji",
+      "Seungjae Yoo",
+      "Joo-Young Kim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.AR",
     "title": "Toward Multi-kW Power Delivery Methodologies for Advanced 3D Heterogeneous Integration",
     "url": "https://arxiv.org/abs/2609.24904v1",
