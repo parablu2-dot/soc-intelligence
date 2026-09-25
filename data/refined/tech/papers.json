@@ -2,6 +2,426 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Beyond Compression: Training Latent Representations for Stable Long-Horizon Rollout in Neural Surrogate Solvers",
+    "url": "https://arxiv.org/abs/2609.30198v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Latent neural surrogate solvers, or latent dynamics models, accelerate simulations of time-dependent physical systems by evolving a compressed latent space rather than resolving full-resolution fields directly. In principle this reduces computational cost and simplifies learning, but in practice errors often accumulate rapidly during long autoregressive rollouts, limiting predictive utility. We show that this instability does not stem from the latent representation itself, but arises when it is ",
+    "authors": [
+      "Andreas E. Robertson",
+      "Ashley T. Lenau",
+      "John D. Shimanek",
+      "Benjamin A. Jasperson",
+      "Vivek Oommen",
+      "David L. Damm",
+      "Krishna Garikipati",
+      "Remi Dingreville"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Track-conditioned Residual Frequency Estimation For Low-resolution FMCW Radar",
+    "url": "https://arxiv.org/abs/2609.30176v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Low-resolution FMCW radar normally forms a complete range-Doppler representation before detection and tracking. After association, however, the tracker already predicts the target's next range and radial velocity. We propose track-conditioned residual estimation (TCRE), which removes the predicted moving-target phase before spectral formation, summarizes each 64-sample chirp by four coherent complex sums, and estimates the remaining beat-frequency and Doppler-frequency errors from phase progress",
+    "authors": [
+      "Huy Trinh",
+      "George Shaker"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.comp-ph",
+    "title": "CTrex: A Research-Oriented Framework for Kernel- and Projection-Level Algorithm Development in CT Reconstruction",
+    "url": "https://arxiv.org/abs/2609.30166v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Micro-computed tomography (micro-CT) is increasingly applied to imaging scenarios in which object motion, deformation, truncated fields of view, continuous rotation, or unconventional scanning protocols violate assumptions underlying classical reconstruction pipelines. Existing reconstruction frameworks efficiently support standard geometries and workflows but offer limited control over how projection operators are discretized and evaluated. This restricts methodological exploration when accurac",
+    "authors": [
+      "Karel Desplenter",
+      "Wannes Goethals",
+      "Thomas De Schryver",
+      "Marjolein Heyndrickx",
+      "Jan Aelterman",
+      "Matthieu N. Boone"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "AI-guided high-throughput discovery of iridium- and ruthenium-free palladium-oxide catalysts for durable acidic oxygen evolution",
+    "url": "https://arxiv.org/abs/2609.30133v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Catalyzing acidic oxygen evolution at the proton-exchange-membrane water electrolysis (PEMWE) anode relies almost entirely on iridium or ruthenium, drawn from concentrated supply chains that constrain gigawatt-scale deployment. We report an artificial intelligence (AI)-guided, human-supervised closed-loop platform (>90% automation) integrating combinatorial sputter synthesis, high-throughput screening, machine-learning composition-property models, adaptive multi-objective optimization, and conte",
+    "authors": [
+      "Ken J. Jenewein",
+      "Faezeh Habib Zadeh",
+      "Xiaoxiao Wang",
+      "Gustavo Malkomes",
+      "Huafan Zhang",
+      "Natalie Page",
+      "Jae Jin Bang",
+      "Peter J. Santiago",
+      "Karla V. Contreras",
+      "Katherine K. Li",
+      "Allison Perna",
+      "Lorena M. Britton",
+      "Fahrettin Kilic",
+      "Kevin J. Cruse",
+      "Armin Taheri",
+      "Krishnanand Mallayya",
+      "Harley Quinn",
+      "Rebecca A. Durr",
+      "Peter A. Beaucage",
+      "John M. Gregoire",
+      "Rafael Gómez-Bombarelli"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Compiler and Hardware Co-Design for Accelerator Architectures",
+    "url": "https://arxiv.org/abs/2609.30099v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Heterogeneous accelerator architectures offer an efficient path to performance for compute-intensive workloads. However, full-stack integration remains difficult. We present EAAC (Extensible Accelerator Architecture), a flexible and extensible compiler and hardware architecture designed to lower the overhead of hardware-compiler co-development for rapid prototyping of hardware accelerators. EAAC targets static data-flow workloads with predictable memory access patterns.\n  By using MLIR, we enabl",
+    "authors": [
+      "Karl Herman Krause",
+      "Emad Jacob Maroun",
+      "Martin Schoeberl"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Subnanometer thermodynamic overlayers on bimetallic nanoparticles",
+    "url": "https://arxiv.org/abs/2609.29971v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Nanoparticle properties are governed by their surfaces, yet their atomic-scale surface structures remain challenging to predict. Here, we report that bimetallic nanoparticles can form a thermodynamically controlled \"shell-dimer\" architecture in which one metal forms an overlayer only a few atomic layers thick on another. Using Au-Rh as a model system, atomic-resolution imaging and molecular dynamics show that an ultrathin Au overlayer forms on Rh, stabilized by competition among surface, interfa",
+    "authors": [
+      "Caitlin A. McCandler",
+      "Xianzhuo Lao",
+      "Jie Liu",
+      "Huipu Liu",
+      "Kristin A. Persson",
+      "Peng-Cheng Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "An Open-Source Standard-Cell Library for IHP 130nm Developed by Students",
+    "url": "https://arxiv.org/abs/2609.29965v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Standard-cell libraries form the critical interface between transistor-level circuit design and automated digital design flows, yet their design and characterization are rarely covered in depth in digital VLSI courses. This paper presents VLSI 5, a graduate-level course at ETH Zurich in which students design, lay out, characterize, and integrate their own standard cells using IHP's open-source 130nm SG13G2 process design kit. In the first course offering, 19 students developed EZ130 8T, an open-",
+    "authors": [
+      "Oscar Castañeda",
+      "Lavinia Recchioni",
+      "Tobias Senti",
+      "Flurin Cahenzli",
+      "Marco Ferroni",
+      "Thorben Heekenjann",
+      "Robert Kenter",
+      "Stefan Odermatt",
+      "Daniel Richner",
+      "Gabriel Altendorfer",
+      "Davide Cannone",
+      "Miguel Correa",
+      "Ivan Herger",
+      "Lars Kröger",
+      "Nicolas Nanzer",
+      "Darja Nonaca",
+      "Christopher Reinwardt",
+      "Lukas Winklhofer",
+      "Enrico Zelioli",
+      "Yiheng Zhang",
+      "Yingxue Zhang",
+      "Domenic Keller",
+      "Seyed Hadi Mirfarshbafan",
+      "Zerun Jiang",
+      "Beat Muheim",
+      "Arianna Rubino",
+      "Jérémy Guichemerre",
+      "Frank K. Gürkaynak",
+      "Christoph Studer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Non-Uniform Activation Aided Distributed Generalized Spatial Modulation for DMIMO Systems",
+    "url": "https://arxiv.org/abs/2609.29915v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "This letter investigates a non-uniform activation aided distributed generalized spatial modulation (DGSM) scheme in a downlink distributed multiple-input multiple-output (DMIMO) system formed by geographically separated transmission reception points (TRPs). Unlike conventional uniform-activation DGSM, the proposed scheme assigns adaptive activation probabilities to different TRP subsets, thereby jointly exploiting the data-domain transmission capability and the index-domain information carried b",
+    "authors": [
+      "Haojin Li",
+      "Chen Sun",
+      "Rang Su",
+      "Zhaojian Liu",
+      "Wenqi Zhang",
+      "Haijun Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Local order in natural sanidine disentangled via single crystal diffuse scattering",
+    "url": "https://arxiv.org/abs/2609.29899v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Natural sanidine commonly preserves metastable chemical disorder at ambient conditions, but the local structural correlations associated with this disorder remain poorly understood due to a reliance on average-structure analysis alone. Here, we investigate single-crystal diffuse scattering in a natural sanidine from Drachenfels, Germany, with consistent observations across additional samples from Laacher See, Germany, and Vesuvio, Italy. The diffraction data reveal pronounced anisotropic diffuse",
+    "authors": [
+      "Christin Wiggers",
+      "Daniel A. Chaney",
+      "Ella M. Schmidt"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Physical-Layer Aspects of Repeater-Assisted MIMO",
+    "url": "https://arxiv.org/abs/2609.29846v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Network-controlled repeaters (NCRs) are emerg- ing as low-cost, band-selective active scatterers that can re- shape the wireless propagation environment without backhaul or tight phase synchronization. We study physical-layer design for repeater-assisted multiple-input multiple-output (RA-MIMO) networks, such as hardware impairments, gain and activation control, duplexing, channel-state information acquisition, and wideband delay effects. We then discuss integrated sensing and communication (ISA",
+    "authors": [
+      "Diana P. M. Osorio",
+      "Kohei Ueda",
+      "Anubhab Chowdhury",
+      "Hiroki Iimori",
+      "Yuto Hama",
+      "Koji Ishibashi",
+      "Erik G. Larsson"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.hist-ph",
+    "title": "Piezoelectricity: A Brief History of its Discovery and Physical Principles Using the Example of Low Quartz",
+    "url": "https://arxiv.org/abs/2609.29810v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Piezoelectricity is a key phenomenon in solid-state physics and has significant technological relevance. In teaching, however, it is often treated either without a historical context or an explicit link to the microscopic crystal structure, meaning that a crucial level of understanding remains untapped. This study combines the history of the discovery of piezoelectricity with its physical description within a didactically coherent framework. Building on the work of the brothers, Jacques and Pier",
+    "authors": [
+      "Ruediger G. Ballas",
+      "Nataliya Koev"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "X2SBench: an open benchmark for evaluating crystal structure determination from powder diffraction",
+    "url": "https://arxiv.org/abs/2609.29751v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Progress towards practical powder X-ray diffraction (PXRD) structure determination requires evaluation beyond small crystals and idealized patterns. X2SBench combines 152,587 simulated structure-pattern pairs with 591 curated measurements, extending evaluation to larger cells, lower-symmetry structures and diverse compositions. Fixed splits, defined inputs and common structural metrics support comparisons by crystal system, atom count and element count. Joint stratification locates weaknesses wi",
+    "authors": [
+      "Zhiyuan Gao",
+      "Juncheng Xiao",
+      "Shuchen Pu",
+      "Qi Li",
+      "Weida Wang",
+      "Shufei Zhang",
+      "Yong Yang",
+      "Shifeng Jin",
+      "Yunqi Cai",
+      "Hongming Weng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "VQ-LIC: Shared Vector-Quantized Learned Image Compression on a Resource-Constrained FPGA",
+    "url": "https://arxiv.org/abs/2609.29727v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Learned image compression (LIC) is hard to deploy on severely resource-constrained FPGAs, since how fast it actually runs depends not just on arithmetic count, but also on memory traffic, imbalance between different operations, and how the hardware batches its work. We present VQ-LIC, an asymmetric edge-cloud codec in which a compact INT8 depthwise (DW)-pointwise (PW) analysis transform and multi-codebook vector quantization (VQ) run at the edge on a reusable DW/PW engine pair, while reconstruct",
+    "authors": [
+      "Muhammad Fahd Ibrahim Bhatti",
+      "Abdullah Bin Faisal",
+      "Ahsan Usman",
+      "Naveed Anwar Bhatti",
+      "Muhammad Ali Siddiqi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Cavity-waveguide coupling in phononic crystals",
+    "url": "https://arxiv.org/abs/2609.29722v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Phononic crystal platforms provide a promising route toward scalable on-chip quantum networks, where mechanical excitations mediate interactions between solid-state qubits. A key building block of such architectures is the cavity-waveguide system, in which localized mechanical modes couple to propagating phononic modes. However, a quantitative understanding of the mechanisms governing this coupling remains incomplete. In this work, we investigate the interaction between localized modes of snowfl",
+    "authors": [
+      "Jakub Rosińński",
+      "Benjamin Mayer",
+      "Hubert J. Krenner",
+      "Paweł Machnikowski"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Dynamical Diversity for Reservoir Computing in Reconfigurable Nanomechanics",
+    "url": "https://arxiv.org/abs/2609.29532v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Physical reservoir computing uses nonlinear dynamics and a trained linear readout to process information. Nanoelectromechanical (NEMS) resonators combine geometric Duffing nonlinearity with fading memory, but most electromechanical implementations use a single resonance mode. Here, we demonstrate reservoir computing with two interacting modes of a single NEMS resonator measured through one readout port. We introduce dynamical diversity through complementary modal drive settings: the same input s",
+    "authors": [
+      "Humayun Ahmed",
+      "Inês S. Garcia",
+      "Filipa C. Mota",
+      "Muhammad Asim",
+      "Ghaith Mahook",
+      "Suleyman Celik",
+      "Yunus Selcuk",
+      "Filipe S. Alves",
+      "Alper Demir",
+      "M. Selim Hanay"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Selective strain tuning of nonequilibrium multiferroic dynamics in BiFeO$_\\text3$",
+    "url": "https://arxiv.org/abs/2609.29472v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Quantum materials are characterized by intertwined orders, and a fundamental goal in condensed matter physics is to achieve their selective control in such a way that one order parameter can be tuned while leaving others largely unaffected. Although significant progress has been made in thermal equilibrium, realizing such control out of equilibrium remains highly challenging. Here we employed \\textit{in situ} tensile strain to selectively manipulate the photoinduced lattice dynamics associated w",
+    "authors": [
+      "Chenhang Xu",
+      "Patrick Liu",
+      "Bo Zhang",
+      "Minyong Han",
+      "Henry G. Bell",
+      "Cameron J. R. Duncan",
+      "Yusong Liu",
+      "Patrick L. Kramer",
+      "Randy Lemons",
+      "Jake D. Koralek",
+      "Alexander H. Reid",
+      "Dong Qian",
+      "Harold Y. Hwang",
+      "Alfred Zong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.plasm-ph",
+    "title": "Equation of state and transport coefficients of warm dense aluminum from mixed deterministic-stochastic density functional theory",
+    "url": "https://arxiv.org/abs/2609.29435v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Aluminum is a reference standard in high-energy-density research and serves as a liner material in megampere Z-pinch facilities. Using mixed deterministic-stochastic finite-temperature density functional theory, we compute the equation of state and transport coefficients of liquid aluminum up to temperatures of 1000 eV and compare the results with model-based approaches. We find that for T<200 eV the density-functional results differ from the models by more than 10% at high density, with a maxim",
+    "authors": [
+      "Zi Li",
+      "Weijie Li",
+      "Cong Wang",
+      "Ping Zhang",
+      "Xianjue Peng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Hamiltonian learning reveals optoelectronic mechanisms across thermodynamic state space in soft semiconductors",
+    "url": "https://arxiv.org/abs/2609.29361v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Predicting optoelectronic response across thermodynamic state space requires coupling finite-temperature nuclear dynamics to electronic structure at scales where direct first-principles calculations are impractical. Machine-learning force fields and Hamiltonian-learning models provide scalable predictions, but integrating them into reliable and interpretable workflows remains challenging. Here, we introduce FLOW-OTTER, a modular, model-agnostic framework that automates molecular dynamics, Hamilt",
+    "authors": [
+      "Frederik Vonhoff",
+      "Jesper R. Pedersen",
+      "Frederico P. Delgado",
+      "Martin Schwade",
+      "Peter Beck",
+      "Jonas A. Oldenstaedt",
+      "Ivano E. Castelli",
+      "David A. Egger"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Combining physical models with dynamically acquired experimental information for the optimization of multicomponent NASICON fast ionic conductors in a self-driving laboratory",
+    "url": "https://arxiv.org/abs/2609.29344v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "Elemental substitution within existing structural frameworks is a widely applied strategy for developing advanced materials. Yet, optimizing target properties while maintaining phase purity usually demands extensive trial-and-error, which becomes substantially inefficient when navigating a complex design space. Here, we introduce a strategy that simultaneously and dynamically assesses composition-dependent synthetic accessibility and target properties via aggregated cost functions that guide aut",
+    "authors": [
+      "Bernardus Rendy",
+      "Yuxing Fei",
+      "Tanjin He",
+      "Xiaochen Yang",
+      "Andrea Giunto",
+      "Lauren N. Walters",
+      "David Milsted",
+      "Hao Qiu",
+      "Matthew J. McDermott",
+      "Bin Ouyang",
+      "Yan Zeng",
+      "Gerbrand Ceder"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "stat.ME",
+    "title": "FDR-Controlled Variable Selection for Generalized Linear Models and Cox Regression with Virtual Dummies",
+    "url": "https://arxiv.org/abs/2609.29335v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "In genomics, imaging and clinical studies, only a few of many candidate predictors are often nonlinearly associated with a response that may be, e.g. binary, categorical, a count or a censored event time. The Terminating-Random Experiments (T-Rex) selector is a scalable variable selection method that controls the false discovery rate (FDR) by letting synthetic null variables (dummies) compete with the real predictors. While the FDR control theory embraces more general settings, to date, the T-Re",
+    "authors": [
+      "Helena Mehler",
+      "Taulant Koka",
+      "Michael Muma"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "quant-ph",
+    "title": "A low-temperature entropy source for on-chip true random number generation: universal robustness beyond device quality",
+    "url": "https://arxiv.org/abs/2609.29300v1",
+    "published_date": "2026-09-24",
+    "source": "arXiv",
+    "summary": "True random number generation is a critical capability for fault-tolerant quantum computing at millikelvin temperatures. Yet existing Josephson-junction-based TRNGs all rest on a widely accepted but untested assumption: that reliable entropy extraction requires precisely controlled device parameters. Here we show that this assumption does not always hold. We demonstrate a counterintuitive finding: a single current-biased Josephson junction, regardless of its parameter quality, can serve as a cry",
+    "authors": [
+      "Y. Q. Chai",
+      "M. Y. Wang",
+      "X. N. Feng",
+      "L. F. Wei"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Altermagnetism and generalised tensorial properties in the exchange multiplet framework",
     "url": "https://arxiv.org/abs/2609.28453v1",
