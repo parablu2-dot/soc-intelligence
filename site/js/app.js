@@ -551,7 +551,11 @@ function _capacityTable() {
     return (ORDER.indexOf(ca) - ORDER.indexOf(cb)) || a.localeCompare(b);
   });
 
-  const maxWspm = Math.max(...capacityRecords.map(r => r.wafer_capacity || 0), 1);
+  // 막대는 '최신 실적' 기준이므로 최대값도 실적만으로 (먼 미래 예측이 스케일을 왜곡하지 않게)
+  const maxWspm = Math.max(...capacityRecords.filter(r => !r.is_forecast).map(r => r.wafer_capacity || 0), 1);
+  const nowMonth = new Date().toISOString().slice(0, 7);
+  const staleCut = (() => { const d = new Date(); d.setMonth(d.getMonth() - 12); return d.toISOString().slice(0, 7); })();
+  const asOf = capacityRecords.filter(r => !r.is_forecast).map(r => r.month).sort().pop() || '–';
 
   const rows = sortedKeys.map(key => {
     const recs = grouped[key].sort((a, b) => a.month.localeCompare(b.month));
@@ -568,11 +572,14 @@ function _capacityTable() {
     const yld   = latest?.yield_rate ? `${Math.round(latest.yield_rate * 100)}%` : '–';
     const fcWspm = latestFc?.wafer_capacity;
     const isForecast = !hist.length;
+    const isStale = !isForecast && latest.month < staleCut;          // 실적이 1년 넘게 갱신 안 됨
+    const fcPast = latestFc && latestFc.month < nowMonth;             // 예측 시점이 이미 지남
+    const src = [...recs].reverse().find(r => r.url);
 
     return `<tr>
       <td>${coLabel(company)}</td>
       <td><strong>${node}</strong></td>
-      <td>${latest?.month || '–'} ${isForecast ? '<span class="chip" style="background:var(--orange);color:#fff;font-size:10px">예측</span>' : ''}</td>
+      <td>${latest?.month || '–'} ${isForecast ? '<span class="chip" style="background:var(--orange);color:#fff;font-size:10px">예측</span>' : ''}${isStale ? ' <span class="chip" style="font-size:10px;color:var(--yellow)" title="최신 실적이 12개월 이상 지남 — 공개 수치 미확보">⚠ 갱신 필요</span>' : ''}</td>
       <td>
         <div style="display:flex;align-items:center;gap:6px">
           <div class="bar-track" style="width:90px;display:inline-block">
@@ -583,7 +590,8 @@ function _capacityTable() {
       </td>
       <td style="color:var(--text-muted);font-size:12px">${price}</td>
       <td style="color:var(--text-muted);font-size:12px">${yld}</td>
-      <td style="color:var(--text-muted);font-size:12px">${fcWspm ? (fcWspm/1000).toFixed(0)+'K wspm ('+latestFc.month+')' : '–'}</td>
+      <td style="color:var(--text-muted);font-size:12px">${fcWspm ? (fcWspm/1000).toFixed(0)+'K wspm ('+latestFc.month+')' : '–'}${fcPast ? ' <span style="font-size:10px">(지난 예측)</span>' : ''}</td>
+      <td style="font-size:11px">${src ? `<a href="${src.url}" target="_blank" rel="noopener" title="${src.source}">출처</a>` : '<span style="color:var(--text-muted)">추정</span>'}</td>
     </tr>`;
   }).join('');
 
@@ -593,14 +601,14 @@ function _capacityTable() {
       <thead>
         <tr>
           <th>파운드리</th><th>노드</th><th>최신 실적</th>
-          <th>캐파 (wspm)</th><th>가격/웨이퍼</th><th>수율</th><th>최신 예측</th>
+          <th>캐파 (wspm)</th><th>가격/웨이퍼</th><th>수율</th><th>최신 예측</th><th>출처</th>
         </tr>
       </thead>
       <tbody>${rows}</tbody>
     </table></div>
     <p style="font-size:11px;color:var(--text-muted);margin-top:8px">
-      출처: TrendForce·Bloomberg·SEMI·Reuters 공개 보고서 추정치. 계약 수치 아님.<br>
-      wspm = wafer starts per month. 막대 기준: 최대 ${(maxWspm/1000).toFixed(0)}K wspm (N7 성숙기).
+      출처: TrendForce·DigiTimes·Bloomberg·SEMI·업체 IR 공개 보고서 추정치. 계약 수치 아님. 최신 실적 기준월 ${asOf}.<br>
+      wspm = wafer starts per month. 막대 기준: 실적 최대 ${(maxWspm/1000).toFixed(0)}K wspm. ⚠ 갱신 필요 = 노드별 최신 공개 수치가 1년 이상 없음.
     </p>`;
 }
 
