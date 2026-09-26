@@ -15,6 +15,10 @@ import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+try:
+    from scripts.llm_errors import record_llm_error
+except ImportError:  # python scripts/<name>.py 직접 실행 시 sys.path[0]=scripts/
+    from llm_errors import record_llm_error
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -133,6 +137,7 @@ def run() -> None:
                     ok += 1
                 except Exception as exc:
                     print(f"  [!] {row['canonical_id'][:10]}… error: {exc}")
+                    record_llm_error("merge_refine", exc)
                     fail += 1
 
             conn.commit()

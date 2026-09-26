@@ -40,3 +40,13 @@ jobs:
           git diff --staged --quiet || git commit -m "chore: company strategy refresh $(date -u +'%Y-%m-%d')"
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push
+
+      # 스크립트는 fail-soft지만 LLM 계정 수준 오류(크레딧 소진·인증·잘못된 모델 ID)는
+      # scripts/llm_errors.py가 .llm-errors.log에 남기고, 여기서 빨간불로 드러냄. 커밋 이후라 데이터는 저장됨.
+      - name: Fail on LLM errors
+        if: always()
+        run: |
+          if [ -s .llm-errors.log ]; then
+            while read -r line; do echo "::error::$line"; done < .llm-errors.log
+            exit 1
+          fi

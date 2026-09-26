@@ -17,6 +17,10 @@ import sys
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+try:
+    from scripts.llm_errors import record_llm_error
+except ImportError:  # python scripts/<name>.py 직접 실행 시 sys.path[0]=scripts/
+    from llm_errors import record_llm_error
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -123,6 +127,7 @@ def generate_company_summaries(conn, client, *, headlines_per_company: int = 10,
             ok += 1
         except Exception as exc:
             print(f"::warning::company_strategy [{company}] failed: {exc}")
+            record_llm_error("company_strategy", exc)
             fail += 1
 
     out = {

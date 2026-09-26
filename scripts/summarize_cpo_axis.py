@@ -21,6 +21,10 @@ import os
 import sys
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+try:
+    from scripts.llm_errors import record_llm_error
+except ImportError:  # python scripts/<name>.py 직접 실행 시 sys.path[0]=scripts/
+    from llm_errors import record_llm_error
 
 try:
     from zoneinfo import ZoneInfo
@@ -152,6 +156,7 @@ def run() -> None:
             content = _generate_digest_content(items, client)
         except Exception as exc:
             print(f"::warning::summarize_cpo_axis digest generation failed: {type(exc).__name__}: {exc}")
+            record_llm_error("summarize_cpo_axis", exc)
     elif items:
         print("::warning::ANTHROPIC_API_KEY not set — CPO digest summary skipped (links만 생성)")
 

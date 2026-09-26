@@ -21,6 +21,10 @@ import sys
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+try:
+    from scripts.llm_errors import record_llm_error
+except ImportError:  # python scripts/<name>.py 직접 실행 시 sys.path[0]=scripts/
+    from llm_errors import record_llm_error
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -107,6 +111,7 @@ def run() -> None:
             ok += 1
         except Exception as exc:
             print(f"::warning::summarize_distillation [{axis}/{category}] failed: {exc}")
+            record_llm_error("summarize_distillation", exc)
             fail += 1
 
     _OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
