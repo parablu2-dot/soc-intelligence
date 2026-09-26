@@ -21,6 +21,10 @@ import os
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
+try:
+    from scripts.llm_errors import record_llm_error
+except ImportError:  # python scripts/<name>.py 직접 실행 시 sys.path[0]=scripts/
+    from llm_errors import record_llm_error
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -225,6 +229,7 @@ def run() -> None:
             sector_summaries = _generate_sector_summaries(by_axis, client, taxonomy)
         except Exception as exc:
             print(f"::warning::summarize_sectors sector summary generation failed: {exc}")
+            record_llm_error("summarize_sectors", exc)
     elif total:
         print("::warning::ANTHROPIC_API_KEY not set — sector summaries skipped")
 

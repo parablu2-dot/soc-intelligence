@@ -31,6 +31,10 @@ import os
 import sys
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+try:
+    from scripts.llm_errors import record_llm_error
+except ImportError:  # python scripts/<name>.py 직접 실행 시 sys.path[0]=scripts/
+    from llm_errors import record_llm_error
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -246,6 +250,7 @@ def run() -> None:
             ko_en = _generate(by_axis, eco_index, mapping, history, client)
         except Exception as exc:
             print(f"::warning::generate_weekly_report 축별 생성 실패: {exc}")
+            record_llm_error("generate_weekly_report", exc)
     elif total:
         print("::warning::ANTHROPIC_API_KEY not set — weekly axis digest skipped")
 
