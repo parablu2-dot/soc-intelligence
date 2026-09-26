@@ -87,7 +87,8 @@ downstream 디바이스/칩셋 수요를 부품·기판(MLCC·substrate·module�
 
 - **저장**: `data/baseline/notes/*.md` (frontmatter + 본문, git 커밋 대상 — append-only)
 - **빌드**: `scripts/export_baseline_notes.py` → `data/refined/baseline_notes.json` (frontmatter 파싱만, LLM 미개입)
-- **렌더**: `site/js/app.js`의 `_baselineNotesPanel()` — `#review` 상단에 카드로 표시 (`_mdLite()` 경량 markdown 렌더)
+- **렌더**: `site/js/app.js`의 `_companyInsightsPanel()` — "업체별 주요 전략" 탭에서 해당 업체 노트를 "업체별 인사이트" 카드로 표시 (`_mdLite()` 경량 markdown 렌더). 매칭은 frontmatter `company:` 우선, 없으면 `tags` 대소문자 무시 일치. (`#review` 상단 패널은 2026-08 제거)
+- **이벤트 인사이트**: 컨퍼런스/발표 종합은 `type: EventInsight` + `company:` frontmatter로 같은 폴더에 추가 (예: `qualcomm_snapdragon_summit_2026.md`)
 - **승격 워크플로**: 이 층은 "흐르는 것"(dashboard). 천이 읽고 판단을 얹으면 켜뮤 `#stub` Permanent로 graduate — 이 저장소에서는 원본을 수정하지 않음
 
 ## 서사 함정 검증 (narrative-trap, 2026-08-01)

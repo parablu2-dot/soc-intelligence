@@ -975,6 +975,117 @@ window.switchSummaryLang = function(btn, company) {
   if (textEl && langs) textEl.textContent = langs[btn.dataset.lang];
 };
 
+// ── 업체별 인사이트 (baseline notes 중 company 일치분, 수동 큐레이션 — LLM 미개입) ──
+function _escHtml(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+function _mdInline(s) {
+  return s
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\[\[([^\]]+)\]\]/g, '<span class="wikilink">$1</span>');
+}
+
+// 아주 가벼운 markdown → HTML 변환. 헤더/굵게/인용/목록/표/구분선만 지원 (풀 CommonMark 아님).
+function _mdLite(md) {
+  const lines = _escHtml(md).split('\n');
+  let html = '';
+  let i = 0;
+  let inList = false;
+  const closeList = () => { if (inList) { html += '</ul>'; inList = false; } };
+  const isTableSep = line => /^\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?$/.test(line.trim());
+
+  while (i < lines.length) {
+    const line = lines[i];
+    if (!line.trim()) { closeList(); i++; continue; }
+
+    const h = line.match(/^(#{1,4})\s+(.*)$/);
+    if (h) {
+      closeList();
+      const level = Math.min(h[1].length + 2, 6); // 문서 h1 → h3 정도로 낮춰 카드 안에서 과하지 않게
+      html += `<h${level}>${_mdInline(h[2])}</h${level}>`;
+      i++; continue;
+    }
+
+    if (line.startsWith('|') && lines[i + 1] && isTableSep(lines[i + 1])) {
+      closeList();
+      const headCells = line.split('|').slice(1, -1).map(c => c.trim());
+      html += '<table class="md-table"><thead><tr>' +
+        headCells.map(c => `<th>${_mdInline(c)}</th>`).join('') + '</tr></thead><tbody>';
+      i += 2;
+      while (i < lines.length && lines[i].trim().startsWith('|')) {
+        const cells = lines[i].split('|').slice(1, -1).map(c => c.trim());
+        html += '<tr>' + cells.map(c => `<td>${_mdInline(c)}</td>`).join('') + '</tr>';
+        i++;
+      }
+      html += '</tbody></table>';
+      continue;
+    }
+
+    if (/^-{3,}$/.test(line.trim())) { closeList(); html += '<hr>'; i++; continue; }
+
+    const bq = line.match(/^&gt;\s?(.*)$/);
+    if (bq) { closeList(); html += `<blockquote>${_mdInline(bq[1])}</blockquote>`; i++; continue; }
+
+    const li = line.match(/^(?:[-*]|\d+\.)\s+(?:\[( |x)\]\s+)?(.*)$/);
+    if (li) {
+      if (!inList) { html += '<ul>'; inList = true; }
+      const checkbox = li[1] !== undefined ? `${li[1] === 'x' ? '☑' : '☐'} ` : '';
+      html += `<li>${checkbox}${_mdInline(li[2])}</li>`;
+      i++; continue;
+    }
+
+    closeList();
+    html += `<p>${_mdInline(line)}</p>`;
+    i++;
+  }
+  closeList();
+  return html;
+}
+
+// company 필드 우선, 없으면(구 노트는 append-only라 수정 불가) tags 대소문자 무시 일치로 fallback
+function _companyNotes(company) {
+  return baselineNotes
+    .filter(n => n.company
+      ? n.company === company
+      : (n.tags || []).some(t => String(t).toLowerCase() === company))
+    .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+}
+
+function _companyInsightsPanel(company) {
+  const notes = _companyNotes(company);
+  if (!notes.length) return '';
+  const cards = notes.map((note, idx) => {
+    const tags = (note.tags || []).map(t => `<span class="chip chip-note">${_escHtml(t)}</span>`).join('');
+    const statusLabel = note.status ? `<span class="chip chip-note-status">${_escHtml(note.status)}</span>` : '';
+    return `
+      <div class="baseline-note-card">
+        <div class="baseline-note-head" onclick="toggleBaselineNote('${note.id}')">
+          <div>
+            <div class="baseline-note-topic">${_escHtml(note.topic)}</div>
+            <div class="baseline-note-meta">${_escHtml(note.axis)} ${note.date ? '· ' + note.date : ''}</div>
+          </div>
+          <div>${statusLabel}${tags}</div>
+        </div>
+        <div id="bn-body-${note.id}" class="baseline-note-body" style="display:${idx === 0 ? 'block' : 'none'}">${_mdLite(note.body_md)}</div>
+      </div>`;
+  }).join('');
+  return `
+    <div class="baseline-notes-panel">
+      <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:8px">
+        ◆ 업체별 인사이트 — 이벤트·deep-research 노트 (수동 큐레이션 · ${notes.length}건)
+      </div>
+      ${cards}
+    </div>`;
+}
+
+window.toggleBaselineNote = function(id) {
+  const el = document.getElementById(`bn-body-${id}`);
+  if (el) el.style.display = el.style.display === 'none' ? 'block' : 'none';
+};
+
 // ── 12. 업체별 주요 전략 ─────────────────────────────────────────────────
 function modCompetitor() {
   // hiring 신호 및 업체 아닌 소스(트렌드포스 등) 제외 — 채용 레이더/기사 전용
@@ -991,6 +1102,7 @@ function modCompetitor() {
     <div class="filters" id="comp-tabs">${tabs}</div>
     <div id="comp-content">
       ${_companySummaryCard(activeCompany)}
+      ${_companyInsightsPanel(activeCompany)}
       ${signalList(sigs.slice(0,50))}
     </div>`;
 }
@@ -1380,7 +1492,7 @@ window.competitorTab = function(btn, company) {
   btn.classList.add('active');
   const sigs = allSignals.filter(s => s.company === company && s.category !== 'hiring');
   document.getElementById('comp-content').innerHTML =
-    _companySummaryCard(company) + signalList(sigs.slice(0,50));
+    _companySummaryCard(company) + _companyInsightsPanel(company) + signalList(sigs.slice(0,50));
 };
 
 // ── 진입점 ────────────────────────────────────────────────────────────────
