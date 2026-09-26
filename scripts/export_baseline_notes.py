@@ -39,6 +39,8 @@ def _parse_note(path: Path) -> dict:
         "id": path.stem,
         "topic": meta.get("topic") or title,
         "axis": meta.get("axis") or meta.get("layer") or "",
+        # 업체별 인사이트 매칭용 (업체별 주요 전략 탭) — 없으면 프론트가 tags로 fallback
+        "company": meta.get("company") or "",
         "status": str(meta.get("status") or ""),
         "tags": meta.get("tags") or [],
         "date": str(meta.get("date")) if meta.get("date") else "",
