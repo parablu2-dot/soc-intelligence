@@ -4946,7 +4946,7 @@ environment = {
 	<atom:link href="https://azure.microsoft.com/en-us/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://azure.microsoft.com/en-us/blog/</link>
 	<description>Get the latest Azure news, updates, and announcements from the Azure blog. From product updates to hot topics, hear from the Azure experts.</description>
-	<lastBuildDate>Wed, 23 Sep 2026 16:12:16 +0000</lastBuildDate>
+	<lastBuildDate>Thu, 24 Sep 2026 20:31:52 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -4962,6 +4962,380 @@ environment = {
 	<height>32</height>
 </image> 
 	<item>
+		<title>Ship agents faster with expanded model choice, voice agents, and continuous optimization</title>
+		<link>https://azure.microsoft.com/en-us/blog/ship-agents-faster-with-expanded-model-choice-voice-agents-and-continuous-optimization/</link>
+					<comments>https://azure.microsoft.com/en-us/blog/ship-agents-faster-with-expanded-model-choice-voice-agents-and-continuous-optimization/#respond</comments>
+		
+		<dc:creator><![CDATA[Tina Schuchman]]></dc:creator>
+		<pubDate>Thu, 24 Sep 2026 18:00:00 +0000</pubDate>
+				<category><![CDATA[AI + machine learning]]></category>
+		<category><![CDATA[Management and governance]]></category>
+		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=54013</guid>
+
+					<description><![CDATA[<p>The best model for your business will keep changing. Adopting it should move your business forward, not send your team back to rebuild the architecture around it.</p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/ship-agents-faster-with-expanded-model-choice-voice-agents-and-continuous-optimization/">Ship agents faster with expanded model choice, voice agents, and continuous optimization</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">The best model for your business will keep changing. Adopting it should move your business forward, not send your team back to rebuild the architecture around it. As models advance, organizations need the freedom to choose the right model for each workload, and an agent foundation that can evolve with those choices.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-us/products/ai-foundry" target="_blank" rel="noreferrer noopener">Microsoft Foundry</a> provides that model—and harness—agnostic foundation for building and running agents. Teams can adopt better models as they emerge while preserving their investments in the enterprise systems, knowledge, tools, and controls that make agents useful to their business. </p>
+
+
+
+<p class="wp-block-paragraph">Adopting a newer model is only the starting point. Foundry helps teams continuously improve their agents, using production traces to evaluate and refine instructions, skills, tools, and model choice against quality, latency, and cost. That’s the <strong>hill-climbing</strong> approach: observe, evaluate, optimize, validate, and repeat—with people in control</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://azure.microsoft.com/en-us/products/ai-foundry" target="_blank" rel="noopener noreferrer">Learn more about Microsoft Foundry</a></div>
+</div>
+
+
+
+<p class="wp-block-paragraph">Today, we’re advancing that foundation to help teams build and continuously improve agents that deliver business value:</p>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item"><strong>Choose from a broader range of models</strong> as frontier AI advances.</li>
+
+
+
+<li class="wp-block-list-item"><strong>Build voice experiences and support long-running work</strong> on the same agent foundation.</li>
+
+
+
+<li class="wp-block-list-item"><strong>Equip agents with knowledge and tools</strong> that help them discover and apply the right capabilities.</li>
+
+
+
+<li class="wp-block-list-item"><strong>Turn production insights into continuous improvement</strong> across agent quality, latency, and cost.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">These advances help teams spend less time assembling infrastructure and more time building.</p>
+
+
+
+<p class="wp-block-paragraph">One customer putting these capabilities together is <a href="https://www.fashable.ai/">Fashable</a>, which uses Foundry’s models, agents, knowledge, and tools to help fashion brands turn trends and ideas into clothing designs, virtual try-on experiences, and campaign imagery. By connecting these workflows with the existing brands’ systems, Fashable reports cutting the time to develop new fashion products from months to weeks, with one customer reducing its budget for physical samples by 60%.</p>
+
+
+
+<h2 class="wp-block-heading" id="choose-and-evaluate-frontier-ai-models-in-microsoft-foundry">Choose and evaluate frontier AI models in Microsoft Foundry</h2>
+
+
+
+<p class="wp-block-paragraph">Frontier AI is advancing rapidly across providers. New capabilities are arriving in days, not months, and this week captures that momentum: the full <a href="https://azure.microsoft.com/en-us/blog/gpt-6-astra-sol-and-luna-for-production-agents-in-microsoft-foundry/" target="_blank" rel="noreferrer noopener"><strong>GPT-6 family from OpenAI</strong></a><strong>, including GPT-6 Sol and GPT-6 Luna, and </strong><a href="https://aka.ms/ClaudeOpus5.5" target="_blank" rel="noreferrer noopener"><strong>Claude Opus 5.5 from Anthropic</strong></a> are now available in Microsoft Foundry. What makes this moment important is not any single model. It is the pace and breadth of innovation happening across the frontier at the same time. </p>
+
+
+
+<p class="wp-block-paragraph">For developers and enterprises, model choice is no longer a decision you make at the start of a project. It is becoming a continuous advantage. The best model for a coding agent today may not be the best model for research, customer service, or high-volume inference, and the right answer will keep changing as new models arrive. <strong>Microsoft Foundry is built for that reality.</strong> </p>
+
+
+
+<p class="wp-block-paragraph">Foundry brings together models from leading AI providers in an open platform where teams can evaluate them against their own data and workloads, compare tradeoffs across quality, latency, and cost, and put the right models into production without rebuilding their AI strategy around a single provider. The arrival of the GPT-6 family and Claude Opus 5.5 expands that choice, giving teams more models to evaluate for their specific workloads alongside the broader portfolio already available in Foundry.</p>
+
+
+
+<h2 class="wp-block-heading" id="build-and-operate-voice-agents-with-foundry-agent-service">Build and operate voice agents with Foundry Agent Service</h2>
+
+
+
+<p class="wp-block-paragraph">Voice is rapidly becoming a major way people interact with AI agents. Yet many voice experiences are still built by layering speech onto agents designed for text, requiring separate speech, orchestration, monitoring, and deployment components. With <a href="https://aka.ms/VoicefirstagentsSept2026" target="_blank" rel="noreferrer noopener"><strong>voice agents in Foundry Agent Service</strong></a>, voice becomes a native part of the agent foundation—built, deployed, observed, evaluated, and optimized through the same platform, API, and SDK as the rest of your Foundry agents. </p>
+
+
+
+<p class="wp-block-paragraph">Voice agents, now in public preview, are a new agent type supporting both prompt and hosted agents. Choose from industry-leading voice models— GPT Realtime, Azure Realtime, MAI and more—to balance latency, reasoning depth, and cost for each scenario, or bring your own. Models, tools, and deployment paths are designed for spoken interaction from the start: expressive voices, natural turn-taking, and graceful recovery when someone interrupts, across 80+ languages and 140+ locales. Teams that want a distinct identity can fine-tune custom speech for domain vocabulary, create a custom voice, or add a photo or video avatar for unique brand identity. Developers can reuse the tools, enterprise knowledge, and governance configured for their other Foundry agents, then deploy to web channels, Microsoft Teams, Teams Phone, and Twilio-based inbound and outbound telephony experiences. </p>
+
+
+
+<p class="wp-block-paragraph">The developer workflow extends across the tools teams already use:</p>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item"><strong>AZD AI</strong> provides a repeatable, source-controlled workflow for configuring and deploying voice agents.</li>
+
+
+
+<li class="wp-block-list-item"><strong>Foundry Toolkit in Visual Studio Code</strong> (<em>coming soon</em>) enables developers to create, run, speak with, and debug voice agents without leaving their development environment.</li>
+
+
+
+<li class="wp-block-list-item"><strong>Voice-agent observability</strong> brings tracing, monitoring, transcripts, and voice-native evaluation to spoken interactions.</li>
+</ul>
+
+
+
+<blockquote class="wp-block-quote has-quote-default-font-size is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">At Fashable, our mission is to make advanced AI accessible to brands and manufacturers of all sizes, regardless of their technical maturity. As we introduce new agentic capabilities, voice becomes an important part of that journey, enabling interactions that feel more natural, conversational, and accessible. People don&#8217;t think in prompts, they think in conversations, and using voice agents in Foundry with MAI-Voice helps bridge that gap.</p>
+<cite>—Orlando Ribas Fernandes, CEO, Fashable</cite></blockquote>
+
+
+
+<figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
+	<div class="wp-block-embed__wrapper">
+		<universal-media-player id="ump-6ab5bb7e591c5"></universal-media-player>
+		<script type="module">
+			const currentTheme =
+				localStorage.getItem('blogInABoxCurrentTheme') ||
+				(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+			// Modify player theme based on localStorage value.
+			let options = {"autoplay":false,"hideControls":null,"language":"en-us","loop":false,"partnerName":"cloud-blogs","poster":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/image\/microsoftcorp\/1123032-voiceagents_tbmnl_en-us?wid=1280","title":"1123032-voiceagents","sources":[{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/1123032-voiceagents-0x1080-6439k","type":"video\/mp4","quality":"HQ"},{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/1123032-voiceagents-0x720-3266k","type":"video\/mp4","quality":"HD"},{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/1123032-voiceagents-0x540-2160k","type":"video\/mp4","quality":"SD"},{"src":"https:\/\/cdn-dynmedia-1.microsoft.com\/is\/content\/microsoftcorp\/1123032-voiceagents-0x360-958k","type":"video\/mp4","quality":"LO"}],"ccFiles":[{"url":"https:\/\/azure.microsoft.com\/en-us\/blog\/wp-json\/bloginabox\/v1\/get-captions?url=https%3A%2F%2Fwww.microsoft.com%2Fcontent%2Fdam%2Fmicrosoft%2Fbade%2Fvideos%2Fproducts-and-services%2Fen-us%2Fazure%2F1123032-voiceagents%2F1123032-voiceagents_cc_en-us.ttml","locale":"en-us","ccType":"TTML"}]};
+
+			if (currentTheme) {
+				options.playButtonTheme = currentTheme;
+			}
+
+			document.addEventListener('DOMContentLoaded', () => {
+				ump("ump-6ab5bb7e591c5", options);
+			});
+		</script>
+	</div>
+	</figure>
+
+
+
+<h2 class="wp-block-heading" id="build-resilient-hosted-agents-for-long-running-tasks">Build resilient hosted agents for long-running tasks</h2>
+
+
+
+<p class="wp-block-paragraph">Real enterprise work does not always finish within a single request. A research task may span many sources, a report may require several tools and processing stages, and an agent may need to wait for external systems or human approval. <a href="https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/long-running-agent-resilience"><strong>Long-running resilience in Foundry Agent Service</strong></a>, now in public preview, lets the work of hosted agents continue after a request disconnects and recover when its hosting process stops unexpectedly.</p>
+
+
+
+<p class="wp-block-paragraph">Microsoft Agent Framework complements these capabilities with framework-level workflow state and checkpointing. When a resilient background workflow is interrupted, Agent Framework can resume from its latest durable checkpoint while Foundry preserves the hosted response.</p>
+
+
+
+<p class="wp-block-paragraph">Microsoft Agent Framework also adds Agent Channel for messaging integrations, AG-UI support for interactive applications, CodeAct and Hyperlight containers for isolated code execution, and episodic procedural memory to reuse successful task patterns. <a href="https://aka.ms/MAFSept2026" target="_blank" rel="noopener noreferrer">Read more</a> about the latest updates in Microsoft Agent Framework.</p>
+
+
+
+<p class="wp-block-paragraph">To build and deploy these long-running agents, developers can use the Foundry Toolkit for Visual Studio Code, which supports hosted agents and Microsoft Agent Framework. The new <a href="https://aka.ms/DevpackSept2026" target="_blank" rel="noreferrer noopener"><strong>Foundry dev pack</strong></a> simplifies onboarding by bringing the Foundry developer toolchain together in one installer. </p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://aka.ms/MAFSept2026" target="_blank" rel="noopener noreferrer">Read more about the latest updates in Microsoft Agent Framework</a></div>
+</div>
+
+
+
+<h2 class="wp-block-heading" id="give-agents-only-what-they-need-when-they-need-it">Give agents only what they need, when they need it </h2>
+
+
+
+<p class="wp-block-paragraph">Enterprise agents don’t need every document, tool, and procedure in every interaction. Loading everything upfront adds latency and cost, and can make behavior harder to predict. Agents should be able to find and use the resources they need as the work unfolds.</p>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item"><strong><a href="https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/toolbox?pivots=vscode" target="_blank" rel="noopener noreferrer">Toolboxes</a> </strong>give agents on-demand access to tools and reusable procedures, with opt-in discovery and tool-level guardrails. Teams can make capabilities available without loading them into every call. Toolboxes are already generally available for hosted agents and are now expanding to prompt agents in public preview.</li>
+
+
+
+<li class="wp-block-list-item"><strong><a href="https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/tool-search?pivots=python" target="_blank" rel="noopener noreferrer">Tool search</a> in Toolboxes</strong>, now generally available, lets agents find the right tool without loading the full catalog of tool definitions upfront. In an <a href="https://commandline.microsoft.com/tool-search-toolboxes-foundry/" target="_blank" rel="noreferrer noopener">internal evaluation</a> using a <a href="https://arxiv.org/abs/2503.01763" target="_blank" rel="noreferrer noopener">public benchmark</a> of more than 44,000 tools and 7,000 queries, tool search reduced input-token consumption by more than 60% for a 50-tool toolbox and by over 97% for a 1,000-tool toolbox. These results are compared with a prompt-cached baseline that loads the full tool catalog upfront.</li>
+
+
+
+<li class="wp-block-list-item"><a href="https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/agent-to-agent?pivots=python" target="_blank" rel="noreferrer noopener"><strong>Agent-to-Agent (A2A)</strong></a>, now generally available, lets agents call other agents, including other Foundry agents, through an open, standardized protocol. Teams can connect agents without building custom point-to-point integrations, while centralized credentials and policy enforcement help maintain security and governance as those systems grow. </li>
+
+
+
+<li class="wp-block-list-item"><strong><a href="https://devblogs.microsoft.com/foundry/from-chatbots-to-automated-assistants-routines-in-microsoft-foundry-are-now-generally-available/" target="_blank" rel="noopener noreferrer">Routines</a> in Foundry Agent Service</strong>, now generally available, let teams run automated agents on a schedule, after a delay, or in response to an event. Teams no longer need to build their own schedulers, queues, and identity plumbing just to start an agent at the right time.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Together, these capabilities help teams reduce unnecessary context and custom infrastructure, with more control over what agents can access and when they run. </p>
+
+
+
+<h2 class="wp-block-heading" id="turn-production-evidence-into-continuous-improvement">Turn production evidence into continuous improvement</h2>
+
+
+
+<p class="wp-block-paragraph">Getting an agent into production is just the beginning. As real users put it to work, teams need to understand what’s driving quality, latency, and cost, and which changes will improve performance without introducing regressions. That has often meant piecing together traces, dashboards, and ad hoc tests. Foundry brings those steps into a continuous improvement loop, helping teams turn production insights into measurable improvements: observe, understand, evaluate, optimize, validate, and repeat. </p>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e5eb60&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e5eb60" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/foundry-agent-loop-v2.webp" alt="Circular diagram showing a continuous agent improvement loop: observe traces and signals; understand quality, latency, and cost; evaluate changes; optimize the agent; and validate that it&rsquo;s better. Arrows connect the five stages in a repeating cycle." class="wp-image-54162 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/foundry-agent-loop-v2.webp"><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item"><a href="https://aka.ms/ObservabilitySept2026" target="_blank" rel="noreferrer noopener">Insights in Foundry</a>, now in public preview, helps teams understand what is happening in production. It analyzes production traces to surface recurring issues and ones teams didn&#8217;t know to look for. For each issue, it gathers the supporting evidence, points to the likely cause, and recommends what to do next, so teams know where to focus before a small problem becomes a widespread one. </li>
+</ul>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e60110&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e60110" class="wp-block-image size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-1024x527.webp" alt="Insights in Foundry surfaces recurring agent issues, likely causes, supporting traces, and recommended actions." class="wp-image-54128 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-1024x527.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-300x154.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-768x395.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-1536x790.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry.webp 2000w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-1024x527.webp"><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item"><a href="https://learn.microsoft.com/en-us/azure/foundry/concepts/evaluation-evaluators/rubric-evaluators" target="_blank" rel="noopener noreferrer">Rubric evaluator</a>, generally available later this month, helps teams define what good looks like once they know what to fix. It turns an agent&#8217;s prompts, traces, and requirements into clear success criteria that can be measured consistently.</li>
+
+
+
+<li class="wp-block-list-item"><a href="https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/traces-to-dataset?tabs=python" target="_blank" rel="noopener noreferrer">Synthetic and traces</a> to dataset generation, generally available later this month, builds the evaluation data to match those criteria. Traces to dataset generation draws on real production traffic, so tests reflect the scenarios customers actually encounter, including the ones Foundry insights flagged.</li>
+
+
+
+<li class="wp-block-list-item"><a href="https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/agent-optimizer-overview" target="_blank" rel="noreferrer noopener">Agent optimizer</a> in Foundry Agent Service, generally available later this month, puts those evaluations, datasets, and constraints to work. It tests changes across instructions, tools, skills, and model choice, and shows which changes actually improve results before anything ships.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Together, these capabilities close the loop from production back to production. The improved agent returns to real traffic, where Foundry insights keep watching for what comes next, and each pass builds on the last so agents keep getting better the longer they run.</p>
+
+
+
+<blockquote class="wp-block-quote has-quote-default-font-size is-layout-flow wp-block-quote-is-layout-flow">
+<p class="wp-block-paragraph">Agent optimizer in Foundry Agent Service turns evaluation insights into actionable datasets and optimization, reducing the manual effort of finding and fixing performance issues. That systematic loop aligns directly with NTT DATA&#8217;s AgentOps with Harness approach—a core element of our Smart AI Agent® concept—together moving agents from proof of concept to trusted production at scale.</p>
+<cite>—Takashi Okamoto, AI Technology Strategist, Global AI Office, NTT DATA Group Corporation</cite></blockquote>
+
+
+
+<h2 class="wp-block-heading" id="govern-ai-agents-with-identity-lifecycle-and-network-controls">Govern AI agents with identity, lifecycle, and network controls</h2>
+
+
+
+<p class="wp-block-paragraph">As agents take on more work, organizations need to manage them as enterprise assets, with identities, owners, policies, lifecycle controls, and evidence of what they did.</p>
+
+
+
+<p class="wp-block-paragraph"><strong>Foundry agents now honor governance operations originating in Microsoft Entra and Agent 365. </strong>Actions such as blocking, disabling, deleting, restoring, or assigning a new owner are enforced by the Foundry runtime rather than recorded only in a directory.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://aka.ms/EgresscontrolsSept2026">Network egress controls</a> govern the outbound destinations a hosted agent can access. Teams can define allow and deny rules, modify outbound headers, or redirect requests before traffic leaves the Foundry-managed sandbox. An audit mode enables teams to evaluate policies before enforcement, with each decision emitted to Azure Application insights.</p>
+
+
+
+<p class="wp-block-paragraph">Coming soon in October, Microsoft Foundry is expanding its integration with Azure API Management with preview support for the new <strong>AI Gateway tier</strong>, helping organizations bring centralized governance into the Foundry developer experience. With this integration, organizations can adopt a <strong>hub-and-spoke approach</strong> where platform teams centrally govern model access through AI Gateway and make approved models available to developers through <strong>Admin Connected Models</strong>. Developers can then use these governed models across familiar Foundry experiences for model discovery, experimentation, agent development, and evaluation. Developers will also be able to connect to models across other resources or outside of Foundry directly from the playground. Existing Foundry integration with traditional Azure API Management tiers will remain supported.</p>
+
+
+
+<p class="wp-block-paragraph">Governing agents as enterprise assets also means proving they meet the organization&#8217;s safety and policy requirements. The new <a href="https://aka.ms/ASSERT-ACS-Clarity-Sept2026" target="_blank" rel="noreferrer noopener">open-source run-assert-eval Skill</a> brings that verification into a single workflow.</p>
+
+
+
+<p class="wp-block-paragraph">It runs three of Microsoft&#8217;s open-source tools in sequence: </p>
+
+
+
+<ol start="1" class="wp-block-list">
+<li class="wp-block-list-item"><a href="https://github.com/microsoft/clarity-agent" target="_blank" rel="noreferrer noopener">Clarity</a> surfaces risks developers may have missed. </li>
+</ol>
+
+
+
+<ol start="2" class="wp-block-list">
+<li class="wp-block-list-item"><a href="https://github.com/microsoft/ASSERT" target="_blank" rel="noreferrer noopener">ASSERT</a> turns requirements into measurable evaluations. </li>
+</ol>
+
+
+
+<ol start="3" class="wp-block-list">
+<li class="wp-block-list-item"><a href="https://github.com/microsoft/agent-governance-toolkit/tree/main/policy-engine" target="_blank" rel="noreferrer noopener">Agent Control Specification (ACS)</a> applies targeted runtime controls where an agent falls short.  </li>
+</ol>
+
+
+
+<p class="wp-block-paragraph">The Skill then re-runs the evaluation to confirm the agent improved without restricting legitimate behavior, giving teams evidence that each policy is working as intended. </p>
+
+
+
+<h2 class="wp-block-heading" id="get-started-with-microsoft-foundry">Get started with Microsoft Foundry</h2>
+
+
+
+<p class="wp-block-paragraph">The latest capabilities in Microsoft Foundry give developers a flexible path from a simple prompt to a production agent, without requiring teams to assemble disconnected development tools, runtimes, gateways, schedulers, and governance controls. </p>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item"><strong>Start building:</strong> Head to <a href="https://ai.azure.com/" target="_blank" rel="noreferrer noopener">ai.azure.com</a> to build your next agent in Microsoft Foundry. Choose a model, define the agent’s instructions, and connect the knowledge and tools it needs. </li>
+
+
+
+<li class="wp-block-list-item"><strong>Learn with the community:</strong> Join <a href="https://aka.ms/model-mondays" target="_blank" rel="noreferrer noopener">Model Mondays</a> and <a href="https://aka.ms/model-mondays/discord" target="_blank" rel="noreferrer noopener">Foundry Fridays</a> for demos and practical guidance. Next up: <a href="https://discord.com/events/1113626258182504448/1542207383823196290/1553096245248000000" target="_blank" rel="noreferrer noopener">Agent Optimizer and insights in Foundry Session</a></li>
+
+
+
+<li class="wp-block-list-item"><strong>Join us at Microsoft Ignite:</strong> Visit <a href="https://ignite.microsoft.com/" target="_blank" rel="noreferrer noopener">Microsoft Ignite</a> to explore sessions on AI and agents and opportunities to connect with experts.  </li>
+</ul>
+
+
+
+<div class="is-style-inline wp-block-bloginabox-theme-promotional">
+	
+<div class="promotional promotional--has-media promotional--media-right">
+	<div class="promotional__wrapper">
+		<div class="promotional__content-wrapper">
+			<div class="promotional__content">
+				
+
+<h2 class="wp-block-heading" id="start-building-and-optimizing-in-microsoft-foundry-today">Start building and optimizing in Microsoft Foundry today</h2>
+
+
+
+<p class="wp-block-paragraph"></p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a aria-label="Begin here: Start building and optimizing in Microsoft Foundry today" data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://ai.azure.com/" target="_blank" rel="noopener noreferrer">Begin here</a></div>
+</div>
+
+			</div>
+		</div>
+					<div class="promotional__media-wrapper">
+				<div class="promotional__media">
+											<img decoding="async" width="2560" height="1810" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO24-Azure-Retail-020-1-scaled.jpg" class="attachment-full size-full" alt="Person sitting at a desk with headphones around their neck working on a computer." loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO24-Azure-Retail-020-1-scaled.jpg 2560w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO24-Azure-Retail-020-1-300x212.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO24-Azure-Retail-020-1-1024x724.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO24-Azure-Retail-020-1-768x543.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO24-Azure-Retail-020-1-1536x1086.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO24-Azure-Retail-020-1-2048x1448.jpg 2048w" sizes="auto, (max-width: 2560px) 100vw, 2560px" />									</div>
+			</div>
+			</div>
+</div>
+</div>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/ship-agents-faster-with-expanded-model-choice-voice-agents-and-continuous-optimization/">Ship agents faster with expanded model choice, voice agents, and continuous optimization</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/ship-agents-faster-with-expanded-model-choice-voice-agents-and-continuous-optimization/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>Your architecture diagram is not your resilience</title>
 		<link>https://azure.microsoft.com/en-us/blog/your-architecture-diagram-is-not-your-resilience/</link>
 					<comments>https://azure.microsoft.com/en-us/blog/your-architecture-diagram-is-not-your-resilience/#respond</comments>
@@ -5035,7 +5409,7 @@ environment = {
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6ab5457f755a1"></universal-media-player>
+		<universal-media-player id="ump-6ab5bb7e67bfa"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5049,7 +5423,7 @@ environment = {
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6ab5457f755a1", options);
+				ump("ump-6ab5bb7e67bfa", options);
 			});
 		</script>
 	</div>
@@ -5097,7 +5471,7 @@ environment = {
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6ab5457f75b69"></universal-media-player>
+		<universal-media-player id="ump-6ab5bb7e6801d"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5111,7 +5485,7 @@ environment = {
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6ab5457f75b69", options);
+				ump("ump-6ab5bb7e6801d", options);
 			});
 		</script>
 	</div>
@@ -5149,7 +5523,7 @@ environment = {
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6ab5457f76031"></universal-media-player>
+		<universal-media-player id="ump-6ab5bb7e682f5"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5163,7 +5537,7 @@ environment = {
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6ab5457f76031", options);
+				ump("ump-6ab5bb7e682f5", options);
 			});
 		</script>
 	</div>
@@ -5263,7 +5637,7 @@ environment = {
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6ab5457f76e89"></universal-media-player>
+		<universal-media-player id="ump-6ab5bb7e68b0b"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5277,7 +5651,7 @@ environment = {
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6ab5457f76e89", options);
+				ump("ump-6ab5bb7e68b0b", options);
 			});
 		</script>
 	</div>
@@ -5690,7 +6064,7 @@ environment = {
 <p class="wp-block-paragraph">The accompanying chart illustrates why enterprise customers on Microsoft Foundry are switching to GPT-5.6 Sol and the latest GPT-6 offerings.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5457f84e04&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5457f84e04" class="wp-block-image size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1024x768.webp" alt="Chart comparing AI model quality and cost per benchmark task, including GPT-6 Astra, GPT-6 Sol, and GPT-6 Luna." class="wp-image-54049 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1024x768.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-300x225.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-768x576.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1536x1152.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-2048x1536.webp 2048w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-809x607.webp 809w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1024x768.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e7390d&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e7390d" class="wp-block-image size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1024x768.webp" alt="Chart comparing AI model quality and cost per benchmark task, including GPT-6 Astra, GPT-6 Sol, and GPT-6 Luna." class="wp-image-54049 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1024x768.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-300x225.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-768x576.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1536x1152.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-2048x1536.webp 2048w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-809x607.webp 809w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1024x768.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5758,7 +6132,7 @@ environment = {
 <p class="wp-block-paragraph">GPT-6 models running on Azure have multiple layers of safety and security built directly into the model and around it. At the core, the model itself carries the alignment and safety training built in, while the prompts and outputs around it are protected by content filters and guardrails that govern what the agent can say. Beyond that, tool calls and responses are protected by controls and <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/content-filter-prompt-shields" target="_blank" rel="noopener noreferrer">prompt injection mitigation</a> that govern what the agent can do, and identity and access are protected by enterprise policies that govern what it can reach.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5457f89949&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5457f89949" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-5.webp" alt="Four layers of AI safety: model training, prompt and output guardrails, tool protections, and identity and access controls." class="wp-image-54003 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-5.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e7524a&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e7524a" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-5.webp" alt="Four layers of AI safety: model training, prompt and output guardrails, tool protections, and identity and access controls." class="wp-image-54003 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-5.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6029,7 +6403,7 @@ environment = {
 </div>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5457f938b5&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5457f938b5" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-3.webp" alt="Graph comparing companies in the Magic Quadrant for Distributed Hybrid Infrastructure." class="wp-image-53936 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-3.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e7e595&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e7e595" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-3.webp" alt="Graph comparing companies in the Magic Quadrant for Distributed Hybrid Infrastructure." class="wp-image-53936 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-3.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6246,7 +6620,7 @@ environment = {
 <p class="wp-block-paragraph">Almost every enterprise we work with needs both, and I&#8217;d argue the interesting engineering problem is making the boundary between them easy to cross: the same image, the same identity and network controls, the same policy, whichever side a team lands on. Platform teams want the control the first model gives them for the models the business depends on. Application teams and agent frameworks want the second, and they often want it without learning Kubernetes. </p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5457f9b8a0&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5457f9b8a0" class="wp-block-image size-large is-style-default wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-927x1024.webp" alt="Gartner Magic Quadrant for Container Management" class="wp-image-53912 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-927x1024.webp 927w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-272x300.webp 272w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-768x848.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-1390x1536.webp 1390w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-1854x2048.webp 1854w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-927x1024.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e8523c&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e8523c" class="wp-block-image size-large is-style-default wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-927x1024.webp" alt="Gartner Magic Quadrant for Container Management" class="wp-image-53912 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-927x1024.webp 927w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-272x300.webp 272w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-768x848.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-1390x1536.webp 1390w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-1854x2048.webp 1854w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-927x1024.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6465,7 +6839,7 @@ environment = {
 </p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5457fa4b6f&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5457fa4b6f" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Effective-cost-governance-screenshot.webp" alt="Diagram showing the agent cost governance cycle: see the spend through observability signals, set spend limits with governance controls, prove return through business outcomes, then optimize, scale, or retire agents based on results" class="wp-image-53860 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Effective-cost-governance-screenshot.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e8d603&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e8d603" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Effective-cost-governance-screenshot.webp" alt="Diagram showing the agent cost governance cycle: see the spend through observability signals, set spend limits with governance controls, prove return through business outcomes, then optimize, scale, or retire agents based on results" class="wp-image-53860 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Effective-cost-governance-screenshot.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6503,7 +6877,7 @@ environment = {
 <p class="wp-block-paragraph">At the gateway, <a href="https://learn.microsoft.com/en-us/azure/api-management/genai-gateway-capabilities" target="_blank" rel="noreferrer noopener">Azure API Management&#8217;s AI Gateway</a> can emit token metrics by API, product, user, subscription, gateway, and backend. <a href="https://learn.microsoft.com/en-us/azure/foundry/observability/concepts/trace-agent-concept" target="_blank" rel="noreferrer noopener">Tracing in Foundry</a> captures tool usage, retries, latency, token consumption, and costs for an agent run.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5457fa5e54&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5457fa5e54" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Conversation-screenshot.webp" alt="ROI dashboard showing .41 net value, .00 value generated, .59 cost, and 930% ROI with supporting cost and value charts." class="wp-image-53862 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Conversation-screenshot.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e8e9f6&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e8e9f6" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Conversation-screenshot.webp" alt="ROI dashboard showing .41 net value, .00 value generated, .59 cost, and 930% ROI with supporting cost and value charts." class="wp-image-53862 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Conversation-screenshot.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6545,7 +6919,7 @@ environment = {
 </p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5457fa746a&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5457fa746a" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Invoice-screenshot.webp" alt="Workflow showing how teams investigate rising AI costs. Monitoring identifies usage trends, traces reveal model calls and retries, and evaluations assess quality and safety to determine the root cause of increased spending." class="wp-image-53864 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Invoice-screenshot.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e8ff12&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e8ff12" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Invoice-screenshot.webp" alt="Workflow showing how teams investigate rising AI costs. Monitoring identifies usage trends, traces reveal model calls and retries, and evaluations assess quality and safety to determine the root cause of increased spending." class="wp-image-53864 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Invoice-screenshot.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6587,7 +6961,7 @@ environment = {
 <p class="wp-block-paragraph">Unlike a cost alert, enforcement happens in the request path. Teams can contain one project&#8217;s consumption before it monopolizes shared capacity and establish different boundaries for different projects. Quotas can operate over hourly, daily, weekly, monthly, or yearly periods. Teams can configure the <a href="https://azure.microsoft.com/en-us/products/api-management" target="_blank" rel="noopener noreferrer">Azure API Management</a>-backed gateway and manage its token limits through Foundry Control Plane. </p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5457fa8c00&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5457fa8c00" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Token-screenshot.webp" alt="Bar chart illustrating project-level token quotas enforced through AI Gateway. Requests exceeding a project's token limit are rejected while other projects continue operating within their allocated capacity" class="wp-image-53866 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Token-screenshot.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e91cef&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e91cef" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Token-screenshot.webp" alt="Bar chart illustrating project-level token quotas enforced through AI Gateway. Requests exceeding a project's token limit are rejected while other projects continue operating within their allocated capacity" class="wp-image-53866 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Token-screenshot.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6649,7 +7023,7 @@ environment = {
 </p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5457faa0c2&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5457faa0c2" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" alt="Graph showing agents at work." src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Smoke-detector-screenshot.webp" alt='Line chart comparing two approaches to controlling AI spend over time. Budget alerts (aka "smoke detector") track billing data and notify owners after spending approaches a financial threshold, while request circuit breakers enforce token limits and immediately reject requests when consumption exceeds predefined quotas, helping protect capacity before costs continue to rise.' class="wp-image-53867 webp-format" srcset="" data-orig-alt="Graph showing agents at work." src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Smoke-detector-screenshot.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e93741&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e93741" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" alt="Graph showing agents at work." src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Smoke-detector-screenshot.webp" alt='Line chart comparing two approaches to controlling AI spend over time. Budget alerts (aka "smoke detector") track billing data and notify owners after spending approaches a financial threshold, while request circuit breakers enforce token limits and immediately reject requests when consumption exceeds predefined quotas, helping protect capacity before costs continue to rise.' class="wp-image-53867 webp-format" srcset="" data-orig-alt="Graph showing agents at work." src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Smoke-detector-screenshot.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6697,7 +7071,7 @@ environment = {
 </p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5457fab74e&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5457fab74e" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Agent-screenshot.webp" alt="Graph comparing two AI agents that shows business value generated, cost incurred, net value, and ROI. The visual illustrates that the lowest-cost agent is not always the best investment, as higher business value can result in a stronger ROI despite higher operating costs" class="wp-image-53869 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Agent-screenshot.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e95910&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e95910" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Agent-screenshot.webp" alt="Graph comparing two AI agents that shows business value generated, cost incurred, net value, and ROI. The visual illustrates that the lowest-cost agent is not always the best investment, as higher business value can result in a stronger ROI despite higher operating costs" class="wp-image-53869 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Agent-screenshot.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6735,7 +7109,7 @@ environment = {
 </ul>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5457fad202&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5457fad202" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Cost-overview.webp" alt="Conversation trace interface showing multi-agent workflow steps and detailed JSON metadata for a selected conversation event." class="wp-image-53871 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Cost-overview.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e97065&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e97065" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Cost-overview.webp" alt="Conversation trace interface showing multi-agent workflow steps and detailed JSON metadata for a selected conversation event." class="wp-image-53871 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Cost-overview.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6777,7 +7151,7 @@ environment = {
 <p class="wp-block-paragraph">Together, the four posts in this series describe one optimization system operating at three speeds. At runtime, model routing, deployment choices, and caching right-size each request. Over days and weeks, context engineering, memory, tools, and agent optimization improve the workflow. Continuously, governance attributes consumption, enforces limits, and measures whether the portfolio is creating value.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5457faec66&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5457faec66" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Optimization-System-screenshot.webp" alt="Timeline illustrating how Microsoft Foundry optimizes AI agents across three layers. Runtime optimizations such as model routing, deployment choices, and prompt caching reduce the cost of individual requests. Workflow optimizations including Agent Optimizer, memory, hosted tools, and evaluations improve performance over time. Continuous governance capabilities including Foundry Control Plane, AI Gateway, Azure Cost Management, and ROI for agents help teams monitor usage, control spending, and measure business outcomes" class="wp-image-53873 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Optimization-System-screenshot.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ab5bb7e98586&quot;}" data-wp-interactive="core/image" data-wp-key="6ab5bb7e98586" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Optimization-System-screenshot.webp" alt="Timeline illustrating how Microsoft Foundry optimizes AI agents across three layers. Runtime optimizations such as model routing, deployment choices, and prompt caching reduce the cost of individual requests. Workflow optimizations including Agent Optimizer, memory, hosted tools, and evaluations improve performance over time. Continuous governance capabilities including Foundry Control Plane, AI Gateway, Azure Cost Management, and ROI for agents help teams monitor usage, control spending, and measure business outcomes" class="wp-image-53873 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Optimization-System-screenshot.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7451,145 +7825,6 @@ environment = {
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/two-zones-or-three-a-design-framework-for-zone-resilient-azure-workloads/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>Beyond the benchmark: How an adaptive approach drives scientific discovery</title>
-		<link>https://azure.microsoft.com/en-us/blog/beyond-the-benchmark-how-an-adaptive-approach-drives-scientific-discovery/</link>
-					<comments>https://azure.microsoft.com/en-us/blog/beyond-the-benchmark-how-an-adaptive-approach-drives-scientific-discovery/#respond</comments>
-		
-		<dc:creator><![CDATA[Aseem Datar]]></dc:creator>
-		<pubDate>Tue, 08 Sep 2026 20:00:00 +0000</pubDate>
-				<category><![CDATA[AI + machine learning]]></category>
-		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=53782</guid>
-
-					<description><![CDATA[<p>For research and development (R&#38;D) organizations, the promise of agentic AI is not a better one-time answer. It is a new way to explore complex scientific and engineering problems: pursuing multiple hypotheses, validating them against evidence, learning from what does not work, and adapting their approach as new information becomes available.</p>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/beyond-the-benchmark-how-an-adaptive-approach-drives-scientific-discovery/">Beyond the benchmark: How an adaptive approach drives scientific discovery</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<p class="wp-block-paragraph">
-  For research and development (R&amp;D) organizations, the promise of agentic AI is not a better one-time answer. It is a new way to explore complex scientific and engineering problems: pursuing multiple hypotheses, validating them against evidence, learning from what does not work, and adapting their approach as new information becomes available.
-</p>
-
-
-
-<p class="wp-block-paragraph">This unique nature of the agentic discovery process has been a core area of research for Microsoft, and a design principle for <a href="https://azure.microsoft.com/en-us/solutions/discovery" target="_blank" rel="noopener noreferrer">Microsoft Discovery</a>, our platform for organizations embracing Frontier R&amp;D. </p>
-
-
-
-<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://techcommunity.microsoft.com/blog/microsoft-discovery-blog/adaptive-by-design-how-microsoft-discovery-explores-science/4552705" target="_blank" rel="noopener noreferrer">Learn how Microsoft Discovery explores science</a></div>
-</div>
-
-
-
-<h2 class="wp-block-heading" id="measuring-adaptive-ai-for-scientific-discovery">Measuring adaptive AI for scientific discovery</h2>
-
-
-
-<p class="wp-block-paragraph">A new benchmark result shows how that opportunity is becoming real. On <a href="https://agents-last-exam.org/" target="_blank" rel="noopener noreferrer">Agent’s Last Exam</a>, a demanding evaluation of long-running, tool-using professional tasks, <a href="https://learn.microsoft.com/en-us/azure/microsoft-discovery/concept-discovery-engine" target="_blank" rel="noopener noreferrer">Microsoft Discovery Engine</a> with CLIO (Cognitive Loop via In-Situ Optimization) <a href="https://techcommunity.microsoft.com/blog/microsoft-discovery-blog/adaptive-by-design-how-microsoft-discovery-explores-science/4552705" target="_blank" rel="noopener noreferrer">achieved higher scores than the other agentic harnesses evaluated across three scientific domains</a>: 61.6% in health and medicine, 75.2% in physical sciences, and 64.6% in life sciences.</p>
-
-
-
-<p class="wp-block-paragraph">
-  This result builds on Microsoft’s core research into what makes agentic discovery distinctive. CLIO enables independent reasoning paths to explore a problem, compare and share learning, and resolve the strongest trajectory into a single evidence-backed result. The system can determine when to keep exploring, change strategy, use a different model, or bring a domain expert into the loop.
-</p>
-
-
-
-<p class="wp-block-paragraph">The <a href="https://techcommunity.microsoft.com/blog/microsoft-discovery-blog/adaptive-by-design-how-microsoft-discovery-explores-science/4552705" target="_blank" rel="noopener noreferrer">CLIO benchmark blog post</a> describes this adaptive reasoning approach in depth. More broadly, this core innovation for scientific discovery, powered by agentic AI, is available to R&amp;D organizations in every industry and the scientific community with <a href="https://azure.microsoft.com/en-us/solutions/discovery" target="_blank" rel="noopener noreferrer">Microsoft Discovery</a> not only as a research breakthrough, but as a foundation for real R&amp;D work.</p>
-
-
-
-<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://azure.microsoft.com/en-us/solutions/discovery" target="_blank" rel="noopener noreferrer">Explore Microsoft Discovery</a></div>
-</div>
-
-
-
-<h2 class="wp-block-heading" id="why-scientific-discovery-requires-adaptive-reasoning">Why scientific discovery requires adaptive reasoning</h2>
-
-
-
-<p class="wp-block-paragraph">
-  Many of the hardest scientific and engineering challenges do not have a clearly defined workflow or a known answer. A researcher may need to navigate incomplete evidence, competing objectives, specialized tools, and changing constraints. A materials team may be balancing performance, safety, cost, and manufacturability. A life sciences team may need to connect literature, proprietary data, models, and experimental evidence before deciding what to validate next. An engineering team may need to search a vast design space without sacrificing physical fidelity or traceability.
-</p>
-
-
-
-<p class="wp-block-paragraph">
-  In these settings, a single model response is not enough. Practitioners need systems that can reason over time, preserve evidence, challenge assumptions, and work within the tools, data, governance, and review processes their experts already use. Just as importantly, they need to understand how a conclusion was reached and where human judgment should enter the process.
-</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-us/solutions/discovery" target="_blank" rel="noopener noreferrer">Microsoft Discovery</a> was designed as an enterprise platform for agentic R&amp;D, combining the scientific mindset of hypothesis, experimentation, and refinement with the engineering rigor of problem decomposition, structured execution, and reproducibility. CLIO strengthens that foundation with a more adaptive reasoning loop and a diverse model ecosystem, while allowing researchers to use a diverse model ecosystem and multiple reasoning paths.</p>
-
-
-
-<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/microsoft/discovery?hasfullconsent=true" target="_blank" rel="noopener noreferrer">Try Microsoft Discovery app</a></div>
-</div>
-
-
-
-<h2 class="wp-block-heading" id="from-benchmarks-to-real-world-impact">From benchmarks to real-world impact</h2>
-
-
-
-<p class="wp-block-paragraph">The greater opportunity extends beyond benchmark rankings into real research environments. Discovery Engine with CLIO has already supported work that discovered a <a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftechcommunity.microsoft.com%2Fblog%2Fmicrosoft-discovery-blog%2Freinventing-organic-redox-flow-batteries-with-microsoft-discovery%2F4552343&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C3471e9be37134bd29f0f08df0db0258a%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639244722368580525%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=oDSHDxJtI%2BRHngUsPJvJLSfLa8Y5g9RAEQkWCx8DE10%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer">novel organic redox flow battery</a>. The same approach has potential across design simulation (like for silicon chips), formulation and process optimization (for example in manufacturing and CPG), materials and molecular discovery (which can drive sustainability and drug discovery), and lab automation, areas where organizations need to shorten research cycles, without sacrificing rigor or traceability.</p>
-
-
-
-<p class="wp-block-paragraph">Agentic discovery does not replace scientists and engineers. It expands what they can explore, helps them learn faster from evidence, and gives them a more systematic and transparent way to move from an idea toward an outcome that experts can evaluate and validate.</p>
-
-
-
-<p class="wp-block-paragraph">Realizing the enormous opportunity to redefine R&amp;D requires a platform built for the tools, data, governance, and review processes researchers already use. <a href="https://azure.microsoft.com/en-us/solutions/discovery" target="_blank" rel="noopener noreferrer">Microsoft Discovery</a> was designed with that need in mind: to bring agentic discovery to researchers and scientists in R&amp;D organizations across every industry and throughout the scientific community. </p>
-
-
-
-<p class="wp-block-paragraph">
-  We are still early in this journey, but this benchmark milestone demonstrates what becomes possible when AI is built for the way discovery actually happens: iteratively, collaboratively, and adaptively. I look forward to seeing what organizations, researchers, and partners discover next.
-</p>
-
-
-
-<div class="is-style-inline wp-block-bloginabox-theme-promotional">
-	
-<div class="promotional promotional--has-media promotional--media-right">
-	<div class="promotional__wrapper">
-		<div class="promotional__content-wrapper">
-			<div class="promotional__content">
-				
-
-<h2 class="wp-block-heading" id="adaptive-ai-for-scientific-discovery">Adaptive AI for scientific discovery</h2>
-
-
-
-<p class="wp-block-paragraph">Learn how Microsoft Discovery uses adaptive, agentic approaches to explore complex scientific and engineering challenges, helping R&amp;D teams accelerate innovation and uncover new possibilities.</p>
-
-
-
-<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://techcommunity.microsoft.com/blog/microsoft-discovery-blog/adaptive-by-design-how-microsoft-discovery-explores-science/4552705" target="_blank" rel="noopener noreferrer"><strong>Read the blog</strong></a></div>
-</div>
-
-			</div>
-		</div>
-					<div class="promotional__media-wrapper">
-				<div class="promotional__media">
-											<img decoding="async" width="1925" height="2560" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/CLO24-Azure-Healthcare-015-scaled.jpg" class="attachment-full size-full" alt="person looking ta the laptop screen in scientific setting" loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/CLO24-Azure-Healthcare-015-scaled.jpg 1925w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/CLO24-Azure-Healthcare-015-226x300.jpg 226w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/CLO24-Azure-Healthcare-015-770x1024.jpg 770w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/CLO24-Azure-Healthcare-015-768x1021.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/CLO24-Azure-Healthcare-015-1155x1536.jpg 1155w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/CLO24-Azure-Healthcare-015-1540x2048.jpg 1540w" sizes="auto, (max-width: 1925px) 100vw, 1925px" />									</div>
-			</div>
-			</div>
-</div>
-</div>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/beyond-the-benchmark-how-an-adaptive-approach-drives-scientific-discovery/">Beyond the benchmark: How an adaptive approach drives scientific discovery</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/beyond-the-benchmark-how-an-adaptive-approach-drives-scientific-discovery/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		

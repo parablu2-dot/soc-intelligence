@@ -1,5 +1,262 @@
 {
-  "date": "2026-09-25",
-  "generated_at": "2026-09-25T23:17:06.577427+00:00",
-  "sectors": {}
+  "date": "2026-09-26",
+  "generated_at": "2026-09-26T22:30:33.387567+00:00",
+  "sectors": {
+    "mobile_ap": {
+      "sector": "Mobile AP",
+      "date": "2026-09-26",
+      "item_count": 2,
+      "generated_at": "2026-09-26T22:30:33.387148+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "Qualcomm unveiled automotive and edge AI initiatives at its Snapdragon Summit. The next flagship Snapdragon SoC will reach 5.40GHz clock speeds using TSMC's 2nm N2P process, though IPC gains are expected to remain below 10%.",
+          "key_facts": [
+            "Qualcomm next-gen Snapdragon flagship: 5.40GHz target frequency",
+            "Process node: TSMC 2nm N2P",
+            "Expected IPC improvement: under 10%"
+          ],
+          "implications": [
+            {
+              "keyword": "Frequency-over-IPC Strategy",
+              "text": "Qualcomm prioritizing clock speed over architectural efficiency improvements, suggesting thermal/power constraints at advanced nodes limit efficiency gains."
+            },
+            {
+              "keyword": "TSMC 2nm Lock-in",
+              "text": "Continued reliance on TSMC's 2nm N2P maintains foundry dependency; no diversification to Samsung or Intel advanced nodes signaled."
+            },
+            {
+              "keyword": "Auto/Edge AI Expansion",
+              "text": "Strategic push into automotive and edge AI markets broadens Qualcomm's TAM beyond smartphone flagships."
+            }
+          ],
+          "counterpoint": "Modest IPC gains under 10% may limit competitive differentiation against Apple's performance trajectory."
+        },
+        "en": {
+          "executive_summary": "Qualcomm unveiled automotive and edge AI initiatives at its Snapdragon Summit. The next flagship Snapdragon SoC will reach 5.40GHz clock speeds using TSMC's 2nm N2P process, though IPC gains are expected to remain below 10%.",
+          "key_facts": [
+            "Qualcomm next-gen Snapdragon flagship: 5.40GHz target frequency",
+            "Process node: TSMC 2nm N2P",
+            "Expected IPC improvement: under 10%"
+          ],
+          "implications": [
+            {
+              "keyword": "Frequency-over-IPC Strategy",
+              "text": "Qualcomm prioritizing clock speed over architectural efficiency improvements, suggesting thermal/power constraints at advanced nodes limit efficiency gains."
+            },
+            {
+              "keyword": "TSMC 2nm Lock-in",
+              "text": "Continued reliance on TSMC's 2nm N2P maintains foundry dependency; no diversification to Samsung or Intel advanced nodes signaled."
+            },
+            {
+              "keyword": "Auto/Edge AI Expansion",
+              "text": "Strategic push into automotive and edge AI markets broadens Qualcomm's TAM beyond smartphone flagships."
+            }
+          ],
+          "counterpoint": "Modest IPC gains under 10% may limit competitive differentiation against Apple's performance trajectory."
+        }
+      }
+    },
+    "hpc_datacenter": {
+      "sector": "HPC·Datacenter",
+      "date": "2026-09-26",
+      "item_count": 3,
+      "generated_at": "2026-09-26T22:30:33.387148+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "Taiwan is seeking alternative funding for AMD's R&D center subsidy, while Qualcomm opened a new chip design center and 6G research program in India. Tesla is ramping hiring for its self-driving team in China.",
+          "key_facts": [
+            "Qualcomm: new chip design center and 6G research program in India",
+            "Tesla: expanding self-driving team recruitment in China",
+            "AMD: R&D center in Taiwan facing subsidy funding challenges"
+          ],
+          "implications": [
+            {
+              "keyword": "Geographic Diversification",
+              "text": "Qualcomm and Tesla expanding R&D/engineering capacity in India and China respectively, reducing reliance on traditional design hubs."
+            },
+            {
+              "keyword": "6G Research Acceleration",
+              "text": "Qualcomm's 6G program in India signals early-stage standardization and modem development outside traditional markets."
+            },
+            {
+              "keyword": "Taiwan Subsidy Pressure",
+              "text": "AMD R&D funding challenges reflect strained Taiwan government budgets or policy reassessment of subsidy allocation."
+            }
+          ],
+          "counterpoint": "Tesla's China hiring for autonomous driving may face geopolitical restrictions or regulatory scrutiny on AI/data handling."
+        },
+        "en": {
+          "executive_summary": "Taiwan is seeking alternative funding for AMD's R&D center subsidy, while Qualcomm opened a new chip design center and 6G research program in India. Tesla is ramping hiring for its self-driving team in China.",
+          "key_facts": [
+            "Qualcomm: new chip design center and 6G research program in India",
+            "Tesla: expanding self-driving team recruitment in China",
+            "AMD: R&D center in Taiwan facing subsidy funding challenges"
+          ],
+          "implications": [
+            {
+              "keyword": "Geographic Diversification",
+              "text": "Qualcomm and Tesla expanding R&D/engineering capacity in India and China respectively, reducing reliance on traditional design hubs."
+            },
+            {
+              "keyword": "6G Research Acceleration",
+              "text": "Qualcomm's 6G program in India signals early-stage standardization and modem development outside traditional markets."
+            },
+            {
+              "keyword": "Taiwan Subsidy Pressure",
+              "text": "AMD R&D funding challenges reflect strained Taiwan government budgets or policy reassessment of subsidy allocation."
+            }
+          ],
+          "counterpoint": "Tesla's China hiring for autonomous driving may face geopolitical restrictions or regulatory scrutiny on AI/data handling."
+        }
+      }
+    },
+    "custom_soc": {
+      "sector": "Custom SoC",
+      "date": "2026-09-26",
+      "item_count": 7,
+      "generated_at": "2026-09-26T22:30:33.387148+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "Google announced plans to test Project Suncatcher TPUs in space, while Lokotech reached volume production milestone with first ASIC and Edge AI wafers exiting the fab. SpaceX's Colossus GPU cluster expansion approaches 1.44 million chips, but power delivery remains a critical bottleneck.",
+          "key_facts": [
+            "Google Project Suncatcher: TPU testing in space environment",
+            "Lokotech: first ASIC and Edge AI wafers in production",
+            "SpaceX Colossus GPU cluster: approaching 1.44 million chips",
+            "Estimated value of unreleased custom chips: $10 billion"
+          ],
+          "implications": [
+            {
+              "keyword": "Space-based AI Infrastructure",
+              "text": "Google's orbital TPU testing explores satellite-based AI compute and edge processing for latency-critical workloads."
+            },
+            {
+              "keyword": "Custom Foundry Emergence",
+              "text": "Lokotech's volume production entry signals growing demand for specialized ASIC and Edge AI designs outside hyperscaler control."
+            },
+            {
+              "keyword": "Power Constraint Limits Scale",
+              "text": "SpaceX's massive GPU expansion bottlenecked by power delivery, not chip count—constrains training throughput and practical utilization."
+            },
+            {
+              "keyword": "Competitive Fragmentation",
+              "text": "Multiple custom silicon initiatives (Google, SpaceX, Lokotech) reduce Nvidia's monopoly on AI compute but fragment the ecosystem."
+            }
+          ],
+          "counterpoint": "Space-based TPU testing and orbital infrastructure remain experimental; practical revenue and AI workload viability unproven."
+        },
+        "en": {
+          "executive_summary": "Google announced plans to test Project Suncatcher TPUs in space, while Lokotech reached volume production milestone with first ASIC and Edge AI wafers exiting the fab. SpaceX's Colossus GPU cluster expansion approaches 1.44 million chips, but power delivery remains a critical bottleneck.",
+          "key_facts": [
+            "Google Project Suncatcher: TPU testing in space environment",
+            "Lokotech: first ASIC and Edge AI wafers in production",
+            "SpaceX Colossus GPU cluster: approaching 1.44 million chips",
+            "Estimated value of unreleased custom chips: $10 billion"
+          ],
+          "implications": [
+            {
+              "keyword": "Space-based AI Infrastructure",
+              "text": "Google's orbital TPU testing explores satellite-based AI compute and edge processing for latency-critical workloads."
+            },
+            {
+              "keyword": "Custom Foundry Emergence",
+              "text": "Lokotech's volume production entry signals growing demand for specialized ASIC and Edge AI designs outside hyperscaler control."
+            },
+            {
+              "keyword": "Power Constraint Limits Scale",
+              "text": "SpaceX's massive GPU expansion bottlenecked by power delivery, not chip count—constrains training throughput and practical utilization."
+            },
+            {
+              "keyword": "Competitive Fragmentation",
+              "text": "Multiple custom silicon initiatives (Google, SpaceX, Lokotech) reduce Nvidia's monopoly on AI compute but fragment the ecosystem."
+            }
+          ],
+          "counterpoint": "Space-based TPU testing and orbital infrastructure remain experimental; practical revenue and AI workload viability unproven."
+        }
+      }
+    },
+    "foundry": {
+      "sector": "Foundry",
+      "date": "2026-09-26",
+      "item_count": 9,
+      "generated_at": "2026-09-26T22:30:33.387148+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "TSMC raised capex guidance toward $64 billion, extending foundry leadership and widening the gap versus Samsung and other rivals. Samsung foundry recovery is gaining momentum around 2nm and Taylor fab development, though execution risks remain. SK Hynix subsidiary Solidiam is exploring a potential IPO valued up to $150 billion, signaling confidence in memory-focused custom logic growth.",
+          "key_facts": [
+            "TSMC capex guidance: toward $64 billion",
+            "Samsung foundry: 2nm and Taylor fab in development",
+            "SK Hynix Solidiam: potential IPO targeting $15 billion raise at $150 billion valuation",
+            "South Korea semiconductor equipment localization: ~20% domestically sourced (flat since 2011)",
+            "China semiconductor equipment localization: grew from 8% (2021) to higher levels"
+          ],
+          "implications": [
+            {
+              "keyword": "TSMC Capex Dominance",
+              "text": "$64 billion capex spending entrenches TSMC's process lead and manufacturing capacity advantage, making competitive catch-up increasingly difficult for Samsung and Intel."
+            },
+            {
+              "keyword": "Samsung 2nm Risk",
+              "text": "Samsung's 2nm and Taylor fab remain execution hurdles; no clear timeline or yield targets communicated versus TSMC's established 2nm deployment."
+            },
+            {
+              "keyword": "Memory-Logic Convergence",
+              "text": "Solidiam IPO validates emerging market for memory-embedded custom logic (chiplets, HBM-integrated SoCs), potentially creating new revenue streams for SK Hynix."
+            },
+            {
+              "keyword": "Korean Supply Chain Vulnerability",
+              "text": "South Korean semiconductor equipment localization stalled at ~20% for 15 years; rising Chinese localization poses long-term competitiveness risk."
+            },
+            {
+              "keyword": "Geopolitical Manufacturing Shift",
+              "text": "Regional investment initiatives (Korea's equipment localization focus, Taiwan funding debates, India's semiconductor ambitions) reflect broader decoupling from singular supply chains."
+            }
+          ],
+          "counterpoint": "Samsung and Intel capex investments could accelerate process node maturity faster than historical cycles if execution improves; TSMC's capex advantage alone does not guarantee permanent technological leadership."
+        },
+        "en": {
+          "executive_summary": "TSMC raised capex guidance toward $64 billion, extending foundry leadership and widening the gap versus Samsung and other rivals. Samsung foundry recovery is gaining momentum around 2nm and Taylor fab development, though execution risks remain. SK Hynix subsidiary Solidiam is exploring a potential IPO valued up to $150 billion, signaling confidence in memory-focused custom logic growth.",
+          "key_facts": [
+            "TSMC capex guidance: toward $64 billion",
+            "Samsung foundry: 2nm and Taylor fab in development",
+            "SK Hynix Solidiam: potential IPO targeting $15 billion raise at $150 billion valuation",
+            "South Korea semiconductor equipment localization: ~20% domestically sourced (flat since 2011)",
+            "China semiconductor equipment localization: grew from 8% (2021) to higher levels"
+          ],
+          "implications": [
+            {
+              "keyword": "TSMC Capex Dominance",
+              "text": "$64 billion capex spending entrenches TSMC's process lead and manufacturing capacity advantage, making competitive catch-up increasingly difficult for Samsung and Intel."
+            },
+            {
+              "keyword": "Samsung 2nm Risk",
+              "text": "Samsung's 2nm and Taylor fab remain execution hurdles; no clear timeline or yield targets communicated versus TSMC's established 2nm deployment."
+            },
+            {
+              "keyword": "Memory-Logic Convergence",
+              "text": "Solidiam IPO validates emerging market for memory-embedded custom logic (chiplets, HBM-integrated SoCs), potentially creating new revenue streams for SK Hynix."
+            },
+            {
+              "keyword": "Korean Supply Chain Vulnerability",
+              "text": "South Korean semiconductor equipment localization stalled at ~20% for 15 years; rising Chinese localization poses long-term competitiveness risk."
+            },
+            {
+              "keyword": "Geopolitical Manufacturing Shift",
+              "text": "Regional investment initiatives (Korea's equipment localization focus, Taiwan funding debates, India's semiconductor ambitions) reflect broader decoupling from singular supply chains."
+            }
+          ],
+          "counterpoint": "Samsung and Intel capex investments could accelerate process node maturity faster than historical cycles if execution improves; TSMC's capex advantage alone does not guarantee permanent technological leadership."
+        }
+      }
+    },
+    "packaging": {
+      "sector": "Packaging",
+      "date": "2026-09-26",
+      "item_count": 6,
+      "generated_at": "2026-09-26T22:30:33.387148+00:00",
+      "content": {
+        "ko": {},
+        "en": {}
+      }
+    }
+  }
 }
