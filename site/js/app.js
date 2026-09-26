@@ -127,6 +127,7 @@ let sectorSummaries = {};  // {axis: {sector, content:{ko,en}, item_count, gener
 let summaryLang = 'ko';  // B-2: 섹터 요약 ko↔en 정적 토글 (클라이언트 메모리만, storage 미사용)
 let dailyTop5 = [];  // [{axis, company, headline, url, source, published_date, score}] — Phase 3 item 7
 let techSignals = [];  // TechSignal[] — data/refined/tech/*.json (axis/company 없음, arXiv 논문 + Google News zh, 20260717 후속)
+let notices = { window: null, notices: [] };  // data/refined/notices.json — 업체 중요 이벤트(전략 발표·IR·라인 투자) 규칙 기반 추출 (scripts/build_notices.py, LLM 미개입)
 let narrativeTrapCases = [];  // NarrativeTrapCase[] — data/refined/narrative_trap_cases.json (수동 큐레이션, LLM 미개입)
 let narrativeTrapTracks = {}; // STANDARD_TRACKS — 위 JSON에 동봉되어 프론트-백엔드 재정의 없이 단일 소스 유지
 let cpoDigest = null;  // data/refined/cpo_optics/digest.json — 9번째 독립 축, DATA_SOURCES와 별도 fetch
@@ -192,6 +193,9 @@ async function loadAllData() {
   const techLoads = TECH_SOURCES.map(f =>
     fetch(`${DATA_BASE}/refined/tech/${f}`).then(r => r.ok ? r.json() : []).catch(() => [])
   );
+  const noticesLoad = fetch(`${DATA_BASE}/refined/notices.json`)
+    .then(r => r.ok ? r.json() : null)
+    .catch(() => null);
   const narrativeTrapLoad = fetch(`${DATA_BASE}/refined/narrative_trap_cases.json`)
     .then(r => r.ok ? r.json() : null)
     .catch(() => null);
@@ -204,8 +208,8 @@ async function loadAllData() {
     fetch(`${DATA_BASE}/refined/cpo_optics/${f}`).then(r => r.ok ? r.json() : []).catch(() => [])
   );
 
-  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data, techResults, narrativeTrapData, cpoDigestData, cpoSignalResults] =
-    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load, Promise.all(techLoads), narrativeTrapLoad, cpoDigestLoad, Promise.all(cpoSignalLoads)]);
+  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data, techResults, narrativeTrapData, cpoDigestData, cpoSignalResults, noticesData] =
+    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load, Promise.all(techLoads), narrativeTrapLoad, cpoDigestLoad, Promise.all(cpoSignalLoads), noticesLoad]);
   allSignals = results.flat().sort((a, b) => b.published_date.localeCompare(a.published_date));
   capacityRecords = capData;
   companySummaries = sumData || {};
@@ -213,6 +217,7 @@ async function loadAllData() {
   versionInfo = versionData;
   sectorSummaries = sectorSumData?.sectors || {};
   dailyTop5 = top5Data?.top5 || [];
+  notices = noticesData?.notices ? noticesData : { window: null, notices: [] };
   techSignals = techResults.flat().sort((a, b) => (b.published_date || '').localeCompare(a.published_date || ''));
   narrativeTrapCases = narrativeTrapData?.cases || [];
   narrativeTrapTracks = narrativeTrapData?.tracks || {};
@@ -371,10 +376,58 @@ function _dailyTop5Panel() {
     </div>`;
 }
 
+// ── 주요 공지 배너 (오늘의 요약 최상단) — 전략 발표 / IR·실적 / 라인·설비 투자 ──
+// 규칙 기반 빌드타임 추출(scripts/build_notices.py). 같은 업체·유형 기사는 1건으로 묶여 count로 표시.
+const _NOTICE_STYLE = {
+  strategy: { icon: '📣', color: 'var(--accent)' },
+  ir:       { icon: '💰', color: 'var(--green)' },
+  invest:   { icon: '🏭', color: 'var(--yellow)' },
+};
+
+function _noticeBanner() {
+  const list = notices.notices || [];
+  if (!list.length) return '';
+  const latest = notices.window?.to || '';
+  const rows = list.map(n => {
+    const st = _NOTICE_STYLE[n.type] || _NOTICE_STYLE.strategy;
+    const isNew = n.date_last === latest;
+    const items = n.items.map(i => `
+      <li style="margin:3px 0">
+        <a href="${_escHtml(i.url)}" target="_blank" rel="noopener">${_escHtml(i.headline)}</a>
+        <span style="font-size:10px;color:var(--text-muted)"> · ${_escHtml(i.source)} · ${i.published_date}</span>
+      </li>`).join('');
+    const more = n.count > n.items.length ? `<li style="color:var(--text-muted);font-size:11px">… 외 ${n.count - n.items.length}건</li>` : '';
+    return `
+      <div class="notice-row" style="border-left:3px solid ${st.color}">
+        <div class="notice-head" onclick="toggleNotice('${n.id}')">
+          <span class="notice-type" style="color:${st.color}">${st.icon} ${_escHtml(n.type_label)}</span>
+          <strong class="notice-co">${_escHtml(n.company_label)}</strong>
+          ${n.event ? `<span class="chip chip-note">${_escHtml(n.event)}</span>` : ''}
+          <span class="notice-title">${_escHtml(n.title)}</span>
+          <span class="notice-meta">${isNew ? '<span class="notice-new">NEW</span>' : ''}관련 ${n.count}건 · ${n.date_first === n.date_last ? n.date_last : n.date_first.slice(5) + '~' + n.date_last.slice(5)}</span>
+        </div>
+        <ul id="notice-body-${n.id}" class="notice-body" style="display:none">${items}${more}</ul>
+      </div>`;
+  }).join('');
+  return `
+    <div class="notice-banner">
+      <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:6px">
+        🔔 주요 공지 — 업체 전략 발표 · IR · 라인 투자 (${notices.window ? notices.window.from + ' ~ ' + notices.window.to : ''} · 규칙 기반 자동 추출)
+      </div>
+      ${rows}
+    </div>`;
+}
+
+window.toggleNotice = function(id) {
+  const el = document.getElementById(`notice-body-${id}`);
+  if (el) el.style.display = el.style.display === 'none' ? 'block' : 'none';
+};
+
 // ── 1. 오늘의 요약 (섹터별 요약 · 당일 수집분) ─────────────────────────────
 function modToday() {
   return `
     ${header('오늘의 요약', '섹터별 요약 (당일 수집분) — 빌드타임 LLM 생성, 5축 기준')}
+    ${_noticeBanner()}
     <div style="margin-bottom:10px">
       <button class="filter-btn" onclick="toggleSummaryLang()">${summaryLang === 'ko' ? 'KO → EN' : 'EN → KO'}</button>
       <span style="font-size:11px;color:var(--text-muted);margin-left:8px">섹터 요약 언어 전환 (정적, 커밋된 번역만 표시)</span>

@@ -85,6 +85,10 @@ jobs:
       - name: Export refined JSON
         run: python scripts/export_refined.py
 
+      # ── 5.4 주요 공지(전략 발표·IR·라인 투자) 규칙 기반 추출 → notices.json (LLM 미개입) ─
+      - name: Build notices
+        run: python scripts/build_notices.py
+
       # ── 5.5 baseline notes(장문 deep-research 노트) → JSON manifest ─
       - name: Export baseline notes
         run: python scripts/export_baseline_notes.py
