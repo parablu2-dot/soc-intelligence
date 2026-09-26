@@ -91,6 +91,18 @@ downstream 디바이스/칩셋 수요를 부품·기판(MLCC·substrate·module�
 - **이벤트 인사이트**: 컨퍼런스/발표 종합은 `type: EventInsight` + `company:` frontmatter로 같은 폴더에 추가 (예: `qualcomm_snapdragon_summit_2026.md`)
 - **승격 워크플로**: 이 층은 "흐르는 것"(dashboard). 천이 읽고 판단을 얹으면 켜뮤 `#stub` Permanent로 graduate — 이 저장소에서는 원본을 수정하지 않음
 
+## 주요 공지 배너 (notices, 2026-09-26)
+
+오늘의 요약 최상단에 업체의 **전략 발표(행사·M&A·신제품) / IR·실적 / 라인·설비 투자** 이벤트를 띄우는 배너. LLM 미개입.
+
+- **빌드**: `scripts/build_notices.py` → `data/refined/notices.json` (`crawl-and-build.yml` "Build notices" 스텝, 매일)
+- **규칙**: 최근 3일(`WINDOW_DAYS`) 신호 → 키워드로 유형 판정(ir > invest > strategy 우선) → 업체 귀속(업체 크롤러는 그대로,
+  집계 소스는 헤드라인에서 **가장 먼저 나온 업체 1곳**) → 주가·투자권유·루머 기사 제외(`_NOISE_RE`) →
+  (업체, 유형) 단위로 병합, 점수 = 유형 가중 + 대형 키워드/행사 말머리(+2) + 대규모 금액(+2) + 공식 채널(+1) + 기사 수(최대 +4),
+  `MIN_SCORE`(5) 이상 상위 10건
+- **튜닝**: 오탐/누락은 `COMPANIES`(별칭), `_TYPE_RES`, `_STRONG_RE`, `_NOISE_RE`, `_GENERIC_TAGS` 정규식만 수정 — 테스트는 `tests/test_build_notices.py`
+- **렌더**: `site/js/app.js`의 `_noticeBanner()` — 행 클릭 시 관련 기사 펼침, 윈도 마지막 날 기사가 있으면 NEW 표시
+
 ## 서사 함정 검증 (narrative-trap, 2026-08-01)
 
 회사 발표 서사("2027년 양산")와 표준 산업 트랙(그린필드 팹 9.5~12년 등) 사이의 시간축 괴리를 노출하는

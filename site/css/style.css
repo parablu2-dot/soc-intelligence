@@ -544,3 +544,37 @@ tr:hover td { background: var(--surface2); }
   .eco-node { padding: 5px 6px; font-size: 10px; }
   .eco-node-logo { width: 16px; height: 16px; font-size: 8px; }
 }
+
+/* 주요 공지 배너 (오늘의 요약 최상단 — scripts/build_notices.py) */
+.notice-banner {
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+}
+.notice-row { margin: 4px 0; padding-left: 8px; }
+.notice-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  cursor: pointer;
+  font-size: 13px;
+}
+.notice-head:hover .notice-title { color: var(--accent); }
+.notice-type { font-size: 11px; font-weight: 600; white-space: nowrap; }
+.notice-co { white-space: nowrap; }
+.notice-title { flex: 1 1 280px; min-width: 0; color: var(--text); }
+.notice-meta { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+.notice-new {
+  background: rgba(248,81,73,0.15);
+  color: var(--red);
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 1px 5px;
+  margin-right: 6px;
+}
+.notice-body { margin: 2px 0 8px 16px; padding: 0; font-size: 12px; line-height: 1.5; }
