@@ -60,25 +60,23 @@
   },
   {
     "axis": "foundry",
-    "company": "intel_foundry",
-    "node": "18A",
-    "month": "2025-07",
-    "wafer_capacity": 10000,
-    "price_per_wafer": 25000.0,
-    "is_forecast": true,
-    "source": "Intel IR / SemiAnalysis forecast",
-    "url": ""
+    "company": "globalfoundries",
+    "node": "전사(300mm eq)",
+    "month": "2026-06",
+    "wafer_capacity": 208000,
+    "is_forecast": false,
+    "source": "GF Q2 2026 실적 (분기 출하 ~625K 300mm eq)",
+    "url": "https://investors.gf.com/news-releases/news-release-details/globalfoundries-reports-second-quarter-2026-financial-results"
   },
   {
     "axis": "foundry",
     "company": "intel_foundry",
     "node": "18A",
-    "month": "2026-01",
-    "wafer_capacity": 25000,
-    "price_per_wafer": 25000.0,
-    "is_forecast": true,
-    "source": "Intel IR / SemiAnalysis forecast",
-    "url": ""
+    "month": "2026-06",
+    "wafer_capacity": 30000,
+    "is_forecast": false,
+    "source": "Intel 18A 램프 보도 종합(신뢰도 중)",
+    "url": "https://www.kad8.com/ai/intel-reports-18a-yield-breakthrough-30000-wafers-per-month-capacity-and-14a-roadmap/"
   },
   {
     "axis": "foundry",
@@ -222,9 +220,51 @@
     "url": ""
   },
   {
+    "axis": "foundry",
+    "company": "samsung_foundry",
+    "node": "SF2",
+    "month": "2026-01",
+    "price_per_wafer": 20000.0,
+    "yield_rate": 0.5,
+    "is_forecast": false,
+    "source": "Exynos 2600 수율 ~50%(SammyFans) / 가격 인하 $20K(SemiWiki)",
+    "url": "https://www.sammyfans.com/2026/01/15/samsung-improves-2nm-exynos-2600-yields/"
+  },
+  {
+    "axis": "foundry",
+    "company": "samsung_foundry",
+    "node": "SF2",
+    "month": "2026-12",
+    "wafer_capacity": 21000,
+    "price_per_wafer": 20000.0,
+    "is_forecast": true,
+    "source": "DigiTimes 2025-11 (2026말 21K 목표, Taylor는 2027 SF2P+ 고객 양산)",
+    "url": "https://www.digitimes.com/news/a20251121PD240/samsung-2026-tsmc-2nm-qualcomm.html"
+  },
+  {
+    "axis": "foundry",
+    "company": "smic",
+    "node": "7nm급(N+2)",
+    "month": "2025-12",
+    "wafer_capacity": 45000,
+    "is_forecast": false,
+    "source": "TrendForce 2025-08 (7nm 이하 2025말 ~45K)",
+    "url": "https://www.trendforce.com/news/2025/08/29/news-smic-1h25-net-profit-rises-35-6-7nm-capacity-reportedly-to-double-in-2026/"
+  },
+  {
+    "axis": "foundry",
+    "company": "smic",
+    "node": "7nm급(N+2)",
+    "month": "2026-12",
+    "wafer_capacity": 60000,
+    "is_forecast": true,
+    "source": "TrendForce 2025-08 (2026 60K, 2배 증설 계획)",
+    "url": "https://www.trendforce.com/news/2025/08/29/news-smic-1h25-net-profit-rises-35-6-7nm-capacity-reportedly-to-double-in-2026/"
+  },
+  {
     "axis": "packaging",
     "company": "tsmc",
-    "node": "CoWoS-L",
+    "node": "CoWoS",
     "month": "2022-01",
     "wafer_capacity": 3000,
     "is_forecast": false,
@@ -234,7 +274,7 @@
   {
     "axis": "packaging",
     "company": "tsmc",
-    "node": "CoWoS-L",
+    "node": "CoWoS",
     "month": "2023-01",
     "wafer_capacity": 7000,
     "is_forecast": false,
@@ -244,7 +284,7 @@
   {
     "axis": "packaging",
     "company": "tsmc",
-    "node": "CoWoS-L",
+    "node": "CoWoS",
     "month": "2024-01",
     "wafer_capacity": 15000,
     "is_forecast": false,
@@ -254,55 +294,75 @@
   {
     "axis": "packaging",
     "company": "tsmc",
-    "node": "CoWoS-L",
-    "month": "2025-01",
-    "wafer_capacity": 25000,
-    "is_forecast": true,
-    "source": "TrendForce forecast",
-    "url": ""
+    "node": "CoWoS",
+    "month": "2025-12",
+    "wafer_capacity": 72500,
+    "is_forecast": false,
+    "source": "TrendForce 2025-01 (2025 70~75K)",
+    "url": "https://www.trendforce.com/news/2025/01/02/news-tsmc-set-to-expand-cowos-capacity-to-record-75000-wafers-in-2025-doubling-2024-output/"
   },
   {
     "axis": "packaging",
     "company": "tsmc",
-    "node": "CoWoS-L",
-    "month": "2026-01",
-    "wafer_capacity": 35000,
+    "node": "CoWoS",
+    "month": "2026-12",
+    "wafer_capacity": 130000,
     "is_forecast": true,
-    "source": "TrendForce forecast",
-    "url": ""
+    "source": "TrendForce 2026-09 (2026말 ~130K)",
+    "url": "https://www.trendforce.com/news/2026/09/14/news-tsmc-reportedly-targets-22-2nm-16-3nm-capacity-boost-by-mid-2027-cowos-to-double-by-2028"
+  },
+  {
+    "axis": "packaging",
+    "company": "tsmc",
+    "node": "CoWoS",
+    "month": "2028-12",
+    "wafer_capacity": 260000,
+    "is_forecast": true,
+    "source": "TrendForce 2026-09 (2028말 260K, AP7·Arizona 증설)",
+    "url": "https://www.trendforce.com/news/2026/09/14/news-tsmc-reportedly-targets-22-2nm-16-3nm-capacity-boost-by-mid-2027-cowos-to-double-by-2028"
   },
   {
     "axis": "foundry",
     "company": "tsmc",
     "node": "N2",
-    "month": "2025-07",
-    "wafer_capacity": 20000,
-    "price_per_wafer": 28000.0,
-    "is_forecast": true,
-    "source": "TrendForce / SemiAnalysis forecast",
-    "url": ""
+    "month": "2025-12",
+    "wafer_capacity": 47500,
+    "price_per_wafer": 30000.0,
+    "is_forecast": false,
+    "source": "TrendForce 2025-08 (2025말 45~50K, 3nm 대비 +50% 가격)",
+    "url": "https://www.trendforce.com/news/2025/08/05/news-tsmcs-2nm-node-reportedly-set-for-60k-monthly-output-in-2026-with-prices-50-above-3nm/"
   },
   {
     "axis": "foundry",
     "company": "tsmc",
     "node": "N2",
-    "month": "2026-01",
-    "wafer_capacity": 50000,
-    "price_per_wafer": 28000.0,
-    "is_forecast": true,
-    "source": "TrendForce / SemiAnalysis forecast",
-    "url": ""
+    "month": "2026-06",
+    "wafer_capacity": 55000,
+    "price_per_wafer": 30000.0,
+    "is_forecast": false,
+    "source": "TrendForce 2026-08 (1H26 50~60K)",
+    "url": "https://www.trendforce.com/news/2026/08/03/news-tsmc-3nm-monthly-wafer-starts-to-hit-180k-by-early-4q26-on-strong-demand-2-3-months-ahead-of-expectations/"
   },
   {
     "axis": "foundry",
     "company": "tsmc",
     "node": "N2",
-    "month": "2026-07",
-    "wafer_capacity": 80000,
-    "price_per_wafer": 28000.0,
+    "month": "2026-12",
+    "wafer_capacity": 90000,
+    "price_per_wafer": 30000.0,
     "is_forecast": true,
-    "source": "TrendForce / SemiAnalysis forecast",
-    "url": ""
+    "source": "TrendForce 2026-09 (연말 90K, 이전 추정 100K에서 하향)",
+    "url": "https://www.trendforce.com/news/2026/09/14/news-tsmc-reportedly-targets-22-2nm-16-3nm-capacity-boost-by-mid-2027-cowos-to-double-by-2028"
+  },
+  {
+    "axis": "foundry",
+    "company": "tsmc",
+    "node": "N2",
+    "month": "2027-06",
+    "wafer_capacity": 110000,
+    "is_forecast": true,
+    "source": "TrendForce 2026-09 (2027 중반 110K)",
+    "url": "https://www.trendforce.com/news/2026/09/14/news-tsmc-reportedly-targets-22-2nm-16-3nm-capacity-boost-by-mid-2027-cowos-to-double-by-2028"
   },
   {
     "axis": "foundry",
@@ -368,23 +428,44 @@
     "axis": "foundry",
     "company": "tsmc",
     "node": "N3/N3E",
-    "month": "2025-01",
-    "wafer_capacity": 100000,
-    "price_per_wafer": 21500.0,
-    "is_forecast": true,
-    "source": "TrendForce forecast",
-    "url": ""
+    "month": "2025-12",
+    "wafer_capacity": 125000,
+    "price_per_wafer": 19500.0,
+    "is_forecast": false,
+    "source": "TrendForce 2026-04 (2025말 120~130K)",
+    "url": "https://www.trendforce.com/news/2026/04/27/news-tsmc-3nm-monthly-capacity-may-hit-180k-wafers-by-2026-up-over-40-yoy-on-ai-demand/"
   },
   {
     "axis": "foundry",
     "company": "tsmc",
     "node": "N3/N3E",
-    "month": "2026-01",
-    "wafer_capacity": 115000,
-    "price_per_wafer": 21500.0,
+    "month": "2026-06",
+    "wafer_capacity": 150000,
+    "price_per_wafer": 20000.0,
+    "is_forecast": false,
+    "source": "TrendForce 2026-08 (1H26 ~150K) / 가격 SiliconAnalysts 2026-08",
+    "url": "https://www.trendforce.com/news/2026/08/03/news-tsmc-3nm-monthly-wafer-starts-to-hit-180k-by-early-4q26-on-strong-demand-2-3-months-ahead-of-expectations/"
+  },
+  {
+    "axis": "foundry",
+    "company": "tsmc",
+    "node": "N3/N3E",
+    "month": "2026-10",
+    "wafer_capacity": 180000,
+    "price_per_wafer": 20000.0,
     "is_forecast": true,
-    "source": "TrendForce forecast",
-    "url": ""
+    "source": "TrendForce 2026-08 (4Q26초 180K, 2H26 최대 15% 인상 검토)",
+    "url": "https://www.trendforce.com/news/2026/08/03/news-tsmc-3nm-monthly-wafer-starts-to-hit-180k-by-early-4q26-on-strong-demand-2-3-months-ahead-of-expectations/"
+  },
+  {
+    "axis": "foundry",
+    "company": "tsmc",
+    "node": "N3/N3E",
+    "month": "2027-06",
+    "wafer_capacity": 210000,
+    "is_forecast": true,
+    "source": "TrendForce 2026-09 (2027 중반 210K)",
+    "url": "https://www.trendforce.com/news/2026/09/14/news-tsmc-reportedly-targets-22-2nm-16-3nm-capacity-boost-by-mid-2027-cowos-to-double-by-2028"
   },
   {
     "axis": "foundry",
