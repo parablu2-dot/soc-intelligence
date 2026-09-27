@@ -116,7 +116,8 @@ let allSignals = [];
 let capacityRecords = [];   // FoundryCapacityRecord[] — Phase 3 backfill
 let companySummaries = {};  // {generated_at, summaries: {company: {summary, signal_count, generated_at}}}
 let _artSignals = { en: [], zh: [], kr: [] };  // 기사 탭 별 신호 캐시 (서브필터용)
-let crawlStatus = [];
+let crawlStatus = [];  // [{axis, company, count, ok, latest}] — latest = 오늘 이전 최근 published_date (P0-4 신선도)
+let crawlHealth = null;  // data/refined/crawl_status.json — P0-3 게이트 기록(crawlers/sectors/alerts), 없으면 null
 let currentModule = 'today';
 let reviewedSet = new Set(JSON.parse(localStorage.getItem('reviewed') || '[]'));
 let baselineNotes = [];  // BaselineNote[] — data/baseline/notes/*.md 빌드타임 파싱 (장문 deep-research 노트, ko 고정)
@@ -162,10 +163,16 @@ async function loadAllData() {
       const resp = await fetch(path);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       const data = await resp.json();
-      crawlStatus.push({ axis, company, count: data.length, ok: true });
+      // 미래 날짜(파싱 오류)는 신선도 판정에서 제외
+      const today = _todayStr();
+      const latest = data.reduce((m, s) => {
+        const d = (s.published_date || '').slice(0, 10);
+        return d && d <= today && d > m ? d : m;
+      }, '') || null;
+      crawlStatus.push({ axis, company, count: data.length, ok: true, latest });
       return data;
     } catch {
-      crawlStatus.push({ axis, company, count: 0, ok: false });
+      crawlStatus.push({ axis, company, count: 0, ok: false, latest: null });
       return [];
     }
   });
@@ -206,8 +213,13 @@ async function loadAllData() {
     fetch(`${DATA_BASE}/refined/cpo_optics/${f}`).then(r => r.ok ? r.json() : []).catch(() => [])
   );
 
-  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data, techResults, narrativeTrapData, cpoDigestData, cpoSignalResults, noticesData] =
-    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load, Promise.all(techLoads), narrativeTrapLoad, cpoDigestLoad, Promise.all(cpoSignalLoads), noticesLoad]);
+  const crawlHealthLoad = fetch(`${DATA_BASE}/refined/crawl_status.json`)
+    .then(r => r.ok ? r.json() : null)
+    .catch(() => null);
+
+  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data, techResults, narrativeTrapData, cpoDigestData, cpoSignalResults, noticesData, crawlHealthData] =
+    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load, Promise.all(techLoads), narrativeTrapLoad, cpoDigestLoad, Promise.all(cpoSignalLoads), noticesLoad, crawlHealthLoad]);
+  crawlHealth = crawlHealthData;
   allSignals = results.flat().sort((a, b) => b.published_date.localeCompare(a.published_date));
   capacityRecords = capData;
   companySummaries = sumData || {};
@@ -512,21 +524,79 @@ function modReview() {
 }
 
 // ── 3. 크롤링 관제 ────────────────────────────────────────────────────────
+// P0-4 신선도 배지 — 소스별 최근 신호일 경과일: 🟢 ≤3일 / 🟡 ≤14일 / 🔴 초과(또는 신호 없음)
+const FRESH_GREEN_DAYS = 3;
+const FRESH_YELLOW_DAYS = 14;
+
+function _todayStr() {
+  return new Date().toLocaleDateString('sv-SE');  // 로컬(KST) YYYY-MM-DD
+}
+
+function _daysSince(dateStr) {
+  if (!dateStr) return null;
+  return Math.round((Date.parse(_todayStr()) - Date.parse(dateStr.slice(0, 10))) / 86400000);
+}
+
+function _freshBadge(dateStr) {
+  const days = _daysSince(dateStr);
+  if (days === null) return '<span class="fresh-badge fresh-red" title="신호 없음">🔴 없음</span>';
+  const level = days <= FRESH_GREEN_DAYS ? 'green' : days <= FRESH_YELLOW_DAYS ? 'yellow' : 'red';
+  const icon = { green: '🟢', yellow: '🟡', red: '🔴' }[level];
+  return `<span class="fresh-badge fresh-${level}">${icon} ${days === 0 ? '오늘' : days + '일 전'}</span>`;
+}
+
+// crawl_status.json(P0-3) 항목 → "연속 0건·오류" 셀. 크롤러가 아닌 소스(파일만 있는 것)는 '–'
+function _gateCell(entry) {
+  if (!entry) return '<span style="color:var(--text-muted)">–</span>';
+  if (entry.error) return `<span class="channel-status warn" title="${String(entry.error).replace(/"/g, '&quot;')}">✗ 오류 ${entry.zero_streak}일</span>`;
+  if (entry.zero_streak) return `<span class="channel-status warn">0건 ${entry.zero_streak}일</span>`;
+  return `<span class="channel-status ok">${entry.last_count}건</span>`;
+}
+
 function modControl() {
-  const rows = crawlStatus.map(s => `
+  const gate = crawlHealth?.crawlers || {};
+  // 오래된 소스가 위로 (신호 없음 → 경과일 큰 순)
+  const sorted = [...crawlStatus].sort((a, b) =>
+    (_daysSince(b.latest) ?? Infinity) - (_daysSince(a.latest) ?? Infinity) || a.company.localeCompare(b.company));
+  const rows = sorted.map(s => `
     <tr>
       <td>${axisLabel(s.axis)}</td>
       <td>${s.company}</td>
       <td><span class="channel-status ${s.ok ? 'ok' : 'warn'}">${s.ok ? '✓ OK' : '✗ 실패'}</span></td>
       <td>${s.count}</td>
+      <td style="font-size:12px;color:var(--text-muted)">${s.latest || '–'}</td>
+      <td>${_freshBadge(s.latest)}</td>
+      <td style="font-size:12px">${_gateCell(gate[`${s.axis}/${s.company}`])}</td>
     </tr>`).join('');
   const ok = crawlStatus.filter(s => s.ok).length;
+  const fresh = crawlStatus.filter(s => { const d = _daysSince(s.latest); return d !== null && d <= FRESH_GREEN_DAYS; }).length;
+  const stale = crawlStatus.filter(s => { const d = _daysSince(s.latest); return d === null || d > FRESH_YELLOW_DAYS; }).length;
+
+  const alerts = crawlHealth?.alerts || [];
+  const alertPanel = alerts.length ? `
+    <div style="background:var(--surface);border:1px solid var(--red);border-radius:6px;padding:10px 12px;margin-bottom:12px;font-size:12px">
+      <div style="font-weight:600;color:var(--red);margin-bottom:4px">⚠ 빈 결과 게이트 경고 ${alerts.length}건</div>
+      <ul style="margin:0 0 0 16px;padding:0;line-height:1.6">${alerts.map(a => `<li>${a}</li>`).join('')}</ul>
+    </div>` : '';
+  const sec = crawlHealth?.sectors;
+  const gateInfo = crawlHealth
+    ? `게이트 기록 ${crawlHealth.updated_at ? new Date(crawlHealth.updated_at).toLocaleString('ko-KR') : '–'}` +
+      (sec ? ` · 섹터요약 ${sec.last_count ?? 0}개 (마지막 정상 ${sec.last_nonempty || '없음'})` : '')
+    : '게이트 기록(crawl_status.json) 없음 — 다음 crawl-and-build 이후 표시';
+
   return `
-    ${header('크롤링 관제', `${ok}/${crawlStatus.length} 소스 정상`)}
+    ${header('크롤링 관제', `${ok}/${crawlStatus.length} 소스 정상 · 🟢 ${fresh} · 🔴 ${stale}`)}
+    ${alertPanel}
+    <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px">${gateInfo}</div>
+    <div style="overflow-x:auto">
     <table>
-      <thead><tr><th>축</th><th>회사</th><th>상태</th><th>신호 수</th></tr></thead>
+      <thead><tr><th>축</th><th>회사</th><th>상태</th><th>신호 수</th><th>최근 신호일</th><th>신선도</th><th>최근 수집</th></tr></thead>
       <tbody>${rows}</tbody>
-    </table>`;
+    </table></div>
+    <p style="font-size:11px;color:var(--text-muted);margin-top:8px">
+      신선도 = 최근 신호일(published_date, 미래 날짜 제외) 기준 경과일: 🟢 ≤${FRESH_GREEN_DAYS}일 · 🟡 ≤${FRESH_YELLOW_DAYS}일 · 🔴 초과/없음.<br>
+      최근 수집 = 마지막 crawl 실행의 수집 건수. 연속 0건·오류가 3일 이상이면 위 경고에 올라갑니다.
+    </p>`;
 }
 
 // ── 4. 파운드리 캐파 ──────────────────────────────────────────────────────
