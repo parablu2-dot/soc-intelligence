@@ -6,10 +6,6 @@ mobile_ap:
     enabled: true
     module: crawlers.mobile_ap.apple
     class: AppleCrawler
-  qualcomm:
-    enabled: true
-    module: crawlers.mobile_ap.qualcomm
-    class: QualcommCrawler
   mediatek:
     enabled: true
     module: crawlers.mobile_ap.mediatek
@@ -58,14 +54,6 @@ hpc_datacenter:
     class: HpcDatacenterGoogleNewsCrawler
 
 custom_soc:
-  broadcom:
-    enabled: true
-    module: crawlers.custom_soc.broadcom
-    class: BroadcomCrawler
-  marvell:
-    enabled: true
-    module: crawlers.custom_soc.marvell
-    class: MarvellCrawler
   hyperscaler_inhouse:
     enabled: true
     module: crawlers.custom_soc.hyperscaler_inhouse
@@ -92,10 +80,6 @@ foundry:
     enabled: true
     module: crawlers.foundry.globalfoundries
     class: GlobalFoundriesCrawler
-  smic:
-    enabled: true
-    module: crawlers.foundry.smic
-    class: SmicCrawler
   trendforce:
     enabled: true
     module: crawlers.foundry.trendforce
@@ -110,18 +94,6 @@ foundry:
     class: FoundryGoogleNewsCrawler
 
 packaging:
-  ase:
-    enabled: true
-    module: crawlers.packaging.ase
-    class: AseCrawler
-  amkor:
-    enabled: true
-    module: crawlers.packaging.amkor
-    class: AmkorCrawler
-  jcet:
-    enabled: true
-    module: crawlers.packaging.jcet
-    class: JcetCrawler
   googlenews:
     enabled: true
     module: crawlers.packaging.googlenews
