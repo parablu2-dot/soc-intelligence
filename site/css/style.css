@@ -397,6 +397,10 @@ tr:hover td { background: var(--surface2); }
 .channel-status { font-size: 12px; font-weight: 500; }
 .channel-status.ok    { color: var(--green); }
 .channel-status.warn  { color: var(--yellow); }
+.fresh-badge { font-size: 12px; font-weight: 500; white-space: nowrap; }
+.fresh-green  { color: var(--green); }
+.fresh-yellow { color: var(--yellow); }
+.fresh-red    { color: var(--red); }
 
 /* Empty state */
 .empty {
