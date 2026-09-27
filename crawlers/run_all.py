@@ -11,6 +11,8 @@ from pathlib import Path
 
 import yaml
 
+from crawlers.common import crawl_status
+
 CONFIG_PATH = Path(__file__).parent / "config.yaml"
 
 # config.yaml의 크롤러 축만 순회 — dedup/eco_companies/axis_news_queries/hiring_targets/policy 등
@@ -30,6 +32,7 @@ def load_config() -> dict:
 def run_all() -> None:
     config = load_config()
     total, failed = 0, []
+    results: dict[str, tuple[int | None, str | None]] = {}  # P0-3 빈 결과 게이트용
 
     for axis in _CRAWLER_AXES:
         companies = config.get(axis) or {}
@@ -40,11 +43,17 @@ def run_all() -> None:
             try:
                 mod = importlib.import_module(spec["module"])
                 crawler_cls = getattr(mod, spec["class"])
-                crawler_cls().run()
-                print(f"[OK] {axis}/{company}")
+                signals = crawler_cls().run()
+                results[f"{axis}/{company}"] = (len(signals), None)
+                print(f"[OK] {axis}/{company}: {len(signals)}건")
             except Exception as e:
                 failed.append((axis, company, str(e)))
+                results[f"{axis}/{company}"] = (None, str(e)[:200])
                 print(f"[FAIL] {axis}/{company}: {e}")
+
+    status = crawl_status.load_status()
+    crawl_status.record_crawlers(status, results, crawl_status.today_kst())
+    crawl_status.save_status(status)
 
     print(f"\n실행: {total}건, 실패: {len(failed)}건")
     if failed:
