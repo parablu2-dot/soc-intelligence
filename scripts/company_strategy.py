@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from scripts.db.db import get_conn, init_db
+from crawlers.common.company_match import match_companies
 
 _SUMMARY_TOOL: dict = {
     "name": "company_summary",
@@ -77,22 +78,29 @@ def generate_company_summaries(conn, client, *, headlines_per_company: int = 10,
     """
     if since:
         rows = conn.execute(
-            "SELECT company, title, updated_at FROM canonical_nodes "
+            "SELECT company, title, inference, updated_at FROM canonical_nodes "
             "WHERE company != 'hiring' AND updated_at >= ? "
             "ORDER BY updated_at DESC",
             (since,),
         ).fetchall()
     else:
         rows = conn.execute(
-            "SELECT company, title, updated_at FROM canonical_nodes "
+            "SELECT company, title, inference, updated_at FROM canonical_nodes "
             "WHERE company != 'hiring' "
             "ORDER BY updated_at DESC"
         ).fetchall()
 
     by_company: dict[str, list[str]] = defaultdict(list)
     for row in rows:
-        if len(by_company[row["company"]]) < headlines_per_company:
-            by_company[row["company"]].append(row["title"])
+        # 1b: googlenews는 업체가 아니라 집계 소스 — 자체 요약 대신 기사에 언급된 업체들로 헤드라인을 분배
+        if row["company"] == "googlenews":
+            summary = json.loads(row["inference"] or "{}").get("summary") or ""
+            targets = match_companies(f"{row['title']} {summary}")
+        else:
+            targets = [row["company"]]
+        for company in targets:
+            if len(by_company[company]) < headlines_per_company:
+                by_company[company].append(row["title"])
 
     print(f"[company_strategy] {len(by_company)} companies to summarise")
     now_ts = datetime.now(timezone.utc).isoformat()
