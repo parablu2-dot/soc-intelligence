@@ -25,8 +25,8 @@ soc-intelligence/
 │   ├── mobile_ap/
 │   ├── hpc_datacenter/
 │   ├── custom_soc/
-│   ├── foundry/         # v2 추가: tsmc, samsung_foundry, intel_foundry, globalfoundries, smic
-│   └── packaging/       # v2 추가: ase, amkor, jcet
+│   ├── foundry/         # v2 추가: tsmc, samsung_foundry, intel_foundry, globalfoundries (smic 2026-09 제거)
+│   └── packaging/       # googlenews만 (ase/amkor/jcet 2026-09 제거 — 공식 크롤러 0건, googlenews가 대체)
 ├── data/
 │   ├── raw/              # 크롤러 원본 출력
 │   └── refined/          # 정규화·태깅된 JSON (사이트가 직접 fetch)
