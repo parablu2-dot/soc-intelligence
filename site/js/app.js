@@ -85,6 +85,11 @@ function coLogoBadge(co) {
 // (매트릭스·벤치마크 스코어·업체별 전략)에서 제외
 const _NON_VENDOR_COMPANIES = ['hiring', 'trendforce', 'etnews', 'hyperscaler_inhouse', 'googlenews'];
 
+// 업체 신호 판정 — 자체 크롤러(company) 또는 googlenews 기사 언급(mentions, export_refined.py 1b 태깅)
+function _isCompanySignal(s, co) {
+  return s.company === co || (s.mentions || []).includes(co);
+}
+
 // ── 모듈 정의 (v2 Phase 1: 17 → 13) ─────────────────────────────────────
 const MODULES = [
   { id: 'today',      label: '오늘의 요약',           icon: '★' },
@@ -708,7 +713,7 @@ function modEcosystem() {
     `<div class="eco-column">
       <div class="eco-axis-label">${axisLabel(axis)}</div>
       ${AXIS_COMPANIES[axis].map(co => {
-        const cnt = allSignals.filter(s => s.company === co).length;
+        const cnt = allSignals.filter(s => _isCompanySignal(s, co)).length;
         return `<div class="eco-node${cnt === 0 ? ' eco-node-empty' : ''}" data-company="${co}" onclick="ecoSelectNode(this,'${co}')">
           <span class="eco-node-logo">${_logoInitials(co)}</span>
           <span class="eco-node-name">${coLabel(co)}</span>
@@ -1144,13 +1149,13 @@ window.toggleBaselineNote = function(id) {
 function modCompetitor() {
   // hiring 신호 및 업체 아닌 소스(트렌드포스 등) 제외 — 채용 레이더/기사 전용
   const stratSignals = allSignals.filter(s => s.category !== 'hiring');
-  const companies = [...new Set(stratSignals.map(s=>s.company))]
+  const companies = [...new Set(stratSignals.flatMap(s => [s.company, ...(s.mentions || [])]))]
     .filter(co => !_NON_VENDOR_COMPANIES.includes(co));
   const activeCompany = companies[0] || '';
   const tabs = companies.map(co =>
     `<button class="filter-btn ${co===activeCompany?'active':''}" style="display:inline-flex;align-items:center;gap:5px" onclick="competitorTab(this,'${co}')">${coLogoBadge(co)}${coLabel(co)}</button>`
   ).join('');
-  const sigs = stratSignals.filter(s => s.company === activeCompany);
+  const sigs = stratSignals.filter(s => _isCompanySignal(s, activeCompany));
   return `
     ${header('업체별 주요 전략', '회사별 상세 신호 (채용 신호 제외)')}
     <div class="filters" id="comp-tabs">${tabs}</div>
@@ -1417,7 +1422,7 @@ window.ecoSelectNode = function(node, company) {
     </tr>`;
   }).join('');
 
-  const sigs = allSignals.filter(s => s.company === company);
+  const sigs = allSignals.filter(s => _isCompanySignal(s, company));
   detail.innerHTML = `
     <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:16px">
       <div style="flex:1;min-width:220px">
@@ -1544,7 +1549,7 @@ window.catAxis = function(btn, axis) {
 window.competitorTab = function(btn, company) {
   document.querySelectorAll('#comp-tabs .filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  const sigs = allSignals.filter(s => s.company === company && s.category !== 'hiring');
+  const sigs = allSignals.filter(s => _isCompanySignal(s, company) && s.category !== 'hiring');
   document.getElementById('comp-content').innerHTML =
     _companySummaryCard(company) + _companyInsightsPanel(company) + signalList(sigs.slice(0,50));
 };

@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from scripts.db.db import get_conn, init_db
+from crawlers.common.company_match import match_companies
 
 DATA_REFINED = ROOT / "data" / "refined"
 
@@ -54,6 +55,11 @@ def run() -> None:
                 signal["tags"] = inf["tags"]
             if inf.get("summary"):
                 signal["summary"] = inf["summary"]
+            # 1b: googlenews는 company 고정 — 언급 업체 슬러그를 mentions로 부착 (app.js 업체별 뷰가 사용)
+            if r["company"] == "googlenews":
+                mentions = match_companies(f"{r['title']} {inf.get('summary') or ''}")
+                if mentions:
+                    signal["mentions"] = mentions
 
             by_axis_co[(r["axis"], r["company"])].append(signal)
 
