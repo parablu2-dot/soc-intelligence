@@ -2,6 +2,384 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Catalogue of Collinear Magnetic Structures in Stoichiometric Materials",
+    "url": "https://arxiv.org/abs/2609.35712v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Magnetic materials persistently serve as a fertile platform for exploring novel quantum emergent phenom ena and advancing information technologies. Reliably determining their magnetic structures (MSs), which is essential for understanding their emergent quantum properties, usually depends on experiments such as neutron scattering. Here, noting that around half of the MSs in MAGNDATA (a database of experimentally determined MSs) are collinear, we adopt the spin space groups (SSGs) to preset the c",
+    "authors": [
+      "Liangliang Huang",
+      "Houhao Wang",
+      "Yuanze Song",
+      "Ruixi Pu",
+      "Xiangang Wan",
+      "Feng Tang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "A Si-on-SiC Platform for Interfacing with Vanadium Dopants in the Telecom O-Band",
+    "url": "https://arxiv.org/abs/2609.35702v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Vanadium color centers in silicon carbide (SiC) offer telecom O-band emission, sub-microsecond optical lifetimes, and second-scale spin relaxation times, rendering them promising candidates for quantum network nodes. However, efficient photon extraction from the high-refractive-index SiC host remains challenging. Here, we introduce a silicon-on-SiC heterogeneous photonic platform in which silicon nanocavities evanescently couple to shallow vanadium dopants in commercial 4H-SiC, enabling efficien",
+    "authors": [
+      "Timothy Draher",
+      "Nolan Bitner",
+      "Vasileios Niaouris",
+      "Claire E. McDermott",
+      "David Czaplewski",
+      "Supratik Guha",
+      "David D. Awschalom",
+      "F. Joseph Heremans",
+      "Alan M. Dibos"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Density functional perturbation theory of meta-generalized gradient approximations using algorithmic differentiation",
+    "url": "https://arxiv.org/abs/2609.35572v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Density functional perturbation theory (DFPT) is an established framework for the computation of derivatives in plane-wave density functional theory. We present an implementation of DFPT for exchange-correlation (XC) functionals $E_\\mathrm{xc}(ρ,τ)$ that incorporate an explicit dependence on both the density $ρ$ and the kinetic energy density $τ$. This covers the popular class of semilocal meta-generalized gradient approximations (meta-GGAs) as well as broader nonlocal parametrizations. We sides",
+    "authors": [
+      "Bruno Ploumhans",
+      "Niklas Frederik Schmitz",
+      "Michael F. Herbst"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.OS",
+    "title": "Argus: Agentic, Reference-Calibrated, Tree-Guided, System-Software-Level Bottleneck Localization",
+    "url": "https://arxiv.org/abs/2609.35508v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Operating system (OS) code can account for a substantial share of CPU execution time. First, as application logic is offloaded to heterogeneous accelerators (e.g., GPUs), the CPU increasingly acts as an orchestrator, spending cycles in driver calls, data movement, and synchronization rather than in application code. Second, workloads such as serverless functions frequently invoke OS services. At the same time, the OS is a complex codebase spanning many subsystems (e.g., memory management, networ",
+    "authors": [
+      "Vlad-Petru Nitu",
+      "Harsh Songara",
+      "Konstantinos Sgouras",
+      "Spiros Galanopoulos",
+      "Konstantinos Kanellopoulos",
+      "Onur Mutlu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Analog Computing revisited: A fully analog and minimalistic Damage Detector for Ultrasonic Testing enabling Material-Integrated Structural Health Monitoring",
+    "url": "https://arxiv.org/abs/2609.35478v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Ultrasonic Testing (UT) is commonly used to detect damage in structures, e.g., metal plates. A sensor acquires Ultrasonic waves, e.g., by using PZT transducers. The time-resolved sensor signal must be processed with analog electronics, e.g., amplified and filtered. Commonly a digitalization follows using an Analog-to-Digital converter, finally processing the digital sensor signal, applying digital signal processing, feature extraction, and Machine Learning by using powerful microprocessor system",
+    "authors": [
+      "Stefan Bosse"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Adapting offline models to a streaming context for music source separation",
+    "url": "https://arxiv.org/abs/2609.35397v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Real-time music source separation must satisfy two constraints: a bound on algorithmic latency and a bound on computational cost. Offline separators are usually omitted from real-time comparisons or credited with a latency equal to their full input length. We show that this latency is set by where the output is read, not by the length of the separator's input. An unmodified offline model can therefore run in a streaming setting, without retraining. At each step, the input slides by one STFT hop,",
+    "authors": [
+      "Dylan Sechet",
+      "Marc Evrard",
+      "Matthieu Kowalski"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Pressure-induced s,p-d electron redistribution accompanies structural transformation in amorphous Zr-Cu alloy under compression",
+    "url": "https://arxiv.org/abs/2609.35380v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Extreme compression can reorganize atomic valence states, in some regimes driving charge from spatially extended orbitals into more compact ones. We investigate this effect in amorphous Zr67Cu33 metallic glass by combining high-pressure X-ray absorption fine structure measurements up to 69 GPa with molecular dynamics simulations and density functional theory calculations. The Zr K-edge XANES spectra show a pronounced increase in the pre-edge intensity and a change in its pressure dependence, whe",
+    "authors": [
+      "P. Dziegielewski",
+      "J. Antonowicz",
+      "K. Georgarakis",
+      "O. Lord",
+      "M. Amboage",
+      "D. Daisenberger",
+      "L. Clough",
+      "T. Irifune",
+      "T. Shinmei"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "MEGATRON: a 28nm Analog PCM CiM/Digital System-on-Chip for Edge GenAI at 57.5 TOPS/W and 1.52 Mparam/mm${}^2$",
+    "url": "https://arxiv.org/abs/2609.35254v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "We present MEGATRON, a heterogeneous Edge GenAI System-on-Chip in 28nm FD-SOI CMOS technology combining a non-volatile analog in-memory-computing engine based on a 4Mi-cell phase-change memory (PCM) array with a digital RISC-V-based flexible neural processing unit. MEGATRON demonstrates up to 3.5 TOPS/W using the RISC-V processors and 57.5 TOPS/W with PCiM, at a storage density of 1.52 Mparam/mm${}^2$ with 4-bit effective weight precision.",
+    "authors": [
+      "Alessandro Nadalini",
+      "Angelo Garofalo",
+      "Lorenzo Greco",
+      "Andrea Belano",
+      "Alessio Antolini",
+      "Francesco Zavalloni",
+      "Andrea Lico",
+      "Riccardo Zurla",
+      "Emanuela Calvetti",
+      "Luigi Croce",
+      "Marco Pasotti",
+      "Alessandro Cabrini",
+      "Eleonora Franchi Scarselli",
+      "Davide Rossi",
+      "Francesco Conti"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.IV",
+    "title": "Memory- and Bandwidth-Efficient SPAD-LiDAR Ranging via Coarse-to-Fine Spline Sketching",
+    "url": "https://arxiv.org/abs/2609.35126v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "This work presents an optimized compression framework for direct time-of-flight (dToF) light detection and ranging (LiDAR), using an accurate, compact timestamp-encoding strategy to address the high data-rate bottleneck from single-photon timing information in single-photon avalanche diode (SPAD) arrays. We propose a hardware-friendly timestamp-to-depth framework in which a sparse single-photon encoding strategy, namely coarse-to-fine spline sketches (CFSS), projects photon timestamps into fine-",
+    "authors": [
+      "Zhenya Zangy",
+      "Istvan Gyongy",
+      "Mike Davies"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "A Multimodal Autonomic Sensing Framework for Objective Assessment of Patient Responses to Dental Pulp Stimulation",
+    "url": "https://arxiv.org/abs/2609.35121v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Patient responses to dental pulp testing, ranging from no sensation to intense pain, provide important information for assessing pulp status in endodontic diagnosis. However, pain is a subjective sensory and emotional experience that varies considerably across individuals and can be difficult to communicate. We investigated whether complementary autonomic signals could support objective assessment of responses during dental examination. Forty-nine patients underwent cold pulp testing, yielding n",
+    "authors": [
+      "Youngsun Kong",
+      "Yubin Choi",
+      "Dongjin Song",
+      "Dong-Guk Shin",
+      "I-Ping Chen",
+      "Ki Chon"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.supr-con",
+    "title": "Low-Temperature Stabilization of $δ$-NbN Superconducting Thin Films through Energy-Selective Ion Beam Sputtering",
+    "url": "https://arxiv.org/abs/2609.35091v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Achieving high-quality superconducting thin films at low temperatures is a central challenge for scalable quantum device integration and Complementary Metal-Oxide-Semiconductor (CMOS)-compatible fabrication. Here, we demonstrate a room-temperature magnetron sputtering approach for synthesizing niobium nitride (NbN) thin films using a novel energy-selective ion source that enables independent control of ion energy and ion flux. This capability provides a powerful route to precisely tailor surface",
+    "authors": [
+      "Yifan Liu",
+      "Junwoo Lee",
+      "Mingyu Xu",
+      "Weiwei Xie",
+      "Robert J. Cava",
+      "Qi Hua Fan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "Efficient TCitH-Based Alternatives to SLH-DSA: Cross-Layer ASIC Design of Mirath",
+    "url": "https://arxiv.org/abs/2609.35053v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "To address the security risks posed by quantum computers, the U.S. National Institute of Standards and Technology (NIST) has standardized the post-quantum signature schemes ML-DSA, FN-DSA, and SLH-DSA. While ML-DSA and FN-DSA are lattice-based, SLH-DSA relies on hash-based assumptions. To support cryptographic agility against future vulnerabilities, NIST is evaluating non-lattice candidates as alternatives to SLH-DSA. Among these, TCitH-based schemes are particularly promising due to their compa",
+    "authors": [
+      "Hiandra Tomasi",
+      "Maximilian Schöffel",
+      "Johannes Feldmann",
+      "Norbert Wehn"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "User Association and Transmit Beamforming for Rotatable Antenna-Enabled LAE Networks",
+    "url": "https://arxiv.org/abs/2609.35010v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "This paper investigates rotatable antenna (RA)-enabled low-altitude economy (LAE) networks, where multiple base stations (BSs) are deployed to serve both terrestrial and aerial users. Unlike conventional fixed orientation antennas, RAs can adjust their boresights to serve users at diverse azimuth and elevation angles, thereby providing three-dimensional (3D) coverage. To improve the performance of LAE networks, we formulate a network sum-rate maximization problem that jointly optimizes user asso",
+    "authors": [
+      "Bowen Yao",
+      "Chao Zhang",
+      "Ying-Chang Liang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Cyclostationary Phase Conditioning for Medical Time Series Diffusion",
+    "url": "https://arxiv.org/abs/2609.34965v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Many physiological time series, such as cardiac and brain recordings, exhibit cyclostationarity: their statistics vary periodically with an underlying cycle phase. Corruption from motion, poor contact, and physiological interference obscures morphology needed for diagnosis, making signal restoration essential. Existing diffusion approaches condition on corrupted observations alone and must learn cyclic structure implicitly. We instead propose two inductive biases which encode cyclostationarity: ",
+    "authors": [
+      "Samuel Ruiperez-Campillo",
+      "Michele Copetti",
+      "Jorge da Silva Goncalves",
+      "Sonia Laguna",
+      "Julia E. Vogt"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Optimization of InAs/InAlGaAs/InP quantum dots for O-band laser applications",
+    "url": "https://arxiv.org/abs/2609.34872v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "The O-band telecommunication spectral range combines minimal chromatic dispersion with low transmission loss, making it highly suitable for optical communications. Semiconductor telecom lasers utilizing low-dimensional active regions, such as quantum dots, offer low threshold power and high thermal stability. However, long-wavelength quantum dot emitters often suffer from thermal carrier escape through excited states when the energy separation between the ground and excited states is insufficien",
+    "authors": [
+      "Anna Penkała",
+      "Paweł Podemski",
+      "Vinayakrishna Joshi",
+      "Vitalii Sichkovskyi",
+      "Johann P. Reithmaier",
+      "Grzegorz Sęk"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "BEHAVE: Functional Behavior Modeling Enables Self-Improving Agents for Hardware Design and Verification",
+    "url": "https://arxiv.org/abs/2609.34785v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Developing agents for hardware design and verification requires reliable correctness feedback. As a hardware specification may permit correct implementations with different latencies, matching design and reference outputs cycle by cycle can reject valid designs. To address this, we introduce BEHAVE, an agentic framework for multi-turn joint hardware design and verification through functional behavior modeling. We define Behavior IR to express task functionality as executable behavior models with",
+    "authors": [
+      "Yuheng Wu",
+      "Berk Gokmen",
+      "Sujeeth Jinesh",
+      "Lauren McLane",
+      "Aarav Wattal",
+      "Qi Yang Huang",
+      "Zhaozhuo Xu",
+      "Thierry Tambe"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Movable Antenna-Enhanced MIMO-OFDM ISAC: Ambiguity Function Analysis, Waveform Design and Antenna Position Optimization",
+    "url": "https://arxiv.org/abs/2609.34737v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Multiple-input multiple-output orthogonal frequency division multiplexing (MIMO-OFDM) provides abundant spatial and time-frequency degrees of freedom for integrated sensing and communication (ISAC), while movable antennas (MAs) further introduce reconfigurable spatial freedom through array geometry adjustment. However, how the array geometry and information bearing MIMO-OFDM waveform jointly shape the three dimensional (3D) ambiguity response remains insufficiently understood, and conventional t",
+    "authors": [
+      "Tianqi Mao",
+      "Yuanshuo Gang",
+      "Guangyao Liu",
+      "Shiqi Cui",
+      "Ying Sun",
+      "Yifeng Xiong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "SPIMOE: Exploiting Hybrid Sparsity for Reasoning MoE Inference on Heterogeneous PIM Architectures",
+    "url": "https://arxiv.org/abs/2609.34612v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Long-reasoning Mixture-of-Experts (MoE) models expose two coupled inference bottlenecks: growing KV caches shift the critical path toward attention, while sparse expert activation causes load imbalance and low hardware utilization. Although Processing-in-Memory (PIM) offers a promising way to mitigate data movement overhead, existing PIM-based accelerators typically optimize attention or FFNs in isolation. We propose SPIMOE, the first co-design framework that exploits hybrid sparsity for efficie",
+    "authors": [
+      "Rubing Yang",
+      "Cenlin Duan",
+      "Yingjie Qi",
+      "Xiaolin He",
+      "Xiao Ma",
+      "Jianlei Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.str-el",
+    "title": "Enhanced sliding in the coexisting Charge Density Wave phase of strained TbTe3",
+    "url": "https://arxiv.org/abs/2609.34569v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "In the last years, the application of mechanical tensile stress has been shown to trigger unconventional phases in quantum materials. Recently, an orientational transition of the charge density wave (CDW) of TbTe3 was reported under the application of moderate uniaxial tensile stress, associated to the in-plane a/c lattice anisotropy. This leads to the disappearance of the pristine c-oriented CDW (CDWc) and to the appearance of the orthogonal a-oriented one (CDWa). A coexistence phase with a sup",
+    "authors": [
+      "Antoine Gallo Frantz",
+      "Aleksander Sinchenko",
+      "Luc Ortega",
+      "Abdellali Hadj Azzem",
+      "Jose Emilio Lorenzo",
+      "Pierre Monceau",
+      "David Le Bolloch",
+      "Vincent Jacques"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Magneto-optical Kerr spectroscopy of exciton Rydberg states in a magnetic van der Waals heterostructure",
+    "url": "https://arxiv.org/abs/2609.34536v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Excitonic states in two-dimensional semiconductors are sensitive to time-reversal symmetry breaking, yet how interfacial exchange acts on higher-lying exciton Rydberg states remains largely unexplored. Here we show that wavelength-resolved magneto-optical Kerr spectroscopy of a proximity-coupled MoSe$_2$/Fe$_3$GaTe$_2$ van der Waals heterostructure resolves magnetic symmetry breaking across the A- and B-exciton manifolds. Combining reflection, photoluminescence, and photoluminescence excitation ",
+    "authors": [
+      "Astha Khandelwal",
+      "Benran Zhang",
+      "Madhusmita Jena",
+      "Zhenchao Wen",
+      "Kenji Watanabe",
+      "Takashi Taniguchi",
+      "Saroj P. Dash",
+      "Zhenglu Li",
+      "Ryo Kitaura",
+      "Bhagwati Prasad",
+      "Daichi Kozawa"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.AS",
+    "title": "Measurement-Based Bitrate-Energy-Quality Analysis of Neural Audio Codec Decoders on Laptop and Phone Platforms",
+    "url": "https://arxiv.org/abs/2609.34524v1",
+    "published_date": "2026-09-28",
+    "source": "arXiv",
+    "summary": "Neural audio codecs can achieve similar objective quality at lower bitrates than conventional codecs, but their decoder-side computational cost may offset this bitrate advantage on battery-powered client devices. This paper presents a measurement-based rate--energy--quality analysis of four neural audio codecs--EnCodec, DAC, HILCodec, and SNAC--and two conventional baselines, AAC-LC and Opus, on laptop and phone platforms. Speech and music are evaluated separately using the original-reference Vi",
+    "authors": [
+      "Seunghyeon Shin",
+      "Seokjin Lee"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "physics.acc-ph",
     "title": "Fabry-Pérot Resonance Shifts as a Novel Non-destructive In Situ Surface Damage Diagnostic",
     "url": "https://arxiv.org/abs/2609.31522v1",
