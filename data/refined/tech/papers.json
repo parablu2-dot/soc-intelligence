@@ -2,6 +2,179 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "physics.acc-ph",
+    "title": "Fabry-Pérot Resonance Shifts as a Novel Non-destructive In Situ Surface Damage Diagnostic",
+    "url": "https://arxiv.org/abs/2609.31522v1",
+    "published_date": "2026-09-25",
+    "source": "arXiv",
+    "summary": "Current surface damage evaluation for nanostructured electronic devices requires specialized equipment or conditions outside the designed operating environment and cannot be used for in situ evaluation of surface damage. In this work, we developed a non-destructive method to probe the surface sublimation of a semiconductor heterostructure which can be applied to other semiconductor damage mechanisms. This approach employs shifts in the resonances of an optical cavity comprising the surface and a",
+    "authors": [
+      "Gregory Blume",
+      "Colin Kirk",
+      "Sushil Poudel",
+      "Alimohammed Kachwala",
+      "Joseph Grames",
+      "Marcy L. Stutzman",
+      "Matt Grau",
+      "Sylvain Marsillac"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Retrainable physics-integrated neural differentiable modeling of sintering across material systems",
+    "url": "https://arxiv.org/abs/2609.31518v1",
+    "published_date": "2026-09-25",
+    "source": "arXiv",
+    "summary": "Sintering is widely used to manufacture ceramics, but coupled densification and grain growth, material-dependent kinetics, and sparse measurements complicate predictive modeling and process design. We present Sinter-PiNDiff, a retrainable physics-integrated neural differentiable framework for predicting density and grain-size evolution. Two neural networks learn densification and grain-growth coefficients within coupled rate equations, while a smooth saturation factor attenuates densification ne",
+    "authors": [
+      "Zeping Chen",
+      "Ani Aprahamian",
+      "Khachatur V. Manukyan",
+      "Tengfei Luo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "Scaling Density Functional Theory with Gaussian Splatting",
+    "url": "https://arxiv.org/abs/2609.31483v1",
+    "published_date": "2026-09-25",
+    "source": "arXiv",
+    "summary": "Density functional theory (DFT) strikes a practical balance between accuracy and computational cost in many problems of computational chemistry and materials science. However, many DFT calculations are limited by fixed atom-centered basis sets, which dictate how accuracy and cost scale with system size. We propose Gaussian Splatting for Density Functional Theory (GS-DFT), which represents molecular orbitals as a cloud of Gaussians whose positions, shapes, and mixing coefficients are optimized jo",
+    "authors": [
+      "Andrés Guzmán-Cordero",
+      "Cindy Zhang",
+      "Majdi Hassan",
+      "Marta Skreta",
+      "Kirill Neklyudov",
+      "Matija Medvidović"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Resolving the Dual-Timescale Forecasting Dilemma in High-Frequency Cyber-Physical Telemetry via Physics-Grounded Dynamic Asymptotic Decomposition",
+    "url": "https://arxiv.org/abs/2609.31361v1",
+    "published_date": "2026-09-25",
+    "source": "arXiv",
+    "summary": "High-frequency industrial cyber-physical systems (CPS) stream continuous sensor telemetry at sub-10-second intervals. Multi-horizon forecasting over hours is required for predictive maintenance and operational control. However, deploying machine learning models over extended horizons (H = 2,160 steps at dt = 5 s) encounters the Dual-Timescale Forecasting Dilemma: the trade-off between short-horizon kinetic momentum and long-horizon diurnal thermodynamic equilibrium. Autoregressive rollouts suffe",
+    "authors": [
+      "Avik Kumar Das"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "High-throughput computational discovery of CuI-based ternary $p$-type transparent conductors",
+    "url": "https://arxiv.org/abs/2609.31277v1",
+    "published_date": "2026-09-25",
+    "source": "arXiv",
+    "summary": "P-type transparent conducting materials (TCMs) remain scarce, limiting progress in transparent electronics and tandem photovoltaics. Here, we perform a high-throughput computational search across CuI-based ternary X--Cu--I compounds using the minima hopping method combined with density functional theory. Filtering for thermodynamic stability, optical transparency, and light hole effective mass, we identify 58 candidate p-type TCMs, of which 49 are previously unreported. Twenty are p-type degener",
+    "authors": [
+      "Michael Seifert",
+      "Miguel A. L. Marques",
+      "Silvana Botti"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "Peregrino: A Full-Hardware Accelerator for the Complete Falcon Post-Quantum Digital Signature Scheme on Resource-Constrained Edge Devices",
+    "url": "https://arxiv.org/abs/2609.31252v1",
+    "published_date": "2026-09-25",
+    "source": "arXiv",
+    "summary": "The arrival of quantum computers threatens the security guarantees of classical cryptography, since quantum algorithms can break schemes that remain secure against conventional attacks. The National Institute of Standards and Technology (NIST) has therefore standardized a set of post-quantum cryptographic algorithms, among them Falcon, a lattice-based digital signature scheme with the most compact signature and public-key sizes of the standardized candidates. Falcon's reliance on floating-point ",
+    "authors": [
+      "Antonio Carreño",
+      "Jaime Señor",
+      "Jorge Portilla"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "POPT: Physics-Informed Deep Learning for Phase-Only Positioning in Distributed MIMO",
+    "url": "https://arxiv.org/abs/2609.31218v1",
+    "published_date": "2026-09-25",
+    "source": "arXiv",
+    "summary": "This article develops a physics-informed deep learning framework for single-snapshot 3D phase-only positioning in narrowband phase-coherent distributed multiple-input multiple-output (D-MIMO) networks under two-ray propagation. Unlike prior phase-coherent D-MIMO localization methods that largely assume line-of-sight (LoS)-only channels, we consider a LoS path and a specular ground reflection. Since the narrowband single-snapshot observation cannot resolve these components in delay, their coheren",
+    "authors": [
+      "Fatih Ayten",
+      "Ossi Kaltiokallio",
+      "Jukka Talvitie",
+      "Akshay Jain",
+      "Mehmet C. Ilter",
+      "Musa Furkan Keskin",
+      "Elena Simona Lohan",
+      "Henk Wymeersch",
+      "Mikko Valkama"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Black silicon avalanche photodiode with dopant-free multiplication region achieves >98% EQE",
+    "url": "https://arxiv.org/abs/2609.31210v1",
+    "published_date": "2026-09-25",
+    "source": "arXiv",
+    "summary": "Conventional silicon avalanche photodiodes (Si APDs) rely on highly doped regions to enable impact ionization and achieve internal gain. However, inefficient charge collection in these regions, combined with front surface reflection, degrades the external quantum efficiency (EQE) of these devices. In this work, we mitigate both loss mechanisms by integrating black silicon (b-Si) surface nanostructuring with Al2O3 induced carrier collection in an inverted-mesa Si APD architecture. This design con",
+    "authors": [
+      "O. Leiviskä",
+      "O. Setälä",
+      "A. Haarahiltunen",
+      "J. Heinonen",
+      "V. Vähänissi",
+      "H. Savin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "PipeDRAM: A Data-Transposition-Free In-DRAM Architecture with Hardware/Software Pipelining",
+    "url": "https://arxiv.org/abs/2609.30998v1",
+    "published_date": "2026-09-25",
+    "source": "arXiv",
+    "summary": "Processing-using-DRAM (PUD) architectures exploit the analog operational properties of DRAM to perform bulk bitwise Boolean and arithmetic operations inside memory arrays by organizing data in a vertical layout, where operand bits are stacked along DRAM columns. However, modern computing systems natively employ a horizontal data layout that preserves the cache line abstraction, leverages spatial locality in row buffers, and enables high memory throughput. This fundamental mismatch forces existin",
+    "authors": [
+      "Geraldo F. Oliveira",
+      "Ataberk Olgun",
+      "Ismail Emir Yüksel",
+      "F. Nisa Bostancı",
+      "Pedro H. E. Becker",
+      "Mohammad Sadrosadati",
+      "Saugata Ghose",
+      "Juan Gómez-Luna",
+      "Onur Mutlu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Adaptive Pilot Selection for Unified Semantic Communication and Semantic Sensing in ISAC",
+    "url": "https://arxiv.org/abs/2609.30891v1",
+    "published_date": "2026-09-25",
+    "source": "arXiv",
+    "summary": "Semantic communication (SemCom) and integrated sensing and communication (ISAC) are promising technologies for future 6G wireless networks. Existing studies have applied semantic technology to either the communication module or the sensing module of ISAC. In this work, we propose SemISAC, which performs both SemCom and semantic sensing within a single dual-function waveform. SemISAC uses a joint semantic encoder that extracts task-specific information for both communication and sensing. We evalu",
+    "authors": [
+      "Muhammad Abubakar Rashid",
+      "Muhammad Hannan Akram",
+      "Haejoon Jung",
+      "Syed Ali Hassan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.LG",
     "title": "Beyond Compression: Training Latent Representations for Stable Long-Horizon Rollout in Neural Surrogate Solvers",
     "url": "https://arxiv.org/abs/2609.30198v1",
