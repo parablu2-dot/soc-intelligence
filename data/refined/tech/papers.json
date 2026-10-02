@@ -2,6 +2,263 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Catscan: Visualizing Pipelines of CPU Performance Simulation",
+    "url": "https://arxiv.org/abs/2610.02121v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "Processor pipeline visualization tools are routine inside industry CPU teams, but few of them are described or released publicly. As a result, students, researchers, and other practitioners rarely see the tooling that processor architects use to debug performance before silicon. This paper describes two pieces of Ampere Computing's performance- analysis infrastructure that we have released to the community as open source: event streams, a simulator-output format, and Catscan, an interactive view",
+    "authors": [
+      "Aaron Lindsay",
+      "Nicholas Kelly",
+      "Scott Witscher",
+      "Mahesh Madhav"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Thin-capping layer epitaxial quantum dots for near-field quantum photonics",
+    "url": "https://arxiv.org/abs/2610.02080v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "Epitaxial quantum dots (QDs) are widely recognised as one of the best quantum light sources, given their good stability, brightness, quantum efficiency and coherence. To reach such properties, QDs are protected from potentially detrimental surface states by a relatively thick capping layer, typically exceeding 50nm. This prevents the implementation of near-field effects, like plasmonic-based ones, that can dramatically increase the light-matter interaction, since the control of the spontaneous e",
+    "authors": [
+      "Yuting Guo",
+      "Jonathan Bar-David",
+      "Pasquale Cilibrizzi",
+      "Sung-Yul L. Park",
+      "Jin Dong Song",
+      "Luca Sapienza"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Programmable nonlinearity within nanophotonic waveguides",
+    "url": "https://arxiv.org/abs/2610.02024v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "Nonlinear nanophotonics enables the engineering of optical functions using light-matter interactions in nanoscale structures with carefully designed geometries. Phase matching in nonlinear optics is typically essential for realizing high efficiency for desired processes and engineering of sophisticated functions, but it can be challenging to reliably achieve in nanophotonic waveguides. Conventionally, phase matching in nanophotonics is achieved through nanofabrication, e.g., by poling a device's",
+    "authors": [
+      "Benjamin A. Ash",
+      "Ryotatsu Yanagimoto",
+      "Mandar M. Sohoni",
+      "Yang Xu",
+      "Yiqi Zhao",
+      "Martin M. Stein",
+      "Fan O. Wu",
+      "Marc Jankowski",
+      "Logan G. Wright",
+      "Tatsuhiro Onodera",
+      "Peter L. McMahon"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "BranchIP: Learning Adaptive Equivariant Computation for Interatomic Potentials",
+    "url": "https://arxiv.org/abs/2610.02013v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "Equivariant machine learning interatomic potentials (MLIPs) have revolutionized atomistic modeling, but accurate treatment of complex materials and molecular systems demands expensive models. This limits simulation length- and time-scales, with tensor products a key computational bottleneck. The recent emergence of foundation-scale MLIPs further exacerbates this challenge. We present Branch Interatomic Potential (BranchIP), a single-model framework for learned adaptive tensor product computation",
+    "authors": [
+      "Laura Zichi",
+      "Gil Harari",
+      "Chuin Wei Tan",
+      "Marc L. Descoteaux",
+      "Albert Zhu",
+      "Menghang Wang",
+      "Yoel Zimmermann",
+      "H. T. Kung",
+      "Boris Kozinsky"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "ZTA-Q: an Open-source RISC-V Platform for Accurate Quantized CNN Inference",
+    "url": "https://arxiv.org/abs/2610.01867v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "Low-precision inference is widely adopted in edge AI to reduce computational cost and memory footprint. However, existing open-source accelerator platforms provide limited end-to-end support for CNNs following the standard TensorFlow Lite integer inference scheme. This paper presents ZTA-Q, an open-source RISC-V-based platform that enables accurate deployment of TensorFlow Lite INT8 models. In addition to extending operator support, ZTA-Q provides a configurable post-processing datapath for stud",
+    "authors": [
+      "Yike Li",
+      "Ajay Kumar M",
+      "Vishnu PS",
+      "Dimitrios S. Nikolopoulos",
+      "Bo Ji",
+      "Hans Vandierendonck",
+      "Deepu John"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Theory of Chirality-Induced Spin Selectivity in Trefoil-knot Molecules",
+    "url": "https://arxiv.org/abs/2610.01732v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "The origin of chirality-induced spin selectivity (CISS) remains elusive, and ultrahigh spin polarization (SP) in topologically knotted molecules is unexplained. We develop a discrete geometric spin-orbit coupling (SOC) framework for molecular junctions, resolving site-specific curvature and current-partition effects beyond continuous models. For trefoil-knot molecules, it quantifies site-resolved geometric SOC, reaching $\\sim$120 meV, nearly two orders of magnitude larger than intrinsic SOC of l",
+    "authors": [
+      "Xi Sun",
+      "Shu-Zheng Zhou",
+      "Kai-Yuan Zhang",
+      "Hua-Hua Fu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Decoding Thermal Stability: In situ Insights into Phase Controlled Phosphine-free Colloidal Bi-Te Nanosheets",
+    "url": "https://arxiv.org/abs/2610.01722v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "Bismuth telluride (Bi2Te3) is a prototypical V-VI semiconductor of interest for both thermoelectric and topological applications; however, phase-selective synthesis and thermal stability across the bismuth-telluride homologous series remain poorly understood. We report a facile and phosphine-free colloidal synthesis approach for a phase-selective synthesis of Bi2Te3, BiTe, and Bi4Te5 nanosheets with well-defined hexagonal morphology. By controlling precursor chemistry and reaction temperature, w",
+    "authors": [
+      "Fagui He",
+      "Kevin Oldenburg",
+      "Rostyslav Lesyuk",
+      "Christian Klinke"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Artifact Annotations Partially Substitute for Per-User Calibration: SAFE-EDA and a Normalization-Controlled Evaluation of Wrist-EDA Affect Recognition",
+    "url": "https://arxiv.org/abs/2610.01692v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "Wrist electrodermal activity (EDA) differs in amplitude from one person to the next, so affect-recognition models normalize their input before classification. Studies that test such models on held-out subjects seldom report where the normalization statistics come from, yet statistics computed from the held-out subject's own recording give the model information that a device does not have when it is first worn. We asked how this choice alters the measured benefit of pretraining. A compact convolu",
+    "authors": [
+      "Haochen Chai",
+      "Xinbi Luo",
+      "Zining Liu",
+      "Fangfang Jiang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "U-Sonic: An Open-Source 8-Channel Ultrasound Transmit IP in a 130 nm RISC-V SoC",
+    "url": "https://arxiv.org/abs/2610.01603v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "Miniaturized ultrasound (US) probes require programmable and synchronized transmit (TX) excitation across multiple elements, while existing compact platforms often rely on limited microcontroller (MCU) pulse generators or closed-source fixed-function pulser devices. We present U-Sonic, an open-source digital US TX peripheral integrated into a 32-bit RISC-V system-on-chip (SoC). The implemented SoC integrates 8 pulser cores, while the parameterized architecture supports up to 16 channels. Each co",
+    "authors": [
+      "Federico Villani",
+      "Nico Canzani",
+      "Marc-André Wessner",
+      "Philippe Sauter",
+      "Enrico Zelioli",
+      "Andrea Cossettini",
+      "Christoph Leitner",
+      "Luca Benini"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.str-el",
+    "title": "Why polar excitons stay sharp: parity protection of the center-of-mass recoil channel in exciton-phonon scattering",
+    "url": "https://arxiv.org/abs/2610.01600v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "In polar semiconductors the Fröhlich interaction is the dominant electron--phonon coupling, yet excitonic resonances in materials such as halide perovskites remain anomalously sharp. We show that standard frozen-center-of-mass treatments of the exciton--phonon problem miss the decisive kinematic degree of freedom: restoring the exact center-of-mass (COM) recoil reveals a universally open, parameter-free $1s\\to1s$ absorption channel at recoil momentum $q_*=\\sqrt{2M_{\\rm ex}\\hbarω_{\\rm LO}}/\\hbar$",
+    "authors": [
+      "Michael O. Atambo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Domain-engineered ferroelectric BiFeO$_3$ thin films for efficient bias-free THz emission",
+    "url": "https://arxiv.org/abs/2610.01357v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "Ultrashort light pulses can drive transient photocurrents in solids, the basis of modern terahertz (THz) emitters. Ferroelectrics have recently emerged in this context as sources that require neither the bias voltage of photoconductive antennas nor the magnetic field of spintronic emitters, yet the ultrafast photocurrent generating the emission has remained debated. Here, we resolve this question in epitaxial BiFeO$_3$ thin films with engineered ferroelectric domain configurations, from single-d",
+    "authors": [
+      "Z. Abdul Hadi",
+      "N. Rezi",
+      "M. Monti",
+      "G. Vaudel",
+      "A. Abdelsamie",
+      "C. Carrétéro",
+      "D. Sando",
+      "M. Viret",
+      "V. Garcia",
+      "S. Fusil",
+      "M. C. Weber",
+      "P. Ruello",
+      "V. Juvé"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Quantitative Assessment of Hemispheric Asymmetry in Alzheimer's Disease and Healthy Brains via QSM-Derived Biomarkers: A Proof of Concept Study",
+    "url": "https://arxiv.org/abs/2610.01341v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "Studying brain lateralization and the resulting hemispheric asymmetry has been a topic of interest for many researchers. Very few studies have focused on differences in brain lateralization and hemispheric asymmetry associated with neurodegeneration. Additionally, Quantitative Susceptibility Mapping (QSM) has not been extensively used to investigate these differences. This article aims to study differences in hemispheric asymmetry between healthy and Alzheimer's disease (AD)-affected brains by c",
+    "authors": [
+      "Sadad Hasan",
+      "Prantik Paul",
+      "Maruf Ahmed"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Correlation Imaging via Hybrid Entanglement between Microwave Photons and Surface Acoustic Wave Phonons",
+    "url": "https://arxiv.org/abs/2610.01252v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "Establishing effective spatial correlations between distinct quantum fields is essential for multi-physics quantum sensing.~We here propose a correlation imaging approach based on the hybrid entanglement between microwave photons and microwave surface acoustic wave phonons generated via a superconducting quantum circuit.~At matched microwave frequencies, the five order-of-magnitude wavelength disparity between photons and phonons leads to a unique quantum entanglement resource, which allows the ",
+    "authors": [
+      "Yu-Yuan Chen",
+      "Ling-An Wu",
+      "Yu-xi Liu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Synthesis of Metal-Semiconductor Heterojunctions in Single Graphene Nanoribbons",
+    "url": "https://arxiv.org/abs/2610.01194v1",
+    "published_date": "2026-10-01",
+    "source": "arXiv",
+    "summary": "Graphene nanoribbons (GNRs) are a highly tunable class of one-dimensional (1D) quantum materials that can be fabricated through bottom-up synthesis. Precise control over GNR band gaps and band-edge alignments has established them as a promising nanoelectronics platform, but forming high-quality electronic interfaces remains challenging. Here we combine sequential on-surface synthesis and scanning tunneling microscopy (STM)-induced dehydrogenation to directly write metallic 7-iGNR segments into o",
+    "authors": [
+      "Ziyi Wang",
+      "Kaitlin Slicker",
+      "Weichen Tang",
+      "Boyu Qie",
+      "Rafal Zuzak",
+      "Haowen Pang",
+      "Yudi Huang",
+      "Xinheng Li",
+      "Peter H. Jacobse",
+      "Steven G. Louie",
+      "Felix R. Fischer",
+      "Michael F. Crommie"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "physics.optics",
     "title": "Design of Mechanically Compliant Membrane Reflectors for Giant Optical Phase Nonlinearity",
     "url": "https://arxiv.org/abs/2609.40354v1",
