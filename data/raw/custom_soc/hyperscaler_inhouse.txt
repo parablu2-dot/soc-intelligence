@@ -5923,7 +5923,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 	<atom:link href="https://azure.microsoft.com/en-us/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://azure.microsoft.com/en-us/blog/</link>
 	<description>Get the latest Azure news, updates, and announcements from the Azure blog. From product updates to hot topics, hear from the Azure experts.</description>
-	<lastBuildDate>Wed, 30 Sep 2026 09:44:10 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 30 Sep 2026 20:22:06 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -5939,6 +5939,194 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 	<height>32</height>
 </image> 
 	<item>
+		<title>Responsible infrastructure at hyperscale: Managing the full lifecycle of Azure hardware</title>
+		<link>https://azure.microsoft.com/en-us/blog/responsible-infrastructure-at-hyperscale-managing-the-full-lifecycle-of-azure-hardware/</link>
+					<comments>https://azure.microsoft.com/en-us/blog/responsible-infrastructure-at-hyperscale-managing-the-full-lifecycle-of-azure-hardware/#respond</comments>
+		
+		<dc:creator><![CDATA[Alistair Speirs]]></dc:creator>
+		<pubDate>Wed, 30 Sep 2026 15:00:00 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[Datacenter]]></category>
+		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=54217</guid>
+
+					<description><![CDATA[<p>Microsoft is advancing Azure cloud infrastructure with more efficient systems and Circular Centers that extend the useful life of datacenter hardware.</p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/responsible-infrastructure-at-hyperscale-managing-the-full-lifecycle-of-azure-hardware/">Responsible infrastructure at hyperscale: Managing the full lifecycle of Azure hardware</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">
+  Every new generation of cloud infrastructure creates two jobs. We must deploy more capable systems quickly, and we must manage the hardware they replace responsibly.
+</p>
+
+
+
+<p class="wp-block-paragraph">Even though these jobs happen behind the scenes, the results matter to <a href="http://azure.microsoft.com" target="_blank" rel="noopener noreferrer">Microsoft Azure</a> customers. Newer systems deliver more compute capacity from the space and power available in a datacenter. At the same time, the reuse, refurbishment, and recycling of older equipment can extend the life of valuable components and return materials to the supply chain, ensuring cost efficiency and reliability. </p>
+
+
+
+<p class="wp-block-paragraph">Managing this process starts early in the lifecycle, with the design of our silicon, servers, networks, and datacenters. It continues through years of operation. When equipment leaves active service, <a href="https://datacenters.microsoft.com/tour/circular-center/">Microsoft Circular Centers</a> help determine its next useful life.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://datacenters.microsoft.com/tour/circular-center/" target="_blank" rel="noopener noreferrer">Discover more about Microsoft Circular Centers</a></div>
+</div>
+
+
+
+<p class="wp-block-paragraph">
+  With new Circular Centers in Newport, Wales, and Sydney, Australia, this work now spans North America, Europe, and Asia Pacific. These facilities help us recover components, prepare space for new infrastructure, and get more value from the hardware and materials already in our system.
+</p>
+
+
+
+<h2 class="wp-block-heading" id="getting-more-from-every-rack-and-every-watt">Getting more from every rack and every watt</h2>
+
+
+
+<p class="wp-block-paragraph">
+  Cloud infrastructure must keep pace with the work customers want to run. That means increasing compute capacity while making better use of the space and power available in each datacenter.
+</p>
+
+
+
+<p class="wp-block-paragraph">
+  Compared with early general-purpose systems, today&#8217;s servers provide significantly more processor cores, more memory capacity, and network bandwidth. As shown in the chart below, Azure infrastructure has become both denser and more efficient over time. Since 2014, cores per rack have increased approximately 13-fold, while the power required to complete the same task has decreased by roughly 90%. For example, a workload such as code compilation that consumed approximately 100 watts on early systems can now be completed using less than 10 watts. 
+</p>
+
+
+
+<p class="wp-block-paragraph">
+  This increase in compute density means we’re able to provide more server capacity to support customer workloads using the same datacenter footprint. By delivering more useful work from each rack, newer infrastructure helps improve resource efficiency while supporting continued growth and scale to meet cloud and AI demand.
+</p>
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/word-image-54217-2.webp" alt="" class="wp-image-54219 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/word-image-54217-2.webp"><figcaption class="wp-element-caption"><em>Source: Microsoft internal analysis using combined average data across general compute infra partners and Cobalt using industry benchmark performance such as </em><a href="https://www.spec.org/cpu2017/results/" target="_blank" rel="noreferrer noopener"><em>SPEC CPU report</em></a><em> and </em><a href="https://microsoft.github.io/VirtualClient/docs/workloads/specpower/" target="_blank" rel="noreferrer noopener"><em>industry-standard utilization markdown</em></a>.</figcaption></figure>
+
+
+
+<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-us/blog/new-azure-cobalt-200-vms-deliver-50-performance-improvement-fully-optimized-for-modern-agentic-ai-workloads/?msockid=2c72ae4c199c6f663812b85718996ea8" target="_blank" rel="noreferrer noopener">Azure Cobalt</a> is one example of this systems approach. Our custom-designed cloud processor allows Microsoft to optimize silicon, servers, networking, storage, and software together. Cobalt 200 delivers up to 50% higher performance than Cobalt 100 and incorporates the latest Microsoft security, networking, and storage technologies.</p>
+
+
+
+<p class="wp-block-paragraph">
+  This constant cycle of innovation is one of the defining characteristics of cloud infrastructure. As new generations of cloud and AI infrastructure are deployed, older hardware is gradually taken out of service. What happens to the equipment being replaced?
+</p>
+
+
+
+<h2 class="wp-block-heading" id="giving-hardware-its-next-useful-life">Giving hardware its next useful life</h2>
+
+
+
+<figure class="wp-block-image"><img fetchpriority="high" decoding="async" width="875" height="583" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/word-image-54217-3.jpeg" alt="" class="wp-image-54220" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/word-image-54217-3.jpeg 875w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/word-image-54217-3-300x200.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/word-image-54217-3-768x512.jpeg 768w" sizes="(max-width: 875px) 100vw, 875px" /></figure>
+
+
+
+<p class="wp-block-paragraph">
+  Last year, Microsoft achieved a 92% reuse and recycling rate for decommissioned servers and components. However, at the scale we operate, retiring a server is a little more complex than simply sorting components into the correct recycling bin. Every server must be securely decommissioned, and data-bearing components wiped. Then we must decide how to recover the most value from it. Can the complete system serve another purpose? Can processors, memory, and other components keep working elsewhere? Which materials can return to the supply chain?
+</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://datacenters.microsoft.com/tour/circular-center/" target="_blank" rel="noopener noreferrer">Microsoft Circular Centers</a> manage these decisions as part of our datacenter operations. At these facilities, our staff give decommissioned hardware a series of possible next lives. Complete systems can support Microsoft labs and training environments, help schools and universities teach technical skills, or be sold to qualified buyers for continued use. Components can become spare parts for other systems. Materials are recycled when reuse is no longer possible.</p>
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ac137cd9b9ef&quot;}" data-wp-interactive="core/image" data-wp-key="6ac137cd9b9ef" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-1024x576.webp" alt="Image of circular center facilities in a global map format. " class="wp-image-54322 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-1536x864.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-2048x1152.webp 2048w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-809x455.webp 809w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-1024x576.webp"><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<p class="wp-block-paragraph">Our Circular Centers operate as a connected global network. With recent launches in Wales and Australia, eight centers are now in operation across North America, Europe, and Asia Pacific. The network continues to grow, with a new center planned for San Antonio, Texas.</p>
+
+
+
+<p class="wp-block-paragraph">We are also investing in technologies that improve the efficiency and scale of circular operations. Through automation initiatives with AI-powered capabilities, such as robotic disassembly and autonomous material handling, we are helping accelerate the recovery of components and materials.</p>
+
+
+
+<h2 class="wp-block-heading" id="making-the-most-of-every-resource">Making the most of every resource</h2>
+
+
+
+<p class="wp-block-paragraph">
+  As demand for cloud and AI continues to grow, every part of the infrastructure lifecycle matters. We must get more compute from every rack and every watt, while getting more value from every server and component. Circular Centers help us do both. They make responsible recovery part of how we grow Azure, renew the foundational infrastructure, and build capacity for what customers need next.
+</p>
+
+
+
+<h2 class="wp-block-heading" id="learn-more">Learn More</h2>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item">Explore <a href="https://azure.microsoft.com/en-us/solutions/migration/" target="_blank">Azure migration and modernization</a>.</li>
+
+
+
+<li class="wp-block-list-item">Learn more about <a href="http://aka.ms/silicontosystems" target="_blank" rel="noreferrer noopener">Microsoft’s silicon to systems approach to Azure Infrastructure</a>.  </li>
+
+
+
+<li class="wp-block-list-item">Learn how <a href="https://azure.microsoft.com/en-us/blog/learn-how-microsoft-circular-centers-are-scaling-cloud-supply-chain-sustainability/" target="_blank">Microsoft Circular Centers are scaling cloud supply chain sustainability</a>.   </li>
+
+
+
+<li class="wp-block-list-item">Read <a href="https://www.microsoft.com/en-us/corporate-responsibility/topics/sustainability/report/" target="_blank">Microsoft’s 2026 Environmental Sustainability Report</a>.  </li>
+</ul>
+
+
+
+<div class="is-style-inline-centered wp-block-bloginabox-theme-promotional">
+	
+<div class="promotional promotional--has-media promotional--media-right">
+	<div class="promotional__wrapper">
+		<div class="promotional__content-wrapper">
+			<div class="promotional__content">
+				
+
+<h2 class="wp-block-heading" id="microsoft-circular-centers">Microsoft Circular Centers</h2>
+
+
+
+<p class="wp-block-paragraph">Helping deliver towards our commitment on Zero Waste</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a aria-label="Take a virtual tour: Microsoft Circular Centers" data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://datacenters.microsoft.com/tour/circular-center/" target="_blank" rel="noopener noreferrer">Take a virtual tour</a></div>
+</div>
+
+			</div>
+		</div>
+					<div class="promotional__media-wrapper">
+				<div class="promotional__media">
+											<img decoding="async" width="1260" height="708" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2025/11/MSFT-Blog-Header-Image-10.webp" class="attachment-full size-full" alt="An aerial shot of the Fairwater AI datacenter near Atlanta, Georgia." loading="lazy" />									</div>
+			</div>
+			</div>
+</div>
+</div>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/responsible-infrastructure-at-hyperscale-managing-the-full-lifecycle-of-azure-hardware/">Responsible infrastructure at hyperscale: Managing the full lifecycle of Azure hardware</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/responsible-infrastructure-at-hyperscale-managing-the-full-lifecycle-of-azure-hardware/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>SQL Server on Azure Local is now generally available</title>
 		<link>https://www.microsoft.com/en-us/sql-server/blog/2026/09/28/sql-server-on-azure-local-is-now-generally-available/</link>
 					<comments>https://www.microsoft.com/en-us/sql-server/blog/2026/09/28/sql-server-on-azure-local-is-now-generally-available/#respond</comments>
@@ -6159,7 +6347,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6abd1ea04eb6c"></universal-media-player>
+		<universal-media-player id="ump-6ac137cda66f0"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6173,7 +6361,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6abd1ea04eb6c", options);
+				ump("ump-6ac137cda66f0", options);
 			});
 		</script>
 	</div>
@@ -6211,7 +6399,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6abd1ea04f05a"></universal-media-player>
+		<universal-media-player id="ump-6ac137cda6b2a"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6225,7 +6413,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6abd1ea04f05a", options);
+				ump("ump-6ac137cda6b2a", options);
 			});
 		</script>
 	</div>
@@ -6273,7 +6461,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6abd1ea04f76c"></universal-media-player>
+		<universal-media-player id="ump-6ac137cda7059"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6287,7 +6475,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6abd1ea04f76c", options);
+				ump("ump-6ac137cda7059", options);
 			});
 		</script>
 	</div>
@@ -6333,7 +6521,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6abd1ea04fd2d"></universal-media-player>
+		<universal-media-player id="ump-6ac137cda7529"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6347,7 +6535,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6abd1ea04fd2d", options);
+				ump("ump-6ac137cda7529", options);
 			});
 		</script>
 	</div>
@@ -6495,7 +6683,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6abd1ea050cce"></universal-media-player>
+		<universal-media-player id="ump-6ac137cda87f8"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6509,7 +6697,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6abd1ea050cce", options);
+				ump("ump-6ac137cda87f8", options);
 			});
 		</script>
 	</div>
@@ -6687,7 +6875,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 		<pubDate>Mon, 28 Sep 2026 15:00:00 +0000</pubDate>
 				<category><![CDATA[Compute]]></category>
 		<category><![CDATA[Management and governance]]></category>
-		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=54069</guid>
+		<guid isPermaLink="false"></guid>
 
 					<description><![CDATA[<p>Our Virtual Machine Lifecycle policy guides how we manage these transitions, giving Azure customers transparency, predictability, and guidance.</p>
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/enhancing-microsoft-azure-virtual-machine-lifecycle/">Enhancing Microsoft Azure Virtual Machine lifecycle</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
@@ -6911,7 +7099,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6abd1ea05d3db"></universal-media-player>
+		<universal-media-player id="ump-6ac137cdb38dc"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6925,7 +7113,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6abd1ea05d3db", options);
+				ump("ump-6ac137cdb38dc", options);
 			});
 		</script>
 	</div>
@@ -6996,7 +7184,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 <p class="wp-block-paragraph">Getting an agent into production is just the beginning. As real users put it to work, teams need to understand what’s driving quality, latency, and cost, and which changes will improve performance without introducing regressions. That has often meant piecing together traces, dashboards, and ad hoc tests. Foundry brings those steps into a continuous improvement loop, helping teams turn production insights into measurable improvements: observe, understand, evaluate, optimize, validate, and repeat. </p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6abd1ea05febd&quot;}" data-wp-interactive="core/image" data-wp-key="6abd1ea05febd" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/foundry-agent-loop-v2.webp" alt="Circular diagram showing a continuous agent improvement loop: observe traces and signals; understand quality, latency, and cost; evaluate changes; optimize the agent; and validate that it&rsquo;s better. Arrows connect the five stages in a repeating cycle." class="wp-image-54162 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/foundry-agent-loop-v2.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ac137cdb5b34&quot;}" data-wp-interactive="core/image" data-wp-key="6ac137cdb5b34" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/foundry-agent-loop-v2.webp" alt="Circular diagram showing a continuous agent improvement loop: observe traces and signals; understand quality, latency, and cost; evaluate changes; optimize the agent; and validate that it&rsquo;s better. Arrows connect the five stages in a repeating cycle." class="wp-image-54162 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/foundry-agent-loop-v2.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7018,7 +7206,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 </ul>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6abd1ea061832&quot;}" data-wp-interactive="core/image" data-wp-key="6abd1ea061832" class="wp-block-image size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-1024x527.webp" alt="Insights in Foundry surfaces recurring agent issues, likely causes, supporting traces, and recommended actions." class="wp-image-54128 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-1024x527.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-300x154.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-768x395.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-1536x790.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry.webp 2000w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-1024x527.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ac137cdb731a&quot;}" data-wp-interactive="core/image" data-wp-key="6ac137cdb731a" class="wp-block-image size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-1024x527.webp" alt="Insights in Foundry surfaces recurring agent issues, likely causes, supporting traces, and recommended actions." class="wp-image-54128 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-1024x527.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-300x154.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-768x395.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-1536x790.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry.webp 2000w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Insights-in-Microsoft-Foundry-1024x527.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7178,6 +7366,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 				<category><![CDATA[Analytics]]></category>
 		<category><![CDATA[DevOps]]></category>
 		<category><![CDATA[Management and governance]]></category>
+		<category><![CDATA[Advancing reliability]]></category>
 		<category><![CDATA[Azure Essentials]]></category>
 		<category><![CDATA[Azure Well-Architected Framework]]></category>
 		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=53956</guid>
@@ -7242,7 +7431,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6abd1ea06c474"></universal-media-player>
+		<universal-media-player id="ump-6ac137cdbf7d1"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -7256,7 +7445,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6abd1ea06c474", options);
+				ump("ump-6ac137cdbf7d1", options);
 			});
 		</script>
 	</div>
@@ -7304,7 +7493,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6abd1ea06d482"></universal-media-player>
+		<universal-media-player id="ump-6ac137cdbfc6f"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -7318,7 +7507,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6abd1ea06d482", options);
+				ump("ump-6ac137cdbfc6f", options);
 			});
 		</script>
 	</div>
@@ -7356,7 +7545,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6abd1ea06d970"></universal-media-player>
+		<universal-media-player id="ump-6ac137cdc0135"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -7370,7 +7559,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6abd1ea06d970", options);
+				ump("ump-6ac137cdc0135", options);
 			});
 		</script>
 	</div>
@@ -7470,7 +7659,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6abd1ea06ec17"></universal-media-player>
+		<universal-media-player id="ump-6ac137cdc0c73"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -7484,7 +7673,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6abd1ea06ec17", options);
+				ump("ump-6ac137cdc0c73", options);
 			});
 		</script>
 	</div>
@@ -7897,7 +8086,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 <p class="wp-block-paragraph">The accompanying chart illustrates why enterprise customers on Microsoft Foundry are switching to GPT-5.6 Sol and the latest GPT-6 offerings.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6abd1ea08056f&quot;}" data-wp-interactive="core/image" data-wp-key="6abd1ea08056f" class="wp-block-image size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1024x768.webp" alt="Chart comparing AI model quality and cost per benchmark task, including GPT-6 Astra, GPT-6 Sol, and GPT-6 Luna." class="wp-image-54049 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1024x768.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-300x225.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-768x576.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1536x1152.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-2048x1536.webp 2048w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-809x607.webp 809w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1024x768.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ac137cdcbb77&quot;}" data-wp-interactive="core/image" data-wp-key="6ac137cdcbb77" class="wp-block-image size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1024x768.webp" alt="Chart comparing AI model quality and cost per benchmark task, including GPT-6 Astra, GPT-6 Sol, and GPT-6 Luna." class="wp-image-54049 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1024x768.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-300x225.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-768x576.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1536x1152.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-2048x1536.webp 2048w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-809x607.webp 809w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/updated_chart-1024x768.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7965,7 +8154,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 <p class="wp-block-paragraph">GPT-6 models running on Azure have multiple layers of safety and security built directly into the model and around it. At the core, the model itself carries the alignment and safety training built in, while the prompts and outputs around it are protected by content filters and guardrails that govern what the agent can say. Beyond that, tool calls and responses are protected by controls and <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/content-filter-prompt-shields" target="_blank" rel="noopener noreferrer">prompt injection mitigation</a> that govern what the agent can do, and identity and access are protected by enterprise policies that govern what it can reach.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6abd1ea084655&quot;}" data-wp-interactive="core/image" data-wp-key="6abd1ea084655" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-5.webp" alt="Four layers of AI safety: model training, prompt and output guardrails, tool protections, and identity and access controls." class="wp-image-54003 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-5.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ac137cdcd41c&quot;}" data-wp-interactive="core/image" data-wp-key="6ac137cdcd41c" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-5.webp" alt="Four layers of AI safety: model training, prompt and output guardrails, tool protections, and identity and access controls." class="wp-image-54003 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-5.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -8217,7 +8406,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 		<pubDate>Wed, 16 Sep 2026 16:00:00 +0000</pubDate>
 				<category><![CDATA[Uncategorized]]></category>
 		<category><![CDATA[Gartner® Magic Quadrant™]]></category>
-		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=53934</guid>
+		<guid isPermaLink="false"></guid>
 
 					<description><![CDATA[<p>Gartner highlighted Microsoft’s unified single-product architecture, flexibility across hyperconverged and disaggregated architectures, and more.</p>
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/microsoft-recognized-as-a-leader-in-the-2026-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/">Microsoft recognized as a Leader in the 2026 Gartner® Magic Quadrant™ for Distributed Hybrid Infrastructure</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
@@ -8236,7 +8425,7 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 </div>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6abd1ea0984b3&quot;}" data-wp-interactive="core/image" data-wp-key="6abd1ea0984b3" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-3.webp" alt="Graph comparing companies in the Magic Quadrant for Distributed Hybrid Infrastructure." class="wp-image-53936 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-3.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ac137cdd8390&quot;}" data-wp-interactive="core/image" data-wp-key="6ac137cdd8390" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-3.webp" alt="Graph comparing companies in the Magic Quadrant for Distributed Hybrid Infrastructure." class="wp-image-53936 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-3.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -8392,230 +8581,6 @@ channel with a link.&lt;/code&gt;&lt;/pre&gt;
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/microsoft-recognized-as-a-leader-in-the-2026-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management</title>
-		<link>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management/</link>
-					<comments>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management/#respond</comments>
-		
-		<dc:creator><![CDATA[Brendan Burns]]></dc:creator>
-		<pubDate>Thu, 10 Sep 2026 21:00:00 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[Containers]]></category>
-		<category><![CDATA[Hybrid + multicloud]]></category>
-		<category><![CDATA[AI]]></category>
-		<category><![CDATA[Gartner® Magic Quadrant™]]></category>
-		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=53828</guid>
-
-					<description><![CDATA[<p>Microsoft was named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management. Discover how AKS, Azure Arc, and Azure Container Apps help organizations run AI and hybrid workloads at scale.</p>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management/">Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<p class="wp-block-paragraph">I am pleased to share that Microsoft has been named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management, positioned furthest to the right on Completeness of Vision. We believe this recognition reflects our ability to help customers modernize existing applications and embrace AI workloads without adding operational complexity.</p>
-
-
-
-<p class="wp-block-paragraph">Furthermore, this recognition comes at a moment when container platforms are being asked to support a far broader range of workloads, operating models, and deployment environments than many organizations ever anticipated. </p>
-
-
-
-<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://www.gartner.com/doc/reprints?id=00ThR00000DypQ4UAJ&amp;ct=260903&amp;st=sb" target="_blank" rel="noopener noreferrer"><strong>Read the Gartner® Magic Quadrant™ Report</strong></a></div>
-</div>
-
-
-
-<p class="wp-block-paragraph">When we started working on Kubernetes over a decade ago, the problem was narrow: democratize distributed systems so that reliable services were easier to build. We were careful to describe workloads in terms of what they needed instead of where they should go, mostly because we wanted the scheduler to have room to make good decisions. That turned out to matter more than we expected, because it meant the system never had strong opinions about what the workloads actually were. </p>
-
-
-
-<p class="wp-block-paragraph">AI has reshaped the requirements for container management. While Kubernetes has proved well suited for AI workloads, the bigger shift is that applications and AI now need to run closer to data and users, and increasingly inside specific sovereign and regulatory boundaries. Organizations now need more than container orchestration; they need a platform that provides a consistent operating model across cloud, edge, and hybrid deployments while adapting to new requirements without needing applications to be rebuilt. This vision underpins Microsoft&#8217;s container portfolio, spanning <a href="https://azure.microsoft.com/en-us/products/kubernetes-service/" target="_blank" rel="noreferrer noopener">Azure Kubernetes Service (AKS)</a>, <a href="https://azure.microsoft.com/en-us/products/container-apps/" target="_blank" rel="noreferrer noopener">Azure Container Apps</a>, <a href="https://azure.microsoft.com/en-us/products/azure-arc/" target="_blank" rel="noreferrer noopener">Azure Arc</a>, and <a href="https://azure.microsoft.com/en-us/products/kubernetes-fleet-manager/" target="_blank" rel="noreferrer noopener">Azure Kubernetes Fleet Manager</a>..</p>
-
-
-
-<h2 class="wp-block-heading" id="run-ai-on-the-platform-you-already-operate">Run AI on the platform you already operate</h2>
-
-
-
-<p class="wp-block-paragraph">
-  Across customer deployments, we&#8217;ve seen it settle into two distinct architectural models. In the first, a platform team owns a persistent serving layer, GPU scheduling, model lifecycle, and the compliance boundary around the system. Once volume is high and predictable, organizations increasingly want AI infrastructure to behave like any other platform capability: application teams consume it, while platform teams retain control over how it is operated and governed. On AKS, open-source tooling such as the AI toolchain operator helps automate model deployment and GPU provisioning, while AKS holding CNCF AI Conformance certification gives customers confidence that the ecosystem around their applications remains compatible as it evolves.
-</p>
-
-
-
-<p class="wp-block-paragraph">In the second model, an application or agent invokes inference when needed, runs generated code, and releases capacity when the work finishes. This model places a premium on elasticity and isolation. Capacity needs to appear quickly, be removed when it&#8217;s no longer needed, and safely contain workloads whose behavior isn&#8217;t always predictable in advance. <a href="https://azure.microsoft.com/en-us/products/container-apps/" id="https://azure.microsoft.com/en-us/products/container-apps/" target="_blank" rel="noopener noreferrer">Azure Container Apps</a> is designed around that operating model, with serverless GPUs for on-demand inference, and hardware-isolated sandboxes for agent hosting that preserve state between interactions. </p>
-
-
-
-<p class="wp-block-paragraph">Almost every enterprise we work with needs both, and I&#8217;d argue the interesting engineering problem is making the boundary between them easy to cross: the same image, the same identity and network controls, the same policy, whichever side a team lands on. Platform teams want the control the first model gives them for the models the business depends on. Application teams and agent frameworks want the second, and they often want it without learning Kubernetes. </p>
-
-
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6abd1ea0a2d33&quot;}" data-wp-interactive="core/image" data-wp-key="6abd1ea0a2d33" class="wp-block-image size-large is-style-default wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-927x1024.webp" alt="Gartner Magic Quadrant for Container Management" class="wp-image-53912 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-927x1024.webp 927w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-272x300.webp 272w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-768x848.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-1390x1536.webp 1390w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-1854x2048.webp 1854w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-927x1024.webp"><button
-			class="lightbox-trigger"
-			type="button"
-			aria-haspopup="dialog"
-			aria-label="Enlarge"
-			data-wp-init="callbacks.initTriggerButton"
-			data-wp-on--click="actions.showLightbox"
-			data-wp-style--right="state.imageButtonRight"
-			data-wp-style--top="state.imageButtonTop"
-		>
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
-			</svg>
-		</button></figure>
-
-
-
-<h2 class="wp-block-heading" id="keep-one-operating-model-as-the-estate-spreads-out">Keep one operating model as the estate spreads out</h2>
-
-
-
-<p class="wp-block-paragraph">
-  Once inference follows the data, the estate stops being centralized. Clusters accumulate across regions, in datacenters, at sites, and in environments where connectivity is intermittent or prohibited outright, often because sovereignty rules require the workload and its data to stay inside a jurisdiction. The resulting failures are usually coordination failures rather than single-cluster failures: configuration drift between locations, upgrades landing unevenly, and policy being applied in one environment but not another. Hybrid strategies can often fail when teams treat coordination problems as isolated cluster issues instead of platform problems.
-</p>
-
-
-
-<p class="wp-block-paragraph">We know that AI needs to spread from cloud to edge. To address that, we&#8217;ve built AKS Everywhere to enable a consistent, Azure-built and secured Kubernetes platform from cloud to edge. Going even broader, with <a href="https://azure.microsoft.com/en-us/products/azure-arc/" id="https://azure.microsoft.com/en-us/products/azure-arc/" target="_blank" rel="noopener noreferrer">Azure Arc</a> for Kubernetes we extend a common identity, policy, and observability model across CNCF-conformant Kubernetes environments, including clusters in other clouds. With many clusters comes cluster sprawl, and <a href="https://azure.microsoft.com/en-us/products/kubernetes-fleet-manager/" id="https://azure.microsoft.com/en-us/products/kubernetes-fleet-manager/" target="_blank" rel="noopener noreferrer">Azure Kubernetes Fleet Manager</a> addresses the coordination problem that emerges as estates grow, helping organizations manage upgrades, workload placement, and policy consistently across fleets. </p>
-
-
-
-<p class="wp-block-paragraph">Holding all of that together depends on AKS staying close to upstream Kubernetes, and we&#8217;ve kept it there deliberately. There&#8217;s no proprietary fork, and open-source is at the core of our strategy. Microsoft is the <a href="https://all.devstats.cncf.io/d/5/companies-table?orgId=1&amp;var-period_name=Last%203%20years&amp;var-metric=contributions" target="_blank" rel="noreferrer noopener">second-largest contributor to CNCF projects overall</a> and the largest among cloud providers for the past three years. That work is what keeps the API you build against stable no matter where the workload lands, and why the ecosystem around your cluster looks the same inside Azure and outside it. </p>
-
-
-
-<h2 class="wp-block-heading" id="hold-operations-steady-as-the-estate-grows">Hold operations steady as the estate grows</h2>
-
-
-
-<p class="wp-block-paragraph">
-  Cluster counts often grow faster than operations teams do, and most organizations feel that pain before they have a plan for it.
-</p>
-
-
-
-<p class="wp-block-paragraph">Some of the answer is better defaults. <a href="https://learn.microsoft.com/en-us/azure/aks/intro-aks-automatic" id="https://learn.microsoft.com/en-us/azure/aks/intro-aks-automatic" target="_blank" rel="noopener noreferrer">AKS Automatic</a> applies operational practices derived from Microsoft&#8217;s experience running Kubernetes at scale, while preserving the flexibility of the Kubernetes API. </p>
-
-
-
-<p class="wp-block-paragraph">The larger shift, however, is agentic operations. I expect this area to change more than any other over the next few years. <a href="https://azure.microsoft.com/en-us/products/sre-agent" id="https://azure.microsoft.com/en-us/products/sre-agent" target="_blank" rel="noopener noreferrer">Azure SRE Agent</a> and the AKS MCP Server help operators move from alert to diagnosis to remediation using the same permissions and controls they already use today. The goal isn&#8217;t to replace operators; it&#8217;s to reduce the amount of routine investigation that still consumes too much operational time. </p>
-
-
-
-<p class="wp-block-paragraph">
-  A platform built to absorb new requirements has more surface area than one built for a single scenario, and that demands more judgment from the people running it. Our job is to keep pulling that complexity into the platform, and the work is not finished.
-</p>
-
-
-
-<h2 class="wp-block-heading" id="customer-momentum">Customer momentum</h2>
-
-
-
-<p class="wp-block-paragraph">
-  These examples highlight how customers are applying Azure&#8217;s container portfolio across AI, business-critical applications, and hybrid environments.
-</p>
-
-
-
-<ul class="wp-block-list">
-<li class="wp-block-list-item"><a href="https://news.microsoft.com/source/emea/features/ai-that-drives-change-wayve-rewrites-self-driving-playbook-with-deep-learning-in-azure/" target="_blank" rel="noreferrer noopener">Wayve</a> trains its autonomous driving models on petabytes of video and sensor data, using AKS to pull thousands of GPUs into what amounts to a single elastic training system.</li>
-
-
-
-<li class="wp-block-list-item"><a href="https://www.microsoft.com/en/customers/story/25679-at-and-t-azure/" target="_blank" rel="noreferrer noopener">AT&amp;T</a> built Ask AT&amp;T with AKS as the orchestration core for its containerized agents, and every agent clears legal, security, and finance review before it reaches production.</li>
-
-
-
-<li class="wp-block-list-item"><a href="https://www.microsoft.com/en/customers/story/26105-replit-azure-openai-in-foundry-models/" target="_blank" rel="noreferrer noopener">Replit</a>&#8216;s agent takes a plain-language description, writes the application, and deploys it as a Container App inside the customer&#8217;s own Azure environment, where it picks up that customer&#8217;s network and compliance controls from the first deployment onward. Roughly three-quarters of their enterprise users don&#8217;t write code for a living.</li>
-
-
-
-<li class="wp-block-list-item"><a href="https://www.microsoft.com/en/customers/story/26553-simcorp-azure" target="_blank" rel="noreferrer noopener">SimCorp</a> moved the investment management platform behind many of the world&#8217;s largest asset managers from virtual machines onto AKS, driven by the need for identity, logging, and security policy to apply identically for every client in every jurisdiction, and to be auditable when someone asks.</li>
-
-
-
-<li class="wp-block-list-item"><a href="https://www.microsoft.com/en/customers/story/1777264680029793974-ega-azure-arc-discrete-manufacturing-en-united-arab-emirates" target="_blank" rel="noreferrer noopener">Emirates Global Aluminium</a> runs about two-thirds of its estate in Azure and a third on-premises at its own sites, with image and video analytics running next to the plant floor and applications moving between the two without being re-engineered.</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">
-  A training cluster spanning thousands of GPUs has very little in common with a regulated multi-tenant SaaS platform or with analytics running beside a smelter. What connects them is that each one eventually needed something its original architecture wasn&#8217;t built for.
-</p>
-
-
-
-<blockquote class="wp-block-quote has-quote-default-font-size is-layout-flow wp-block-quote-is-layout-flow">
-<p class="wp-block-paragraph"><em>Azure Kubernetes Service gives us the control and cost efficiency we need. We can scale GPU resources based on call volume and test new models without touching production.</em></p>
-<cite><em>Brian Sutliffe, Vice President of Engineering, CallRevu</em></cite></blockquote>
-
-
-
-<p class="wp-block-paragraph">Being named a Leader in this Magic Quadrant is an honor for us, and it solidifies clear expectations for our work ahead. At the end of the day, only the team running a workload can decide where it belongs, and the answer will vary across an estate. The platform&#8217;s role is to let that answer change without forcing the team to redesign the application or adopt a second operating model. I also want to personally thank all of Azure Cloud Native since this recognition reflects a lot of hard work by many people throughout Microsoft and Azure.</p>
-
-
-
-<p class="wp-block-paragraph">You can read a complimentary copy of the 2026 Gartner® Magic Quadrant™ for Container Management <a href="https://www.gartner.com/doc/reprints?id=00ThR00000DypQ4UAJ&amp;ct=260903&amp;st=sb" id="https://www.gartner.com/doc/reprints?id=00ThR00000DypQ4UAJ&amp;ct=260903&amp;st=sb" target="_blank" rel="noopener noreferrer">here</a>.</p>
-
-
-
-<div class="is-style-compact wp-block-bloginabox-theme-promotional">
-	
-<div class="promotional">
-	<div class="promotional__wrapper">
-		<div class="promotional__content-wrapper">
-			<div class="promotional__content">
-				
-
-<h2 class="wp-block-heading" id="microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management">Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management</h2>
-
-
-
-<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a aria-label="Read the report: Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management" data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://www.gartner.com/doc/reprints?id=00ThR00000DypQ4UAJ&amp;ct=260903&amp;st=sb" target="_blank" rel="noopener noreferrer">Read the report</a></div>
-</div>
-
-			</div>
-		</div>
-			</div>
-</div>
-</div>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity" />
-
-
-
-<p class="wp-block-paragraph"><em>Gartner ® Magic Quadrant™ for Container Management, Dennis Smith, Tony Iams, Wataru Katsurashima, Lucas Albuquerque, 2 September 2026</em>
-</p>
-
-
-
-<p class="wp-block-paragraph"><em>Gartner does not endorse any company, vendor, product or service depicted in its publications, and does not advise technology users to select only those vendors with the highest ratings or other designation. Gartner publications consist of the opinions of Gartner’s business and technology insights organization and should not be construed as statements of fact. Gartner disclaims all warranties, expressed or implied, with respect to this publication, including any warranties of merchantability or fitness for a particular purpose.</em>
-</p>
-
-
-
-<p class="wp-block-paragraph"><em>Gartner and Magic Quadrant are trademarks of Gartner, Inc., and/or its affiliates.</em>
-</p>
-
-
-
-<p class="wp-block-paragraph"><em>This graphic was published by Gartner, Inc. as part of a larger research document and should be evaluated in the context of the entire document. The Gartner document is available upon request <a href="https://www.gartner.com/doc/reprints?id=00ThR00000DypQ4UAJ&amp;ct=260903&amp;st=sb" id="https://www.gartner.com/doc/reprints?id=00ThR00000DypQ4UAJ&amp;ct=260903&amp;st=sb" target="_blank" rel="noopener noreferrer">here</a>.</em></p>
-
-
-
-<p class="wp-block-paragraph"></p>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management/">Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		
