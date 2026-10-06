@@ -1,86 +1,250 @@
 {
-  "date": "2026-10-04",
-  "generated_at": "2026-10-04T22:52:47.772266+00:00",
+  "date": "2026-10-06",
+  "generated_at": "2026-10-06T01:15:54.146942+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-10-04",
+      "date": "2026-10-06",
       "item_count": 1,
-      "generated_at": "2026-10-04T22:52:47.771926+00:00",
+      "generated_at": "2026-10-06T01:15:54.146377+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Qualcomm launches AI-first Snapdragon chips and renews its patent licensing deal with Apple, strengthening its position in AI-enabled mobile processors.",
+          "executive_summary": "Tata Electronics has launched a semiconductor pilot in Assam with a focus on automotive modules, signaling India's expansion into semiconductor manufacturing for the automotive sector.",
           "key_facts": [
-            "Qualcomm launches AI-first Snapdragon chips",
-            "Qualcomm renews Apple patent deal"
+            "Tata Electronics - Assam semiconductor pilot",
+            "Automotive modules focus"
           ],
           "implications": [
             {
-              "keyword": "AI Integration",
-              "text": "Snapdragon portfolio shift toward on-device AI capabilities positions Qualcomm to capture demand from OEMs deploying AI features in flagship and mid-tier smartphones."
+              "keyword": "Geographic Expansion",
+              "text": "India's automotive semiconductor ecosystem is beginning to localize production, reducing supply chain dependencies."
             },
             {
-              "keyword": "Apple Licensing",
-              "text": "Patent agreement renewal ensures continued revenue stream and signals sustained demand for Qualcomm IP across Apple's product roadmap."
+              "keyword": "Market Entry",
+              "text": "Tata's pilot addresses automotive module demand, potentially capturing regional supply chains."
             }
           ],
-          "counterpoint": "Limited details on Snapdragon AI specifications, performance metrics, or timeline for mass deployment."
+          "counterpoint": "Pilot status suggests early-stage manufacturing readiness with uncertain scaling timelines."
         },
         "en": {
-          "executive_summary": "Qualcomm launches AI-first Snapdragon chips and renews its patent licensing deal with Apple, strengthening its position in AI-enabled mobile processors.",
+          "executive_summary": "Tata Electronics has launched a semiconductor pilot in Assam with a focus on automotive modules, signaling India's expansion into semiconductor manufacturing for the automotive sector.",
           "key_facts": [
-            "Qualcomm launches AI-first Snapdragon chips",
-            "Qualcomm renews Apple patent deal"
+            "Tata Electronics - Assam semiconductor pilot",
+            "Automotive modules focus"
           ],
           "implications": [
             {
-              "keyword": "AI Integration",
-              "text": "Snapdragon portfolio shift toward on-device AI capabilities positions Qualcomm to capture demand from OEMs deploying AI features in flagship and mid-tier smartphones."
+              "keyword": "Geographic Expansion",
+              "text": "India's automotive semiconductor ecosystem is beginning to localize production, reducing supply chain dependencies."
             },
             {
-              "keyword": "Apple Licensing",
-              "text": "Patent agreement renewal ensures continued revenue stream and signals sustained demand for Qualcomm IP across Apple's product roadmap."
+              "keyword": "Market Entry",
+              "text": "Tata's pilot addresses automotive module demand, potentially capturing regional supply chains."
             }
           ],
-          "counterpoint": "Limited details on Snapdragon AI specifications, performance metrics, or timeline for mass deployment."
+          "counterpoint": "Pilot status suggests early-stage manufacturing readiness with uncertain scaling timelines."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-10-04",
-      "item_count": 4,
-      "generated_at": "2026-10-04T22:52:47.771926+00:00",
+      "date": "2026-10-06",
+      "item_count": 3,
+      "generated_at": "2026-10-06T01:15:54.146377+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Entry-level semiconductor job openings surged 47% in the first half of the year amid industry expansion, while SK Hailix's termination of four new hires highlights tensions in talent management practices within the sector.",
+          "key_facts": [
+            "Entry-level job openings up 47% in H1 2024",
+            "SK Hailix terminated 4 new hires",
+            "Tesla AI Day unveiled Optimus robot, FSD Beta, and Dojo chip developments"
+          ],
+          "implications": [
+            {
+              "keyword": "Talent Supply Mismatch",
+              "text": "High job growth masks potential retention and management inconsistencies, raising concerns about employment stability."
+            },
+            {
+              "keyword": "AI Infrastructure Build-out",
+              "text": "Tesla's Dojo and broader HPC investments accelerate demand for semiconductor talent across chip design and manufacturing."
+            }
+          ],
+          "counterpoint": "SK Hailix's personnel decision may reflect stricter compliance enforcement rather than systematic talent management failure."
+        },
+        "en": {
+          "executive_summary": "Entry-level semiconductor job openings surged 47% in the first half of the year amid industry expansion, while SK Hailix's termination of four new hires highlights tensions in talent management practices within the sector.",
+          "key_facts": [
+            "Entry-level job openings up 47% in H1 2024",
+            "SK Hailix terminated 4 new hires",
+            "Tesla AI Day unveiled Optimus robot, FSD Beta, and Dojo chip developments"
+          ],
+          "implications": [
+            {
+              "keyword": "Talent Supply Mismatch",
+              "text": "High job growth masks potential retention and management inconsistencies, raising concerns about employment stability."
+            },
+            {
+              "keyword": "AI Infrastructure Build-out",
+              "text": "Tesla's Dojo and broader HPC investments accelerate demand for semiconductor talent across chip design and manufacturing."
+            }
+          ],
+          "counterpoint": "SK Hailix's personnel decision may reflect stricter compliance enforcement rather than systematic talent management failure."
+        }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-10-04",
-      "item_count": 7,
-      "generated_at": "2026-10-04T22:52:47.771926+00:00",
+      "date": "2026-10-06",
+      "item_count": 9,
+      "generated_at": "2026-10-06T01:15:54.146377+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Amazon, AWS, and enterprise cloud vendors are committing $1+ billion to custom AI chip development, signaling a shift toward in-house silicon to offset high AI compute costs. Broadcom negotiated Samsung pricing alignment with Nvidia terms for 2026 TPU products, while EnSilica's 53% FY sales growth reflects expanded ASIC design demand.",
+          "key_facts": [
+            "Amazon $1 billion custom chip investment",
+            "AWS Trainium/Inferentia billion-dollar deployment to SAP, Salesforce, Workday",
+            "Broadcom TPU v10 design adjustments impacting 2026 pricing",
+            "Broadcom-Samsung pricing deal matched Nvidia terms for 2026",
+            "EnSilica FY sales up 53% on expanded ASIC pipeline",
+            "Synopsys outlines AI-driven growth strategy"
+          ],
+          "implications": [
+            {
+              "keyword": "Custom Silicon Economics",
+              "text": "Cloud giants shifting from Nvidia dependency to proprietary AI accelerators, reshaping foundry demand patterns and pricing leverage."
+            },
+            {
+              "keyword": "Design Ecosystem Expansion",
+              "text": "ASIC design services (EnSilica) and EDA tools (Synopsys) benefit from proliferation of custom SoCs across enterprise and cloud vendors."
+            },
+            {
+              "keyword": "Supply Chain Consolidation",
+              "text": "Broadcom-Samsung pricing alignment signals foundry coordination on premium AI chip pricing, potentially raising barriers for smaller players."
+            }
+          ],
+          "counterpoint": "Custom chip timelines and yields remain unproven at scale compared to established Nvidia platforms, limiting near-term market share displacement."
+        },
+        "en": {
+          "executive_summary": "Amazon, AWS, and enterprise cloud vendors are committing $1+ billion to custom AI chip development, signaling a shift toward in-house silicon to offset high AI compute costs. Broadcom negotiated Samsung pricing alignment with Nvidia terms for 2026 TPU products, while EnSilica's 53% FY sales growth reflects expanded ASIC design demand.",
+          "key_facts": [
+            "Amazon $1 billion custom chip investment",
+            "AWS Trainium/Inferentia billion-dollar deployment to SAP, Salesforce, Workday",
+            "Broadcom TPU v10 design adjustments impacting 2026 pricing",
+            "Broadcom-Samsung pricing deal matched Nvidia terms for 2026",
+            "EnSilica FY sales up 53% on expanded ASIC pipeline",
+            "Synopsys outlines AI-driven growth strategy"
+          ],
+          "implications": [
+            {
+              "keyword": "Custom Silicon Economics",
+              "text": "Cloud giants shifting from Nvidia dependency to proprietary AI accelerators, reshaping foundry demand patterns and pricing leverage."
+            },
+            {
+              "keyword": "Design Ecosystem Expansion",
+              "text": "ASIC design services (EnSilica) and EDA tools (Synopsys) benefit from proliferation of custom SoCs across enterprise and cloud vendors."
+            },
+            {
+              "keyword": "Supply Chain Consolidation",
+              "text": "Broadcom-Samsung pricing alignment signals foundry coordination on premium AI chip pricing, potentially raising barriers for smaller players."
+            }
+          ],
+          "counterpoint": "Custom chip timelines and yields remain unproven at scale compared to established Nvidia platforms, limiting near-term market share displacement."
+        }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-10-04",
-      "item_count": 4,
-      "generated_at": "2026-10-04T22:52:47.771926+00:00",
+      "date": "2026-10-06",
+      "item_count": 14,
+      "generated_at": "2026-10-06T01:15:54.146377+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "TSMC achieved record results but faces potential demand volatility from Nvidia and Apple. Qualcomm, Apple, and MediaTek are competing for TSMC 2nm capacity on competing AI strategies, while China spent $13B+ stockpiling ASML DUV tools to sustain advanced chip production amid export controls. Domestic Korean semiconductor equipment and materials ETFs rallied >20% in one month as AI capex expansion fuels supply chain investment.",
+          "key_facts": [
+            "TSMC hit record results; Nvidia and Apple demand uncertainty identified",
+            "Qualcomm, Apple, MediaTek competing for TSMC 2nm",
+            "China spent $13B+ on ASML DUV tools in 2024–25",
+            "Korean semiconductor equipment/materials ETFs up >20% in one month",
+            "BOE Chairman Tian Yenshun scheduled meetings with Samsung Electronics President Roh Tae-moon to negotiate LCD panel supply and pricing",
+            "KPCA establishing advanced semiconductor packaging workforce training center",
+            "IC designers eyeing 5% to double-digit price hikes in late 2026–early 2027",
+            "Foundry costs rising, driving designer pricing expectations"
+          ],
+          "implications": [
+            {
+              "keyword": "Capacity Constraints",
+              "text": "TSMC 2nm contention among three major fabless designers signals tight supply into 2026, supporting premium pricing expectations."
+            },
+            {
+              "keyword": "Chinese Supply Chain Independence",
+              "text": "$13B ASML DUV stockpiling enables sustained domestic advanced node production despite Western export restrictions, prolonging foundry demand fragmentation."
+            },
+            {
+              "keyword": "Equipment Ecosystem Tailwinds",
+              "text": "Korean semiconductor equipment and materials gaining investor interest as AI capex expansion drives tool and precursor demand across geographies."
+            },
+            {
+              "keyword": "Display Supply Dynamics",
+              "text": "Samsung-BOE negotiations on LCD panel supply and pricing reflect tightening display market conditions amid TV demand recovery."
+            },
+            {
+              "keyword": "Packaging Talent Gap",
+              "text": "KPCA training center initiative addresses critical shortage of advanced packaging workforce needed for chiplet and HBM integration."
+            },
+            {
+              "keyword": "Pricing Power Consolidation",
+              "text": "IC designer price hike expectations (5-100%+) in late 2026–early 2027 reflect foundry cost escalation being passed downstream."
+            }
+          ],
+          "counterpoint": "TSMC's demand uncertainty and rising designer price expectations may compress near-term fabless profitability and incentivize alternative foundry or in-house strategies."
+        },
+        "en": {
+          "executive_summary": "TSMC achieved record results but faces potential demand volatility from Nvidia and Apple. Qualcomm, Apple, and MediaTek are competing for TSMC 2nm capacity on competing AI strategies, while China spent $13B+ stockpiling ASML DUV tools to sustain advanced chip production amid export controls. Domestic Korean semiconductor equipment and materials ETFs rallied >20% in one month as AI capex expansion fuels supply chain investment.",
+          "key_facts": [
+            "TSMC hit record results; Nvidia and Apple demand uncertainty identified",
+            "Qualcomm, Apple, MediaTek competing for TSMC 2nm",
+            "China spent $13B+ on ASML DUV tools in 2024–25",
+            "Korean semiconductor equipment/materials ETFs up >20% in one month",
+            "BOE Chairman Tian Yenshun scheduled meetings with Samsung Electronics President Roh Tae-moon to negotiate LCD panel supply and pricing",
+            "KPCA establishing advanced semiconductor packaging workforce training center",
+            "IC designers eyeing 5% to double-digit price hikes in late 2026–early 2027",
+            "Foundry costs rising, driving designer pricing expectations"
+          ],
+          "implications": [
+            {
+              "keyword": "Capacity Constraints",
+              "text": "TSMC 2nm contention among three major fabless designers signals tight supply into 2026, supporting premium pricing expectations."
+            },
+            {
+              "keyword": "Chinese Supply Chain Independence",
+              "text": "$13B ASML DUV stockpiling enables sustained domestic advanced node production despite Western export restrictions, prolonging foundry demand fragmentation."
+            },
+            {
+              "keyword": "Equipment Ecosystem Tailwinds",
+              "text": "Korean semiconductor equipment and materials gaining investor interest as AI capex expansion drives tool and precursor demand across geographies."
+            },
+            {
+              "keyword": "Display Supply Dynamics",
+              "text": "Samsung-BOE negotiations on LCD panel supply and pricing reflect tightening display market conditions amid TV demand recovery."
+            },
+            {
+              "keyword": "Packaging Talent Gap",
+              "text": "KPCA training center initiative addresses critical shortage of advanced packaging workforce needed for chiplet and HBM integration."
+            },
+            {
+              "keyword": "Pricing Power Consolidation",
+              "text": "IC designer price hike expectations (5-100%+) in late 2026–early 2027 reflect foundry cost escalation being passed downstream."
+            }
+          ],
+          "counterpoint": "TSMC's demand uncertainty and rising designer price expectations may compress near-term fabless profitability and incentivize alternative foundry or in-house strategies."
+        }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-10-04",
-      "item_count": 3,
-      "generated_at": "2026-10-04T22:52:47.771926+00:00",
+      "date": "2026-10-06",
+      "item_count": 17,
+      "generated_at": "2026-10-06T01:15:54.146377+00:00",
       "content": {
         "ko": {},
         "en": {}
