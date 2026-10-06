@@ -2,6 +2,253 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Goal-Oriented Wave Computing for Direction-of-Arrival Estimation",
+    "url": "https://arxiv.org/abs/2610.06839v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "Programmable metasurfaces---arrays of elements whose electromagnetic response can be tuned electronically---can process signals as a wave propagates through or reflects off them, a paradigm known as wave-domain analog computing. The design strategy is typically indirect: the surface is fitted to a prescribed linear operator, such as a discrete Fourier transform, and the result is read from output power measurements. Using direction-of-arrival (DoA) estimation as a canonical benchmark, we study w",
+    "authors": [
+      "Mert Kalfa"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Structural, electronic, and magnetic properties of HoCo$_2$ thin films grown by pulsed laser deposition",
+    "url": "https://arxiv.org/abs/2610.06655v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "We report the growth and physical properties of HoCo$_2$ thin films on Si substrate by pulsed laser deposition. Well-defined Kiessig fringes in the x-ray reflectivity data yield a film thickness of $35 \\pm 1$~nm and demonstrate smooth film surface and interface profiles. Atomic force microscopy confirms the high morphological quality of the films, revealing subnanometer surface roughness of $\\sim$170~pm. Two independently prepared films exhibit a reproducible ferrimagnetic transition at $T_{\\mat",
+    "authors": [
+      "Ajay Kumar",
+      "Christopher Burgio",
+      "Anis Biswas",
+      "Yaroslav Mudryk"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "On the Real Part of Butterfly Factorizations, with Application to Fast Transforms",
+    "url": "https://arxiv.org/abs/2610.06583v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "Fast transforms such as the Discrete Cosine Transform can be expressed as the real part of a product of complex-valued structured sparse matrices known as Kronecker-sparse factors. More generally, products of such structured sparse matrices appear in square dyadic butterfly and monarch matrices, which are known to represent many fast transforms efficiently. Yet, it has remained unclear whether taking the real or the imaginary part of such products preserves this structure. In this letter, we giv",
+    "authors": [
+      "Ma{ë}l Chaumette",
+      "R{é}mi Gribonval",
+      "Elisa Riccietti"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Terracotta: Enabling the Adoption of New DRAM Techniques via a Flexible DRAM Interface and Memory Controller",
+    "url": "https://arxiv.org/abs/2610.06475v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "DRAM continues to limit the performance, energy efficiency, and robustness of modern systems. Many prior works propose DRAM techniques that support in-DRAM computation, improve memory access latency and parallelism, and enhance DRAM maintenance and reliability. However, adopting each new technique requires repeated modifications to the rigid DRAM interface and memory controller, hindering its deployment. Our goal is to reduce these repeated modifications. We observe that the DRAM commands and me",
+    "authors": [
+      "Harsh Songara",
+      "Konstantinos Kanellopoulos",
+      "F. Nisa Bostancı",
+      "Konstantinos Marios Sgouras",
+      "Ataberk Olgun",
+      "İsmail Emir Yüksel",
+      "Andreas Kosmas Kakolyris",
+      "A. Giray Yağlıkçı",
+      "Onur Mutlu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Quantum spectral thermodynamics and active learning enable million-scale exploration of high-entropy ceramics",
+    "url": "https://arxiv.org/abs/2610.06467v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "Understanding phase stability and navigating vast compositional spaces in multicomponent solids remain central challenges in solid-state chemistry. Here, we develop a quantum spectral thermodynamic framework connecting interaction-induced phonon spectral broadening to free energy, alongside an uncertainty-guided active-learning workflow that explores 7.7 million high-entropy ceramic configurations at density-functional-theory fidelity, achieving a $10^5$-fold acceleration. We show that phonon se",
+    "authors": [
+      "Jie Sun",
+      "Yiheng Shen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "A new MRI-based feature for quantifying the Diffuse Low-Grade Glioma brain infiltration and discriminating patterns of patients",
+    "url": "https://arxiv.org/abs/2610.06398v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "Gliomas are the most common type of primary brain tumors. Diffuse low-grade gliomas (DLGGs) are slow-growing tumors that are often minimally symptomatic for a long period of time. They progress to a higher grade, resulting in the patient's death. Treatments include surgery, chemotherapy and radiation therapy to control tumor progression. Responses to treatments are highly variable among patients. Furthermore, the diffuse component of this tumor entity has been observed but is not yet well measur",
+    "authors": [
+      "Jean-Marie Moureaux",
+      "Sophie Wantz-M{é}zi{è}res",
+      "Cyril Brzenczek",
+      "Marie Blonski",
+      "Luc Taillandier"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Electro-Optical Metalens for Near-Surface Cooling of a Levitated Particle",
+    "url": "https://arxiv.org/abs/2610.06279v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "Advanced levitation optomechanics in the quantum regime requires sophisticated quantumengineered protocols operating at shorter length and time scales, demanding an increasing control over both optical and electrical potentials. Integrated chip-scale platforms offer a natural route toward such control. Here, we demonstrate optical levitation in vacuum using a miniaturized hybrid electro-optical metalens. Motion control is achieved using a high numerical aperture metalens combined with electrical",
+    "authors": [
+      "Pedro Rosso Gomez",
+      "Bruno Melo",
+      "Adeel Afridi",
+      "Mohamed Sabry Mohamed",
+      "Nadine Meyer",
+      "Romain Quidant"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Reinforcement Learning-Based Optimization of Workload-Aware Power Delivery Networks",
+    "url": "https://arxiv.org/abs/2610.06148v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "Power Delivery Networks (PDNs) are critical components of modern VLSI chips, providing stable voltage levels while satisfying electromigration (EM) and IR-drop constraints. Conventional PDN design methodologies typically rely on worst-case assumptions, often resulting in over-provisioned networks and inefficient use of resources. This paper presents a reinforcement learning-based framework for the optimization of workload-aware PDNs. The proposed methodology first generates workload-aware PDNs u",
+    "authors": [
+      "Oran Hayes",
+      "Maria Pantazi-Kypraiou",
+      "Athanasios Tziouvaras",
+      "George Stamoulis",
+      "Anuj Pathania",
+      "Shreejith Shanker",
+      "George Floros"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Co-Optimizing Graph Sparsification and Approximate Computing for Energy-Efficient FPGA-Based GCN Inference",
+    "url": "https://arxiv.org/abs/2610.06138v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "Graph Convolutional Networks (GCNs) have emerged as a powerful framework for learning from graph-structured data, yet their deployment on resource-constrained edge platforms remains challenging due to the computational and memory demands of sparse graph aggregation. This work presents an FPGA-based GCN accelerator that combines DSpar graph sparsification, 8-bit quantization, and approximate multipliers on the AMD Kria KV260. Evaluated on Cora, LastFM Asia, and Amazon Photo, the design explores t",
+    "authors": [
+      "Nathaniel Kaye Mellor",
+      "Shreejith Shanker",
+      "George Floros"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Combining Improvements in Uplink AI-RAN",
+    "url": "https://arxiv.org/abs/2610.05936v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "One of the major transformative factors in 6G will be the integration of Artificial Intelligence (AI) to become a native part of Radio Access Network (RAN). While most physical-layer AI features have so far been evaluated in isolation using link-level simulations, their combined behavior in a realistic multi-cell, multi-UE deployment has remained largely unexplored. In this paper, we present system-level performance results when multiple uplink AI features are enabled together, achieved by integ",
+    "authors": [
+      "Petteri Kela",
+      "Dani Korpi",
+      "Mikko Honkala"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SY",
+    "title": "When voltage sensors fail: Electrochemically constrained fault-tolerant state estimation for flat-plateau LFP batteries",
+    "url": "https://arxiv.org/abs/2610.05906v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "The flat voltage plateau of lithium iron phosphate (LFP)/graphite cells makes electrochemical-state errors and voltage-measurement abnormalities produce similar innovations, complicating state-of-charge (SOC) estimation. This work proposes an electrochemically constrained residual-bias compensation dual extended Kalman filter (RBC-DEKF) with uncertain-initialization commissioning. A thermal control-oriented parameter-grouped single-particle model (CPG-SPMT) provides paired-electrode dynamics and",
+    "authors": [
+      "Feng Guo",
+      "Luis D. Couto",
+      "Hamid Hamed",
+      "Khiem Trad",
+      "Dong Zhang",
+      "Ru Hong",
+      "Guangdi Hu",
+      "Mohammadhosein Safari"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Intrinsic spin-orbit coupling in graphene stacks",
+    "url": "https://arxiv.org/abs/2610.05905v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "The effect of spin-orbit coupling (SOC) in monolayer graphene has been thoroughly studied in the past. Its impact is commonly disregarded since the electronic structure of graphene is almost unaffected. Consequently, SOC has also been ignored in other graphitic systems. In this work, we calculate the intrinsic SOC in stacks of graphene layers from a model that includes all the valence orbitals of carbon as well as the intra-atomic SOC.The leading spin-orbit term in a graphene multilayer combines",
+    "authors": [
+      "Guillermo Parra-Martinez",
+      "Alejandro Jimeno-Pozo",
+      "Ady Stern",
+      "Jose Angel Silva-Guillén",
+      "Francisco Guinea"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Chirality-induced spin selectivity as a nonequilibrium effect: a unified test of competing mechanisms",
+    "url": "https://arxiv.org/abs/2610.05710v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "For two decades, the origin of Chirality-Induced Spin Selectivity (CISS), the spin polarization of electrons by nonmagnetic chiral systems without magnetic fields, has remained unsettled. Here, we establish a single exact rule defining the fundamental conditions for the effect: in nonmagnetic, time-reversal-invariant conductors, all measurable CISS signals are time-reversal odd and vanish near equilibrium, proving that structural chirality alone is insufficient. By evaluating leading theoretical",
+    "authors": [
+      "Swagata Acharya",
+      "Mark van Schilfgaarde"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.NI",
+    "title": "6G as It Is Actually Being Built: Insights from Early 3GPP Standardization",
+    "url": "https://arxiv.org/abs/2610.05694v1",
+    "published_date": "2026-10-05",
+    "source": "arXiv",
+    "summary": "As mobile communications cross the threshold from 5G to 6G, the 3GPP has entered a decisive phase. Following the Technical Specification Group (TSG) plenary meetings of June 2026 and the associated 6G workshop in Singapore, the Release-20 study phase is now well underway across all three TSGs: Radio Access Network (RAN), Service and System Aspects (SA), and Core Network and Terminals (CT). Concurrently, the timeline for the first normative 6G specifications in Release 21 has been established. Ra",
+    "authors": [
+      "Ngo Hoang Tu",
+      "Huy T. Nguyen",
+      "Mao V. Ngo",
+      "Tran Thien Thanh",
+      "Vo Nguyen Quoc Bao",
+      "Tony Q. S. Quek"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Cut Binary Cross Entropy: Efficient Large-Vocabulary Loss and Gradient Kernels for Sequential Recommendation",
+    "url": "https://arxiv.org/abs/2610.05559v1",
+    "published_date": "2026-10-04",
+    "source": "arXiv",
+    "summary": "Industrial sequential recommender systems operate over massive item catalogs (e.g., 10^5--10^7 items). Multi-label recommendation models are trained with Binary Cross-Entropy (BCE) loss over the full vocabulary, but standard BCE materializes a dense [B, N, V] logits tensor in High Bandwidth Memory (HBM), incurring prohibitive $O(BNV)$ memory and fatal Out-Of-Memory (OOM) errors. While chunked loss optimizations exist for Softmax Cross-Entropy in LLMs, large-scale multi-label BCE optimization rem",
+    "authors": [
+      "Yaoyiran Li",
+      "Haowen Ning",
+      "Mohamed Hammad"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Wavelength-Dependent Photoluminescence Mapping of Depth-Dependent Degradation Under Thermal Stress in Phenethylammonium Tetrafluoroborate Treated Perovskite Solar Cells",
     "url": "https://arxiv.org/abs/2610.04714v1",
