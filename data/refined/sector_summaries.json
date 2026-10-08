@@ -1,80 +1,58 @@
 {
-  "date": "2026-10-06",
-  "generated_at": "2026-10-06T23:43:35.119337+00:00",
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T00:09:51.206954+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-10-06",
-      "item_count": 6,
-      "generated_at": "2026-10-06T23:43:35.118124+00:00",
+      "date": "2026-10-08",
+      "item_count": 2,
+      "generated_at": "2026-10-08T00:09:51.206443+00:00",
       "content": {
         "ko": {
-          "executive_summary": "MediaTek Dimensity 9600 Pro 2nm 칩셋이 OPPO Find X10 Pro Max에 탑재되어 출시되었으며, Qualcomm·Apple·MediaTek이 TSMC 2nm 플래그십 AI 칩셋 경쟁을 펼치고 있다. Huawei의 LogicFolding 기술은 클록 버퍼를 50% 감소시키지만 열 문제로 인해 Qualcomm과 Apple의 관심을 받지 못하고 있으며, Gigaphoton은 DUV 리소그래피에 사용되는 전 세계 네온의 70%를 처리하는 칩 제조업체들을 위해 50% 회수율의 네온 재활용 시스템을 출시했다.",
+          "executive_summary": "Qualcomm will license patents for Huawei's LogicFolding chip architecture. Apple, Qualcomm, and MediaTek are pursuing different 2nm routes to enable 30B-parameter AI model execution on smartphones.",
           "key_facts": [
-            "MediaTek Dimensity 9600 Pro 칩셋, TSMC 2nm 공정",
-            "OPPO Find X10 Pro Max, MediaTek Dimensity 9600 Pro 탑재 첫 스마트폰",
-            "Huawei LogicFolding, 클록 버퍼 50% 감소",
-            "Gigaphoton 네온 재활용 시스템, 50% 회수율",
-            "DUV 리소그래피용 글로벌 네온의 70% 칩 제조에 사용",
-            "Tata Electronics, Assam에서 자동차 모듈 반도체 파일럿 시작"
+            "Qualcomm to license Huawei LogicFolding patents",
+            "Apple, Qualcomm, MediaTek implementing 2nm AI solutions",
+            "Target: 30B-parameter AI models on mobile"
           ],
           "implications": [
             {
-              "keyword": "2nm 경쟁",
-              "text": "Qualcomm, Apple, MediaTek이 TSMC 2nm에서 플래그십 AI 칩셋으로 경쟁하며 프리미엄 모바일 AP 시장의 기술 군비경쟁 심화"
+              "keyword": "Cross-licensing strategy",
+              "text": "Qualcomm-Huawei patent deal signals openness to architectural innovation beyond traditional IP walls in mobile SoC design."
             },
             {
-              "keyword": "공정 기술 채택",
-              "text": "MediaTek이 2nm Dimensity를 인도 시장의 플래그십 스마트폰에 빠르게 탑재하여 프리미엄 모바일 프로세서 보급 확대"
-            },
-            {
-              "keyword": "소재 공급망 안정성",
-              "text": "Gigaphoton의 네온 재활용 기술이 DUV 칩 제조 공급망의 지정학적 리스크 완화 및 비용 효율성 향상에 기여 가능"
-            },
-            {
-              "keyword": "대체 기술 채택 저항",
-              "text": "Huawei의 LogicFolding이 열 제어 문제로 인해 주요 공급업체(Qualcomm, Apple)에서 거부되어 기술 표준화의 과제 노출"
+              "keyword": "Mobile AI convergence",
+              "text": "Multiple vendors pursuing 2nm process for large language model inference on-device, fragmenting the approach landscape."
             }
           ],
-          "counterpoint": "Huawei의 LogicFolding 기술이 열 문제에도 불구하고 다른 설계자나 중국 제조사에 의해 채택될 가능성이 있으므로 단순한 거부만으로는 시장 영향 전망이 제한적일 수 있음."
+          "counterpoint": "Different architectural routes may hinder ecosystem standardization and software optimization across platforms."
         },
         "en": {
-          "executive_summary": "MediaTek Dimensity 9600 Pro 2nm chipset has been launched in the OPPO Find X10 Pro Max, with Qualcomm, Apple, and MediaTek competing in the TSMC 2nm flagship AI chipset market. Huawei's LogicFolding technology reduces clock buffers by 50% but has failed to attract interest from Qualcomm and Apple due to thermal issues, and Gigaphoton has launched a neon recycling system with 50% recovery rate for chipmakers that handle 70% of the world's neon used in DUV lithography.",
+          "executive_summary": "Qualcomm will license patents for Huawei's LogicFolding chip architecture. Apple, Qualcomm, and MediaTek are pursuing different 2nm routes to enable 30B-parameter AI model execution on smartphones.",
           "key_facts": [
-            "MediaTek Dimensity 9600 Pro chipset, TSMC 2nm process",
-            "OPPO Find X10 Pro Max, first smartphone with MediaTek Dimensity 9600 Pro",
-            "Huawei LogicFolding, 50% reduction in clock buffers",
-            "Gigaphoton neon recycling system, 50% recovery rate",
-            "70% of global neon for DUV lithography used in chipmaking",
-            "Tata Electronics, pilot automotive module semiconductors in Assam"
+            "Qualcomm to license Huawei LogicFolding patents",
+            "Apple, Qualcomm, MediaTek implementing 2nm AI solutions",
+            "Target: 30B-parameter AI models on mobile"
           ],
           "implications": [
             {
-              "keyword": "2nm competition",
-              "text": "Qualcomm, Apple, and MediaTek compete on TSMC 2nm with flagship AI chipsets, intensifying technological arms race in premium mobile AP market"
+              "keyword": "Cross-licensing strategy",
+              "text": "Qualcomm-Huawei patent deal signals openness to architectural innovation beyond traditional IP walls in mobile SoC design."
             },
             {
-              "keyword": "Process technology adoption",
-              "text": "MediaTek rapidly integrates 2nm Dimensity into flagship smartphones in India market, expanding availability of premium mobile processors"
-            },
-            {
-              "keyword": "Material supply chain stability",
-              "text": "Gigaphoton's neon recycling technology can mitigate geopolitical risk in DUV chipmaking supply chain and improve cost efficiency"
-            },
-            {
-              "keyword": "Alternative technology adoption resistance",
-              "text": "Huawei's LogicFolding rejected by major suppliers (Qualcomm, Apple) due to thermal control issues, exposing challenges in technology standardization"
+              "keyword": "Mobile AI convergence",
+              "text": "Multiple vendors pursuing 2nm process for large language model inference on-device, fragmenting the approach landscape."
             }
           ],
-          "counterpoint": "Huawei's LogicFolding technology may be adopted by other designers or Chinese manufacturers despite thermal issues, so market impact outlook may be limited by simple rejection alone."
+          "counterpoint": "Different architectural routes may hinder ecosystem standardization and software optimization across platforms."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-10-06",
-      "item_count": 7,
-      "generated_at": "2026-10-06T23:43:35.118124+00:00",
+      "date": "2026-10-08",
+      "item_count": 2,
+      "generated_at": "2026-10-08T00:09:51.206443+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -82,9 +60,9 @@
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-10-06",
-      "item_count": 22,
-      "generated_at": "2026-10-06T23:43:35.118124+00:00",
+      "date": "2026-10-08",
+      "item_count": 16,
+      "generated_at": "2026-10-08T00:09:51.206443+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -92,9 +70,9 @@
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-10-06",
-      "item_count": 32,
-      "generated_at": "2026-10-06T23:43:35.118124+00:00",
+      "date": "2026-10-08",
+      "item_count": 21,
+      "generated_at": "2026-10-08T00:09:51.206443+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -102,9 +80,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-10-06",
-      "item_count": 35,
-      "generated_at": "2026-10-06T23:43:35.118124+00:00",
+      "date": "2026-10-08",
+      "item_count": 25,
+      "generated_at": "2026-10-08T00:09:51.206443+00:00",
       "content": {
         "ko": {},
         "en": {}
