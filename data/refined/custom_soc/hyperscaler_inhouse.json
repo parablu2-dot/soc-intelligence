@@ -3,6 +3,16 @@
     "axis": "custom_soc",
     "company": "hyperscaler_inhouse",
     "category": "news",
+    "headline": "Share GPU clusters across teams with isolation and fairness using Amazon SageMaker HyperPod",
+    "url": "https://aws.amazon.com/blogs/machine-learning/share-gpu-clusters-across-teams-with-isolation-and-fairness-using-amazon-sagemaker-hyperpod/",
+    "published_date": "2026-10-08",
+    "source": "AWS Blog",
+    "summary": "A reference architecture for securely sharing one Amazon SageMaker HyperPod EKS cluster across multiple teams, using AWS IAM Identity Center for authentication, per-team SageMaker Domains and Kubernetes namespaces for isolation, HyperPod Task Governance for fairness, and namespace-level cost allocation for chargeback."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
+    "category": "news",
     "headline": "Responsible infrastructure at hyperscale: Managing the full lifecycle of Azure hardware",
     "url": "https://azure.microsoft.com/en-us/blog/responsible-infrastructure-at-hyperscale-managing-the-full-lifecycle-of-azure-hardware/",
     "published_date": "2026-09-30",

@@ -1,69 +1,91 @@
 {
   "axis": "cpo_optics",
   "sector": "CPO/광통신",
-  "date": "2026-10-08",
-  "generated_at": "2026-10-08T00:09:59.034505+00:00",
-  "item_count": 2,
+  "date": "2026-10-09",
+  "generated_at": "2026-10-09T00:17:57.347004+00:00",
+  "item_count": 8,
   "content": {
     "ko": {
-      "executive_summary": "Silicon photonics continues gaining traction with izmo Microsystems and IIT Madras advancing to Phase II of India's MeitY-backed development program. MediaTek is expanding into AI datacenter applications, signaling chipmaker interest in optical interconnect solutions for high-bandwidth compute environments.",
+      "executive_summary": "코-패키지드 옵틱스(CPO)는 데이터센터 AI 인터커넥트의 핵심 기술로 부상하며, Broadcom과 Credo Technology를 포함한 주요 반도체 기업들이 OCP Summit 등에서 솔루션 전시를 진행 중입니다. VCSEL 기반 NPO 수요는 2031년까지 6억 5천만 유닛으로 전망되고 있으나, CPO 테스트는 빠르게 변화하는 사양 표준화의 도전에 직면해 있습니다.",
       "key_facts": [
-        "izmo Microsystems and IIT Madras Phase II program valued at ₹99.94 Crore",
-        "Program sanctioned by India's MeitY (Ministry of Electronics and Information Technology)",
-        "MediaTek keynote at Summit 2026 focused on AI datacenter expansion"
+        "VCSEL NPO 수요 예측: 2031년까지 6억 5천만 유닛 (TrendForce)",
+        "Broadcom: AI Networking 및 CPO 기술 OCP Summit에서 전시",
+        "Credo Technology (CRDO): CPO 경쟁 진출",
+        "Marvell: OCP Summit 메모리 및 보안 데모 14개 세션",
+        "AI 랙 업그레이드: 1.6T 규격 및 고압력 전원 공급 기술 포함"
       ],
       "implications": [
         {
-          "keyword": "India Silicon Photonics",
-          "text": "Government-backed funding accelerating local ecosystem development for integrated photonics and optical component manufacturing."
+          "keyword": "VCSEL 공급망 경쟁",
+          "text": "6개 주요 제공업체가 VCSEL NPO 시장에 투자 중이며, 2031년까지 6억 5천만 유닛 규모로 성장하는 시장에서 공급 안정성과 가격 경쟁력이 핵심 경합 요소가 될 것으로 예상됩니다."
         },
         {
-          "keyword": "AI Datacenter Optics",
-          "text": "Major semiconductor vendors targeting optical interconnect solutions for AI workloads, indicating co-packaged optics adoption in hyperscale deployments."
+          "keyword": "CPO 테스트 표준화 이슈",
+          "text": "빠르게 변화하는 사양으로 인해 CPO 테스트 벤치마킹이 어려워지고 있으며, 이는 제품 개발 일정 및 시장 진출 시간(time-to-market)에 영향을 미칠 수 있습니다."
         },
         {
-          "keyword": "Supply Chain Diversification",
-          "text": "Non-traditional regions establishing indigenous photonics capabilities, potentially reducing concentration risk in optical component sourcing."
+          "keyword": "AI 데이터센터 수렴 기술",
+          "text": "메모리 확장, 고압력 전원 공급, 1.6T 인터커넥트 기술이 AI 시스템 효율성 '전쟁'의 중심이 되고 있으며, CPO는 이들 기술 스택의 필수 요소로 자리잡고 있습니다."
         }
       ],
-      "counterpoint": "Headlines lack specifics on silicon photonics technical roadmap (wavelengths, integration density, transceiver speeds) and whether MediaTek intends to develop proprietary optics or integrate third-party solutions."
+      "counterpoint": "CPO가 장기 성장 기회로 평가되고 있으나, 빠르게 변화하는 기술 사양과 테스트 표준화 지연이 대량 생산 실현과 수익성 달성 시점을 불확실하게 만들 수 있습니다."
     },
     "en": {
-      "executive_summary": "Silicon photonics continues gaining traction with izmo Microsystems and IIT Madras advancing to Phase II of India's MeitY-backed development program. MediaTek is expanding into AI datacenter applications, signaling chipmaker interest in optical interconnect solutions for high-bandwidth compute environments.",
+      "executive_summary": "Co-packaged optics (CPO) is emerging as a key technology for AI interconnects in data centers, with major semiconductor companies including Broadcom and Credo Technology exhibiting solutions at events such as the OCP Summit. VCSEL-based NPO demand is projected to reach 650 million units by 2031, though CPO testing faces challenges from rapidly evolving specification standardization.",
       "key_facts": [
-        "izmo Microsystems and IIT Madras Phase II program valued at ₹99.94 Crore",
-        "Program sanctioned by India's MeitY (Ministry of Electronics and Information Technology)",
-        "MediaTek keynote at Summit 2026 focused on AI datacenter expansion"
+        "VCSEL NPO demand forecast: 650 million units by 2031 (TrendForce)",
+        "Broadcom: AI Networking and CPO technology exhibition at OCP Summit",
+        "Credo Technology (CRDO): CPO competitive entry",
+        "Marvell: 14 sessions demonstrating memory and security at OCP Summit",
+        "AI rack upgrade: 1.6T specification and high-pressure power supply technology included"
       ],
       "implications": [
         {
-          "keyword": "India Silicon Photonics",
-          "text": "Government-backed funding accelerating local ecosystem development for integrated photonics and optical component manufacturing."
+          "keyword": "VCSEL supply chain competition",
+          "text": "Six major providers are investing in the VCSEL NPO market, and in a market growing to 650 million units by 2031, supply stability and price competitiveness are expected to be key competitive factors."
         },
         {
-          "keyword": "AI Datacenter Optics",
-          "text": "Major semiconductor vendors targeting optical interconnect solutions for AI workloads, indicating co-packaged optics adoption in hyperscale deployments."
+          "keyword": "CPO test standardization issues",
+          "text": "Rapidly evolving specifications are making CPO test benchmarking difficult, which may impact product development timelines and time-to-market."
         },
         {
-          "keyword": "Supply Chain Diversification",
-          "text": "Non-traditional regions establishing indigenous photonics capabilities, potentially reducing concentration risk in optical component sourcing."
+          "keyword": "AI data center convergence technology",
+          "text": "Memory expansion, high-pressure power supply, and 1.6T interconnect technology are becoming central to the AI system efficiency 'race', with CPO establishing itself as an essential component of this technology stack."
         }
       ],
-      "counterpoint": "Headlines lack specifics on silicon photonics technical roadmap (wavelengths, integration density, transceiver speeds) and whether MediaTek intends to develop proprietary optics or integrate third-party solutions."
+      "counterpoint": "While CPO is valued as a long-term growth opportunity, rapidly evolving technology specifications and delayed test standardization may create uncertainty in achieving mass production realization and profitability timelines."
     }
   },
   "links": [
     {
-      "headline": "izmo Microsystems and IIT Madras Enter Phase II of ₹99.94 Crore MeitY-Sanctioned Silicon Photonics Program - Press Trust of India",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNLW8yS0lIcXgxUGNKX3R1TTNadkNnUElQZ2YwUFNKOW9oQmVHU1MySVJVVFB0UHhNOVJZYV9sX1FGRXdsN1NHTmcxLWp5QU9Ha1liQlNBYXEtVExFVEpzSmhrSlJVTmZWLVdpQzlBd184cjBwbzB5aUZMMFFXX0Y5VmdJS2FnZzlfYm9XbzFabVFjeVlkelR1Q0JBYkFBdG90cFFrU2hfYVRLWjRJMkNnc1BnU0VsY2txenVLeGdubXNadURWdmw1THhOaS1HRVV5VnlLUFZuQjJ2eEVjZVNUWW9pVHlGbHN3eEFwaGlxamJSZw?oc=5",
+      "headline": "Optical illusion: Is co-packaged optics the savior the data center industry has been waiting for? - Data Center Dynamics",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNSVYyRnZTcFRrMzByalVJWXpSZUs4OGpORnZSVThnTDRqZ0lkZVZIeTNRWlBNTTRnQUY3dWhPSE9zOXdnQXdKdFRTWXRxMWZSUXV0VzI0cDhaNWNKQkxvc19aVzZCU0NQQThWU09fODkxZU5SYWNfN056dGhPUGhXM2F1NUUxLUFrVWVJdU5aMGUtSnVoSXpiSW5QaVowYmtjSU9MMWFVNGRRU2t4NFFkVWRSNXc2cDViaURHYmowTzRneEYwYTMxUElCMEtaUGY3bWZaR0NOYWVxanM?oc=5",
       "source": "Google News",
-      "published_date": "2026-10-07"
+      "published_date": "2026-10-08"
     },
     {
-      "headline": "Summit 2026 Keynote - The Quiet Giant Goes All In: MediaTek is Diving Into AI Datacenters - All About Circuits",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYmpNR1VxT1NUX1AzQk9vYUE3QjJrSU8tTHRtaWhyclJrQUZpQm5BOHNFbWU5MEotNmg1Z055S3lTRWg4SkxKeElRMm5oSkRWX0I3S3VSbGpiVzE5T0RORmpPbjlpSDMzaDB3TXpiMnRMT3gtN2Rsa0JQRTRCZmpjdWMzT1BuWWhudzJydld0WFppRTZEQlJ4c2hyTm96c19Xb2JNM1ZGRHk3a1Z6UGtLX0lkSS02N1RMNWFTVUlTMm4yLUE?oc=5",
+      "headline": "Broadcom to Showcase AI Networking and Co-Packaged Optics at OCP Summit - HPCwire",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVERTc25kSE1PYVBNei1SZlhrNzRQT1dSZno5UWsyeldTSlF3SWZCc2ZxeUhXVmlYZlY4YXNBUk5tQ0E0QVY4SkVfZjBZMmU1UV96SGkwOEVyVHBFTDlQNTd2c3pyVzJwRjRBZVFUQmxGN3g3WGZCNDMxWnd4SFBIYy1YQ3lwbXlRd1BLWWRVQ0Q0RlhneEM5V1dUNl9ianVTSlM2Y3JsZGFfLWxlNzZnZUdCV3A?oc=5",
       "source": "Google News",
-      "published_date": "2026-10-07"
+      "published_date": "2026-10-08"
+    },
+    {
+      "headline": "CPO Testing Faces A Moving Target Problem - Semiconductor Engineering",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0wOFNEOThWWm9lc21UamcwODkwWk9DU01TZklkckVLR0lsYnB4M3Rmalc4UGxRSXR6RmIyM1FPTEp2RkwyRU1uWDExNEFhcFV0MXY0Mlh3dEhzNzRKTkRyQjRfOTl1UXF5Wk1sRjlqYmtMNGdIUjNsT0hn?oc=5",
+      "source": "Google News",
+      "published_date": "2026-10-08"
+    },
+    {
+      "headline": "Six Major Players Bet on VCSEL NPO for AI Optical Interconnect Opportunities; Demand Projected to Reach 650 Million Units by 2031 - BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9CN3Y3d3lqTVVrSzZ2ZlNlLU00Rm5VUEhNY3MzMlliTHV3TzJuUTBCTHpiZ3FZT2h5aXV5bVlYc05YdmliTzhYdndTZWlkM3dOV3c0RWRsS3F3b2VqSnlZT2lYU194NnBkdDU1N3JGU2tJa2U0bXc?oc=5",
+      "source": "Google News",
+      "published_date": "2026-10-08"
+    },
+    {
+      "headline": "[Insight] Six Leading Suppliers Bet on VCSEL NPO; VCSEL Demand Projected to Reach 650 Million Units by 2031, Says TrendForce - LEDinside",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1QTG1nS2lQUUdMVmNBR1pWRkFlOTZ4bjJBVERFRHU2RnFCcGtWNU1aM2dyWEM1bHlpUlNBRFFMR1BNaGNwWlM3Um5NVHY2bGNkZkpiSFFkcmVPLWF2TkVBbE0tQ1kwbmc2TFYtaA?oc=5",
+      "source": "Google News",
+      "published_date": "2026-10-08"
     }
   ]
 }
