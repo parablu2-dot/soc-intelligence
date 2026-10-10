@@ -402,6 +402,30 @@ tr:hover td { background: var(--surface2); }
 .fresh-yellow { color: var(--yellow); }
 .fresh-red    { color: var(--red); }
 
+/* Judgment UX 1차 (CPO 파일럿, 2026-10-10) — ① 판단 한 줄 + ④ 근거 */
+.judgment-card { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--cyan);
+  border-radius: 6px; padding: 12px 14px; margin-bottom: 16px; }
+.judgment-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 6px; }
+.judgment-label { font-size: 11px; font-weight: 600; color: var(--accent); }
+.judgment-badge { font-size: 11px; padding: 1px 8px; border-radius: 10px; background: var(--surface2); color: var(--text-muted); }
+.judgment-badge-err { background: rgba(248,81,73,0.15); color: var(--red); cursor: help; }
+.judgment-topic { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+.judgment-text { font-size: 15px; font-weight: 600; line-height: 1.5; margin-bottom: 8px; }
+.judgment-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; font-size: 12px; color: var(--text-muted); }
+.judgment-details { margin-top: 10px; font-size: 12px; }
+.judgment-details summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+.judgment-table { width: 100%; border-collapse: collapse; margin: 8px 0; }
+.judgment-table th, .judgment-table td { text-align: left; vertical-align: top; padding: 6px; border-top: 1px solid var(--border); }
+.judgment-table th { font-size: 11px; color: var(--text-muted); font-weight: 500; }
+.judgment-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.judgment-role { font-size: 11px; font-weight: 600; white-space: nowrap; }
+.judgment-role-pro { color: var(--green); }
+.judgment-role-con { color: var(--red); }
+.judgment-fn { color: var(--accent); margin-left: 2px; }
+.judgment-notes { margin: 4px 0 10px 18px; padding: 0; color: var(--text-muted); font-size: 11px; line-height: 1.6; }
+.judgment-field { margin: 8px 0; line-height: 1.6; }
+@media (max-width: 640px) { .judgment-table th:first-child, .judgment-table td:first-child { display: none; } }
+
 /* Empty state */
 .empty {
   text-align: center;

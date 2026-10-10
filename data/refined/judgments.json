@@ -1,0 +1,203 @@
+{
+  "generated": "2026-10-10",
+  "count": 1,
+  "outcome_stats": {
+    "by_axis": {
+      "cpo_optics": {
+        "hit": 0,
+        "miss": 0,
+        "partial": 0
+      }
+    },
+    "total": {
+      "hit": 0,
+      "miss": 0,
+      "partial": 0
+    }
+  },
+  "overdue_checks": [],
+  "lineage": {},
+  "coverage": {
+    "cpo_optics": {
+      "total": 318,
+      "top_source": "googlenews",
+      "top_count": 308,
+      "top_pct": 97
+    }
+  },
+  "errors": [],
+  "blocked": {},
+  "judgments": [
+    {
+      "id": "J-20261010-001",
+      "date": "2026-10-10",
+      "axis": "cpo_optics",
+      "topic": "CPO는 AI 데이터센터 광 연결의 주류가 되는가, 적용 범위는 어디까지인가",
+      "judgment": "CPO는 양산에 진입했으나 광 연결 확대의 여러 해법 중 하나이며, 적용은 최상위 모듈 간(스위치·랙 스케일) 연결에 한정된다 — 근거리 메모리 IO로의 확장은 부적합.",
+      "direction": "신규",
+      "evidence": [
+        {
+          "source": "finance.biggo.com",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5PZDFWeWJCRzlWMWJTUnFQZ054MDZjWjBnUHd4dVlBVjJZTXoyOURzUjNtMWlrdU1scWZSNGxPd2lOeVllQk9MNEwyOHJ6ajc4UjFyb21qV2MtSzRISWpXLXU3U3lLSWNQSFJQdlR6UWxRa2VTOUE?oc=5",
+          "headline": "Nvidia's CPO Switches Enter Full Mass Production; TSMC, Foxconn Lead Supply Chain Positioning - finance.biggo.com",
+          "claim": "양산 시작은 맞음",
+          "role": "지지",
+          "matched": {
+            "match": "url",
+            "headline": "Nvidia's CPO Switches Enter Full Mass Production; TSMC, Foxconn Lead Supply Chain Positioning - finance.biggo.com",
+            "source": "Google News",
+            "company": "googlenews",
+            "published_date": "2026-08-14",
+            "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5PZDFWeWJCRzlWMWJTUnFQZ054MDZjWjBnUHd4dVlBVjJZTXoyOURzUjNtMWlrdU1scWZSNGxPd2lOeVllQk9MNEwyOHJ6ajc4UjFyb21qV2MtSzRISWpXLXU3U3lLSWNQSFJQdlR6UWxRa2VTOUE?oc=5"
+          }
+        },
+        {
+          "source": "finance.biggo.com",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1RQjc4X0dJQ09NSW1YR1lmR2tiZDI5SnNEYlpQbF9jc1JyOWJTazBoQ3BieUdhcXJTc3RIc2dVdjFfb2s4dHJXRXJSYnQwLXNIYXZPMFVybHVKZ1VNazNGR3NGS0wwRmdTbWlmV05nLXMyd2NkYkE?oc=5",
+          "headline": "TSMC Executive: Silicon Photonics Penetration to Surpass 50% by 2027, CPO Mass Production to Begin in Second Half - finance.biggo.com",
+          "claim": "TSMC 임원 발표라 믿음직, TSMC가 CPO를 잘하는 것도 맞음",
+          "role": "지지",
+          "note": "1차 출처: TSMC 쉬궈진 부사장, SEMICON Taiwan SEMI 포럼(2026-08-31, 鉅亨網). 50%는 실리콘 포토닉스의 광 트랜시버 시장 침투율이며 CPO 수치 아님. CPO 하반기 양산 주체는 TSMC가 아닌 '대형 반도체 업체'. 같은 발언에서 테스트 등 공급망 병목을 언급 → 7번과 연결.",
+          "matched": {
+            "match": "url",
+            "headline": "TSMC Executive: Silicon Photonics Penetration to Surpass 50% by 2027, CPO Mass Production to Begin in Second Half - finance.biggo.com",
+            "source": "Google News",
+            "company": "googlenews",
+            "published_date": "2026-08-31",
+            "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1RQjc4X0dJQ09NSW1YR1lmR2tiZDI5SnNEYlpQbF9jc1JyOWJTazBoQ3BieUdhcXJTc3RIc2dVdjFfb2s4dHJXRXJSYnQwLXNIYXZPMFVybHVKZ1VNazNGR3NGS0wwRmdTbWlmV05nLXMyd2NkYkE?oc=5"
+          }
+        },
+        {
+          "source": "Business Wire",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSUJCbllkY3hVVnhWLVBWYnpiWnNJZFFPNGJsbURjd2xGUEJYWFRMSGVhTjg1ektlZmtyRWxEOWRkVXZTWnZsVWV3SW5NNl94NXdzZTFwRGFkd3N4ckk5al9jTXRwY3J0bnlJNV91ZTlCSVA2VjJPSDhUU3BONzV0SXR4YXZZd0ItT1NGV2s2eXNXejhhR3YtV0F3T2lEdGdOQWE2azhDS3JES2pENXhsNjlEUTBhTXM?oc=5",
+          "headline": "JEDEC® Publishes First Industry-Wide Silicon Photonics Reliability Standard for AI, Datacenter and Telecom Infrastructure - Business Wire",
+          "claim": "표준 제정은 필요함",
+          "role": "지지",
+          "matched": {
+            "match": "url",
+            "headline": "JEDEC® Publishes First Industry-Wide Silicon Photonics Reliability Standard for AI, Datacenter and Telecom Infrastructure - Business Wire",
+            "source": "Google News",
+            "company": "googlenews",
+            "published_date": "2026-10-02",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSUJCbllkY3hVVnhWLVBWYnpiWnNJZFFPNGJsbURjd2xGUEJYWFRMSGVhTjg1ektlZmtyRWxEOWRkVXZTWnZsVWV3SW5NNl94NXdzZTFwRGFkd3N4ckk5al9jTXRwY3J0bnlJNV91ZTlCSVA2VjJPSDhUU3BONzV0SXR4YXZZd0ItT1NGV2s2eXNXejhhR3YtV0F3T2lEdGdOQWE2azhDS3JES2pENXhsNjlEUTBhTXM?oc=5"
+          }
+        },
+        {
+          "source": "Investing.com",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOZG0xV243TloyaGNtTzRTMXljTWE1aE1Tam8td01yWG5SYUdVR2Uyc0hITnNpVVNvMHlKbk9MV3M0ckdWd09Ob3dsbUU4akNjMFY0aHM3N2pxcHo1c0pUVVJCOTMwTzJra2Mtemx3ejd5YXE5UHhEb1poLXdCWmpvSDVraUJ5UVRzWVpBTFNUYVVwQ0c0cVNzd0hDUm1iYnRBZXp6dEhpZUF2UjlIZ3RoUzRWLUdqQmlJRFJxb1JB?oc=5",
+          "headline": "GlobalFoundries, Marvell expand SiGe capacity for AI data centers - Investing.com",
+          "claim": "캐파 확대 배경과 일맥상통",
+          "role": "지지",
+          "matched": {
+            "match": "url",
+            "headline": "GlobalFoundries, Marvell expand SiGe capacity for AI data centers - Investing.com",
+            "source": "Google News",
+            "company": "googlenews",
+            "published_date": "2026-09-17",
+            "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOZG0xV243TloyaGNtTzRTMXljTWE1aE1Tam8td01yWG5SYUdVR2Uyc0hITnNpVVNvMHlKbk9MV3M0ckdWd09Ob3dsbUU4akNjMFY0aHM3N2pxcHo1c0pUVVJCOTMwTzJra2Mtemx3ejd5YXE5UHhEb1poLXdCWmpvSDVraUJ5UVRzWVpBTFNUYVVwQ0c0cVNzd0hDUm1iYnRBZXp6dEhpZUF2UjlIZ3RoUzRWLUdqQmlJRFJxb1JB?oc=5"
+          }
+        },
+        {
+          "source": "SK hynix",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1JQkVPNFB5aVdSRWoxN0p2NHdNQklDUEIwYjhIejhESzdKdldtQ0RZeG52OWxzdjB0Njk5c0xXTXMyclFNTW40c1cwb3FoTUV0X0REN28yR0ZFWlJkcjN0ZTBlN3M?oc=5",
+          "headline": "SK hynix’s technology roadmap for co-packaged optics features in ‘Nature Electronics,’ as AI competition shifts from chips to systems - SK hynix",
+          "claim": "개인 경험상 메모리 IO로 쓰기엔 CPO와 맞지 않음, 시스템을 아는 정도로 갈 것",
+          "role": "반증",
+          "matched": {
+            "match": "url",
+            "headline": "SK hynix’s technology roadmap for co-packaged optics features in ‘Nature Electronics,’ as AI competition shifts from chips to systems - SK hynix",
+            "source": "Google News",
+            "company": "googlenews",
+            "published_date": "2026-08-20",
+            "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1JQkVPNFB5aVdSRWoxN0p2NHdNQklDUEIwYjhIejhESzdKdldtQ0RZeG52OWxzdjB0Njk5c0xXTXMyclFNTW40c1cwb3FoTUV0X0REN28yR0ZFWlJkcjN0ZTBlN3M?oc=5"
+          }
+        },
+        {
+          "source": "Pulse 2.0",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPN0VJMGg1WW9tVzFrOHRlMGFkN25aSVo2V1VfOUNFMGhZZkswNFRBX0ZLMzJCdk1IZUNvM3hKWDRDVkRKclZPcjM2OW52S1FGakp5YV9saXRfcEt3eGdOWXkxUUh4dWJ2Ml9aMjFWMURxYVNOZU1WT2JWbHdPS05LYTRfVlFUMjJVMjJOQUdJeTVyOXB4ZWJTeTdYYkN6VUJLMUVWWDVvbkN2b0pJWDVEa04wZHV5TlZKdjlJVUt2RlRodVVTYkHSAcsBQVVfeXFMUFhQSHBjbUU0bzFKT0NSQk1jR2xwNFZVSjBnQ3o0RWNOV3hUazJScklsb3ozekFMak5DbDA5eU9XQVZhTi0yemxrMDBwdTRzQ05mZElrYl9EQzhqOFdYdGdkdndlTThnbnczR1RJa2dYeml3NGZmSzhmeS1PQWdXZ2VFZnVsUU5LaXN0V1BibEJFdXhjNnRjN01pekhIN3c1bHJvaTJuTTZHVUtJaDFFcWU4WmVlQUZEbHRveENVeHU0S1Q2aTFaNWtOVVk?oc=5",
+          "headline": "Ayar Labs Raises Additional $150 Million, Bringing 2026 Funding To $650 Million, To Scale AI Co-Packaged Optics - Pulse 2.0",
+          "claim": "자금 조달 금액이 구체적",
+          "role": "지지",
+          "matched": {
+            "match": "url",
+            "headline": "Ayar Labs Raises Additional $150 Million, Bringing 2026 Funding To $650 Million, To Scale AI Co-Packaged Optics - Pulse 2.0",
+            "source": "Google News",
+            "company": "googlenews",
+            "published_date": "2026-09-11",
+            "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPN0VJMGg1WW9tVzFrOHRlMGFkN25aSVo2V1VfOUNFMGhZZkswNFRBX0ZLMzJCdk1IZUNvM3hKWDRDVkRKclZPcjM2OW52S1FGakp5YV9saXRfcEt3eGdOWXkxUUh4dWJ2Ml9aMjFWMURxYVNOZU1WT2JWbHdPS05LYTRfVlFUMjJVMjJOQUdJeTVyOXB4ZWJTeTdYYkN6VUJLMUVWWDVvbkN2b0pJWDVEa04wZHV5TlZKdjlJVUt2RlRodVVTYkHSAcsBQVVfeXFMUFhQSHBjbUU0bzFKT0NSQk1jR2xwNFZVSjBnQ3o0RWNOV3hUazJScklsb3ozekFMak5DbDA5eU9XQVZhTi0yemxrMDBwdTRzQ05mZElrYl9EQzhqOFdYdGdkdndlTThnbnczR1RJa2dYeml3NGZmSzhmeS1PQWdXZ2VFZnVsUU5LaXN0V1BibEJFdXhjNnRjN01pekhIN3c1bHJvaTJuTTZHVUtJaDFFcWU4WmVlQUZEbHRveENVeHU0S1Q2aTFaNWtOVVk?oc=5"
+          }
+        },
+        {
+          "source": "Semiconductor Engineering",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0wOFNEOThWWm9lc21UamcwODkwWk9DU01TZklkckVLR0lsYnB4M3Rmalc4UGxRSXR6RmIyM1FPTEp2RkwyRU1uWDExNEFhcFV0MXY0Mlh3dEhzNzRKTkRyQjRfOTl1UXF5Wk1sRjlqYmtMNGdIUjNsT0hn?oc=5",
+          "headline": "CPO Testing Faces A Moving Target Problem - Semiconductor Engineering",
+          "claim": "기준이 움직인다는 것은 이상함",
+          "role": "반증",
+          "note": "Red Team 재검토(2026-10-10): 2번 화자(TSMC 쉬궈진)가 같은 발언에서 테스트를 공급망 병목으로 언급 → 반증 판정과 긴장 관계 지적. 천 결정: 반증 유지 — 누가 Test 항목을 좌우하는가가 명확치 않음.",
+          "matched": {
+            "match": "url",
+            "headline": "CPO Testing Faces A Moving Target Problem - Semiconductor Engineering",
+            "source": "Google News",
+            "company": "googlenews",
+            "published_date": "2026-10-08",
+            "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0wOFNEOThWWm9lc21UamcwODkwWk9DU01TZklkckVLR0lsYnB4M3Rmalc4UGxRSXR6RmIyM1FPTEp2RkwyRU1uWDExNEFhcFV0MXY0Mlh3dEhzNzRKTkRyQjRfOTl1UXF5Wk1sRjlqYmtMNGdIUjNsT0hn?oc=5"
+          }
+        },
+        {
+          "source": "Data Center Dynamics",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNSVYyRnZTcFRrMzByalVJWXpSZUs4OGpORnZSVThnTDRqZ0lkZVZIeTNRWlBNTTRnQUY3dWhPSE9zOXdnQXdKdFRTWXRxMWZSUXV0VzI0cDhaNWNKQkxvc19aVzZCU0NQQThWU09fODkxZU5SYWNfN056dGhPUGhXM2F1NUUxLUFrVWVJdU5aMGUtSnVoSXpiSW5QaVowYmtjSU9MMWFVNGRRU2t4NFFkVWRSNXc2cDViaURHYmowTzRneEYwYTMxUElCMEtaUGY3bWZaR0NOYWVxanM?oc=5",
+          "headline": "Optical illusion: Is co-packaged optics the savior the data center industry has been waiting for? - Data Center Dynamics",
+          "claim": "일부 개선, Module 간 연결(최상위단)에 쓰임",
+          "role": "반증",
+          "matched": {
+            "match": "url",
+            "headline": "Optical illusion: Is co-packaged optics the savior the data center industry has been waiting for? - Data Center Dynamics",
+            "source": "Google News",
+            "company": "googlenews",
+            "published_date": "2026-10-08",
+            "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNSVYyRnZTcFRrMzByalVJWXpSZUs4OGpORnZSVThnTDRqZ0lkZVZIeTNRWlBNTTRnQUY3dWhPSE9zOXdnQXdKdFRTWXRxMWZSUXV0VzI0cDhaNWNKQkxvc19aVzZCU0NQQThWU09fODkxZU5SYWNfN056dGhPUGhXM2F1NUUxLUFrVWVJdU5aMGUtSnVoSXpiSW5QaVowYmtjSU9MMWFVNGRRU2t4NFFkVWRSNXc2cDViaURHYmowTzRneEYwYTMxUElCMEtaUGY3bWZaR0NOYWVxanM?oc=5"
+          }
+        },
+        {
+          "source": "LEDinside",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1QTG1nS2lQUUdMVmNBR1pWRkFlOTZ4bjJBVERFRHU2RnFCcGtWNU1aM2dyWEM1bHlpUlNBRFFMR1BNaGNwWlM3Um5NVHY2bGNkZkpiSFFkcmVPLWF2TkVBbE0tQ1kwbmc2TFYtaA?oc=5",
+          "headline": "[Insight] Six Leading Suppliers Bet on VCSEL NPO; VCSEL Demand Projected to Reach 650 Million Units by 2031, Says TrendForce - LEDinside",
+          "claim": "2031년 개수는 믿기 어려움",
+          "role": "반증",
+          "matched": {
+            "match": "url",
+            "headline": "[Insight] Six Leading Suppliers Bet on VCSEL NPO; VCSEL Demand Projected to Reach 650 Million Units by 2031, Says TrendForce - LEDinside",
+            "source": "Google News",
+            "company": "googlenews",
+            "published_date": "2026-10-08",
+            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1QTG1nS2lQUUdMVmNBR1pWRkFlOTZ4bjJBVERFRHU2RnFCcGtWNU1aM2dyWEM1bHlpUlNBRFFMR1BNaGNwWlM3Um5NVHY2bGNkZkpiSFFkcmVPLWF2TkVBbE0tQ1kwbmc2TFYtaA?oc=5"
+          }
+        },
+        {
+          "source": "XenoSpectrum",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBwc1RIeXR6RURKWFdYaWk5TXJsZHAyWXpQbmwwaW5TWThDNUJ0b2tiSW5XZDJFM09ma2Z6MldiS2hpUUhsOWFaSW5XS09yTkFkQk9YOTEyRURZZlVUTWpiOHRkbmhXd0t6WGM4VXdtSnpFdGU3?oc=5",
+          "headline": "Not All CPO: Breaking Down the $144.4 Billion Data Center Optical Interconnect Forecast - XenoSpectrum",
+          "claim": "CPO는 광통신 Solution의 하나",
+          "role": "지지",
+          "matched": {
+            "match": "url",
+            "headline": "Not All CPO: Breaking Down the $144.4 Billion Data Center Optical Interconnect Forecast - XenoSpectrum",
+            "source": "Google News",
+            "company": "googlenews",
+            "published_date": "2026-08-19",
+            "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBwc1RIeXR6RURKWFdYaWk5TXJsZHAyWXpQbmwwaW5TWThDNUJ0b2tiSW5XZDJFM09ma2Z6MldiS2hpUUhsOWFaSW5XS09yTkFkQk9YOTEyRURZZlVUTWpiOHRkbmhXd0t6WGM4VXdtSnpFdGU3?oc=5"
+          }
+        }
+      ],
+      "rationale": "A(적용 범위 한정)와 B(광 연결 확대, CPO는 해법 중 하나)는 층위가 달라 충돌하지 않음 → 합침. '메모리 IO'를 '근거리 메모리 IO'로 좁힘 — Memory 랙 간 연결 시에는 필요한 기술이나, Memory 하나하나의 모듈은 CPO와 관계가 멂. 확신도 근거: 수요 측 증거가 모두 평가·제한 배치 단계. 감점: Rubin 세대 발표가 6개월 내 판을 바꿀 위험.",
+      "verified_by": "천 근거 평가(2026-10-10, 지지 6 / 반증 4) + Red Team 웹 검색 검증(2026-10-10): 2번 1차 출처 확인(공급자 발언, 서사 파훼 ②단계 할인), 수요 측 증거 확인(Meta Bailly 배치는 랩 특성평가 단계, Nvidia는 스케일아웃용·NPO 공존), 7·8·9 날짜 묶음은 독립 매체 3곳으로 추세 판정. 7번 재검토 후 반증 유지(천 결정).",
+      "confidence": 0.7,
+      "prediction": "2027-03-31까지 ⓐ 주요 하이퍼스케일러 중 5만 GPU+ 학습 클러스터의 기본 패브릭으로 CPO 채택을 발표한 곳이 없고 ⓑ CPO가 근거리 메모리 IO 용도로 양산 채택된 1차 발표가 없다.",
+      "check_date": "2027-03-31",
+      "outcome": null,
+      "lesson": null,
+      "supersedes": null,
+      "source_file": "data/judgments/J-20261010-001.md"
+    }
+  ]
+}
