@@ -126,11 +126,14 @@ downstream 디바이스/칩셋 수요를 부품·기판(MLCC·substrate·module�
 
 CPO/광통신 탭 상단에 천의 판단 한 줄을 보여주는 레이어. 설계 원문은 Drive `SOC Dashboard/session-docs/SoCIntelligence_JudgmentUX파일럿_20261010.md`(메모 v6).
 
-- **저장**: `data/judgments/J-yyyymmdd-nnn.md` frontmatter (Judgment Schema V1, append-only, 천이 직접 작성 — LLM 생성 금지)
+- **저장**: `data/judgments/J-yyyymmdd-nnn.md` frontmatter (Judgment Schema V1, append-only, 천이 직접 작성 — LLM 생성 금지).
+  **이 폴더가 유일한 원본** — Drive `AI반도체Strategist_기술/J-20261010-001.md`는 "이동됨" 표시된 사본, 다음 판단부터 여기에 직접 작성
 - **빌드**: `scripts/build_judgments.py` → `data/refined/judgments.json` (`crawl-and-build.yml` "Build judgments", `--ci`로 exit 0 + `errors[]`).
   axis는 신호 axis 체계 + `meta`(app.js 모듈 id `cpo` 아님), evidence는 도메인 축 필수·meta 선택, `evidence[].note`는 선택 필드(화면 각주).
-  evidence는 같은 axis 신호와 url → headline 정확 일치로 연결(`matched`). 오류 레코드는 렌더 대상에서 제외. 테스트 `tests/test_build_judgments.py`
-- **렌더**: `site/js/app.js`의 `_judgmentPanel(axis)` — ① 판단 한 줄(최근 J, 7일 초과 시 "유지 중"+경과일 배지) + 헤더 배지(신호 N건·최다 소스 %, 오류 N건) + ④ 근거(기본 접힘)
+  evidence는 같은 axis 신호와 url → headline 정확 일치로 연결(`matched`). 오류 레코드는 렌더 대상에서 제외하고 `blocked{axis:[id]}`에 기록,
+  CI에는 `::warning::` + step summary. 테스트 `tests/test_build_judgments.py` (CI는 pytest를 돌리지 않음 — 로컬 실행 필요)
+- **렌더**: `site/js/app.js`의 `_judgmentPanel(axis)` — ① 판단 한 줄(최근 J, outcome 없으면 "미검증"+신선도 배지, 보류 판단 있으면 "최신 판단 보류됨") + 헤더 배지(신호 N건·최다 소스 %, 오류 N건) + ④ 근거(기본 접힘).
+  "유지 중"은 반박 근거 확인 기록 필드(메모 v7 예정) 생기기 전엔 쓰지 않음
 - **2차(미착수, 2026-11-09~)**: ② 비교 앵커, ③ 대비 표본·Verifier 화면은 보류
 
 ## 현재 진행 상태

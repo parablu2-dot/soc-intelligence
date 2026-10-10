@@ -75,6 +75,15 @@ def test_error_record_excluded_but_reported(tmp_path, monkeypatch):
     out = bj.build(today="2026-10-12")
     assert [r["id"] for r in out["judgments"]] == ["J-20261010-001"]  # 이전 정상 판단 유지
     assert any("axis 'cpo'" in e for e in out["errors"])
+    assert out["blocked"] == {}  # axis 자체가 잘못되면 어느 축에 보류 표시할지 모름 → 전역 오류 배지만
+
+
+def test_blocked_marks_axis_of_excluded_newer_judgment(tmp_path, monkeypatch):
+    bad = GOOD.replace("J-20261010-001", "J-20261011-001").replace("direction: 신규", "direction: 상승")
+    _setup(tmp_path, monkeypatch, {"a.md": GOOD, "b.md": bad})
+    out = bj.build(today="2026-10-12")
+    assert [r["id"] for r in out["judgments"]] == ["J-20261010-001"]
+    assert out["blocked"] == {"cpo_optics": ["J-20261011-001"]}
 
 
 def test_evidence_required_for_domain_axis_only(tmp_path, monkeypatch):
@@ -118,9 +127,13 @@ def test_outcome_stats_by_axis_and_overdue(tmp_path, monkeypatch):
 def test_ci_flag_exit_code(tmp_path, monkeypatch):
     _setup(tmp_path, monkeypatch, {"a.md": GOOD.replace("confidence: 0.7", "confidence: 7")})
     monkeypatch.setattr(bj, "OUT", tmp_path / "data" / "refined" / "judgments.json")
+    summary = tmp_path / "summary.md"
+    monkeypatch.setattr(bj.os, "environ", {"GITHUB_STEP_SUMMARY": str(summary)})
     assert bj.main([]) == 1
+    assert not summary.exists()  # 로컬 실행은 CI 주석 없음
     assert bj.main(["--ci"]) == 0
     assert json.loads(bj.OUT.read_text(encoding="utf-8"))["errors"]
+    assert "판단 기록 오류 1건" in summary.read_text(encoding="utf-8")
 
 
 def test_axes_match_crawler_axes():

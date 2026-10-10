@@ -11,7 +11,9 @@ Judgment Schema V1 (Judgment UX 파일럿 메모 v6, 2026-10-10). 10/2 판단기
 - 오류 레코드는 errors[]에만 남기고 judgments(렌더 대상)에서 제외 → 이전 정상 판단이 계속 렌더됨
 - outcome_stats는 axis별 분리 집계 (total은 참고값)
 - coverage: 판단이 있는 축별 신호 N건 · 최다 소스 비율 (빌드마다 계산, 상수 금지)
-- --ci: 검증 오류가 있어도 exit 0 (그날 크롤링 커밋을 막지 않음). 오류는 JSON errors[] → 화면 경고 배지.
+- blocked: 오류로 빠진 판단 id를 axis별로 → 화면 ① 옆 "최신 판단 보류됨" (옛 판단이 최신처럼 보이지 않게)
+- --ci: 검증 오류가 있어도 exit 0 (그날 크롤링 커밋을 막지 않음). 오류는 JSON errors[] → 화면 경고 배지,
+  CI에는 ::warning:: 주석 + step summary로 노출.
   로컬 실행(옵션 없음)은 오류 시 exit 1.
 
 원본(Source of Truth)은 md frontmatter(append-only). 결과물은 손으로 고치지 않는다. LLM 호출 없음.
@@ -19,6 +21,7 @@ Judgment Schema V1 (Judgment UX 파일럿 메모 v6, 2026-10-10). 10/2 판단기
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from collections import Counter
@@ -200,11 +203,14 @@ def build(today: str | None = None) -> dict:
 
     # 오류 레코드는 렌더 대상에서 제외 (중복 id는 해당 id 전부 제외 — 어느 쪽이 원본인지 모름)
     records = []
+    blocked = {}  # 오류로 빠진 판단을 axis별로 — 화면에서 "최신 판단 보류됨" (옛 판단이 최신처럼 보이지 않게)
     for fm in candidates:
         errs = validate(fm)
         errors.extend(errs)
         if not errs and fm["id"] not in dup:
             records.append(fm)
+        elif fm.get("axis") in AXES:
+            blocked.setdefault(fm["axis"], []).append(fm["id"])
     records.sort(key=lambda r: (str(r["date"]), r["id"]))
 
     signals_cache = {}
@@ -229,6 +235,7 @@ def build(today: str | None = None) -> dict:
         "lineage": lineage,
         "coverage": {a: coverage(s) for a, s in signals_cache.items()},
         "errors": errors,
+        "blocked": {a: sorted(set(ids)) for a, ids in blocked.items()},
         "judgments": records,
     }
 
@@ -242,6 +249,15 @@ def main(argv: list[str]) -> int:
           f"검증 대기 {len(result['overdue_checks'])}건 | 오류 {len(result['errors'])}건")
     for e in result["errors"]:
         print(f"[ERR] {e}")
+    if ci and result["errors"]:
+        # exit 0이라 CI가 초록이어도 오류가 묻히지 않게: 런 화면 주석 + step summary
+        for e in result["errors"]:
+            print(f"::warning title=판단 기록 오류::{e}")
+        summary = os.environ.get("GITHUB_STEP_SUMMARY")
+        if summary:
+            with open(summary, "a", encoding="utf-8") as f:
+                f.write(f"### ⚠ 판단 기록 오류 {len(result['errors'])}건 (렌더 제외, 보류 {result['blocked']})\n")
+                f.writelines(f"- {e}\n" for e in result["errors"])
     return 0 if ci or not result["errors"] else 1
 
 

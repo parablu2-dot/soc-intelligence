@@ -1394,8 +1394,9 @@ function modCpo() {
 
 // ── Judgment UX 1차 (메모 v6, 2026-10-10) — ① 판단 한 줄 + 헤더 배지 + ④ 근거 ──────────
 // data/refined/judgments.json(scripts/build_judgments.py)만 읽음. 값은 전부 천이 쓴 J 파일 원문 그대로 —
-// 없으면 블록을 숨기고 아무것도 생성하지 않음. 오류 레코드는 빌드에서 이미 제외(이전 정상 판단 유지).
-const JUDGMENT_HOLD_DAYS = 7;  // 판단일로부터 이 기간이 지나면 새 판단 없는 주 → "유지 중"
+// 없으면 블록을 숨기고 아무것도 생성하지 않음. 오류 레코드는 빌드에서 이미 제외(이전 정상 판단 유지) —
+// 그 axis에 보류된 판단이 있으면 ① 옆에 "최신 판단 보류됨"을 띄워 옛 판단이 최신처럼 보이지 않게 함.
+// outcome이 비면 "미검증" — "유지 중"은 반박 근거 확인 기록(메모 v7 예정) 생기기 전엔 쓰지 않음. 시간 기준은 신선도 배지 하나.
 
 function _safeUrl(u) {
   return /^https?:\/\//.test(String(u || '')) ? _escHtml(u) : '';
@@ -1445,11 +1446,14 @@ function _judgmentEvidence(j) {
 function _judgmentPanel(axis) {
   const list = (judgmentsData?.judgments || []).filter(j => j.axis === axis);
   const errBadge = _judgmentErrorBadge();
-  if (!list.length) return errBadge ? `<div style="margin-bottom:12px">${errBadge}</div>` : '';
+  const blockedIds = judgmentsData?.blocked?.[axis] || [];
+  const blockedBadge = blockedIds.length
+    ? `<span class="judgment-badge judgment-badge-err" title="오류로 렌더 제외: ${_escHtml(blockedIds.join(', '))}">⚠ 최신 판단 보류됨 (${_escHtml(blockedIds.join(', '))})</span>`
+    : '';
+  if (!list.length) return errBadge ? `<div style="margin-bottom:12px">${errBadge} ${blockedBadge}</div>` : '';
   const j = list[list.length - 1];  // 빌드에서 (date, id) 오름차순 정렬됨 → 마지막이 최근
   const cov = judgmentsData.coverage?.[axis];
   const covBadge = cov ? `<span class="judgment-badge" title="이 축 수집 신호 전체 기준, 빌드마다 계산">${cov.total}건 · ${_escHtml(cov.top_source)} ${cov.top_pct}%</span>` : '';
-  const held = (_daysSince(j.date) ?? 0) > JUDGMENT_HOLD_DAYS;
   const conf = typeof j.confidence === 'number' ? `확신도 ${Math.round(j.confidence * 100)}%` : '';
   return `
     <div class="judgment-card">
@@ -1459,12 +1463,12 @@ function _judgmentPanel(axis) {
         ${errBadge}
       </div>
       <div class="judgment-topic">Q. ${_escHtml(j.topic)}</div>
-      <div class="judgment-text">${_escHtml(j.judgment)}</div>
+      <div class="judgment-text">${_escHtml(j.judgment)} ${blockedBadge}</div>
       <div class="judgment-meta">
         ${j.direction ? `<span class="chip chip-cat-news">${_escHtml(j.direction)}</span>` : ''}
         <span>${conf}</span>
         <span>검증일 ${_escHtml(j.check_date)}</span>
-        <span>${held ? '유지 중 · ' : ''}판단일 ${_escHtml(j.date)} ${_freshBadge(j.date)}</span>
+        <span>${j.outcome ? `결과 ${_escHtml(j.outcome)}` : '미검증'} · 판단일 ${_escHtml(j.date)} ${_freshBadge(j.date)}</span>
       </div>
       ${_judgmentEvidence(j)}
     </div>`;
