@@ -1,103 +1,59 @@
 {
-  "date": "2026-10-09",
-  "generated_at": "2026-10-09T23:56:39.736200+00:00",
+  "date": "2026-10-10",
+  "generated_at": "2026-10-10T23:23:12.579067+00:00",
   "sectors": {
-    "mobile_ap": {
-      "sector": "Mobile AP",
-      "date": "2026-10-09",
-      "item_count": 8,
-      "generated_at": "2026-10-09T23:56:39.734806+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "MediaTek Q3 revenue reached NT$168 billion, beating guidance, with data center business expected to drive growth in 2026. Samsung System LSI retreating from automotive APs to prioritize higher-margin chips, while Samsung Galaxy S27 Ultra is reportedly switching globally to Qualcomm Snapdragon 8 Elite Gen 6 over Exynos. India's semiconductor push and agentic AI are reshaping telecom and connected devices.",
-          "key_facts": [
-            "MediaTek Q3 revenue: NT$168 billion",
-            "Qualcomm Snapdragon 8 Elite Gen 6 unveiled at IMC 2026",
-            "Samsung Galaxy S27 Ultra reportedly using Snapdragon 8 Elite Gen 6 worldwide",
-            "Department of War committed $1.5 billion loan to Wolfspeed for national security applications",
-            "Samsung System LSI retreating from automotive AP market"
-          ],
-          "implications": [
-            {
-              "keyword": "Market Consolidation",
-              "text": "Qualcomm strengthening mobile SoC market dominance as Samsung exits automotive APs and MediaTek refocuses on data center segment"
-            },
-            {
-              "keyword": "Geopolitical Focus",
-              "text": "US government loan commitment to Wolfspeed emphasizes semiconductor supply chain security and reduced China dependence"
-            },
-            {
-              "keyword": "Margin Optimization",
-              "text": "Samsung's retreat from lower-margin automotive chips signals industry shift toward higher-value AI and data center segments"
-            }
-          ],
-          "counterpoint": "MediaTek's data center growth ambitions may face intense competition from established players like Nvidia and AMD."
-        },
-        "en": {
-          "executive_summary": "MediaTek Q3 revenue reached NT$168 billion, beating guidance, with data center business expected to drive growth in 2026. Samsung System LSI retreating from automotive APs to prioritize higher-margin chips, while Samsung Galaxy S27 Ultra is reportedly switching globally to Qualcomm Snapdragon 8 Elite Gen 6 over Exynos. India's semiconductor push and agentic AI are reshaping telecom and connected devices.",
-          "key_facts": [
-            "MediaTek Q3 revenue: NT$168 billion",
-            "Qualcomm Snapdragon 8 Elite Gen 6 unveiled at IMC 2026",
-            "Samsung Galaxy S27 Ultra reportedly using Snapdragon 8 Elite Gen 6 worldwide",
-            "Department of War committed $1.5 billion loan to Wolfspeed for national security applications",
-            "Samsung System LSI retreating from automotive AP market"
-          ],
-          "implications": [
-            {
-              "keyword": "Market Consolidation",
-              "text": "Qualcomm strengthening mobile SoC market dominance as Samsung exits automotive APs and MediaTek refocuses on data center segment"
-            },
-            {
-              "keyword": "Geopolitical Focus",
-              "text": "US government loan commitment to Wolfspeed emphasizes semiconductor supply chain security and reduced China dependence"
-            },
-            {
-              "keyword": "Margin Optimization",
-              "text": "Samsung's retreat from lower-margin automotive chips signals industry shift toward higher-value AI and data center segments"
-            }
-          ],
-          "counterpoint": "MediaTek's data center growth ambitions may face intense competition from established players like Nvidia and AMD."
-        }
-      }
-    },
-    "hpc_datacenter": {
-      "sector": "HPC·Datacenter",
-      "date": "2026-10-09",
-      "item_count": 11,
-      "generated_at": "2026-10-09T23:56:39.734806+00:00",
-      "content": {
-        "ko": {},
-        "en": {}
-      }
-    },
-    "custom_soc": {
-      "sector": "Custom SoC",
-      "date": "2026-10-09",
-      "item_count": 21,
-      "generated_at": "2026-10-09T23:56:39.734806+00:00",
-      "content": {
-        "ko": {},
-        "en": {}
-      }
-    },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-10-09",
-      "item_count": 25,
-      "generated_at": "2026-10-09T23:56:39.734806+00:00",
+      "date": "2026-10-10",
+      "item_count": 2,
+      "generated_at": "2026-10-10T23:23:12.578950+00:00",
       "content": {
-        "ko": {},
-        "en": {}
-      }
-    },
-    "packaging": {
-      "sector": "Packaging",
-      "date": "2026-10-09",
-      "item_count": 46,
-      "generated_at": "2026-10-09T23:56:39.734806+00:00",
-      "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "삼성전자 반도체 부문의 실적 개선으로 대규모 특별성과급 지급이 예정되면서 직원 보상 규모가 크게 증가하고 있다. SK그룹은 호남권 반도체클러스터 조성을 위해 광주시와 긴밀히 협력하며 부지 조성, 전력, 용수 등 인프라 구축을 추진 중이다.",
+          "key_facts": [
+            "삼성전자 반도체 부문 직원 부부 예상 성과급 30억원 이상",
+            "SK그룹 회장 광주 군공항, 탄약고 이전 예정지 방문",
+            "호남권 반도체클러스터 조성 준비"
+          ],
+          "implications": [
+            {
+              "keyword": "삼성 반도체 실적 회복",
+              "text": "반도체 실적 개선에 따른 파급효과로 대규모 특별성과급 지급으로 업계 임금 상승 압력 증가"
+            },
+            {
+              "keyword": "SK 호남권 투자",
+              "text": "호남권 반도체클러스터 조성을 통한 지역 거점 확보로 삼성 기업도시 대비 차별화 전략 추진"
+            },
+            {
+              "keyword": "인프라 구축",
+              "text": "부지, 전력, 용수 등 기반시설 조성으로 반도체 공장 입지 조건 마련"
+            }
+          ],
+          "counterpoint": "호남권 클러스터 조성은 초기 인프라 투자 규모가 크고 실제 공장 가동까지 상당한 시간 소요 예상"
+        },
+        "en": {
+          "executive_summary": "Samsung Electronics' semiconductor division performance improvement is driving large-scale special bonuses, significantly increasing employee compensation. SK Group is working closely with Gwangju City to establish a Honam region semiconductor cluster, promoting infrastructure development including site preparation, power, and water supply.",
+          "key_facts": [
+            "Samsung Electronics semiconductor division employees expected special bonus of 3 billion won or more",
+            "SK Group chairman visits planned relocation sites of Gwangju military airport and ammunition depot",
+            "Honam region semiconductor cluster establishment in preparation"
+          ],
+          "implications": [
+            {
+              "keyword": "Samsung semiconductor performance recovery",
+              "text": "Large-scale special bonus payments from semiconductor performance improvement increase wage pressure in the industry"
+            },
+            {
+              "keyword": "SK Honam region investment",
+              "text": "Differentiation strategy compared to Samsung corporate city through securing regional hub via Honam semiconductor cluster establishment"
+            },
+            {
+              "keyword": "Infrastructure development",
+              "text": "Site preparation, power, and water supply infrastructure creation provides conditions for semiconductor factory location"
+            }
+          ],
+          "counterpoint": "Honam region cluster establishment requires large initial infrastructure investment and considerable time expected until actual factory operations"
+        }
       }
     }
   }

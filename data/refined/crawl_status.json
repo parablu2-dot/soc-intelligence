@@ -1,9 +1,9 @@
 {
   "crawlers": {
     "mobile_ap/apple": {
-      "_streak_before_today": 12,
-      "zero_streak": 13,
-      "last_run": "2026-10-10",
+      "_streak_before_today": 13,
+      "zero_streak": 14,
+      "last_run": "2026-10-11",
       "last_count": 0,
       "error": null,
       "last_nonempty": null
@@ -11,191 +11,191 @@
     "mobile_ap/mediatek": {
       "_streak_before_today": 0,
       "zero_streak": 0,
-      "last_run": "2026-10-10",
+      "last_run": "2026-10-11",
       "last_count": 1,
       "error": null,
-      "last_nonempty": "2026-10-10"
+      "last_nonempty": "2026-10-11"
     },
     "mobile_ap/unisoc": {
       "_streak_before_today": 0,
       "zero_streak": 0,
-      "last_run": "2026-10-10",
+      "last_run": "2026-10-11",
       "last_count": 6,
       "error": null,
-      "last_nonempty": "2026-10-10"
+      "last_nonempty": "2026-10-11"
     },
     "mobile_ap/exynos": {
       "_streak_before_today": 0,
       "zero_streak": 0,
-      "last_run": "2026-10-10",
+      "last_run": "2026-10-11",
       "last_count": 14,
       "error": null,
-      "last_nonempty": "2026-10-10"
+      "last_nonempty": "2026-10-11"
     },
     "mobile_ap/googlenews": {
       "_streak_before_today": 0,
-      "zero_streak": 0,
-      "last_run": "2026-10-10",
-      "last_count": 3,
-      "error": null,
+      "zero_streak": 1,
+      "last_run": "2026-10-11",
+      "last_count": null,
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22mobile%20AP%22%20OR%20%22application%20processor%22%20OR%20Snapdragon%20OR%20Dimensity%20OR%20%22Apple%20silicon%",
       "last_nonempty": "2026-10-10"
     },
     "hpc_datacenter/nvidia": {
       "_streak_before_today": 0,
       "zero_streak": 0,
-      "last_run": "2026-10-10",
+      "last_run": "2026-10-11",
       "last_count": 3,
       "error": null,
-      "last_nonempty": "2026-10-10"
+      "last_nonempty": "2026-10-11"
     },
     "hpc_datacenter/amd": {
       "_streak_before_today": 0,
       "zero_streak": 0,
-      "last_run": "2026-10-10",
+      "last_run": "2026-10-11",
       "last_count": 2,
       "error": null,
-      "last_nonempty": "2026-10-10"
+      "last_nonempty": "2026-10-11"
     },
     "hpc_datacenter/intel": {
       "_streak_before_today": 0,
       "zero_streak": 0,
-      "last_run": "2026-10-10",
+      "last_run": "2026-10-11",
       "last_count": 61,
       "error": null,
-      "last_nonempty": "2026-10-10"
+      "last_nonempty": "2026-10-11"
     },
     "hpc_datacenter/hiring": {
       "_streak_before_today": 0,
-      "zero_streak": 0,
-      "last_run": "2026-10-10",
-      "last_count": 380,
+      "zero_streak": 1,
+      "last_run": "2026-10-11",
+      "last_count": 0,
       "error": null,
       "last_nonempty": "2026-10-10"
     },
     "hpc_datacenter/googlenews": {
-      "_streak_before_today": 6,
-      "zero_streak": 0,
-      "last_run": "2026-10-10",
-      "last_count": 2,
-      "error": null,
+      "_streak_before_today": 0,
+      "zero_streak": 1,
+      "last_run": "2026-10-11",
+      "last_count": null,
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22data%20center%22%20OR%20HPC%20accelerator%20OR%20%22AI%20chip%22%20GPU%20HBM%20semiconductor+when:1d&hl=en-US&gl=",
       "last_nonempty": "2026-10-10"
     },
     "custom_soc/hyperscaler_inhouse": {
       "_streak_before_today": 0,
       "zero_streak": 0,
-      "last_run": "2026-10-10",
+      "last_run": "2026-10-11",
       "last_count": 4,
       "error": null,
-      "last_nonempty": "2026-10-10"
+      "last_nonempty": "2026-10-11"
     },
     "custom_soc/googlenews": {
       "_streak_before_today": 0,
-      "zero_streak": 0,
-      "last_run": "2026-10-10",
-      "last_count": 8,
-      "error": null,
+      "zero_streak": 1,
+      "last_run": "2026-10-11",
+      "last_count": null,
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=ASIC%20OR%20%22custom%20silicon%22%20OR%20Trainium%20OR%20TPU%20OR%20Maia%20chip%20design+when:1d&hl=en-US&gl=US&cei",
       "last_nonempty": "2026-10-10"
     },
     "foundry/tsmc": {
       "_streak_before_today": 0,
       "zero_streak": 0,
-      "last_run": "2026-10-10",
-      "last_count": 9,
+      "last_run": "2026-10-11",
+      "last_count": 8,
       "error": null,
-      "last_nonempty": "2026-10-10"
+      "last_nonempty": "2026-10-11"
     },
     "foundry/samsung_foundry": {
       "_streak_before_today": 0,
       "zero_streak": 0,
-      "last_run": "2026-10-10",
+      "last_run": "2026-10-11",
       "last_count": 9,
       "error": null,
-      "last_nonempty": "2026-10-10"
+      "last_nonempty": "2026-10-11"
     },
     "foundry/intel_foundry": {
       "_streak_before_today": 0,
       "zero_streak": 0,
-      "last_run": "2026-10-10",
+      "last_run": "2026-10-11",
       "last_count": 21,
       "error": null,
-      "last_nonempty": "2026-10-10"
+      "last_nonempty": "2026-10-11"
     },
     "foundry/globalfoundries": {
       "_streak_before_today": 0,
       "zero_streak": 0,
-      "last_run": "2026-10-10",
+      "last_run": "2026-10-11",
       "last_count": 40,
       "error": null,
-      "last_nonempty": "2026-10-10"
+      "last_nonempty": "2026-10-11"
     },
     "foundry/trendforce": {
       "_streak_before_today": 0,
       "zero_streak": 0,
-      "last_run": "2026-10-10",
+      "last_run": "2026-10-11",
       "last_count": 8,
       "error": null,
-      "last_nonempty": "2026-10-10"
+      "last_nonempty": "2026-10-11"
     },
     "foundry/etnews": {
       "_streak_before_today": 0,
       "zero_streak": 0,
-      "last_run": "2026-10-10",
-      "last_count": 3,
+      "last_run": "2026-10-11",
+      "last_count": 4,
       "error": null,
-      "last_nonempty": "2026-10-10"
+      "last_nonempty": "2026-10-11"
     },
     "foundry/googlenews": {
       "_streak_before_today": 0,
-      "zero_streak": 0,
-      "last_run": "2026-10-10",
-      "last_count": 6,
-      "error": null,
+      "zero_streak": 1,
+      "last_run": "2026-10-11",
+      "last_count": null,
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=foundry%20%22process%20node%22%20OR%20%222nm%22%20OR%20%223nm%22%20OR%20%22wafer%20capacity%22%20TSMC%20OR%20%22Sams",
       "last_nonempty": "2026-10-10"
     },
     "packaging/googlenews": {
       "_streak_before_today": 0,
-      "zero_streak": 0,
-      "last_run": "2026-10-10",
-      "last_count": 21,
-      "error": null,
+      "zero_streak": 1,
+      "last_run": "2026-10-11",
+      "last_count": null,
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=CoWoS%20OR%20chiplet%20OR%20%22advanced%20packaging%22%20OR%20UCIe%20semiconductor+when:1d&hl=en-US&gl=US&ceid=US:en",
       "last_nonempty": "2026-10-10"
     },
     "cpo_optics/ecoc": {
-      "_streak_before_today": 12,
-      "zero_streak": 13,
-      "last_run": "2026-10-10",
+      "_streak_before_today": 13,
+      "zero_streak": 14,
+      "last_run": "2026-10-11",
       "last_count": 0,
       "error": null,
       "last_nonempty": null
     },
     "cpo_optics/googlenews": {
       "_streak_before_today": 0,
-      "zero_streak": 0,
-      "last_run": "2026-10-10",
-      "last_count": 6,
-      "error": null,
+      "zero_streak": 1,
+      "last_run": "2026-10-11",
+      "last_count": null,
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22co-packaged%20optics%22%20OR%20CPO%20OR%20%22silicon%20photonics%22%20OR%20%22optical%20interconnect%22%20OR%20OF",
       "last_nonempty": "2026-10-10"
     },
     "pmic/googlenews": {
       "_streak_before_today": 0,
-      "zero_streak": 0,
-      "last_run": "2026-10-10",
-      "last_count": 7,
-      "error": null,
+      "zero_streak": 1,
+      "last_run": "2026-10-11",
+      "last_count": null,
+      "error": "503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%22power%20management%20IC%22%20OR%20PMIC%20OR%20%28%22legacy%20node%22%20OR%20%22mature%20process%22%29%20%28%22Chi",
       "last_nonempty": "2026-10-10"
     }
   },
   "sectors": {
     "_streak_before_today": 0,
     "zero_streak": 0,
-    "last_run": "2026-10-10",
-    "last_count": 5,
+    "last_run": "2026-10-11",
+    "last_count": 1,
     "error": null,
-    "last_nonempty": "2026-10-10"
+    "last_nonempty": "2026-10-11"
   },
-  "updated_at": "2026-10-09T23:56:40.042539+00:00",
+  "updated_at": "2026-10-10T23:23:12.791033+00:00",
   "alerts": [
-    "cpo_optics/ecoc 13일 연속 0건 (마지막 수집일 없음)",
-    "mobile_ap/apple 13일 연속 0건 (마지막 수집일 없음)"
+    "cpo_optics/ecoc 14일 연속 0건 (마지막 수집일 없음)",
+    "mobile_ap/apple 14일 연속 0건 (마지막 수집일 없음)"
   ]
 }
