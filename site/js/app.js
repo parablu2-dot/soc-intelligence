@@ -131,6 +131,7 @@ let narrativeTrapCases = [];  // NarrativeTrapCase[] — data/refined/narrative_
 let narrativeTrapTracks = {}; // STANDARD_TRACKS — 위 JSON에 동봉되어 프론트-백엔드 재정의 없이 단일 소스 유지
 let cpoDigest = null;  // data/refined/cpo_optics/digest.json — 9번째 독립 축, DATA_SOURCES와 별도 fetch
 let cpoSignals = [];   // data/refined/cpo_optics/{ecoc,googlenews}.json 합본 (allSignals와 분리 유지)
+let judgmentsData = null;  // data/refined/judgments.json — Judgment Schema V1 (scripts/build_judgments.py, 천 작성·LLM 미개입)
 
 // ── 부트스트랩 ─────────────────────────────────────────────────────────────
 async function boot() {
@@ -216,9 +217,13 @@ async function loadAllData() {
   const crawlHealthLoad = fetch(`${DATA_BASE}/refined/crawl_status.json`)
     .then(r => r.ok ? r.json() : null)
     .catch(() => null);
+  const judgmentsLoad = fetch(`${DATA_BASE}/refined/judgments.json`)
+    .then(r => r.ok ? r.json() : null)
+    .catch(() => null);
 
-  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data, techResults, narrativeTrapData, cpoDigestData, cpoSignalResults, noticesData, crawlHealthData] =
-    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load, Promise.all(techLoads), narrativeTrapLoad, cpoDigestLoad, Promise.all(cpoSignalLoads), noticesLoad, crawlHealthLoad]);
+  const [results, capData, sumData, baselineNotesData, versionData, sectorSumData, top5Data, techResults, narrativeTrapData, cpoDigestData, cpoSignalResults, noticesData, crawlHealthData, judgmentsLoaded] =
+    await Promise.all([Promise.all(loads), capLoad, sumLoad, baselineNotesLoad, versionLoad, sectorSumLoad, top5Load, Promise.all(techLoads), narrativeTrapLoad, cpoDigestLoad, Promise.all(cpoSignalLoads), noticesLoad, crawlHealthLoad, judgmentsLoad]);
+  judgmentsData = judgmentsLoaded;
   crawlHealth = crawlHealthData;
   allSignals = results.flat().sort((a, b) => b.published_date.localeCompare(a.published_date));
   capacityRecords = capData;
@@ -1368,6 +1373,7 @@ function modCpo() {
   const links = cpoDigest?.links || [];
   return `
     ${header('CPO/광통신', 'ECOC 학회 피드 + OFC 포함 업계 뉴스 — 구독 고객 전용 다이제스트와 동일 소스')}
+    ${_judgmentPanel('cpo_optics')}
     ${cpoDigest?.content
       ? `<div style="margin-bottom:10px">
           <button class="filter-btn" onclick="toggleSummaryLang()">${summaryLang === 'ko' ? 'KO → EN' : 'EN → KO'}</button>
@@ -1384,6 +1390,84 @@ function modCpo() {
       </ul>` : ''}
     <div style="font-size:11px;font-weight:600;color:var(--accent);margin-bottom:6px">◈ 수집 신호 전체 (${cpoSignals.length}건)</div>
     ${signalList(cpoSignals)}`;
+}
+
+// ── Judgment UX 1차 (메모 v6, 2026-10-10) — ① 판단 한 줄 + 헤더 배지 + ④ 근거 ──────────
+// data/refined/judgments.json(scripts/build_judgments.py)만 읽음. 값은 전부 천이 쓴 J 파일 원문 그대로 —
+// 없으면 블록을 숨기고 아무것도 생성하지 않음. 오류 레코드는 빌드에서 이미 제외(이전 정상 판단 유지).
+const JUDGMENT_HOLD_DAYS = 7;  // 판단일로부터 이 기간이 지나면 새 판단 없는 주 → "유지 중"
+
+function _safeUrl(u) {
+  return /^https?:\/\//.test(String(u || '')) ? _escHtml(u) : '';
+}
+
+function _judgmentErrorBadge() {
+  const errs = judgmentsData?.errors || [];
+  if (!errs.length) return '';
+  return `<span class="judgment-badge judgment-badge-err" title="${_escHtml(errs.join('\n'))}">⚠ 판단 기록 오류 ${errs.length}건</span>`;
+}
+
+function _judgmentEvidence(j) {
+  const ev = j.evidence || [];
+  const notes = [];
+  const rows = ev.map((e, i) => {
+    const m = e.matched;
+    const headline = m?.headline || e.headline || e.url;
+    const url = _safeUrl(m?.url || e.url);
+    const src = m ? `${_escHtml(m.source || e.source)}${m.published_date ? ` · ${_escHtml(m.published_date)}` : ''}` : `${_escHtml(e.source)} <span title="수집 신호와 미연결 — J 파일 내용만 표시">(외부)</span>`;
+    let mark = '';
+    if (e.note) { notes.push(e.note); mark = `<sup class="judgment-fn">${notes.length}</sup>`; }
+    return `<tr>
+      <td>${i + 1}</td>
+      <td><span class="judgment-role judgment-role-${e.role === '반증' ? 'con' : 'pro'}">${_escHtml(e.role)}</span></td>
+      <td>${url ? `<a href="${url}" target="_blank" rel="noopener">${_escHtml(headline)}</a>` : _escHtml(headline)}<div class="judgment-sub">${src}</div></td>
+      <td>${_escHtml(e.claim)}${mark}</td>
+    </tr>`;
+  }).join('');
+  const pro = ev.filter(e => e.role === '지지').length;
+  const field = (label, v) => v == null || v === '' ? '' :
+    `<div class="judgment-field"><div class="judgment-label">${label}</div><div>${_escHtml(v)}</div></div>`;
+  return `
+    <details class="judgment-details">
+      <summary>④ 근거 — 지지 ${pro} · 반증 ${ev.length - pro}</summary>
+      ${ev.length ? `<table class="judgment-table">
+        <thead><tr><th>#</th><th>역할</th><th>기사 (수집 신호 원문)</th><th>천의 평가</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>` : ''}
+      ${notes.length ? `<ol class="judgment-notes">${notes.map(n => `<li>${_escHtml(n)}</li>`).join('')}</ol>` : ''}
+      ${field('Rationale', j.rationale)}
+      ${field('검증 (verified_by)', j.verified_by)}
+      ${field('예측 (prediction)', j.prediction)}
+      <div class="judgment-sub">검증일 ${_escHtml(j.check_date)} · 결과 ${j.outcome ? _escHtml(j.outcome) : '미확정'}${j.lesson ? ` · 교훈: ${_escHtml(j.lesson)}` : ''}</div>
+    </details>`;
+}
+
+function _judgmentPanel(axis) {
+  const list = (judgmentsData?.judgments || []).filter(j => j.axis === axis);
+  const errBadge = _judgmentErrorBadge();
+  if (!list.length) return errBadge ? `<div style="margin-bottom:12px">${errBadge}</div>` : '';
+  const j = list[list.length - 1];  // 빌드에서 (date, id) 오름차순 정렬됨 → 마지막이 최근
+  const cov = judgmentsData.coverage?.[axis];
+  const covBadge = cov ? `<span class="judgment-badge" title="이 축 수집 신호 전체 기준, 빌드마다 계산">${cov.total}건 · ${_escHtml(cov.top_source)} ${cov.top_pct}%</span>` : '';
+  const held = (_daysSince(j.date) ?? 0) > JUDGMENT_HOLD_DAYS;
+  const conf = typeof j.confidence === 'number' ? `확신도 ${Math.round(j.confidence * 100)}%` : '';
+  return `
+    <div class="judgment-card">
+      <div class="judgment-head">
+        <span class="judgment-label">◆ 판단</span>
+        ${covBadge}
+        ${errBadge}
+      </div>
+      <div class="judgment-topic">Q. ${_escHtml(j.topic)}</div>
+      <div class="judgment-text">${_escHtml(j.judgment)}</div>
+      <div class="judgment-meta">
+        ${j.direction ? `<span class="chip chip-cat-news">${_escHtml(j.direction)}</span>` : ''}
+        <span>${conf}</span>
+        <span>검증일 ${_escHtml(j.check_date)}</span>
+        <span>${held ? '유지 중 · ' : ''}판단일 ${_escHtml(j.date)} ${_freshBadge(j.date)}</span>
+      </div>
+      ${_judgmentEvidence(j)}
+    </div>`;
 }
 
 // ── 이벤트 핸들러 ─────────────────────────────────────────────────────────

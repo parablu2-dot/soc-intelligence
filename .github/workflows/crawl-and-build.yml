@@ -103,6 +103,12 @@ jobs:
       - name: Build narrative-trap index
         run: python scripts/narrative_trap_case.py build-index
 
+      # ── 5.57 판단 기록(data/judgments/J-*.md, 천 작성) → judgments.json + evidence↔신호 연결 ─
+      # --ci: J 파일 오류가 그날 크롤링 커밋을 막지 않게 exit 0, 오류는 errors[] → 화면 경고 배지.
+      # continue-on-error 금지(실패가 초록으로 가려짐). 신호 매칭이 있으므로 export_refined 이후에 둔다.
+      - name: Build judgments
+        run: python scripts/build_judgments.py --ci
+
       # ── 5.6 version.json의 date 필드 build 시각으로 갱신 (version/maturity는 수동) ─
       - name: Stamp version date
         run: python scripts/stamp_version.py

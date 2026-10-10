@@ -122,6 +122,17 @@ downstream 디바이스/칩셋 수요를 부품·기판(MLCC·substrate·module�
 - **다음 단계 (미착수)**: 기존 크롤러 파이프라인과 연결할 diff-extraction 훅(Option A — 신호에서
   narrative-trap 후보를 자동 추출). 현재는 전량 수동 큐레이션.
 
+## 판단 기록 · Judgment UX (CPO 파일럿, 2026-10-10)
+
+CPO/광통신 탭 상단에 천의 판단 한 줄을 보여주는 레이어. 설계 원문은 Drive `SOC Dashboard/session-docs/SoCIntelligence_JudgmentUX파일럿_20261010.md`(메모 v6).
+
+- **저장**: `data/judgments/J-yyyymmdd-nnn.md` frontmatter (Judgment Schema V1, append-only, 천이 직접 작성 — LLM 생성 금지)
+- **빌드**: `scripts/build_judgments.py` → `data/refined/judgments.json` (`crawl-and-build.yml` "Build judgments", `--ci`로 exit 0 + `errors[]`).
+  axis는 신호 axis 체계 + `meta`(app.js 모듈 id `cpo` 아님), evidence는 도메인 축 필수·meta 선택, `evidence[].note`는 선택 필드(화면 각주).
+  evidence는 같은 axis 신호와 url → headline 정확 일치로 연결(`matched`). 오류 레코드는 렌더 대상에서 제외. 테스트 `tests/test_build_judgments.py`
+- **렌더**: `site/js/app.js`의 `_judgmentPanel(axis)` — ① 판단 한 줄(최근 J, 7일 초과 시 "유지 중"+경과일 배지) + 헤더 배지(신호 N건·최다 소스 %, 오류 N건) + ④ 근거(기본 접힘)
+- **2차(미착수, 2026-11-09~)**: ② 비교 앵커, ③ 대비 표본·Verifier 화면은 보류
+
 ## 현재 진행 상태
 - [x] 3축 구조 설계 → 5축으로 승격 (v2)
 - [x] CLAUDE.md 초안
