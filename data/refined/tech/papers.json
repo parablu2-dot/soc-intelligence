@@ -2,6 +2,286 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "quant-ph",
+    "title": "A Hardware-Native Trapped-Ion Hybrid Qudit-Oscillator Instruction Set",
+    "url": "https://arxiv.org/abs/2610.13843v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "Scaling trapped-ion processors by adding ions remains challenging. A complementary route exploits the multilevel internal structure of each ion to increase the computational Hilbert space per ion. We introduce a hardware-native hybrid qudit-oscillator instruction set for a general d-level internal register coupled to bosonic modes and prove that three of its native operation families suffice for universality of one qudit coupled to several modes. Adding an entangling operation between ions exten",
+    "authors": [
+      "Masoud Hakimi Heris",
+      "Yuan Liu",
+      "Frank Mueller"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Improved screening of doped ZrO$_2$ catalysts for CO$_2$ hydrogenation from graph-based machine learning",
+    "url": "https://arxiv.org/abs/2610.13795v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "Dopants can tune the activity of zirconia-based CO$_2$ hydrogenation catalysts through changes in adsorbate and transition-state (TS) energetics. Computing these quantities with density functional theory (DFT) becomes expensive when several dopants, reaction intermediates, and TSs must be screened. Here, we further develop the graph-based machine learning method Wasserstein Weisfeiler-Lehman Gaussian Process Regression (WWL-GPR): we introduce additional electronic-structure and local-environment",
+    "authors": [
+      "Karsten Walz Jensen",
+      "Mie Andersen",
+      "Raffaele Cheula"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "HF Single-Station Localization via Multimode Ray Tracing and Time-Frequency Information Fusion",
+    "url": "https://arxiv.org/abs/2610.13560v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "High-frequency (HF) single-station localization estimates an emitter location from measured directions of arrival (DOAs) and an ionospheric propagation model. When the propagation mode composition cannot be identified from conventional direction-finding (DF) measurements, the same DF observation may produce multiple physically valid ground landing points under different propagation modes, making the location inversion ambiguous. This paper proposes a multimode time-frequency information fusion l",
+    "authors": [
+      "Qinglin Li",
+      "Wen Liu",
+      "Yun Ning",
+      "Zhongxin Deng",
+      "Junkang He",
+      "Mingshuo Liu",
+      "Chuangjian Xia"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Aubry-André transition in photonic time quasicrystals",
+    "url": "https://arxiv.org/abs/2610.13538v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "In one dimension, Anderson localization by a disordered potential sets in at any strength, whereas localization by a quasiperiodic potential in the Aubry-André model occurs through a transition at a critical strength. Disordered photonic time crystals exhibit a temporal counterpart of this Anderson localization, in which light, instead of decaying in space, stops propagating and grows in time. Whether a counterpart of the Aubry-André transition exists in photonic time quasicrystals remains an op",
+    "authors": [
+      "Shuhang Chen",
+      "Qi Zhu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "UV Fluorescence Sensing of Medical-Chemical-and- Biological Analytes by an AlGaN/Si-on-Sapphire Optoelectronic Chip",
+    "url": "https://arxiv.org/abs/2610.13525v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "This paper proposes and analyzes a compact fluorescence-photometer lab-on-a-chip that is simpler than a fluorescence spectrometer, and that does not require spectrum reconstruction by a computer. An on-chip AlGaN VCSEL lasing at 280 nm, or at 310 nm, pumps an on-chip sample in the form of liquid or solid or tissue, thereby exciting signature fluorescence in the 300 to 540 nm wavelength range. This emission signal is detected and read out by an on-chip UV-enhanced Silicon photodiode. The 2 cm x 5",
+    "authors": [
+      "Richard Soref"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "A Hybrid and Hierarchical Ray Tracing Method for Efficient 3D Gaussian Rendering",
+    "url": "https://arxiv.org/abs/2610.13498v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "3D Gaussian Splatting (3DGS) is a powerful representation for real-time neural reconstruction and rendering. While existing 3DGS systems rely on rasterization for efficiency, recent work explores ray tracing to enable secondary lighting, highly distorted cameras, and depth-of-field effects. However, compared with rasterization, ray-traced 3DGS introduces three major challenges: (1) the highly non-uniform spatial distribution of massive numbers of Gaussian primitives creates severe load imbalance",
+    "authors": [
+      "Tiancheng Zhao",
+      "Sixu Li",
+      "Yuzhou Chen",
+      "Hengyu Ding",
+      "Zhiming Pan",
+      "Chaojian Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Suppressing Multiple GNSS Interferers with Local-Gradient Adaptive Notch Filtering",
+    "url": "https://arxiv.org/abs/2610.13443v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "Adaptive notch filters (ANFs) based on the normalized least mean squares (NLMS) algorithm are an established technique for suppressing narrowband interference in GNSS receivers. The traditional solution for multiple interferers is simply cascading the NLMS-ANF into multiple stages but this solution degrades performance when multiple chirp jammers of similar power are present. We propose a low-complexity modification to the cascaded NLMS-ANF update rule to resolve this: a local gradient (LG) form",
+    "authors": [
+      "Burak Soner",
+      "Felix Ott"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "CNN-Transformer with Sigmoid Label for High-Resolution Sub-Degree DOA Estimation",
+    "url": "https://arxiv.org/abs/2610.13433v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "This paper addresses the grid quantization error of deep-learning (DL)-based direction-of-arrival (DOA) estimation. Classification- based DOA methods discretize the continuous angular space into a grid, so that with a peak-based read-out, the accuracy and resolution are limited by the grid step and by the width of the label peak. To address this issue, we propose a sigmoid label that encodes the sources' DOAs as the sum of angle-shifted monotonic sigmoid functions. Differentiating the output of ",
+    "authors": [
+      "Lifeng Wang",
+      "Xintong Li",
+      "Aifei Liu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Predicting Nanofabrication Variance: A Conditional Diffusion Model",
+    "url": "https://arxiv.org/abs/2610.13420v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "Micro- and nanostructures fabricated by focused ion beam (FIB) milling invariably deviate from input designs due to systematic and stochastic effects such as ablation-rate fluctuations, and redeposition. As such, nominally identical iterations of a given process yield a distribution of non-identical fabrication outcomes, leading to variations in the physical (optical, mechanical) properties of fabricated structures. Existing models of the milling process typically predict a single deterministic ",
+    "authors": [
+      "Wenhan Zhang",
+      "Ben Mills",
+      "Oleksandr Buchnev",
+      "Kevin F. MacDonald"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Anechoic: Onsager-Corrected Parallel Annealing for Sub-0.1 ms Dense Max-Cut on an FPGA",
+    "url": "https://arxiv.org/abs/2610.13368v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "Ising machines solve combinatorial optimization problems by annealing a network of spins. On dense problems, the least expensive hardware step updates all spins at once: stochastic cellular automata (SCA) decide every spin in parallel and read couplings only for the spins that flip. Such synchronous updates create an echo: the previous state of each spin returns to it through its neighbors. On K2000, a Max-Cut benchmark on a 2,000-node complete graph, two-thirds of all flips undo the same spin's",
+    "authors": [
+      "Seungki Hong",
+      "Kyeongwon Jeong",
+      "Taekwang Jang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "JEPA-kMMVAE: CSI Prediction for Time-Varying Wireless Channels",
+    "url": "https://arxiv.org/abs/2610.13315v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "This paper considers channel state information (CSI) prediction using neural networks for time-varying multi-antenna channels from noisy historical observations. The main challenge is to exploit temporal correlation while distinguishing channel evolution from observation noise. We propose JEPA-kMMVAE, which combines a joint-embedding predictive architecture with a k-memory Markov variational autoencoder to predict future CSI through temporally structured latent representations. The framework sup",
+    "authors": [
+      "Efstathios Chatziloizos",
+      "Konstantinos Vandikas",
+      "Aneta Vulgarakis Feljan",
+      "Zheng Chen",
+      "Nikolaos Pappas"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Theory of exciton-exciton interactions in crystalline systems",
+    "url": "https://arxiv.org/abs/2610.13246v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "Excitons are bound electron-hole pairs in semiconductors whose interactions influence optical properties and determine their collective behavior and emergent correlated phases. Despite the theoretical and experimental significance of these phenomena, a microscopic theory of exciton-exciton interactions that takes into account the full composite nature of these quasiparticles is lacking. Here, we present a general theory of exciton-exciton interactions that builds upon our previous publication [P",
+    "authors": [
+      "L. Maisel Licerán",
+      "H. T. C. Stoof"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Orbital transfer reveals material-selective structure in Rydberg excitons",
+    "url": "https://arxiv.org/abs/2610.13149v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "Rydberg excitons in atomically thin semiconductors offer a sensitive view of dielectric screening and electronic structure. As their spectra become increasingly well resolved, a central question is how much material information an effective Hamiltonian can predict beyond the states used to determine it. Using the 1s, 2p and 2s levels to determine a scalar Rytova-Keldysh Hamiltonian, we test its transfer to the excluded 3p state. The transfer deviations have opposite signs: the observed 3p lies 7",
+    "authors": [
+      "Mengli Wang",
+      "Peng Chen",
+      "Wenqi Xue",
+      "Haonan Xia",
+      "Hong Zhang",
+      "Benniu Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.OS",
+    "title": "Characterizing CPU-GPU Memory Sharing over Unified Memory Architecture",
+    "url": "https://arxiv.org/abs/2610.13125v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "Unified Memory Architecture (UMA) enables the CPU and GPU to share a single physical memory. However, its complexity and opacity often drive applications back to inefficient copying or to incorrect direct access that sacrifices performance or even correctness. This paper presents a comprehensive study of CPU-GPU memory sharing on UMA, covering correctness and performance across data-plane transmission and control-plane coordination on four platforms. It yields four findings that guide libumsh, a",
+    "authors": [
+      "Jinrong Yang",
+      "Zimeng Wang",
+      "Rong Chen",
+      "Haibo Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Certified Outage Dimensioning of Fluid Antenna Receivers: Required SNR, Aperture, and Port Count",
+    "url": "https://arxiv.org/abs/2610.13094v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "We study the SNR, aperture, and port count needed to meet a target outage in a single-user downlink with a fixed transmit antenna and a single-RF fluid antenna receiver. For known spatially correlated Rayleigh channels and ideal port selection, a sampling-free residual certificate controls reduced-rank outage error over a continuous SNR interval. Positive Bessel features support large arrays, and bounded importance sampling converts the certificate into simultaneous design intervals. At 1 bit/s/",
+    "authors": [
+      "Yuanjun Shen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Evolution and breakdown of chiral anomaly in Weyl semiconductor tellurium",
+    "url": "https://arxiv.org/abs/2610.13084v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "Chiral anomaly in topological materials manifests as negative longitudinal magnetoresistance, yet the tunability and evolution of this effect remain elusive. Here we show that doped tellurium serves as a versatile platform to realize a giant negative longitudinal magnetoresistance that is highly tunable via the Fermi level and magnetic field. By moving the Fermi level towards the Weyl point, we observe a pronounced enhancement of negative magnetoresistance, which arises from chiral anomaly and r",
+    "authors": [
+      "Zhifeng Xue",
+      "Jiaji Zhao",
+      "Yi Ji",
+      "Fuyang Chen",
+      "Nannan Tang",
+      "Gangjian Jin",
+      "Bing Shen",
+      "Bin Wang",
+      "Yang Wang",
+      "Mingxi Chi",
+      "Jin-Zhu Zhao",
+      "Ruiqiang Wang",
+      "Qizhong Zhu",
+      "He Wang",
+      "Huakun Zuo",
+      "Donghui Guo",
+      "Dingyong Zhong",
+      "Mingxun Deng",
+      "Huichao Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "TPCS: A Cycle-Level Simulation Paradigm with Native Execution Semantics for RTL Modeling and Generation",
+    "url": "https://arxiv.org/abs/2610.13067v1",
+    "published_date": "2026-10-09",
+    "source": "arXiv",
+    "summary": "The growing diversity of domain-specific architectures and microarchitectural designs demands fast and accurate evaluation methods during early design stages. However, existing approaches suffer from a fundamental trade-off: high-level simulators offer speed but lack fidelity, while RTL-based tools provide accuracy at the cost of significant simulation overhead. This gap limits efficient pre-RTL microarchitecture exploration. Therefore, we propose Transaction-Pruned Cycle Simulation (TPCS), a no",
+    "authors": [
+      "Chengzhen Meng",
+      "Xiaoyu Li",
+      "Chen Bai",
+      "Zhenyu Zhang",
+      "Hongjun Dai"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "eess.SP",
     "title": "Tri-Hybrid Cell-Free Massive MIMO Systems",
     "url": "https://arxiv.org/abs/2610.12290v1",
