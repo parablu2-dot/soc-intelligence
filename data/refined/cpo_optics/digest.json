@@ -1,99 +1,12 @@
 {
   "axis": "cpo_optics",
   "sector": "CPO/광통신",
-  "date": "2026-10-13",
-  "generated_at": "2026-10-13T02:02:56.219971+00:00",
-  "item_count": 7,
+  "date": "2026-10-14",
+  "generated_at": "2026-10-13T23:50:52.181761+00:00",
+  "item_count": 0,
   "content": {
-    "ko": {
-      "executive_summary": "Multiple vendors are advancing optical interconnect solutions targeting AI data centers with enhanced throughput and standardization efforts. Key announcements include Celestica's DS6005 co-packaged optics switch, Credo's Short-Reach Micro-Emitter Optics (SRMO) standardization and 1.6T ZeroFlap Active Light Cable, and Nvidia/Cisco-led pluggable optics format initiatives, reflecting intensified competition for row-scale and chip-scale optical connectivity.",
-      "key_facts": [
-        "Celestica DS6005 co-packaged optics switch for AI data centers",
-        "Credo SRMO (Short-Reach Micro-Emitter Optics) standardization launched",
-        "Credo 1.6T ZeroFlap Active Light Cable announced, shipping 2027",
-        "Vuzix Causeway Optical Interconnect Evaluation Platform",
-        "Nvidia and Cisco introduced new pluggable optics format for AI data centers"
-      ],
-      "implications": [
-        {
-          "keyword": "Standardization Push",
-          "text": "SRMO standardization by Credo and new pluggable optics format by Nvidia/Cisco signal industry-wide effort to establish common interfaces for AI data-center optical interconnects, reducing vendor lock-in and accelerating adoption."
-        },
-        {
-          "keyword": "Throughput Scaling",
-          "text": "1.6T cable and multi-terabit transceiver speeds reflect ongoing arms race to meet AI cluster bandwidth demands at row and chip scales without incurring excessive power/latency penalties."
-        },
-        {
-          "keyword": "Co-Packaged Optics Consolidation",
-          "text": "Celestica's DS6005 and wider CPO switch ecosystem maturation indicate move from discrete optics toward integrated optical-electrical fabric, potentially displacing traditional pluggable transceiver architectures."
-        },
-        {
-          "keyword": "Supply Timeline Risk",
-          "text": "Credo's 1.6T cable shipping in 2027 suggests long qualification cycles and potential delays in deploying next-generation AI interconnect infrastructure."
-        }
-      ],
-      "counterpoint": "Announcements focus on multiple competing form factors (CPO, SRMO, pluggable formats) without clear single-winner outcome; fragmentation risk may persist if ecosystem fails to converge on dominant standards."
-    },
-    "en": {
-      "executive_summary": "Multiple vendors are advancing optical interconnect solutions targeting AI data centers with enhanced throughput and standardization efforts. Key announcements include Celestica's DS6005 co-packaged optics switch, Credo's Short-Reach Micro-Emitter Optics (SRMO) standardization and 1.6T ZeroFlap Active Light Cable, and Nvidia/Cisco-led pluggable optics format initiatives, reflecting intensified competition for row-scale and chip-scale optical connectivity.",
-      "key_facts": [
-        "Celestica DS6005 co-packaged optics switch for AI data centers",
-        "Credo SRMO (Short-Reach Micro-Emitter Optics) standardization launched",
-        "Credo 1.6T ZeroFlap Active Light Cable announced, shipping 2027",
-        "Vuzix Causeway Optical Interconnect Evaluation Platform",
-        "Nvidia and Cisco introduced new pluggable optics format for AI data centers"
-      ],
-      "implications": [
-        {
-          "keyword": "Standardization Push",
-          "text": "SRMO standardization by Credo and new pluggable optics format by Nvidia/Cisco signal industry-wide effort to establish common interfaces for AI data-center optical interconnects, reducing vendor lock-in and accelerating adoption."
-        },
-        {
-          "keyword": "Throughput Scaling",
-          "text": "1.6T cable and multi-terabit transceiver speeds reflect ongoing arms race to meet AI cluster bandwidth demands at row and chip scales without incurring excessive power/latency penalties."
-        },
-        {
-          "keyword": "Co-Packaged Optics Consolidation",
-          "text": "Celestica's DS6005 and wider CPO switch ecosystem maturation indicate move from discrete optics toward integrated optical-electrical fabric, potentially displacing traditional pluggable transceiver architectures."
-        },
-        {
-          "keyword": "Supply Timeline Risk",
-          "text": "Credo's 1.6T cable shipping in 2027 suggests long qualification cycles and potential delays in deploying next-generation AI interconnect infrastructure."
-        }
-      ],
-      "counterpoint": "Announcements focus on multiple competing form factors (CPO, SRMO, pluggable formats) without clear single-winner outcome; fragmentation risk may persist if ecosystem fails to converge on dominant standards."
-    }
+    "ko": {},
+    "en": {}
   },
-  "links": [
-    {
-      "headline": "Celestica Unveils DS6005 Co-Packaged Optics Switch for AI Data Centers - Unite.AI",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMzk2OERwakJjRnhHT1ZqM3BVSHd6MmlhT0wwWkNyWUxOYUduaC1yRTJ5RkVfbmRCa0NmdXNNdjh5Z1NmcmVHWUdzZXZfVk12aGlJOUxjZ0p4TDdYTUNPcXQza2lvUUVfY3lhNmJpNEIzd25CSTZqTzZoVVlwcU5NRGdXaEVFdVhoLWxwWUN1V0F4aXRwRldR?oc=5",
-      "source": "Google News",
-      "published_date": "2026-10-12"
-    },
-    {
-      "headline": "Credo Launches Short-Reach Micro-Emitter Optics (SRMO) Standardization for AI Data Center Scale-Up and Scale-Out Applications - Business Wire",
-      "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOZFhwTVIxMWxyTWhPSlliZU1zT0haZkxaTldSdm9YTVhmX1VncmNIcmtEU0xKalNNRnZUOTc5ZlR3Z040RGVoU2NPZjVFY2NId1NJRUNmLUt0bEE4bmlDU3o1V1FRSjBoNHp1XzlkQlozRDF1OVpyZFp0Q0cyTWVtTXdjb1BaeHpRTmVHYXdMWHlBVzdLbkE0cEtiMXhuUThjaWtGQVFQc3FSX1lpaC1HaFBfQnRwaS1vNXc4WG0tdjZnbmtSajYxN3ZocTBRTWQ4Nk9SaUg1SHdhT3kyQjREbUNQVDJfaU1JS040NWttcDhVbElNaUQ4QWZDNlpZajVVYzhHbDhOcU1kZ2c0?oc=5",
-      "source": "Google News",
-      "published_date": "2026-10-12"
-    },
-    {
-      "headline": "Credo Unveils 1.6T ZeroFlap Active Light Cable, Industry’s First Row-Scale, Wide-Parallel Optical Interconnect for AI Data Centers - Morningstar",
-      "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxNWnBiX2dvaUhtQUxFNVJkRTlzUUVuZkZiZXEySzhEUFBvVXM1TmxmVWNNSVhUMjNZTV81TzlZRDRuOGhBR1hZVXZ1TEcwSHRfMm9QTjFHRnQ3aUJLeFJVRXpicE9EcHlleXltckUyNGZqLW90V05USHJoaExoMGs1b1ZFWW9COHFLaXg0dzVmS1VxcVp0ZEQwSHJRa3ViZ3BHZ0NRSkQ3RlFYZFlJWW9RM0NhWVBGeFJycGRRTzkyUEh4TkdPOWRLQll6SzFfTnQ4WFo1SHBQdTVDaExYUWdHMS1ldHlfWmxCWjRsaFlRY0hQTFRORm1SMmQ1WEp6MlR4bDBNS2xsV0FDNEg1Z2EyZDdrMWFyb1k?oc=5",
-      "source": "Google News",
-      "published_date": "2026-10-12"
-    },
-    {
-      "headline": "Vuzix to Showcase Vuzix Causeway™ Optical Interconnect Evaluation Platform at OCP Global Summit and PECC Summit - PR Newswire",
-      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQd3BPQVU0ZjFTZVF5UWZUQ3lpdFBfc1J3R2hzcnJrYm15b1JwQXM1aWl0czBNMHBic3BEMFpYVEgxMWNRYzVZZERfY0l2LUNzQXZVbndMU3ViQ0xRa0Z4QVVXM3V6M0ZKWWlRQklsLTl6SlNlSHlqZ2VaT1NfMHl3b0N5c3Znb0JkSDQ1N0NQVnI4Mm9FSl9iTFA4aEFFZG9scWx6YkRxU3dlREZGZTJuZ2x5eGlvb0IxUzExU1o1bUtBbVdlYWNjRjBtOXpYTDRYbUxua0g5R0ExRmxORm5hZC1jdFR3ck91V0l2NEpRYkhTeGJvQnB0TGJ3?oc=5",
-      "source": "Google News",
-      "published_date": "2026-10-12"
-    },
-    {
-      "headline": "Credo unveils 1.6T optical cable for AI data centers, shipping 2027 - StreetInsider",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPXzhieWJRSmgzWDJIOHhfdnkxcVQzcWYxM3Z5RWxnMjVub2k5RDhLWEJ1VW93VnNXYmFtOUp1cEZtZFNUWlB4VWphZkJHSF9na0dMQWdhTVFhTmxZR3ItQUJfNW1QWmRWTmIxX1pRcFBJb3B3bWc5RUxoSFUyOHFPTlNZQUlUTnJqU2ViOF96WW93Umhtd25sdzVUMXRybXowTHZjRktZbWstalhiQktmZV9VbnczZkV3NUZNREV6OHpQSVhJRFZR?oc=5",
-      "source": "Google News",
-      "published_date": "2026-10-12"
-    }
-  ]
+  "links": []
 }
