@@ -2,6 +2,243 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Landau quantization of $C_3$ high-fold fermions in honeycomb lattices",
+    "url": "https://arxiv.org/abs/2610.20595v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "We present the theory of the Landau levels of $C_3$ high-fold fermions in honeycomb lattices. These fermions arise as a generalization of the tight-binding model in a honeycomb lattice with one orbital per site, known to describe graphene, to a family of models with several orbitals per site transforming according to representations of $C_3$, relevant for triangulene two-dimensional crystals. The models are defined by the number of orbitals $n_a$ and $n_b$ at the $a$ and $b$ sites of the unit ce",
+    "authors": [
+      "Luisa Madail",
+      "Joaquín Fernández-Rossier"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Effect of deep-trap density of states for a-Si:H layers on HIT cell performances: Modeling Framework",
+    "url": "https://arxiv.org/abs/2610.20517v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "In this work, an aSi and cSi heterojunction solar cell with an intrinsic layer is simulated using AFORS-HET software. The study focuses on the role of the electronic density of states DOS of the amorphous emitter, p type aSiH, in governing the performance of the HIT cell and the electronic transfer across the heterointerface. It is found that the DOS of the p type aSiH emitter can cause an unfavorable recombination and trapping effect, which becomes more severe and difficult to avoid when the bu",
+    "authors": [
+      "Tewfik Souier",
+      "Adel Gougam"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Modeling Diffuse Scattering in Mobility Scenarios: Ray Tracing Model and Measurement Validation",
+    "url": "https://arxiv.org/abs/2610.20387v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "Open-source ray tracing (RT) frameworks are increasingly used for site-specific channel modeling due to their reproducibility and extensibility. In non-stationary mobility scenarios, repeated RT evaluations can generate different diffuse propagation paths without preserving their correspondence, limiting a consistent representation of their temporal evolution. To address this limitation, we extend diffuse scattering modeling in Sionna RT using persistent surface-associated scattering points. The",
+    "authors": [
+      "Milica Djordjevic",
+      "Thomas Wilding",
+      "Anja Dakić",
+      "Markus Hofer",
+      "Benjamin Rainer",
+      "Thomas Zemen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "TRP-UE Bistatic Sensing for 6G Performance Analysis and Insights",
+    "url": "https://arxiv.org/abs/2610.20219v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "Integrated sensing and communication (ISAC) equips cellular networks with the dual capability of data transmission and environmental sensing by sharing spectrum, waveforms, and radio hardware. While network-side sensing via transmission-reception points (TRPs) has been widely investigated, the use of user equipment (UEs) as sensing receivers introduces additional bistatic viewpoints and can improve target observability. UE-assisted operation is nevertheless constrained by small UE apertures and ",
+    "authors": [
+      "Necati Kagan Erkek",
+      "Marco Di Renzo",
+      "Arman Shojaeifard",
+      "Yasser Mestrah",
+      "Remun Koirala",
+      "Mohammad Heggo",
+      "Kunjan Shah"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Radar-Only Long-Term Beam Prediction in mmWave Vehicular Networks: An Empirical Study of Doppler Input and Cross-Modal Distillation",
+    "url": "https://arxiv.org/abs/2610.20185v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "Sensing-aided beam prediction could cut the beam-training overhead of millimeter-wave vehicular links, and two design choices could strengthen a radar-only predictor: a Doppler-resolved input and knowledge distilled from a camera during training. We measure what each is worth in received power rather than in top-1 accuracy, whose differences of a few points amount to only tenths of a decibel. We use real DeepSense 6G measurements, mainly at one roadside site, and one convolutional-recurrent pred",
+    "authors": [
+      "Jeongwan Kang",
+      "Miguel Bordallo López",
+      "Nhan Thanh Nguyen",
+      "Junhyeong Kim",
+      "Sunwoo Kim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Transverse magneto-gyrotropy driven by spin-induced ferroaxiality",
+    "url": "https://arxiv.org/abs/2610.20061v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "Photon chirality is inherently sensitive to structural handedness and magnetism, which break spatial inversion and time-reversal symmetries, respectively. Ferroaxial order, by contrast, hosts two-dimensional chirality while preserving both symmetries, thereby precluding its direct coupling to photon chirality. Intertwining ferroaxiality with magnetic order, however, may lift such constraints and enable unconventional coupling to photon chirality. Nevertheless, the optical response arising from s",
+    "authors": [
+      "Yoshihiro Okamura",
+      "Takumi Kagawa",
+      "Ayano Nakamura",
+      "Shinichi Nishihaya",
+      "Masaki Uchida",
+      "Susumu Minami",
+      "Ryotaro Arita",
+      "Youtarou Takahashi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "The Reciprocal tau-Cell: A Log-Domain Circuit for On-Chip Learning",
+    "url": "https://arxiv.org/abs/2610.20018v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "Training hardware by gradient descent requires a gradient to be computed using a separate backwards pass. If a circuit is reciprocal, meaning every connection is symmetric, the backward pass is the same network run a second time with the error as its input. The reciprocal tau-cell, a weak-inversion log-domain circuit, makes this practical in standard CMOS. Each cell is a current-mode leaky integrator with a built-in ReLU; each connection is two transistors whose signed strength is a ratio of bia",
+    "authors": [
+      "Craig Jin",
+      "Thomas Chaffey"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "STISA: A 0.16 GOPS/W/PE Single-Shot Inference FPGA-based SNN Accelerator with Algorithm and Hardware Co-Design",
+    "url": "https://arxiv.org/abs/2610.19973v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "Spiking neural networks (SNNs) offer great potential for low-power intelligent computing owing to their event-driven nature, yet their deployment is limited by high inference latency and inefficient hardware utilization caused by temporal dependencies. Existing accelerators struggle to balance timesteps, accuracy, and energy efficiency, while hardware-oriented timestep compression remains underexplored. To address these challenges, this work presents STISA, a unified algorithm-hardware co-design",
+    "authors": [
+      "Kainan Wang",
+      "Chengyi Yang",
+      "Lei Liu",
+      "Chengting Yu",
+      "Yee Sin Ang",
+      "Bo Wang",
+      "Aili Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Toward Motion Capture Textiles: A Batteryless IMU Array Powered and Networked Through a Conductive-Fabric Bus",
+    "url": "https://arxiv.org/abs/2610.19969v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "Motion capture is increasingly important in healthcare, rehabilitation, and sports applications. However, conventional vision-based systems require camera infrastructure and line-of-sight conditions, limiting their use in daily environments. This paper proposes a location-independent platform for motion capture, based on an array of IMU (inertial measurement unit) sensor nodes without individual wiring or onboard batteries, enabled by two-dimensional communication and power delivery over conduct",
+    "authors": [
+      "Ryusei Miyakawa",
+      "Akihito Noda"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "A practical route to amorphous solid-state electrolyte structures by hybrid reverse Monte Carlo with foundation potentials",
+    "url": "https://arxiv.org/abs/2610.19846v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "Amorphous alkali oxychlorides are fast ion conductors, but their atomic structure remains unresolved. Total scattering sums all partial pair correlations into one curve that has no unique inversion, so the structure must be modeled. Melt-quench molecular dynamics builds a model from the interatomic potential alone, and reverse Monte Carlo (RMC) builds one from the measurement alone. The two have rarely been compared with all else held fixed. We benchmark both routes and two hybrid schemes on amo",
+    "authors": [
+      "Xintian Wang",
+      "Xinyu Zhang",
+      "Denys Butenko",
+      "Bolong Hong",
+      "Jinlong Zhu",
+      "Peichen Zhong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Magnetic field induced modulation of heat transport in CrPS$_4$ probed by TaIrTe$_4$ transverse Seebeck thermometry",
+    "url": "https://arxiv.org/abs/2610.19833v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "Understanding and controlling heat flow in low-dimensional magnetic materials is central to thermoelectrics and spin caloritronics. One of the challenges is the absence of sensitive probes of small, field-dependent modulations in thermal transport. Here we demonstrate transverse Seebeck thermometry using exfoliated TaIrTe$_4$ as a probe of thermal conductivity modulated by an external magnetic field on a van der Waals magnet, CrPS$_4$. With a temperature gradient oriented at $45^\\circ$ to its pr",
+    "authors": [
+      "Krishnaraajan Sundararajan",
+      "Sergio Alvarruiz",
+      "Cédric A. Cordero-Silis",
+      "Majid Ahmadi",
+      "Marcos H. D. Guimarães",
+      "Jagoda S\\lawińska",
+      "Joseph Barker",
+      "Bart J. van Wees"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "CAFE: Conducting-Cell-Aware Adaptive Differential Encoding for Robust DNN Inference in FeFET-Based Compute-in-Memory",
+    "url": "https://arxiv.org/abs/2610.19697v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "Ferroelectric field-effect transistor (FeFET)-based compute-in-memory (CIM) promises energy-efficient deep neural network (DNN) inference, but device variation can severely degrade bit-sliced CIM accuracy. Prior works either rely on hardware modifications or treat such variation as generic noise, overlooking a key FeFET asymmetry: negligible off-state leakage makes errors dominated by conducting on-state cells. This asymmetry is amplified by two's-complement sign extension, which maps small nega",
+    "authors": [
+      "Wenshuai Yao",
+      "Wenyong Zhou",
+      "Hanyong Shao",
+      "Zhiyuan Ning",
+      "Ru Huang",
+      "Kechao Tang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "ESL-former: Event Sparse Linear Transformer for FPGA-Accelerated Malware Detection",
+    "url": "https://arxiv.org/abs/2610.19665v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "Transformer based intrusion detection has shown strong potential for identifying unknown malware variants, but its deployment on resource constrained edge devices remains difficult due to the high computational and memory cost of self attention. This paper presents an event sparse Linear Transformer framework for malware detection on FPGA edge platforms. Instead of relying on an explicit attention matrix, the proposed method derives token and channel importance directly from the accumulated key ",
+    "authors": [
+      "Jun Yang",
+      "Yumeng Cao",
+      "Yingxuan Xiao",
+      "Changhong Li",
+      "Shangru Zhou"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.flu-dyn",
+    "title": "Response of Confined Mesoscale Flames to Acoustic Forcing",
+    "url": "https://arxiv.org/abs/2610.19661v1",
+    "published_date": "2026-10-14",
+    "source": "arXiv",
+    "summary": "Mesoscale combustion plays a vital role in applications ranging from portable power generation to micro-propulsion systems. This study investigates the response of mesoscale flames to upstream acoustic forcing across three characteristic flame regimes: Flames with Repetitive Extinction and Ignition (FREI), Stable Flames (SF), and Propagating Flames (PF). Acoustic forcing is applied over a broad range of pressure intensities at the first harmonic of the combustor tube. At low forcing intensities,",
+    "authors": [
+      "Akhil Aravind",
+      "Balasundaram Mohan",
+      "Saptarshi Basu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "quant-ph",
     "title": "A Hardware-Native Trapped-Ion Hybrid Qudit-Oscillator Instruction Set",
     "url": "https://arxiv.org/abs/2610.13843v1",
