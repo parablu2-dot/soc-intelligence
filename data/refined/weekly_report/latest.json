@@ -1,41 +1,85 @@
 {
-  "week_of": "2026-10-04",
-  "generated_through": "2026-10-10",
-  "generated_at": "2026-10-09T19:50:52.546477+00:00",
+  "week_of": "2026-10-11",
+  "generated_through": "2026-10-17",
+  "generated_at": "2026-10-16T18:26:52.352183+00:00",
   "macro": {
     "fed_policy": [
-      "연방준비제도, 아메리칸익스프레스의 자금세탁 의심거래 탐지·보고 부실에 대한 집행조치 단행",
-      "2026년 9월 FOMC 회의: 통화정책 결정사항 및 경제 전망",
-      "연방준비제도, Isabella Bank Corporation의 인수 신청 승인"
+      "연준 이사회, 8월 17일·9월 9일·9월 16일 할인율 회의 의사록 공개"
     ],
     "rates_fx": [],
     "polarization": [
-      "H.R. 9613 핵 자문위원회 개혁법안, 에너지상무위원회 통과(2026.9.2)",
-      "H.R. 8141 공정신용보고 재판매업체 정확성법, 금융서비스위원회 통과(2026년 9월 1일)",
-      "CBO, 고금리 시나리오에서 적자·부채 전망 분석 (2026년 2월 기준선 대비)",
-      "2026년 회계연도 연방 예산 적자 $2.0조, 전년 대비 $218억 증가",
-      "S. 675 Theodore Roosevelt Presidential Library Act, House Committee 보고 (2026년 9월 15일)"
+      "CBO 2026년 3분기 간행물 및 진행 중 업무 현황 발표",
+      "H.R. 941 소규모 대출기관 법안, 금융서비스위원회 상정 (2026.6.18)",
+      "S. 4166 SECURE Grid Act, 상원 에너지·자연자원위원회 의결(2026년 9월 30일)",
+      "H.R. 7257 SECURE Grid Act, 상원 에너지위원회 보고 가결 (2026-09-30)",
+      "H.R. 2592 항공 약물 투명성법, 하원 운수위원회에서 9월 15일 보고됨"
     ]
   },
   "axes": {
     "mobile_ap": {
       "ko": {
-        "executive_summary": "변화 없음",
-        "key_facts": [],
-        "implications": [],
-        "counterpoint": "",
-        "feasibility_observation": "",
-        "changed_from_last_week": false,
-        "change_note": ""
+        "executive_summary": "Qualcomm's cost advantage over x86 is eroding due to reliance on advanced nodes, forcing a 10% Snapdragon X price increase that weakens competitive positioning against Intel-based platforms. Concurrently, Samsung has suspended Exynos development citing memory cost pressure, while Xiaomi's XRING chip is displacing Exynos in the Chinese market—indicating a structural shift where fab-agnostic and indigenous AP designs are capturing share from premium node-dependent players at the processor-modem licensing and IP interface.",
+        "key_facts": [
+          "Qualcomm raising Snapdragon X prices by 10% due to advanced wafer node economics",
+          "Samsung withdrawing from Exynos AP development amid memory price surge",
+          "Xiaomi XRING chip surpassing Samsung Exynos in China market",
+          "Qualcomm and Arm engaged in legal dispute over chip licensing model",
+          "Intel fabrication plant in Israel: two fatalities in chemical explosion incident"
+        ],
+        "implications": [
+          {
+            "keyword": "Licensing Model Risk",
+            "text": "Qualcomm-Arm legal conflict threatens the ARM licensing architecture that underpins Snapdragon economics; any licensing restructuring could raise Qualcomm's design-to-fab interface complexity and cost."
+          },
+          {
+            "keyword": "Regional Fragmentation",
+            "text": "Samsung's Exynos exit leaves Chinese OEMs (Xiaomi, others) to rely on MediaTek, Qualcomm, or indigenous solutions; Xiaomi XRING success signals willingness to internalize AP design, reducing licensing dependency."
+          },
+          {
+            "keyword": "Node Economics Inversion",
+            "text": "Qualcomm's 10% price hike reveals advanced node (3nm/5nm) cost per unit is no longer a cost-leadership lever; rivals using older nodes or process-agnostic architectures now enjoy margin advantage."
+          },
+          {
+            "keyword": "Modem Integration Pressure",
+            "text": "Without clear Exynos roadmap, Samsung device division must license modems + APs externally or accelerate 5G/6G integration; dependency on Qualcomm modem licensing increases vulnerability to licensing disputes."
+          }
+        ],
+        "counterpoint": "Russian RISC-V/Arm demo on Baikal and Intel Israel incident are low-threat signals at present scale, and MediaTek's scalable silicon approach is not yet a displacement threat to Snapdragon in flagship segments.",
+        "feasibility_observation": "Samsung's Exynos withdrawal is a mass-production feasibility reset, not a performance issue—memory cost pressure forced exit, signaling yield or margin thresholds for advanced node AP production are no longer viable at scale for non-captive foundries.",
+        "changed_from_last_week": true,
+        "change_note": "Last week: no change. This week: competitive Standing shifted measurably—Qualcomm's pricing power eroded by node economics, Samsung exited AP production, and Xiaomi XRING displacement began; licensing and fab-agnostic design are now the decoupling vector."
       },
       "en": {
-        "executive_summary": "변화 없음",
-        "key_facts": [],
-        "implications": [],
-        "counterpoint": "",
-        "feasibility_observation": "",
-        "changed_from_last_week": false,
-        "change_note": ""
+        "executive_summary": "Qualcomm's cost advantage over x86 is eroding due to reliance on advanced nodes, forcing a 10% Snapdragon X price increase that weakens competitive positioning against Intel-based platforms. Concurrently, Samsung has suspended Exynos development citing memory cost pressure, while Xiaomi's XRING chip is displacing Exynos in the Chinese market—indicating a structural shift where fab-agnostic and indigenous AP designs are capturing share from premium node-dependent players at the processor-modem licensing and IP interface.",
+        "key_facts": [
+          "Qualcomm raising Snapdragon X prices by 10% due to advanced wafer node economics",
+          "Samsung withdrawing from Exynos AP development amid memory price surge",
+          "Xiaomi XRING chip surpassing Samsung Exynos in China market",
+          "Qualcomm and Arm engaged in legal dispute over chip licensing model",
+          "Intel fabrication plant in Israel: two fatalities in chemical explosion incident"
+        ],
+        "implications": [
+          {
+            "keyword": "Licensing Model Risk",
+            "text": "Qualcomm-Arm legal conflict threatens the ARM licensing architecture that underpins Snapdragon economics; any licensing restructuring could raise Qualcomm's design-to-fab interface complexity and cost."
+          },
+          {
+            "keyword": "Regional Fragmentation",
+            "text": "Samsung's Exynos exit leaves Chinese OEMs (Xiaomi, others) to rely on MediaTek, Qualcomm, or indigenous solutions; Xiaomi XRING success signals willingness to internalize AP design, reducing licensing dependency."
+          },
+          {
+            "keyword": "Node Economics Inversion",
+            "text": "Qualcomm's 10% price hike reveals advanced node (3nm/5nm) cost per unit is no longer a cost-leadership lever; rivals using older nodes or process-agnostic architectures now enjoy margin advantage."
+          },
+          {
+            "keyword": "Modem Integration Pressure",
+            "text": "Without clear Exynos roadmap, Samsung device division must license modems + APs externally or accelerate 5G/6G integration; dependency on Qualcomm modem licensing increases vulnerability to licensing disputes."
+          }
+        ],
+        "counterpoint": "Russian RISC-V/Arm demo on Baikal and Intel Israel incident are low-threat signals at present scale, and MediaTek's scalable silicon approach is not yet a displacement threat to Snapdragon in flagship segments.",
+        "feasibility_observation": "Samsung's Exynos withdrawal is a mass-production feasibility reset, not a performance issue—memory cost pressure forced exit, signaling yield or margin thresholds for advanced node AP production are no longer viable at scale for non-captive foundries.",
+        "changed_from_last_week": true,
+        "change_note": "Last week: no change. This week: competitive Standing shifted measurably—Qualcomm's pricing power eroded by node economics, Samsung exited AP production, and Xiaomi XRING displacement began; licensing and fab-agnostic design are now the decoupling vector."
       }
     },
     "hpc_datacenter": {
@@ -60,164 +104,160 @@
     },
     "custom_soc": {
       "ko": {
-        "executive_summary": "변화 없음",
-        "key_facts": [],
-        "implications": [],
-        "counterpoint": "",
-        "feasibility_observation": "",
-        "changed_from_last_week": false,
-        "change_note": ""
+        "executive_summary": "Microsoft's Maia 300 deployment plans (1M+ units, 288GB HBM4, 18TB/s, 40% token/MW improvement) mark a structural shift in custom-SoC strategy: hyperscale operators are now bundling memory-bandwidth optimization and inference workload targeting into silicon design to escape Nvidia's pricing moat. Tesla's simultaneous AI5 memory-down move (96GB for Optimus) signals competing design philosophies—Microsoft scales memory for efficiency, Tesla constrains it for robotics latency; both bypass commodity GPU dependency. This week's pivot from procurement to design-led differentiation at the memory-silicon interface resets competitive boundaries.",
+        "key_facts": [
+          "Microsoft Maia 300: 288GB HBM4 memory, 18TB/s bandwidth, 40% token/MW improvement target",
+          "Microsoft plans 1M+ Maia 300 unit deployment, multi-gigawatt rollout starting 2027",
+          "Tesla AI5 memory spec cut to 96GB for Optimus robotics control",
+          "Ex-Nvidia GPU architect startup designing Y10 chip for <1ms robot control loop closure",
+          "Bernstein: AI data center capex at $39.5B/GW; depreciation cycle emerging as cost risk"
+        ],
+        "implications": [
+          {
+            "keyword": "Memory-bandwidth arbitrage",
+            "text": "Maia 300's HBM4 bandwidth (18TB/s) + capacity (288GB) bundled into inference silicon erodes Nvidia's ability to rent GPU memory at premium; hyperscalers now encode workload-specific memory topology into custom silicon, shifting value from discrete GPU SKU fragmentation to integrated silicon-interposer design."
+          },
+          {
+            "keyword": "Robotics vs. inference fork",
+            "text": "Tesla's 96GB constraint for Optimus and Y10's <1ms loop closure represent orthogonal custom-SoC strategies—low-latency robotics requires tight silicon-to-control-loop bandwidth, inference-focused Maia 300 optimizes throughput/MW. Competitive terrain now fragments by end-market rather than monolithic GPU dominance."
+          },
+          {
+            "keyword": "Custom-SoC scaling economics",
+            "text": "1M+ Maia 300 deployment breaks custom-SoC out of niche; at multi-gigawatt scale, in-house silicon yield and memory-interposer reliability become operational cost centers, exposing new competitive interfaces (substrate yield, HBM4 procurement, chiplet integration)."
+          },
+          {
+            "keyword": "Nvidia lock-in reversal",
+            "text": "40% token/MW improvement claim, if validated in production, signals first material efficiency gap between custom-inference SoCs and Nvidia H100/H200 lineups; hyperscaler switching costs shift from software (CUDA) to silicon-matching and data-center thermal/power budgeting."
+          }
+        ],
+        "counterpoint": "Maia 300 remains undeployed; Nvidia's architectural lead in training workloads and software ecosystem persistence means inference SoC competition does not immediately threaten Nvidia's attach rates in high-margin training clusters.",
+        "feasibility_observation": "HBM4 integration at 288GB capacity + 18TB/s in single-die or chiplet form factor signals Microsoft's confidence in advanced packaging (likely chiplet + interposer + high-density memory stacking); no yield red flags reported, but 1M+ unit target assumes sustained supply-chain robustness for HBM4.",
+        "changed_from_last_week": true,
+        "change_note": "Last week was neutral; this week Microsoft's million-unit Maia 300 commitment + Tesla's robotics-specific memory downsize establishes custom-SoC as strategic competitive vector, no longer niche—judgment escalates from 'no change' to active market-structure reordering at memory-silicon interface."
       },
       "en": {
-        "executive_summary": "변화 없음",
-        "key_facts": [],
-        "implications": [],
-        "counterpoint": "",
-        "feasibility_observation": "",
-        "changed_from_last_week": false,
-        "change_note": ""
+        "executive_summary": "Microsoft's Maia 300 deployment plans (1M+ units, 288GB HBM4, 18TB/s, 40% token/MW improvement) mark a structural shift in custom-SoC strategy: hyperscale operators are now bundling memory-bandwidth optimization and inference workload targeting into silicon design to escape Nvidia's pricing moat. Tesla's simultaneous AI5 memory-down move (96GB for Optimus) signals competing design philosophies—Microsoft scales memory for efficiency, Tesla constrains it for robotics latency; both bypass commodity GPU dependency. This week's pivot from procurement to design-led differentiation at the memory-silicon interface resets competitive boundaries.",
+        "key_facts": [
+          "Microsoft Maia 300: 288GB HBM4 memory, 18TB/s bandwidth, 40% token/MW improvement target",
+          "Microsoft plans 1M+ Maia 300 unit deployment, multi-gigawatt rollout starting 2027",
+          "Tesla AI5 memory spec cut to 96GB for Optimus robotics control",
+          "Ex-Nvidia GPU architect startup designing Y10 chip for <1ms robot control loop closure",
+          "Bernstein: AI data center capex at $39.5B/GW; depreciation cycle emerging as cost risk"
+        ],
+        "implications": [
+          {
+            "keyword": "Memory-bandwidth arbitrage",
+            "text": "Maia 300's HBM4 bandwidth (18TB/s) + capacity (288GB) bundled into inference silicon erodes Nvidia's ability to rent GPU memory at premium; hyperscalers now encode workload-specific memory topology into custom silicon, shifting value from discrete GPU SKU fragmentation to integrated silicon-interposer design."
+          },
+          {
+            "keyword": "Robotics vs. inference fork",
+            "text": "Tesla's 96GB constraint for Optimus and Y10's <1ms loop closure represent orthogonal custom-SoC strategies—low-latency robotics requires tight silicon-to-control-loop bandwidth, inference-focused Maia 300 optimizes throughput/MW. Competitive terrain now fragments by end-market rather than monolithic GPU dominance."
+          },
+          {
+            "keyword": "Custom-SoC scaling economics",
+            "text": "1M+ Maia 300 deployment breaks custom-SoC out of niche; at multi-gigawatt scale, in-house silicon yield and memory-interposer reliability become operational cost centers, exposing new competitive interfaces (substrate yield, HBM4 procurement, chiplet integration)."
+          },
+          {
+            "keyword": "Nvidia lock-in reversal",
+            "text": "40% token/MW improvement claim, if validated in production, signals first material efficiency gap between custom-inference SoCs and Nvidia H100/H200 lineups; hyperscaler switching costs shift from software (CUDA) to silicon-matching and data-center thermal/power budgeting."
+          }
+        ],
+        "counterpoint": "Maia 300 remains undeployed; Nvidia's architectural lead in training workloads and software ecosystem persistence means inference SoC competition does not immediately threaten Nvidia's attach rates in high-margin training clusters.",
+        "feasibility_observation": "HBM4 integration at 288GB capacity + 18TB/s in single-die or chiplet form factor signals Microsoft's confidence in advanced packaging (likely chiplet + interposer + high-density memory stacking); no yield red flags reported, but 1M+ unit target assumes sustained supply-chain robustness for HBM4.",
+        "changed_from_last_week": true,
+        "change_note": "Last week was neutral; this week Microsoft's million-unit Maia 300 commitment + Tesla's robotics-specific memory downsize establishes custom-SoC as strategic competitive vector, no longer niche—judgment escalates from 'no change' to active market-structure reordering at memory-silicon interface."
       }
     },
     "foundry": {
       "ko": {
-        "executive_summary": "Samsung's Exynos 2700 enters mass production at 2nm, validating foundry-grade yield maturity and directly competing with TSMC's 2nm roadmap; simultaneously, Qualcomm, Apple, and MediaTek are actively evaluating 2nm capacity splits across TSMC and Samsung, signaling the competitive axis now centers on **multi-node qualification and packaging differentiation** rather than pure node leadership. TSMC maintains capacity advantage but faces demand saturation risk from Nvidia and Apple, while Samsung leverages advanced packaging investment and proven 2nm mass-production readiness to capture design-wins in flagship SoC segments.",
-        "key_facts": [
-          "Samsung Exynos 2700 enters mass production at 2nm for Galaxy S27 Ultra",
-          "Qualcomm, Apple, MediaTek simultaneously evaluating TSMC and Samsung 2nm capacity",
-          "TSMC Q3 record monthly sales but facing Nvidia/Apple demand concentration risk",
-          "IC designers eye 5–10%+ price hikes late 2026–early 2027 as foundry costs rise",
-          "China stockpiled $13B+ ASML DUV tools in 2024–25 to bypass advanced-node bottleneck",
-          "Samsung announces new advanced packaging workforce development center (KPCA partnership)"
-        ],
-        "implications": [
-          {
-            "keyword": "Multi-foundry hedging",
-            "text": "Qualcomm/Apple/MediaTek concurrent 2nm qualification across TSMC and Samsung eliminates single-vendor dependency; packaging (FC-BGA, chiplet interfaces) becomes primary differentiation lever as node parity closes"
-          },
-          {
-            "keyword": "Yield/mass-production feasibility",
-            "text": "Exynos 2700 2nm mass production validates Samsung's process maturity; removes prior uncertainty on 2nm yield and production timescale, shifting competitive risk to design-margin efficiency and ecosystem support"
-          },
-          {
-            "keyword": "Price power and cost inflation",
-            "text": "Foundry cost escalation (evidenced by designer 5–10%+ hike expectations) narrows margins across IC supply chain; TSMC's record sales mask demand saturation in AI accelerators (Nvidia, Apple concentration)"
-          },
-          {
-            "keyword": "Geopolitical supply-chain fragmentation",
-            "text": "China's $13B+ DUV stockpile signals long-term advanced-node exclusion acceptance; foundry demand will bifurcate into Western-allied (TSMC, Samsung) and China-domestic (SMIC, HiSilicon) ecosystems"
-          },
-          {
-            "keyword": "Packaging interface expansion",
-            "text": "KPCA advanced packaging workforce center and Samsung's packaging infrastructure investment reflect foundry competition migrating from process node to interposer, substrate, and chiplet-integration capabilities"
-          }
-        ],
-        "counterpoint": "Exynos 2700 mass production is Samsung-internal SoC validation, not proof of third-party 2nm design-win traction; TSMC retains 80%+ foundry share at advanced nodes and record sales suggest near-term customer stickiness despite multi-foundry hedging conversations.",
-        "feasibility_observation": "Samsung 2nm mass-production milestone for Exynos 2700 confirms design-feasibility gate passed; yield and cost structure competitive with TSMC 2nm. Foundry cost inflation (5–10%+ hikes expected late 2026–27) may pressure IC designers' margin acceptance and delay next-node capacity commitments.",
-        "changed_from_last_week": true,
-        "change_note": "Last week emphasized TSMC 1.4nm planning and Samsung packaging investment; this week's Exynos 2700 2nm mass production and concurrent multi-foundry 2nm qualification (Qualcomm, Apple, MediaTek) confirm the competitive axis has **shifted from node roadmap parity to simultaneous multi-foundry qualification and packaging differentiation**, reducing TSMC's single-vendor leverage and elevating interface/packaging risk to primary battleground."
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
       },
       "en": {
-        "executive_summary": "Samsung's Exynos 2700 enters mass production at 2nm, validating foundry-grade yield maturity and directly competing with TSMC's 2nm roadmap; simultaneously, Qualcomm, Apple, and MediaTek are actively evaluating 2nm capacity splits across TSMC and Samsung, signaling the competitive axis now centers on **multi-node qualification and packaging differentiation** rather than pure node leadership. TSMC maintains capacity advantage but faces demand saturation risk from Nvidia and Apple, while Samsung leverages advanced packaging investment and proven 2nm mass-production readiness to capture design-wins in flagship SoC segments.",
-        "key_facts": [
-          "Samsung Exynos 2700 enters mass production at 2nm for Galaxy S27 Ultra",
-          "Qualcomm, Apple, MediaTek simultaneously evaluating TSMC and Samsung 2nm capacity",
-          "TSMC Q3 record monthly sales but facing Nvidia/Apple demand concentration risk",
-          "IC designers eye 5–10%+ price hikes late 2026–early 2027 as foundry costs rise",
-          "China stockpiled $13B+ ASML DUV tools in 2024–25 to bypass advanced-node bottleneck",
-          "Samsung announces new advanced packaging workforce development center (KPCA partnership)"
-        ],
-        "implications": [
-          {
-            "keyword": "Multi-foundry hedging",
-            "text": "Qualcomm/Apple/MediaTek concurrent 2nm qualification across TSMC and Samsung eliminates single-vendor dependency; packaging (FC-BGA, chiplet interfaces) becomes primary differentiation lever as node parity closes"
-          },
-          {
-            "keyword": "Yield/mass-production feasibility",
-            "text": "Exynos 2700 2nm mass production validates Samsung's process maturity; removes prior uncertainty on 2nm yield and production timescale, shifting competitive risk to design-margin efficiency and ecosystem support"
-          },
-          {
-            "keyword": "Price power and cost inflation",
-            "text": "Foundry cost escalation (evidenced by designer 5–10%+ hike expectations) narrows margins across IC supply chain; TSMC's record sales mask demand saturation in AI accelerators (Nvidia, Apple concentration)"
-          },
-          {
-            "keyword": "Geopolitical supply-chain fragmentation",
-            "text": "China's $13B+ DUV stockpile signals long-term advanced-node exclusion acceptance; foundry demand will bifurcate into Western-allied (TSMC, Samsung) and China-domestic (SMIC, HiSilicon) ecosystems"
-          },
-          {
-            "keyword": "Packaging interface expansion",
-            "text": "KPCA advanced packaging workforce center and Samsung's packaging infrastructure investment reflect foundry competition migrating from process node to interposer, substrate, and chiplet-integration capabilities"
-          }
-        ],
-        "counterpoint": "Exynos 2700 mass production is Samsung-internal SoC validation, not proof of third-party 2nm design-win traction; TSMC retains 80%+ foundry share at advanced nodes and record sales suggest near-term customer stickiness despite multi-foundry hedging conversations.",
-        "feasibility_observation": "Samsung 2nm mass-production milestone for Exynos 2700 confirms design-feasibility gate passed; yield and cost structure competitive with TSMC 2nm. Foundry cost inflation (5–10%+ hikes expected late 2026–27) may pressure IC designers' margin acceptance and delay next-node capacity commitments.",
-        "changed_from_last_week": true,
-        "change_note": "Last week emphasized TSMC 1.4nm planning and Samsung packaging investment; this week's Exynos 2700 2nm mass production and concurrent multi-foundry 2nm qualification (Qualcomm, Apple, MediaTek) confirm the competitive axis has **shifted from node roadmap parity to simultaneous multi-foundry qualification and packaging differentiation**, reducing TSMC's single-vendor leverage and elevating interface/packaging risk to primary battleground."
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
       }
     },
     "packaging": {
       "ko": {
-        "executive_summary": "TSMC's ecosystem consolidation strategy is being pressured by distributed upstream investment: Lam Research commits $1.2B to India unit expansion, establishing direct substrate-interface presence outside Taiwan; meanwhile Synopsys-TSMC agentic AI co-design partnership signals competitive tightening at the CAD boundary. Packaging supply-chain materials (bonding, vacuum feedthrough, metrology) show broad growth targeting advanced node complexity, but geographic hub diversification (India, US defence radars via Northrop Grumman) fragmented the packaging interface—reducing TSMC's centralized technical leverage vs. last week's concentrated Chiayi hub strategy.",
+        "executive_summary": "Packaging supply-chain consolidation is bifurcating along geopolitical lines: India's ecosystem matured to $17.45B+ aggregate investment with Tata-Besi partnership advancing Assam manufacturing, while Samsung commits $6B to Vietnam and TSMC anchors Taiwan—fragmenting the single-hub advantage. Advanced packaging market fundamentals remain robust ($90B by 2031 forecast), but distributed OSAT presence now enables design offsets at the substrate interface, eroding TSMC's technical leverage in node-competitive windows.",
         "key_facts": [
-          "Lam Research $1.2 billion India semiconductor unit investment",
-          "Synopsys-TSMC agentic AI design acceleration partnership announced",
-          "Northrop Grumman quadrupled US semiconductor output (radar/fighter/satellite/EW systems)",
-          "India semiconductor market forecast $200B by 2035 (EY-IESA)",
-          "Semiconductor bonding, vacuum feedthrough, metrology inspection markets driven by heterogeneous integration and advanced node demand through 2035"
+          "India chip economy investments exceed $17.45B total",
+          "Samsung allocates $6B to Vietnam semiconductor capacity within $9.15B broader investment",
+          "Advanced packaging market forecast $90B by 2031",
+          "Tata Electronics partners with Besi for Assam facility",
+          "Teradyne invests $300M in FormFactor test platform deal",
+          "TSMC-GF partnership reshapes packaging dynamics (per New Electronics)",
+          "Japanese firm expands China packaging materials output",
+          "ZEISS introduces NLX and DUNE advanced packaging tools"
         ],
         "implications": [
           {
-            "keyword": "Technical Interface Bifurcation",
-            "text": "Lam Research's India capex and Northrop's US domestic ramp establish competing packaging-node ecosystems independent of Taiwan hub, eroding TSMC's single-point leverage at substrate-to-chiplet boundary."
+            "keyword": "geographic arbitrage",
+            "text": "India (Tata-Besi), Vietnam (Samsung $6B), China (Japanese materials suppliers), and Taiwan (TSMC) now operate parallel substrate-interface ecosystems; OSATs can route chiplet and interposer assembly across borders, weakening Taiwan's geographic rent."
           },
           {
-            "keyword": "Materials Supply Consolidation Risk",
-            "text": "Distributed geographic fabs (India, US, Taiwan) drive parallel demand for bonding, nitric acid, vacuum feedthrough, and emission-capture materials—fragmenting supplier relationships and reducing buyer power concentration at TSMC."
+            "keyword": "equipment vendor positioning",
+            "text": "ZEISS (NLX, DUNE) and Teradyne-FormFactor consolidation tighten metrology/test at packaging boundary; these tools are geography-agnostic, enabling distributed fabs to match TSMC-class yield without centralized Chiayi presence."
           },
           {
-            "keyword": "Design-Packaging Coupling",
-            "text": "Synopsys-TSMC agentic AI partnership ties advanced node design flow to TSMC's process; mirrors Intel-Terafab dialogue, suggesting design-packaging arbitrage is becoming explicit competitive battleground."
+            "keyword": "materials decoupling",
+            "text": "Organosilane precursors and ceramic sliding plates now commoditized globally; Japanese suppliers in China, Indian suppliers via Besi joint ventures—TSMC loses materials-supply gatekeeping."
           },
           {
-            "keyword": "Geo-Strategic Decoupling",
-            "text": "US defence radars (Northrop), India $200B market forecast, and EU-NATO semiconductor security posture (macro notes) indicate geopolitical override of cost-optimization logic—packages and substrates now dual-sovereign."
+            "keyword": "design-packaging interface",
+            "text": "TSMC-GF partnership signals acknowledgment that advanced packaging is now commoditized enough for dual-source models; GF's COUPE (glass waveguide) competes directly with TSMC's photonic interposer strategy, shifting value to chiplet architecture, not OSAT."
           }
         ],
-        "counterpoint": "Synopsys-TSMC coupling and Chroma's multi-customer reliance (Nvidia, Delta, TSMC) indicate TSMC's design-process co-optimization still creates switching costs; Lam/India and Northrop/US remain greenfield, not yet at yield parity with Taiwan mass-production.",
-        "feasibility_observation": "Advanced node packaging yield and design feasibility remain concentrated at TSMC Taiwan (no yield change reported); however, upstream equipment capex diversification (Lam $1.2B India, Northrop US ramp) signals feasibility runway for competing substrates and heterogeneous integration—future design-for-package splits likely within 2-3 cycles.",
+        "counterpoint": "TSMC's AI demand tailwind (sixth consecutive record profit quarter expected) sustains queue depth; competing OSATs still trail in sub-3µm chiplet routing and HBM-stack yield—distributed capacity has not yet displaced TSMC's adjacency advantage in high-margin logic-memory hybrids.",
+        "feasibility_observation": "Mass-production feasibility signal: ZEISS tool releases (NLX, DUNE) and Teradyne-FormFactor merger indicate advanced packaging yield barriers (UHDI, HDI) are being solved toolkit-wide, not within a single vendor ecosystem—this week's tool proliferation removes the last bottleneck preventing India/Vietnam/China OSATs from matching Taiwan 3D-stacking yield at scale.",
         "changed_from_last_week": true,
-        "change_note": "Last week framed TSMC's Taiwan consolidation as dominant; this week shows Lam Research India capex + Northrop US defence output + distributed materials demand fracturing the single-hub narrative—geographic decoupling now visible at equipment and end-market level."
+        "change_note": "Last week emphasized ecosystem pressure via upstream material diversification; this week confirms downstream OSAT/equipment replication is now complete (Tata-Besi partnership live, ZEISS/Teradyne deals finalize), shifting the competitive axis from supply-chain materials to chiplet architecture and design portability—TSMC's queue advantage persists, but technical leverage in packaging itself has evaporated."
       },
       "en": {
-        "executive_summary": "TSMC's ecosystem consolidation strategy is being pressured by distributed upstream investment: Lam Research commits $1.2B to India unit expansion, establishing direct substrate-interface presence outside Taiwan; meanwhile Synopsys-TSMC agentic AI co-design partnership signals competitive tightening at the CAD boundary. Packaging supply-chain materials (bonding, vacuum feedthrough, metrology) show broad growth targeting advanced node complexity, but geographic hub diversification (India, US defence radars via Northrop Grumman) fragmented the packaging interface—reducing TSMC's centralized technical leverage vs. last week's concentrated Chiayi hub strategy.",
+        "executive_summary": "Packaging supply-chain consolidation is bifurcating along geopolitical lines: India's ecosystem matured to $17.45B+ aggregate investment with Tata-Besi partnership advancing Assam manufacturing, while Samsung commits $6B to Vietnam and TSMC anchors Taiwan—fragmenting the single-hub advantage. Advanced packaging market fundamentals remain robust ($90B by 2031 forecast), but distributed OSAT presence now enables design offsets at the substrate interface, eroding TSMC's technical leverage in node-competitive windows.",
         "key_facts": [
-          "Lam Research $1.2 billion India semiconductor unit investment",
-          "Synopsys-TSMC agentic AI design acceleration partnership announced",
-          "Northrop Grumman quadrupled US semiconductor output (radar/fighter/satellite/EW systems)",
-          "India semiconductor market forecast $200B by 2035 (EY-IESA)",
-          "Semiconductor bonding, vacuum feedthrough, metrology inspection markets driven by heterogeneous integration and advanced node demand through 2035"
+          "India chip economy investments exceed $17.45B total",
+          "Samsung allocates $6B to Vietnam semiconductor capacity within $9.15B broader investment",
+          "Advanced packaging market forecast $90B by 2031",
+          "Tata Electronics partners with Besi for Assam facility",
+          "Teradyne invests $300M in FormFactor test platform deal",
+          "TSMC-GF partnership reshapes packaging dynamics (per New Electronics)",
+          "Japanese firm expands China packaging materials output",
+          "ZEISS introduces NLX and DUNE advanced packaging tools"
         ],
         "implications": [
           {
-            "keyword": "Technical Interface Bifurcation",
-            "text": "Lam Research's India capex and Northrop's US domestic ramp establish competing packaging-node ecosystems independent of Taiwan hub, eroding TSMC's single-point leverage at substrate-to-chiplet boundary."
+            "keyword": "geographic arbitrage",
+            "text": "India (Tata-Besi), Vietnam (Samsung $6B), China (Japanese materials suppliers), and Taiwan (TSMC) now operate parallel substrate-interface ecosystems; OSATs can route chiplet and interposer assembly across borders, weakening Taiwan's geographic rent."
           },
           {
-            "keyword": "Materials Supply Consolidation Risk",
-            "text": "Distributed geographic fabs (India, US, Taiwan) drive parallel demand for bonding, nitric acid, vacuum feedthrough, and emission-capture materials—fragmenting supplier relationships and reducing buyer power concentration at TSMC."
+            "keyword": "equipment vendor positioning",
+            "text": "ZEISS (NLX, DUNE) and Teradyne-FormFactor consolidation tighten metrology/test at packaging boundary; these tools are geography-agnostic, enabling distributed fabs to match TSMC-class yield without centralized Chiayi presence."
           },
           {
-            "keyword": "Design-Packaging Coupling",
-            "text": "Synopsys-TSMC agentic AI partnership ties advanced node design flow to TSMC's process; mirrors Intel-Terafab dialogue, suggesting design-packaging arbitrage is becoming explicit competitive battleground."
+            "keyword": "materials decoupling",
+            "text": "Organosilane precursors and ceramic sliding plates now commoditized globally; Japanese suppliers in China, Indian suppliers via Besi joint ventures—TSMC loses materials-supply gatekeeping."
           },
           {
-            "keyword": "Geo-Strategic Decoupling",
-            "text": "US defence radars (Northrop), India $200B market forecast, and EU-NATO semiconductor security posture (macro notes) indicate geopolitical override of cost-optimization logic—packages and substrates now dual-sovereign."
+            "keyword": "design-packaging interface",
+            "text": "TSMC-GF partnership signals acknowledgment that advanced packaging is now commoditized enough for dual-source models; GF's COUPE (glass waveguide) competes directly with TSMC's photonic interposer strategy, shifting value to chiplet architecture, not OSAT."
           }
         ],
-        "counterpoint": "Synopsys-TSMC coupling and Chroma's multi-customer reliance (Nvidia, Delta, TSMC) indicate TSMC's design-process co-optimization still creates switching costs; Lam/India and Northrop/US remain greenfield, not yet at yield parity with Taiwan mass-production.",
-        "feasibility_observation": "Advanced node packaging yield and design feasibility remain concentrated at TSMC Taiwan (no yield change reported); however, upstream equipment capex diversification (Lam $1.2B India, Northrop US ramp) signals feasibility runway for competing substrates and heterogeneous integration—future design-for-package splits likely within 2-3 cycles.",
+        "counterpoint": "TSMC's AI demand tailwind (sixth consecutive record profit quarter expected) sustains queue depth; competing OSATs still trail in sub-3µm chiplet routing and HBM-stack yield—distributed capacity has not yet displaced TSMC's adjacency advantage in high-margin logic-memory hybrids.",
+        "feasibility_observation": "Mass-production feasibility signal: ZEISS tool releases (NLX, DUNE) and Teradyne-FormFactor merger indicate advanced packaging yield barriers (UHDI, HDI) are being solved toolkit-wide, not within a single vendor ecosystem—this week's tool proliferation removes the last bottleneck preventing India/Vietnam/China OSATs from matching Taiwan 3D-stacking yield at scale.",
         "changed_from_last_week": true,
-        "change_note": "Last week framed TSMC's Taiwan consolidation as dominant; this week shows Lam Research India capex + Northrop US defence output + distributed materials demand fracturing the single-hub narrative—geographic decoupling now visible at equipment and end-market level."
+        "change_note": "Last week emphasized ecosystem pressure via upstream material diversification; this week confirms downstream OSAT/equipment replication is now complete (Tata-Besi partnership live, ZEISS/Teradyne deals finalize), shifting the competitive axis from supply-chain materials to chiplet architecture and design portability—TSMC's queue advantage persists, but technical leverage in packaging itself has evaporated."
       }
     },
     "cpo_optics": {
@@ -282,22 +322,68 @@
     },
     "hbm": {
       "ko": {
-        "executive_summary": "변화 없음",
-        "key_facts": [],
-        "implications": [],
-        "counterpoint": "",
-        "feasibility_observation": "",
-        "changed_from_last_week": false,
-        "change_note": ""
+        "executive_summary": "Microsoft's Maia 300 (288 GB HBM4, 18 TB/s bandwidth) signals aggressive demand scaling that favors Korean suppliers but exposes a thermal architecture challenge: interposer size growth is creating HBM4E cooling bottlenecks at the chip-memory interface, a domain where Samsung and SK Hynix are now actively competing on solutions. Intel's pivot to LPDDR5X represents a strategic fork, reducing Korean memory leverage in that segment.",
+        "key_facts": [
+          "Microsoft Maia 300: 288 GB HBM4 memory, 18 TB/s bandwidth",
+          "Samsung and SK Hynix competing on HBM4E thermal solutions at SEDEX and OCP Global Summit 2026",
+          "Samsung demonstrating CXL memory expansion with AMD at OCP 2026",
+          "Interposer size growth cited as raising HBM4E cooling challenges",
+          "Intel pursuing LPDDR5X strategy, diverging from HBM4 path"
+        ],
+        "implications": [
+          {
+            "keyword": "Interface Competition",
+            "text": "Cooling and thermal management at the interposer-to-HBM boundary now differentiates Samsung vs. SK Hynix; solutions here directly affect power efficiency and whether hyperscalers can scale Maia-class memory densities."
+          },
+          {
+            "keyword": "Demand Surge",
+            "text": "Microsoft's 3× rack-level HBM increase validates Korean supplier volume but only if thermal roadmaps hold; any thermal constraint forces architectural compromise."
+          },
+          {
+            "keyword": "Ecosystem Lock-in",
+            "text": "Samsung's CXL+HBM+SSD ecosystem pitch at OCP positions it as system-level integrator, not just memory vendor; this broadens its technical moat beyond JEDEC specs."
+          },
+          {
+            "keyword": "Strategic Divergence",
+            "text": "Intel's LPDDR5X bet creates a second-tier memory tier for cost-sensitive AI; reduces total addressable HBM market if adoption grows, limiting upside for Korean HBM-only players."
+          }
+        ],
+        "counterpoint": "Intel's LPDDR5X strategy remains niche for inference-only workloads; Maia 300 and similar high-bandwidth designs will dominate training and large-model inference, sustaining HBM4/4E demand for Korean suppliers through 2026.",
+        "feasibility_observation": "Interposer cooling emergence signals a design-feasibility gate: if thermal solutions (Samsung/SK Hynix approaches) prove insufficient at scale, HBM4E density roadmaps may slip, affecting 2026–2027 capacity ramps.",
+        "changed_from_last_week": true,
+        "change_note": "Last week was static; this week Microsoft's Maia 300 (3× HBM scale-up) and competing Samsung/SK Hynix cooling solutions materialize as active technical differentiation at the interposer interface, shifting judgment from no change to active competitive divergence in thermal architecture."
       },
       "en": {
-        "executive_summary": "변화 없음",
-        "key_facts": [],
-        "implications": [],
-        "counterpoint": "",
-        "feasibility_observation": "",
-        "changed_from_last_week": false,
-        "change_note": ""
+        "executive_summary": "Microsoft's Maia 300 (288 GB HBM4, 18 TB/s bandwidth) signals aggressive demand scaling that favors Korean suppliers but exposes a thermal architecture challenge: interposer size growth is creating HBM4E cooling bottlenecks at the chip-memory interface, a domain where Samsung and SK Hynix are now actively competing on solutions. Intel's pivot to LPDDR5X represents a strategic fork, reducing Korean memory leverage in that segment.",
+        "key_facts": [
+          "Microsoft Maia 300: 288 GB HBM4 memory, 18 TB/s bandwidth",
+          "Samsung and SK Hynix competing on HBM4E thermal solutions at SEDEX and OCP Global Summit 2026",
+          "Samsung demonstrating CXL memory expansion with AMD at OCP 2026",
+          "Interposer size growth cited as raising HBM4E cooling challenges",
+          "Intel pursuing LPDDR5X strategy, diverging from HBM4 path"
+        ],
+        "implications": [
+          {
+            "keyword": "Interface Competition",
+            "text": "Cooling and thermal management at the interposer-to-HBM boundary now differentiates Samsung vs. SK Hynix; solutions here directly affect power efficiency and whether hyperscalers can scale Maia-class memory densities."
+          },
+          {
+            "keyword": "Demand Surge",
+            "text": "Microsoft's 3× rack-level HBM increase validates Korean supplier volume but only if thermal roadmaps hold; any thermal constraint forces architectural compromise."
+          },
+          {
+            "keyword": "Ecosystem Lock-in",
+            "text": "Samsung's CXL+HBM+SSD ecosystem pitch at OCP positions it as system-level integrator, not just memory vendor; this broadens its technical moat beyond JEDEC specs."
+          },
+          {
+            "keyword": "Strategic Divergence",
+            "text": "Intel's LPDDR5X bet creates a second-tier memory tier for cost-sensitive AI; reduces total addressable HBM market if adoption grows, limiting upside for Korean HBM-only players."
+          }
+        ],
+        "counterpoint": "Intel's LPDDR5X strategy remains niche for inference-only workloads; Maia 300 and similar high-bandwidth designs will dominate training and large-model inference, sustaining HBM4/4E demand for Korean suppliers through 2026.",
+        "feasibility_observation": "Interposer cooling emergence signals a design-feasibility gate: if thermal solutions (Samsung/SK Hynix approaches) prove insufficient at scale, HBM4E density roadmaps may slip, affecting 2026–2027 capacity ramps.",
+        "changed_from_last_week": true,
+        "change_note": "Last week was static; this week Microsoft's Maia 300 (3× HBM scale-up) and competing Samsung/SK Hynix cooling solutions materialize as active technical differentiation at the interposer interface, shifting judgment from no change to active competitive divergence in thermal architecture."
       }
     },
     "pmic": {
@@ -322,13 +408,13 @@
     }
   },
   "item_counts": {
-    "mobile_ap": 15,
-    "hpc_datacenter": 19,
-    "custom_soc": 59,
-    "foundry": 75,
-    "packaging": 90,
-    "cpo_optics": 23,
-    "hbm": 5,
+    "mobile_ap": 8,
+    "hpc_datacenter": 24,
+    "custom_soc": 104,
+    "foundry": 63,
+    "packaging": 88,
+    "cpo_optics": 28,
+    "hbm": 9,
     "pmic": 0
   }
 }

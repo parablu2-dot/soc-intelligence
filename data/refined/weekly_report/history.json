@@ -1,42 +1,42 @@
 {
   "mobile_ap": {
-    "date": "2026-10-10",
-    "executive_summary": "변화 없음"
+    "date": "2026-10-17",
+    "executive_summary": "Qualcomm's cost advantage over x86 is eroding due to reliance on advanced nodes, forcing a 10% Snapdragon X price increase that weakens competitive positioning against Intel-based platforms. Concurrently, Samsung has suspended Exynos development citing memory cost pressure, while Xiaomi's XRING chip is displacing Exynos in the Chinese market—indicating a structural shift where fab-agnostic and indigenous AP designs are capturing share from premium node-dependent players at the processor-modem licensing and IP interface."
   },
   "hpc_datacenter": {
-    "date": "2026-10-10",
+    "date": "2026-10-17",
     "executive_summary": "변화 없음"
   },
   "custom_soc": {
-    "date": "2026-10-10",
-    "executive_summary": "변화 없음"
+    "date": "2026-10-17",
+    "executive_summary": "Microsoft's Maia 300 deployment plans (1M+ units, 288GB HBM4, 18TB/s, 40% token/MW improvement) mark a structural shift in custom-SoC strategy: hyperscale operators are now bundling memory-bandwidth optimization and inference workload targeting into silicon design to escape Nvidia's pricing moat. Tesla's simultaneous AI5 memory-down move (96GB for Optimus) signals competing design philosophies—Microsoft scales memory for efficiency, Tesla constrains it for robotics latency; both bypass commodity GPU dependency. This week's pivot from procurement to design-led differentiation at the memory-silicon interface resets competitive boundaries."
   },
   "foundry": {
-    "date": "2026-10-10",
-    "executive_summary": "Samsung's Exynos 2700 enters mass production at 2nm, validating foundry-grade yield maturity and directly competing with TSMC's 2nm roadmap; simultaneously, Qualcomm, Apple, and MediaTek are actively evaluating 2nm capacity splits across TSMC and Samsung, signaling the competitive axis now centers on **multi-node qualification and packaging differentiation** rather than pure node leadership. TSMC maintains capacity advantage but faces demand saturation risk from Nvidia and Apple, while Samsung leverages advanced packaging investment and proven 2nm mass-production readiness to capture design-wins in flagship SoC segments."
+    "date": "2026-10-17",
+    "executive_summary": "변화 없음"
   },
   "packaging": {
-    "date": "2026-10-10",
-    "executive_summary": "TSMC's ecosystem consolidation strategy is being pressured by distributed upstream investment: Lam Research commits $1.2B to India unit expansion, establishing direct substrate-interface presence outside Taiwan; meanwhile Synopsys-TSMC agentic AI co-design partnership signals competitive tightening at the CAD boundary. Packaging supply-chain materials (bonding, vacuum feedthrough, metrology) show broad growth targeting advanced node complexity, but geographic hub diversification (India, US defence radars via Northrop Grumman) fragmented the packaging interface—reducing TSMC's centralized technical leverage vs. last week's concentrated Chiayi hub strategy."
+    "date": "2026-10-17",
+    "executive_summary": "Packaging supply-chain consolidation is bifurcating along geopolitical lines: India's ecosystem matured to $17.45B+ aggregate investment with Tata-Besi partnership advancing Assam manufacturing, while Samsung commits $6B to Vietnam and TSMC anchors Taiwan—fragmenting the single-hub advantage. Advanced packaging market fundamentals remain robust ($90B by 2031 forecast), but distributed OSAT presence now enables design offsets at the substrate interface, eroding TSMC's technical leverage in node-competitive windows."
   },
   "cpo_optics": {
-    "date": "2026-10-10",
+    "date": "2026-10-17",
     "executive_summary": "변화 없음"
   },
   "dram": {
-    "date": "2026-10-10",
+    "date": "2026-10-17",
     "executive_summary": "변화 없음"
   },
   "nand": {
-    "date": "2026-10-10",
+    "date": "2026-10-17",
     "executive_summary": "변화 없음"
   },
   "hbm": {
-    "date": "2026-10-10",
-    "executive_summary": "변화 없음"
+    "date": "2026-10-17",
+    "executive_summary": "Microsoft's Maia 300 (288 GB HBM4, 18 TB/s bandwidth) signals aggressive demand scaling that favors Korean suppliers but exposes a thermal architecture challenge: interposer size growth is creating HBM4E cooling bottlenecks at the chip-memory interface, a domain where Samsung and SK Hynix are now actively competing on solutions. Intel's pivot to LPDDR5X represents a strategic fork, reducing Korean memory leverage in that segment."
   },
   "pmic": {
-    "date": "2026-10-10",
+    "date": "2026-10-17",
     "executive_summary": "변화 없음"
   }
 }
