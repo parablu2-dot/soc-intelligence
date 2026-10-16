@@ -2,6 +2,401 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.DC",
+    "title": "Architecting for Hardware Diversity: Meta's End-to-End Co-Design for High-Performance AI Training on AMD GPUs",
+    "url": "https://arxiv.org/abs/2610.22230v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "Meta deploys a heterogeneous fleet comprising NVIDIA GPUs, AMD GPUs, and proprietary MTIA accelerators to reduce costs and mitigate vendor lock-in. However, the extensive history of NVIDIA-specific optimizations hinders performance portability to other hardware. This paper presents our methods for optimizing alternative accelerators, using AMD Instinct MI350X versus NVIDIA B200 for recommendation model training as a case study. We propose three reusable principles. First, hardware-model co-desig",
+    "authors": [
+      "Haoyu Zhang",
+      "Arshad Rahman",
+      "Adnan Aziz",
+      "Ajith Prabhudev",
+      "Amin Farmahini",
+      "Ben Rhoads",
+      "Benson Ma",
+      "Brian Shi",
+      "Cen Zhao",
+      "CK Luk",
+      "Dingming Wu",
+      "Emad El-Haraty",
+      "Eric Chen",
+      "Frank Li",
+      "Gary Huang",
+      "Gefei Zuo",
+      "Haoran Zhang",
+      "Hiwot Kassa",
+      "Hongyi Zeng",
+      "Jack Taylor",
+      "Jeremy Hadidjojo",
+      "John Donati",
+      "Jonathan Sheffield",
+      "Julio Machado Silva",
+      "Karthik Ganesan",
+      "Kent Russell",
+      "KR Kishore",
+      "Lei Tian",
+      "Liu Ke",
+      "Muhammad Osama",
+      "Peng Chen",
+      "Rakesh Hemnani",
+      "Ryan Swann",
+      "Saleel Kudchadker",
+      "Shankar Yanamandram",
+      "Shobhit Kanaujia",
+      "Shucai Xiao",
+      "Srinath Bayareddy",
+      "Srinivas Vaidyanathan",
+      "Sudharssun Subramanian",
+      "Supadchaya Puangpontip",
+      "Taylor Robie",
+      "Tianhao Huang",
+      "Tyler Hart",
+      "Viswesh Sankaran",
+      "Weijun Jiang",
+      "Wenkai Du",
+      "Xiaodong Wang",
+      "Xiaohu Guo",
+      "Yao Rong",
+      "Yinbin Ma",
+      "Yue Dong",
+      "Yuzhen Huang",
+      "Yvonne Liu",
+      "Zhan Shu",
+      "Dan Rabinovitsj",
+      "Ajit Mathews",
+      "Chunqiang Tang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "The role of friction on heave-induced motion of offshore drilling systems: modelling, analysis, and numerical experiments",
+    "url": "https://arxiv.org/abs/2610.22189v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "This paper investigates the influence of friction dynamics on heave-induced disturbance propagation using a coupled hydraulic-structural drilling model formulated as a semilinear interconnection of ordinary and hyperbolic partial differential equations (ODE-PDEs), and capturing spatially distributed memory effects in the drillstring-wellbore interaction. First, local and global existence and uniqueness results are established, and sufficient conditions for boundedness and input-to-state stabilit",
+    "authors": [
+      "Luigi Romano",
+      "Ole Morten Aamo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.SD",
+    "title": "From Signals to Evidence: Interpretable Underwater Acoustic Target Sensing with Large Language Models - Part I: Framework and Recognition",
+    "url": "https://arxiv.org/abs/2610.22064v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "Underwater acoustic target detection and recognition are essential to marine surveillance and intelligent ocean sensing. Despite substantial advances in deep learning, existing systems typically produce binary detection decisions, categorical labels, or scalar confidence scores, offering limited insight into the physical evidence underlying their outputs. Large language models (LLMs) offer an opportunity to move underwater acoustic sensing toward interpretable, evidence-grounded understanding; h",
+    "authors": [
+      "Yuge Zhang",
+      "Jie Chen",
+      "Zhengqiao Zhao",
+      "Xiling Yao",
+      "Lingji Xu",
+      "Jingdong Chen",
+      "Yixin Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.RO",
+    "title": "De-Risking Robotic Welding for In-Space Metal Joining Through Physics-Grounded Digital Twins",
+    "url": "https://arxiv.org/abs/2610.21939v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "Growing interest in in-space servicing, manufacturing, and assembly has renewed attention on reliable metal joining for modular construction and on-orbit repair. Robotic welding is promising, but reduced-gravity and low-pressure operation remains poorly characterised and flight-like tests are limited. The UK Space Agency-supported ISPARK project is developing a physics-grounded digital twin for structured process de-risking. This paper evaluates a model-based prototype combining a finite-volume ",
+    "authors": [
+      "Zhou Daniel Hao",
+      "Umer Masood Chaudry",
+      "Robert Shaw",
+      "Andrew Cheney",
+      "Nick Ludford",
+      "Mark Sims",
+      "Hongbiao Dong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "VoroTypes: automated enumeration of Voronoi cell topologies for structural identification of complex crystals in atomistic simulations",
+    "url": "https://arxiv.org/abs/2610.21911v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "VoroTypes enumerates, for an arbitrary crystal structure, the complete family of Voronoi cell topologies that can arise under small generic perturbations of atomic positions, and exports it as a topological filter for the VoroTop framework. This extends per-atom structural identification in molecular dynamics simulations, previously limited to a handful of simple reference structures, to complex crystals such as Frank--Kasper and Laves phases, with per-sublattice resolution. The package takes a ",
+    "authors": [
+      "Emanuel A. Lazar",
+      "Chris H. Rycroft"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Compiling Multi-Threshold Operators for Quantized Non-Monotonic and Fine-Granular Activations in Custom-Tailored DNN Accelerators",
+    "url": "https://arxiv.org/abs/2610.21825v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "Aggressive quantization of neural networks can expose activation functions as bottlenecks for efficient hardware acceleration. Implementing quantized activations as multi-threshold operations has been shown to be a promising optimization, allowing for efficient hardware implementation of few-bit activations. However, current implementations are limited to monotonically increasing functions, quantization schemes with one-dimensional (per-channel) granularity and a small set of predefined activati",
+    "authors": [
+      "Christoph Berganski",
+      "Felix Jentzsch",
+      "Marco Platzner"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Coexistence of Altermagnetic and Compensated Ferrimagnetic Motifs in a Noncollinear Multiferroic",
+    "url": "https://arxiv.org/abs/2610.21770v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "Collinear compensated magnets with nonrelativistic spin splitting comprise altermagnets (ALMs), whose rotation- or mirror-related opposite-spin sublattices produce momentum-selective splitting that vanishes at $Γ$, and compensated ferrimagnets (CFIMs), whose symmetry-inequivalent sublattices allow splitting throughout the Brillouin zone, including at $Γ$. Here, we show that the coplanar noncollinear magnetic state of multiferroic boracite Ni$_3$B$_7$O$_{13}$Cl hosts both motifs on distinct Ni su",
+    "authors": [
+      "Vikrant Chaudhary",
+      "Fu Li",
+      "Hui Liu",
+      "Mengli Hu",
+      "Rajyavardhan Ray",
+      "Chen Shen",
+      "Jeroen van den Brink",
+      "Hongbin Zhang",
+      "Harish K. Singh"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Low magnon damping of a EuSe film down to millikelvin temperatures",
+    "url": "https://arxiv.org/abs/2610.21733v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "The rapid development of quantum magnonics over the past decade has created a demand for magnetic materials that keep their magnon losses low at millikelvin temperatures and add functionality beyond that of the established iron garnets and ferromagnetic metals. The europium chalcogenides are natural candidates $-$ they are magnetic semiconductors whose moment of $7\\,μ_{\\mathrm{B}}$ per Eu$^{2+}$ ion stems from a half-filled $4f$ shell with zero orbital momentum, so that spin-orbit coupling and i",
+    "authors": [
+      "Rostyslav O. Serha",
+      "Jan Hofer",
+      "Khrystyna O. Levchenko",
+      "Andreas Ney",
+      "Sergej O. Demokritov",
+      "Gunther Springholz",
+      "Andrii V. Chumak"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Novel high-pressure silicon allotrope with quartz topology from first principles",
+    "url": "https://arxiv.org/abs/2610.21683v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "A novel silicon allotrope, qtz Si, with quartz topology is proposed and investigated alongside four known allotropes (dia Si-I, lon Si-IV, bsn Si-II, and gsi Si-III) using first-principles density functional theory. qtz Si is found to exhibit the smallest atom-averaged volume (18.06 A3), highest density (2.582 g/cm3), highest bulk modulus (98 GPa), and highest maximum phonon frequency (16 THz) among the five, while showing the lowest shear modulus (37 GPa). All five allotropes are confirmed to s",
+    "authors": [
+      "Samir F. Matar",
+      "Vladimir L. Solozhenko"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Defect Candidates for Single-Photon Emission in Monolayer GaS and GaSe",
+    "url": "https://arxiv.org/abs/2610.21670v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "We investigate the spin-resolved electronic structure of native vacancies and substitutional defects in monolayer GaS and GaSe using an anisotropic screened-exchange functional developed for two-dimensional material systems. By combining an energy-based classification of defect-associated states with spatially resolved projections and partial charge densities, we examine how these defects modify the in-gap electronic structure and assess their relevance for defect-based single-photon emission. T",
+    "authors": [
+      "Michael Lorke"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "How Does Probabilistic Constellation Shaping Control Ranging Sidelobe Levels in ISAC?",
+    "url": "https://arxiv.org/abs/2610.21653v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "Probabilistic constellation shaping (PCS), originally designed to fill the gap between finite uniform constellations and continuous capacity-achieving input distributions, has recently emerged as a central tool in adjusting the expected integrated sidelobe level (EISL) in integrated sensing and communication (ISAC). In this paper, we show that PCS goes beyond EISL: A large class of PCS methods, termed as type-based PCS, are capable of providing precise control over codeword-wise integrated sidel",
+    "authors": [
+      "Zexuan Jing",
+      "Yifeng Xiong",
+      "Fan Liu",
+      "Xuehua Li",
+      "Jianhua Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Dual-Purpose SSB Design for Joint Time-Frequency Synchronization Using Relocated DMRS",
+    "url": "https://arxiv.org/abs/2610.21617v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "The synchronization signal block (SSB) is designed to synchronize a capable user-equipment (UE) with the base-station (BS) in recent cellular networks. However, the same SSB cannot be utilized by a narrowband, low-complexity, and low-power internet of things (IoT) device for synchronization. To address this limitation, this paper proposes a dual-purpose SSB (DP-SSB) to enable low-complexity IoT synchronization using the existing SSB, while ensuring uninterrupted conventional UE operation. Specif",
+    "authors": [
+      "Sadiq Iqbal",
+      "Abdelali Arous",
+      "Huseyin Arslan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "From Interference to Diversity: Mode Coloring and Two-Dimensional Modal-Time Rake Combining for Multipath OAM Communications",
+    "url": "https://arxiv.org/abs/2610.21602v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "Orbital angular momentum (OAM) beams provide a spatial-multiplexing dimension for wireless communications, but multipath scattering broadens their mode spectrum, so that energy leaks across modes as inter-mode interference (IMI), which conventional OAM demultiplexing discards. This paper treats the leaked modal energy not as interference but as a structured, harvestable resource: it attains up to $LK$-fold asymptotic diversity under independent-branch fading and yields harvested energy under the",
+    "authors": [
+      "Runyu Lyu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Synergistic Graphene and PEDOT:PSS Layers on Silicon for Enhanced Efficiency and Stability in Schottky Junction Solar Cells",
+    "url": "https://arxiv.org/abs/2610.21563v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "While graphene/n-type silicon (Gr/n-Si) and PEDOT:PSS/n-Si solar cells offer a cost-effective alternative to conventional photovoltaics, achieving simultaneous high power conversion efficiency (PCE) and long-term environmental stability remains a formidable challenge. Here, we report the synergistic enhancement of both performance and stability in a planar trilayer PEDOT:PSS/Gr/n-Si Schottky junction architecture. By systematically benchmarking this hybrid device against pristine Gr/n-Si and PED",
+    "authors": [
+      "Kentaro Nakajo",
+      "Hojun Im",
+      "Keiichiro Nishimura",
+      "Masahiro Teraoka",
+      "Masaya Kikuchi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Minimum RISC-V: Maximum FPGA Efficiency",
+    "url": "https://arxiv.org/abs/2610.21552v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "RISC-V processors are now widely available for FPGAs, with most FPGA vendors replacing their proprietary soft-CPU architectures with this instruction-set architecture (ISA). Although contemporary FPGAs are increasingly resource- and feature-rich, a soft processor system---including memory---often occupies a disproportionately large footprint and delivers only modest performance relative to the potential of the target device. In this work we first design a lightweight but deeply pipelined RISC-V ",
+    "authors": [
+      "Martin Langhammer",
+      "Bogdan Pasca",
+      "Gregg Baeckler"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "It Takes Two Moments: Rigidity and Limits of Continuous Encoders for Over-the-Air Computation",
+    "url": "https://arxiv.org/abs/2610.21536v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "We study over-the-air computation of functions, such as empirical variance, formed by combining two separately postprocessed sums of locally transformed observations. We consider continuous encoders subject to pointwise peak-power constraints over a single use of a complex multiple-access channel. With four or more transmitters, we identify conditions under which exact noiseless recovery forces every continuous encoder collection into a common affine structure that preserves both sums, reducing ",
+    "authors": [
+      "Saeed Razavikia"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.RO",
+    "title": "A Black-Box Positioning Solution for Effortless Integration in Wearable Navigation",
+    "url": "https://arxiv.org/abs/2610.21353v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "Accurate localization is critical for a wide range of applications, including navigation, augmented reality, safety management, and healthcare. However, achieving accurate positioning remains challenging, especially in GPS-degraded environments. Pedestrian Dead Reckoning (PDR), which estimates position based on inertial sensor data, offers a promising alternative but typically demands substantial effort in algorithm design and system integration. This complexity often leads to prolonged developm",
+    "authors": [
+      "Anh-Van Vu",
+      "Changmin Sung",
+      "Dongsoo Han"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "PSA: A Pruning-Friendly Sparse-Aware Accelerator for Efficient Sparse Convolution in SNNs",
+    "url": "https://arxiv.org/abs/2610.21313v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "Spiking neural networks (SNNs) are promising for energy-efficient artificial intelligence due to their event-driven sparse computation, and neuron pruning can further reduce redundant operations. However, in practical hardware accelerators, spike sparsity and pruning-induced sparsity produce highly irregular sparse workloads that are difficult to execute efficiently. Existing approaches do not jointly support sparse-input execution, low-overhead sparse convolution lowering and pruning-friendly e",
+    "authors": [
+      "Sanhe Fu",
+      "Kainan Wang",
+      "Bo Wang",
+      "Aili Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Broadband radio-frequency TEM specimen holders for in situ biasing excitation and 100-ps-scale electron beam control",
+    "url": "https://arxiv.org/abs/2610.21275v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "Broadband electrical excitation inside a transmission electron microscope (TEM) is required to investigate electrically driven nanodevices at their actual operating frequencies and to develop fully electrical time-resolved experiments at a sub-nanosecond range. Here, we report the performances of homemade two- and four-channel radio-frequency (RF) TEM specimen holders based on a hybrid architecture combining coaxial transmission lines with miniaturized impedance-controlled printed circuit boards",
+    "authors": [
+      "Christophe Gatel",
+      "Marine Resano",
+      "Bérangère Disic",
+      "Nasibeh Parsaei",
+      "Emmanuel Perrin",
+      "Hervé Parvery",
+      "Romain Queslier",
+      "Bertrand Gatti",
+      "Pierre Abeilhou",
+      "Alexandre Alibert",
+      "Christian Pertel",
+      "Cécile Marcelot",
+      "Nicolas Biziere"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Helix: A Unified Programmable Accelerator for Diverse Krylov Subspace Solvers",
+    "url": "https://arxiv.org/abs/2610.21096v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "Domain-specific accelerators deliver high performance and energy efficiency through specialization but often lack support for extensible algorithm families. Existing FPGA accelerators for Krylov subspace methods, which iteratively solve sparse linear systems, typically support a single solver or require separate hardware configurations. Helix follows a systematic algorithm-family design methodology that first abstracts common computational primitives from diverse Krylov solvers and builds the ar",
+    "authors": [
+      "Wei Chen",
+      "Yizhi Yuan",
+      "Linghao Song"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Superfast Spectral Compressed Sensing with Quadratic Convergence",
+    "url": "https://arxiv.org/abs/2610.21068v1",
+    "published_date": "2026-10-15",
+    "source": "arXiv",
+    "summary": "In this paper, we study the spectral compressed sensing problem of recovering a spectrally sparse signal from linear compressive measurements. Exploiting the low-rank Hankel structure associated with the signal, we formulate a nonconvex fixed-rank optimization problem with a Hankel regularization. We propose a Superfast Iterative Hard Thresholding (SIHT) algorithm, where each iteration consists of a tangent-space least-squares update followed by a fixed-rank hard thresholding projection. SIHT is",
+    "authors": [
+      "Xunmeng Wu",
+      "Jian-Feng Cai",
+      "Zongben Xu",
+      "Zai Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mes-hall",
     "title": "Landau quantization of $C_3$ high-fold fermions in honeycomb lattices",
     "url": "https://arxiv.org/abs/2610.20595v1",
