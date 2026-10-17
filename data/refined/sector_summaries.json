@@ -1,101 +1,275 @@
 {
-  "date": "2026-10-16",
-  "generated_at": "2026-10-16T22:42:36.448304+00:00",
+  "date": "2026-10-17",
+  "generated_at": "2026-10-17T22:04:11.715725+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-10-16",
-      "item_count": 6,
-      "generated_at": "2026-10-16T22:42:36.447522+00:00",
+      "date": "2026-10-17",
+      "item_count": 4,
+      "generated_at": "2026-10-17T22:04:11.715421+00:00",
       "content": {
         "ko": {
-          "executive_summary": "삼성은 내부 테스트에서 Snapdragon 8 Elite Extreme Gen 6의 심각한 성능 문제를 발견했으며, 삼성은 Galaxy S27 Ultra에 Exynos 사용 계획을 메모리 가격 급등으로 취소했다. NVIDIA RTX Spark PC와 MediaTek 칩셋이 출시되며 AI 에이전트 시장이 확대되고 있다.",
+          "executive_summary": "Qualcomm disputes overheating claims for Snapdragon 8 Elite Extreme Gen 6, yet multiple reports indicate Samsung is testing overheating issues with the chip for Galaxy S27 Ultra. Samsung is preparing Exynos 2700 as a contingency option if Snapdragon thermal problems persist.",
           "key_facts": [
-            "Samsung internal tests found severe performance issues in Snapdragon 8 Elite Extreme Gen 6",
-            "Samsung cancels Exynos plan for Galaxy S27 Ultra due to memory price surge",
-            "NVIDIA RTX Spark PCs launched with MediaTek chip",
-            "Samsung hosts Silicon Valley Future Wireless Summit 2026"
+            "Snapdragon 8 Elite Extreme Gen 6 experiencing overheating in Samsung tests",
+            "Samsung Galaxy S27 Ultra considering Exynos 2700 as alternative chip",
+            "Qualcomm Marketing Head denies overheating accuracy"
           ],
           "implications": [
             {
-              "keyword": "Qualcomm risk",
-              "text": "Performance issues may force Samsung toward alternative SoC suppliers or accelerate internal Exynos development for premium flagships"
+              "keyword": "Thermal Risk",
+              "text": "Continued thermal issues with flagship Snapdragon could damage Qualcomm's premium positioning and accelerate Samsung's reliance on in-house Exynos silicon."
             },
             {
-              "keyword": "Snapdragon market share",
-              "text": "Continuing problems could erode Qualcomm's dominant position in Android flagship processors"
-            },
-            {
-              "keyword": "Memory cost impact",
-              "text": "DRAM/NAND price increases are pushing OEMs to reconsider chip sourcing economics and vertical integration strategies"
+              "keyword": "Supplier Diversification",
+              "text": "Samsung shifting to Exynos 2700 signals growing confidence in proprietary SoC and reduced dependency on Snapdragon for flagship devices."
             }
           ],
-          "counterpoint": "Qualcomm's leadership position remains entrenched despite near-term issues; Samsung's internal chip options remain constrained at premium performance tiers."
+          "counterpoint": "Qualcomm's public denial, despite internal Samsung testing concerns, raises questions about the scope and severity of the overheating problem."
         },
         "en": {
-          "executive_summary": "Samsung discovered severe performance issues in the Snapdragon 8 Elite Extreme Gen 6 during internal testing, and Samsung canceled plans to use Exynos in the Galaxy S27 Ultra due to memory price surge. NVIDIA RTX Spark PCs and MediaTek chipsets are launching, expanding the AI agent market.",
+          "executive_summary": "Qualcomm disputes overheating claims for Snapdragon 8 Elite Extreme Gen 6, yet multiple reports indicate Samsung is testing overheating issues with the chip for Galaxy S27 Ultra. Samsung is preparing Exynos 2700 as a contingency option if Snapdragon thermal problems persist.",
           "key_facts": [
-            "Samsung internal tests found severe performance issues in Snapdragon 8 Elite Extreme Gen 6",
-            "Samsung cancels Exynos plan for Galaxy S27 Ultra due to memory price surge",
-            "NVIDIA RTX Spark PCs launched with MediaTek chip",
-            "Samsung hosts Silicon Valley Future Wireless Summit 2026"
+            "Snapdragon 8 Elite Extreme Gen 6 experiencing overheating in Samsung tests",
+            "Samsung Galaxy S27 Ultra considering Exynos 2700 as alternative chip",
+            "Qualcomm Marketing Head denies overheating accuracy"
           ],
           "implications": [
             {
-              "keyword": "Qualcomm risk",
-              "text": "Performance issues may force Samsung toward alternative SoC suppliers or accelerate internal Exynos development for premium flagships"
+              "keyword": "Thermal Risk",
+              "text": "Continued thermal issues with flagship Snapdragon could damage Qualcomm's premium positioning and accelerate Samsung's reliance on in-house Exynos silicon."
             },
             {
-              "keyword": "Snapdragon market share",
-              "text": "Continuing problems could erode Qualcomm's dominant position in Android flagship processors"
-            },
-            {
-              "keyword": "Memory cost impact",
-              "text": "DRAM/NAND price increases are pushing OEMs to reconsider chip sourcing economics and vertical integration strategies"
+              "keyword": "Supplier Diversification",
+              "text": "Samsung shifting to Exynos 2700 signals growing confidence in proprietary SoC and reduced dependency on Snapdragon for flagship devices."
             }
           ],
-          "counterpoint": "Qualcomm's leadership position remains entrenched despite near-term issues; Samsung's internal chip options remain constrained at premium performance tiers."
+          "counterpoint": "Qualcomm's public denial, despite internal Samsung testing concerns, raises questions about the scope and severity of the overheating problem."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-10-16",
-      "item_count": 6,
-      "generated_at": "2026-10-16T22:42:36.447522+00:00",
+      "date": "2026-10-17",
+      "item_count": 1,
+      "generated_at": "2026-10-17T22:04:11.715421+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "South Korea's semiconductor sector is experiencing accelerated hiring growth driven by AI infrastructure demand. Entry-level semiconductor hiring surged 47% amid the global AI chip boom.",
+          "key_facts": [
+            "Entry-level semiconductor hiring in South Korea up 47%",
+            "Growth driven by AI-driven chip boom"
+          ],
+          "implications": [
+            {
+              "keyword": "Talent Acquisition",
+              "text": "Rapid hiring expansion indicates strong regional demand for semiconductor workforce to support HPC and AI infrastructure buildout."
+            },
+            {
+              "keyword": "Competitive Capacity",
+              "text": "South Korea strengthening talent pipeline suggests intent to capture greater share of high-growth AI infrastructure markets."
+            }
+          ],
+          "counterpoint": ""
+        },
+        "en": {
+          "executive_summary": "South Korea's semiconductor sector is experiencing accelerated hiring growth driven by AI infrastructure demand. Entry-level semiconductor hiring surged 47% amid the global AI chip boom.",
+          "key_facts": [
+            "Entry-level semiconductor hiring in South Korea up 47%",
+            "Growth driven by AI-driven chip boom"
+          ],
+          "implications": [
+            {
+              "keyword": "Talent Acquisition",
+              "text": "Rapid hiring expansion indicates strong regional demand for semiconductor workforce to support HPC and AI infrastructure buildout."
+            },
+            {
+              "keyword": "Competitive Capacity",
+              "text": "South Korea strengthening talent pipeline suggests intent to capture greater share of high-growth AI infrastructure markets."
+            }
+          ],
+          "counterpoint": ""
+        }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-10-16",
-      "item_count": 13,
-      "generated_at": "2026-10-16T22:42:36.447522+00:00",
+      "date": "2026-10-17",
+      "item_count": 6,
+      "generated_at": "2026-10-17T22:04:11.715421+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Microsoft's Maia 300 prioritizes 2.5x memory bandwidth gains and 40% efficiency improvements over raw compute as hyperscalers pursue custom silicon alternatives. Concurrently, SpaceX commits 1.44M Nvidia GPUs by 2026 while emerging designs like FlexNPU target energy efficiency via dynamic reconfiguration.",
+          "key_facts": [
+            "Microsoft Maia 300 achieves 2.5x memory bandwidth gain and 40% efficiency bump",
+            "SpaceX committed to 1.44M Nvidia GPU deployment by 2026",
+            "FlexNPU architecture enables layer-by-layer dynamic reconfiguration for energy reduction",
+            "Anthropic offers Blackstone 10% on $9B of $60B TPU debt"
+          ],
+          "implications": [
+            {
+              "keyword": "Custom Silicon Proliferation",
+              "text": "Major hyperscalers (Microsoft, Google, Anthropic) accelerating proprietary AI chip development with focus on memory efficiency rather than pure compute, challenging Nvidia's monopoly."
+            },
+            {
+              "keyword": "Memory Bandwidth Priority",
+              "text": "Industry shift from compute-centric to bandwidth-centric AI processor design suggests maturing AI workload understanding and efficiency-driven competitive advantage."
+            },
+            {
+              "keyword": "Nvidia Lock-In Persistence",
+              "text": "SpaceX's massive Nvidia GPU commitment demonstrates continued reliance on established CUDA ecosystem despite custom silicon competition."
+            }
+          ],
+          "counterpoint": "Custom silicon development timelines remain uncertain, and Nvidia's software ecosystem advantage may sustain dominance despite hardware alternatives."
+        },
+        "en": {
+          "executive_summary": "Microsoft's Maia 300 prioritizes 2.5x memory bandwidth gains and 40% efficiency improvements over raw compute as hyperscalers pursue custom silicon alternatives. Concurrently, SpaceX commits 1.44M Nvidia GPUs by 2026 while emerging designs like FlexNPU target energy efficiency via dynamic reconfiguration.",
+          "key_facts": [
+            "Microsoft Maia 300 achieves 2.5x memory bandwidth gain and 40% efficiency bump",
+            "SpaceX committed to 1.44M Nvidia GPU deployment by 2026",
+            "FlexNPU architecture enables layer-by-layer dynamic reconfiguration for energy reduction",
+            "Anthropic offers Blackstone 10% on $9B of $60B TPU debt"
+          ],
+          "implications": [
+            {
+              "keyword": "Custom Silicon Proliferation",
+              "text": "Major hyperscalers (Microsoft, Google, Anthropic) accelerating proprietary AI chip development with focus on memory efficiency rather than pure compute, challenging Nvidia's monopoly."
+            },
+            {
+              "keyword": "Memory Bandwidth Priority",
+              "text": "Industry shift from compute-centric to bandwidth-centric AI processor design suggests maturing AI workload understanding and efficiency-driven competitive advantage."
+            },
+            {
+              "keyword": "Nvidia Lock-In Persistence",
+              "text": "SpaceX's massive Nvidia GPU commitment demonstrates continued reliance on established CUDA ecosystem despite custom silicon competition."
+            }
+          ],
+          "counterpoint": "Custom silicon development timelines remain uncertain, and Nvidia's software ecosystem advantage may sustain dominance despite hardware alternatives."
+        }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-10-16",
-      "item_count": 17,
-      "generated_at": "2026-10-16T22:42:36.447522+00:00",
+      "date": "2026-10-17",
+      "item_count": 3,
+      "generated_at": "2026-10-17T22:04:11.715421+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "TSMC maintains strategic growth narrative around 2nm capacity expansion amid record AI quarters, though stock underperforms. Chinese CXMT projects 600% Q3 revenue surge underpinned by AI demand, directly challenging Samsung and SK Hynix in DRAM markets.",
+          "key_facts": [
+            "TSMC pursuing 2nm growth opportunity; stock defending $412 support despite record AI quarter",
+            "CXMT projects Q3 revenue of 1,147-1,197 billion yuan (~$229-239 billion KRW equivalent)",
+            "CXMT planning self-stock buyback up to 400 billion KRW",
+            "CXMT pursuing 600% year-over-year revenue growth in Q3"
+          ],
+          "implications": [
+            {
+              "keyword": "Competitive Displacement",
+              "text": "CXMT's explosive growth signals Chinese memory manufacturers gaining critical mass in AI-driven DRAM demand, threatening Samsung and SK Hynix market share."
+            },
+            {
+              "keyword": "TSMC Valuation Disconnect",
+              "text": "Record AI revenue failing to drive stock appreciation suggests market concerns about margin sustainability or competitive pressure at advanced nodes."
+            },
+            {
+              "keyword": "2nm Roadmap Criticality",
+              "text": "TSMC's 2nm positioning remains strategic differentiator against foundry competition, but execution risk persists as pricing pressures intensify."
+            }
+          ],
+          "counterpoint": "CXMT's growth projections are heavily AI-dependent and may not be sustainable if AI infrastructure capex cycles normalize."
+        },
+        "en": {
+          "executive_summary": "TSMC maintains strategic growth narrative around 2nm capacity expansion amid record AI quarters, though stock underperforms. Chinese CXMT projects 600% Q3 revenue surge underpinned by AI demand, directly challenging Samsung and SK Hynix in DRAM markets.",
+          "key_facts": [
+            "TSMC pursuing 2nm growth opportunity; stock defending $412 support despite record AI quarter",
+            "CXMT projects Q3 revenue of 1,147-1,197 billion yuan (~$229-239 billion KRW equivalent)",
+            "CXMT planning self-stock buyback up to 400 billion KRW",
+            "CXMT pursuing 600% year-over-year revenue growth in Q3"
+          ],
+          "implications": [
+            {
+              "keyword": "Competitive Displacement",
+              "text": "CXMT's explosive growth signals Chinese memory manufacturers gaining critical mass in AI-driven DRAM demand, threatening Samsung and SK Hynix market share."
+            },
+            {
+              "keyword": "TSMC Valuation Disconnect",
+              "text": "Record AI revenue failing to drive stock appreciation suggests market concerns about margin sustainability or competitive pressure at advanced nodes."
+            },
+            {
+              "keyword": "2nm Roadmap Criticality",
+              "text": "TSMC's 2nm positioning remains strategic differentiator against foundry competition, but execution risk persists as pricing pressures intensify."
+            }
+          ],
+          "counterpoint": "CXMT's growth projections are heavily AI-dependent and may not be sustainable if AI infrastructure capex cycles normalize."
+        }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-10-16",
-      "item_count": 14,
-      "generated_at": "2026-10-16T22:42:36.447522+00:00",
+      "date": "2026-10-17",
+      "item_count": 8,
+      "generated_at": "2026-10-17T22:04:11.715421+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Semiconductor packaging supply chain is experiencing diversification and capacity expansion globally, with TSMC offering fallback support for Intel EMIB-T packaging. Fujifilm, GlobalFoundries, and regional players are increasing material and equipment production capacity to support AI-era demand.",
+          "key_facts": [
+            "XY Motorized Positioning Stages market supporting 6-8% CAGR through 2035 driven by semiconductor demand",
+            "Fujifilm expanding Mesa facility with $18 million investment for semiconductor materials production",
+            "GlobalFoundries expanding US chip investment to $5 billion",
+            "TSMC offering contingency support for Intel EMIB-T packaging customers if supply falls short",
+            "EnterpriseSG positioning Singapore semiconductor SMEs for expanded supply chain roles",
+            "Tamil Nadu delinking chip incentives from central government approval"
+          ],
+          "implications": [
+            {
+              "keyword": "Supply Chain Resilience",
+              "text": "TSMC's EMIB-T packaging support signals industry-wide focus on reducing single-supplier dependencies and building redundancy for advanced packaging."
+            },
+            {
+              "keyword": "Materials Bottleneck Mitigation",
+              "text": "Fujifilm and regional players scaling materials production capacity to alleviate supply constraints in specialized semiconductor materials."
+            },
+            {
+              "keyword": "Regional Ecosystem Development",
+              "text": "Singapore and Tamil Nadu initiatives indicate geographic diversification of semiconductor supply chains to reduce concentration risk and enable local participation."
+            },
+            {
+              "keyword": "Capital Intensity",
+              "text": "GlobalFoundries' $5B US expansion and Fujifilm's Mesa investment reflect sustained high-capex environment required to meet AI infrastructure demands."
+            }
+          ],
+          "counterpoint": "Regional supply chain decentralization efforts may face execution challenges and cost disadvantages versus concentrated manufacturing hubs."
+        },
+        "en": {
+          "executive_summary": "Semiconductor packaging supply chain is experiencing diversification and capacity expansion globally, with TSMC offering fallback support for Intel EMIB-T packaging. Fujifilm, GlobalFoundries, and regional players are increasing material and equipment production capacity to support AI-era demand.",
+          "key_facts": [
+            "XY Motorized Positioning Stages market supporting 6-8% CAGR through 2035 driven by semiconductor demand",
+            "Fujifilm expanding Mesa facility with $18 million investment for semiconductor materials production",
+            "GlobalFoundries expanding US chip investment to $5 billion",
+            "TSMC offering contingency support for Intel EMIB-T packaging customers if supply falls short",
+            "EnterpriseSG positioning Singapore semiconductor SMEs for expanded supply chain roles",
+            "Tamil Nadu delinking chip incentives from central government approval"
+          ],
+          "implications": [
+            {
+              "keyword": "Supply Chain Resilience",
+              "text": "TSMC's EMIB-T packaging support signals industry-wide focus on reducing single-supplier dependencies and building redundancy for advanced packaging."
+            },
+            {
+              "keyword": "Materials Bottleneck Mitigation",
+              "text": "Fujifilm and regional players scaling materials production capacity to alleviate supply constraints in specialized semiconductor materials."
+            },
+            {
+              "keyword": "Regional Ecosystem Development",
+              "text": "Singapore and Tamil Nadu initiatives indicate geographic diversification of semiconductor supply chains to reduce concentration risk and enable local participation."
+            },
+            {
+              "keyword": "Capital Intensity",
+              "text": "GlobalFoundries' $5B US expansion and Fujifilm's Mesa investment reflect sustained high-capex environment required to meet AI infrastructure demands."
+            }
+          ],
+          "counterpoint": "Regional supply chain decentralization efforts may face execution challenges and cost disadvantages versus concentrated manufacturing hubs."
+        }
       }
     }
   }
