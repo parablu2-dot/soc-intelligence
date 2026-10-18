@@ -4416,7 +4416,7 @@ response = bedrock_runtime.converse(
 	<atom:link href="https://azure.microsoft.com/en-us/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://azure.microsoft.com/en-us/blog/</link>
 	<description>Get the latest Azure news, updates, and announcements from the Azure blog. From product updates to hot topics, hear from the Azure experts.</description>
-	<lastBuildDate>Wed, 14 Oct 2026 16:54:08 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 14 Oct 2026 20:08:05 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -4432,6 +4432,278 @@ response = bedrock_runtime.converse(
 	<height>32</height>
 </image> 
 	<item>
+		<title>Evolving the cloud-native foundation for the next generation of AI</title>
+		<link>https://azure.microsoft.com/en-us/blog/evolving-the-cloud-native-foundation-for-the-next-generation-of-ai/</link>
+					<comments>https://azure.microsoft.com/en-us/blog/evolving-the-cloud-native-foundation-for-the-next-generation-of-ai/#respond</comments>
+		
+		<dc:creator><![CDATA[Mike Hulme]]></dc:creator>
+		<pubDate>Thu, 15 Oct 2026 16:00:00 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[Containers]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[Cloud Cost Optimization]]></category>
+		<category><![CDATA[FinOps]]></category>
+		<category><![CDATA[Monitoring]]></category>
+		<category><![CDATA[Networking]]></category>
+		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=54554</guid>
+
+					<description><![CDATA[<p>Discover how Azure is advancing cloud-native infrastructure to help organizations build, run, and optimize applications and agents at scale.</p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/evolving-the-cloud-native-foundation-for-the-next-generation-of-ai/">Evolving the cloud-native foundation for the next generation of AI</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<h2 class="wp-block-heading" id="from-alerts-to-answers-the-future-of-postgresql-operations-is-intelligent">Building a cloud-native foundation for AI</h2>
+
+
+
+<p class="wp-block-paragraph">The relationship between model innovation and AI infrastructure has never been more clear; as AI becomes more capable, the platform underneath it matters even more. Agents are fundamentally changing how applications work, and with that, what organizations need from the cloud.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://developer.microsoft.com/en-us/reactor/series/S-1692/" target="_blank" rel="noopener noreferrer noreferrer noopener">Learn how to build a cloud-native AI foundation</a></div>
+</div>
+
+
+
+<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-us/solutions/cloud-native-apps/" target="_blank" rel="noopener noreferrer">Cloud-native practices gave organizations the scale, flexibility and resilience</a> to build a generation of distributed applications. Agents build on that foundation, but they work differently, placing new demands on it. Unlike applications designed around more predictable workflows, <a href="https://azure.microsoft.com/en-us/solutions/ai/" target="_blank" rel="noopener noreferrer">agents behave in entirely new ways, gathering information and deep intelligence from across the business</a>, using tools, making decisions, and coordinating work across long-running processes. To complete complex tasks, they pause for approval, respond to new information in real time and change course as conditions evolve. All this changes what the platform needs to deliver.</p>
+
+
+
+<p class="wp-block-paragraph">Customers need infrastructure that adapts as demand changes, applications that remain reliable as work becomes more dynamic, and the visibility and control to understand what is happening across the system. Meeting those needs doesn’t mean starting over, but it does require that the cloud-native foundation organizations already rely on, to evolve. <a href="https://learn.microsoft.com/en-us/cloud-computing/finops/framework/optimize/architecting" target="_blank" rel="noopener noreferrer">Compute, storage and networking need to work together</a>. Application platforms need to make it easier to build and run AI workloads. Open technologies need to give customers flexibility without adding unnecessary complexity.</p>
+
+
+
+<p class="wp-block-paragraph">The platform decisions organizations make today are increasingly strategic, shaping how effectively they can put AI to work for their business. Evolving the cloud-native foundation is essential to helping organizations get more from AI today while giving them the flexibility to take advantage of new capabilities as they emerge.</p>
+
+
+
+<h2 class="wp-block-heading" id="optimize-infrastructure-for-ai-workloads">Optimize infrastructure for AI workloads</h2>
+
+
+
+<p class="wp-block-paragraph">The true measure of AI infrastructure is the useful work it enables. AI workloads rarely place the same demands on infrastructure from beginning to end. <a href="https://azure.microsoft.com/en-us/solutions/high-performance-computing/ai-infrastructure" target="_blank" rel="noopener noreferrer">Different parts of the work may need accelerated compute, CPUs, fast access to data or connectivity</a> across applications and environments. The answer isn’t simply more capacity, but rather, to <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/infrastructure/compute" target="_blank" rel="noopener noreferrer">match the right resources to the right work at the right time</a>.</p>
+
+
+
+<p class="wp-block-paragraph">That makes coordination across the infrastructure extremely important. Compute, storage and networking need to work together as demands change. When they do, teams can spend less time managing infrastructure and more time focused on the applications and outcomes that matter to their business.</p>
+
+
+
+<p class="wp-block-paragraph">Economics matter, too. Infrastructure needs to be tuned to the demands of the application and the business value it delivers, <a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/" target="_blank" rel="noopener noreferrer">with the right balance of performance, reliability and cost</a> across the complete workload.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.microsoft.com/en/customers/story/26652-basecamp-research-ltd-azure-container-registry" target="_blank" rel="noopener noreferrer">Basecamp Research</a> is one example. The company used Azure to assemble 9.7 trillion nucleotides for EDEN, its therapeutic-design models, and reported laboratory validation across three therapeutic applications within about three weeks. In this example, AI didn’t simply require more infrastructure, it needed AI infrastructure that was coordinated and designed around the outcome – bringing together the compute, data and platform capabilities needed to move complex work forward.</p>
+
+
+
+<p class="wp-block-paragraph">As Glen Gowers, co-founder of Basecamp Research put it: “To really be successful here, we need those three ingredients to come together. We need someone scaling the data; that&#8217;s us. But someone who really knows how to scale models and scale compute is Microsoft.”</p>
+
+
+
+<p class="wp-block-paragraph">Leadership takeaway: Measure success by the useful work AI completes. Judge infrastructure investment by the performance, reliability and cost of delivering those outcomes, with compute, storage and networking operating as one system.</p>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e25fde7d2&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e25fde7d2" class="wp-block-image aligncenter size-large wp-lightbox-container"><img fetchpriority="high" decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Madeleine_office_009-1024x683.jpg" alt="Developer standing in front of the computer monitor" class="wp-image-54558" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Madeleine_office_009-1024x683.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Madeleine_office_009-300x200.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Madeleine_office_009-768x512.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Madeleine_office_009-1536x1024.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Madeleine_office_009-2048x1365.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<h2 class="wp-block-heading" id="turn-open-source-innovation-into-production-capability">Turn open-source innovation into production capability</h2>
+
+
+
+<p class="wp-block-paragraph">Open technologies have long helped drive cloud innovation, and AI is accelerating that pace. New models, frameworks and cloud-native technologies give organizations more choice in how they build and adapt applications.</p>
+
+
+
+<p class="wp-block-paragraph">That opportunity builds on an established cloud-native foundation. Gartner forecasts that by 2028, 95% of new AI agent deployment will use Kubernetes.<sup>1</sup> Reusing established components can shorten the path to production, allowing developers to focus on differentiated business capabilities rather than rebuilding the foundation.</p>
+
+
+
+<p class="wp-block-paragraph">More choice can also bring more complexity. Taking advantage of open-source innovation often requires specialized expertise to integrate, manage and maintain technologies in production. That expertise is hard to find and even harder to scale. We need to make these capabilities accessible to more businesses, without requiring every organization to build and maintain that expertise themselves.</p>
+
+
+
+<p class="wp-block-paragraph">Azure helps reduce that burden. Services like <a href="https://learn.microsoft.com/en-us/azure/aks/what-is-aks" target="_blank" rel="noopener noreferrer">Azure Kubernetes Service</a> give teams access to open-source innovation while helping manage the complexity and risk of running it in production. This makes it easier for more businesses to take advantage of open technologies while preserving the flexibility to adapt with changing needs.</p>
+
+
+
+<p class="wp-block-paragraph">Leadership takeaway: Choose a platform that helps turn open-source freedom into business advantage. <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/" target="_blank" rel="noopener noreferrer">Preserve the ability to adapt and optimize while reducing the expertise and operating effort</a> required to sustain those choices in production.</p>
+
+
+
+<h2 class="wp-block-heading" id="align-ai-infrastructure-costs-with-business-value">Align AI infrastructure costs with business value</h2>
+
+
+
+<p class="wp-block-paragraph">As more organizations put AI into production, understanding the economics becomes increasingly important. AI investment starts with an expectation of business value: faster decisions, more responsive services or greater capacity to get useful work done. Then, it’s evaluating whether the value justifies the investment to deliver it. <a href="https://learn.microsoft.com/en-us/cloud-computing/finops/overview" target="_blank" rel="noopener noreferrer">FinOps</a> can help teams understand that return and make more informed decisions in this area.</p>
+
+
+
+<p class="wp-block-paragraph">For customers, that starts with understanding the full investment required to run AI applications and how to optimize it as workloads scale. Models represent a significant expense, with token usage and agent behavior influencing spending. Compute, storage, networking and operations also factor into the equation. Considering these together helps customers make more informed decisions about where to optimize.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://learn.microsoft.com/en-us/cloud-computing/finops/best-practices/compute" target="_blank" rel="noopener noreferrer">Learn FinOps best practices for compute</a></div>
+</div>
+
+
+
+<p class="wp-block-paragraph">Teams can’t simply place their bets on spending less. They need to carefully consider that a more capable model or additional infrastructure that costs more may be the right choice if it produces greater value long-term. Teams need to understand the full cost, establish ownership and put guardrails in place as they scale. From there, they can use business outcomes to decide where to optimize and where to invest.</p>
+
+
+
+<p class="wp-block-paragraph">Leadership takeaway: Manage AI investment against the business return it needs to deliver. Evaluate model and platform costs together, then use evidence of outcome value to decide where to optimize and where to invest.</p>
+
+
+
+<h2 class="wp-block-heading" id="transform-cloud-operations-with-agentic-ai">Transform cloud operations with agentic AI</h2>
+
+
+
+<p class="wp-block-paragraph">Operations teams are already stretched thin, keeping critical services running while balancing competing priorities and constant change. AI adds new complexity, and it also creates an opportunity to change how those environments are managed.</p>
+
+
+
+<p class="wp-block-paragraph">Cloud-native operations gave teams a new model for managing infrastructure, bringing increased automation, visibility and resilience. <a href="https://azure.microsoft.com/en-us/products/sre-agent/" target="_blank" rel="noopener noreferrer">Agentic operations build on that foundation</a>, bringing deeper intelligence across applications and infrastructure by connecting signals from otherwise disconnected systems. This helps teams identify issues earlier and resolve them faster, while increasing automation and continuously improving how their environments perform; all within the tools they already use.</p>
+
+
+
+<p class="wp-block-paragraph">Over time, AI can help operations teams move from reacting to problems toward anticipating and addressing them before they disrupt the business. As these capabilities mature, more actions can be automated within defined controls, with people remaining in the loop and accountable for critical decisions. When operations teams have greater reach without additional manual effort, reliability, performance and cost are continuously improved while critical services remain uninterrupted.</p>
+
+
+
+<p class="wp-block-paragraph">Leadership takeaway: Invest in operations that can anticipate problems and coordinate action across the environment. Expand autonomy as capabilities are validated, with clear controls and human accountability protecting critical business services.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://azure.microsoft.com/en-us/products/sre-agent/" target="_blank" rel="noopener noreferrer">Automate operations with Azure SRE Agent</a></div>
+</div>
+
+
+
+<h2 class="wp-block-heading" id="build-a-cloud-native-ai-foundation-on-azure">Build a cloud-native AI foundation on Azure</h2>
+
+
+
+<p class="wp-block-paragraph">Azure serves as the foundation customers need to put AI to work at scale. That means infrastructure designed around the complete workload, access to open innovation without unnecessary complexity, and a clear view of cost and business value. Greater intelligence across cloud operations helps teams anticipate issues and continuously improve how their environments perform as application needs evolve.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-gb/solutions/ai/?ef_id=_k_CjwKCAjwirLWBhBBEiwAlItbEiofqa5DDqkdgm6LDQnspxBsKug9QALCXOsCCeA2BYKp1Q2v8naV_RoCfewQAvD_BwE_k_&amp;OCID=AIDcmmo7vzpajg_SEM__k_CjwKCAjwirLWBhBBEiwAlItbEiofqa5DDqkdgm6LDQnspxBsKug9QALCXOsCCeA2BYKp1Q2v8naV_RoCfewQAvD_BwE_k_&amp;gad_source=1&amp;gad_campaignid=23504081703&amp;gbraid=0AAAAADcJh_uggBwd2EZDje1Ybccm3N8Nl&amp;gclid=CjwKCAjwirLWBhBBEiwAlItbEiofqa5DDqkdgm6LDQnspxBsKug9QALCXOsCCeA2BYKp1Q2v8naV_RoCfewQAvD_BwE" target="_blank" rel="noopener noreferrer">We’re continuing to invest in capabilities across Azure</a> that give customers greater flexibility in how they build and run AI applications. From <a href="https://learn.microsoft.com/en-us/azure/container-apps/sandboxes-get-started" target="_blank" rel="noopener noreferrer">secure, isolated environments for agents</a> to simpler application deployment and the ability to run workloads across cloud and edge environments, these investments help customers take advantage of new capabilities without adding unnecessary operational complexity.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://azure.microsoft.com/en-us/products/kubernetes-service/" target="_blank" rel="noopener noreferrer">Get started with Azure Kubernetes Service (AKS)</a></div>
+</div>
+
+
+
+<p class="wp-block-paragraph">AI is changing what applications can do, and Azure has already evolved to support that shift. The cloud platform has to evolve with them. Years of focused engineering investment have built the foundation for some of the most advanced AI workloads running today, with continued innovation to support what comes next.</p>
+
+
+
+<h2 class="wp-block-heading" id="build-for-the-next-generation-of-ai">Build for the next generation of AI</h2>
+
+
+
+<p class="wp-block-paragraph">Platform value compounds when improvements reinforce one another: faster information access keeps compute productive, operational insight exposes waste, and open technologies preserve room to adapt. The leadership task is to make those gains work together. That is the next chapter of cloud native: a foundation that turns advances in AI into dependable business value.</p>
+
+
+
+<p class="wp-block-paragraph">To learn more about the recent Azure innovations and how Azure is evolving the cloud-native foundation for AI applications and agents, explore:</p>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item"><a href="http://aka.ms/aks/flexnodeforaks" target="_blank" rel="noopener noreferrer">Flex Nodes for AKS</a></li>
+
+
+
+<li class="wp-block-list-item"><a href="https://azure.microsoft.com/en-us/products/sre-agent/">Azure SRE Agent</a></li>
+
+
+
+<li class="wp-block-list-item"><a href="http://aka.ms/aca/sandbox/launch-blog">Azure Container Apps Sandboxes</a></li>
+
+
+
+<li class="wp-block-list-item"><a href="http://aka.ms/aca/express/blog">Azure Container Apps Express</a></li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Explore what this means for your organization. <a href="https://events.microsoft.com/flow/microsoft/microsoftds/catalog/page/unauthsession?tab.deliverymethod=deliverymethod_live&amp;search=Innovate%20with%20AI%20on%20a%20Cloud%20Native%20Foundation" target="_blank" rel="noreferrer noopener">Register for our upcoming discovery session</a> to learn how to put a cloud-native foundation for AI applications and agents into practice.</p>
+
+
+
+<div class="is-style-inline wp-block-bloginabox-theme-promotional">
+	
+<div class="promotional promotional--has-media promotional--media-left">
+	<div class="promotional__wrapper">
+		<div class="promotional__content-wrapper">
+			<div class="promotional__content">
+				
+
+<h2 class="wp-block-heading" id="register-for-discovery-session">Build your AI foundation</h2>
+
+
+
+<p class="wp-block-paragraph" id="register-for-discovery-session">Learn how to put a cloud-native foundation for AI applications and agents into practice in our upcoming discovery session.</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a aria-label="Register now: Build your AI foundation" data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdeveloper.microsoft.com%2Fen-us%2Freactor%2Fseries%2FS-1692%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C28c075d5e138424372f908df28ba85fd%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639274453818303715%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=GiAsxkX905%2BhlL4R%2FfdH2ILCbPhpQjytgvFfjKWHRSY%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer">Register now</a></div>
+</div>
+
+			</div>
+		</div>
+					<div class="promotional__media-wrapper">
+				<div class="promotional__media">
+											<img decoding="async" width="2560" height="1707" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-scaled.jpg" class="attachment-full size-full" alt="person sitting in front of the computer and smiling looking at the monitor" loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-scaled.jpg 2560w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-300x200.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-1024x683.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-768x512.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-1536x1024.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-2048x1365.jpg 2048w" sizes="auto, (max-width: 2560px) 100vw, 2560px" />									</div>
+			</div>
+			</div>
+</div>
+</div>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity" />
+
+
+
+<p class="wp-block-paragraph"><sup>1</sup> Gartner®, Magic Quadrant™ for Container Management, Dennis Smith, Wataru Katsurashima, et al., 6 August 2025 <br></p>
+
+
+
+<p class="has-body-medium-font-size wp-block-paragraph">GARTNER and MAGIC QUADRANT are trademarks of Gartner, Inc. and/or its affiliates.</p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/evolving-the-cloud-native-foundation-for-the-next-generation-of-ai/">Evolving the cloud-native foundation for the next generation of AI</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/evolving-the-cloud-native-foundation-for-the-next-generation-of-ai/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
 		<title>Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Server Virtualization Platforms</title>
 		<link>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-server-virtualization-platforms/</link>
 					<comments>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-server-virtualization-platforms/#respond</comments>
@@ -4456,7 +4728,7 @@ response = bedrock_runtime.converse(
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71d94168&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71d94168" class="wp-block-image aligncenter size-full wp-lightbox-container"><img fetchpriority="high" decoding="async" width="819" height="908" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image.jpg" alt="Magic Quadrant graph for Server Virtualization Platforms." class="wp-image-54577" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image.jpg 819w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-271x300.jpg 271w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-768x851.jpg 768w" sizes="(max-width: 819px) 100vw, 819px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e25fe599c&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e25fe599c" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="819" height="908" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image.jpg" alt="Magic Quadrant graph for Server Virtualization Platforms." class="wp-image-54577" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image.jpg 819w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-271x300.jpg 271w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-768x851.jpg 768w" sizes="(max-width: 819px) 100vw, 819px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -4601,7 +4873,7 @@ response = bedrock_runtime.converse(
 <p class="wp-block-paragraph">This approach builds on the model Microsoft established with other industry collaborators on <a href="https://caliptra.io/" target="_blank" rel="noreferrer noopener">Caliptra</a>, a fully open-source <a href="https://azure.microsoft.com/en-us/blog/enforcing-trust-and-transparency-open-sourcing-the-azure-integrated-hsm/" target="_blank" rel="noopener noreferrer">silicon root-of-trust that has since been broadly adopted</a> across the hardware ecosystem. Through Project Tessera, industry leaders including Microsoft, Marvell®, Oracle, and the Open Compute Project will apply that same model of transparency and collaboration to advance hardware key protection with the industry.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71d98d47&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71d98d47" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" alt="Image reads, "Tessera Integrated HSM"" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-2-1.webp" alt='Image reads, "Tessera Integrated HSM"' class="wp-image-54585 webp-format" srcset="" data-orig-alt="Image reads, "Tessera Integrated HSM"" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-2-1.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e25febf1a&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e25febf1a" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" alt="Image reads, "Tessera Integrated HSM"" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-2-1.webp" alt='Image reads, "Tessera Integrated HSM"' class="wp-image-54585 webp-format" srcset="" data-orig-alt="Image reads, "Tessera Integrated HSM"" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-2-1.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -4677,7 +4949,7 @@ response = bedrock_runtime.converse(
 <p class="wp-block-paragraph">By combining strong hardware-rooted protection with an open-source implementation and open protocols, Tessera Integrated HSM creates a path toward greater transparency, interoperability, and <a href="https://azure.microsoft.com/en-us/blog/protecting-azure-infrastructure-from-silicon-to-systems/" target="_blank" rel="noopener noreferrer">innovation across the HSM ecosystem</a>. The native support for quantum-resilient cryptography will help ease the industry’s transition to post-quantum cryptography.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71d99f16&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71d99f16" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-10.webp" alt="Diagram showing a Tessera Integrated HSM protecting cryptographic keys in hardware while a virtual machine accesses them locally." class="wp-image-54513 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-10.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e25fed5ac&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e25fed5ac" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-10.webp" alt="Diagram showing a Tessera Integrated HSM protecting cryptographic keys in hardware while a virtual machine accesses them locally." class="wp-image-54513 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-10.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -4705,7 +4977,7 @@ response = bedrock_runtime.converse(
 <p class="wp-block-paragraph">The Tessera Integrated HSM protocols use post-quantum cryptography to protect communication between HSMs. This enables authorized workloads with a Tessera Integrated HSM to use both classical cryptography and post-quantum cryptographic services while their keys remain secured within the HSM boundary and can only be authorized for use by the key owner.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71d9acc8&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71d9acc8" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-11.webp" alt="Diagram showing Project Tessera protocols enabling HSM partition cloning between Tessera Integrated HSM and Marvell LiquidSecurity 2." class="wp-image-54514 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-11.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e25feea56&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e25feea56" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-11.webp" alt="Diagram showing Project Tessera protocols enabling HSM partition cloning between Tessera Integrated HSM and Marvell LiquidSecurity 2." class="wp-image-54514 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-11.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -4745,7 +5017,7 @@ response = bedrock_runtime.converse(
 <p class="wp-block-paragraph">Project Tessera provides the highest level of hardware assurance, protecting keys within a dedicated, tamper-resistant security boundary designed to meet demanding certification requirements, including FIPS 140-3 Level 3 and Common Criteria. </p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71d9bcec&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71d9bcec" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles-1024x576.webp" alt="Diagram comparing Project Tessera protection profiles across virtualization, confidential computing, and Integrated HSM deployments." class="wp-image-54598 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles.webp 1280w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles-1024x576.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e25fefe2d&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e25fefe2d" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles-1024x576.webp" alt="Diagram comparing Project Tessera protection profiles across virtualization, confidential computing, and Integrated HSM deployments." class="wp-image-54598 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles.webp 1280w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Project-Tessera_Protection-Profiles-1024x576.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -4847,7 +5119,7 @@ response = bedrock_runtime.converse(
 <p class="wp-block-paragraph"><a href="https://blogs.microsoft.com/blog/2026/01/26/maia-200-the-ai-accelerator-built-for-inference/" target="_blank" rel="noopener noreferrer">Maia</a> reflects our system co-design approach. It is designed alongside Microsoft infrastructure and production workloads, bringing models, application frameworks, kernels, communication libraries, systems software, and custom silicon into one optimization loop. Maia 200 is deploying across the United States, Europe and Australia and delivering up to 1.7x more tokens per watt for built-in AI capabilities in Microsoft Teams, <a href="https://www.microsoft.com/en-us/copilot" target="_blank" rel="noopener noreferrer">Copilot</a> and Cowork experiences compared with leading GPU infrastructure.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71d9fa2f&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71d9fa2f" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Phoenix-Data-Center-Shoot-2026_Stills-2-1-scaled.webp" alt="Azure Maia 200 systems installed in a Microsoft datacenter." class="wp-image-54582 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Phoenix-Data-Center-Shoot-2026_Stills-2-1-scaled.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e26001021&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e26001021" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Phoenix-Data-Center-Shoot-2026_Stills-2-1-scaled.webp" alt="Azure Maia 200 systems installed in a Microsoft datacenter." class="wp-image-54582 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Phoenix-Data-Center-Shoot-2026_Stills-2-1-scaled.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -4867,7 +5139,7 @@ response = bedrock_runtime.converse(
 <p class="wp-block-paragraph">AI is not only about accelerators. Agentic workloads create entirely new demands on CPUs. Every agent interaction generates orchestration, data retrieval, memory management, and service calls that must occur quickly and efficiently. That is why we designed Cobalt 200 as an agent-native CPU. <a href="https://azure.microsoft.com/en-us/blog/new-azure-cobalt-200-vms-deliver-50-performance-improvement-fully-optimized-for-modern-agentic-ai-workloads/">Cobalt 200</a> delivers more than 50% performance improvement over Cobalt 100 and reduces agent call latency by 33%, while providing 23% higher throughput on agentic workloads.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71da069d&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71da069d" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Azure-Hardware-Media-Selects_Blurred-16-scaled.webp" alt="Rows of Azure Cobalt 200 server systems installed in a Microsoft datacenter." class="wp-image-54583 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Azure-Hardware-Media-Selects_Blurred-16-scaled.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e26002793&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e26002793" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Azure-Hardware-Media-Selects_Blurred-16-scaled.webp" alt="Rows of Azure Cobalt 200 server systems installed in a Microsoft datacenter." class="wp-image-54583 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Azure-Hardware-Media-Selects_Blurred-16-scaled.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5075,7 +5347,7 @@ response = bedrock_runtime.converse(
 <p class="wp-block-paragraph">Maia 200 introduced a new class of accelerator architecture called <a href="https://techcommunity.microsoft.com/blog/azureinfrastructureblog/maia-200-software-defined-dataflow-and-all-ethernet-networking-for-efficient-inf/4548198">Software Defined Locally Accessed Dataflow Architecture</a>, or SDLA. It begins with the observation that efficient data management, including storing, moving and converting data, is one of the central challenges in modern AI systems. The Maia programmable dataflow architecture separates control path programming from data path execution and allows software to explicitly coordinate data placement, movement, conversion and synchronization across specialized local memories, DMA engines, compute engines, and the network.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71da56a5&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71da56a5" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-SoC.webp" alt="Diagram of Azure Maia 300 architecture" class="wp-image-54481 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-SoC.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e2600a7b7&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e2600a7b7" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-SoC.webp" alt="Diagram of Azure Maia 300 architecture" class="wp-image-54481 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-SoC.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5127,7 +5399,7 @@ response = bedrock_runtime.converse(
 </blockquote>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71da6826&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71da6826" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-Specifications.webp" alt="Chart showing Azure Maia 300 technical specs" class="wp-image-54483 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-Specifications.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e2600c218&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e2600c218" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-Specifications.webp" alt="Chart showing Azure Maia 300 technical specs" class="wp-image-54483 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-Specifications.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5161,7 +5433,7 @@ response = bedrock_runtime.converse(
 </ul>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71da773c&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71da773c" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Top-tier-Scale-Up-Network.webp" alt="Diagram showing Azure Maia 300 network architecture" class="wp-image-54484 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Top-tier-Scale-Up-Network.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e2600d659&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e2600d659" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Top-tier-Scale-Up-Network.webp" alt="Diagram showing Azure Maia 300 network architecture" class="wp-image-54484 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Top-tier-Scale-Up-Network.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5195,7 +5467,7 @@ response = bedrock_runtime.converse(
 </ul>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71da85d3&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71da85d3" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Racks.webp" alt="Diagram showing Azure Maia 300 data traffic between racks" class="wp-image-54485 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Racks.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e2600ec84&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e2600ec84" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Racks.webp" alt="Diagram showing Azure Maia 300 data traffic between racks" class="wp-image-54485 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Racks.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5221,7 +5493,7 @@ response = bedrock_runtime.converse(
 </ul>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71da94c4&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71da94c4" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Shared-Spare-Pool.webp" alt="Diagram showing Azure Maia 300 data traffic across racks" class="wp-image-54486 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Shared-Spare-Pool.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e26010063&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e26010063" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Shared-Spare-Pool.webp" alt="Diagram showing Azure Maia 300 data traffic across racks" class="wp-image-54486 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Shared-Spare-Pool.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5251,7 +5523,7 @@ response = bedrock_runtime.converse(
 </ul>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71daa279&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71daa279" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-Rack-Architecture.webp" alt="Chart showing Azure Maia 300 rack architecture" class="wp-image-54487 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-Rack-Architecture.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e26011a22&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e26011a22" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-Rack-Architecture.webp" alt="Chart showing Azure Maia 300 rack architecture" class="wp-image-54487 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-Rack-Architecture.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5285,7 +5557,7 @@ response = bedrock_runtime.converse(
 </ul>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71dab029&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71dab029" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-flowchart.webp" alt="Images showing Azure Maia 300 silicon, server, and rack" class="wp-image-54488 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-flowchart.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e260134b0&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e260134b0" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-flowchart.webp" alt="Images showing Azure Maia 300 silicon, server, and rack" class="wp-image-54488 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Maia-300-flowchart.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5401,7 +5673,7 @@ response = bedrock_runtime.converse(
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71dae9b6&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71dae9b6" class="wp-block-image aligncenter size-large wp-lightbox-container" style="margin-top:var(--wp--preset--spacing--2-xl);margin-bottom:var(--wp--preset--spacing--2-xl)"><img decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1-1024x576.jpeg" alt="Flowchart about redesigning infrastructure work with A I." class="wp-image-54371" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1-1024x576.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1-300x169.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1-768x432.jpeg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1-1536x864.jpeg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1-809x455.jpeg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1.jpeg 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e260175e5&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e260175e5" class="wp-block-image aligncenter size-large wp-lightbox-container" style="margin-top:var(--wp--preset--spacing--2-xl);margin-bottom:var(--wp--preset--spacing--2-xl)"><img decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1-1024x576.jpeg" alt="Flowchart about redesigning infrastructure work with A I." class="wp-image-54371" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1-1024x576.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1-300x169.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1-768x432.jpeg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1-1536x864.jpeg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1-809x455.jpeg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-1.jpeg 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5430,7 +5702,7 @@ response = bedrock_runtime.converse(
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71daff33&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71daff33" class="wp-block-image aligncenter size-large wp-lightbox-container" style="margin-top:var(--wp--preset--spacing--2-xl);margin-bottom:var(--wp--preset--spacing--2-xl)"><img decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2-1024x576.jpeg" alt="Comparison between connected decisions with manual research as opposed to using A I and a connected workflow." class="wp-image-54372" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2-1024x576.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2-300x169.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2-768x432.jpeg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2-1536x864.jpeg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2-809x455.jpeg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2.jpeg 1920w" sizes="(max-width: 1024px) 100vw, 1024px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e26018e45&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e26018e45" class="wp-block-image aligncenter size-large wp-lightbox-container" style="margin-top:var(--wp--preset--spacing--2-xl);margin-bottom:var(--wp--preset--spacing--2-xl)"><img loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2-1024x576.jpeg" alt="Comparison between connected decisions with manual research as opposed to using A I and a connected workflow." class="wp-image-54372" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2-1024x576.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2-300x169.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2-768x432.jpeg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2-1536x864.jpeg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2-809x455.jpeg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-2.jpeg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5491,7 +5763,7 @@ response = bedrock_runtime.converse(
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71db12c0&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71db12c0" class="wp-block-image aligncenter size-large wp-lightbox-container" style="margin-top:var(--wp--preset--spacing--2-xl);margin-bottom:var(--wp--preset--spacing--2-xl)"><img loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3-1024x576.jpeg" alt="Loop flowchart about aspects of Learning Across the Fleet." class="wp-image-54373" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3-1024x576.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3-300x169.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3-768x432.jpeg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3-1536x864.jpeg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3-809x455.jpeg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3.jpeg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e2601ab23&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e2601ab23" class="wp-block-image aligncenter size-large wp-lightbox-container" style="margin-top:var(--wp--preset--spacing--2-xl);margin-bottom:var(--wp--preset--spacing--2-xl)"><img loading="lazy" decoding="async" width="1024" height="576" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3-1024x576.jpeg" alt="Loop flowchart about aspects of Learning Across the Fleet." class="wp-image-54373" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3-1024x576.jpeg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3-300x169.jpeg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3-768x432.jpeg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3-1536x864.jpeg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3-809x455.jpeg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/261001_AI-Powered_Systems_Blog-3.jpeg 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5639,7 +5911,7 @@ response = bedrock_runtime.converse(
 <p class="wp-block-paragraph">As industrial organizations modernize, they need a foundation that connects operations across cloud and edge environments. Azure’s adaptive cloud approach, powered by <a href="https://azure.microsoft.com/en-us/solutions/iot" target="_blank" rel="noopener noreferrer">Microsoft Azure IoT</a>, <a href="https://azure.microsoft.com/en-us/products/azure-arc" target="_blank" rel="noopener noreferrer">Microsoft Azure Arc</a>, <a href="https://azure.microsoft.com/en-us/products/local" target="_blank" rel="noopener noreferrer">Azure Local</a>, <a href="https://www.microsoft.com/en-ie/microsoft-fabric" target="_blank" rel="noopener noreferrer">Microsoft Fabric</a>, and <a href="https://azure.microsoft.com/en-us/products/ai-foundry" target="_blank" rel="noopener noreferrer">Microsoft Foundry</a>, enables organizations to connect operational assets, contextualize data, apply AI-powered reasoning, and close the loop between insight and action.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71db72bc&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71db72bc" class="wp-block-image size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-894x1024.webp" alt="Gartner Magic Quadrant for Global Industrial AIoT Platforms (September 2026) showing Microsoft positioned as a Leader for vision and execution." class="wp-image-54401 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-894x1024.webp 894w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-262x300.webp 262w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-768x880.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-1340x1536.webp 1340w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-1787x2048.webp 1787w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-894x1024.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e2602184b&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e2602184b" class="wp-block-image size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-894x1024.webp" alt="Gartner Magic Quadrant for Global Industrial AIoT Platforms (September 2026) showing Microsoft positioned as a Leader for vision and execution." class="wp-image-54401 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-894x1024.webp 894w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-262x300.webp 262w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-768x880.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-1340x1536.webp 1340w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-1787x2048.webp 1787w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Figure_1_Magic_Quadrant_for_Global_Industrial_AIoT_Platforms_highres-894x1024.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5935,7 +6207,7 @@ response = bedrock_runtime.converse(
 <p class="wp-block-paragraph"><a href="https://datacenters.microsoft.com/tour/circular-center/" target="_blank" rel="noopener noreferrer">Microsoft Circular Centers</a> manage these decisions as part of our datacenter operations. At these facilities, our staff give decommissioned hardware a series of possible next lives. Complete systems can support Microsoft labs and training environments, help schools and universities teach technical skills, or be sold to qualified buyers for continued use. Components can become spare parts for other systems. Materials are recycled when reuse is no longer possible.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad0e71dbe4a4&quot;}" data-wp-interactive="core/image" data-wp-key="6ad0e71dbe4a4" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-1024x576.webp" alt="Image of circular center facilities in a global map format. " class="wp-image-54322 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-1536x864.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-2048x1152.webp 2048w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-809x455.webp 809w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-1024x576.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6ad1e2602adf1&quot;}" data-wp-interactive="core/image" data-wp-key="6ad1e2602adf1" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-1024x576.webp" alt="Image of circular center facilities in a global map format. " class="wp-image-54322 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-1536x864.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-2048x1152.webp 2048w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-809x455.webp 809w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Circular-Centers-Picture-1024x576.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6250,7 +6522,7 @@ response = bedrock_runtime.converse(
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6ad0e71dc4899"></universal-media-player>
+		<universal-media-player id="ump-6ad1e26033cd3"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6264,7 +6536,7 @@ response = bedrock_runtime.converse(
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6ad0e71dc4899", options);
+				ump("ump-6ad1e26033cd3", options);
 			});
 		</script>
 	</div>
@@ -6302,7 +6574,7 @@ response = bedrock_runtime.converse(
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6ad0e71dc4bc9"></universal-media-player>
+		<universal-media-player id="ump-6ad1e260341b1"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6316,7 +6588,7 @@ response = bedrock_runtime.converse(
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6ad0e71dc4bc9", options);
+				ump("ump-6ad1e260341b1", options);
 			});
 		</script>
 	</div>
@@ -6364,7 +6636,7 @@ response = bedrock_runtime.converse(
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6ad0e71dc500c"></universal-media-player>
+		<universal-media-player id="ump-6ad1e26034861"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6378,7 +6650,7 @@ response = bedrock_runtime.converse(
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6ad0e71dc500c", options);
+				ump("ump-6ad1e26034861", options);
 			});
 		</script>
 	</div>
@@ -6424,7 +6696,7 @@ response = bedrock_runtime.converse(
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6ad0e71dc539c"></universal-media-player>
+		<universal-media-player id="ump-6ad1e26034dca"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6438,7 +6710,7 @@ response = bedrock_runtime.converse(
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6ad0e71dc539c", options);
+				ump("ump-6ad1e26034dca", options);
 			});
 		</script>
 	</div>
@@ -6586,7 +6858,7 @@ response = bedrock_runtime.converse(
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-dnt="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6ad0e71dc6053"></universal-media-player>
+		<universal-media-player id="ump-6ad1e26035fe7"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -6600,7 +6872,7 @@ response = bedrock_runtime.converse(
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6ad0e71dc6053", options);
+				ump("ump-6ad1e26035fe7", options);
 			});
 		</script>
 	</div>
@@ -6768,122 +7040,6 @@ response = bedrock_runtime.converse(
 <enclosure url="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/1117414-agenticappdevdemo" length="220573284" type="" />
 <enclosure url="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/1117414-iqsharing" length="243981606" type="" />
 
-			</item>
-		<item>
-		<title>Enhancing Microsoft Azure Virtual Machine lifecycle</title>
-		<link>https://azure.microsoft.com/en-us/blog/enhancing-microsoft-azure-virtual-machine-lifecycle/</link>
-					<comments>https://azure.microsoft.com/en-us/blog/enhancing-microsoft-azure-virtual-machine-lifecycle/#respond</comments>
-		
-		<dc:creator><![CDATA[The Microsoft Azure Team]]></dc:creator>
-		<pubDate>Mon, 28 Sep 2026 15:00:00 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<category><![CDATA[Management and governance]]></category>
-		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=54069</guid>
-
-					<description><![CDATA[<p>Our Virtual Machine Lifecycle policy guides how we manage these transitions, giving Azure customers transparency, predictability, and guidance.</p>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/enhancing-microsoft-azure-virtual-machine-lifecycle/">Enhancing Microsoft Azure Virtual Machine lifecycle</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<p class="wp-block-paragraph">Azure continuously advances through new infrastructure generations, platform capabilities, services, and innovations that lead the industry in performance, security, reliability, and efficiency. Our Virtual Machine (VM) Lifecycle policy guides how we manage these transitions, giving Azure customers transparency, predictability, and guidance to plan for and execute technology changes with confidence. Our goal is to help every organization plan and navigate these modernization steps in line with Azure&#8217;s latest innovations and ongoing platform investments.</p>
-
-
-
-<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://learn.microsoft.com/en-us/azure/virtual-machines/" target="_blank" rel="noopener noreferrer">Learn more about virtual machines in Azure</a></div>
-</div>
-
-
-
-<p class="wp-block-paragraph">To give you access to the most advanced cloud and AI infrastructure, deployed on the most sophisticated silicon and hardware, the Azure Virtual Machine lifecycle is built around three customer outcomes:</p>
-
-
-
-<ul class="wp-block-list">
-<li class="wp-block-list-item"><strong>Transparency</strong> to easily understand the lifecycle status of Azure technologies, Microsoft&#8217;s level of ongoing investment, and the recommended path forward as new innovations become available.</li>
-
-
-
-<li class="wp-block-list-item"><strong>Predictability</strong> to plan against defined lifecycle stages, understand what to expect at each stage, and advance notice as technologies progress through their lifecycle.</li>
-
-
-
-<li class="wp-block-list-item"><strong>Guidance </strong>to help you modernize and adopt newer technologies rapidly and with confidence, along with AI-led tooling to accelerate workload transitions and recommendations.</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">This lifecycle provides a shared taxonomy, common stages, and consistent commitments for how we communicate technology evolution.</p>
-
-
-
-<p class="wp-block-paragraph"><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview?tabs=breakdownseries%2Cgeneralsizelist%2Ccomputesizelist%2Cmemorysizelist%2Cstoragesizelist%2Cgpusizelist%2Cfpgasizelist%2Chpcsizelist" target="_blank" rel="noopener noreferrer">Azure General Purpose, Memory Optimized, Compute Optimized, and Storage Optimized VMs</a> are the first VM families covered by this policy.</p>
-
-
-
-<p class="wp-block-paragraph">The lifecycle stages, spanning <strong><em>Current</em>, <em>Extended</em>, <em>End of Life</em>,</strong> and <strong><em>Retired,</em></strong> are defined below, with dedicated Microsoft investment levels, regional and quota availability, applicable purchasing options, and pricing. The policy establishes clear lifecycle stages, expected customer experiences, and Microsoft&#8217;s commitments at each stage so customers can confidently plan, deploy, and modernize workloads over time.</p>
-
-
-
-<figure class="wp-block-table aligncenter"><table class="has-fixed-layout"><tbody><tr><td class="has-text-align-center" data-align="center" colspan="2"><strong>Azure Virtual Machine Lifecycle Policy</strong></td></tr><tr><td><strong>Stage</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Current</strong></td><td><strong>Customer recommendation</strong>: Customers can confidently deploy new workloads, expand existing deployments, and optimize their Azure investments using VMs in the <em>Current</em> stage of the lifecycle. These VMs are specifically recommended for new deployments. <br><strong>Microsoft investment</strong>: During this stage, products receive standard maintenance and support.<br><strong>Availability</strong>:<em> Current</em> VM series are generally available to customers and have broad availability across Azure regions globally.<br><strong>Purchasing</strong> <strong>options and pricing</strong>: Pay-as-you-go pricing and Azure Savings Plans. Azure Reserved VM Instances may also be offered.  </td></tr><tr><td><strong>Extended</strong></td><td><strong>Customer recommendation</strong>: Azure VMs in the <em>Extended</em> stage remain supported for existing workloads; however, customers should begin evaluating and planning a transition to VMs in the <em>Current</em> stage.<br><strong>Microsoft investment</strong>: During this stage, products continue to receive standard maintenance and support.<br><strong>Availability</strong>: VMs in the <em>Extended</em> stage remain generally available across multiple regions. However, VMs in this stage may be subject to quota restrictions. <strong>Purchasing options and pricing</strong>: Pay-as-you-go pricing and Azure Savings Plans. Azure Reserved VM Instances may also be offered. Changes to purchasing options and pricing are possible.</td></tr><tr><td><strong>End of Life</strong></td><td><strong>Customer recommendation:</strong> VMs enter the <em>End of Life</em> stage when their retirement is formally announced. These VMs are based on older platform generations and do not benefit from the latest advancements in performance, security, reliability, and efficiency. Customers should actively plan and transition the workloads to VMs in the <em>Current</em> or <em>Extended</em> stages.<br><strong>Microsoft investment:</strong> During this stage, products continue to receive standard maintenance and support. In addition, Azure will provide notifications, migration tooling, and guidance to help customers move to newer versions.<br><strong>Availability:</strong> VMs in the <em>End of Life</em> stage remain available to existing customers in currently supported regions and within their existing quota allocations, subject to available capacity. New deployments and quota requests are subject to restriction. Microsoft will deploy new workload placement capabilities for VMs in the <em>End of Life</em> stage. While customers may experience minor workload performance variations in rare scenarios, existing Azure Virtual Machines SLAs will be met. These capabilities allow Microsoft to improve capacity availability for VMs in the <em>End of Life</em> stage as well as help support continued investments in modern hardware, new capabilities, and global scale.<br><strong>Purchasing options and pricing</strong>: Pay-as-you-go pricing and Azure Savings Plans remain available, while Reserved Instances may no longer be offered. When VMs enter the <em>End of Life</em> stage, customers should expect changes to pricing and availability.</td></tr><tr><td><strong>Retired</strong></td><td><strong>Customer recommendation:</strong> <em>Retired</em> VMs are no longer available and can no longer be provisioned. Customer modernization should be complete, with workloads now deployed to VMs in the <em>Current</em> or <em>Extended</em> stages.<br><strong>Microsoft investment:</strong> VMs in a <em>Retired</em> series are no longer covered by a service level agreement (SLA) and are not eligible for Microsoft support.<br><strong>Availability:</strong> New VM creation is no longer available, and existing VMs will be deallocated.<br><strong>Purchasing options and pricing:</strong> VMs in a retired series are no longer available for purchase.</td></tr></tbody></table></figure>
-
-
-
-<p class="wp-block-paragraph"><strong><em>Note</em></strong><em>: Lifecycle details described in this policy represent general guidance and may be subject to product-specific, regional, or operational exceptions.</em></p>
-
-
-
-<h2 class="wp-block-heading" id="platform-experiences-and-tools-to-help-simplify-transitions">Platform experiences and tools to help simplify transitions</h2>
-
-
-
-<p class="wp-block-paragraph">Microsoft is committed to helping you modernize your workload portfolio with the greatest possible speed, confidence, and simplicity. Azure Advisor and Azure Service Health give you clear insight into your subscriptions and resources—helping you discover upcoming VM retirements, identify affected resources, and track your modernization progress with recommended actions built in. Beyond this, Microsoft is investing in intelligent, AI-augmented tools designed to apply lifecycle guidance across your entire workload portfolio, further reducing friction as you modernize.</p>
-
-
-
-<p class="wp-block-paragraph">Microsoft is committed to helping you navigate these infrastructure transitions and take advantage of the next wave of innovation. As Azure continues to advance, our commitment is to make change predictable, transparent, and supported through clear lifecycle guidance, early visibility, and practical help to modernize with confidence. This policy is an important step toward making modernization easier to plan, simpler to execute, and more valuable for every Azure customer.</p>
-
-
-
-<p class="wp-block-paragraph">For more information about the Azure Virtual Machines lifecycle, visit the <a href="https://aka.ms/VM-lifecycle/learn/vm-lifecycle-policy" target="_blank" rel="noreferrer noopener">VM lifecycle overview page</a>.</p>
-
-
-
-<div class="is-style-inline-centered wp-block-bloginabox-theme-promotional">
-	
-<div class="promotional promotional--has-media promotional--media-right">
-	<div class="promotional__wrapper">
-		<div class="promotional__content-wrapper">
-			<div class="promotional__content">
-				
-
-<h2 class="wp-block-heading" id="azure-virtual-machines">Azure Virtual Machines</h2>
-
-
-
-<p class="wp-block-paragraph">Create and manage virtual machines </p>
-
-
-
-<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a aria-label="Get started: Azure Virtual Machines" data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://learn.microsoft.com/en-us/azure/virtual-machines/" target="_blank" rel="noopener noreferrer noreferrer noopener">Get started</a></div>
-</div>
-
-			</div>
-		</div>
-					<div class="promotional__media-wrapper">
-				<div class="promotional__media">
-											<img decoding="async" width="2560" height="1707" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_Evan_office_001-1-scaled.jpg" class="attachment-full size-full" alt="Person in office working at computer." loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_Evan_office_001-1-scaled.jpg 2560w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_Evan_office_001-1-300x200.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_Evan_office_001-1-1024x683.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_Evan_office_001-1-768x512.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_Evan_office_001-1-1536x1024.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO20b_Evan_office_001-1-2048x1365.jpg 2048w" sizes="auto, (max-width: 2560px) 100vw, 2560px" />									</div>
-			</div>
-			</div>
-</div>
-</div>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/enhancing-microsoft-azure-virtual-machine-lifecycle/">Enhancing Microsoft Azure Virtual Machine lifecycle</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/enhancing-microsoft-azure-virtual-machine-lifecycle/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
 			</item>
 	</channel>
 </rss>
