@@ -2,6 +2,312 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Engineering nonrelativistic spin splitting in semiconductors by altermagnetic proximity",
+    "url": "https://arxiv.org/abs/2610.23773v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "Altermagnets combine vanishing net magnetization with momentum-dependent, nonrelativistic spin splitting, offering functionalities attractive for spintronics and quantum devices. Their practical use, however, is constrained by the limited availability of materials that simultaneously possess the required altermagnetic symmetry, semiconducting electronic structure, and weak spin-orbit coupling. Here we show that these requirements can instead be separated between constituent materials through pro",
+    "authors": [
+      "Sing Lam Wong",
+      "Marcel Franz"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "TileDRAM: Compiler-Controlled Tile-to-DRAM Layouts for 3D DRAM GPGPUs",
+    "url": "https://arxiv.org/abs/2610.23767v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "Modern GPU compilers expose rich layout abstractions for mapping tensors to threads and on-chip resources, but compute-unit-local (CU-local) 3D DRAM architectures lack a corresponding abstraction for specifying how operand-tile data are\n  arranged within the DRAM address space. Without such an abstraction, conventional placement under the existing DRAM address mapping can subject structured tile accesses to severe row-buffer conflicts. We present TileDRAM, a compiler-runtime\n  toolchain that int",
+    "authors": [
+      "Guangyuan Xu",
+      "Lanxuan Zhang",
+      "Ziyang Li",
+      "Zhaoshi Li",
+      "Yajun Ha"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "ECG-SDI: Single-lead Electrocardiogram Enables Continuous Sleep Depth Index Profiling and Scalable Digital Biomarkers for Sleep Health",
+    "url": "https://arxiv.org/abs/2610.23727v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "Conventional sleep staging provides a coarse-grained representation that obscures within-stage depth variation. We developed ECG-SDI, a single-lead electrocardiography (ECG) framework for continuous sleep-depth profiling and digital biomarker extraction. Using 12,392 overnight polysomnographic recordings, we trained and validated a two-stage deep learning model supervised by conventional sleep-stage labels. Correlations with ordered stages excluding rapid eye movement (REM) sleep were 0.828 in t",
+    "authors": [
+      "Donglin Xie",
+      "Qingshuo Zhao",
+      "Songchi Zhou",
+      "Haoyu Wang",
+      "Jingyu Wang",
+      "Yuxi Zhou",
+      "Thomas Penzel",
+      "Shenda Hong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Agentic AI for Heterogeneous System Design Across Chip, Scale-Up, and Scale-Out Domains",
+    "url": "https://arxiv.org/abs/2610.23724v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "The design space of modern AI/HPC systems has expanded rapidly across compute architectures, including GPUs, dataflow processors, and RISC-V accelerators; memory tech- nologies, including HBM, GDDR, and SRAM; and interconnects such as NVLink, UALink, Infinity Fabric, InfiniBand, Slingshot, and Ultra Ethernet. No single architecture is optimal across LLM training, LLM serving, and AI-coupled HPC workloads, while the resulting combinatorial design space is too large for manual exploration. We pres",
+    "authors": [
+      "Murali Emani",
+      "Kashyap R Manjusha"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Learning the self-energy through equivariant neural networks",
+    "url": "https://arxiv.org/abs/2610.23717v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "The electronic self-energy determines the single-particle Green's function and, through it, quasiparticle energies and spectral functions, but computing it from first principles is expensive and it is a difficult machine-learning target: complex-valued, matrix-valued in a local-orbital basis, and dependent on a continuous frequency. We predict the dynamical correlation part of the imaginary-frequency G_0W_0 self-energy matrix of molecules from atomic species and coordinates with an E(3)-equivari",
+    "authors": [
+      "Wudong Shen",
+      "Yang Zhong",
+      "Min-Ye Zhang",
+      "Xinyang Dong",
+      "Hongjun Xiang",
+      "Xinguo Ren"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Scalable long-range machine learning interatomic potentials with electrical response for atomistic material modeling",
+    "url": "https://arxiv.org/abs/2610.23643v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "Accurate atomistic simulations of materials under electric fields require long-range electrostatics and electrical-response modeling at length scales beyond the reach of conventional first-principles methods. Yet these capabilities remain difficult to reconcile with the scalability of machine-learning interatomic potentials (MLIPs). Strictly local models enable efficient spatial parallelization but neglect long-range interactions, whereas existing electrostatic extensions introduce global depend",
+    "authors": [
+      "Yicheng Chen",
+      "Xiaoyun Yu",
+      "Hyejeong Song",
+      "Xintian Wang",
+      "Zihui Li",
+      "Zixi Xia",
+      "Junmin Chen",
+      "Peichen Zhong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "When Magnitude Suffices: Reconstructing Time-Domain-Gated Microwave Signals Without Phase on a Thoracic Phantom",
+    "url": "https://arxiv.org/abs/2610.23608v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "Time-domain gating separates the arrivals that form a microwave S-parameter measurement. It requires the measurement of complex values, so this application almost always uses a vector network analyzer (VNA). We show that, on one calibrated measurement configuration, the gated magnitude the VNA would give can be reconstructed from a magnitude-only sweep of a spectrum analyzer with a tracking generator (SA). We select the gate center for separability of the measured states, correct each instrument",
+    "authors": [
+      "Maciej Cichoń",
+      "Patrycja Gołaś",
+      "Maksymilian Bartosik",
+      "Angelika Walczak",
+      "Agata Bielecka-Dąbrowa",
+      "Maciej Ślot"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Linear response for machine-learned interatomic potentials: phonons at arbitrary wave vectors from the primitive cell",
+    "url": "https://arxiv.org/abs/2610.23545v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "Phonon calculations with machine-learned interatomic potentials are almost exclusively performed with finite displacements in supercells, an approach that is exact only at wave vectors commensurate with the supercell and whose error depends on the range of the force constants. In message-passing networks this range grows with the number of layers, and reaches 140 angstrom for the deepest universal models. Here we show that the dynamical matrix of a message-passing potential can be obtained exact",
+    "authors": [
+      "Thalis H. B. da Silva",
+      "Hai-Chen Wang",
+      "Miguel A. L. Marques"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "topas-editor and TOPilot: tools for AI-driven analysis of diffraction and total scattering data",
+    "url": "https://arxiv.org/abs/2610.23512v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "This paper describes topas-editor and TOPilot, which provide a powerful interface to the TOPAS software suite and allow generative AI-driven automation of complex crystallographic tasks. topas-editor is a TOPAS-aware VS Code extension designed for the rapid creation and editing of TOPAS input files and for interacting with the software. It knows TOPAS syntax, has crystallographic-aware editing features and provides in-line user guidance via hover tips and automated links to reference manuals. TO",
+    "authors": [
+      "John S. O. Evans",
+      "Oliver J. Wagstaff",
+      "Ivana R. Evans",
+      "Arnt Kern",
+      "Alan A. Coelho"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "HBFSim: A Simulator for Exploring HBF in Memory Hierarchies for LLMs",
+    "url": "https://arxiv.org/abs/2610.23503v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "High Bandwidth Flash (HBF) has recently emerged as a promising technology that provides terabyte-scale accelerator-local capacity at bandwidths approaching HBM, with a potential cost-per-bit advantage over HBM. However, its NAND foundation brings long latency, out-of-place updates, and finite write endurance directly into the accelerator memory hierarchy, making its effects on performance and lifetime difficult to predict. To study this emerging design space, we present HBFSim, an LLM-aware even",
+    "authors": [
+      "Jinheng Li",
+      "Guosheng Wang",
+      "Hongchao Du",
+      "Shangyu Wu",
+      "Qiao Li",
+      "Chun Jason Xue"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "A Smaller Subspace is All You Need: Efficient ISAC Beamforming via Dimensionality Reduction",
+    "url": "https://arxiv.org/abs/2610.23462v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "Integrated sensing and communication (ISAC) has been recognized as a critical technology for the sixth generation (6G) wireless networks. Under monostatic sensing mode, achieving a balance between communication and sensing performance via optimal beamforming is a critical research problem. In multiple input multiple output (MIMO) systems, such beamforming problems are of substantial computational complexity due to the large number of antennas. Existing methods exploit exact subspaces of lower di",
+    "authors": [
+      "Ruiqi Liu",
+      "Yuanshuo Gang",
+      "Tianqi Mao",
+      "Qingqing Wu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Hydrogen Ion-Cut Single-Crystal Diamond Membranes for Wide and Ultrawide Bandgap Semiconductor Heterointegration",
+    "url": "https://arxiv.org/abs/2610.23433v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "Single-crystal diamond membranes (SCDms) were created using a hydrogen ion-cut process combined with a two-step post-implantation annealing, electrochemical etching, and micro-transfer printing. Monte Carlo simulations comparing H, He, C, and O implantation predicted a narrower vacancy-distribution profile for hydrogen under the implantation conditions examined. Raman spectroscopy was used to evaluate implantation-induced lattice damage and its recovery during annealing and membrane release, whi",
+    "authors": [
+      "Xuanyu Zhou",
+      "Chenyu Wang",
+      "Dmitry Shinyavskiy",
+      "Lu Chen",
+      "Luke Suter",
+      "Andreas Graff",
+      "Michel Simon-Najasek",
+      "Vincent Gambin",
+      "Katherine T. Fountaine",
+      "Zhenqiang Ma",
+      "Frank Altmann",
+      "Matthias Muehle",
+      "Jung-Hun Seo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "GUMPIM: Unitary and Malleable Memory for Processing-in-Memory with Guaranteed PIM Pages",
+    "url": "https://arxiv.org/abs/2610.23406v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "DRAM-based Processing-in-Memory (PIM) addresses the \"memory wall\" by executing computations directly inside main memory. However, memory interleaving and virtual memory limit contiguous data size visible to PIM units, constraining PIM task granularity. To mitigate this, existing PIM systems drastically isolate PIM memory or disable memory interleaving. These design choices, however, decrease the CPU memory bandwidth and introduce extra data transfer, leading to an additional \"system memory wall\"",
+    "authors": [
+      "Yilong Zhao",
+      "Fangxin Liu",
+      "Yiwei Hu",
+      "Zongwu Wang",
+      "Mingyu Gao",
+      "Onur Mutlu",
+      "He Xian",
+      "Hanlin Dong",
+      "Naifeng Jing",
+      "Xiaoyao Liang",
+      "Haibing Guan",
+      "Qiang Xu",
+      "Chixiao Chen",
+      "Shuxue Quan",
+      "Tao Yang",
+      "Li Jiang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "AWM: An All-in-One Wireless Foundation Model for Multi-User Channel Acquisition and Localization Without Downstream Tuning",
+    "url": "https://arxiv.org/abs/2610.23403v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "Wireless foundation models (WFMs) seek to unify diverse wireless tasks and scenarios, yet existing methods still rely on task- or scenario-specific components or deployment-time fine-tuning. This paper presents an all-in-one wireless model (AWM), a WFM that unifies multi-user channel acquisition and localization, despite their distinct data modalities and functional objectives. We reveal that user location and channel state information (CSI) at different frequencies can be viewed as attribute-sp",
+    "authors": [
+      "Zirui Chen",
+      "Ziqing Xing",
+      "Zhaoyang Zhang",
+      "Hongning Ruan",
+      "Zili Wang",
+      "Zhaohui Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "qGAMMA: A Framework for Optimal DNN Mapping on Multi-Precision Accelerators",
+    "url": "https://arxiv.org/abs/2610.23222v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "This work describes qGAMMA, a flexible framework for exploring and optimizing the mapping of mixed-precision Deep Neural Network (DNN) models onto general-purpose spatial accelerators that support a range of fixed- and floating-point precisions. qGAMMA navigates the design space using a domain-specific genetic algorithm and an analytical performance model based on hardware synthesis results. The framework identifies the optimal mapping and accelerator configuration that minimizes target metrics.",
+    "authors": [
+      "Leandro Fiorin",
+      "Luigi Altamura",
+      "Cristina Silvano"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "LWMa: Distributed Deployment of an Angle-Delay-Domain Wireless Foundation Model for Multiple Tasks",
+    "url": "https://arxiv.org/abs/2610.23084v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "The growing diversity of wireless services in sixth-generation (6G) wireless communication systems calls for reusable channel representations that support multiple tasks across different propagation environments. However, deploying such representations between user equipment and the base station in frequency-division duplexing systems faces uplink feedback constraints. This paper proposes a distributed framework based on an angle-delay-domain large wireless model (LWMa) for multiple tasks. LWMa ",
+    "authors": [
+      "Zhizhen Ren",
+      "Xudong Zhang",
+      "Jingbo Tan",
+      "Jintao Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Wavelength Diversity Expands the Expressive Power of Optical Computing",
+    "url": "https://arxiv.org/abs/2610.23070v1",
+    "published_date": "2026-10-16",
+    "source": "arXiv",
+    "summary": "Universal function approximation underpins neural networks' capacity to represent nonlinear relationships, but realizing this capability in optical hardware requires engineering the computational features encoded in light. Here, we show that wavelength diversity enhances optical function-approximation expressivity through wavelength-scaled Fourier features generated by a shared phase encoder, without increasing the number of input-encoded harmonics. Multiple wavelengths contribute to the represe",
+    "authors": [
+      "Shiqi Chen",
+      "Che-Yung Shen",
+      "Parnian Ghapandar Kashani",
+      "Yongkang Cheng",
+      "Aydogan Ozcan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.DC",
     "title": "Architecting for Hardware Diversity: Meta's End-to-End Co-Design for High-Performance AI Training on AMD GPUs",
     "url": "https://arxiv.org/abs/2610.22230v1",

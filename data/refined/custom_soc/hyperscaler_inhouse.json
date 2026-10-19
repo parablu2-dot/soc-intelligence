@@ -3,6 +3,19 @@
     "axis": "custom_soc",
     "company": "hyperscaler_inhouse",
     "category": "news",
+    "headline": "How Deepgram optimized voice AI at scale with AWS Trainium",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-deepgram-optimized-voice-ai-at-scale-with-aws-trainium/",
+    "published_date": "2026-10-19",
+    "source": "AWS Blog",
+    "tags": [
+      "Trainium"
+    ],
+    "summary": "Deepgram worked with the AWS Forward Deployed Engineering team to port its Nova-3 speech-to-text model to AWS Trainium2 for offline batch inference. This post covers porting to the AWS Neuron stack, kernel-level tuning, a data-parallel Rust runtime, and the throughput and cost results on batch transcription."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
+    "category": "news",
     "headline": "Introducing Reflection Beam: an open-weight model for agentic coding on AWS",
     "url": "https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/",
     "published_date": "2026-10-16",
