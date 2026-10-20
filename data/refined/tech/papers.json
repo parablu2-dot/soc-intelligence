@@ -2,6 +2,330 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Doppler-compensated Space-time Coding for MIMO PMCW Radar",
+    "url": "https://arxiv.org/abs/2610.26842v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "Phase modulated continuous wave (PMCW) radar is an attractive choice for automotive sensing due to its high dynamic range, interference robustness, and support for integrated communication and sensing. In multiple-input multiple-output (MIMO) PMCW radar, code division multiplexing (CDM) separates transmit signals, but non-ideal auto- and cross-correlation properties increase range sidelobes and degrade dynamic range. This paper proposes a Doppler-compensated space-time coding (STC)-based MIMO PM",
+    "authors": [
+      "Gabriel Daniel",
+      "Hanqing Wu",
+      "Ashish Pandharipande",
+      "Geert Leus"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "stat.AP",
+    "title": "Physics-Constrained Modeling and Inference of the Equation of State for Dissociative Materials",
+    "url": "https://arxiv.org/abs/2610.26791v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "Equations of state (EOSs) describe how a material's internal energy and pressure change with temperature and density. They are inputs to hydrodynamic simulations in materials science and planetary science. We model the ion-thermal free-energy term for dissociative materials, where molecular bonds break apart to form new species under extreme conditions. This term is governed by two latent physical processes, a molar-mass surface and a Debye-temperature curve, neither of which is observed directl",
+    "authors": [
+      "Jolypich Pek",
+      "Ben Seiyon Lee",
+      "Jason Bernstein",
+      "Philip Myint"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Injection of Space Radiation Errors on Low-power NVM using Generative Deep Learning",
+    "url": "https://arxiv.org/abs/2610.26724v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "We develop an error model for a Non-Volatile Memory (NVM) device that represents the effects of physical faults experienced in a CubeSat mission in Low Earth Orbit (LEO). The CubeSat carries an off-the-shelf low-power Ferroelectric RAM (FRAM) chip and runs repeated read/write tests according to a predefined pattern. We compare every memory snapshot received from the satellite with a reference bitmap to identify bit errors. We visually analyze erroneous values distributions in the memory snapshot",
+    "authors": [
+      "Eleonora Giudici",
+      "Antonio Miele",
+      "Luca Mottola"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Terabit-scale wavelength-multiplexed transmitter enabled by thin-film lithium tantalate",
+    "url": "https://arxiv.org/abs/2610.26674v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "Artificial-intelligence systems face a growing data-movement bottleneck and require higher interconnect bandwidth without a proportional increase in electrical power consumption or the number of laser sources and fibre connections. Moving optical interfaces closer to computing chips reduces electrical transmission loss, while demanding optical engines that combine high channel capacity, broadband modulation and simple packaging. Although wavelength multiplexing relieves pressure on the fibre bud",
+    "authors": [
+      "Shivaprasad U. Hulyal",
+      "Dengyang Fang",
+      "Jiachen Cai",
+      "Xinru Ji",
+      "Alexander Kotz",
+      "Jiale Sun",
+      "Christian Koos",
+      "Tobias J. Kippenberg"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Resolving the Thermal Labyrinth inside 3D-IC Stacks",
+    "url": "https://arxiv.org/abs/2610.26647v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "The heat pathways in 3D-ICs have long been a labyrinth lacking experimental investigations into spatial distribution of thermal properties, severely limiting study of internal thermal management inside chips. For the first time, we established a methodology for 3D thermal characterizations of advanced 3D-ICs, implemented through a systematic workflow that enables layer-resolved thermal property extraction and the construction of a location-specific thermal database. We demonstrated its applicati",
+    "authors": [
+      "Xufei Guo",
+      "Yiyun He",
+      "Zirou Chen",
+      "Zifeng Huang",
+      "Runsheng Wang",
+      "Zhe Cheng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Stabilization of Ferroelectric Domains via Interfacial Strain in HoFeO3- BaTiO3 Nanofiber Heterostructures for Enhanced Hybrid Energy Harvesting",
+    "url": "https://arxiv.org/abs/2610.26611v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "Piezoelectric nanogenerators (PENGs) are an attractive platform for self-powered mechanical-energy harvesting, but their output is often limited by depolarization fields, charge leakage, and inefficient stress transfer to the active dipoles, particularly in polymer-dominated composites. Here we report HoFeO3-BaTiO3 (HFO-BTO) nanofiber heterostructures prepared by alternating sol-gel electrospinning, in which orthorhombic HoFeO3 (Pbnm) and tetragonal BaTiO3 (P4mm) coexist in intimate contact. Rie",
+    "authors": [
+      "Smita Chaturvedi",
+      "Swathi Krishna",
+      "Shivshankar Jokare",
+      "Supriya Sahoo",
+      "Vikash Kushwaha",
+      "Priyank Shyam",
+      "Mandar Shirolkar",
+      "R. Boomishankar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.HC",
+    "title": "TapID: Rapid touch interaction in virtual reality using wearable sensing",
+    "url": "https://arxiv.org/abs/2610.26598v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "Current Virtual Reality systems typically use cameras to capture user input from controllers or free-hand mid-air interaction. In this paper, we argue that this is a key impediment to productivity scenarios in VR, which require continued interaction over prolonged periods of time---a requirement that controller or free-hand input in mid-air does not satisfy. To address this challenge, we bring rapid touch interaction on surfaces to Virtual Reality---the input modality that users have grown used ",
+    "authors": [
+      "Manuel Meier",
+      "Paul Streli",
+      "Andreas Fender",
+      "Christian Holz"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "A 105 MS/s 4.18 nJ/inference 0.765 $\\text{mm}^\\text{2}$ Mixed-Signal Streaming ML Engine for Wireless Baseband in 12LP+ FinFET",
+    "url": "https://arxiv.org/abs/2610.26552v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "We present SIXPPAC, the first streaming machine-learning engine for real-time integrated sensing and communication (ISAC) in wireless systems. SIXPPAC integrates two SAR ADCs and a digital binary-weight six-layer neural network (NN). The 0.765 mm$^\\text{2}$ 12 nm FinFET engine stores all NN parameters on chip, enabling sustained 105 MS/s processing of 8b I/Q baseband samples at 0.8 V. By deploying bipolar inner products using AND instead of XNOR gates, SIXPPAC consumes 4.18 nJ/inference (0.42 PO",
+    "authors": [
+      "Oscar Castañeda",
+      "Lavinia Recchioni",
+      "Sueda Taner",
+      "Thomas Burger",
+      "Jérémy Guichemerre",
+      "Christoph Studer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Does Synchrophasor Attenuation Preclude Detection of High-Frequency Oscillations?",
+    "url": "https://arxiv.org/abs/2610.26480v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "Recent work suggests that standard synchrophasors are inadequate for capturing high-frequency data center oscillations, primarily due to filtering and windowing attenuation during phasor estimation. We prove that widely used periodogram and RMS energy detectors remain largely robust to it and confirm this by simulation.",
+    "authors": [
+      "Chetan Mishra",
+      "Luigi Vanfretti",
+      "Jaime Delaree",
+      "Kevin D. Jones"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.soc-ph",
+    "title": "Systemic collapse emergence from climate-induced perturbations in transportation networks",
+    "url": "https://arxiv.org/abs/2610.26428v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "The interaction between human infrastructures and external events results in loss of functionality or even complete system disruption through a snowball effect of cascading-failures. Their complex interplay challenges their prevention, affecting the human population that rely on their functionality. Understanding how these networks respond to external perturbations is crucial for predicting and mitigating the impacts of disruptive events. In particular, meteorological events, while not preventab",
+    "authors": [
+      "Mauro Faccin",
+      "Tomas Scagliarini",
+      "Manlio De Domenico"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "A Generic On-Board AI Processing Chain for Earth Observation: From Application Development to Embedded Deployment and Mission-Level Orchestration",
+    "url": "https://arxiv.org/abs/2610.26340v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "Earth observation satellites acquire more data than they can downlink. Extracting information on board with artificial intelligence (AI) turns the satellite into a data-reduction stage that downlinks compact products, such as masks or detections, instead of full scenes; deploying it in a mission, however, involves the whole processing chain and not only the neural network. We present a generic on-board AI processing chain along three axes, with wildfire segmentation as the worked example among s",
+    "authors": [
+      "Michel-Fran{\\c c}ois Foulon",
+      "Liz Ramos Medina",
+      "Thomas Goudemant",
+      "Clotilde Szywala",
+      "Virgile Robles",
+      "Cl{é}ment Petitjean",
+      "Ad{è}le Hankache",
+      "Omar Hlimi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Machine Learning-Assisted Discovery of Carbon-Related Defect Formation Mechanisms in Diamond",
+    "url": "https://arxiv.org/abs/2610.26301v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "Diamond is an important host material for functional defects such as solid-state spin qubits. During the defect creation by irradiation and subsequent thermal annealing, carbon-related defects, including vacancies and interstitials, are generated and can migrate to form new defect complexes. To investigate this kinetically driven process and reveal the formation mechanisms of the di-interstitials and di-vacancies in the neutral charge state, we fine-tuned a universal machine learning interatomic",
+    "authors": [
+      "Grace Huang",
+      "Christopher Fivecoat",
+      "Xun Xu",
+      "Mengen Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Physics-Driven Framework for QoS-Constrained Satellite System with Non-Linear PA Distortion",
+    "url": "https://arxiv.org/abs/2610.26153v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "This work develops a physics-driven self-supervised graph learning framework that directly optimizes the distortion-aware precoder under nonlinear correlated power amplifier (PA) distortion, without relying on expensive optimizer-generated labels for a user-centric satellite system. We minimize nonlinear PA consumption subject to user quality-of-service (QoS) constraints under PA nonlinearity for a downlink multi-input-single-output (MISO) satellite system. Our pipeline jointly designs the preco",
+    "authors": [
+      "Hamza Ahmed Qureshi",
+      "Abuzar Babikir Mohammad Adam",
+      "Vu Nguyen Ha",
+      "Konstantinos Ntontin",
+      "Symeon Chatzinotas"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "A Hybrid GPU and Processing-Near-Memory Architecture with Shared DRAM for Efficient Prefill-Decode Disaggregation",
+    "url": "https://arxiv.org/abs/2610.26131v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "The growing adoption of large language models (LLMs) has significantly increased the compute and memory demands of inference serving. A key challenge arises from the mismatch between compute-bound prefill and memory-bound decoding: when executed together, the two phases interfere, while separating them via prefill-decode (PD) disaggregation leads to substantial resource underutilization. Specifically, prefill leaves memory bandwidth underutilized, whereas decoding underutilizes compute resources",
+    "authors": [
+      "Sanghyeok Han",
+      "Inseong Choi",
+      "Byungkuk Yoon",
+      "Gyeonghwan Park",
+      "Jae-Joon Kim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.ET",
+    "title": "Superposed analog memory for vector storage in neural networks",
+    "url": "https://arxiv.org/abs/2610.26118v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "The growing memory demands of artificial neural networks pose a major challenge for energy-efficient computing, particularly for models that rely on large collections of high-dimensional weight and embedding vectors. Conventional memory architectures store these vectors individually, requiring many memory cells per vector and limiting achievable storage density. Here we demonstrate an analog memory architecture that encodes multiple vectors in a distributed superposition within a single memory a",
+    "authors": [
+      "Athanasios Vasilopoulos",
+      "Patrick Diener",
+      "Michael Hersche",
+      "Abbas Rahimi",
+      "Abu Sebastian"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "MX-Like Tensor Core for LLM Inference with NPU Integration via Hardware-Software Co-Design Exploration",
+    "url": "https://arxiv.org/abs/2610.26083v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "Block-scaled quantization formats such as OCP Microscaling (MX) and NVFP4 have been widely adopted as efficient data formats for LLM inference. However, the design space of these formats spanned by shared scale, weight, and activation format combinations has not been systematically explored, and the joint accuracy-silicon tradeoff across this space remains uncharacterized, leaving the true Pareto-optimal configurations for NPU-based edge LLM deployment an open question. To bridge this gap, we co",
+    "authors": [
+      "Zijun Zhao",
+      "Ruichu Ao",
+      "Stef Cuyckens",
+      "Marian Verhelst",
+      "Chao Fang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Timing Skew Estimation of Time-Interleaved ADC based on Inter-Channel Correlations without Computing Derivative of Input Signal",
+    "url": "https://arxiv.org/abs/2610.25974v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "Time-interleaved analog-to-digital converters (TI-ADCs) enable multi-gigasample-per-second throughput in high-speed applications, but sub-picosecond timing skews among interleaved channels introduce large spectral artifacts that degrade dynamic performance. To continuously track parametric drifts without interrupting normal operation, background calibration is required. However, extracting timing skews under unknown inputs is challenging, and many existing correlation-based methods rely on resou",
+    "authors": [
+      "Bibhu Datta Sahoo",
+      "Gabriele Manganaro"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "A Stress-Induced Tetragonal Distortion in K2OsCl6 under Pressure",
+    "url": "https://arxiv.org/abs/2610.25913v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "The structural behaviour of cubic (Fm-3m) K2OsCl6 under compression was investigated to 35.4 GPa using angle-dispersive synchrotron powder X-ray diffraction. Upon increasing pressure, K2OsCl6 undergoes a sequence of structural transformations from the ambient-pressure cubic phase to a tetragonal (P4/mnc) phase above 9.5(3) GPa, followed by a transition to a monoclinic (P21/n) phase beginning at approximately 14.2 GPa. The tetragonal and monoclinic phases coexist over the pressure range 14.2-17.2",
+    "authors": [
+      "Neha Bura",
+      "Peije Zhang",
+      "Ganesh Bera",
+      "Catalin Popescu",
+      "Caleb J. Bennett",
+      "Brendan J. Kennedy",
+      "Daniel Errandonea"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "One-Bit Coherent Distributed Radar Detection in Clutter via Velocity-Plane Search: Vanishing Loss and EEC-Calibrated Thresholding",
+    "url": "https://arxiv.org/abs/2610.25911v1",
+    "published_date": "2026-10-19",
+    "source": "arXiv",
+    "summary": "Coherent distributed radar architectures enhance the detectability of low-reflectivity targets. However, conventional coherent processing generally entails prohibitively large volumes of inter-station data exchange, thereby motivating the adoption of one-bit quantization strategies. In this work, we investigate a clutter-dominated regime in which the interference is driven by a dense ensemble of weak scatterers. We demonstrate that, under these conditions, one-bit quantization can exhibit a vani",
+    "authors": [
+      "Yu-Hang Xiao",
+      "David Ramírez",
+      "Xiaochuan Ke",
+      "Lei Huang",
+      "Hing Cheung So"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mes-hall",
     "title": "Engineering nonrelativistic spin splitting in semiconductors by altermagnetic proximity",
     "url": "https://arxiv.org/abs/2610.23773v1",
