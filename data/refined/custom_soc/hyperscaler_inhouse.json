@@ -2,6 +2,19 @@
   {
     "axis": "custom_soc",
     "company": "hyperscaler_inhouse",
+    "category": "process",
+    "headline": "Train Qwen3 on AWS Trainium with torchtitan",
+    "url": "https://aws.amazon.com/blogs/machine-learning/train-qwen3-on-aws-trainium-with-torchtitan/",
+    "published_date": "2026-10-21",
+    "source": "AWS Blog",
+    "tags": [
+      "Trainium"
+    ],
+    "summary": "Train Qwen3 on AWS Trainium with torchtitan three ways on a single trn2.48xlarge: the Hugging Face Transformers v5 modeling backend, torchtitan's native Qwen3, and NKI mixture-of-experts kernels. The same torchrun launcher and config structure work unchanged across all three paths, including loading and saving published Hugging Face safetensors."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
     "category": "news",
     "headline": "Beyond the KV cache: Training and serving i14’s Laplace 3B linear attention model on AWS Trainium2 with native PyTorch",
     "url": "https://aws.amazon.com/blogs/machine-learning/beyond-the-kv-cache-training-and-serving-i14s-laplace-3b-linear-attention-model-on-aws-trainium2-with-native-pytorch/",

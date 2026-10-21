@@ -2,6 +2,310 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Multiscale Modeling of Zr Corrosion: Predicting Microstructures of Oxide Films",
+    "url": "https://arxiv.org/abs/2610.28493v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "A first-principles-informed multiscale modeling approach is reported for oxide formation during corrosion of zirconium. The present simulations reproduce the columnar corrosion film microstructure and grain size distribution seen in micrographs of oxidized Zr surfaces. This structural feature emerges from a hexagonal ZrO layer adjacent to the $α$-Zr/ZrO$_{2-x}$ interface, which is dynamically stabilized by continuous heterogeneous grain nucleation and grain boundary mass diffusion. This ZrO laye",
+    "authors": [
+      "K. Starkey",
+      "L. Kahle",
+      "M. Christensen",
+      "V. Eyert",
+      "A. El-Azab",
+      "C. B. Geller",
+      "A. P. Shivprasad",
+      "E. Wimmer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "A Hierarchical Space-Ground Collaborative Network: Architecture Design and Deployment",
+    "url": "https://arxiv.org/abs/2610.28459v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "The sixth-generation (6G) landscape demands a profound architectural evolution toward a unified, collaborative ecosystem that integrates satellite and terrestrial segments to provide ubiquitous global connectivity. Nevertheless, conventional independent management paradigms are increasingly challenged by the profound spatiotemporal nonstationarity of low-Earth orbit (LEO) channels and the volatile demands of massive heterogeneous services. To address these challenges, this study focuses on the a",
+    "authors": [
+      "Yunxin Geng",
+      "Shaopeng Feng",
+      "Zijian Guo",
+      "Shengfeng Wang",
+      "Rui Ding",
+      "Kan Zheng",
+      "Zhiqing Wei",
+      "Weiwei Jiang",
+      "Zhiyong Feng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Topology-Adaptive Seismic Response Prediction of Interconnected Structural Systems Using Reduced Order Model Embedded Graph Neural Network",
+    "url": "https://arxiv.org/abs/2610.28378v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "Electrical substation equipment is commonly interconnected by busbars and flexible conductors. Such interconnected infrastructures exhibit complex dynamic interactions, where the response of each component is influenced by local structural properties, mechanical coupling, system topology, and transient excitation. High-fidelity FE models can capture some of these effects, but their computational cost limits their use for real-time prediction. Purely data-driven models offer faster inference, yet",
+    "authors": [
+      "Huangbin Liang",
+      "Beatriz Moya",
+      "Francisco Chinesta",
+      "Eleni Chatzi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Uncertainty-Aware Distributed Radio Map Estimation in Decentralized Wireless Networks",
+    "url": "https://arxiv.org/abs/2610.28293v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "Federated learning based radio map estimation (RME) approaches rely on frequent exchange of high-dimensional model updates and often require a central server for collaboration coordination and update aggregation. This incurs prohibitively high communication overhead, rendering them impractical for bandwidth-constrained mobile and wireless edge networks. Moreover, in practical mobile sensing scenarios, sparse and unevenly collected measurements lead to estimation uncertainty, which is critical fo",
+    "authors": [
+      "Dong Yang",
+      "Zhuoyu Yao",
+      "Yue Wang",
+      "Songyang Zhang",
+      "Yingshu Li",
+      "Zhi Tian",
+      "Zhipeng Cai"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "RPolyPlan: A Unified Global Floorplanning and Legalization Framework for Rectilinear Soft Modules",
+    "url": "https://arxiv.org/abs/2610.28276v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "Floorplanning with rectilinear soft modules improves area utilization and wirelength by allowing modules to adapt to rectilinear polygon (RPoly) shapes. Existing methods typically construct rectilinear polygons through incremental refinement after obtaining a rectangular global solution, which confines polygon exploration to the neighborhood induced by the initial floorplan. This paper presents RPolyPlan, a unified framework for outline-free and fixed-outline floorplanning that directly incorpor",
+    "authors": [
+      "Fuxing Huang",
+      "Wenxing Zhu",
+      "Xinning Liu",
+      "Ziran Zhu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "DiffRMST: A GPU-Accelerated Fully Differentiable Rectilinear Minimum Spanning Tree Wirelength Model for Global Placement",
+    "url": "https://arxiv.org/abs/2610.28246v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "Analytical global placement requires a differentiable wirelength objective that accurately reflects routed interconnect cost. The widely used half-perimeter wirelength (HPWL) is efficient but overlooks the internal topology of multi-pin nets. The rectilinear Steiner minimum tree (RSMT) provides higher fidelity, but its underlying decision problem is NP-complete, and its discrete construction precludes direct use in gradient-based optimization. The rectilinear minimum spanning tree (RMST) offers ",
+    "authors": [
+      "Fuxing Huang",
+      "Hao Ai",
+      "Wenxing Zhu",
+      "Xinning Liu",
+      "Ziran Zhu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "High-throughput Down-selection of Fusion Candidate Materials",
+    "url": "https://arxiv.org/abs/2610.28232v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "Developing radiation-resistant fusion reactor materials is constrained by the slow pace of conventional irradiation qualification methodologies, which usually require extensive one-at-a-time irradiation campaigns and post-irradiation characterization. At the current pace of development, we may not discover the materials necessary to deploy fusion power plants at desired rates. In this work, we present a high-throughput (HT) experimental framework for the accelerated down-selection of fusion-rele",
+    "authors": [
+      "Elena Botica-Artalejo",
+      "Josh Randolph",
+      "Kevin B. Woller",
+      "Gregory Wallace",
+      "Michael P. Short"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "A Multimodal Engineering GraphRAG Framework for Post-Wind-Event Building Assessment and Recovery Inference",
+    "url": "https://arxiv.org/abs/2610.28216v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "Post-event building assessment requires linking observed physical damage to its consequences for safety, habitability, functionality, and recovery. Yet post-disaster evidence is often heterogeneous, incomplete, and distributed across images and reconnaissance reports, while recovery models typically require structured engineering inputs. This study develops a multimodal engineering Graph Retrieval-Augmented Generation (GraphRAG) framework that connects post-wind-event damage evidence to physical",
+    "authors": [
+      "Seyedeh Fatemeh Mirfakhar",
+      "Reda Snaiki",
+      "Rocio Lilen Segura"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Crucial role of magnetic dipole and anomalous field dependence in $\\mathrm{NiPS_3}$",
+    "url": "https://arxiv.org/abs/2610.28209v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "$\\mathrm{NiPS_3}$ has attracted considerable attention, yet the origin of its intriguing magnetic behaviors remains elusive due to limited insight into its low-energy anisotropy. Here, high-field torque magnetometry measurements are performed, revealing a previously unrecognized anisotropic spin response that reflects interaction terms beyond the standard XY or XXZ models. In combination with relativistic density functional theory calculations and magnetic force response theory, an effective low",
+    "authors": [
+      "Do Hoon Kiem",
+      "Muhammad Nauman",
+      "Joonyoung Choi",
+      "David Graf",
+      "Junghyun Kim",
+      "Heejun Yang",
+      "Je-Geun Park",
+      "Younjung Jo",
+      "Myung Joon Han"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.str-el",
+    "title": "Rare-earth tuning of magnetic entropy and interaction scales in K$_3$$Ln$(PO$_4$)$_2$ ($Ln$ = Yb, Gd) for adiabatic demagnetization refrigeration",
+    "url": "https://arxiv.org/abs/2610.28038v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "Adiabatic demagnetization refrigeration (ADR) based on frustrated rare-earth magnets provides a promising route toward helium-free sub-Kelvin cooling, while balancing magnetic entropy and interaction scales is essential for optimizing the ADR functionalities. Here we investigate the low-temperature magnetic and ADR properties of the alkali rare-earth double phosphates K$_3$$Ln$(PO$_4$)$_2$ ($Ln$ = Yb, Gd), which crystallize in a monoclinic $P2_1/m$ structure containing distorted isosceles triang",
+    "authors": [
+      "Yonglin Wang",
+      "Chuandi Zhang",
+      "Jianglong Zhang",
+      "Zihang Gao",
+      "Ziqi Li",
+      "Feiran Shen",
+      "Lunhua He",
+      "Peijie Sun",
+      "Hao Deng",
+      "Junsen Xiang",
+      "Wentao Jin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "RIS Configuration with Low-Overhead Measurements via Physics-Guided Neural Networks",
+    "url": "https://arxiv.org/abs/2610.27972v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "This paper studies reconfigurable intelligent surface (RIS) configuration for a single-input single-output (SISO) communication link using a two-stage estimate-then-optimize procedure. Within this framework, two common approaches to the estimation stage are pilot-based channel estimation and received signal strength (RSS)-based channel estimation. Our hardware experiments reveal substantial inter-block phase evolution consistent with residual CFO, while simulations show that such phase rotations",
+    "authors": [
+      "Son Dinh-Van",
+      "Matthew D. Higgins"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "When Every Bit Counts in Quantized Beamforming: From CSI Feedback to Low-Resolution Hardware",
+    "url": "https://arxiv.org/abs/2610.27923v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "Multiple-input multiple-output (MIMO) is a key technology in modern wireless networks, but its performance is often analyzed under ideal hardware assumptions. In practical implementations, however, quantization appears throughout the signal-processing chain, including channel state information (CSI) feedback, fronthaul signaling, beamforming coefficients, data converters, and finite-resolution phase shifters. These impairments do not act independently: they alter the channel information availabl",
+    "authors": [
+      "Yasaman Khorsandmanesh",
+      "Parisa Ramezani",
+      "Emil Bjornson"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Accelerating real-time hybrid-functional calculations with learned ACE and symmetry-based FFT reuse",
+    "url": "https://arxiv.org/abs/2610.27798v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "Real-time hybrid-functional calculations require repeated reconstruction of nonlocal exchange, whose cost grows rapidly with Brillouin-zone sampling. We develop two methods to improve the efficiency of time evolution and spatial processing. The first learns the time evolution of adaptively compressed exchange (ACE) factors and predicts their updates, reducing the frequency of explicit reconstruction. The second uses crystal symmetry to reuse exchange fast Fourier transforms (FFTs) among equivale",
+    "authors": [
+      "Tomohito Otobe"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "Toward Agentic AI for the 6G Physical Layer: From Algorithm Discovery to Verified Baseband Silicon",
+    "url": "https://arxiv.org/abs/2610.27797v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "6G will be designed faster than it can be built: AI-driven search already proposes physical-layer algorithms at machine speed, while carrying a single one onto embedded baseband silicon remains specialist work. That silicon imposes hard memory and numeric limits, but also exposes cost structures a GPU lacks, and a design flow that never runs on the target sees neither. We present an agentic workflow in which an LLM coding agent implements algorithms on a commercial baseband SoC, optimizes them d",
+    "authors": [
+      "Eric Mittag",
+      "Lukas Brechtel",
+      "Maximilian Stark",
+      "Hans D. Schotten"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.supr-con",
+    "title": "Non-uniform grids to accelerate electron-phonon coupling calculations for superconductivity",
+    "url": "https://arxiv.org/abs/2610.27718v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "Efficient and accurate evaluation of electron-phonon interactions is essential for predictive superconductivity calculations, but dense Brillouin zone sampling requirements pose a major computational bottleneck. To overcome this, we introduce an accelerated, highly scalable framework that combines a double delta truncation scheme with non-uniform Farey grids in both $\\mathbf{k}$ and $\\mathbf{q}$ space. The truncation strategy significantly reduces computational cost by restricting integration to",
+    "authors": [
+      "Kang Wang",
+      "Siyu Chen",
+      "Sun-Woo Kim",
+      "Kieran Bozier",
+      "Chris Pickard",
+      "Bartomeu Monserrat"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "ZKPU: Zero-Knowledge Processing Unit for Heterogeneous Workloads",
+    "url": "https://arxiv.org/abs/2610.27530v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "Zero-knowledge proofs (ZKPs) have become a fundamental building block for privacy-preserving computation, blockchain systems, and verifiable machine learning. Modern ZKP protocols span two distinct families: curve-based protocols, which rely on large finite-field arithmetic, and hash-based protocols, which operate over native 64-bit fields. Existing hardware accelerators are specialized for one protocol family because they are built on operand-scanning Montgomery multiplication, resulting in fix",
+    "authors": [
+      "Jonathan Ku",
+      "Changchun Zhou",
+      "Jiawen Wu",
+      "Sangouk Jeon",
+      "Cong Guo",
+      "Yuzhe Fu",
+      "Bowen Duan",
+      "Dongsuk Jeon",
+      "JV Rajendran",
+      "Yiran Chen",
+      "Hai Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Charge-conserving creation and annihilation of topological phase singularities in atomically thin semiconductors",
+    "url": "https://arxiv.org/abs/2610.27486v1",
+    "published_date": "2026-10-20",
+    "source": "arXiv",
+    "summary": "Atomically thin transition metal dichalcogenides provide a promising material platform for optical phase manipulation, as rapid variations in their dielectric functions can give rise to topological phase singularities (PSs). However, PS evolution while preserving topological charge conservation has not yet been investigated in exciton enabled PS systems. Here, using atomically thin MoS2 films on sapphire as a model system, we theoretically and experimentally demonstrate that the evolution of die",
+    "authors": [
+      "Yongjing Wang",
+      "Yuhang Wang",
+      "Guoshuai Fan",
+      "Qingqing Luo",
+      "Yanning Li",
+      "Lidong Sun",
+      "Chunguang Hu",
+      "Wanfu Shen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "eess.SP",
     "title": "Doppler-compensated Space-time Coding for MIMO PMCW Radar",
     "url": "https://arxiv.org/abs/2610.26842v1",

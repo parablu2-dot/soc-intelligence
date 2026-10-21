@@ -1,58 +1,78 @@
 {
-  "date": "2026-10-20",
-  "generated_at": "2026-10-20T23:05:19.491027+00:00",
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21T23:10:03.773476+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-10-20",
-      "item_count": 3,
-      "generated_at": "2026-10-20T23:05:19.490478+00:00",
+      "date": "2026-10-21",
+      "item_count": 5,
+      "generated_at": "2026-10-21T23:10:03.772696+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Qualcomm 계획 해고는 11월 스마트폰 칩 수요 약세로 시작되며 AI 전략 확대와 동시 진행된다. Samsung은 2nm Exynos 2700으로 반도체 사업 회생을 노린다.",
+          "executive_summary": "삼성이 2nm Exynos 2700 출력을 10% 이상 증가시켜 비메모리 사업 부활을 노리고 있으며, Exynos 2700과 최적화된 M2700 모뎀이 Galaxy S27에 우수한 전력 효율을 제공한다. 스냅드래곤 8EE Gen 6과 10,100mAh 배터리를 탑재한 Honor Win 2가 출시되었고, Elon Musk의 Terafab은 2028년 Q3-Q4 양산 목표를 추구 중이며 ASML을 포함한 장비 업체들이 배송 신속화에 동의했다.",
           "key_facts": [
-            "Qualcomm 전 지역 구조조정 2026년 11월 개시",
-            "Samsung 2nm Exynos 2700 투자 중심",
-            "Galaxy S27 Ultra Snapdragon 드라마 지속"
+            "Samsung Exynos 2700: 10% 이상 출력 증가 목표",
+            "Samsung M2700 모뎀 최적화로 Galaxy S27 전력 효율 개선",
+            "Honor Win 2: Snapdragon 8EE Gen 6, 10,100mAh 배터리, 듀얼 팬 냉각(최대 14.4°C 온도 저감)",
+            "Terafab 양산 목표: 2028년 Q3-Q4",
+            "Qualcomm: 글로벌 구조조정(AI 데이터센터 및 엣지 제품 중심 전환)"
           ],
           "implications": [
             {
-              "keyword": "인력 재편",
-              "text": "스마트폰 칩 약세 속 Qualcomm이 AI 역량 강화로 경영진 구조조정"
+              "keyword": "삼성 비메모리 회생",
+              "text": "2nm Exynos 2700 물량 확대는 애플리케이션 프로세서 시장에서 삼성의 경쟁력 회복을 시도하는 전략적 움직임"
             },
             {
-              "keyword": "수직통합",
-              "text": "Samsung이 자체 Exynos 설계·제조로 스냅드래곤 의존도 축소 전략"
+              "keyword": "모바일 모뎀 통합",
+              "text": "M2700 모뎀의 전력 최적화는 5G/6G 모바일 플랫폼의 배터리 효율 차별화 핵심"
+            },
+            {
+              "keyword": "Terafab 일정 위험",
+              "text": "'매우 야심적' 일정으로 표현된 Q3-Q4 2028 양산 목표는 공정 성숙도 불확실성 내재"
+            },
+            {
+              "keyword": "Qualcomm 조직 재편",
+              "text": "AI 데이터센터 및 엣지 제품 중심 전환은 기존 모바일 위주 사업 포트폴리오에서의 전략적 재조정"
             }
           ],
-          "counterpoint": "스마트폰 칩 약세 중에도 고급 공정 경쟁은 계속되고 있으므로 관심 고객 기반은 유지될 가능성 있음."
+          "counterpoint": "Qualcomm 구조조정 여파와 삼성의 야심찬 출력 목표 달성 불확실성이 시장 실현성에 영향을 미칠 수 있음."
         },
         "en": {
-          "executive_summary": "Qualcomm's planned layoffs begin in November amid weak smartphone chip demand while AI strategy expansion proceeds in parallel. Samsung aims to revive its semiconductor business with 2nm Exynos 2700.",
+          "executive_summary": "Samsung targets non-memory business revival by increasing Exynos 2700 output by over 10%, with the Exynos 2700 and optimized M2700 modem providing superior power efficiency for Galaxy S27. Honor Win 2 has launched with Snapdragon 8EE Gen 6 and 10,100mAh battery, while Elon Musk's Terafab pursues mass production target for Q3-Q4 2028 with equipment suppliers including ASML agreeing to accelerate deliveries.",
           "key_facts": [
-            "Qualcomm global restructuring begins November 2026",
-            "Samsung investing in 2nm Exynos 2700",
-            "Galaxy S27 Ultra Snapdragon drama continues"
+            "Samsung Exynos 2700: target for over 10% output increase",
+            "Samsung M2700 modem optimization improves Galaxy S27 power efficiency",
+            "Honor Win 2: Snapdragon 8EE Gen 6, 10,100mAh battery, dual fan cooling (maximum 14.4°C temperature reduction)",
+            "Terafab mass production target: Q3-Q4 2028",
+            "Qualcomm: global restructuring (strategic shift to AI datacenter and edge products)"
           ],
           "implications": [
             {
-              "keyword": "workforce restructuring",
-              "text": "Qualcomm strengthens AI capabilities through management restructuring amid weak smartphone chip demand"
+              "keyword": "Samsung non-memory recovery",
+              "text": "Expanded Exynos 2700 volume at 2nm is a strategic move attempting to restore Samsung's competitive position in the application processor market"
             },
             {
-              "keyword": "vertical integration",
-              "text": "Samsung strategy to reduce Snapdragon dependence through in-house Exynos design and manufacturing"
+              "keyword": "Mobile modem integration",
+              "text": "M2700 modem power optimization is key to battery efficiency differentiation in 5G/6G mobile platforms"
+            },
+            {
+              "keyword": "Terafab schedule risk",
+              "text": "Q3-Q4 2028 mass production target, characterized as 'highly ambitious', carries inherent uncertainty regarding process maturity"
+            },
+            {
+              "keyword": "Qualcomm organizational restructuring",
+              "text": "Strategic shift toward AI datacenter and edge products represents a pivotal reorientation from the previously mobile-focused business portfolio"
             }
           ],
-          "counterpoint": "Advanced process competition continues despite smartphone chip weakness, so high-end customer base likely to remain"
+          "counterpoint": "Impact from Qualcomm restructuring and uncertainty in achieving Samsung's ambitious output targets could affect market realization."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-10-20",
-      "item_count": 6,
-      "generated_at": "2026-10-20T23:05:19.490478+00:00",
+      "date": "2026-10-21",
+      "item_count": 14,
+      "generated_at": "2026-10-21T23:10:03.772696+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -60,9 +80,9 @@
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-10-20",
-      "item_count": 34,
-      "generated_at": "2026-10-20T23:05:19.490478+00:00",
+      "date": "2026-10-21",
+      "item_count": 21,
+      "generated_at": "2026-10-21T23:10:03.772696+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -70,9 +90,9 @@
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-10-20",
-      "item_count": 13,
-      "generated_at": "2026-10-20T23:05:19.490478+00:00",
+      "date": "2026-10-21",
+      "item_count": 16,
+      "generated_at": "2026-10-21T23:10:03.772696+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -80,9 +100,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-10-20",
-      "item_count": 11,
-      "generated_at": "2026-10-20T23:05:19.490478+00:00",
+      "date": "2026-10-21",
+      "item_count": 19,
+      "generated_at": "2026-10-21T23:10:03.772696+00:00",
       "content": {
         "ko": {},
         "en": {}
