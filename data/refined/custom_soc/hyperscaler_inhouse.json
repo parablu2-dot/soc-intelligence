@@ -2,6 +2,36 @@
   {
     "axis": "custom_soc",
     "company": "hyperscaler_inhouse",
+    "category": "news",
+    "headline": "Announcing new ways to customize models with SageMaker AI, without managing GPUs",
+    "url": "https://aws.amazon.com/blogs/machine-learning/announcing-new-ways-to-customize-models-with-sagemaker-ai-without-managing-gpus/",
+    "published_date": "2026-10-22",
+    "source": "AWS Blog",
+    "summary": "Amazon SageMaker AI serverless model customization now includes training sessions, generally available today. You write and coordinate your own post-training loop (custom loss functions, reward signals, or multi-turn reinforcement learning) while SageMaker AI handles GPU allocation, distributed execution, fault recovery, and checkpoint storage."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
+    "category": "news",
+    "headline": "Write your own training loop — without managing GPUs — with Amazon SageMaker training session APIs",
+    "url": "https://aws.amazon.com/blogs/machine-learning/write-your-own-training-loop-without-managing-gpus-with-amazon-sagemaker-training-sessions/",
+    "published_date": "2026-10-22",
+    "source": "AWS Blog",
+    "summary": "Amazon SageMaker AI training session APIs let you write your own LLM training loop (SFT, RL, or custom objectives) in a Python script while the service runs the GPUs. This post introduces the programming model and three SDK clients, then walks through a GRPO loop on GSM8K and a reinforcement learning workload on competitive programming."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
+    "category": "news",
+    "headline": "Stop guessing auto scaling targets for TTS on Amazon SageMaker AI",
+    "url": "https://aws.amazon.com/blogs/machine-learning/stop-guessing-auto-scaling-targets-for-tts-on-amazon-sagemaker-ai/",
+    "published_date": "2026-10-22",
+    "source": "AWS Blog",
+    "summary": "Teams deploying custom text-to-speech models on Amazon SageMaker AI often guess at autoscaling thresholds, and a wrong guess either wastes GPU spend or breaches a latency SLO. This post deploys Kokoro-82M as a custom container and derives a measured autoscaling policy from two live-endpoint measurements, Q_max and T_total, instead of guesswork."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
     "category": "process",
     "headline": "Train Qwen3 on AWS Trainium with torchtitan",
     "url": "https://aws.amazon.com/blogs/machine-learning/train-qwen3-on-aws-trainium-with-torchtitan/",

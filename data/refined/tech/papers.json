@@ -2,6 +2,260 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.NI",
+    "title": "Enhancing IoT Network Reliability through Antenna Diversity in Real-World Scenarios",
+    "url": "https://arxiv.org/abs/2610.30015v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "Antenna diversity in Internet of Things (IoT) devices is explored to address challenges associated with fixed device orientation and interference from nearby metallic objects, which can degrade wireless network performance. Integrating multiple antennas with different polarizations can significantly enhance signal quality and network reliability. Experiments demonstrated significant improvements in link quality, with gains exceeding 30 dB in received signal strength for specific scenarios. Alrea",
+    "authors": [
+      "Marco Niederberger",
+      "Yanick Schoch",
+      "Michel A. Nyffenegger",
+      "Christian Gwerder",
+      "Hans-Dieter Lang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "HAWK: Heterogeneity-Aware KV Cache Transfer for Efficient GPU-NPU Phase-Disaggregated LLM Inference",
+    "url": "https://arxiv.org/abs/2610.29873v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "Large language model (LLM) inference exhibits distinct computational characteristics across its two phases: prefill is compute-intensive, whereas decode is more memory-bound. As a result, AI accelerators achieve varying levels of efficiency across the two phases. GPUs are well suited to prefill, but are often underutilized during decode. By contrast, NPUs can utilize their compute resources more effectively during decode. Motivated by this observation, we explore a heterogeneous architecture tha",
+    "authors": [
+      "Junhyeok Park",
+      "Jungeun Yoon",
+      "Kyungmin Kim",
+      "Hunsoon Lee",
+      "Shinyoung Ahn",
+      "Kangho Kim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Framework to identify defect-insensitive electron transport in topological semimetals",
+    "url": "https://arxiv.org/abs/2610.29848v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "Topological semimetals are of increasing interest to replace conventional metals for interconnects in future semiconductor chips, due to their potential to exhibit decreasing resistivity with reducing wire dimensions and a lower sensitivity to electron scattering at defects. First-principles evaluation of promising topological semimetals for interconnects typically employ non-equilibrium Green's functions (NEGF) techniques to estimate defect scattering, but such calculations for specific defect ",
+    "authors": [
+      "Lily Jade Joyce",
+      "Michelle M. Kelley",
+      "Timothy Philicelli",
+      "Ching-tzu Chen",
+      "Ravishankar Sundararaman"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "Consistent Modeling of SEI Growth via Electron Diffusion Validated Across Diverse Cell Specifications and Operating Conditions in LFP/Graphite Cells",
+    "url": "https://arxiv.org/abs/2610.29775v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "Understanding and predicting degradation in lithium-ion batteries is critical for their widespread deployment. The continuous growth of the solid-electrolyte interphase (SEI) remains a dominant aging pathway, yet accurately modeling its kinetics across diverse cell specifications and operating conditions remains a significant challenge. Here, we present and validate a physically grounded SEI growth model mediated by the electron diffusion mechanism. This framework intrinsically captures the stat",
+    "authors": [
+      "Lukas Köbbing",
+      "William Black",
+      "Claire Floras",
+      "Saad Azam",
+      "Eniko Zsoldos",
+      "Ben Tang",
+      "J. R. Dahn",
+      "Birger Horstmann"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Wave Processing Unit: Closed-Form Matrix Synthesis for Wave Computing in Multiuser MIMO Communications",
+    "url": "https://arxiv.org/abs/2610.29687v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "Wave computing offers a compelling route to bypass the latency and energy bottlenecks of digital baseband processing. However, existing wave-domain processors rely on task-specific, non-convex iterative optimization, which incurs substantial configuration overhead and limits real-time applications. In this paper, we propose the wave processing unit (WPU), a programmable planar Mach--Zehnder interferometer (MZI) network that accelerates matrix--vector multiplications in MIMO communications. First",
+    "authors": [
+      "Xiaokun Teng",
+      "Yanqing Ren",
+      "Weicong Chen",
+      "Wankai Tang",
+      "Xiao Li",
+      "Shi Jin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.IV",
+    "title": "TernScope: Model-Hardware Co-Design for Efficient Ternary Endoscopic Segmentation",
+    "url": "https://arxiv.org/abs/2610.29617v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "Edge medical segmentation must reconcile small model size, high accuracy, and fast inference. TernScope addresses this tradeoff through model--hardware co-design, learning a compact segmentation network whose low-bit operators also simplify hardware execution. Split-channel large-kernel blocks preserve spatial context with limited computation, while branch fusion removes redundant inference paths. Ternary Progressive Quantization-aware Training (TPQ) then adapts the fused network from deep to sh",
+    "authors": [
+      "Zhuoyu Wu",
+      "Wenhui Ou",
+      "Qiawei Zheng",
+      "Xuhong Qiu",
+      "Wenqi Fang",
+      "Raphaël C. -W. Phan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Microstructural evolution during isothermal tempering of a highly supersaturated metastable austenitic state of a PM high-speed steel",
+    "url": "https://arxiv.org/abs/2610.29599v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "This study investigates the microstructural evolution of the powder metallurgical high-speed steel PM HS 3-3-4 during isothermal holding within the transformation gap between pearlite and bainite formation. The focus is on the mechanism of carbide spheroidization and the proposed formation of a chemically graded carbide rim. The heat treatments were carried out in a quenching dilatometer, enabling precise control of the thermal cycles and isothermal holding conditions. Spatially resolved analyti",
+    "authors": [
+      "Stefan Müller",
+      "Santiago Benito",
+      "Hendric Schaefer",
+      "Yujiao Li",
+      "Leonhard Gertlowski",
+      "Oliver Schenk",
+      "Ulrich Hagemann",
+      "Christoph Broeckmann",
+      "Sebastian Weber"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Large-size multivariate scale-free texture generation from small-size learning sets with self-attention Wasserstein-GAN",
+    "url": "https://arxiv.org/abs/2610.29535v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "Multivariate scale-free texture images are nowadays central in numerous modern applications very different in nature. A common challenging issue consists of being able to generate such multivariate textures at any arbitrary size, from a learning set of (possibly much) smaller size. Parametric models often turn out to be too restrictive for the generation of realistic textures, thus prompting neural network training-based generation. While several neural network approaches propose generation at s",
+    "authors": [
+      "Jhonatan Ancco Cerda",
+      "Kinan Abbas",
+      "Stéphane G. Roux",
+      "Patrice Abry"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Hard and Soft Real-Time DNN Inference Scheduling on Heterogeneous Multi-Accelerator Systems via Reinforcement Learning",
+    "url": "https://arxiv.org/abs/2610.29503v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "We present a scheduling framework for heterogeneous multi-accelerator systems executing both hard real-time and soft real-time QoS-aware DNN inference workloads. The framework combines an online reinforcement learning (RL) scheduler with a deterministic runtime safety layer. The RL scheduler dynamically generates candidate schedules by jointly selecting sub-job priorities and accelerator assignments, while runtime certification guarantees that all HRT deadlines remain satisfied independently of ",
+    "authors": [
+      "Francesco Giulio Blanco",
+      "Enrico Russo",
+      "Giuseppe Ascia",
+      "Davide Patti",
+      "Maurizio Palesi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Reorienting the Vector Axis: Restructuring FlashAttention for Long-Vector Processors",
+    "url": "https://arxiv.org/abs/2610.29489v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "A Transformer is built around attention, whose cost grows with the square of the sequence length and dominates the layer on long sequences. FlashAttention made that cost manageable by tiling the attention matrix and updating the softmax as it goes, but almost all work since has targeted GPUs. On long-vector processors one vector register can hold up to 512 single-precision numbers. The savings of a vector instruction are proportional to how much of the register it uses, so the choice of which lo",
+    "authors": [
+      "Emmanuel Irabor",
+      "Marc Casas"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "math.NA",
+    "title": "Approximate Matrix Multiplication through Joint Leverage Score Sampling",
+    "url": "https://arxiv.org/abs/2610.29466v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "In this paper, we investigate approximate matrix multiplication through random sampling. Specifically, we propose using a non-uniform sampling distribution constructed from the leverage scores of the two matrices, and characterize the associated approximation error in terms of the matrix spectral norm; which is well-known to better characterize the downstream error when the matrix product operator is applied to an input vector. We provide the probability error bounds for the proposed algorithm a",
+    "authors": [
+      "Neophytos Charalambides",
+      "Mert Pilanci",
+      "Alfred O. Hero"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Large anisotropic magnetoresistance in paramagnetic Fe-doped Ta4SiTe4",
+    "url": "https://arxiv.org/abs/2610.29463v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "Large anisotropic magnetoresistance (AMR) usually relies on magnetic ordering, which fixes a preferred moment orientation and couples it to charge transport. Here, we demonstrate that pronounced AMR can instead arise from the anisotropic magnetic-field-induced polarization of dilute local moments in paramagnetic Fe-doped Ta4SiTe4, a quasi-one-dimensional van der Waals narrow-gap semiconductor. Magnetization measurements reveal Curie-like paramagnetism down to 2 K, with the c axis as the magnetic",
+    "authors": [
+      "Keita Nagasawa",
+      "Ryutaro Okuma",
+      "Jun-ichi Yamaura",
+      "Yoshihiko Okamoto"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LO",
+    "title": "Deciding Scale Placement in MXFP4 Dot Products with Integer Arithmetic",
+    "url": "https://arxiv.org/abs/2610.29445v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "The Open Compute Project's microscaling (MX) family includes MXFP4, which stores 32 four-bit elements with a shared power-of-two scale. When lowering a dot-product reduction, a compiler can apply these scales before the reduction, or defer scaling until afterwards. Although equivalent over real numbers, these formulations can produce different IEEE binary32 results through overflow or underflow, with equivalence also depending on the reduction tree. We study the legality of compiler rewrites in ",
+    "authors": [
+      "Shreyas Vinayakumar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Compositional neural networks for multimodal X-ray and neutron scattering inversion",
+    "url": "https://arxiv.org/abs/2610.29362v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "X-ray and neutron scattering are indispensable for structural characterization across condensed-matter physics and materials science. Yet, because scattering experiments generally record intensities without phase information, distinct structures can yield similar scattering patterns, rendering the corresponding inverse problems non-unique. This ambiguity can be reduced by combining complementary measurements, but their integration into machine-learning frameworks remains challenging. Here we int",
+    "authors": [
+      "Valentin Munteanu",
+      "Alexander Hinderhofer",
+      "Dmitry Lapkin",
+      "Vladimir Starostin",
+      "Frank Schreiber"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Higher-Order Flatband-Touching Points Mediate Unconventional Bulk-Boundary Correspondence",
+    "url": "https://arxiv.org/abs/2610.29251v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "The bulk-boundary correspondence establishes a fundamental connection between bulk band topology and the emergence of boundary states, underpinning topological phenomena across electronic, acoustic, photonic, and many other wave systems. A broad class of singular flatband systems, however, exhibits an unconventional form of bulk-boundary correspondence, in which robust boundary modes (RBMs) originate from flatband-touching points (FBTPs) and the real-space topology associated with incomplete set",
+    "authors": [
+      "Limin Song",
+      "Jianqi Xiong",
+      "Liqin Tang",
+      "Daohong Song",
+      "Zhigang Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Multiscale Modeling of Zr Corrosion: Predicting Microstructures of Oxide Films",
     "url": "https://arxiv.org/abs/2610.28493v1",
