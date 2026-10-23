@@ -1,0 +1,448 @@
+{
+  "week_of": "2026-10-18",
+  "generated_through": "2026-10-24",
+  "generated_at": "2026-10-23T18:47:46.575691+00:00",
+  "macro": {
+    "fed_policy": [],
+    "rates_fx": [],
+    "polarization": [
+      "상원 통과한 경찰관 유족급여 확대법, 공공안전 부문 재정 양극화 심화 신호",
+      "H.R. 6470, 기준선 업데이트법안 — 예산 기준선 조정 메커니즘 도입으로 재정 양극화 구조 심화 우려",
+      "H.R. 4464 예방보건저축법: 의료접근성 양극화 심화 우려",
+      "H.R. 9785: 남다코타 수자원 타당성 조사 법안, 하원 자연자원위원회 가결(2026.9.15)",
+      "H.R. 9367 Stop Lawmakers From Predicting Act, 하원행정위원회 보고 (2026년 6월 24일)"
+    ]
+  },
+  "axes": {
+    "mobile_ap": {
+      "ko": {
+        "executive_summary": "Samsung has reversed course on Exynos after last week's suspension announcement, committing to >10% output increase on 2nm Exynos 2700 with co-optimized M2700 modem to re-enter Galaxy S27 competition. Qualcomm faces thermal and demand headwinds—Snapdragon 8 Elite Extreme Gen 6 overheating requires official denial, Honor Win 2 ships with aftermarket cooling (14.4°C delta), and Q4 2026 global layoffs signal smartphone AP weakness despite AI pivot. The modem-AP interface and thermal management at the package boundary have become competitive leverage points, favoring vertically integrated players.",
+        "key_facts": [
+          "Samsung Exynos 2700 targets >10% output increase on 2nm process",
+          "Samsung M2700 modem co-optimized with Exynos 2700 for Galaxy S27",
+          "Snapdragon 8 Elite Extreme Gen 6 overheating reports with official Qualcomm denial",
+          "Honor Win 2 ships with dual-fan cooling reducing thermals by 14.4°C on Snapdragon 8EE Gen 6",
+          "Qualcomm global layoffs begin November 2026 as smartphone demand weakens",
+          "Terafab targets volume production Q3-Q4 2028 with ASML equipment expedited shipments"
+        ],
+        "implications": [
+          {
+            "keyword": "Vertical Integration",
+            "text": "Samsung's co-optimized modem-AP stack (M2700+Exynos 2700) eliminates licensing overhead at the processor-modem interface, directly attacking Qualcomm's IP licensing model at a tighter thermal boundary than before."
+          },
+          {
+            "keyword": "Thermal & Power Efficiency",
+            "text": "Snapdragon thermal issues requiring Honor Win 2 dual-fan remediation expose a process-node or design optimization gap; Samsung's modem co-optimization and integrated power delivery now define the competitive interface."
+          },
+          {
+            "keyword": "Demand Contraction",
+            "text": "Qualcomm's November 2026 layoffs and smartphone AP weakness signal volume pressure; Samsung's >10% Exynos ramp and Galaxy S27 re-entry indicate share capture from Qualcomm-dependent OEMs seeking differentiation."
+          },
+          {
+            "keyword": "Node Dependency Risk",
+            "text": "Qualcomm's continued reliance on advanced nodes now compounds with thermal and demand risk; Samsung's 2nm Exynos commitment shows fab-integrated players retain process risk management superiority."
+          }
+        ],
+        "counterpoint": "Qualcomm's Snapdragon 8EE Gen 6 remains in demand (Honor Win 2, Galaxy S27 fallback), and AI/edge pivot may offset smartphone AP decline; Terafab's 2028 timeline is speculative and far from volume.",
+        "feasibility_observation": "Samsung's >10% Exynos 2700 output ramp on 2nm and modem co-optimization signal resolved design feasibility on power and thermal; Qualcomm's Snapdragon overheating and official denial suggest ongoing performance or yield concern at advanced node requiring external thermal solutions.",
+        "changed_from_last_week": true,
+        "change_note": "Samsung reversed Exynos suspension with >10% 2nm output increase and modem co-optimization for Galaxy S27, contradicting last week's structural shift narrative; thermal/demand pressure on Qualcomm now forces OEM differentiation through system-level cooling rather than licensing moat."
+      },
+      "en": {
+        "executive_summary": "Samsung has reversed course on Exynos after last week's suspension announcement, committing to >10% output increase on 2nm Exynos 2700 with co-optimized M2700 modem to re-enter Galaxy S27 competition. Qualcomm faces thermal and demand headwinds—Snapdragon 8 Elite Extreme Gen 6 overheating requires official denial, Honor Win 2 ships with aftermarket cooling (14.4°C delta), and Q4 2026 global layoffs signal smartphone AP weakness despite AI pivot. The modem-AP interface and thermal management at the package boundary have become competitive leverage points, favoring vertically integrated players.",
+        "key_facts": [
+          "Samsung Exynos 2700 targets >10% output increase on 2nm process",
+          "Samsung M2700 modem co-optimized with Exynos 2700 for Galaxy S27",
+          "Snapdragon 8 Elite Extreme Gen 6 overheating reports with official Qualcomm denial",
+          "Honor Win 2 ships with dual-fan cooling reducing thermals by 14.4°C on Snapdragon 8EE Gen 6",
+          "Qualcomm global layoffs begin November 2026 as smartphone demand weakens",
+          "Terafab targets volume production Q3-Q4 2028 with ASML equipment expedited shipments"
+        ],
+        "implications": [
+          {
+            "keyword": "Vertical Integration",
+            "text": "Samsung's co-optimized modem-AP stack (M2700+Exynos 2700) eliminates licensing overhead at the processor-modem interface, directly attacking Qualcomm's IP licensing model at a tighter thermal boundary than before."
+          },
+          {
+            "keyword": "Thermal & Power Efficiency",
+            "text": "Snapdragon thermal issues requiring Honor Win 2 dual-fan remediation expose a process-node or design optimization gap; Samsung's modem co-optimization and integrated power delivery now define the competitive interface."
+          },
+          {
+            "keyword": "Demand Contraction",
+            "text": "Qualcomm's November 2026 layoffs and smartphone AP weakness signal volume pressure; Samsung's >10% Exynos ramp and Galaxy S27 re-entry indicate share capture from Qualcomm-dependent OEMs seeking differentiation."
+          },
+          {
+            "keyword": "Node Dependency Risk",
+            "text": "Qualcomm's continued reliance on advanced nodes now compounds with thermal and demand risk; Samsung's 2nm Exynos commitment shows fab-integrated players retain process risk management superiority."
+          }
+        ],
+        "counterpoint": "Qualcomm's Snapdragon 8EE Gen 6 remains in demand (Honor Win 2, Galaxy S27 fallback), and AI/edge pivot may offset smartphone AP decline; Terafab's 2028 timeline is speculative and far from volume.",
+        "feasibility_observation": "Samsung's >10% Exynos 2700 output ramp on 2nm and modem co-optimization signal resolved design feasibility on power and thermal; Qualcomm's Snapdragon overheating and official denial suggest ongoing performance or yield concern at advanced node requiring external thermal solutions.",
+        "changed_from_last_week": true,
+        "change_note": "Samsung reversed Exynos suspension with >10% 2nm output increase and modem co-optimization for Galaxy S27, contradicting last week's structural shift narrative; thermal/demand pressure on Qualcomm now forces OEM differentiation through system-level cooling rather than licensing moat."
+      }
+    },
+    "hpc_datacenter": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "custom_soc": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "foundry": {
+      "ko": {
+        "executive_summary": "NVIDIA's unified HBM base die specification—mandating TSMC 3nm for Samsung, SK Hynix, and Micron—forcibly breaks the foundry rivalry and reshapes competitive positioning at the memory-compute interface. Samsung's yield shortfall on NVIDIA's custom HBM base die forces outsourcing to TSMC 3nm, marking the first time Samsung cedes advanced logic packaging to a rival for a premium AI customer, while TSMC locks its N3 capacity and extends manufacturing footprint with a new Taiwan 3nm plant targeting 2028 ramp. This shift transfers both technical leadership (3nm base die standardization) and customer lock-in from domestic competition to NVIDIA-led supply chain consolidation.",
+        "key_facts": [
+          "NVIDIA mandates TSMC 3nm for HBM base die across Samsung, SK Hynix, Micron",
+          "Samsung outsources custom HBM base die production to TSMC due to yield gaps",
+          "TSMC adds new Taiwan 3nm plant, targets 2028 production ramp",
+          "Apple targets 1.4nm chips in H1 2028 mass production",
+          "Samsung—TSMC foundry rivalry effectively suspended for unified NVIDIA spec"
+        ],
+        "implications": [
+          {
+            "keyword": "Technical interface consolidation",
+            "text": "NVIDIA's unified base die spec centralizes the HBM-compute packaging boundary at TSMC 3nm, eliminating foundry competition at the highest-value interface and converting independent memory suppliers into design-dependent customers."
+          },
+          {
+            "keyword": "Samsung's yield liability",
+            "text": "Outsourcing to TSMC signals Samsung's 3nm process cannot meet NVIDIA's custom HBM base die performance or yield targets, ceding leadership in AI memory architecture to rival and forcing capacity reliance on external partner."
+          },
+          {
+            "keyword": "TSMC capacity lock-in",
+            "text": "New Taiwan 3nm fab and N3 commitment across NVIDIA's three memory partners locks TSMC's 2028 roadmap, securing premium pricing and multi-year demand visibility while delaying competitive alternatives (Samsung, Intel)."
+          },
+          {
+            "keyword": "Foundry decoupling from DRAM packaging",
+            "text": "Memory suppliers (Samsung, SK Hynix, Micron) lose control over base die node choice; NVIDIA's mandate shifts competitive leverage from memory vendor roadmaps to NVIDIA's unilateral supply-chain architecture."
+          }
+        ],
+        "counterpoint": "Samsung's outsourcing may be temporary or limited in scope (NVIDIA-specific custom die only); legacy HBM stacks and other memory base dies could continue on Samsung 3nm, preserving capacity utilization and revenue if yields improve.",
+        "feasibility_observation": "Samsung's HBM base die yield gap vs. TSMC 3nm confirmed; TSMC 3nm process proven capable of NVIDIA custom HBM base die production. TSMC's new Taiwan 3nm plant targets 2028 ramp, extending N3 availability for H1 2028 Apple 1.4nm mass production prep.",
+        "changed_from_last_week": true,
+        "change_note": "Last week: no change. This week: NVIDIA's unified HBM base die specification mandating TSMC 3nm for Samsung, SK Hynix, and Micron materializes; Samsung confirms yield shortfall and outsources to TSMC, reshaping foundry competitive positioning at the memory-compute packaging interface."
+      },
+      "en": {
+        "executive_summary": "NVIDIA's unified HBM base die specification—mandating TSMC 3nm for Samsung, SK Hynix, and Micron—forcibly breaks the foundry rivalry and reshapes competitive positioning at the memory-compute interface. Samsung's yield shortfall on NVIDIA's custom HBM base die forces outsourcing to TSMC 3nm, marking the first time Samsung cedes advanced logic packaging to a rival for a premium AI customer, while TSMC locks its N3 capacity and extends manufacturing footprint with a new Taiwan 3nm plant targeting 2028 ramp. This shift transfers both technical leadership (3nm base die standardization) and customer lock-in from domestic competition to NVIDIA-led supply chain consolidation.",
+        "key_facts": [
+          "NVIDIA mandates TSMC 3nm for HBM base die across Samsung, SK Hynix, Micron",
+          "Samsung outsources custom HBM base die production to TSMC due to yield gaps",
+          "TSMC adds new Taiwan 3nm plant, targets 2028 production ramp",
+          "Apple targets 1.4nm chips in H1 2028 mass production",
+          "Samsung—TSMC foundry rivalry effectively suspended for unified NVIDIA spec"
+        ],
+        "implications": [
+          {
+            "keyword": "Technical interface consolidation",
+            "text": "NVIDIA's unified base die spec centralizes the HBM-compute packaging boundary at TSMC 3nm, eliminating foundry competition at the highest-value interface and converting independent memory suppliers into design-dependent customers."
+          },
+          {
+            "keyword": "Samsung's yield liability",
+            "text": "Outsourcing to TSMC signals Samsung's 3nm process cannot meet NVIDIA's custom HBM base die performance or yield targets, ceding leadership in AI memory architecture to rival and forcing capacity reliance on external partner."
+          },
+          {
+            "keyword": "TSMC capacity lock-in",
+            "text": "New Taiwan 3nm fab and N3 commitment across NVIDIA's three memory partners locks TSMC's 2028 roadmap, securing premium pricing and multi-year demand visibility while delaying competitive alternatives (Samsung, Intel)."
+          },
+          {
+            "keyword": "Foundry decoupling from DRAM packaging",
+            "text": "Memory suppliers (Samsung, SK Hynix, Micron) lose control over base die node choice; NVIDIA's mandate shifts competitive leverage from memory vendor roadmaps to NVIDIA's unilateral supply-chain architecture."
+          }
+        ],
+        "counterpoint": "Samsung's outsourcing may be temporary or limited in scope (NVIDIA-specific custom die only); legacy HBM stacks and other memory base dies could continue on Samsung 3nm, preserving capacity utilization and revenue if yields improve.",
+        "feasibility_observation": "Samsung's HBM base die yield gap vs. TSMC 3nm confirmed; TSMC 3nm process proven capable of NVIDIA custom HBM base die production. TSMC's new Taiwan 3nm plant targets 2028 ramp, extending N3 availability for H1 2028 Apple 1.4nm mass production prep.",
+        "changed_from_last_week": true,
+        "change_note": "Last week: no change. This week: NVIDIA's unified HBM base die specification mandating TSMC 3nm for Samsung, SK Hynix, and Micron materializes; Samsung confirms yield shortfall and outsources to TSMC, reshaping foundry competitive positioning at the memory-compute packaging interface."
+      }
+    },
+    "packaging": {
+      "ko": {
+        "executive_summary": "Packaging supply-chain bifurcation deepened with TSMC outsourcing CoWoS interposer production to GlobalFoundries ($5B deal), signaling substrate-layer arbitrage is now operational; meanwhile Hanmi Semiconductor and Amkor simultaneously expand US/Korea manufacturing hubs, and SHINKO advances hybrid RDL substrates toward 2026 AI workloads, fragmenting technical control of the critical packaging interface further away from traditional node-dominant players.",
+        "key_facts": [
+          "TSMC outsources CoWoS interposers to GlobalFoundries ($5B deal)",
+          "SHINKO announces hybrid RDL and glass-core substrate evolution for 2026 AI packaging",
+          "Hanmi Semiconductor establishes Hanmi USA hub in Silicon Valley for AI chip packaging",
+          "Amkor breaks ground on Gwangju plant as Honam Semiconductor Project anchor",
+          "Tamil Nadu announces 25% subsidy semiconductor scheme",
+          "SEC wins first commercial order for semiconductor inspection equipment",
+          "Deep-UV semiconductor inspection market projected 7.5% CAGR to 2035"
+        ],
+        "implications": [
+          {
+            "keyword": "Interposer Arbitrage",
+            "text": "TSMC's CoWoS outsource to GlobalFoundries validates packaging substrate as independent competitive lever; OSAT players now control design margins at the chiplet interface, eroding monolithic node advantage."
+          },
+          {
+            "keyword": "Geographic Substrate Consolidation",
+            "text": "Hanmi USA + Amkor Gwangju + Tamil Nadu subsidies complete Korea-India-US packaging triangle; substrate fabrication no longer Taiwan-anchored, reducing TSMC's supply-chain veto power in AI packaging."
+          },
+          {
+            "keyword": "AI Substrate Architecture Shift",
+            "text": "SHINKO hybrid RDL (glass-core + ABF blend) signals substrate heterogeneity replacing monolithic ABF dominance; chiplet-era interposer design now decoupled from node process, enabling cross-region competitive substitution."
+          },
+          {
+            "keyword": "Inspection Capability Parity",
+            "text": "SEC commercial order + 7.5% CAGR deep-UV inspection growth indicate packaging yield verification capability diffusing beyond Korea/Japan incumbents; quality arbitrage shrinks."
+          }
+        ],
+        "counterpoint": "GlobalFoundries interposer capacity remains nascent relative to TSMC CoWoS footprint; substrate diversification increases design cycle complexity and yield ramp risk for emerging nodes.",
+        "feasibility_observation": "Mass-production feasibility shift: GlobalFoundries CoWoS ramp introduces dual-source interposer yield dependencies; SHINKO glass-core hybrid substrate requires new CMP slurry and inspection protocols (evidenced by CMP market expansion), extending qualification timelines for 2026 AI packaging roadmaps.",
+        "changed_from_last_week": true,
+        "change_note": "TSMC's strategic CoWoS outsource to GlobalFoundries (this week) operationalizes the substrate-layer arbitrage thesis; packaging is now explicitly a multi-vendor technical interface, not a Taiwan-consolidated lever—this represents a competitive inflection beyond last week's geopolitical consolidation forecast."
+      },
+      "en": {
+        "executive_summary": "Packaging supply-chain bifurcation deepened with TSMC outsourcing CoWoS interposer production to GlobalFoundries ($5B deal), signaling substrate-layer arbitrage is now operational; meanwhile Hanmi Semiconductor and Amkor simultaneously expand US/Korea manufacturing hubs, and SHINKO advances hybrid RDL substrates toward 2026 AI workloads, fragmenting technical control of the critical packaging interface further away from traditional node-dominant players.",
+        "key_facts": [
+          "TSMC outsources CoWoS interposers to GlobalFoundries ($5B deal)",
+          "SHINKO announces hybrid RDL and glass-core substrate evolution for 2026 AI packaging",
+          "Hanmi Semiconductor establishes Hanmi USA hub in Silicon Valley for AI chip packaging",
+          "Amkor breaks ground on Gwangju plant as Honam Semiconductor Project anchor",
+          "Tamil Nadu announces 25% subsidy semiconductor scheme",
+          "SEC wins first commercial order for semiconductor inspection equipment",
+          "Deep-UV semiconductor inspection market projected 7.5% CAGR to 2035"
+        ],
+        "implications": [
+          {
+            "keyword": "Interposer Arbitrage",
+            "text": "TSMC's CoWoS outsource to GlobalFoundries validates packaging substrate as independent competitive lever; OSAT players now control design margins at the chiplet interface, eroding monolithic node advantage."
+          },
+          {
+            "keyword": "Geographic Substrate Consolidation",
+            "text": "Hanmi USA + Amkor Gwangju + Tamil Nadu subsidies complete Korea-India-US packaging triangle; substrate fabrication no longer Taiwan-anchored, reducing TSMC's supply-chain veto power in AI packaging."
+          },
+          {
+            "keyword": "AI Substrate Architecture Shift",
+            "text": "SHINKO hybrid RDL (glass-core + ABF blend) signals substrate heterogeneity replacing monolithic ABF dominance; chiplet-era interposer design now decoupled from node process, enabling cross-region competitive substitution."
+          },
+          {
+            "keyword": "Inspection Capability Parity",
+            "text": "SEC commercial order + 7.5% CAGR deep-UV inspection growth indicate packaging yield verification capability diffusing beyond Korea/Japan incumbents; quality arbitrage shrinks."
+          }
+        ],
+        "counterpoint": "GlobalFoundries interposer capacity remains nascent relative to TSMC CoWoS footprint; substrate diversification increases design cycle complexity and yield ramp risk for emerging nodes.",
+        "feasibility_observation": "Mass-production feasibility shift: GlobalFoundries CoWoS ramp introduces dual-source interposer yield dependencies; SHINKO glass-core hybrid substrate requires new CMP slurry and inspection protocols (evidenced by CMP market expansion), extending qualification timelines for 2026 AI packaging roadmaps.",
+        "changed_from_last_week": true,
+        "change_note": "TSMC's strategic CoWoS outsource to GlobalFoundries (this week) operationalizes the substrate-layer arbitrage thesis; packaging is now explicitly a multi-vendor technical interface, not a Taiwan-consolidated lever—this represents a competitive inflection beyond last week's geopolitical consolidation forecast."
+      }
+    },
+    "cpo_optics": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "dram": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "nand": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "hbm": {
+      "ko": {
+        "executive_summary": "NVIDIA's mandate for TSMC 3nm NVHBM base dies (adopted by Samsung, SK Hynix, and Micron) consolidates the HBM packaging standard at the interposer level, effectively neutralizing Samsung's foundry leverage but preserving Korean memory suppliers' stack position. Simultaneously, SK Hynix's advanced iHBM thermal architecture—moving thermal management up the stack—signals a competitive pivot away from base-die manufacturing toward advanced stacking, where cooling bottlenecks (thermally and electrically) now become the next interface battleground.",
+        "key_facts": [
+          "NVIDIA specifies TSMC 3nm for NVHBM base die, mandatory across Samsung, SK Hynix, Micron",
+          "SK Hynix initiating iHBM supply-chain coordination for production ramp (thermal-optimized HBM)",
+          "Intel D-Series GPUs making HBM optional for agentic inference workloads",
+          "Micron developing edge inference memory, HBM production targeted 2H28",
+          "Samsung's HBM base-die development linked to 2nm 5G modem advancement"
+        ],
+        "implications": [
+          {
+            "keyword": "Interposer standardization",
+            "text": "NVIDIA's unified TSMC 3nm base-die spec removes Korean foundry differentiation at the critical chip-memory interface; Samsung loses independent process arbitrage in HBM packaging."
+          },
+          {
+            "keyword": "Thermal stack shift",
+            "text": "SK Hynix iHBM repositions heat dissipation control upward in the stack (memory-side thermal architecture), creating a new competitive interface beyond base-die lithography; Korean suppliers regain differentiation at thermal-performance boundary."
+          },
+          {
+            "keyword": "Demand bifurcation",
+            "text": "Intel's optional HBM approach signals fracturing of monolithic HBM-required inference, expanding LPDDR5X and embedded-memory segments where Korean leverage is weaker."
+          },
+          {
+            "keyword": "Supplier consolidation",
+            "text": "NVIDIA's three-supplier mandate (Samsung, SK Hynix, Micron) on single TSMC process node reduces foundry competition but maintains Korean memory duopoly in HBM stack volume."
+          }
+        ],
+        "counterpoint": "Samsung's 2nm modem development via HBM base-die experience may unlock alternative foundry demand from Qualcomm, partially offsetting TSMC 3nm lock-in.",
+        "feasibility_observation": "SK Hynix's iHBM supply-chain engagement indicates advanced thermal management feasibility is advancing to production phase; mass-production readiness for iHBM stacking (2H28 window for edge variants) confirms yield/cooling challenges are transitioning from R&D gate to scaling gate.",
+        "changed_from_last_week": true,
+        "change_note": "Last week focused on cooling bottlenecks at the chip-memory interface (HBM4E); this week's data shows Korean suppliers are leapfrogging base-die manufacturing entirely by moving thermal control into HBM stack architecture (iHBM), while NVIDIA's spec consolidation removes foundry as a competitive lever for Samsung."
+      },
+      "en": {
+        "executive_summary": "NVIDIA's mandate for TSMC 3nm NVHBM base dies (adopted by Samsung, SK Hynix, and Micron) consolidates the HBM packaging standard at the interposer level, effectively neutralizing Samsung's foundry leverage but preserving Korean memory suppliers' stack position. Simultaneously, SK Hynix's advanced iHBM thermal architecture—moving thermal management up the stack—signals a competitive pivot away from base-die manufacturing toward advanced stacking, where cooling bottlenecks (thermally and electrically) now become the next interface battleground.",
+        "key_facts": [
+          "NVIDIA specifies TSMC 3nm for NVHBM base die, mandatory across Samsung, SK Hynix, Micron",
+          "SK Hynix initiating iHBM supply-chain coordination for production ramp (thermal-optimized HBM)",
+          "Intel D-Series GPUs making HBM optional for agentic inference workloads",
+          "Micron developing edge inference memory, HBM production targeted 2H28",
+          "Samsung's HBM base-die development linked to 2nm 5G modem advancement"
+        ],
+        "implications": [
+          {
+            "keyword": "Interposer standardization",
+            "text": "NVIDIA's unified TSMC 3nm base-die spec removes Korean foundry differentiation at the critical chip-memory interface; Samsung loses independent process arbitrage in HBM packaging."
+          },
+          {
+            "keyword": "Thermal stack shift",
+            "text": "SK Hynix iHBM repositions heat dissipation control upward in the stack (memory-side thermal architecture), creating a new competitive interface beyond base-die lithography; Korean suppliers regain differentiation at thermal-performance boundary."
+          },
+          {
+            "keyword": "Demand bifurcation",
+            "text": "Intel's optional HBM approach signals fracturing of monolithic HBM-required inference, expanding LPDDR5X and embedded-memory segments where Korean leverage is weaker."
+          },
+          {
+            "keyword": "Supplier consolidation",
+            "text": "NVIDIA's three-supplier mandate (Samsung, SK Hynix, Micron) on single TSMC process node reduces foundry competition but maintains Korean memory duopoly in HBM stack volume."
+          }
+        ],
+        "counterpoint": "Samsung's 2nm modem development via HBM base-die experience may unlock alternative foundry demand from Qualcomm, partially offsetting TSMC 3nm lock-in.",
+        "feasibility_observation": "SK Hynix's iHBM supply-chain engagement indicates advanced thermal management feasibility is advancing to production phase; mass-production readiness for iHBM stacking (2H28 window for edge variants) confirms yield/cooling challenges are transitioning from R&D gate to scaling gate.",
+        "changed_from_last_week": true,
+        "change_note": "Last week focused on cooling bottlenecks at the chip-memory interface (HBM4E); this week's data shows Korean suppliers are leapfrogging base-die manufacturing entirely by moving thermal control into HBM stack architecture (iHBM), while NVIDIA's spec consolidation removes foundry as a competitive lever for Samsung."
+      }
+    },
+    "pmic": {
+      "ko": {
+        "executive_summary": "SMIC's capacity utilization is rising on dual demand from foundry cycle recovery and China AI chip demand, but this represents cyclical strength rather than structural PMIC-specific momentum. No direct evidence of automotive-grade or server-grade certification expansions, pricing pressure relief, or BOM-level supply stabilization in the material provided.",
+        "key_facts": [
+          "SMIC: capacity cycle uplift driven by foundry + China AI chips (Longbridge)"
+        ],
+        "implications": [
+          {
+            "keyword": "Foundry Capacity Utilization",
+            "text": "SMIC fab loading improving, which may indirectly tighten BCD availability for PMICs if mature-node allocation shifts toward AI/logic customers."
+          },
+          {
+            "keyword": "China AI Chip Pull",
+            "text": "Incremental demand flow into SMIC could compete for BCD capacity slots, raising PMIC lead times and negotiating leverage for integrated-device makers."
+          },
+          {
+            "keyword": "Hybrid Vehicle Growth",
+            "text": "Hybrid platform demand (per macro) drives sustained PMIC/driver IC orders, offsetting EV sales slowdown post-subsidy expiry."
+          }
+        ],
+        "counterpoint": "SMIC capacity cycle uplift is foundry/logic-centric; no direct evidence that PMIC-specific BOM costs, availability windows, or automotive-grade certification depth improved this week.",
+        "feasibility_observation": "해당 없음",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "SMIC's capacity utilization is rising on dual demand from foundry cycle recovery and China AI chip demand, but this represents cyclical strength rather than structural PMIC-specific momentum. No direct evidence of automotive-grade or server-grade certification expansions, pricing pressure relief, or BOM-level supply stabilization in the material provided.",
+        "key_facts": [
+          "SMIC: capacity cycle uplift driven by foundry + China AI chips (Longbridge)"
+        ],
+        "implications": [
+          {
+            "keyword": "Foundry Capacity Utilization",
+            "text": "SMIC fab loading improving, which may indirectly tighten BCD availability for PMICs if mature-node allocation shifts toward AI/logic customers."
+          },
+          {
+            "keyword": "China AI Chip Pull",
+            "text": "Incremental demand flow into SMIC could compete for BCD capacity slots, raising PMIC lead times and negotiating leverage for integrated-device makers."
+          },
+          {
+            "keyword": "Hybrid Vehicle Growth",
+            "text": "Hybrid platform demand (per macro) drives sustained PMIC/driver IC orders, offsetting EV sales slowdown post-subsidy expiry."
+          }
+        ],
+        "counterpoint": "SMIC capacity cycle uplift is foundry/logic-centric; no direct evidence that PMIC-specific BOM costs, availability windows, or automotive-grade certification depth improved this week.",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    }
+  },
+  "item_counts": {
+    "mobile_ap": 10,
+    "hpc_datacenter": 31,
+    "custom_soc": 101,
+    "foundry": 80,
+    "packaging": 75,
+    "cpo_optics": 25,
+    "hbm": 14,
+    "pmic": 1
+  }
+}
