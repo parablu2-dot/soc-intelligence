@@ -1,256 +1,88 @@
 {
-  "date": "2026-10-23",
-  "generated_at": "2026-10-23T23:04:41.578526+00:00",
+  "date": "2026-10-24",
+  "generated_at": "2026-10-24T22:22:11.607508+00:00",
   "sectors": {
-    "mobile_ap": {
-      "sector": "Mobile AP",
-      "date": "2026-10-23",
-      "item_count": 2,
-      "generated_at": "2026-10-23T23:04:41.577966+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "Solidigm abandons IPO plans due to unfavorable semiconductor market conditions, pivoting to US fab construction. China continues advancing advanced chipmaking capabilities without EUV lithography despite rising development costs.",
-          "key_facts": [
-            "Solidigm confirms US fab construction plan",
-            "Solidigm cancels IPO due to semiconductor share price trends",
-            "China developing advanced chips without EUV technology"
-          ],
-          "implications": [
-            {
-              "keyword": "Capex Strategy",
-              "text": "Solidigm prioritizes domestic US manufacturing over equity financing, signaling confidence in long-term foundry demand despite near-term market headwinds."
-            },
-            {
-              "keyword": "Geopolitical Compete",
-              "text": "China's continued progress without EUV access demonstrates alternative process roadmaps narrowing the technology gap despite escalating R&D costs."
-            }
-          ],
-          "counterpoint": "IPO abandonment may indicate broader capital market weakness affecting all semiconductor startups' exit strategies."
-        },
-        "en": {
-          "executive_summary": "Solidigm abandons IPO plans due to unfavorable semiconductor market conditions, pivoting to US fab construction. China continues advancing advanced chipmaking capabilities without EUV lithography despite rising development costs.",
-          "key_facts": [
-            "Solidigm confirms US fab construction plan",
-            "Solidigm cancels IPO due to semiconductor share price trends",
-            "China developing advanced chips without EUV technology"
-          ],
-          "implications": [
-            {
-              "keyword": "Capex Strategy",
-              "text": "Solidigm prioritizes domestic US manufacturing over equity financing, signaling confidence in long-term foundry demand despite near-term market headwinds."
-            },
-            {
-              "keyword": "Geopolitical Compete",
-              "text": "China's continued progress without EUV access demonstrates alternative process roadmaps narrowing the technology gap despite escalating R&D costs."
-            }
-          ],
-          "counterpoint": "IPO abandonment may indicate broader capital market weakness affecting all semiconductor startups' exit strategies."
-        }
-      }
-    },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-10-23",
+      "date": "2026-10-24",
       "item_count": 4,
-      "generated_at": "2026-10-23T23:04:41.577966+00:00",
+      "generated_at": "2026-10-24T22:22:11.607207+00:00",
       "content": {
         "ko": {
-          "executive_summary": "India launches major 3D AI chip packaging facility in Madhya Pradesh backed by $655M investment. Semiconductor talent development accelerates through SK Hynix collaboration with Korean technical schools and AMD's design center expansion in Romania.",
+          "executive_summary": "Significant workforce restructuring is underway across major US semiconductor players amid persistent talent shortages. Intel plans to reduce its workforce by 20% by year-end, while industry efforts focus on reimagining labor models to close the talent gap. Nvidia is investing in a Taiwan-based AI R&D center with subsidy support, and TSMC's Design Center Alliance continues to expand with new members like Silicon Topology.",
           "key_facts": [
-            "Madhya Pradesh invests $655M in India's first 3D AI chip packaging facility",
-            "AMD relocates Iași Design Center to Palas Campus office building",
-            "SK Hynix deepens academic partnership with Korea Semiconductor Meister High School",
-            "SK Hynix adjusting recruitment and interview processes due to AI impact"
+            "Intel reducing workforce by one-fifth (20%) by end of year",
+            "Nvidia establishing Taiwan AI R&D center with subsidies",
+            "Silicon Topology joining TSMC Design Center Alliance",
+            "McKinsey addressing US semiconductor talent gap through labor reimagining"
           ],
           "implications": [
             {
-              "keyword": "Capacity Expansion",
-              "text": "India's 3D packaging facility addresses bottleneck in AI chip assembly and signals regional diversification from China-Taiwan concentration."
+              "keyword": "US Talent Crisis",
+              "text": "Simultaneous workforce reductions by Intel and labor shortage concerns indicate structural market imbalance requiring immediate policy and educational intervention."
             },
             {
-              "keyword": "Talent Pipeline",
-              "text": "SK Hynix's formalized academic collaboration and AI-driven recruitment evolution demonstrate anticipation of AI-augmented design workflows and specialized skill requirements."
+              "keyword": "Regional Concentration",
+              "text": "Major R&D investments (Nvidia Taiwan) and foundry partnerships (TSMC) signal continued geographic concentration of HPC innovation outside US borders."
             },
             {
-              "keyword": "Design Localization",
-              "text": "AMD's Romania footprint expansion reflects European geopolitical push for design center distribution outside core US operations."
+              "keyword": "Design Ecosystem",
+              "text": "TSMC Design Center expansion suggests strengthening of supplier-foundry partnerships to accelerate custom silicon development cycles."
             }
           ],
-          "counterpoint": "Heavy reliance on government subsidies in India and emerging markets may create dependency on policy continuity."
+          "counterpoint": "Intel's workforce reduction may free up capital for strategic R&D investment rather than purely signaling market weakness."
         },
         "en": {
-          "executive_summary": "India launches major 3D AI chip packaging facility in Madhya Pradesh backed by $655M investment. Semiconductor talent development accelerates through SK Hynix collaboration with Korean technical schools and AMD's design center expansion in Romania.",
+          "executive_summary": "Significant workforce restructuring is underway across major US semiconductor players amid persistent talent shortages. Intel plans to reduce its workforce by 20% by year-end, while industry efforts focus on reimagining labor models to close the talent gap. Nvidia is investing in a Taiwan-based AI R&D center with subsidy support, and TSMC's Design Center Alliance continues to expand with new members like Silicon Topology.",
           "key_facts": [
-            "Madhya Pradesh invests $655M in India's first 3D AI chip packaging facility",
-            "AMD relocates Iași Design Center to Palas Campus office building",
-            "SK Hynix deepens academic partnership with Korea Semiconductor Meister High School",
-            "SK Hynix adjusting recruitment and interview processes due to AI impact"
+            "Intel reducing workforce by one-fifth (20%) by end of year",
+            "Nvidia establishing Taiwan AI R&D center with subsidies",
+            "Silicon Topology joining TSMC Design Center Alliance",
+            "McKinsey addressing US semiconductor talent gap through labor reimagining"
           ],
           "implications": [
             {
-              "keyword": "Capacity Expansion",
-              "text": "India's 3D packaging facility addresses bottleneck in AI chip assembly and signals regional diversification from China-Taiwan concentration."
+              "keyword": "US Talent Crisis",
+              "text": "Simultaneous workforce reductions by Intel and labor shortage concerns indicate structural market imbalance requiring immediate policy and educational intervention."
             },
             {
-              "keyword": "Talent Pipeline",
-              "text": "SK Hynix's formalized academic collaboration and AI-driven recruitment evolution demonstrate anticipation of AI-augmented design workflows and specialized skill requirements."
+              "keyword": "Regional Concentration",
+              "text": "Major R&D investments (Nvidia Taiwan) and foundry partnerships (TSMC) signal continued geographic concentration of HPC innovation outside US borders."
             },
             {
-              "keyword": "Design Localization",
-              "text": "AMD's Romania footprint expansion reflects European geopolitical push for design center distribution outside core US operations."
+              "keyword": "Design Ecosystem",
+              "text": "TSMC Design Center expansion suggests strengthening of supplier-foundry partnerships to accelerate custom silicon development cycles."
             }
           ],
-          "counterpoint": "Heavy reliance on government subsidies in India and emerging markets may create dependency on policy continuity."
+          "counterpoint": "Intel's workforce reduction may free up capital for strategic R&D investment rather than purely signaling market weakness."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-10-23",
-      "item_count": 10,
-      "generated_at": "2026-10-23T23:04:41.577966+00:00",
+      "date": "2026-10-24",
+      "item_count": 4,
+      "generated_at": "2026-10-24T22:22:11.607207+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Custom AI SoC competition intensifies as Arm's reference designs, Google's $250B chip ambition, and Korea's $606M humanoid robot AI program challenge Marvell and Broadcom's dominance. Taiwan's custom silicon ecosystem and Mobilint-led domestic programs reshape datacenter SoC procurement dynamics.",
-          "key_facts": [
-            "Google targets $250B AI chip market opportunity vs Nvidia",
-            "Marvell faces competition from Arm's ready-made AI datacenter chip designs",
-            "Korea commits $606M for on-device humanoid robot AI chips under Mobilint leadership",
-            "Broadcom maintains custom silicon leadership; Marvell positioned as challenger",
-            "Blackstone's chip investment sparks credit market restructuring",
-            "AiSEM@Selangor 2026 closes with US$105M potential GMV"
-          ],
-          "implications": [
-            {
-              "keyword": "Design Democratization",
-              "text": "Arm's standardized reference designs lower barriers for cloud providers to bypass custom SoC vendors, directly threatening Marvell's switching cost moat."
-            },
-            {
-              "keyword": "Hyperscaler Vertical",
-              "text": "Google's $250B opportunity signals sustained in-house silicon commitment, forcing Marvell and Broadcom into niche specialization (automotive, edge, AI accelerators)."
-            },
-            {
-              "keyword": "Korean Sovereignty",
-              "text": "Korea's $606M humanoid robot AI chip initiative under Mobilint establishes national industrial policy foothold in edge AI, distinct from hyperscaler-driven datacenter architectures."
-            },
-            {
-              "keyword": "Credit Market",
-              "text": "Blackstone's debt-financed chip investments indicate PE capital flooding semiconductor, potentially creating valuation bubbles and competitive pressure from financial buyers."
-            }
-          ],
-          "counterpoint": "Arm's reference designs still require vendor-specific customization for production yield and power efficiency at scale."
-        },
-        "en": {
-          "executive_summary": "Custom AI SoC competition intensifies as Arm's reference designs, Google's $250B chip ambition, and Korea's $606M humanoid robot AI program challenge Marvell and Broadcom's dominance. Taiwan's custom silicon ecosystem and Mobilint-led domestic programs reshape datacenter SoC procurement dynamics.",
-          "key_facts": [
-            "Google targets $250B AI chip market opportunity vs Nvidia",
-            "Marvell faces competition from Arm's ready-made AI datacenter chip designs",
-            "Korea commits $606M for on-device humanoid robot AI chips under Mobilint leadership",
-            "Broadcom maintains custom silicon leadership; Marvell positioned as challenger",
-            "Blackstone's chip investment sparks credit market restructuring",
-            "AiSEM@Selangor 2026 closes with US$105M potential GMV"
-          ],
-          "implications": [
-            {
-              "keyword": "Design Democratization",
-              "text": "Arm's standardized reference designs lower barriers for cloud providers to bypass custom SoC vendors, directly threatening Marvell's switching cost moat."
-            },
-            {
-              "keyword": "Hyperscaler Vertical",
-              "text": "Google's $250B opportunity signals sustained in-house silicon commitment, forcing Marvell and Broadcom into niche specialization (automotive, edge, AI accelerators)."
-            },
-            {
-              "keyword": "Korean Sovereignty",
-              "text": "Korea's $606M humanoid robot AI chip initiative under Mobilint establishes national industrial policy foothold in edge AI, distinct from hyperscaler-driven datacenter architectures."
-            },
-            {
-              "keyword": "Credit Market",
-              "text": "Blackstone's debt-financed chip investments indicate PE capital flooding semiconductor, potentially creating valuation bubbles and competitive pressure from financial buyers."
-            }
-          ],
-          "counterpoint": "Arm's reference designs still require vendor-specific customization for production yield and power efficiency at scale."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-10-23",
-      "item_count": 11,
-      "generated_at": "2026-10-23T23:04:41.577966+00:00",
+      "date": "2026-10-24",
+      "item_count": 4,
+      "generated_at": "2026-10-24T22:22:11.607207+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Samsung accelerates 2nm capacity to 20,000 wafers/month by H2 2027 at Taylor, Texas, while TSMC advances CoPoS packaging and GlobalFoundries expands US-Japan fab footprint. Intel's transistor progress faces TSMC's yield and scale advantages; Japan pursues 2nm medical AI chip with IBM and Rapidus.",
-          "key_facts": [
-            "Samsung orders equipment for 6,000 additional 2nm wafers/month at Taylor, Texas fab",
-            "Samsung 2nm capacity target: 20,000 wafers/month by H2 2027",
-            "TSMC advances CoPoS (Chip-on-Packaging) technology at Taoyuan Longtan",
-            "GlobalFoundries operates two new fabs in New York under US-Japan initiative",
-            "GlobalFoundries announces FD-SOI platform roadmap for Physical AI",
-            "GlobalFoundries reaches agreement for US-based silicon interposer supply for advanced AI packaging",
-            "Japan targets 2nm medical AI chip design with IBM; Rapidus eyed for foundry",
-            "GlobalFoundries partners with Xanadu for quantum chip manufacturing acceleration",
-            "Infineon and Nvidia expand GaN power collaboration for AI datacenters"
-          ],
-          "implications": [
-            {
-              "keyword": "Capacity Race",
-              "text": "Samsung's 20,000-wafer 2nm target by H2 2027 directly competes with TSMC's capacity roadmap; Texas fab becomes critical for US strategic autonomy in advanced logic."
-            },
-            {
-              "keyword": "Packaging Shift",
-              "text": "TSMC's CoPoS advancement and GlobalFoundries' silicon interposer supply agreement signal chiplet/advanced packaging dominance as critical as transistor nodes for AI performance."
-            },
-            {
-              "keyword": "Regionalization",
-              "text": "US-Japan foundry alliance via GlobalFoundries reduces reliance on Taiwan-Korea duopoly; medical AI and quantum verticals targeted for differentiation."
-            },
-            {
-              "keyword": "Design Fragmentation",
-              "text": "Proliferation of node targets (2nm for AI, 8LPU+ for automotive) and process variants (FD-SOI, FinFET) increases foundry complexity and reduces single-node concentration."
-            }
-          ],
-          "counterpoint": "Samsung and GlobalFoundries' capacity targets assume sustained AI demand; economic slowdown could leave new fab capacity underutilized."
-        },
-        "en": {
-          "executive_summary": "Samsung accelerates 2nm capacity to 20,000 wafers/month by H2 2027 at Taylor, Texas, while TSMC advances CoPoS packaging and GlobalFoundries expands US-Japan fab footprint. Intel's transistor progress faces TSMC's yield and scale advantages; Japan pursues 2nm medical AI chip with IBM and Rapidus.",
-          "key_facts": [
-            "Samsung orders equipment for 6,000 additional 2nm wafers/month at Taylor, Texas fab",
-            "Samsung 2nm capacity target: 20,000 wafers/month by H2 2027",
-            "TSMC advances CoPoS (Chip-on-Packaging) technology at Taoyuan Longtan",
-            "GlobalFoundries operates two new fabs in New York under US-Japan initiative",
-            "GlobalFoundries announces FD-SOI platform roadmap for Physical AI",
-            "GlobalFoundries reaches agreement for US-based silicon interposer supply for advanced AI packaging",
-            "Japan targets 2nm medical AI chip design with IBM; Rapidus eyed for foundry",
-            "GlobalFoundries partners with Xanadu for quantum chip manufacturing acceleration",
-            "Infineon and Nvidia expand GaN power collaboration for AI datacenters"
-          ],
-          "implications": [
-            {
-              "keyword": "Capacity Race",
-              "text": "Samsung's 20,000-wafer 2nm target by H2 2027 directly competes with TSMC's capacity roadmap; Texas fab becomes critical for US strategic autonomy in advanced logic."
-            },
-            {
-              "keyword": "Packaging Shift",
-              "text": "TSMC's CoPoS advancement and GlobalFoundries' silicon interposer supply agreement signal chiplet/advanced packaging dominance as critical as transistor nodes for AI performance."
-            },
-            {
-              "keyword": "Regionalization",
-              "text": "US-Japan foundry alliance via GlobalFoundries reduces reliance on Taiwan-Korea duopoly; medical AI and quantum verticals targeted for differentiation."
-            },
-            {
-              "keyword": "Design Fragmentation",
-              "text": "Proliferation of node targets (2nm for AI, 8LPU+ for automotive) and process variants (FD-SOI, FinFET) increases foundry complexity and reduces single-node concentration."
-            }
-          ],
-          "counterpoint": "Samsung and GlobalFoundries' capacity targets assume sustained AI demand; economic slowdown could leave new fab capacity underutilized."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-10-23",
-      "item_count": 15,
-      "generated_at": "2026-10-23T23:04:41.577966+00:00",
+      "date": "2026-10-24",
+      "item_count": 7,
+      "generated_at": "2026-10-24T22:22:11.607207+00:00",
       "content": {
         "ko": {},
         "en": {}

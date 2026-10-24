@@ -2,6 +2,233 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Ray-by-Ray: Fine-Grained Resource Management for GPU Ray Tracing Units",
+    "url": "https://arxiv.org/abs/2610.31630v1",
+    "published_date": "2026-10-22",
+    "source": "arXiv",
+    "summary": "Ray tracing (RT) generates photorealistic images by simulating the physical behavior of light as it interacts with surfaces in a virtual scene. In film production and high-end rendering pipelines, this technique computes global illumination, reflections, refractions, and soft shadows by tracing millions of light rays per frame and accurately modeling their bounces and attenuation. Contemporary GPUs incorporate specialized ray tracing hardware to accelerate key operations in the traversal pipelin",
+    "authors": [
+      "Junrui Pan",
+      "Cesar Avalos Baddouh",
+      "Kai Ze Ee",
+      "Timothy G. Rogers"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Nanopillar metasurfaces uniting high optical reflectivity with ultracoherent nanomechanics",
+    "url": "https://arxiv.org/abs/2610.31452v1",
+    "published_date": "2026-10-22",
+    "source": "arXiv",
+    "summary": "Mechanically compliant mirrors are key components in cavity optomechanics. However, the requirements to achieve the best optical and mechanical performance are usually in direct competition. A high reflectivity for tightly focused beams entails thick reflectors, whereas ultracoherent flexural nanomechanics necessitates thin membranes. We eliminate this trade-off by introducing high-refractive-index nanopillar metasurfaces on top of a thin membrane. We pattern a 50 micrometer-diameter array of na",
+    "authors": [
+      "Alexander Jung",
+      "Anastasiia Ciers",
+      "Hannes Pfeifer",
+      "Albert Hansson",
+      "Johanna Örgård",
+      "Daniel Stachanow",
+      "Viktor A. Lilja",
+      "Philippe Tassin",
+      "Witlef Wieczorek"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Mn-deficient Ni-Mn-Ga alloys: phase transitions, magnetic properties, and disappearance of martensitic transformation",
+    "url": "https://arxiv.org/abs/2610.31206v1",
+    "published_date": "2026-10-22",
+    "source": "arXiv",
+    "summary": "Composition gradients formed during directional solidification are generally considered undesirable in Ni-Mn-Ga magnetic shape-memory alloys. However, these gradients offer a highly effective platform for systematically investigating composition-property relationships under identical growth and heat-treatment conditions. To exploit this approach, one Mn-deficient and two near-stoichiometric Ni-Mn-Ga oligocrystals were grown by optical zone remelting and characterized by X-ray fluorescence mappin",
+    "authors": [
+      "Valentina Moskvina",
+      "Jaroslav Čapek",
+      "Michal Rameš",
+      "Denys Musiienko",
+      "Petr Veřtát",
+      "Alexej Perevertov",
+      "Ladislav Straka",
+      "Oleg Heczko"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Anomalous polar chains in halide perovskites",
+    "url": "https://arxiv.org/abs/2610.31184v1",
+    "published_date": "2026-10-22",
+    "source": "arXiv",
+    "summary": "Local polar distortions, their collective ordering, and their field-driven reversal have been studied extensively in ferroelectric perovskites for decades. Here we identify an unusual behavior in the ferroelectric halide perovskite CsGeBr3 using large-scale molecular dynamics with first-principles-trained interatomic potentials. In its nominally cubic phase the Ge off-centering forms one-dimensional polar chains that extend over at least tens of nanometers and relax on nanosecond timescales, fou",
+    "authors": [
+      "Erik Fransson",
+      "Apinya Ngoipala",
+      "Priyanka Deswal",
+      "Ethan Berger",
+      "Nicholas C. Bristowe",
+      "Paul Erhart",
+      "Julia Wiktor"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "SnakeCharmer: Orchestrating Utility, Timeliness, and Placement in GPU Prefetching",
+    "url": "https://arxiv.org/abs/2610.30990v1",
+    "published_date": "2026-10-22",
+    "source": "arXiv",
+    "summary": "GPUs rely on massive thread-level parallelism to tolerate long memory latency, yet they still suffer severe stalls when many warps simultaneously wait for data from the memory system. Address-prediction-based GPU prefetchers can mitigate such stalls, but accurate prediction alone does not guarantee performance improvement: a predicted prefetch becomes beneficial only if it is worth issuing, arrives at the right time, and is retained without harmful interference. Because these requirements intera",
+    "authors": [
+      "Yuhan Tang",
+      "Tiejun Li",
+      "Jianmin Zhang",
+      "An Hu",
+      "Guangyu Sun",
+      "Sheng Ma",
+      "Yiqun Lang",
+      "Hanqing Li",
+      "Siqing Fu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Donor-acceptor recombination in diamond",
+    "url": "https://arxiv.org/abs/2610.30977v1",
+    "published_date": "2026-10-22",
+    "source": "arXiv",
+    "summary": "We re-examine several optical systems that have previously been attributed to donor-acceptor (D-A) recombination in diamond, including the broad 2.8 eV and 2.3 eV bands, and the sharp-lined series in the ranges 2.0-2.7 eV and 4.0-5.0 eV. In all cases, internal transitions at one or multiple defect centers provide a more consistent explanation of the experimental observations than the D-A model. The 2.3 eV case is marginal, where the key argument against the D-A recombination is the improbably lo",
+    "authors": [
+      "Konstantin Iakoubovskii",
+      "Andrey Katrusha",
+      "Weihua Peng",
+      "Jianguo Peng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Piezo-Kerr effect in altermagnets and noncollinear antiferromagnets",
+    "url": "https://arxiv.org/abs/2610.30929v1",
+    "published_date": "2026-10-22",
+    "source": "arXiv",
+    "summary": "Symmetry is usually viewed as a constraint on physical responses, but it can also be used to design the fields that control them. Here, we adopt the representation-matching principle used to identify conjugate fields of order parameters and apply it to response tensors. A linear coupling, the key ingredient for sign-switching control, is symmetry-allowed when a component (or a combination of components) of the control field and the selected response component share the same irreducible represent",
+    "authors": [
+      "Yuqi Liu",
+      "Qiu-Shi Huang",
+      "Xinfeng Chen",
+      "Yilin Han",
+      "Run-Wu Zhang",
+      "Zhi-Ming Yu",
+      "Yugui Yao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Beyond Binary Encoding: Qudit-Based QAOA Framework for ML Detection in $M$-QAM MIMO Systems",
+    "url": "https://arxiv.org/abs/2610.30925v1",
+    "published_date": "2026-10-22",
+    "source": "arXiv",
+    "summary": "Maximum likelihood (ML) detection in massive multiple-input multiple-output (MIMO) systems is an NP-hard combinatorial problem whose complexity grows exponentially with the number of transmit antennas and the modulation order. The Quantum Approximate Optimization Algorithm (QAOA) has recently emerged as a promising near-term quantum heuristic for such problems; however, existing qubit-based formulations require $\\log_2 M$ qubits per $M$-QAM symbol, inflating both circuit width and depth. In this",
+    "authors": [
+      "Chiran Siriwardena",
+      "Chanula Luckshan",
+      "Samiru Gayan",
+      "Hazer Inaltekin",
+      "Wonjae Shin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "All-photonic millimeter-wave and terahertz signal core at room and cryogenic temperatures",
+    "url": "https://arxiv.org/abs/2610.30857v1",
+    "published_date": "2026-10-22",
+    "source": "arXiv",
+    "summary": "Millimeter-wave and terahertz technologies offer new opportunities for high-capacity communications, sensing, and quantum systems, but electronic signal chains above 100 GHz are limited by weak sources, noisy receivers, and lossy interconnects. Photonic approaches mitigate these constraints by enabling chip-scale high-frequency components, yet existing implementations generally retain lossy off-chip electrical or free-space links, hindering dense and compact integration for cryogenic or space-co",
+    "authors": [
+      "Jiawen Liu",
+      "Chengli Wang",
+      "Aleksei Gaier",
+      "Tianyi Zhang",
+      "Gabriel Jülg",
+      "Yazan Lampert",
+      "André Garcia Primo",
+      "Alessandro Tomasino",
+      "Hua Li",
+      "Xin Ou",
+      "Ileana-Cristina Benea-Chelmus"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.dis-nn",
+    "title": "Localization Contrast As a Fundamental Limit of Radiative Quantum Efficiency",
+    "url": "https://arxiv.org/abs/2610.30741v1",
+    "published_date": "2026-10-22",
+    "source": "arXiv",
+    "summary": "Disorder can localize valence- and conduction-band states to different degrees, yet whether such localization contrast has observable consequences remains poorly understood. Here, we show that localization contrast strongly impacts competing carrier-recombination channels. We illustrate this behavior in random In$_x$Ga$_{1-x}$N alloys. Increasing the In content from $x=13.5\\%$ to $x=22\\%$ progressively localizes the valence-band maximum state while leaving the conduction-band minimum state compa",
+    "authors": [
+      "Arsineh Apelian",
+      "Tanay Tak",
+      "Xuance Jiang",
+      "Tsung-Yin Tsai",
+      "James S. Speck",
+      "Vojtech Vlcek"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "HDLouvain: High-Throughput Incremental Clustering for Hyperdimensional Data",
+    "url": "https://arxiv.org/abs/2610.30687v1",
+    "published_date": "2026-10-22",
+    "source": "arXiv",
+    "summary": "Modern shotgun proteomics generates tens of thousands of tandem mass spectra per hour, producing hundreds of gigabytes of data that strain conventional clustering pipelines. DBSCAN and hierarchical agglomerative clustering (HAC) offer flexible similarity search, but DBSCAN is unstable across varying data densities, HAC costs $O(n^2)$, and both yield poor cluster quality. Graph-based methods such as Louvain produce high-quality clusters but scale poorly on streaming data. We observe that Louvain'",
+    "authors": [
+      "Beenish Gul",
+      "Mahbod Afarin",
+      "Farhat Ahmed",
+      "Sumukh Pinge",
+      "Tsung-Han Lu",
+      "Tajana Rosing",
+      "Kevin Skadron"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Strain-induced structural transformations in hexagonal monolayer boron nitride. A density functional study",
+    "url": "https://arxiv.org/abs/2610.30598v1",
+    "published_date": "2026-10-22",
+    "source": "arXiv",
+    "summary": "In this work we theoretically study the structural transformations occurring in monolayer hexagonal boron nitride (h-BN) subjected to strong deformations. The first-principle computer simulations are based on the density functional theory employing the pseudopotentials with the exchange-correlation energy given in Perdew-Burke-Ernzerhof form. Depending on the direction and the type of the strain, the simulations reveal different types of structural transformations in two-dimensional (2D) h-BN as",
+    "authors": [
+      "O. Bystrenko",
+      "B. Ilkiv",
+      "S. Petrovska",
+      "O. Foia",
+      "T. Bystrenko",
+      "O. Khyzhun"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.NI",
     "title": "Enhancing IoT Network Reliability through Antenna Diversity in Real-World Scenarios",
     "url": "https://arxiv.org/abs/2610.30015v1",
@@ -251,6 +478,25 @@
       "Liqin Tang",
       "Daohong Song",
       "Zhigang Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "FIGFLEX: A Mixed-Precision FP-INT GEMM Accelerator Co-Designed with Low-Bit LLM Quantization",
+    "url": "https://arxiv.org/abs/2610.30480v1",
+    "published_date": "2026-10-21",
+    "source": "arXiv",
+    "summary": "Weight-only quantization keeps LLM activations in floating point and stores weights as low-bit integers, turning the dominant workload into floating-point-integer (FP-INT) general matrix multiplication. Recent quantizers reach a 2-3-bit average with mixed precision, but hardware has not kept pace: GPUs dequantize weights to FP16 before the tensor-core multiply-accumulate, and bit-parallel FP-INT accelerators run at a single weight precision, so fewer bits save memory but not computation. In this",
+    "authors": [
+      "Faraz Tahmasebi",
+      "Haocheng Xu",
+      "Andrew Trauger",
+      "Yomal Perera",
+      "Zhenyu Tang",
+      "Nael Chowdhury",
+      "Sitao Huang"
     ]
   },
   {
