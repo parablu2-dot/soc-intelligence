@@ -1,68 +1,70 @@
 {
-  "date": "2026-10-24",
-  "generated_at": "2026-10-24T22:22:11.607508+00:00",
+  "date": "2026-10-25",
+  "generated_at": "2026-10-25T22:25:42.193405+00:00",
   "sectors": {
-    "hpc_datacenter": {
-      "sector": "HPC·Datacenter",
-      "date": "2026-10-24",
-      "item_count": 4,
-      "generated_at": "2026-10-24T22:22:11.607207+00:00",
+    "mobile_ap": {
+      "sector": "Mobile AP",
+      "date": "2026-10-25",
+      "item_count": 3,
+      "generated_at": "2026-10-25T22:25:42.192950+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Significant workforce restructuring is underway across major US semiconductor players amid persistent talent shortages. Intel plans to reduce its workforce by 20% by year-end, while industry efforts focus on reimagining labor models to close the talent gap. Nvidia is investing in a Taiwan-based AI R&D center with subsidy support, and TSMC's Design Center Alliance continues to expand with new members like Silicon Topology.",
+          "executive_summary": "Samsung's Exynos 2700 (2nm) demonstrates 20% performance advantage over Qualcomm's Snapdragon 8 Elite Extreme Gen 6 in internal CPU and GPU benchmarks, expected to power the Galaxy S27 flagship.",
           "key_facts": [
-            "Intel reducing workforce by one-fifth (20%) by end of year",
-            "Nvidia establishing Taiwan AI R&D center with subsidies",
-            "Silicon Topology joining TSMC Design Center Alliance",
-            "McKinsey addressing US semiconductor talent gap through labor reimagining"
+            "Exynos 2700 2nm process",
+            "20% faster in CPU and GPU workloads vs Snapdragon 8 Elite Extreme Gen 6",
+            "Galaxy S27 expected launch device",
+            "Benchmarks from Geekbench and Graphics tests"
           ],
           "implications": [
             {
-              "keyword": "US Talent Crisis",
-              "text": "Simultaneous workforce reductions by Intel and labor shortage concerns indicate structural market imbalance requiring immediate policy and educational intervention."
+              "keyword": "Samsung SoC Competitiveness",
+              "text": "Exynos 2700 establishes Samsung's in-house chip design strength, reducing dependence on Qualcomm and potentially increasing ASP flexibility for Galaxy flagships."
             },
             {
-              "keyword": "Regional Concentration",
-              "text": "Major R&D investments (Nvidia Taiwan) and foundry partnerships (TSMC) signal continued geographic concentration of HPC innovation outside US borders."
-            },
-            {
-              "keyword": "Design Ecosystem",
-              "text": "TSMC Design Center expansion suggests strengthening of supplier-foundry partnerships to accelerate custom silicon development cycles."
+              "keyword": "Qualcomm's 2nm Gamble",
+              "text": "TSMC's 2nm process may not deliver anticipated performance gains for Snapdragon, questioning the technology node roadmap and its cost-performance tradeoff."
             }
           ],
-          "counterpoint": "Intel's workforce reduction may free up capital for strategic R&D investment rather than purely signaling market weakness."
+          "counterpoint": "Internal Samsung testing may reflect controlled conditions; real-world performance and power efficiency data from shipping devices necessary to validate superiority claims."
         },
         "en": {
-          "executive_summary": "Significant workforce restructuring is underway across major US semiconductor players amid persistent talent shortages. Intel plans to reduce its workforce by 20% by year-end, while industry efforts focus on reimagining labor models to close the talent gap. Nvidia is investing in a Taiwan-based AI R&D center with subsidy support, and TSMC's Design Center Alliance continues to expand with new members like Silicon Topology.",
+          "executive_summary": "Samsung's Exynos 2700 (2nm) demonstrates 20% performance advantage over Qualcomm's Snapdragon 8 Elite Extreme Gen 6 in internal CPU and GPU benchmarks, expected to power the Galaxy S27 flagship.",
           "key_facts": [
-            "Intel reducing workforce by one-fifth (20%) by end of year",
-            "Nvidia establishing Taiwan AI R&D center with subsidies",
-            "Silicon Topology joining TSMC Design Center Alliance",
-            "McKinsey addressing US semiconductor talent gap through labor reimagining"
+            "Exynos 2700 2nm process",
+            "20% faster in CPU and GPU workloads vs Snapdragon 8 Elite Extreme Gen 6",
+            "Galaxy S27 expected launch device",
+            "Benchmarks from Geekbench and Graphics tests"
           ],
           "implications": [
             {
-              "keyword": "US Talent Crisis",
-              "text": "Simultaneous workforce reductions by Intel and labor shortage concerns indicate structural market imbalance requiring immediate policy and educational intervention."
+              "keyword": "Samsung SoC Competitiveness",
+              "text": "Exynos 2700 establishes Samsung's in-house chip design strength, reducing dependence on Qualcomm and potentially increasing ASP flexibility for Galaxy flagships."
             },
             {
-              "keyword": "Regional Concentration",
-              "text": "Major R&D investments (Nvidia Taiwan) and foundry partnerships (TSMC) signal continued geographic concentration of HPC innovation outside US borders."
-            },
-            {
-              "keyword": "Design Ecosystem",
-              "text": "TSMC Design Center expansion suggests strengthening of supplier-foundry partnerships to accelerate custom silicon development cycles."
+              "keyword": "Qualcomm's 2nm Gamble",
+              "text": "TSMC's 2nm process may not deliver anticipated performance gains for Snapdragon, questioning the technology node roadmap and its cost-performance tradeoff."
             }
           ],
-          "counterpoint": "Intel's workforce reduction may free up capital for strategic R&D investment rather than purely signaling market weakness."
+          "counterpoint": "Internal Samsung testing may reflect controlled conditions; real-world performance and power efficiency data from shipping devices necessary to validate superiority claims."
         }
+      }
+    },
+    "hpc_datacenter": {
+      "sector": "HPC·Datacenter",
+      "date": "2026-10-25",
+      "item_count": 4,
+      "generated_at": "2026-10-25T22:25:42.192950+00:00",
+      "content": {
+        "ko": {},
+        "en": {}
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-10-24",
-      "item_count": 4,
-      "generated_at": "2026-10-24T22:22:11.607207+00:00",
+      "date": "2026-10-25",
+      "item_count": 5,
+      "generated_at": "2026-10-25T22:25:42.192950+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -70,9 +72,9 @@
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-10-24",
-      "item_count": 4,
-      "generated_at": "2026-10-24T22:22:11.607207+00:00",
+      "date": "2026-10-25",
+      "item_count": 14,
+      "generated_at": "2026-10-25T22:25:42.192950+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -80,9 +82,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-10-24",
-      "item_count": 7,
-      "generated_at": "2026-10-24T22:22:11.607207+00:00",
+      "date": "2026-10-25",
+      "item_count": 4,
+      "generated_at": "2026-10-25T22:25:42.192950+00:00",
       "content": {
         "ko": {},
         "en": {}
