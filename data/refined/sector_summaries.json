@@ -1,90 +1,246 @@
 {
-  "date": "2026-10-25",
-  "generated_at": "2026-10-25T22:25:42.193405+00:00",
+  "date": "2026-10-26",
+  "generated_at": "2026-10-26T23:41:18.034844+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-10-25",
+      "date": "2026-10-26",
       "item_count": 3,
-      "generated_at": "2026-10-25T22:25:42.192950+00:00",
+      "generated_at": "2026-10-26T23:41:18.034469+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Samsung's Exynos 2700 (2nm) demonstrates 20% performance advantage over Qualcomm's Snapdragon 8 Elite Extreme Gen 6 in internal CPU and GPU benchmarks, expected to power the Galaxy S27 flagship.",
+          "executive_summary": "Samsung's Exynos 2700 demonstrates 20% CPU performance advantage over Snapdragon in leaked tests, though 2nm yield challenges and cost pressures threaten production. Cadence introduced Maestro, fine-tuned AI models for chip design agents with 30% higher quality and 5x token efficiency, entering select customer trials in Q4 2026.",
           "key_facts": [
-            "Exynos 2700 2nm process",
-            "20% faster in CPU and GPU workloads vs Snapdragon 8 Elite Extreme Gen 6",
-            "Galaxy S27 expected launch device",
-            "Benchmarks from Geekbench and Graphics tests"
+            "Samsung Exynos 2700 shows ~20% CPU performance lead over Snapdragon",
+            "Exynos 2700 planned for Galaxy S27",
+            "Cadence Maestro targeting Q4 2026 early access",
+            "Maestro claims 30% higher quality and 5x token efficiency vs general-purpose AI models"
           ],
           "implications": [
             {
-              "keyword": "Samsung SoC Competitiveness",
-              "text": "Exynos 2700 establishes Samsung's in-house chip design strength, reducing dependence on Qualcomm and potentially increasing ASP flexibility for Galaxy flagships."
+              "keyword": "Samsung Design Dominance",
+              "text": "Exynos 2700 performance gains position Samsung to reduce Snapdragon dependency for flagship devices, but yield uncertainty may limit volume availability."
             },
             {
-              "keyword": "Qualcomm's 2nm Gamble",
-              "text": "TSMC's 2nm process may not deliver anticipated performance gains for Snapdragon, questioning the technology node roadmap and its cost-performance tradeoff."
+              "keyword": "AI-Driven Design Tools",
+              "text": "Cadence's Maestro aims to accelerate chip design cycles through specialized AI agents; token efficiency gains suggest lower inference costs for design teams."
             }
           ],
-          "counterpoint": "Internal Samsung testing may reflect controlled conditions; real-world performance and power efficiency data from shipping devices necessary to validate superiority claims."
+          "counterpoint": "Exynos 2700 cost burdens and 2nm manufacturing hurdles may prevent competitive pricing, and Maestro's Q4 2026 timeline extends beyond immediate deployment."
         },
         "en": {
-          "executive_summary": "Samsung's Exynos 2700 (2nm) demonstrates 20% performance advantage over Qualcomm's Snapdragon 8 Elite Extreme Gen 6 in internal CPU and GPU benchmarks, expected to power the Galaxy S27 flagship.",
+          "executive_summary": "Samsung's Exynos 2700 demonstrates 20% CPU performance advantage over Snapdragon in leaked tests, though 2nm yield challenges and cost pressures threaten production. Cadence introduced Maestro, fine-tuned AI models for chip design agents with 30% higher quality and 5x token efficiency, entering select customer trials in Q4 2026.",
           "key_facts": [
-            "Exynos 2700 2nm process",
-            "20% faster in CPU and GPU workloads vs Snapdragon 8 Elite Extreme Gen 6",
-            "Galaxy S27 expected launch device",
-            "Benchmarks from Geekbench and Graphics tests"
+            "Samsung Exynos 2700 shows ~20% CPU performance lead over Snapdragon",
+            "Exynos 2700 planned for Galaxy S27",
+            "Cadence Maestro targeting Q4 2026 early access",
+            "Maestro claims 30% higher quality and 5x token efficiency vs general-purpose AI models"
           ],
           "implications": [
             {
-              "keyword": "Samsung SoC Competitiveness",
-              "text": "Exynos 2700 establishes Samsung's in-house chip design strength, reducing dependence on Qualcomm and potentially increasing ASP flexibility for Galaxy flagships."
+              "keyword": "Samsung Design Dominance",
+              "text": "Exynos 2700 performance gains position Samsung to reduce Snapdragon dependency for flagship devices, but yield uncertainty may limit volume availability."
             },
             {
-              "keyword": "Qualcomm's 2nm Gamble",
-              "text": "TSMC's 2nm process may not deliver anticipated performance gains for Snapdragon, questioning the technology node roadmap and its cost-performance tradeoff."
+              "keyword": "AI-Driven Design Tools",
+              "text": "Cadence's Maestro aims to accelerate chip design cycles through specialized AI agents; token efficiency gains suggest lower inference costs for design teams."
             }
           ],
-          "counterpoint": "Internal Samsung testing may reflect controlled conditions; real-world performance and power efficiency data from shipping devices necessary to validate superiority claims."
+          "counterpoint": "Exynos 2700 cost burdens and 2nm manufacturing hurdles may prevent competitive pricing, and Maestro's Q4 2026 timeline extends beyond immediate deployment."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-10-25",
-      "item_count": 4,
-      "generated_at": "2026-10-25T22:25:42.192950+00:00",
+      "date": "2026-10-26",
+      "item_count": 3,
+      "generated_at": "2026-10-26T23:41:18.034469+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Three South Korean startups are challenging the GPU-centric AI inference model by delivering AI chips requiring only 4 GPUs versus the traditional 24-GPU setup. SK Hynix is removing degree requirements for AI chip talent recruitment, while Micron is quadrupling R&D hiring in India to compete in the AI memory ecosystem.",
+          "key_facts": [
+            "South Korean startups achieving 4-GPU AI chip solutions vs. traditional 24-GPU architectures",
+            "SK Hynix eliminating degree requirements for AI chip talent recruitment",
+            "Micron quadrupling R&D hiring headcount in India"
+          ],
+          "implications": [
+            {
+              "keyword": "AI Inference Efficiency",
+              "text": "Reduced GPU requirements indicate emerging architectures optimizing for inference workloads, challenging Nvidia's traditional scaling assumptions."
+            },
+            {
+              "keyword": "Talent Competition",
+              "text": "SK Hynix's degree-waiver policy signals acute skills shortage in AI chip development, forcing non-traditional recruitment strategies."
+            },
+            {
+              "keyword": "India R&D Expansion",
+              "text": "Micron's quadrupled investment in India positions the region as a secondary innovation hub for memory and HPC chip design."
+            }
+          ],
+          "counterpoint": "South Korean startups remain largely unnamed, and their production viability and cost structure relative to established players remain unvalidated."
+        },
+        "en": {
+          "executive_summary": "Three South Korean startups are challenging the GPU-centric AI inference model by delivering AI chips requiring only 4 GPUs versus the traditional 24-GPU setup. SK Hynix is removing degree requirements for AI chip talent recruitment, while Micron is quadrupling R&D hiring in India to compete in the AI memory ecosystem.",
+          "key_facts": [
+            "South Korean startups achieving 4-GPU AI chip solutions vs. traditional 24-GPU architectures",
+            "SK Hynix eliminating degree requirements for AI chip talent recruitment",
+            "Micron quadrupling R&D hiring headcount in India"
+          ],
+          "implications": [
+            {
+              "keyword": "AI Inference Efficiency",
+              "text": "Reduced GPU requirements indicate emerging architectures optimizing for inference workloads, challenging Nvidia's traditional scaling assumptions."
+            },
+            {
+              "keyword": "Talent Competition",
+              "text": "SK Hynix's degree-waiver policy signals acute skills shortage in AI chip development, forcing non-traditional recruitment strategies."
+            },
+            {
+              "keyword": "India R&D Expansion",
+              "text": "Micron's quadrupled investment in India positions the region as a secondary innovation hub for memory and HPC chip design."
+            }
+          ],
+          "counterpoint": "South Korean startups remain largely unnamed, and their production viability and cost structure relative to established players remain unvalidated."
+        }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-10-25",
-      "item_count": 5,
-      "generated_at": "2026-10-25T22:25:42.192950+00:00",
+      "date": "2026-10-26",
+      "item_count": 6,
+      "generated_at": "2026-10-26T23:41:18.034469+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Amazon, Google, and Broadcom are aggressively pursuing custom AI chips to reduce inference costs and challenge Nvidia; Amazon considers a $7 billion Decart acquisition and jointly released PyTorch tools with Google. Alphabet's custom chip strategy highlights competition risks for Broadcom despite booming AI business growth.",
+          "key_facts": [
+            "Amazon reports AI inference costs remain '10 times too expensive'",
+            "Amazon exploring $7 billion Decart AI chip acquisition",
+            "Google and Amazon released new PyTorch tools targeting Nvidia AI chip dominance",
+            "Broadcom's AI chip business booming but faces competitive pressure from hyperscaler custom silicon",
+            "Vietnam's first chip plant unlikely to meet 2027 target"
+          ],
+          "implications": [
+            {
+              "keyword": "Hyperscaler Vertical Integration",
+              "text": "Amazon and Google investing directly in custom silicon and development tools signals structural shift from Nvidia dependency toward in-house acceleration."
+            },
+            {
+              "keyword": "Inference Economics",
+              "text": "Amazon's framing of 10x cost reduction target drives urgency for Decart acquisition; inference margin pressure may reshape cloud AI pricing models."
+            },
+            {
+              "keyword": "Regional Chip Expansion Risk",
+              "text": "Vietnam fab delays highlight geopolitical supply chain fragmentation and extend reliance on established Taiwan/Korea foundries."
+            },
+            {
+              "keyword": "Broadcom Risk Profile",
+              "text": "Booming AI business creates customer concentration risk if hyperscalers fully internalize chip design, reducing Broadcom's addressable market."
+            }
+          ],
+          "counterpoint": "Custom chip development timelines remain long, and hyperscalers' in-house efforts face technical and manufacturing execution risks vs. specialized vendors."
+        },
+        "en": {
+          "executive_summary": "Amazon, Google, and Broadcom are aggressively pursuing custom AI chips to reduce inference costs and challenge Nvidia; Amazon considers a $7 billion Decart acquisition and jointly released PyTorch tools with Google. Alphabet's custom chip strategy highlights competition risks for Broadcom despite booming AI business growth.",
+          "key_facts": [
+            "Amazon reports AI inference costs remain '10 times too expensive'",
+            "Amazon exploring $7 billion Decart AI chip acquisition",
+            "Google and Amazon released new PyTorch tools targeting Nvidia AI chip dominance",
+            "Broadcom's AI chip business booming but faces competitive pressure from hyperscaler custom silicon",
+            "Vietnam's first chip plant unlikely to meet 2027 target"
+          ],
+          "implications": [
+            {
+              "keyword": "Hyperscaler Vertical Integration",
+              "text": "Amazon and Google investing directly in custom silicon and development tools signals structural shift from Nvidia dependency toward in-house acceleration."
+            },
+            {
+              "keyword": "Inference Economics",
+              "text": "Amazon's framing of 10x cost reduction target drives urgency for Decart acquisition; inference margin pressure may reshape cloud AI pricing models."
+            },
+            {
+              "keyword": "Regional Chip Expansion Risk",
+              "text": "Vietnam fab delays highlight geopolitical supply chain fragmentation and extend reliance on established Taiwan/Korea foundries."
+            },
+            {
+              "keyword": "Broadcom Risk Profile",
+              "text": "Booming AI business creates customer concentration risk if hyperscalers fully internalize chip design, reducing Broadcom's addressable market."
+            }
+          ],
+          "counterpoint": "Custom chip development timelines remain long, and hyperscalers' in-house efforts face technical and manufacturing execution risks vs. specialized vendors."
+        }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-10-25",
-      "item_count": 14,
-      "generated_at": "2026-10-25T22:25:42.192950+00:00",
+      "date": "2026-10-26",
+      "item_count": 7,
+      "generated_at": "2026-10-26T23:41:18.034469+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "TSMC posted record quarterly revenue and raised 2026 guidance, while Samsung's 2nm Exynos achieves competitive performance. SK Hynix targets record profit with 78% operating margin in 3Q, boosted by HBM and long-term agreements. Nvidia is bypassing JEDEC HBM standards, signaling custom memory ecosystem fragmentation.",
+          "key_facts": [
+            "TSMC posts record quarterly revenue and raises 2026 forecast",
+            "Samsung 2nm Exynos beats Snapdragon in leaked tests",
+            "SK Hynix targeting record 3Q profit at 78% operating margin",
+            "SK Hynix benefits from HBM demand and long-term agreements (LTAs)",
+            "Nvidia bypassing JEDEC HBM standard, pursuing custom memory interfaces"
+          ],
+          "implications": [
+            {
+              "keyword": "TSMC Market Leadership",
+              "text": "Record revenue and raised 2026 guidance reinforce TSMC's dominance in advanced process nodes, driven by AI chip demand acceleration."
+            },
+            {
+              "keyword": "Samsung 2nm Competitiveness",
+              "text": "Exynos 2700 performance parity suggests Samsung's 2nm process is maturing, but yield and cost structure must enable broader customer adoption."
+            },
+            {
+              "keyword": "Memory-Logic Coupling",
+              "text": "SK Hynix's HBM momentum and LTA volume indicate persistent AI infrastructure undersupply, supporting sustained memory pricing power through 2026."
+            },
+            {
+              "keyword": "Standard Fragmentation",
+              "text": "Nvidia's JEDEC bypass creates closed-loop custom memory ecosystems, reducing interoperability and raising switching costs for AI customers."
+            }
+          ],
+          "counterpoint": "Samsung's 2nm cost competitiveness and volume roadmap remain unconfirmed; TSMC's 2026 forecast assumes sustained AI capex without supply-demand correction."
+        },
+        "en": {
+          "executive_summary": "TSMC posted record quarterly revenue and raised 2026 guidance, while Samsung's 2nm Exynos achieves competitive performance. SK Hynix targets record profit with 78% operating margin in 3Q, boosted by HBM and long-term agreements. Nvidia is bypassing JEDEC HBM standards, signaling custom memory ecosystem fragmentation.",
+          "key_facts": [
+            "TSMC posts record quarterly revenue and raises 2026 forecast",
+            "Samsung 2nm Exynos beats Snapdragon in leaked tests",
+            "SK Hynix targeting record 3Q profit at 78% operating margin",
+            "SK Hynix benefits from HBM demand and long-term agreements (LTAs)",
+            "Nvidia bypassing JEDEC HBM standard, pursuing custom memory interfaces"
+          ],
+          "implications": [
+            {
+              "keyword": "TSMC Market Leadership",
+              "text": "Record revenue and raised 2026 guidance reinforce TSMC's dominance in advanced process nodes, driven by AI chip demand acceleration."
+            },
+            {
+              "keyword": "Samsung 2nm Competitiveness",
+              "text": "Exynos 2700 performance parity suggests Samsung's 2nm process is maturing, but yield and cost structure must enable broader customer adoption."
+            },
+            {
+              "keyword": "Memory-Logic Coupling",
+              "text": "SK Hynix's HBM momentum and LTA volume indicate persistent AI infrastructure undersupply, supporting sustained memory pricing power through 2026."
+            },
+            {
+              "keyword": "Standard Fragmentation",
+              "text": "Nvidia's JEDEC bypass creates closed-loop custom memory ecosystems, reducing interoperability and raising switching costs for AI customers."
+            }
+          ],
+          "counterpoint": "Samsung's 2nm cost competitiveness and volume roadmap remain unconfirmed; TSMC's 2026 forecast assumes sustained AI capex without supply-demand correction."
+        }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-10-25",
-      "item_count": 4,
-      "generated_at": "2026-10-25T22:25:42.192950+00:00",
+      "date": "2026-10-26",
+      "item_count": 19,
+      "generated_at": "2026-10-26T23:41:18.034469+00:00",
       "content": {
         "ko": {},
         "en": {}

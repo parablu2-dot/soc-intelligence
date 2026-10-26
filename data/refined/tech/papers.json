@@ -2,6 +2,432 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "eess.AS",
+    "title": "SEMAC: Spherical Energy Matching Ambisonics Codec for Efficient Higher-Order Ambisonics Compression",
+    "url": "https://arxiv.org/abs/2610.32981v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Higher-order Ambisonics (HOA) is an attractive format for immersive spatial audio, but its high channel count and directional properties present significant audio coding challenges. The widely deployed Opus audio codec supports HOA through Channel Mapping Families 2 and 3 (RFC 8486), which code and transmit every Ambisonics channel, so the bitrate grows quadratically with the spherical harmonic order. We introduce SEMAC, which instead represents an Ambisonics signal by a quantized full-order dir",
+    "authors": [
+      "Christoph Hold",
+      "Jan Buethe",
+      "Jean-Marc Valin",
+      "Jan Skoglund",
+      "Toni Hirvonen",
+      "Nils Peters"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Reducing 6G Energy Consumption: TDD-Aligned Drain Voltage Modulation for Power Amplifiers",
+    "url": "https://arxiv.org/abs/2610.32889v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "The Power Amplifier (PA) of a base station operates inefficiently at partial load, where back-off from the peak output power wastes supply headroom. Adapting the PA drain voltage to the instantaneous signal recovers this loss but requires frequent switching, increasing hardware cost. We propose TDD-Aligned Drain Voltage Modulation (TDD-DVM), a drain voltage modulation scheme that instead selects the drain voltage level once per Time-Division Duplex (TDD) period based on the downlink resource loa",
+    "authors": [
+      "Meizhen Zhuo",
+      "Gunter Wolff",
+      "Stephan ten Brink",
+      "Silvio Mandelli"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Embodied Emissions of 2.5D and 3D Scaling in Chipletized GPUs for Low-Carbon AI",
+    "url": "https://arxiv.org/abs/2610.32830v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "GPU compute resources are scaling to support growing AI workloads, leading to further rises in the climate change impact of hyperscale data centers that rely on high-performance GPUs. To model how packaging decisions impact the carbon footprint we have estimated the embodied emissions (EE) of a chiplet-based GPU that has been scaled in 2.5D and 3D using the imec.netzero modelling platform. We doubled the number of compute units and high bandwidth memory (HBM) capacity in the 2.5D and 3D scaled s",
+    "authors": [
+      "Hannah Watson",
+      "Arjun Singh",
+      "Jennifer Stephenson",
+      "Job Soethoudt",
+      "Debjyoti Bhattacharjee",
+      "James Myers"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.NI",
+    "title": "Multi-Timescale Context-Aware Radio Resource Optimization for Harmonious NTN-TN Coexistence: A Digital Twin and Open RAN Enabled Framework",
+    "url": "https://arxiv.org/abs/2610.32827v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Coexistence between non-terrestrial networks (NTNs) and terrestrial networks (TNs) is essential for future wireless systems, but terrestrial downlink transmissions can generate harmful aggregate interference at low-Earth orbit (LEO) satellite receivers. We present DT-STABLE, an Open Radio Access Network (O-RAN)-enabled, digital twin (DT)-assisted framework for context-aware NTN-TN coexistence. Using site-specific information, the DT estimates interference at LEO satellites, enabling proactive ma",
+    "authors": [
+      "Ecem Izde Kaya",
+      "Md. Zoheb Hassan",
+      "Georges Kaddoum"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "U-NeXt: General-purpose event detection for neonatal EEG",
+    "url": "https://arxiv.org/abs/2610.32811v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "We developed U-NeXt, a general framework for neonatal electroencephalography (EEG) event detection based on semantic segmentation. Its convolutional encoder-decoder directly segments individual channels using long input segments to preserve temporal context. A shared architecture and training framework were developed using low-voltage interval, artefact, and seizure datasets containing 51, 98, and 278 neonates, respectively, comprising over 11,000 hours of EEG and 82,000 annotated events. Perfor",
+    "authors": [
+      "Robert Hogan",
+      "Sean R. Mathieson",
+      "Aurel Luca",
+      "Soraia Ventura",
+      "Sean Griffin",
+      "Geraldine B. Boylan",
+      "John M. O'Toole"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.NI",
+    "title": "Clean-label Poisoning Attack and Defense Game for Federated Learning in Vehicular Networks",
+    "url": "https://arxiv.org/abs/2610.32765v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "This paper studies interactions between clean-label poisoning attack and defense in vehicular networks using federated learning (FL). Basic Safety Message (BSM) classification for anomaly detection is modeled as a distributed learning problem over a vehicular network with dynamic topology. As a critical threat to FL, a feature-space clean-label attack is introduced, wherein benign samples are perturbed toward malicious feature extremes, degrading class separability while preserving labels. To co",
+    "authors": [
+      "Yalin E. Sagduyu",
+      "Tugba Erpek",
+      "Nathan Stephenson",
+      "Mengran Xue"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Integrated elliptical III-V nanopillar arrays on silicon for dual photodetection and light emission",
+    "url": "https://arxiv.org/abs/2610.32744v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Next-generation on-chip photonic devices require compact, energy-efficient components integrating photodetection and light emission on silicon platforms. Achieving broadband photodetection combined with efficient emission in a single nanoscale device remains challenging. Here, we demonstrate elliptical nanopillar arrays monolithically integrated as III-V-on-Si templates, exhibiting broadband photoresponse across visible to near-infrared wavelengths, dynamic neuron-like graded responses under mod",
+    "authors": [
+      "João D. G. Azevedo",
+      "Rafael Ramos Uña",
+      "Ángela Barreda",
+      "Stuart Edwards",
+      "J. Iwan Davies",
+      "Jérôme Borme",
+      "Braulio Garcia-Cámara",
+      "Jana B. Nieder",
+      "Bruno Romeira"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "First- and Second-Order Electron Position Correlators Reveal Topological Phase Transitions",
+    "url": "https://arxiv.org/abs/2610.32743v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "The theory of conventional critical phenomena is built around the concepts of fluctuations and correlators of local observables. Here, we show that topological phase transitions can also be characterized through spatial and temporal two-point correlation functions associated with fluctuations of the electronic position operator. The key object is the antisymmetric part of the position-position correlation function, which yields the Chern number in the equal-time and equal-space limit. When the s",
+    "authors": [
+      "Antimo Marrazzo",
+      "Christian Loer Llemit",
+      "Massimo Capone"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Controlled Fabrication of Uniform Columnar Porous GaN Architectures by Electrochemical Etching",
+    "url": "https://arxiv.org/abs/2610.32722v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Electrochemical etching (ECE) of n-type c-plane GaN enables the formation of porous architectures capable of enhancing the performance of optoelectronic devices and broadening the range of possible GaN applications. Here, we demonstrate that the addition of NaOH to Na2C2O4 (and other non-acidic etchant solutions) directs ECE toward the formation of nanoscale, vertically aligned, highly uniform columnar pore morphologies with relatively limited surface roughening. By varying the NaOH concentratio",
+    "authors": [
+      "Thom R. Harris-Lee",
+      "Ben Thornley",
+      "Jiawei Zhang",
+      "Martin Frentrup",
+      "Simon Fairclough",
+      "Menno J. Kappers",
+      "Rachel A. Oliver"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "High-quality, deep formation and identification of oxygen-vacancy defects in silicon carbide",
+    "url": "https://arxiv.org/abs/2610.32642v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Optically addressable paramagnetic defects in silicon carbide (SiC) are attractive for scalable quantum technologies such as quantum sensing. PL5, PL6, and PL7 are promising defects for their high brightness and spin-readout contrast. Although generation by oxygen implantation has been reported very recently, nonuniform spin and optical properties and the limited generation depth of implanted defects hinder both high-sensitivity sensing and conclusive microscopic identification. Here we engineer",
+    "authors": [
+      "Ryo Shiotani",
+      "Fu-Chieh Chuang",
+      "Mitsuaki Kaneko",
+      "Tetsuri Nishikawa",
+      "Hiroshi Abe",
+      "Taiga Matsuoka",
+      "Shigehito Miki",
+      "Kazuki Okajima",
+      "Takeshi Ohshima",
+      "Yoshihiko Kanemitsu",
+      "Tsunenobu Kimoto",
+      "Naoya Morioka",
+      "Norikazu Mizuochi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "Toward Open ISA Supercomputing: A Comparative Study of RISC-V, Arm, and x86 Architectures on HPC Workloads",
+    "url": "https://arxiv.org/abs/2610.32632v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "RISC-V is emerging as a candidate architecture for high-performance computing (HPC), but its competitiveness against established x86 and Arm processors remains difficult to assess because existing studies use different platforms, workloads, and methodologies, and rarely consider energy efficiency. Our work provides an evaluation of contemporary HPC RISC-V, Arm, and x86 processors using a common software stack and methodology. We characterize the Sophgo SG2044 and compare it with the NVIDIA Grace",
+    "authors": [
+      "Emanuele Venieri",
+      "Giacomo Madella",
+      "Gabriele Ceccolini",
+      "Simone Manoni",
+      "Federico Ficarelli",
+      "Filippo Barbari",
+      "Jenny Lynn Almerol",
+      "Elisabetta Boella",
+      "Nitin Shukla",
+      "Simone Bnà",
+      "Luca Benini",
+      "Andrea bartolini"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Automated Multi-Line Bug Repair Using Model Checker Aided LLMs: A Case Study on RISC-V Processors",
+    "url": "https://arxiv.org/abs/2610.32597v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Functional verification of Register-Transfer Level(RTL) designs has become a critical bottleneck in modern semiconductor development, often consuming the majority of project resources. Debugging, in particular, remains an especially time-consuming task, requiring careful analysis of simulation traces or counterexamples. Recent work has explored applying Large Language Models (LLMs) to RTL debug and repair with great promise. However, the existing approaches typically are for single-line bugs, op",
+    "authors": [
+      "Debleena Das",
+      "Chandan Kumar Jha",
+      "Muhammad Hassan",
+      "Rolf Drechsler",
+      "Ansuman Banerjee",
+      "Subhra K. Das",
+      "Amlan Chakrabarti"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Magnetic Anisotropy and Magnetization Dynamics in Si/Ni Multilayers Probed by FMR and VSM Magnetometry",
+    "url": "https://arxiv.org/abs/2610.32565v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "The magnetic anisotropy and magnetization dynamics of sputtered [Si(40~Å)/Ni($t_{\\mathrm{Ni}}$~Å)]$_{20}$ multilayers were systematically investigated at room temperature using SQUID--VSM magnetometry and angle-dependent ferromagnetic resonance (FMR). Static measurements reveal soft ferromagnetic behaviour in thicker Ni layers and mixed ferromagnetic and superparamagnetic contributions at reduced thicknesses. The saturation magnetization increases toward the bulk Ni value with increasing thickne",
+    "authors": [
+      "Dushyant Singh",
+      "Subha Maity",
+      "Tharundev V",
+      "Subhavenkadesh SS",
+      "Vigneshwari SR",
+      "Krista R. Khiangte"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Perfectly aperiodic asymmetric scalable metasurface based on the hat monotile",
+    "url": "https://arxiv.org/abs/2610.32467v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Metasurfaces are conventionally designed on periodic lattices, which renders their electromagnetic response spatially uniform and leaves the spatial arrangement itself unused as an information-bearing design resource. In this study, we propose and numerically validate a metasurface built on an aperiodic monotile: the recently discovered \"hat\" polykite, a single tile mathematically guaranteed to tile the plane only nonperiodically. The twelve distinguishable orientations of the hat serve as a nat",
+    "authors": [
+      "Yuma Otsuka",
+      "Hiroki Wakatsuchi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Side-Chain Engineering Controls Molecular Packing and Vertical Electron Transport in Discrete n-Type NDI-T2 Oligomers",
+    "url": "https://arxiv.org/abs/2610.32456v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "High-efficiency vertical charge transport in multilayer organic optoelectronic devices highly depends on molecular structure and arrangement. Using two T2-(NDI-T2)2 conjugated oligomers with ethylhexyl (EH) and octyldodecyl (OD) side chains as a model system, their effects on electron transport are investigated using, among other techniques, atomic force microscopy (AFM), conductive atomic force microscopy (C-AFM), grazing-incidence wide-angle X-ray scattering (GIWAXS), steady-state optical spec",
+    "authors": [
+      "Zihao Liu",
+      "Hajar Komekoz",
+      "Nisarg Trivedi",
+      "Max Dorfner",
+      "Lokesh Rasabathina",
+      "Rico Ehrler",
+      "Mike Hambsch",
+      "Chen Wang",
+      "Dietrich R. T. Zahn",
+      "Jörg Matysik",
+      "Stefan C. B. Mannsfeld",
+      "Carsten Deibel",
+      "Olav Hellwig",
+      "Frank Ortmann",
+      "Michael Sommer",
+      "Georgeta Salvan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "On the Role of Atomic Mobility in the Polyamorphism of Metallic Glasses",
+    "url": "https://arxiv.org/abs/2610.32434v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Understanding the microscopic mechanisms underlying polyamorphic transitions requires simultaneous knowledge of thermodynamic and structural evolution, which has remained experimentally inaccessible. Here, we combine chip-based fast differential scanning calorimetry with high-energy synchrotron X-ray diffraction to simultaneously probe the thermodynamic and structural evolution during the polyamorphic transition of a Pd-Ni-P metallic glass. Correlating heat-flow signals with the corresponding st",
+    "authors": [
+      "Jie Shen",
+      "Antoine Cornet",
+      "Pei-Hao Sun",
+      "Valerio Di Lisio",
+      "Daniele Cangialosi",
+      "Klara Otto",
+      "Isabella Gallino",
+      "Martin Rosenthal",
+      "Eloi Pineda",
+      "Giulio Monaco",
+      "Marco Di Michiel",
+      "Yong-Hao Sun",
+      "Wei-Hua Wang",
+      "Ruta Beatrice"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "PARIS: Parallel Arithmetic Reduction and Integrated Selection for MSDF Inner Products",
+    "url": "https://arxiv.org/abs/2610.32410v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Existing most-significant-digit-first (MSDF) accelerators serialize input-term processing, causing inner-product latency to increase with fan-in. This paper presents PARIS, an MSDF architecture that eliminates input-term serialization through parallel bit-plane reduction and shared carry-save residual selection. For $B$-bit operands, PARIS processes $B^2$ bit-position pairs, independent of fan-in within the supported tile, while generating exact MSDF outputs. Synthesized in 45\\,nm at 100\\,MHz, t",
+    "authors": [
+      "Malik Zohaib Nisar",
+      "Ic-Pyo Hong",
+      "Dorit Merhof",
+      "Muhammad Usman"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Type-based Over-the-Air Computation",
+    "url": "https://arxiv.org/abs/2610.32343v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Over-the-air computation (OAC) exploits the superposition property of wireless channels to compute functions of distributed data, reducing the communication overhead associated with its multiple access. However, existing OAC frameworks are often designed around specific classes of functions, limiting their applicability to more general nonlinear computations. This paper investigates type-based multiple access (TBMA) as a general framework for OAC, enabling the receiver to recover a histogram of ",
+    "authors": [
+      "Marc Martinez-Gost",
+      "Ana Pérez-Neira"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Flexo-Photoresponses from First Principles",
+    "url": "https://arxiv.org/abs/2610.32341v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Many functionally important materials, such as silicon, possess high-symmetry crystal structures that forbid even-order nonlinear optical responses, thereby limiting their application in e.g., photonics and optoelectronics. Strain gradients can effectively break symmetries, activating otherwise forbidden optical responses. Although such flexo-photoresponses have attracted considerable interest recently, a comprehensive microscopic theoretical framework is still lacking. Here, we develop a first-",
+    "authors": [
+      "Zhichao Guo",
+      "Hua Wang",
+      "Haowei Xu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "TranSAGE: Automating Spatial Accelerator Generation for Large-Scale Transformer Models",
+    "url": "https://arxiv.org/abs/2610.32279v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Large-scale Transformers have achieved remarkable success across NLP, computer vision, and robotics, but their growing computational and memory demands challenge efficient inference. Spatial accelerators offer advantages in on-chip bandwidth and energy efficiency, yet designing them for large models remains costly and time-consuming. Existing accelerator generators typically focus on single-operation support, overlooking the benefits of multi-operation pipelining, which limits throughput and ene",
+    "authors": [
+      "Chi Zhang",
+      "Yi Sun",
+      "Weichuang Zhang",
+      "Quan Chen",
+      "Jieru Zhao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Intrinsic Raman Modes and Crystal Symmetry of Altermagnetic $α$-MnTe",
+    "url": "https://arxiv.org/abs/2610.32261v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Crystal symmetry governs the physical properties of materials and provides the framework for interpreting their microscopic excitations and macroscopic responses. In altermagnets, the crystal symmetries that relate opposite-spin sublattices give rise to momentum-dependent spin splitting despite compensated magnetization. Determining the real crystal symmetry is therefore essential for understanding the intrinsic electronic and magnetic properties. For the altermagnetic semiconductor $α$-MnTe, co",
+    "authors": [
+      "Yunpeng Cui",
+      "Shuai Zhang",
+      "Jia-Liang Xie",
+      "Jinxuan Liang",
+      "Hao Lin",
+      "Miao Qin",
+      "Jiawei Shao",
+      "Gongling Chen",
+      "Yidian Li",
+      "Yixuan Luo",
+      "Deng Hu",
+      "Bingru Lu",
+      "Hao Li",
+      "Xiang Li",
+      "Tiantian Liu",
+      "Haodong Yu",
+      "Hongyun Zhang",
+      "Shuyun Zhou",
+      "Zhiwei Wang",
+      "Yanfeng Guo",
+      "Tiantian Zhang",
+      "Miao-Ling Lin",
+      "Ping-Heng Tan",
+      "Feng Jin",
+      "Luyi Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.RO",
+    "title": "Incremental-Smoothing-Based ARAIM Protection Levels for Tightly Coupled GNSS/IMU Integration in Urban Canyons",
+    "url": "https://arxiv.org/abs/2610.32259v1",
+    "published_date": "2026-10-23",
+    "source": "arXiv",
+    "summary": "Protection levels (PLs) bound position errors under specified fault hypotheses and risk budgets, but advanced re-ceiver autonomous integrity monitoring (ARAIM) is formulated for snapshot GNSS estimation rather than the correlated poste-rior of tightly coupled GNSS/IMU factor graph optimization (FGO). This paper formulates ARAIM solution separation and PL computation on the FGO posterior. Because current-epoch pseudorange factors enter only the current-state block of the fixed-lag information mat",
+    "authors": [
+      "Jiahao Hu",
+      "Xiangru Wang",
+      "Weisong Wen",
+      "Meng Qian"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.AR",
     "title": "Ray-by-Ray: Fine-Grained Resource Management for GPU Ray Tracing Units",
     "url": "https://arxiv.org/abs/2610.31630v1",
