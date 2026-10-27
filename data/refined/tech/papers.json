@@ -2,6 +2,324 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Bodyseismography (BSG): Theoretical Foundation and Numerical Modeling",
+    "url": "https://arxiv.org/abs/2610.35844v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "Bodyseismography (BSG) records cardiovascular vibrations transmitted through the body and a supporting bed, enabling contactless assessment of cardiac mechanics. Relating these vibrations to hemodynamic features requires separating cardiac excitation from the effects of body and bed transmission. We develop a source-transmission-measurement framework that couples myocardial contraction and vascular recoil to directional BSG observations. The theory connects stroke volume, cardiac output, and blo",
+    "authors": [
+      "WenZhan Song",
+      "Yuanyuan Zhang",
+      "Yuyan Wu",
+      "Sahas Biddappa",
+      "Yida Zhang",
+      "Jiayu Chen",
+      "Zixuan Zeng",
+      "Yixuan Li",
+      "Jiahui Li",
+      "Fei Dou",
+      "Zhenlin An",
+      "Hae Young Noh"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Third harmonic generation in the transition metal trichalcogenides",
+    "url": "https://arxiv.org/abs/2610.35803v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "The transition metal trichalcogenides (TMTs) are an interesting class of layered 2D materials that have strong anisotropic electrical and optical properties. We report on the polarization-dependent nonlinear optical response of exfoliated crystals at the third harmonic using non-resonant excitation with a 1560 nm femtosecond laser. All members of the TMT crystal family explored (ZrS3, HfS3, TiS3, and NbS3) display large anisotropy in their polarized third harmonic generation signal, with anisotr",
+    "authors": [
+      "Timothy Y. Chung",
+      "Vergil M. Schreiber",
+      "Randy M. Sterbentz",
+      "David P. Shelton",
+      "Eduardo Flores",
+      "Jose Ramon Ares",
+      "Isabel J. Ferrer",
+      "Joshua O. Island"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Retention-constrained fine-tuning of a pre-trained aluminium MACE potential for non-equilibrium defect dynamics and plasticity",
+    "url": "https://arxiv.org/abs/2610.35653v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "Adapting a pre-trained machine-learning interatomic potential for non-equilibrium defect dynamics and plasticity requires improving defect accuracy without degrading the near-equilibrium elastic and vibrational response. Here we achieve this balance for the aluminium MACE potential QP17 by integrating conditional readout uncertainty, iterative full-parameter updates and protocol-compatible relative-energy anchoring. Sensitivities over 144 linear readout weights guide acquisition, with within-bat",
+    "authors": [
+      "Yue Wu",
+      "Yuan Tian",
+      "Deng Pan",
+      "Mingwei Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Whole-Route Planning of a Memory Bus Between Two BGAs: An Exact Model of Crossings and Layer Changes, Negotiated to DRC-Clean Copper",
+    "url": "https://arxiv.org/abs/2610.35601v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "Routing the bus between a processor and its DRAM remains largely manual in printed circuit board (PCB) design, and published algorithms optimize proxies such as crossing or layer counts. We present a router that plans every lane of a two-layer BGA-to-BGA bus before any copper is laid, and carries the plan to design-rule-clean copper. Its core is an exact constraint-programming model that chooses, for all lanes at once, where each necessary crossing occurs, in what order -- by a rule over every t",
+    "authors": [
+      "Andrew Haas"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Transverse detuned loading for modulation bandwidth enhancement in VCSELs",
+    "url": "https://arxiv.org/abs/2610.35578v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "Directly modulated vertical-cavity surface-emitting lasers (VCSELs) are central to short-reach optical interconnects, where modulation bandwidth and power efficiency are critical factors for increasing data transfer capacity. Conventional oxide VCSELs still require power-hungry signal processing to achieve high-speed data transmission above 100 Gb/s. Here we report an experimental implementation of detuned loading in a VCSEL to enhance the modulation bandwidth. The detuned loading is achieved by",
+    "authors": [
+      "Giacomo Graziano",
+      "Richard Schatz",
+      "Antoine Pissis",
+      "Wilfried Maineult",
+      "Aurelio Rossinelli",
+      "Philipp Täschler",
+      "Simon Hönl",
+      "Vincenzo Pasanisi",
+      "Tobias Süss",
+      "Dario Schiavon",
+      "Donato Bonfrate",
+      "Martin Spieser",
+      "Stefano Tirelli",
+      "Evgeny Zibik"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "math.OC",
+    "title": "ADACT: PDE-Constrained Thermal Hardware/Software Co-Design Adjoint-Driven Optimal Control via Finite Difference Discretization",
+    "url": "https://arxiv.org/abs/2610.35569v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "By virtue of the sheer compute demands of large-scale artificial intelligence (AI) and high-performance computing (HPC), modern multi-core microprocessors suffer from severe power density limits and thermal throttling, entailing an urgent need for principled methods for predictive, physics-informed dynamical thermal management (DTM). Here, we introduce a hardware/software co-design physics-informed PDE-constrained DTM throttling optimal control algorithm, ADACT (Adjoint-Driven Adaptive Co-Design",
+    "authors": [
+      "Don Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "High-resolution tactile observation makes hidden racket-control mechanisms learnable",
+    "url": "https://arxiv.org/abs/2610.35563v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "Experts can master fine hand-object manipulation skills, yet limited conscious perception of rapid tactile interactions hinders their ability to articulate the underlying control mechanisms. Badminton racket control requires rapid, fine hand-force coordination, providing a demanding testbed for uncovering these mechanisms. An 864-node tactile-inertial glove with synchronized 100-Hz acquisition recorded over 14,000 strokes from more than 70 participants across five skills. Inspired by sensorimoto",
+    "authors": [
+      "Haoyang Tian",
+      "Zhengwei Li",
+      "Houcheng Li",
+      "Xu Yang",
+      "Peigeng Gu",
+      "Xinyue Wang",
+      "Tairan Zhu",
+      "Shuo Jiang",
+      "Long Cheng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "XL MIMO Extreme Learning Machines: Wave-Domain Inference with Stacked Metasurfaces",
+    "url": "https://arxiv.org/abs/2610.35469v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "The recently envisioned goal-oriented communications paradigm requires machine learning inference to be performed directly on wirelessly transferred data, by splitting neural network computations between the transmitter, the Receiver (RX), and the wireless channel. Such approaches aim to offload large portions of the computation onto the channel itself, which is often controlled by reconfigurable MetaSurfaces (MSs). Typical MS-parametrized systems, however, enable only limited computation offloa",
+    "authors": [
+      "Kyriakos Stylianopoulos",
+      "Mattia Fabiani",
+      "Davide Dardari",
+      "George C. Alexandropoulos"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Pulsed Laser Deposition of Ferroelectric SrTiO3 Shells Enables Polarization-Controlled Charge Separation in TiO2 Photoanode",
+    "url": "https://arxiv.org/abs/2610.35454v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "Ferroelectric polarization offers a powerful route to govern the interfacial charge separation in photoelectrodes; however, chemically converted ferroelectric shells lack sub-nanometer thickness control, coherent strain retention, and chemically clean interfaces. Here, we use pulsed laser deposition to fabricate stoichiometric SrTiO3 shells on hydrothermally grown TiO2 nanorod arrays, achieving atomically defined core-shell architectures while preserving the one-dimensional transport geometry. T",
+    "authors": [
+      "Yiqi Jin",
+      "Weizeng Zheng",
+      "Beibei Wang",
+      "Lei Zhao",
+      "Binmin Wu",
+      "Leonhard Mayrhofer",
+      "Xiangjian Meng",
+      "Hao Shen",
+      "Xiaodan Wang",
+      "Weiguang Huang",
+      "Junhao Chu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Movable Antenna Enabled Anti-Jamming: From Local Optimality Guaranteed Design to a Unified Antenna Position Optimization Framework",
+    "url": "https://arxiv.org/abs/2610.35438v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "Anti-jamming capability is of paramount importance in modern wireless communications, yet conventional receivers are severely constrained by their fixed array geometries, which limit the available spatial degrees of freedom and leave performance highly susceptible to strong interference. By contrast, movable antennas (MAs) provide additional spatial degrees of freedom through antenna-position optimization. This paper investigates MA-enabled anti-jamming by jointly optimizing the antenna-position",
+    "authors": [
+      "Lebin Chen",
+      "Ming-Min Zhao",
+      "Lipeng Zhu",
+      "Zhenyu Xiao",
+      "Min-Jian Zhao",
+      "Rui Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "NOMAD-EEG: Native Omni-Montage Adaptive Diffusion",
+    "url": "https://arxiv.org/abs/2610.35246v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "Purpose. Electroencephalography (EEG) montages, channel counts and recording lengths vary widely, but most EEG foundation models are bound to the channel set and input length they were trained on. We aimed to build a generative EEG foundation model independent of the number, identity and order of electrodes and of the input length. Methods. NOMAD-EEG is a 12.0 M-parameter diffusion model that alternates state-space layers along time, without patches, with attention across electrodes identified o",
+    "authors": [
+      "Abdulkader Helwan",
+      "Khadidja Henni",
+      "Lina Abou-Abbas"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Optical Thermometry in Monolayer WS2: Raman and Photoluminescence Spectroscopy from 5 K to 1273 K",
+    "url": "https://arxiv.org/abs/2610.35214v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "Reliable temperature measurement is essential for characterizing and engineering two-dimensional (2D) semiconductor devices, yet optical thermometry of 2D materials has so far been demonstrated only over narrow temperature windows spanning a few hundred kelvin. Here, we establish a comprehensive optical thermometry framework for monolayer WS2 from 5~K to 1273~K. We show that: (i) the out-of-plane A1g Raman mode shifts linearly with temperature above 100~K, with a slope of -0.0138 cm^{-1}/K in no",
+    "authors": [
+      "Gyeongjun Lee",
+      "Antoine Borel",
+      "Takashi Taniguchi",
+      "Kenji Watanabe",
+      "Fausto Sirotti",
+      "Fabian Cadiz"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Sparse Target Parameter and Channel Estimation in MIMO-OOFDM-Aided Visible Light Integrated Sensing and Communication Systems",
+    "url": "https://arxiv.org/abs/2610.35170v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "A unified framework is developed for parameter estimation (PE) and channel estimation (CE) in monostatic multiple-input multiple-output (MIMO) direct-current-biased optical orthogonal frequency division multiplexing (DCO-OFDM)-aided visible light integrated sensing and communication (VL-ISAC) systems. A common optical waveform supports sensing and downlink communication while accounting for target reflections, clutter, Doppler effects, and the communication channel. For sensing PE, one-dimension",
+    "authors": [
+      "Shubham Saxena",
+      "Garudadri Mythreya",
+      "Suraj Srivastava",
+      "Washim Uddin Mondal",
+      "Aditya K. Jagannatham"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.AS",
+    "title": "Realizing Low-Precision Storage and Sparse Execution in a Folded FPGA Speech Enhancer",
+    "url": "https://arxiv.org/abs/2610.35144v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "Hardware-aware training often optimizes FPGA resources, latency, or bit operations, but folding changes what compression saves: shared arithmetic decouples precision, weight storage, and scheduled work. We derive training objectives from the measured costs of a folded streaming speech-enhancement accelerator. Mixed-precision weights reduce on-chip storage; structured channel sparsity removes entire operations from the engine schedule. We deploy a bit-exact implementation on the Kria KV260. The b",
+    "authors": [
+      "Clément Laroche"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Detection of Single Stuck-at and Bridging Faults in Cluster-based FPGA Architectures",
+    "url": "https://arxiv.org/abs/2610.35026v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "This paper presents a new technique for detecting single stuck-at and bridging faults in cluster-based FPGA architectures, using same set of test vectors generated by a test pattern generator circuitry. This technique is based on configuration of logic elements using test logic structure and the outputs of two separated logic elements are compared to detect a fault. To do this, block under test, TPG and output response analysis circuitry are generated in FPGAs. The configurations of test pattern",
+    "authors": [
+      "Nachiketa Das",
+      "Sudip Ghosh",
+      "H. Rahaman"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "When and Why to Use TMA: A Workload-Grounded Characterization of Tensor Memory Acceleration on NVIDIA Hopper GPUs",
+    "url": "https://arxiv.org/abs/2610.34907v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "The Tensor Memory Accelerator (TMA), introduced on NVIDIA Hopper, is used pervasively in production GPU kernels yet its usage is conspicuously selective: expert kernel developers in CUTLASS, FlashAttention-3, and FlashInfer apply TMA to some tensor operands within a kernel but fall back to cp.async, direct global loads, or distributed shared memory (DSM) for others. Vendor documentation describes the API, and recent microbenchmarking work characterizes TMA throughput in isolation, but neither an",
+    "authors": [
+      "Christin David Bose",
+      "Cesar Avalos",
+      "Junrui Pan",
+      "Timothy Rogers"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "PaFeDSE: Pareto-Feedback-Guided Microarchitecture Design Space Exploration for Efficient Pareto Search",
+    "url": "https://arxiv.org/abs/2610.34838v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "Efficient microarchitecture design space exploration (DSE) is critical for optimizing performance, power, and area trade-offs in modern out-of-order processors. While machine-learning-based DSE significantly reduces the cost of exhaustively evaluating large design spaces, existing methods still waste expensive simulations on Pareto-miss candidates that do not improve the Pareto frontier and repeatedly process redundant candidates during iterative exploration. In this paper, we propose PaFeDSE, a",
+    "authors": [
+      "Joonyong Park",
+      "Hyojeong Lee",
+      "Sejeong Yang",
+      "Joo-Young Kim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "SPARTA: A Sparse Ternary LLM Accelerator with Adaptive Attention and Unified Datapath for Long-Context Edge Inference",
+    "url": "https://arxiv.org/abs/2610.34824v1",
+    "published_date": "2026-10-26",
+    "source": "arXiv",
+    "summary": "LLMs on edge devices are constrained by limited memory and bandwidth. Although 1.58-bit ternary weights greatly reduce model storage, long-context inference is increasingly bottlenecked by KV-cache traffic and attention. Existing accelerators also use separate datapaths for ternary linear layers and attention, incurring hardware and execution overhead. We present SPARTA, a sparse ternary LLM accelerator for efficient long-context edge inference. SPARTA integrates: (1) a phase-aware sparse datafl",
+    "authors": [
+      "Yanzhen Zhou",
+      "Zhengyu Han",
+      "Qunyou Liu",
+      "Zheyu Yan",
+      "Weihong Xu",
+      "Cheng Zhuo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "eess.AS",
     "title": "SEMAC: Spherical Energy Matching Ambisonics Codec for Efficient Higher-Order Ambisonics Compression",
     "url": "https://arxiv.org/abs/2610.32981v1",
