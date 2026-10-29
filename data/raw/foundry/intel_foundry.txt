@@ -126,7 +126,7 @@
 <script type="text/javascript">
     var cq_tms = {
         wa_emtcontenttype: "emtcontenttype:customercommunications/news",
-        wa_emtsubject: "emtsubject:itinformationtechnology/aiartificialintelligence,emtsubject:design/corporateinformation/manufacturingatintel,emtsubject:design/corporateinformation/intelfoundry,emtsubject:design/corporateinformation,emtsubject:design/corporateinformation/thoughtleadership,emtsubject:itinformationtechnology/clientcomputing,emtsubject:itinformationtechnology/datacenter",
+        wa_emtsubject: "emtsubject:itinformationtechnology/aiartificialintelligence,emtsubject:corporateinformation/manufacturingatintel,emtsubject:corporateinformation,emtsubject:corporateinformation/thoughtleadership,emtsubject:itinformationtechnology/clientcomputing,emtsubject:corporateinformation/intelfoundry,emtsubject:itinformationtechnology/datacenter",
         
         wa_industry_type: "",
         wa_subject: "",
@@ -315,9 +315,9 @@
         
             <meta name="menu">
         
-            <meta name="emtsubject" content="Subject|Design|Corporate Information|Thought Leadership;Subject|Information Technology (IT)|Artificial Intelligence (AI);Subject|Design|Corporate Information;Subject|Information Technology (IT)|Client Computing;Subject|Information Technology (IT)|Data Centers;Subject|Design|Corporate Information|Intel Foundry;Subject|Design|Corporate Information|Manufacturing at Intel;">
+            <meta name="emtsubject" content="Subject|Corporate Information|Thought Leadership;Subject|Information Technology (IT)|Artificial Intelligence (AI);Subject|Corporate Information;Subject|Information Technology (IT)|Client Computing;Subject|Information Technology (IT)|Data Centers;Subject|Corporate Information|Intel Foundry;Subject|Corporate Information|Manufacturing at Intel;">
         
-            <meta name="reimaginefilters" content="Subject|Design|Corporate Information|Thought Leadership;Subject|Information Technology (IT)|Artificial Intelligence (AI);Subject|Design|Corporate Information;Subject|Information Technology (IT)|Client Computing;Subject|Information Technology (IT)|Data Center;Subject|Design|Corporate Information|Intel Foundry;Subject|Design|Corporate Information|Manufacturing at Intel;">
+            <meta name="reimaginefilters" content="Subject|Corporate Information|Thought Leadership;Subject|Information Technology (IT)|Artificial Intelligence (AI);Subject|Corporate Information;Subject|Information Technology (IT)|Client Computing;Subject|Information Technology (IT)|Data Center;Subject|Corporate Information|Intel Foundry;Subject|Corporate Information|Manufacturing at Intel;">
         
             <meta name="generic1" content="true">
         
@@ -2126,10 +2126,34 @@
             <div class="cmp-cardgrid__container-item">
                 <div class="teaser">
                     
+    <div id="news-card-3009370238" class="cmp-teaser" data-card-topic-tags="emtsubject:itinformationtechnology/aiartificialintelligence">
+        <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/artificial-intelligence/intel-demonstrates-physical-ai-action-with-sap.html" target="_self" aria-label="From Task to Fulfillment – Intel and SAP Demonstrate Physical AI and the Autonomous Warehouse in Action">
+            <div class="cmp-teaser__content">
+                <p class="cmp-teaser__pretitle">Artificial Intelligence (AI)</p>
+                <h2 class="cmp-teaser__title">From Task to Fulfillment – Intel and SAP Demonstrate Physical AI and the Autonomous Warehouse in Action</h2>
+                <div class="cmp-teaser__description">
+                    <p>October 28,2026</p>
+                </div>
+            </div>
+            <div class="cmp-teaser__image">
+                 <div class="cmp-image" data-cmp-is="image" data-cmp-widths="375,768,1024,1440,1650" data-cmp-dmimage="" data-cmp-smartcroprendition="1080-1080" data-cmp-src="https://intelcorp.scene7.com/is/image/intelcorp/newsroom-sap-intel-1920x1080%3A1080-1080?ts=1793124437208&amp;fmt=png8-alpha&amp;dpr=off" data-asset-id="0d9828af-4273-47a1-aeb4-a93a69506237" data-cmp-filereference="/content/dam/www/central-libraries/us/en/images/2026-10/newsroom-sap-intel-1920x1080.png" id="news-card-3009370238-image" data-cmp-hook-image="imageV3" itemscope itemtype="http://schema.org/ImageObject">
+                    <img class="cmp-image__image" src="https://intelcorp.scene7.com/is/image/intelcorp/newsroom-sap-intel-1920x1080:1080-1080?ts=1793124437208&amp;fmt=png8-alpha&amp;dpr=on,1.5" loading="lazy" itemprop="contentUrl" width="1920" height="1080">
+                    <meta itemprop="caption" content="Intel SAP v2">
+                </div>
+            </div>
+        </a>
+    </div>
+
+                </div>
+            </div>
+        
+            <div class="cmp-cardgrid__container-item">
+                <div class="teaser">
+                    
     <div id="news-card-741535158" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-oracle-collaborate-on-enterprise-and-agentic-ai.html" target="_self" aria-label="Intel and Oracle Plan Expanded Collaboration to Support Enterprise and Agentic AI on Oracle Cloud Infrastructure">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel and Oracle Plan Expanded Collaboration to Support Enterprise and Agentic AI on Oracle Cloud Infrastructure</h2>
                 <div class="cmp-teaser__description">
                     <p>October 27,2026</p>
@@ -2177,7 +2201,7 @@
     <div id="news-card-2707038399" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-classiq-accelerate-scalable-quantum-computing.html" target="_self" aria-label="Intel to Acquire Classiq to Create a Full-stack Quantum Computing Platform">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel to Acquire Classiq to Create a Full-stack Quantum Computing Platform</h2>
                 <div class="cmp-teaser__description">
                     <p>October 26,2026</p>
@@ -2513,7 +2537,7 @@
     <div id="news-card-1247681386" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-reports-third-quarter-2026-financial-results.html" target="_self" aria-label="Intel to Report Third-Quarter 2026 Financial Results">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel to Report Third-Quarter 2026 Financial Results</h2>
                 <div class="cmp-teaser__description">
                     <p>October 06,2026</p>
@@ -2705,7 +2729,7 @@
     <div id="news-card-158746393" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/foundation-pltw-expand-semiconductor-careers.html" target="_self" aria-label="Intel Foundation and PLTW Expand Pathways to Semiconductor Careers">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Foundation and PLTW Expand Pathways to Semiconductor Careers</h2>
                 <div class="cmp-teaser__description">
                     <p>September 01,2026</p>
@@ -2774,30 +2798,6 @@
             <div class="cmp-cardgrid__container-item">
                 <div class="teaser">
                     
-    <div id="news-card-1464494099" class="cmp-teaser" data-card-topic-tags="emtsubject:itinformationtechnology/aiartificialintelligence">
-        <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/artificial-intelligence/6-in-10-leaders-bet-big-on-robots-only-4-in-10-are-ready.html" target="_self" aria-label="Six in 10 Leaders Bet Big on Robots. Only Four in 10 Are Ready.">
-            <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Artificial Intelligence (AI)</p>
-                <h2 class="cmp-teaser__title">Six in 10 Leaders Bet Big on Robots. Only Four in 10 Are Ready.</h2>
-                <div class="cmp-teaser__description">
-                    <p>August 20,2026</p>
-                </div>
-            </div>
-            <div class="cmp-teaser__image">
-                 <div class="cmp-image" data-cmp-is="image" data-cmp-widths="375,768,1024,1440,1650" data-cmp-dmimage="" data-cmp-smartcroprendition="1080-1080" data-cmp-src="https://intelcorp.scene7.com/is/image/intelcorp/idl-id-489777%3A1080-1080?ts=1787698929099&amp;fmt=png8-alpha&amp;dpr=off" data-asset-id="61d6758e-5097-476b-9c83-c1287d85db0d" data-cmp-filereference="/content/dam/www/central-libraries/us/en/images/2026-08/idl-id-489777.png" id="news-card-1464494099-image" data-cmp-hook-image="imageV3" itemscope itemtype="http://schema.org/ImageObject">
-                    <img class="cmp-image__image" src="https://intelcorp.scene7.com/is/image/intelcorp/idl-id-489777:1080-1080?ts=1787698929099&amp;fmt=png8-alpha&amp;dpr=on,1.5" alt="Robotic Arm" loading="lazy" itemprop="contentUrl" width="1920" height="1080">
-                    <meta itemprop="caption" content="Robotic Arm">
-                </div>
-            </div>
-        </a>
-    </div>
-
-                </div>
-            </div>
-        
-            <div class="cmp-cardgrid__container-item">
-                <div class="teaser">
-                    
     <div id="news-card-3476112023" class="cmp-teaser" data-card-topic-tags="emtsubject:itinformationtechnology/aiartificialintelligence">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/opinion/count-the-work-not-just-the-cores.html" target="_self" aria-label="Count the Work Done. Not Just the Cores.">
             <div class="cmp-teaser__content">
@@ -2822,10 +2822,34 @@
             <div class="cmp-cardgrid__container-item">
                 <div class="teaser">
                     
+    <div id="news-card-1464494099" class="cmp-teaser" data-card-topic-tags="emtsubject:itinformationtechnology/aiartificialintelligence">
+        <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/artificial-intelligence/6-in-10-leaders-bet-big-on-robots-only-4-in-10-are-ready.html" target="_self" aria-label="Six in 10 Leaders Bet Big on Robots. Only Four in 10 Are Ready.">
+            <div class="cmp-teaser__content">
+                <p class="cmp-teaser__pretitle">Artificial Intelligence (AI)</p>
+                <h2 class="cmp-teaser__title">Six in 10 Leaders Bet Big on Robots. Only Four in 10 Are Ready.</h2>
+                <div class="cmp-teaser__description">
+                    <p>August 20,2026</p>
+                </div>
+            </div>
+            <div class="cmp-teaser__image">
+                 <div class="cmp-image" data-cmp-is="image" data-cmp-widths="375,768,1024,1440,1650" data-cmp-dmimage="" data-cmp-smartcroprendition="1080-1080" data-cmp-src="https://intelcorp.scene7.com/is/image/intelcorp/idl-id-489777%3A1080-1080?ts=1787698929099&amp;fmt=png8-alpha&amp;dpr=off" data-asset-id="61d6758e-5097-476b-9c83-c1287d85db0d" data-cmp-filereference="/content/dam/www/central-libraries/us/en/images/2026-08/idl-id-489777.png" id="news-card-1464494099-image" data-cmp-hook-image="imageV3" itemscope itemtype="http://schema.org/ImageObject">
+                    <img class="cmp-image__image" src="https://intelcorp.scene7.com/is/image/intelcorp/idl-id-489777:1080-1080?ts=1787698929099&amp;fmt=png8-alpha&amp;dpr=on,1.5" alt="Robotic Arm" loading="lazy" itemprop="contentUrl" width="1920" height="1080">
+                    <meta itemprop="caption" content="Robotic Arm">
+                </div>
+            </div>
+        </a>
+    </div>
+
+                </div>
+            </div>
+        
+            <div class="cmp-cardgrid__container-item">
+                <div class="teaser">
+                    
     <div id="news-card-2504325593" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-corporation-to-participate-in-upcoming-investor-conference-august-2026.html" target="_self" aria-label="Intel Corporation to Participate in Upcoming Investor Conference">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Corporation to Participate in Upcoming Investor Conference</h2>
                 <div class="cmp-teaser__description">
                     <p>August 18,2026</p>
@@ -2849,7 +2873,7 @@
     <div id="news-card-2058636701" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-announces-upsize-and-pricing-of-20-billion-common-stock-offering.html" target="_self" aria-label="Intel Announces Upsize and Pricing of $20 Billion Common Stock Offering">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Announces Upsize and Pricing of $20 Billion Common Stock Offering</h2>
                 <div class="cmp-teaser__description">
                     <p>August 11,2026</p>
@@ -2873,7 +2897,7 @@
     <div id="news-card-1002858944" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-announces-proposed-15-billion-common-stock-offering.html" target="_self" aria-label="Intel Announces Proposed $15 Billion Common Stock Offering">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Announces Proposed $15 Billion Common Stock Offering</h2>
                 <div class="cmp-teaser__description">
                     <p>August 10,2026</p>
@@ -2921,7 +2945,7 @@
     <div id="news-card-1764773580" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-announces-leadership-appointment-to-strengthen-customer-engagement-and-accelerate-growth.html" target="_self" aria-label="Intel Announces Leadership Appointment to Strengthen Customer Engagement and Accelerate Growth">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Announces Leadership Appointment to Strengthen Customer Engagement and Accelerate Growth</h2>
                 <div class="cmp-teaser__description">
                     <p>August 07,2026</p>
@@ -2945,7 +2969,7 @@
     <div id="news-card-452347568" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/creating-pathways-to-semiconductor-careers-intel-launches-sepp.html" target="_self" aria-label="Creating Pathways to Semiconductor Careers: Intel Launches SEPP">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Creating Pathways to Semiconductor Careers: Intel Launches SEPP</h2>
                 <div class="cmp-teaser__description">
                     <p>August 06,2026</p>
@@ -2993,7 +3017,7 @@
     <div id="news-card-2373173125" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-reports-second-quarter-2026-financial-results.html" target="_self" aria-label="Intel Reports Second-Quarter 2026 Financial Results">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Reports Second-Quarter 2026 Financial Results</h2>
                 <div class="cmp-teaser__description">
                     <p>July 23,2026</p>
@@ -3059,30 +3083,6 @@
                 </div>
             </div>
         
-            <div class="cmp-cardgrid__container-item">
-                <div class="teaser">
-                    
-    <div id="news-card-3171740186" class="cmp-teaser" data-card-topic-tags="emtsubject:itinformationtechnology/aiartificialintelligence">
-        <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/artificial-intelligence/intel-google-cloud-announce-collaboration-to-accelerate-intel-ai-enabled-enterprise-transformation.html" target="_self" aria-label="Intel and Google Cloud Announce Collaboration to Accelerate Intel's AI-Enabled Enterprise Transformation">
-            <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Artificial Intelligence (AI)</p>
-                <h2 class="cmp-teaser__title">Intel and Google Cloud Announce Collaboration to Accelerate Intel's AI-Enabled Enterprise Transformation</h2>
-                <div class="cmp-teaser__description">
-                    <p>July 16,2026</p>
-                </div>
-            </div>
-            <div class="cmp-teaser__image">
-                 <div class="cmp-image" data-cmp-is="image" data-cmp-widths="375,768,1024,1440,1650" data-cmp-dmimage="" data-cmp-smartcroprendition="1080-1080" data-cmp-src="https://intelcorp.scene7.com/is/image/intelcorp/google-intel-lockup%3A1080-1080?ts=1785995918867&amp;fmt=png8-alpha&amp;dpr=off" data-asset-id="402f1f65-693e-47d5-80d1-c372cb3f3f6c" data-cmp-filereference="/content/dam/www/central-libraries/us/en/images/2026-08/google-intel-lockup.png" id="news-card-3171740186-image" data-cmp-hook-image="imageV3" itemscope itemtype="http://schema.org/ImageObject">
-                    <img class="cmp-image__image" src="https://intelcorp.scene7.com/is/image/intelcorp/google-intel-lockup:1080-1080?ts=1785995918867&amp;fmt=png8-alpha&amp;dpr=on,1.5" alt="Google Cloud and Intel logos" loading="lazy" itemprop="contentUrl" width="1280" height="720">
-                    <meta itemprop="caption" content="Google Lockup">
-                </div>
-            </div>
-        </a>
-    </div>
-
-                </div>
-            </div>
-        
     </div>
     <div class="pagination">
     <div class="cmp-pagination" data-items-per-page="8" data-current-page="1" data-page-label="Page" data-page-of-label="of" data-parent-component-selector="cmp-cardgrid" data-item-container-selector="cmp-cardgrid__container">
@@ -3126,6 +3126,30 @@
         
             <div id="aiartificialintelligence-tabpanel" role="tabpanel" aria-labelledby="aiartificialintelligence" tabindex="0" class="cmp-tabs__tabpanel" data-cmp-hook-tabs="tabpanel" data-cmp-data-layer="{&quot;tabs-e4add6585d-item-8b6476ff52&quot;:{&quot;@type&quot;:&quot;intelsites/components/core-components/tabs/item&quot;,&quot;repo:modifyDate&quot;:&quot;2026-10-14T14:56:22Z&quot;,&quot;dc:title&quot;:&quot;Artificial Intelligence&quot;}}"><div class="dynamiccardgrid ui-vs-top--bs"><div class="cmp-cardgrid-tracker cmp-cardgrid cmp-cardgrid--imagecard cmp-cardgrid--4-column component" id="dynamiccardgrid-8b6476ff52" data-component-id="2" data-component="card-grid">
     <div class="cmp-cardgrid__container">
+        
+            <div class="cmp-cardgrid__container-item">
+                <div class="teaser">
+                    
+    <div id="news-card-3009370238" class="cmp-teaser" data-card-topic-tags="emtsubject:itinformationtechnology/aiartificialintelligence">
+        <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/artificial-intelligence/intel-demonstrates-physical-ai-action-with-sap.html" target="_self" aria-label="From Task to Fulfillment – Intel and SAP Demonstrate Physical AI and the Autonomous Warehouse in Action">
+            <div class="cmp-teaser__content">
+                <p class="cmp-teaser__pretitle">Artificial Intelligence (AI)</p>
+                <h2 class="cmp-teaser__title">From Task to Fulfillment – Intel and SAP Demonstrate Physical AI and the Autonomous Warehouse in Action</h2>
+                <div class="cmp-teaser__description">
+                    <p>October 28,2026</p>
+                </div>
+            </div>
+            <div class="cmp-teaser__image">
+                 <div class="cmp-image" data-cmp-is="image" data-cmp-widths="375,768,1024,1440,1650" data-cmp-dmimage="" data-cmp-smartcroprendition="1080-1080" data-cmp-src="https://intelcorp.scene7.com/is/image/intelcorp/newsroom-sap-intel-1920x1080%3A1080-1080?ts=1793124437208&amp;fmt=png8-alpha&amp;dpr=off" data-asset-id="0d9828af-4273-47a1-aeb4-a93a69506237" data-cmp-filereference="/content/dam/www/central-libraries/us/en/images/2026-10/newsroom-sap-intel-1920x1080.png" id="news-card-3009370238-image" data-cmp-hook-image="imageV3" itemscope itemtype="http://schema.org/ImageObject">
+                    <img class="cmp-image__image" src="https://intelcorp.scene7.com/is/image/intelcorp/newsroom-sap-intel-1920x1080:1080-1080?ts=1793124437208&amp;fmt=png8-alpha&amp;dpr=on,1.5" loading="lazy" itemprop="contentUrl" width="1920" height="1080">
+                    <meta itemprop="caption" content="Intel SAP v2">
+                </div>
+            </div>
+        </a>
+    </div>
+
+                </div>
+            </div>
         
             <div class="cmp-cardgrid__container-item">
                 <div class="teaser">
@@ -3514,30 +3538,6 @@
             <div class="cmp-cardgrid__container-item">
                 <div class="teaser">
                     
-    <div id="news-card-1464494099" class="cmp-teaser" data-card-topic-tags="emtsubject:itinformationtechnology/aiartificialintelligence">
-        <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/artificial-intelligence/6-in-10-leaders-bet-big-on-robots-only-4-in-10-are-ready.html" target="_self" aria-label="Six in 10 Leaders Bet Big on Robots. Only Four in 10 Are Ready.">
-            <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Artificial Intelligence (AI)</p>
-                <h2 class="cmp-teaser__title">Six in 10 Leaders Bet Big on Robots. Only Four in 10 Are Ready.</h2>
-                <div class="cmp-teaser__description">
-                    <p>August 20,2026</p>
-                </div>
-            </div>
-            <div class="cmp-teaser__image">
-                 <div class="cmp-image" data-cmp-is="image" data-cmp-widths="375,768,1024,1440,1650" data-cmp-dmimage="" data-cmp-smartcroprendition="1080-1080" data-cmp-src="https://intelcorp.scene7.com/is/image/intelcorp/idl-id-489777%3A1080-1080?ts=1787698929099&amp;fmt=png8-alpha&amp;dpr=off" data-asset-id="61d6758e-5097-476b-9c83-c1287d85db0d" data-cmp-filereference="/content/dam/www/central-libraries/us/en/images/2026-08/idl-id-489777.png" id="news-card-1464494099-image" data-cmp-hook-image="imageV3" itemscope itemtype="http://schema.org/ImageObject">
-                    <img class="cmp-image__image" src="https://intelcorp.scene7.com/is/image/intelcorp/idl-id-489777:1080-1080?ts=1787698929099&amp;fmt=png8-alpha&amp;dpr=on,1.5" alt="Robotic Arm" loading="lazy" itemprop="contentUrl" width="1920" height="1080">
-                    <meta itemprop="caption" content="Robotic Arm">
-                </div>
-            </div>
-        </a>
-    </div>
-
-                </div>
-            </div>
-        
-            <div class="cmp-cardgrid__container-item">
-                <div class="teaser">
-                    
     <div id="news-card-3476112023" class="cmp-teaser" data-card-topic-tags="emtsubject:itinformationtechnology/aiartificialintelligence">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/opinion/count-the-work-not-just-the-cores.html" target="_self" aria-label="Count the Work Done. Not Just the Cores.">
             <div class="cmp-teaser__content">
@@ -3551,6 +3551,30 @@
                  <div class="cmp-image" data-cmp-is="image" data-cmp-widths="375,768,1024,1440,1650" data-cmp-dmimage="" data-cmp-smartcroprendition="1080-1080" data-cmp-src="https://intelcorp.scene7.com/is/image/intelcorp/adobestock-433186924-2-4x3%3A1080-1080?ts=1786655665209&amp;fmt=png8-alpha&amp;dpr=off" data-asset-id="8645070b-3661-459c-85cd-9cf911302e1c" data-cmp-filereference="/content/dam/www/central-libraries/us/en/images/2026-08/adobestock-433186924-2-4x3.jpg" id="news-card-3476112023-image" data-cmp-hook-image="imageV3" itemscope itemtype="http://schema.org/ImageObject">
                     <img class="cmp-image__image" src="https://intelcorp.scene7.com/is/image/intelcorp/adobestock-433186924-2-4x3:1080-1080?ts=1786655665209&amp;fmt=png8-alpha&amp;dpr=on,1.5" alt="Server room data center - 3d rendering" loading="lazy" itemprop="contentUrl" width="1280" height="720">
                     <meta itemprop="caption" content="Server room data center - 3d rendering">
+                </div>
+            </div>
+        </a>
+    </div>
+
+                </div>
+            </div>
+        
+            <div class="cmp-cardgrid__container-item">
+                <div class="teaser">
+                    
+    <div id="news-card-1464494099" class="cmp-teaser" data-card-topic-tags="emtsubject:itinformationtechnology/aiartificialintelligence">
+        <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/artificial-intelligence/6-in-10-leaders-bet-big-on-robots-only-4-in-10-are-ready.html" target="_self" aria-label="Six in 10 Leaders Bet Big on Robots. Only Four in 10 Are Ready.">
+            <div class="cmp-teaser__content">
+                <p class="cmp-teaser__pretitle">Artificial Intelligence (AI)</p>
+                <h2 class="cmp-teaser__title">Six in 10 Leaders Bet Big on Robots. Only Four in 10 Are Ready.</h2>
+                <div class="cmp-teaser__description">
+                    <p>August 20,2026</p>
+                </div>
+            </div>
+            <div class="cmp-teaser__image">
+                 <div class="cmp-image" data-cmp-is="image" data-cmp-widths="375,768,1024,1440,1650" data-cmp-dmimage="" data-cmp-smartcroprendition="1080-1080" data-cmp-src="https://intelcorp.scene7.com/is/image/intelcorp/idl-id-489777%3A1080-1080?ts=1787698929099&amp;fmt=png8-alpha&amp;dpr=off" data-asset-id="61d6758e-5097-476b-9c83-c1287d85db0d" data-cmp-filereference="/content/dam/www/central-libraries/us/en/images/2026-08/idl-id-489777.png" id="news-card-1464494099-image" data-cmp-hook-image="imageV3" itemscope itemtype="http://schema.org/ImageObject">
+                    <img class="cmp-image__image" src="https://intelcorp.scene7.com/is/image/intelcorp/idl-id-489777:1080-1080?ts=1787698929099&amp;fmt=png8-alpha&amp;dpr=on,1.5" alt="Robotic Arm" loading="lazy" itemprop="contentUrl" width="1920" height="1080">
+                    <meta itemprop="caption" content="Robotic Arm">
                 </div>
             </div>
         </a>
@@ -4055,30 +4079,6 @@
                  <div class="cmp-image" data-cmp-is="image" data-cmp-widths="375,768,1024,1440,1650" data-cmp-dmimage="" data-cmp-smartcroprendition="1080-1080" data-cmp-src="https://intelcorp.scene7.com/is/image/intelcorp/ces2026-event-4%3A1080-1080?ts=1787674936444&amp;fmt=png8-alpha&amp;dpr=off" data-asset-id="17e2a1c2-13db-4300-b04e-79273e320eab" data-cmp-filereference="/content/dam/www/central-libraries/us/en/images/2026-08/ces2026-event-4.jpg" id="news-card-3912312749-image" data-cmp-hook-image="imageV3" itemscope itemtype="http://schema.org/ImageObject">
                     <img class="cmp-image__image" src="https://intelcorp.scene7.com/is/image/intelcorp/ces2026-event-4:1080-1080?ts=1787674936444&amp;fmt=png8-alpha&amp;dpr=on,1.5" alt="At Intel's Series 3 launch, Intel showed off 9 engaging demos highlighting, gaming, AI, content creation, retail, edge and more – all running on PCs powered by Intel® Core™ Ultra Series 3." loading="lazy" itemprop="contentUrl" width="4176" height="2784">
                     <meta itemprop="caption" content="CES 2026 Event 4">
-                </div>
-            </div>
-        </a>
-    </div>
-
-                </div>
-            </div>
-        
-            <div class="cmp-cardgrid__container-item">
-                <div class="teaser">
-                    
-    <div id="news-card-1599149542" class="cmp-teaser" data-card-topic-tags="emtsubject:itinformationtechnology/aiartificialintelligence">
-        <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/artificial-intelligence/2025-holiday-buyers-guide.html" target="_self" aria-label="2025 Holiday Buyers Guide">
-            <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Artificial Intelligence (AI)</p>
-                <h2 class="cmp-teaser__title">2025 Holiday Buyers Guide</h2>
-                <div class="cmp-teaser__description">
-                    <p>November 26,2025</p>
-                </div>
-            </div>
-            <div class="cmp-teaser__image">
-                 <div class="cmp-image" data-cmp-is="image" data-cmp-widths="375,768,1024,1440,1650" data-cmp-dmimage="" data-cmp-smartcroprendition="1080-1080" data-cmp-src="https://intelcorp.scene7.com/is/image/intelcorp/hdr-intel-2025-holiday-buyers-guide-scaled%3A1080-1080?ts=1785995684745&amp;fmt=png8-alpha&amp;dpr=off" data-asset-id="405da122-a22c-4715-9477-354f955cd8b6" data-cmp-filereference="/content/dam/www/central-libraries/us/en/images/2026-08/hdr-intel-2025-holiday-buyers-guide-scaled.jpg" id="news-card-1599149542-image" data-cmp-hook-image="imageV3" itemscope itemtype="http://schema.org/ImageObject">
-                    <img class="cmp-image__image" src="https://intelcorp.scene7.com/is/image/intelcorp/hdr-intel-2025-holiday-buyers-guide-scaled:1080-1080?ts=1785995684745&amp;fmt=png8-alpha&amp;dpr=on,1.5" alt="2025 Holiday Buyers Guide" loading="lazy" itemprop="contentUrl" width="2560" height="1426">
-                    <meta itemprop="caption" content="Hdr intel 2025 Holiday Buyers Guide Scaled">
                 </div>
             </div>
         </a>
@@ -4901,7 +4901,7 @@
     <div id="news-card-741535158" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-oracle-collaborate-on-enterprise-and-agentic-ai.html" target="_self" aria-label="Intel and Oracle Plan Expanded Collaboration to Support Enterprise and Agentic AI on Oracle Cloud Infrastructure">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel and Oracle Plan Expanded Collaboration to Support Enterprise and Agentic AI on Oracle Cloud Infrastructure</h2>
                 <div class="cmp-teaser__description">
                     <p>October 27,2026</p>
@@ -4925,7 +4925,7 @@
     <div id="news-card-2707038399" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-classiq-accelerate-scalable-quantum-computing.html" target="_self" aria-label="Intel to Acquire Classiq to Create a Full-stack Quantum Computing Platform">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel to Acquire Classiq to Create a Full-stack Quantum Computing Platform</h2>
                 <div class="cmp-teaser__description">
                     <p>October 26,2026</p>
@@ -4949,7 +4949,7 @@
     <div id="news-card-1247681386" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-reports-third-quarter-2026-financial-results.html" target="_self" aria-label="Intel to Report Third-Quarter 2026 Financial Results">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel to Report Third-Quarter 2026 Financial Results</h2>
                 <div class="cmp-teaser__description">
                     <p>October 06,2026</p>
@@ -4973,7 +4973,7 @@
     <div id="news-card-158746393" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/foundation-pltw-expand-semiconductor-careers.html" target="_self" aria-label="Intel Foundation and PLTW Expand Pathways to Semiconductor Careers">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Foundation and PLTW Expand Pathways to Semiconductor Careers</h2>
                 <div class="cmp-teaser__description">
                     <p>September 01,2026</p>
@@ -4997,7 +4997,7 @@
     <div id="news-card-2504325593" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-corporation-to-participate-in-upcoming-investor-conference-august-2026.html" target="_self" aria-label="Intel Corporation to Participate in Upcoming Investor Conference">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Corporation to Participate in Upcoming Investor Conference</h2>
                 <div class="cmp-teaser__description">
                     <p>August 18,2026</p>
@@ -5021,7 +5021,7 @@
     <div id="news-card-2058636701" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-announces-upsize-and-pricing-of-20-billion-common-stock-offering.html" target="_self" aria-label="Intel Announces Upsize and Pricing of $20 Billion Common Stock Offering">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Announces Upsize and Pricing of $20 Billion Common Stock Offering</h2>
                 <div class="cmp-teaser__description">
                     <p>August 11,2026</p>
@@ -5045,7 +5045,7 @@
     <div id="news-card-1002858944" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-announces-proposed-15-billion-common-stock-offering.html" target="_self" aria-label="Intel Announces Proposed $15 Billion Common Stock Offering">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Announces Proposed $15 Billion Common Stock Offering</h2>
                 <div class="cmp-teaser__description">
                     <p>August 10,2026</p>
@@ -5069,7 +5069,7 @@
     <div id="news-card-1764773580" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-announces-leadership-appointment-to-strengthen-customer-engagement-and-accelerate-growth.html" target="_self" aria-label="Intel Announces Leadership Appointment to Strengthen Customer Engagement and Accelerate Growth">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Announces Leadership Appointment to Strengthen Customer Engagement and Accelerate Growth</h2>
                 <div class="cmp-teaser__description">
                     <p>August 07,2026</p>
@@ -5093,7 +5093,7 @@
     <div id="news-card-452347568" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/creating-pathways-to-semiconductor-careers-intel-launches-sepp.html" target="_self" aria-label="Creating Pathways to Semiconductor Careers: Intel Launches SEPP">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Creating Pathways to Semiconductor Careers: Intel Launches SEPP</h2>
                 <div class="cmp-teaser__description">
                     <p>August 06,2026</p>
@@ -5117,7 +5117,7 @@
     <div id="news-card-2373173125" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-reports-second-quarter-2026-financial-results.html" target="_self" aria-label="Intel Reports Second-Quarter 2026 Financial Results">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Reports Second-Quarter 2026 Financial Results</h2>
                 <div class="cmp-teaser__description">
                     <p>July 23,2026</p>
@@ -5141,7 +5141,7 @@
     <div id="news-card-506973388" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-to-report-second-quarter-2026-financial-results.html" target="_self" aria-label="Intel to Report Second-Quarter 2026 Financial Results">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel to Report Second-Quarter 2026 Financial Results</h2>
                 <div class="cmp-teaser__description">
                     <p>June 30,2026</p>
@@ -5165,7 +5165,7 @@
     <div id="news-card-1515537096" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-announces-leadership-appointment-at-intel-foundry-to-accelerate-development-and-manufacturing.html" target="_self" aria-label="Intel Announces Leadership Appointment at Intel Foundry to Accelerate Development and Manufacturing">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Announces Leadership Appointment at Intel Foundry to Accelerate Development and Manufacturing</h2>
                 <div class="cmp-teaser__description">
                     <p>June 18,2026</p>
@@ -5189,7 +5189,7 @@
     <div id="news-card-1947671367" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/ceo-letter-2025-26-intel-corporate-responsibility-report.html" target="_self" aria-label="CEO Letter: 2025-26 Intel Corporate Responsibility Report">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">CEO Letter: 2025-26 Intel Corporate Responsibility Report</h2>
                 <div class="cmp-teaser__description">
                     <p>June 17,2026</p>
@@ -5213,7 +5213,7 @@
     <div id="news-card-2634501420" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-advances-growth-in-ai-era-2025-2026-csr-report.html" target="_self" aria-label="Intel Advances Responsible Business Practices and AI-Driven Growth in 2025-2026 Corporate Responsibility Report">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Advances Responsible Business Practices and AI-Driven Growth in 2025-2026 Corporate Responsibility Report</h2>
                 <div class="cmp-teaser__description">
                     <p>June 17,2026</p>
@@ -5237,7 +5237,7 @@
     <div id="news-card-2738420288" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intels-2025-outstanding-researcher-awards-honor-10-academic-innovators.html" target="_self" aria-label="Intel's 2025 Outstanding Researcher Awards Honor 10 Academic Innovators">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel's 2025 Outstanding Researcher Awards Honor 10 Academic Innovators</h2>
                 <div class="cmp-teaser__description">
                     <p>May 21,2026</p>
@@ -5261,7 +5261,7 @@
     <div id="news-card-4018746662" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-named-official-compute-partner-of-mclaren-racing.html" target="_self" aria-label="Intel Named Official Compute Partner of McLaren Racing">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Named Official Compute Partner of McLaren Racing</h2>
                 <div class="cmp-teaser__description">
                     <p>May 14,2026</p>
@@ -5285,7 +5285,7 @@
     <div id="news-card-406940830" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-corporation-to-participate-in-upcoming-investor-conferences-may-2026.html" target="_self" aria-label="Intel Corporation to Participate in Upcoming Investor Conferences">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Corporation to Participate in Upcoming Investor Conferences</h2>
                 <div class="cmp-teaser__description">
                     <p>May 05,2026</p>
@@ -5309,7 +5309,7 @@
     <div id="news-card-1325413249" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-client-computing-and-innovation-leadership-news-may-2026.html" target="_self" aria-label="Intel Announces Leadership Appointments to Advance Client Computing and Enable Future Innovation">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Announces Leadership Appointments to Advance Client Computing and Enable Future Innovation</h2>
                 <div class="cmp-teaser__description">
                     <p>May 04,2026</p>
@@ -5333,7 +5333,7 @@
     <div id="news-card-2092655873" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-reports-first-quarter-2026-financial-results.html" target="_self" aria-label="Intel Reports First-Quarter 2026 Financial Results">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Reports First-Quarter 2026 Financial Results</h2>
                 <div class="cmp-teaser__description">
                     <p>April 23,2026</p>
@@ -5357,7 +5357,7 @@
     <div id="news-card-178075462" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-appoints-aparna-bawa-as-executive-vice-president-and-chief-legal-people-officer.html" target="_self" aria-label="Intel Appoints Aparna Bawa as Executive Vice President and Chief Legal &amp; People Officer">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Appoints Aparna Bawa as Executive Vice President and Chief Legal &amp; People Officer</h2>
                 <div class="cmp-teaser__description">
                     <p>April 02,2026</p>
@@ -5381,7 +5381,7 @@
     <div id="news-card-575263756" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-repurchase-49-equity-interest-ireland-fab-joint-venture.html" target="_self" aria-label="Intel to Repurchase 49% Equity Interest in Ireland Fab Joint Venture">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel to Repurchase 49% Equity Interest in Ireland Fab Joint Venture</h2>
                 <div class="cmp-teaser__description">
                     <p>April 01,2026</p>
@@ -5405,7 +5405,7 @@
     <div id="news-card-2586645210" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-to-report-first-quarter-2026-financial-results.html" target="_self" aria-label="Intel to Report First-Quarter 2026 Financial Results">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel to Report First-Quarter 2026 Financial Results</h2>
                 <div class="cmp-teaser__description">
                     <p>March 31,2026</p>
@@ -5429,7 +5429,7 @@
     <div id="news-card-36489126" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-named-one-of-americas-most-innovative-companies-by-fortune.html" target="_self" aria-label="Intel Named One of America's Most Innovative Companies by Fortune">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Named One of America's Most Innovative Companies by Fortune</h2>
                 <div class="cmp-teaser__description">
                     <p>March 26,2026</p>
@@ -5453,7 +5453,7 @@
     <div id="news-card-1335040189" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-announces-2026-epic-supplier-award-recipients.html" target="_self" aria-label="Intel Announces 2026 EPIC Supplier Award Recipients">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Announces 2026 EPIC Supplier Award Recipients</h2>
                 <div class="cmp-teaser__description">
                     <p>March 19,2026</p>
@@ -5477,7 +5477,7 @@
     <div id="news-card-1372748963" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-board-chair-frank-d-yeary-to-retire-following-annual-meeting-dr-craig-h-barratt-elected-as-chair.html" target="_self" aria-label="Intel Board Chair Frank D. Yeary to Retire Following Annual Meeting; Dr. Craig H. Barratt Elected as Chair">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Board Chair Frank D. Yeary to Retire Following Annual Meeting; Dr. Craig H. Barratt Elected as Chair</h2>
                 <div class="cmp-teaser__description">
                     <p>March 03,2026</p>
@@ -5501,7 +5501,7 @@
     <div id="news-card-868628875" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-to-participate-in-morgan-stanley-conference.html" target="_self" aria-label="Intel Corporation to Participate in Upcoming Investor Conference">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Corporation to Participate in Upcoming Investor Conference</h2>
                 <div class="cmp-teaser__description">
                     <p>February 18,2026</p>
@@ -5525,7 +5525,7 @@
     <div id="news-card-32044848" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-to-match-federal-contributions-under-trump-accounts-program-for-employees-families.html" target="_self" aria-label="Intel to Match Federal Contributions Under Trump Accounts Program for Employees’ Families">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel to Match Federal Contributions Under Trump Accounts Program for Employees’ Families</h2>
                 <div class="cmp-teaser__description">
                     <p>January 27,2026</p>
@@ -5549,7 +5549,7 @@
     <div id="news-card-2886811622" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-reports-fourth-quarter-and-full-year-2025-financial-results.html" target="_self" aria-label="Intel Reports Fourth-Quarter and Full-Year 2025 Financial Results">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Reports Fourth-Quarter and Full-Year 2025 Financial Results</h2>
                 <div class="cmp-teaser__description">
                     <p>January 22,2026</p>
@@ -5573,7 +5573,7 @@
     <div id="news-card-2786395373" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-to-report-fourth-quarter-and-full-year-2025-financial-results.html" target="_self" aria-label="Intel to Report Fourth-Quarter and Full-Year 2025 Financial Results">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel to Report Fourth-Quarter and Full-Year 2025 Financial Results</h2>
                 <div class="cmp-teaser__description">
                     <p>January 07,2026</p>
@@ -5597,7 +5597,7 @@
     <div id="news-card-3106275796" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-announces-senior-leadership-appointments-in-government-affairs-marketing-communications-and-advanced-technology-strategy.html" target="_self" aria-label="Intel Announces Senior Leadership Appointments in Government Affairs, Marketing &amp; Communications and Advanced Technology Strategy">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Announces Senior Leadership Appointments in Government Affairs, Marketing &amp; Communications and Advanced Technology Strategy</h2>
                 <div class="cmp-teaser__description">
                     <p>December 15,2025</p>
@@ -5621,7 +5621,7 @@
     <div id="news-card-1767506943" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-appoints-cindy-stoddard-as-senior-vice-president-and-chief-information-officer.html" target="_self" aria-label="Intel Appoints Cindy Stoddard as Senior Vice President and Chief Information Officer">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Appoints Cindy Stoddard as Senior Vice President and Chief Information Officer</h2>
                 <div class="cmp-teaser__description">
                     <p>November 18,2025</p>
@@ -5645,7 +5645,7 @@
     <div id="news-card-1709072862" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-to-participate-in-upcoming-investor-conferences.html" target="_self" aria-label="Intel Corporation to Participate in Upcoming Investor Conferences">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Corporation to Participate in Upcoming Investor Conferences</h2>
                 <div class="cmp-teaser__description">
                     <p>November 12,2025</p>
@@ -5669,7 +5669,7 @@
     <div id="news-card-2438063179" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-appoints-dr-craig-h-barratt-to-board-of-directors.html" target="_self" aria-label="Intel Appoints Dr. Craig H. Barratt to Board of Directors">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Appoints Dr. Craig H. Barratt to Board of Directors</h2>
                 <div class="cmp-teaser__description">
                     <p>November 10,2025</p>
@@ -5693,7 +5693,7 @@
     <div id="news-card-2092153257" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-reports-third-quarter-2025-financial-results.html" target="_self" aria-label="Intel Reports Third-Quarter 2025 Financial Results">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Reports Third-Quarter 2025 Financial Results</h2>
                 <div class="cmp-teaser__description">
                     <p>October 23,2025</p>
@@ -5717,7 +5717,7 @@
     <div id="news-card-2586142594" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-to-report-third-quarter-2025-financial-results.html" target="_self" aria-label="Intel to Report Third-Quarter 2025 Financial Results">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel to Report Third-Quarter 2025 Financial Results</h2>
                 <div class="cmp-teaser__description">
                     <p>October 08,2025</p>
@@ -5741,7 +5741,7 @@
     <div id="news-card-3359921753" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/webcast-replay-nvidia-and-intel-ceos-detail-new-collaboration.html" target="_self" aria-label="Webcast Replay: NVIDIA and Intel CEOs detail new collaboration">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Webcast Replay: NVIDIA and Intel CEOs detail new collaboration</h2>
                 <div class="cmp-teaser__description">
                     <p>September 18,2025</p>
@@ -5765,7 +5765,7 @@
     <div id="news-card-622803677" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-announces-key-leadership-appointments.html" target="_self" aria-label="Intel Announces Key Leadership Appointments to Accelerate Innovation and Strengthen Execution">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Announces Key Leadership Appointments to Accelerate Innovation and Strengthen Execution</h2>
                 <div class="cmp-teaser__description">
                     <p>September 08,2025</p>
@@ -5789,7 +5789,7 @@
     <div id="news-card-3849483598" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-and-trump-administration-reach-historic-agreement.html" target="_self" aria-label="Intel and Trump Administration Reach Historic Agreement to Accelerate American Technology and Manufacturing Leadership">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel and Trump Administration Reach Historic Agreement to Accelerate American Technology and Manufacturing Leadership</h2>
                 <div class="cmp-teaser__description">
                     <p>August 22,2025</p>
@@ -5813,7 +5813,7 @@
     <div id="news-card-1021205512" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-corporation-to-participate-in-upcoming-investor-conferences-8-21-25.html" target="_self" aria-label="Intel Corporation to Participate in Upcoming Investor Conferences">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">Intel Corporation to Participate in Upcoming Investor Conferences</h2>
                 <div class="cmp-teaser__description">
                     <p>August 21,2025</p>
@@ -5837,7 +5837,7 @@
     <div id="news-card-959957869" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/softbank-group-and-intel-corporation-sign-2b-investment-agreement.html" target="_self" aria-label="SoftBank Group and Intel Corporation Sign $2B Investment Agreement">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Corporate Information</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation</p>
                 <h2 class="cmp-teaser__title">SoftBank Group and Intel Corporation Sign $2B Investment Agreement</h2>
                 <div class="cmp-teaser__description">
                     <p>August 18,2025</p>
@@ -6333,7 +6333,7 @@
     <div id="news-card-213037277" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/opinion/building-america-capacity-to-innovate.html" target="_self" aria-label="Building America's Capacity to Innovate ">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">Building America's Capacity to Innovate </h2>
                 <div class="cmp-teaser__description">
                     <p>October 21,2026</p>
@@ -6357,7 +6357,7 @@
     <div id="news-card-1919374434" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/intel-foundry/how-intel-researchers-are-advancing-chemistry-behind-high-na-euv-tools.html" target="_self" aria-label="How Intel Researchers Are Advancing the Chemistry Behind High-NA EUV Tools">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">How Intel Researchers Are Advancing the Chemistry Behind High-NA EUV Tools</h2>
                 <div class="cmp-teaser__description">
                     <p>September 17,2026</p>
@@ -6381,7 +6381,7 @@
     <div id="news-card-2375512538" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/intel-foundry/intel-foundry-asml-accelerate-industry-readiness-for-high-na-euv.html" target="_self" aria-label="Intel Foundry and ASML Accelerate Industry Readiness for High-NA EUV">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">Intel Foundry and ASML Accelerate Industry Readiness for High-NA EUV</h2>
                 <div class="cmp-teaser__description">
                     <p>September 07,2026</p>
@@ -6405,7 +6405,7 @@
     <div id="news-card-2528124827" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/intel-foundry/intels-us-advanced-packaging-enables-next-generation-ai-semiconductors.html" target="_self" aria-label="Intel's U.S. Advanced Packaging Enables Next-Generation AI Semiconductors">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">Intel's U.S. Advanced Packaging Enables Next-Generation AI Semiconductors</h2>
                 <div class="cmp-teaser__description">
                     <p>July 29,2026</p>
@@ -6429,7 +6429,7 @@
     <div id="news-card-3664286184" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/intel-foundry/intel-completes-ramp-c-program-accelerating-momentum-for-secure-enclave.html" target="_self" aria-label="Intel Completes RAMP-C Program, Accelerating Momentum for Secure Enclave">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">Intel Completes RAMP-C Program, Accelerating Momentum for Secure Enclave</h2>
                 <div class="cmp-teaser__description">
                     <p>July 28,2026</p>
@@ -6453,7 +6453,7 @@
     <div id="news-card-2305681983" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-and-lens-technology-collaborate-to-enable-advanced-semiconductor-packaging-for-the-ai-era.html" target="_self" aria-label="Intel and Lens Technology Collaborate to Enable Advanced Semiconductor Packaging for the AI Era">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">Intel and Lens Technology Collaborate to Enable Advanced Semiconductor Packaging for the AI Era</h2>
                 <div class="cmp-teaser__description">
                     <p>July 24,2026</p>
@@ -6477,7 +6477,7 @@
     <div id="news-card-3675205504" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-foundry-details-process-milestones-future-innovation-at-vlsi-symposium.html" target="_self" aria-label="Intel Foundry Details Process Milestones and Future Innovation at VLSI Symposium">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">Intel Foundry Details Process Milestones and Future Innovation at VLSI Symposium</h2>
                 <div class="cmp-teaser__description">
                     <p>June 16,2026</p>
@@ -6501,7 +6501,7 @@
     <div id="news-card-2317403698" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/meet-the-inventor-of-emib.html" target="_self" aria-label="Meet the Intel Pioneer Behind EMIB Chip Packaging">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">Meet the Intel Pioneer Behind EMIB Chip Packaging</h2>
                 <div class="cmp-teaser__description">
                     <p>May 28,2026</p>
@@ -6525,7 +6525,7 @@
     <div id="news-card-2993441342" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/burning-buildings-pave-the-way-to-advances-in-ai.html" target="_self" aria-label="How the Science of Burning Buildings Paves the Way to Advances in AI">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">How the Science of Burning Buildings Paves the Way to Advances in AI</h2>
                 <div class="cmp-teaser__description">
                     <p>May 27,2025</p>
@@ -6549,7 +6549,7 @@
     <div id="news-card-3403204588" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/device-engineering-ambitions-real-silicon-collide.html" target="_self" aria-label="Device Engineering: Where Ambitions and Real Silicon Collide">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">Device Engineering: Where Ambitions and Real Silicon Collide</h2>
                 <div class="cmp-teaser__description">
                     <p>May 07,2025</p>
@@ -6573,7 +6573,7 @@
     <div id="news-card-3072957068" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/postcard-from-intel-foundry-direct-connect-the-ultimate-factory-tour.html" target="_self" aria-label="Postcard from Intel Foundry Direct Connect: The Ultimate Factory Tour">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">Postcard from Intel Foundry Direct Connect: The Ultimate Factory Tour</h2>
                 <div class="cmp-teaser__description">
                     <p>April 30,2025</p>
@@ -6597,7 +6597,7 @@
     <div id="news-card-81049499" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-foundry-gathers-customers-partners-outlines-priorities.html" target="_self" aria-label="Intel Foundry Gathers Customers and Partners, Outlines Priorities">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">Intel Foundry Gathers Customers and Partners, Outlines Priorities</h2>
                 <div class="cmp-teaser__description">
                     <p>April 29,2025</p>
@@ -6621,7 +6621,7 @@
     <div id="news-card-1068444476" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/postcard-from-intel-foundry-direct-connect-chip-roams-intel-factories.html" target="_self" aria-label="Postcard from Intel Foundry Direct Connect: Chip Roams Intel Factories">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">Postcard from Intel Foundry Direct Connect: Chip Roams Intel Factories</h2>
                 <div class="cmp-teaser__description">
                     <p>April 29,2025</p>
@@ -6642,34 +6642,10 @@
             <div class="cmp-cardgrid__container-item">
                 <div class="teaser">
                     
-    <div id="news-card-3717369968" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
-        <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/direct-connect-2025-keynote-livestream-replay.html" target="_self" aria-label="Intel Foundry Direct Connect Keynote: Earning Customers' Trust (Replay)">
-            <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
-                <h2 class="cmp-teaser__title">Intel Foundry Direct Connect Keynote: Earning Customers' Trust (Replay)</h2>
-                <div class="cmp-teaser__description">
-                    <p>April 29,2025</p>
-                </div>
-            </div>
-            <div class="cmp-teaser__image">
-                 <div class="cmp-image" data-cmp-is="image" data-cmp-widths="375,768,1024,1440,1650" data-cmp-dmimage="" data-cmp-smartcroprendition="1080-1080" data-cmp-src="https://intelcorp.scene7.com/is/image/intelcorp/intel-foundry-logo-1080x1080%3A1080-1080?ts=1785866675523&amp;fmt=png8-alpha&amp;dpr=off" data-asset-id="2c7c0e64-91f1-42ed-8d89-3c30f57a204c" data-cmp-filereference="/content/dam/www/central-libraries/us/en/images/2026-08/intel-foundry-logo-1080x1080.png" id="news-card-3717369968-image" data-cmp-hook-image="imageV3" itemscope itemtype="http://schema.org/ImageObject">
-                    <img class="cmp-image__image" src="https://intelcorp.scene7.com/is/image/intelcorp/intel-foundry-logo-1080x1080:1080-1080?ts=1785866675523&amp;fmt=png8-alpha&amp;dpr=on,1.5" alt="Intel Foundry Logo 1080x1080" loading="lazy" itemprop="contentUrl" width="2160" height="2160">
-                    <meta itemprop="caption" content="Intel Foundry Logo 1080x1080">
-                </div>
-            </div>
-        </a>
-    </div>
-
-                </div>
-            </div>
-        
-            <div class="cmp-cardgrid__container-item">
-                <div class="teaser">
-                    
     <div id="news-card-2535768173" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/press-hub/press-kit/corporate/intel-foundry-direct-connect-2025.html" target="_self" aria-label="Press Kit: Intel Foundry Direct Connect 2025">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">Press Kit: Intel Foundry Direct Connect 2025</h2>
                 <div class="cmp-teaser__description">
                     <p>April 29,2025</p>
@@ -6690,10 +6666,34 @@
             <div class="cmp-cardgrid__container-item">
                 <div class="teaser">
                     
+    <div id="news-card-3717369968" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
+        <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/direct-connect-2025-keynote-livestream-replay.html" target="_self" aria-label="Intel Foundry Direct Connect Keynote: Earning Customers' Trust (Replay)">
+            <div class="cmp-teaser__content">
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
+                <h2 class="cmp-teaser__title">Intel Foundry Direct Connect Keynote: Earning Customers' Trust (Replay)</h2>
+                <div class="cmp-teaser__description">
+                    <p>April 29,2025</p>
+                </div>
+            </div>
+            <div class="cmp-teaser__image">
+                 <div class="cmp-image" data-cmp-is="image" data-cmp-widths="375,768,1024,1440,1650" data-cmp-dmimage="" data-cmp-smartcroprendition="1080-1080" data-cmp-src="https://intelcorp.scene7.com/is/image/intelcorp/intel-foundry-logo-1080x1080%3A1080-1080?ts=1785866675523&amp;fmt=png8-alpha&amp;dpr=off" data-asset-id="2c7c0e64-91f1-42ed-8d89-3c30f57a204c" data-cmp-filereference="/content/dam/www/central-libraries/us/en/images/2026-08/intel-foundry-logo-1080x1080.png" id="news-card-3717369968-image" data-cmp-hook-image="imageV3" itemscope itemtype="http://schema.org/ImageObject">
+                    <img class="cmp-image__image" src="https://intelcorp.scene7.com/is/image/intelcorp/intel-foundry-logo-1080x1080:1080-1080?ts=1785866675523&amp;fmt=png8-alpha&amp;dpr=on,1.5" alt="Intel Foundry Logo 1080x1080" loading="lazy" itemprop="contentUrl" width="2160" height="2160">
+                    <meta itemprop="caption" content="Intel Foundry Logo 1080x1080">
+                </div>
+            </div>
+        </a>
+    </div>
+
+                </div>
+            </div>
+        
+            <div class="cmp-cardgrid__container-item">
+                <div class="teaser">
+                    
     <div id="news-card-2592097948" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/intelfoundry">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/news/corporate/intel-ceo-lip-bu-tan-headline-intel-foundry-direct-connect.html" target="_self" aria-label="Intel CEO Lip-Bu Tan to Headline Intel Foundry Direct Connect">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Intel Foundry</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/intelfoundry</p>
                 <h2 class="cmp-teaser__title">Intel CEO Lip-Bu Tan to Headline Intel Foundry Direct Connect</h2>
                 <div class="cmp-teaser__description">
                     <p>April 03,2025</p>
@@ -6853,7 +6853,7 @@
     <div id="news-card-1887385060" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/manufacturingatintel">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/tech101/manufacturing/understanding-moores-law.html" target="_self" aria-label="Understanding Moore's Law">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Manufacturing at Intel</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/manufacturingatintel</p>
                 <h2 class="cmp-teaser__title">Understanding Moore's Law</h2>
                 <div class="cmp-teaser__description">
                     <p>April 09,2025</p>
@@ -6877,7 +6877,7 @@
     <div id="news-card-32077411" class="cmp-teaser" data-card-topic-tags="emtsubject:design/corporateinformation/manufacturingatintel">
         <a class="cmp-teaser__link" href="/content/www/us/en/newsroom/tech101/manufacturing/how-silicon-die-become-chip-packages.html" target="_self" aria-label="How Silicon Die Become Chip Packages">
             <div class="cmp-teaser__content">
-                <p class="cmp-teaser__pretitle">Manufacturing at Intel</p>
+                <p class="cmp-teaser__pretitle">emtsubject:design/corporateinformation/manufacturingatintel</p>
                 <h2 class="cmp-teaser__title">How Silicon Die Become Chip Packages</h2>
                 <div class="cmp-teaser__description">
                     <p>February 19,2025</p>

@@ -2,6 +2,395 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.AR",
+    "title": "SLICE-CiM: Selective Layer-wise Inference Control Engine with Confidence-Based Early Exit for SRAM based Digital Compute-in-Memory",
+    "url": "https://arxiv.org/abs/2610.37601v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Digital SRAM compute-in-memory (CIM) macros enable energy-efficient CNN inference by eliminating off-chip weight transfers; however, peripheral control logic introduces three inefficiencies: bit- slice over-activation at reduced precision (L1), unnecessary accumula- tion depth (L2), and idle precision-transition stalls (L3). To address these, we present four synthesizable peripheral blocks: a Flush-Merge Enable (FME) controller, a Confidence-Based Early-Exit (EE) module, a Precision Register wit",
+    "authors": [
+      "Pratham Sharma",
+      "Mohd Faisal Khan",
+      "Santosh Kumar Vishvakarma"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Back-End-Of-Line Integration of 2-Terminal Ferroelectric Hafnia Synaptic Weights on Commercial CMOS Process",
+    "url": "https://arxiv.org/abs/2610.37530v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Functionalising the back-end-of-line (BEOL) of CMOS with emerging materials is a key route to neural network accelerators and neuromorphic systems. In this work, we demonstrate for the first time the integration of 2-terminal ferroelectric synaptic weights in the BEOL of as-delivered commercial 180 nm CMOS dies. A novel material stack is proposed, in which a WOx/[HfO2-ZrO2] bilayer is sandwiched between TiN and Mo electrodes. For devices annealed at 450 °C, programming below 1.8 V is achieved wi",
+    "authors": [
+      "Alexander Flasby",
+      "Anwesha Panda",
+      "Nathan Savoia",
+      "Laura Bégon-Lours"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Coordinated and Uncoordinated Channel Tracking for High-Rate IoT in Distributed Massive MIMO With Low-Resolution ADCs",
+    "url": "https://arxiv.org/abs/2610.37508v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "This paper investigates dynamic channel tracking for high-rate Internet of things (IoT) in distributed massive multiple-input multiple-output (mMIMO) with low-resolution analog-to-digital converters (ADCs), where pilot and data activities are decoupled, pilots are reused, and mobile channels evolve across access slots. We hereby develop a quantization-aware joint coordinated Kalman filter (Q-JCKF) for known pilot activity and a quantization-aware distributed probabilistic data association filter",
+    "authors": [
+      "Hediyeh Soltanizadeh",
+      "Ardavan Rahimian"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.NI",
+    "title": "Keeping Inference in the Radio: Design and Measurement of a Spiking Accelerator for mmWave ISAC Activity Recognition",
+    "url": "https://arxiv.org/abs/2610.37480v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Integrated sensing and communication allows wireless networks to recognize human activity from the channel estimates that the receiver computes anyway. The inference, however, runs on the general-purpose processors of the base station, access point or handset, which are the first components a device switches off to save energy. Always-on sensing therefore requires a classifier that is small enough to remain powered while the rest of the system sleeps. We investigate whether Spiking Neural Networ",
+    "authors": [
+      "Anthony Sánchez",
+      "Rafael Ruiz",
+      "José A. Belloch",
+      "Jesús O. Lacruz",
+      "Joerg Widmer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Kernel Performance Engineering under Physical Non-Idealities",
+    "url": "https://arxiv.org/abs/2610.37466v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Physical non-idealities in integrated circuit (IC) design and fabrication are concealed by conventional hardware abstractions, yet they can limit kernel performance and obscure optimization opportunities. Using distributed shared memory (DSMEM) on NVIDIA H100 GPUs as a case study, we show how floorsweeping restricts hardware resources available for clustered execution, potentially offsetting the benefits of reduced data movement enabled by DSMEM. Guided by these insights, we develop a wave-aware",
+    "authors": [
+      "Supun Kuruppu",
+      "Pranav Dangi",
+      "Wei Li",
+      "Zhenyu Bai",
+      "Tulika Mitra"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "5G Sensing for Human Pose Estimation with PRS-based CSI: An Experimental Demonstration",
+    "url": "https://arxiv.org/abs/2610.37435v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "This paper presents an experimental study of device- free 2D human pose estimation using Channel State Information (CSI) extracted from downlink Fifth Generation (5G) Positioning Reference Signal (PRS). The proposed system employs a Next Generation Node Base (gNB) transmitting PRS to a User Equipment (UE) equipped with two receive antennas to measure the radio channel. The CSI is estimated using a least-squares (LS) method, and processed through amplitude smoothing and phase calibration. The res",
+    "authors": [
+      "Zhaorui Yin",
+      "Pietro Morri",
+      "Mattia Brambilla",
+      "Monica Nicoli"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.RO",
+    "title": "AuRaSim: A Ray-Tracing Based Automotive FMCW Radar Simulator for Dynamic Scenarios",
+    "url": "https://arxiv.org/abs/2610.37403v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Modern simulators can generate synthetic camera and LiDAR data with accurate annotations for downstream tasks. In contrast, automotive radar simulation remains less mature because it requires not only a 3D engine to model dynamic objects in the scenes but also electromagnetic material properties, antenna configurations, wave propagation mechanisms, and coherent signal synthesis. Existing frameworks are either proprietary or overly simplified, limiting the scalability of radar raw measurements. T",
+    "authors": [
+      "Zhaoze Wang",
+      "Changxu Zhang",
+      "Tai Fei",
+      "Christopher Grimm",
+      "Yi Jin",
+      "Claas Tebruegge",
+      "Markus Gardill"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "JEPA-Inspired Latent Field Prediction for Sparse-Pilot MIMO-OFDM Channel Reconstruction",
+    "url": "https://arxiv.org/abs/2610.37391v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Accurate acquisition of full channel state information (CSI) is essential for multiple-input multiple-output orthogonal frequency-division multiplexing (MIMO-OFDM) wireless systems, while dense pilot-based estimation incurs substantial overhead. Directly minimizing the prediction error over raw CSI coefficients is fragile in realistic propagation environments, since small-scale fading, mobility, local scattering, and small spatial perturbations can induce large phase-sensitive variations. Nevert",
+    "authors": [
+      "Yuzhi Yang",
+      "Brahim Mefgouda",
+      "Hang Zou",
+      "Lina Bariah",
+      "Anis Bara",
+      "Yuhuan Lu",
+      "Hao Zhang",
+      "Merouane Debbah"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Unconventional SOC-activated Altermagnetic Spin Splitting and Half-Angle Locking of Spin Transport",
+    "url": "https://arxiv.org/abs/2610.37367v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Conventional altermagnetic spin splitting arises from staggered exchange and sublattice-dependent anisotropic hopping without requiring spin-orbit coupling (SOC). Here we derive a low-energy effective model showing that SOC and staggered exchange can jointly activate additional spin splitting on momentum planes where the nonrelativistic contribution vanishes. In hexagonal $α$-MnTe, this SOC-activated contribution produces d-wave spin splitting near $Γ$ with out-of-plane spin polarization. Its le",
+    "authors": [
+      "Weiwei Chen",
+      "Ziyu Zhou",
+      "Pan Gao",
+      "Yanan Pan",
+      "Zhongjun Li",
+      "Ye Yang",
+      "Jianhui Zhou",
+      "Rui Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Enhancing magneto-optical coupling and scattering from magnetic vortices by optical polarization texturing",
+    "url": "https://arxiv.org/abs/2610.37233v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Magnetic textures offer a route toward photonic functionality in which electromagnetic fields are controlled not only by material composition and geometry but also by the internal magnetic configuration. Conversely, spatial texturing of these fields is a qualitatively new tool to increase the effective coupling strength to magnetic matter and to act on the the vortex topology and magnetic dynamics. Here, we investigate the coupling and scattering of structured electromagnetic fields by a magneti",
+    "authors": [
+      "Vakhtang Jandieri",
+      "Chenglong Jia",
+      "Ramaz Khomeriki",
+      "Nicolas Tsagareli",
+      "Qian Li",
+      "Douglas H. Werner",
+      "Jamal Berakdar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Deep Holes and Aperture: Sign Laws for the Empirical Correlation of Lattice-Sampled Random Wave Fields",
+    "url": "https://arxiv.org/abs/2610.37174v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "A Gaussian random wave field is sampled on a lattice within a bounded aperture. After displacement, re-indexing leaves a residual in the Voronoi cell. We study whether the empirical lag correlation has positive real part throughout the cell. For each realization in a single-output reciprocal link with noiseless over-the-air return, this is equivalent to the negative returned gradient being a descent direction for all residuals and differentiable losses with nonzero error signals. Return noise is",
+    "authors": [
+      "Tianhao Guo",
+      "Hao Luo",
+      "Xianzhong Li",
+      "Yuzhi Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.SD",
+    "title": "EEG-Based Decoding of Musical Mode and Melodic Direction Using Empirical Mode Decomposition",
+    "url": "https://arxiv.org/abs/2610.37148v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Electroencephalography (EEG) has proven to be a powerful tool for decoding neural activity in real-life scenarios, including the perception and processing of emotions elicited by music. Among the various musical features that modulate these responses, musical mode and melodic direction (or contour) play a central role. This work proposes a novel EEG feature extraction framework based on Empirical Mode Decomposition (EMD) to decompose EEG signals recorded during active piano performance for the d",
+    "authors": [
+      "Sergio Guillén",
+      "Lorenzo J. Tardón",
+      "Ana M. Barbancho",
+      "Isabel Barbancho"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "Prospector: learning a compact graph traversal policy for scientific reasoning",
+    "url": "https://arxiv.org/abs/2610.37121v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Scientific reasoning in specialized engineering fields depends on knowledge scattered across the literature, often proprietary and absent from frontier LLM training data. In such domains, frontier models tend to give generic answers. Knowledge graphs (KGs) can ground LLM reasoning. Because a graph is too large to provide in full, typical LLM+KG systems preselect a portion, deciding relevance before reasoning begins. Here we train a compact model, Prospector, to reason over a domain knowledge gra",
+    "authors": [
+      "Haiqian Yang",
+      "Markus J. Buehler"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Hardware-Matched Spiking Neural Networks for Real-Time Purkinje Cell Spike Classification",
+    "url": "https://arxiv.org/abs/2610.37104v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Distinguishing Purkinje cell (PC) simple spikes (SSs) from complex spikes (CSs) is key to studying cerebellar function. PC recordings commonly rely on wired headstages, whose tethers restrict natural movement in freely behaving animals. Untethered headstages remove this constraint, but cannot continuously transmit raw recordings within their power budgets, making on-headstage spike classification an attractive form of compression, provided it runs accurately in real time on constrained hardware.",
+    "authors": [
+      "Arooba Farhan",
+      "Afsah Syed",
+      "Muhammad Fahd Ibrahim Bhatti",
+      "Muhammad Areeb Khalid Kidwai",
+      "Muhammad Ahsan Salar Khan",
+      "Vincenzo Romano",
+      "Muhammad Ali Siddiqi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "First-Principles Investigation of Irida-Graphane: A Wide-Band-Gap Semiconductor Derived from Irida-Graphene",
+    "url": "https://arxiv.org/abs/2610.37095v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Opening a band gap in metallic two-dimensional carbon allotropes is an important step toward their use in electronic and optoelectronic devices, and full hydrogenation has proven to be an effective route to achieve it. Here, we propose irida-graphane, the fully hydrogenated derivative of the irida-graphene, a monolayer composed of three-, six-, and eight-membered rings, and investigate its structural, mechanical, electronic, and optical properties using density functional theory (DFT) at the PBE",
+    "authors": [
+      "Djardiel S. Gomes",
+      "Isaac M. Félix",
+      "Marcelo L. Pereira Junior"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Closed-Form Subspace Loss and Snapshot-Limited Dimension Selection for Beamspace MVDR Radar",
+    "url": "https://arxiv.org/abs/2610.37089v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "A beamspace minimum variance distortionless response (MVDR) processor adapts a window of B beams instead of all N elements of a large array, trading a subspace loss that falls with B against a covariance estimation loss that rises with B for a fixed number K of training snapshots. We give the subspace loss of a DFT beam window in point jamming in closed form: exactly for any jammer power, and in the high interference-to-noise ratio (INR) limit through the Dirichlet kernel of the array. Combined ",
+    "authors": [
+      "Moris S. Mukwayi",
+      "Michael A. van Wyk",
+      "Andre M. McDonald"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Orthogonal Zadoff-Chu Based Pilot Design For Fractional Channel Estimation in MIMO-OTFS",
+    "url": "https://arxiv.org/abs/2610.37079v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "In this paper, we propose a Zadoff-Chu (ZC) sequence-based pilot design for fractional channel estimation in orthogonal time frequency space (OTFS) modulation for point-to-point multi-input multi-output (MIMO) scenarios. Orthogonal pilot sequences are assigned to each transmit antenna using ZF sequences. At the receiver, a correlation-based scheme is used to construct the signal for estimation. The estimation relies on a two-dimensional extension of the Aboutanios and Mulgrew (A&M) frequency est",
+    "authors": [
+      "Omid Aghda",
+      "Prabhat Gupta",
+      "João Guerreiro",
+      "Nuno Souto",
+      "Michal Szczachor",
+      "Lukasz Krzymien",
+      "Rui Dinis"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Placing the Beamspace Window on a Hopping Carrier: Bin Drift, Exact Capture and the Cost of Rounding",
+    "url": "https://arxiv.org/abs/2610.37067v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "A frequency-agile radar with a large digital array moves the spatial frequency of its look direction across the beams of a spatial FFT every time it changes carrier, so a beamspace adaptive processor must decide where to put its window at each hop. Because the beamspace transform is orthonormal, the output of the processor depends only on the span of the window, and a hop changes nothing but where the window sits. Centring the window exactly on the fractional bin of the look direction keeps the ",
+    "authors": [
+      "Moris S. Mukwayi",
+      "Michael A. van Wyk",
+      "Andre M. McDonald"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "p-DCIM: A 28nm Probabilistic SRAM DCIM based Ising Machine for Near-Memory Context Selection in LLM-RAG Pipeline",
+    "url": "https://arxiv.org/abs/2610.37033v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "We present a fabricated SRAM DCIM Ising machine that performs set-level context selection for large language model (LLM) with retrieval-augmented generation (RAG). In RAG, the evidence-selection stage is increasingly delegated to repeated language-model reranking, which adds substantial energy to the inference pipeline. We reformulate evidence selection as a quadratic unconstrained binary optimization (QUBO) problem and solve it on a dual-mode digital compute-in-memory (DCIM) macro: the same mul",
+    "authors": [
+      "Madhav Vadlamani",
+      "Rahul Singh",
+      "Yuyao Kong",
+      "Haomei Liu",
+      "Zheng Zhang",
+      "Shimeng Yu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "A Wearable Sensor Array on Conductive Textiles for Body Surface Temperature Mapping",
+    "url": "https://arxiv.org/abs/2610.37008v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Continuous monitoring of body-surface temperature distributions can provide useful information for wearable health and thermal-condition monitoring. However, practical daily-use wearable systems for distributed temperature sensing remain difficult to implement because multiple sensor nodes require power delivery and data collection across a garment. Conventional wiring increases system complexity, reduces placement flexibility, and can compromise the wearability of garment-integrated sensor arra",
+    "authors": [
+      "Amiri Onuki",
+      "Akihito Noda"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "The role of A in ARPES",
+    "url": "https://arxiv.org/abs/2610.36909v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Angle-resolved photoemission spectroscopy (ARPES) was developed in the 1970s-1990s as a momentum-resolved probe of the electronic structure of solids, with its basic principles summarized in early seminal works and classic reviews. The basic ARPES result is currently almost exclusively associated with the two-dimensional intensity distribution with coordinate axes labeled as Binding Energy and Momentum. Such datasets are usually directly compared to the band structure calculations along high sym",
+    "authors": [
+      "Sergey Borisenko"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "ZnO/Ni interface-activated enhancement of spintronic terahertz emission from Ni/Pt bilayers",
+    "url": "https://arxiv.org/abs/2610.36889v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "Spintronic terahertz (THz) emitters based on ferromagnet/heavy-metal bilayers provide an efficient route for generating broadband THz radiation through ultrafast spin-to-charge conversion. However, Ni/Pt bilayers usually exhibit relatively weak THz emission, limiting their use as efficient spintronic emitters. Here, we report an interface-assisted enhancement of THz emission in ZnO/Ni/Pt heterostructures. By placing ZnO underneath Ni while preserving the direct Ni/Pt contact, the THz amplitude i",
+    "authors": [
+      "Jia Xu",
+      "Shaohua Zhang",
+      "Xianguo Jiang",
+      "Lei Hao",
+      "Yaxuan Jin",
+      "Ning Yang",
+      "Yao Wang",
+      "Tong Fu",
+      "Hao Meng",
+      "Chao Lu",
+      "Wendeng Huang",
+      "Chao Zhou"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Spatial MIMO Channel Rendering: A 3D Gaussian Splatting Approach",
+    "url": "https://arxiv.org/abs/2610.36880v1",
+    "published_date": "2026-10-27",
+    "source": "arXiv",
+    "summary": "The achievable gains of multiple-input multiple-output (MIMO) systems depend on channel state information (CSI), whose acquisition consumes pilot and feedback resources for every user in every coherence interval. Meanwhile, the propagation environment that shapes the channel persists. Exploiting such information will help to greatly reduce the overhead of CSI acquisition. This paper investigates the spatial MIMO channel rendering problem, which learns a latent beamspace channel scene from sparse",
+    "authors": [
+      "Juntaek Han",
+      "Geonha Kim",
+      "Chaozheng Wen",
+      "Ahmed Alkhateeb",
+      "Jun Zhang",
+      "Jeonghun Park"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "eess.SP",
     "title": "Bodyseismography (BSG): Theoretical Foundation and Numerical Modeling",
     "url": "https://arxiv.org/abs/2610.35844v1",

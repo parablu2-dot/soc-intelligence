@@ -2,6 +2,16 @@
   {
     "axis": "custom_soc",
     "company": "hyperscaler_inhouse",
+    "category": "process",
+    "headline": "Distributed training with Ray Train DLCs and EFA on EKS",
+    "url": "https://aws.amazon.com/blogs/machine-learning/distributed-training-with-ray-train-dlcs-and-efa-on-eks/",
+    "published_date": "2026-10-28",
+    "source": "AWS Blog",
+    "summary": "The Ray Train Deep Learning Container ships the full CUDA-through-EFA stack, so you build no image. This post walks through a reproducible sample that fine-tunes Qwen2.5-1.5B with PyTorch FSDP across eight GPUs on two EFA-enabled g6.12xlarge instances on Amazon EKS, using the container exactly as published."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
     "category": "news",
     "headline": "Announcing SOCI-indexed images for faster SageMaker AI jobs",
     "url": "https://aws.amazon.com/blogs/machine-learning/announcing-soci-indexed-images-for-faster-sagemaker-ai-jobs/",

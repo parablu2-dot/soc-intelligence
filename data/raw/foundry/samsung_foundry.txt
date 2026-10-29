@@ -152,7 +152,24 @@ var info = {"ajax_url":"https:\/\/news.samsungsemiconductor.com\/global\/wp-admi
         <!-- main kv -->
                 <div class="main__kv slider main_inner">
             <div class="slider_wrap mo_inner loading">
-                                                            <div class="slide ">
+                                                <div class="slide ">
+                                                            <a href="https://news.samsungsemiconductor.com/global/part-1-the-evolution-of-ai-and-ai-chips-and-the-hbm-that-powers-them" class="link" >
+                                                        <div class="text_box">
+                                <div class="group">
+                                    <span class="eyebrow">Technology</span>
+                                    <p class="title">Part 1. The Evolution of AI and AI Chips - and the HBM That Powers Them</p>
+                                    <p class="date">2026-10-28</p>
+                                </div>
+                                                                    <span class="button square read_more">Learn more</span>
+                                                            </div>
+                            <div class="image_box">
+                                <div class="image_container">
+                                    <img src="https://news.samsungsemiconductor.com/global/wp-content/uploads/2026/10/HBM_tech-article_home-kv_tab__890x593아트보드-1-1.jpg" alt="Part 1. The Evolution of AI and AI Chips - and the HBM That Powers Them">
+                                </div>
+                            </div>
+                                                            </a>
+                                                    </div>
+                                                                    <div class="slide ">
                                                             <a href="https://news.samsungsemiconductor.com/global/interview-a-rocket-toward-her-future-eva-neills-career-journey-at-samsung" class="link" >
                                                         <div class="text_box">
                                 <div class="group">
@@ -203,24 +220,7 @@ var info = {"ajax_url":"https:\/\/news.samsungsemiconductor.com\/global\/wp-admi
                             </div>
                                                             </a>
                                                     </div>
-                                                                    <div class="slide ">
-                                                            <a href="https://news.samsungsemiconductor.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026" class="link" >
-                                                        <div class="text_box">
-                                <div class="group">
-                                    <span class="eyebrow"></span>
-                                    <p class="title">Samsung Electronics Announces Earnings Guidance for Third Quarter 2026</p>
-                                    <p class="date">2026-10-08</p>
-                                </div>
-                                                                    <span class="button square read_more">Learn more</span>
-                                                            </div>
-                            <div class="image_box">
-                                <div class="image_container">
-                                    <img src="https://news.samsungsemiconductor.com/global/wp-content/uploads/2025/10/썸네일_DSR_revised-1024x884-1.jpg" alt="Samsung Electronics Announces Earnings Guidance for Third Quarter 2026">
-                                </div>
-                            </div>
-                                                            </a>
-                                                    </div>
-                                                        </div>
+                                                                    </div>
             <div class="slider_navigator mo_inner">
                 <div class="slider_progress">
                 </div>
@@ -236,6 +236,27 @@ var info = {"ajax_url":"https:\/\/news.samsungsemiconductor.com\/global\/wp-admi
     <h2 class="article_title">Latest news</h2>
     <ul class="article_list">
         
+              <li class="article_item new">
+
+                <a href="https://news.samsungsemiconductor.com/global/part-1-the-evolution-of-ai-and-ai-chips-and-the-hbm-that-powers-them/">
+                  <div class="contents">
+                    <div class="top">      <span class="category">Technology</span>
+                      <span class="date">2026.10.28</span>
+                    </div>
+                    <p class="title">Part 1. The Evolution of AI and AI Chips - and the HBM That Powers Them
+                       <span class="article_new">new</span>
+                     </p>
+                    <p class="desc">As AI becomes capable of understanding long documents, answering complex questions, and performing multiple tasks, the demands on the semiconductors behind...</p>
+                  </div>
+                  <div class="image">
+                    <div class="image_container">
+                      <img src="https://news.samsungsemiconductor.com/global/wp-content/uploads/2026/10/HBM_tech-article_home-kv_tab__890x593아트보드-1-1-636x424.jpg" alt="">
+                    </div>
+                  </div>
+                </a>
+              </li>
+              
+              
               <li class="article_item">
 
                 <a href="https://news.samsungsemiconductor.com/global/interview-a-rocket-toward-her-future-eva-neills-career-journey-at-samsung/">
@@ -382,27 +403,6 @@ var info = {"ajax_url":"https:\/\/news.samsungsemiconductor.com\/global\/wp-admi
                 </a>
               </li>
               
-              
-              <li class="article_item">
-
-                <a href="https://news.samsungsemiconductor.com/global/samsung-and-mistral-ai-announce-strategic-partnership-for-intelligence-driven-semiconductor-infrastructure/">
-                  <div class="contents">
-                    <div class="top">
-                      <span class="date">2026.09.09</span>
-                    </div>
-                    <p class="title">Samsung and Mistral AI Announce Strategic Partnership for Intelligence-Driven Semiconductor Infrastructure
-                    
-                     </p>
-                    <p class="desc">Collaboration will focus on development and implementation of on-premises AI technologies across Samsung’s chip operations Samsung makes lead investment in...</p>
-                  </div>
-                  <div class="image">
-                    <div class="image_container">
-                      <img src="https://news.samsungsemiconductor.com/global/wp-content/uploads/2025/10/썸네일_DSR_revised-1024x884-1-636x424.jpg" alt="">
-                    </div>
-                  </div>
-                </a>
-              </li>
-              
                   </ul>
     <div class="button_wrap right">
         <a href="https://news.samsungsemiconductor.com/global/latest" class="button new_more">See more latest</a>
@@ -485,8 +485,8 @@ var info = {"ajax_url":"https:\/\/news.samsungsemiconductor.com\/global\/wp-admi
 </div>
 <!-- // #wrapper -->
 <style id='core-block-supports-inline-css' type='text/css'>
-.wp-elements-18890810763f7a770da1c4a524eb98f8 a{color:#1420a8;}.wp-elements-66c627c71659ae63b468502beb6af0ce a{color:#1420a8;}.wp-elements-fcef61d62691a69c778af75bde3d082a a{color:#1420a8;}.wp-elements-ee24e7daa43c2cb4251193948d34efb2 a{color:#1420a8;}.wp-elements-3c8190e8fe52e09ea773a0183e65ac74 a{color:#1420a8;}.wp-elements-dd47806446e9416de7aeac3197d1c9af a{color:#1420a8;}.wp-elements-93aa4136546d5e8116b98ce274847831 a{color:#1428a0;}.wp-elements-3fba06e28059d9dc1a9a49f8bf060197 a{color:#1420a8;}.wp-elements-6dc764b4597ac77132d0eb685317f812 a{color:#1420a8;}.wp-elements-7ddbd2802f5f6c75f23126acc11f20eb a{color:#1420a8;}.wp-elements-4d04653a49a9702cb28453eb625319d8 a{color:#1420a8;}.wp-elements-c1e8e62b3d0fa4f820611db6371b236a a{color:#1420a8;}.wp-elements-743aa35295f19e88d8e4a342d724fc08 a{color:#1420a8;}
+.wp-elements-70cb7cbfd8fae5b1a975925ee3c718d8 a{color:#1420a8;}.wp-elements-79b79c8d9966d02a26eba1347d54a75a a{color:#74797d;}.wp-elements-53cef6d50443c1bf8e4b85861aa3bb4b a{color:#1420a8;}.wp-elements-46a4b00fec48a8f93b00f711d5a825f5 a{color:#1420a8;}.wp-elements-37eb1d4dbcecf7b10606fa075805f639 a{color:#1420a8;}.wp-elements-c6694f30b88d4555c5b28ee4cb162328 a{color:#1420a8;}.wp-elements-18890810763f7a770da1c4a524eb98f8 a{color:#1420a8;}.wp-elements-66c627c71659ae63b468502beb6af0ce a{color:#1420a8;}.wp-elements-fcef61d62691a69c778af75bde3d082a a{color:#1420a8;}.wp-elements-ee24e7daa43c2cb4251193948d34efb2 a{color:#1420a8;}.wp-elements-3c8190e8fe52e09ea773a0183e65ac74 a{color:#1420a8;}.wp-elements-dd47806446e9416de7aeac3197d1c9af a{color:#1420a8;}.wp-elements-93aa4136546d5e8116b98ce274847831 a{color:#1428a0;}.wp-elements-3fba06e28059d9dc1a9a49f8bf060197 a{color:#1420a8;}.wp-elements-6dc764b4597ac77132d0eb685317f812 a{color:#1420a8;}.wp-elements-7ddbd2802f5f6c75f23126acc11f20eb a{color:#1420a8;}.wp-elements-4d04653a49a9702cb28453eb625319d8 a{color:#1420a8;}
 </style>
 <script type="text/javascript" src="https://news.samsungsemiconductor.com/global/wp-includes/js/clipboard.min.js?ver=2.0.11" id="clipboard-js"></script>
-<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1824656386" async></script></body>
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1207613571" async></script></body>
 </html>
