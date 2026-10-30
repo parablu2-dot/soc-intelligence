@@ -12,7 +12,7 @@
 	<atom:link href="https://blogs.nvidia.com/feed/" rel="self" type="application/rss+xml" />
 	<link>https://blogs.nvidia.com/</link>
 	<description></description>
-	<lastBuildDate>Thu, 29 Oct 2026 16:02:28 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 30 Oct 2026 02:20:58 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,6 +20,45 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=7.1.4</generator>
 	<item>
+		<title>Things That Go Beep in the Night: Agentic AI Joins the Search for Extraterrestrial Signals</title>
+		<link>https://blogs.nvidia.com/blog/ai-joins-the-search-for-extraterrestrial-signals/</link>
+		
+		<dc:creator><![CDATA[Chris Porter]]></dc:creator>
+		<pubDate>Fri, 30 Oct 2026 15:00:10 +0000</pubDate>
+				<category><![CDATA[AI]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Nemotron]]></category>
+		<category><![CDATA[NVIDIA Holoscan]]></category>
+		<category><![CDATA[Science]]></category>
+		<guid isPermaLink="false">https://blogs.nvidia.com/?p=99597</guid>
+
+					<description><![CDATA[While science fiction lore tells us that humans will meet extraterrestrial life in the form of little green men, the detail that should raise hairs this Halloween is this: the search for extraterrestrial intelligence took a major leap forward with AI, and it increasingly focuses on AI agents built by humans listening for AI agents [&#8230;]]]></description>
+										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><span style="font-weight: 400;">While science fiction lore tells us that humans will meet extraterrestrial life in the form of little green men, the detail that should raise hairs this Halloween is this: the search for extraterrestrial intelligence took a major leap forward with AI, and it increasingly focuses on AI agents built by humans listening for AI agents built by aliens.</span></p>
+<p><span style="font-weight: 400;">Some scientists have suggested that extraterrestrial civilizations, if they exist, could be billions of years older than humanity. Such civilizations might have developed technologies far beyond humanity’s, including forms of AI.</span></p>
+<p><span style="font-weight: 400;">Breakthrough Listen and the SETI Institute are bringing agentic AI into the daily search for extraterrestrial intelligence. At the</span> <a target="_blank" href="https://www.seti.org/seti-allen-telescope-array-ata"><span style="font-weight: 400;">Allen Telescope Array</span></a><span style="font-weight: 400;"> in Northern California, agents can now steer the instrument, enhance and correct incoming data, and apply AI models to the incoming stream — all from a single natural language request. The </span><a target="_blank" href="https://www.nvidia.com/en-us/edge-computing/holoscan/"><span style="font-weight: 400;">NVIDIA Holoscan</span></a><span style="font-weight: 400;"> platform processes the massive streams of sensor data, giving agents live data to act on.</span></p>
+<p><span style="font-weight: 400;">The result is a faster, more adaptable search for potential signals from extraterrestrial life and technologies.</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">“As our new agentic observatories reach out into the universe, what they find may have much more in common with themselves than with the humans who created them,” said Andrew Siemion, Bernard M. Oliver chair for SETI at the SETI Institute and principal investigator of Breakthrough Listen. “But this isn&#8217;t something to fear. Rather, it’s a breakthrough in translation.”</span></p>
+<h2><strong>Terabits a Second, Processed in Flight</strong></h2>
+<p><span style="font-weight: 400;">Radio telescopes generate enormous volumes of data, creating a challenge for scientists who need to identify potentially interesting signals as observations unfold.</span></p>
+<p><span style="font-weight: 400;">At the Allen Telescope Array, </span><a target="_blank" href="https://developer.nvidia.com/daqiri"><span style="font-weight: 400;">DAQIRI</span></a><span style="font-weight: 400;">, a Holoscan platform library, enables the telescope to pull terabits per second of sensor data straight into GPU memory so observations are processed in flight rather than filling hard drives. </span><a target="_blank" href="https://cyberether.org"><span style="font-weight: 400;">CyberEther</span></a><span style="font-weight: 400;">, a signal-processing framework developed at the SETI Institute, does the math using NVIDIA CUDA-X libraries including </span><a target="_blank" href="https://developer.nvidia.com/cufft"><span style="font-weight: 400;">cuFFT</span></a><span style="font-weight: 400;"> and </span><a target="_blank" href="https://developer.nvidia.com/cublas"><span style="font-weight: 400;">cuBLAS</span></a><span style="font-weight: 400;">.</span></p>
+<p><a target="_blank" href="https://stelline.space"><span style="font-weight: 400;">Nexus</span></a><span style="font-weight: 400;">, a web-based observatory orchestrator, acts as the agent harness. It gives agents a single source of truth for instrument state, compute resources and pipelines and lets researchers monitor packet loss, read live spectrograms and rewrite signal-processing blocks — all by prompting in natural language. The system can handle 2.4 terabits per second on NVIDIA RTX PRO 6000 Blackwell GPUs, with inference running on premises, next to the instrument.</span></p>
+<p><span style="font-weight: 400;">Put together, the system enables an agent to steer a telescope’s antennae, calibrate and focus the instrument for a clean signal, catch and fix data errors and plot the result. Agents compress what would take humans weeks or years into hours.</span></p>
+<h2><strong>Science Fact, Not Fiction</strong></h2>
+<p><span style="font-weight: 400;">The pipeline has already proven itself, achieving the first real-time AI detection of a pulsar — a rapidly spinning stellar remnant that pulses like a cosmic lighthouse — in the Crab Nebula. </span></p>
+<p><span style="font-weight: 400;">Next, the team is evaluating open models including </span><a target="_blank" href="https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/"><span style="font-weight: 400;">NVIDIA Nemotron</span></a><span style="font-weight: 400;"> for cases where data locality and turnaround matter most and for observatories that may someday run offline on the far side of the moon.</span></p>
+<p><i><span style="font-weight: 400;">Learn more about </span></i><a target="_blank" href="https://www.nvidia.com/en-us/high-performance-computing/ai-for-science/"><i><span style="font-weight: 400;">NVIDIA AI for science</span></i></a><i><span style="font-weight: 400;">.</span></i></p>
+]]></content:encoded>
+					
+		
+		
+				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/10/IMG_1607-ATA-2023-CREDIT-Joe-Marfia-scaled.jpg" type="image/jpeg" width="2048" height="1365">
+			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/10/IMG_1607-ATA-2023-CREDIT-Joe-Marfia-842x450.jpg" width="842" height="450" />
+			<media:title type="html"><![CDATA[Things That Go Beep in the Night: Agentic AI Joins the Search for Extraterrestrial Signals]]></media:title>
+			<media:description type="html"></media:description>
+		</media:content>
+	</item>
+		<item>
 		<title>Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents</title>
 		<link>https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/</link>
 		
@@ -1112,52 +1151,6 @@
 				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/10/European-Leaders-Industrial-Manufacturing-2.jpg" type="image/jpeg" width="1920" height="1080">
 			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/10/European-Leaders-Industrial-Manufacturing-2-842x450.jpg" width="842" height="450" />
 			<media:title type="html"><![CDATA[Europe’s Industrial Leaders Reinvent Engineering and Manufacturing With NVIDIA]]></media:title>
-			<media:description type="html"></media:description>
-		</media:content>
-	</item>
-		<item>
-		<title>NVIDIA cuDSS Now Generally Available to Accelerate Engineering and Scientific Simulations</title>
-		<link>https://blogs.nvidia.com/blog/cudss-generally-available-engineering-scientific-simulation/</link>
-		
-		<dc:creator><![CDATA[Timothy Costa]]></dc:creator>
-		<pubDate>Wed, 21 Oct 2026 10:30:25 +0000</pubDate>
-				<category><![CDATA[AI]]></category>
-		<category><![CDATA[CUDA-X]]></category>
-		<category><![CDATA[GTC 2026]]></category>
-		<category><![CDATA[Scientific Visualization]]></category>
-		<category><![CDATA[Simulation]]></category>
-		<guid isPermaLink="false">https://blogs.nvidia.com/?p=99204</guid>
-
-					<description><![CDATA[NVIDIA cuDSS, launched today in general availability, is an NVIDIA CUDA-X library that shifts a critical part of engineering and scientific simulations onto GPUs.  Complex engineering feats — from advanced chips to aircraft to industrial systems —– depend on simulation to predict how designs will perform before they’re built. As designs become more complex, simulations [&#8230;]]]></description>
-										<content:encoded><![CDATA[<div id="bsf_rt_marker"></div><p><span style="font-weight: 400;">NVIDIA cuDSS, launched today in general availability, is an </span><a target="_blank" href="https://developer.nvidia.com/cuda/cuda-x-libraries"><span style="font-weight: 400;">NVIDIA CUDA-X library</span></a><span style="font-weight: 400;"> that shifts a critical part of engineering and scientific simulations onto GPUs. </span></p>
-<p><span style="font-weight: 400;">Complex engineering feats — from advanced chips to aircraft to industrial systems —– depend on simulation to predict how designs will perform before they’re built. As designs become more complex, simulations take longer to run, increasing computing demands and limiting the number of ideas teams can test.</span></p>
-<p><span style="font-weight: 400;">NVIDIA cuDSS accelerates solving large sparse systems — the math-heavy step that repeats throughout engineering and scientific simulations and often limits how many designs a team can test — by tapping into GPUs. This lets applications reduce time to results and increase simulation throughput, enabling end users to explore larger more realistic models, more accurate representations and a wider design space at a reduced cost.</span></p>
-<p>&nbsp;</p>
-<div style="margin: 0 !important; padding: 0 !important; text-align: center; line-height: 1;"><a style="display: inline-flex; align-items: center; justify-content: center; margin: 0 !important; padding: 10px !important; background-color: #76b900; color: #ffffff !important; font-family: 'NVIDIA Sans', Arial, sans-serif; font-size: 16px; font-weight: bold; line-height: 1 !important; text-align: center; text-decoration: none !important; white-space: nowrap; vertical-align: top;" href="https://blogs.nvidia.com/gtc-berlin-2026-news/">Read All NVIDIA in Europe Announcements</a></div>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Industry leaders are already integrating NVIDIA cuDSS into their tools to transform workflows for their end customers:</span></p>
-<ul>
-<li style="font-weight: 400;" aria-level="1"><b>Applied Materials:</b> <span style="font-weight: 400;">With cuDSS, Applied Materials accelerated sparse solves in Ginestra, its physics-based, defect-centric simulation platform, by up to 10x versus CPU-only approaches, speeding exploration of semiconductor materials and device reliability.</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>COMSOL:</b><span style="font-weight: 400;"> Using COMSOL Multiphysics with NVIDIA cuDSS on NVIDIA accelerated computing, ZEISS SMT achieved a measured 4x speedup in an EUV lithography plasma simulation benchmark, completing the full simulation in six days and 14 hours.</span></li>
-<li style="font-weight: 400;" aria-level="1"><a target="_blank" href="https://community.cadence.com/cadence_blogs_8/b/corporate-news/posts/cadence-and-toyota-advance-automotive-simulation-on-nvidia-ai-infrastructure"><b>Cadence</b></a><b>:</b><span style="font-weight: 400;"> Uses cuDSS in its Celsius software to accelerate simulations of heat, structural stress and warpage in advanced chips and 3D chip designs, helping customers including </span><span style="font-weight: 400;">Nokia</span><span style="font-weight: 400;"> analyze complex designs faster.</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Dassault Systèmes</b><b>: </b><span style="font-weight: 400;">Dassault Systèmes reports an 8-10x speedup using cuDSS within its Abaqus structural and computer simulation technology electromagnetic solvers for performance-critical simulations across industries.</span></li>
-<li style="font-weight: 400;" aria-level="1"><b>Siemens</b><b>:</b><span style="font-weight: 400;"> Siemens uses cuDSS in Simcenter STAR-CCM+ to accelerate simulations of structures in fluid-structure interaction workflows.</span></li>
-<li style="font-weight: 400;" aria-level="1"><a target="_blank" href="https://ansys.synopsys.com/blog/synopsys-advances-physical-ai"><b>Synopsys</b></a><b>: </b><span style="font-weight: 400;">Synopsys uses cuDSS in its Sentaurus Device simulator tool to accelerate simulations of advanced logic, memory and power chips, helping Infineon model increasingly complex devices faster.</span></li>
-</ul>
-<h2><b>Accelerated Simulation at Scale</b></h2>
-<p><span style="font-weight: 400;">As simulation workloads grow in size and complexity, cuDSS can scale out of the box from individual workstations to large computing clusters.</span></p>
-<p><span style="font-weight: 400;">Developers can integrate cuDSS into existing engineering, scientific and optimization software offerings, bringing GPU acceleration to tools already used by engineers and researchers. They can use cuDSS through C, C++,  Python and Fortran interfaces.</span></p>
-<p><i><span style="font-weight: 400;">Learn more about cuDSS by visiting the NVIDIA demo booth and </span></i><i><span style="font-weight: 400;">Dassault Systèmes </span></i><i><span style="font-weight: 400;">booth at GTC Berlin.</span></i></p>
-<p><i><span style="font-weight: 400;">Featured image courtesy of Dassault Systèmes.</span></i></p>
-<p>&nbsp;</p>
-<div style="margin: 0 !important; padding: 0 !important; text-align: center; line-height: 1;"><a style="display: inline-flex; align-items: center; justify-content: center; margin: 0 !important; padding: 10px !important; background-color: #76b900; color: #ffffff !important; font-family: 'NVIDIA Sans', Arial, sans-serif; font-size: 16px; font-weight: bold; line-height: 1 !important; text-align: center; text-decoration: none !important; white-space: nowrap; vertical-align: top;" href="https://blogs.nvidia.com/gtc-berlin-2026-news/">Read All NVIDIA in Europe Announcements</a></div>
-]]></content:encoded>
-					
-		
-		
-				<media:content url="https://blogs.nvidia.com/wp-content/uploads/2026/10/cuDSS_GTCBerlin.jpg" type="image/jpeg" width="1672" height="941">
-			<media:thumbnail url="https://blogs.nvidia.com/wp-content/uploads/2026/10/cuDSS_GTCBerlin-842x450.jpg" width="842" height="450" />
-			<media:title type="html"><![CDATA[NVIDIA cuDSS Now Generally Available to Accelerate Engineering and Scientific Simulations]]></media:title>
 			<media:description type="html"></media:description>
 		</media:content>
 	</item>
