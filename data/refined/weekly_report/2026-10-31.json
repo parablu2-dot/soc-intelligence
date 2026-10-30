@@ -1,0 +1,385 @@
+{
+  "week_of": "2026-10-25",
+  "generated_through": "2026-10-31",
+  "generated_at": "2026-10-30T19:47:08.656149+00:00",
+  "macro": {
+    "fed_policy": [
+      "연방준비제도, 캐나다 노바스코샤 은행의 신청 승인",
+      "연방준비제도 FOMC 성명서 발표 (2026년 10월)"
+    ],
+    "rates_fx": [],
+    "polarization": [
+      "S. 1462 Fix Our Forests Act, 상원농업위원회 보고 (2025년 10월 27일)",
+      "S. 5526 농업법 2026, 상원 농업위원회 상정 — 소규모·대규모 농장 지원 규모 차이 예상",
+      "CBO, 2026 보건정책 방향성 세션에서 의회 예산 분석 기법 소개",
+      "H.R. 6207 반도체 장비 품질·무결성 보호법안, 하원 에너지상무위원회 보고(2026.9.16)",
+      "H.R. 2102 Major Richard Star Act (H. Res. 1247 수정안) CBO 공식 발간"
+    ]
+  },
+  "axes": {
+    "mobile_ap": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "hpc_datacenter": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "custom_soc": {
+      "ko": {
+        "executive_summary": "Custom silicon acceleration for AI workloads has shifted from niche to competitive necessity: Google TPUs now distribute via Oracle OCI, Amazon pursues Decart ($7B) to escape NVIDIA inference costs, AWS launches TorchNeuron to erode CUDA lock-in, and Google-led custom chips forecast to outship GPUs by 2028. The interface value has migrated from monolithic GPU dominance to heterogeneous chiplet/HBM stacks with software abstraction layers (PyTorch, Bedrock prompt caching) that decouple workload optimization from hardware vendor.",
+        "key_facts": [
+          "Google TPU integration into Oracle OCI (first-time hyperscaler cross-licensing)",
+          "Amazon Decart acquisition target $7B for AWS chip flexibility",
+          "Google-led custom AI chips projected outship GPUs by 2028",
+          "AWS TorchNeuron releases to commoditize Trainium adoption, counter CUDA moat",
+          "SK Hynix SSD controllers with 100+ embedded processors (custom HBM era)",
+          "Microsoft Maia 300 AI accelerator shown at OCP 2026",
+          "Broadcom AI chip business confirmed booming amid competitive pressure signals",
+          "Amazon inference cost thesis: 10x expense premium vs. internal chip target"
+        ],
+        "implications": [
+          {
+            "keyword": "packaging/interposer boundary",
+            "text": "Custom HBM (Samsung, SK Hynix) and chiplet stacks now table-stakes; monolithic GPU memory hierarchy loses margin as hyperscalers standardize on 2.5D/3D packaging with vendor-agnostic controller logic."
+          },
+          {
+            "keyword": "software abstraction layer",
+            "text": "PyTorch native support (Google, AWS), Bedrock prompt caching, and TorchNeuron collectively reduce lock-in friction, allowing rapid custom-chip adoption—erosion of NVIDIA's proprietary compiler moat accelerates."
+          },
+          {
+            "keyword": "hyperscaler vertical integration",
+            "text": "Oracle TPU resale, Amazon Decart bid, Google OCI distribution, and Microsoft Maia 300 roadmap signal 4-way race to own training+inference pipeline; Broadcom remains bottleneck for networking fabric (RDMAoE, InfiniBand)."
+          },
+          {
+            "keyword": "inference cost economics",
+            "text": "Amazon's stated 10x inference expense ratio drives bespoke silicon urgency; custom ASICs now table-stakes for >50% model serving volumes, reshaping capex allocation away from general-purpose accelerators."
+          }
+        ],
+        "counterpoint": "NVIDIA retains software ecosystem depth (CUDA libraries, optimized frameworks) that custom-chip teams require 12–24 months to replicate; interim-period workload migration risk remains high for latency-sensitive inference at scale.",
+        "feasibility_observation": "SK Hynix 100+ processor SSD controller and Google-Oracle TPU distribution signal no material design-feasibility blocker for custom silicon, but yield and volume ramp sustainability unclear given hyperscaler fab capacity constraints (Vietnam plant missed 2027 target signals broader foundry capacity squeeze).",
+        "changed_from_last_week": true,
+        "change_note": "Last week no-change; this week custom-silicon momentum shifted from strategic intent to execution: hyperscaler cross-licensing, CUDA-parity software releases, and cost-driven M&A (Decart) now visible—interface control (packaging, software boundary) shifting away from NVIDIA."
+      },
+      "en": {
+        "executive_summary": "Custom silicon acceleration for AI workloads has shifted from niche to competitive necessity: Google TPUs now distribute via Oracle OCI, Amazon pursues Decart ($7B) to escape NVIDIA inference costs, AWS launches TorchNeuron to erode CUDA lock-in, and Google-led custom chips forecast to outship GPUs by 2028. The interface value has migrated from monolithic GPU dominance to heterogeneous chiplet/HBM stacks with software abstraction layers (PyTorch, Bedrock prompt caching) that decouple workload optimization from hardware vendor.",
+        "key_facts": [
+          "Google TPU integration into Oracle OCI (first-time hyperscaler cross-licensing)",
+          "Amazon Decart acquisition target $7B for AWS chip flexibility",
+          "Google-led custom AI chips projected outship GPUs by 2028",
+          "AWS TorchNeuron releases to commoditize Trainium adoption, counter CUDA moat",
+          "SK Hynix SSD controllers with 100+ embedded processors (custom HBM era)",
+          "Microsoft Maia 300 AI accelerator shown at OCP 2026",
+          "Broadcom AI chip business confirmed booming amid competitive pressure signals",
+          "Amazon inference cost thesis: 10x expense premium vs. internal chip target"
+        ],
+        "implications": [
+          {
+            "keyword": "packaging/interposer boundary",
+            "text": "Custom HBM (Samsung, SK Hynix) and chiplet stacks now table-stakes; monolithic GPU memory hierarchy loses margin as hyperscalers standardize on 2.5D/3D packaging with vendor-agnostic controller logic."
+          },
+          {
+            "keyword": "software abstraction layer",
+            "text": "PyTorch native support (Google, AWS), Bedrock prompt caching, and TorchNeuron collectively reduce lock-in friction, allowing rapid custom-chip adoption—erosion of NVIDIA's proprietary compiler moat accelerates."
+          },
+          {
+            "keyword": "hyperscaler vertical integration",
+            "text": "Oracle TPU resale, Amazon Decart bid, Google OCI distribution, and Microsoft Maia 300 roadmap signal 4-way race to own training+inference pipeline; Broadcom remains bottleneck for networking fabric (RDMAoE, InfiniBand)."
+          },
+          {
+            "keyword": "inference cost economics",
+            "text": "Amazon's stated 10x inference expense ratio drives bespoke silicon urgency; custom ASICs now table-stakes for >50% model serving volumes, reshaping capex allocation away from general-purpose accelerators."
+          }
+        ],
+        "counterpoint": "NVIDIA retains software ecosystem depth (CUDA libraries, optimized frameworks) that custom-chip teams require 12–24 months to replicate; interim-period workload migration risk remains high for latency-sensitive inference at scale.",
+        "feasibility_observation": "SK Hynix 100+ processor SSD controller and Google-Oracle TPU distribution signal no material design-feasibility blocker for custom silicon, but yield and volume ramp sustainability unclear given hyperscaler fab capacity constraints (Vietnam plant missed 2027 target signals broader foundry capacity squeeze).",
+        "changed_from_last_week": true,
+        "change_note": "Last week no-change; this week custom-silicon momentum shifted from strategic intent to execution: hyperscaler cross-licensing, CUDA-parity software releases, and cost-driven M&A (Decart) now visible—interface control (packaging, software boundary) shifting away from NVIDIA."
+      }
+    },
+    "foundry": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "packaging": {
+      "ko": {
+        "executive_summary": "Packaging competitive topology pivots toward geographic supply-chain redundancy and material-layer control rather than node-driven consolidation. Hanmi Semiconductor's U.S. base opening, Amkor's margin gains in advanced packaging, and Intel-AMD chiplet collaboration signals fragment design-at-interface arbitrage further; simultaneously, adhesive localization (Henkel Korea) and interposer heterogeneity (Egis-SiPearl CPU chiplets for Europe) erode single-vendor packaging dominance and raise barriers to technical lock-in at the substrate-protocol boundary.",
+        "key_facts": [
+          "Hanmi Semiconductor opens U.S. manufacturing base; market cap KRW 18.1 trillion",
+          "Amkor Q3 2026 results highlight margin expansion in advanced packaging segment",
+          "Intel-AMD chiplet collaboration announced, targeting advanced packaging and custom silicon",
+          "Egis (Taiwan) partners SiPearl (France) on CPU chiplets for sovereign EU AI infrastructure",
+          "Applied Materials doubles Singapore R&D and manufacturing footprint",
+          "Henkel establishes Korean factory producing adhesives for AI chip assembly",
+          "Yield management solutions market projected US$3.19 billion by 2035"
+        ],
+        "implications": [
+          {
+            "keyword": "Substrate Regionalization",
+            "text": "Hanmi + Henkel + Applied Materials geographic expansion decouples packaging from traditional Taiwan-Korea duopoly; enables customer lock-in via proximity and adhesive/material supply leverage at substrate layer."
+          },
+          {
+            "keyword": "Chiplet-Native Interposer Standards",
+            "text": "Intel-AMD collaboration and Egis-SiPearl EU partnership signal competing interposer protocols emerging outside TSMC-controlled CoWoS; multiplexes technical interface control to system integrators and reduces single-node dependency."
+          },
+          {
+            "keyword": "Material-Layer Defensibility",
+            "text": "Adhesive and resist localization (Henkel, dry-deposited resist R&D at KU Leuven/Imec) shifts competitive moat from die-attach to bonding material IP; lower capex barrier than lithography but higher switching cost than commodity flip-chip."
+          },
+          {
+            "keyword": "US-Europe Sovereign Capacity",
+            "text": "Applied Materials Singapore expansion + Egis-SiPearl CPU chiplets + US helium classification reflect de-risking against China supply friction; packaging becomes geopolitical checkoff, not pure efficiency play."
+          }
+        ],
+        "counterpoint": "Material-layer fragmentation (adhesives, resists, interposer variants) may drive test/yield costs up and time-to-volume down if standardization stalls; Amkor margin gains could reverse if substrate commoditization accelerates across multiple regional fabs.",
+        "feasibility_observation": "Amkor Q3 2026 margin expansion in advanced packaging implies yield/volume ramp visible this cycle; Henkel Korean adhesive factory and Applied Materials Singapore doubling signal confidence in mass-production feasibility for next-gen bonding and equipment supply, though EUV resist tone behavior variance (KU Leuven/Imec) hints at E-beam lithography fine-tuning still required for high-volume RDL.",
+        "changed_from_last_week": true,
+        "change_note": "Last week emphasized interposer outsourcing (TSMC-GF arbitrage) and node-centric fragmentation; this week's data reveals geographic substrate redundancy and chiplet-protocol multiplexing are operationalizing faster—adhesive and resist localization now visible alongside packaging migration, indicating material IP and system-level integration are overtaking node economics as competitive boundary."
+      },
+      "en": {
+        "executive_summary": "Packaging competitive topology pivots toward geographic supply-chain redundancy and material-layer control rather than node-driven consolidation. Hanmi Semiconductor's U.S. base opening, Amkor's margin gains in advanced packaging, and Intel-AMD chiplet collaboration signals fragment design-at-interface arbitrage further; simultaneously, adhesive localization (Henkel Korea) and interposer heterogeneity (Egis-SiPearl CPU chiplets for Europe) erode single-vendor packaging dominance and raise barriers to technical lock-in at the substrate-protocol boundary.",
+        "key_facts": [
+          "Hanmi Semiconductor opens U.S. manufacturing base; market cap KRW 18.1 trillion",
+          "Amkor Q3 2026 results highlight margin expansion in advanced packaging segment",
+          "Intel-AMD chiplet collaboration announced, targeting advanced packaging and custom silicon",
+          "Egis (Taiwan) partners SiPearl (France) on CPU chiplets for sovereign EU AI infrastructure",
+          "Applied Materials doubles Singapore R&D and manufacturing footprint",
+          "Henkel establishes Korean factory producing adhesives for AI chip assembly",
+          "Yield management solutions market projected US$3.19 billion by 2035"
+        ],
+        "implications": [
+          {
+            "keyword": "Substrate Regionalization",
+            "text": "Hanmi + Henkel + Applied Materials geographic expansion decouples packaging from traditional Taiwan-Korea duopoly; enables customer lock-in via proximity and adhesive/material supply leverage at substrate layer."
+          },
+          {
+            "keyword": "Chiplet-Native Interposer Standards",
+            "text": "Intel-AMD collaboration and Egis-SiPearl EU partnership signal competing interposer protocols emerging outside TSMC-controlled CoWoS; multiplexes technical interface control to system integrators and reduces single-node dependency."
+          },
+          {
+            "keyword": "Material-Layer Defensibility",
+            "text": "Adhesive and resist localization (Henkel, dry-deposited resist R&D at KU Leuven/Imec) shifts competitive moat from die-attach to bonding material IP; lower capex barrier than lithography but higher switching cost than commodity flip-chip."
+          },
+          {
+            "keyword": "US-Europe Sovereign Capacity",
+            "text": "Applied Materials Singapore expansion + Egis-SiPearl CPU chiplets + US helium classification reflect de-risking against China supply friction; packaging becomes geopolitical checkoff, not pure efficiency play."
+          }
+        ],
+        "counterpoint": "Material-layer fragmentation (adhesives, resists, interposer variants) may drive test/yield costs up and time-to-volume down if standardization stalls; Amkor margin gains could reverse if substrate commoditization accelerates across multiple regional fabs.",
+        "feasibility_observation": "Amkor Q3 2026 margin expansion in advanced packaging implies yield/volume ramp visible this cycle; Henkel Korean adhesive factory and Applied Materials Singapore doubling signal confidence in mass-production feasibility for next-gen bonding and equipment supply, though EUV resist tone behavior variance (KU Leuven/Imec) hints at E-beam lithography fine-tuning still required for high-volume RDL.",
+        "changed_from_last_week": true,
+        "change_note": "Last week emphasized interposer outsourcing (TSMC-GF arbitrage) and node-centric fragmentation; this week's data reveals geographic substrate redundancy and chiplet-protocol multiplexing are operationalizing faster—adhesive and resist localization now visible alongside packaging migration, indicating material IP and system-level integration are overtaking node economics as competitive boundary."
+      }
+    },
+    "cpo_optics": {
+      "ko": {
+        "executive_summary": "Co-packaged optics (CPO) and silicon photonics are consolidating as critical AI infrastructure interfaces. Nvidia-SPIL's 15x capacity expansion by mid-2027 and Taiwan's LandMark's record Q3 EPS on silicon photonics demand confirm supply-chain lock-in at the optical-electronic boundary; Micro LED variants (Erised, Starksemi, San'an backing) now passing customer validation, signaling technology divergence at the modulation layer. Market estimates of $50B+ reflect mainstream adoption, but competitive pressure concentrates around transceiver density and thermal management at the package edge.",
+        "key_facts": [
+          "Nvidia-SPIL targeting 15x co-packaged optics capacity expansion by mid-2027",
+          "LandMark Optoelectronics Q3 EPS NT$6.12 on silicon photonics; capex commitment NT$8 billion",
+          "Kyushu University-Sumitomo Chemical achieved 180 Gbaud ultrafast operation on KNN thin-film waveguide modulators",
+          "Starksemi Micro LED optical interconnect passed leading customer technical validation",
+          "CScale raised $145M for AI optical interconnects; Erised Series B for Micro LED optical links",
+          "Optical interconnects market estimated at US$50.09 billion",
+          "Schneider Electric 2.5MW power module; Nvidia DSX POD architectural integration",
+          "PsiQuantum optical circuit switch for AI data centers; Vuzix entering optical interconnect"
+        ],
+        "implications": [
+          {
+            "keyword": "supply-chain concentration",
+            "text": "Nvidia-SPIL duopoly consolidation on CPO capacity through 2027 creates bottleneck at photonic-electronic interface; competing Micro LED paths (Starksemi, Erised, San'an) emerging as alternative transducer architecture to challenge silicon photonics incumbents."
+          },
+          {
+            "keyword": "modulation technology divergence",
+            "text": "KNN thin-film waveguide (Sumitomo-Kyushu) and Micro LED transducers now achieving 180 Gbaud+ performance parity with standard silicon photonics, fragmenting optical modulation standards at customer validation threshold."
+          },
+          {
+            "keyword": "capital intensity redistribution",
+            "text": "LandMark's NT$8B capex surge and venture funding surge (CScale $145M, Erised Series B) indicate shift from legacy optoelectronics vendors toward specialised AI optical-link designers as primary value accrual node."
+          },
+          {
+            "keyword": "package-edge thermal coupling",
+            "text": "Power module scaling (Schneider 2.5MW) and DSX POD architecture tightening power-optical co-location constraints, elevating thermal dissipation and signal-integrity at transceiver interface as differentiator."
+          }
+        ],
+        "counterpoint": "South Korea AI spending slowdown risk and NIST quantum-resistant crypto migration timeline (tagged macro) may dampen near-term optical-link capex velocity if end-customer data center builds delay; near-parity performance of Micro LED vs. silicon photonics at 180 Gbaud does not yet confirm yield or cost leadership.",
+        "feasibility_observation": "Design feasibility for silicon photonics modulation improved: Kyushu-Sumitomo 180 Gbaud KNN waveguide and Starksemi Micro LED both achieving customer-validation milestone, confirming ultrafast operation and thermal efficiency at scale. No mass-production yield gates visibly broken this week, but LandMark's NT$8B capex commitment and CScale-Erised funding indicate fabs and tool suppliers ramping.",
+        "changed_from_last_week": true,
+        "change_note": "From 'no change' to confirmed CPO supply-chain acceleration: Nvidia-SPIL 15x expansion target, LandMark record revenue, and dual-track modulation architectures (silicon photonics + Micro LED) now validating at customer tier, shifting competitive boundary from research to production-readiness."
+      },
+      "en": {
+        "executive_summary": "Co-packaged optics (CPO) and silicon photonics are consolidating as critical AI infrastructure interfaces. Nvidia-SPIL's 15x capacity expansion by mid-2027 and Taiwan's LandMark's record Q3 EPS on silicon photonics demand confirm supply-chain lock-in at the optical-electronic boundary; Micro LED variants (Erised, Starksemi, San'an backing) now passing customer validation, signaling technology divergence at the modulation layer. Market estimates of $50B+ reflect mainstream adoption, but competitive pressure concentrates around transceiver density and thermal management at the package edge.",
+        "key_facts": [
+          "Nvidia-SPIL targeting 15x co-packaged optics capacity expansion by mid-2027",
+          "LandMark Optoelectronics Q3 EPS NT$6.12 on silicon photonics; capex commitment NT$8 billion",
+          "Kyushu University-Sumitomo Chemical achieved 180 Gbaud ultrafast operation on KNN thin-film waveguide modulators",
+          "Starksemi Micro LED optical interconnect passed leading customer technical validation",
+          "CScale raised $145M for AI optical interconnects; Erised Series B for Micro LED optical links",
+          "Optical interconnects market estimated at US$50.09 billion",
+          "Schneider Electric 2.5MW power module; Nvidia DSX POD architectural integration",
+          "PsiQuantum optical circuit switch for AI data centers; Vuzix entering optical interconnect"
+        ],
+        "implications": [
+          {
+            "keyword": "supply-chain concentration",
+            "text": "Nvidia-SPIL duopoly consolidation on CPO capacity through 2027 creates bottleneck at photonic-electronic interface; competing Micro LED paths (Starksemi, Erised, San'an) emerging as alternative transducer architecture to challenge silicon photonics incumbents."
+          },
+          {
+            "keyword": "modulation technology divergence",
+            "text": "KNN thin-film waveguide (Sumitomo-Kyushu) and Micro LED transducers now achieving 180 Gbaud+ performance parity with standard silicon photonics, fragmenting optical modulation standards at customer validation threshold."
+          },
+          {
+            "keyword": "capital intensity redistribution",
+            "text": "LandMark's NT$8B capex surge and venture funding surge (CScale $145M, Erised Series B) indicate shift from legacy optoelectronics vendors toward specialised AI optical-link designers as primary value accrual node."
+          },
+          {
+            "keyword": "package-edge thermal coupling",
+            "text": "Power module scaling (Schneider 2.5MW) and DSX POD architecture tightening power-optical co-location constraints, elevating thermal dissipation and signal-integrity at transceiver interface as differentiator."
+          }
+        ],
+        "counterpoint": "South Korea AI spending slowdown risk and NIST quantum-resistant crypto migration timeline (tagged macro) may dampen near-term optical-link capex velocity if end-customer data center builds delay; near-parity performance of Micro LED vs. silicon photonics at 180 Gbaud does not yet confirm yield or cost leadership.",
+        "feasibility_observation": "Design feasibility for silicon photonics modulation improved: Kyushu-Sumitomo 180 Gbaud KNN waveguide and Starksemi Micro LED both achieving customer-validation milestone, confirming ultrafast operation and thermal efficiency at scale. No mass-production yield gates visibly broken this week, but LandMark's NT$8B capex commitment and CScale-Erised funding indicate fabs and tool suppliers ramping.",
+        "changed_from_last_week": true,
+        "change_note": "From 'no change' to confirmed CPO supply-chain acceleration: Nvidia-SPIL 15x expansion target, LandMark record revenue, and dual-track modulation architectures (silicon photonics + Micro LED) now validating at customer tier, shifting competitive boundary from research to production-readiness."
+      }
+    },
+    "dram": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "nand": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "hbm": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "pmic": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "해당 없음",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "해당 없음",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    }
+  },
+  "item_counts": {
+    "mobile_ap": 13,
+    "hpc_datacenter": 44,
+    "custom_soc": 79,
+    "foundry": 76,
+    "packaging": 75,
+    "cpo_optics": 23,
+    "hbm": 14,
+    "pmic": 0
+  }
+}
