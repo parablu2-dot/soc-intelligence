@@ -1,12 +1,83 @@
 {
   "axis": "cpo_optics",
   "sector": "CPO/광통신",
-  "date": "2026-11-01",
-  "generated_at": "2026-10-31T23:13:32.484855+00:00",
-  "item_count": 0,
+  "date": "2026-11-02",
+  "generated_at": "2026-11-01T23:32:23.946943+00:00",
+  "item_count": 4,
   "content": {
-    "ko": {},
-    "en": {}
+    "ko": {
+      "executive_summary": "PsiQuantum demonstrated an 8x8 optical switch with 1.2 dB loss targeting AI data centers, while Tower Semiconductor and Dixon Technologies are positioning for AI-driven optical infrastructure demand. STMicroelectronics is capitalizing on the combined AI and industrial market expansion.",
+      "key_facts": [
+        "PsiQuantum: 8x8 optical switch with 1.2 dB loss for AI data centers",
+        "Tower Semiconductor: Q3 performance test amid rising AI demand",
+        "Dixon Technologies: targeting silicon photonics for AI data centers",
+        "STMicroelectronics: riding AI and industrial boom"
+      ],
+      "implications": [
+        {
+          "keyword": "Low-loss optical switching",
+          "text": "PsiQuantum's 1.2 dB loss specification indicates progress in reducing insertion loss for data center fabric switches, critical for hyperscaler optical interconnect deployments."
+        },
+        {
+          "keyword": "Silicon photonics acceleration",
+          "text": "Multiple suppliers (Dixon, STMicroelectronics) targeting silicon photonics for AI infrastructure suggests this technology is becoming mainstream for co-packaged optics in high-radix switch architectures."
+        },
+        {
+          "keyword": "Semiconductor capacity constraints",
+          "text": "Tower Semiconductor's Q3 stress test reflects tight capacity allocation as AI data center optical demand scales, potentially creating near-term supply dynamics for optical transceiver components."
+        }
+      ],
+      "counterpoint": "Headlines lack specifics on integration readiness, cost-competitiveness, or deployment timelines for these optical solutions in production data centers."
+    },
+    "en": {
+      "executive_summary": "PsiQuantum demonstrated an 8x8 optical switch with 1.2 dB loss targeting AI data centers, while Tower Semiconductor and Dixon Technologies are positioning for AI-driven optical infrastructure demand. STMicroelectronics is capitalizing on the combined AI and industrial market expansion.",
+      "key_facts": [
+        "PsiQuantum: 8x8 optical switch with 1.2 dB loss for AI data centers",
+        "Tower Semiconductor: Q3 performance test amid rising AI demand",
+        "Dixon Technologies: targeting silicon photonics for AI data centers",
+        "STMicroelectronics: riding AI and industrial boom"
+      ],
+      "implications": [
+        {
+          "keyword": "Low-loss optical switching",
+          "text": "PsiQuantum's 1.2 dB loss specification indicates progress in reducing insertion loss for data center fabric switches, critical for hyperscaler optical interconnect deployments."
+        },
+        {
+          "keyword": "Silicon photonics acceleration",
+          "text": "Multiple suppliers (Dixon, STMicroelectronics) targeting silicon photonics for AI infrastructure suggests this technology is becoming mainstream for co-packaged optics in high-radix switch architectures."
+        },
+        {
+          "keyword": "Semiconductor capacity constraints",
+          "text": "Tower Semiconductor's Q3 stress test reflects tight capacity allocation as AI data center optical demand scales, potentially creating near-term supply dynamics for optical transceiver components."
+        }
+      ],
+      "counterpoint": "Headlines lack specifics on integration readiness, cost-competitiveness, or deployment timelines for these optical solutions in production data centers."
+    }
   },
-  "links": []
+  "links": [
+    {
+      "headline": "STMicroelectronics Rides AI and Industrial Boom - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQcmYzcnhkYWFoUzJzVVlES3VEc2JDN1lyMGh4RUQ4UWxCZ2lsd0ZIaldobVV5UGI5dkVHT2IxblUzdEliMTFBNFdES1luSXNvMXF0d2JxSk5pb2l4SDhDcXZFVEptLWt2Rk9JNlhQaU1XUXZsenM4ZFhOQnpfUE5CTVVXSldWT21RRDY2Mi1iTXNGTG9lN196NDliU3JETVdk?oc=5",
+      "source": "Google News",
+      "published_date": "2026-11-01"
+    },
+    {
+      "headline": "PsiQuantum demos 8x8 optical switch for AI data centers with 1.2 dB loss - news.lavx.hu",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcWpTTE5EbkJ6ODNmZGlJV3k5aHltNG44UFo2VFl1Z3FpUVczMGxTOUxKV3R5YjJyR2VKcVg5Y0xmYWNIemo5VkJjamk5TmxwSTBOc013XzVXTXF2T3QxVHNyQlFWaEFTZGUtOTYzUW9DVlhtYXpiS3dXS3NwaTlkLXZkTGRzUE9DTzRJajJIZE9xbzN1dkxaQkZKSElUeHlwVXow?oc=5",
+      "source": "Google News",
+      "published_date": "2026-10-31"
+    },
+    {
+      "headline": "Tower Semiconductor stock faces Q3 test as AI demand builds - ad-hoc-news.de",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNUHRuVDFfU0FGUDkyQV9EYWl6VG1ZanhNS3dLeUhtdnJRQnBraDlOT3V4SmhSb1hHNmZzZ2xTRnNxaTVJQUlLZjJSQVNNNVZtLXZ4OEhvMXRQOUl2ZDUwX00zMERNUVlrbmpVNFdTYlZUSWN3dHFjcWhoVUJfbnU3ZmI5dlZ0QmZaSUtxbWpZbkVDU1c4TkkwaldHVEtlWkNwTzNNRHJyTnBTREdfcldDdDVjM0ZhVUd0N3NXdzgydw?oc=5",
+      "source": "Google News",
+      "published_date": "2026-10-31"
+    },
+    {
+      "headline": "Dixon Technologies stock targets silicon photonics for AI data centers - ad-hoc-news.de",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQM3c1M1pTM1VoOWN0eVlES3JDbHFVMWkxeW5GUkdzckgzNGlZelNvaXF5X1lybU9MaWVzNmQ1NmtNMXZIMk95aEdfQlVab3pFbHlZMlVmRDZ0S3FyeVZUQnc4ZF93V1JkWjM5a2RCaG9GYW9wS01ZUXg4ZXdjSGx2VzNoajlaZGRGcWVWck5uTFczd2FoaUlNRDEyd25wUHQ0RjFCLTFRTXpwcTZfUUh4cUUtVVQ4djBncHdTTWpnQ0lKck5ZcUs4WA?oc=5",
+      "source": "Google News",
+      "published_date": "2026-10-31"
+    }
+  ]
 }
