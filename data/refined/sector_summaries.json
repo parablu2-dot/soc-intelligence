@@ -1,241 +1,95 @@
 {
-  "date": "2026-11-01",
-  "generated_at": "2026-11-01T23:32:15.316093+00:00",
+  "date": "2026-11-03",
+  "generated_at": "2026-11-03T02:10:04.125684+00:00",
   "sectors": {
-    "hpc_datacenter": {
-      "sector": "HPC·Datacenter",
-      "date": "2026-11-01",
-      "item_count": 8,
-      "generated_at": "2026-11-01T23:32:15.315358+00:00",
+    "mobile_ap": {
+      "sector": "Mobile AP",
+      "date": "2026-11-03",
+      "item_count": 4,
+      "generated_at": "2026-11-03T02:10:04.125228+00:00",
       "content": {
         "ko": {
-          "executive_summary": "SK Hynix is undertaking major recruitment transformation focused on AI-era talent acquisition, restructuring hiring processes to include half-day deep interviews and AI competency assessments. The company is conducting nationwide recruitment briefings and running a 100-million-won AI hackathon to identify fast-track talent, though system failures disrupted the hackathon's preliminary rounds.",
+          "executive_summary": "Infineon and Qualcomm are collaborating on next-generation automotive computers featuring Qualcomm Snapdragon Ride for automated driving and digital cockpits. MediaTek reported Q3 2026 revenue of NT$168 billion (18.3% growth) with AI chip sales targeting $16 billion in 2027.",
           "key_facts": [
-            "SK Hynix revamped hiring process includes half-day in-depth interviews and AI competency forms",
-            "100 million won AI hackathon offering fast-track recruitment benefits",
-            "SK Hynix recruiting bond portfolio managers to manage 3 trillion won in entrusted funds",
-            "AI hackathon preliminary rounds suspended due to system failures"
+            "Infineon + Qualcomm partnership on vehicle computers",
+            "MediaTek Q3 2026 revenue: NT$168 billion",
+            "MediaTek Q3 2026 revenue growth: 18.3%",
+            "MediaTek AI chip sales target 2027: $16 billion",
+            "Qualcomm Snapdragon Ride platform"
           ],
           "implications": [
             {
-              "keyword": "Talent Competition",
-              "text": "SK Hynix's aggressive AI talent recruitment signals intensified competition for specialized AI/memory engineering expertise in HPC infrastructure buildout"
+              "keyword": "Automotive SoC momentum",
+              "text": "Infineon-Qualcomm collaboration signals accelerating adoption of advanced SoCs for autonomous and connected vehicle platforms, challenging pure-play automotive suppliers."
             },
             {
-              "keyword": "Operational Readiness",
-              "text": "System disruptions in recruitment platforms highlight infrastructure vulnerabilities during critical talent acquisition phases for AI capacity expansion"
+              "keyword": "MediaTek AI expansion",
+              "text": "AI chip revenue target of $16 billion by 2027 positions MediaTek as significant player in AI inference/edge computing, diversifying beyond consumer AP."
             }
           ],
-          "counterpoint": "Unrealistic expectations around 'eight-figure bonuses' may create hiring friction despite aggressive recruitment messaging"
+          "counterpoint": "Automotive semiconductor adoption cycles remain long; time-to-production for these platforms extends beyond 2027."
         },
         "en": {
-          "executive_summary": "SK Hynix is undertaking major recruitment transformation focused on AI-era talent acquisition, restructuring hiring processes to include half-day deep interviews and AI competency assessments. The company is conducting nationwide recruitment briefings and running a 100-million-won AI hackathon to identify fast-track talent, though system failures disrupted the hackathon's preliminary rounds.",
+          "executive_summary": "Infineon and Qualcomm are collaborating on next-generation automotive computers featuring Qualcomm Snapdragon Ride for automated driving and digital cockpits. MediaTek reported Q3 2026 revenue of NT$168 billion (18.3% growth) with AI chip sales targeting $16 billion in 2027.",
           "key_facts": [
-            "SK Hynix revamped hiring process includes half-day in-depth interviews and AI competency forms",
-            "100 million won AI hackathon offering fast-track recruitment benefits",
-            "SK Hynix recruiting bond portfolio managers to manage 3 trillion won in entrusted funds",
-            "AI hackathon preliminary rounds suspended due to system failures"
+            "Infineon + Qualcomm partnership on vehicle computers",
+            "MediaTek Q3 2026 revenue: NT$168 billion",
+            "MediaTek Q3 2026 revenue growth: 18.3%",
+            "MediaTek AI chip sales target 2027: $16 billion",
+            "Qualcomm Snapdragon Ride platform"
           ],
           "implications": [
             {
-              "keyword": "Talent Competition",
-              "text": "SK Hynix's aggressive AI talent recruitment signals intensified competition for specialized AI/memory engineering expertise in HPC infrastructure buildout"
+              "keyword": "Automotive SoC momentum",
+              "text": "Infineon-Qualcomm collaboration signals accelerating adoption of advanced SoCs for autonomous and connected vehicle platforms, challenging pure-play automotive suppliers."
             },
             {
-              "keyword": "Operational Readiness",
-              "text": "System disruptions in recruitment platforms highlight infrastructure vulnerabilities during critical talent acquisition phases for AI capacity expansion"
+              "keyword": "MediaTek AI expansion",
+              "text": "AI chip revenue target of $16 billion by 2027 positions MediaTek as significant player in AI inference/edge computing, diversifying beyond consumer AP."
             }
           ],
-          "counterpoint": "Unrealistic expectations around 'eight-figure bonuses' may create hiring friction despite aggressive recruitment messaging"
+          "counterpoint": "Automotive semiconductor adoption cycles remain long; time-to-production for these platforms extends beyond 2027."
         }
+      }
+    },
+    "hpc_datacenter": {
+      "sector": "HPC·Datacenter",
+      "date": "2026-11-03",
+      "item_count": 4,
+      "generated_at": "2026-11-03T02:10:04.125228+00:00",
+      "content": {
+        "ko": {},
+        "en": {}
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-11-01",
-      "item_count": 6,
-      "generated_at": "2026-11-01T23:32:15.315358+00:00",
+      "date": "2026-11-03",
+      "item_count": 13,
+      "generated_at": "2026-11-03T02:10:04.125228+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Custom AI accelerator competition intensifies as OpenAI plans to purchase Google TPU chips amid surging AI infrastructure demand, while FuriosaAI raises valuation to 3.8 trillion won backed by state funds. Specialized AI chip companies including Alchip, Lokotech, and SkyeChip are expanding ASIC and 3D integration capabilities to capture AI workload processing demand.",
-          "key_facts": [
-            "OpenAI purchasing Google TPU chips for AI infrastructure",
-            "Google TPU generated first AI response in orbit, launching space data center competition",
-            "FuriosaAI valued at 3.8 trillion won with state fund backing",
-            "Lokotech names Vladimir Darbroodi as CTO for ASIC and AI strategy",
-            "SkyeChip posted RM54.2 million revenue in Q2'27, up 9% quarter-on-quarter",
-            "Alchip Technologies focuses on AI and 3D integration analyst coverage"
-          ],
-          "implications": [
-            {
-              "keyword": "GPU Sourcing Diversification",
-              "text": "OpenAI's TPU adoption signals compute diversification away from NVIDIA dominance, validating alternative custom silicon strategies in hyperscaler infrastructure"
-            },
-            {
-              "keyword": "State-Backed AI Champions",
-              "text": "FuriosaAI's 3.8 trillion won valuation via state funding reflects government commitment to domestic AI chip ecosystems independent of foreign dependencies"
-            },
-            {
-              "keyword": "Edge AI Processing",
-              "text": "Space data center applications and orbital AI inference create new market segments for specialized, power-efficient custom silicon architectures"
-            }
-          ],
-          "counterpoint": "FuriosaAI's lack of chip manufacturing partnerships may limit commercial deployment velocity against integrated foundry-fabless competitors"
-        },
-        "en": {
-          "executive_summary": "Custom AI accelerator competition intensifies as OpenAI plans to purchase Google TPU chips amid surging AI infrastructure demand, while FuriosaAI raises valuation to 3.8 trillion won backed by state funds. Specialized AI chip companies including Alchip, Lokotech, and SkyeChip are expanding ASIC and 3D integration capabilities to capture AI workload processing demand.",
-          "key_facts": [
-            "OpenAI purchasing Google TPU chips for AI infrastructure",
-            "Google TPU generated first AI response in orbit, launching space data center competition",
-            "FuriosaAI valued at 3.8 trillion won with state fund backing",
-            "Lokotech names Vladimir Darbroodi as CTO for ASIC and AI strategy",
-            "SkyeChip posted RM54.2 million revenue in Q2'27, up 9% quarter-on-quarter",
-            "Alchip Technologies focuses on AI and 3D integration analyst coverage"
-          ],
-          "implications": [
-            {
-              "keyword": "GPU Sourcing Diversification",
-              "text": "OpenAI's TPU adoption signals compute diversification away from NVIDIA dominance, validating alternative custom silicon strategies in hyperscaler infrastructure"
-            },
-            {
-              "keyword": "State-Backed AI Champions",
-              "text": "FuriosaAI's 3.8 trillion won valuation via state funding reflects government commitment to domestic AI chip ecosystems independent of foreign dependencies"
-            },
-            {
-              "keyword": "Edge AI Processing",
-              "text": "Space data center applications and orbital AI inference create new market segments for specialized, power-efficient custom silicon architectures"
-            }
-          ],
-          "counterpoint": "FuriosaAI's lack of chip manufacturing partnerships may limit commercial deployment velocity against integrated foundry-fabless competitors"
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-11-01",
-      "item_count": 9,
-      "generated_at": "2026-11-01T23:32:15.315358+00:00",
+      "date": "2026-11-03",
+      "item_count": 15,
+      "generated_at": "2026-11-03T02:10:04.125228+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Sony and TSMC are establishing a 6.3 billion dollar image sensor manufacturing joint venture in Japan, while Samsung simplifies TV product lineups from technical nomenclature to three-tier categorization. AI investment profitability concerns are spreading on Wall Street as hyperscalers face mounting scrutiny over semiconductor capex returns.",
-          "key_facts": [
-            "Sony and TSMC plan 6.3 billion dollar image sensor plant in Japan",
-            "Samsung restructuring TV lineup into Ultra, Plus, Basic three-tier categories from Q 2025",
-            "Samsung discontinuing quantum dot TV production in favor of backlight unit-focused simplification",
-            "Apple reclaimed world market cap leader position from NVIDIA",
-            "2026 International Photonics Korea Expo generated over 10 million dollars in export contracts",
-            "North Korean hackers extracted 18,270 bitcoins (approximately 1.87 trillion won) from Binance"
-          ],
-          "implications": [
-            {
-              "keyword": "Strategic Imaging Partnership",
-              "text": "Sony-TSMC joint venture in image sensors positions Japan as advanced imaging node hub, diversifying foundry portfolio beyond logic and expanding high-margin specialty wafer applications"
-            },
-            {
-              "keyword": "Demand Pullback Signaling",
-              "text": "Samsung's TV product simplification and quantum dot production halt signal consumer demand normalization and margin pressure in display segments"
-            },
-            {
-              "keyword": "AI ROI Skepticism",
-              "text": "Wall Street hedging via put options and credit default swaps on GPU usage indicates growing uncertainty about AI infrastructure capex-to-revenue conversion timelines"
-            }
-          ],
-          "counterpoint": "Apple's market cap leadership despite AI underinvestment may be temporary valuation arbitrage rather than fundamental market repricing of AI economics"
-        },
-        "en": {
-          "executive_summary": "Sony and TSMC are establishing a 6.3 billion dollar image sensor manufacturing joint venture in Japan, while Samsung simplifies TV product lineups from technical nomenclature to three-tier categorization. AI investment profitability concerns are spreading on Wall Street as hyperscalers face mounting scrutiny over semiconductor capex returns.",
-          "key_facts": [
-            "Sony and TSMC plan 6.3 billion dollar image sensor plant in Japan",
-            "Samsung restructuring TV lineup into Ultra, Plus, Basic three-tier categories from Q 2025",
-            "Samsung discontinuing quantum dot TV production in favor of backlight unit-focused simplification",
-            "Apple reclaimed world market cap leader position from NVIDIA",
-            "2026 International Photonics Korea Expo generated over 10 million dollars in export contracts",
-            "North Korean hackers extracted 18,270 bitcoins (approximately 1.87 trillion won) from Binance"
-          ],
-          "implications": [
-            {
-              "keyword": "Strategic Imaging Partnership",
-              "text": "Sony-TSMC joint venture in image sensors positions Japan as advanced imaging node hub, diversifying foundry portfolio beyond logic and expanding high-margin specialty wafer applications"
-            },
-            {
-              "keyword": "Demand Pullback Signaling",
-              "text": "Samsung's TV product simplification and quantum dot production halt signal consumer demand normalization and margin pressure in display segments"
-            },
-            {
-              "keyword": "AI ROI Skepticism",
-              "text": "Wall Street hedging via put options and credit default swaps on GPU usage indicates growing uncertainty about AI infrastructure capex-to-revenue conversion timelines"
-            }
-          ],
-          "counterpoint": "Apple's market cap leadership despite AI underinvestment may be temporary valuation arbitrage rather than fundamental market repricing of AI economics"
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-11-01",
-      "item_count": 13,
-      "generated_at": "2026-11-01T23:32:15.315358+00:00",
+      "date": "2026-11-03",
+      "item_count": 16,
+      "generated_at": "2026-11-03T02:10:04.125228+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Samsung Chairman Lee Jae-yong conducted his first in-person inspection of the Yokohama Advanced Package Lab, signaling advanced packaging as critical to AI semiconductor competition. Samsung is accelerating materials and equipment partnerships with Japanese suppliers, while industry data indicates structural supply chain shifts including Intel EMIB yield challenges and rising CoWoS capital spending concentration.",
-          "key_facts": [
-            "Lee Jae-yong visited Yokohama Advanced Package Lab approximately two months after September 8 facility opening",
-            "Samsung chairman emphasizing advanced packaging as key AI chip competition battleground",
-            "Intel EMIB experiencing yield challenges affecting supply chain economics",
-            "TSMC CoWoS pricing power benefiting downstream AI chip stocks",
-            "Inari expanding photonics and advanced packaging growth focus",
-            "Russia registering new Tensor chiplet for semiconductor independence"
-          ],
-          "implications": [
-            {
-              "keyword": "Executive Strategic Prioritization",
-              "text": "Lee Jae-yong's first Yokohama visit elevates advanced packaging to board-level decision making, confirming chiplet and heterogeneous integration as Samsung's primary AI competitive vector"
-            },
-            {
-              "keyword": "Supply Chain Consolidation",
-              "text": "TSMC CoWoS capacity constraints creating pricing power concentration, forcing fabless AI chip companies to secure advanced packaging through secondary providers or in-house solutions"
-            },
-            {
-              "keyword": "Materials Ecosystem Deepening",
-              "text": "Samsung's direct partnership exploration with Japanese materials and equipment suppliers signals vertically integrated packaging strategy to de-risk supply dependencies"
-            },
-            {
-              "keyword": "Geopolitical Diversification",
-              "text": "Russia's new Tensor chiplet registration indicates accelerating semiconductor decoupling efforts outside Western supply chains amid AI capability race"
-            }
-          ],
-          "counterpoint": "Intel's EMIB yield issues may signal fundamental technical complexity in advanced packaging that Samsung's execution risk requires careful monitoring"
-        },
-        "en": {
-          "executive_summary": "Samsung Chairman Lee Jae-yong conducted his first in-person inspection of the Yokohama Advanced Package Lab, signaling advanced packaging as critical to AI semiconductor competition. Samsung is accelerating materials and equipment partnerships with Japanese suppliers, while industry data indicates structural supply chain shifts including Intel EMIB yield challenges and rising CoWoS capital spending concentration.",
-          "key_facts": [
-            "Lee Jae-yong visited Yokohama Advanced Package Lab approximately two months after September 8 facility opening",
-            "Samsung chairman emphasizing advanced packaging as key AI chip competition battleground",
-            "Intel EMIB experiencing yield challenges affecting supply chain economics",
-            "TSMC CoWoS pricing power benefiting downstream AI chip stocks",
-            "Inari expanding photonics and advanced packaging growth focus",
-            "Russia registering new Tensor chiplet for semiconductor independence"
-          ],
-          "implications": [
-            {
-              "keyword": "Executive Strategic Prioritization",
-              "text": "Lee Jae-yong's first Yokohama visit elevates advanced packaging to board-level decision making, confirming chiplet and heterogeneous integration as Samsung's primary AI competitive vector"
-            },
-            {
-              "keyword": "Supply Chain Consolidation",
-              "text": "TSMC CoWoS capacity constraints creating pricing power concentration, forcing fabless AI chip companies to secure advanced packaging through secondary providers or in-house solutions"
-            },
-            {
-              "keyword": "Materials Ecosystem Deepening",
-              "text": "Samsung's direct partnership exploration with Japanese materials and equipment suppliers signals vertically integrated packaging strategy to de-risk supply dependencies"
-            },
-            {
-              "keyword": "Geopolitical Diversification",
-              "text": "Russia's new Tensor chiplet registration indicates accelerating semiconductor decoupling efforts outside Western supply chains amid AI capability race"
-            }
-          ],
-          "counterpoint": "Intel's EMIB yield issues may signal fundamental technical complexity in advanced packaging that Samsung's execution risk requires careful monitoring"
-        }
+        "ko": {},
+        "en": {}
       }
     }
   }
