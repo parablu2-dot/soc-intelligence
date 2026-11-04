@@ -2,6 +2,276 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Thought-deciphering via hierarchical EEG-to-text alignment",
+    "url": "https://arxiv.org/abs/2611.03623v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "Communication is important for our well-being, but it can be impaired by disabilities, such as locked-in syndrome (LIS), cerebral palsy (CP), and dysarthria. Non-invasive brain-to-text brain-computer interfaces (BCIs) offer a promising solution by providing an alternative communication pathway for people with communication disabilities. However, most recent breakthroughs have relied on large, cumbersome, and costly neuroimaging modalities, such as functional magnetic resonance imaging (fMRI) and",
+    "authors": [
+      "Xiaopeng Mao",
+      "Morten Mørup",
+      "Xin Xu",
+      "Sang Wan Lee",
+      "Sadasivan Puthusserypady"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Temperature-Independent Logarithmic Current Slope in Interdiffusion-Broadened Silicon pn Junction toward Low-Power Thermometry",
+    "url": "https://arxiv.org/abs/2611.03593v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "With the development of cryogenic technologies such as quantum computing, there is an increasing need for low-power cryogenic thermometers that minimize self-heating. Here, we report an anomalous temperature-independent logarithmic current slope, $d(\\ln J)/dV$, in heavily doped silicon p$^{+}$n$^{+}$ junctions with significant dopant interdiffusion and highlight the advantages of our device as a low-power, cryogenic thermometer. Electrical characterizations from 2 to 420 K reveal that, at low fo",
+    "authors": [
+      "Sungjae Hong",
+      "Jeffrey A. Ivie",
+      "Tzu-Ming Lu",
+      "Christopher R. Allemang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "ST-GFM: Spectral-Temporal Graph Forecasting with Measured Perturbation Bounds and Masked Spectral Reconstruction",
+    "url": "https://arxiv.org/abs/2611.03512v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "Graph forecasters for sensor networks are trained in one regime and deployed in others, where sensor coupling and signal frequency content both change. We split this spectral shift into an operator channel and a frequency channel, each with a dimensionless measure. ST-GFM (Spectral-Temporal Graph Forecasting Model) filters every input step with Chebyshev and bidirectional diffusion filters on one learned, non-symmetric operator and alternates them with per-node temporal attention. For the operat",
+    "authors": [
+      "Aashish Bohra",
+      "Vivek Vijay"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Cage-enforced i-wave altermagnetism in boron-carbon clathrates",
+    "url": "https://arxiv.org/abs/2611.03492v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "The spin splitting of an altermagnet arises from a rotation that relates its two magnetic sublattices. In known cases it is fixed by the crystal structure. Here we show that guest-host frameworks separate the two roles. In the boron-carbon clathrates $M$B$_3$C$_3$ the ordered cage removes the translation between the two guest sites and enforces cubic $i$-wave altermagnetism, with six symmetry-enforced nodal planes, for any magnetic guest in the compensated state; strain retunes the class to $d$-",
+    "authors": [
+      "Meiyan Wang",
+      "Li Zhu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.comp-ph",
+    "title": "Identifying the Shear Piezoelectric Coefficient using Physics-Informed Neural Networks under Exact Boundary and Initial Constraints",
+    "url": "https://arxiv.org/abs/2611.03485v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "The shear piezoelectric coefficient $e_{15}$ governs the shear-mode electromechanical coupling in piezoelectric micromachined ultrasonic transducers (PMUTs) and surface acoustic wave (SAW) devices, but measuring it typically requires destructive resonance testing on dedicated specimens. On simulated data, $e_{15}$ can instead be recovered non-destructively from sparse, noisy subsurface wavefield observations using a constrained physics-informed neural network (PINN). By building exact spatial di",
+    "authors": [
+      "Suhas Suresh Bharadwaj"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "GIST: Location-Dependent Uplink Path Structure Transfer for FDD Downlink Channel Estimation",
+    "url": "https://arxiv.org/abs/2611.03482v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "A key challenge of downlink (DL) channel estimation in frequency division duplex (FDD) massive multiple-input multiple-output (MIMO) systems is the pilot overhead, which grows with the numbers of antennas and subcarriers. However, a prior on path delays and directions shared by the uplink (UL) and DL channels can reduce this overhead. A model trained only on UL channels measured at a base station (BS) can predict the path structure (delays, directions and power gains) from the location of a user",
+    "authors": [
+      "Jinghan Zhang",
+      "Xitao Gong",
+      "Qi Wang",
+      "Mate Boban",
+      "Giuseppe Caire"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "TinyML Hits the Memory Wall: A Benchmark of Ten Sub-Watt Edge Devices",
+    "url": "https://arxiv.org/abs/2611.03392v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "Neural network inference at the edge must fit tight energy budgets. Existing benchmarks compare few devices, do not report energy on a common basis, and omit the newest microcontrollers with an NPU or the 1 GHz Cortex-M85. Hardware-aware design also ranks networks by MAC count, yet no study has tested whether this proxy holds across accelerators. We benchmark sub-watt edge AI hardware by evaluating four CNNs (MobileNetV3, MCUNetV1, EfficientNet, SqueezeNet) and two tiny transformers (MobileViT-X",
+    "authors": [
+      "Pietro Bonazzi",
+      "Luigi Capogrosso",
+      "Ahmet Celik",
+      "Rosanna Manzo",
+      "Marco Giordano",
+      "Szymon Ruciński",
+      "Jonathan Hungerbuehler",
+      "Michele Magno"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Joint Data Association and Tracking for Surveillance Radar Using Gaussian Processes",
+    "url": "https://arxiv.org/abs/2611.03314v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "The growing presence of unmanned aerial vehicles or drones has increased the necessity of developing methods to detect and track them to secure restricted airspaces. This can be done using radars which is a common sensor around e.g. airports, an emerging method to track targets is by using Gaussian processes. However, false alarms is ever present in radars especially if tracking weak targets complicating the data association task.\n  We propose a joint data association and tracking algorithm for ",
+    "authors": [
+      "Anders Malthe Westerkam",
+      "Troels Pedersen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.ins-det",
+    "title": "A combined segmented anode gas ionization chamber and time-of-flight detector for heavy ion elastic recoil detection analysis",
+    "url": "https://arxiv.org/abs/2611.03147v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "A dedicated detector system for heavy ion elastic recoil detection analysis at the Tandem Laboratory of Uppsala University is presented. Benefits of combining a time-of-flight measurement with a segmented anode gas ionization chamber are demonstrated. The capability of ion species identification is improved with the present system, compared to that obtained when using a single solid state silicon detector for the full ion energy signal. The system enables separation of light elements, up to Neon",
+    "authors": [
+      "Petter Ström",
+      "Per Petersson",
+      "Marek Rubel",
+      "Göran Possnert"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Writing with Near-Field: towards Atomic Resolution in Material Processing",
+    "url": "https://arxiv.org/abs/2611.03144v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "Direct laser writing with ultra-short pulses is the most flexible route to two- and three-dimensional (2D/3D) material modification, yet its resolution is judged against the optical diffraction limit. This review argues the opposite: the finest, most reproducible modifications come not from shortening the wavelength but from localising the absorber. Through the threshold effect and a transient epsilon-near-zero (ENZ) state - the dielectric-to-metal (Die-Met) state of the excited solid - the depo",
+    "authors": [
+      "Haoran Mu",
+      "Hsin-Hui Huang",
+      "Tomas Katkus",
+      "Darius Gailevicius",
+      "Saulius Juodkazis"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.RO",
+    "title": "KlaskTron: An Open-Source Platform for Physical Adversarial Multi-Agent RL",
+    "url": "https://arxiv.org/abs/2611.03138v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "Progress in robot learning, particularly physical multi-agent reinforcement learning (MARL), is currently challenged by a limited availability of accessible, standardized benchmarks. While simulation-based MARL has produced remarkable emergent behaviors, from coordinated team play to complex tool use, translating these advances to physical systems remains difficult. A key barrier is infrastructural: physical platforms are often prohibitively expensive, require specialized facilities, or lack ope",
+    "authors": [
+      "Aswin Ramachandran",
+      "Jona Schulz",
+      "Maurus Derungs",
+      "Carlo Angelini",
+      "Tobias Meier",
+      "Raffaello D'Andrea"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Resilient Cell-Free MIMO ISAC Under Uncertainties: An Impairment-Aware Graph Neural Network Framework",
+    "url": "https://arxiv.org/abs/2611.03054v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "Beamforming designs for integrated sensing and communication (ISAC) in cell-free multiple-input multiple-output (MIMO) systems face the challenge to stay reliable under uncertainties from both channel state information (CSI) as well as clutter. To this end, this paper proposes an impairment-aware heterogeneous graph neural network (GNN) framework for beamforming that obtains the CSI error level and the clutter covariance as edge features, which enables a single trained model to adapt to both imp",
+    "authors": [
+      "Oways Alsoloh",
+      "Robert-Jeron Reifert",
+      "Aymen Khaleel",
+      "Stefan Roth",
+      "Aydin Sezgin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "quant-ph",
+    "title": "eigenkit: A Provider-Neutral Quantum Computing Library",
+    "url": "https://arxiv.org/abs/2611.02979v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "Quantum software ecosystems provide increasingly capable tools for simulation and hardware execution, but differences in programming models, supported features, and backend capabilities can make it difficult to move and systematically compare the same quantum algorithm across execution environments. We introduce eigenkit, a provider-neutral quantum computing library that separates algorithm definition from backend execution through a common circuit representation and provider interface. The libr",
+    "authors": [
+      "Laia Domingo",
+      "Daniil Tarpanov",
+      "Arsenii Senokosov",
+      "Asel Sagingalieva"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Memory Admission and Result-Retention Sizing in an RV32IMC FPGA Soft Processor",
+    "url": "https://arxiv.org/abs/2611.02974v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "In FPGA soft processors with shared backing block RAM, memory admission can stall a multiplication after its product has been prepared. We study how admission timing changes result retention in PaceRV, our board-tested five-stage RV32IMC core, using fixed binaries and matched dynamic instructions. Offering data requests one edge earlier reduces geometric-mean Embench cycles by 18.2% and retention opportunities from 375,063 to 4,373. Admission and retention cycle gains are conditional and non-add",
+    "authors": [
+      "Yihang Dai",
+      "Shuyu Xu",
+      "Yinfeng Zhou",
+      "Chenglei Peng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Observing oscillations using the non-magnetic and magnetic spin Hall effect in a non-collinear antiferromagnet",
+    "url": "https://arxiv.org/abs/2611.02804v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "In this study, it was observed that, in non-collinear IrMn3, both the non-magnetic spin Hall effect (NMSHE) and the magnetic spin Hall effect (MSHE) exhibit oscillations as the triangularly ordered magnetic moments of IrMn3 evolve with temperature. These oscillations are strongly influenced by the magnetic properties at the interface between IrMn3 and the adjacent material. Permalloy (Py), a ferromagnet, and platinum (Pt), a paramagnet, were employed as adjacent layers. Such experimental analyse",
+    "authors": [
+      "Monalisa Cavalcante",
+      "José Laurentino",
+      "Carlos Eduardo",
+      "Kevin Mesel",
+      "José Holanda"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Universal model of the growth of III-V tetrahedral semiconductors on polar surfaces: pyramids and glue atoms. VII. Step kinetics",
+    "url": "https://arxiv.org/abs/2611.02735v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "Ab initio calculations were used to simulate the kinetics of attachment of new segments of the crystalline lattice (pyramids) at steps on the nonmetal-terminated surface of tetrahedral semiconductors: GaN, GaP, GaAs and GaSb. These surfaces are wurtzite gallium nitride, i.e. GaN(000-1) surface, zinc blende gallium phosphide, i.e. GaP(-1-1-1) gallium arsenide, GaAs(-1-1-1) and gallium antimonide GaSb(-1-1-1) surfaces. Diffusion species are gallium adatoms at high coverage or gallium adatoms conne",
+    "authors": [
+      "Pawel Strak",
+      "Stanisław Krukowski"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Universal model of the growth of III-V tetrahedral semiconductors on polar surfaces: pyramids and glue atoms. VI. Surface diffusion on a nonmetal-terminated surface",
+    "url": "https://arxiv.org/abs/2611.02723v1",
+    "published_date": "2026-11-02",
+    "source": "arXiv",
+    "summary": "Ab initio calculations were used to simulate surface diffusion of adsorbates on the nonmetal-terminated surface of tetrahedral semiconductors: GaN, GaP, GaAs and GaSb. These surfaces are wurtzite gallium nitride, i.e. GaN(000-1) surface, zinc blende gallium phosphide, i.e. GaP(-1-1-1) gallium arsenide, GaAs (-1-1-1) and gallium antimonide GaSb (-1-1-1) surfaces. The mixed coverage consists of Ga adatoms in the first layer with a nonmetal atom attached above them forming a triangular-based pyrami",
+    "authors": [
+      "Pawel Strak",
+      "Stanisław Krukowski"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mes-hall",
     "title": "Electric field control of anisotropic spin traffic between spin-filtering and magnon-scattering in a layered antiferromagnet",
     "url": "https://arxiv.org/abs/2610.40423v1",
