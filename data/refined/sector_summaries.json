@@ -1,260 +1,86 @@
 {
-  "date": "2026-11-04",
-  "generated_at": "2026-11-04T00:35:22.919789+00:00",
+  "date": "2026-11-05",
+  "generated_at": "2026-11-05T00:55:00.247324+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-11-04",
-      "item_count": 4,
-      "generated_at": "2026-11-04T00:35:22.918971+00:00",
+      "date": "2026-11-05",
+      "item_count": 1,
+      "generated_at": "2026-11-05T00:55:00.246766+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Nordic Semiconductor introduced the nRF71 combining Wi-Fi and edge AI capabilities. ON Semiconductor reported 38% net income growth in Q3 with revenue exceeding forecasts. Key partnerships emerged including Infineon and Qualcomm collaboration on automotive computing for autonomous driving.",
+          "executive_summary": "SteamOS now runs natively on Apple Silicon Macs with significantly improved gaming performance, achieving Windows game frame rates up to 2.9x higher in testing.",
           "key_facts": [
-            "Nordic Semiconductor nRF71 integrates Wi-Fi and edge AI",
-            "ON Semiconductor Q3 net income increased 38%",
-            "Infineon and Qualcomm partnering on autonomous driving car computers",
-            "Vivo V80 FE features Dimensity 7400-Turbo processor with 50MP cameras"
+            "SteamOS runs on Apple Silicon Macs",
+            "Windows game frame rates up to 2.9x higher in tests"
           ],
           "implications": [
             {
-              "keyword": "Edge AI Integration",
-              "text": "Convergence of wireless connectivity and local AI processing in mobile AP designs drives system-on-chip consolidation"
+              "keyword": "Gaming Ecosystem",
+              "text": "SteamOS expansion to Apple Silicon enables broader gaming platform compatibility and improves developer targeting options."
             },
             {
-              "keyword": "Automotive Expansion",
-              "text": "Infineon-Qualcomm partnership signals competitive pressure to integrate computing for autonomous vehicle platforms"
+              "keyword": "Performance Optimization",
+              "text": "Frame rate improvements suggest effective CPU/GPU utilization on ARM-based Apple hardware compared to native Windows execution."
             }
           ],
-          "counterpoint": "ON Semiconductor's strong Q3 results reflect prior demand momentum but may not sustain if smartphone refresh cycles normalize."
+          "counterpoint": ""
         },
         "en": {
-          "executive_summary": "Nordic Semiconductor introduced the nRF71 combining Wi-Fi and edge AI capabilities. ON Semiconductor reported 38% net income growth in Q3 with revenue exceeding forecasts. Key partnerships emerged including Infineon and Qualcomm collaboration on automotive computing for autonomous driving.",
+          "executive_summary": "SteamOS now runs natively on Apple Silicon Macs with significantly improved gaming performance, achieving Windows game frame rates up to 2.9x higher in testing.",
           "key_facts": [
-            "Nordic Semiconductor nRF71 integrates Wi-Fi and edge AI",
-            "ON Semiconductor Q3 net income increased 38%",
-            "Infineon and Qualcomm partnering on autonomous driving car computers",
-            "Vivo V80 FE features Dimensity 7400-Turbo processor with 50MP cameras"
+            "SteamOS runs on Apple Silicon Macs",
+            "Windows game frame rates up to 2.9x higher in tests"
           ],
           "implications": [
             {
-              "keyword": "Edge AI Integration",
-              "text": "Convergence of wireless connectivity and local AI processing in mobile AP designs drives system-on-chip consolidation"
+              "keyword": "Gaming Ecosystem",
+              "text": "SteamOS expansion to Apple Silicon enables broader gaming platform compatibility and improves developer targeting options."
             },
             {
-              "keyword": "Automotive Expansion",
-              "text": "Infineon-Qualcomm partnership signals competitive pressure to integrate computing for autonomous vehicle platforms"
+              "keyword": "Performance Optimization",
+              "text": "Frame rate improvements suggest effective CPU/GPU utilization on ARM-based Apple hardware compared to native Windows execution."
             }
           ],
-          "counterpoint": "ON Semiconductor's strong Q3 results reflect prior demand momentum but may not sustain if smartphone refresh cycles normalize."
+          "counterpoint": ""
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-11-04",
-      "item_count": 8,
-      "generated_at": "2026-11-04T00:35:22.918971+00:00",
+      "date": "2026-11-05",
+      "item_count": 7,
+      "generated_at": "2026-11-05T00:55:00.246766+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "South Korea doubled its AI chip budget and announced aggressive hiring surges (2,500-person across Samsung and SK, 47% entry-level hiring increase). AI optimization tools are accelerating semiconductor fab engineering cycles. China faces talent shortages limiting self-sufficiency goals despite smuggling attempts bypassing HBM export controls.",
-          "key_facts": [
-            "South Korea doubles AI chip budget allocation",
-            "Samsung and SK announced 2,500-person hiring surge at equipment makers",
-            "47% surge in entry-level semiconductor hiring in South Korea",
-            "AI-driven process optimization shortening fab engineering timelines",
-            "China smuggling smuggled HBM from South Korea via server packaging to circumvent export controls",
-            "Semiconductor talent shortage impacting China's chip self-sufficiency initiatives"
-          ],
-          "implications": [
-            {
-              "keyword": "Government Investment",
-              "text": "South Korea's doubled AI chip budget and coordinated hiring by Samsung/SK indicates strategic pivot to compete in AI accelerator supply"
-            },
-            {
-              "keyword": "Supply Chain Controls",
-              "text": "HBM smuggling via packaging loopholes exposes vulnerabilities in export restrictions; enforcement gaps benefit non-compliant suppliers"
-            },
-            {
-              "keyword": "Engineering Velocity",
-              "text": "AI-assisted process optimization reduces R&D cycle time for complex node transitions and defect reduction"
-            }
-          ],
-          "counterpoint": "South Korea's talent scaling may face constraints as global semiconductor competition intensifies for specialized engineering resources."
-        },
-        "en": {
-          "executive_summary": "South Korea doubled its AI chip budget and announced aggressive hiring surges (2,500-person across Samsung and SK, 47% entry-level hiring increase). AI optimization tools are accelerating semiconductor fab engineering cycles. China faces talent shortages limiting self-sufficiency goals despite smuggling attempts bypassing HBM export controls.",
-          "key_facts": [
-            "South Korea doubles AI chip budget allocation",
-            "Samsung and SK announced 2,500-person hiring surge at equipment makers",
-            "47% surge in entry-level semiconductor hiring in South Korea",
-            "AI-driven process optimization shortening fab engineering timelines",
-            "China smuggling smuggled HBM from South Korea via server packaging to circumvent export controls",
-            "Semiconductor talent shortage impacting China's chip self-sufficiency initiatives"
-          ],
-          "implications": [
-            {
-              "keyword": "Government Investment",
-              "text": "South Korea's doubled AI chip budget and coordinated hiring by Samsung/SK indicates strategic pivot to compete in AI accelerator supply"
-            },
-            {
-              "keyword": "Supply Chain Controls",
-              "text": "HBM smuggling via packaging loopholes exposes vulnerabilities in export restrictions; enforcement gaps benefit non-compliant suppliers"
-            },
-            {
-              "keyword": "Engineering Velocity",
-              "text": "AI-assisted process optimization reduces R&D cycle time for complex node transitions and defect reduction"
-            }
-          ],
-          "counterpoint": "South Korea's talent scaling may face constraints as global semiconductor competition intensifies for specialized engineering resources."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-11-04",
-      "item_count": 15,
-      "generated_at": "2026-11-04T00:35:22.918971+00:00",
+      "date": "2026-11-05",
+      "item_count": 13,
+      "generated_at": "2026-11-05T00:55:00.246766+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Samsung Foundry secured 2nm cloud AI chip orders via Taiwan partner Faraday; Google's TPUs rank second only to Nvidia in deployed compute. Microsoft and Anthropic exploring custom chip design to reshape AI compute architecture. Marvell announced $115B acquisition of Lumentum to expand AI connectivity capabilities.",
-          "key_facts": [
-            "Samsung Foundry wins 2nm cloud AI chip orders partnered with Faraday",
-            "Google TPUs rank second only to Nvidia in deployed compute",
-            "Marvell acquiring Lumentum for $115 billion",
-            "Anthropic highlights Claude's chip design potential in pre-IPO discussions",
-            "Microsoft exploring custom AI chip development",
-            "Cartesia delivers sub-100ms text-to-speech via State Space Models on AWS",
-            "AI-designed CPUs from Cambricon matching decade-old smartphone performance"
-          ],
-          "implications": [
-            {
-              "keyword": "Foundry Diversification",
-              "text": "Samsung's 2nm AI chip orders through Faraday partnership signal shift beyond TSMC monopoly in advanced custom silicon"
-            },
-            {
-              "keyword": "Vertical Integration",
-              "text": "Microsoft and Anthropic custom chip efforts indicate hyperscalers moving upstream to control AI compute stack differentiation"
-            },
-            {
-              "keyword": "Connectivity M&A",
-              "text": "Marvell-Lumentum combination consolidates AI infrastructure interconnect; $115B valuation reflects criticality of data center networking"
-            },
-            {
-              "keyword": "TPU Deployment Growth",
-              "text": "Google's TPU rank second to Nvidia signals Google Cloud gaining traction as alternative AI accelerator platform"
-            }
-          ],
-          "counterpoint": "Samsung's 2nm orders are limited in scope; foundry diversification away from TSMC remains constrained by manufacturing complexity and customer risk tolerance."
-        },
-        "en": {
-          "executive_summary": "Samsung Foundry secured 2nm cloud AI chip orders via Taiwan partner Faraday; Google's TPUs rank second only to Nvidia in deployed compute. Microsoft and Anthropic exploring custom chip design to reshape AI compute architecture. Marvell announced $115B acquisition of Lumentum to expand AI connectivity capabilities.",
-          "key_facts": [
-            "Samsung Foundry wins 2nm cloud AI chip orders partnered with Faraday",
-            "Google TPUs rank second only to Nvidia in deployed compute",
-            "Marvell acquiring Lumentum for $115 billion",
-            "Anthropic highlights Claude's chip design potential in pre-IPO discussions",
-            "Microsoft exploring custom AI chip development",
-            "Cartesia delivers sub-100ms text-to-speech via State Space Models on AWS",
-            "AI-designed CPUs from Cambricon matching decade-old smartphone performance"
-          ],
-          "implications": [
-            {
-              "keyword": "Foundry Diversification",
-              "text": "Samsung's 2nm AI chip orders through Faraday partnership signal shift beyond TSMC monopoly in advanced custom silicon"
-            },
-            {
-              "keyword": "Vertical Integration",
-              "text": "Microsoft and Anthropic custom chip efforts indicate hyperscalers moving upstream to control AI compute stack differentiation"
-            },
-            {
-              "keyword": "Connectivity M&A",
-              "text": "Marvell-Lumentum combination consolidates AI infrastructure interconnect; $115B valuation reflects criticality of data center networking"
-            },
-            {
-              "keyword": "TPU Deployment Growth",
-              "text": "Google's TPU rank second to Nvidia signals Google Cloud gaining traction as alternative AI accelerator platform"
-            }
-          ],
-          "counterpoint": "Samsung's 2nm orders are limited in scope; foundry diversification away from TSMC remains constrained by manufacturing complexity and customer risk tolerance."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-11-04",
-      "item_count": 25,
-      "generated_at": "2026-11-04T00:35:22.918971+00:00",
+      "date": "2026-11-05",
+      "item_count": 18,
+      "generated_at": "2026-11-05T00:55:00.246766+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "TSMC reports Q1 EPS of NT$22.08 and commits to Science Based Targets carbon reduction goals. Samsung and TSMC are both cutting 8-inch foundry capacity, pushing utilization toward 90%. Samsung Foundry gains momentum with 2nm cloud AI orders and AMD Taylor 2 HBM base die sourcing commitment.",
-          "key_facts": [
-            "TSMC Q1 EPS NT$22.08",
-            "Samsung and TSMC cutting 8-inch foundry capacity",
-            "8-inch foundry capacity utilization pushing toward 90%",
-            "Samsung Foundry securing AMD Taylor 2 HBM base die orders",
-            "Samsung Foundry exits 8-inch production by 2030",
-            "TSMC 2nm ramp supports Taiwanese supply chain growth",
-            "China's NAURA chip tool sales up only 1% in 3Q; ACM profit down 86%"
-          ],
-          "implications": [
-            {
-              "keyword": "Capacity Discipline",
-              "text": "Coordinated 8-inch cutbacks by TSMC and Samsung signal mature node consolidation and shift to advanced nodes for AI/HPC demand"
-            },
-            {
-              "keyword": "Samsung Turnaround",
-              "text": "Tesla, Qualcomm, and AMD wins demonstrate Samsung Foundry gaining Design-in momentum after years of losses"
-            },
-            {
-              "keyword": "China Semiconductor Stress",
-              "text": "NAURA and ACM divergence reflects uneven demand recovery in China's domestic tool sector despite government investment"
-            },
-            {
-              "keyword": "Sustainability Commitment",
-              "text": "TSMC's carbon reduction target adoption signals ESG becoming supply chain requirement for enterprise customers"
-            }
-          ],
-          "counterpoint": "Samsung's foundry recovery remains fragile with wins concentrated in niche segments; sustained profitability hinges on 3nm/2nm ramp execution."
-        },
-        "en": {
-          "executive_summary": "TSMC reports Q1 EPS of NT$22.08 and commits to Science Based Targets carbon reduction goals. Samsung and TSMC are both cutting 8-inch foundry capacity, pushing utilization toward 90%. Samsung Foundry gains momentum with 2nm cloud AI orders and AMD Taylor 2 HBM base die sourcing commitment.",
-          "key_facts": [
-            "TSMC Q1 EPS NT$22.08",
-            "Samsung and TSMC cutting 8-inch foundry capacity",
-            "8-inch foundry capacity utilization pushing toward 90%",
-            "Samsung Foundry securing AMD Taylor 2 HBM base die orders",
-            "Samsung Foundry exits 8-inch production by 2030",
-            "TSMC 2nm ramp supports Taiwanese supply chain growth",
-            "China's NAURA chip tool sales up only 1% in 3Q; ACM profit down 86%"
-          ],
-          "implications": [
-            {
-              "keyword": "Capacity Discipline",
-              "text": "Coordinated 8-inch cutbacks by TSMC and Samsung signal mature node consolidation and shift to advanced nodes for AI/HPC demand"
-            },
-            {
-              "keyword": "Samsung Turnaround",
-              "text": "Tesla, Qualcomm, and AMD wins demonstrate Samsung Foundry gaining Design-in momentum after years of losses"
-            },
-            {
-              "keyword": "China Semiconductor Stress",
-              "text": "NAURA and ACM divergence reflects uneven demand recovery in China's domestic tool sector despite government investment"
-            },
-            {
-              "keyword": "Sustainability Commitment",
-              "text": "TSMC's carbon reduction target adoption signals ESG becoming supply chain requirement for enterprise customers"
-            }
-          ],
-          "counterpoint": "Samsung's foundry recovery remains fragile with wins concentrated in niche segments; sustained profitability hinges on 3nm/2nm ramp execution."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-11-04",
-      "item_count": 17,
-      "generated_at": "2026-11-04T00:35:22.918971+00:00",
+      "date": "2026-11-05",
+      "item_count": 16,
+      "generated_at": "2026-11-05T00:55:00.246766+00:00",
       "content": {
         "ko": {},
         "en": {}

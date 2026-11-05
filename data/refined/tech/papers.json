@@ -2,6 +2,317 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Bond-valence theory is a general electrostatic valence rule",
+    "url": "https://arxiv.org/abs/2611.05339v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "Pauling's electrostatic valence rule assigns to each bond of a cation of charge $z$ with $n$ anion neighbors the strength $z/n$. Bond-valence theory replaces the equal split of valence among bonds by $s=\\exp[(R_0-d)/B]$ in the bond length $d$ and takes the sum rule, that the valences at each atom add to its formal charge, as its first axiom. Here the bond valence is defined in the electron density. Atomic basins of a first-principles density are bounded by faces, one per bond critical point, and",
+    "authors": [
+      "M. L. Whittaker"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Analog signal processing, storage, and demultiplexing via in-materia wave-based computing",
+    "url": "https://arxiv.org/abs/2611.05180v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "The ability of mechanical systems to perform basic computations has gained traction in recent years, providing a robust supplement to digital computing in off-grid, low-power, and extreme environments where electronics are inaccessible or risk failure. However, prior work has focused on Boolean logic applied via bistable structures, snap-through mechanisms, or origami lattices. Digital signal processing (DSP) underpins a wide range of computational tasks, providing the foundation for information",
+    "authors": [
+      "Saeed Behboodi",
+      "Mohamed Mousa",
+      "Mostafa Nouh"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "Workload-Static Optical Circuit Switching For Scalable LLM Inference Decode",
+    "url": "https://arxiv.org/abs/2611.05104v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "LLM inference decode executes fine-grained collectives whose latency directly limits per-user interactivity, yet scale-up fabrics are still built from electronic packet switches designed for training. We observe that, for a given model deployment and parallelization, the communication structure of decode is fixed, and propose workload-static optical circuit switching (OCS): circuits are configured once per deployment, co-designed with model parallelism and with topology-aware collective schedule",
+    "authors": [
+      "Maximilian Thürmer",
+      "Nicolas Scotto di Perto",
+      "Eloise Stein",
+      "Natanijel Vasic",
+      "Mikaeil Bagherli",
+      "Zhenguo Wu",
+      "Benjamin Klenk",
+      "Holger Fröning",
+      "Johannes Feldmann"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "6G ISAC Drone Detection: Signal Processing and Experimental Validation at FR1",
+    "url": "https://arxiv.org/abs/2611.05052v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "Integrated sensing and communications (ISAC) enables mobile networks to detect passive targets such as drones at minimal additional cost. However, in ISAC, a small drone must be detected against strong ground clutter with the limited radio resources left by communications. In this paper, we propose two ISAC target detectors: a coherent detector, which combines all frames and beam dwells of a revisit, and a non-coherent detector, robust to inter-frame clock phase drift. The algorithms leverage pe",
+    "authors": [
+      "Enrique T. R. Pinto",
+      "Marcus Henninger",
+      "Lucas Giroto",
+      "Markku Juntti",
+      "Silvio Mandelli"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Periodically poled lithium niobate with submicrometer periodicity using electric-field poling technique",
+    "url": "https://arxiv.org/abs/2611.05009v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "A series of monocrystalline lithium niobate (LN) thin films on low-resistivity silicon (LNOS) substrates, with thicknesses ranging from micrometers down to tens of nanometers, were prepared through chemical-mechanical polishing of pristine crystal films. By employing the electric-field poling technique, high-quality periodically poled lithium niobate (PPLN) structures with submicrometer periodicity were fabricated in these LNOSs, and full-thickness polarization reversal beneath the poling electr",
+    "authors": [
+      "Yuchen Zhang",
+      "Sanbing Li",
+      "Shengbo Song",
+      "Xitan Xu",
+      "Xudong Tong",
+      "Rui Yang",
+      "Meiyu Liu",
+      "Jiangdong Sun",
+      "Feng Gao",
+      "Fang Bo",
+      "Jingjun Xu",
+      "Guoquan Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.supr-con",
+    "title": "Ta-based S-I-S junctions for integrated superconducting Electronics",
+    "url": "https://arxiv.org/abs/2611.04982v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "In this work, we have presented S-I-S Josephson junctions with $\\rmα$-Ta electrodes and a ${\\rm TaO}_x$ barrier. We grew base and top $α$-Ta electrodes using seed layer engineering, showing both Nb and ${\\rm TaN}_x$ are viable seed layer choices, and particularly emphasize that at room temperature a re-seed layer is required to nucleate $\\rmα$-Ta for the top electrode. However, we note that the choice of seed layer can have subtle implications on the electrical tunneling behavior of the junction",
+    "authors": [
+      "Trent Borman",
+      "Cameron Bullock",
+      "Cole Chason",
+      "Bradley Christensen",
+      "Jonathan Cochran",
+      "Emad Din",
+      "Evan Donohue",
+      "Jason Flagg",
+      "A. L. Graninger",
+      "Eric Jones",
+      "Robert Klaes",
+      "Shawn Keebaugh",
+      "Erin Kennedy",
+      "John Kula",
+      "Jason Lapano",
+      "Melissa Loving",
+      "Christopher Pasco",
+      "Devika Pathan",
+      "Tam Pham",
+      "Timothy Pillsbury",
+      "Robert Pownall",
+      "Paige Quarterman",
+      "Jacob Ruf",
+      "Jade Simmons",
+      "Nathan Siwak",
+      "Joel Strand",
+      "Yong Mo Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Band structure of two-dimensional graphene and of one-dimensional nanoribbons via variational quantum algorithms: from energies to wavefunction quality",
+    "url": "https://arxiv.org/abs/2611.04975v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "Simulating quantum many-body systems classically encounters exponential bottlenecks, which quantum devices circumvent by natively encoding wavefunctions. In the Noisy Intermediate-Scale Quantum (NISQ) era, however, hardware noise constrains simulation accuracy. As a stepping stone toward strongly correlated materials, we compute the band structure of 2D monolayer graphene and 1D nanoribbons (zigzag and armchair) using a single variational workflow in the $p_z$ tight-binding approximation. Non-in",
+    "authors": [
+      "Raúl Medrano Millán",
+      "Rodrigo Gil-Merino y Rubio",
+      "Juan Borge",
+      "Unai Aseguinolaza Aguirreche"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Interpretability Analysis of End-to-End Learned CSI Feedback for Precoding-Oriented Massive MIMO",
+    "url": "https://arxiv.org/abs/2611.04927v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "Recent end-to-end learning frameworks jointly optimize pilot design, channel state information (CSI) feedback, and downlink precoding, achieving strong performance under limited feedback overhead in massive multiple-input multiple-output (MIMO) networks. However, the internal representations and decision-making strategies learned by these architectures remain largely unexplored. This paper presents an interpretability analysis of a precoding-oriented end-to-end CSI feedback framework using expla",
+    "authors": [
+      "Roberta Bucchignani",
+      "Furkan Bagci",
+      "Jalal Jalali",
+      "Natasha Devroye"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Joint Channel Scanning and Geometry-Aware Codebook Design for Movable Antenna Arrays",
+    "url": "https://arxiv.org/abs/2611.04918v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "Multiple-input multiple-output (MIMO) systems rely on spatial degrees of freedom, but fixed antenna geometries cannot adapt to propagation environments. Movable antenna (MA) systems address this by adapting antenna positions to the channel. In discrete MA architectures, active antennas are selected from candidate positions, requiring channel state information (CSI) at those positions. With limited radio-frequency (RF) chains, CSI is acquired through successive pilot rounds, or antenna scanning, ",
+    "authors": [
+      "Amna Irshad",
+      "Luca Antonelli",
+      "Vitaly Petrov",
+      "Luca Sanguinetti",
+      "Emil Bjornson"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Effect of molybdenum content on phase transformations during continuous heating of metastable β Ti-Mo alloys",
+    "url": "https://arxiv.org/abs/2611.04858v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "Three metastable $β$ titanium alloys with different molybdenum contents, Ti-12Mo, Ti-15Mo and Ti-18Mo (wt.%), were investigated to determine the influence of $β$-phase stability on phase transformations during continuous heating. Electrical resistance measurement, dilatometry and differential scanning calorimetry were performed during linear heating at 5 °C/min up to 750 °C. The in-situ experiments were complemented by electron microscopy observations of specimens heated to selected temperatures",
+    "authors": [
+      "Veronika Kočiščáková",
+      "Anna Veverková",
+      "Josef Stráský",
+      "Jana Šmilauerová",
+      "Kristína Bartha",
+      "Petr Harcuba",
+      "Dalibor Preisler",
+      "Jozef Veselý",
+      "Miloš Janeček"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "GSPIM: A Temporal-Locality-Aware 4DGS Accelerator for PIM-Enabled Edge Devices",
+    "url": "https://arxiv.org/abs/2611.04804v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "4D Gaussian Splatting (4DGS) enables high-quality real-time novel-view synthesis for dynamic scenes, supporting free-viewpoint video, mobile XR, and autonomous systems at the edge. Methods using explicit 4D distributions, keyframe interpolation, or anchor binding share two GPU data-movement bottlenecks. Temporal filtering follows model record loading, wasting LPDDR5 bandwidth on inactive data. Frame-isolated execution also overlooks highly overlapping active sets and depth relationships across a",
+    "authors": [
+      "Zirui Ma",
+      "Zhihua Fan",
+      "Haibin Wu",
+      "Dongrui Fan",
+      "Xiaochun Ye",
+      "Wenming Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "A RISC-V Simulator for the Tenstorrent Tensix Architecture",
+    "url": "https://arxiv.org/abs/2611.04740v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "RISC-V based AI accelerators have become popular and not only for AI and ML, but also as vehicles for exploring HPC workloads more generally. Tenstorrent are one example, and whilst they document their Tensix architecture in detail and develop their software stack openly, running code has historically required a physical card, and their recently released simulator targets hardware equivalence rather than introspection. In this paper we present Wolfpine, a community developed RISC-V simulator for",
+    "authors": [
+      "Nick Brown",
+      "Daniyal Arshad"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Effect of compensation on magnetic ordering in (Ga,Mn)As",
+    "url": "https://arxiv.org/abs/2611.04729v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "The real mechanism of ferromagnetism in III-V diluted magnetic semiconductors such as Ga$_{1-x}$Mn$_x$As is still debated. The experimental results point out the realization of appreciable ferromagnetism at filling of the impurity band close to one-half that can be expressed in terms of compensation degree. Based on our recent results on the existence of two competing mechanisms of pair indirect exchange (with ferro- and antiferro alignment of Mn $d$ shells), a theory of magnetic ordering in (Ga",
+    "authors": [
+      "I. A. Kokurin",
+      "N. S. Averkiev"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Statistically Robust Characterization of Polaron and Bipolaron Intrinsic Traps in Amorphous Silica Reveals the Role of Network Flexibility in Electron Localisation",
+    "url": "https://arxiv.org/abs/2611.04652v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "Intrinsic electron localization in amorphous silica (a-SiO2) contributes to charge trapping and defect generation in silica-based electronic materials - a phenomenon that degrades logic-device performance but can be exploited for memory applications. However, the structural distribution of one- and two-electron traps remains incompletely characterized, largely because the disordered covalent network of a-SiO2 spans a vast configurational space. To address this, we perform statistical sampling to",
+    "authors": [
+      "Robin Delhomme",
+      "Jonathon Cottom",
+      "Emilia Olsson"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Spin-Density-Driven Hybrid Spin Splitting in Collinear Compensated Magnets",
+    "url": "https://arxiv.org/abs/2611.04617v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "Nonrelativistic spin splitting in collinear compensated magnets is constrained by spin-group symmetry, with distinct alternating and Zeeman-type splitting typically associated with altermagnets and fully compensated ferrimagnets, respectively. From a spin-density perspective, we propose a class of hybrid compensated magnets in which alternating-like and Zeeman-type spin splitting coexist within a single collinear compensated state. Using a minimal two-sector model, we demonstrate that this coexi",
+    "authors": [
+      "Peibo Xu",
+      "Yixuan Che",
+      "Yuxuan Li",
+      "Haifeng Lv",
+      "Xiaojun Wu",
+      "Jinlong Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Mutual-Coupling-Aware Joint Precoding and Antenna Positioning for Movable-Antenna MU-MIMO Systems",
+    "url": "https://arxiv.org/abs/2611.04552v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "Movable antennas (MAs) improve wireless communications by adapting antenna positions to the propagation environment. However, antenna movement also changes the mutual coupling (MC) among elements of the transmit and receive arrays, which affects the performance of MA-enabled systems. In this paper, we investigate MC-aware joint precoding and antenna positioning for a downlink multiuser multiple-input multiple-output (MU-MIMO) system with MAs at both the base station and users. We establish an MC",
+    "authors": [
+      "Wei Guo",
+      "Tianyi Liao",
+      "Zixin Wang",
+      "Shenghui Song",
+      "Jun Zhang",
+      "Khaled B. Letaief"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.OS",
+    "title": "UMLoad: Fast On-Demand Model Loading on Unified Memory Architecture",
+    "url": "https://arxiv.org/abs/2611.04253v1",
+    "published_date": "2026-11-03",
+    "source": "arXiv",
+    "summary": "On-demand model loading dominates response latency for interactive on-device AI, yet unified memory architectures (UMAs), now common on edge devices, should make it cheap by placing weights in memory the GPU already sees. However, frameworks still use the loading flow built for discrete GPUs, leaving significant inefficiencies. This paper presents UMLoad, a system-level model-loading accelerator that decouples a framework's logical allocations from their physical page backing. UMLoad uses on-dem",
+    "authors": [
+      "Zimeng Wang",
+      "Jinrong Yang",
+      "Rong Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.LG",
     "title": "Thought-deciphering via hierarchical EEG-to-text alignment",
     "url": "https://arxiv.org/abs/2611.03623v1",
