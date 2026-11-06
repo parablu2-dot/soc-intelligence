@@ -1,42 +1,42 @@
 {
   "mobile_ap": {
-    "date": "2026-10-31",
+    "date": "2026-11-07",
     "executive_summary": "변화 없음"
   },
   "hpc_datacenter": {
-    "date": "2026-10-31",
-    "executive_summary": "변화 없음"
+    "date": "2026-11-07",
+    "executive_summary": "SK Hynix and Samsung are aggressively recruiting across production, design, and equipment-supplier roles amid AI-driven DRAM demand surge, with SK Hynix notably targeting AI expertise through hackathons and revamped hiring processes—signaling confidence in HPC memory capacity ramps. However, talent acquisition intensity may indicate supply-chain strain at the integration layer (module-to-system) rather than foundational design breakthroughs, and operational execution risk (SK Hynix hackathon system failures) suggests coordination challenges at scale. South Korea's chip exports approach trillion-dollar threshold, but smuggling exploits (HBM+cheap processors bundled for export circumvention) expose packaging/interposer boundaries as a competitive and compliance vulnerability."
   },
   "custom_soc": {
-    "date": "2026-10-31",
-    "executive_summary": "Custom silicon acceleration for AI workloads has shifted from niche to competitive necessity: Google TPUs now distribute via Oracle OCI, Amazon pursues Decart ($7B) to escape NVIDIA inference costs, AWS launches TorchNeuron to erode CUDA lock-in, and Google-led custom chips forecast to outship GPUs by 2028. The interface value has migrated from monolithic GPU dominance to heterogeneous chiplet/HBM stacks with software abstraction layers (PyTorch, Bedrock prompt caching) that decouple workload optimization from hardware vendor."
+    "date": "2026-11-07",
+    "executive_summary": "Custom silicon for AI inference is consolidating around two competitive vectors: cloud provider verticalization (Google TPU to OpenAI, Microsoft Azure Maia 300 targeting 7x throughput by 2026) and chiplet-led interconnect differentiation (Marvell's Lumentum integration positioning silicon-optics fusion as the critical interface). The value shift confirms last week's thesis—but this week reveals the battleground has narrowed to three layers: (1) inference-specific ASICs displacing general-purpose GPUs, (2) high-bandwidth interconnect as the binding interface between accelerators and memory, and (3) cloud provider lock-in via software abstraction (AWS SageMaker AI coupling Cartesia's SSM models to bespoke chip architectures)."
   },
   "foundry": {
-    "date": "2026-10-31",
+    "date": "2026-11-07",
     "executive_summary": "변화 없음"
   },
   "packaging": {
-    "date": "2026-10-31",
-    "executive_summary": "Packaging competitive topology pivots toward geographic supply-chain redundancy and material-layer control rather than node-driven consolidation. Hanmi Semiconductor's U.S. base opening, Amkor's margin gains in advanced packaging, and Intel-AMD chiplet collaboration signals fragment design-at-interface arbitrage further; simultaneously, adhesive localization (Henkel Korea) and interposer heterogeneity (Egis-SiPearl CPU chiplets for Europe) erode single-vendor packaging dominance and raise barriers to technical lock-in at the substrate-protocol boundary."
+    "date": "2026-11-07",
+    "executive_summary": "Samsung's C-suite focus on advanced packaging via Japan's Yokohama lab signals competitive repositioning toward materials and equipment partnerships rather than internal node-driven consolidation. TSMC's CoWoS capacity continues to anchor AI chip margins, while Intel's EMIB yield challenges indicate structural fragmentation in the CSP supply chain—creating openings for tier-two vendors (ASE, Inari, Ace nanochem) in flip-chip interconnect and thermal materials. Geographic diversification and materials-layer control remain the durable competitive moat."
   },
   "cpo_optics": {
-    "date": "2026-10-31",
-    "executive_summary": "Co-packaged optics (CPO) and silicon photonics are consolidating as critical AI infrastructure interfaces. Nvidia-SPIL's 15x capacity expansion by mid-2027 and Taiwan's LandMark's record Q3 EPS on silicon photonics demand confirm supply-chain lock-in at the optical-electronic boundary; Micro LED variants (Erised, Starksemi, San'an backing) now passing customer validation, signaling technology divergence at the modulation layer. Market estimates of $50B+ reflect mainstream adoption, but competitive pressure concentrates around transceiver density and thermal management at the package edge."
+    "date": "2026-11-07",
+    "executive_summary": "CPO consolidation accelerated sharply this week with Marvell's $115B acquisition of Lumentum (endorsed by Nvidia's Jensen Huang), signaling vertical integration of optical-electronic interfaces at the system level rather than through supplier fragmentation. Tower Semiconductor and Innolight's near-package optics partnership, combined with Lumentum's $5B CPO order win, confirm demand momentum; however, the mega-merger reconfigures competitive leverage—optical transceiver density and thermal management now concentrate within a single player's end-to-end control, raising barriers for independent silicon-photonics and micro-LED competitors."
   },
   "dram": {
-    "date": "2026-10-31",
+    "date": "2026-11-07",
     "executive_summary": "변화 없음"
   },
   "nand": {
-    "date": "2026-10-31",
+    "date": "2026-11-07",
     "executive_summary": "변화 없음"
   },
   "hbm": {
-    "date": "2026-10-31",
-    "executive_summary": "변화 없음"
+    "date": "2026-11-07",
+    "executive_summary": "Samsung's Taylor 2 fab (2nm) is reportedly fully booked pre-groundbreaking with AMD and NVIDIA HBM base-die orders, consolidating Samsung's packaging-interface control in the HBM supply chain while NVIDIA secures HBM3E/HBM4 adoption across its accelerated compute stack. Simultaneously, China is circumventing U.S. trade controls by smuggling HBM packaged with commodity processors, creating parallel supply pressure on Huawei's domestic alternatives—indicating the technical interface (packaging boundary, base-die production) is now the critical choke point for both legal and illicit HBM flows."
   },
   "pmic": {
-    "date": "2026-10-31",
+    "date": "2026-11-07",
     "executive_summary": "변화 없음"
   }
 }
