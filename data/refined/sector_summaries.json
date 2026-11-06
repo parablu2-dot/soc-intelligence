@@ -1,86 +1,270 @@
 {
-  "date": "2026-11-05",
-  "generated_at": "2026-11-05T00:55:00.247324+00:00",
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T00:56:32.105025+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-11-05",
-      "item_count": 1,
-      "generated_at": "2026-11-05T00:55:00.246766+00:00",
+      "date": "2026-11-06",
+      "item_count": 5,
+      "generated_at": "2026-11-06T00:56:32.104479+00:00",
       "content": {
         "ko": {
-          "executive_summary": "SteamOS now runs natively on Apple Silicon Macs with significantly improved gaming performance, achieving Windows game frame rates up to 2.9x higher in testing.",
+          "executive_summary": "Marvell's $115 billion all-stock acquisition of Lumentum creates an integrated optics supplier for AI data center scale-up/scale-in architectures. Qualcomm revenue declined 2% to $43.24 billion in FY2026 despite automotive surging 52%, with AI data center revenue targeted at $15 billion by FY2029.",
           "key_facts": [
-            "SteamOS runs on Apple Silicon Macs",
-            "Windows game frame rates up to 2.9x higher in tests"
+            "Marvell to acquire Lumentum in $115 billion all-stock deal",
+            "Qualcomm FY2026 revenue: $43.24 billion (down 2%)",
+            "Qualcomm automotive revenue up 52%",
+            "Qualcomm AI data center target: $15 billion by FY2029",
+            "Qualcomm shares fell 7% post-AI chip launch"
           ],
           "implications": [
             {
-              "keyword": "Gaming Ecosystem",
-              "text": "SteamOS expansion to Apple Silicon enables broader gaming platform compatibility and improves developer targeting options."
+              "keyword": "Optics Integration",
+              "text": "Combined Marvell-Lumentum entity positions for optical interconnect dominance in AI infrastructure"
             },
             {
-              "keyword": "Performance Optimization",
-              "text": "Frame rate improvements suggest effective CPU/GPU utilization on ARM-based Apple hardware compared to native Windows execution."
+              "keyword": "Automotive Momentum",
+              "text": "Qualcomm's 52% automotive surge and Infineon partnerships signal vehicle-centric AI/autonomy adoption"
+            },
+            {
+              "keyword": "Data Center Exposure",
+              "text": "AI data center segment represents critical growth lever; FY2029 target of $15B implies significant market share assumptions"
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "Stock pullback despite strategic positioning suggests investor caution on valuation and execution risk."
         },
         "en": {
-          "executive_summary": "SteamOS now runs natively on Apple Silicon Macs with significantly improved gaming performance, achieving Windows game frame rates up to 2.9x higher in testing.",
+          "executive_summary": "Marvell's $115 billion all-stock acquisition of Lumentum creates an integrated optics supplier for AI data center scale-up/scale-in architectures. Qualcomm revenue declined 2% to $43.24 billion in FY2026 despite automotive surging 52%, with AI data center revenue targeted at $15 billion by FY2029.",
           "key_facts": [
-            "SteamOS runs on Apple Silicon Macs",
-            "Windows game frame rates up to 2.9x higher in tests"
+            "Marvell to acquire Lumentum in $115 billion all-stock deal",
+            "Qualcomm FY2026 revenue: $43.24 billion (down 2%)",
+            "Qualcomm automotive revenue up 52%",
+            "Qualcomm AI data center target: $15 billion by FY2029",
+            "Qualcomm shares fell 7% post-AI chip launch"
           ],
           "implications": [
             {
-              "keyword": "Gaming Ecosystem",
-              "text": "SteamOS expansion to Apple Silicon enables broader gaming platform compatibility and improves developer targeting options."
+              "keyword": "Optics Integration",
+              "text": "Combined Marvell-Lumentum entity positions for optical interconnect dominance in AI infrastructure"
             },
             {
-              "keyword": "Performance Optimization",
-              "text": "Frame rate improvements suggest effective CPU/GPU utilization on ARM-based Apple hardware compared to native Windows execution."
+              "keyword": "Automotive Momentum",
+              "text": "Qualcomm's 52% automotive surge and Infineon partnerships signal vehicle-centric AI/autonomy adoption"
+            },
+            {
+              "keyword": "Data Center Exposure",
+              "text": "AI data center segment represents critical growth lever; FY2029 target of $15B implies significant market share assumptions"
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "Stock pullback despite strategic positioning suggests investor caution on valuation and execution risk."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-11-05",
-      "item_count": 7,
-      "generated_at": "2026-11-05T00:55:00.246766+00:00",
+      "date": "2026-11-06",
+      "item_count": 5,
+      "generated_at": "2026-11-06T00:56:32.104479+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "GPU-CPU orchestration emerging as critical bottleneck in agentic AI workloads; NVIDIA advancing full-stack codesign with HBM3e/HBM4 adoption to address memory pressure. Samsung and SK Hynix intensifying recruitment in Japan to secure packaging and HBM talent amid capacity constraints.",
+          "key_facts": [
+            "NVIDIA adopting HBM3e and HBM4 technologies in accelerated computing stack",
+            "AI agents require CPU execution alongside GPU reasoning, straining memory subsystems",
+            "Samsung and SK Hynix launching Japan-based talent acquisition for packaging and HBM expertise",
+            "Samsung/SK Hynix offering employment-guaranteed contract programs to secure semiconductor talent"
+          ],
+          "implications": [
+            {
+              "keyword": "Memory Hierarchy Redesign",
+              "text": "Full-stack codesign and HBM adoption essential to sustain AI agent scaling; supply tightness continuing through near term"
+            },
+            {
+              "keyword": "Talent War",
+              "text": "Cross-border recruitment by major Korean players indicates acute shortage of advanced packaging and HBM specialists"
+            },
+            {
+              "keyword": "AI Architecture Evolution",
+              "text": "CPU-GPU heterogeneous execution patterns reshaping compute hierarchy and memory bandwidth requirements"
+            }
+          ],
+          "counterpoint": "Job guarantee programs may signal overconfidence in sustained AI capex; economic softening could reverse talent scarcity."
+        },
+        "en": {
+          "executive_summary": "GPU-CPU orchestration emerging as critical bottleneck in agentic AI workloads; NVIDIA advancing full-stack codesign with HBM3e/HBM4 adoption to address memory pressure. Samsung and SK Hynix intensifying recruitment in Japan to secure packaging and HBM talent amid capacity constraints.",
+          "key_facts": [
+            "NVIDIA adopting HBM3e and HBM4 technologies in accelerated computing stack",
+            "AI agents require CPU execution alongside GPU reasoning, straining memory subsystems",
+            "Samsung and SK Hynix launching Japan-based talent acquisition for packaging and HBM expertise",
+            "Samsung/SK Hynix offering employment-guaranteed contract programs to secure semiconductor talent"
+          ],
+          "implications": [
+            {
+              "keyword": "Memory Hierarchy Redesign",
+              "text": "Full-stack codesign and HBM adoption essential to sustain AI agent scaling; supply tightness continuing through near term"
+            },
+            {
+              "keyword": "Talent War",
+              "text": "Cross-border recruitment by major Korean players indicates acute shortage of advanced packaging and HBM specialists"
+            },
+            {
+              "keyword": "AI Architecture Evolution",
+              "text": "CPU-GPU heterogeneous execution patterns reshaping compute hierarchy and memory bandwidth requirements"
+            }
+          ],
+          "counterpoint": "Job guarantee programs may signal overconfidence in sustained AI capex; economic softening could reverse talent scarcity."
+        }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-11-05",
+      "date": "2026-11-06",
       "item_count": 13,
-      "generated_at": "2026-11-05T00:55:00.246766+00:00",
+      "generated_at": "2026-11-06T00:56:32.104479+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Hyperscalers and fabless design houses racing to differentiate through in-house silicon: Google commits $17B to Wyoming data center, Anthropic advances internal chip design, and Broadcom TPU compute doubled to ~2M H100-equivalents. Custom SoC market consolidating around AI training/inference optimization with significant design wins ($1B+ for GlobalFoundries).",
+          "key_facts": [
+            "Google commits $17 billion to first Wyoming data center campus",
+            "Broadcom TPU compute shipments doubled to approximately 2 million H100-equivalents",
+            "GlobalFoundries secures nearly $1 billion in custom chip design wins",
+            "Amazon Trainium sales targeted for late 2027",
+            "MediaTek recruits Intel packaging veteran Navid Shahriari for AI chip acceleration",
+            "Anthropic advancing proprietary chip design with Claude integration",
+            "Micron unveiling 3D NAND, High-NA EUV, and custom silicon roadmap",
+            "MI355X targets 288 GB memory [2026]"
+          ],
+          "implications": [
+            {
+              "keyword": "Vertical Integration",
+              "text": "Hyperscalers (Google, Amazon, Anthropic) building proprietary silicon to differentiate and control cost structure; design-in wins shifting from fabless to consumer/platform companies"
+            },
+            {
+              "keyword": "Fabric Performance",
+              "text": "Broadcom TPU volume doubling signals sustained demand for custom networking/training silicon; Qualcomm AI shift may reshape Samsung foundry relationships"
+            },
+            {
+              "keyword": "Talent Acquisitions",
+              "text": "MediaTek's recruitment of Intel packaging expertise and focus on dual CoWoS-EMIB strategy indicate advanced packaging as critical competitive differentiator"
+            },
+            {
+              "keyword": "Memory Roadmap",
+              "text": "Micron's custom silicon comeback with 3D NAND and High-NA EUV reflects AI workload memory density requirements"
+            }
+          ],
+          "counterpoint": "Hyperscaler custom chip programs face long design cycles and execution risk; fabless breadth remains valued for multiple customers."
+        },
+        "en": {
+          "executive_summary": "Hyperscalers and fabless design houses racing to differentiate through in-house silicon: Google commits $17B to Wyoming data center, Anthropic advances internal chip design, and Broadcom TPU compute doubled to ~2M H100-equivalents. Custom SoC market consolidating around AI training/inference optimization with significant design wins ($1B+ for GlobalFoundries).",
+          "key_facts": [
+            "Google commits $17 billion to first Wyoming data center campus",
+            "Broadcom TPU compute shipments doubled to approximately 2 million H100-equivalents",
+            "GlobalFoundries secures nearly $1 billion in custom chip design wins",
+            "Amazon Trainium sales targeted for late 2027",
+            "MediaTek recruits Intel packaging veteran Navid Shahriari for AI chip acceleration",
+            "Anthropic advancing proprietary chip design with Claude integration",
+            "Micron unveiling 3D NAND, High-NA EUV, and custom silicon roadmap",
+            "MI355X targets 288 GB memory [2026]"
+          ],
+          "implications": [
+            {
+              "keyword": "Vertical Integration",
+              "text": "Hyperscalers (Google, Amazon, Anthropic) building proprietary silicon to differentiate and control cost structure; design-in wins shifting from fabless to consumer/platform companies"
+            },
+            {
+              "keyword": "Fabric Performance",
+              "text": "Broadcom TPU volume doubling signals sustained demand for custom networking/training silicon; Qualcomm AI shift may reshape Samsung foundry relationships"
+            },
+            {
+              "keyword": "Talent Acquisitions",
+              "text": "MediaTek's recruitment of Intel packaging expertise and focus on dual CoWoS-EMIB strategy indicate advanced packaging as critical competitive differentiator"
+            },
+            {
+              "keyword": "Memory Roadmap",
+              "text": "Micron's custom silicon comeback with 3D NAND and High-NA EUV reflects AI workload memory density requirements"
+            }
+          ],
+          "counterpoint": "Hyperscaler custom chip programs face long design cycles and execution risk; fabless breadth remains valued for multiple customers."
+        }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-11-05",
-      "item_count": 18,
-      "generated_at": "2026-11-05T00:55:00.246766+00:00",
+      "date": "2026-11-06",
+      "item_count": 15,
+      "generated_at": "2026-11-06T00:56:32.104479+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "TSMC and Samsung consolidating AI lead through HBM base die capacity and advanced packaging: Samsung's second Taylor Fab locked into orders for AMD/NVIDIA HBM production; Intel touting 90%+ wafer utilization with interposer-free EMIB; MediaTek dual CoWoS-EMIB strategy advancing. Micron's Taiwan fab construction halted amid labor dispute, signaling supply chain fragility.",
+          "key_facts": [
+            "Samsung second Taylor Fab orders confirmed for HBM base dies (AMD, NVIDIA customers)",
+            "Samsung dedicating new 2nm/4nm fab to HBM expansion",
+            "Intel reporting 90%+ wafer utilization with interposer-free EMIB; targeting 70+ bridges per future AI chip",
+            "MediaTek advancing dual CoWoS-EMIB strategy with Intel packaging veteran Navid Shahriari",
+            "Micron Taiwan Taoyuan fab construction halted due to labor dispute",
+            "Micron Taoyuan union secured legal strike rights (Taiwan advanced tech industry first)",
+            "Samsung Q3 DRAM market share: 38% (vs SK Hynix 29%, Micron 21%)",
+            "DRAM wafer revenue exceeds $80,000, surpassing TSMC 2nm foundry pricing"
+          ],
+          "implications": [
+            {
+              "keyword": "HBM Capacity Lock-in",
+              "text": "Samsung's Taylor Fab orders underscore hyperscaler demand certainty; HBM base die production becoming strategic bottleneck comparable to GPU demand"
+            },
+            {
+              "keyword": "Advanced Packaging Rivalry",
+              "text": "Intel EMIB 90%+ utilization and MediaTek dual-strategy indicate packaging architecture competition accelerating; interposer-free designs driving yield and cost"
+            },
+            {
+              "keyword": "Supply Chain Risk",
+              "text": "Micron Taiwan fab halt exposes labor/geopolitical vulnerability in memory expansion; union strike precedent raises cost structure concerns for future Taiwan capacity"
+            },
+            {
+              "keyword": "Memory Pricing Power",
+              "text": "DRAM wafer revenue ($80k+) dramatically exceeds foundry (TSMC 2nm), signaling AI-driven memory premiums may sustain through 2027"
+            }
+          ],
+          "counterpoint": "Samsung's ambitious HBM fab expansion and locked orders assume sustained hyperscaler capex; economic downturn could force order deferrals or cancellations."
+        },
+        "en": {
+          "executive_summary": "TSMC and Samsung consolidating AI lead through HBM base die capacity and advanced packaging: Samsung's second Taylor Fab locked into orders for AMD/NVIDIA HBM production; Intel touting 90%+ wafer utilization with interposer-free EMIB; MediaTek dual CoWoS-EMIB strategy advancing. Micron's Taiwan fab construction halted amid labor dispute, signaling supply chain fragility.",
+          "key_facts": [
+            "Samsung second Taylor Fab orders confirmed for HBM base dies (AMD, NVIDIA customers)",
+            "Samsung dedicating new 2nm/4nm fab to HBM expansion",
+            "Intel reporting 90%+ wafer utilization with interposer-free EMIB; targeting 70+ bridges per future AI chip",
+            "MediaTek advancing dual CoWoS-EMIB strategy with Intel packaging veteran Navid Shahriari",
+            "Micron Taiwan Taoyuan fab construction halted due to labor dispute",
+            "Micron Taoyuan union secured legal strike rights (Taiwan advanced tech industry first)",
+            "Samsung Q3 DRAM market share: 38% (vs SK Hynix 29%, Micron 21%)",
+            "DRAM wafer revenue exceeds $80,000, surpassing TSMC 2nm foundry pricing"
+          ],
+          "implications": [
+            {
+              "keyword": "HBM Capacity Lock-in",
+              "text": "Samsung's Taylor Fab orders underscore hyperscaler demand certainty; HBM base die production becoming strategic bottleneck comparable to GPU demand"
+            },
+            {
+              "keyword": "Advanced Packaging Rivalry",
+              "text": "Intel EMIB 90%+ utilization and MediaTek dual-strategy indicate packaging architecture competition accelerating; interposer-free designs driving yield and cost"
+            },
+            {
+              "keyword": "Supply Chain Risk",
+              "text": "Micron Taiwan fab halt exposes labor/geopolitical vulnerability in memory expansion; union strike precedent raises cost structure concerns for future Taiwan capacity"
+            },
+            {
+              "keyword": "Memory Pricing Power",
+              "text": "DRAM wafer revenue ($80k+) dramatically exceeds foundry (TSMC 2nm), signaling AI-driven memory premiums may sustain through 2027"
+            }
+          ],
+          "counterpoint": "Samsung's ambitious HBM fab expansion and locked orders assume sustained hyperscaler capex; economic downturn could force order deferrals or cancellations."
+        }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-11-05",
-      "item_count": 16,
-      "generated_at": "2026-11-05T00:55:00.246766+00:00",
+      "date": "2026-11-06",
+      "item_count": 12,
+      "generated_at": "2026-11-06T00:56:32.104479+00:00",
       "content": {
         "ko": {},
         "en": {}

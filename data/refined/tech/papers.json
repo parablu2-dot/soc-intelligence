@@ -2,6 +2,249 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Joint Association and Beamforming Design for Cooperative ISAC Systems",
+    "url": "https://arxiv.org/abs/2611.06853v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "Cooperation among multiple base stations (BSs) improves both communication and sensing in integrated sensing and communication (ISAC) networks. However, it requires deciding which BSs serve each communication user (CU) and each target, and how each BS beamforms. In this work, we consider joint BS-CU and BS-target association, and beamforming for a general cooperative ISAC system, overcoming prior simplifications such as single-user or target setups, fixed BS roles, coherent radar or separate wav",
+    "authors": [
+      "Abhishek Rajasekaran",
+      "Mehdi Karbalayghareh",
+      "Xiaoyan Ma",
+      "David J. Love",
+      "Christopher G. Brinton"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Enabling AWS Cloud FPGA Development Using High-Level Vitis HLS",
+    "url": "https://arxiv.org/abs/2611.06829v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "We present a toolchain for development of ML models on AWS EC2 F2 cloud FPGA infrastructure from high-level language, implementing a complete Vitis HLS to HDK bridge to AFI workflow that has been absent from the academic literature despite eight years of AWS FPGA availability. We introduce a four-level methodology (FP32 PyTorch, bit-accurate quantized Python, HLS C-simulation, physical FPGA) to aid in localizing errors, including FPGA-specific circuit errors. Together these tools allow coding ag",
+    "authors": [
+      "David Rostcheck"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "Integrated Identity Protection for Semantic Communications in Embodied IoT Systems",
+    "url": "https://arxiv.org/abs/2611.06788v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "Embodied Internet of Things (IoT) systems are promoting the adoption of task-oriented semantic communication (SemCom), in which the trustworthy task decisions require both semantic information reliability and source legitimacy. However, existing trustworthy designs in SemCom mainly focus on semantic content recovery and protection, with limited attention to source legitimacy. Motivated by this limitation, this paper establishes a new information exploitation paradigm for integrated SemCom-identi",
+    "authors": [
+      "Yu Zhang",
+      "JingQi Liu",
+      "Shuangrui Zhao",
+      "Yuanyu Zhang",
+      "Yulong Shen",
+      "Xiaohong Jiang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Energy Efficient Near-Threshold Voltage Massive MIMO Computing",
+    "url": "https://arxiv.org/abs/2611.06772v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "Near-Threshold Computing (NTC) offers a substan- tial energy savings, i.e., up to 10x, for digital circuits. However, due to Process, Voltage, and Temperature (PVT) variations, low voltage operating digital processors face increased susceptibility to timing errors. This work equips conventional massive MIMO algorithms with computational error detection mechanisms, en- abling reliable operation down to near-threshold voltages. While conventional hardware based Timing Error Detection (TED) systems",
+    "authors": [
+      "MD Salman Sakib",
+      "Mehdi Safarpour",
+      "Pejman Ghasemzadeh",
+      "Shahriar Shahabuddin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Data Center Agglomeration and Power Infrastructure Capacity in the United States",
+    "url": "https://arxiv.org/abs/2611.06737v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "The continuous expansion of digital infrastructure, especially data centers, has imposed unprecedented, geographically concentrated stress on existing power grids. However, rigorous causal evidence quantifying how these facilities reshape local power-infrastructure supply remains limited. This study builds a comprehensive county-level US panel dataset spanning 2010-2024, uniquely integrating individual data center building footprints and power-plant additions. To mitigate endogeneity and high-di",
+    "authors": [
+      "Yutong Ma"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Delay-Doppler Synchronization for Distributed Uplink Interference Nulling in LEO Networks",
+    "url": "https://arxiv.org/abs/2611.06719v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "Cooperation among low-Earth-orbit (LEO) satellites provides spatial diversity for mitigating uplink interference that is difficult to suppress with a single onboard array. Coherent interference cancellation across satellites, however, requires compensation of the relative delay and Doppler of a common interferer. We analyze two-branch interference nulling with finite training and derive a closed-form approximation to the mean residual interference-to-noise ratio (INR). The approximation separate",
+    "authors": [
+      "Stefan Daniel Tancovici",
+      "Shizhen Jia",
+      "Marco Mezzavilla",
+      "C. Nicolas Barati",
+      "Sundeep Rangan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Explicit pore pre-conditioning and inverse design of amorphous nanoporous carbon",
+    "url": "https://arxiv.org/abs/2611.06614v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "Porous carbons store energy, capture gases and purify water, and their performance depends strongly on the geometry of their pores. Atomistic models mostly simulate their synthesis by molecular dynamics, with results that depend on the interatomic potential, and return the pore network as an output rather than as a specification. Here we show that the pore network can be an input: pores drawn from a target size distribution fill a prescribed volume fraction, carbon is grown around them by stocha",
+    "authors": [
+      "Matteo Alberghini",
+      "Giacomo Pierotti",
+      "Maryam Amini",
+      "Mauro Sgroi",
+      "Alessio Tommasi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Iteration-Free Candidate Pruning and an Index-Domain VLSI Architecture for Sort-Free MIMO Box Decoding up to 1024-QAM",
+    "url": "https://arxiv.org/abs/2611.06576v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "Wi-Fi~7 and 5G NR use constellations up to $4096$-QAM and $1024$-QAM at multi-gigabit peak rates. The MIMO detector must sustain these rates at a low cost. Linear MMSE detection meets these rates at low cost but loses several dB in SNR. $K$-Best detection recovers this loss, but its per-layer sorting grows with the modulation order and needs large sorting networks or deep pipelines at these rates. Box Decoding is a sort-free tree-search detector whose complexity does not depend on the QAM order,",
+    "authors": [
+      "Shengchun Yang",
+      "Amit Sravan Bora",
+      "Emil Matúš",
+      "Gerhard Fettweis"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Box-Shift: Fixed-Complexity Counter-Hypothesis Generation for Soft-Output MIMO Box Decoding",
+    "url": "https://arxiv.org/abs/2611.06566v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "Box Decoding is a sort-free tree-search multiple-input multiple-output (MIMO) detector with a fixed per-layer cost independent of the quadrature amplitude modulation (QAM) order. Its regular datapath is well suited to hardware implementation, but the detector has so far been limited to hard-output operation in uncoded systems. Its fixed four-point box spans two adjacent Gray-coded QAM levels per axis, leaving most bits without counter-hypotheses for higher-order QAM. This missing counter-hypothe",
+    "authors": [
+      "Shengchun Yang",
+      "Amit Sravan Bora",
+      "Emil Matúš",
+      "Gerhard Fettweis"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "FPTR: Feasibility-Preserving Transactional Refinement for Deadline-Constrained Joint Beam and Resource Allocation",
+    "url": "https://arxiv.org/abs/2611.06491v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "Short-interval wireless schedulers must return a complete, feasible beam-and-resource allocation before each execution deadline, and a late or invalid output gives no utility in the current control cycle. Searching longer can increase transmitted traffic, but it may also miss the deadline or leave only an infeasible intermediate solution. We propose Feasibility-Preserving Transactional Refinement (FPTR), which always keeps a validated feasible allocation, the incumbent. Each refinement stage bui",
+    "authors": [
+      "Minghao Kong",
+      "Zirong Liu",
+      "Jianhao Wu",
+      "Muyao Chen",
+      "Jianxin Wu",
+      "Rongjie Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Hardwired Distributed Processing Units for Inference: Neural Decisions at the Sensor that Free the Host",
+    "url": "https://arxiv.org/abs/2611.06436v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "We show that a hardwired distributed processing unit (HDPU) can take a neural decision at the sensor and so remove the inference from the host. Built for zebra-crossing detection on a low-cost Artix-7 FPGA, the unit decides on every camera frame in a fixed 2,269,477 clock cycles (34.04 ms depends upon Fpga clk ), inside the 37.49-ms frame period, and on the board it returns the same scores and decisions as its bit-exact software model on all 639 test images. The whole detection path, from camera",
+    "authors": [
+      "Raj Mali"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Consistency Learning and Distillation for One-Step MIMO-OFDM Channel Estimation",
+    "url": "https://arxiv.org/abs/2611.06271v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "Iterative neural channel estimators can improve recovery under pilot contamination, but repeated network evaluations increase inference cost. This paper develops observation-anchored consistency and Consistency Mid-Training (CMT) estimators for one-step channel estimation in multiple-input multiple-output orthogonal frequency-division multiplexing (MIMO-OFDM) systems. Both estimators refine pilot-derived least-squares channel estimates in the delay-beam domain. Consistency learning couples endpo",
+    "authors": [
+      "Fredrik Nguyen",
+      "Qiwen Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Ambiguity Elimination via Successive Estimation in ISAC Systems with Reference Signals",
+    "url": "https://arxiv.org/abs/2611.06227v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "Integrated sensing and communication (ISAC) systems can efficiently reuse 5G New Radio (NR) reference signals to enable joint communication and passive target detection. Among these, the Positioning Reference Signal (PRS) is widely adopted for high-performance sensing activities. However, the PRS configuration, given by the comb structure, introduces periodic ambiguities, resulting in ghost targets. Existing approaches mitigate this issue by combining PRS with additional reference signals, such ",
+    "authors": [
+      "Ali Al Khansa",
+      "Sami Mekki",
+      "Giyyarpuram Madhusudan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "ST-CGMDiff: Sparse-Conditioned Cross-Frequency Spatio-Temporal Latent Diffusion for Dynamic 3D Channel Gain Map Reconstruction",
+    "url": "https://arxiv.org/abs/2611.06220v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "Accurate and efficient reconstruction of channel gain maps (CGMs) is essential for environment-aware wireless communications. Unlike prior works that focus on static CGMs at a single frequency band, this paper studies the construction of dynamic three-dimensional (3D) CGMs across multiple frequency bands over consecutive time slots, using limited channel measurements. Specifically, for a given transmitter (Tx) location, we represent the CGM at any given receiver (Rx) height as a two-dimensional ",
+    "authors": [
+      "Tianxiang Li",
+      "Yilong Chen",
+      "Han Hu",
+      "Yong Zeng",
+      "Jie Xu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.PL",
+    "title": "TauLang: A Language and Compiler for Space-Time Programming on Statically Scheduled Accelerators",
+    "url": "https://arxiv.org/abs/2611.06079v1",
+    "published_date": "2026-11-04",
+    "source": "arXiv",
+    "summary": "Statically scheduled accelerators such as Groq's Tensor Streaming Processor (TSP) achieve low-latency large language model inference by stripping dynamic synchronization hardware from the chip. With no caches, arbiters, or hardware schedulers, the compiler must fix the exact slice and issue cycle of every operation, so when an operation runs is a condition for correctness. Existing kernel languages cannot target such machines because they rely on hardware to resolve cycle timing and instead enco",
+    "authors": [
+      "Xuxiao Yang",
+      "Junchi Wu",
+      "Feiyang Wu",
+      "Zhuoran Li",
+      "Shuo Tao",
+      "Dongyi Fan",
+      "Yiming Zhang",
+      "Keqin Luo",
+      "Xingrui Gao",
+      "Xuehai Qian",
+      "Youwei Zhuo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Bond-valence theory is a general electrostatic valence rule",
     "url": "https://arxiv.org/abs/2611.05339v1",
