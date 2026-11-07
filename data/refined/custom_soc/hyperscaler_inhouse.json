@@ -3,6 +3,36 @@
     "axis": "custom_soc",
     "company": "hyperscaler_inhouse",
     "category": "news",
+    "headline": "SageMaker Inference now supports Multi-Instance GPU to maximize GPU utilization for model endpoints",
+    "url": "https://aws.amazon.com/blogs/machine-learning/sagemaker-inference-now-supports-multi-instance-gpu-to-maximize-gpu-utilization-for-model-endpoints/",
+    "published_date": "2026-11-06",
+    "source": "AWS Blog",
+    "summary": "Amazon SageMaker Inference now supports GPU partitioning with NVIDIA Multi-Instance GPU (MIG), which divides one GPU into hardware-isolated partitions so you can run a different model in each or take a right-sized fraction of a newer accelerator. This post shows how two optional API fields place one model per partition, and what we measured against a whole older GPU."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
+    "category": "news",
+    "headline": "How Greenlight Financial built an autonomous SOC solution on Amazon Bedrock AgentCore",
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-greenlight-financial-built-an-autonomous-soc-solution-on-amazon-bedrock-agentcore/",
+    "published_date": "2026-11-06",
+    "source": "AWS Blog",
+    "summary": "Greenlight Financial resolves more than 90% of up to 4,000 monthly security and risk cases without human intervention using Luna, a tiered multi-agent system on Amazon Bedrock AgentCore. This post covers the architecture, episodic memory for continuous learning, and the expansion from SOC operations into financial risk triage."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
+    "category": "news",
+    "headline": "Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200",
+    "url": "https://azure.microsoft.com/en-us/blog/designing-azure-silicon-on-azure-silicon-eda-workloads-on-cobalt-200/",
+    "published_date": "2026-11-05",
+    "source": "Microsoft Azure Blog",
+    "summary": "Discover how Microsoft is accelerating electronic design automation (EDA) workloads with Azure Cobalt 200 VMs. Explore early performance results demonstrating faster simulation, verification, and static timing analysis, along with the benefits of scalable cloud infrastructure for silicon design and development. \n The post  Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200  appeared first on  Microsoft Azure Blog ."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
+    "category": "news",
     "headline": "Building ultra-low-latency voice AI applications on AWS",
     "url": "https://aws.amazon.com/blogs/machine-learning/building-ultra-low-latency-voice-ai-applications-on-aws/",
     "published_date": "2026-11-03",
