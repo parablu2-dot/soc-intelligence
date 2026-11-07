@@ -5393,7 +5393,7 @@ aws sagemaker describe-model-package \
 	<atom:link href="https://azure.microsoft.com/en-us/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://azure.microsoft.com/en-us/blog/</link>
 	<description>Get the latest Azure news, updates, and announcements from the Azure blog. From product updates to hot topics, hear from the Azure experts.</description>
-	<lastBuildDate>Thu, 05 Nov 2026 16:09:56 +0000</lastBuildDate>
+	<lastBuildDate>Wed, 04 Nov 2026 17:09:11 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -5409,606 +5409,6 @@ aws sagemaker describe-model-package \
 	<height>32</height>
 </image> 
 	<item>
-		<title>Stop treating agents as one-off projects and start running them as a continuous discipline</title>
-		<link>https://azure.microsoft.com/en-us/blog/stop-treating-agents-as-one-off-projects-and-start-running-them-as-a-continuous-discipline/</link>
-					<comments>https://azure.microsoft.com/en-us/blog/stop-treating-agents-as-one-off-projects-and-start-running-them-as-a-continuous-discipline/#respond</comments>
-		
-		<dc:creator><![CDATA[Cyril Belikoff]]></dc:creator>
-		<pubDate>Thu, 05 Nov 2026 17:00:00 +0000</pubDate>
-				<category><![CDATA[AI + machine learning]]></category>
-		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=54831</guid>
-
-					<description><![CDATA[<p>AI must be selected, architected, and managed as a continuous business discipline, not a series of isolated projects.</p>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/stop-treating-agents-as-one-off-projects-and-start-running-them-as-a-continuous-discipline/">Stop treating agents as one-off projects and start running them as a continuous discipline</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<p class="wp-block-paragraph">Transformation begins at the line between an experiment that works and a capability the business depends on. Scaling intelligence requires production capabilities built for sustained business performance, with investments prioritized against financial thresholds, tied to measurable outcomes, instrumented for unit costs, and owned by accountable leaders. This approach manages cost, performance, governance, and reliability as adoption grows.</p>
-
-
-
-<p class="wp-block-paragraph">A new IDC InfoBrief, sponsored by Microsoft, <a href="https://marketingassets.microsoft.com/adobe/assets/urn:aaid:aem:5d3ad527-11a7-4c8a-a95c-0b37adcbbb4b/original/as/Analyst-Report-Scaling-AI-Without-Scaling-Costs.pdf" target="_blank" rel="noreferrer noopener">Scaling AI Without Scaling Costs</a>*, on how organizations are funding and governing AI, shows both the urgency of that shift and the friction holding it back. </p>
-
-
-
-<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://marketingassets.microsoft.com/adobe/assets/urn:aaid:aem:5d3ad527-11a7-4c8a-a95c-0b37adcbbb4b/original/as/Analyst-Report-Scaling-AI-Without-Scaling-Costs.pdf" target="_blank" rel="noopener noreferrer">Read the IDC InfoBrief</a></div>
-</div>
-
-
-
-<blockquote class="wp-block-quote has-quote-default-font-size is-layout-flow wp-block-quote-is-layout-flow">
-<p class="wp-block-paragraph">Nearly 90% of organizations apply financial thresholds before<br>approving AI initiatives.</p>
-<cite><a href="https://marketingassets.microsoft.com/adobe/assets/urn:aaid:aem:5d3ad527-11a7-4c8a-a95c-0b37adcbbb4b/original/as/Analyst-Report-Scaling-AI-Without-Scaling-Costs.pdf" target="_blank" rel="noreferrer noopener">Scaling AI Without Scaling Costs</a></cite></blockquote>
-
-
-
-<p class="wp-block-paragraph">Only 17% of organizations build models to project how costs scale in production—even as about 78% prioritize cost efficiency when selecting a model. 86% expect financial results within six to 24 months—roughly one budget cycle to show something real. Together, those findings point to a new operating reality: AI must be selected, architected, and managed as a continuous business discipline, not a series of isolated projects. The market has moved from proving it works to proving it can scale economically.</p>
-
-
-
-<h2 class="wp-block-heading" id="four-questions-to-answer-before-your-next-funding-decisionrun-each-candidate-through-four-questions-that-follow-a-scaled-workload-s-life-fund-it-run-it-improve-it-prove-it">Four questions to answer before your next funding decision</h2>
-
-
-
-<p class="wp-block-paragraph" id="four-questions-to-answer-before-your-next-funding-decisionrun-each-candidate-through-four-questions-that-follow-a-scaled-workload-s-life-fund-it-run-it-improve-it-prove-it">Run each candidate through four questions that follow a scaled workload&#8217;s life: fund it, run it, improve it, prove it.</p>
-
-
-
-<h3 class="wp-block-heading" id="1-how-can-we-predict-and-track-costs-at-scale">1. How can we predict and track costs at scale?</h3>
-
-
-
-<p class="wp-block-paragraph">A pilot proves the idea, rarely the economics: only 17% of organizations model how costs scale in production. Before you fund, project usage at 3 times and 10 times, and make sure spend traces to an application, team, and agent. <a href="https://devblogs.microsoft.com/foundry/build-2026-foundry-models/" target="_blank" rel="noopener noreferrer">Compare models on cost, quality, and latency</a>, and commit steady demand to reserved capacity. If cost rises with usage while value flattens, you&#8217;ve found an architecture problem while it&#8217;s still cheap to fix.</p>
-
-
-
-<h3 class="wp-block-heading" id="2-how-can-we-optimize-model-costs-for-every-request">2. How can we optimize model costs for every request?</h3>
-
-
-
-<p class="wp-block-paragraph">One successful outcome can take a dozen model requests, so what matters is cost per outcome, not price per token. Ask:</p>
-
-
-
-<ul class="wp-block-list">
-<li class="wp-block-list-item">Is routine work like classification paying frontier-model prices?</li>
-
-
-
-<li class="wp-block-list-item">Are the same instructions reprocessed on every turn?</li>
-
-
-
-<li class="wp-block-list-item">Is work that can wait running at a lower-cost tier?</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">The goal is the right model for every request, with evaluation proving quality held.</p>
-
-
-
-<h3 class="wp-block-heading" id="3-how-can-we-continuously-improve-agent-performance-and-costs">3. How can we continuously improve agent performance and costs?</h3>
-
-
-
-<p class="wp-block-paragraph">Retrieved documents, tool definitions, instructions, and history are often an agent&#8217;s largest cost and a common cause of weak answers. Check:</p>
-
-
-
-<ul class="wp-block-list">
-<li class="wp-block-list-item">Does the agent retrieve the relevant passage or the whole document?</li>
-
-
-
-<li class="wp-block-list-item">Does it carry every tool description on every turn?</li>
-
-
-
-<li class="wp-block-list-item">Is the same procedure copied into every agent?</li>
-
-
-
-<li class="wp-block-list-item">Does it replay full transcripts instead of remembering what matters?</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-context-engineering-for-enterprise-ai-agents/">Trimming what the model doesn&#8217;t need lowers cost without hurting quality.</a></p>
-
-
-
-<h3 class="wp-block-heading" id="4-how-can-we-control-spending-and-measure-roi">4. How can we control spending and measure ROI?</h3>
-
-
-
-<p class="wp-block-paragraph">A budget alert reports the fire after it starts; a runaway agent needs a circuit breaker on every request. Cost must tie to the outcome the business pays for, such as a resolved case, so leaders can optimize, scale, or retire an agent. The business owner also needs an evaluation suite, cost and latency budgets, a rollback path, and regular reviews. With 86% of organizations expecting financial results within six to 24 months, that evidence has about one budget cycle to appear.</p>
-
-
-
-<p class="wp-block-paragraph" id="all-four-answers-depend-on-evidence-captured-where-ai-runs-per-request-agent-and-outcome-if-each-team-builds-it-by-hand-the-discipline-won-t-survive-the-tenth-agent-it-has-to-come-from-the-platform-why-microsoft-and-how-microsoft-foundry-helps"><strong>All four answers depend on evidence captured where AI runs:</strong> per request, agent, and outcome. If each team builds it by hand, the discipline won&#8217;t survive the tenth agent. It has to come from the platform.</p>
-
-
-
-<h2 class="wp-block-heading" id="all-four-answers-depend-on-evidence-captured-where-ai-runs-per-request-agent-and-outcome-if-each-team-builds-it-by-hand-the-discipline-won-t-survive-the-tenth-agent-it-has-to-come-from-the-platform-why-microsoft-and-how-microsoft-foundry-helps">How Microsoft Foundry supports continuous cost optimization</h2>
-
-
-
-<p class="wp-block-paragraph">When customers ask for a few practical ways to scale AI while controlling costs, I recommend: </p>
-
-
-
-<ol class="wp-block-list">
-<li class="wp-block-list-item">Use model routing across the over 11,000 models available in <a href="https://ai.azure.com/home" target="_blank" rel="noopener noreferrer">Microsoft Foundry</a>.</li>
-
-
-
-<li class="wp-block-list-item">Implement <a href="https://www.microsoft.com/en-us/ai/microsoft-iq" target="_blank" rel="noopener noreferrer">Microsoft IQ</a> to improve relevance and reduce costs.</li>
-
-
-
-<li class="wp-block-list-item">Use the plan, control, and optimize capabilities described below to strengthen operations across the organization.</li>
-</ol>
-
-
-
-<p class="wp-block-paragraph"><a href="https://ai.azure.com/home" target="_blank" rel="noopener noreferrer">Microsoft Foundry</a> is the enterprise platform to build, ground, and govern AI apps and agents at scale. It brings together your full agent lifecycle with open development, built-in intelligence, and consistent security, compliance, and policy controls across every agent. Think of it as a repeatable production line rather than a set of one-off builds, where the same controls, evidence, and economics apply to the tenth agent as to the first.</p>
-
-
-
-<p class="wp-block-paragraph">This is what makes the operating loop practical at scale. Across the loop:</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Plan:</strong> Compare models on cost, quality, and performance before committing to an architecture, and match predictable baseline demand to reserved capacity while keeping the flexibility to burst. The decisions that set your production cost curve get made with data rather than intuition.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Control</strong>: <a href="https://azure.microsoft.com/en-us/blog/agent-factory-top-5-agent-observability-best-practices-for-reliable-ai/" target="_blank" rel="noopener noreferrer">Observability</a> that reports cost alongside quality, latency, and safety in one view, so the economics of a workload are visible while it&#8217;s running rather than reconstructed at quarter-end. That&#8217;s what makes cost per outcome a number you can put in front of your CFO.</p>
-
-
-
-<p class="wp-block-paragraph"><strong>Optimize:</strong> Model routing that sends each request to the smallest model that can serve it, an intelligence layer that provides context and retrieval centrally and addresses a common source of avoidable token spend, and evaluation tooling that catches quality regression when you make a cost decision—because a cheaper system that quietly degrades isn&#8217;t a saving.</p>
-
-
-
-<p class="wp-block-paragraph">The value compounds with volume. When every agent inherits the same grounding, governance, and cost telemetry from the platform, scaling from one use case to 20 doesn&#8217;t mean rebuilding the discipline 20 times. What <a href="https://ai.azure.com/home" target="_blank" rel="noopener noreferrer">Foundry</a> does is make sure the evidence exists when the funding conversation comes around, and the levers are within reach when you need them.</p>
-
-
-
-<h2 class="wp-block-heading" id="next-steps-for-optimizing-ai-agent-costs-and-roi">Next steps for optimizing AI agent costs and ROI</h2>
-
-
-
-<p class="wp-block-paragraph">Scaling AI isn&#8217;t a bigger experiment. It&#8217;s a different discipline: a shared threshold, a unit cost, a value curve that outruns the cost curve, and an owner whose name is on the result.</p>
-
-
-
-<p class="wp-block-paragraph">Go deeper with <a href="https://azure.microsoft.com/en-us/blog/tag/the-economics-of-agent-optimization/">our four-part blog series on The Economics of Agent Optimization</a> in Microsoft Foundry, which takes each of these questions from principle to implementation:</p>
-
-
-
-<ul class="wp-block-list">
-<li class="wp-block-list-item"><a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-from-pilots-to-measurable-returns/">AI cost management: From AI pilots to measurable ROI</a></li>
-
-
-
-<li class="wp-block-list-item"><a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-four-ways-to-lower-the-cost/">AI cost optimization: How to lower AI spend</a></li>
-
-
-
-<li class="wp-block-list-item"><a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-context-engineering-for-enterprise-ai-agents/">AI agent optimization: How context engineering lowers AI costs</a></li>
-
-
-
-<li class="wp-block-list-item"><a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-how-ai-agent-governance-controls-cost-and-proves-roi/">AI agent governance: How to measure AI value and ROI</a></li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">Then join us at <a href="https://ignite.microsoft.com/en-US/home">Microsoft Ignite</a>, November 17–20 in San Francisco or online, to see it in action and go hands-on with the team that built it.</p>
-
-
-
-<div class="is-style-inline-centered wp-block-bloginabox-theme-promotional">
-	
-<div class="promotional promotional--has-media promotional--media-right">
-	<div class="promotional__wrapper">
-		<div class="promotional__content-wrapper">
-			<div class="promotional__content">
-				
-
-<h2 class="wp-block-heading" id="microsoft-foundry">Microsoft Foundry</h2>
-
-
-
-<p class="wp-block-paragraph">The AI app and agent factory.</p>
-
-
-
-<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a aria-label="Get started: Microsoft Foundry" data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://ai.azure.com/home" target="_blank" rel="noopener noreferrer">Get started</a></div>
-</div>
-
-			</div>
-		</div>
-					<div class="promotional__media-wrapper">
-				<div class="promotional__media">
-											<img decoding="async" width="1920" height="1280" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003.jpg" class="attachment-full size-full" alt="Two people sitting at desks and working at computers." loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003.jpg 1920w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-300x200.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-1024x683.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-768x512.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-1536x1024.jpg 1536w" sizes="auto, (max-width: 1920px) 100vw, 1920px" />									</div>
-			</div>
-			</div>
-</div>
-</div>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity" />
-
-
-
-<p class="wp-block-paragraph"><em>*Source: doc ##US54538926-IB, July 2026</em></p>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/stop-treating-agents-as-one-off-projects-and-start-running-them-as-a-continuous-discipline/">Stop treating agents as one-off projects and start running them as a continuous discipline</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/stop-treating-agents-as-one-off-projects-and-start-running-them-as-a-continuous-discipline/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
-		<title>Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200</title>
-		<link>https://azure.microsoft.com/en-us/blog/designing-azure-silicon-on-azure-silicon-eda-workloads-on-cobalt-200/</link>
-					<comments>https://azure.microsoft.com/en-us/blog/designing-azure-silicon-on-azure-silicon-eda-workloads-on-cobalt-200/#respond</comments>
-		
-		<dc:creator><![CDATA[Selim Bilgin and Silvian Goldenberg]]></dc:creator>
-		<pubDate>Thu, 05 Nov 2026 16:00:00 +0000</pubDate>
-				<category><![CDATA[Compute]]></category>
-		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=54813</guid>
-
-					<description><![CDATA[<p>Discover how Microsoft is accelerating electronic design automation (EDA) workloads with Azure Cobalt 200 VMs. Explore early performance results demonstrating faster simulation, verification, and static timing analysis, along with the benefits of scalable cloud infrastructure for silicon design and development.</p>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/designing-azure-silicon-on-azure-silicon-eda-workloads-on-cobalt-200/">Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></description>
-										<content:encoded><![CDATA[
-<p class="wp-block-paragraph">Every Azure chip Microsoft has built started as electronic design automation (EDA) jobs used to design, test, and validate silicon before it is manufactured. This includes simulation sweeps that run for days, verification regressions that fan out across thousands of cores overnight, and physical signoff runs that use hundreds of gigabytes of memory for a single block. Together, these workloads account for hundreds of millions of compute jobs each year. Today we’re sharing early results from our next step in that evolution: running EDA workloads on <a href="https://aka.ms/cobalt200vms" target="_blank" rel="noreferrer noopener"><strong>Azure Cobalt 200</strong></a>, Azure’s custom compute infrastructure built on the Arm Neoverse CSS V3. In our silicon design environment, the evaluated EDA workloads ran with <strong>1.30x to 4.15x more performance</strong> than on Cobalt 100 across a range of testing scenarios, from simulation to verification to static timing analysis.</p>
-
-
-
-<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://aka.ms/cobalt200vms" target="_blank" rel="noopener noreferrer noreferrer noopener">Learn more about Azure Cobalt 200 VMs</a></div>
-</div>
-
-
-
-<p class="wp-block-paragraph">Traditionally, EDA workloads ran on fixed, on-premise x86 server capacity, sized for peak demand with periods of underutilization. The shift to cloud-based EDA on Microsoft Azure offered a new level of flexibility, scale, and reliability on compute-intensive silicon design workloads. Using <a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/cobalt-overview" target="_blank" rel="noreferrer noopener">Azure Cobalt-based virtual machine</a> (VM) instances, silicon engineering teams at Microsoft are experiencing significant performance and efficiency improvements on EDA workloads that Azure customers are seeing across many workloads—optimizing the performance and speed of designing increasingly sophisticated silicon for increasingly complex cloud systems.</p>
-
-
-
-<p class="wp-block-paragraph">In this blog, we highlight results from Cadence Xcelium and Cadence Spectre, Synopsys PrimeTime and Synopsys VCS, and Siemens Calibre tools. Tools enabled on Cobalt 100 ran unmodified in our Cobalt 200 evaluation, allowing us to focus on performance testing rather than functionality.</p>
-
-
-
-<h2 class="wp-block-heading" id="why-cobalt-200-suits-eda">Why Cobalt 200 suits EDA</h2>
-
-
-
-<p class="wp-block-paragraph">EDA spans workloads with very different compute requirements:</p>
-
-
-
-<ul class="wp-block-list">
-<li class="wp-block-list-item"><strong>Circuit and analog simulation</strong> — optimized for highly parallel workloads, with sensitivity to memory behavior.</li>
-
-
-
-<li class="wp-block-list-item"><strong>Functional and formal verification</strong> — throughput-driven, with large numbers of independent jobs running concurrently.</li>
-
-
-
-<li class="wp-block-list-item"><strong>Implementation and signoff</strong> — memory-intensive and bandwidth-sensitive, with long-running jobs.</li>
-</ul>
-
-
-
-<p class="wp-block-paragraph">For computer-aided design (CAD) managers, predictable per-core performance is essential to planning overnight regressions. Per-core performance measured on a lightly loaded VM does not necessarily hold as concurrency increases. Verification farms need predictable throughput when VMs are heavily loaded.</p>
-
-
-
-<p class="wp-block-paragraph">Cobalt 200 combines physical cores without the overhead of hyperthreading, dedicated 3MB L2 cache per core, and high provisioned memory bandwidth to support concurrent workloads. These core and memory architecture characteristics support strong per-core performance at high utilization. </p>
-
-
-
-<h2 class="wp-block-heading" id="what-we-measured">What we measured</h2>
-
-
-
-<p class="wp-block-paragraph">We tested Cobalt 200 with workloads from several stages of Microsoft’s silicon development flow, including RTL and gate-level simulation, static timing, physical verification, and analog simulation, comparing job completion time with Cobalt 100 and selected x86 Azure VMs.</p>
-
-
-
-<p class="wp-block-paragraph">All tested VMs were configured with the maximum number of cores possible for high throughput<sup> 5</sup>, multiple jobs were concurrently executed on the VM to validate the performance under high load conditions. Throughput is normalized per logical core. For the Cobalt 100, Cobalt 200, and hx176rs configurations, logical cores are also physical cores. </p>
-
-
-
-<h2 class="wp-block-heading" id="consolidated-eda-workload-results">Consolidated EDA workload results</h2>
-
-
-
-<figure class="wp-block-table is-style-stripes"><table class="has-fixed-layout"><thead><tr><th>Workload</th><th>EDA tool</th><th>Measure</th><th>Cobalt 200 result</th></tr></thead><tbody><tr><td><strong>Digital simulation</strong></td><td>Cadence Xcelium<sup>1</sup></td><td>Peak throughput per logical core</td><td><strong>More than 40% higher</strong> than any other tested system</td></tr><tr><td><strong>Digital simulation</strong></td><td>Synopsys VCS<sup>1</sup></td><td>Peak throughput per logical core</td><td><strong>More than 40% higher</strong> than any other tested system</td></tr><tr><td><strong>Analog and mixed-signal simulation</strong></td><td>Cadence Spectre<sup>2</sup></td><td>Throughput per logical core</td><td><strong>38% higher</strong> generation over generation; exceeded tested x86 Azure VMs</td></tr><tr><td><strong>Physical verification</strong></td><td>Siemens Calibre<sup>3</sup> DRC</td><td>Wall time / relative performance</td><td><strong>23% lower</strong> wall time; 1.30× relative performance versus Cobalt 100</td></tr><tr><td><strong>Static timing analysis</strong></td><td>Synopsys PrimeTime<sup>4</sup></td><td>Peak throughput per logical core</td><td><strong>2.0×</strong> Cobalt 100; exceeded tested x86 Azure VMs</td></tr></tbody></table></figure>
-
-
-
-<h2 class="wp-block-heading" id="digital-simulation">Digital simulation</h2>
-
-
-
-<p class="wp-block-paragraph">Cadence Xcelium and Synopsys VCS are tools used to simulate and verify digital designs. RTL simulation is central to functional verification and can consume significant compute capacity as teams run large regression suites. When testing RTL workloads using both simulators, optimally loaded Cobalt 200 systems delivered significantly greater peak throughput than the previous generation. For the workload tested on Xcelium and VCS, Cobalt 200 delivered more than <strong>40% higher throughput per logical core than any other system we tested</strong>.</p>
-
-
-
-<p class="wp-block-paragraph">Throughput is normalized per logical core to account for the VMs’ different core counts.</p>
-
-
-
-<p class="wp-block-paragraph">Cobalt 200 was optimized for EDA workloads through increased cache size and improved memory bandwidth per core. Our results demonstrate that Cobalt 200 design optimizations generate significantly improved performance for logic simulation workloads. </p>
-
-
-
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6aed26c970a04&quot;}" data-wp-interactive="core/image" data-wp-key="6aed26c970a04" class="wp-block-image aligncenter size-large wp-lightbox-container"><img fetchpriority="high" decoding="async" width="1024" height="575" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-1024x575.jpg" alt="Bar chart comparing Cadence Xcelium RTL simulation throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 4.15x throughput, compared with 2.89x for x86-A and 1.67x for x86-B, delivering at least 40% higher throughput than x86-A." class="wp-image-54890" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-1024x575.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-768x431.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-809x455.jpg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1.jpg 1132w" sizes="(max-width: 1024px) 100vw, 1024px" /><button
-			class="lightbox-trigger"
-			type="button"
-			aria-haspopup="dialog"
-			aria-label="Enlarge"
-			data-wp-init="callbacks.initTriggerButton"
-			data-wp-on--click="actions.showLightbox"
-			data-wp-style--right="state.imageButtonRight"
-			data-wp-style--top="state.imageButtonTop"
-		>
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
-			</svg>
-		</button></figure>
-
-
-
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6aed26c970f78&quot;}" data-wp-interactive="core/image" data-wp-key="6aed26c970f78" class="wp-block-image size-large wp-lightbox-container"><img decoding="async" width="1024" height="602" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput-1024x602.jpg" alt="Bar chart comparing Synopsys VCS RTL simulation throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 2.58x throughput, compared with 1.84x for x86-A and 1.32x for x86-B, delivering at least 40% higher throughput than x86-A." class="wp-image-54885" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput-1024x602.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput-300x176.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput-768x451.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput.jpg 1149w" sizes="(max-width: 1024px) 100vw, 1024px" /><button
-			class="lightbox-trigger"
-			type="button"
-			aria-haspopup="dialog"
-			aria-label="Enlarge"
-			data-wp-init="callbacks.initTriggerButton"
-			data-wp-on--click="actions.showLightbox"
-			data-wp-style--right="state.imageButtonRight"
-			data-wp-style--top="state.imageButtonTop"
-		>
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
-			</svg>
-		</button><figcaption class="wp-element-caption"><em>Figure 1 and 2. Cadence Xcelium RTL and Synopsys VCS simulation throughput for an internal <em>real simulation </em>test case, normalized jobs per hour per logical core; Cobalt 100 = 1.0. </em></figcaption></figure>
-
-
-
-<h2 class="wp-block-heading" id="analog-and-mixed-signal-simulation">Analog and mixed signal simulation</h2>
-
-
-
-<p class="wp-block-paragraph">Cadence Spectre is used for analog and mixed-signal circuit simulation. Analog and mixed-signal circuit simulation workloads differ from RTL simulation and are dominated by multithreaded performance. We tested Cadence Spectre on Cobalt 200 and observed <strong>38% higher throughput per logical core </strong>generation over generation, and delivered 11-52% higher throughput per logical core compared with all other platforms tested. </p>
-
-
-
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6aed26c971586&quot;}" data-wp-interactive="core/image" data-wp-key="6aed26c971586" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" width="1024" height="570" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1-1024x570.jpg" alt="Bar chart comparing Cadence Spectre analog simulation throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 1.38x throughput, compared with 1.24x for x86-A and 0.91x for x86-B, delivering the highest throughput among the four configurations." class="wp-image-54891" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1-1024x570.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1-300x167.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1-768x427.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1.jpg 1165w" sizes="(max-width: 1024px) 100vw, 1024px" /><button
-			class="lightbox-trigger"
-			type="button"
-			aria-haspopup="dialog"
-			aria-label="Enlarge"
-			data-wp-init="callbacks.initTriggerButton"
-			data-wp-on--click="actions.showLightbox"
-			data-wp-style--right="state.imageButtonRight"
-			data-wp-style--top="state.imageButtonTop"
-		>
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
-			</svg>
-		</button><figcaption class="wp-element-caption"><em>Figure 3. Cadence Spectre analog simulation throughput for an internal test case, normalized jobs per hour per logical core; Cobalt 100 = 1.0. </em></figcaption></figure>
-
-
-
-<p class="wp-block-paragraph">This result shows meaningful progress between Cobalt generations. </p>
-
-
-
-<h2 class="wp-block-heading" id="physical-verification">Physical verification</h2>
-
-
-
-<p class="wp-block-paragraph">Siemens Calibre DRC checks a design’s physical layout against manufacturing design rules before tapeout.</p>
-
-
-
-<p class="wp-block-paragraph">For the Calibre workload we tested DRC against an IP Macro with 16 cores per job, Cobalt 200 completed the run in approximately 23% lower wall time than Cobalt 100, equivalent to 1.30x relative performance. It also outperformed the selected x86 Azure VMs at the same per-job core count.</p>
-
-
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6aed26c971dc9&quot;}" data-wp-interactive="core/image" data-wp-key="6aed26c971dc9" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-1024x576.webp" alt="Bar chart comparing Siemens Calibre DRC performance using 16 cores, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 1.30x performance, compared with 0.86x for x86-A and 1.08x for x86-B, delivering the highest performance among the four configurations." class="wp-image-54909 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog.webp 1280w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-1024x576.webp"><button
-			class="lightbox-trigger"
-			type="button"
-			aria-haspopup="dialog"
-			aria-label="Enlarge"
-			data-wp-init="callbacks.initTriggerButton"
-			data-wp-on--click="actions.showLightbox"
-			data-wp-style--right="state.imageButtonRight"
-			data-wp-style--top="state.imageButtonTop"
-		>
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
-			</svg>
-		</button><figcaption class="wp-element-caption"><em>Figure 4. Siemens Calibre DRC performance for an internal test case using 16 cores per job</em>. Relative performance is Cobalt 100 mean total wall time divided by each platform&rsquo;s mean total wall time; Cobalt 100 = 1.0.</figcaption></figure>
-
-
-
-<h2 class="wp-block-heading" id="static-timing-analysis-on-synopsys-primetime">Static timing analysis on Synopsys PrimeTime</h2>
-
-
-
-<p class="wp-block-paragraph">Synopsys PrimeTime is used for static timing analysis to verify that a design meets its timing requirements. For the PrimeTime workload tested with 16 cores per job, Cobalt 200 delivered 2x the peak throughput per logical core of Cobalt 100 and exceeded the selected x86 Azure VMs. Figure 5 compares each VM platform’s highest measured throughput value, normalized to Cobalt 100.</p>
-
-
-
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6aed26c97243f&quot;}" data-wp-interactive="core/image" data-wp-key="6aed26c97243f" class="wp-block-image aligncenter size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="570" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput-1024x570.jpg" alt="Bar chart comparing Synopsys PrimeTime static timing throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 2.03x throughput, compared with 1.45x for x86-A and 1.21x for x86-B, delivering the highest throughput among the four configurations." class="wp-image-54888" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput-1024x570.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput-300x167.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput-768x428.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput.jpg 1144w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
-			class="lightbox-trigger"
-			type="button"
-			aria-haspopup="dialog"
-			aria-label="Enlarge"
-			data-wp-init="callbacks.initTriggerButton"
-			data-wp-on--click="actions.showLightbox"
-			data-wp-style--right="state.imageButtonRight"
-			data-wp-style--top="state.imageButtonTop"
-		>
-			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
-				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
-			</svg>
-		</button><figcaption class="wp-element-caption"><em>Figure 5. Synopsys PrimeTime peak job throughput for an internal test case, using 16 cores per job and normalized to jobs per hour per logical core; Cobalt 100 = 1.0.</em> </figcaption></figure>
-
-
-
-<h2 class="wp-block-heading" id="more-than-just-an-soc-platform-level-advantages-to-cobalt-200">More than just an SoC: Platform-level advantages to Cobalt 200</h2>
-
-
-
-<p class="wp-block-paragraph">A higher-performance compute SoC only helps if the rest of the platform scales its performance as well. EDA workloads depend on high-bandwidth and low-latency storage and data movement, and demand varies throughout a silicon program. Verification activity can spike before a milestone, while physical verification and signoff activity increase toward tapeout. Demand can fall sharply once those milestones are completed.</p>
-
-
-
-<p class="wp-block-paragraph">Running on Azure pairs Cobalt 200 compute with:</p>
-
-
-
-<ul class="wp-block-list">
-<li class="wp-block-list-item"><strong>Elastic capacity</strong>: provisioning compute capacity for a regression campaign or signoff push, then release it as demand falls. Size for the workload, not the annual peak.</li>
-
-
-
-<li class="wp-block-list-item"><strong>High-performance storage: </strong>supporting the data demands of large design databases, waveform dumps, and physical verification runs.</li>
-
-
-
-<li class="wp-block-list-item"><strong>Global capacity</strong>: aligning deployments with engineering locations, data residency requirements, and regional availability.</li>
-
-
-
-<li class="wp-block-list-item"><strong>Adjacency to Azure AI services</strong>: As agentic and AI-assisted design workflows evolve, proximity between AI inference services and Cobalt 200 compute creates opportunities for tighter integration of AI-powered reasoning with EDA execution. This <strong>reduces</strong> data movement overhead, accelerates iterative design and verification cycles, and enables AI agents to orchestrate complex engineering workflows more efficiently.</li>
-</ul>
-
-
-
-<blockquote class="wp-block-quote has-quote-default-font-size is-layout-flow wp-block-quote-is-layout-flow">
-<p class="wp-block-paragraph">Microsoft is a key partner for Cadence, and our collaboration on Cobalt spans multiple generations of Azure silicon. With Cadence EDA workflows now qualified on Cobalt 200, we are extending that collaboration to the latest generation of Azure infrastructure and giving semiconductor teams greater flexibility in how they access and scale compute for demanding design and verification workloads.</p>
-<cite><strong>—Paul Cunningham, Sr. VP &amp; GM, System Verification Group, Cadence</strong></cite></blockquote>
-
-
-
-<blockquote class="wp-block-quote has-quote-default-font-size is-layout-flow wp-block-quote-is-layout-flow">
-<p class="wp-block-paragraph">As semiconductor designs grow increasingly complex, engineering teams face mounting pressure to accelerate silicon development while managing growing compute demands. Executing Siemens EDA solutions on Microsoft Azure Cobalt 200 provides an efficient, scalable platform for demanding verification and signoff workloads. Our collaboration with Microsoft demonstrates the value of matching the right workloads to the right compute architecture to advance silicon innovation.</p>
-<cite><strong>—Craig Johnson, VP of Cloud Solutions, Siemens EDA</strong></cite></blockquote>
-
-
-
-<blockquote class="wp-block-quote has-quote-default-font-size is-layout-flow wp-block-quote-is-layout-flow">
-<p class="wp-block-paragraph">Our longstanding partnership with Microsoft is grounded in a shared commitment to help engineering teams tackle increasingly complex design challenges. We congratulate Microsoft on the impressive performance of Cobalt 200, developed using Synopsys’ comprehensive EDA flow spanning verification, implementation and signoff, together with HAPS hardware prototyping and Synopsys IP. We’re excited to see Cobalt 200 delivering meaningful performance gains generation-on-generation, including more than 40% faster runtimes with Synopsys VCS and 2x per-core throughput with Synopsys PrimeTime. We look forward to continuing our collaboration to help engineering teams advance the next generation of AI silicon.</p>
-<cite><strong>—Sanjay Bali, Senior Vice President of EDA Product Management and Strategy at Synopsys</strong></cite></blockquote>
-
-
-
-<h2 class="wp-block-heading" id="designing-next-generation-cobalt-with-cobalt-200">Designing Next-Generation Cobalt with Cobalt 200</h2>
-
-
-
-<p class="wp-block-paragraph">There’s a virtuous cycle between silicon development and EDA performance: EDA tools helped bring Cobalt 200 to life, and now Cobalt 200 is accelerating those same design and verification workloads for our next-generation Cobalt products. By observing how EDA workloads perform at scale, we gain insights that help shape future generations of Cobalt and Azure compute infrastructure, with each generation helping design and improve the next. </p>
-
-
-
-<h2 class="wp-block-heading" id="what-comes-next">What comes next</h2>
-
-
-
-<p class="wp-block-paragraph">Our early tests show significant progress for EDA on Cobalt 200. Existing Arm-enabled tools ran without workflow changes, and the tested workloads performed competitively against the selected x86 Azure VMs. Xcelium and PrimeTime showed a particularly large improvement over Cobalt 100. Spectre and Calibre which were strong performers on Cobalt 100 also improved generation over generation, and we are working with our EDA partners on further tuning of multiple tools.</p>
-
-
-
-<p class="wp-block-paragraph">We are broadening workload coverage, validating results on a greater scale, and continuing to collaborate with our EDA partners as Cobalt 200 enters general availability.</p>
-
-
-
-<p class="wp-block-paragraph">If you&#8217;re evaluating cloud infrastructure for semiconductor design, we invite you to test your EDA workflows on <a href="https://aka.ms/cobalt200vms" target="_blank" rel="noopener noreferrer">Azure Cobalt 200 VMs</a>. </p>
-
-
-
-<ul class="wp-block-list">
-<li class="wp-block-list-item"><em>Learn more about Cobalt at Microsoft Ignite: </em><a href="https://ignite.microsoft.com/en-US/sessions/1787856640202001EbGn-1791588234328001CsHm?source=sessions" target="_blank" rel="noopener noreferrer"><em>Cobalt 200: Delivering Azure&#8217;s Best Performance And Efficiency</em></a></li>
-
-
-
-<li class="wp-block-list-item"><em>Check out <a href="https://aka.ms/silicontosystems" target="_blank" rel="noopener noreferrer">Microsoft’s silicon to system approach to infrastructure</a>.</em></li>
-</ul>
-
-
-
-<div class="is-style-inline wp-block-bloginabox-theme-promotional">
-	
-<div class="promotional promotional--has-media promotional--media-right">
-	<div class="promotional__wrapper">
-		<div class="promotional__content-wrapper">
-			<div class="promotional__content">
-				
-
-<h2 class="wp-block-heading" id="run-next-generation-ai-workloads-with-azure-cobalt-200">Run next-generation AI workloads with Azure Cobalt 200</h2>
-
-
-
-<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a aria-label="Learn more: Run next-generation AI workloads with Azure Cobalt 200" data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://aka.ms/cobalt200vms" target="_blank" rel="noopener noreferrer noreferrer noopener">Learn more</a></div>
-</div>
-
-			</div>
-		</div>
-					<div class="promotional__media-wrapper">
-				<div class="promotional__media">
-											<img decoding="async" width="2560" height="1440" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Azure-Infrastructure-Dark-scaled.jpg" class="attachment-full size-full" alt="" loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Azure-Infrastructure-Dark-scaled.jpg 2560w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Azure-Infrastructure-Dark-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Azure-Infrastructure-Dark-1024x576.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Azure-Infrastructure-Dark-768x432.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Azure-Infrastructure-Dark-1536x864.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Azure-Infrastructure-Dark-2048x1152.jpg 2048w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Azure-Infrastructure-Dark-809x455.jpg 809w" sizes="auto, (max-width: 2560px) 100vw, 2560px" />									</div>
-			</div>
-			</div>
-</div>
-</div>
-
-
-
-<hr class="wp-block-separator has-alpha-channel-opacity" />
-
-
-
-<p class="has-body-medium-font-size wp-block-paragraph">1. Cadence Xcelium and Synopsys VCS results use an internal RTL simulation test case, concurrently run. Throughput is calculated from mean full-job wall time at the tested concurrency. Each platform’s highest measured throughput is normalized to Cobalt 100. Throughput is normalized as jobs per hour per logical core to account for different VM core counts.</p>
-
-
-
-<p class="has-body-medium-font-size wp-block-paragraph">2. Cadence Spectre results use an internal analog simulation test case, concurrently run with mt=16 per job. Peak throughput is normalized as jobs per hour per logical core to account for different VM core counts. The 38% figure is the measured generation-over-generation throughput improvement from Cobalt 100 to Cobalt 200 for the evaluated workload.</p>
-
-
-
-<p class="has-body-medium-font-size wp-block-paragraph">3. Siemens Calibre DRC results use an internal IP Macro test case, run with mt=16 on a quiet VM. Relative performance is calculated as Cobalt 100 mean total wall time divided by each platform’s mean total wall time.</p>
-
-
-
-<p class="has-body-medium-font-size wp-block-paragraph">4. Synopsys PrimeTime results use an internal static-timing test case, concurrently run with 16 cores per job. Throughput is calculated from mean full-job wall time at the tested concurrency. Each platform’s highest measured throughput per logical core is normalized to Cobalt 100. Throughput is normalized as jobs per hour per logical core to account for different VM core counts.</p>
-
-
-
-<p class="has-body-medium-font-size wp-block-paragraph">5. Results are from internal Microsoft test cases and apply only to the evaluated workloads, software versions, VM configurations, concurrency levels, and test conditions. Tested VMs included Cobalt 100 (96 cores), Cobalt 200 (128 cores), hx176rs (176 cores), and e160adsv7 (160 logical cores, hyperthreading enabled).</p>
-<p>The post <a href="https://azure.microsoft.com/en-us/blog/designing-azure-silicon-on-azure-silicon-eda-workloads-on-cobalt-200/">Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
-]]></content:encoded>
-					
-					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/designing-azure-silicon-on-azure-silicon-eda-workloads-on-cobalt-200/feed/</wfw:commentRss>
-			<slash:comments>0</slash:comments>
-		
-		
-			</item>
-		<item>
 		<title>Predicting and detecting failures: How Azure strengthens reliability for mission-critical workloads</title>
 		<link>https://azure.microsoft.com/en-us/blog/predicting-and-detecting-failures-how-azure-strengthens-reliability-for-mission-critical-workloads/</link>
 					<comments>https://azure.microsoft.com/en-us/blog/predicting-and-detecting-failures-how-azure-strengthens-reliability-for-mission-critical-workloads/#respond</comments>
@@ -6798,7 +6198,7 @@ aws sagemaker describe-model-package \
 <p class="wp-block-paragraph">Beyond integration and scale, ARM distinguishes itself by orchestrating all stages of an ensemble study across modeling, simulation, data management, and analysis. The workflow tightly connects the tools reservoir teams already use with Azure-scale infrastructure and the governed data services provided by Azure Data Manager for Energy.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6aed26c97edb1&quot;}" data-wp-interactive="core/image" data-wp-key="6aed26c97edb1" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Screenshot-2026-10-22-170942.webp" alt="Agile Reservoir Modeling workflow using cloud HPC to generate and simulate multiple reservoir-model realizations in parallel delivered to web-based interface for analysis.." class="wp-image-54721 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Screenshot-2026-10-22-170942.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6aeba0ee4bf9e&quot;}" data-wp-interactive="core/image" data-wp-key="6aeba0ee4bf9e" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Screenshot-2026-10-22-170942.webp" alt="Agile Reservoir Modeling workflow using cloud HPC to generate and simulate multiple reservoir-model realizations in parallel delivered to web-based interface for analysis.." class="wp-image-54721 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Screenshot-2026-10-22-170942.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7125,7 +6525,7 @@ aws sagemaker describe-model-package \
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6aed26c9834f3&quot;}" data-wp-interactive="core/image" data-wp-key="6aed26c9834f3" class="wp-block-image aligncenter size-full wp-lightbox-container"><img loading="lazy" decoding="async" width="960" height="540" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Msft-Intel-YourAI-960.gif" alt="Microsoft and Intel graphic illustrating protected AI infrastructure, with data and workloads connected to a secured central compute environment." class="wp-image-54689" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6aeba0ee51fd0&quot;}" data-wp-interactive="core/image" data-wp-key="6aeba0ee51fd0" class="wp-block-image aligncenter size-full wp-lightbox-container"><img fetchpriority="high" decoding="async" width="960" height="540" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Msft-Intel-YourAI-960.gif" alt="Microsoft and Intel graphic illustrating protected AI infrastructure, with data and workloads connected to a secured central compute environment." class="wp-image-54689" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7153,7 +6553,7 @@ aws sagemaker describe-model-package \
 <p class="wp-block-paragraph">That starts at the compute layer and extends through identity, encryption, governance, policy, and operations. For supported <a href="https://learn.microsoft.com/azure/confidential-computing/confidential-vm-overview" target="_blank" rel="noreferrer noopener">Azure Confidential VM</a> configurations, Intel® Xeon® processors provide hardware-based protections, including <a href="https://cc-enabling.trustedservices.intel.com/intel-tdx-enabling-guide/01/introduction/" target="_blank" rel="noopener noreferrer">Intel® Trust Domain Extensions (Intel TDX)</a>, which can help isolate workloads while they are in use. Hardware-backed attestation can provide evidence that helps organizations verify relevant security properties of the environment against their requirements. Microsoft extends this foundation through security and governance controls across cloud and customer-controlled environments.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6aed26c983c57&quot;}" data-wp-interactive="core/image" data-wp-key="6aed26c983c57" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/2.3-updated-v2.webp" alt="Microsoft and Intel security stack showing protection extending from silicon and Intel TDX compute through workloads, platform, governance, and cloud." class="wp-image-54694 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/2.3-updated-v2.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6aeba0ee52baf&quot;}" data-wp-interactive="core/image" data-wp-key="6aeba0ee52baf" class="wp-block-image size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/2.3-updated-v2.webp" alt="Microsoft and Intel security stack showing protection extending from silicon and Intel TDX compute through workloads, platform, governance, and cloud." class="wp-image-54694 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/2.3-updated-v2.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7482,6 +6882,411 @@ aws sagemaker describe-model-package \
 ]]></content:encoded>
 					
 					<wfw:commentRss>https://www.microsoft.com/en-us/security/blog/2026/10/16/managing-open-weight-model-risk-in-enterprise-deployments/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Evolving the cloud-native foundation for the next generation of AI</title>
+		<link>https://azure.microsoft.com/en-us/blog/evolving-the-cloud-native-foundation-for-the-next-generation-of-ai/</link>
+					<comments>https://azure.microsoft.com/en-us/blog/evolving-the-cloud-native-foundation-for-the-next-generation-of-ai/#respond</comments>
+		
+		<dc:creator><![CDATA[Mike Hulme]]></dc:creator>
+		<pubDate>Thu, 15 Oct 2026 16:00:00 +0000</pubDate>
+				<category><![CDATA[Compute]]></category>
+		<category><![CDATA[Containers]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[Cloud Cost Optimization]]></category>
+		<category><![CDATA[FinOps]]></category>
+		<category><![CDATA[Monitoring]]></category>
+		<category><![CDATA[Networking]]></category>
+		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=54554</guid>
+
+					<description><![CDATA[<p>Discover how Azure is advancing cloud-native infrastructure to help organizations build, run, and optimize applications and agents at scale.</p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/evolving-the-cloud-native-foundation-for-the-next-generation-of-ai/">Evolving the cloud-native foundation for the next generation of AI</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<h2 class="wp-block-heading" id="from-alerts-to-answers-the-future-of-postgresql-operations-is-intelligent">Building a cloud-native foundation for AI</h2>
+
+
+
+<p class="wp-block-paragraph">The relationship between model innovation and AI infrastructure has never been more clear; as AI becomes more capable, the platform underneath it matters even more. Agents are fundamentally changing how applications work, and with that, what organizations need from the cloud.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://developer.microsoft.com/en-us/reactor/series/S-1692/" target="_blank" rel="noopener noreferrer noreferrer noopener">Learn how to build a cloud-native AI foundation</a></div>
+</div>
+
+
+
+<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-us/solutions/cloud-native-apps/" target="_blank" rel="noopener noreferrer">Cloud-native practices gave organizations the scale, flexibility and resilience</a> to build a generation of distributed applications. Agents build on that foundation, but they work differently, placing new demands on it. Unlike applications designed around more predictable workflows, <a href="https://azure.microsoft.com/en-us/solutions/ai/" target="_blank" rel="noopener noreferrer">agents behave in entirely new ways, gathering information and deep intelligence from across the business</a>, using tools, making decisions, and coordinating work across long-running processes. To complete complex tasks, they pause for approval, respond to new information in real time and change course as conditions evolve. All this changes what the platform needs to deliver.</p>
+
+
+
+<p class="wp-block-paragraph">Customers need infrastructure that adapts as demand changes, applications that remain reliable as work becomes more dynamic, and the visibility and control to understand what is happening across the system. Meeting those needs doesn’t mean starting over, but it does require that the cloud-native foundation organizations already rely on, to evolve. <a href="https://learn.microsoft.com/en-us/cloud-computing/finops/framework/optimize/architecting" target="_blank" rel="noopener noreferrer">Compute, storage and networking need to work together</a>. Application platforms need to make it easier to build and run AI workloads. Open technologies need to give customers flexibility without adding unnecessary complexity.</p>
+
+
+
+<p class="wp-block-paragraph">The platform decisions organizations make today are increasingly strategic, shaping how effectively they can put AI to work for their business. Evolving the cloud-native foundation is essential to helping organizations get more from AI today while giving them the flexibility to take advantage of new capabilities as they emerge.</p>
+
+
+
+<h2 class="wp-block-heading" id="optimize-infrastructure-for-ai-workloads">Optimize infrastructure for AI workloads</h2>
+
+
+
+<p class="wp-block-paragraph">The true measure of AI infrastructure is the useful work it enables. AI workloads rarely place the same demands on infrastructure from beginning to end. <a href="https://azure.microsoft.com/en-us/solutions/high-performance-computing/ai-infrastructure" target="_blank" rel="noopener noreferrer">Different parts of the work may need accelerated compute, CPUs, fast access to data or connectivity</a> across applications and environments. The answer isn’t simply more capacity, but rather, to <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/infrastructure/compute" target="_blank" rel="noopener noreferrer">match the right resources to the right work at the right time</a>.</p>
+
+
+
+<p class="wp-block-paragraph">That makes coordination across the infrastructure extremely important. Compute, storage and networking need to work together as demands change. When they do, teams can spend less time managing infrastructure and more time focused on the applications and outcomes that matter to their business.</p>
+
+
+
+<p class="wp-block-paragraph">Economics matter, too. Infrastructure needs to be tuned to the demands of the application and the business value it delivers, <a href="https://azure.microsoft.com/en-us/blog/cloud-cost-optimization-how-to-maximize-roi-from-ai-manage-costs-and-unlock-real-business-value/" target="_blank" rel="noopener noreferrer">with the right balance of performance, reliability and cost</a> across the complete workload.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.microsoft.com/en/customers/story/26652-basecamp-research-ltd-azure-container-registry" target="_blank" rel="noopener noreferrer">Basecamp Research</a> is one example. The company used Azure to assemble 9.7 trillion nucleotides for EDEN, its therapeutic-design models, and reported laboratory validation across three therapeutic applications within about three weeks. In this example, AI didn’t simply require more infrastructure, it needed AI infrastructure that was coordinated and designed around the outcome – bringing together the compute, data and platform capabilities needed to move complex work forward.</p>
+
+
+
+<p class="wp-block-paragraph">As Glen Gowers, co-founder of Basecamp Research put it: “To really be successful here, we need those three ingredients to come together. We need someone scaling the data; that&#8217;s us. But someone who really knows how to scale models and scale compute is Microsoft.”</p>
+
+
+
+<p class="wp-block-paragraph">Leadership takeaway: Measure success by the useful work AI completes. Judge infrastructure investment by the performance, reliability and cost of delivering those outcomes, with compute, storage and networking operating as one system.</p>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6aeba0ee5c9bd&quot;}" data-wp-interactive="core/image" data-wp-key="6aeba0ee5c9bd" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" width="1024" height="683" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Madeleine_office_009-1024x683.jpg" alt="Developer standing in front of the computer monitor" class="wp-image-54558" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Madeleine_office_009-1024x683.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Madeleine_office_009-300x200.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Madeleine_office_009-768x512.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Madeleine_office_009-1536x1024.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Madeleine_office_009-2048x1365.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<h2 class="wp-block-heading" id="turn-open-source-innovation-into-production-capability">Turn open-source innovation into production capability</h2>
+
+
+
+<p class="wp-block-paragraph">Open technologies have long helped drive cloud innovation, and AI is accelerating that pace. New models, frameworks and cloud-native technologies give organizations more choice in how they build and adapt applications.</p>
+
+
+
+<p class="wp-block-paragraph">That opportunity builds on an established cloud-native foundation. Gartner forecasts that by 2028, 95% of new AI agent deployment will use Kubernetes.<sup>1</sup> Reusing established components can shorten the path to production, allowing developers to focus on differentiated business capabilities rather than rebuilding the foundation.</p>
+
+
+
+<p class="wp-block-paragraph">More choice can also bring more complexity. Taking advantage of open-source innovation often requires specialized expertise to integrate, manage and maintain technologies in production. That expertise is hard to find and even harder to scale. We need to make these capabilities accessible to more businesses, without requiring every organization to build and maintain that expertise themselves.</p>
+
+
+
+<p class="wp-block-paragraph">Azure helps reduce that burden. Services like <a href="https://learn.microsoft.com/en-us/azure/aks/what-is-aks" target="_blank" rel="noopener noreferrer">Azure Kubernetes Service</a> give teams access to open-source innovation while helping manage the complexity and risk of running it in production. This makes it easier for more businesses to take advantage of open technologies while preserving the flexibility to adapt with changing needs.</p>
+
+
+
+<p class="wp-block-paragraph">Leadership takeaway: Choose a platform that helps turn open-source freedom into business advantage. <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/" target="_blank" rel="noopener noreferrer">Preserve the ability to adapt and optimize while reducing the expertise and operating effort</a> required to sustain those choices in production.</p>
+
+
+
+<h2 class="wp-block-heading" id="align-ai-infrastructure-costs-with-business-value">Align AI infrastructure costs with business value</h2>
+
+
+
+<p class="wp-block-paragraph">As more organizations put AI into production, understanding the economics becomes increasingly important. AI investment starts with an expectation of business value: faster decisions, more responsive services or greater capacity to get useful work done. Then, it’s evaluating whether the value justifies the investment to deliver it. <a href="https://learn.microsoft.com/en-us/cloud-computing/finops/overview" target="_blank" rel="noopener noreferrer">FinOps</a> can help teams understand that return and make more informed decisions in this area.</p>
+
+
+
+<p class="wp-block-paragraph">For customers, that starts with understanding the full investment required to run AI applications and how to optimize it as workloads scale. Models represent a significant expense, with token usage and agent behavior influencing spending. Compute, storage, networking and operations also factor into the equation. Considering these together helps customers make more informed decisions about where to optimize.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://learn.microsoft.com/en-us/cloud-computing/finops/best-practices/compute" target="_blank" rel="noopener noreferrer">Learn FinOps best practices for compute</a></div>
+</div>
+
+
+
+<p class="wp-block-paragraph">Teams can’t simply place their bets on spending less. They need to carefully consider that a more capable model or additional infrastructure that costs more may be the right choice if it produces greater value long-term. Teams need to understand the full cost, establish ownership and put guardrails in place as they scale. From there, they can use business outcomes to decide where to optimize and where to invest.</p>
+
+
+
+<p class="wp-block-paragraph">Leadership takeaway: Manage AI investment against the business return it needs to deliver. Evaluate model and platform costs together, then use evidence of outcome value to decide where to optimize and where to invest.</p>
+
+
+
+<h2 class="wp-block-heading" id="transform-cloud-operations-with-agentic-ai">Transform cloud operations with agentic AI</h2>
+
+
+
+<p class="wp-block-paragraph">Operations teams are already stretched thin, keeping critical services running while balancing competing priorities and constant change. AI adds new complexity, and it also creates an opportunity to change how those environments are managed.</p>
+
+
+
+<p class="wp-block-paragraph">Cloud-native operations gave teams a new model for managing infrastructure, bringing increased automation, visibility and resilience. <a href="https://azure.microsoft.com/en-us/products/sre-agent/" target="_blank" rel="noopener noreferrer">Agentic operations build on that foundation</a>, bringing deeper intelligence across applications and infrastructure by connecting signals from otherwise disconnected systems. This helps teams identify issues earlier and resolve them faster, while increasing automation and continuously improving how their environments perform; all within the tools they already use.</p>
+
+
+
+<p class="wp-block-paragraph">Over time, AI can help operations teams move from reacting to problems toward anticipating and addressing them before they disrupt the business. As these capabilities mature, more actions can be automated within defined controls, with people remaining in the loop and accountable for critical decisions. When operations teams have greater reach without additional manual effort, reliability, performance and cost are continuously improved while critical services remain uninterrupted.</p>
+
+
+
+<p class="wp-block-paragraph">Leadership takeaway: Invest in operations that can anticipate problems and coordinate action across the environment. Expand autonomy as capabilities are validated, with clear controls and human accountability protecting critical business services.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://azure.microsoft.com/en-us/products/sre-agent/" target="_blank" rel="noopener noreferrer">Automate operations with Azure SRE Agent</a></div>
+</div>
+
+
+
+<h2 class="wp-block-heading" id="build-a-cloud-native-ai-foundation-on-azure">Build a cloud-native AI foundation on Azure</h2>
+
+
+
+<p class="wp-block-paragraph">Azure serves as the foundation customers need to put AI to work at scale. That means infrastructure designed around the complete workload, access to open innovation without unnecessary complexity, and a clear view of cost and business value. Greater intelligence across cloud operations helps teams anticipate issues and continuously improve how their environments perform as application needs evolve.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://azure.microsoft.com/en-gb/solutions/ai/?ef_id=_k_CjwKCAjwirLWBhBBEiwAlItbEiofqa5DDqkdgm6LDQnspxBsKug9QALCXOsCCeA2BYKp1Q2v8naV_RoCfewQAvD_BwE_k_&amp;OCID=AIDcmmo7vzpajg_SEM__k_CjwKCAjwirLWBhBBEiwAlItbEiofqa5DDqkdgm6LDQnspxBsKug9QALCXOsCCeA2BYKp1Q2v8naV_RoCfewQAvD_BwE_k_&amp;gad_source=1&amp;gad_campaignid=23504081703&amp;gbraid=0AAAAADcJh_uggBwd2EZDje1Ybccm3N8Nl&amp;gclid=CjwKCAjwirLWBhBBEiwAlItbEiofqa5DDqkdgm6LDQnspxBsKug9QALCXOsCCeA2BYKp1Q2v8naV_RoCfewQAvD_BwE" target="_blank" rel="noopener noreferrer">We’re continuing to invest in capabilities across Azure</a> that give customers greater flexibility in how they build and run AI applications. From <a href="https://learn.microsoft.com/en-us/azure/container-apps/sandboxes-get-started" target="_blank" rel="noopener noreferrer">secure, isolated environments for agents</a> to simpler application deployment and the ability to run workloads across cloud and edge environments, these investments help customers take advantage of new capabilities without adding unnecessary operational complexity.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://azure.microsoft.com/en-us/products/kubernetes-service/" target="_blank" rel="noopener noreferrer">Get started with Azure Kubernetes Service (AKS)</a></div>
+</div>
+
+
+
+<p class="wp-block-paragraph">AI is changing what applications can do, and Azure has already evolved to support that shift. The cloud platform has to evolve with them. Years of focused engineering investment have built the foundation for some of the most advanced AI workloads running today, with continued innovation to support what comes next.</p>
+
+
+
+<h2 class="wp-block-heading" id="build-for-the-next-generation-of-ai">Build for the next generation of AI</h2>
+
+
+
+<p class="wp-block-paragraph">Platform value compounds when improvements reinforce one another: faster information access keeps compute productive, operational insight exposes waste, and open technologies preserve room to adapt. The leadership task is to make those gains work together. That is the next chapter of cloud native: a foundation that turns advances in AI into dependable business value.</p>
+
+
+
+<p class="wp-block-paragraph">To learn more about the recent Azure innovations and how Azure is evolving the cloud-native foundation for AI applications and agents, explore:</p>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item"><a href="http://aka.ms/aks/flexnodeforaks" target="_blank" rel="noopener noreferrer">Flex Nodes for AKS</a></li>
+
+
+
+<li class="wp-block-list-item"><a href="https://azure.microsoft.com/en-us/products/sre-agent/">Azure SRE Agent</a></li>
+
+
+
+<li class="wp-block-list-item"><a href="http://aka.ms/aca/sandbox/launch-blog">Azure Container Apps Sandboxes</a></li>
+
+
+
+<li class="wp-block-list-item"><a href="http://aka.ms/aca/express/blog">Azure Container Apps Express</a></li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Explore what this means for your organization. <a href="https://events.microsoft.com/flow/microsoft/microsoftds/catalog/page/unauthsession?tab.deliverymethod=deliverymethod_live&amp;search=Innovate%20with%20AI%20on%20a%20Cloud%20Native%20Foundation" target="_blank" rel="noreferrer noopener">Register for our upcoming discovery session</a> to learn how to put a cloud-native foundation for AI applications and agents into practice.</p>
+
+
+
+<div class="is-style-inline wp-block-bloginabox-theme-promotional">
+	
+<div class="promotional promotional--has-media promotional--media-left">
+	<div class="promotional__wrapper">
+		<div class="promotional__content-wrapper">
+			<div class="promotional__content">
+				
+
+<h2 class="wp-block-heading" id="register-for-discovery-session">Build your AI foundation</h2>
+
+
+
+<p class="wp-block-paragraph" id="register-for-discovery-session">Learn how to put a cloud-native foundation for AI applications and agents into practice in our upcoming discovery session.</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a aria-label="Register now: Build your AI foundation" data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdeveloper.microsoft.com%2Fen-us%2Freactor%2Fseries%2FS-1692%2F&amp;data=05%7C02%7Cv-estvirko%40microsoft.com%7C28c075d5e138424372f908df28ba85fd%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639274453818303715%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=GiAsxkX905%2BhlL4R%2FfdH2ILCbPhpQjytgvFfjKWHRSY%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer">Register now</a></div>
+</div>
+
+			</div>
+		</div>
+					<div class="promotional__media-wrapper">
+				<div class="promotional__media">
+											<img decoding="async" width="2560" height="1707" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-scaled.jpg" class="attachment-full size-full" alt="person sitting in front of the computer and smiling looking at the monitor" loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-scaled.jpg 2560w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-300x200.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-1024x683.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-768x512.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-1536x1024.jpg 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Evan_office_003-2048x1365.jpg 2048w" sizes="auto, (max-width: 2560px) 100vw, 2560px" />									</div>
+			</div>
+			</div>
+</div>
+</div>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity" />
+
+
+
+<p class="wp-block-paragraph"><sup>1</sup> Gartner®, Magic Quadrant™ for Container Management, Dennis Smith, Wataru Katsurashima, et al., 6 August 2025 <br></p>
+
+
+
+<p class="has-body-medium-font-size wp-block-paragraph">GARTNER and MAGIC QUADRANT are trademarks of Gartner, Inc. and/or its affiliates.</p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/evolving-the-cloud-native-foundation-for-the-next-generation-of-ai/">Evolving the cloud-native foundation for the next generation of AI</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/evolving-the-cloud-native-foundation-for-the-next-generation-of-ai/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Server Virtualization Platforms</title>
+		<link>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-server-virtualization-platforms/</link>
+					<comments>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-server-virtualization-platforms/#respond</comments>
+		
+		<dc:creator><![CDATA[Maria Bledsoe]]></dc:creator>
+		<pubDate>Wed, 14 Oct 2026 19:00:00 +0000</pubDate>
+				<category><![CDATA[Hybrid + multicloud]]></category>
+		<category><![CDATA[Gartner® Magic Quadrant™]]></category>
+		<guid isPermaLink="false">https://azure.microsoft.com/en-us/blog/?p=54576</guid>
+
+					<description><![CDATA[<p>We're building operational consistency through Azure and Azure Arc, and infrastructure consistency through Hyper-V.</p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-server-virtualization-platforms/">Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Server Virtualization Platforms</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">We’re proud to share that Microsoft has been named a <a href="https://www.gartner.com/doc/reprints?id=00ThR00000LRWXfUAP&amp;ct=261008&amp;st=sb" target="_blank" rel="noopener noreferrer">Leader in the 2026 Gartner® Magic Quadrant™ for Server Virtualization Platforms</a>. We believe this recognition comes at an important moment for enterprise infrastructure. The question is no longer simply which hypervisor to run. It is how to create a consistent operating model across cloud, datacenter, edge, and sovereign environments. Microsoft addresses that challenge at two levels: operational consistency through Azure and <a href="https://azure.microsoft.com/en-us/products/azure-arc/" target="_blank" rel="noopener noreferrer">Azure Arc</a>, and infrastructure consistency through <a href="https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/" target="_blank" rel="noopener noreferrer">Hyper-V</a>.</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://www.gartner.com/doc/reprints?id=00ThR00000LRWXfUAP&amp;ct=261008&amp;st=sb" target="_blank" rel="noopener noreferrer">Read the report</a></div>
+</div>
+
+
+
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6aeba0ee60eb6&quot;}" data-wp-interactive="core/image" data-wp-key="6aeba0ee60eb6" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="819" height="908" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image.jpg" alt="Magic Quadrant graph for Server Virtualization Platforms." class="wp-image-54577" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image.jpg 819w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-271x300.jpg 271w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/image-768x851.jpg 768w" sizes="(max-width: 819px) 100vw, 819px" /><button
+			class="lightbox-trigger"
+			type="button"
+			aria-haspopup="dialog"
+			aria-label="Enlarge"
+			data-wp-init="callbacks.initTriggerButton"
+			data-wp-on--click="actions.showLightbox"
+			data-wp-style--right="state.imageButtonRight"
+			data-wp-style--top="state.imageButtonTop"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+				<path fill="#fff" d="M2 0a2 2 0 0 0-2 2v2h1.5V2a.5.5 0 0 1 .5-.5h2V0H2Zm2 10.5H2a.5.5 0 0 1-.5-.5V8H0v2a2 2 0 0 0 2 2h2v-1.5ZM8 12v-1.5h2a.5.5 0 0 0 .5-.5V8H12v2a2 2 0 0 1-2 2H8Zm2-12a2 2 0 0 1 2 2v2h-1.5V2a.5.5 0 0 0-.5-.5H8V0h2Z" />
+			</svg>
+		</button></figure>
+
+
+
+<h2 class="wp-block-heading" id="from-choosing-a-hypervisor-to-choosing-an-operating-model">From choosing a hypervisor to choosing an operating model</h2>
+
+
+
+<p class="wp-block-paragraph">For years, the primary virtualization decision was which hypervisor to run. Today, the more consequential decision is how infrastructure will be operated across every environment the business depends on. Virtualization remains a critical foundation, but the value of the platform increasingly depends on how infrastructure is managed, governed, secured, updated, and connected across environments. As infrastructure becomes more distributed, how it is operated becomes as important as where it runs.</p>
+
+
+
+<p class="wp-block-paragraph">Microsoft delivers that consistency at two complementary levels:</p>
+
+
+
+<ul class="wp-block-list">
+<li class="wp-block-list-item"><strong>Operational consistency:</strong> Azure provides common management, governance, and security across cloud, datacenter, and edge environments. Azure Arc extends those capabilities to distributed infrastructure, giving organizations a unified way to operate diverse environments.</li>
+
+
+
+<li class="wp-block-list-item"><strong>Infrastructure consistency:</strong> Hyper-V provides a common virtualization foundation across Azure, Azure Local, and <a href="https://www.microsoft.com/en-us/windows-server" target="_blank" rel="noopener noreferrer">Windows Server</a>, helping organizations maintain a consistent infrastructure layer wherever workloads run.</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Together, these layers help organizations preserve choice without multiplying operational models. Workloads can move, environments can evolve, and new technologies can be adopted without requiring a separate operating model for every environment.</p>
+
+
+
+<h2 class="wp-block-heading" id="ready-for-what-comes-next">Ready for what comes next</h2>
+
+
+
+<p class="wp-block-paragraph">Operational and infrastructure consistency will become even more important as AI reshapes enterprise IT. Models, agents, applications, and data will increasingly span cloud, datacenter, edge, and sovereign environments. AI alone will not reduce the complexity of distributed infrastructure; in many cases, it will increase the need for common management, governance, security, and infrastructure foundations.</p>
+
+
+
+<p class="wp-block-paragraph">Being named a Leader in this Magic Quadrant is an honor for us. More importantly, we believe it reflects a direction many organizations are pursuing: operational consistency across increasingly distributed environments. We remain committed to helping customers combine the flexibility to run workloads where they choose with the consistency required to manage them as one environment.</p>
+
+
+
+<div class="is-style-inline-centered wp-block-bloginabox-theme-promotional">
+	
+<div class="promotional promotional--has-media promotional--media-right">
+	<div class="promotional__wrapper">
+		<div class="promotional__content-wrapper">
+			<div class="promotional__content">
+				
+
+<h2 class="wp-block-heading has-text-align-center" id="recognized-as-a-leader">Recognized as a Leader</h2>
+
+
+
+<p class="has-text-align-center wp-block-paragraph">in the 2026 Gartner® Magic Quadrant™ for Server Virtualization Platforms</p>
+
+
+
+<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a aria-label="Read the report: Recognized as a Leader" data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://www.gartner.com/doc/reprints?id=00ThR00000LRWXfUAP&amp;ct=261008&amp;st=sb" target="_blank" rel="noopener noreferrer">Read the report</a></div>
+</div>
+
+			</div>
+		</div>
+					<div class="promotional__media-wrapper">
+				<div class="promotional__media">
+											<img decoding="async" width="1920" height="1280" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003.jpg" class="attachment-full size-full" alt="Two people sitting at desks and working at computers." loading="lazy" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003.jpg 1920w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-300x200.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-1024x683.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-768x512.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003-1536x1024.jpg 1536w" sizes="auto, (max-width: 1920px) 100vw, 1920px" />									</div>
+			</div>
+			</div>
+</div>
+</div>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity" />
+
+
+
+<p class="has-body-medium-font-size wp-block-paragraph"><em>Gartner, Magic Quadrant for Server Virtualization Platforms, Tony Harvey, Daniel Bowers, Paul Delory, Tony Iams, Owen Marino, 14 September 2026.</em></p>
+
+
+
+<p class="has-body-medium-font-size wp-block-paragraph"><em>Gartner does not endorse any company, vendor, product or service depicted in its publications, and does not advise technology users to select only those vendors with the highest ratings or other designation. Gartner publications consist of the opinions of Gartner’s business and technology insights organization and should not be construed as statements of fact. Gartner disclaims all warranties, expressed or implied, with respect to this publication, including any warranties of merchantability or fitness for a particular purpose.</em></p>
+
+
+
+<p class="has-body-medium-font-size wp-block-paragraph"><em>Gartner and Magic Quadrant are trademarks of Gartner, Inc., and/or its affiliates. This graphic was published by Gartner, Inc. as part of a larger research document and should be evaluated in the context of the entire document. The Gartner document is available upon request from <a href="https://www.gartner.com/doc/reprints?id=00ThR00000LRWXfUAP&amp;ct=261008&amp;st=sb">Microsoft here.</a></em></p>
+<p>The post <a href="https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-server-virtualization-platforms/">Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Server Virtualization Platforms</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-server-virtualization-platforms/feed/</wfw:commentRss>
 			<slash:comments>0</slash:comments>
 		
 		

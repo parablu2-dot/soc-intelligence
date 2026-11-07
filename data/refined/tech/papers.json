@@ -2,6 +2,259 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.soft",
+    "title": "Trapping and Fracture of Particles in Three-Sphere Ball-Milling Collisions",
+    "url": "https://arxiv.org/abs/2611.08435v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "We numerically investigate the collision and fracture processes of ball milling based on a minimal model of a three-sphere geometry using discrete element method (DEM) simulations combined with Christensen-type and Weibull-type normalized fracture criteria. The outcome of the brittle target particle (ejected versus trapped, fractured versus intact) depends on the impact geometry and velocity. We develop a reduced three-sphere collision description in which trapping is governed by impact geometry",
+    "authors": [
+      "Ziyi Cui",
+      "Qiong Zhang",
+      "Suwei Liu",
+      "Richard M. Lueptow"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Scaling Up Analog CIM: A Simulation Framework for Topology-Aware Mapping",
+    "url": "https://arxiv.org/abs/2611.08399v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "Analog compute-in-memory (CIM) enables energy-efficient AI inference by performing in-situ matrix multiplication. The growing demand for deploying larger models motivates chiplet integration to expand CIM capacity. However, simulation abstractions based on local operator costs and aggregate communication metrics obscure the impact of weight-mapping topology when CIM system scales up. We develop a phase analysis that quantifies how strongly mapping topology affects system performance across hardw",
+    "authors": [
+      "Yuxin Ren",
+      "Danella Zhao",
+      "Huanrui Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "SensorGuard-RV: Sensor-to-Register Data Protection for Resource-Constrained RISC-V Devices",
+    "url": "https://arxiv.org/abs/2611.08380v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "Embedded systems rely on sensor measurements that traverse a complex hardware-firmware stack (e.g. peripheral interfaces, communication buses, memory, and drivers) before reaching the applications that use them. At worst, an attacker with access to this path may successfully intercept, overwrite, fabricate, or replay readings. This may cause systems that act on such data, such as flight controllers and industrial processes, to behave incorrectly or unsafely. Existing defences, such as trusted ex",
+    "authors": [
+      "Hamid Noori",
+      "Carlton Shepherd"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CV",
+    "title": "4D Point Splatting for mmWave Radar Micro-Doppler Differentiable Rendering",
+    "url": "https://arxiv.org/abs/2611.08342v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "Millimeter-wave radar resolves the micrometer displacements of a moving body as micro-Doppler, enabling gait, gesture, activity, pose and vital-sign sensing. Each task relies on a downstream model trained on real data, yet radar datasets lag orders of magnitude behind vision and language. Brute-force collection will not close that gap, and existing synthesis methods (forward-only simulators, learned generators and static-scene inverse renderers) cannot fit a real capture of a moving body, leavin",
+    "authors": [
+      "Adnan Armouti",
+      "Guanyue Qian",
+      "Rajalakshmi Nandakumar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Should You Split Decode? Disaggregation Across Future Models and Accelerators",
+    "url": "https://arxiv.org/abs/2611.08299v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "For large language model (LLM) inference, prefill/decode disaggregation (P/D) is deployed in production to isolate phases with different resource demands. Attention/feed-forward network disaggregation (AFD) splits decode again, but adds communication, placement constraints, and another provisioned pool. We ask whether role-specific placement repays this cost as models and accelerator roadmaps change. Infrastructure is committed before future models and hardware can be benchmarked. We present Sil",
+    "authors": [
+      "Ramyad Hadidi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "Zirah: A Post-Quantum True Random Number Generator Hardware Signer With an Avalanche Noise",
+    "url": "https://arxiv.org/abs/2611.08200v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "Zirah is a hardware signer built around an STM32F407 microcontroller, and its purpose is to find out, on inexpensive hardware, where a post-quantum signing key is exposed and what actually protects it. The device draws every random bit from a reverse-biased 2N3904 junction in avalanche breakdown, amplified by an LM358 and screened by SP 800-90B health tests, computes ML-DSA-65 (FIPS 204, hedged) on the STM32 with two-share arithmetic masking of the secret-key multiplications, and adds ECDSA P-25",
+    "authors": [
+      "Muhammad Shaheer Bin Junaid"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CV",
+    "title": "MCUFlowNet: Hardware-Aware Neural Architecture Search for Optical Flow on Microcontrollers",
+    "url": "https://arxiv.org/abs/2611.08147v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "Dense optical flow allows small drones to avoid obstacles. However, few dense optical flow networks are designed for microcontrollers (MCUs) with neural accelerators, whose on-chip SRAM limits the input resolution. We present PACE-NAS, a macro-to-micro neural architecture search framework that decouples memory from latency: a macro design fixes the backbone and its peak SRAM, and a micro design searches operators and depths to trade accuracy against compiler-estimated latency. We apply it to Edg",
+    "authors": [
+      "Enmin Lin",
+      "Jona Beysens"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.AS",
+    "title": "SubRoformer: Subband Time-Domain Representation for Music Source Separation",
+    "url": "https://arxiv.org/abs/2611.08130v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "Music source separation extracts vocals and instruments from a mixed recording, enabling remixing, content production, and music analysis. Existing systems commonly operate on waveforms or full-band spectrograms. Waveform inputs contain many samples even in short segments, whereas a single spectrogram resolution imposes a shared time-frequency resolution trade-off across frequency ranges. We propose SubRoFormer, a Transformer-based system comprising a subband module and a residual RoFormer modul",
+    "authors": [
+      "Chunyat Wu",
+      "Chuang Ding",
+      "Paris Smaragdis",
+      "Qiuqiang Kong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Geometry-Aware Channel Aging in MIMO Systems: When Is Kronecker Separability Enough?",
+    "url": "https://arxiv.org/abs/2611.08007v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "This letter investigates when Kronecker-separable spatial correlation approximates the covariance of multiple-input-multiple-output (MIMO) channels. We propose a geometry-aware channel model in which the same propagation environment determines both the Weischelberger spatial coupling matrix and the temporal correlation coefficient. The propagation environment follows a 3GPP-inspired clustered channel model. We consider a MIMO system affected by symbol-level channel aging caused by the user equip",
+    "authors": [
+      "Steven Rivetti",
+      "Gabor Fodor",
+      "Emil Bjornson",
+      "Mikael Skoglund"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "From Choirs to Solos: Reducing Multi-Cell Cooperation via Pinching Antennas",
+    "url": "https://arxiv.org/abs/2611.07901v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "This article investigates the potential of the pinching-antenna system (PASS) to reduce multi-cell cooperation requirements. Flexible pinching-antenna (PA) placement can enhance desired channel gains and reduce the required transmit power, which consequently alleviates inter-cell interference and the need for cooperative transmission. A two-cell PASS is considered, where the cooperation cost is quantified by the number of additional base station-user data associations. The cooperation cost is mi",
+    "authors": [
+      "Zhenqiao Cheng",
+      "Chongjun Ouyang",
+      "Zhiguo Ding"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Laser fabrication of vibrating microcavities on silicon: Formation dynamics and frequency tunability",
+    "url": "https://arxiv.org/abs/2611.07742v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "Laser processing of silicon has long since become a standard method for wafer dicing, surface texturing, re-crystallization after ion implantation, as well as surface amorphization, to name a few examples. Here, we introduce a novel concept, the fabrication of vibrating microcavities in a commercial platform, Si wafers covered by a thick SiO2 layer, acting as a membrane. We demonstrate that by exposing our material system to single ultrashort laser pulses above the evaporation threshold of Si, a",
+    "authors": [
+      "Belen Valiente",
+      "Gonzalo Gomez-Munoz",
+      "Mario Garcia-Lechuga",
+      "Irene Solana",
+      "Fernando Agulló-Rueda",
+      "David Grojo",
+      "Angel Rodriguez-Fernandez",
+      "Javier Solis",
+      "Jan Siegel"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Copula-Based Dependence Modeling for Resilient 6G Multi-Hop Wireless Networks",
+    "url": "https://arxiv.org/abs/2611.07716v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "Reliable operation of multi-hop wireless networks requires accounting for statistical dependence among link failures caused by common propagation conditions and shared network components. This paper develops a copula-based framework for modeling node-induced dependence among link-level signal-to-noise ratios and quantifying its effect on end-to-end outage. By separating marginal fading distributions from the dependence structure, the framework captures nonlinear and tail-dependent coupling beyon",
+    "authors": [
+      "Ali Izadimoein",
+      "Prathapasinghe Dharmawansa",
+      "Nurul Huda Mahmood",
+      "Eduard Axel Jorswieck"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "CAMP: Context-Aware Mapping and Placement for LLMs on 3D-IMC Arrays",
+    "url": "https://arxiv.org/abs/2611.07707v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "Large Language Models (LLMs) incur severe memory-access overheads due to the cost of loading large weight matrices and key-value (KV) caches. Analog In-Memory Computing (AIMC) is an emerging solution that enables computation directly on static weights stored in memory, substantially reducing energy and latency. 3D-IMC further stacks memory arrays into vertical tiers, increasing capacity but revealing a new challenge: how weights are placed in memory determines which matrix-vector multiplications",
+    "authors": [
+      "Orhun Görkem",
+      "Athanasios Vasilopoulos",
+      "Georgios Pagonis",
+      "Victoria Clerico",
+      "Hadjer Benmeziane",
+      "Irem Boybat",
+      "Hsinyu Tsai",
+      "Abu Sebastian",
+      "William Andrew Simon"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Equivariant Deep Learning in Direct-Product Space for Electronic-Structure Hamiltonian Prediction",
+    "url": "https://arxiv.org/abs/2611.07695v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "Most existing equivariant architectures for Hamiltonian prediction propagate features in direct-sum spaces of irreducible spherical tensors, whereas the target Hamiltonian is naturally an operator block in a direct-product representation over local orbital and spin bases. This representation mismatch fragments contiguous Hamiltonian blocks, obscures direct manipulation of orbital couplings, and organizes features into irregular angular-momentum components that require numerous transformations an",
+    "authors": [
+      "Shi Yin",
+      "Zujian Dai",
+      "Xinyang Pan",
+      "Lixin He"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "SVM + CFAR + OR: A Hybrid Machine-Learning-CFAR Receiver for Low-False-Alarm PRACH Preamble Detection in 5G NR and Beyond",
+    "url": "https://arxiv.org/abs/2611.07685v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "The physical random access channel (PRACH) enables initial access between user equipment and the base station, making reliable preamble detection essential for cellular networks. Growing device density in 5G and beyond-5G networks, massive machine-type communication, and the shift towards machine-learning-driven radio interfaces challenge conventional analytical detectors, particularly in complex radio environments and at low signal-to-noise ratios. This article formulates preamble detection as ",
+    "authors": [
+      "Filip Ferenc",
+      "Michal Szczachor"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "OpenRDMA: A GPU-Native Multi-Path Reliable RDMA Transport Architecture",
+    "url": "https://arxiv.org/abs/2611.07559v1",
+    "published_date": "2026-11-05",
+    "source": "arXiv",
+    "summary": "As the computing power density of large-scale AI clusters rises, network communication increasingly limits system performance. GPU-initiated communication requires low-overhead request submission to overlap communication with computation. However, GPUDirect RDMA (GDR) still relies on CPU involvement in its control path, while InfiniBand GPUDirect Async (IBGDA) requires GPUs to assemble Work Queue Entries (WQEs), consuming additional SM resources and memory bandwidth. We propose OpenRDMA, an open",
+    "authors": [
+      "Ziheng Ji",
+      "Chunyu Liu",
+      "Weihao Peng",
+      "Mingheng Mi",
+      "Pu Wang",
+      "Hai Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "eess.SP",
     "title": "Joint Association and Beamforming Design for Cooperative ISAC Systems",
     "url": "https://arxiv.org/abs/2611.06853v1",
