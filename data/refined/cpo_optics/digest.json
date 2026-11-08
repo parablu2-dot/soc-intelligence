@@ -1,12 +1,99 @@
 {
   "axis": "cpo_optics",
   "sector": "CPO/광통신",
-  "date": "2026-11-08",
-  "generated_at": "2026-11-07T23:33:00.877288+00:00",
-  "item_count": 0,
+  "date": "2026-11-09",
+  "generated_at": "2026-11-08T23:32:24.381836+00:00",
+  "item_count": 9,
   "content": {
-    "ko": {},
-    "en": {}
+    "ko": {
+      "executive_summary": "AI 데이터센터 인프라 투자가 급증 중이며, STMicroelectronics는 Q3 FY 2026에서 AI 데이터센터 관련 수주 증가를 기록했다. 광학 상호연결 기술의 최적화(800 VDC 전원공급 아키텍처, 아이솔레이터 없는 광 송신기)와 확장성 평가가 데이터센터 효율성 강화에 주력하는 상황이다.",
+      "key_facts": [
+        "AI 데이터센터 투자: $17B (2026년 예상)",
+        "STMicroelectronics: Q3 FY 2026 AI 데이터센터 및 수주 증가",
+        "Lite-On Technology: 800 VDC 아키텍처 전원공급 기술 시연",
+        "Ondine Capital: Fund III 첫 마감 (AI, 반도체, Physical AI 스타트업 투자)",
+        "주요 경쟁사: Qualcomm, Broadcom, Marvell, NVIDIA, Intel"
+      ],
+      "implications": [
+        {
+          "keyword": "광학 상호연결 경쟁",
+          "text": "아이솔레이터 없는 광 송신기 및 고전압 전원공급 아키텍처(800 VDC)의 등장으로 데이터센터 광학 모듈 설계의 소형화·효율화 경쟁이 심화될 전망"
+        },
+        {
+          "keyword": "포트 확장성 한계",
+          "text": "광학 상호연결 포트 확장성에 대한 건축 조사가 진행 중으로, 대규모 AI 클러스터 구축 시 물리적 한계 극복이 핵심 과제로 대두"
+        },
+        {
+          "keyword": "생태계 자금 이동",
+          "text": "Ondine Capital의 대규모 펀딩이 AI·반도체 스타트업 투자에 집중되면서 광통신 하드웨어 혁신에 민간 자본 유입 가속화"
+        },
+        {
+          "keyword": "규제 리스크",
+          "text": "블루웨이브 정책 기조에서 반발하는 반데이터센터 감정이 고조되고 있어, AI 인프라 확장 투자 계획이 규제 지연 직면 가능성"
+        }
+      ],
+      "counterpoint": "단순 데이터센터 인프라 투자 증가만으로는 CPO/광통신 모듈의 실제 채용 확대와 직결되지 않을 수 있으며, 아키텍처 표준화 및 대량 생산 준비도가 미흡할 위험."
+    },
+    "en": {
+      "executive_summary": "AI datacenter infrastructure investment is surging, and STMicroelectronics recorded increased orders related to AI datacenters in Q3 FY 2026. Optimization of optical interconnect technology (800 VDC power supply architecture, isolator-free optical transmitters) and scalability assessment are the focus of efforts to enhance datacenter efficiency.",
+      "key_facts": [
+        "AI datacenter investment: $17B (projected for 2026)",
+        "STMicroelectronics: Q3 FY 2026 AI datacenter and orders increase",
+        "Lite-On Technology: Demonstrated 800 VDC architecture power supply technology",
+        "Ondine Capital: Fund III first close (investing in AI, semiconductor, Physical AI startups)",
+        "Major competitors: Qualcomm, Broadcom, Marvell, NVIDIA, Intel"
+      ],
+      "implications": [
+        {
+          "keyword": "Optical interconnect competition",
+          "text": "With the emergence of isolator-free optical transmitters and high-voltage power supply architecture (800 VDC), competition for miniaturization and efficiency in datacenter optical module design is expected to intensify."
+        },
+        {
+          "keyword": "Port scalability limitations",
+          "text": "Architectural surveys on optical interconnect port scalability are underway, and overcoming physical limitations in building large-scale AI clusters is emerging as a critical challenge."
+        },
+        {
+          "keyword": "Ecosystem capital movement",
+          "text": "As Ondine Capital's large-scale funding concentrates on AI and semiconductor startup investment, private capital inflow into optical communications hardware innovation is accelerating."
+        },
+        {
+          "keyword": "Regulatory risk",
+          "text": "Anti-datacenter sentiment is intensifying against the blue wave policy direction, and AI infrastructure expansion investment plans may face regulatory delays."
+        }
+      ],
+      "counterpoint": "Increased datacenter infrastructure investment alone may not directly translate to expanded actual adoption of CPO/optical communication modules, with risks of inadequate architecture standardization and mass production readiness."
+    }
   },
-  "links": []
+  "links": [
+    {
+      "headline": "Isolator-free optical transmitter could shrink data center interconnects - EurekAlert!",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1XWEJkeHBqc0cyN0M1NEJ5YTQxZWVSSndZeVFJSXBvZlgzUnZhTDB6Ulp5SVdwak5rNHBUY2wxNXZ5Z05jekl1NnRuaVFMYW51?oc=5",
+      "source": "Google News",
+      "published_date": "2026-11-08"
+    },
+    {
+      "headline": "Ondine Capital Announces First Close of Fund III to Drive AI and Semiconductor Innovation - The Manila Times",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOX1J2YzliSGVsaGxOQ2dDMTlTTHRZRndLR3IybXJtS0gxNW1oM1B1M1RBQ09IaV9tUVFwRDZFYXBFYjNYQ2hKbFVvTG82S1NIMnNYMzFMVldMNGZtUWRIdlFmZDhKcHhhQzlYS3BxV0lFREZpTjhYVGJEeVd5eVBKbXVPdkFsd2d6U3VCS1hCVW9DMmd1WC00QVNyOURWa1k3QXZXT080NjRtUmV0T2czdXV6eDMtdjRBNkdsM2d3MGRGYUJPZjY5UU5qZlE1OTQ0elRV0gHTAUFVX3lxTE5fUnZjOWJIZWxobE5DZ0MxOVNMdFlGd0tHcjJtcm1LSDE1bWgzUHUzVEFDT0hpX21RUXBENkVhcEViM1hDaEpsVW9MbzZLU0gyc1gzMUxWV0w0Zm1RZEh2UWZkOEpweGFDOVhLcHFXSUVERmlOOFhUYkR5V3l5UEptdU92QWx3Z3pTdUJLWEJVb0MyZ3VYLTRBU3I5RFZrWTdBdldPTzQ2NG1SZXRPZzN1dXp4My12NEE2R2wzZ3cwZEZhQk9mNjlRTmpmUTU5NDR6VFU?oc=5",
+      "source": "Google News",
+      "published_date": "2026-11-08"
+    },
+    {
+      "headline": "Telecom Semiconductor Market 2026: Qualcomm, Broadcom, Marvell, NVIDIA and Intel Compete for 5G, AI-RAN and Broadband Chip Spending - TelecomLead",
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQMnhpcDkweHV6U2tzQnVkeloxZ3hiUGZLclZLeFNWUE4ycm56RXd0SWRJY3Y0cnNRS0VXTDYtd0tIcFpKOFN3dFlDVENjMG51bTVLSm5aZ1VhMzNYZGNZb3lHY25mOVMxUWZ0U2syWU5HVUNDaDRGTmx4MkpBRjIwSG1XdEtocUxqWDUtSnNPLXFGdWxDQUIybklzY1J6R21DMUtLeHRUWV9NczFtaVlOTktzSDFTM1RNU28xZ0drYkNrQ19jb2kxQ0ZKMFh0OUpwSzJWSC1tZmZhX0o3WHF1YU5rdzdjN1VjZW1yZGdfU05MRGljaHJWdXlwTGNqZHJn?oc=5",
+      "source": "Google News",
+      "published_date": "2026-11-08"
+    },
+    {
+      "headline": "Architectural Survey Evaluates Scalable Optical Interconnect Port Limits in Data Centers - Bioengineer.org",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcFF1b3R6cFdfY0Z1UWg1bWhGSTRYNUhQLXpsalIxdllzMzVNbkFPeWJZVldVUVVTLXBVcW9nRmtZQmJMX1NXWUl0OFRBSXR2YUNnX21XZklLRkxWcS1Ncml5LTY5anUxUVZxYWhKeV94VGQ2NnltSC1wX05MVFM0MXlyM0xqWnMzRG9oaW9PRGZmTzBHMVJ0ZzVBQkx6UC1wMDFfa1NJM2ZtVnRKMF9vN3dldw?oc=5",
+      "source": "Google News",
+      "published_date": "2026-11-07"
+    },
+    {
+      "headline": "Ondine Capital Announces First Close Of Fund III To Invest In AI, Semiconductors, And Physical AI Startups - Pulse 2.0",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPczB4Sm9yMHFyRkdSM1JORzlZTEhFX3hvMWJqRk1ZZW5qRFN6aHhFc0Z0VEpGNjJUYkwyTHp6LU5vUmRmcGRtajlsYkY2U0lwU25MLU1OSjhfREtpdzVOYTNxaE02YmwtQllEalpCWnhRVE1Pa1lSelJscVRybG5VR2FqU3FRaE9vSFZmQXNtR0VvbzRLMERuS3k5c0YtZ1FMVTRRdmNxRDdGN29QcjBMVVRzSWZial9LcFBsdHM4VGV4UQ?oc=5",
+      "source": "Google News",
+      "published_date": "2026-11-07"
+    }
+  ]
 }
