@@ -2,6 +2,354 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.RO",
+    "title": "EmbodiedIntentBench: Benchmarking Intent-Driven Runtime Adaptation for Mobile Robotic Missions",
+    "url": "https://arxiv.org/abs/2611.10498v1",
+    "published_date": "2026-11-07",
+    "source": "arXiv",
+    "summary": "Mobile robotic sensing systems must adapt to operator requirements, limited resources, changing connectivity, and observation opportunities shaped by physical motion. Evaluating runtime strategies therefore requires assessing whether their decisions fulfill mission objectives, beyond isolated perception accuracy or execution efficiency. We present EmbodiedIntentBench, a benchmark for intent-driven runtime adaptation in mobile robotic missions. It represents mission intent through structured cont",
+    "authors": [
+      "Rajat Bhattacharjya",
+      "Changwoon Lee",
+      "Hyeonjong Ju",
+      "Sing-Yao Wu",
+      "Hamidreza Alikhani",
+      "Zhuoyi Yang",
+      "Ian Harris",
+      "Nalini Venkatasubramanian",
+      "Nikil Dutt"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Soft-then-Hard: Joint Link Association and Precoding Optimization for LEO Satellite Networks",
+    "url": "https://arxiv.org/abs/2611.10482v1",
+    "published_date": "2026-11-07",
+    "source": "arXiv",
+    "summary": "Spatial multiplexing in dense low Earth orbit (LEO) satellite downlinks is hindered by two bottlenecks. First, line-of-sight (LoS)-dominant propagation from a high orbital altitude places the users in a narrow angular region, which limits the spatial resolution achievable by a single satellite. Second, the visible satellites cause severe inter-satellite interference. Both effects call for joint link association and precoding, because the association decides which users are served together and wh",
+    "authors": [
+      "Hyeongtak Yun",
+      "Wonjae Shin",
+      "Jeonghun Park"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Dopant Cluster Engineering for Tunable Room-Temperature Ferromagnetism in 2D Transition Metal Dichalcogenides",
+    "url": "https://arxiv.org/abs/2611.10480v1",
+    "published_date": "2026-11-07",
+    "source": "arXiv",
+    "summary": "Two-dimensional transition metal dichalcogenides (2D-TMDs) offer a promising platform for realizing dilute magnetic semiconductors. However, simultaneously achieving large magnetic anisotropy energy (MAE) and high Curie temperature (T$_\\text{c}$) remains a major challenge. In this work, we employ DFT+U to systematically investigate the thermodynamic stability and magnetic properties of 2D-MoSe$_2$ and 2D-WSe$_2$ doped with transition metal atoms. We found that the paired dopant configurations ar",
+    "authors": [
+      "Shivangee",
+      "Sachin Grewal",
+      "Akash Singh"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Coexistence of LEO Satellite Communication Systems under Regulatory Protection Constraints",
+    "url": "https://arxiv.org/abs/2611.10462v1",
+    "published_date": "2026-11-07",
+    "source": "arXiv",
+    "summary": "This paper investigates the coexistence of two low Earth orbit (LEO) satellite communication systems sharing the same frequency band: a primary system with regulatory precedence over the spectrum and a secondary system that must not cause excessive interference to the primary system's ground users. This spectrum sharing paradigm was recently formalized by the United States Federal Communications Commission (FCC) through short-term and long-term protection criteria that limit primary-link unavail",
+    "authors": [
+      "Sunwoo Min",
+      "Daesik Hong",
+      "Jemin Lee",
+      "Ian P. Roberts"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Fabrication and Characterization of Flexible In2O3 Thin-Film Transistors on Mica Substrates",
+    "url": "https://arxiv.org/abs/2611.10354v1",
+    "published_date": "2026-11-07",
+    "source": "arXiv",
+    "summary": "Flexible oxide-semiconductor thin-film transistors (TFTs) with high field-effect mobility (uFE > 70 cm^2/Vs) are required for next-generation flexible displays. Polycrystalline In2O3-based TFTs are promising candidates; however, conventional flexible substrates such as plastics are not suitable because their fabrication typically requires relatively high temperatures (~350 deg.C). In this study, we used mica as a flexible substrate to fabricate polycrystalline In2O3-based TFTs, motivated by prev",
+    "authors": [
+      "Hyeonjun Kong",
+      "Ping-Hsein Wu",
+      "Xian-Ye Jiang",
+      "Yasutaka Matsuo",
+      "Ying-Hao Chu",
+      "Hiromichi Ohta"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "The World Model Planning Accelerator (WMPA): Hardware-Algorithm Co-Design for Embedded AI in Robotics",
+    "url": "https://arxiv.org/abs/2611.10316v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "Embedded AI is moving from perception to prediction. Robots now use world models$\\unicode{x2014}$learned simulators that predict the outcome of candidate actions in a compressed latent space before any is executed. Every predicted step must be computed on board within a tight power and thermal budget, yet the energy these steps fundamentally require, and how far real hardware sits from it, have not been characterized. We derive lower bounds on the arithmetic operations and the CMOS dynamic energ",
+    "authors": [
+      "Prerana Ramkumar",
+      "Suhas Suresh Bharadwaj",
+      "Fazal Hameed"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Two-Timescale Receive Combining for Fronthaul-Constrained Uplink XL-MIMO with Visibility Regions",
+    "url": "https://arxiv.org/abs/2611.10195v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "Extremely large-scale multiple-input multiple-output (XL-MIMO) arrays are hard to deploy in virtualized radio access networks, because the fronthaul data rate grows with the number of antennas when the radio unit forwards every antenna sample. We propose a two-timescale receiver that allocates the per-user combining ranks under the fronthaul stream budget from the channel statistics. The radio unit applies the long-timescale transform, after which the distributed unit applies a minimum mean-squa",
+    "authors": [
+      "Jaebum Park",
+      "Robert W. Heath"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Hidden memory above the Neel temperature programs antiferromagnetic order in Cr2O3",
+    "url": "https://arxiv.org/abs/2611.10173v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "Control of antiferromagnetic order is central to magnetoelectric and antiferromagnetic spintronic devices. In the prototypical magnetoelectric antiferromagnet Cr2O3, domains are conventionally selected by simultaneous application of electric and magnetic fields during cooling through the Neel temperature (T_N) or at a fixed temperature below T_N. Here, we show that antiferromagnetic order can instead be programmed by electric-field conditioning entirely in the paramagnetic state above T_N. By me",
+    "authors": [
+      "Josiah Keagy",
+      "Sumukh Mahesh",
+      "Wei-Cheng Liao",
+      "Jing Shi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Controlled Oxidation of Tellurium Nanoparticles for Telecom Detection",
+    "url": "https://arxiv.org/abs/2611.10135v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "Surface oxidation plays an important role in governing charge transport in semiconductor nanoparticle assemblies. Here, we investigate the optoelectronic properties of solution-processed tellurium (Te) nanoparticle ensembles prepared through gradual ambient-air exposure. Structural and spectroscopic analyses reveal interconnected elemental Te nanoparticles with coexisting alpha-TeO2 and hydroxyl-containing surface species, exhibiting a lower relative contribution of oxidized Te than previously i",
+    "authors": [
+      "Biman Jana"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.soft",
+    "title": "Reversible Interchain Associations Dominate Plateau Elasticity in Conjugated Polymers",
+    "url": "https://arxiv.org/abs/2611.09810v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "The modulus plateau is widely regarded as a hallmark of topological entanglement in homopolymer melts and has been used to identify entanglement in semiflexible conjugated polymers. Using regiorandom poly(3-alkylthiophenes) as a model system, we show that their plateau elasticity relaxes through an Arrhenius process decoupled from segmental and terminal dynamics, reorganizes persistently under mechanical perturbation, and varies systematically with side-chain length. These behaviors are hard to ",
+    "authors": [
+      "Juncheng Zheng",
+      "Xiaobing Zuo",
+      "Xiaodan Gu",
+      "Shiwang Cheng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Exciton design via topological spin textures",
+    "url": "https://arxiv.org/abs/2611.09800v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "Excitons carry energy and information through a semiconductor without carrying charge. This makes them attractive for optoelectronics, but also hard to guide. Magnetic skyrmions, on the other hand, are moved by small electrical currents. Here we develop a theory of excitons interacting with a skyrmion in which the electron and the hole are treated as distinct constituents, each with its own spin--orbit coupling. We find that the topology of the skyrmion is transferred to the exciton only when th",
+    "authors": [
+      "Karim Rezouali",
+      "Selcuk Sözeri",
+      "Samir Lounis"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "On PMU Adequacy for Wideband Dynamics Tracking Beyond Attenuation Assumptions",
+    "url": "https://arxiv.org/abs/2611.09789v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "Recent work highlights the inadequacy of standard synchrophasors in capturing high-frequency grid dynamics, including data center oscillations, primarily due to filtering and windowing attenuation during phasor estimation. This letter shows how synchrophasor ambient data spectrum itself contains information on attenuation, which provides a way to identify critically impacted measurements and potentially estimate and undo the effect. Results are shown for synthetic data as well as actual synchrop",
+    "authors": [
+      "Chetan Mishra",
+      "Luigi Vanfretti",
+      "Jaime Delaree Jr. and",
+      "Kevin D. Jones"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Expert Spindles in the Wild: Enriched Supervision for a Dense Detector",
+    "url": "https://arxiv.org/abs/2611.09576v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "Sleep spindles are a hallmark of healthy NREM sleep whose frequency, amplitude, density, duration and topography vary with brain maturation, age and disease. Their manual annotation is impractical and variable between scorers, yet the public references used to train automatic detectors cover these characteristics only partially: stage N2 only, a single central derivation, or short pre-selected segments. Measuring duration and density requires dense detectors that learn event boundaries from anno",
+    "authors": [
+      "Olivier Pallanca",
+      "Alexis Bollengier",
+      "Abel Díaz Berenguer",
+      "Hichem Sahli",
+      "André Anjos"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Inverse design of superconductors and semiconductors with differentiable foundation models",
+    "url": "https://arxiv.org/abs/2611.09572v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "Designing a crystal for a target property requires choosing its elements, stoichiometry, and atomic structure together, yet gradients exist only for the continuous structural variables. We introduce differentiable Equiformer fast effective-atom theory (DEFEAT), which lets a pretrained EquiformerV3 foundation model accept continuous species weights and site occupancies without retraining on fractional data, thereby enabling gradient-based materials optimization. Gradients from fine-tuned property",
+    "authors": [
+      "Cristóbal Méndez",
+      "Justin Tahmassebpur",
+      "Tomás A. Arias"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "Atik: A Shared-Mesh Transformer Accelerator for RISC-V",
+    "url": "https://arxiv.org/abs/2611.09522v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "Transformer inference repeatedly invokes dense matrix multiplication and attention, including its data-dependent softmax normalization. We present Atik, an open-source RoCC accelerator for RocketChip that executes matrix multiplication and dense attention through one shared fixed-point MAC mesh. Atik accepts and returns BF16 tensors, uses a streaming online-softmax schedule that never materializes the full score matrix, and is invoked through a small descriptor-based ABI. We evaluate three meshe",
+    "authors": [
+      "Ahmed Zeer",
+      "Erkan Uslu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "High-Volume Wurtzite MnSe in MnSe/CdSe Superlattices: Structure, Magnetism and Optical Response",
+    "url": "https://arxiv.org/abs/2611.09509v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "Polymorphism in Mn-based chalcogenides offers access to magnetic semiconductors with distinct crystal symmetries, polar structures, and different magnetic orders. In particular, wurtzite MnSe exhibits an appealing interplay of electric polarization and several competing magnetic phases including altermagnetic order. However, stabilizing metastable polymorphs, such as wurtzite MnSe, in experimentally useful volumes remains challenging. Here, we show that a nanoscale-period MnSe/CdSe superlattice ",
+    "authors": [
+      "Michał J. Grzybowski",
+      "Katarzyna Gas",
+      "Jaroslaw Z. Domagala",
+      "Serhii Kryvyi",
+      "Łukasz Gondek",
+      "Soumik Das",
+      "Jan Suffczyński",
+      "Oleksii Liubchenko",
+      "Anna Kaleta",
+      "Sławomir Kret",
+      "Maciej Sawicki",
+      "Wojciech Pacuski"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.supr-con",
+    "title": "Pelletization Pressure Engineering of the Superconducting Properties of Fluorine-Doped PrFeAsO",
+    "url": "https://arxiv.org/abs/2611.10083v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "We investigate the influence of the pelletization pressure on the structural, microstructural, and superconducting properties of fluorine-doped PrFeAsO0.7F0.3 (Pr1111). Precursor powders are pressed into pellets at pressures ranging from 174 to 1131 MPa, after which the applied pressure is released and all samples undergo an identical two-step conventional synthesis process at ambient pressure (CSP-AP). All samples predominantly exhibit the tetragonal P4/nmm structure, and the lattice parameter ",
+    "authors": [
+      "Jayant Kumar",
+      "Konrad Kwatek",
+      "Tatiana Zajarniuk",
+      "Taras Palasyuk",
+      "Yaroslaw Konopelnyk",
+      "Tomasz Cetner",
+      "Cezariusz Jastrzębski",
+      "Shiv J. Singh"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Real-Time Trans-Oceanic Fiber Sensing via Convergence of Long-Reach OFDR, High-Speed Optical Networking, and RDMA-Capable Edge-GPUs",
+    "url": "https://arxiv.org/abs/2611.10080v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "We demonstrate real-time network-integrated bi-directional fiber sensing over a 4400-km subsea cable. Streaming and fusing two OFDR instruments via RDMA over a live transoceanic 130Gbaud coherent link and GPU edge-compute enabling parallel capture of multiple spatial resolutions from ~10m to ~100m.",
+    "authors": [
+      "Mikael Mazur",
+      "Nicolas K. Fontaine",
+      "Roland Ryf",
+      "Sarvesh Bidkar",
+      "Tracy Chodkiewicz",
+      "Kristopher M. McBrian",
+      "Keigh L. McLaughlin",
+      "Brian J. Sperry",
+      "James Rottman",
+      "Anuar G. Butler",
+      "Martin Karrenbach",
+      "Bobby Nguyen",
+      "Lauren Dallachiesa",
+      "Ells Burrows",
+      "David Winter",
+      "Haoshuo Chen",
+      "Jeewan Naik",
+      "Ajay Mistry",
+      "Jim Sandoz",
+      "Martin Peterson",
+      "Michael Libeskind",
+      "Binh Le",
+      "Jesse Simsarian",
+      "David T. Neilson"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Pinching Antenna Systems (PASS) for Air-Ground Integrated Sensing and Communications (ISAC)",
+    "url": "https://arxiv.org/abs/2611.09435v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "This paper proposes a multi-user single-target air-ground integrated sensing and communication (ISAC) system, in which a ground pinching-antenna system (PASS) transmits communication and sensing signals and an unmanned aerial vehicle (UAV) receives the target echo. The communication and sensing beamforming vectors, pinching antenna positions, and UAV position are jointly optimized to minimize the weighted Cramér-Rao bound (CRB). A penalty dual decomposition (PDD) algorithm is developed for the r",
+    "authors": [
+      "Chaoran Chen",
+      "Haochen Li",
+      "Jincheng Zhu",
+      "Zhiwen Pan",
+      "Mark F. Flanagan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "Robust & Scalable Website Fingerprinting via Minimal DRAM Traffic",
+    "url": "https://arxiv.org/abs/2611.09422v1",
+    "published_date": "2026-11-06",
+    "source": "arXiv",
+    "summary": "Website fingerprinting attacks infer websites visited by users and threaten their privacy. These attacks are classified as on-path, which monitor network traffic, and co-located, which exploit shared system resources. Existing co-located attacks, such as sweep-counting and loop-counting, achieve over 90% accuracy but suffer significant performance degradation on many-core systems. Loop-counting accuracy drops from 93% on 8 cores to 50% on 24 cores, while sweep-counting accuracy decreases from 84",
+    "authors": [
+      "Shubham Roy",
+      "Samar Parwez",
+      "Biswabandan Panda"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.soft",
     "title": "Trapping and Fracture of Particles in Three-Sphere Ball-Milling Collisions",
     "url": "https://arxiv.org/abs/2611.08435v1",

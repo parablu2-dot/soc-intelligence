@@ -1,79 +1,261 @@
 {
-  "date": "2026-11-08",
-  "generated_at": "2026-11-08T23:32:10.642796+00:00",
+  "date": "2026-11-10",
+  "generated_at": "2026-11-10T02:42:51.266921+00:00",
   "sectors": {
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-11-08",
-      "item_count": 3,
-      "generated_at": "2026-11-08T23:32:10.642485+00:00",
+      "date": "2026-11-10",
+      "item_count": 4,
+      "generated_at": "2026-11-10T02:42:51.266076+00:00",
       "content": {
         "ko": {
-          "executive_summary": "AI semiconductor landscape under scrutiny as Nvidia faces U.S. Congressional pressure over China spy allegations, creating regulatory uncertainty for semiconductor export controls. SK Hynix recruitment activity signals ongoing talent development amid industry competition.",
+          "executive_summary": "NVIDIA is deepening Korea's sovereign AI ecosystem through investments in Korean startups, deployment optimization of domestic open models, and collaboration with MSIT on NPU/XPU infrastructure. Samsung and other Korean industry leaders are applying accelerated computing and simulation to physical AI in manufacturing, robotics, and autonomous vehicles.",
           "key_facts": [
-            "Nvidia facing U.S. Congressional pressure over China spy allegations",
-            "SK Hynix recruitment briefing scheduled for September 17 at Seoul National University"
+            "NVIDIA partnership forum held at COEX with over 20 Korean startups in foundation models, physical AI, and AI semiconductors",
+            "NVIDIA released Dynamo-optimized recipes for K2 (SK Telecom), K-EXAONE 2.0 (LG AI Research), Solar Open 2 (Upstage), and Motif-3 (Motif Technologies)",
+            "NVIDIA investment announced in Korean startup Point2",
+            "Collaboration includes groundwork for Korean NPU and XPU companies to join NVIDIA NVLink Fusion ecosystem"
           ],
           "implications": [
             {
-              "keyword": "Export Controls",
-              "text": "Congressional scrutiny of Nvidia creates wildcard risk for U.S. semiconductor export control policies affecting HPC/datacenter chip availability"
+              "keyword": "Sovereign AI Infrastructure",
+              "text": "Korea positioning itself as hub for independent AI capability through GPU/NPU infrastructure and localized model deployment beyond US dominance."
             },
             {
-              "keyword": "Talent Competition",
-              "text": "SK Hynix active recruitment at major universities indicates competitive hiring for technical talent in HPC/datacenter segment"
+              "keyword": "Manufacturing Competitiveness",
+              "text": "Physical AI adoption in semiconductor manufacturing, robotics, and autonomous vehicles could strengthen Korea's engineering sector differentiation."
+            },
+            {
+              "keyword": "Startup Ecosystem",
+              "text": "Direct NVIDIA investment and development partnerships signal confidence in Korean AI semiconductor and infrastructure talent."
             }
           ],
-          "counterpoint": "Headlines lack quantitative details on AI compute demand or specific HPC product roadmaps to assess market momentum."
+          "counterpoint": "Reliance on NVIDIA's ecosystem and optimization tools maintains technological dependency despite sovereignty initiatives."
         },
         "en": {
-          "executive_summary": "AI semiconductor landscape under scrutiny as Nvidia faces U.S. Congressional pressure over China spy allegations, creating regulatory uncertainty for semiconductor export controls. SK Hynix recruitment activity signals ongoing talent development amid industry competition.",
+          "executive_summary": "NVIDIA is deepening Korea's sovereign AI ecosystem through investments in Korean startups, deployment optimization of domestic open models, and collaboration with MSIT on NPU/XPU infrastructure. Samsung and other Korean industry leaders are applying accelerated computing and simulation to physical AI in manufacturing, robotics, and autonomous vehicles.",
           "key_facts": [
-            "Nvidia facing U.S. Congressional pressure over China spy allegations",
-            "SK Hynix recruitment briefing scheduled for September 17 at Seoul National University"
+            "NVIDIA partnership forum held at COEX with over 20 Korean startups in foundation models, physical AI, and AI semiconductors",
+            "NVIDIA released Dynamo-optimized recipes for K2 (SK Telecom), K-EXAONE 2.0 (LG AI Research), Solar Open 2 (Upstage), and Motif-3 (Motif Technologies)",
+            "NVIDIA investment announced in Korean startup Point2",
+            "Collaboration includes groundwork for Korean NPU and XPU companies to join NVIDIA NVLink Fusion ecosystem"
           ],
           "implications": [
             {
-              "keyword": "Export Controls",
-              "text": "Congressional scrutiny of Nvidia creates wildcard risk for U.S. semiconductor export control policies affecting HPC/datacenter chip availability"
+              "keyword": "Sovereign AI Infrastructure",
+              "text": "Korea positioning itself as hub for independent AI capability through GPU/NPU infrastructure and localized model deployment beyond US dominance."
             },
             {
-              "keyword": "Talent Competition",
-              "text": "SK Hynix active recruitment at major universities indicates competitive hiring for technical talent in HPC/datacenter segment"
+              "keyword": "Manufacturing Competitiveness",
+              "text": "Physical AI adoption in semiconductor manufacturing, robotics, and autonomous vehicles could strengthen Korea's engineering sector differentiation."
+            },
+            {
+              "keyword": "Startup Ecosystem",
+              "text": "Direct NVIDIA investment and development partnerships signal confidence in Korean AI semiconductor and infrastructure talent."
             }
           ],
-          "counterpoint": "Headlines lack quantitative details on AI compute demand or specific HPC product roadmaps to assess market momentum."
+          "counterpoint": "Reliance on NVIDIA's ecosystem and optimization tools maintains technological dependency despite sovereignty initiatives."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-11-08",
-      "item_count": 2,
-      "generated_at": "2026-11-08T23:32:10.642485+00:00",
+      "date": "2026-11-10",
+      "item_count": 28,
+      "generated_at": "2026-11-10T02:42:51.266076+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Google announced TPU 8tx and TPU 8i Max, expanding its eighth-generation TPU portfolio with specialized architectures for agentic AI workloads. TPU 8tx integrates AMD EPYC Turin CPUs with confidential computing capabilities, while TPU 8i Max doubles memory bandwidth to address the memory wall; Google's AI chip business now approaches 100 customers with four TPU generations released in one year.",
+          "key_facts": [
+            "Google released TPU 8tx and TPU 8i Max as specialized agentic AI systems",
+            "TPU 8tx pairs AMD EPYC Turin hosts with confidential computing",
+            "TPU 8i Max doubles memory bandwidth versus prior generation",
+            "Google's AI chip customer base nearing 100",
+            "Fourth TPU generation released within a single year (2026 roadmap)"
+          ],
+          "implications": [
+            {
+              "keyword": "Competitive Acceleration",
+              "text": "Rapid TPU cadence (four generations/year) and specialized agent-focused variants challenge NVIDIA's dominance in AI accelerator market."
+            },
+            {
+              "keyword": "Heterogeneous Integration",
+              "text": "TPU 8tx reliance on AMD CPUs reflects broader industry trend toward custom SoC-CPU pairing rather than monolithic designs."
+            },
+            {
+              "keyword": "Security as Differentiator",
+              "text": "Confidential computing in TPU 8tx addresses enterprise concern for encrypted inference, potential competitive advantage in regulated sectors."
+            },
+            {
+              "keyword": "Memory Bandwidth Priority",
+              "text": "TPU 8i Max focusing on HBM bandwidth doubling indicates memory saturation becoming critical bottleneck for agentic workloads."
+            }
+          ],
+          "counterpoint": "Customer concentration risk remains undisclosed; reliance on AMD CPU supply chain introduces external dependency alongside custom chip development."
+        },
+        "en": {
+          "executive_summary": "Google announced TPU 8tx and TPU 8i Max, expanding its eighth-generation TPU portfolio with specialized architectures for agentic AI workloads. TPU 8tx integrates AMD EPYC Turin CPUs with confidential computing capabilities, while TPU 8i Max doubles memory bandwidth to address the memory wall; Google's AI chip business now approaches 100 customers with four TPU generations released in one year.",
+          "key_facts": [
+            "Google released TPU 8tx and TPU 8i Max as specialized agentic AI systems",
+            "TPU 8tx pairs AMD EPYC Turin hosts with confidential computing",
+            "TPU 8i Max doubles memory bandwidth versus prior generation",
+            "Google's AI chip customer base nearing 100",
+            "Fourth TPU generation released within a single year (2026 roadmap)"
+          ],
+          "implications": [
+            {
+              "keyword": "Competitive Acceleration",
+              "text": "Rapid TPU cadence (four generations/year) and specialized agent-focused variants challenge NVIDIA's dominance in AI accelerator market."
+            },
+            {
+              "keyword": "Heterogeneous Integration",
+              "text": "TPU 8tx reliance on AMD CPUs reflects broader industry trend toward custom SoC-CPU pairing rather than monolithic designs."
+            },
+            {
+              "keyword": "Security as Differentiator",
+              "text": "Confidential computing in TPU 8tx addresses enterprise concern for encrypted inference, potential competitive advantage in regulated sectors."
+            },
+            {
+              "keyword": "Memory Bandwidth Priority",
+              "text": "TPU 8i Max focusing on HBM bandwidth doubling indicates memory saturation becoming critical bottleneck for agentic workloads."
+            }
+          ],
+          "counterpoint": "Customer concentration risk remains undisclosed; reliance on AMD CPU supply chain introduces external dependency alongside custom chip development."
+        }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-11-08",
-      "item_count": 14,
-      "generated_at": "2026-11-08T23:32:10.642485+00:00",
+      "date": "2026-11-10",
+      "item_count": 16,
+      "generated_at": "2026-11-10T02:42:51.266076+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Samsung and SK hynix are reportedly competing to secure ASML EUV lithography orders ahead of 2027–2028 shortages, with each potentially ordering up to KRW 20 trillion in equipment. Terafab targets 1 million wafers monthly by 2032 (700K for memory near Samsung's total DRAM capacity), while China's SMEE showcases domestically localized lithography claiming 10M+ wafer processing. Samsung is also expanding premium smartphone production and deepening strategic ties with Hyundai Motor Group in mobility and physical AI.",
+          "key_facts": [
+            "Samsung and SK hynix racing for ASML EUV orders worth up to KRW 20T each",
+            "ASML EUV shortage anticipated 2027–2028",
+            "Terafab targeting 1M wafers monthly by 2032, with 700K for memory",
+            "China's SMEE lithography systems with 90%+ localized parts, 10M+ wafers processed",
+            "Samsung-Hyundai Motor strategic partnership announced for mobility and physical AI",
+            "Samsung Galaxy S27 premium models (Ultra, Pro) targeted at 70% production mix"
+          ],
+          "implications": [
+            {
+              "keyword": "Equipment Scarcity",
+              "text": "EUV bottleneck through 2028 forces Korean foundries into high-stakes preemptive ordering, potentially constraining capital for process development."
+            },
+            {
+              "keyword": "Capacity Expansion Race",
+              "text": "Terafab's 1M wafer target by 2032 represents industry-scale capacity play; 700K memory share would rival Samsung's total DRAM output if realized."
+            },
+            {
+              "keyword": "China Lithography Threat",
+              "text": "SMEE's 90%+ localization and claimed 10M+ wafer throughput signal advancing domestic capabilty that could erode ASML market share."
+            },
+            {
+              "keyword": "Automotive-Semiconductor Convergence",
+              "text": "Samsung-Hyundai physical AI collaboration extends semiconductor strength into autonomous vehicles, signaling vertical integration in mobility."
+            }
+          ],
+          "counterpoint": "Terafab's 2032 capacity targets remain unverified; SMEE throughput claims lack third-party validation and cost competitiveness remains unclear."
+        },
+        "en": {
+          "executive_summary": "Samsung and SK hynix are reportedly competing to secure ASML EUV lithography orders ahead of 2027–2028 shortages, with each potentially ordering up to KRW 20 trillion in equipment. Terafab targets 1 million wafers monthly by 2032 (700K for memory near Samsung's total DRAM capacity), while China's SMEE showcases domestically localized lithography claiming 10M+ wafer processing. Samsung is also expanding premium smartphone production and deepening strategic ties with Hyundai Motor Group in mobility and physical AI.",
+          "key_facts": [
+            "Samsung and SK hynix racing for ASML EUV orders worth up to KRW 20T each",
+            "ASML EUV shortage anticipated 2027–2028",
+            "Terafab targeting 1M wafers monthly by 2032, with 700K for memory",
+            "China's SMEE lithography systems with 90%+ localized parts, 10M+ wafers processed",
+            "Samsung-Hyundai Motor strategic partnership announced for mobility and physical AI",
+            "Samsung Galaxy S27 premium models (Ultra, Pro) targeted at 70% production mix"
+          ],
+          "implications": [
+            {
+              "keyword": "Equipment Scarcity",
+              "text": "EUV bottleneck through 2028 forces Korean foundries into high-stakes preemptive ordering, potentially constraining capital for process development."
+            },
+            {
+              "keyword": "Capacity Expansion Race",
+              "text": "Terafab's 1M wafer target by 2032 represents industry-scale capacity play; 700K memory share would rival Samsung's total DRAM output if realized."
+            },
+            {
+              "keyword": "China Lithography Threat",
+              "text": "SMEE's 90%+ localization and claimed 10M+ wafer throughput signal advancing domestic capabilty that could erode ASML market share."
+            },
+            {
+              "keyword": "Automotive-Semiconductor Convergence",
+              "text": "Samsung-Hyundai physical AI collaboration extends semiconductor strength into autonomous vehicles, signaling vertical integration in mobility."
+            }
+          ],
+          "counterpoint": "Terafab's 2032 capacity targets remain unverified; SMEE throughput claims lack third-party validation and cost competitiveness remains unclear."
+        }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-11-08",
-      "item_count": 4,
-      "generated_at": "2026-11-08T23:32:10.642485+00:00",
+      "date": "2026-11-10",
+      "item_count": 10,
+      "generated_at": "2026-11-10T02:42:51.266076+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Seoul secured Henkel's advanced semiconductor packaging materials R&D center with KRW 12.1 billion investment through 2031, targeting AI and HBM packaging solutions. EV Group is advancing quantum computing qubit scaling through packaging expertise, while Paras Semiconductors partnered with BroadPak to build advanced packaging in India. Infineon launched world's first 300-mm silicon carbide (SiC) wafer production.",
+          "key_facts": [
+            "Henkel R&D center in Seoul with KRW 12.1 billion investment through 2031",
+            "Focus on AI and high-bandwidth memory (HBM) packaging materials",
+            "EV Group advancing qubit scaling for quantum computing packaging",
+            "Paras Semiconductors-BroadPak partnership for advanced packaging in India",
+            "Infineon started world's first 300-mm power SiC wafer production"
+          ],
+          "implications": [
+            {
+              "keyword": "Supply Chain Resilience",
+              "text": "Henkel R&D in Seoul signals material localization strategy for HBM and AI packaging, reducing dependence on external suppliers amid semiconductor supply constraints."
+            },
+            {
+              "keyword": "HBM Packaging Innovation",
+              "text": "Dedicated materials R&D for high-bandwidth memory packaging addresses thermal and electrical challenges critical for next-generation AI accelerators."
+            },
+            {
+              "keyword": "Quantum-Semiconductor Convergence",
+              "text": "EV Group's qubit packaging expertise signals emerging packaging complexity for quantum systems, potential new revenue stream beyond traditional semiconductors."
+            },
+            {
+              "keyword": "Wide-Bandgap Scaling",
+              "text": "Infineon's 300-mm SiC production milestone enables cost reduction and volume scaling for power electronics in EV and renewable energy."
+            }
+          ],
+          "counterpoint": "Henkel Seoul center scale and technology transfer depth versus global R&D footprint remains uncertain; SiC market penetration dependent on cost parity with silicon."
+        },
+        "en": {
+          "executive_summary": "Seoul secured Henkel's advanced semiconductor packaging materials R&D center with KRW 12.1 billion investment through 2031, targeting AI and HBM packaging solutions. EV Group is advancing quantum computing qubit scaling through packaging expertise, while Paras Semiconductors partnered with BroadPak to build advanced packaging in India. Infineon launched world's first 300-mm silicon carbide (SiC) wafer production.",
+          "key_facts": [
+            "Henkel R&D center in Seoul with KRW 12.1 billion investment through 2031",
+            "Focus on AI and high-bandwidth memory (HBM) packaging materials",
+            "EV Group advancing qubit scaling for quantum computing packaging",
+            "Paras Semiconductors-BroadPak partnership for advanced packaging in India",
+            "Infineon started world's first 300-mm power SiC wafer production"
+          ],
+          "implications": [
+            {
+              "keyword": "Supply Chain Resilience",
+              "text": "Henkel R&D in Seoul signals material localization strategy for HBM and AI packaging, reducing dependence on external suppliers amid semiconductor supply constraints."
+            },
+            {
+              "keyword": "HBM Packaging Innovation",
+              "text": "Dedicated materials R&D for high-bandwidth memory packaging addresses thermal and electrical challenges critical for next-generation AI accelerators."
+            },
+            {
+              "keyword": "Quantum-Semiconductor Convergence",
+              "text": "EV Group's qubit packaging expertise signals emerging packaging complexity for quantum systems, potential new revenue stream beyond traditional semiconductors."
+            },
+            {
+              "keyword": "Wide-Bandgap Scaling",
+              "text": "Infineon's 300-mm SiC production milestone enables cost reduction and volume scaling for power electronics in EV and renewable energy."
+            }
+          ],
+          "counterpoint": "Henkel Seoul center scale and technology transfer depth versus global R&D footprint remains uncertain; SiC market penetration dependent on cost parity with silicon."
+        }
       }
     }
   }
