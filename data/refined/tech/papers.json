@@ -2,6 +2,273 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "High Pressure Material Phase Identification with Gaussian Kernel Neural Networks",
+    "url": "https://arxiv.org/abs/2611.12840v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "Phase identification is a computational task involving the classification of material structure using the positions of atoms. Using data from Molecular Dynamics (MD) simulations, our task is to identify the material phase of a set of atoms, based on how the simulations predict their positioning relative to each other. By leveraging existing research on mechanistic neural network theory, particularly Neural Tangent Kernels (NTK), we develop a new and efficient method for classifying simulated mat",
+    "authors": [
+      "Cameron Ryan",
+      "Yasantha Pasindu Hetti Kankanamalage",
+      "Shuai Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Coexistence of Direct-to-Device (D2D) Satellite Systems with 5G/6G Terrestrial Networks: Cross-Border Aggregate Interference Analysis in Saudi Arabia",
+    "url": "https://arxiv.org/abs/2611.12644v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "Direct-to-device (D2D) satellite systems, particularly those based on 3GPP-compliant non-terrestrial networks (NTN), deliver connectivity to standard mobile phones and IoT devices using terrestrial International Mobile Telecommunications (IMT) spectrum. This raises the risk of harmful cross-border interference into incumbent terrestrial IMT networks, an issue considered under Agenda Item 1.13 of the ITU World Radiocommunication Conference 2027 (WRC-27). This paper presents an ITU-R-compliant ass",
+    "authors": [
+      "Muneer M. Alzubi",
+      "Muhammad Alrabeiah",
+      "Khalid Aldubaikhy",
+      "Abdullah Alqasir",
+      "Majed Alsifaee",
+      "Mohamed-Slim Alouini"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "Reconfiguring System-Level Protection Through Bounded Delegation in RISC-V MCUs",
+    "url": "https://arxiv.org/abs/2611.12622v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "MCU-based embedded and cyber-physical systems increasingly require protection policies to change at runtime as resources, software, and system composition evolve. Yet widely used COTS MCU protection mechanisms are still largely designed around statically established policies. While they can restrict which domains modify protection primitives, they generally do not constrain what policy an authorized domain may create. As a result, domains may expand protection rules beyond their intended scope o",
+    "authors": [
+      "Luís Cunha",
+      "José Martins",
+      "Manuel Rodríguez",
+      "Tiago Gomes",
+      "Uwe Moslehner",
+      "Kai Dieffenbach",
+      "Georg Schmalz",
+      "Kajetan Nuernberger",
+      "Thomas Roecker",
+      "Sandro Pinto"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Harmonic origin of local symmetry breaking in PbTe revealed using machine-learned potentials",
+    "url": "https://arxiv.org/abs/2611.12598v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "We use machine-learned interatomic potentials combined with higher-order interatomic force constant models to show that finite-range polar correlations in PbTe are driven by long-range harmonic interactions rather than lattice anharmonicity. Our molecular dynamics simulations reveal a spatial polar correlation range exceeding 50 Å at low temperatures and decreasing with increasing temperature. Selective interatomic force constant mapping demonstrates that crystal anharmonicity usually associated",
+    "authors": [
+      "Seongjoo Jung",
+      "Nicola A. Spaldin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Hidden in Plain Sight: Privacy-Enhanced Computing Through Register Renaming",
+    "url": "https://arxiv.org/abs/2611.12570v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "Privacy-Enhanced Computing (PEC) is a mechanism to hide program secrets from the outside world without paying the cost of fully-homomorphic encryption. Previous work has developed hardware mechanisms to achieve this goal but they require a dedicated processor enclave where all computations are done, requiring duplicate ALU resources and limiting the performance of PEC-utilizing applications due to not being able to access the full compute resources of the processor (e.g., multiple execution unit",
+    "authors": [
+      "Ahmed Nematallah",
+      "Stefanos Kaxiras"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "UniHam: A Large-Scale SOC-Complete Dataset and Benchmark for Hamiltonian Learning in Materials",
+    "url": "https://arxiv.org/abs/2611.12509v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "Accurate prediction of electronic Hamiltonians would enable broad property inference while avoiding the high computational cost of Density Functional Theory (DFT). However, progress toward general-purpose materials foundation models is limited by a data bottleneck: existing Hamiltonian datasets are typically small, lack structural diversity, and often omit essential relativistic physics such as spin--orbit coupling (SOC). We therefore construct UniHam, a large-scale Hamiltonian dataset and bench",
+    "authors": [
+      "Yuewen Huang",
+      "Pin Chen",
+      "Yutong Lu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "To SIMD or Not to SIMD: Comparing RVV vs. CGRA SoCs for Non-Linear Functions in AI",
+    "url": "https://arxiv.org/abs/2611.12435v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "Non-linear functions are an important class of operations in modern large language models. However, chip vendors building for AI have so far relied on traditional vector or scalar processing units for non-linear functions. The performance of these units has not kept pace with matrix multiplication units (MMUs), which can be found in both high-performance and edge-computing devices from almost every vendor. Reconfigurable units such as FPGAs and CGRAs have been proposed in the literature, but hav",
+    "authors": [
+      "Sameer Deshmukh",
+      "Naoya Mizuki",
+      "Takumi Honda"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Neural Multipath Fields for 6G FR3 Digital Twins: Latent Adaptation from Sparse Data",
+    "url": "https://arxiv.org/abs/2611.12425v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "Wireless digital twins are essential for environment-aware 6G communications, motivating the investigation of frequency range 3 (FR3), an emerging mid-band regime offering a promising balance between bandwidth and propagation characteristics. Neural Radio Frequency (RF) fields provide continuous surrogates for site-specific radio propagation, but adapting a scene-specific field to a new environment can require substantial measurements and retraining. To this end, we propose the Latent-Adaptive N",
+    "authors": [
+      "Srijita Sanyal",
+      "Adam Umra",
+      "Aydin Sezgin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Kagome Flat Bands from Self-Assembled Water on Non-van der Waals 2D Materials",
+    "url": "https://arxiv.org/abs/2611.12371v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "The properties of two-dimensional (2D) materials are governed not only by their intrinsic electronic structure but also in particular by their surface chemistry and interactions with the environment. The surfaces of non-van der Waals (non-vdW) 2D materials are intrinsically reactive and may require chemical stabilization under realistic experimental conditions. Here, we perform a systematic first-principles study of water passivation of non-vdW 2D materials and demonstrate that molecular water a",
+    "authors": [
+      "Tom Barnowsky",
+      "Madeleine Christie",
+      "Anastasiia Nihei",
+      "Rico Friedrich"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Ultrafast Inter-Aggregate Energy Transfer Drives Efficient Charge Generation in Organic Homojunctions",
+    "url": "https://arxiv.org/abs/2611.12322v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "Y6-based homojunction organic photovoltaic devices have recently achieved exceptional power conversion efficiencies, surpassing those of conventional organic photovoltaic materials. Although unusually long exciton diffusion lengths and efficient exciton dissociation have been reported, the fundamental mechanism underlying this outstanding performance remains under debate. Here, we report that structurally distinct aggregates in Y6 thin films exhibit complementary charge-transfer (CT) characters ",
+    "authors": [
+      "Shanchao Ouyang",
+      "Hang Yuen Ho",
+      "Sudhi Mahadevan",
+      "Ziyao Yue",
+      "Haochen Liu",
+      "Zhiqiang Guan",
+      "Chun-Sing Lee",
+      "Shu Kong So",
+      "Sai-Wing Tsang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Tuning correlated states in rhombohedral pentalayer graphene with magnetic encapsulation",
+    "url": "https://arxiv.org/abs/2611.12281v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "Rhombohedral graphene multilayers provide a flexible platform for correlated physics associated with their flat-band electronic structure.While a variety of correlated states appear in these systems as a function of bias and electrostatic doping, promoting specific correlated flavor symmetry breaking states remains a challenge. Here we show that magnetic encapsulation by CrGeTe$_3$ achieves this in rhombohedral pentalayer graphene, by using switchable exchange couplings induced by ferromagnetic ",
+    "authors": [
+      "Cuiju Yu",
+      "Yitao Sun",
+      "Jose L. Lado"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Defects and Structural Evolution in CrSBr: Machine-Learning Potentials for Atomistic Simulations",
+    "url": "https://arxiv.org/abs/2611.12267v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "The layered van der Waals semiconductor CrSBr combines intrinsic magnetic order with semiconducting and optical properties, making it a promising material for multifunctional electronic and photonic applications. Understanding how defects and structural transformations affect its properties under experimentally relevant conditions, however, remains challenging for first-principles simulations due to the relevant length and time scales. Here, we develop and benchmark machine-learning interatomic ",
+    "authors": [
+      "Arsalan Hashemi",
+      "Daniil Kruklinskii",
+      "Xiaoya Chang",
+      "Tapio Ala-Nissila",
+      "Mikko Karttunen",
+      "Arkady V. Krasheninnikov",
+      "Mahdi Ghorbani-Asl"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Movable Antenna-Assisted Covert Communications: Robust Beamforming and Antenna Position Optimization",
+    "url": "https://arxiv.org/abs/2611.12250v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "In this paper, we study a movable antenna (MA)-enhanced covert communication system, where a legitimate transmitter (named Alice) serves multiple legitimate users in the presence of multiple aerial wardens that attempt to detect the transmission from Alice. To ensure data covertness with imperfect knowledge of warden channel state information (CSI), we develop a unified robust covert transmission framework that incorporates bounded and statistical CSI error models. In particular, we aim to joint",
+    "authors": [
+      "Xiangyu Dong",
+      "Ran Yang",
+      "Weidong Mei",
+      "Zheng Dong",
+      "Yue Xiu",
+      "Daniel Benevides da Costa",
+      "Zhongpei Zhang",
+      "Ning We"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Mitigating the BICM Loss in MIMO Receivers with Correlation-Informed Logits",
+    "url": "https://arxiv.org/abs/2611.12223v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "Bit-interleaved coded modulation (BICM) is widely used in multiple-input multiple-output (MIMO) wireless systems. However, separating MIMO data detection from channel decoding and only exchanging per-bit soft information discards correlation information among the bits within each transmit vector. We show that the resulting information loss limits the performance of practical one-shot receivers. Even though iterative detection and decoding (IDD) can recover most of this loss, IDD significantly in",
+    "authors": [
+      "Christoph Studer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Misorientations in dislocation cell structures: Modelling and statistical analysis",
+    "url": "https://arxiv.org/abs/2611.12165v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "Dislocation pattern formation is accompanied by the emergence of lattice rotations and concomitant misorientations across dislocation walls (cell boundaries). Recent advances in mesoscopic modelling of dislocation patterns enable for the first time a systematic simulation study of this phenomenon. We present simulation results for lattice rotation and misorientation patterns in crystals with face-centered cubic and rocksalt lattice structure. Statistical analysis of the orientation changes acros",
+    "authors": [
+      "Lei Zeng",
+      "Yufan Zhang",
+      "Michael Zaiser"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "Benchmarking language models and agents for scientific reasoning in evolving materials laboratories",
+    "url": "https://arxiv.org/abs/2611.12014v1",
+    "published_date": "2026-11-09",
+    "source": "arXiv",
+    "summary": "Large language models and the multi-agent systems built around them could accelerate materials discovery by connecting scientific knowledge with experimental decisions. Existing benchmarks establish capabilities in domain knowledge, multimodal interpretation and scientific tool use. As language models increasingly support materials research workflows, their ability to distinguish closely related material states and reason accurately with quantitative evidence remains insufficiently evaluated. Th",
+    "authors": [
+      "Xuyu Dong",
+      "Yixuan Li",
+      "Jianguo Huang",
+      "Feng Chen",
+      "Yiyun Zhou",
+      "Bo An",
+      "Zheng Liu",
+      "Da Shu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.RO",
     "title": "EmbodiedIntentBench: Benchmarking Intent-Driven Runtime Adaptation for Mobile Robotic Missions",
     "url": "https://arxiv.org/abs/2611.10498v1",
