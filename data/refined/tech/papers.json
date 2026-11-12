@@ -2,6 +2,244 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.AR",
+    "title": "SkipLane: Write-Once, Conflict-Free Accumulation for Zero-Skipping CNN Engines on FPGAs",
+    "url": "https://arxiv.org/abs/2611.14495v1",
+    "published_date": "2026-11-10",
+    "source": "arXiv",
+    "summary": "Skipping zero activations saves multiplications in CNN accelerators, but it complicates accumulation: the products in a compressed input window belong to different output columns and must be merged. In our earlier engine, this merging was done by read-modify-write (RMW) of a row buffer, which made sparse inputs slower than dense ones even at 87% sparsity. Existing designs either merge kernel rows through RMW or reduce bank conflicts with extra hardware, without eliminating them. SkipLane makes t",
+    "authors": [
+      "Aditya Saboo",
+      "Pratibha Verma"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Direction-Selective Anomalous Quantum Transport from Saddle-like Topological Surface States Coupled to an Electronic Instability in YbSb$_{2}$",
+    "url": "https://arxiv.org/abs/2611.14360v1",
+    "published_date": "2026-11-10",
+    "source": "arXiv",
+    "summary": "We report direction-selective anomalous quantum transport in epitaxial YbSb$_{2}$ thin films associated with an interplay between anisotropic topological surface states and an electronic instability. Quantum oscillations reveal a quasi-two-dimensional orbit with a non-trivial Berry phase and Dirac-like dispersion, observable for current along the $a$-axis but absent along the orthogonal in-plane $c$-axis. Together with first-principles calculations, these observations support its assignment to a",
+    "authors": [
+      "Rudra Dhara",
+      "Pritesh Srivastava",
+      "Jack Tregidga",
+      "Rahul Sharma",
+      "Shivani",
+      "Shankhadip Bhattacharjee",
+      "Danilo Ratkovski",
+      "Shikhar Gupta",
+      "Kartick Biswas",
+      "Shivesh Yadav",
+      "Nilesh Kulkarni",
+      "Sarthak S. Gandhi",
+      "Pavan Nukala",
+      "Surajit Saha",
+      "John W. Harter",
+      "Bahadur Singh",
+      "Shouvik Chatterjee"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Nanostructuring Semiconductor Surfaces Using Self-Assembled Metal Nanoparticles for Optoelectronic Applications",
+    "url": "https://arxiv.org/abs/2611.14292v1",
+    "published_date": "2026-11-10",
+    "source": "arXiv",
+    "summary": "Semiconductor nanostructures are key light-management elements because their geometry can strengthen light-matter interaction, suppress reflection, and enhance optical coupling. Yet their adoption across material platforms is constrained by lithography, multistep pattern transfer, persistent masks, and material-specific etching. Here, we introduce a lithography-free two-step strategy in which thermally evaporated self-assembled Ga nanoparticles act as self-consuming masks during Ar inductively c",
+    "authors": [
+      "S. Catalán-Gomez",
+      "M. Ibáñez",
+      "P. Guo",
+      "V. Braza",
+      "B. Vázquez",
+      "R. Sun",
+      "F. Li",
+      "P. Ibáñez",
+      "Y. K. Ryu",
+      "M. Vila",
+      "J. Bartolomé",
+      "D. F. Reyes",
+      "J. Martínez",
+      "D. González",
+      "H. Wang",
+      "J. M. Ulloa",
+      "A. Hierro"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Physics-Constrained Autoencoder for Interpretable Health Representation Learning in Turbofan Engines",
+    "url": "https://arxiv.org/abs/2611.14266v1",
+    "published_date": "2026-11-10",
+    "source": "arXiv",
+    "summary": "Health Indices (HIs) summarize degradation from operational data and support diagnostic and prognostic tasks in Prognostics and Health Management (PHM). Their usefulness depends on capturing degradation and interpreting system condition. Autoencoders learn such representations from unlabelled monitoring data; however, when training is driven only by reconstruction, the physical meaning of latent variables remains undefined, limiting their interpretation and diagnostic value. This work proposes a",
+    "authors": [
+      "Leonardo Baldo",
+      "Jokin Alcibar Ibarzabal",
+      "Daniel Cisneros Acevedo",
+      "Kai Goebel",
+      "Manuel Arias Chao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Chain of Physics: Supporting Fault Diagnosis with Engineering-Inspired Large Language Model Reasoning",
+    "url": "https://arxiv.org/abs/2611.14263v1",
+    "published_date": "2026-11-10",
+    "source": "arXiv",
+    "summary": "Fault diagnosis in complex systems requires linking observed changes in physical quantities to the failure mechanisms that produce them. Experienced engineers perform this task by combining sensor information with knowledge of system behavior and fault propagation. Large Language Models (LLMs) can support this process, but their diagnostic reasoning depends on the availability of asset-specific engineering knowledge and on how this knowledge is represented and used during inference. This work in",
+    "authors": [
+      "Wenqi Zhou",
+      "Leonardo Baldo",
+      "Kai Goebel",
+      "Manuel Arias Chao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "ScaleBrain: A Scale-Consistent Framework for EEG Foundation Models",
+    "url": "https://arxiv.org/abs/2611.14035v1",
+    "published_date": "2026-11-10",
+    "source": "arXiv",
+    "summary": "Foundation models pre-trained on large unlabeled electroencephalography (EEG) corpora have emerged as a transformative paradigm for Brain-Computer Interface (BCI) applications. Recent EEG foundation models have shown that multi-scale representations derived from fixed-length patches can improve EEG representation learning. Existing frameworks commonly construct temporal scales through feature-level operations. However, these operations leave the correspondence between learned features and scale-",
+    "authors": [
+      "Minyu Zhou",
+      "Yajing Wu",
+      "Yongqiang Tang",
+      "Wang Jia",
+      "Wensheng Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "SFU-Sim: Bit-Exact Reverse Engineering of NVIDIA MUFU and Validation of PTX Paths",
+    "url": "https://arxiv.org/abs/2611.13879v1",
+    "published_date": "2026-11-10",
+    "source": "arXiv",
+    "summary": "Reproducing the numerical behavior of a GPU requires predicting the exact output of special function instructions. Vendor documents give only the function semantics and error bounds. These do not fix the output bit pattern. We present SFU-Sim, which builds bit-exact models of NVIDIA multi-function unit (MUFU) instructions by black-box reverse engineering on real GPUs. We first model a single bare MUFU instruction. We then add the surrounding operations found in the disassembly to model full PTX ",
+    "authors": [
+      "Haozhi Xie",
+      "Tao Su"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Uncovering the Memory Hierarchy of Modern NVIDIA GPUs for Accurate Simulation",
+    "url": "https://arxiv.org/abs/2611.13860v1",
+    "published_date": "2026-11-10",
+    "source": "arXiv",
+    "summary": "Emerging artificial intelligence workloads, particularly Large Language Models (LLMs), place unprecedented demands on GPU memory systems. Consequently, architectural innovations increasingly target the memory system to alleviate these bottlenecks. However, existing works still rely on outdated memory hierarchy models that fail to capture the complexities of modern hardware. This fidelity gap leads to inaccurate characterization and could misguide optimization strategies. To bridge this gap, we p",
+    "authors": [
+      "Ziwen Wang",
+      "Jiapeng Zhou",
+      "Changxi Liu",
+      "Dongsheng Wang",
+      "Yun Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "Scaling Shapley Energy Attribution to Large LLM Batches",
+    "url": "https://arxiv.org/abs/2611.13802v1",
+    "published_date": "2026-11-10",
+    "source": "arXiv",
+    "summary": "LLM services have become essential infrastructure for applications such as chat assistants and coding agents. Service providers need to attribute resource consumption to individual requests for purposes such as billing. Among these resources, energy is a key metric for assessing the cost of serving each request. However, serving engines batch requests together, and GPUs report only aggregate energy consumption. Providers typically estimate each request's share in proportion to its token consumpt",
+    "authors": [
+      "Qi Luo",
+      "Ziwen Wang",
+      "Kunlin Li",
+      "Changxi Liu",
+      "Yun Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Electronic Origin of Contrasting Li and Na Clustering on Graphene",
+    "url": "https://arxiv.org/abs/2611.13798v1",
+    "published_date": "2026-11-10",
+    "source": "arXiv",
+    "summary": "The electrochemical performance of anode materials is often defined by the ability of metal ions (e.g., Li and Na) to be effectively stored within the host material over a specific range of chemical potentials. This is particularly true for adsorbed Li and Na atoms on carbon surfaces (e.g., graphite or pore surfaces in hard carbon), where the interplay between ionic and metallic bonding often takes place - while metal atoms act as ionic species, in a finite concentration limit, they tend to form",
+    "authors": [
+      "G. Kuderowicz",
+      "O. I. Malyi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Exploiting What NVIDIA Profilers Hide: Fast and Accurate Analytical GPU Performance Modeling",
+    "url": "https://arxiv.org/abs/2611.13762v1",
+    "published_date": "2026-11-10",
+    "source": "arXiv",
+    "summary": "GPUs have become essential to many fields, including AI and scientific computing. As GPUs grow more complex, the design space of their hardware configurations becomes increasingly large, yet cycle-level simulators remain too slow to explore it. Analytical models make this exploration much faster. However, existing GPU analytical models fall short of accurately predicting performance across hardware configurations, because they re-estimate or scale every stall of a warp on the target configuratio",
+    "authors": [
+      "Ziwen Wang",
+      "Qi Luo",
+      "Kunlin Li",
+      "Changxi Liu",
+      "Dongsheng Wang",
+      "Yun Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Tri-Stack-PIM: A Heterogeneous Multi-Die 3D-Integrated Processing-in-Memory Architecture for Efficient LLM Inference",
+    "url": "https://arxiv.org/abs/2611.13644v1",
+    "published_date": "2026-11-10",
+    "source": "arXiv",
+    "summary": "Large language model (LLM) inference during autoregressive decoding is fundamentally memory-bandwidth-bound. Existing three-dimensional (3D) stacked processing-in-memory (PIM) architectures alleviate the off-chip bandwidth wall, yet remain constrained by several limitations: physical layer (PHY), controllers, and direct memory access (DMA) engines compete with arithmetic units for advanced-node base-die area; hybrid-bonding keep-out zones fragment the base-die floorplan and impede physical desig",
+    "authors": [
+      "Shuao Jia",
+      "Zichao Ling",
+      "Chen Bai",
+      "Kang Zhao",
+      "Jianwang Zhai"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Design and Over-the-Air Evaluation of a Digital Twin-Driven Site-Specific Neural Receiver for 5G NR on NVIDIA DGX Spark",
+    "url": "https://arxiv.org/abs/2611.13490v1",
+    "published_date": "2026-11-10",
+    "source": "arXiv",
+    "summary": "We design and evaluate a site-specific neural receiver for the 5G New Radio (NR) uplink. A corridor digital twin built from a radar scan and refined manually provides 28,671 ray-traced channel records for training an eight-round convolutional graph neural network with pilot-aware inputs and auxiliary channel supervision. The GPU on NVIDIA DGX Spark evaluates time--frequency convolutions in parallel across the received grid to accelerate inference. The receiver uses the standard NR uplink wavefor",
+    "authors": [
+      "Qiuyuan Chen",
+      "Chengyang Yao",
+      "Liuchang Zhuo",
+      "Yuquan Sun",
+      "Cunhua Pan",
+      "Hong Ren",
+      "Jiangzhou Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "High Pressure Material Phase Identification with Gaussian Kernel Neural Networks",
     "url": "https://arxiv.org/abs/2611.12840v1",
