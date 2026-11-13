@@ -1,346 +1,354 @@
 {
-  "week_of": "2026-11-01",
-  "generated_through": "2026-11-07",
-  "generated_at": "2026-11-06T20:40:07.452185+00:00",
+  "week_of": "2026-11-08",
+  "generated_through": "2026-11-14",
+  "generated_at": "2026-11-13T21:03:33.903511+00:00",
   "macro": {
     "fed_policy": [
-      "연방준비제도, Allegiant United Holdings·Nano Financial Holdings·Nano Banc에 대한 집행조치 종료"
+      "연준, 유나이티드커뮤니티은행 전직원에 대한 집행조치 발동",
+      "연방준비제도, 2027년 FOMC 회의 일정 개정안 발표",
+      "연준, 2027년 1월 1일부터 결제 서비스 요금 체계 개편 및 수표 서비스 조정",
+      "연준, Mutual Federal Bancorp과 MFB Bancorp의 두 인수합병 신청 승인"
     ],
     "rates_fx": [],
     "polarization": [
-      "CBO, 11월 9주 하원 정지규칙 의결 대상 법안의 재정 영향 추정 발표",
-      "H.R. 8183, 자격증·채용 현대화법은 노동시장 접근성 규제 개혁으로 고숙련/저숙련 격차 완화 또는 심화 압박 초래",
-      "2026년 9월 상원에너지자원위원회가 미국전장보호프로그램개정법안(S.3524) 보고 의결",
-      "S. 3885 항공혁신법, 2026년 7월 상원 상무위 보고 — 美 항공산업 경쟁력 양극화 입법화",
-      "H.R. 3937 Wabeno Economic Development Act, Senate Committee on Energy and Natural Resources 보고 (2026년 7월 23일)"
+      "H.R. 4936 TRAPS Act, 하원 금융서비스위원회 보고(2026년 9월 16일)",
+      "S. 3041 부족민 영장 공정성법, 2026년 6월 상원 통과",
+      "FY2026 연방 적자 2조 달러 돌파, 전년 대비 12% 증가"
     ]
   },
   "axes": {
     "mobile_ap": {
       "ko": {
-        "executive_summary": "변화 없음",
-        "key_facts": [],
-        "implications": [],
-        "counterpoint": "",
-        "feasibility_observation": "",
-        "changed_from_last_week": false,
-        "change_note": ""
+        "executive_summary": "Samsung remains undecided between Snapdragon and Exynos (2700) for Galaxy S27 Ultra, with performance claims suggesting internal fragmentation; MediaTek Dimensity variants (9600 Pro, 9500) meanwhile consolidate non-Samsung OEM adoption across flagships (vivo X500, Galaxy Tab S12). The real competitive shift is in design automation—Cognichip's AI-assisted tooling threatens to flatten the SoC design cycle advantage that historically favored well-resourced players like Qualcomm.",
+        "key_facts": [
+          "Galaxy S27 Ultra chip decision unresolved: Snapdragon vs. Exynos 2700",
+          "Exynos 2700 reportedly 20% more powerful than incumbent",
+          "vivo X500 Series uses MediaTek Dimensity 9600 Pro",
+          "Samsung Galaxy Tab S12 uses MediaTek Dimensity 9500",
+          "Cognichip claims AI-assisted design reduces chip design time from months to days"
+        ],
+        "implications": [
+          {
+            "keyword": "Design Automation",
+            "text": "Cognichip's AI tooling compresses the design cycle; if validated at scale, this erodes the R&D cost moat that protected Qualcomm and Samsung's market position and could accelerate secondary players' (MediaTek, Unisoc, Bionic) ability to field competitive SoCs."
+          },
+          {
+            "keyword": "MediaTek Consolidation",
+            "text": "Dimensity 9600 Pro and 9500 now anchor flagship and tablet segments outside Samsung/Apple; MediaTek is effectively replacing Snapdragon in non-Qualcomm-exclusive chains."
+          },
+          {
+            "keyword": "Samsung's Internal Conflict",
+            "text": "S27 Ultra indecision between Snapdragon and 20%-faster Exynos 2700 suggests either yield/reliability concerns with 2700 or binding supply/IP commitments to Qualcomm that override performance gain—both signal weakness in Samsung's SoC stack."
+          }
+        ],
+        "counterpoint": "Cognichip's design-time reduction remains theoretical without demonstrated tape-out success or industry adoption; design automation alone does not guarantee power efficiency, yield, or protocol compliance—execution risk remains high.",
+        "feasibility_observation": "No explicit gate-level feasibility change reported this week; however, Exynos 2700's 20% performance claim paired with S27 Ultra's continued Snapdragon optionality hints at potential design/yield risk for Samsung's in-house SoC that warrants monitoring.",
+        "changed_from_last_week": true,
+        "change_note": "Last week: no change. This week: Cognichip's design automation emergence introduces a structural threat to incumbent SoC design timelines; MediaTek's dual-flagship presence (vivo + Samsung tablet) confirms market shift away from Snapdragon exclusivity."
       },
       "en": {
-        "executive_summary": "변화 없음",
-        "key_facts": [],
-        "implications": [],
-        "counterpoint": "",
-        "feasibility_observation": "",
-        "changed_from_last_week": false,
-        "change_note": ""
+        "executive_summary": "Samsung remains undecided between Snapdragon and Exynos (2700) for Galaxy S27 Ultra, with performance claims suggesting internal fragmentation; MediaTek Dimensity variants (9600 Pro, 9500) meanwhile consolidate non-Samsung OEM adoption across flagships (vivo X500, Galaxy Tab S12). The real competitive shift is in design automation—Cognichip's AI-assisted tooling threatens to flatten the SoC design cycle advantage that historically favored well-resourced players like Qualcomm.",
+        "key_facts": [
+          "Galaxy S27 Ultra chip decision unresolved: Snapdragon vs. Exynos 2700",
+          "Exynos 2700 reportedly 20% more powerful than incumbent",
+          "vivo X500 Series uses MediaTek Dimensity 9600 Pro",
+          "Samsung Galaxy Tab S12 uses MediaTek Dimensity 9500",
+          "Cognichip claims AI-assisted design reduces chip design time from months to days"
+        ],
+        "implications": [
+          {
+            "keyword": "Design Automation",
+            "text": "Cognichip's AI tooling compresses the design cycle; if validated at scale, this erodes the R&D cost moat that protected Qualcomm and Samsung's market position and could accelerate secondary players' (MediaTek, Unisoc, Bionic) ability to field competitive SoCs."
+          },
+          {
+            "keyword": "MediaTek Consolidation",
+            "text": "Dimensity 9600 Pro and 9500 now anchor flagship and tablet segments outside Samsung/Apple; MediaTek is effectively replacing Snapdragon in non-Qualcomm-exclusive chains."
+          },
+          {
+            "keyword": "Samsung's Internal Conflict",
+            "text": "S27 Ultra indecision between Snapdragon and 20%-faster Exynos 2700 suggests either yield/reliability concerns with 2700 or binding supply/IP commitments to Qualcomm that override performance gain—both signal weakness in Samsung's SoC stack."
+          }
+        ],
+        "counterpoint": "Cognichip's design-time reduction remains theoretical without demonstrated tape-out success or industry adoption; design automation alone does not guarantee power efficiency, yield, or protocol compliance—execution risk remains high.",
+        "feasibility_observation": "No explicit gate-level feasibility change reported this week; however, Exynos 2700's 20% performance claim paired with S27 Ultra's continued Snapdragon optionality hints at potential design/yield risk for Samsung's in-house SoC that warrants monitoring.",
+        "changed_from_last_week": true,
+        "change_note": "Last week: no change. This week: Cognichip's design automation emergence introduces a structural threat to incumbent SoC design timelines; MediaTek's dual-flagship presence (vivo + Samsung tablet) confirms market shift away from Snapdragon exclusivity."
       }
     },
     "hpc_datacenter": {
       "ko": {
-        "executive_summary": "SK Hynix and Samsung are aggressively recruiting across production, design, and equipment-supplier roles amid AI-driven DRAM demand surge, with SK Hynix notably targeting AI expertise through hackathons and revamped hiring processes—signaling confidence in HPC memory capacity ramps. However, talent acquisition intensity may indicate supply-chain strain at the integration layer (module-to-system) rather than foundational design breakthroughs, and operational execution risk (SK Hynix hackathon system failures) suggests coordination challenges at scale. South Korea's chip exports approach trillion-dollar threshold, but smuggling exploits (HBM+cheap processors bundled for export circumvention) expose packaging/interposer boundaries as a competitive and compliance vulnerability.",
+        "executive_summary": "South Korea's HPC memory leadership intensified this week as SK Hynix escalated production-tier hiring (eliminating degree requirements, ~$600K performance bonuses) while NVIDIA expanded sovereign AI partnerships across Samsung and Korean startups—signaling sustained AI DRAM ramp confidence. However, the intensity of talent acquisition (now extending to non-degree roles and international poaching via SanDisk) reveals deeper execution friction at manufacturing scale rather than architectural differentiation, and Korea's strategy pivots toward ecosystem lock-in (NVLink Fusion participation, Dynamo recipe optimization) to offset NVIDIA's integrated advantage. Competitive standing at the packaging/interposer boundary remains unchanged: Korean suppliers own volume but face erosion from Google's TPU coalition and AMD's EPYC momentum in non-NVIDIA stacks.",
         "key_facts": [
-          "SK Hynix revamped hiring format: half-day deep interviews, AI competency screening",
-          "South Korea entry-level semiconductor hiring surged 47% YoY",
-          "Samsung and SK Hynix sparked 2,500-person hiring surge at global chip equipment makers",
-          "South Korea chip exports approach first trillion-dollar annual year (due November)",
-          "AI chip smugglers exploit trade control loophole: banned HBM from SK bundled with cheap unsanctioned processors",
-          "SK Hynix AI hackathon system failures halted qualification rounds mid-event",
-          "DRAM demand ramping for Samsung and SK Hynix, super-suppliers increasing headcount"
+          "SK Hynix ~$600K performance bonus per production hire; degree requirements removed",
+          "NVIDIA announced investments in Korean AI startups (Point2 among 20+ targets)",
+          "NVIDIA released Dynamo recipes for SK Telecom A.X K2, LG AI Research K-EXAONE 2.0, Upstage Solar Open 2",
+          "NVIDIA-MSIT collaboration includes NVLink Fusion ecosystem access for Korean NPU/XPU vendors",
+          "SanDisk expanding engineer recruitment targeting Samsung and SK Hynix talent",
+          "U.S. semiconductor sector faces 157,000-worker deficit; China faces severe talent shortage",
+          "AMD showcased 6th Gen EPYC processors for AI/enterprise; Google TPU alliance strengthening"
         ],
         "implications": [
           {
-            "keyword": "Interposer/Packaging Vulnerability",
-            "text": "Smuggling pattern (HBM + commodity processor bundling) reveals packaging-level exploits in trade controls; competitors gain effective access to Korean HBM outside official channels, eroding margin capture at memory-module interface."
+            "keyword": "Manufacturing Bottleneck",
+            "text": "Elimination of degree requirements and $600K+ bonuses at SK Hynix signal acute production labor scarcity at the module assembly stage, not design capability—capacity ramp constrained by operational execution rather than DRAM architecture."
           },
           {
-            "keyword": "Capacity Execution Risk",
-            "text": "Simultaneous 2,500+ hiring at equipment suppliers + SK Hynix AI talent sprint suggests aggressive ramp timelines; operational glitches (hackathon failures) foreshadow potential integration bottlenecks during mass DRAM production scale-up."
+            "keyword": "Ecosystem Capture",
+            "text": "NVIDIA's Dynamo recipes and NVLink Fusion access lock Korean model developers into NVIDIA stack, reducing interoperability leverage at the software-hardware boundary and deepening vendor lock-in."
           },
           {
-            "keyword": "Talent Arbitrage & Poaching",
-            "text": "SK Hynix recruiting Samsung non-memory veterans signals talent competition intensifying at design-process boundary; fast-track hiring may accelerate capability transfer but risks consolidation dependency."
+            "keyword": "Competitive Encirclement",
+            "text": "Google's TPU alliance and AMD's EPYC trajectory create viable alternatives to HPC-pure DRAM strategies; Korea's memory-centric positioning weakens if compute-memory co-design becomes the differentiator."
           },
           {
-            "keyword": "AI-Memory Stack Positioning",
-            "text": "SK Hynix framing AI expertise as core hiring criterion (and public narrative) confirms memory vendors competing for system-architect mindshare at AI chip–memory protocol interface, not just commodity DRAM supply."
+            "keyword": "Talent Arbitrage Risk",
+            "text": "SanDisk poaching and global talent deficits (157K U.S. shortfall, China's severe shortage) expose Korean suppliers to brain drain; aggressive local hiring masks underlying retention and skill-depth vulnerabilities."
           }
         ],
-        "counterpoint": "Headline hiring volume does not guarantee yield or time-to-productivity; SK Hynix operational stumbles (hackathon, system failures) may indicate process maturity lags despite capex and recruitment scale, and geopolitical export restrictions (HBM smuggling countermeasures) could cap effective addressable market growth.",
-        "feasibility_observation": "No explicit design or yield gate movement reported in material. SK Hynix system failures (hackathon platform) are HR/recruiting process issues, not fab or product design feasibility changes.",
+        "counterpoint": "SK Hynix's production-tier hiring may succeed if it stabilizes near-term module output without long-term skill erosion; NVIDIA's Korea ecosystem partnerships do not yet demonstrate higher memory bandwidth or latency gains relative to competitors.",
+        "feasibility_observation": "Mass-production feasibility at the module/system integration layer shows execution stress (labor scarcity requiring unconventional hiring) without corresponding design breakthroughs in HBM stack density or interposer thermal management.",
         "changed_from_last_week": true,
-        "change_note": "Last week: no change. This week: aggressive personnel mobilization (2,500+ equipment-supplier hires, AI-focused SK Hynix recruitment, 47% entry-level surge) and trade-control evasion (HBM smuggling pattern) signal intensified competitive jockeying at memory-module and protocol boundaries, moving from stable posture to supply-chain and regulatory risk management."
+        "change_note": "Last week flagged talent acquisition as a supply-chain symptom; this week escalation to degree-requirement elimination and $600K bonuses signals crisis-level manufacturing friction outpacing last week's assessment, while NVIDIA ecosystem lock-in (Dynamo, NVLink) emerges as a new competitive boundary threat separate from smuggling vulnerabilities."
       },
       "en": {
-        "executive_summary": "SK Hynix and Samsung are aggressively recruiting across production, design, and equipment-supplier roles amid AI-driven DRAM demand surge, with SK Hynix notably targeting AI expertise through hackathons and revamped hiring processes—signaling confidence in HPC memory capacity ramps. However, talent acquisition intensity may indicate supply-chain strain at the integration layer (module-to-system) rather than foundational design breakthroughs, and operational execution risk (SK Hynix hackathon system failures) suggests coordination challenges at scale. South Korea's chip exports approach trillion-dollar threshold, but smuggling exploits (HBM+cheap processors bundled for export circumvention) expose packaging/interposer boundaries as a competitive and compliance vulnerability.",
+        "executive_summary": "South Korea's HPC memory leadership intensified this week as SK Hynix escalated production-tier hiring (eliminating degree requirements, ~$600K performance bonuses) while NVIDIA expanded sovereign AI partnerships across Samsung and Korean startups—signaling sustained AI DRAM ramp confidence. However, the intensity of talent acquisition (now extending to non-degree roles and international poaching via SanDisk) reveals deeper execution friction at manufacturing scale rather than architectural differentiation, and Korea's strategy pivots toward ecosystem lock-in (NVLink Fusion participation, Dynamo recipe optimization) to offset NVIDIA's integrated advantage. Competitive standing at the packaging/interposer boundary remains unchanged: Korean suppliers own volume but face erosion from Google's TPU coalition and AMD's EPYC momentum in non-NVIDIA stacks.",
         "key_facts": [
-          "SK Hynix revamped hiring format: half-day deep interviews, AI competency screening",
-          "South Korea entry-level semiconductor hiring surged 47% YoY",
-          "Samsung and SK Hynix sparked 2,500-person hiring surge at global chip equipment makers",
-          "South Korea chip exports approach first trillion-dollar annual year (due November)",
-          "AI chip smugglers exploit trade control loophole: banned HBM from SK bundled with cheap unsanctioned processors",
-          "SK Hynix AI hackathon system failures halted qualification rounds mid-event",
-          "DRAM demand ramping for Samsung and SK Hynix, super-suppliers increasing headcount"
+          "SK Hynix ~$600K performance bonus per production hire; degree requirements removed",
+          "NVIDIA announced investments in Korean AI startups (Point2 among 20+ targets)",
+          "NVIDIA released Dynamo recipes for SK Telecom A.X K2, LG AI Research K-EXAONE 2.0, Upstage Solar Open 2",
+          "NVIDIA-MSIT collaboration includes NVLink Fusion ecosystem access for Korean NPU/XPU vendors",
+          "SanDisk expanding engineer recruitment targeting Samsung and SK Hynix talent",
+          "U.S. semiconductor sector faces 157,000-worker deficit; China faces severe talent shortage",
+          "AMD showcased 6th Gen EPYC processors for AI/enterprise; Google TPU alliance strengthening"
         ],
         "implications": [
           {
-            "keyword": "Interposer/Packaging Vulnerability",
-            "text": "Smuggling pattern (HBM + commodity processor bundling) reveals packaging-level exploits in trade controls; competitors gain effective access to Korean HBM outside official channels, eroding margin capture at memory-module interface."
+            "keyword": "Manufacturing Bottleneck",
+            "text": "Elimination of degree requirements and $600K+ bonuses at SK Hynix signal acute production labor scarcity at the module assembly stage, not design capability—capacity ramp constrained by operational execution rather than DRAM architecture."
           },
           {
-            "keyword": "Capacity Execution Risk",
-            "text": "Simultaneous 2,500+ hiring at equipment suppliers + SK Hynix AI talent sprint suggests aggressive ramp timelines; operational glitches (hackathon failures) foreshadow potential integration bottlenecks during mass DRAM production scale-up."
+            "keyword": "Ecosystem Capture",
+            "text": "NVIDIA's Dynamo recipes and NVLink Fusion access lock Korean model developers into NVIDIA stack, reducing interoperability leverage at the software-hardware boundary and deepening vendor lock-in."
           },
           {
-            "keyword": "Talent Arbitrage & Poaching",
-            "text": "SK Hynix recruiting Samsung non-memory veterans signals talent competition intensifying at design-process boundary; fast-track hiring may accelerate capability transfer but risks consolidation dependency."
+            "keyword": "Competitive Encirclement",
+            "text": "Google's TPU alliance and AMD's EPYC trajectory create viable alternatives to HPC-pure DRAM strategies; Korea's memory-centric positioning weakens if compute-memory co-design becomes the differentiator."
           },
           {
-            "keyword": "AI-Memory Stack Positioning",
-            "text": "SK Hynix framing AI expertise as core hiring criterion (and public narrative) confirms memory vendors competing for system-architect mindshare at AI chip–memory protocol interface, not just commodity DRAM supply."
+            "keyword": "Talent Arbitrage Risk",
+            "text": "SanDisk poaching and global talent deficits (157K U.S. shortfall, China's severe shortage) expose Korean suppliers to brain drain; aggressive local hiring masks underlying retention and skill-depth vulnerabilities."
           }
         ],
-        "counterpoint": "Headline hiring volume does not guarantee yield or time-to-productivity; SK Hynix operational stumbles (hackathon, system failures) may indicate process maturity lags despite capex and recruitment scale, and geopolitical export restrictions (HBM smuggling countermeasures) could cap effective addressable market growth.",
-        "feasibility_observation": "No explicit design or yield gate movement reported in material. SK Hynix system failures (hackathon platform) are HR/recruiting process issues, not fab or product design feasibility changes.",
+        "counterpoint": "SK Hynix's production-tier hiring may succeed if it stabilizes near-term module output without long-term skill erosion; NVIDIA's Korea ecosystem partnerships do not yet demonstrate higher memory bandwidth or latency gains relative to competitors.",
+        "feasibility_observation": "Mass-production feasibility at the module/system integration layer shows execution stress (labor scarcity requiring unconventional hiring) without corresponding design breakthroughs in HBM stack density or interposer thermal management.",
         "changed_from_last_week": true,
-        "change_note": "Last week: no change. This week: aggressive personnel mobilization (2,500+ equipment-supplier hires, AI-focused SK Hynix recruitment, 47% entry-level surge) and trade-control evasion (HBM smuggling pattern) signal intensified competitive jockeying at memory-module and protocol boundaries, moving from stable posture to supply-chain and regulatory risk management."
+        "change_note": "Last week flagged talent acquisition as a supply-chain symptom; this week escalation to degree-requirement elimination and $600K bonuses signals crisis-level manufacturing friction outpacing last week's assessment, while NVIDIA ecosystem lock-in (Dynamo, NVLink) emerges as a new competitive boundary threat separate from smuggling vulnerabilities."
       }
     },
     "custom_soc": {
       "ko": {
-        "executive_summary": "Custom silicon for AI inference is consolidating around two competitive vectors: cloud provider verticalization (Google TPU to OpenAI, Microsoft Azure Maia 300 targeting 7x throughput by 2026) and chiplet-led interconnect differentiation (Marvell's Lumentum integration positioning silicon-optics fusion as the critical interface). The value shift confirms last week's thesis—but this week reveals the battleground has narrowed to three layers: (1) inference-specific ASICs displacing general-purpose GPUs, (2) high-bandwidth interconnect as the binding interface between accelerators and memory, and (3) cloud provider lock-in via software abstraction (AWS SageMaker AI coupling Cartesia's SSM models to bespoke chip architectures).",
+        "executive_summary": "Google's rapid generation cadence—four TPU variants (8, 8e, 8tx, 8i Max) deployed within a year—signals competitive acceleration in inference-specialized silicon, with 8tx's confidential computing via AMD EPYC Turin and 8i Max's doubled memory bandwidth (targeting agentic AI) now approaching 100 cloud customers. This week confirms verticalization is moving faster than Marvell's silicon-optics fusion path; the critical interface has shifted from interconnect differentiation to workload-specific ASIC partitioning and host-CPU coupling, reducing the heterogeneous integration advantage previously credited to silicon-optics.",
         "key_facts": [
-          "OpenAI to purchase Google TPU chips amid AI infrastructure surge",
-          "Microsoft Azure Maia 300 claims 7x throughput, production date 2026",
-          "Marvell acquires Lumentum to integrate silicon and optical interconnect",
-          "FuriosaAI Series D raises $620M at $2.9B valuation for AI inference scaling",
-          "Broadcom secures key TSMC capacity despite cloud provider TPU chip deals",
-          "Google TPU generates first AI response from satellite-deployed inference system",
-          "MediaTek secured second AI-chip customer (identity withheld in report)"
+          "Google TPU portfolio now comprises four Gen-8 variants deployed in one year (TPU 8, 8e, 8tx, 8i Max)",
+          "Google TPU business nears 100 named cloud customers",
+          "TPU 8tx pairs with AMD EPYC Turin hosts and supports confidential computing (data encrypted in use)",
+          "TPU 8i Max doubles memory bandwidth over baseline TPU 8",
+          "Google TPUs represent 44% of Anthropic's $644B named compute deals",
+          "TSM trading at 21x valuation after 30% chip sector sell-off"
         ],
         "implications": [
           {
-            "keyword": "inference disaggregation",
-            "text": "OpenAI's pivot to Google TPUs signals that custom inference silicon now justifies direct cloud provider relationships outside NVIDIA, fragmenting the GPU standard."
+            "keyword": "verticalization pace",
+            "text": "Google's four-in-one-year cadence outpaces heterogeneous integration roadmaps; cloud provider lock-in now secured via workload specialization (8tx for inference+security, 8i Max for agentic memory-bandwidth demands) rather than proprietary interconnect IP alone."
           },
           {
-            "keyword": "interconnect as moat",
-            "text": "Marvell's Lumentum integration moves the competitive interface from compute die to the optical/electrical boundary—companies controlling chiplet-to-chiplet bandwidth own next-generation AI data-center margin."
+            "keyword": "host-CPU coupling as interface",
+            "text": "AMD EPYC Turin selection for TPU 8tx signals the value boundary has moved from chip-to-chip interconnect (Marvell silicon-optics) to CPU-accelerator protocol and confidential compute capabilities; this erodes the silicon-optics differentiation thesis."
           },
           {
-            "keyword": "edge + satellite inference",
-            "text": "Google's orbital TPU demonstrates custom silicon advantage in power-constrained, latency-critical deployments where GPU scale-down is inefficient; edge margins now prize inference ASICs over general-purpose compute."
+            "keyword": "agentic AI workload capture",
+            "text": "TPU 8i Max's memory bandwidth doubling explicitly targets agentic inference; if workload-specific ASICs replace general-purpose GPU stacks, Nvidia's margin compression accelerates, and cloud provider custom silicon becomes the binding layer between application and infrastructure."
           },
           {
-            "keyword": "software lock-in layers",
-            "text": "AWS SageMaker AI + Cartesia SSM model coupling shows cloud providers using abstraction layers (PyTorch, state-space models) to route workloads to proprietary chips without exposing hardware dependency; this amplifies switching costs beyond chip cost."
-          },
-          {
-            "keyword": "supply chain consolidation",
-            "text": "Broadcom's TSMC capacity win despite TPU growth indicates that mature chipmakers are securing CapEx allocation by serving multiple cloud players; custom chip fragmentation does not fragment foundry power."
+            "keyword": "customer concentration risk",
+            "text": "44% of Anthropic's $644B compute deals via Google TPUs demonstrates dual risk: Google's inference ASICs now capture value that would historically flow to general-purpose GPU makers, but customer stickiness depends on software abstraction (likely proprietary to Google's Vertex AI stack)."
           }
         ],
-        "counterpoint": "MediaTek's second AI-chip customer remains unnamed and revenue-opaque, and FuriosaAI's $2.9B valuation (raised without named chip alliance) suggests that non-hyperscaler custom silicon faces adoption friction—design wins do not guarantee volume parity with Google/Microsoft/Amazon internally funded chips.",
-        "feasibility_observation": "Azure Maia 300's 7x throughput claim cites no production date before 2026 and carries no yield/defect reporting; Microsoft's history of multi-year gap between announcement and volume production (e.g., Cobalt, Maia 100) warrants design-to-mass-production risk flagging. No new feasibility data on Google TPU yield or Marvell's chiplet integration timelines.",
+        "counterpoint": "TSM's 30% sector drawdown and 21x multiple suggest TSMC's margin expansion from custom silicon may already be priced in; a slowdown in cloud provider capex (visible in Q4 2025 guidance) could limit TPU ramp rates and reduce TSMC's AI-specific revenue growth.",
+        "feasibility_observation": "No design feasibility or mass-production feasibility constraints reported this week for TPU 8tx or 8i Max; confidential computing support and memory bandwidth doubling imply both designs cleared silicon review. TSM valuation pressure, not yield, is the mass-production limiting signal.",
         "changed_from_last_week": true,
-        "change_note": "Last week emphasized heterogeneous chiplet/HBM stacks; this week reveals the interconnect layer (Marvell-Lumentum, bandwidth protocols) is now the primary value interface, and cloud provider exclusivity (OpenAI-Google TPU, Azure Maia roadmap) is hardening faster than software abstraction can port workloads."
+        "change_note": "Judgment shifts from 'interconnect as binding interface' to 'workload-specialized ASIC partitioning + host-CPU coupling' as the dominant value layer; Marvell's silicon-optics path no longer appears to be the competitive lever, and Google's speed of generational release (4 in 1 year) now sets the pace for custom silicon adoption."
       },
       "en": {
-        "executive_summary": "Custom silicon for AI inference is consolidating around two competitive vectors: cloud provider verticalization (Google TPU to OpenAI, Microsoft Azure Maia 300 targeting 7x throughput by 2026) and chiplet-led interconnect differentiation (Marvell's Lumentum integration positioning silicon-optics fusion as the critical interface). The value shift confirms last week's thesis—but this week reveals the battleground has narrowed to three layers: (1) inference-specific ASICs displacing general-purpose GPUs, (2) high-bandwidth interconnect as the binding interface between accelerators and memory, and (3) cloud provider lock-in via software abstraction (AWS SageMaker AI coupling Cartesia's SSM models to bespoke chip architectures).",
+        "executive_summary": "Google's rapid generation cadence—four TPU variants (8, 8e, 8tx, 8i Max) deployed within a year—signals competitive acceleration in inference-specialized silicon, with 8tx's confidential computing via AMD EPYC Turin and 8i Max's doubled memory bandwidth (targeting agentic AI) now approaching 100 cloud customers. This week confirms verticalization is moving faster than Marvell's silicon-optics fusion path; the critical interface has shifted from interconnect differentiation to workload-specific ASIC partitioning and host-CPU coupling, reducing the heterogeneous integration advantage previously credited to silicon-optics.",
         "key_facts": [
-          "OpenAI to purchase Google TPU chips amid AI infrastructure surge",
-          "Microsoft Azure Maia 300 claims 7x throughput, production date 2026",
-          "Marvell acquires Lumentum to integrate silicon and optical interconnect",
-          "FuriosaAI Series D raises $620M at $2.9B valuation for AI inference scaling",
-          "Broadcom secures key TSMC capacity despite cloud provider TPU chip deals",
-          "Google TPU generates first AI response from satellite-deployed inference system",
-          "MediaTek secured second AI-chip customer (identity withheld in report)"
+          "Google TPU portfolio now comprises four Gen-8 variants deployed in one year (TPU 8, 8e, 8tx, 8i Max)",
+          "Google TPU business nears 100 named cloud customers",
+          "TPU 8tx pairs with AMD EPYC Turin hosts and supports confidential computing (data encrypted in use)",
+          "TPU 8i Max doubles memory bandwidth over baseline TPU 8",
+          "Google TPUs represent 44% of Anthropic's $644B named compute deals",
+          "TSM trading at 21x valuation after 30% chip sector sell-off"
         ],
         "implications": [
           {
-            "keyword": "inference disaggregation",
-            "text": "OpenAI's pivot to Google TPUs signals that custom inference silicon now justifies direct cloud provider relationships outside NVIDIA, fragmenting the GPU standard."
+            "keyword": "verticalization pace",
+            "text": "Google's four-in-one-year cadence outpaces heterogeneous integration roadmaps; cloud provider lock-in now secured via workload specialization (8tx for inference+security, 8i Max for agentic memory-bandwidth demands) rather than proprietary interconnect IP alone."
           },
           {
-            "keyword": "interconnect as moat",
-            "text": "Marvell's Lumentum integration moves the competitive interface from compute die to the optical/electrical boundary—companies controlling chiplet-to-chiplet bandwidth own next-generation AI data-center margin."
+            "keyword": "host-CPU coupling as interface",
+            "text": "AMD EPYC Turin selection for TPU 8tx signals the value boundary has moved from chip-to-chip interconnect (Marvell silicon-optics) to CPU-accelerator protocol and confidential compute capabilities; this erodes the silicon-optics differentiation thesis."
           },
           {
-            "keyword": "edge + satellite inference",
-            "text": "Google's orbital TPU demonstrates custom silicon advantage in power-constrained, latency-critical deployments where GPU scale-down is inefficient; edge margins now prize inference ASICs over general-purpose compute."
+            "keyword": "agentic AI workload capture",
+            "text": "TPU 8i Max's memory bandwidth doubling explicitly targets agentic inference; if workload-specific ASICs replace general-purpose GPU stacks, Nvidia's margin compression accelerates, and cloud provider custom silicon becomes the binding layer between application and infrastructure."
           },
           {
-            "keyword": "software lock-in layers",
-            "text": "AWS SageMaker AI + Cartesia SSM model coupling shows cloud providers using abstraction layers (PyTorch, state-space models) to route workloads to proprietary chips without exposing hardware dependency; this amplifies switching costs beyond chip cost."
-          },
-          {
-            "keyword": "supply chain consolidation",
-            "text": "Broadcom's TSMC capacity win despite TPU growth indicates that mature chipmakers are securing CapEx allocation by serving multiple cloud players; custom chip fragmentation does not fragment foundry power."
+            "keyword": "customer concentration risk",
+            "text": "44% of Anthropic's $644B compute deals via Google TPUs demonstrates dual risk: Google's inference ASICs now capture value that would historically flow to general-purpose GPU makers, but customer stickiness depends on software abstraction (likely proprietary to Google's Vertex AI stack)."
           }
         ],
-        "counterpoint": "MediaTek's second AI-chip customer remains unnamed and revenue-opaque, and FuriosaAI's $2.9B valuation (raised without named chip alliance) suggests that non-hyperscaler custom silicon faces adoption friction—design wins do not guarantee volume parity with Google/Microsoft/Amazon internally funded chips.",
-        "feasibility_observation": "Azure Maia 300's 7x throughput claim cites no production date before 2026 and carries no yield/defect reporting; Microsoft's history of multi-year gap between announcement and volume production (e.g., Cobalt, Maia 100) warrants design-to-mass-production risk flagging. No new feasibility data on Google TPU yield or Marvell's chiplet integration timelines.",
+        "counterpoint": "TSM's 30% sector drawdown and 21x multiple suggest TSMC's margin expansion from custom silicon may already be priced in; a slowdown in cloud provider capex (visible in Q4 2025 guidance) could limit TPU ramp rates and reduce TSMC's AI-specific revenue growth.",
+        "feasibility_observation": "No design feasibility or mass-production feasibility constraints reported this week for TPU 8tx or 8i Max; confidential computing support and memory bandwidth doubling imply both designs cleared silicon review. TSM valuation pressure, not yield, is the mass-production limiting signal.",
         "changed_from_last_week": true,
-        "change_note": "Last week emphasized heterogeneous chiplet/HBM stacks; this week reveals the interconnect layer (Marvell-Lumentum, bandwidth protocols) is now the primary value interface, and cloud provider exclusivity (OpenAI-Google TPU, Azure Maia roadmap) is hardening faster than software abstraction can port workloads."
+        "change_note": "Judgment shifts from 'interconnect as binding interface' to 'workload-specialized ASIC partitioning + host-CPU coupling' as the dominant value layer; Marvell's silicon-optics path no longer appears to be the competitive lever, and Google's speed of generational release (4 in 1 year) now sets the pace for custom silicon adoption."
       }
     },
     "foundry": {
       "ko": {
-        "executive_summary": "변화 없음",
-        "key_facts": [],
-        "implications": [],
-        "counterpoint": "",
+        "executive_summary": "TSMC publicly reaffirmed logic-only foundry commitment this week while credible sources indicate active BEOL (back-end-of-line) 3D DRAM development leveraging processor die footprint—a technical move that sidesteps the memory business taboo by positioning DRAM as process integration rather than memory manufacturing. Meanwhile, Samsung secured TSMC 3nm capacity for NVIDIA's next-gen NVHBM, reinforcing TSMC's packaging-interface dominance in AI accelerator stacks even as Samsung and SK Hynix race to secure ASML EUV tools ahead of 2027–2028 supply constraints.",
+        "key_facts": [
+          "TSMC denies memory business entry; simultaneously developing BEOL 3D DRAM tied to processor die",
+          "Samsung relies on TSMC 3nm for NVIDIA NVHBM production",
+          "Samsung, SK Hynix reportedly ordering ASML EUV equipment worth up to KRW 20 trillion each",
+          "Terafab targeting 1M wafers/month by 2032; 700K for memory (approaching Samsung DRAM capacity)",
+          "China's SMEE lithography systems claim 90%+ localization, 10M+ wafers processed",
+          "Philadelphia Semiconductor Index (SOX) fell 12.2% in single session amid data-center regulation fears"
+        ],
+        "implications": [
+          {
+            "keyword": "Packaging boundary as competitive moat",
+            "text": "TSMC's BEOL 3D DRAM + processor integration preserves foundry positioning while capturing memory-like margin; Samsung's reliance on TSMC 3nm for NVHBM locks heterogeneous integration roadmap to TSMC's advanced nodes."
+          },
+          {
+            "keyword": "Capacity gap and tool scarcity",
+            "text": "2027–2028 EUV shortage driving Samsung/SK Hynix tool hoarding; Terafab's 1M wafer ambition (2032) underscores global capacity race but China's SMEE 90%+ localization threatens equipment margin structures if yield improves."
+          },
+          {
+            "keyword": "Market perception vs. fundamentals",
+            "text": "SOX 12.2% single-day drop driven by data-center regulation uncertainty, not foundry utilization; industry consensus dismisses regulatory impact as short-term noise, signaling confidence in AI-driven long-cycle demand."
+          }
+        ],
+        "counterpoint": "TSMC's BEOL 3D DRAM remains unproven at volume; Samsung's NVHBM dependency on TSMC 3nm may prove temporary if Samsung 3nm yield improves or if chiplets shift to smaller dies not requiring TSMC's advanced node.",
         "feasibility_observation": "",
-        "changed_from_last_week": false,
-        "change_note": ""
+        "changed_from_last_week": true,
+        "change_note": "TSMC's BEOL 3D DRAM strategy (technical interface play) and Samsung's NVHBM reliance on TSMC 3nm emerged as concrete competitive moves this week; prior week showed no substantive judgment."
       },
       "en": {
-        "executive_summary": "변화 없음",
-        "key_facts": [],
-        "implications": [],
-        "counterpoint": "",
+        "executive_summary": "TSMC publicly reaffirmed logic-only foundry commitment this week while credible sources indicate active BEOL (back-end-of-line) 3D DRAM development leveraging processor die footprint—a technical move that sidesteps the memory business taboo by positioning DRAM as process integration rather than memory manufacturing. Meanwhile, Samsung secured TSMC 3nm capacity for NVIDIA's next-gen NVHBM, reinforcing TSMC's packaging-interface dominance in AI accelerator stacks even as Samsung and SK Hynix race to secure ASML EUV tools ahead of 2027–2028 supply constraints.",
+        "key_facts": [
+          "TSMC denies memory business entry; simultaneously developing BEOL 3D DRAM tied to processor die",
+          "Samsung relies on TSMC 3nm for NVIDIA NVHBM production",
+          "Samsung, SK Hynix reportedly ordering ASML EUV equipment worth up to KRW 20 trillion each",
+          "Terafab targeting 1M wafers/month by 2032; 700K for memory (approaching Samsung DRAM capacity)",
+          "China's SMEE lithography systems claim 90%+ localization, 10M+ wafers processed",
+          "Philadelphia Semiconductor Index (SOX) fell 12.2% in single session amid data-center regulation fears"
+        ],
+        "implications": [
+          {
+            "keyword": "Packaging boundary as competitive moat",
+            "text": "TSMC's BEOL 3D DRAM + processor integration preserves foundry positioning while capturing memory-like margin; Samsung's reliance on TSMC 3nm for NVHBM locks heterogeneous integration roadmap to TSMC's advanced nodes."
+          },
+          {
+            "keyword": "Capacity gap and tool scarcity",
+            "text": "2027–2028 EUV shortage driving Samsung/SK Hynix tool hoarding; Terafab's 1M wafer ambition (2032) underscores global capacity race but China's SMEE 90%+ localization threatens equipment margin structures if yield improves."
+          },
+          {
+            "keyword": "Market perception vs. fundamentals",
+            "text": "SOX 12.2% single-day drop driven by data-center regulation uncertainty, not foundry utilization; industry consensus dismisses regulatory impact as short-term noise, signaling confidence in AI-driven long-cycle demand."
+          }
+        ],
+        "counterpoint": "TSMC's BEOL 3D DRAM remains unproven at volume; Samsung's NVHBM dependency on TSMC 3nm may prove temporary if Samsung 3nm yield improves or if chiplets shift to smaller dies not requiring TSMC's advanced node.",
         "feasibility_observation": "",
-        "changed_from_last_week": false,
-        "change_note": ""
+        "changed_from_last_week": true,
+        "change_note": "TSMC's BEOL 3D DRAM strategy (technical interface play) and Samsung's NVHBM reliance on TSMC 3nm emerged as concrete competitive moves this week; prior week showed no substantive judgment."
       }
     },
     "packaging": {
       "ko": {
-        "executive_summary": "Samsung's C-suite focus on advanced packaging via Japan's Yokohama lab signals competitive repositioning toward materials and equipment partnerships rather than internal node-driven consolidation. TSMC's CoWoS capacity continues to anchor AI chip margins, while Intel's EMIB yield challenges indicate structural fragmentation in the CSP supply chain—creating openings for tier-two vendors (ASE, Inari, Ace nanochem) in flip-chip interconnect and thermal materials. Geographic diversification and materials-layer control remain the durable competitive moat.",
+        "executive_summary": "Packaging supply-chain consolidation accelerates around AI/HBM demand vectors, with NVIDIA directly investing in SPIL alongside TSMC's CoWoS anchor, while downstream materials control (Henkel Seoul R&D, 12.1B won HBM-focused investment) and geographic dispersal (India via Paras-BroadPak, Europe via Silicon Box €3.2B Vulcan) fragment tier-two positioning. Samsung's materials-layer strategy (signaled last week via Yokohama) now competes directly with Korean materials-supply inroads (Henkel Seoul), indicating a shift from internal CSP consolidation to external ecosystem lock-in—commoditizing interconnect vendors unless they own process IP at the thermal/adhesion boundary.",
         "key_facts": [
-          "Samsung Chairman Lee Jae-yong inspects Yokohama advanced packaging research center, first personal visit",
-          "TSMC CoWoS pricing power directly links to AI chip stock valuations per Simply Wall St analysis",
-          "Intel EMIB yield challenges noted as structural shift in AI advanced packaging supply chain (SemiVision)",
-          "Ace nanochem develops three new semiconductor materials for power devices and advanced packaging (Japan)",
-          "ASE, MCL, PVA TePla advancing flip-chip defect detection via AI image enhancement",
-          "AI chip packaging projected to drive materials and equipment demand; India ISIG targeting packaging and power electronics"
+          "NVIDIA investing billions in additional CoWoS capacity; SPIL named as key AI accelerator partner",
+          "TSMC Re-entry into South Korea's Asia-Pacific memory sector announced",
+          "Henkel (Germany) establishing R&D center in Seoul for AI and HBM chip materials; 12.1 billion won investment through 2031",
+          "Paras Semiconductors (India) partnering with BroadPak (US) for advanced packaging facility",
+          "Silicon Box (Europe) presenting €3.2B 'Vulcan Project' for Novara microchip manufacturing",
+          "Infineon begins 300-millimeter power silicon carbide (SiC) wafer production",
+          "Semiconductor materials market projected to reach US$115.6 billion",
+          "EV Group advancing qubit packaging for quantum computing",
+          "Qualitas Semiconductor demoing interface IP at ICCAD 2026"
         ],
         "implications": [
           {
-            "keyword": "Materials arbitrage",
-            "text": "Samsung's Japan lab pivot and Ace nanochem material launches expose shift from node economics to substrate/interposer material control; raises bar for captive packaging vendors without dedicated materials R&D."
+            "keyword": "Capacity Lock-in",
+            "text": "NVIDIA's direct CoWoS investment via SPIL bypasses traditional EMS aggregators, signaling permanent shift from spot-buy to long-term capacity partnerships. TSMC's Korea re-entry threatens Samsung's memory-packaging upside."
           },
           {
-            "keyword": "CoWoS monopoly rent",
-            "text": "TSMC's CoWoS capacity constraint and pricing power over AI chip makers reinforces substrate-protocol boundary as primary value capture; competitors (Amkor, ASE) forced into incremental yield improvements rather than architectural innovation."
+            "keyword": "Materials-Boundary Control",
+            "text": "Henkel's Seoul footprint and local HBM focus compete directly with Samsung's internal materials development; companies controlling thermal interface, bump materials, and underfill at the die-substrate boundary will command AI-era margins."
           },
           {
-            "keyword": "Yield fragmentation",
-            "text": "Intel EMIB yield challenges signal chiplet-level interconnect defects becoming yield limiter; creates opening for AI-enhanced defect detection vendors (MCL, PVA TePla) and third-party flip-chip specialists to commoditize advanced packaging entry."
+            "keyword": "Geographic Fragmentation Risk",
+            "text": "Paras-BroadPak (India), Silicon Box Vulcan (Europe), and EV Group (quantum) diffuse packaging IP across regions; tier-two vendors without process ownership at thermal/adhesion layers become regional commodity suppliers, not strategic partners."
           },
           {
-            "keyword": "Geographic redundancy",
-            "text": "Samsung's Japan materials partnership, U.S.-Malaysia advanced tech cooperation, and India ISIG momentum reinforce multi-region substrate/materials sourcing as essential de-risking strategy; single-nation lock-in diminishes."
+            "keyword": "SiC Power Packaging",
+            "text": "Infineon's 300mm SiC ramp signals power-delivery packaging becoming a separate competitive moat from logic-AI packaging; EV/automotive demand decouples from CoWoS bottlenecks, creating new margin pools for specialist vendors."
           }
         ],
-        "counterpoint": "Samsung's Japan inspection remains exploratory; no binding supply agreements or capacity commitments disclosed—unlikely to dislodge TSMC's near-term CoWoS or Amkor's margin gains in 2026 unless coupled with tangible HBM packaging ramp.",
-        "feasibility_observation": "Intel EMIB yield challenges represent first disclosed mass-production feasibility degradation in chiplet interconnect; suggests design-at-interface complexity (bump pitch, thermal cycling, micro-vias) now exceeds yield models, elevating CSP capex burden on foundries and ODMs.",
+        "counterpoint": "Henkel's Korea R&D investment and Paras-BroadPak partnership create real regional capability depth, but neither yet displaces TSMC or Samsung's process-IP edge; quantum and space-qualified packaging (EV Group, Axiom-Nitride MOU) remain niche margins outside AI-accelerator mainstream.",
+        "feasibility_observation": "No new design-feasibility or mass-production yield gates disclosed this week. Infineon's 300mm SiC transition is a manufacturing roadmap milestone, not a yield crisis signal.",
         "changed_from_last_week": true,
-        "change_note": "Samsung's chairman-level materials/equipment partnership pursuit in Japan escalates packaging from supply-chain redundancy play to active technology import strategy, signaling acknowledgment that in-house advanced packaging R&D lags TSMC/Amkor and requires external materials and tooling alliances."
+        "change_note": "Last week emphasized geographic diversification and materials-layer moat; this week's evidence shows Henkel-Korea and Paras-BroadPak materialize those moves into executable partnerships, while NVIDIA's direct SPIL investment shifts competitive weight from internal CSP consolidation to external ecosystem lock-in, threatening tier-two margin stability."
       },
-      "en": {
-        "executive_summary": "Samsung's C-suite focus on advanced packaging via Japan's Yokohama lab signals competitive repositioning toward materials and equipment partnerships rather than internal node-driven consolidation. TSMC's CoWoS capacity continues to anchor AI chip margins, while Intel's EMIB yield challenges indicate structural fragmentation in the CSP supply chain—creating openings for tier-two vendors (ASE, Inari, Ace nanochem) in flip-chip interconnect and thermal materials. Geographic diversification and materials-layer control remain the durable competitive moat.",
-        "key_facts": [
-          "Samsung Chairman Lee Jae-yong inspects Yokohama advanced packaging research center, first personal visit",
-          "TSMC CoWoS pricing power directly links to AI chip stock valuations per Simply Wall St analysis",
-          "Intel EMIB yield challenges noted as structural shift in AI advanced packaging supply chain (SemiVision)",
-          "Ace nanochem develops three new semiconductor materials for power devices and advanced packaging (Japan)",
-          "ASE, MCL, PVA TePla advancing flip-chip defect detection via AI image enhancement",
-          "AI chip packaging projected to drive materials and equipment demand; India ISIG targeting packaging and power electronics"
-        ],
-        "implications": [
-          {
-            "keyword": "Materials arbitrage",
-            "text": "Samsung's Japan lab pivot and Ace nanochem material launches expose shift from node economics to substrate/interposer material control; raises bar for captive packaging vendors without dedicated materials R&D."
-          },
-          {
-            "keyword": "CoWoS monopoly rent",
-            "text": "TSMC's CoWoS capacity constraint and pricing power over AI chip makers reinforces substrate-protocol boundary as primary value capture; competitors (Amkor, ASE) forced into incremental yield improvements rather than architectural innovation."
-          },
-          {
-            "keyword": "Yield fragmentation",
-            "text": "Intel EMIB yield challenges signal chiplet-level interconnect defects becoming yield limiter; creates opening for AI-enhanced defect detection vendors (MCL, PVA TePla) and third-party flip-chip specialists to commoditize advanced packaging entry."
-          },
-          {
-            "keyword": "Geographic redundancy",
-            "text": "Samsung's Japan materials partnership, U.S.-Malaysia advanced tech cooperation, and India ISIG momentum reinforce multi-region substrate/materials sourcing as essential de-risking strategy; single-nation lock-in diminishes."
-          }
-        ],
-        "counterpoint": "Samsung's Japan inspection remains exploratory; no binding supply agreements or capacity commitments disclosed—unlikely to dislodge TSMC's near-term CoWoS or Amkor's margin gains in 2026 unless coupled with tangible HBM packaging ramp.",
-        "feasibility_observation": "Intel EMIB yield challenges represent first disclosed mass-production feasibility degradation in chiplet interconnect; suggests design-at-interface complexity (bump pitch, thermal cycling, micro-vias) now exceeds yield models, elevating CSP capex burden on foundries and ODMs.",
-        "changed_from_last_week": true,
-        "change_note": "Samsung's chairman-level materials/equipment partnership pursuit in Japan escalates packaging from supply-chain redundancy play to active technology import strategy, signaling acknowledgment that in-house advanced packaging R&D lags TSMC/Amkor and requires external materials and tooling alliances."
-      }
+      "en": {}
     },
     "cpo_optics": {
       "ko": {
-        "executive_summary": "CPO consolidation accelerated sharply this week with Marvell's $115B acquisition of Lumentum (endorsed by Nvidia's Jensen Huang), signaling vertical integration of optical-electronic interfaces at the system level rather than through supplier fragmentation. Tower Semiconductor and Innolight's near-package optics partnership, combined with Lumentum's $5B CPO order win, confirm demand momentum; however, the mega-merger reconfigures competitive leverage—optical transceiver density and thermal management now concentrate within a single player's end-to-end control, raising barriers for independent silicon-photonics and micro-LED competitors.",
+        "executive_summary": "CPO competitive fragmentation is re-emerging post-Marvell/Lumentum consolidation, with multiple independent optical interconnect platforms (MicroLED via Fabric.AI, Polar Light; silicon photonics via GlobalFoundries, Staera; isolator-free transmitters) advancing in parallel to capture AI data-center scaling. While Marvell controls end-to-end optical-electronic integration, new entrants are targeting specific interface gaps—thermal management, fault tolerance, and process control—suggesting the value accrual boundary is shifting from monolithic CPO systems toward modular, chiplet-compatible optical I/O standards.",
         "key_facts": [
-          "Marvell Technology acquiring Lumentum for $115 billion",
-          "Jensen Huang (Nvidia) endorsed the Marvell-Lumentum mega-merger",
-          "Lumentum secured $5 billion co-packaged optics order",
-          "Tower Semiconductor and Innolight partnering on near-package optics for AI",
-          "Tower Semiconductor guiding to $2 billion annual revenue",
-          "Micro-LED optical interconnect startup won first commercial order",
-          "Eulitha ramping lithography systems for AI data-center lasers"
+          "Staera Semiconductor raised $4.6M pre-seed for on-chip optical interconnect technology",
+          "Fabric.AI filed U.S. patent for MicroLED optical interconnect with fault tolerance and GPU synchronization",
+          "Polar Light Technologies signed first optical interconnect agreement leveraging MicroLED platform",
+          "GlobalFoundries identified as silicon photonics inflection point amid AI demand",
+          "LITEON showcasing high-speed optical interconnect at electronica 2026",
+          "JEDEC established JC-14.8 subcommittee for System Level Reliability Testing (SLRT)",
+          "Isolator-free optical transmitter architecture emerging for data center interconnect reduction",
+          "PicoJool referenced for 12.8T AI-era optical interconnect rethinking"
         ],
         "implications": [
           {
-            "keyword": "Vertical integration",
-            "text": "Marvell-Lumentum merger collapses the optical-electronic boundary into single-vendor control, reducing switching costs for hyperscalers and locking out independent transceiver vendors at the package edge."
+            "keyword": "Interface Boundary Shift",
+            "text": "Value migration from monolithic Marvell/Lumentum CPO toward modular chiplet-level optical I/O; Fabric.AI and Polar Light targeting GPU-to-memory and inter-chip pathways rather than transceiver density concentration."
           },
           {
-            "keyword": "Supply-chain lock-in",
-            "text": "Combined entity controls end-to-end CPO stack (silicon photonics, packaging, thermal management); independent suppliers (Dixon, STMicro) now compete at subsystem level rather than full system integration."
+            "keyword": "Standardization Risk",
+            "text": "JEDEC SLRT subcommittee creation signals need for reliability consensus; absence of unified optical I/O spec creates fragmentation risk—Marvell's proprietary end-to-end stack vs. open MicroLED/silicon-photonics alternatives."
           },
           {
-            "keyword": "Technology divergence risk",
-            "text": "Micro-LED entrants (e.g., US startup's first commercial win) gain traction but face Marvell-Lumentum's integrated advantage in yield, reliability, and volume production at the modulation layer."
+            "keyword": "Process Control Inflection",
+            "text": "Silicon photonics yield challenges (GlobalFoundries rating upgrade) and isolator-free transmitter complexity indicate manufacturing feasibility is now primary competitive gate, not just architecture."
           },
           {
-            "keyword": "Ecosystem fragmentation",
-            "text": "Near-package optics (Tower-Innolight) and isolator-free transmitter designs emerge as alternative architectures to defend against Marvell's package-level dominance."
+            "keyword": "Thermal & Fault Tolerance",
+            "text": "Fabric.AI's redundant MicroLED channels and Polar Light's reliability focus address failure modes not fully solved by Marvell's density-first CPO; opens niche for fault-tolerant optical interconnects in large-scale AI clusters."
           }
         ],
-        "counterpoint": "Marvell-Lumentum integration requires 18+ months regulatory/operational closure; competitors retain short-term design-in momentum if they accelerate silicon-photonics density or micro-LED thermal performance before merger completion.",
-        "feasibility_observation": "No change in design or yield feasibility reported this week based on the material provided. Tower-Innolight and Eulitha lithography ramp are on-track enablers, but no new performance gates or manufacturing bottlenecks disclosed.",
+        "counterpoint": "Marvell's $115B acquisition still commands system-level OEM qualification cycles and high-margin transceiver dominance; fragmented MicroLED and silicon-photonics startups lack volume ramp credentials and face yield/cost validation hurdles.",
+        "feasibility_observation": "Silicon photonics process control challenges (GlobalFoundries article) and isolator-free transmitter design complexity indicate design feasibility improvements are under way but mass-production yield remains unproven; JEDEC SLRT standardization suggests industry recognizes reliability as manufacturing bottleneck.",
         "changed_from_last_week": true,
-        "change_note": "Last week's judgment tracked SPIL capacity and Micro-LED validation as parallel vectors; this week Marvell-Lumentum acquisition collapses optical-electronic boundary into one player, fundamentally shifting competitive terrain from multi-vendor supply-chain to integrated vertical control."
+        "change_note": "Last week's judgment focused on consolidation concentration (Marvell/Lumentum barrier elevation); this week's data shows parallel-path competition re-entering via modular optical platforms (MicroLED, silicon photonics) and specialized interfaces (fault tolerance, isolator-free transmitters), indicating value boundary is disaggregating toward chiplet-level integration rather than remaining monolithic."
       },
-      "en": {
-        "executive_summary": "CPO consolidation accelerated sharply this week with Marvell's $115B acquisition of Lumentum (endorsed by Nvidia's Jensen Huang), signaling vertical integration of optical-electronic interfaces at the system level rather than through supplier fragmentation. Tower Semiconductor and Innolight's near-package optics partnership, combined with Lumentum's $5B CPO order win, confirm demand momentum; however, the mega-merger reconfigures competitive leverage—optical transceiver density and thermal management now concentrate within a single player's end-to-end control, raising barriers for independent silicon-photonics and micro-LED competitors.",
-        "key_facts": [
-          "Marvell Technology acquiring Lumentum for $115 billion",
-          "Jensen Huang (Nvidia) endorsed the Marvell-Lumentum mega-merger",
-          "Lumentum secured $5 billion co-packaged optics order",
-          "Tower Semiconductor and Innolight partnering on near-package optics for AI",
-          "Tower Semiconductor guiding to $2 billion annual revenue",
-          "Micro-LED optical interconnect startup won first commercial order",
-          "Eulitha ramping lithography systems for AI data-center lasers"
-        ],
-        "implications": [
-          {
-            "keyword": "Vertical integration",
-            "text": "Marvell-Lumentum merger collapses the optical-electronic boundary into single-vendor control, reducing switching costs for hyperscalers and locking out independent transceiver vendors at the package edge."
-          },
-          {
-            "keyword": "Supply-chain lock-in",
-            "text": "Combined entity controls end-to-end CPO stack (silicon photonics, packaging, thermal management); independent suppliers (Dixon, STMicro) now compete at subsystem level rather than full system integration."
-          },
-          {
-            "keyword": "Technology divergence risk",
-            "text": "Micro-LED entrants (e.g., US startup's first commercial win) gain traction but face Marvell-Lumentum's integrated advantage in yield, reliability, and volume production at the modulation layer."
-          },
-          {
-            "keyword": "Ecosystem fragmentation",
-            "text": "Near-package optics (Tower-Innolight) and isolator-free transmitter designs emerge as alternative architectures to defend against Marvell's package-level dominance."
-          }
-        ],
-        "counterpoint": "Marvell-Lumentum integration requires 18+ months regulatory/operational closure; competitors retain short-term design-in momentum if they accelerate silicon-photonics density or micro-LED thermal performance before merger completion.",
-        "feasibility_observation": "No change in design or yield feasibility reported this week based on the material provided. Tower-Innolight and Eulitha lithography ramp are on-track enablers, but no new performance gates or manufacturing bottlenecks disclosed.",
-        "changed_from_last_week": true,
-        "change_note": "Last week's judgment tracked SPIL capacity and Micro-LED validation as parallel vectors; this week Marvell-Lumentum acquisition collapses optical-electronic boundary into one player, fundamentally shifting competitive terrain from multi-vendor supply-chain to integrated vertical control."
-      }
+      "en": {}
     },
     "dram": {
       "ko": {
@@ -384,71 +392,78 @@
     },
     "hbm": {
       "ko": {
-        "executive_summary": "Samsung's Taylor 2 fab (2nm) is reportedly fully booked pre-groundbreaking with AMD and NVIDIA HBM base-die orders, consolidating Samsung's packaging-interface control in the HBM supply chain while NVIDIA secures HBM3E/HBM4 adoption across its accelerated compute stack. Simultaneously, China is circumventing U.S. trade controls by smuggling HBM packaged with commodity processors, creating parallel supply pressure on Huawei's domestic alternatives—indicating the technical interface (packaging boundary, base-die production) is now the critical choke point for both legal and illicit HBM flows.",
+        "executive_summary": "Samsung is pivoting from foundry-centric strategy to vertically integrated HBM packaging dominance, announcing KRW 46T Onyang hub (five packaging lines, operations moved up to 2028) while simultaneously relying on TSMC 3nm for NVIDIA's next-gen base dies—a structural inversion where Samsung controls the high-margin packaging interface but outsources the commodity logic node. Concurrent material localization (LG Chem's NCF/MR-MUF for bonding, Henkel's Seoul R&D center for advanced packaging adhesives) and Google's 8i Max doubling HBM bandwidth signal that the packaging-interposer boundary—not raw memory dies—is now the technical choke point determining competitive positioning in AI accelerator supply chains.",
         "key_facts": [
-          "Samsung Taylor 2 fab (2nm) fully booked before 2030 output, led by AMD HBM base-die orders",
-          "AMD reportedly commits next-generation HBM base dies from Samsung's Taylor 2 facility",
-          "NVIDIA HGX B200 analysis confirms HBM3E supplier adoption and advanced packaging innovation",
-          "China smuggling route: HBM packaged with unsanctioned processors to bypass export controls",
-          "Huawei 960DT faces domestic HBM shortage amid global supply tightness",
-          "Samsung Q3 DRAM market share: 38% (vs SK Hynix 29%, Micron 21%, CXMT 9%)",
-          "Samsung and SK Hynix recruiting key semiconductor talent from Japan for packaging and HBM capability",
-          "NVIDIA first to adopt HBM3e and HBM4 technologies into accelerated computing stack"
+          "Samsung Onyang hub: KRW 46 trillion, five HBM packaging lines, operations 2028",
+          "Samsung sourcing TSMC 3nm for NVIDIA NVHBM base dies",
+          "Google 8i Max doubles HBM bandwidth vs. prior generation",
+          "LG Chem developing MR-MUF bonding materials to reduce Japan dependency",
+          "Henkel investing KRW 12.1 billion for Seoul advanced packaging materials R&D center (through 2031)",
+          "HBM market projected USD 69.75 billion"
         ],
         "implications": [
           {
-            "keyword": "Base-die production monopoly",
-            "text": "Samsung's Taylor 2 securing AMD orders before construction completion signals packaging-interface leverage: foundry capacity for HBM base dies is the new pricing/supply control point, shifting power away from memory vendors (SK Hynix, Micron) toward the interposer/packaging layer."
+            "keyword": "Samsung packaging verticalization",
+            "text": "Control of HBM packaging (Onyang five lines by 2028) insulates Samsung from foundry-dependent base-die capacity constraints; outsourcing logic to TSMC 3nm preserves margin concentration at the packaging-interposer interface where yield/performance differentiation now resides."
           },
           {
-            "keyword": "Trade control evasion via packaging",
-            "text": "Smuggling route exploits the technical interface itself: expensive HBM + cheap processor packaging creates legal export classification, indicating regulatory frameworks lag actual component-level control. This pressures legitimate suppliers to accept margin compression or cede volume to illicit channels."
+            "keyword": "Material supply chain bifurcation",
+            "text": "LG Chem and Henkel R&D investments signal Korean/European players capturing advanced bonding and adhesive materials—historically Japan-dominated—creating redundancy in the packaging supply chain; reduces single-point-of-failure risk for Samsung and broader HBM ecosystem."
           },
           {
-            "keyword": "Domestic China HBM shortfall",
-            "text": "Huawei 960DT dependency on smuggled HBM (not indigenous alternatives) reveals China's packaging/interposer ecosystem lacks autonomous capability at scale; attempted self-sufficiency is not yet viable."
+            "keyword": "Bandwidth wall as design limiter",
+            "text": "Google's 8i Max doubling HBM bandwidth indicates memory bandwidth (not capacity) is now the bottleneck for next-gen AI accelerators; HBM packaging architecture and interposer design become primary vehicles for competitive performance differentiation."
           },
           {
-            "keyword": "NVIDIA packaging lock-in",
-            "text": "NVIDIA's end-to-end HBM3E/HBM4 adoption across HGX stack deepens customer switching costs at the chiplet-memory protocol boundary, enabling premium pricing and supply priority during scarcity."
+            "keyword": "Base-die sourcing fragility",
+            "text": "Samsung's reliance on TSMC 3nm for NVIDIA NVHBM, despite Taylor 2 fab pre-booking claims, exposes geopolitical vulnerability if U.S.–Taiwan relations deteriorate; packaging hub alone cannot compensate if logic node supply is interrupted."
           }
         ],
-        "counterpoint": "Samsung's Taylor 2 capacity is not yet in production (groundbreaking ceremony being led by Chairman Lee Jae-yong this week); actual delivery of HBM base dies to AMD/NVIDIA remains 2–3 years out, and competitive dynamics (SK Hynix, TSMC interposer capability, or new entrants) could shift before meaningful volume accrues.",
-        "feasibility_observation": "Mass-production feasibility signal: Samsung's pre-booking of Taylor 2 2nm capacity for HBM base dies indicates Samsung management confidence in 2nm yield and design-rule maturity for memory-intensive passive interposer/connector layers, reducing prior uncertainty around 2nm HBM base-die yield targets.",
+        "counterpoint": "Onyang timeline acceleration (2028 vs. prior year 2029) and five-line capacity remain non-binding announcements; Samsung has a history of HBM packaging delays. TSMC 3nm capacity competition with other customers (AI logic, mobile SoC) could constrain NVIDIA base-die orders.",
+        "feasibility_observation": "Mass-production feasibility for Samsung's packaging improves with LG Chem's MR-MUF and Henkel's advanced adhesive localization—reducing reliance on single-source Japanese suppliers and lowering yield variance risk in multi-die bonding. However, base-die sourcing (TSMC 3nm) introduces external capacity risk not reflected in Samsung's packaging-only projections.",
         "changed_from_last_week": true,
-        "change_note": "Judgment shifted from 'no change' to active supply-chain consolidation: Samsung Taylor 2 pre-bookings by AMD/NVIDIA, combined with documented HBM smuggling and Huawei shortage, elevate packaging-interface control as the decisive competitive frontier—last week lacked concrete customer commitment evidence."
+        "change_note": "Last week emphasized Samsung's packaging control via Taylor 2 pre-booking; this week reveals Samsung is outsourcing base dies to TSMC 3nm for NVIDIA, inverting the competitive model from foundry dominance to packaging-interface dominance and introducing geopolitical exposure to Taiwan node dependency."
       },
       "en": {}
     },
     "pmic": {
       "ko": {
-        "executive_summary": "변화 없음",
-        "key_facts": [],
-        "implications": [],
-        "counterpoint": "",
+        "executive_summary": "TSMC and Samsung's shift away from 8-inch capacity toward advanced nodes is creating supply opportunity for Chinese matnode producers SMIC and Hua Hong in BCD/analog segments. This represents a structural demand realignment in a mature-node capacity axis rather than performance competition; Chinese vendors are capturing volume-based cost advantage on legacy process nodes where leading-edge players have reduced fab utilization.",
+        "key_facts": [
+          "TSMC, Samsung reallocating fab capacity away from 8-inch platforms",
+          "SMIC and Hua Hong seizing 8-inch matnode demand (PMIC, analog)",
+          "Chinese suppliers capturing volume leverage in BCD-class nodes"
+        ],
+        "implications": [
+          {
+            "keyword": "BOM pricing pressure",
+            "text": "SMIC/Hua Hong 8-inch ramp will increase supply elasticity for analog and PMIC ICs, likely moderating ASP across mature-node segments where automotive/industrial certification is already established."
+          },
+          {
+            "keyword": "Capacity utilization shift",
+            "text": "Chinese fabs now have clearer path to 8-inch utilization rates as TSMC/Samsung exit, improving their unit economics and potentially extending node maturity lifecycle in PMIC/power-management segments."
+          },
+          {
+            "keyword": "Supply diversification",
+            "text": "OEMs gain second-source optionality on PMIC supply (SMIC/Hua Hong vs. incumbent players), reducing single-supplier risk in automotive and server power-delivery chains."
+          }
+        ],
+        "counterpoint": "SMIC Q1 FY2026 call transcript content not detailed in provided material; actual capacity ramp timeline, yield stability, and automotive-grade qualification status remain opaque from headline alone.",
         "feasibility_observation": "해당 없음",
-        "changed_from_last_week": false,
-        "change_note": ""
+        "changed_from_last_week": true,
+        "change_note": "Last week 변화 없음; this week structural supply shift evident as TSMC/Samsung capacity exit creates documented demand capture by Chinese matnode players—represents capacity/pricing realignment in PMIC segment."
       },
-      "en": {
-        "executive_summary": "변화 없음",
-        "key_facts": [],
-        "implications": [],
-        "counterpoint": "",
-        "feasibility_observation": "해당 없음",
-        "changed_from_last_week": false,
-        "change_note": ""
-      }
+      "en": {}
     }
   },
   "item_counts": {
-    "mobile_ap": 14,
-    "hpc_datacenter": 31,
-    "custom_soc": 59,
-    "foundry": 82,
-    "packaging": 71,
-    "cpo_optics": 25,
-    "hbm": 14,
-    "pmic": 0
+    "mobile_ap": 6,
+    "hpc_datacenter": 58,
+    "custom_soc": 88,
+    "foundry": 102,
+    "packaging": 52,
+    "cpo_optics": 20,
+    "hbm": 13,
+    "pmic": 2
   }
 }
