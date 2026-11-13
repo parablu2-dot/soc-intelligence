@@ -3,6 +3,29 @@
     "axis": "custom_soc",
     "company": "hyperscaler_inhouse",
     "category": "news",
+    "headline": "Deploy frontier AI models on AWS Trainium with SGLang-Neuron",
+    "url": "https://aws.amazon.com/blogs/machine-learning/deploy-frontier-ai-models-on-aws-trainium-with-sglang-neuron/",
+    "published_date": "2026-11-12",
+    "source": "AWS Blog",
+    "tags": [
+      "Trainium"
+    ],
+    "summary": "SGLang-Neuron is now publicly available through an AWS Deep Learning Container. With SGLang-Neuron, you can serve models and generate reinforcement learning rollouts with SGLang on AWS Trainium using the same SGLang interface you already know, all running on native PyTorch."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
+    "category": "news",
+    "headline": "Optimizing cost per task and proving agent ROI on Amazon Bedrock",
+    "url": "https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/",
+    "published_date": "2026-11-12",
+    "source": "AWS Blog",
+    "summary": "Comparing per-token prices hides the real cost of running a model on Amazon Bedrock. This post shows how to calculate the true cost per task across four hidden cost drivers, reduce it with caching, routing, and output constraints, and prove agent ROI with human baselines, holdout experiments, and a five-dimension scorecard."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
+    "category": "news",
     "headline": "Detecting and recovering from silent data corruption on Amazon SageMaker HyperPod",
     "url": "https://aws.amazon.com/blogs/machine-learning/detecting-and-recovering-from-silent-data-corruption-on-amazon-sagemaker-hyperpod/",
     "published_date": "2026-11-11",
