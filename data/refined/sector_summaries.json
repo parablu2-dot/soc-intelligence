@@ -1,12 +1,12 @@
 {
   "date": "2026-11-14",
-  "generated_at": "2026-11-14T00:51:20.915495+00:00",
+  "generated_at": "2026-11-14T23:45:18.333006+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
       "date": "2026-11-14",
       "item_count": 1,
-      "generated_at": "2026-11-14T00:51:20.914905+00:00",
+      "generated_at": "2026-11-14T23:45:18.332300+00:00",
       "content": {
         "ko": {
           "executive_summary": "",
@@ -25,170 +25,180 @@
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
       "date": "2026-11-14",
-      "item_count": 5,
-      "generated_at": "2026-11-14T00:51:20.914905+00:00",
+      "item_count": 7,
+      "generated_at": "2026-11-14T23:45:18.332300+00:00",
       "content": {
         "ko": {
-          "executive_summary": "SK hynix는 AI 전환(AX) 시대의 인재 전략으로 신입채용에서 학력제한을 전면 폐지했다. Samsung Foundry는 모든 고도화 공정에서 Synopsys와의 협력을 확대하고 있으며, 향후 GPU 투자 물결이 한국의 HBM 성장을 견인할 전망이다.",
+          "executive_summary": "Nvidia의 리더십 공백에도 한국 정부는 26만 장의 GPU 공급 계획을 재확인했으며, SK하이닉스와 TSMC는 채용 확대와 고급 노드 협력으로 데이터센터 경쟁력 강화에 나섰다. HBM 성장이 Korea의 핵심 기회로 대두되면서 공급망 정렬이 가속화되고 있다.",
           "key_facts": [
-            "SK hynix: 신입채용 학력제한 전면 폐지",
-            "Samsung Foundry: Synopsys와 전 고도화 노드 공정 협력 확대",
-            "한국 HBM 성장: 차세대 GPU 투자 물결과 연계"
+            "엔비디아 한국 공급 26만 장 유지",
+            "SK하이닉스 신입채용 학력제한 전면 폐지",
+            "Samsung Foundry와 Synopsys 모든 고급 노드 협력 확대",
+            "TSMC 피닉스 공장 확장으로 베테랑 채용"
           ],
           "implications": [
             {
-              "keyword": "인재 확보",
-              "text": "SK hynix의 학력제한 폐지는 AI 반도체 설계 및 공정 분야 인재 풀 확대를 통해 경쟁력 강화 전략"
+              "keyword": "공급망 안정성",
+              "text": "Huang 사임 후에도 정부 주도 GPU 공급 보장으로 AI 인프라 사업 연속성 확보"
             },
             {
-              "keyword": "HBM 공급망",
-              "text": "Nvidia 경영진 변화에도 불구하고 한국의 HBM 공급이 차세대 GPU 아키텍처의 핵심 병목이 될 가능성"
+              "keyword": "HBM 수요",
+              "text": "GPU 투자 확대 추세에서 한국 메모리 기업의 고대역폭 제품 수요 증가 전망"
+            },
+            {
+              "keyword": "경쟁 심화",
+              "text": "TSMC-Synopsys 협력 강화로 파운드리 첨단 노드 경쟁 고도화"
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "Nvidia 리더십 불확실성이 지속되면 고객 신뢰 약화 가능성"
         },
         "en": {
-          "executive_summary": "SK hynix has abolished academic background restrictions in new hiring as a talent strategy for the AI transformation (AX) era. Samsung Foundry is expanding collaboration with Synopsys across all advanced process nodes, and the next wave of GPU investment is expected to drive Korea's HBM growth.",
+          "executive_summary": "Despite Nvidia's leadership gap, the Korean government reconfirmed its plan to supply 260,000 GPUs, while SK Hynix and TSMC bolster datacenter competitiveness through expanded recruitment and advanced node collaboration. HBM growth emerges as a core opportunity for Korea, accelerating supply chain alignment.",
           "key_facts": [
-            "SK hynix: Abolished academic background restrictions in new hiring",
-            "Samsung Foundry: Expanded collaboration with Synopsys across all advanced process nodes",
-            "Korea's HBM growth: Linked to next-generation GPU investment wave"
+            "Nvidia Korea supply 260,000 units maintained",
+            "SK Hynix eliminates educational background requirements for new hires entirely",
+            "Samsung Foundry and Synopsys expand advanced node collaboration across all nodes",
+            "TSMC expands Phoenix facility with veteran hiring"
           ],
           "implications": [
             {
-              "keyword": "Talent acquisition",
-              "text": "SK hynix's removal of academic restrictions is a strategy to strengthen competitiveness by expanding the talent pool in AI semiconductor design and process fields"
+              "keyword": "Supply chain stability",
+              "text": "Government-led GPU supply assurance post-Huang ensures business continuity for AI infrastructure projects"
             },
             {
-              "keyword": "HBM supply chain",
-              "text": "Despite changes in Nvidia's leadership, Korea's HBM supply could become a critical bottleneck in next-generation GPU architecture"
+              "keyword": "HBM demand",
+              "text": "Expanding GPU investment trend drives increased demand for Korean memory companies' high-bandwidth products"
+            },
+            {
+              "keyword": "Intensifying competition",
+              "text": "TSMC-Synopsys collaboration strengthens foundry advanced node competition"
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "Continued Nvidia leadership uncertainty may weaken customer confidence"
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
       "date": "2026-11-14",
-      "item_count": 19,
-      "generated_at": "2026-11-14T00:51:20.914905+00:00",
+      "item_count": 23,
+      "generated_at": "2026-11-14T23:45:18.332300+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Google이 Tensor Processing Unit(TPU) 8세대에 기밀 처리 전용 TPU 8tx와 듀얼칩 TPU 8i Max를 추가했다. 이는 Nvidia의 범용 GPU 지위에 대한 직접적인 도전이며, Nvidia 경영진 변화로 인한 시장 기회 확대로 대만 ASIC 주식이 강세를 보이고 있다. Semifive는 AI/HPC 주문으로 사상 최대 245.5억 원의 수주잔고를 기록했다.",
+          "executive_summary": "Google이 TPU 8tx와 TPU 8i Max를 발표하며 Nvidia의 범용 AI 칩 우위 약화를 시도하고 있으며, Semifive의 AI/HPC 백로그 기록(245.5억 원)과 ASICland의 분기 흑자 전환으로 커스텀 ASIC 수요가 가시화되고 있다. Huang 사임으로 촉발된 Nvidia 주가 급락 후 대만 ASIC 주식이 급등하며 산업 구도 재편 신호를 보이고 있다.",
           "key_facts": [
-            "Google: TPU 8tx(기밀 처리용), TPU 8i Max(듀얼칩 추가)",
-            "Nvidia: Jensen Huang CEO 사임으로 경영진 변화",
-            "대만 ASIC 주식: 3개 종목 漲停, Global Unichip 역대 둘째 높은 주가 기록",
-            "Semifive: 245.5억 원 AI/HPC 수주잔고(사상 최대)",
-            "ASICland: Q3 영업이익 14억 원, 전년동기 흑자전환",
-            "Alphabet: Cloud 매출 100% 이상 증가, 고객 데이터센터 내 커스텀 AI 칩 배포"
+            "Google TPU 8tx, TPU 8i Max 공식 발표",
+            "Semifive AI/HPC 백로그 245.5억 원 기록",
+            "ASICland Q3 영업이익 14억 원 흑자 전환",
+            "Alphabet 클라우드 매출 2배 이상 증가",
+            "대만 ASIC 3개 주식 한계주 도달"
           ],
           "implications": [
             {
-              "keyword": "커스텀 ASIC 경쟁",
-              "text": "Google의 TPU 확장과 Alphabet의 클라우드 매출 급증은 엔드-투-엔드 AI 칩 전략이 Nvidia 의존도를 낮추는 방향을 제시"
+              "keyword": "ASIC 정상화",
+              "text": "Google·Amazon 등 Hyperscaler 자체 칩 투자 확대로 커스텀 ASIC 설계·검증 수요 폭증"
             },
             {
-              "keyword": "ASIC 설계 기회",
-              "text": "Nvidia 지배력 약화로 Semifive, ASICland 등 한대만 ASIC 설계사가 AI/HPC 수주 기회 획기적 증가"
+              "keyword": "Nvidia 경쟁 위기",
+              "text": "TPU 8 라인업 확대와 Trainium 등 경쟁 칩 부상으로 범용 GPU 시장 기울기 가속"
             },
             {
-              "keyword": "Nvidia 경영 공백",
-              "text": "Huang 사임으로 인한 리더십 불확실성이 경쟁사(AMD, Qualcomm, 중국 업체)의 시장 점유율 회수 기회 창출"
+              "keyword": "한국 ASIC 팹리스 기회",
+              "text": "Semifive 같은 국내 ASIC 기업의 수주 호황으로 AI/HPC 커스텀 설계 시장 성장"
             }
           ],
-          "counterpoint": "Nvidia 경영 변화가 최종 확정되지 않았고 후임 CEO의 실행력이 아직 검증되지 않아 시장 영향도 변동 가능"
+          "counterpoint": "Google TPU는 자사 클라우드 내부용 중심이라 Nvidia의 외부 판매 시장에 직접 영향은 제한적"
         },
         "en": {
-          "executive_summary": "Google has added confidential computing-dedicated TPU 8tx and dual-chip TPU 8i Max to its 8th generation Tensor Processing Unit (TPU) lineup. This represents a direct challenge to Nvidia's position in general-purpose GPUs, and amid leadership changes at Nvidia, Taiwan's ASIC stocks have shown strength as market opportunities expand. Semifive has recorded a record 24.55 billion won in AI/HPC order backlog.",
+          "executive_summary": "Google announces TPU 8tx and TPU 8i Max, attempting to weaken Nvidia's general-purpose AI chip lead, while Semifive's record AI/HPC backlog (24.55 billion won) and ASICland's quarterly profit turnaround signal emerging custom ASIC demand. Post-Huang resignation, Nvidia's sharp stock decline followed by surging Taiwan ASIC stocks signals industry restructuring.",
           "key_facts": [
-            "Google: TPU 8tx (confidential computing), TPU 8i Max (dual-chip addition)",
-            "Nvidia: CEO Jensen Huang's resignation leads to leadership change",
-            "Taiwan's ASIC stocks: 3 stocks hit daily limits, Global Unichip reaches second-highest stock price on record",
-            "Semifive: 24.55 billion won AI/HPC order backlog (record high)",
-            "ASICland: Q3 operating profit 1.4 billion won, turned profitable year-over-year",
-            "Alphabet: Cloud revenue increased over 100%, deploying custom AI chips in customer datacenters"
+            "Google announces TPU 8tx and TPU 8i Max officially",
+            "Semifive AI/HPC backlog reaches 24.55 billion won",
+            "ASICland Q3 operating profit swings to 1.4 billion won profit",
+            "Alphabet Cloud revenue increases more than 2x",
+            "Three Taiwan ASIC stocks hit lower limits"
           ],
           "implications": [
             {
-              "keyword": "Custom ASIC competition",
-              "text": "Google's TPU expansion and Alphabet's surging cloud revenue demonstrate that an end-to-end AI chip strategy can reduce Nvidia dependence"
+              "keyword": "ASIC normalization",
+              "text": "Hyperscalers including Google and Amazon expand in-house chip investment, surging custom ASIC design and verification demand"
             },
             {
-              "keyword": "ASIC design opportunities",
-              "text": "Weakening of Nvidia's dominance has led to a dramatic increase in AI/HPC orders for Korean and Taiwan ASIC design firms like Semifive and ASICland"
+              "keyword": "Nvidia competitive crisis",
+              "text": "TPU 8 lineup expansion and rise of competing chips like Trainium accelerate general-purpose GPU market shift"
             },
             {
-              "keyword": "Nvidia's leadership vacuum",
-              "text": "Leadership uncertainty from Huang's resignation creates opportunities for competitors (AMD, Qualcomm, Chinese firms) to recapture market share"
+              "keyword": "Korean ASIC fabless opportunity",
+              "text": "Domestic ASIC firms like Semifive benefit from order boom, driving AI/HPC custom design market growth"
             }
           ],
-          "counterpoint": "Nvidia's leadership transition has not been finalized and the successor CEO's execution capability remains unproven, so market impact may remain uncertain"
+          "counterpoint": "Google TPU is primarily focused on internal cloud use, limiting direct impact on Nvidia's external sales market"
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
       "date": "2026-11-14",
-      "item_count": 23,
-      "generated_at": "2026-11-14T00:51:20.914905+00:00",
+      "item_count": 26,
+      "generated_at": "2026-11-14T23:45:18.332300+00:00",
       "content": {
         "ko": {
-          "executive_summary": "TSMC는 2026년 5월 매출 보고서와 이사회 결의를 발표했으며, SMIC는 2027년을 넘어 2028년 상반까지 용량 수급 상황이 극팽할 수 있음을 시사했다(장비 리드타임 16-24개월). Nvidia 경영진 변화 속에서 TSMC는 완충 역할을 하고 있으며, AMD와 다른 경쟁업체들이 점유율 획득 기회를 노리고 있다.",
+          "executive_summary": "SMIC가 2027년 이상 용량 부족과 16~24개월 장비 리드타임을 발표하며 파운드리 공급 압박 심화가 예상되는 가운데, Samsung 5라인 HBM 패키징 시설 착공과 TSMC 월간 수익 보고로 고대역폭 수요 기반이 굳혀지고 있다.",
           "key_facts": [
-            "TSMC: 2026년 5월 매출 보고서 및 이사회 결의 발표",
-            "SMIC: 2027년 이후 용량 부족 지속 가능성, 장비 리드타임 16-24개월",
-            "Samsung 온양캠퍼스: 6조 원 투자 HBM 첨단 패키징 시설 5라인 착공",
-            "Nvidia GPU 공급: 한국 정부 확인 결과 26만장 공급 계획 유지"
+            "SMIC 용량 부족 2027년 이상 지속 예상",
+            "SMIC 장비 리드타임 16~24개월",
+            "Samsung 온양캠퍼스 5라인 HBM 패키징 시설 착공",
+            "TSMC 2026년 5월 월간 수익 발표",
+            "Nvidia 리더십 진공 상황 진행 중"
           ],
           "implications": [
             {
-              "keyword": "파운드리 경쟁 심화",
-              "text": "SMIC의 용량 부족과 TSMC의 안정적 공급이 고객 다변화 기회를 만들어 삼성파운드리 등 2~3순위 선택을 가속화"
+              "keyword": "파운드리 병목",
+              "text": "SMIC 공급 제약으로 2세 파운드리(중국계) 의존도 높은 고객 대체선 모색 필연"
             },
             {
-              "keyword": "HBM 공급망 중요성",
-              "text": "Samsung의 HBM 첨단 패키징 투자 확대는 AI 메모리 병목 해소를 통해 GPU 공급망의 전체 효율성 제고"
+              "keyword": "HBM 패키징 경쟁",
+              "text": "Samsung 시설 확대로 고대역폭 메모리 후공정 용량 경쟁 심화 전망"
             },
             {
-              "keyword": "정지정책 리스크",
-              "text": "Nvidia 경영 변화로 인한 공급 차질 우려가 정부 수준의 개입을 초래하며 반도체 공급망 국가전략화 심화"
+              "keyword": "공급망 리스크",
+              "text": "Nvidia CEO 변화와 파운드리 용량 제약이 겹치면서 AI 칩 공급망 변동성 증대"
             }
           ],
-          "counterpoint": "비반도체 뉘스(호주 캠핑 소년 사건 등) 포함으로 인해 foundry 섹터의 명확한 시장 신호 해석에 제약"
+          "counterpoint": "TSMC 월간 수익 안정성은 아직 Samsung이나 중국 파운드리 경쟁 심화 정도를 상쇄하기에 충분하지 않을 수 있음"
         },
         "en": {
-          "executive_summary": "TSMC released its May 2026 revenue report and board resolutions, while SMIC indicated that capacity constraints could intensify beyond 2027 through the first half of 2028 (equipment lead time 16-24 months). Amid Nvidia's leadership transition, TSMC is playing a stabilizing role, while AMD and other competitors are seeking opportunities to capture market share.",
+          "executive_summary": "SMIC announces capacity shortages through 2027 and equipment lead times of 16–24 months, signaling intensifying foundry supply pressure, while Samsung's Onyang campus 5-line HBM packaging facility groundbreaking and TSMC's monthly revenue reporting solidify high-bandwidth demand foundation.",
           "key_facts": [
-            "TSMC: Released May 2026 revenue report and board resolutions",
-            "SMIC: Potential sustained capacity shortage beyond 2027, equipment lead time 16-24 months",
-            "Samsung's Onyangcampus: Groundbreaking 5 advanced HBM packaging production lines with 6 trillion won investment",
-            "Nvidia GPU supply: Korean government confirmed plan to maintain 260,000-unit supply"
+            "SMIC capacity shortages expected to persist through 2027",
+            "SMIC equipment lead time 16–24 months",
+            "Samsung Onyang campus 5-line HBM packaging facility groundbreaking",
+            "TSMC monthly revenue reporting May 2026",
+            "Nvidia leadership vacuum ongoing"
           ],
           "implications": [
             {
-              "keyword": "Intensifying foundry competition",
-              "text": "SMIC's capacity shortage and TSMC's stable supply create diversification opportunities for customers, accelerating selection of second and third-tier foundries like Samsung Foundry"
+              "keyword": "Foundry bottleneck",
+              "text": "SMIC supply constraints force customers with high China-based second-tier foundry dependence to seek alternatives"
             },
             {
-              "keyword": "HBM supply chain importance",
-              "text": "Samsung's increased HBM advanced packaging investment enhances overall supply chain efficiency by resolving AI memory bottlenecks in GPU supply"
+              "keyword": "HBM packaging competition",
+              "text": "Samsung facility expansion intensifies post-process capacity competition for high-bandwidth memory"
             },
             {
-              "keyword": "Supply policy risk",
-              "text": "Concerns over supply disruption from Nvidia's leadership changes have prompted government-level intervention, deepening the nationalization of semiconductor supply chain strategy"
+              "keyword": "Supply chain risk",
+              "text": "Nvidia CEO transition overlapping with foundry capacity constraints increases AI chip supply chain volatility"
             }
           ],
-          "counterpoint": "Inclusion of non-semiconductor news (Australian camping incident) constrains clarity in interpreting foundry sector market signals"
+          "counterpoint": "TSMC's monthly revenue stability may not yet be sufficient to offset Samsung or Chinese foundry competitive intensification"
         }
       }
     },
     "packaging": {
       "sector": "Packaging",
       "date": "2026-11-14",
-      "item_count": 13,
-      "generated_at": "2026-11-14T00:51:20.914905+00:00",
+      "item_count": 15,
+      "generated_at": "2026-11-14T23:45:18.332300+00:00",
       "content": {
         "ko": {},
         "en": {}
