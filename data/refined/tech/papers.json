@@ -2,6 +2,319 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "SiC-BN composites with extreme thermal and environmental stability",
+    "url": "https://arxiv.org/abs/2611.17283v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "Ceramic materials that maintain structural integrity and resist thermal-shock under extreme conditions are critical for many applications. Here we show that spark plasma sintered composites containing equal weight fractions of hexagonal silicon carbide (6H-SiC) and boron nitride (h-BN) exhibit exceptional stability under extreme high-temperature oxidizing conditions and unusually stable temperature-independent thermal conductivity across a broad temperature range. Under high-velocity oxygen-fuel",
+    "authors": [
+      "Abhijit Biswas",
+      "Eugenio Garcia-Granados",
+      "Saman Zare",
+      "Mozhdeh Mirakhory",
+      "JungHun Park",
+      "Shuvodeep De",
+      "Jessica Reyes",
+      "Hunter B. Schonfeld",
+      "Noah A. Burke",
+      "William Riffe",
+      "Michael S. Lafferty",
+      "Sudaice Kazibwe",
+      "Maryam Amiri",
+      "Shreyasi Chattopadhyay",
+      "Mingrui Xu",
+      "Gelu Costin",
+      "Tanguy Terlier",
+      "Jianhua Li",
+      "Ching-Wu Chu",
+      "Liangzi Deng",
+      "Bharat K. Jasthi",
+      "Manoj Tripathi",
+      "Venkataramana Gadhamshetty",
+      "Gi-Dong Sim",
+      "Kathy Lu",
+      "Adri C. T. van Duin",
+      "Patrick E. Hopkins",
+      "Sanjay Sampath",
+      "Pulickel M. Ajayan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "LazyWeights: Decode-on-Demand Edge LLMs",
+    "url": "https://arxiv.org/abs/2611.17108v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "Memory decides which LLMs an edge device runs, and how fast: capacity on a $4$ GB Jetson Nano, bandwidth on an $8$ GB Jetson Orin Nano Super. Deployed formats (GPTQ, AWQ, $\\texttt{llama.cpp}$'s K- and I-quants) spend equal bits on every integer code of a matrix, although the codes are far from uniform. $\\texttt{LazyWeights}$ keeps these formats but tunes GPTQ so the codes compress, Huffman-codes them losslessly in interleaved lanes, and decodes them on demand in a small unit between DRAM and L2,",
+    "authors": [
+      "Arnab Sanyal",
+      "Gourav Datta",
+      "Sandeep P. Chinchali"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Broadcast, Don't Replicate: Eliminating Weight HBM in Datacenter LLM Serving",
+    "url": "https://arxiv.org/abs/2611.17097v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "Large language model (LLM) inference at datacenter scale is fundamentally bottlenecked by memory capacity and bandwidth limits. Because model weights are read-only and identical across instances, conventional architectures that replicate these parameters across the local DRAM of tens of thousands of accelerators incur massive capital expenditures, significant static power dissipation, and redundant memory-fetch energy. A recent proposal to use optical fiber loops as delay-line memory alleviates ",
+    "authors": [
+      "Hannah Atmer",
+      "Yuan Yao",
+      "Thiemo Voigt",
+      "Stefanos Kaxiras"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Capacity-Constrained Delayed Feedback for Online Conformal Risk Control",
+    "url": "https://arxiv.org/abs/2611.17059v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "Online conformal risk control (OCRC) enables reliable uncertainty quantification in machine learning by converting model outputs into prediction sets with long-term risk guarantees. These guarantees, however, hinge on the assumption that the loss of each round is revealed immediately and losslessly. In practice, feedback may be delayed, and limited resources may prevent tracking all pending predictions, causing some feedback to be lost. To address this challenge, we develop capacity-aware OCRC (",
+    "authors": [
+      "Bowen Wang",
+      "Osvaldo Simeone"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Infrastructure for Verifiable AI: Where Proof Costs Go and How Hardware Can Help",
+    "url": "https://arxiv.org/abs/2611.17042v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "Users of artificial intelligence services, including those powered by large language models and other transformer-based models, need assurance that inference and training follow the declared computation without exposing private models or data. Zero-knowledge proofs can provide this assurance, but proof generation remains expensive. Hardware acceleration research often reports gains for individual cryptographic operations, leaving their effect on the full cost of proving neural-network workloads,",
+    "authors": [
+      "Yihan Xia",
+      "Wenxin Xu",
+      "Taotao Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.PF",
+    "title": "Control-Flow Profiling for Workload Representativeness",
+    "url": "https://arxiv.org/abs/2611.16889v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "Workload characterization in performance engineering often replaces expensive target executions with lower-cost proxies, including reduced datasets, miniapps, and training inputs. Such substitutions require empirical verification that the proxy faithfully exercises the target's dynamic execution behavior. This paper presents an address-keyed control-flow profiling methodology and tool suite designed to evaluate workload representativeness directly from compiled, unmodified binaries. We pair time",
+    "authors": [
+      "Mahesh Madhav"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.IV",
+    "title": "Transmission-Mode Multispectral Imaging for Estimation of Microcystis spp. Cell Concentration and ELISA-Equivalent Microcystin Concentration in Water",
+    "url": "https://arxiv.org/abs/2611.16859v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "Harmful algal blooms dominated by Microcystis spp. threaten freshwater systems through proliferation and microcystin (MC) production. Conventional measurements of cyanobacterial abundance and MC concentration commonly require laboratory processing, specialized instrumentation, or assay reagents. Because MC concentration cannot always be reliably inferred from cell abundance, complementary optical approaches for estimating both quantities are of interest. This study proposes and evaluates a trans",
+    "authors": [
+      "J. A. S. T. Jayakody",
+      "G. Thilakarathne",
+      "G. A. S. L. Ranasinghe",
+      "M. C. L. De Silva",
+      "K. A. D. S. A. Perera",
+      "G. M. R. I. Godaliyadda",
+      "H. M. V. R. Herath",
+      "M. P. B. Ekanayake",
+      "A. D. S. N. P. Athukorala",
+      "H. A. D. R. P. Sirimanna"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Asymptotic SINR Analysis of Linear Detectors in Uplink Massive NTN MIMO Transmissions",
+    "url": "https://arxiv.org/abs/2611.16851v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "This paper examines the performance degradation of receivers caused by imperfect channel state information (CSI), arising from training-based and semi-blind channel estimation techniques. We focus on the uplink of massive multiple-input multiple-output (MIMO) systems operating in time-division duplexing (TDD) mode, considering the asymptotic regime where the number of base station (BS) antennas grows large while the number of users remains fixed. Leveraging random matrix theory (RMT), we analyze",
+    "authors": [
+      "Xue Zhang",
+      "Abla Kammoun",
+      "Mohamed-Slim Alouini"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "RadarML: A Multi-Channel Over-the-Air Dataset of Common Radar Waveforms for ES Evaluation",
+    "url": "https://arxiv.org/abs/2611.16786v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "This paper introduces \"RadarML\", a publicly available dataset of modulated radar pulses recorded over-the-air across multiple semi-independent receiver channels. The dataset was generated using the UCL ARESTOR platform which is a Radio Frequency System on a Chip (RFSoC) based Software Defined Radio (SDR). The dataset contains a library of around two million waveforms with varying centre frequencies, bandwidths, pulse widths and modulations, with 1,000 examples of each signal variation per receiv",
+    "authors": [
+      "Ryan White",
+      "Adam Hosford",
+      "Matthew A. Ritchie"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Large Pockels Effect in Multiaxial Ferroelectrics Induced by Polarization Reorientation",
+    "url": "https://arxiv.org/abs/2611.16773v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "Materials with large linear electro-optic (Pockels) effect have significant potential for fabricating energy-efficient photonic devices. Previous strategies have mostly relied on structural softness---associated with phase boundary, domain wall, or strain induced phase transition---to create large Pockels effect in ferroelectrics. In this Letter, we show that polarization reorientation in multiaxial ferroelectrics may create structural softness and thus induce large Pockels effect. By developing",
+    "authors": [
+      "Zhijun Jiang",
+      "Jinyang Ni",
+      "Hong Jian Zhao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Metric random tilings: exact entropy and the diffraction of counted disorder",
+    "url": "https://arxiv.org/abs/2611.16730v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "Tiling mathematics has twice become the language of a state of matter: crystals, then quasicrystals, whose thermodynamics are described by the random tiling of fixed shapes. There the counted variable is the arrangement rather than the geometry, although the metric is what chemical design sets and diffraction measures. Here we introduce metric random tilings, periodic networks of locked topology whose edge lengths fluctuate under exact face closure, so that the geometry itself is countable. Purp",
+    "authors": [
+      "Xinyan Wu",
+      "Qingqing Ji"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "A Dual-Branch Graph and Convolutional Network for Interpretable Movement EEG Classification",
+    "url": "https://arxiv.org/abs/2611.16609v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "Decoding upper-limb movements from scalp electroencephalography (EEG) is an important problem for brain-computer interfaces (BCIs), but many deep learning models provide limited insight into the brain regions underlying their predictions. We propose a two-branch architecture that combines an LGGNet-inspired local-global graph branch with an EEGNet-style convolutional branch for movement-versus-rest classification. The graph branch groups 61 EEG electrodes into anatomically informed regions and l",
+    "authors": [
+      "Maryam Ostadsharif Memar",
+      "Behzad Nazari"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Delta-Iterations: A General-Purpose Linear Regression Solver for Huber's Penalty, $ε$-Insensitive Loss, and Other Moreau Envelope-Based Loss Functions",
+    "url": "https://arxiv.org/abs/2611.16558v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "A general-purpose linear regression solver for a class of smooth loss functions is presented. The method applies to loss functions of the Moreau envelope type, which are continuously differentiable and have Lipschitz-continuous first derivatives. This class includes piecewise-defined cost functions consisting of constant, linear and quadratic segments, such as Huber's loss, insensitive least squares, one-sided least squares. The convergence guarantee provided by the associated proximal operator,",
+    "authors": [
+      "Cagatay Candan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Flexible Intelligent Metasurfaces for Enhancing Secure MISO Communications",
+    "url": "https://arxiv.org/abs/2611.16411v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "This letter investigates flexible intelligent metasurface (FIM)-aided secure multiple-input single-output (MISO) communications in the presence of a multi-antenna eavesdropper. By exploiting the morphing capability of the FIM, the transmit array geometry can be dynamically reconfigured to reshape the legitimate and eavesdropping channels. We formulate a secrecy rate maximization (SRM) problem by jointly optimizing the transmit covariance matrix and the FIM surface shape. For a given FIM surface ",
+    "authors": [
+      "Zihao Teng",
+      "Zihao Zhao",
+      "Jiancheng An",
+      "Lu Gan",
+      "Arumugam Nallanathan",
+      "Bo Ai"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "SPEC CPU2026 Under the Microscope: Programs, Phases, and Samples",
+    "url": "https://arxiv.org/abs/2611.16376v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "SPEC CPU2026, the latest generation of the SPEC CPU benchmarks, is set to become the standard benchmark suite in computer architecture research, where new designs are often evaluated through sampled simulation with tools such as SimPoint. Existing characterizations of the suite focus on whole-run averages, which reveal neither how behavior changes within a run nor how well sampling captures it. We characterize CPU2026 on real hardware at three levels: programs, phases, and samples. At the progra",
+    "authors": [
+      "Peijun Li",
+      "Pei-Hung Lin",
+      "Tianming Cui",
+      "Caiwen Ding",
+      "Yang Katie Zhao",
+      "Maya Gokhale"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Vector-Space Projection and Unified Complex-Valued Acceleration for Scaling Matrix-Based Brain-Inspired Representations",
+    "url": "https://arxiv.org/abs/2611.16363v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "Symbolic reasoning at scale requires representations that are both expressive and hardware-efficient. Hyperdimensional Computing (HDC) provides a promising brain-inspired framework, encoding concepts as high-dimensional vectors composed through efficient algebraic operations. However, the widely used Fourier Holographic Reduced Representation (FHRR) relies on commutative binding, which cannot encode order or directionality. Prior FPGA/ASIC accelerators recover this through costly permutation log",
+    "authors": [
+      "William Youngwoo Chung",
+      "Hyunwoo Oh",
+      "Calvin Yeung",
+      "Hansen Jin Lillemark",
+      "Hamza Errahmouni Barkam",
+      "Mohsen Imani"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Physics-Aware Transformer-Based Beamforming Optimization for Near-Field E-MIMO ISAC Systems",
+    "url": "https://arxiv.org/abs/2611.16305v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "This paper proposes a physics-aware Transformer-based beamforming optimization (PATBO) framework for near-field extreme massive multiple-input multiple-output integrated sensing and communication (E-MIMO-ISAC) systems. PATBO combines regularized zero-forcing (RZF) communication directions and spherical-wave near-field sensing directions with learned stream-power allocation. A token-preserving Transformer maintains the correspondence between individual users/targets and their allocated powers, wh",
+    "authors": [
+      "Mohsin Ali",
+      "Abdulahi Abiodun Badrudeen",
+      "Azharul Islam",
+      "Sunwoo Kim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Bright and Uniform Silicon Carbide Nanophotonic Arrays for Scalable Nanoscale Quantum Sensing",
+    "url": "https://arxiv.org/abs/2611.16252v1",
+    "published_date": "2026-11-12",
+    "source": "arXiv",
+    "summary": "Silicon carbide (SiC) spin defects are emerging as powerful platforms for nanoscale quantum sensing due to their near-surface stability, near-infrared emission, and CMOS compatibility. However, poor photon collection efficiency and the reliance on randomly distributed defects hinder the realization of practical, large-scale devices. Here, we demonstrate scalable, ultra-bright, and highly uniform SiC quantum nanophotonic arrays. By combining a self-aligned fabrication process with localized oxyge",
+    "authors": [
+      "Chenyang Liao",
+      "Chihang Luo",
+      "Xin Chen",
+      "Cunliang Xin",
+      "Hongfang Zuo",
+      "Haoyu Sun",
+      "Fazhan Shi",
+      "Mengqi Wang",
+      "Ya Wang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.AR",
     "title": "SkipLane: Write-Once, Conflict-Free Accumulation for Zero-Skipping CNN Engines on FPGAs",
     "url": "https://arxiv.org/abs/2611.14495v1",

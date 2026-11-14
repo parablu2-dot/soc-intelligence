@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-13",
-  "generated_at": "2026-11-13T01:09:11.114279+00:00",
+  "date": "2026-11-14",
+  "generated_at": "2026-11-14T00:51:20.915495+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-11-13",
+      "date": "2026-11-14",
       "item_count": 1,
-      "generated_at": "2026-11-13T01:09:11.113075+00:00",
+      "generated_at": "2026-11-14T00:51:20.914905+00:00",
       "content": {
         "ko": {
           "executive_summary": "",
@@ -24,211 +24,171 @@
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-11-13",
-      "item_count": 12,
-      "generated_at": "2026-11-13T01:09:11.113075+00:00",
+      "date": "2026-11-14",
+      "item_count": 5,
+      "generated_at": "2026-11-14T00:51:20.914905+00:00",
       "content": {
         "ko": {
-          "executive_summary": "China's AI chip shortage is redirecting eSSD supply from domestic to U.S. markets, with Samsung and SK Hynix shifting allocation. SK Hynix is executing aggressive workforce expansion in production roles with performance incentives reaching 2964% bonuses, signaling confidence in HPC demand scaling.",
+          "executive_summary": "SK hynix는 AI 전환(AX) 시대의 인재 전략으로 신입채용에서 학력제한을 전면 폐지했다. Samsung Foundry는 모든 고도화 공정에서 Synopsys와의 협력을 확대하고 있으며, 향후 GPU 투자 물결이 한국의 HBM 성장을 견인할 전망이다.",
           "key_facts": [
-            "Samsung and SK Hynix redirecting eSSD orders from China to U.S. due to AI chip shortage",
-            "HBM market projected to reach USD 69.75 billion",
-            "SK Hynix recruiting H2 production staff with bonus incentives exceeding 2964%",
-            "Hyperscalers committing billions to next-generation data center accelerators",
-            "CEA-Leti and Armenia discussing semiconductor research center establishment"
+            "SK hynix: 신입채용 학력제한 전면 폐지",
+            "Samsung Foundry: Synopsys와 전 고도화 노드 공정 협력 확대",
+            "한국 HBM 성장: 차세대 GPU 투자 물결과 연계"
           ],
           "implications": [
             {
-              "keyword": "Supply Chain Reorientation",
-              "text": "China-facing eSSD capacity diverted westward indicates geopolitical tensions reshaping semiconductor logistics; Korean suppliers gaining U.S. market access."
+              "keyword": "인재 확보",
+              "text": "SK hynix의 학력제한 폐지는 AI 반도체 설계 및 공정 분야 인재 풀 확대를 통해 경쟁력 강화 전략"
             },
             {
-              "keyword": "HPC Talent Competition",
-              "text": "SK Hynix removing educational prerequisites and offering exceptional bonuses reflects acute production capacity pressure and talent scarcity in memory manufacturing."
-            },
-            {
-              "keyword": "HBM Expansion",
-              "text": "Projected $69.75B HBM market growth drives memory manufacturer capital intensity and hiring across packaging and production."
+              "keyword": "HBM 공급망",
+              "text": "Nvidia 경영진 변화에도 불구하고 한국의 HBM 공급이 차세대 GPU 아키텍처의 핵심 병목이 될 가능성"
             }
           ],
-          "counterpoint": "SK Hynix recruitment spike may reflect cyclical production surge rather than sustained demand; bonus structure sustainability questionable if AI capex cycle normalizes."
+          "counterpoint": ""
         },
         "en": {
-          "executive_summary": "China's AI chip shortage is redirecting eSSD supply from domestic to U.S. markets, with Samsung and SK Hynix shifting allocation. SK Hynix is executing aggressive workforce expansion in production roles with performance incentives reaching 2964% bonuses, signaling confidence in HPC demand scaling.",
+          "executive_summary": "SK hynix has abolished academic background restrictions in new hiring as a talent strategy for the AI transformation (AX) era. Samsung Foundry is expanding collaboration with Synopsys across all advanced process nodes, and the next wave of GPU investment is expected to drive Korea's HBM growth.",
           "key_facts": [
-            "Samsung and SK Hynix redirecting eSSD orders from China to U.S. due to AI chip shortage",
-            "HBM market projected to reach USD 69.75 billion",
-            "SK Hynix recruiting H2 production staff with bonus incentives exceeding 2964%",
-            "Hyperscalers committing billions to next-generation data center accelerators",
-            "CEA-Leti and Armenia discussing semiconductor research center establishment"
+            "SK hynix: Abolished academic background restrictions in new hiring",
+            "Samsung Foundry: Expanded collaboration with Synopsys across all advanced process nodes",
+            "Korea's HBM growth: Linked to next-generation GPU investment wave"
           ],
           "implications": [
             {
-              "keyword": "Supply Chain Reorientation",
-              "text": "China-facing eSSD capacity diverted westward indicates geopolitical tensions reshaping semiconductor logistics; Korean suppliers gaining U.S. market access."
+              "keyword": "Talent acquisition",
+              "text": "SK hynix's removal of academic restrictions is a strategy to strengthen competitiveness by expanding the talent pool in AI semiconductor design and process fields"
             },
             {
-              "keyword": "HPC Talent Competition",
-              "text": "SK Hynix removing educational prerequisites and offering exceptional bonuses reflects acute production capacity pressure and talent scarcity in memory manufacturing."
-            },
-            {
-              "keyword": "HBM Expansion",
-              "text": "Projected $69.75B HBM market growth drives memory manufacturer capital intensity and hiring across packaging and production."
+              "keyword": "HBM supply chain",
+              "text": "Despite changes in Nvidia's leadership, Korea's HBM supply could become a critical bottleneck in next-generation GPU architecture"
             }
           ],
-          "counterpoint": "SK Hynix recruitment spike may reflect cyclical production surge rather than sustained demand; bonus structure sustainability questionable if AI capex cycle normalizes."
+          "counterpoint": ""
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-11-13",
-      "item_count": 24,
-      "generated_at": "2026-11-13T01:09:11.113075+00:00",
+      "date": "2026-11-14",
+      "item_count": 19,
+      "generated_at": "2026-11-14T00:51:20.914905+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Google significantly expands proprietary AI chip portfolio with TPU 8tx and TPU 8i Max systems, positioning Arm-based Axion as inference alternative and creating supply diversification opportunities for Samsung and SK Hynix. NVIDIA leadership crisis—Jensen Huang's resignation—reshapes competitive dynamics as Anthropic and OpenAI advance AI-assisted chip design methodologies.",
+          "executive_summary": "Google이 Tensor Processing Unit(TPU) 8세대에 기밀 처리 전용 TPU 8tx와 듀얼칩 TPU 8i Max를 추가했다. 이는 Nvidia의 범용 GPU 지위에 대한 직접적인 도전이며, Nvidia 경영진 변화로 인한 시장 기회 확대로 대만 ASIC 주식이 강세를 보이고 있다. Semifive는 AI/HPC 주문으로 사상 최대 245.5억 원의 수주잔고를 기록했다.",
           "key_facts": [
-            "Google unveils TPU 8tx and TPU 8i Max AI systems with Arm-based Axion architecture",
-            "Google inference TPU volume now exceeds training TPU deployment",
-            "Anthropic and OpenAI using AI to design AI chips",
-            "Luminal secures $25 million funding for AI inference cost reduction",
-            "Jensen Huang resigns all roles at NVIDIA; Colette Cress assumes interim CEO",
-            "Shanghai chip supplier Innolight advancing IPO targeting 3 billion yuan",
-            "Alphabet stock climbs 3% on AI chip expansion; Microsoft +2%, Amazon marginal gain",
-            "Taiwan 00413A ETF rises 4% on TSMC ecosystem focus"
+            "Google: TPU 8tx(기밀 처리용), TPU 8i Max(듀얼칩 추가)",
+            "Nvidia: Jensen Huang CEO 사임으로 경영진 변화",
+            "대만 ASIC 주식: 3개 종목 漲停, Global Unichip 역대 둘째 높은 주가 기록",
+            "Semifive: 245.5억 원 AI/HPC 수주잔고(사상 최대)",
+            "ASICland: Q3 영업이익 14억 원, 전년동기 흑자전환",
+            "Alphabet: Cloud 매출 100% 이상 증가, 고객 데이터센터 내 커스텀 AI 칩 배포"
           ],
           "implications": [
             {
-              "keyword": "Vertical Integration Acceleration",
-              "text": "Google's expanded TPU lineup and Arm-Axion deployment signals hyperscaler commitment to chip sovereignty, reducing NVIDIA dependency and creating foundry volume for Samsung/SK Hynix memory integration."
+              "keyword": "커스텀 ASIC 경쟁",
+              "text": "Google의 TPU 확장과 Alphabet의 클라우드 매출 급증은 엔드-투-엔드 AI 칩 전략이 Nvidia 의존도를 낮추는 방향을 제시"
             },
             {
-              "keyword": "Inference Monetization",
-              "text": "TPU 8i Max inference volumes exceeding training represents margin expansion opportunity; Luminal $25M raise targets cost optimization, intensifying price competition in inference services."
+              "keyword": "ASIC 설계 기회",
+              "text": "Nvidia 지배력 약화로 Semifive, ASICland 등 한대만 ASIC 설계사가 AI/HPC 수주 기회 획기적 증가"
             },
             {
-              "keyword": "NVIDIA Leadership Vacuum",
-              "text": "Huang resignation creates strategic uncertainty; interim CFO leadership signals governance crisis that could accelerate customer diversification toward Google, AMD, and custom silicon."
-            },
-            {
-              "keyword": "AI Design Automation",
-              "text": "Anthropic/OpenAI AI-designed chips reduce design cycle time and capital barriers, enabling new custom SoC entrants and threatening traditional design methodology incumbents."
+              "keyword": "Nvidia 경영 공백",
+              "text": "Huang 사임으로 인한 리더십 불확실성이 경쟁사(AMD, Qualcomm, 중국 업체)의 시장 점유율 회수 기회 창출"
             }
           ],
-          "counterpoint": "Google TPU architectural maturity and production economics remain unproven at scale compared to established NVIDIA demand; NVIDIA's dominant installed base and software ecosystem provide near-term resilience despite leadership turmoil."
+          "counterpoint": "Nvidia 경영 변화가 최종 확정되지 않았고 후임 CEO의 실행력이 아직 검증되지 않아 시장 영향도 변동 가능"
         },
         "en": {
-          "executive_summary": "Google significantly expands proprietary AI chip portfolio with TPU 8tx and TPU 8i Max systems, positioning Arm-based Axion as inference alternative and creating supply diversification opportunities for Samsung and SK Hynix. NVIDIA leadership crisis—Jensen Huang's resignation—reshapes competitive dynamics as Anthropic and OpenAI advance AI-assisted chip design methodologies.",
+          "executive_summary": "Google has added confidential computing-dedicated TPU 8tx and dual-chip TPU 8i Max to its 8th generation Tensor Processing Unit (TPU) lineup. This represents a direct challenge to Nvidia's position in general-purpose GPUs, and amid leadership changes at Nvidia, Taiwan's ASIC stocks have shown strength as market opportunities expand. Semifive has recorded a record 24.55 billion won in AI/HPC order backlog.",
           "key_facts": [
-            "Google unveils TPU 8tx and TPU 8i Max AI systems with Arm-based Axion architecture",
-            "Google inference TPU volume now exceeds training TPU deployment",
-            "Anthropic and OpenAI using AI to design AI chips",
-            "Luminal secures $25 million funding for AI inference cost reduction",
-            "Jensen Huang resigns all roles at NVIDIA; Colette Cress assumes interim CEO",
-            "Shanghai chip supplier Innolight advancing IPO targeting 3 billion yuan",
-            "Alphabet stock climbs 3% on AI chip expansion; Microsoft +2%, Amazon marginal gain",
-            "Taiwan 00413A ETF rises 4% on TSMC ecosystem focus"
+            "Google: TPU 8tx (confidential computing), TPU 8i Max (dual-chip addition)",
+            "Nvidia: CEO Jensen Huang's resignation leads to leadership change",
+            "Taiwan's ASIC stocks: 3 stocks hit daily limits, Global Unichip reaches second-highest stock price on record",
+            "Semifive: 24.55 billion won AI/HPC order backlog (record high)",
+            "ASICland: Q3 operating profit 1.4 billion won, turned profitable year-over-year",
+            "Alphabet: Cloud revenue increased over 100%, deploying custom AI chips in customer datacenters"
           ],
           "implications": [
             {
-              "keyword": "Vertical Integration Acceleration",
-              "text": "Google's expanded TPU lineup and Arm-Axion deployment signals hyperscaler commitment to chip sovereignty, reducing NVIDIA dependency and creating foundry volume for Samsung/SK Hynix memory integration."
+              "keyword": "Custom ASIC competition",
+              "text": "Google's TPU expansion and Alphabet's surging cloud revenue demonstrate that an end-to-end AI chip strategy can reduce Nvidia dependence"
             },
             {
-              "keyword": "Inference Monetization",
-              "text": "TPU 8i Max inference volumes exceeding training represents margin expansion opportunity; Luminal $25M raise targets cost optimization, intensifying price competition in inference services."
+              "keyword": "ASIC design opportunities",
+              "text": "Weakening of Nvidia's dominance has led to a dramatic increase in AI/HPC orders for Korean and Taiwan ASIC design firms like Semifive and ASICland"
             },
             {
-              "keyword": "NVIDIA Leadership Vacuum",
-              "text": "Huang resignation creates strategic uncertainty; interim CFO leadership signals governance crisis that could accelerate customer diversification toward Google, AMD, and custom silicon."
-            },
-            {
-              "keyword": "AI Design Automation",
-              "text": "Anthropic/OpenAI AI-designed chips reduce design cycle time and capital barriers, enabling new custom SoC entrants and threatening traditional design methodology incumbents."
+              "keyword": "Nvidia's leadership vacuum",
+              "text": "Leadership uncertainty from Huang's resignation creates opportunities for competitors (AMD, Qualcomm, Chinese firms) to recapture market share"
             }
           ],
-          "counterpoint": "Google TPU architectural maturity and production economics remain unproven at scale compared to established NVIDIA demand; NVIDIA's dominant installed base and software ecosystem provide near-term resilience despite leadership turmoil."
+          "counterpoint": "Nvidia's leadership transition has not been finalized and the successor CEO's execution capability remains unproven, so market impact may remain uncertain"
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-11-13",
-      "item_count": 24,
-      "generated_at": "2026-11-13T01:09:11.113075+00:00",
+      "date": "2026-11-14",
+      "item_count": 23,
+      "generated_at": "2026-11-14T00:51:20.914905+00:00",
       "content": {
         "ko": {
-          "executive_summary": "TSMC expands 3nm capacity in Kumamoto amid 'endless' AI chip demand, while Samsung commits 46 trillion won HBM hub investment at Onyang by 2028, intensifying memory-foundry co-integration competition. NVIDIA CEO Jensen Huang's resignation triggers global supply chain uncertainty; interim CFO Colette Cress assumes leadership as geopolitical intelligence allegations complicate competitive dynamics.",
+          "executive_summary": "TSMC는 2026년 5월 매출 보고서와 이사회 결의를 발표했으며, SMIC는 2027년을 넘어 2028년 상반까지 용량 수급 상황이 극팽할 수 있음을 시사했다(장비 리드타임 16-24개월). Nvidia 경영진 변화 속에서 TSMC는 완충 역할을 하고 있으며, AMD와 다른 경쟁업체들이 점유율 획득 기회를 노리고 있다.",
           "key_facts": [
-            "TSMC approves 3nm at second Kumamoto fab; CEO Kevin Zhang cites 'endless' AI demand",
-            "Samsung plans KRW 46 trillion Onyang HBM hub with five production lines, accelerating 2028 operations launch by one year",
-            "Jensen Huang resigns as NVIDIA founder-CEO after 33 years; Colette Cress interim CEO",
-            "Alice Huang (Huang's affair partner) intelligence concerns trigger U.S. counterintelligence investigation",
-            "National Pension Fund suffers ~4 trillion won NVIDIA valuation loss in four months",
-            "Trump nominates Tim Cook as potential NVIDIA CEO successor",
-            "China denies Alice Huang espionage allegations as U.S. tech containment tactic",
-            "Memory price hikes planned amid enterprise-consumer demand divergence"
+            "TSMC: 2026년 5월 매출 보고서 및 이사회 결의 발표",
+            "SMIC: 2027년 이후 용량 부족 지속 가능성, 장비 리드타임 16-24개월",
+            "Samsung 온양캠퍼스: 6조 원 투자 HBM 첨단 패키징 시설 5라인 착공",
+            "Nvidia GPU 공급: 한국 정부 확인 결과 26만장 공급 계획 유지"
           ],
           "implications": [
             {
-              "keyword": "Capacity Race Acceleration",
-              "text": "TSMC 3nm Kumamoto expansion and Samsung Onyang HBM hub both targeting 2028 operations create duopoly memory-logic co-supply competition; capacity additions signal confidence in multi-year AI infrastructure cycle."
+              "keyword": "파운드리 경쟁 심화",
+              "text": "SMIC의 용량 부족과 TSMC의 안정적 공급이 고객 다변화 기회를 만들어 삼성파운드리 등 2~3순위 선택을 가속화"
             },
             {
-              "keyword": "Geopolitical-Commercial Blur",
-              "text": "NVIDIA CEO intelligence allegations and U.S. counterintelligence scrutiny inject political risk into semiconductor supply chain; Taiwan/Korea favor vs. China dynamics now weaponized via executive vetting."
+              "keyword": "HBM 공급망 중요성",
+              "text": "Samsung의 HBM 첨단 패키징 투자 확대는 AI 메모리 병목 해소를 통해 GPU 공급망의 전체 효율성 제고"
             },
             {
-              "keyword": "Leadership Vacuum Risk",
-              "text": "NVIDIA interim CFO leadership during multi-year AI capex cycle creates technology roadmap and partnership continuity risk; customer defection to TSMC custom silicon accelerates."
-            },
-            {
-              "keyword": "Price Power Divergence",
-              "text": "Planned memory price increases targeting enterprise AI while consumer demand softens indicates market segmentation; premium products insulate margins from commodity pressure."
+              "keyword": "정지정책 리스크",
+              "text": "Nvidia 경영 변화로 인한 공급 차질 우려가 정부 수준의 개입을 초래하며 반도체 공급망 국가전략화 심화"
             }
           ],
-          "counterpoint": "Samsung's 46T won Onyang investment scale and 2028 timeline subject to demand validation risk; NVIDIA's interim leadership may stabilize faster than geopolitical narratives suggest given Cress' financial credibility."
+          "counterpoint": "비반도체 뉘스(호주 캠핑 소년 사건 등) 포함으로 인해 foundry 섹터의 명확한 시장 신호 해석에 제약"
         },
         "en": {
-          "executive_summary": "TSMC expands 3nm capacity in Kumamoto amid 'endless' AI chip demand, while Samsung commits 46 trillion won HBM hub investment at Onyang by 2028, intensifying memory-foundry co-integration competition. NVIDIA CEO Jensen Huang's resignation triggers global supply chain uncertainty; interim CFO Colette Cress assumes leadership as geopolitical intelligence allegations complicate competitive dynamics.",
+          "executive_summary": "TSMC released its May 2026 revenue report and board resolutions, while SMIC indicated that capacity constraints could intensify beyond 2027 through the first half of 2028 (equipment lead time 16-24 months). Amid Nvidia's leadership transition, TSMC is playing a stabilizing role, while AMD and other competitors are seeking opportunities to capture market share.",
           "key_facts": [
-            "TSMC approves 3nm at second Kumamoto fab; CEO Kevin Zhang cites 'endless' AI demand",
-            "Samsung plans KRW 46 trillion Onyang HBM hub with five production lines, accelerating 2028 operations launch by one year",
-            "Jensen Huang resigns as NVIDIA founder-CEO after 33 years; Colette Cress interim CEO",
-            "Alice Huang (Huang's affair partner) intelligence concerns trigger U.S. counterintelligence investigation",
-            "National Pension Fund suffers ~4 trillion won NVIDIA valuation loss in four months",
-            "Trump nominates Tim Cook as potential NVIDIA CEO successor",
-            "China denies Alice Huang espionage allegations as U.S. tech containment tactic",
-            "Memory price hikes planned amid enterprise-consumer demand divergence"
+            "TSMC: Released May 2026 revenue report and board resolutions",
+            "SMIC: Potential sustained capacity shortage beyond 2027, equipment lead time 16-24 months",
+            "Samsung's Onyangcampus: Groundbreaking 5 advanced HBM packaging production lines with 6 trillion won investment",
+            "Nvidia GPU supply: Korean government confirmed plan to maintain 260,000-unit supply"
           ],
           "implications": [
             {
-              "keyword": "Capacity Race Acceleration",
-              "text": "TSMC 3nm Kumamoto expansion and Samsung Onyang HBM hub both targeting 2028 operations create duopoly memory-logic co-supply competition; capacity additions signal confidence in multi-year AI infrastructure cycle."
+              "keyword": "Intensifying foundry competition",
+              "text": "SMIC's capacity shortage and TSMC's stable supply create diversification opportunities for customers, accelerating selection of second and third-tier foundries like Samsung Foundry"
             },
             {
-              "keyword": "Geopolitical-Commercial Blur",
-              "text": "NVIDIA CEO intelligence allegations and U.S. counterintelligence scrutiny inject political risk into semiconductor supply chain; Taiwan/Korea favor vs. China dynamics now weaponized via executive vetting."
+              "keyword": "HBM supply chain importance",
+              "text": "Samsung's increased HBM advanced packaging investment enhances overall supply chain efficiency by resolving AI memory bottlenecks in GPU supply"
             },
             {
-              "keyword": "Leadership Vacuum Risk",
-              "text": "NVIDIA interim CFO leadership during multi-year AI capex cycle creates technology roadmap and partnership continuity risk; customer defection to TSMC custom silicon accelerates."
-            },
-            {
-              "keyword": "Price Power Divergence",
-              "text": "Planned memory price increases targeting enterprise AI while consumer demand softens indicates market segmentation; premium products insulate margins from commodity pressure."
+              "keyword": "Supply policy risk",
+              "text": "Concerns over supply disruption from Nvidia's leadership changes have prompted government-level intervention, deepening the nationalization of semiconductor supply chain strategy"
             }
           ],
-          "counterpoint": "Samsung's 46T won Onyang investment scale and 2028 timeline subject to demand validation risk; NVIDIA's interim leadership may stabilize faster than geopolitical narratives suggest given Cress' financial credibility."
+          "counterpoint": "Inclusion of non-semiconductor news (Australian camping incident) constrains clarity in interpreting foundry sector market signals"
         }
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-11-13",
-      "item_count": 18,
-      "generated_at": "2026-11-13T01:09:11.113075+00:00",
+      "date": "2026-11-14",
+      "item_count": 13,
+      "generated_at": "2026-11-14T00:51:20.914905+00:00",
       "content": {
         "ko": {},
         "en": {}
