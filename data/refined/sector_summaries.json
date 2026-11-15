@@ -1,204 +1,76 @@
 {
-  "date": "2026-11-14",
-  "generated_at": "2026-11-14T23:45:18.333006+00:00",
+  "date": "2026-11-15",
+  "generated_at": "2026-11-15T23:53:45.168440+00:00",
   "sectors": {
-    "mobile_ap": {
-      "sector": "Mobile AP",
-      "date": "2026-11-14",
-      "item_count": 1,
-      "generated_at": "2026-11-14T23:45:18.332300+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "",
-          "key_facts": [],
-          "implications": [],
-          "counterpoint": ""
-        },
-        "en": {
-          "executive_summary": "",
-          "key_facts": [],
-          "implications": [],
-          "counterpoint": ""
-        }
-      }
-    },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-11-14",
-      "item_count": 7,
-      "generated_at": "2026-11-14T23:45:18.332300+00:00",
+      "date": "2026-11-15",
+      "item_count": 2,
+      "generated_at": "2026-11-15T23:53:45.168081+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Nvidia의 리더십 공백에도 한국 정부는 26만 장의 GPU 공급 계획을 재확인했으며, SK하이닉스와 TSMC는 채용 확대와 고급 노드 협력으로 데이터센터 경쟁력 강화에 나섰다. HBM 성장이 Korea의 핵심 기회로 대두되면서 공급망 정렬이 가속화되고 있다.",
+          "executive_summary": "Nvidia expands R&D footprint with Shanghai center, while SK Hynix removes credential barriers in new hiring to strengthen talent acquisition amid competitive pressures.",
           "key_facts": [
-            "엔비디아 한국 공급 26만 장 유지",
-            "SK하이닉스 신입채용 학력제한 전면 폐지",
-            "Samsung Foundry와 Synopsys 모든 고급 노드 협력 확대",
-            "TSMC 피닉스 공장 확장으로 베테랑 채용"
+            "Nvidia establishes R&D center in Shanghai",
+            "SK Hynix implements open recruitment for new graduates, prioritizing growth potential over educational credentials"
           ],
           "implications": [
             {
-              "keyword": "공급망 안정성",
-              "text": "Huang 사임 후에도 정부 주도 GPU 공급 보장으로 AI 인프라 사업 연속성 확보"
+              "keyword": "China Strategy",
+              "text": "Nvidia's Shanghai R&D presence signals commitment to local innovation capabilities despite geopolitical constraints."
             },
             {
-              "keyword": "HBM 수요",
-              "text": "GPU 투자 확대 추세에서 한국 메모리 기업의 고대역폭 제품 수요 증가 전망"
-            },
-            {
-              "keyword": "경쟁 심화",
-              "text": "TSMC-Synopsys 협력 강화로 파운드리 첨단 노드 경쟁 고도화"
+              "keyword": "Talent Competition",
+              "text": "SK Hynix relaxing credential requirements reflects intensified competition for semiconductor engineering talent in Asia."
             }
           ],
-          "counterpoint": "Nvidia 리더십 불확실성이 지속되면 고객 신뢰 약화 가능성"
+          "counterpoint": "Nvidia's R&D expansion scope and investment level remain undisclosed."
         },
         "en": {
-          "executive_summary": "Despite Nvidia's leadership gap, the Korean government reconfirmed its plan to supply 260,000 GPUs, while SK Hynix and TSMC bolster datacenter competitiveness through expanded recruitment and advanced node collaboration. HBM growth emerges as a core opportunity for Korea, accelerating supply chain alignment.",
+          "executive_summary": "Nvidia expands R&D footprint with Shanghai center, while SK Hynix removes credential barriers in new hiring to strengthen talent acquisition amid competitive pressures.",
           "key_facts": [
-            "Nvidia Korea supply 260,000 units maintained",
-            "SK Hynix eliminates educational background requirements for new hires entirely",
-            "Samsung Foundry and Synopsys expand advanced node collaboration across all nodes",
-            "TSMC expands Phoenix facility with veteran hiring"
+            "Nvidia establishes R&D center in Shanghai",
+            "SK Hynix implements open recruitment for new graduates, prioritizing growth potential over educational credentials"
           ],
           "implications": [
             {
-              "keyword": "Supply chain stability",
-              "text": "Government-led GPU supply assurance post-Huang ensures business continuity for AI infrastructure projects"
+              "keyword": "China Strategy",
+              "text": "Nvidia's Shanghai R&D presence signals commitment to local innovation capabilities despite geopolitical constraints."
             },
             {
-              "keyword": "HBM demand",
-              "text": "Expanding GPU investment trend drives increased demand for Korean memory companies' high-bandwidth products"
-            },
-            {
-              "keyword": "Intensifying competition",
-              "text": "TSMC-Synopsys collaboration strengthens foundry advanced node competition"
+              "keyword": "Talent Competition",
+              "text": "SK Hynix relaxing credential requirements reflects intensified competition for semiconductor engineering talent in Asia."
             }
           ],
-          "counterpoint": "Continued Nvidia leadership uncertainty may weaken customer confidence"
+          "counterpoint": "Nvidia's R&D expansion scope and investment level remain undisclosed."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-11-14",
-      "item_count": 23,
-      "generated_at": "2026-11-14T23:45:18.332300+00:00",
+      "date": "2026-11-15",
+      "item_count": 9,
+      "generated_at": "2026-11-15T23:53:45.168081+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Google이 TPU 8tx와 TPU 8i Max를 발표하며 Nvidia의 범용 AI 칩 우위 약화를 시도하고 있으며, Semifive의 AI/HPC 백로그 기록(245.5억 원)과 ASICland의 분기 흑자 전환으로 커스텀 ASIC 수요가 가시화되고 있다. Huang 사임으로 촉발된 Nvidia 주가 급락 후 대만 ASIC 주식이 급등하며 산업 구도 재편 신호를 보이고 있다.",
-          "key_facts": [
-            "Google TPU 8tx, TPU 8i Max 공식 발표",
-            "Semifive AI/HPC 백로그 245.5억 원 기록",
-            "ASICland Q3 영업이익 14억 원 흑자 전환",
-            "Alphabet 클라우드 매출 2배 이상 증가",
-            "대만 ASIC 3개 주식 한계주 도달"
-          ],
-          "implications": [
-            {
-              "keyword": "ASIC 정상화",
-              "text": "Google·Amazon 등 Hyperscaler 자체 칩 투자 확대로 커스텀 ASIC 설계·검증 수요 폭증"
-            },
-            {
-              "keyword": "Nvidia 경쟁 위기",
-              "text": "TPU 8 라인업 확대와 Trainium 등 경쟁 칩 부상으로 범용 GPU 시장 기울기 가속"
-            },
-            {
-              "keyword": "한국 ASIC 팹리스 기회",
-              "text": "Semifive 같은 국내 ASIC 기업의 수주 호황으로 AI/HPC 커스텀 설계 시장 성장"
-            }
-          ],
-          "counterpoint": "Google TPU는 자사 클라우드 내부용 중심이라 Nvidia의 외부 판매 시장에 직접 영향은 제한적"
-        },
-        "en": {
-          "executive_summary": "Google announces TPU 8tx and TPU 8i Max, attempting to weaken Nvidia's general-purpose AI chip lead, while Semifive's record AI/HPC backlog (24.55 billion won) and ASICland's quarterly profit turnaround signal emerging custom ASIC demand. Post-Huang resignation, Nvidia's sharp stock decline followed by surging Taiwan ASIC stocks signals industry restructuring.",
-          "key_facts": [
-            "Google announces TPU 8tx and TPU 8i Max officially",
-            "Semifive AI/HPC backlog reaches 24.55 billion won",
-            "ASICland Q3 operating profit swings to 1.4 billion won profit",
-            "Alphabet Cloud revenue increases more than 2x",
-            "Three Taiwan ASIC stocks hit lower limits"
-          ],
-          "implications": [
-            {
-              "keyword": "ASIC normalization",
-              "text": "Hyperscalers including Google and Amazon expand in-house chip investment, surging custom ASIC design and verification demand"
-            },
-            {
-              "keyword": "Nvidia competitive crisis",
-              "text": "TPU 8 lineup expansion and rise of competing chips like Trainium accelerate general-purpose GPU market shift"
-            },
-            {
-              "keyword": "Korean ASIC fabless opportunity",
-              "text": "Domestic ASIC firms like Semifive benefit from order boom, driving AI/HPC custom design market growth"
-            }
-          ],
-          "counterpoint": "Google TPU is primarily focused on internal cloud use, limiting direct impact on Nvidia's external sales market"
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-11-14",
-      "item_count": 26,
-      "generated_at": "2026-11-14T23:45:18.332300+00:00",
+      "date": "2026-11-15",
+      "item_count": 13,
+      "generated_at": "2026-11-15T23:53:45.168081+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "SMIC가 2027년 이상 용량 부족과 16~24개월 장비 리드타임을 발표하며 파운드리 공급 압박 심화가 예상되는 가운데, Samsung 5라인 HBM 패키징 시설 착공과 TSMC 월간 수익 보고로 고대역폭 수요 기반이 굳혀지고 있다.",
-          "key_facts": [
-            "SMIC 용량 부족 2027년 이상 지속 예상",
-            "SMIC 장비 리드타임 16~24개월",
-            "Samsung 온양캠퍼스 5라인 HBM 패키징 시설 착공",
-            "TSMC 2026년 5월 월간 수익 발표",
-            "Nvidia 리더십 진공 상황 진행 중"
-          ],
-          "implications": [
-            {
-              "keyword": "파운드리 병목",
-              "text": "SMIC 공급 제약으로 2세 파운드리(중국계) 의존도 높은 고객 대체선 모색 필연"
-            },
-            {
-              "keyword": "HBM 패키징 경쟁",
-              "text": "Samsung 시설 확대로 고대역폭 메모리 후공정 용량 경쟁 심화 전망"
-            },
-            {
-              "keyword": "공급망 리스크",
-              "text": "Nvidia CEO 변화와 파운드리 용량 제약이 겹치면서 AI 칩 공급망 변동성 증대"
-            }
-          ],
-          "counterpoint": "TSMC 월간 수익 안정성은 아직 Samsung이나 중국 파운드리 경쟁 심화 정도를 상쇄하기에 충분하지 않을 수 있음"
-        },
-        "en": {
-          "executive_summary": "SMIC announces capacity shortages through 2027 and equipment lead times of 16–24 months, signaling intensifying foundry supply pressure, while Samsung's Onyang campus 5-line HBM packaging facility groundbreaking and TSMC's monthly revenue reporting solidify high-bandwidth demand foundation.",
-          "key_facts": [
-            "SMIC capacity shortages expected to persist through 2027",
-            "SMIC equipment lead time 16–24 months",
-            "Samsung Onyang campus 5-line HBM packaging facility groundbreaking",
-            "TSMC monthly revenue reporting May 2026",
-            "Nvidia leadership vacuum ongoing"
-          ],
-          "implications": [
-            {
-              "keyword": "Foundry bottleneck",
-              "text": "SMIC supply constraints force customers with high China-based second-tier foundry dependence to seek alternatives"
-            },
-            {
-              "keyword": "HBM packaging competition",
-              "text": "Samsung facility expansion intensifies post-process capacity competition for high-bandwidth memory"
-            },
-            {
-              "keyword": "Supply chain risk",
-              "text": "Nvidia CEO transition overlapping with foundry capacity constraints increases AI chip supply chain volatility"
-            }
-          ],
-          "counterpoint": "TSMC's monthly revenue stability may not yet be sufficient to offset Samsung or Chinese foundry competitive intensification"
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-11-14",
-      "item_count": 15,
-      "generated_at": "2026-11-14T23:45:18.332300+00:00",
+      "date": "2026-11-15",
+      "item_count": 4,
+      "generated_at": "2026-11-15T23:53:45.168081+00:00",
       "content": {
         "ko": {},
         "en": {}
