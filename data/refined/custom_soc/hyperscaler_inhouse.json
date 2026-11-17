@@ -3,6 +3,19 @@
     "axis": "custom_soc",
     "company": "hyperscaler_inhouse",
     "category": "news",
+    "headline": "Use prompt caching with open-weight models on Amazon Bedrock",
+    "url": "https://aws.amazon.com/blogs/machine-learning/use-prompt-caching-with-open-weight-models-on-amazon-bedrock/",
+    "published_date": "2026-11-16",
+    "source": "AWS Blog",
+    "tags": [
+      "NPU"
+    ],
+    "summary": "Many generative AI applications resend the same long context on every request. Prompt caching lets open-weight models on Amazon Bedrock reuse it to reduce input cost and latency. This post shows implicit and explicit caching through the Chat Completions API and applies caching to an OpenCode coding agent session."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
+    "category": "news",
     "headline": "OpenFold3 on Amazon SageMaker JumpStart: Predict biomolecular structures",
     "url": "https://aws.amazon.com/blogs/machine-learning/openfold3-on-amazon-sagemaker-jumpstart-predict-biomolecular-structures/",
     "published_date": "2026-11-13",

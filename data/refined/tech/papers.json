@@ -2,6 +2,377 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "eess.SP",
+    "title": "What Makes Good Datasets for Intelligent Multi-Modal Sensing-Communication Integration?",
+    "url": "https://arxiv.org/abs/2611.19206v1",
+    "published_date": "2026-11-14",
+    "source": "arXiv",
+    "summary": "Intelligent multi-modal sensing-communication integration, namely Synesthesia of Machines (SoM), represents an AI-native paradigm for enabling embodied intelligence and future wireless networks. Multi-modal sensing and communication foundation models developed for SoM learn cross-modal associations and generalizable environmental representations through large-scale pretraining, making the quality of pretraining datasets critical. However, existing methods lack unified evaluation of heterogeneous",
+    "authors": [
+      "Mingran Sun",
+      "Zengrui Han",
+      "Xuanyu Liu",
+      "Xuesong Cai",
+      "Xiang Cheng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "From Sensors to Silicon: Causal Cross-Layer Self-Healing Edge AI for Secure and Energy-Adaptive IoT Systems",
+    "url": "https://arxiv.org/abs/2611.19165v1",
+    "published_date": "2026-11-14",
+    "source": "arXiv",
+    "summary": "The migration of artificial intelligence from centralized cloud infrastructure to resource-constrained Internet-of-Things (IoT) devices reduces communication latency and improves data locality, but it also tightly couples sensing quality, inference behavior, microarchitectural activity, hardware reliability, security, and energy management within the same physical node. Existing edge-intelligence solutions predominantly address these dimensions in isolation, making it difficult to determine whet",
+    "authors": [
+      "Mostafa Darvishi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "HDR-DTCP: High-Dynamic-Range Differential Tissue-Coupled Wireless Powering for Tunable Biphasic Stimulation in Injectable Implants",
+    "url": "https://arxiv.org/abs/2611.19148v1",
+    "published_date": "2026-11-14",
+    "source": "arXiv",
+    "summary": "Next-generation implantable neurostimulators require efficient wireless power delivery in smaller, less invasive form factors, yet variations in tissue coupling, implantation conditions, and stimulation loads can alter received power (or requirements) and degrade energy-harvesting performance. This work presents high-dynamic-range (HDR) differential tissue-coupled powering (DTCP), termed HDR-DTCP, a body-coupled architecture in which noninvasive differential electrodes establish an AC electric f",
+    "authors": [
+      "Asif Iftekhar Omi",
+      "Anyu Jiang",
+      "Han Wu",
+      "Sultan Mahmud",
+      "Mali Halac",
+      "Shreyas Sen",
+      "Shriya Srinivasan",
+      "Adam Khalifa",
+      "Baibhab Chatterjee"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CE",
+    "title": "A predictive, per-engine energy roofline of the Apple Neural Engine",
+    "url": "https://arxiv.org/abs/2611.19101v1",
+    "published_date": "2026-11-14",
+    "source": "arXiv",
+    "summary": "The Apple Neural Engine (ANE) is in over a billion devices, but is characterized indirectly via CoreML. Using a CoreML-free fused-graph dispatch path, we measure the ANE, along with the Apple GPU and CPU on the same device, with per-engine energy accounting. The consumer-available roofline does not predict the ANE in practice. A critical correction is that the ANE sees two effective memory bandwidths: a slow activation path and a fast weight-stream path. Two roofline ridges follow, and the weigh",
+    "authors": [
+      "Spencer H. Bryngelson"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "HeteroWear: Sensor-Aware Self-Supervised Learning for Heterogeneous Wearable Activity Recognition",
+    "url": "https://arxiv.org/abs/2611.19027v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Self-supervised learning for wearable sensing is usually confined to a single dataset or device family, leaving open whether representations transfer across heterogeneous sensor configurations and whether gains come from pretraining rather than architecture or richer sensor input. We present HeteroWear, a sensor-aware self-supervised framework pretrained on an eight-dataset wearable corpus (173 subjects, 358,261 windows) spanning inertial and physiological signals across body locations, devices,",
+    "authors": [
+      "Yasaman Mohammadpour",
+      "Pouya Shaeri"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Adaptive nonorthogonal atomic orbitals refine charge transfer and bonding descriptors",
+    "url": "https://arxiv.org/abs/2611.19023v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "First-principles calculations implicitly encode bonding and charge transfer, but converting periodic electronic structure into interpretable and transferable descriptors remains challenging. Recently, we introduced Crystal Orbital Guided Iteration To atomic-Orbitals (COGITO), a tool for mapping plane-wave DFT back to an interpretable, minimal basis of adaptive atomic orbitals. Here, we show how the high-dimensional bonding information from COGITO can be reduced into chemically useful descriptors",
+    "authors": [
+      "Emily Oliphant",
+      "Emmanouil Kioupakis",
+      "Wenhao Sun"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Tunable Multi-Frequency-Band Generator and Detector of AC Signals Based on a Spin Hall Device with Two Antiferromagnetic Layers",
+    "url": "https://arxiv.org/abs/2611.19004v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Antiferromagnetic (AFM) spin Hall oscillators offer an electrical route to compact terahertz sources, while AFM spin Hall diodes can be used as a promising detectors of terahertz signals, however, their attainable frequency and the redout efficiency are constrained by the dynamics of a single AFM layer. We theoretically and numerically investigate a spin Hall multilayer junction Pt/AFM/Pt/AFM/Pt comprising two canted AFM layers, driven by independent drive DC currents flowing in the outer platin",
+    "authors": [
+      "Oleh Shtanko",
+      "Volodymyr Prokopenko",
+      "Oleksandr Prokopenko"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "NEMESIS2.0: LLM-Aided Netlist-Driven Performance Equation Modeling for Accelerated Analog Circuit Sizing",
+    "url": "https://arxiv.org/abs/2611.18995v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "This work presents NEMESIS2.0, an open-source LLM-aided framework that automatically derives equation-based performance models for analog circuits. The resulting equations provide fast, accurate surrogates for SPICE evaluation. To validate the method, equation-based models are developed for seven circuit test cases in a commercial 65nm CMOS technology, covering 15 metrics on five operational transconductance amplifier topologies, and six metrics on two dynamic comparator topologies. When tested ",
+    "authors": [
+      "Subhadip Ghosh",
+      "Ramesh Harjani",
+      "Sachin S. Sapatnekar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "Dual-Stage Channel-Posterior Integration for MLM-Aided Token Communications",
+    "url": "https://arxiv.org/abs/2611.18958v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Token transmission over conventional digital modulation is vulnerable to channel impairments, leading to bit errors that cause received tokens to become contextually inconsistent. This paper proposes a receiver-side dual-stage channel-posterior integration framework for masked language model (MLM)-aided token reconstruction. In the proposed framework, the receiver detects unreliable token positions from channel reliability and constructs a vocabulary-level channel-posterior. In particular, withi",
+    "authors": [
+      "Hyelin Nam",
+      "Jihoon Lee",
+      "Seung-Woo Ko",
+      "Jinho Choi",
+      "Seong-Lyun Kim"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "On-demand valley control in a WSe2/CrPS4 heterostructure via optically programmed magnetic order",
+    "url": "https://arxiv.org/abs/2611.18906v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "The ability to optically control the valley degree of freedom in two-dimensional semiconductors is critical for scalable valleytronics. While magnetic proximity effects can lift valley degeneracy, static interfaces lack the dynamic control needed for devices. Here, we demonstrate on-demand optical switching of valley symmetry breaking in a WSe2/CrPS4 heterostructure by exploiting light-tunable magnetic order. Using polarization- and time-resolved photoluminescence, we show that excitation below ",
+    "authors": [
+      "Muhammad Hassan Shaikh",
+      "Daria Blach",
+      "Harishankar Jayakumar",
+      "Brayan Eraso Solarte",
+      "Kenji Watanabe",
+      "Takashi Taniguchi",
+      "Yafei Ren",
+      "Archana Raja",
+      "Chitraleema Chakraborty"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Lasso: Towards Sustainable AI-Generated Media Detection with Intel QAT On-Chip Compression",
+    "url": "https://arxiv.org/abs/2611.18895v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Synthetic text, images, and video are rising. Software-only detectors are power-hungry, too slow, and costly, and do not scale with demand. When software cannot scale, historically hardware often comes to the rescue. We perform the first reverse engineering of a compression accelerator--Intel QuickAssist Technology (QAT) microarchitecture and--find different amount of time on each, a novel data structure-dependent property. Using this information, we then build Lasso, a low-cost, high-performanc",
+    "authors": [
+      "Darsh Asher",
+      "Joshua Kalyanapu",
+      "Kaushal Mhapsekar",
+      "Bita Aslrousta",
+      "Amna Hassan",
+      "Debayan Sengupta",
+      "Samira Mirbagher Ajorpaz"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Exstill: The Most Efficient Single-Chip Processor for the Next Token",
+    "url": "https://arxiv.org/abs/2611.18859v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Generating a token with a language model requires a fixed amount of arithmetic, whose energy sets a floor beneath any hardware. For Qwen3-1.7B at a 16K-token context, gate-level measurements at 5 nm place this floor at 0.89 mJ per token, yet an NVIDIA B300 spends 391-1,120x that. The excess is the price of generality, software layers, programmable hardware and moving weights and key-value (KV) caches from external memory, and it widens with each process generation. We present a co-design approac",
+    "authors": [
+      "Valavan Manohararajah",
+      "Vithursan Thangarasa"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "WaferTetris: Efficient Freeform Mapping on Wafer-Scale Accelerators",
+    "url": "https://arxiv.org/abs/2611.18527v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Wafer-scale accelerators offer massive compute capacity through hundreds of thousands of processing elements (PEs) interconnected across a single wafer, but realizing this potential requires efficient application mapping. Their scale makes programming these systems and mapping applications onto them challenging. Existing approaches rely on template-based mappings to maintain productivity, but these templates restrict the mapping design space. In particular, they impose fixed geometric layouts ov",
+    "authors": [
+      "Dayou Du",
+      "Congjie He",
+      "Andrew Boutros",
+      "Luo Mai",
+      "Vaughn Betz",
+      "Jianyi Cheng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Pressure and Magnetic Field Control of Topology in Antiferromagnetic Bilayers",
+    "url": "https://arxiv.org/abs/2611.18525v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Controlling band topology in magnetic semiconductors requires strategies that couple electronic structure to experimentally accessible degrees of freedom. Here we propose a cooperative approach based on pressure and magnetic reorientation in A-type antiferromagnetic bilayers. Antiparallel layer magnetizations suppress hybridization between exchange-polarized band-edge states, limiting their response to interlayer compression. A magnetic field that aligns the layer moments removes this spin misma",
+    "authors": [
+      "Narsimha Rao Elaprolu",
+      "Marco Gibertini"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "EventSpikeSeg: Memory-Aware Mixed-Signal Architecture for Event-Camera Spiking Segmentation",
+    "url": "https://arxiv.org/abs/2611.18524v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Event-camera segmentation requires persistent neural state despite sparse input events, making memory organization a central constraint on embedded implementation. We present EventSpikeSeg, a mixed-signal architecture combining resident capacitor memory with shared analog processing in GF180MCU 180-nm CMOS. Its 25-population spiking encoder-decoder has 143,824 synaptic weights but requires 30,976,000 membrane states at 440 x 640 resolution. The mapping specifies chronological 5-ms model updates,",
+    "authors": [
+      "Amir Mohammad Khadem Hosseini",
+      "Sattar Mirzakuchaki"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Mutable Inference: Architecting LLM Accelerators for Inference-Time Learning",
+    "url": "https://arxiv.org/abs/2611.18523v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Long-context LLMs must retain growing histories, but full attention makes each new token increasingly expensive. Inference-time learning (ITL) offers another approach. The model keeps training on the context during inference, retaining what it learns in its weights. Recent work shows that ITL can match full-context attention quality while attending only to a recent fixed-size window. This bounds attention costs but adds Learning (backward computation and weight updates) alongside Prediction (the",
+    "authors": [
+      "Yimin Gao",
+      "Liangtao Dai",
+      "Melika Morsali",
+      "Junting Huo",
+      "Mircea Stan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Blind in-memory arithmetic with confined skyrmions: doubling and successor functions on a skyrmion byte",
+    "url": "https://arxiv.org/abs/2611.18492v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "We present a skyrmionic-based computation platform, able to perform fully in-memory computing by collectively manipulating the skyrmions that serve as bits of the binary memory. The computation protocols are implemented through driving currents and adequately located anisotropy defects that modify the dynamics of the skyrmions along a magnetic track. Simulations demonstrating the feasibility of such an in-memory computing system are shown for several basic and simple mathematical operations with",
+    "authors": [
+      "Joan Reverté",
+      "Nuria Del-Valle",
+      "Jaume Cunill-Subiranas",
+      "Natanael Bort-Soldevila",
+      "Carles Navau"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "PACT: A Decoder-Confidence-Guided Two-Round Receiver for Joint Channel and Phase-Noise Estimation in Sub-THz OFDM",
+    "url": "https://arxiv.org/abs/2611.18450v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Frequency-selective fading and oscillator phase noise (PN) jointly impair coded sub-THz OFDM reception. We propose a decoder-confidence-guided two-round receiver combining a {pilot-aware complex transformer} (PACT) estimator, banded linear minimum mean-square error equalization, and neural normalized min-sum decoding. PACT jointly estimates the frequency-domain channel and effective time-domain PN through interacting complex-valued branches. Decoder-derived pseudo-pilots and continuous constella",
+    "authors": [
+      "Ruilin Wang",
+      "Xiaodai Dong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "High Entropy Oxides as Room Temperature Anderson Insulators with Colossal Soft Gaps",
+    "url": "https://arxiv.org/abs/2611.18433v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "The Anderson effect, arising from destructive quantum interference of electron wave packets in disordered potentials, is usually observed at cryogenic temperatures and typically arises from extrinsic defects in conventional materials such as phosphorus dopants in silicon or oxygen vacancies in transition metal oxides. Here we demonstrate that a multication lattice of transition metals in a high-entropy oxide (HEO) natively establishes an interacting Anderson insulator that extends up to $500\\,\\m",
+    "authors": [
+      "Elena Salagre",
+      "Heather Hare",
+      "Eli Rotenberg",
+      "Jonathan D. Denlinger",
+      "Joshua D. Sugar",
+      "Yiyang Li",
+      "Elliot J. Fuller"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Validating Graph Neural Network Feature Attribution Through Local Perturbations: A Study on CoMoFeNiCu Decomposition Enthalpy",
+    "url": "https://arxiv.org/abs/2611.18430v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Graph neural networks (GNNs) show promise for predicting materials properties, but interpretability remains a challenge, particularly understanding whether attributed feature importance reflects physical reality or statistical artifacts. Here, we present a methods validation study that deliberately overfits a physics-aware GNN ensemble to probe the robustness of feature-ranking approaches. Using the CoMoFeNiCu high-entropy alloy system with three stoichiometries, we train GNNs to predict decompo",
+    "authors": [
+      "Miguel Tenorio",
+      "James Chapman"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.RO",
+    "title": "The State Is Not the Bottleneck: A Paged-State Gated-DeltaNet Tile on a Tri-Mode Multicast Mesh, Bit-Exact from RTL to Silicon",
+    "url": "https://arxiv.org/abs/2611.18422v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Linear-attention language models replace a growing key-value cache with a recurrent state of fixed size. On an edge FPGA, this state can exceed the on-chip memory and must be paged to external memory. This paper asks whether such paging dominates the cost of decoding (generating tokens). We built a hardware tile that computes one complete layer of a custom 369-million-parameter hybrid Gated DeltaNet model on an Agilex 5 FPGA and pages its recurrent state. The model state needs 6.2 MiB, whereas t",
+    "authors": [
+      "Cong Xu",
+      "Ravi Sankar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Graph diffusion transformer for interpretable generation and inverse design of disordered atomic structures",
+    "url": "https://arxiv.org/abs/2611.18420v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Atomic disorder offers a potent degree of freedom to tailor material properties, yet the resulting vast configuration space obscures structure-property relations and hinders rational inverse design. Here we introduce Graph Amorphous Diffusion Transformer (GaDiT), a generative model that combines dynamic periodic graphs, masked conditioning and an interval-weighted training-noise distribution. GaDiT generates high-quality disordered structures while accelerating sampling by two orders of magnitud",
+    "authors": [
+      "Jiani Hu",
+      "Chenyan Wang",
+      "Yongkun Yang",
+      "Guanyu Hou",
+      "Jihaochen Zhang",
+      "Lei Liu",
+      "Ji Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.IV",
+    "title": "DecompJSCC: Joint Source-Channel Coding With Decoupled SNR and Rate Adaptation",
+    "url": "https://arxiv.org/abs/2611.18379v1",
+    "published_date": "2026-11-13",
+    "source": "arXiv",
+    "summary": "Deep joint source-channel coding (DeepJSCC) for image transmission must adapt to changes in the signal-to-noise ratio (SNR) and available transmission resources. However, some existing joint-adaptive methods condition the encoder on the requested rate, while others apply static masks after encoding. The former couples latent formation to the rate request, whereas the latter cannot adapt channel selection to image content. To address these limitations, we propose DecompJSCC, which decomposes join",
+    "authors": [
+      "Yunhao Liu",
+      "Jiancun Fan",
+      "Haojun Sun",
+      "Jie Luo",
+      "Qing Zhao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "SiC-BN composites with extreme thermal and environmental stability",
     "url": "https://arxiv.org/abs/2611.17283v1",

@@ -1,66 +1,202 @@
 {
-  "date": "2026-11-15",
-  "generated_at": "2026-11-15T23:53:45.168440+00:00",
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T02:55:45.135192+00:00",
   "sectors": {
-    "hpc_datacenter": {
-      "sector": "HPC·Datacenter",
-      "date": "2026-11-15",
-      "item_count": 2,
-      "generated_at": "2026-11-15T23:53:45.168081+00:00",
+    "mobile_ap": {
+      "sector": "Mobile AP",
+      "date": "2026-11-17",
+      "item_count": 1,
+      "generated_at": "2026-11-17T02:55:45.134653+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Nvidia expands R&D footprint with Shanghai center, while SK Hynix removes credential barriers in new hiring to strengthen talent acquisition amid competitive pressures.",
+          "executive_summary": "Apple announced the launch of the Apple Health AI Usage Study in the United States, featuring a virtual research study and associated app to explore AI applications in health.",
           "key_facts": [
-            "Nvidia establishes R&D center in Shanghai",
-            "SK Hynix implements open recruitment for new graduates, prioritizing growth potential over educational credentials"
+            "Apple Health AI Usage Study launched in the United States"
           ],
           "implications": [
             {
-              "keyword": "China Strategy",
-              "text": "Nvidia's Shanghai R&D presence signals commitment to local innovation capabilities despite geopolitical constraints."
-            },
-            {
-              "keyword": "Talent Competition",
-              "text": "SK Hynix relaxing credential requirements reflects intensified competition for semiconductor engineering talent in Asia."
+              "keyword": "Health AI Integration",
+              "text": "Apple expanding AI capabilities into health domain, signaling potential new service revenue streams beyond traditional device sales."
             }
           ],
-          "counterpoint": "Nvidia's R&D expansion scope and investment level remain undisclosed."
+          "counterpoint": ""
         },
         "en": {
-          "executive_summary": "Nvidia expands R&D footprint with Shanghai center, while SK Hynix removes credential barriers in new hiring to strengthen talent acquisition amid competitive pressures.",
+          "executive_summary": "Apple announced the launch of the Apple Health AI Usage Study in the United States, featuring a virtual research study and associated app to explore AI applications in health.",
           "key_facts": [
-            "Nvidia establishes R&D center in Shanghai",
-            "SK Hynix implements open recruitment for new graduates, prioritizing growth potential over educational credentials"
+            "Apple Health AI Usage Study launched in the United States"
           ],
           "implications": [
             {
-              "keyword": "China Strategy",
-              "text": "Nvidia's Shanghai R&D presence signals commitment to local innovation capabilities despite geopolitical constraints."
-            },
-            {
-              "keyword": "Talent Competition",
-              "text": "SK Hynix relaxing credential requirements reflects intensified competition for semiconductor engineering talent in Asia."
+              "keyword": "Health AI Integration",
+              "text": "Apple expanding AI capabilities into health domain, signaling potential new service revenue streams beyond traditional device sales."
             }
           ],
-          "counterpoint": "Nvidia's R&D expansion scope and investment level remain undisclosed."
+          "counterpoint": ""
+        }
+      }
+    },
+    "hpc_datacenter": {
+      "sector": "HPC·Datacenter",
+      "date": "2026-11-17",
+      "item_count": 13,
+      "generated_at": "2026-11-17T02:55:45.134653+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "NVIDIA expanded HPC ecosystem with DGX Spark Developer Kit, Rubin GPU for scientific computing, and quantum integration via Slurm, while Lambda deployed CPO switches with 10,000+ GB300 NVL72 GPUs. Competitive pressure emerges from Intel's D270 GPU benchmarks and market uncertainty surrounding NVIDIA leadership transition. SK hynix is aggressively hiring for semiconductor talent and investing in memory technology.",
+          "key_facts": [
+            "NVIDIA DGX Spark: four-node cluster for researchers introduced at SC26 (Chicago)",
+            "NVIDIA Rubin HPC announced with 50,000+ CUDA cores for scientific simulation",
+            "Lambda using NVIDIA CPO photonics switches to connect 10,000+ GPUs in GB300 NVL72 racks",
+            "NVIDIA CUDA marking 20th anniversary; quantum processor deployments at 30+ supercomputing centers",
+            "Intel D270 data center GPU claims 5.9x performance advantage over NVIDIA RTX PRO 6000",
+            "SK hynix removing education requirements, offering performance bonuses (₩100M), hosting Tech Day 2024",
+            "AI chip market expectations declining sharply per analyst reports"
+          ],
+          "implications": [
+            {
+              "keyword": "Developer Ecosystem Expansion",
+              "text": "NVIDIA investing in entry-level developer tools (DGX Spark) and specialized HPC GPUs (Rubin) to broaden adoption beyond cloud datacenters."
+            },
+            {
+              "keyword": "Quantum-HPC Convergence",
+              "text": "Slurm integration enabling 50+ quantum processors at supercomputing centers signals emerging hybrid classical-quantum workload orchestration market."
+            },
+            {
+              "keyword": "Leadership Transition Risk",
+              "text": "NVIDIA CEO exit creating execution uncertainty on CPO roadmap and supply chain strategy amid competitive Intel advances and market softness."
+            },
+            {
+              "keyword": "Samsung Beneficiary Potential",
+              "text": "Analyst reports of NVIDIA dominance weakening position Samsung to capture HBM and GPU accelerator opportunities in next phase of market consolidation."
+            },
+            {
+              "keyword": "Korea Talent War",
+              "text": "SK hynix aggressive recruitment removing barriers and increasing incentives to secure domestic semiconductor talent amid structural industry competition."
+            }
+          ],
+          "counterpoint": "Intel D270 benchmark claims lack independent third-party validation; NVIDIA's quantum roadmap implications remain unclear given early-stage deployment scales."
+        },
+        "en": {
+          "executive_summary": "NVIDIA expanded HPC ecosystem with DGX Spark Developer Kit, Rubin GPU for scientific computing, and quantum integration via Slurm, while Lambda deployed CPO switches with 10,000+ GB300 NVL72 GPUs. Competitive pressure emerges from Intel's D270 GPU benchmarks and market uncertainty surrounding NVIDIA leadership transition. SK hynix is aggressively hiring for semiconductor talent and investing in memory technology.",
+          "key_facts": [
+            "NVIDIA DGX Spark: four-node cluster for researchers introduced at SC26 (Chicago)",
+            "NVIDIA Rubin HPC announced with 50,000+ CUDA cores for scientific simulation",
+            "Lambda using NVIDIA CPO photonics switches to connect 10,000+ GPUs in GB300 NVL72 racks",
+            "NVIDIA CUDA marking 20th anniversary; quantum processor deployments at 30+ supercomputing centers",
+            "Intel D270 data center GPU claims 5.9x performance advantage over NVIDIA RTX PRO 6000",
+            "SK hynix removing education requirements, offering performance bonuses (₩100M), hosting Tech Day 2024",
+            "AI chip market expectations declining sharply per analyst reports"
+          ],
+          "implications": [
+            {
+              "keyword": "Developer Ecosystem Expansion",
+              "text": "NVIDIA investing in entry-level developer tools (DGX Spark) and specialized HPC GPUs (Rubin) to broaden adoption beyond cloud datacenters."
+            },
+            {
+              "keyword": "Quantum-HPC Convergence",
+              "text": "Slurm integration enabling 50+ quantum processors at supercomputing centers signals emerging hybrid classical-quantum workload orchestration market."
+            },
+            {
+              "keyword": "Leadership Transition Risk",
+              "text": "NVIDIA CEO exit creating execution uncertainty on CPO roadmap and supply chain strategy amid competitive Intel advances and market softness."
+            },
+            {
+              "keyword": "Samsung Beneficiary Potential",
+              "text": "Analyst reports of NVIDIA dominance weakening position Samsung to capture HBM and GPU accelerator opportunities in next phase of market consolidation."
+            },
+            {
+              "keyword": "Korea Talent War",
+              "text": "SK hynix aggressive recruitment removing barriers and increasing incentives to secure domestic semiconductor talent amid structural industry competition."
+            }
+          ],
+          "counterpoint": "Intel D270 benchmark claims lack independent third-party validation; NVIDIA's quantum roadmap implications remain unclear given early-stage deployment scales."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-11-15",
-      "item_count": 9,
-      "generated_at": "2026-11-15T23:53:45.168081+00:00",
+      "date": "2026-11-17",
+      "item_count": 15,
+      "generated_at": "2026-11-17T02:55:45.134653+00:00",
       "content": {
-        "ko": {},
-        "en": {}
+        "ko": {
+          "executive_summary": "Google accelerating TPU roadmap visibility to 2029 backed by OpenAI and Anthropic mega-orders, while TSMC is investing up to $1B in these AI customers. Intel announced Diamond Rapids Xeon with 1.6TB/s memory bandwidth and 1.28GB cache across 256 P-cores. Google Cloud, Amazon, and Microsoft expanding in-house chip development amid NVIDIA leadership uncertainty.",
+          "key_facts": [
+            "Google TPU visibility extended through 2029 (OpenAI, Anthropic commitments)",
+            "TSMC investing up to $1B in Anthropic and OpenAI",
+            "Intel Diamond Rapids Xeon: 1.6TB/s memory bandwidth, 1.28GB cache, 256 P-cores",
+            "Google Cloud reports MLPerf v6.1 results for Ironwood TPUs and Grace Blackwell GPUs",
+            "SK hynix planning new HBM4 equipment orders despite NVIDIA uncertainty",
+            "MediaTek identified as biggest beneficiary of Google TPU visibility expansion",
+            "NVIDIA leadership succession in limbo; NVIDIA CEO exit creates ecosystem uncertainty"
+          ],
+          "implications": [
+            {
+              "keyword": "Hyperscaler Diversification",
+              "text": "Google, Amazon, MS accelerating custom SoC roadmaps in response to NVIDIA execution risk and supply constraints, reducing foundational dependency."
+            },
+            {
+              "keyword": "TPU Market Expansion",
+              "text": "Multi-year OpenAI and Anthropic TPU commitments extending Google's AI chip TAM visibility and reinforcing in-house SoC ROI thesis through 2029."
+            },
+            {
+              "keyword": "TSMC Strategic Positioning",
+              "text": "$1B investment in OpenAI/Anthropic suppliers signals TSMC's commitment to AI customer ecosystem lock-in beyond pure foundry services."
+            },
+            {
+              "keyword": "Intel Server Resurgence",
+              "text": "Diamond Rapids specifications (memory bandwidth, cache) targeting AI training/inference workloads traditionally NVIDIA-dominated, testing market receptiveness."
+            },
+            {
+              "keyword": "Memory Demand Continuity",
+              "text": "SK hynix HBM4 equipment orders despite NVIDIA uncertainty indicate AI datacenters' sustained memory investment regardless of GPU supplier transitions."
+            }
+          ],
+          "counterpoint": "Google TPU visibility claims rely on customer announcements that may not materialize at stated scale; Intel Xeon adoption in AI remains unproven versus entrenched NVIDIA ecosystem."
+        },
+        "en": {
+          "executive_summary": "Google accelerating TPU roadmap visibility to 2029 backed by OpenAI and Anthropic mega-orders, while TSMC is investing up to $1B in these AI customers. Intel announced Diamond Rapids Xeon with 1.6TB/s memory bandwidth and 1.28GB cache across 256 P-cores. Google Cloud, Amazon, and Microsoft expanding in-house chip development amid NVIDIA leadership uncertainty.",
+          "key_facts": [
+            "Google TPU visibility extended through 2029 (OpenAI, Anthropic commitments)",
+            "TSMC investing up to $1B in Anthropic and OpenAI",
+            "Intel Diamond Rapids Xeon: 1.6TB/s memory bandwidth, 1.28GB cache, 256 P-cores",
+            "Google Cloud reports MLPerf v6.1 results for Ironwood TPUs and Grace Blackwell GPUs",
+            "SK hynix planning new HBM4 equipment orders despite NVIDIA uncertainty",
+            "MediaTek identified as biggest beneficiary of Google TPU visibility expansion",
+            "NVIDIA leadership succession in limbo; NVIDIA CEO exit creates ecosystem uncertainty"
+          ],
+          "implications": [
+            {
+              "keyword": "Hyperscaler Diversification",
+              "text": "Google, Amazon, MS accelerating custom SoC roadmaps in response to NVIDIA execution risk and supply constraints, reducing foundational dependency."
+            },
+            {
+              "keyword": "TPU Market Expansion",
+              "text": "Multi-year OpenAI and Anthropic TPU commitments extending Google's AI chip TAM visibility and reinforcing in-house SoC ROI thesis through 2029."
+            },
+            {
+              "keyword": "TSMC Strategic Positioning",
+              "text": "$1B investment in OpenAI/Anthropic suppliers signals TSMC's commitment to AI customer ecosystem lock-in beyond pure foundry services."
+            },
+            {
+              "keyword": "Intel Server Resurgence",
+              "text": "Diamond Rapids specifications (memory bandwidth, cache) targeting AI training/inference workloads traditionally NVIDIA-dominated, testing market receptiveness."
+            },
+            {
+              "keyword": "Memory Demand Continuity",
+              "text": "SK hynix HBM4 equipment orders despite NVIDIA uncertainty indicate AI datacenters' sustained memory investment regardless of GPU supplier transitions."
+            }
+          ],
+          "counterpoint": "Google TPU visibility claims rely on customer announcements that may not materialize at stated scale; Intel Xeon adoption in AI remains unproven versus entrenched NVIDIA ecosystem."
+        }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-11-15",
-      "item_count": 13,
-      "generated_at": "2026-11-15T23:53:45.168081+00:00",
+      "date": "2026-11-17",
+      "item_count": 17,
+      "generated_at": "2026-11-17T02:55:45.134653+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -68,9 +204,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-11-15",
-      "item_count": 4,
-      "generated_at": "2026-11-15T23:53:45.168081+00:00",
+      "date": "2026-11-17",
+      "item_count": 18,
+      "generated_at": "2026-11-17T02:55:45.134653+00:00",
       "content": {
         "ko": {},
         "en": {}
