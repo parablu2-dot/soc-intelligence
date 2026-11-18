@@ -1,202 +1,208 @@
 {
-  "date": "2026-11-17",
-  "generated_at": "2026-11-17T02:55:45.135192+00:00",
+  "date": "2026-11-18",
+  "generated_at": "2026-11-18T02:19:47.077187+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-11-17",
+      "date": "2026-11-18",
       "item_count": 1,
-      "generated_at": "2026-11-17T02:55:45.134653+00:00",
+      "generated_at": "2026-11-18T02:19:47.076563+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Apple announced the launch of the Apple Health AI Usage Study in the United States, featuring a virtual research study and associated app to explore AI applications in health.",
+          "executive_summary": "Indian laptop buyers prioritize performance and show growing interest in AI capabilities, with Snapdragon processors gaining market traction.",
           "key_facts": [
-            "Apple Health AI Usage Study launched in the United States"
+            "India's laptop market shows preference for performance-focused systems",
+            "Snapdragon processors gaining adoption in Indian laptop segment",
+            "AI capabilities increasingly factored into buyer decisions"
           ],
           "implications": [
             {
-              "keyword": "Health AI Integration",
-              "text": "Apple expanding AI capabilities into health domain, signaling potential new service revenue streams beyond traditional device sales."
+              "keyword": "Market Demand Shift",
+              "text": "AI-enabled laptops becoming purchase consideration in emerging markets like India, expanding beyond traditional enterprise focus."
+            },
+            {
+              "keyword": "Snapdragon Positioning",
+              "text": "Qualcomm's Snapdragon mobile processors establishing foothold in laptop segment, challenging traditional x86 dominance."
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "Survey data alone does not confirm actual purchase conversion or market share impact."
         },
         "en": {
-          "executive_summary": "Apple announced the launch of the Apple Health AI Usage Study in the United States, featuring a virtual research study and associated app to explore AI applications in health.",
+          "executive_summary": "Indian laptop buyers prioritize performance and show growing interest in AI capabilities, with Snapdragon processors gaining market traction.",
           "key_facts": [
-            "Apple Health AI Usage Study launched in the United States"
+            "India's laptop market shows preference for performance-focused systems",
+            "Snapdragon processors gaining adoption in Indian laptop segment",
+            "AI capabilities increasingly factored into buyer decisions"
           ],
           "implications": [
             {
-              "keyword": "Health AI Integration",
-              "text": "Apple expanding AI capabilities into health domain, signaling potential new service revenue streams beyond traditional device sales."
+              "keyword": "Market Demand Shift",
+              "text": "AI-enabled laptops becoming purchase consideration in emerging markets like India, expanding beyond traditional enterprise focus."
+            },
+            {
+              "keyword": "Snapdragon Positioning",
+              "text": "Qualcomm's Snapdragon mobile processors establishing foothold in laptop segment, challenging traditional x86 dominance."
             }
           ],
-          "counterpoint": ""
+          "counterpoint": "Survey data alone does not confirm actual purchase conversion or market share impact."
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-11-17",
-      "item_count": 13,
-      "generated_at": "2026-11-17T02:55:45.134653+00:00",
+      "date": "2026-11-18",
+      "item_count": 6,
+      "generated_at": "2026-11-18T02:19:47.076563+00:00",
       "content": {
         "ko": {
-          "executive_summary": "NVIDIA expanded HPC ecosystem with DGX Spark Developer Kit, Rubin GPU for scientific computing, and quantum integration via Slurm, while Lambda deployed CPO switches with 10,000+ GB300 NVL72 GPUs. Competitive pressure emerges from Intel's D270 GPU benchmarks and market uncertainty surrounding NVIDIA leadership transition. SK hynix is aggressively hiring for semiconductor talent and investing in memory technology.",
+          "executive_summary": "NVIDIA announced Nemotron for Science, Rubin HPC GPU and expanded Vera CPU platform at SC26. SK Hynix is aggressively recruiting production workers and rolling out global talent initiatives amid HPC infrastructure demand.",
           "key_facts": [
-            "NVIDIA DGX Spark: four-node cluster for researchers introduced at SC26 (Chicago)",
-            "NVIDIA Rubin HPC announced with 50,000+ CUDA cores for scientific simulation",
-            "Lambda using NVIDIA CPO photonics switches to connect 10,000+ GPUs in GB300 NVL72 racks",
-            "NVIDIA CUDA marking 20th anniversary; quantum processor deployments at 30+ supercomputing centers",
-            "Intel D270 data center GPU claims 5.9x performance advantage over NVIDIA RTX PRO 6000",
-            "SK hynix removing education requirements, offering performance bonuses (₩100M), hosting Tech Day 2024",
-            "AI chip market expectations declining sharply per analyst reports"
+            "NVIDIA announced Nemotron for Science at SC26 with AI agent capabilities for researchers",
+            "NVIDIA Rubin HPC GPU and expanded Vera CPU platform launched",
+            "U.S. extending AI export controls to China's overseas computing access, raising Korean HBM demand questions",
+            "Axelera AI entering HPC market with Titania product",
+            "SK Hynix offers 700 million won performance bonus in production worker recruitment",
+            "SK Hynix launched 'Talent hy-way' global recruitment initiative",
+            "SK Hynix CEO Kwak Noh-jung emphasizes supporting young talent relocation to regional areas alongside regional investment"
           ],
           "implications": [
             {
-              "keyword": "Developer Ecosystem Expansion",
-              "text": "NVIDIA investing in entry-level developer tools (DGX Spark) and specialized HPC GPUs (Rubin) to broaden adoption beyond cloud datacenters."
+              "keyword": "HPC Software Stack",
+              "text": "NVIDIA expanding beyond GPUs into AI agent frameworks and research software, creating ecosystem lock-in for HPC researchers."
             },
             {
-              "keyword": "Quantum-HPC Convergence",
-              "text": "Slurm integration enabling 50+ quantum processors at supercomputing centers signals emerging hybrid classical-quantum workload orchestration market."
+              "keyword": "HBM Supply Dynamics",
+              "text": "U.S. export controls on China's overseas computing access create uncertain demand signals for Korean HBM suppliers, while NVIDIA's new GPU roadmap may influence next-gen HBM specifications."
             },
             {
-              "keyword": "Leadership Transition Risk",
-              "text": "NVIDIA CEO exit creating execution uncertainty on CPO roadmap and supply chain strategy amid competitive Intel advances and market softness."
+              "keyword": "Talent Competition",
+              "text": "SK Hynix aggressive recruitment with 700M KRW bonuses indicates supply-side capacity constraints and regional talent shortage in memory manufacturing."
             },
             {
-              "keyword": "Samsung Beneficiary Potential",
-              "text": "Analyst reports of NVIDIA dominance weakening position Samsung to capture HBM and GPU accelerator opportunities in next phase of market consolidation."
-            },
-            {
-              "keyword": "Korea Talent War",
-              "text": "SK hynix aggressive recruitment removing barriers and increasing incentives to secure domestic semiconductor talent amid structural industry competition."
+              "keyword": "Regional Manufacturing Policy",
+              "text": "SK Hynix's 'Talent hy-way' initiative reflects government push for decentralized semiconductor production outside Seoul metro area."
             }
           ],
-          "counterpoint": "Intel D270 benchmark claims lack independent third-party validation; NVIDIA's quantum roadmap implications remain unclear given early-stage deployment scales."
+          "counterpoint": "U.S. export controls create geopolitical uncertainty that could reduce HBM demand more than offset by AI server growth."
         },
         "en": {
-          "executive_summary": "NVIDIA expanded HPC ecosystem with DGX Spark Developer Kit, Rubin GPU for scientific computing, and quantum integration via Slurm, while Lambda deployed CPO switches with 10,000+ GB300 NVL72 GPUs. Competitive pressure emerges from Intel's D270 GPU benchmarks and market uncertainty surrounding NVIDIA leadership transition. SK hynix is aggressively hiring for semiconductor talent and investing in memory technology.",
+          "executive_summary": "NVIDIA announced Nemotron for Science, Rubin HPC GPU and expanded Vera CPU platform at SC26. SK Hynix is aggressively recruiting production workers and rolling out global talent initiatives amid HPC infrastructure demand.",
           "key_facts": [
-            "NVIDIA DGX Spark: four-node cluster for researchers introduced at SC26 (Chicago)",
-            "NVIDIA Rubin HPC announced with 50,000+ CUDA cores for scientific simulation",
-            "Lambda using NVIDIA CPO photonics switches to connect 10,000+ GPUs in GB300 NVL72 racks",
-            "NVIDIA CUDA marking 20th anniversary; quantum processor deployments at 30+ supercomputing centers",
-            "Intel D270 data center GPU claims 5.9x performance advantage over NVIDIA RTX PRO 6000",
-            "SK hynix removing education requirements, offering performance bonuses (₩100M), hosting Tech Day 2024",
-            "AI chip market expectations declining sharply per analyst reports"
+            "NVIDIA announced Nemotron for Science at SC26 with AI agent capabilities for researchers",
+            "NVIDIA Rubin HPC GPU and expanded Vera CPU platform launched",
+            "U.S. extending AI export controls to China's overseas computing access, raising Korean HBM demand questions",
+            "Axelera AI entering HPC market with Titania product",
+            "SK Hynix offers 700 million won performance bonus in production worker recruitment",
+            "SK Hynix launched 'Talent hy-way' global recruitment initiative",
+            "SK Hynix CEO Kwak Noh-jung emphasizes supporting young talent relocation to regional areas alongside regional investment"
           ],
           "implications": [
             {
-              "keyword": "Developer Ecosystem Expansion",
-              "text": "NVIDIA investing in entry-level developer tools (DGX Spark) and specialized HPC GPUs (Rubin) to broaden adoption beyond cloud datacenters."
+              "keyword": "HPC Software Stack",
+              "text": "NVIDIA expanding beyond GPUs into AI agent frameworks and research software, creating ecosystem lock-in for HPC researchers."
             },
             {
-              "keyword": "Quantum-HPC Convergence",
-              "text": "Slurm integration enabling 50+ quantum processors at supercomputing centers signals emerging hybrid classical-quantum workload orchestration market."
+              "keyword": "HBM Supply Dynamics",
+              "text": "U.S. export controls on China's overseas computing access create uncertain demand signals for Korean HBM suppliers, while NVIDIA's new GPU roadmap may influence next-gen HBM specifications."
             },
             {
-              "keyword": "Leadership Transition Risk",
-              "text": "NVIDIA CEO exit creating execution uncertainty on CPO roadmap and supply chain strategy amid competitive Intel advances and market softness."
+              "keyword": "Talent Competition",
+              "text": "SK Hynix aggressive recruitment with 700M KRW bonuses indicates supply-side capacity constraints and regional talent shortage in memory manufacturing."
             },
             {
-              "keyword": "Samsung Beneficiary Potential",
-              "text": "Analyst reports of NVIDIA dominance weakening position Samsung to capture HBM and GPU accelerator opportunities in next phase of market consolidation."
-            },
-            {
-              "keyword": "Korea Talent War",
-              "text": "SK hynix aggressive recruitment removing barriers and increasing incentives to secure domestic semiconductor talent amid structural industry competition."
+              "keyword": "Regional Manufacturing Policy",
+              "text": "SK Hynix's 'Talent hy-way' initiative reflects government push for decentralized semiconductor production outside Seoul metro area."
             }
           ],
-          "counterpoint": "Intel D270 benchmark claims lack independent third-party validation; NVIDIA's quantum roadmap implications remain unclear given early-stage deployment scales."
+          "counterpoint": "U.S. export controls create geopolitical uncertainty that could reduce HBM demand more than offset by AI server growth."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-11-17",
-      "item_count": 15,
-      "generated_at": "2026-11-17T02:55:45.134653+00:00",
+      "date": "2026-11-18",
+      "item_count": 20,
+      "generated_at": "2026-11-18T02:19:47.076563+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Google accelerating TPU roadmap visibility to 2029 backed by OpenAI and Anthropic mega-orders, while TSMC is investing up to $1B in these AI customers. Intel announced Diamond Rapids Xeon with 1.6TB/s memory bandwidth and 1.28GB cache across 256 P-cores. Google Cloud, Amazon, and Microsoft expanding in-house chip development amid NVIDIA leadership uncertainty.",
+          "executive_summary": "Google expanded TPU lineup with TPU 8tx and TPU 8i Max targeting different AI workloads, while Microsoft scaled Maia 200 to mass production with 1.7x token efficiency per watt gains. Foundry price hikes of 10-20% in 2027 threaten ASIC margin compression, and NVIDIA's post-2026 AI chip market share forecast fell to 28% per JPMorgan.",
           "key_facts": [
-            "Google TPU visibility extended through 2029 (OpenAI, Anthropic commitments)",
-            "TSMC investing up to $1B in Anthropic and OpenAI",
-            "Intel Diamond Rapids Xeon: 1.6TB/s memory bandwidth, 1.28GB cache, 256 P-cores",
-            "Google Cloud reports MLPerf v6.1 results for Ironwood TPUs and Grace Blackwell GPUs",
-            "SK hynix planning new HBM4 equipment orders despite NVIDIA uncertainty",
-            "MediaTek identified as biggest beneficiary of Google TPU visibility expansion",
-            "NVIDIA leadership succession in limbo; NVIDIA CEO exit creates ecosystem uncertainty"
+            "Google announced TPU 8tx and TPU 8i Max for expanded AI workload coverage",
+            "Microsoft scaled Maia 200 AI chip to mass production with 1.7x token efficiency per watt improvement",
+            "Foundry price hikes estimated at 10-20% for 2027",
+            "NVIDIA's projected market share for post-2026 AI compute deals: 28% per JPMorgan",
+            "SEMIFIVE applying 3D-IC platform to PFN AI chip targeting Q1 2025 tape-out",
+            "TSMC and Alchip posted strong October gains on 2nm and ASIC orders",
+            "Google expanding confidential computing and EPYC integration in TPU 8tx",
+            "BTQ Technologies advancing quantum-accelerated silicon and blockchain milestones"
           ],
           "implications": [
             {
-              "keyword": "Hyperscaler Diversification",
-              "text": "Google, Amazon, MS accelerating custom SoC roadmaps in response to NVIDIA execution risk and supply constraints, reducing foundational dependency."
+              "keyword": "TPU Competition Acceleration",
+              "text": "Google's expanded TPU portfolio (8tx, 8i Max) directly targets NVIDIA's market dominance with workload-specific optimization, fragmenting AI chip demand."
             },
             {
-              "keyword": "TPU Market Expansion",
-              "text": "Multi-year OpenAI and Anthropic TPU commitments extending Google's AI chip TAM visibility and reinforcing in-house SoC ROI thesis through 2029."
+              "keyword": "Maia Efficiency Focus",
+              "text": "Microsoft's mass production ramp and 1.7x per-watt efficiency gains establish credible alternative to NVIDIA for hyperscaler internal use, reducing GPU dependency."
             },
             {
-              "keyword": "TSMC Strategic Positioning",
-              "text": "$1B investment in OpenAI/Anthropic suppliers signals TSMC's commitment to AI customer ecosystem lock-in beyond pure foundry services."
+              "keyword": "ASIC Margin Compression",
+              "text": "Foundry price hikes of 10-20% in 2027 will compress fabless AI chip designer margins if unable to pass costs to customers, forcing design optimization or consolidation."
             },
             {
-              "keyword": "Intel Server Resurgence",
-              "text": "Diamond Rapids specifications (memory bandwidth, cache) targeting AI training/inference workloads traditionally NVIDIA-dominated, testing market receptiveness."
+              "keyword": "Market Share Fragmentation",
+              "text": "NVIDIA's post-2026 market share falling to 28% signals successful competitive entry by Google, Microsoft, and other custom SoC players into major AI infrastructure deals."
             },
             {
-              "keyword": "Memory Demand Continuity",
-              "text": "SK hynix HBM4 equipment orders despite NVIDIA uncertainty indicate AI datacenters' sustained memory investment regardless of GPU supplier transitions."
+              "keyword": "Advanced Packaging Enabler",
+              "text": "SEMIFIVE's 3D-IC application to AI chips indicates chiplet-based designs gaining adoption for cost and time-to-market advantages."
             }
           ],
-          "counterpoint": "Google TPU visibility claims rely on customer announcements that may not materialize at stated scale; Intel Xeon adoption in AI remains unproven versus entrenched NVIDIA ecosystem."
+          "counterpoint": "NVIDIA's 28% share projection assumes sustained execution by Google/Microsoft; supply chain disruptions or performance gaps could preserve NVIDIA's dominance."
         },
         "en": {
-          "executive_summary": "Google accelerating TPU roadmap visibility to 2029 backed by OpenAI and Anthropic mega-orders, while TSMC is investing up to $1B in these AI customers. Intel announced Diamond Rapids Xeon with 1.6TB/s memory bandwidth and 1.28GB cache across 256 P-cores. Google Cloud, Amazon, and Microsoft expanding in-house chip development amid NVIDIA leadership uncertainty.",
+          "executive_summary": "Google expanded TPU lineup with TPU 8tx and TPU 8i Max targeting different AI workloads, while Microsoft scaled Maia 200 to mass production with 1.7x token efficiency per watt gains. Foundry price hikes of 10-20% in 2027 threaten ASIC margin compression, and NVIDIA's post-2026 AI chip market share forecast fell to 28% per JPMorgan.",
           "key_facts": [
-            "Google TPU visibility extended through 2029 (OpenAI, Anthropic commitments)",
-            "TSMC investing up to $1B in Anthropic and OpenAI",
-            "Intel Diamond Rapids Xeon: 1.6TB/s memory bandwidth, 1.28GB cache, 256 P-cores",
-            "Google Cloud reports MLPerf v6.1 results for Ironwood TPUs and Grace Blackwell GPUs",
-            "SK hynix planning new HBM4 equipment orders despite NVIDIA uncertainty",
-            "MediaTek identified as biggest beneficiary of Google TPU visibility expansion",
-            "NVIDIA leadership succession in limbo; NVIDIA CEO exit creates ecosystem uncertainty"
+            "Google announced TPU 8tx and TPU 8i Max for expanded AI workload coverage",
+            "Microsoft scaled Maia 200 AI chip to mass production with 1.7x token efficiency per watt improvement",
+            "Foundry price hikes estimated at 10-20% for 2027",
+            "NVIDIA's projected market share for post-2026 AI compute deals: 28% per JPMorgan",
+            "SEMIFIVE applying 3D-IC platform to PFN AI chip targeting Q1 2025 tape-out",
+            "TSMC and Alchip posted strong October gains on 2nm and ASIC orders",
+            "Google expanding confidential computing and EPYC integration in TPU 8tx",
+            "BTQ Technologies advancing quantum-accelerated silicon and blockchain milestones"
           ],
           "implications": [
             {
-              "keyword": "Hyperscaler Diversification",
-              "text": "Google, Amazon, MS accelerating custom SoC roadmaps in response to NVIDIA execution risk and supply constraints, reducing foundational dependency."
+              "keyword": "TPU Competition Acceleration",
+              "text": "Google's expanded TPU portfolio (8tx, 8i Max) directly targets NVIDIA's market dominance with workload-specific optimization, fragmenting AI chip demand."
             },
             {
-              "keyword": "TPU Market Expansion",
-              "text": "Multi-year OpenAI and Anthropic TPU commitments extending Google's AI chip TAM visibility and reinforcing in-house SoC ROI thesis through 2029."
+              "keyword": "Maia Efficiency Focus",
+              "text": "Microsoft's mass production ramp and 1.7x per-watt efficiency gains establish credible alternative to NVIDIA for hyperscaler internal use, reducing GPU dependency."
             },
             {
-              "keyword": "TSMC Strategic Positioning",
-              "text": "$1B investment in OpenAI/Anthropic suppliers signals TSMC's commitment to AI customer ecosystem lock-in beyond pure foundry services."
+              "keyword": "ASIC Margin Compression",
+              "text": "Foundry price hikes of 10-20% in 2027 will compress fabless AI chip designer margins if unable to pass costs to customers, forcing design optimization or consolidation."
             },
             {
-              "keyword": "Intel Server Resurgence",
-              "text": "Diamond Rapids specifications (memory bandwidth, cache) targeting AI training/inference workloads traditionally NVIDIA-dominated, testing market receptiveness."
+              "keyword": "Market Share Fragmentation",
+              "text": "NVIDIA's post-2026 market share falling to 28% signals successful competitive entry by Google, Microsoft, and other custom SoC players into major AI infrastructure deals."
             },
             {
-              "keyword": "Memory Demand Continuity",
-              "text": "SK hynix HBM4 equipment orders despite NVIDIA uncertainty indicate AI datacenters' sustained memory investment regardless of GPU supplier transitions."
+              "keyword": "Advanced Packaging Enabler",
+              "text": "SEMIFIVE's 3D-IC application to AI chips indicates chiplet-based designs gaining adoption for cost and time-to-market advantages."
             }
           ],
-          "counterpoint": "Google TPU visibility claims rely on customer announcements that may not materialize at stated scale; Intel Xeon adoption in AI remains unproven versus entrenched NVIDIA ecosystem."
+          "counterpoint": "NVIDIA's 28% share projection assumes sustained execution by Google/Microsoft; supply chain disruptions or performance gaps could preserve NVIDIA's dominance."
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-11-17",
-      "item_count": 17,
-      "generated_at": "2026-11-17T02:55:45.134653+00:00",
+      "date": "2026-11-18",
+      "item_count": 20,
+      "generated_at": "2026-11-18T02:19:47.076563+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -204,9 +210,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-11-17",
-      "item_count": 18,
-      "generated_at": "2026-11-17T02:55:45.134653+00:00",
+      "date": "2026-11-18",
+      "item_count": 15,
+      "generated_at": "2026-11-18T02:19:47.076563+00:00",
       "content": {
         "ko": {},
         "en": {}

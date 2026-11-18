@@ -2,6 +2,339 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Electrostatic screening and nitrogen-vacancy charge states in boron-doped/nitrogen-doped diamond junctions",
+    "url": "https://arxiv.org/abs/2611.22074v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "Boron-doped diamond (BDD) enables the integration of electrical functionality with nitrogen-vacancy (NV) centers, but the influence of junction electrostatics on NV charge-state stability remains unclear. In this study, we investigate the equilibrium electrostatics of BDD/nitrogen-doped diamond junctions using self-consistent Poisson-Fermi calculations. The results reveal two distinct electrostatic length scales in the nitrogen-doped substrate: a near-interface region of ionized donors that prod",
+    "authors": [
+      "Masato Koga",
+      "Haizen Cho",
+      "El Mustapha Mansouri",
+      "Eikichi Kimura",
+      "Ryo Matsumoto",
+      "Yoshihiko Takano",
+      "Keigo Arai"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Accelerating 3D Gaussian Splatting Training through Selective Freezing and Computation Caching",
+    "url": "https://arxiv.org/abs/2611.22059v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "3D Gaussian Splatting (3DGS) becomes a key primitive for immersive 3D experiences. However, its applicability is limited by its long training overhead. Although prior work has shown that gradient accumulation is the dominant bottleneck in training, existing works either have limited speedup or degrade reconstruction quality. To address this issue, we present ElsaGS, an algorithm-hardware co-designed framework that accelerates 3DGS training with negligible accuracy degradation. Our key observatio",
+    "authors": [
+      "He Zhu",
+      "Zhiheng Dai",
+      "Zihan Liu",
+      "Ruyang Li",
+      "Hui Wei",
+      "Yaqian Zhao",
+      "Han Zhao",
+      "Xiaofeng Hou",
+      "Chen Chen",
+      "Jingwen Leng",
+      "Yu Feng",
+      "Minyi Guo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "quant-ph",
+    "title": "QCap: a physics-corrected graph neural network for the capacitance matrix of any planar superconducting device layout",
+    "url": "https://arxiv.org/abs/2611.22057v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "Electromagnetic simulations of device layouts to extract capacitance are computationally intensive, a major obstacle to accurate design of circuit devices. Machine learning models can bypass these simulations, but previous approaches have been restricted to layouts using only particular components, and require thousands of simulations of those same components as training data. We present QCap, a model that accurately predicts the Maxwell capacitance matrix of an arbitrary superconducting device ",
+    "authors": [
+      "Sadman Ahmed Shanto",
+      "Saikat Das",
+      "Eli M. Levenson-Falk"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "Computed Permutation Trellis Coding: Near-Optimal Quantization from Two Multiplications and a 64-Byte Table",
+    "url": "https://arxiv.org/abs/2611.22019v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "We propose Computed Permutation Trellis Coding (CPTC), a low-bit quantization format for tensors written once and read many times. Formats that round each value on its own, such as INT4 and FP4, waste a large part of their bits against the information-theoretic ideal. Trellis codes recover this loss by encoding values jointly, but prior decoders either need a large lookup table for their best quality or compute values with a hash that restricts what they can decode. CPTC's decoder multiplies its",
+    "authors": [
+      "Muhammed Fatih Balın"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Weight-Space Programming for Materials Science",
+    "url": "https://arxiv.org/abs/2611.22013v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "A materials discovery campaign often begins with almost no measurements of the property it is searching for, and the models that rank candidates or screen the output of a generator then have to be built from those first few labels. Following recent work on weight-space programming, in which a language model writes the weights of a small network directly as text, we show that a general-purpose model, given the task in words, the names of the inputs and a network of 16 hidden units with every weig",
+    "authors": [
+      "Sk Md Ahnaf Akif Alvi",
+      "Raymundo Arróyave"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "ThermLeT: Transformer-based Temperature Prediction for 2.5D Chiplet Architecture",
+    "url": "https://arxiv.org/abs/2611.21954v1",
+    "published_date": "2026-11-16",
+    "source": "arXiv",
+    "summary": "The drive toward heterogeneous 2.5D chiplet packages promises unmatched performance and customization, yet the resulting density amplifies thermal challenges. To facilitate rapid design space exploration, we present ThermLeT, a multimodal transformer-based, scale invariant surrogate that integrates power density maps, spatial coordinate embeddings, material properties and heat transfer rate to predict steady state temperature in 13 ms, about four orders of magnitude faster than conventional fini",
+    "authors": [
+      "Varun Darshana Parekh",
+      "Anusha Devulapally",
+      "Sivani Devarapalli",
+      "Cassius Henderson",
+      "Shimeng Yu",
+      "Vijaykrishnan Narayanan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Bandwidth-tunable thermal emitter via dynamic resonator coupling and loss",
+    "url": "https://arxiv.org/abs/2611.21934v1",
+    "published_date": "2026-11-16",
+    "source": "arXiv",
+    "summary": "We demonstrate a dynamically tunable omnidirectional thermal emitter that can be switched from a narrowband emission state to a broadband state. The structure is a metal-backed multilayer with subwavelength thickness across the mid-infrared, which forms an angle-insensitive (up to 60°) optical cavity with one input port. We used an ultrathin VO2 layer to dynamically switch the coupling and loss coefficients of this optical cavity, resulting in narrowband emission from the vibrational mode of a p",
+    "authors": [
+      "Jin-Woo Cho",
+      "Tanuj Kumar",
+      "Joseph A. Andrade",
+      "Shenwei Yin",
+      "Samir Rosas",
+      "Filiz Yesilköy",
+      "Dung T. Quach",
+      "Albert G. Wright",
+      "Colin M. Hessel",
+      "David Woolf",
+      "Mikhail A. Kats"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Optical characterization of Fermi polarons in monolayer MoSe$_2$ encapsulated in amorphous silicon nitride",
+    "url": "https://arxiv.org/abs/2611.21931v1",
+    "published_date": "2026-11-16",
+    "source": "arXiv",
+    "summary": "Amorphous silicon nitride is the leading low-loss, CMOS-compatible platform for wafer-scale integrated photonics. Encapsulating transition-metal dichalcogenide (TMD) monolayers within this platform offers a promising route towards scalable TMD-photonic circuits. Yet the effect of this amorphous dielectric on the optical response of the monolayer remains poorly understood. Here, we compare monolayer MoSe$_2$ encapsulated in amorphous silicon nitride with a hexagonal boron nitride-encapsulated ref",
+    "authors": [
+      "Christos Paspalides",
+      "Brendan C. Mulkerin",
+      "Rafael Luque Merino",
+      "Alvaro Castilla Lamas",
+      "Samuel Palacios Valdepeñas",
+      "Kenji Watanabe",
+      "Takashi Taniguchi",
+      "Jesper Levinsen",
+      "Meera M. Parish",
+      "Luis Viña",
+      "Maria Dolores Martín",
+      "Francesca Maria Marchetti",
+      "Andres Castellanos-Gomez",
+      "Carlos Antón-Solanas"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "quantEM: Quantitative Electron Microscopy Analysis from Differentiable Physics to Neural Priors",
+    "url": "https://arxiv.org/abs/2611.21903v1",
+    "published_date": "2026-11-16",
+    "source": "arXiv",
+    "summary": "Quantitative electron microscopy includes imaging, diffraction, spectroscopy, and tomography measurements, and the analysis of these measurements increasingly requires solving inverse problems with physical forward models. Open-source software has made many of these analyses widely available, but most packages are organized around a single modality, so that multimodal analyses require moving data between packages, and new methods cannot easily reuse the physical models and optimizers of existing",
+    "authors": [
+      "Colin Ophus",
+      "Arthur RC McCray",
+      "Georgios Varnavides",
+      "Stephanie M Ribet"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "Symmetry-reduced k-point sampling and Wannier analysis with localized Gaussian orbitals",
+    "url": "https://arxiv.org/abs/2611.21801v1",
+    "published_date": "2026-11-16",
+    "source": "arXiv",
+    "summary": "Brillouin-zone sampling with localized orbitals requires consistent transformations between sparse real-space matrices and complex Bloch states. Symmetry reduces the number of reciprocal-space problems, but scalar integration weights alone cannot reconstruct the matrices and wavefunctions needed for densities and orbital analysis. We develop a unified formulation of these transformations for nonorthogonal Gaussian bases and describe its implementation in CP2K. Atom permutations, local orbital ro",
+    "authors": [
+      "Johann V. Pototschnig",
+      "Jan Kloppenburg",
+      "Shaojie He",
+      "Chengze Zhou",
+      "Shiyang Wang",
+      "Sam Azadi",
+      "Hossein Mirhosseini",
+      "Jürg Hutter",
+      "Thomas D. Kühne"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Radiation Response of NbN Superconducting Nanowire Single-Photon Detectors Under $^{210}$Po Alpha-Particle Irradiation",
+    "url": "https://arxiv.org/abs/2611.21762v1",
+    "published_date": "2026-11-16",
+    "source": "arXiv",
+    "summary": "Superconducting nanowire single-photon detectors (SNSPDs) are attractive for space applications because they combine high detection efficiency, low noise, and fast timing, but their radiation tolerance remains less established than that of conventional semiconductor detectors. Here we study NbN SNSPDs exposed to alpha-particle $^{210}$Po irradiation by combining cryogenic electrical and photon-counting measurements with SRIM and Geant4 radiation-transport calculations. For the estimated fluence ",
+    "authors": [
+      "Francesca Incalza",
+      "Matteo Castellani",
+      "Alejandro Simon",
+      "Emma Batson",
+      "Karl K. Berggren"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.ins-det",
+    "title": "Surrogate-Assisted Compact-Model Extraction for SKY130 CMOS at 77 K",
+    "url": "https://arxiv.org/abs/2611.21594v1",
+    "published_date": "2026-11-16",
+    "source": "arXiv",
+    "summary": "Cryogenic circuit design requires compact transistor models that reproduce measured low-temperature behavior and run in standard circuit simulators. We fit BSIM4 parameters to measured I-V curves of SkyWater 130 nm (SKY130) transistors at 77 K using a neural surrogate of NGSpice. The surrogate maps compact-model parameters and device geometry to the complete set of output and transfer characteristics. Extraction is a bounded least-squares search: a bank of NGSpice simulations supplies initial ca",
+    "authors": [
+      "Aaron Wang",
+      "Olivia Gzamouranis",
+      "Vaibhav Lohia",
+      "Hershel Fei Xun Weiner",
+      "Olivia Seidel",
+      "Richard Cavanaugh",
+      "Giuseppe Di Guglielmo",
+      "Nhan Tran",
+      "Davide Braga"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Do Apple M-Series Processors Enforce the Compound Memory Model? Sequential and Parallel Composition of Arm and TSO",
+    "url": "https://arxiv.org/abs/2611.21406v1",
+    "published_date": "2026-11-16",
+    "source": "arXiv",
+    "summary": "Apple's M-series processors can run each thread under the Arm memory model or under a TSO model, and threads of both kinds can share memory. This raises two questions of composition that Apple has not answered. Across threads, how does the machine behave as a whole? Within a thread, which Arm instructions play the roles of TSO's loads, stores and atomic read-modify-writes, and how are they ordered between themselves and across other Arm instructions?\n  We propose that both answers are compositio",
+    "authors": [
+      "Vijay Nagarajan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.stat-mech",
+    "title": "A Free Energy Approach to Modelling Disordered Hyperuniform Patterns",
+    "url": "https://arxiv.org/abs/2611.21351v1",
+    "published_date": "2026-11-16",
+    "source": "arXiv",
+    "summary": "We present a free-energy-based approach for modelling disordered hyperuniform patterns. Specifically, we devise a phase-field crystal model with a correlation kernel that simultaneously selects for a continuous range of degenerate wave modes. At small wave vectors, we construct the correlation function by inverting the Ornstein-Zernike relation to approximate the structure factor of a hyperuniform pattern. Our model demonstrates a crossover between liquid, crystalline, quasicrystalline, and long",
+    "authors": [
+      "Alex Mamaev",
+      "Enno Igel",
+      "Axel Voigt",
+      "Marco Salvalaglio"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "GNoF: A Low-SM-Overhead GPU-Native NVMe-over-Fabrics Completion Path for Data-Intensive GPU Workloads",
+    "url": "https://arxiv.org/abs/2611.21288v1",
+    "published_date": "2026-11-16",
+    "source": "arXiv",
+    "summary": "GPUs are the main compute engine for data-intensive workloads whose datasets exceed device memory and reside on remote flash. The conventional host CPU orchestrates every NVMe-over-Fabrics (NVMe-oF) transaction and stages data through host memory, costing high CPU usage, repeated CPU-GPU synchronization, and redundant data movement. GPU-initiated storage removes the CPU from the I/O path, but existing designs leave two problems: synchronous lock-step completion pins streaming multiprocessors (SM",
+    "authors": [
+      "Lei Tian",
+      "Wenhao Gu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "A database of optical and thermal-radiative behaviour of materials under solar radiation",
+    "url": "https://arxiv.org/abs/2611.21281v1",
+    "published_date": "2026-11-16",
+    "source": "arXiv",
+    "summary": "Solar-matter interactions are important in many scientific and engineering applications. Modeling them needs consistent optical and thermal-radiative properties over the full solar spectrum. Here we present SpaderOptics, a database for 21 materials: metals, oxides, semiconductors, polymers, ceramics, and carbon. It compiles wavelength-dependent refractive indices and extinction coefficients from the literature. Each literature source is kept separate, together with its original conditions. One p",
+    "authors": [
+      "Vasiliki E. Alexopoulou",
+      "Nikolaos Karalis",
+      "Konstantinos Asimakopoulos",
+      "Andrei Totu",
+      "Constantin Sandu",
+      "Paul-Peter Sotiriadis"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "SURMA: Efficient Fine-Grained Communication Offload for SuperPOD",
+    "url": "https://arxiv.org/abs/2611.21274v1",
+    "published_date": "2026-11-16",
+    "source": "arXiv",
+    "summary": "GPU SuperPODs underpin large language model (LLM) serving, but growing bandwidth and round-trip times make inter-GPU communication consume increasing compute resources. SM-driven remote memory access occupies shared memory or registers for in-flight data and competes for SM-to-NoC bandwidth. Dedicated engines can free these resources, but must handle fine-grained transfers, down to a 576\\,B KV-cache entry. NVIDIA's CopyEngine uses less than 1\\% of NVLink bandwidth at 7\\,KB granularity. We presen",
+    "authors": [
+      "Haoran Shang",
+      "Weifeng Zhang",
+      "Mengzhu Li",
+      "Huizheng Wang",
+      "Sihan Guan",
+      "Xinyang Huang",
+      "Bowen Liu",
+      "Ran Shu",
+      "Xinru Tang",
+      "Ruoyu Wu",
+      "Yinben Xia",
+      "Xiang Li",
+      "Zekun He",
+      "Yachen Wang",
+      "Xianneng Zou",
+      "Jinyi Deng",
+      "Yang Hu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.ed-ph",
+    "title": "Immersive virtual reality in learning physics: a systematic review of opportunities and challenges",
+    "url": "https://arxiv.org/abs/2611.21228v1",
+    "published_date": "2026-11-16",
+    "source": "arXiv",
+    "summary": "Immersive virtual reality (IVR) can heighten presence and enable active, embodied interaction in realistic 3D environments, which has been associated with potential benefits in physics education. This article presents a comprehensive review of IVR implementation in physics education at both school and university levels. The analysis included 34 studies indexed in Scopus and ERIC, published between 1 January 2018 and 1 June 2025. Methodologically, this review followed a preferred reporting items ",
+    "authors": [
+      "Andrej Vidak",
+      "Iva Movre Šapić",
+      "Vjeran Gomzi",
+      "Vanes Mešić"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "eess.SP",
     "title": "What Makes Good Datasets for Intelligent Multi-Modal Sensing-Communication Integration?",
     "url": "https://arxiv.org/abs/2611.19206v1",
