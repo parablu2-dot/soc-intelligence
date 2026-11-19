@@ -87,6 +87,356 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Fine-Tuning Gemma 4 Edge Models for MATLAB Signal-Processing Code with SFT and QLoRA on a Laptop iGPU",
+    "url": "https://arxiv.org/abs/2611.23205v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "Small language models that run on a laptop are attractive for writing signal-processing code offline, but they make systematic errors on digital signal processing (DSP) conventions. We apply supervised fine-tuning (SFT) to the Gemma 4 edge models E2B and E4B with 66 checked examples covering 11 signal-processing MATLAB subtasks, using low-rank adaptation (LoRA) and quantized LoRA (QLoRA) on the integrated GPU (iGPU) of a laptop, and deploy the 8-bit integer (int8) models with the adapters throug",
+    "authors": [
+      "Mehmet Altan Toksöz"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Charge-transfer excitation drives cooperative phonon-assisted exciton self-trapping in NiPS$_3$",
+    "url": "https://arxiv.org/abs/2611.23131v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "Carrier self-trapping is a fundamental relaxation pathway in strongly correlated quantum materials, yet the microscopic lattice motions that drive it have remained largely inaccessible to direct observation. Here we investigate the van der Waals antiferromagnet NiPS$_3$ upon excitation across its ligand-to-metal charge-transfer gap, and reveal a nonequilibrium pathway that initially generates unbound carriers before they evolve into correlated excitonic states. Using ultrabroadband optical-pump ",
+    "authors": [
+      "Long Cheng",
+      "Alexander Holm Ohrt",
+      "Oliver Nagy",
+      "Yu Zhao",
+      "Chenyu Wang",
+      "Yaxian Wang",
+      "Sheng Meng",
+      "Guohui Li",
+      "Qinying Pan",
+      "Xingyu Huang",
+      "Sanshui Xiao",
+      "Sijie Zhang",
+      "Guoqian Liao",
+      "Yutong Li",
+      "Xuan Luo",
+      "Yuping Sun",
+      "Kaibo Zheng",
+      "Peter Uhd Jepsen",
+      "Binbin Zhou"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "StreamingDPD: A 1.28-GSa/s Instantaneous-Power-Gated Depthwise TCN Accelerator for Real-Time 320-MHz Digital Predistortion",
+    "url": "https://arxiv.org/abs/2611.23101v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "State feedback between successive samples limits the streaming throughput of recurrent neural networks for digital predistortion (DPD). We present StreamingDPD, an accelerator that processes 320-MHz signals at 1.28 GSa/s. Its 207-parameter instantaneous-power-gated depthwise temporal convolutional network (IPG-DWTCN) uses $|x[n]|^2$ to gate feature channels and causal dilated depthwise convolutions to model power amplifier memory. The network maps to a spatially unrolled fixed-point pipeline wit",
+    "authors": [
+      "Yizhuo Wu",
+      "Xinling Wang",
+      "Chang Gao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Dissecting the GPU Load/Store Unit and Exposing Its Security Risks",
+    "url": "https://arxiv.org/abs/2611.23022v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "GPUs are the main platform for large-scale machine learning and power the largest supercomputers. Their load/store units (LSUs) often determine kernel performance and have been exploited in prior attacks. Yet what is known about the LSU is only a few isolated mechanisms and parameters, and even a single one has been enough for an attack. In particular, it is still unknown what a load costs, where loads contend, and even whether a warp can starve due to contention. Until each is measured, neither",
+    "authors": [
+      "Wenbo Han",
+      "Pierre Talbot"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Generation of Sample Complex Wishart Distributed Matrices and Change Detection in Polarimetric SAR Data",
+    "url": "https://arxiv.org/abs/2611.22943v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "The complex Wishart distribution is used to describe synthetic aperture radar (SAR) data in the so-called covariance matrix representation. We give a test statistic for detection of differences between two instances in this distribution and an associated probability measure. Generated complex Wishart distributed covariance matrices are used to show that this test statistic and the probability measure in situations with no differences follow the expected distributions.",
+    "authors": [
+      "Allan A. Nielsen",
+      "Henning Skriver",
+      "Knut Conradsen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "From quasiperiodic three-colour order on a triangular lattice to covalent carbon sheets",
+    "url": "https://arxiv.org/abs/2611.22938v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "Can the quasiperiodic colouring of a lattice be encoded in the bonds of a single carbon sheet? We construct golden-, silver- and bronze-mean three-colour patterns on a triangular lattice. The positions of one colour determine the other two through a nearest-neighbour rule. The three patterns have eight, nine and seven first-shell environments, respectively. A triangle of three identical motifs frustrates the alternating bond ports of each of the three molecular alphabets in the golden and silver",
+    "authors": [
+      "Chaoyu He"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "LASH-PAT: Deadlock-Free Adaptive Shortest-Path Routing for Inter-Chiplet Interconnects",
+    "url": "https://arxiv.org/abs/2611.22937v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "With the slowdown of transistor scaling, chipletbased systems, and in particular chiplet-based wafer-scale integration, have emerged as a promising approach to sustain growth in computing capability per cost for modern processors and accelerators. In recent years, many specialized inter-chiplet interconnect topologies have been proposed. In these topologies, the simple, well-established, and deadlock-free dimension-order routing scheme is not applicable due to its reliance on regular mesh struct",
+    "authors": [
+      "Patrick Iff",
+      "Torsten Hoefler"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Temperature Flips the Sign of the Hydrogen Response in Nanogranular Palladium Networks",
+    "url": "https://arxiv.org/abs/2611.22877v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "In nanogranular palladium networks, hydrogen uptake has two opposing effects on electrical resistance. Absorbed hydrogen scatters electrons within the particles, raising their resistance, while particle expansion narrows the gaps between them and lowers the junction resistance. Such networks are widely studied as resistive hydrogen sensors, and the sign of their net response is usually treated as a fixed property of the architecture. In networks grown by atomic layer deposition on macroporous si",
+    "authors": [
+      "Niclas Alkazaz",
+      "Robert Zierold",
+      "Patrick Huber"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Engineering third order absorbing exceptional points in multi-drive cavity magnonics for enhanced sensing",
+    "url": "https://arxiv.org/abs/2611.22875v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "We consider a four mode cavity magnonics system consisting of two coupled resonators containing a pair of YIG spheres. Each resonator has two input-output ports allowing for the application of multiple drive fields. We show that with control of the dipolar coupling strength between the YIG spheres the relative amplitude and phase of the drive fields can be used to tune the system to third order absorbing exceptional points. The system considered here offers considerable flexibility and may be us",
+    "authors": [
+      "R. D. McKenzie",
+      "R. L. Stamps"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "AlCoCuFeNi High-Entropy Alloy Nanoparticle Melting and Solidification: A Classical Molecular Dynamics Simulation Study",
+    "url": "https://arxiv.org/abs/2611.22858v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "The processes of melting and solidification of an AlCoCuFeNi high-entropy alloy nanoparticle with a diameter of about 10 nm were studied by classical molecular dynamics simulation using an embedded atom model potential. Three cooling rates, 10^11, 10^12, and 10^13 K/s, were considered. Melting and crystallization behavior were characterized through the temperature dependence of the potential energy. Structural evolution was analyzed using adaptive common-neighbor analysis (CNA) and radial distri",
+    "authors": [
+      "O. I. Kushnerov"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.PF",
+    "title": "How well does graph superoptimization transfer? Adapting tensor-graph superoptimizer to a Triton-based NPU",
+    "url": "https://arxiv.org/abs/2611.22844v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "For automatic optimization systems, performance portability across increasingly diverse AI accelerators remains a challenge. We investigate how well graph-level superoptimization transfers across architectures by adapting Mirage from its CUDA-oriented design to the Huawei Ascend 910B3 through a Triton-based compilation stack. We evaluate the adapted system on transformer-relevant workloads, including matrix multiplication, softmax, RMSNorm+MatMul, gated MLP, FNN, and attention. The results show ",
+    "authors": [
+      "Weronika Hryniewska-Guzik",
+      "Mateusz Comblik",
+      "Daniel Murawski",
+      "Jakub Schmiegel",
+      "Maciej Świetlik",
+      "Maciej Kokociński",
+      "Tadeusz Kobus"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "From a High-T$\\rm_C$ Spin-Gapless Semiconductor to a Spin-Glass: The Role of Disorder in NiMnCrAl",
+    "url": "https://arxiv.org/abs/2611.22784v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "We combine first-principles calculations with structural, magnetic, and transport measurements to investigate the influence of chemical disorder on the quaternary Heusler alloy NiMnCrAl. For the ordered Y-type structure, density-functional-theory calculations predict a ferrimagnetic spin-gapless-semiconducting state with a total magnetic moment of $1.99\\,μ_{\\mathrm{B}}/\\mathrm{f.u.}$ and a mean-field ordering temperature of approximately $1300~\\mathrm{K}$. Polycrystalline NiMnCrAl forms in a sin",
+    "authors": [
+      "Arka Patra",
+      "Tufan Roy",
+      "Nilofar Kurawle",
+      "Tamaghna Maitra",
+      "Souvik Banerjee",
+      "Mantu Modak",
+      "Shuvankar Gupta",
+      "Sudip Chakraborty",
+      "Soumya Bhowmik",
+      "Papri Dasgupta",
+      "Rajashri Urkude",
+      "Biplab Ghosh",
+      "D. Bhattacharyya",
+      "A. Sundaresan",
+      "Sudhindra Rayaprol",
+      "Masafumi Shirai",
+      "Chandan Mazumdar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Canonical spin glass behavior and memory effects in van der Waals magnet (Fe0.55Ni0.45)3GaTe2",
+    "url": "https://arxiv.org/abs/2611.22781v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "We demonstrate the canonical spin-glass behavior and non-equilibrium dynamics in a single-crystalline Ni-doped van der Waals magnet (Fe0.55Ni0.45)3GaTe2 with a freezing temperature $T_f \\approx 45.5$ K from detailed ac susceptibility and dc magnetization measurements. The temperature-dependent dc magnetization exhibits strong magnetic irreversibility and the ac susceptibility shows that the peak at $T_f$ shifts towards higher temperatures with increase in ac frequency, indicating the presence of",
+    "authors": [
+      "P. Biswal",
+      "Kakan Deb",
+      "Nitesh Kumar",
+      "D. Samal",
+      "Prabhat Mandal"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "PAISF: A Partially Adaptive In-Order Selection Function for Routing in On-Chip, Inter-Chiplet, and Wafer-Scale Networks",
+    "url": "https://arxiv.org/abs/2611.22772v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "The growing number of compute elements per chip, along with advances such as chiplet systems and wafer-scale integration, drives the need for scalable and efficient routing algorithms for irregular topologies. A routing algorithm consists of a routing function (RF) that ensures deadlock freedom and a selection function (SF) that avoids congestion and, in some cases, guarantees in-order packet delivery. We propose two novel SFs for irregular topologies, ISF and PAISF, which ensure in-order delive",
+    "authors": [
+      "Patrick Iff",
+      "Luca Oertig",
+      "Andrin Weber",
+      "Luca Benini",
+      "Torsten Hoefler"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Structured Design of Layered Sparse Unitary Space-Time Modulation for Integrated Noncoherent and Coherent MIMO Communications",
+    "url": "https://arxiv.org/abs/2611.22763v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "This work presents a novel structured constellation design based on unitary space-time modulation (USTM) for integrated noncoherent and coherent multiple-input multiple-output (MIMO) communications. Information is encoded into the sparse space-time matrices through two layers: a noncoherent layer that distinguishes points on the Grassmann manifold (subspaces) and a coherent layer that distinguishes among the Stiefel representatives associated with each of those points (bases for the subspaces). ",
+    "authors": [
+      "Álvaro Pendás-Recondo",
+      "Enrique Pendás-Recondo",
+      "Rafael González Ayestarán",
+      "Jesús Alberto López-Fernández",
+      "Ignacio Santamaria"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Reference Coordinates, Output Perturbations, and Information Loss in EEG Decoding",
+    "url": "https://arxiv.org/abs/2611.22752v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "Electroencephalography (EEG) decoders can respond to reference changes that preserve all relative-potential information. We use established measurement-operator theory to distinguish coordinate sensitivity, additional output-channel perturbations, and electrode loss. Exact pseudoinverse alignment supplies a consistency control; measurement-operator canonicalization (MOC) denotes a graph-Tikhonov estimator. The broader evaluation covers three public motor-imagery datasets and four decoders. The p",
+    "authors": [
+      "Runni Zhou",
+      "Rongrong Fu",
+      "Xinghao Yan",
+      "Xiaoyang Li"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "LaFlash: Capacity-Driven Acceleration for Coding Agent Workflows via QLC-HBF",
+    "url": "https://arxiv.org/abs/2611.22746v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "As large language models (LLMs) evolve toward agentic AI, coding agents are emerging as memory-intensive workloads that repeatedly reuse persistent states, including contexts and KV caches. Emerging agentic workflows, including Loop/Graph Engineering, cause state amplification through frequent active/dormant transitions, increasing memory pressure. Evicted states incur costly recomputation upon reactivation, particularly under long-context, short-decode workloads. This motivates Capacity-Driven ",
+    "authors": [
+      "Yuseon Choi",
+      "Eunjong Lee",
+      "Sanghyeon Park",
+      "Seongyon Hong",
+      "Sangjin Kim",
+      "Thierry Tambe"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.NI",
+    "title": "Gateway-Free Kafka Streaming from FPGA-Based Detectors: A Bare-Metal Pipelined Producer on Zynq-7000",
+    "url": "https://arxiv.org/abs/2611.22674v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "We present a bare-metal Apache Kafka producer implemented on a Zynq-7000 System-on-Chip (SoC) for event-driven data acquisition. Events are generated in Programmable Logic (PL), transferred to the Processing System (PS) through AXI4-Stream and AXI DMA, and published to a standard Kafka broker without an intermediate gateway computer. The PS constructs ProduceRequest messages and transmits them through the lwIP raw TCP/IP API. A configurable pipeline limits the number of outstanding Kafka request",
+    "authors": [
+      "Fernanda Zapata Bascuñán",
+      "Matías Hampel"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "VQkit: A Unified and Extensible Framework for VASP and Quantum ESPRESSO Pre- and Post-Processing",
+    "url": "https://arxiv.org/abs/2611.22664v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "VQkit is a Python-based computational toolkit developed to streamline the pre- and post-processing of density functional theory calculations performed using Vienna Ab initio Simulation Package (VASP) and Quantum ESPRESSO (QE). The framework employs a unified representation of lattice vectors, atomic coordinates, chemical species, and positional constraints, enabling cross-code structure conversion, geometry manipulation, crystallographic reconstruction, and code-specific input generation. Its pr",
+    "authors": [
+      "Rajkamal Anand",
+      "Seunghwan Kwon",
+      "Gun Jin Yun"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Edge-Combining Subharmonic Mixer-First Receiver",
+    "url": "https://arxiv.org/abs/2611.22526v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "A 1-10 GHz subharmonic mixer-first receiver using edge combining to drive N-path switches from 50% duty-cycle clocks at half the local oscillator (LO) frequency avoids the gain penalty of harmonic mixing. Inverter-based differential baseband amplifiers with back-gate feedback linearization set their gain by process-defined capacitance ratios, using no additional components and consuming no additional power. A 22 nm fully depleted silicon on insulator (FD-SOI) prototype receiver achieves a conver",
+    "authors": [
+      "Eric Danson",
+      "Jeffrey S. Walling"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Koopmans spectral functionals for excitons in materials",
+    "url": "https://arxiv.org/abs/2611.22524v1",
+    "published_date": "2026-11-17",
+    "source": "arXiv",
+    "summary": "Accurate first-principles characterization of excitons typically relies on the Bethe-Salpeter equation (BSE) combined with quasiparticle energies from computationally demanding GW calculations. Here, we replace the GW step with quasiparticle energies from Koopmans-compliant spectral functionals, an approach we call BSE@qKI, and implement it in an automated, reproducible AiiDA workflow. For a set of benchmark semiconductors, BSE@qKI reproduces experimental band gaps and first exciton energies wit",
+    "authors": [
+      "Miki Bonacci",
+      "Edward Linscott",
+      "Julian Geiger",
+      "Nicola Marzari",
+      "Nicola Colonna"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.AR",
     "title": "ThermLeT: Transformer-based Temperature Prediction for 2.5D Chiplet Architecture",
     "url": "https://arxiv.org/abs/2611.21954v1",
