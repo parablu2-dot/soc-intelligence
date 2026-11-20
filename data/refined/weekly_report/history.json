@@ -1,42 +1,42 @@
 {
   "mobile_ap": {
-    "date": "2026-11-14",
-    "executive_summary": "Samsung remains undecided between Snapdragon and Exynos (2700) for Galaxy S27 Ultra, with performance claims suggesting internal fragmentation; MediaTek Dimensity variants (9600 Pro, 9500) meanwhile consolidate non-Samsung OEM adoption across flagships (vivo X500, Galaxy Tab S12). The real competitive shift is in design automation—Cognichip's AI-assisted tooling threatens to flatten the SoC design cycle advantage that historically favored well-resourced players like Qualcomm."
+    "date": "2026-11-21",
+    "executive_summary": "This week's material lacks substantive technical or competitive moves in mobile AP design, packaging, or protocol boundaries. The Apple health study signals compute capability relevance but remains research-stage; the India laptop survey confirms Snapdragon's market share momentum but offers no new architectural or yield data. No change to competitive standings."
   },
   "hpc_datacenter": {
-    "date": "2026-11-14",
-    "executive_summary": "South Korea's HPC memory leadership intensified this week as SK Hynix escalated production-tier hiring (eliminating degree requirements, ~$600K performance bonuses) while NVIDIA expanded sovereign AI partnerships across Samsung and Korean startups—signaling sustained AI DRAM ramp confidence. However, the intensity of talent acquisition (now extending to non-degree roles and international poaching via SanDisk) reveals deeper execution friction at manufacturing scale rather than architectural differentiation, and Korea's strategy pivots toward ecosystem lock-in (NVLink Fusion participation, Dynamo recipe optimization) to offset NVIDIA's integrated advantage. Competitive standing at the packaging/interposer boundary remains unchanged: Korean suppliers own volume but face erosion from Google's TPU coalition and AMD's EPYC momentum in non-NVIDIA stacks."
+    "date": "2026-11-21",
+    "executive_summary": "변화 없음"
   },
   "custom_soc": {
-    "date": "2026-11-14",
-    "executive_summary": "Google's rapid generation cadence—four TPU variants (8, 8e, 8tx, 8i Max) deployed within a year—signals competitive acceleration in inference-specialized silicon, with 8tx's confidential computing via AMD EPYC Turin and 8i Max's doubled memory bandwidth (targeting agentic AI) now approaching 100 cloud customers. This week confirms verticalization is moving faster than Marvell's silicon-optics fusion path; the critical interface has shifted from interconnect differentiation to workload-specific ASIC partitioning and host-CPU coupling, reducing the heterogeneous integration advantage previously credited to silicon-optics."
+    "date": "2026-11-21",
+    "executive_summary": "변화 없음"
   },
   "foundry": {
-    "date": "2026-11-14",
-    "executive_summary": "TSMC publicly reaffirmed logic-only foundry commitment this week while credible sources indicate active BEOL (back-end-of-line) 3D DRAM development leveraging processor die footprint—a technical move that sidesteps the memory business taboo by positioning DRAM as process integration rather than memory manufacturing. Meanwhile, Samsung secured TSMC 3nm capacity for NVIDIA's next-gen NVHBM, reinforcing TSMC's packaging-interface dominance in AI accelerator stacks even as Samsung and SK Hynix race to secure ASML EUV tools ahead of 2027–2028 supply constraints."
+    "date": "2026-11-21",
+    "executive_summary": "NVIDIA's CEO transition injects supply-chain recalculation risk into the foundry ecosystem; Samsung gains tactical negotiating room with TSMC while SK Hynix doubles down on HBM4 packaging and test capacity despite AI sector uncertainty, signaling that memory-interface integration—not core logic—remains the competitive vector. TSMC's public logic-only posture is now shadowed by rival capital deployment aimed explicitly at packaging and assembly nodes where margin and control concentrate."
   },
   "packaging": {
-    "date": "2026-11-14",
-    "executive_summary": "Packaging supply-chain consolidation accelerates around AI/HBM demand vectors, with NVIDIA directly investing in SPIL alongside TSMC's CoWoS anchor, while downstream materials control (Henkel Seoul R&D, 12.1B won HBM-focused investment) and geographic dispersal (India via Paras-BroadPak, Europe via Silicon Box €3.2B Vulcan) fragment tier-two positioning. Samsung's materials-layer strategy (signaled last week via Yokohama) now competes directly with Korean materials-supply inroads (Henkel Seoul), indicating a shift from internal CSP consolidation to external ecosystem lock-in—commoditizing interconnect vendors unless they own process IP at the thermal/adhesion boundary."
+    "date": "2026-11-21",
+    "executive_summary": "Packaging ecosystem consolidates around dual momentum: TSMC-Xintec seven-year CoWoS capacity deal (through 2033) anchors AI/HBM supply guarantees, while Daxin Materials' semiconductor revenue breakthrough (22.7%, first time >20%) and Taiwan APS Holdings' ceramic substrate IPO (NT$188/share) signal materials-layer commoditization is reversing through platform differentiation. Chiplet standardization (UCIe 4.0 memory integration, Imec-ASRA automotive ACIR specs) now creates vertical lock-in at the interposer boundary, favoring integrated materials players over standalone interconnect vendors."
   },
   "cpo_optics": {
-    "date": "2026-11-14",
-    "executive_summary": "CPO competitive fragmentation is re-emerging post-Marvell/Lumentum consolidation, with multiple independent optical interconnect platforms (MicroLED via Fabric.AI, Polar Light; silicon photonics via GlobalFoundries, Staera; isolator-free transmitters) advancing in parallel to capture AI data-center scaling. While Marvell controls end-to-end optical-electronic integration, new entrants are targeting specific interface gaps—thermal management, fault tolerance, and process control—suggesting the value accrual boundary is shifting from monolithic CPO systems toward modular, chiplet-compatible optical I/O standards."
+    "date": "2026-11-21",
+    "executive_summary": "변화 없음"
   },
   "dram": {
-    "date": "2026-11-14",
+    "date": "2026-11-21",
     "executive_summary": "변화 없음"
   },
   "nand": {
-    "date": "2026-11-14",
+    "date": "2026-11-21",
     "executive_summary": "변화 없음"
   },
   "hbm": {
-    "date": "2026-11-14",
-    "executive_summary": "Samsung is pivoting from foundry-centric strategy to vertically integrated HBM packaging dominance, announcing KRW 46T Onyang hub (five packaging lines, operations moved up to 2028) while simultaneously relying on TSMC 3nm for NVIDIA's next-gen base dies—a structural inversion where Samsung controls the high-margin packaging interface but outsources the commodity logic node. Concurrent material localization (LG Chem's NCF/MR-MUF for bonding, Henkel's Seoul R&D center for advanced packaging adhesives) and Google's 8i Max doubling HBM bandwidth signal that the packaging-interposer boundary—not raw memory dies—is now the technical choke point determining competitive positioning in AI accelerator supply chains."
+    "date": "2026-11-21",
+    "executive_summary": "Samsung and SK Hynix are consolidating HBM packaging and test dominance while simultaneously capturing custom base-die production via platform-locked partnerships—Samsung now holds HBM4E for Meta on 2nm (outsourcing commodity logic, not packaging), while SK Hynix aggressively scales HBM4 capacity for H1 2025 operations. The tactical inversion is now complete: Korean suppliers own the packaging-interposer boundary (high-margin, differentiation point), while hyperscalers (Google, Meta) are systematizing direct HBM procurement to bypass Broadcom intermediation and lock packaging specs to their own base-die roadmaps, fragmenting the previously unified HBM ecosystem into platform-specific supply chains."
   },
   "pmic": {
-    "date": "2026-11-14",
-    "executive_summary": "TSMC and Samsung's shift away from 8-inch capacity toward advanced nodes is creating supply opportunity for Chinese matnode producers SMIC and Hua Hong in BCD/analog segments. This represents a structural demand realignment in a mature-node capacity axis rather than performance competition; Chinese vendors are capturing volume-based cost advantage on legacy process nodes where leading-edge players have reduced fab utilization."
+    "date": "2026-11-21",
+    "executive_summary": "No material shift in PMIC supply dynamics this week. MaxLinear's new AI optics power chip launch addresses application-layer demand but does not alter underlying BCD/mature-node capacity allocation or pricing pressure from Chinese competitors (SMIC, Hua Hong). TSMC/Samsung's continued 8-inch capacity reduction remains the structural driver; Chinese matnode producers remain positioned to capture volume-based cost advantage."
   }
 }
