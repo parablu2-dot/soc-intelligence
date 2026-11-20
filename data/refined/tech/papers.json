@@ -2,6 +2,377 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "physics.ins-det",
+    "title": "4D-TEMPO: Differentiable 4D-STEM ptychography via fast Physics Optimizers",
+    "url": "https://arxiv.org/abs/2611.24776v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Electron ptychography recovers atomic structure from 4D-STEM data: diffraction patterns at multiple positions of a scanned probe. Current codes reconstruct an image and read atoms off it, or fit atoms under an $L_1$ loss; neither gives per-atom uncertainty. We propose 4D-TEMPO, a differentiable physical renderer that fits the atoms, the microscope, and the detector directly to the recorded electron counts under a Poisson likelihood. The output is a list of atoms, each a Gaussian primitive with a",
+    "authors": [
+      "Ramani Duraiswami",
+      "Yichao Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Atomic-scale assembly of sulfur vacancy complexes for tailored in-gap states in monolayer WS$_{2}$",
+    "url": "https://arxiv.org/abs/2611.24754v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Atomic-scale defects in two-dimensional semiconductors are quasi-isolated quantum systems with promise for emerging technologies. Although their potential as spin qubits, quantum sensors and single-photon emitters has been demonstrated experimentally, creating them deterministically and identifying them chemically remains challenging, which limits control over their electronic states. In this work we assemble sulfur vacancies in monolayer WS$_{2}$ into complexes of different sizes and geometries",
+    "authors": [
+      "Daniel Jansen",
+      "Guangyao Miao",
+      "Jan-Heinrich Keienburg",
+      "Jeison Fischer",
+      "Thomas Michely",
+      "Hannu-Pekka Komsa",
+      "Wouter Jolie"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Mechanistic Critics for Sample-Efficient NPU Design-Space Exploration",
+    "url": "https://arxiv.org/abs/2611.24733v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "NPU design-space exploration for LLM inference mainly relies on an expensive simulator that often returns only scalar feedback such as latency and power. Such feedback can rank evaluated configurations, but gives little information for deciding why a configuration is slow or which architecture parameter should be changed next. This limitation is especially severe because prefill and decode workloads can be limited by different resources, including compute throughput and HBM bandwidth. We propose",
+    "authors": [
+      "Yicheng He",
+      "Yuqi Xue",
+      "Tianyang Wu",
+      "Jian Huang",
+      "Bin Hu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "The Long and Winding Pore: Tuning Porosity in Templated Nanoporous Carbons",
+    "url": "https://arxiv.org/abs/2611.24707v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Disordered materials pose a recurring challenge for molecular simulation: realistic structural models are often generated through thermal protocols in which several structural descriptors emerge simultaneously and cannot easily be varied independently. Nanoporous carbons constitute a particularly relevant example: pore size, wall order, curvature, and network tortuosity generally emerge as outcomes of the thermal preparation protocol, rather than being independently prescribed structural paramet",
+    "authors": [
+      "Zacharie Waysenson",
+      "Baptiste Barthe-Gold",
+      "Arthur France-Lanord",
+      "Mathieu Salanne",
+      "A. Marco Saitta"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Hypnos: A Dual-Phase End-to-End Platform for Scalable Continual Learning at the Edge",
+    "url": "https://arxiv.org/abs/2611.24637v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Continual learning (CL) enables neural networks to adapt to non-stationary data streams by mitigating catastrophic forgetting, offering a path to robust, private, and adaptable edge devices. Yet, porting CL to real-world edge devices remains challenging for two reasons: (i) online operation, where sensor data arrives one sample at a time and the device must adapt on-the-fly, and (ii) the low footprint of edge devices, which makes traditional error backpropagation training prohibitive. Inspired b",
+    "authors": [
+      "Guilherme Guedes",
+      "Marco Apolinario Lainez",
+      "Charlotte Frenkel"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Reliable arithmetic circuits using less reliable (sub-digital) logic",
+    "url": "https://arxiv.org/abs/2611.24591v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "The frequent static failure of CMOS logic gates at ultra-low voltages has historically been perceived as a strict barrier to extreme voltage scaling: this paper introduces a statistical circuit law proving this intuition wrong. We discovered a universal power law connecting gate and circuit static failure probabilities, revealing that circuit failure requires the simultaneous breakdown of an entire gate cluster rather than a single component. Because the required cluster size increases rapidly a",
+    "authors": [
+      "Trevor McCourt",
+      "Ila R. Fiete",
+      "Neil Gershenfeld",
+      "Isaac L. Chuang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Slim-Mamba: An Efficient and Reconfigurable Mamba-Based Accelerator for Massive MIMO Indoor Localization",
+    "url": "https://arxiv.org/abs/2611.24553v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Using real-world massive MIMO measurements from the LuViRA dataset, we present a system-level solution combining Mamba-based model development and hardware acceleration for indoor localization. Three Mamba-based models are explored: the original Mamba architecture, CMamba, a channel-correlation-enhanced state-space model designed to exploit correlations across input channels, and our proposed Slim-Mamba. Hardware implementation and bottleneck analysis are then used to guide further model simplif",
+    "authors": [
+      "Shengjie Chen",
+      "Chenxi Zhang",
+      "Sijia Cheng",
+      "Ove Edfors",
+      "Liang Liu",
+      "Ilayda Yaman"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "A Runtime System for Mitigating Crossbar Port Contention on SM-Partitioned GPUs",
+    "url": "https://arxiv.org/abs/2611.24458v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "To avoid scheduling delays when running concurrent workloads on a GPU, Streaming Multiprocessor (SM) partitioning mechanisms such as CUDA Green Contexts restrict each workload to separate SMs. Despite this partitioning, concurrent workloads still significantly slow down latency-critical workloads, which recent studies attribute to shared L2 cache and memory contention. However, contention also occurs at the crossbar ports connecting each Graphics Processing Cluster (GPC) of SMs to the L2 cache, ",
+    "authors": [
+      "Ziwen Wang",
+      "Qi Luo",
+      "Kunlin Li",
+      "Changxi Liu",
+      "Dongsheng Wang",
+      "Yun Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Dissecting an Unexplored SASS Control-Code Field: Barrier Exemption and Programmable Warp Priority",
+    "url": "https://arxiv.org/abs/2611.24437v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Every instruction in NVIDIA's native GPU ISA (SASS) carries a control code that guides hardware scheduling, and prior work has decoded its known fields to optimize GPU kernels. However, one control-code field remains unexplored: it appears over 500000 times in NVIDIA's closed-source libraries such as cuBLAS and cuDNN, yet nvcc never emits it when compiling user programs. This paper presents the first systematic study of this control-code field across GPU architectures from Volta to Blackwell. Us",
+    "authors": [
+      "Ziwen Wang",
+      "Qi Luo",
+      "Kunlin Li",
+      "Changxi Liu",
+      "Dongsheng Wang",
+      "Yun Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "How to Turn an Attention Neural Network into an Interpretable Hard-Logic Predicate Circuit: Truth-Table Predicate Extraction and State-Machine Merging under Ship-of-Theseus Replacement",
+    "url": "https://arxiv.org/abs/2611.24381v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "We convert a trained attention network as a whole, attention included, into a hard-logic predicate circuit that runs in its place. Every unit of the circuit is a 0/1 predicate on tokens, and every map between predicates is a minimised truth table. Short tables, such as the product of a query code and a key code, are minimised exactly, and wide feature-to-feature transitions become implication rules by noise-tolerant minimisation. Blocks are replaced one at a time from the output down, in the man",
+    "authors": [
+      "Yuchen Li",
+      "Zongqi Fan",
+      "Xintong Li",
+      "Nguyen H. Tran",
+      "Ken-Tye Yong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Constellation Shaping for OFDM-ISAC Systems: A Systematic and Experimental Comparison",
+    "url": "https://arxiv.org/abs/2611.24271v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Emerging integrated sensing and communications (ISAC) systems reuse the communications signal for radar-like sensing to provide environmental awareness. However, this integrated design imposes conflicting constraints on the modulation format, as communications systems use higher-order modulation formats while sensing systems use unit-modulus signals, making constellation shaping a key performance driver in ISAC systems. This paper develops a unified analytical and experimental framework for cons",
+    "authors": [
+      "Benedikt Geiger",
+      "Daniel Gil Gaviria",
+      "Christian Karle",
+      "Delcho Donev",
+      "Charlotte Muth",
+      "Thomas Zwick",
+      "Jürgen Becker",
+      "Benjamin Nuss",
+      "Laurent Schmalen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Hardware Acceleration of Vision-Language-Action Models with Weight Precision Rising over the Flow Steps",
+    "url": "https://arxiv.org/abs/2611.24234v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Vision-language-action (VLA) models such as GR00T control robots through an action head: a diffusion transformer that turns noise into a chunk of actions in a few flow-matching steps. Every step re-reads all of the head's weights from DRAM but applies each weight to only about fifty tokens. Inference is therefore memory-bound, and its latency and energy are largely determined by the total number of transferred weight bits. We show that later flow steps attenuate the quantization errors of earlie",
+    "authors": [
+      "Robin Geens",
+      "Simon Haepers",
+      "Jonas Crols",
+      "Chao Fang",
+      "Marian Verhelst"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "PULSAR-V: I/O-Aware Post-Update Attestation for RISC-V",
+    "url": "https://arxiv.org/abs/2611.24135v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Post-update attestation proves that a device installed the intended firmware, not that the image stayed protected until the report was signed. In a multi-master SoC, a master outside the attested processor can corrupt update-critical memory. In contrast, the firmware identity, lifecycle state, and the CPU's protection evidence remain byte-identical to a healthy device's. We present PULSAR-V, a post-update attestation architecture which binds the authenticated update commit to the effective permi",
+    "authors": [
+      "Niccolò Lentini",
+      "Stefano Di Carlo",
+      "Alessandro Savino"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "A Universal Diffusion Model for the Quantum Position Operator",
+    "url": "https://arxiv.org/abs/2611.24130v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "The quantum position operator and its response to perturbations underpin the functional properties of insulating materials. In the modern theory of polarization, Wannier charge centres encode Berry-phase polarization, while their structural derivatives determine key response functions. Here we introduce a universal diffusion model based on E(3)-equivariant graph neural networks for moments of the position operator, with the first moment defining Wannier centres and the second central moment thei",
+    "authors": [
+      "Ransell D'Souza",
+      "Austin Zadoks",
+      "Riccardo Dal Molin",
+      "Nataliia Manko",
+      "Junfeng Qiao",
+      "Nicola Marzari",
+      "Antimo Marrazzo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Properties of [111]-oriented ferroelectric superlattices based on oxides with a perovskite structure",
+    "url": "https://arxiv.org/abs/2611.24129v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "The ground-state structures of fifteen free-standing [111]-oriented ferroelectric superlattices (SLs) based on perovskite oxides and involving a single-atom substitution---BaTiO$_3$/SrTiO$_3$, PbTiO$_3$/SrTiO$_3$, PbTiO$_3$/PbZrO$_3$, SrZrO$_3$/SrTiO$_3$, PbZrO$_3$/BaZrO$_3$, BaTiO$_3$/BaZrO$_3$, PbTiO$_3$/BaTiO$_3$, BaTiO$_3$/CaTiO$_3$, KNbO$_3$/KTaO$_3$, KNbO$_3$/NaNbO$_3$, SrTiO$_3$/SrHfO$_3$, BaTiO$_3$/BaSnO$_3$, PbTiO$_3$/CaTiO$_3$, SrTiO$_3$/CaTiO$_3$, and PbZrO$_3$/SrZrO$_3$---are calcula",
+    "authors": [
+      "A. I. Lebedev"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Towards Deep Learning-Based Linear Assignment Problem Solvers for Multi-Object Tracking",
+    "url": "https://arxiv.org/abs/2611.24107v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "This paper proposes and evaluates deep learning (DL)-based linear assignment problem (LAP) solvers as a replacement for the classical Hungarian algorithm in multi-object tracking (MOT) systems. Three representative neural models are studied, namely a convolutional network (CNN), a graph neural network (GNN), and the graph-based linear assignment network (GLAN). A cost-matrix embedding is introduced so that a single model operates on cost matrices of any size, as required in MOT where the number ",
+    "authors": [
+      "Chu Tam Vu",
+      "Tran Thi Thuy Quynh",
+      "Do Hai Son"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Uncovering the Structural, Electronic, and Electrostatic Landscapes of SrTiO$_3$ Grain Boundaries via Grand Canonical Monte Carlo with a Machine-Learning Interatomic Potential",
+    "url": "https://arxiv.org/abs/2611.24097v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Grain boundaries in perovskites exhibit a rich variety of electronic, polar and magnetic properties, yet identifying their atomic structures and compositions remains challenging. Here, we combine the Grand Canonical Monte Carlo (GCMC) method with a universal machine-learning interatomic potential to explore the coupled compositional and structural phase space of $Σ$5(310)[001] SrTiO$_3$ grain boundaries. The resulting chemical potential phase diagram identifies ten stable structures belonging to",
+    "authors": [
+      "Xing He",
+      "Kairi Masuda",
+      "Aaron M. Schankler",
+      "Songsong Zhou",
+      "Andrew M. Rappe"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "A GPU-Native Nested Sampling Framework for Finite-Temperature Materials Modelling with Machine-Learned Interatomic Potentials",
+    "url": "https://arxiv.org/abs/2611.24088v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Modern equivariant machine-learned interatomic potentials (MLIPs) have dramatically improved the accuracy of and the scales accessible to atomistic simulation, yet the thermodynamic sampling methods needed to turn those potentials into finite-temperature phase stability predictions have not kept pace computationally. We present the GPU-native, massively parallel nested sampling framework JAXRENS, implemented on top of JAX, which removes the practical bottlenecks preventing atomistic nested sampl",
+    "authors": [
+      "Nico Unglert",
+      "Alessandro Serafini",
+      "Jesús Carrete",
+      "Georg K. H. Madsen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "Recurrent Domain Incremental Adaptation of Time-Series Foundation Models",
+    "url": "https://arxiv.org/abs/2611.24075v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Pretrained Time-Series Foundation Models (TSFMs) provide strong representations for downstream classification tasks. Yet adapting a TSFM under changing operating conditions remains challenging. A model must improve on each newly observed condition without sacrificing conditions it has already learned, often from only a small labeled calibration set and without knowing the operating condition at inference time. We find that this difficulty has an important geometric structure. Under an operating-",
+    "authors": [
+      "Sachith Abeywickrama",
+      "Peiliang Gong",
+      "Emadeldeen Eldele",
+      "Min Wu",
+      "Chau Yuen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Toward Massive MIMO HAPS Networks: Antenna Architectures and Design",
+    "url": "https://arxiv.org/abs/2611.24064v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "High-altitude platform stations (HAPS) are expected to become an important component of sixth-generation (6G) and beyond wireless networks by providing wide-area wireless connectivity through massive multiple-input multiple-output (mMIMO) technology. As the communication performance of HAPS systems is fundamentally determined by the antenna array architecture, efficient antenna design has become a critical research topic. Motivated by these considerations, this article provides a comprehensive o",
+    "authors": [
+      "Shasha Liu",
+      "Abla Kammoun",
+      "Mohamed Slim Alouini"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Ultrafast Successive Control and Electrical Detection of Long-Lived Valley Polarization in Room-Temperature Germanium",
+    "url": "https://arxiv.org/abs/2611.23998v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Germanium (Ge) hosts four degenerate valleys in the conduction band minima, and their highly anisotropic effective masses offer a valley degree of freedom in transport phenomena via anisotropic conductivity. Using time- and polarization-resolved terahertz spectroscopy combined with deformation potential theory, we reveal a valley relaxation time reaching 10 ps near the band edge of Ge(001) at room temperature, long enough to detect the valley polarization in electrical transport measurements. We",
+    "authors": [
+      "Ami M. Shirai",
+      "Yuta Murotani",
+      "Shunta Aoki",
+      "Shunsuke A. Sato",
+      "Tomohiro Fujimoto",
+      "Kota Aikyo",
+      "Changsu Kim",
+      "Hidefumi Akiyama",
+      "Jun Yoshinobu",
+      "Toshiya Ideue",
+      "Ryusuke Matsunaga"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Light-Induced Odd-Parity h-Wave Magnetism in Penrose Quasicrystals",
+    "url": "https://arxiv.org/abs/2611.23992v1",
+    "published_date": "2026-11-18",
+    "source": "arXiv",
+    "summary": "Noncrystallographic rotational symmetry offers a route to unconventional spin splitting beyond the constraints of periodic crystals. We show that circularly polarized light induces odd-parity $h$-wave magnetism in a collinear antiferromagnetic Penrose quasicrystal without spin-orbit coupling. Light-induced chiral hopping, generated by virtual two-step processes, combines with staggered exchange to lift the spin degeneracy of the undriven system. Quasicrystalline spin-group symmetry enforces odd-",
+    "authors": [
+      "Yiming Li",
+      "Huaqing Huang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Electrostatic screening and nitrogen-vacancy charge states in boron-doped/nitrogen-doped diamond junctions",
     "url": "https://arxiv.org/abs/2611.22074v1",

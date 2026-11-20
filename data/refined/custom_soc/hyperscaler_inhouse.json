@@ -3,6 +3,36 @@
     "axis": "custom_soc",
     "company": "hyperscaler_inhouse",
     "category": "news",
+    "headline": "Amazon SageMaker Inference: 2026 launches in review, part 2",
+    "url": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-inference-2026-launches-in-review-part-2/",
+    "published_date": "2026-11-20",
+    "source": "AWS Blog",
+    "summary": "This second installment reviews 13 more Amazon SageMaker AI inference launches from 2026, spanning configuration recommendations, fitting more models onto each GPU, serving models too large for one instance, cross-Region routing, and post-launch tuning, bringing the year's total to 26."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
+    "category": "news",
+    "headline": "Amazon SageMaker AI now detects latency drift, idle GPUs, and missed optimizations on your inference endpoints",
+    "url": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-ai-now-detects-latency-drift-idle-gpus-and-missed-optimizations-on-your-inference-endpoints/",
+    "published_date": "2026-11-19",
+    "source": "AWS Blog",
+    "summary": "Amazon SageMaker AI now monitors your generative AI inference endpoints by default and tells you when a change could improve performance or lower cost. It tracks latency, GPU utilization, and serving configuration, then sends a finding through AWS Health with a one-click path to benchmark alternatives in SageMaker Studio before you apply any change."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
+    "category": "news",
+    "headline": "Using NVIDIA Run:ai GPU Fractioning on Amazon EKS",
+    "url": "https://aws.amazon.com/blogs/machine-learning/using-nvidia-runai-gpu-fractioning-on-amazon-eks/",
+    "published_date": "2026-11-19",
+    "source": "AWS Blog",
+    "summary": "Learn how to run two memory-bounded Kubernetes Pods on a single NVIDIA A10G GPU using open-source NVIDIA Run:ai GPU Fractioning on Amazon EKS. This walkthrough builds a custom Amazon Linux 2023 image, installs KAI Scheduler and the GPU Fractioning Operator, and validates per-Pod GPU-memory contracts with enforcement and metrics."
+  },
+  {
+    "axis": "custom_soc",
+    "company": "hyperscaler_inhouse",
+    "category": "news",
     "headline": "Exa boosts embedding throughput by 50% to index billions of documents on AWS AI chips",
     "url": "https://aws.amazon.com/blogs/machine-learning/exa-boosts-embedding-throughput-by-50-to-index-billions-of-documents-on-aws-ai-chips/",
     "published_date": "2026-11-18",
