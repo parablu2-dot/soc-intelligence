@@ -1,263 +1,189 @@
 {
-  "date": "2026-11-20",
-  "generated_at": "2026-11-20T01:52:36.812579+00:00",
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T01:16:14.723198+00:00",
   "sectors": {
-    "hpc_datacenter": {
-      "sector": "HPC·Datacenter",
-      "date": "2026-11-20",
-      "item_count": 5,
-      "generated_at": "2026-11-20T01:52:36.811996+00:00",
+    "mobile_ap": {
+      "sector": "Mobile AP",
+      "date": "2026-11-21",
+      "item_count": 1,
+      "generated_at": "2026-11-21T01:16:14.722698+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Intel showcases D270 Crescent Island GPU with 5.9x FP64 performance improvement. Samsung and MediaTek expand R&D infrastructure with $220M Vietnam center and new Purdue design center, while SK Hynix removes educational barriers in recruitment drive.",
+          "executive_summary": "TSMC 및 Samsung이 Xiaomi, OPPO, Vivo에 대한 칩 출하를 중단했다.",
           "key_facts": [
-            "Intel D270 Crescent Island GPU: 5.9x FP64 performance claim",
-            "Samsung: $220 million R&D center in Vietnam",
-            "SK Hynix: Removed education requirements, opened 16,000 recruitment positions",
-            "MediaTek: Announced new semiconductor design center at Purdue University, Indiana"
+            "TSMC",
+            "Samsung",
+            "Xiaomi",
+            "OPPO",
+            "Vivo"
           ],
-          "implications": [
-            {
-              "keyword": "GPU Compute Performance",
-              "text": "Intel's D270 FP64 gains position it as competitive alternative in HPC accelerator market"
-            },
-            {
-              "keyword": "Talent Acquisition",
-              "text": "SK Hynix's elimination of education criteria signals intensifying competition for skilled labor in memory manufacturing"
-            },
-            {
-              "keyword": "Geopolitical Strategy",
-              "text": "Samsung and MediaTek infrastructure investments in Vietnam and US diversify geographic design/R&D footprint outside China"
-            }
-          ],
-          "counterpoint": "No concrete details on D270 timeline, production scale, or when Samsung/MediaTek facilities become operational."
+          "implications": [],
+          "counterpoint": ""
         },
         "en": {
-          "executive_summary": "Intel showcases D270 Crescent Island GPU with 5.9x FP64 performance improvement. Samsung and MediaTek expand R&D infrastructure with $220M Vietnam center and new Purdue design center, while SK Hynix removes educational barriers in recruitment drive.",
+          "executive_summary": "TSMC and Samsung halted chip shipments to Xiaomi, OPPO, and Vivo.",
           "key_facts": [
-            "Intel D270 Crescent Island GPU: 5.9x FP64 performance claim",
-            "Samsung: $220 million R&D center in Vietnam",
-            "SK Hynix: Removed education requirements, opened 16,000 recruitment positions",
-            "MediaTek: Announced new semiconductor design center at Purdue University, Indiana"
+            "TSMC",
+            "Samsung",
+            "Xiaomi",
+            "OPPO",
+            "Vivo"
+          ],
+          "implications": [],
+          "counterpoint": ""
+        }
+      }
+    },
+    "hpc_datacenter": {
+      "sector": "HPC·Datacenter",
+      "date": "2026-11-21",
+      "item_count": 11,
+      "generated_at": "2026-11-21T01:16:14.722698+00:00",
+      "content": {
+        "ko": {
+          "executive_summary": "TSMC은 뮌헨에 새 칩 설계센터를 개설하고 Samsung은 핀란드 에스포에 새 R&D센터를 열었다. Google과 Blackstone이 $5B TPU 클라우드 합작사업을 출범시켰으며, 데이터센터 AI 칩 경쟁에서 Broadcom과 Marvell이 주요 선수로 부상하고 있다.",
+          "key_facts": [
+            "TSMC 뮌헨 칩 설계센터 개설",
+            "Samsung 에스포 R&D센터 개설",
+            "Google-Blackstone TPU 클라우드 합작사업 $5B",
+            "SK하이닉스 채용문화 우수기업 어워즈 수상",
+            "Tesla Dojo 슈퍼컴퓨터 기술 소송 제기"
           ],
           "implications": [
             {
-              "keyword": "GPU Compute Performance",
-              "text": "Intel's D270 FP64 gains position it as competitive alternative in HPC accelerator market"
+              "keyword": "지역 R&D 거점 확대",
+              "text": "TSMC과 Samsung의 유럽 설계/R&D센터 개설은 고객 접근성과 지역 기술 생태계 강화를 의도"
             },
             {
-              "keyword": "Talent Acquisition",
-              "text": "SK Hynix's elimination of education criteria signals intensifying competition for skilled labor in memory manufacturing"
+              "keyword": "AI 인프라 투자",
+              "text": "Google-Blackstone 파트너십은 클라우드 TPU 용량 확대로 AI 훈련 시장에서 경쟁 심화"
             },
             {
-              "keyword": "Geopolitical Strategy",
-              "text": "Samsung and MediaTek infrastructure investments in Vietnam and US diversify geographic design/R&D footprint outside China"
+              "keyword": "인재 채용 경쟁",
+              "text": "SK하이닉스 채용 프로세스 혁신(자소서 폐지, 반나절 면접)은 반도체 업계 인력 채용 경쟁 가중"
             }
           ],
-          "counterpoint": "No concrete details on D270 timeline, production scale, or when Samsung/MediaTek facilities become operational."
+          "counterpoint": "Post-quantum cryptography 성능 이슈 등 보안 과제는 HPC 데이터센터 확대에 별도의 고려 필요"
+        },
+        "en": {
+          "executive_summary": "TSMC opened a new chip design center in Munich and Samsung opened a new R&D center in Espoo, Finland. Google and Blackstone launched a $5B TPU cloud joint venture, with Broadcom and Marvell emerging as key players in the datacenter AI chip competition.",
+          "key_facts": [
+            "TSMC Munich chip design center opened",
+            "Samsung Espoo R&D center opened",
+            "Google-Blackstone TPU cloud joint venture $5B",
+            "SK Hynix received award for excellent recruitment culture",
+            "Tesla Dojo supercomputer technology lawsuit filed"
+          ],
+          "implications": [
+            {
+              "keyword": "Regional R&D hub expansion",
+              "text": "TSMC and Samsung's opening of European design/R&D centers aims to enhance customer accessibility and strengthen regional technology ecosystems."
+            },
+            {
+              "keyword": "AI infrastructure investment",
+              "text": "Google-Blackstone partnership intensifies competition in AI training market through expanded cloud TPU capacity."
+            },
+            {
+              "keyword": "Talent acquisition competition",
+              "text": "SK Hynix's recruitment process innovation (elimination of cover letters, half-day interviews) intensifies talent competition in semiconductor industry."
+            }
+          ],
+          "counterpoint": "Security challenges such as post-quantum cryptography performance issues require separate consideration for HPC datacenter expansion."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-11-20",
-      "item_count": 22,
-      "generated_at": "2026-11-20T01:52:36.811996+00:00",
+      "date": "2026-11-21",
+      "item_count": 16,
+      "generated_at": "2026-11-21T01:16:14.722698+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Google accelerates AI chip momentum with four TPU releases in 2024, establishing MediaTek partnership while securing direct HBM sourcing. GlobalFoundries commits $10M strategic investment in Indian chip designer Cyient Semiconductors, valued at $510M. Dnotitia demonstrates vector search ASIC at SC26.",
+          "executive_summary": "Google이 2027년 TPU 주문을 Broadcom에서 MediaTek으로 대폭 전환하면서 Broadcom 주가가 11-12% 하락했다. Google은 Broadcom 설계 TPU 계획을 축소하고 HBM을 직접 공급업체로부터 구매함으로써 TPU 공급망을 재편하고 있다.",
           "key_facts": [
-            "Google: Four TPU releases throughout 2024",
-            "GlobalFoundries: $10 million investment in Cyient Semiconductors",
-            "Cyient Semiconductors: $510 million valuation",
-            "Google-MediaTek partnership for AI chips with direct HBM sourcing bypass",
-            "Dnotitia: VDPU vector search ASIC demonstration at SC26"
+            "Google 2027년 TPU 주문 Broadcom → MediaTek 전환",
+            "Broadcom 주가 11-12% 하락",
+            "Broadcom 시가총액 $191B 감소",
+            "Goldman Sachs Broadcom 목표가 $460",
+            "Marvell 주가 10% 하락",
+            "Google HBM 직구로 예상 절감액 $50B (TPU 생명주기 기준)",
+            "Amazon SageMaker HyperPod 강화 observability",
+            "Amazon ElastiCache 분산 KV 캐싱으로 추론 비용 40%, 토큰까지시간 80% 단축",
+            "Dnotitia VDPU 벡터 검색 ASIC SC26 시연"
           ],
           "implications": [
             {
-              "keyword": "TPU Cadence",
-              "text": "Google's four releases in single year demonstrate aggressive custom silicon roadmap to reduce HBM/component dependencies"
+              "keyword": "공급망 다변화",
+              "text": "Google의 직접 조달 확대 및 MediaTek 활용으로 Broadcom의 커스텀 SoC 의존도 감소"
             },
             {
-              "keyword": "India Ecosystem",
-              "text": "GlobalFoundries' Cyient investment signals strategic bet on Indian chip design talent and cost-competitive design services"
+              "keyword": "설계비용 절감",
+              "text": "Google의 HBM 직구 및 공급망 재편은 TPU 개발 비용 최적화를 통해 경제성 개선"
             },
             {
-              "keyword": "Supply Chain Control",
-              "text": "Google's direct HBM procurement circumvents traditional Broadcom intermediary, consolidating vertical integration"
+              "keyword": "AI 인프라 효율성",
+              "text": "분산 KV 캐싱, SageMaker 고급 observability는 LLM 자체 호스팅 비용 및 지연시간 단축으로 경쟁력 강화"
             },
             {
-              "keyword": "Specialized ASICs",
-              "text": "Dnotitia vector search silicon indicates emerging market for AI inference acceleration beyond general compute"
+              "keyword": "소수 공급업체 집중 완화",
+              "text": "Google의 다원화 전략은 Broadcom 독점 위험 감소 및 산업 경쟁 구도 변화 초래"
             }
           ],
-          "counterpoint": "Limited specifics on TPU architectural advances, Cyient's design focus areas, or volume implications of Google-MediaTek collaboration."
+          "counterpoint": "MediaTek의 대량 TPU 생산 능력 및 품질 검증이 아직 Broadcom 수준인지 불확실"
         },
         "en": {
-          "executive_summary": "Google accelerates AI chip momentum with four TPU releases in 2024, establishing MediaTek partnership while securing direct HBM sourcing. GlobalFoundries commits $10M strategic investment in Indian chip designer Cyient Semiconductors, valued at $510M. Dnotitia demonstrates vector search ASIC at SC26.",
+          "executive_summary": "Google is significantly shifting its 2027 TPU orders from Broadcom to MediaTek, causing Broadcom's stock to decline 11-12%. Google is restructuring its TPU supply chain by scaling back Broadcom-designed TPU plans and procuring HBM directly from suppliers.",
           "key_facts": [
-            "Google: Four TPU releases throughout 2024",
-            "GlobalFoundries: $10 million investment in Cyient Semiconductors",
-            "Cyient Semiconductors: $510 million valuation",
-            "Google-MediaTek partnership for AI chips with direct HBM sourcing bypass",
-            "Dnotitia: VDPU vector search ASIC demonstration at SC26"
+            "Google 2027 TPU orders shifting from Broadcom to MediaTek",
+            "Broadcom stock decline 11-12%",
+            "Broadcom market cap decrease $191B",
+            "Goldman Sachs Broadcom price target $460",
+            "Marvell stock decline 10%",
+            "Google HBM direct procurement estimated savings $50B (TPU lifecycle basis)",
+            "Amazon SageMaker HyperPod enhanced observability",
+            "Amazon ElastiCache distributed KV caching reduces inference cost 40%, token-to-latency 80%",
+            "Dnotitia VDPU vector search ASIC SC26 demonstration"
           ],
           "implications": [
             {
-              "keyword": "TPU Cadence",
-              "text": "Google's four releases in single year demonstrate aggressive custom silicon roadmap to reduce HBM/component dependencies"
+              "keyword": "Supply chain diversification",
+              "text": "Google's expansion of direct procurement and MediaTek utilization reduces Broadcom's dependence as custom SoC supplier."
             },
             {
-              "keyword": "India Ecosystem",
-              "text": "GlobalFoundries' Cyient investment signals strategic bet on Indian chip design talent and cost-competitive design services"
+              "keyword": "Design cost reduction",
+              "text": "Google's HBM direct procurement and supply chain restructuring improve economics through TPU development cost optimization."
             },
             {
-              "keyword": "Supply Chain Control",
-              "text": "Google's direct HBM procurement circumvents traditional Broadcom intermediary, consolidating vertical integration"
+              "keyword": "AI infrastructure efficiency",
+              "text": "Distributed KV caching and advanced SageMaker observability strengthen competitiveness by reducing LLM self-hosting costs and latency."
             },
             {
-              "keyword": "Specialized ASICs",
-              "text": "Dnotitia vector search silicon indicates emerging market for AI inference acceleration beyond general compute"
+              "keyword": "Mitigation of single supplier concentration",
+              "text": "Google's diversification strategy reduces Broadcom monopoly risk and reshapes industry competitive dynamics."
             }
           ],
-          "counterpoint": "Limited specifics on TPU architectural advances, Cyient's design focus areas, or volume implications of Google-MediaTek collaboration."
+          "counterpoint": "Uncertainty remains whether MediaTek possesses production capacity and quality validation at Broadcom levels for high-volume TPU manufacturing."
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-11-20",
-      "item_count": 5,
-      "generated_at": "2026-11-20T01:52:36.811996+00:00",
+      "date": "2026-11-21",
+      "item_count": 14,
+      "generated_at": "2026-11-21T01:16:14.722698+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Intel secures first external 18A foundry customer (identity pending), positioning against TSMC dominance. Samsung develops custom HBM4E for Meta on 2nm base die while NVIDIA pursues TSMC 3nm. JEDEC targets DDR6 at 50% higher bandwidth and 12.8 GT/s. US export curbs impact Southeast Asia GPU rental financing including ByteDance-linked $480M loan pause.",
-          "key_facts": [
-            "Intel: First external 18A foundry win, Microsoft named EMIB customer",
-            "Samsung: Custom HBM4E development for Meta with 2nm base die",
-            "NVIDIA: Pursuing TSMC 3nm for advanced chips",
-            "JEDEC: Preliminary DDR6 specs with 12.8 GT/s speeds (50% higher bandwidth)",
-            "US chip curbs: ByteDance-linked $480M GPU rental financing loan paused",
-            "Intel 18A: First external deal announced by CEO Tan"
-          ],
-          "implications": [
-            {
-              "keyword": "Intel Foundry Strategy",
-              "text": "18A customer win validates Intel's competitive positioning against TSMC for cutting-edge logic; Microsoft EMIB deal expands adjacent packaging services"
-            },
-            {
-              "keyword": "Custom Memory",
-              "text": "Samsung-Meta HBM4E collaboration signals trend toward buyer-specific memory optimization and potential capacity diversification from SK Hynix"
-            },
-            {
-              "keyword": "Memory Bandwidth",
-              "text": "JEDEC DDR6 trajectory maintains DRAM relevance against HBM/chiplet alternatives for data center workloads"
-            },
-            {
-              "keyword": "Export Controls",
-              "text": "US curbs tighten ByteDance GPU access, escalating pressure on Southeast Asia chip ecosystem and alternative financing models"
-            }
-          ],
-          "counterpoint": "Intel 18A customer identity and volume commitments remain unconfirmed; Samsung-Meta HBM4E timeline and production readiness unclear."
-        },
-        "en": {
-          "executive_summary": "Intel secures first external 18A foundry customer (identity pending), positioning against TSMC dominance. Samsung develops custom HBM4E for Meta on 2nm base die while NVIDIA pursues TSMC 3nm. JEDEC targets DDR6 at 50% higher bandwidth and 12.8 GT/s. US export curbs impact Southeast Asia GPU rental financing including ByteDance-linked $480M loan pause.",
-          "key_facts": [
-            "Intel: First external 18A foundry win, Microsoft named EMIB customer",
-            "Samsung: Custom HBM4E development for Meta with 2nm base die",
-            "NVIDIA: Pursuing TSMC 3nm for advanced chips",
-            "JEDEC: Preliminary DDR6 specs with 12.8 GT/s speeds (50% higher bandwidth)",
-            "US chip curbs: ByteDance-linked $480M GPU rental financing loan paused",
-            "Intel 18A: First external deal announced by CEO Tan"
-          ],
-          "implications": [
-            {
-              "keyword": "Intel Foundry Strategy",
-              "text": "18A customer win validates Intel's competitive positioning against TSMC for cutting-edge logic; Microsoft EMIB deal expands adjacent packaging services"
-            },
-            {
-              "keyword": "Custom Memory",
-              "text": "Samsung-Meta HBM4E collaboration signals trend toward buyer-specific memory optimization and potential capacity diversification from SK Hynix"
-            },
-            {
-              "keyword": "Memory Bandwidth",
-              "text": "JEDEC DDR6 trajectory maintains DRAM relevance against HBM/chiplet alternatives for data center workloads"
-            },
-            {
-              "keyword": "Export Controls",
-              "text": "US curbs tighten ByteDance GPU access, escalating pressure on Southeast Asia chip ecosystem and alternative financing models"
-            }
-          ],
-          "counterpoint": "Intel 18A customer identity and volume commitments remain unconfirmed; Samsung-Meta HBM4E timeline and production readiness unclear."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-11-20",
-      "item_count": 17,
-      "generated_at": "2026-11-20T01:52:36.811996+00:00",
+      "date": "2026-11-21",
+      "item_count": 23,
+      "generated_at": "2026-11-21T01:16:14.722698+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Advanced packaging drives AI infrastructure growth with Kulicke and Soffa Q3 guidance driven by chiplet and HBM assembly demand. Messer establishes Taiwan chipmaker JV targeting gas supply; Greenland's TMAH chemicals enter overseas advanced packaging supply chain. Capitol Region $10B semiconductor project breaks ground with packaging component; orbital semiconductor crystal growth explored via Axiom Space partnership.",
-          "key_facts": [
-            "Kulicke and Soffa: Q3 CY2026 outlook driven by AI infrastructure and advanced packaging",
-            "Capitol Region: $10 billion semiconductor project groundbreaking",
-            "Messer: New joint venture targeting Taiwan chipmakers",
-            "Greenland TMAH: Bulk shipments of advanced packaging chemicals underway",
-            "Axiom Space: Orbital semiconductor crystal growth partnership",
-            "India semiconductor ecosystem: Transitioning from silicon to systems integration"
-          ],
-          "implications": [
-            {
-              "keyword": "AI-Driven Assembly",
-              "text": "Advanced chiplet packaging (chiplet interconnect, micro-bump, mass transfer) critical bottleneck; Kulicke/Soffa position reflects strong multi-year demand"
-            },
-            {
-              "keyword": "Supply Diversification",
-              "text": "Messer Taiwan JV and Greenland TMAH expansion reduce South Korea/Japan gas/chemical supply concentration risk"
-            },
-            {
-              "keyword": "Geopolitical Resilience",
-              "text": "Capitol Region $10B project and India ecosystem expansion build Western/Allied supply chain autonomy in packaging infrastructure"
-            },
-            {
-              "keyword": "Process Innovation",
-              "text": "Orbital crystal growth and plasma chamber simulation suggest frontier packaging techniques to enable next-gen thermal/electrical performance"
-            }
-          ],
-          "counterpoint": "Axiom orbital manufacturing remains pre-commercial; Messer Taiwan JV and Capitol Region project timelines/capacity commitments not detailed."
-        },
-        "en": {
-          "executive_summary": "Advanced packaging drives AI infrastructure growth with Kulicke and Soffa Q3 guidance driven by chiplet and HBM assembly demand. Messer establishes Taiwan chipmaker JV targeting gas supply; Greenland's TMAH chemicals enter overseas advanced packaging supply chain. Capitol Region $10B semiconductor project breaks ground with packaging component; orbital semiconductor crystal growth explored via Axiom Space partnership.",
-          "key_facts": [
-            "Kulicke and Soffa: Q3 CY2026 outlook driven by AI infrastructure and advanced packaging",
-            "Capitol Region: $10 billion semiconductor project groundbreaking",
-            "Messer: New joint venture targeting Taiwan chipmakers",
-            "Greenland TMAH: Bulk shipments of advanced packaging chemicals underway",
-            "Axiom Space: Orbital semiconductor crystal growth partnership",
-            "India semiconductor ecosystem: Transitioning from silicon to systems integration"
-          ],
-          "implications": [
-            {
-              "keyword": "AI-Driven Assembly",
-              "text": "Advanced chiplet packaging (chiplet interconnect, micro-bump, mass transfer) critical bottleneck; Kulicke/Soffa position reflects strong multi-year demand"
-            },
-            {
-              "keyword": "Supply Diversification",
-              "text": "Messer Taiwan JV and Greenland TMAH expansion reduce South Korea/Japan gas/chemical supply concentration risk"
-            },
-            {
-              "keyword": "Geopolitical Resilience",
-              "text": "Capitol Region $10B project and India ecosystem expansion build Western/Allied supply chain autonomy in packaging infrastructure"
-            },
-            {
-              "keyword": "Process Innovation",
-              "text": "Orbital crystal growth and plasma chamber simulation suggest frontier packaging techniques to enable next-gen thermal/electrical performance"
-            }
-          ],
-          "counterpoint": "Axiom orbital manufacturing remains pre-commercial; Messer Taiwan JV and Capitol Region project timelines/capacity commitments not detailed."
-        }
+        "ko": {},
+        "en": {}
       }
     }
   }

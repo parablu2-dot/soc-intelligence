@@ -2,6 +2,352 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "physics.optics",
+    "title": "From power to spectrum: an off-the-shelf photodiode turned into a spectrometer by its bias alone",
+    "url": "https://arxiv.org/abs/2611.26532v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Computational spectrometers replace dispersive optics with detectors whose spectral response can be varied, but every reported single-detector device obtains this response through dedicated fabrication: two-dimensional heterostructures, graded epitaxial junctions, organic stacks, filters or photonic circuits. We demonstrate a generic, fabrication-free alternative in which a standard commercial photodiode becomes a spectrometer through its electrical drive alone, requiring no modification of the ",
+    "authors": [
+      "Roi Yozevitch",
+      "Shmuel Sternklar",
+      "Ziv Glasser"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Constitutive Kolmogorov-Arnold Networks in Finite Element Model Updating: Closed-Form Hyperelastic Strain Energies from Heterogeneous Experiments",
+    "url": "https://arxiv.org/abs/2611.26528v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Calibrating a hyperelastic constitutive model for a soft material traditionally poses two problems: an expert must choose its functional form, and several homogeneous tests must determine its parameters. Neural constitutive models solve the first, but either remain black boxes or draw on a library of candidate terms fixed in advance. Full-field measurements, such as those from digital image correlation (DIC), promise to solve the second, replacing those tests by a single heterogeneous one. Two g",
+    "authors": [
+      "Kian P. Abdolazizi",
+      "Kevin Linka",
+      "Christian J. Cyron"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "From Seed to BLOOM: Autonomously Growing a Better Out-of-Order Core",
+    "url": "https://arxiv.org/abs/2611.26517v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Improving microprocessor performance while meeting ASIC implementation constraints like area and frequency is a complex and labor-intensive task that requires expertise across computer architecture, hardware design, and performance analysis and profiling. While large teams in industry can afford the engineering resources to target this problem across performance modeling, RTL design, and ASIC implementations, small teams of researchers and engineers cannot take on this huge engineering burden wh",
+    "authors": [
+      "Angela Cui",
+      "Ferran Hermida-Rivera",
+      "Jack Toubes",
+      "Jim Fang",
+      "Chengyi Lux Zhang",
+      "Borivoje Nikolić",
+      "Christopher W. Fletcher",
+      "Sagar Karandikar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "FoldSim: Scaling Cycle-Exact RTL Simulation with Hierarchical Folding and Static Scheduling",
+    "url": "https://arxiv.org/abs/2611.26472v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "RTL simulation is essential for hardware design and verification, yet its execution time grows rapidly with design scale and complexity. CPU- and GPU-based simulators exploit parallelism to accelerate RTL evaluation, but achieving high simulation throughput for large designs remains challenging. FPGA-based simulators offer higher throughput by mapping RTL computations directly onto hardware, but their scalability is constrained by FPGA resource capacity.\n  We present FoldSim, an automated framew",
+    "authors": [
+      "Chengxuan Wang",
+      "Nikhil Rout",
+      "Yang-gon Kim",
+      "Jacob Leigh",
+      "Yufan Du",
+      "Blaise Tine"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "quant-ph",
+    "title": "Scaling classical hardware for accurate real-time quantum error correction",
+    "url": "https://arxiv.org/abs/2611.26447v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Fault-tolerant quantum computation requires a classical decoder fast enough to process syndrome measurements at the rate at which they are generated, and to return its decisions with low latency. This is most demanding for superconducting processors, whose fast syndrome cycles force a trade-off between decoding speed and accuracy. Decoders fast enough to keep up sacrifice accuracy, which must be compensated for with larger codes and thus additional physical qubits. Here we introduce Rapids, a st",
+    "authors": [
+      "Chenyang Jin",
+      "Susanne F. Yelin",
+      "Andi Gu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Sensor-Free Shockable Rhythm Classification During CPR Using the Existing ECG Channel of Public-Access Automated External Defibrillators",
+    "url": "https://arxiv.org/abs/2611.26393v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Automated external defibrillators (AEDs) are public-access devices intended for use by lay rescuers, yet they must pause chest compressions to analyze the rhythm because compressions corrupt the electrocardiogram (ECG). Removing this pause requires a method that uses the hardware already present in the device, fits within its processor budget, and meets the rhythm-recognition performance required for defibrillator approval. Existing approaches rely either on an auxiliary sensor, which entails a ",
+    "authors": [
+      "Jaechan Lim",
+      "David Hicks",
+      "Matt Valentine",
+      "Ki H. Chon"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Scalable fault vulnerability analysis for ReRAM-based process-in-memory CNN accelerators",
+    "url": "https://arxiv.org/abs/2611.26307v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Resistive random-access memory (ReRAM)-based processing-in-memory (PIM) accelerators offer a highly efficient platform for parallel matrix-vector multiplications (VMM) in neural networks, leveraging analog computation, high density, low leakage, and non-volatility. However, their susceptibility to permanent faults, such as stuck-at-high (\\textit{SaH}) and stuck-at-low (\\textit{SaL}) resistance states, permanently corrupts the convolutional neural networks (CNNs) weights mapped onto ReRAM cell co",
+    "authors": [
+      "Aniseh Dorostkar",
+      "Hamed Farbeh",
+      "Hamid R. Zarandi",
+      "Meysam Sharifzadeh"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Sliding-ferroelectric control of dipolar and quadrupolar excitons in R-stacked WSe$_2$",
+    "url": "https://arxiv.org/abs/2611.26158v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "A fundamental property of interlayer excitons is their dipolar character, enabling electrical tunability, enhanced exciton-exciton interactions and extended lifetime. It is important for studying collective phenomena and realizing novel optoelectronic devices. However, in homo- or heterostructures based on two-dimensional semiconductors, the magnitude and orientation of the dipole moment are commonly locked due to spatially confined charges and nature of the band transition. Here, we use gate-de",
+    "authors": [
+      "Asmund Ottesen",
+      "Shun Feng",
+      "Edoardo Lopriore",
+      "Yaroslav Zhumagulov",
+      "Kenji Watanabe",
+      "Takashi Taniguchi",
+      "Oleg V. Yazyev",
+      "Andras Kis"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Transition Dynamics Matter: Hidden Markov Scoring of Epileptogenic Channels in SEEG",
+    "url": "https://arxiv.org/abs/2611.26142v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Stereo-electroencephalography (SEEG) represents the most effective technique for the detection of the Epileptogenic Zone (EZ) in drug-resistant epilepsy. This procedure produces a multi-dimensional signal with hundreds of components, named channels, each associated with a different brain location. In this work, we propose a joint Hidden Markov Model (HMM), in which each SEEG channel is described by a latent Markov chain, with states shared across the network and channel-specific transition proba",
+    "authors": [
+      "Giulia Tacconi",
+      "Federico Mason",
+      "Lorenzo Ferri",
+      "Elena Pasini",
+      "Lidia Di Vito",
+      "Matteo Martinoni",
+      "Lara Alvisi",
+      "Anna Scarabello",
+      "Luca Zanuttini",
+      "Francesca Bisulli",
+      "Andrea Zanella"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Reading Across Space, Time and Frequencies: Tensor Decomposition of SEEG Signals to Support Epileptogenic Zone Definition",
+    "url": "https://arxiv.org/abs/2611.26137v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Stereo-electroencephalography (SEEG) is an invasive technique used in the presurgical evaluation of drug-resistant epilepsy to support the localization of the Epileptogenic Zone (EZ). SEEG data are particularly complex to analyze, as they include hundreds of components, named channels, each associated with a different brain site, with interactions varying in both time and frequency. In this study, we propose a new framework for SEEG analysis, based on the Canonical Polyadic (CP) decomposition, t",
+    "authors": [
+      "Federico Mason",
+      "Matteo Neri",
+      "Maria Fratello",
+      "Julia Makhalova",
+      "Fabrice Bartolomei",
+      "Giovanni Petri",
+      "Christian G. Benar"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Absolute User Fairness for a Downlink Multiuser MIMO-NOMA System",
+    "url": "https://arxiv.org/abs/2611.26133v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "User fairness has been widely researched in various non-orthogonal multiple access (NOMA) systems. In this paper, max-min or min-max fairness is adopted for a downlink multiuser multiple-input multiple-output NOMA system, where one multi-antenna base station (BS) transmits to multiple NOMA clusters and each cluster is composed of two single-antenna users sharing a single beam on the same time-frequency resource block. Specifically, under perfect channel state information in the transmitter (CSIT",
+    "authors": [
+      "Mingyan Gong",
+      "Bin Lyu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Photonic processors that carry their own unclonable fingerprint",
+    "url": "https://arxiv.org/abs/2611.26079v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Physically unclonable functions (PUFs) derive cryptographic keys from uncontrollable fabrication disorder, removing the need to store secrets in vulnerable non-volatile memory. Programmable photonic processors are natural candidates for PUFs, because each of their many tunable interferometers carries its own fabrication imperfections. However, we show that the mesh topology itself funnels light along short paths, so that most of this disorder contributes little to the response. Here we introduce",
+    "authors": [
+      "Oxel Arnal Martínez",
+      "Pablo Martínez-Carrasco Romero",
+      "David Álvarez Outerelo",
+      "Francisco Javier Fraile-Peláez",
+      "José Capmany Francoy"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Topology-Enabled Self-Verification of Quantum Hall Resistance Standards",
+    "url": "https://arxiv.org/abs/2611.26016v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "The scaling of multi-element quantized Hall array resistance standards necessitates rigorous validation that internal quantization has not broken down without relying on the verification of dissipationless edge state transport. One proposed solution is to use a Symmetric Precision Quantization Reliability criterion, a mathematical framework that statistically assures such validation strictly through outer terminal measurements of Cn-symmetric designs. This criterion essentially bounds the likeli",
+    "authors": [
+      "DaVonne Henry",
+      "Dominick S. Scaletta",
+      "Tamar M. Padwa",
+      "Heather M. Hill",
+      "Gretchen B. Ferguson",
+      "Evelyn E. Hopkins",
+      "Mattias Kruskopf",
+      "Dean G. Jarrett",
+      "David B. Newell",
+      "Albert F. Rigosi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Multicharged Kramers-Weyl Fermions, Quantum Geometric Hall Responses and de Haas-van Alphen Oscillations in WAl$_2$",
+    "url": "https://arxiv.org/abs/2611.25987v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Quantum geometry of Bloch wave functions and crystalline symmetries play a central role in condensed matter physics, shaping the electronic topology and physical responses of solids. In particular, Kramers-Weyl fermions, spin-split Fermi surfaces probed through quantum oscillations and quantum geometric nonlinear Hall and intrinsic spin Hall responses have garnered significant attention. Despite progress in understanding these phenomena individually, their coexistence with topological surface st",
+    "authors": [
+      "Saurav Patel",
+      "Meet Shah",
+      "Prafulla K. Jha"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Kameleo: In-Situ Activation-Precision Selection for Bit-Serial LLM Accelerators",
+    "url": "https://arxiv.org/abs/2611.25971v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Weight-only quantization keeps the activations of large language models (LLMs) in a higher-precision format, pushing the on-chip inference cost to the activation arithmetic. Bit-serial, variable-length accelerators offer a promising path to reduce this cost by lowering activation precision while preserving model quality. They process only the mantissa bits that each layer needs. The length has to be chosen per layer and operator, and today it is chosen by offline calibration: a search driven by ",
+    "authors": [
+      "Robin Geens",
+      "Thomas Debelle",
+      "Marian Verhelst",
+      "Chao Fang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.DC",
+    "title": "Matching Architecture to Workload: Comparing RISC-V Parallel Accelerators for Energy-Efficient Embedded Computing",
+    "url": "https://arxiv.org/abs/2611.25947v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Embedded computing demands high performance and energy efficiency across workloads with widely different computational characteristics. Choosing the most suitable execution model therefore requires a quantitative understanding of how each model maps to different workload classes. In this paper, we compare three execution models for energy-efficient embedded computing: scalar multicore, stream ing multicore, and vector processing. We use three open-source RISC-V accelerators as representative imp",
+    "authors": [
+      "Luca Colombo",
+      "Luigi Ghionda",
+      "Amirhossein Kiamarzi",
+      "Yvan Tortorella",
+      "Riccardo Giunti",
+      "Niccolò Giuliani",
+      "Samuele Colmi",
+      "Angelo Garofalo",
+      "Giuseppe Tagliavini",
+      "Davide Rossi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Alloying effects on the interface cohesion of grain boundaries in the Ni--Fe--Cr system",
+    "url": "https://arxiv.org/abs/2611.25944v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Grain boundaries (GBs) in polycrystalline Ni-based alloys strongly influence mechanical strength and fracture behavior, yet the effect of alloying elements such as Fe and Cr on GB cohesion remains difficult to quantify systematically. Using density functional theory (DFT), we compute rigid-body separation (RBS) curves for six symmetric-tilt Ni GBs, extracting the work of separation $W_{\\mathrm{sep}}$ and maximum traction $σ_{\\max}$ via the universal binding energy relation (UBER). We find that s",
+    "authors": [
+      "Aljoscha Felix Baumann",
+      "Reyhaneh Ghassemizadeh",
+      "Daniel F. Urban"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Thermal investigation of buffer and transition layers in AlGaN HEMT stacks",
+    "url": "https://arxiv.org/abs/2611.25928v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "In this work, we investigate thermal transport in a set of thin-film layers used in modern HEMT designs. Our theoretical analysis employs three phonon-transport models of increasing sophistication, ranging from a relatively simple Debye-approximation model to a first-principles framework that incorporates Density Functional Theory (DFT)-derived harmonic and anharmonic phonon properties. To describe ternary semiconductors, alloy scattering is also considered, and to account for the properties of ",
+    "authors": [
+      "Simon Fernbach",
+      "Lisa Mitterhuber",
+      "Egbert Zojer",
+      "Natalia Bedoya-Martínez"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Large transformation strain of $\\mathrm{Ni}_{50}\\mathrm{Fe}_{23}\\mathrm{Ga}_{27}$ microwires produced by the Taylor-Ulitovsky method",
+    "url": "https://arxiv.org/abs/2611.25911v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "The martensitic transformation and associated tensile strain of $\\mathrm{Ni}_{50}\\mathrm{Fe}_{23}\\mathrm{Ga}_{27}$ microwires produced by the Taylor--Ulitovsky method were investigated using thermomechanical analysis, electron backscatter diffraction (EBSD), and in-situ tensile X-ray diffraction (XRD). EBSD mapping at room temperature reveals cubic austenite in a nonstrained part of the microwire and tetragonal martensite in the strained part. Both EBSD and XRD show that both austenite and marte",
+    "authors": [
+      "Limpat Nulandaya",
+      "Petr Cejpek",
+      "Ladislav Straka",
+      "Oleg Heczko",
+      "Rastislav Varga"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "DISC: A Deterministic Instantaneous-SINR Combiner for Uplink Massive MIMO Systems",
+    "url": "https://arxiv.org/abs/2611.25897v1",
+    "published_date": "2026-11-19",
+    "source": "arXiv",
+    "summary": "Future Massive MIMO (multiple-input multiple-output) systems will fit more antennas into compact arrays, making minimum mean-square-error (MMSE) combining computationally demanding. Maximum-ratio (MR) combining serves as a cheaper alternative but performs poorly in multi-user scenarios. Existing solutions to this either mimic the MMSE combiner using second-order statistics or, as in the optimal bilinear equalizer (OBE), rely on the loose use-and-then-forget (UaTF) bound. In this paper, we propos",
+    "authors": [
+      "Emanuel Wennemo",
+      "Ki Won Sung",
+      "Emil Björnson"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "physics.ins-det",
     "title": "4D-TEMPO: Differentiable 4D-STEM ptychography via fast Physics Optimizers",
     "url": "https://arxiv.org/abs/2611.24776v1",
