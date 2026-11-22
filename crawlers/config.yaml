@@ -10,10 +10,6 @@ mobile_ap:
     enabled: true
     module: crawlers.mobile_ap.mediatek
     class: MediaTekCrawler
-  unisoc:
-    enabled: true
-    module: crawlers.mobile_ap.unisoc
-    class: UnisocCrawler
   exynos:
     enabled: true
     module: crawlers.mobile_ap.exynos
@@ -102,10 +98,6 @@ packaging:
 # 9번째 독립 축 (2026-08-11 구독시스템 구현 스펙) — 기존 5축과 별개, site/js/app.js·
 # summarize_sectors.py에는 의도적으로 배선하지 않음(단일 고객 전용 구독 메일링만 소비).
 cpo_optics:
-  ecoc:
-    enabled: true
-    module: crawlers.cpo_optics.ecoc
-    class: EcocCrawler
   googlenews:
     enabled: true
     module: crawlers.cpo_optics.googlenews

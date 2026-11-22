@@ -8,7 +8,7 @@ SK hynix China Memory Benchmark Dashboard를 벤치마킹해 만드는 **SoC(Sys
 ## 도메인 축 (5-Axis, v2)
 | 축 | 대상 | 폴더 |
 |---|---|---|
-| Mobile AP | Apple, Qualcomm, MediaTek, Unisoc, Exynos | `crawlers/mobile_ap/` |
+| Mobile AP | Apple, MediaTek, Exynos (Qualcomm·Unisoc는 googlenews 태깅) | `crawlers/mobile_ap/` |
 | HPC·Datacenter | NVIDIA, AMD, Intel, SK hynix, Tesla | `crawlers/hpc_datacenter/` |
 | Custom SoC | Broadcom, Marvell, 하이퍼스케일러 인하우스(Trainium/TPU/Maia) | `crawlers/custom_soc/` |
 | Foundry(공정) | TSMC, Samsung Foundry, Intel Foundry, GlobalFoundries, SMIC | `crawlers/foundry/` |
