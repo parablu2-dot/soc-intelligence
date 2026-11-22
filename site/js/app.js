@@ -7,7 +7,6 @@
 const DATA_SOURCES = [
   { axis: 'mobile_ap',      company: 'apple' },
   { axis: 'mobile_ap',      company: 'mediatek' },
-  { axis: 'mobile_ap',      company: 'unisoc' },
   { axis: 'mobile_ap',      company: 'exynos' },
   { axis: 'mobile_ap',      company: 'googlenews' },  // Phase 4: 축별 뉴스 확장
   { axis: 'hpc_datacenter', company: 'nvidia' },
@@ -130,7 +129,7 @@ let notices = { window: null, notices: [] };  // data/refined/notices.json — �
 let narrativeTrapCases = [];  // NarrativeTrapCase[] — data/refined/narrative_trap_cases.json (수동 큐레이션, LLM 미개입)
 let narrativeTrapTracks = {}; // STANDARD_TRACKS — 위 JSON에 동봉되어 프론트-백엔드 재정의 없이 단일 소스 유지
 let cpoDigest = null;  // data/refined/cpo_optics/digest.json — 9번째 독립 축, DATA_SOURCES와 별도 fetch
-let cpoSignals = [];   // data/refined/cpo_optics/{ecoc,googlenews}.json 합본 (allSignals와 분리 유지)
+let cpoSignals = [];   // data/refined/cpo_optics/googlenews.json (allSignals와 분리 유지)
 let judgmentsData = null;  // data/refined/judgments.json — Judgment Schema V1 (scripts/build_judgments.py, 천 작성·LLM 미개입)
 
 // ── 부트스트랩 ─────────────────────────────────────────────────────────────
@@ -210,7 +209,7 @@ async function loadAllData() {
   const cpoDigestLoad = fetch(`${DATA_BASE}/refined/cpo_optics/digest.json`)
     .then(r => r.ok ? r.json() : null)
     .catch(() => null);
-  const cpoSignalLoads = ['ecoc.json', 'googlenews.json'].map(f =>
+  const cpoSignalLoads = ['googlenews.json'].map(f =>
     fetch(`${DATA_BASE}/refined/cpo_optics/${f}`).then(r => r.ok ? r.json() : []).catch(() => [])
   );
 
@@ -1372,7 +1371,7 @@ function modNarrativeTrap() {
 function modCpo() {
   const links = cpoDigest?.links || [];
   return `
-    ${header('CPO/광통신', 'ECOC 학회 피드 + OFC 포함 업계 뉴스 — 구독 고객 전용 다이제스트와 동일 소스')}
+    ${header('CPO/광통신', 'OFC·ECOC 포함 업계 뉴스 — 구독 고객 전용 다이제스트와 동일 소스')}
     ${_judgmentPanel('cpo_optics')}
     ${cpoDigest?.content
       ? `<div style="margin-bottom:10px">
