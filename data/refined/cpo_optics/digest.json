@@ -1,12 +1,91 @@
 {
   "axis": "cpo_optics",
   "sector": "CPO/광통신",
-  "date": "2026-11-22",
-  "generated_at": "2026-11-22T00:12:05.056925+00:00",
-  "item_count": 0,
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T00:42:11.953077+00:00",
+  "item_count": 8,
   "content": {
-    "ko": {},
-    "en": {}
+    "ko": {
+      "executive_summary": "Apple has entered the $39 billion optical chip market alongside Samsung and SK hynix, recruiting silicon photonics engineers as a signal of vertical integration into CPO/optical interconnect design. Meanwhile, Lambda deploys Nvidia Photonics switches at QScale data center, and Samsung expands its silicon photonics portfolio through strategic patent acquisitions, positioning OEMs and infrastructure vendors to capture growing AI data center demand.",
+      "key_facts": [
+        "Apple, Samsung, SK hynix competing in $39 billion optical chip market",
+        "Lambda deployed Nvidia Photonics switches at QScale data center",
+        "Samsung Electronics expanding silicon photonics through patent acquisitions",
+        "Apple recruiting silicon photonics engineers",
+        "Wacker selected for government-backed CPO optical interconnect materials project"
+      ],
+      "implications": [
+        {
+          "keyword": "OEM Vertical Integration",
+          "text": "Apple's entry and direct hiring of silicon photonics talent signals intent to design proprietary CPO solutions in-house rather than rely solely on third-party suppliers, raising competitive pressure on traditional optical chipmakers."
+        },
+        {
+          "keyword": "Data Center Competition",
+          "text": "Nvidia Photonics switch deployment at Lambda/QScale and Samsung's patent expansion indicate fierce competition for optical interconnect sockets in AI infrastructure, with both incumbent and emerging players consolidating IP."
+        },
+        {
+          "keyword": "Supply Chain Localization",
+          "text": "Government-backed CPO materials project selection of Wacker suggests policy-driven efforts to secure independent optical interconnect supply chains outside dominant Asia-based suppliers."
+        }
+      ],
+      "counterpoint": "No concrete technical specifications (transceiver speeds, integration nodes, or shipment volumes) are disclosed in the headlines, limiting assessment of market timing and actual competitive threat levels."
+    },
+    "en": {
+      "executive_summary": "Apple has entered the $39 billion optical chip market alongside Samsung and SK hynix, recruiting silicon photonics engineers as a signal of vertical integration into CPO/optical interconnect design. Meanwhile, Lambda deploys Nvidia Photonics switches at QScale data center, and Samsung expands its silicon photonics portfolio through strategic patent acquisitions, positioning OEMs and infrastructure vendors to capture growing AI data center demand.",
+      "key_facts": [
+        "Apple, Samsung, SK hynix competing in $39 billion optical chip market",
+        "Lambda deployed Nvidia Photonics switches at QScale data center",
+        "Samsung Electronics expanding silicon photonics through patent acquisitions",
+        "Apple recruiting silicon photonics engineers",
+        "Wacker selected for government-backed CPO optical interconnect materials project"
+      ],
+      "implications": [
+        {
+          "keyword": "OEM Vertical Integration",
+          "text": "Apple's entry and direct hiring of silicon photonics talent signals intent to design proprietary CPO solutions in-house rather than rely solely on third-party suppliers, raising competitive pressure on traditional optical chipmakers."
+        },
+        {
+          "keyword": "Data Center Competition",
+          "text": "Nvidia Photonics switch deployment at Lambda/QScale and Samsung's patent expansion indicate fierce competition for optical interconnect sockets in AI infrastructure, with both incumbent and emerging players consolidating IP."
+        },
+        {
+          "keyword": "Supply Chain Localization",
+          "text": "Government-backed CPO materials project selection of Wacker suggests policy-driven efforts to secure independent optical interconnect supply chains outside dominant Asia-based suppliers."
+        }
+      ],
+      "counterpoint": "No concrete technical specifications (transceiver speeds, integration nodes, or shipment volumes) are disclosed in the headlines, limiting assessment of market timing and actual competitive threat levels."
+    }
   },
-  "links": []
+  "links": [
+    {
+      "headline": "Wacker Selected for Government-Backed CPO Optical Interconnect Materials Project - THE ELEC, Korea Electronics Industry Media",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE41UVFEZHZyNFNpTmc3YzNXYnFLX2xMZmxmSGZILTViQTk3REU2ellySGFvTUl6eWV3WVpKbFV4eml4cllKUU9RQWEzcFJmc1liajBUclBPUTg2ZU82aW9hSF9TVWcwb3M?oc=5",
+      "source": "Google News",
+      "published_date": "2026-11-22"
+    },
+    {
+      "headline": "Intel Stock And 2 AI Infrastructure Shares Backing Data Center Growth - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQNTU2MldLVGdRQ3ExWW1WTzNwYTZyRnJYRzEwZHI0VmJTakJXNlZDa2NtSGw3eGNPUzgwNWlIejZhVVZRQTIwQm9UekQtQXFfVFFwQ0ZRTWlsa2NXUU5OMTFmODdXOUNYX3dhSHRjNXVjTVBTcm1VUldEcm52YjF6TVA2UXZYOTlPanNWZXNiVVZ2d2hUQ0diUUJjNVdhbXY1blZpMXhmMnUtVXhKRks3QzJsUkREV3REOThXemRrQlN3SnRUX2FGcHRR?oc=5",
+      "source": "Google News",
+      "published_date": "2026-11-20"
+    },
+    {
+      "headline": "Apple joins Samsung, SK hynix in $39 bn optical chip race - 매일경제",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5OWV96aXVJdTRtc3VJX01CcHg1dG1XMzdOaXNpbDZFRzBCYzFUZnY0dVFOTDJGeUhXRmxXV3cwTWtMcTRIUDZZZXRZTXJGaGhvYmZvUnZZSQ?oc=5",
+      "source": "Google News",
+      "published_date": "2026-11-20"
+    },
+    {
+      "headline": "Lambda deploys Nvidia Photonics switches at QScale data center - Data Center Dynamics",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxONDdrVzE0Z1V0MVExa0t4TWRma0ZpSTFfUUhXMlZ6S2dybWpLYjl5MU82UF81b0Fsc1FCWmtncFd5d3h4X1cyWkZKeExJQ0RuTjdIa0dZNjU5dFoyQm43cW5uUmtSX1lFOHFWaDA0Y3IzaUxUUS1ZOFdobEpSU1JoaVBXZ1ZSNzBBcWpEdjl5UDhqTTBCcDZiTDJORWpZUk9tbFJWZ1J1NHVBZw?oc=5",
+      "source": "Google News",
+      "published_date": "2026-11-20"
+    },
+    {
+      "headline": "[News] Samsung Electronics Expands Silicon Photonics Portfolio Through Patent Acquisitions - TrendForce",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPYW5Sc0JHVkE2NmQ3VVZGcTZVdTBNZVBwY2Mwd3RkczZ3dXF1Ny1ZcW5RWEFzNG1ISEhZUXlKRlMxanJxblJGSU1pX1VZbEJqS193QzE1ZUg2bXhYcjdoVHJxQzVBZXNocnV6QjJvVUQza0stOVhSS25qT2pSRFJ3cDNuSE0yMW9reTFBVkJMeWNTSXkzU205SUNTU3dSbHYxbmhhUGEteUFiRzZRUkJCUDR3UXEycmszOGtzSDhBMTEybEJkVDNFZDAydWU?oc=5",
+      "source": "Google News",
+      "published_date": "2026-11-20"
+    }
+  ]
 }

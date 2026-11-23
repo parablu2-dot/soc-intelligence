@@ -6,7 +6,7 @@
 	<atom:link href="https://aws.amazon.com/blogs/machine-learning/feed/" rel="self" type="application/rss+xml"/>
 	<link>https://aws.amazon.com/blogs/machine-learning/</link>
 	<description>Official Machine Learning Blog of Amazon Web Services</description>
-	<lastBuildDate>Sat, 21 Nov 2026 01:06:42 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 22 Nov 2026 01:59:13 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -14,6 +14,119 @@
 	1	</sy:updateFrequency>
 	
 	<item>
+		<title>Meta ads is now available in AWS Quick</title>
+		<link>https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick/</link>
+		
+		<dc:creator><![CDATA[Chris Geiger]]></dc:creator>
+		<pubDate>Sun, 22 Nov 2026 01:59:13 +0000</pubDate>
+				<category><![CDATA[Announcements]]></category>
+		<category><![CDATA[AWS Quick]]></category>
+		<category><![CDATA[Foundational (100)]]></category>
+		<guid isPermaLink="false">2f499b0fad46f2d46fc1c337c454cd6adc7edd47</guid>
+
+					<description>AWS Quick now has a Meta ads AI connector. Meta advertisers can use natural language in Quick to create, manage, and analyze campaigns while staying connected to the Meta ad management network, and combine Meta ad data with first- and third-party sources to build dashboards, documents, slide decks, and automated workflows.</description>
+										<content:encoded>&lt;p&gt;Marketers have never had more data to act on. Take an apparel brand that advertises on Meta technologies: campaign results live in Meta Ads Manager, briefs and creative assets in shared storage, and inventory, customer lifetime value, and in-store purchases in a data lake. Analysts export reports, merge spreadsheets, and rebuild the same deck each week, and the data ages before anyone acts on it. When the team does decide what to change, someone returns to Ads Manager to update campaigns, ad sets, budgets, and audiences by hand. As a result, teams judge campaigns on metrics alone, and the path from insight to action stays slow and manual.&lt;/p&gt; 
+&lt;p&gt;Today, AWS Quick added a Meta ads AI connector. The connector gives Quick access to ads Model Context Protocol (MCP) server operations. Meta ads customers can use natural language to create, manage, and analyze campaigns within Quick, while staying connected to the Meta ad management network. Marketers can complete tasks with support from AI, such as pulling insights to understand ads performance, creating product catalogs, and editing existing or creating new campaigns. Quick can also combine Meta ad management data with first- and third-party data sources to create dashboards, documents, slide decks, and automated workflows.&lt;/p&gt; 
+&lt;blockquote&gt;
+ &lt;p&gt;&lt;em&gt;“Meta ads AI connector through Quick gives our marketing teams one place to go from campaign planning to execution. It lets us act on business insights directly in our ads, without the handoffs and tool switching that slow campaigns down. With fal.ai’s image, audio, and video models in the same workflow, we’ll test more creative ideas and spend more time reaching customers.”&lt;/em&gt;&lt;/p&gt; 
+ &lt;p&gt;— Tina Sang, Head of Marketing at fal&lt;/p&gt;
+&lt;/blockquote&gt; 
+&lt;h2 id="demo-meta-ads-in-quick"&gt;Demo: Meta ads in Quick&lt;/h2&gt; 
+&lt;p&gt;The video shows how to install the Meta ads connector from &lt;strong&gt;Customize&lt;/strong&gt; &amp;gt; &lt;strong&gt;Connectors&lt;/strong&gt; in AWS Quick, sign in with Facebook, and choose which Pages, Businesses, and Instagram accounts AWS Quick can access. It then runs two example prompts. One turns past campaign results into an eight-slide launch-plan deck. The other builds a dashboard comparing spend, leads, and cost per lead for two ad sets, with recommended tests to run next.&lt;/p&gt; 
+&lt;div style="width: 640px;" class="wp-video"&gt;
+ &lt;video class="wp-video-shortcode" id="video-145451-1" width="640" height="360" preload="metadata" controls="controls"&gt;
+  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22411/b46d9e222b1ec27f572a3e2ba0fc06ab8c1447b3be0e8fd10a7e101091d9191d.mp4?_=1"&gt;
+ &lt;/video&gt;
+&lt;/div&gt; 
+&lt;p&gt;&lt;em&gt;Connecting Meta ads to Quick and running prompts for performance analysis, campaign creation, and a shareable deck&lt;/em&gt;&lt;/p&gt; 
+&lt;h2 id="example-use-cases-and-prompts"&gt;Example use cases and prompts&lt;/h2&gt; 
+&lt;p&gt;The following use cases demonstrate how Meta advertisers can use the connector with Quick, along with sample prompts.&lt;/p&gt; 
+&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
+ &lt;tbody&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Use case&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;What Quick does&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;&lt;strong&gt;Example prompt&lt;/strong&gt;&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Plan and launch campaigns&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Drafts campaign, ad set, and ad settings from an approved brief. Flags missing budget and audience decisions. Runs a standard pre-launch check of naming, UTM tags, budget, and special ad category.&lt;/td&gt; 
+   &lt;td&gt;“Using Meta ads, [campaign_brief], and past results, propose a launch plan for [promotion_name]. Flag missing decisions and prepare a review deck. Do not create or change ads yet.”&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Analyze and share performance&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Tracks spend, CTR, and ROAS at the account, campaign, ad set, and ad level. Compares results to the media plan. Builds a weekly deck of top ads, weak ads, and next tests. Lets leaders review the deck and ask follow-up questions before meetings.&lt;/td&gt; 
+   &lt;td&gt;“Analyze Meta ads conversions for [campaign_name], identify the biggest changes, and recommend next tests. Put the findings in a PowerPoint I can share with my team. Do not change budgets.”&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Refresh creative and audiences&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Flags creative fatigue when frequency rises and CTR falls. Creates new Custom Audiences after approval. Compares the best-performing themes with competitor messaging and trends. Drafts the next creative brief with headline variants and an A/B test plan.&lt;/td&gt; 
+   &lt;td&gt;“Use Meta ads results, [past_briefs], and approved audience information to flag possible creative fatigue and propose new messaging and segments. Draft a creative brief and test hypotheses, without activating changes.”&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Measure lift and customer quality&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Helps plan a conversion lift study. Confirms eligibility and creates the study after approval. Compares lift with attributed conversions and customer value from the CRM. Presents the results, the level of uncertainty, and the budget implications.&lt;/td&gt; 
+   &lt;td&gt;“Help me plan a conversion lift study in Meta ads for [campaign_name]. Check eligibility, prepare the inputs for approval, and explain how study results and [customer_outcomes] could inform our next decisions.”&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Prepare product catalogs for catalog ads&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Builds a SKU sheet that joins catalog eligibility with stock, margin, and image status. Explains why Meta rejected items and updates product sets. Gives merchandisers one place to review rejected items. Routes items to data owners and tracks fixes.&lt;/td&gt; 
+   &lt;td&gt;“Use Meta ads catalog diagnostics and [product_dataset] to identify ineligible products and image issues. Build a SKU correction table and propose products for catalog ads using authorized stock and margin inputs.”&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Align spend with stock and profit&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Shows Meta spend next to warehouse stock and contribution margin for each product line. Models how shifting budget to high-margin, in-stock products would affect results. Runs scheduled stock checks and queues changes for approval. Applies the changes in Meta ads after approval.&lt;/td&gt; 
+   &lt;td&gt;“Compare Meta ads performance with [warehouse_inventory], [margin_dataset], and [media_plan]. Propose where to shift spend and when a lower ROAS target could meet our approved commercial goals. Show assumptions and do not apply changes.”&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Diagnose pixel, account, and delivery issues&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Triages pixel and Conversions API issues, such as drops in event volume and low Event Match Quality scores. Passes an Ads Manager error page into a troubleshooting flow. Gathers diagnostics, internal order counts, and Meta help articles into one checklist. Drafts a handoff email to engineering.&lt;/td&gt; 
+   &lt;td&gt;“Investigate [issue] in Meta ads for [ad_account]. Compare available diagnostics with [order_dataset], find relevant guidance, and separate confirmed errors from hypotheses. Draft a troubleshooting handoff without changing the account.”&lt;/td&gt; 
+  &lt;/tr&gt; 
+  &lt;tr&gt; 
+   &lt;td&gt;&lt;strong&gt;Govern spend and connect it to your data&lt;/strong&gt;&lt;/td&gt; 
+   &lt;td&gt;Routes budget increases above a set threshold to finance for approval. Tracks spend against approved budgets for each ad account. Reconciles spend exports with warehouse and finance records. Keeps budget policies, metric definitions, and spend reviews in one shared place.&lt;/td&gt; 
+   &lt;td&gt;“Review Meta ads spend against [budget_policy], reconcile reporting with [warehouse_dataset], and use [change_log] to document known changes. Produce an exception report and proposed review steps, without executing changes.”&lt;/td&gt; 
+  &lt;/tr&gt; 
+ &lt;/tbody&gt; 
+&lt;/table&gt; 
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The connector can make changes in your ad accounts. Before Quick creates a campaign, changes a budget, or runs another write action, it asks for your permission to take the action.&lt;/p&gt; 
+&lt;h2 id="prerequisites"&gt;Prerequisites&lt;/h2&gt; 
+&lt;p&gt;Before you begin, confirm that you have the following:&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Access to Quick.&lt;/li&gt; 
+ &lt;li&gt;A Meta business account with access to the ad accounts you want to connect.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;h2 id="get-started"&gt;Get started&lt;/h2&gt; 
+&lt;p&gt;&lt;a href="https://quick.aws.com/sn?offer_type=meta-ads-quick-promo" target="_blank" rel="noopener"&gt;Try Quick at no additional cost for 3 months&lt;/a&gt;&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Sign up, connect your Meta ads account, and ask your first question.&lt;/li&gt; 
+ &lt;li&gt;Invite up to 10 teammates at no cost for your first 3 months.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;hr style="width: 100%"&gt; 
+&lt;h2&gt;About the authors&lt;/h2&gt; 
+&lt;footer&gt; 
+ &lt;div class="blog-author-box" style="padding-top: 2.0em"&gt; 
+  &lt;div class="blog-author-image" style="margin-right: 1.0em"&gt;
+   &lt;img class="alignnone size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22411-1.jpg" alt="Chris Geiger" width="100" height="133"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Chris Geiger&lt;/h3&gt; 
+  &lt;p style="overflow: hidden"&gt;Chris is a Senior Solutions Architect at AWS who supports Meta and other strategic customers. He works with their executives, engineers, and architects to design and scale workloads on AWS, from generative AI to large-scale infrastructure. He has a background in advertising technology (AdTech) and has helped some of the largest AdTech companies solve complex architecture problems on AWS.&lt;/p&gt; 
+ &lt;/div&gt; 
+ &lt;div class="blog-author-box" style="padding-top: 2.0em"&gt; 
+  &lt;div class="blog-author-image" style="margin-right: 1.0em"&gt;
+   &lt;img loading="lazy" class="alignnone size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22411-2.jpg" alt="Mark Botto" width="100" height="133"&gt;
+  &lt;/div&gt; 
+  &lt;h3 class="lb-h4"&gt;Mark Botto&lt;/h3&gt; 
+  &lt;p style="overflow: hidden"&gt;Mark is a Senior Customer Solutions Manager at AWS, where he supports Meta as one of AWS’s most strategic customers. He helps teams across Meta use AWS services and infrastructure to deliver business results. When he’s not on the clock, he’s staying active on the trails or playing music.&lt;/p&gt; 
+ &lt;/div&gt; 
+&lt;/footer&gt;</content:encoded>
+					
+		
+		<enclosure length="38682427" type="video/mp4" url="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22411/b46d9e222b1ec27f572a3e2ba0fc06ab8c1447b3be0e8fd10a7e101091d9191d.mp4"/>
+
+			</item>
+		<item>
 		<title>New in AWS Quick: More capable flows, an updated web experience, and agents that work together</title>
 		<link>https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together/</link>
 		
@@ -40,7 +153,7 @@
 &lt;p&gt;For example, here is how flows could support a finance team. Maya is a financial planning and analysis manager at a retailer. Each month, she prepares a report for her VP of Finance that explains changes to costs and margins. For each region, she pulls last month’s results, compares them to the plan in a spreadsheet, writes commentary on the biggest changes, and sends the report. The process lives in her memory and a personal checklist. When she is out, a teammate has to rebuild the report from scratch, and it looks different every time.&lt;/p&gt; 
 &lt;p&gt;With Quick, Maya can standardize the process, automate it, and make it available to her team. She describes her process in chat, the way she would explain it to a new employee. Quick builds the flow from her description and she tests and refines it in the same conversation. A diagram beside the chat shows each step, so she can confirm it matches how she works.&lt;/p&gt; 
 &lt;div id="attachment_145991" style="width: 1486px" class="wp-caption alignnone"&gt;
- &lt;img aria-describedby="caption-attachment-145991" class="wp-image-145991 size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/20/Screenshot-2026-11-20-at-4.58.42%E2%80%AFPM.png" alt="" width="1476" height="1526"&gt;
+ &lt;img aria-describedby="caption-attachment-145991" loading="lazy" class="wp-image-145991 size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/20/Screenshot-2026-11-20-at-4.58.42%E2%80%AFPM.png" alt="" width="1476" height="1526"&gt;
  &lt;p id="caption-attachment-145991" class="wp-caption-text"&gt;Figure 1: Maya describes her monthly report in chat, and Quick builds the flow with a diagram beside it. Both views, enlarged here for visibility, appear side by side in the same Quick window&lt;/p&gt;
 &lt;/div&gt; 
 &lt;p&gt;&lt;img loading="lazy" class="alignnone size-full wp-image-145990" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/20/Screenshot-2026-11-20-at-4.58.51%E2%80%AFPM.png" alt="" width="1302" height="1170"&gt;&lt;/p&gt; 
@@ -2032,8 +2145,8 @@ Payments this run: 1, total $0.01&lt;/code&gt;&lt;/pre&gt;
  &lt;li&gt;&lt;strong&gt;Performance degradation:&lt;/strong&gt; declining accuracy, latency, or cost-efficiency.&lt;/li&gt; 
 &lt;/ul&gt; 
 &lt;div style="width: 640px;" class="wp-video"&gt;
- &lt;video class="wp-video-shortcode" id="video-143007-1" width="640" height="360" preload="metadata" controls="controls"&gt;
-  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-20698/20698-3.mp4?_=1"&gt;
+ &lt;video class="wp-video-shortcode" id="video-143007-2" width="640" height="360" preload="metadata" controls="controls"&gt;
+  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-20698/20698-3.mp4?_=2"&gt;
  &lt;/video&gt;
 &lt;/div&gt; 
 &lt;p&gt;Figure 3: Example governance agent workflow&lt;/p&gt; 
@@ -2195,8 +2308,8 @@ Payments this run: 1, total $0.01&lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;The Amazon Selling Partner plugin&lt;/h1&gt; 
 &lt;p&gt;The Selling Partner plugin connects AWS Quick directly to live Seller Central data. After one sign-in with a Seller Central account, the plugin gives conversational access to product listings, inventory, and sales data, pulled live rather than exported and reassembled by hand. It installs like an app, with no coding required. It ships with curated Amazon skills, and it pairs with Amazon Ads MCP so campaign performance and spend sit next to the selling data. The plugin is in beta for US stores.&lt;/p&gt; 
 &lt;div style="width: 640px;" class="wp-video"&gt;
- &lt;video class="wp-video-shortcode" id="video-145762-2" width="640" height="360" preload="metadata" controls="controls"&gt;
-  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22255/1_permissions_setup.mp4?_=2"&gt;
+ &lt;video class="wp-video-shortcode" id="video-145762-3" width="640" height="360" preload="metadata" controls="controls"&gt;
+  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22255/1_permissions_setup.mp4?_=3"&gt;
  &lt;/video&gt;
 &lt;/div&gt; 
 &lt;p&gt;Figure 1: The Selling Partner plugin consent screen, where the seller grants None, View, or Edit access per data category&lt;/p&gt; 
@@ -2208,16 +2321,16 @@ Payments this run: 1, total $0.01&lt;/code&gt;&lt;/pre&gt;
  &lt;li&gt;Ask your first question, something you would normally build a spreadsheet for.&lt;/li&gt; 
 &lt;/ol&gt; 
 &lt;div style="width: 640px;" class="wp-video"&gt;
- &lt;video class="wp-video-shortcode" id="video-145762-3" width="640" height="360" preload="metadata" controls="controls"&gt;
-  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22255/2_aws_quick_setup.mp4?_=3"&gt;
+ &lt;video class="wp-video-shortcode" id="video-145762-4" width="640" height="360" preload="metadata" controls="controls"&gt;
+  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22255/2_aws_quick_setup.mp4?_=4"&gt;
  &lt;/video&gt;
 &lt;/div&gt; 
 &lt;p&gt;Figure 2: Connecting the Selling Partner plugin from the AWS Quick sign-up flow&lt;/p&gt; 
 &lt;h1&gt;3. What the experience looks like&lt;/h1&gt; 
 &lt;p&gt;After the plugin is connected, the work happens in a conversation. You ask in plain language, Quick pulls the relevant live data, and it comes back with an answer and a recommended next step. Instead of checking a dashboard, exporting a report, and reconciling it in a spreadsheet, you move from a question to an answer to an action in one place. You review what Quick proposes before anything is sent.&lt;/p&gt; 
 &lt;div style="width: 640px;" class="wp-video"&gt;
- &lt;video class="wp-video-shortcode" id="video-145762-4" width="640" height="360" preload="metadata" controls="controls"&gt;
-  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22255/3_health_check_run.mp4?_=4"&gt;
+ &lt;video class="wp-video-shortcode" id="video-145762-5" width="640" height="360" preload="metadata" controls="controls"&gt;
+  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22255/3_health_check_run.mp4?_=5"&gt;
  &lt;/video&gt;
 &lt;/div&gt; 
 &lt;p&gt;Figure 3: Quick diagnosing whether a sales dip comes from traffic or conversion, using live selling data&lt;/p&gt; 
@@ -2226,16 +2339,16 @@ Payments this run: 1, total $0.01&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id="use-case-a-inventory-launch-prep"&gt;Use case A: Inventory Launch Prep&lt;/h2&gt; 
 &lt;p&gt;The seller is staging a new product into Amazon and wants the lowest total landed cost. The agent reads supplier data and weighs the fulfillment options per SKU on inbound cost, storage, and speed to sellable. It walks through placement choices and returns the output the seller picks: a shipping plan, a cost comparison, or a combined packet. It explains its reasoning and confirms before it creates anything.&lt;/p&gt; 
 &lt;div style="width: 640px;" class="wp-video"&gt;
- &lt;video class="wp-video-shortcode" id="video-145762-5" width="640" height="360" preload="metadata" controls="controls"&gt;
-  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22255/4_inventory_decision.mp4?_=5"&gt;
+ &lt;video class="wp-video-shortcode" id="video-145762-6" width="640" height="360" preload="metadata" controls="controls"&gt;
+  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22255/4_inventory_decision.mp4?_=6"&gt;
  &lt;/video&gt;
 &lt;/div&gt; 
 &lt;p&gt;Figure 4: The Inventory Launch Prep agent comparing FBA and AWD fulfillment per factor and recommending a hybrid approach&lt;/p&gt; 
 &lt;h2 id="use-case-b-post-launch-product-health"&gt;Use case B: Post-Launch Product Health&lt;/h2&gt; 
 &lt;p&gt;After the launch, the agent reads four signal families through the Selling Partner plugin: listing health, inventory, sales, and traffic. It connects them to find the cause rather than just reporting numbers. Flat sales with healthy traffic points to a conversion problem. Flat sales with falling traffic points to discoverability. Good conversion with falling units points to supply. It returns a health summary per ASIN, the diagnosis with evidence, and a ranked fix list, labeling any low-confidence call.&lt;/p&gt; 
 &lt;div style="width: 640px;" class="wp-video"&gt;
- &lt;video class="wp-video-shortcode" id="video-145762-6" width="640" height="360" preload="metadata" controls="controls"&gt;
-  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22255/5_health_verdict.mp4?_=6"&gt;
+ &lt;video class="wp-video-shortcode" id="video-145762-7" width="640" height="360" preload="metadata" controls="controls"&gt;
+  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22255/5_health_verdict.mp4?_=7"&gt;
  &lt;/video&gt;
 &lt;/div&gt; 
 &lt;p&gt;Figure 5: The Post-Launch Product Health agent’s weekly summary, with week-over-week sales evidence&lt;/p&gt; 
@@ -3781,211 +3894,6 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 		
 		
 			</item>
-		<item>
-		<title>Protect agent tool calls with Skyflow and Amazon Bedrock AgentCore Gateway</title>
-		<link>https://aws.amazon.com/blogs/machine-learning/protect-agent-tool-calls-with-skyflow-and-amazon-bedrock-agentcore-gateway/</link>
-		
-		<dc:creator><![CDATA[Joe McCarron]]></dc:creator>
-		<pubDate>Thu, 19 Nov 2026 18:14:36 +0000</pubDate>
-				<category><![CDATA[Advanced (300)]]></category>
-		<category><![CDATA[Amazon Bedrock AgentCore]]></category>
-		<category><![CDATA[Best Practices]]></category>
-		<guid isPermaLink="false">64eb7c5f6286bb53ae673651e85ab1d1e8321eda</guid>
-
-					<description>Learn how Skyflow and Amazon Bedrock AgentCore Gateway keep sensitive data out of the tools your AI agents call. Added as a gateway interceptor, Skyflow de-identifies data before any tool, model, or log sees it, and restores it for authorized callers, with no change to your agent code.</description>
-										<content:encoded>&lt;p&gt;In this post, we show how &lt;a href="https://www.skyflow.com/" target="_blank" rel="noopener"&gt;Skyflow&lt;/a&gt; and Amazon Bedrock &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway.html" target="_blank" rel="noopener"&gt;AgentCore Gateway&lt;/a&gt; keep sensitive data out of the tools your AI agents call, and out of the model context those tools feed. We add Skyflow Detect to Amazon Bedrock AgentCore Gateway as a request and response &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-interceptors.html" target="_blank" rel="noopener"&gt;interceptor&lt;/a&gt;. The Skyflow interceptor de-identifies data before it reaches a tool, restores it before the agent reads the result, and replaces documents with clean copies before the agent opens them. Your agents and tools don’t change.&lt;/p&gt; 
-&lt;p&gt;Skyflow is available in AWS Marketplace, and the interceptor is open source on GitHub.&lt;/p&gt; 
-&lt;h2 id="agents-act-through-tools-and-tools-move-data"&gt;Agents act through tools, and tools move data&lt;/h2&gt; 
-&lt;p&gt;Agents have moved from answering questions to taking action, and they take action through tools: Model Context Protocol (MCP) servers, SaaS APIs, document stores, and web search. Every agent tool call is a data flow. Most enterprise controls cover what goes into and comes out of the model. Far fewer cover what an agent sends to its tools or what those tools send back.&lt;/p&gt; 
-&lt;p&gt;That gap shows up in three ways:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Sensitive data leaves through tool arguments.&lt;/strong&gt; The model writes the arguments from everything in its context, including details the tool doesn’t need. Ask an agent about a customer, and the customer’s name, account number, or email goes straight into a query to a third-party server. That server sits outside your AWS account and your compliance scope.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Sensitive data comes back in tool results.&lt;/strong&gt; Scraped web pages, CRM records, and case notes land in the model’s context, memory, traces, and logs. This happens even when the task never needed them.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Documents bypass text inspection.&lt;/strong&gt; Document tools such as Amazon Simple Storage Service (Amazon S3), Box, and Google Drive return a signed URL, not text. A filter that inspects strings sees a link and lets it through, and the agent then opens the original file.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Patching each agent doesn’t scale across teams and frameworks, and it can’t reach third-party tools. The controls need to sit where every tool call passes, so authorization, content safety, and data protection apply the same way to every agent and tool.&lt;/p&gt; 
-&lt;p&gt;AgentCore Gateway is that place. It fronts every tool an agent uses, whatever framework or model the agent runs on. It does more than route that traffic. With AgentCore Gateway interceptors, you can run your own code, as an AWS Lambda function, on every call that passes through it. A request interceptor sees each call before it reaches a tool, and a response interceptor sees each result before it reaches the agent. Either one can inspect the payload, rewrite it, or block the call. That makes the gateway a natural place to add data protection alongside Policy and Guardrails. This single control, attached once, covers every agent and every tool behind the gateway, without any change to agent or tool code.&lt;/p&gt; 
-&lt;h3 id="example-a-dispute-resolution-agent-at-a-large-european-bank"&gt;Example: A dispute-resolution agent at a large European bank&lt;/h3&gt; 
-&lt;p&gt;Consider a large European bank with retail and corporate banking operations and strict data-residency obligations. Its operations teams are adopting agents to investigate card disputes.&lt;/p&gt; 
-&lt;p&gt;An analyst asks the agent to look into a disputed transaction. The agent searches the web for the merchant, then pulls the dispute case note from Amazon S3 to summarize it. Without protection, three things happen:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;The model builds the search query from everything in context. The search provider receives ‘Mateo Jackson dispute AnyCompany Electronics London’. That’s the customer’s name, sent to a third party, for a search that only needed the merchant.&lt;/li&gt; 
- &lt;li&gt;Scraped merchant pages bring unrelated personal data into the model’s context.&lt;/li&gt; 
- &lt;li&gt;The agent reads the original case note, with the customer’s full name, email, phone number, and card details.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;With the Skyflow interceptor on the gateway, the same workflow plays out differently:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;The search provider receives ‘[NAME_AJbrIud] dispute AnyCompany Electronics London’, where [NAME_AJbrIud] is a reversible vault token. The merchant results come back the same, the provider never learns who the customer is, and the analyst still sees the real name in the agent’s answer.&lt;/li&gt; 
- &lt;li&gt;Web content reaches the model already de-identified.&lt;/li&gt; 
- &lt;li&gt;The agent only ever receives a link to a de-identified copy of the case note.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="solution-overview"&gt;Solution overview&lt;/h2&gt; 
-&lt;p&gt;The Skyflow interceptor is a single AWS Lambda function attached to both of the AgentCore Gateway interception points:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;code&gt;REQUEST&lt;/code&gt; runs before the gateway calls a tool.&lt;/li&gt; 
- &lt;li&gt;&lt;code&gt;RESPONSE&lt;/code&gt; runs after the tool answers and before the agent sees the result.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;At each point, it calls Skyflow Detect to find sensitive entities such as names, email addresses, phone numbers, government IDs, card numbers, dates of birth, and locations. It replaces them with tokens, or restores the originals. Skyflow Vault stores the original values so authorized systems can reverse the tokens.&lt;/p&gt; 
-&lt;p&gt;The Skyflow gateway configuration decides, for each tool, which of three protection modes applies: Shield the tool, Shield the model, and Shield the document.&lt;/p&gt; 
-&lt;table border="1px" width="100%" cellpadding="10px"&gt; 
- &lt;tbody&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Mode&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;What happens&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Who sees real data&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;How it works&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;&lt;strong&gt;Typical use&lt;/strong&gt;&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Shield the tool&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;Sensitive values are stripped from arguments on the way out and restored in results on the way back&lt;/td&gt; 
-   &lt;td&gt;The agent and user, not the tool&lt;/td&gt; 
-   &lt;td&gt;Uses reversible vault tokens, so values the tool echoes back are restored before the agent reads them&lt;/td&gt; 
-   &lt;td&gt;Web search, enrichment, and third-party APIs that don’t need customer identity to do their job&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Shield the model&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;Prompts, history, files and tool results are de-identified before the model reads them. The answer is re-identified on the way back&lt;/td&gt; 
-   &lt;td&gt;Agent and user, not the model&lt;/td&gt; 
-   &lt;td&gt;Model calls go through the gateway’s inference endpoint. On the way back, only the tokens minted for that call are restored&lt;/td&gt; 
-   &lt;td&gt;Customer conversations, scraped web content, cross-Region or third-party models&lt;/td&gt; 
-  &lt;/tr&gt; 
-  &lt;tr&gt; 
-   &lt;td&gt;&lt;strong&gt;Shield the document&lt;/strong&gt;&lt;/td&gt; 
-   &lt;td&gt;The file’s signed URL is swapped for one pointing to a de-identified copy&lt;/td&gt; 
-   &lt;td&gt;No one on the agent side&lt;/td&gt; 
-   &lt;td&gt;Skyflow Detect v2 (preview) fetches the file, cleans it and stores the copy in an approved Region. The file never passes through Lambda, so payload limits don’t cap file size&lt;/td&gt; 
-   &lt;td&gt;Case notes, statements, contracts in Amazon S3, Box, Google Drive&lt;/td&gt; 
-  &lt;/tr&gt; 
- &lt;/tbody&gt; 
-&lt;/table&gt; 
-&lt;p&gt;Four properties matter in production:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;No change to agents or tools.&lt;/strong&gt; Agents discover the gateway and sign requests with their AWS Identity and Access Management (AWS IAM) role as before. To shield the model, the agent points its model client at the gateway’s inference endpoint. The interceptor is otherwise invisible to them.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Configuration without redeploys.&lt;/strong&gt; The policy sets the direction, entity types, and token type (reversible vault tokens or one-way tokens) per server and per tool. It lives in AWS Systems Manager Parameter Store, and changes take effect without redeploying.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Fail closed.&lt;/strong&gt; If de-identification can’t complete, the call is withheld rather than sent in the clear. The interceptor fetches files only from allowlisted locations, and it blocks traffic it can’t inspect rather than passing it silently.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Operations built on AWS.&lt;/strong&gt; The Skyflow API key lives in AWS Secrets Manager. Every decision is logged to Amazon CloudWatch, with metrics for alarms, and the interceptor never logs credentials or original values.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="architecture"&gt;Architecture&lt;/h2&gt; 
-&lt;p&gt;The reference architecture shows where each component sits. The three walkthroughs after it follow a single tool call through the Shield the tool and Shield the document modes.&lt;/p&gt; 
-&lt;p&gt;The following diagram shows how the interceptor sits between AgentCore Gateway and your tools.&lt;/p&gt; 
-&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
- &lt;a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22128-1.png" target="_blank" rel="noopener"&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22128-1.png" alt="Reference architecture with the Skyflow interceptor Lambda function between Amazon Bedrock AgentCore Gateway and the tools, reading its policy from Parameter Store and its API key from Secrets Manager" width="800"&gt;&lt;/a&gt;
- &lt;p class="wp-caption-text"&gt;Figure 1: Reference architecture. The numbered steps match the following flow.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;The flow:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;The agent calls a tool through AgentCore Gateway, signed with its IAM role.&lt;/li&gt; 
- &lt;li&gt;The &lt;code&gt;REQUEST&lt;/code&gt; interceptor matches the tool against the policy and, where required, de-identifies the arguments with Skyflow Detect.&lt;/li&gt; 
- &lt;li&gt;The gateway calls the tool, which receives tokens instead of sensitive values.&lt;/li&gt; 
- &lt;li&gt;The &lt;code&gt;RESPONSE&lt;/code&gt; interceptor re-identifies the result, de-identifies it, or swaps a document URL, as the policy requires.&lt;/li&gt; 
- &lt;li&gt;The agent receives the result.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;The agent runs on &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html" target="_blank" rel="noopener"&gt;AgentCore runtime&lt;/a&gt;, a capability of Amazon Bedrock AgentCore. Alongside that flow, the interceptor reads its policy from Parameter Store and its Skyflow API key from Secrets Manager, and it logs each decision to Amazon CloudWatch. It calls Skyflow Detect and Skyflow Vault in an approved Region to de-identify and re-identify data. The targets sit outside the gateway: a third-party web search MCP server, a case-note store in Amazon S3, and a model in Amazon Bedrock that the gateway reaches through an inference target. For model calls, the interceptor keeps a short-lived record in Amazon DynamoDB of which tokens each call minted, so it restores only those. The record holds no original values. For documents, Skyflow Detect fetches the file directly through a presigned URL, so the file bytes never pass through Lambda.&lt;/p&gt; 
-&lt;h3 id="walkthrough-shield-the-tool"&gt;Walkthrough: Shield the tool&lt;/h3&gt; 
-&lt;p&gt;This is the web search from the dispute example, step by step. The customer’s name leaves as a token and comes back as the real value, so the search provider never sees it and the analyst still does.&lt;/p&gt; 
-&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
- &lt;a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22128-2.png" target="_blank" rel="noopener"&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22128-2.png" alt="Shield the tool flow where the customer name is replaced with a vault token before the search provider sees the query and restored before the agent reads the results" width="800"&gt;&lt;/a&gt;
- &lt;p class="wp-caption-text"&gt;Figure 2: Shield the tool. The customer name is replaced with a vault token before the search provider sees the query, and restored before the agent reads the results.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3 id="walkthrough-shield-the-model"&gt;Walkthrough: Shield the model&lt;/h3&gt; 
-&lt;p&gt;This is the analyst asking the agent to draft a reply to the customer. The customer’s name and email address reach the model as tokens, and the draft comes back with the real values in place.&lt;/p&gt; 
-&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
- &lt;a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22128-3.png" target="_blank" rel="noopener"&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22128-3.png" alt="Shield the model flow where the interceptor de-identifies the prompt and conversation history before the model reads them and restores the minted tokens before the agent reads the answer" width="800"&gt;&lt;/a&gt;
- &lt;p class="wp-caption-text"&gt;Figure 3: Shield the model. The interceptor de-identifies the prompt and the conversation history before the model reads them, and restores the tokens it minted for that call before the agent reads the answer.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;h3 id="walkthrough-shield-the-document"&gt;Walkthrough: Shield the document&lt;/h3&gt; 
-&lt;p&gt;This is the case-note request. The interceptor never handles the file itself. It checks the presigned URL and hands it to Skyflow Detect, which returns a link to a clean copy.&lt;/p&gt; 
-&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
- &lt;a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22128-4.png" target="_blank" rel="noopener"&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22128-4.png" alt="Shield the document flow where the interceptor checks the presigned URL against the allowlist and Skyflow Detect returns a link to a de-identified copy of the file" width="800"&gt;&lt;/a&gt;
- &lt;p class="wp-caption-text"&gt;Figure 4: Shield the document. The interceptor checks the presigned URL against the allowlist and size limit, Skyflow Detect fetches and de-identifies the file, and the agent receives a link to the clean copy.&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;Here is the case note as stored in Amazon S3, beside the copy the agent receives:&lt;/p&gt; 
-&lt;div style="width: 810px" class="wp-caption alignnone"&gt;
- &lt;a href="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22128-5.png" target="_blank" rel="noopener"&gt;&lt;img src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22128-5.png" alt="Side-by-side comparison of the case note as stored in Amazon S3 with full customer details and the de-identified copy the agent receives with those values replaced by tokens" width="800"&gt;&lt;/a&gt;
- &lt;p class="wp-caption-text"&gt;Figure 5: The case note as stored (left) and the de-identified copy the agent receives (right).&lt;/p&gt;
-&lt;/div&gt; 
-&lt;p&gt;A token like [NAME_AJbrIud] is a vault token, which an authorized user can reverse through Skyflow. A token like [NAME_1] is a one-way counter that nothing can reverse.&lt;/p&gt; 
-&lt;p&gt;The following video shows Shield the document end to end. The agent asks for the dispute case note and receives a link to a de-identified copy instead of the original.&lt;/p&gt; 
-&lt;div style="width: 640px;" class="wp-video"&gt;
- &lt;video class="wp-video-shortcode" id="video-145632-7" width="640" height="360" preload="metadata" controls="controls"&gt;
-  &lt;source type="video/mp4" src="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22128/skyflow-1-shield-the-document.mp4?_=7"&gt;
- &lt;/video&gt;
-&lt;/div&gt; 
-&lt;p&gt;&lt;em&gt;Video 1: Shield the document in action. Without Skyflow, the agent reads the original case note. With Skyflow on the gateway, it reads a de-identified copy.&lt;/em&gt;&lt;/p&gt; 
-&lt;h2 id="how-it-fits-with-the-rest-of-agentcore"&gt;How it fits with the rest of AgentCore&lt;/h2&gt; 
-&lt;p&gt;The interceptor complements the controls AgentCore and Amazon Bedrock already provide:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Policy in Amazon Bedrock AgentCore&lt;/strong&gt; authorizes what agents can do, using Cedar and Dogwood. It goes beyond deciding whether a principal can call a tool. It can base decisions on earlier actions in the agent’s trajectory, control access to agents and models, stop specific arguments from being sent to specific tools, and check the data passing through the gateway using Amazon Bedrock Guardrails. Skyflow works alongside Policy. When Policy allows a call, Skyflow swaps the sensitive values in it for reversible tokens, so the call goes through without exposing real data to the tool or model. Policy decides what an agent may do, and Skyflow controls how sensitive data is handled when it does.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Amazon Bedrock Guardrails&lt;/strong&gt; handle content safety and sensitive information redaction for model interactions. Skyflow adds vault-backed tokenization and document de-identification to the same gateway. Use them together for layered protection across every model and tool call.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;AgentCore Identity, a capability of Amazon Bedrock AgentCore, and AWS IAM&lt;/strong&gt; stay as they are. The interceptor adds no credentials for agents to manage.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;AgentCore Observability, a capability of Amazon Bedrock AgentCore, and Amazon CloudWatch&lt;/strong&gt; record interceptor decisions alongside gateway traces.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="deploying-the-solution"&gt;Deploying the solution&lt;/h2&gt; 
-&lt;p&gt;The Skyflow interceptor is open source in the &lt;a href="https://github.com/SkyflowFoundry/agentcore-skyflow" target="_blank" rel="noopener"&gt;agentcore-skyflow&lt;/a&gt; repository on GitHub under the MIT license. Skyflow is available in &lt;a href="https://aws.amazon.com/marketplace/pp/prodview-zysz3tjic76qg" target="_blank" rel="noopener"&gt;AWS Marketplace&lt;/a&gt;. To add the interceptor to a gateway you already run:&lt;/p&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Subscribe to Skyflow in AWS Marketplace, create a vault, and store its API key in AWS Secrets Manager.&lt;/li&gt; 
- &lt;li&gt;Deploy the interceptor stack from the repository with the AWS Cloud Development Kit (AWS CDK). It creates the Lambda function, its policy parameter, a DynamoDB table for model-call records, and the Amazon CloudWatch metrics and alarms.&lt;/li&gt; 
- &lt;li&gt;Attach the interceptor to your gateway at both interception points. A script in the repository does this and grants the gateway role permission to invoke only that function. If you manage the gateway with AWS CloudFormation or the AWS CDK, declare the interceptor there instead, so later stack updates keep it.&lt;/li&gt; 
- &lt;li&gt;To shield the model, add an inference target to the gateway and point the agent’s model client at the gateway’s inference endpoint.&lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;p&gt;The repository also contains the complete reference deployment from this post, including the agent, the gateway, and its targets, which you can deploy with the AgentCore CLI, a capability of Amazon Bedrock AgentCore.&lt;/p&gt; 
-&lt;p&gt;There are five ways in:&lt;/p&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Existing gateways.&lt;/strong&gt; Attach the interceptor to a gateway you already run. Agents and tools stay as they are.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;New agents.&lt;/strong&gt; Put tools behind AgentCore Gateway from day one.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;MCP servers outside AWS.&lt;/strong&gt; Front them as gateway MCP server targets so their traffic passes through the interceptor.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Document stores.&lt;/strong&gt; Tools that return signed URLs are covered by adding their location to the policy’s allowlist.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Model calls.&lt;/strong&gt; Add an inference target and send the agent’s model calls through the gateway.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;p&gt;Skyflow offers several vault deployment models and Region choices to meet residency requirements. See &lt;a href="https://docs.skyflow.com/docs/fundamentals/product-overview" target="_blank" rel="noopener"&gt;Skyflow deployment models&lt;/a&gt;.&lt;/p&gt; 
-&lt;h2 id="considerations"&gt;Considerations&lt;/h2&gt; 
-&lt;ul&gt; 
- &lt;li&gt;&lt;strong&gt;Formats.&lt;/strong&gt; Text and Office formats (TXT, JSON, CSV, XML, JSONL, DOCX, XLSX, and PPTX) keep reversible vault tokens. PDFs and images are fully de-identified but receive one-way tokens, so the original values can’t be restored from those files.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Availability.&lt;/strong&gt; String de-identification and re-identification are generally available. Document de-identification through signed URLs uses Skyflow Detect v2, which is in preview. AgentCore Gateway availability varies by AWS Region. Before you deploy, check &lt;a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html" target="_blank" rel="noopener"&gt;Supported AWS Regions&lt;/a&gt; in the Amazon Bedrock AgentCore documentation.&lt;/li&gt; 
- &lt;li&gt;&lt;strong&gt;Document size and latency.&lt;/strong&gt; Document de-identification is bounded by design. The interceptor checks file size before submitting, so a file above your configured limit is refused immediately rather than timing out. Files within the limit complete within the connection window AgentCore Gateway allows. De-identification time scales with document size, so set the size limit to match your documents. Skyflow Detect v2 is in preview. Validate latency against your own workloads and Region during a pilot, before you widen the rollout.&lt;/li&gt; 
-&lt;/ul&gt; 
-&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt; 
-&lt;p&gt;Agents are only as trustworthy as the data they move. With AgentCore Gateway and the Skyflow interceptor, you can enforce a privacy control at the one place every tool call passes through. It works in both directions, covers documents and text, and needs no change to agent code.&lt;/p&gt; 
-&lt;h3 id="where-to-start"&gt;Where to start&lt;/h3&gt; 
-&lt;ol type="1"&gt; 
- &lt;li&gt;Pick one agent workflow that touches customer data and calls at least one tool outside your account.&lt;/li&gt; 
- &lt;li&gt;List the entity types that must never leave, and the tools allowed to see them.&lt;/li&gt; 
- &lt;li&gt;Deploy the interceptor from the &lt;a href="https://github.com/SkyflowFoundry/agentcore-skyflow" target="_blank" rel="noopener"&gt;GitHub repository&lt;/a&gt; and attach it to that workflow’s gateway.&lt;/li&gt; 
- &lt;li&gt;Start with Shield the tool. Then add Shield the document for your document store, and Shield the model once the agent’s model calls go through the gateway.&lt;/li&gt; 
- &lt;li&gt;Watch the interceptor’s CloudWatch metrics for a week before widening the rollout.&lt;/li&gt; 
- &lt;li&gt;If you have further questions, see the &lt;a href="https://docs.skyflow.com/docs/sdks/overview" target="_blank" rel="noopener"&gt;Skyflow SDK documentation&lt;/a&gt;. &lt;/li&gt; 
-&lt;/ol&gt; 
-&lt;hr style="width: 100%"&gt; 
-&lt;h2&gt;About the authors&lt;/h2&gt; 
-&lt;footer&gt; 
- &lt;div class="blog-author-box" style="padding-top: 2.0em"&gt; 
-  &lt;div class="blog-author-image" style="margin-right: 1.0em"&gt;
-   &lt;img loading="lazy" class="alignnone size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22128-7.jpg" alt="Joe McCarron" width="100" height="133"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Joe McCarron&lt;/h3&gt; 
-  &lt;p style="overflow: hidden"&gt;Joe is Head of Developer Advocacy and Product Lead at Skyflow. Joe spent the last decade building API and developer platforms at Zendesk and Apollo GraphQL before joining Skyflow to lead platform product management and developer advocacy.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box" style="padding-top: 2.0em"&gt; 
-  &lt;div class="blog-author-image" style="margin-right: 1.0em"&gt;
-   &lt;img loading="lazy" class="alignnone size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22128-8.jpg" alt="Sindhu Jambunathan" width="100" height="133"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Sindhu Jambunathan&lt;/h3&gt; 
-  &lt;p style="overflow: hidden"&gt;Sindhu is a Senior Solutions Architect at AWS. Sindhu works with ISV customers to build scalable, secure, cost-effective data and generative AI solutions.&lt;/p&gt; 
- &lt;/div&gt; 
- &lt;div class="blog-author-box" style="padding-top: 2.0em"&gt; 
-  &lt;div class="blog-author-image" style="margin-right: 1.0em"&gt;
-   &lt;img loading="lazy" class="alignnone size-full" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2026/11/18/ML-22128-9.jpg" alt="Sunita Koppar" width="100" height="133"&gt;
-  &lt;/div&gt; 
-  &lt;h3 class="lb-h4"&gt;Sunita Koppar&lt;/h3&gt; 
-  &lt;p style="overflow: hidden"&gt;Sunita is a Senior Specialist Solutions Architect in Generative AI and Machine Learning at AWS, where she partners with customers across diverse industries to design solutions, build proof of concepts, and drive measurable business outcomes.&lt;/p&gt; 
- &lt;/div&gt; 
-&lt;/footer&gt;</content:encoded>
-					
-		
-		<enclosure length="8253823" type="video/mp4" url="https://d2908q01vomqb2.cloudfront.net/artifacts/DBSBlogs/ML-22128/skyflow-1-shield-the-document.mp4"/>
-
-			</item>
 	</channel>
 </rss>
 
@@ -4008,7 +3916,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 	<atom:link href="https://azure.microsoft.com/en-us/blog/feed/" rel="self" type="application/rss+xml" />
 	<link>https://azure.microsoft.com/en-us/blog/</link>
 	<description>Get the latest Azure news, updates, and announcements from the Azure blog. From product updates to hot topics, hear from the Azure experts.</description>
-	<lastBuildDate>Tue, 17 Nov 2026 21:45:10 +0000</lastBuildDate>
+	<lastBuildDate>Sat, 21 Nov 2026 00:30:59 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -4075,7 +3983,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 <p class="wp-block-paragraph">This operational visibility is complemented by agent access controls: Oracle AI Database@Azure supports Microsoft Entra authentication and Oracle Deep Data Security, helping agents stay within users’ existing permissions while database calls run through the managed model context protocol (MCP) server and activity remains auditable across your Oracle database estate.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6afdad18ebfd3&quot;}" data-wp-interactive="core/image" data-wp-key="6afdad18ebfd3" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/azure_workload_health_upscaled.webp" alt="Azure Workload Center for Oracle showing degraded workload health for the Caldova Oracle workload. Copilot summarizes the issue and identifies database services as the cause, while the Run Oracle agent provides workload-aware troubleshooting and resolution options." class="wp-image-55525 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/azure_workload_health_upscaled.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b014761ee378&quot;}" data-wp-interactive="core/image" data-wp-key="6b014761ee378" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/azure_workload_health_upscaled.webp" alt="Azure Workload Center for Oracle showing degraded workload health for the Caldova Oracle workload. Copilot summarizes the issue and identifies database services as the cause, while the Run Oracle agent provides workload-aware troubleshooting and resolution options." class="wp-image-55525 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/azure_workload_health_upscaled.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -4115,7 +4023,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 <p class="wp-block-paragraph">Together, Microsoft and Oracle are bringing intelligence to the workflows that run the business: giving analysts, planners and controllers the power to understand margin changes, analyze shifts in demand, resolve reconciliation issues, and act on supply chain disruptions. Copilot analyzes Oracle transaction data and enriches it with context from <a href="https://www.microsoft.com/en/copilot/features/work-iq" target="_blank" rel="noopener noreferrer">Work IQ</a>, drawn from meetings, email, documents and Teams, to identify exceptions, draft an explanation, and prepare a governed action plan for review. Rather than another dashboard, or disconnected chatbot, this is AI in the flow of work, grounded in systems of record maintained in Oracle AI Database.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6afdad18ececb&quot;}" data-wp-interactive="core/image" data-wp-key="6afdad18ececb" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/3_Excel_Addin_AI_Assistant_upscaled.webp" alt="Microsoft Excel connected to Oracle Autonomous A I Database, showing country sales data in a worksheet and an A I assistant retrieving and presenting results from the Oracle database." class="wp-image-55496 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/3_Excel_Addin_AI_Assistant_upscaled.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b014761eee39&quot;}" data-wp-interactive="core/image" data-wp-key="6b014761eee39" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/3_Excel_Addin_AI_Assistant_upscaled.webp" alt="Microsoft Excel connected to Oracle Autonomous A I Database, showing country sales data in a worksheet and an A I assistant retrieving and presenting results from the Oracle database." class="wp-image-55496 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/3_Excel_Addin_AI_Assistant_upscaled.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -4151,7 +4059,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 <p class="wp-block-paragraph">In another scenario, a customer service agent, grounded through <a href="https://azure.microsoft.com/en-us/products/ai-foundry/iq/" target="_blank" rel="noopener noreferrer">Foundry IQ</a>, can answer questions about a policy or an account with supporting citations, and recall the customer history from Oracle-backed memory, retrieve similar past interactions, and responds with context.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6afdad18edd22&quot;}" data-wp-interactive="core/image" data-wp-key="6afdad18edd22" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/foundry1_highlight_upscaled.webp" alt="Microsoft Foundry showing an A I agent connected to Oracle A I Database. In the chat, the agent responds to a request for 2025 sales by month with results retrieved directly from the Oracle database." class="wp-image-55495 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/foundry1_highlight_upscaled.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b014761ef7ca&quot;}" data-wp-interactive="core/image" data-wp-key="6b014761ef7ca" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/foundry1_highlight_upscaled.webp" alt="Microsoft Foundry showing an A I agent connected to Oracle A I Database. In the chat, the agent responds to a request for 2025 sales by month with results retrieved directly from the Oracle database." class="wp-image-55495 webp-format" srcset="" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/foundry1_highlight_upscaled.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -4242,7 +4150,23 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/introducing-azure-catalyst-agentic-modernization-and-new-ai-infrastructure-innovations/">Introducing Azure Catalyst agentic modernization and new AI infrastructure innovations</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<p class="wp-block-paragraph">As AI continues to reshape how every business builds, operates, and competes, it is rapidly emerging as the defining workload in the cloud. This new class of agents, more demanding, complex, and dynamic than anything before them, is rewriting the rules of cloud infrastructure. Reasoning across multi-agent systems, drawing on rich context, acting in real time, and running continuously, they ask more of every layer of the platform beneath them. This week, we’re introducing innovations across <a href="https://azure.microsoft.com/en-us/explore/" target="_blank" rel="noopener noreferrer">Microsoft Azure</a> that set a new standard for how the cloud powers AI: expanded AI core capabilities in Azure to build what’s next, and Azure Catalyst, an intelligent agent-led solution to modernize the apps, data, and infrastructure that already run the business.</p>
+<details class="wp-block-details has-h-4-font-size is-layout-flow wp-block-details-is-layout-flow" open><summary>The top announcements:</summary>
+<ul class="wp-block-list">
+<li class="wp-block-list-item"><a href="#ai-applications" id="#ai-applications">AKS and Microsoft Foundry</a></li>
+
+
+
+<li class="wp-block-list-item"><a href="#azure-catalyst" id="#azure-catalyst">Azure Catalyst</a></li>
+
+
+
+<li class="wp-block-list-item"><a href="#run-ai" id="#foundry-iq">Windows Server 2028</a></li>
+</ul>
+</details>
+
+
+
+<p class="wp-block-paragraph">As AI continues to reshape how every business builds, operates, and competes, it is rapidly emerging as the defining workload in the cloud. This new class of agents, more demanding, complex, and dynamic than anything before them, is rewriting the rules of cloud infrastructure. Reasoning across multi-agent systems, drawing on rich context, acting in real time, and running continuously, they ask more of every layer of the platform beneath them. This week, we’re introducing innovations across Microsoft Azure that set a new standard for how the cloud powers AI: expanded AI core capabilities in Azure to build what’s next, and <a href="https://aka.ms/Azure-Catalyst" target="_blank" rel="noopener noreferrer"><strong>Azure Catalyst</strong></a>, an intelligent agent-led solution to modernize the apps, data, and infrastructure that already run the business.</p>
 
 
 
@@ -4251,7 +4175,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-a89b3969 wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://azure.microsoft.com/en-us/explore/" target="_blank" rel="noopener noreferrer">Explore Microsoft Azure</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://aka.ms/Azure-Catalyst" target="_blank" rel="noopener noreferrer noreferrer noopener">Explore Azure Catalyst</a></div>
 </div>
 
 
@@ -4265,15 +4189,15 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 <ol class="wp-block-list">
-<li class="wp-block-list-item"><strong><a href="#ai-applications" id="#ai-applications">Building the next generation of AI applications</a>.</strong> Silicon, compute, storage, and networking work as one system across Azure for inference, training, and agents. A new connected path from Microsoft Foundry to Azure Kubernetes Service (AKS) gives you choice in how and where you run AI.</li>
+<li class="wp-block-list-item"><strong>Building the next generation of AI applications.</strong> Silicon, compute, storage, and networking work as one system across Azure for inference, training, and agents. A new connected path from Microsoft Foundry to Azure Kubernetes Service (AKS) gives you choice in how and where you run AI.</li>
 
 
 
-<li class="wp-block-list-item"><strong><a href="#azure-catalyst">Modernizing apps and data with agents</a>.</strong> Azure Catalyst uses AI agents to modernize applications, data<em>,</em> and infrastructure in a fraction of the time and cost of traditional methods, turning decades of technical debt into the fastest path to AI.</li>
+<li class="wp-block-list-item"><strong>Modernizing apps and data with agents.</strong> Azure Catalyst uses AI agents to modernize applications, data<em>,</em> and infrastructure in a fraction of the time and cost of traditional methods, turning decades of technical debt into the fastest path to AI.</li>
 
 
 
-<li class="wp-block-list-item"><strong><a href="#run-ai" id="#run-ai">Extending AI wherever you operate</a>.</strong> Azure Local, flex nodes for AKS and Microsoft Foundry extend AI across cloud and distributed environments, governed through Azure Arc. Windows Server 2028, now in public preview, and Windows PCs, bring AI closer to applications, data<em>,</em> and users, providing the choice to meet workload-specific data, performance, regulatory<em>,</em> and cost needs.</li>
+<li class="wp-block-list-item"><strong>Extending AI wherever you operate.</strong> Azure Local, flex nodes for AKS and Microsoft Foundry extend AI across cloud and distributed environments, governed through Azure Arc. Windows Server 2028, now in public preview, and Windows PCs, bring AI closer to applications, data<em>,</em> and users, providing the choice to meet workload-specific data, performance, regulatory<em>,</em> and cost needs.</li>
 </ol>
 
 
@@ -4336,7 +4260,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<p class="wp-block-paragraph">To go deeper at Microsoft Ignite, check out these sessions:</p>
+<p class="wp-block-paragraph">To go deeper at Microsoft Ignite, check out these on-demand sessions:</p>
 
 
 
@@ -4420,7 +4344,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-mto="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6afdad18f1f2c"></universal-media-player>
+		<universal-media-player id="ump-6b014761f33d7"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -4434,7 +4358,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6afdad18f1f2c", options);
+				ump("ump-6b014761f33d7", options);
 			});
 		</script>
 	</div>
@@ -4446,7 +4370,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<p class="wp-block-paragraph">For a full breakdown, read the <a href="https://aka.ms/modernization-ignite26" target="_blank" rel="noopener noreferrer">Azure Catalyst announcement blog</a>. To go deeper at Microsoft Ignite, check out these sessions:</p>
+<p class="wp-block-paragraph">For a full breakdown, read the <a href="https://aka.ms/modernization-ignite26" target="_blank" rel="noopener noreferrer">Azure Catalyst announcement blog</a>. To go deeper at Microsoft Ignite, check out these on-demand sessions:</p>
 
 
 
@@ -4478,7 +4402,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<p class="wp-block-paragraph">For a full breakdown, read the <a href="https://aka.ms/WindowsServer2028Announcement" target="_blank" rel="noreferrer noopener">Windows Server 2028 blog</a>. To go deeper at Microsoft Ignite, check out these sessions:</p>
+<p class="wp-block-paragraph">For a full breakdown, read the <a href="https://aka.ms/WindowsServer2028Announcement" target="_blank" rel="noreferrer noopener">Windows Server 2028 blog</a>. To go deeper at Microsoft Ignite, check out these on-demand sessions:</p>
 
 
 
@@ -4487,7 +4411,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<li class="wp-block-list-item"><a href="https://ignite.microsoft.com/en-US/sessions?search=brk442&amp;sortBy=relevance" target="_blank" rel="noreferrer noopener"><strong>BRK442:</strong></a> Build sovereign AI with Azure Local and Foundry Local</li>
+<li class="wp-block-list-item"><a href="https://ignite.microsoft.com/en-US/sessions/1787856640517001EIKl-1791588245037001C6mG?source=sessions" id="https://ignite.microsoft.com/en-US/sessions/1787856640517001EIKl-1791588245037001C6mG?source=sessions" target="_blank" rel="noreferrer noopener"><strong>BRK442:</strong></a> Build sovereign AI with Azure Local and Foundry Local</li>
 </ul>
 
 
@@ -4506,7 +4430,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<p class="wp-block-paragraph">This week, I’m looking forward to Mark Russinovich, Chief Technology Officer (CTO), Deputy Chief Information Security Officer (dCISO), and Technical Fellow, Microsoft Azure and Pavan Davuluri, Executive Vice President, Windows and Devices, discussing why Azure and Windows are the foundation for mission-critical AI, from datacenters to the edge to a billion devices, at <a href="https://ignite.microsoft.com/en-US/sessions?search=INV643&amp;sortBy=relevance" target="_blank" rel="noreferrer noopener"><strong>INV643</strong></a><strong>:</strong> AI infrastructure from cloud to edge. We’d love to see you there.</p>
+<p class="wp-block-paragraph">This week, I’m looking forward to Mark Russinovich, Chief Technology Officer (CTO), Deputy Chief Information Security Officer (dCISO), and Technical Fellow, Microsoft Azure and Pavan Davuluri, Executive Vice President, Windows and Devices, discussing why Azure and Windows are the foundation for mission-critical AI, from datacenters to the edge to a billion devices, at <a href="https://ignite.microsoft.com/en-US/sessions/1787856658187001Etji-1789751959279001dn4k?source=sessions" id="https://ignite.microsoft.com/en-US/sessions/1787856658187001Etji-1789751959279001dn4k?source=sessions" target="_blank" rel="noreferrer noopener"><strong>INV643</strong></a><strong>:</strong> AI infrastructure from cloud to edge.</p>
 
 
 
@@ -4518,16 +4442,16 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 			<div class="promotional__content">
 				
 
-<h2 class="wp-block-heading" id="microsoft-azure">Microsoft Azure</h2>
+<h2 class="wp-block-heading" id="try-azure-catalyst-today">Try Azure Catalyst today</h2>
 
 
 
-<p class="wp-block-paragraph">Azure unifies infrastructure, data, applications, and AI on a trusted cloud platform to accelerate innovation and scale AI with confidence.</p>
+<p class="wp-block-paragraph">Modernize apps, databases, and infrastructure with one agent-led experience.</p>
 
 
 
 <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a aria-label="Learn more: Microsoft Azure" data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://azure.microsoft.com/en-us/explore/" target="_blank" rel="noopener noreferrer">Learn more</a></div>
+<div class="wp-block-button"><a aria-label="Explore Azure Catalyst: Try Azure Catalyst today" data-bi-an="Global CTA" data-bi-ct="cta link" data-bi-id="cta-block" class="wp-block-button__link wp-element-button" href="https://aka.ms/Azure-Catalyst" target="_blank" rel="noopener noreferrer noreferrer noopener">Explore Azure Catalyst</a></div>
 </div>
 
 			</div>
@@ -4608,7 +4532,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<p class="wp-block-paragraph">Azure is the foundation of Frontier Transformation. We engineer Azure as one system, so the knowledge an agent needs stays governed and the security you use to protect your people extends to the agents acting for them. And because we&#8217;re evolving the open, cloud-native platform you already rely on, you don&#8217;t have to start over.</p>
+<p class="wp-block-paragraph">Azure is the foundation of <a href="https://www.microsoft.com/en-us/ai/frontier-transformation" target="_blank" rel="noopener noreferrer">Frontier Transformation</a>. We engineer Azure as one system, so the knowledge an agent needs stays governed and the security you use to protect your people extends to the agents acting for them. And because we&#8217;re evolving the open, cloud-native platform you already rely on, you don&#8217;t have to start over.</p>
 
 
 
@@ -4622,15 +4546,15 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<p class="wp-block-paragraph">This week at Microsoft Ignite, we&#8217;re sharing what&#8217;s new across every layer of the platform. New capabilities spanning compute, storage, and networking let you run AI at scale with the control of your own infrastructure, without having to build, secure, and operate all of it yourself. Azure Catalyst brings agent-led modernization together in one experience from estate to code.</p>
+<p class="wp-block-paragraph">This week at Microsoft Ignite, we&#8217;re sharing what&#8217;s new across every layer of the platform. New capabilities spanning compute, storage, and networking let you run AI at scale with the control of your own infrastructure, without having to build, secure, and operate all of it yourself. <a href="https://aka.ms/azure-catalyst" target="_blank" rel="noopener noreferrer"><strong>Azure Catalyst</strong></a> brings agent-led modernization together in one experience from estate to code.</p>
 
 
 
-<p class="wp-block-paragraph">PostgreSQL now has two homes at Microsoft: Azure HorizonDB, generally available for mission-critical scale, and the new Fabric HorizonDB, which connects your PostgreSQL apps to analytics and AI. And Fabric apps, now generally available, let your teams turn trusted enterprise data into working apps.</p>
+<p class="wp-block-paragraph">PostgreSQL now has two homes at Microsoft: <a href="https://azure.microsoft.com/en-us/products/horizondb" target="_blank" rel="noopener noreferrer"><strong>Azure HorizonDB</strong></a>, generally available for mission-critical scale, and the new <a href="https://aka.ms/Fabric-HorizonDB" target="_blank" rel="noopener noreferrer"><strong>Fabric HorizonDB</strong></a>, which connects your PostgreSQL apps to analytics and AI. And <a href="https://www.microsoft.com/en-us/microsoft-fabric/features/rayfin" target="_blank" rel="noopener noreferrer"><strong>Fabric apps</strong></a>, now generally available, let your teams turn trusted enterprise data into working apps.</p>
 
 
 
-<p class="wp-block-paragraph">We&#8217;re also introducing Microsoft IQ, the enterprise context management platform that helps you build your own IQ and put it to work in every app and agent. It also gives your teams a path on Azure to build, run, and continuously improve those agents.</p>
+<p class="wp-block-paragraph">We&#8217;re also introducing <a href="https://www.microsoft.com/ai/microsoft-iq" target="_blank" rel="noopener noreferrer"><strong>Microsoft IQ</strong></a>, the enterprise context management platform that helps you build your own IQ and put it to work in every app and agent. It also gives your teams a path on Azure to build, run, and continuously improve those agents.</p>
 
 
 
@@ -4682,7 +4606,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<p class="wp-block-paragraph">To hear how organizations are operating AI at scale, join Mark Russinovich and Pavan Davuluri in the innovation session &#8220;<a href="https://ignite.microsoft.com/sessions/1787856658187001Etji-1789751959279001dn4k?source=sessions" target="_blank" rel="noreferrer noopener">AI Infrastructure from cloud to edge</a>.” </p>
+<p class="wp-block-paragraph">To hear how organizations are operating AI at scale, watch Mark Russinovich and Pavan Davuluri in the innovation session &#8220;<a href="https://ignite.microsoft.com/sessions/1787856658187001Etji-1789751959279001dn4k?source=sessions" target="_blank" rel="noreferrer noopener">AI Infrastructure from cloud to edge</a>.”</p>
 
 
 
@@ -4786,7 +4710,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-mto="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6afdad1902074"></universal-media-player>
+		<universal-media-player id="ump-6b01476202d5f"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -4800,7 +4724,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6afdad1902074", options);
+				ump("ump-6b01476202d5f", options);
 			});
 		</script>
 	</div>
@@ -4848,7 +4772,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-mto="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6afdad1902417"></universal-media-player>
+		<universal-media-player id="ump-6b014762030fa"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -4862,7 +4786,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6afdad1902417", options);
+				ump("ump-6b014762030fa", options);
 			});
 		</script>
 	</div>
@@ -4922,7 +4846,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-mto="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6afdad19028a5"></universal-media-player>
+		<universal-media-player id="ump-6b0147620360f"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -4936,7 +4860,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6afdad19028a5", options);
+				ump("ump-6b0147620360f", options);
 			});
 		</script>
 	</div>
@@ -5038,7 +4962,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-mto="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6afdad1903107"></universal-media-player>
+		<universal-media-player id="ump-6b01476203e6c"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5052,7 +4976,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6afdad1903107", options);
+				ump("ump-6b01476203e6c", options);
 			});
 		</script>
 	</div>
@@ -5074,7 +4998,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<p class="wp-block-paragraph">Every agent you build is only as good as what it knows about your business. That&#8217;s why we&#8217;re making sure your IQ, the context that makes your company unique, is available to your agents across every layer of Azure, with governance and security built in. It stays yours, and its value grows with everything you build on it. To learn more about Microsoft IQ, I encourage you to join my Microsoft Ignite session, “<a href="https://ignite.microsoft.com/sessions/1787856657893001Euld-1789751958877001dRyn?source=sessions" target="_blank" rel="noreferrer noopener">Harnessing Your IQ with a continuously improving agent platform</a>,” in person or online at no cost, or watch the recording afterward.</p>
+<p class="wp-block-paragraph">Every agent you build is only as good as what it knows about your business. That&#8217;s why we&#8217;re making sure your IQ, the context that makes your company unique, is available to your agents across every layer of Azure, with governance and security built in. It stays yours, and its value grows with everything you build on it. To learn more about Microsoft IQ, I encourage you to watch my Microsoft Ignite session, “<a href="https://ignite.microsoft.com/sessions/1787856657893001Euld-1789751958877001dRyn?source=sessions" target="_blank" rel="noreferrer noopener">Harnessing Your IQ with a continuously improving agent platform</a>.”</p>
 
 
 
@@ -5175,7 +5099,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-mto="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6afdad1907242"></universal-media-player>
+		<universal-media-player id="ump-6b014762075a8"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5189,7 +5113,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6afdad1907242", options);
+				ump("ump-6b014762075a8", options);
 			});
 		</script>
 	</div>
@@ -5267,7 +5191,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<p class="wp-block-paragraph">Cobalt 200 was designed to deliver high-performance for database workloads, and at Microsoft Build 2026, we announced the availability of <a href="https://azure.microsoft.com/en-us/blog/new-azure-cobalt-200-vms-deliver-50-performance-improvement-fully-optimized-for-modern-agentic-ai-workloads/" target="_blank" rel="noopener noreferrer">Azure Database for PostgreSQL on Cobalt 200</a>. Cobalt 200 VMs provide scalable performance, memory capacity, and local storage needed to accelerate Azure Database for PostgreSQL.</p>
+<p class="wp-block-paragraph">Cobalt 200 was designed to deliver high-performance for database workloads, and at Microsoft Build 2026, we announced the availability of <a href="https://techcommunity.microsoft.com/blog/adforpostgresql/more-power-more-resilience-better-value-azure-database-for-postgresql-at-ignite-/4573613" target="_blank" rel="noreferrer noopener">Azure Database for PostgreSQL on Cobalt 200</a>. Cobalt 200 VMs provide scalable performance, memory capacity, and local storage needed to accelerate Azure Database for PostgreSQL.</p>
 
 
 
@@ -5535,7 +5459,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 										<content:encoded><![CDATA[
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-mto="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6afdad190d16f"></universal-media-player>
+		<universal-media-player id="ump-6b0147620d186"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5549,7 +5473,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6afdad190d16f", options);
+				ump("ump-6b0147620d186", options);
 			});
 		</script>
 	</div>
@@ -5654,7 +5578,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 <p class="wp-block-paragraph">Continuous improvement in <a href="https://ai.azure.com/home" target="_blank" rel="noopener noreferrer">Foundry</a> follows four steps, repeated, so each pass builds on the last: <strong>Establish</strong>, <strong>Identify</strong>, <strong>Optimize</strong>, then <strong>Validate and repeat</strong>.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6afdad190e7ae&quot;}" data-wp-interactive="core/image" data-wp-key="6afdad190e7ae" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-1024x696.webp" alt="Graphic showing four-step continuous improvement cycle in Microsoft Foundry." class="wp-image-55516 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-1024x696.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-300x204.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-768x522.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-1536x1044.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-2048x1393.webp 2048w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-1024x696.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b0147620e528&quot;}" data-wp-interactive="core/image" data-wp-key="6b0147620e528" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-1024x696.webp" alt="Graphic showing four-step continuous improvement cycle in Microsoft Foundry." class="wp-image-55516 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-1024x696.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-300x204.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-768x522.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-1536x1044.webp 1536w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-2048x1393.webp 2048w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-1024x696.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5729,7 +5653,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6afdad190f66d&quot;}" data-wp-interactive="core/image" data-wp-key="6afdad190f66d" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1120" height="630" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/AgentOptimizer-Blog-GIF.gif" alt="Microsoft Foundry Agent Optimizer showing optimization runs that improve agent quality and cost." class="wp-image-55536" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b0147620f351&quot;}" data-wp-interactive="core/image" data-wp-key="6b0147620f351" class="wp-block-image aligncenter size-full wp-lightbox-container"><img decoding="async" width="1120" height="630" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/AgentOptimizer-Blog-GIF.gif" alt="Microsoft Foundry Agent Optimizer showing optimization runs that improve agent quality and cost." class="wp-image-55536" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -5790,7 +5714,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 <figure class="wp-block-bloginabox-theme-ump-embed wp-block-msx-ump-embed" class="wp-block-bloginabox-theme-ump-embed" data-bi-mto="true" role="presentation">
 	<div class="wp-block-embed__wrapper">
-		<universal-media-player id="ump-6afdad190fba5"></universal-media-player>
+		<universal-media-player id="ump-6b0147620f8d3"></universal-media-player>
 		<script type="module">
 			const currentTheme =
 				localStorage.getItem('blogInABoxCurrentTheme') ||
@@ -5804,7 +5728,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 			}
 
 			document.addEventListener('DOMContentLoaded', () => {
-				ump("ump-6afdad190fba5", options);
+				ump("ump-6b0147620f8d3", options);
 			});
 		</script>
 	</div>
@@ -5983,21 +5907,27 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 <p>The post <a href="https://azure.microsoft.com/en-us/blog/introducing-the-new-microsoft-iq-putting-your-organizations-intelligence-to-work-in-every-agent/">Introducing the new Microsoft IQ: Putting your organization&#8217;s intelligence to work in every agent</a> appeared first on <a href="https://azure.microsoft.com/en-us/blog">Microsoft Azure Blog</a>.</p>
 ]]></description>
 										<content:encoded><![CDATA[
-<aside class="table-of-contents-block accordion wp-block-bloginabox-theme-table-of-contents" id="accordion-ad5a954e-d584-4134-a6f8-0fa671d1abaa" data-bi-aN="table-of-contents">
-	<button class="btn btn-collapse" type="button" aria-expanded="true" aria-controls="accordion-collapse-ad5a954e-d584-4134-a6f8-0fa671d1abaa">
-		<span class="table-of-contents-block__label">In this article</span>
-		<span class="table-of-contents-block__current" aria-hidden="true"></span>
+<details class="wp-block-details has-h-4-font-size is-layout-flow wp-block-details-is-layout-flow" open><summary>In this article</summary>
+<ul class="wp-block-list">
+<li class="wp-block-list-item"><a href="#work-iq" id="#work-iq">What&#8217;s new in Work IQ</a></li>
 
-		<svg class="table-of-contents-block__arrow" aria-label="Toggle arrow" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M15.7761 11L18 8.82043L9 0L0 8.82043L2.22394 11L9 4.35913L15.7761 11Z" fill="currentColor" />
-		</svg>
-	</button>
-	<div id="accordion-collapse-ad5a954e-d584-4134-a6f8-0fa671d1abaa" class="table-of-contents-block__collapse-wrapper collapse show" data-parent="#accordion-ad5a954e-d584-4134-a6f8-0fa671d1abaa">
-		<div class="table-of-contents-block__content">
-			<ol class="table-of-contents-block__list"><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#how-microsoft-iq-turns-intelligence-into-advantage">How Microsoft IQ turns intelligence into advantage</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#customer-spotlight-aemo-uses-microsoft-iq-to-keep-australia-s-grid-secure">Customer spotlight: AEMO uses Microsoft IQ to keep Australia’s grid secure</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#turn-production-signals-into-continuous-improvement">Turn production signals into continuous improvement</a></li><li class="table-of-contents-block__list-item"><a class="table-of-contents-block__list-item-link" href="#explore-microsoft-iq-at-ignite-2026">Explore Microsoft IQ at Ignite 2026</a></li></ol>		</div>
-	</div>
-	<span class="table-of-contents-block__progress-bar"></span>
-</aside>
+
+
+<li class="wp-block-list-item"><a href="#fabric-iq" id="#fabric-iq">What&#8217;s new in Fabric IQ</a></li>
+
+
+
+<li class="wp-block-list-item"><a href="#foundry-iq" id="#foundry-iq">What&#8217;s new in Foundry IQ</a></li>
+
+
+
+<li class="wp-block-list-item"><a href="#web-iq">What&#8217;s new in Web IQ</a></li>
+
+
+
+<li class="wp-block-list-item"><a href="#aemo-uses-microsoft-iq">Customer spotlight: AEMO uses Microsoft IQ</a></li>
+</ul>
+</details>
 
 
 
@@ -6035,7 +5965,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<h3 class="wp-block-heading" id="what-s-new-in-work-iq">What’s new in Work IQ</h3>
+<h3 class="wp-block-heading" id="work-iq">What’s new in Work IQ</h3>
 
 
 
@@ -6061,7 +5991,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<h3 class="wp-block-heading" id="what-s-new-in-fabric-iq">What’s new in Fabric IQ</h3>
+<h3 class="wp-block-heading" id="fabric-iq">What’s new in Fabric IQ</h3>
 
 
 
@@ -6073,7 +6003,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<p class="wp-block-paragraph">With <strong>Fabric apps</strong>, now in preview, developers can embed conversational experiences powered by Power BI semantic models and Fabric data agents into their custom applications. <strong>IQ sharing</strong> now supports <strong>ontologies in Fabric IQ</strong> in preview, so organizations can share business context with customers and partners.</p>
+<p class="wp-block-paragraph">With <strong>Fabric apps</strong>, now generally available, developers can embed conversational experiences powered by Power BI semantic models and Fabric data agents into their custom applications. <strong>IQ sharing</strong> now supports <strong>ontologies in Fabric IQ</strong> in preview, so organizations can share business context with customers and partners.</p>
 
 
 
@@ -6087,7 +6017,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<h3 class="wp-block-heading" id="what-s-new-in-foundry-iq">What’s new in Foundry IQ</h3>
+<h3 class="wp-block-heading" id="foundry-iq">What’s new in Foundry IQ</h3>
 
 
 
@@ -6113,7 +6043,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<h3 class="wp-block-heading" id="what-s-new-in-web-iq">What’s new in Web IQ</h3>
+<h3 class="wp-block-heading" id="web-iq">What’s new in Web IQ</h3>
 
 
 
@@ -6143,7 +6073,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<h2 class="wp-block-heading" id="customer-spotlight-aemo-uses-microsoft-iq-to-keep-australia-s-grid-secure">Customer spotlight: AEMO uses Microsoft IQ to keep Australia’s grid secure</h2>
+<h2 class="wp-block-heading" id="aemo-uses-microsoft-iq">Customer spotlight: AEMO uses Microsoft IQ to keep Australia’s grid secure</h2>
 
 
 
@@ -6155,7 +6085,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<p class="wp-block-paragraph"><strong>Continuous improvement in Foundry</strong> can turn your organization’s collective knowledge and live production signals into agents that can improve day over day. Teams define success, compare quality, latency, and cost per successful outcome, and approve changes before deployment. Agent Optimizer in Foundry evaluates an agent against those criteria, generates improved configurations, and ranks them so teams can deploy the best one.</p>
+<p class="wp-block-paragraph"><strong><a href="https://azure.microsoft.com/en-us/blog/continuous-improvement-comes-to-microsoft-foundry/" target="_blank" rel="noopener noreferrer">Continuous improvement in Foundry</a></strong> can turn your organization’s collective knowledge and live production signals into agents that can improve day over day. Teams define success, compare quality, latency, and cost per successful outcome, and approve changes before deployment. Agent Optimizer in Foundry evaluates an agent against those criteria, generates improved configurations, and ranks them so teams can deploy the best one.</p>
 
 
 
@@ -6175,7 +6105,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<h2 class="wp-block-heading" id="explore-microsoft-iq-at-ignite-2026">Explore Microsoft IQ at Ignite 2026</h2>
+<h2 class="wp-block-heading" id="microsoft-iq-at-ignite-2026">Microsoft IQ at Ignite 2026</h2>
 
 
 
@@ -6184,23 +6114,19 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 <ul class="wp-block-list">
-<li class="wp-block-list-item"><strong>Watch the </strong><a href="https://ignite.microsoft.com/en-US/sessions/1787856726055001EpP1-1789751960282001d6eI?source=sessions"><strong>keynote</strong></a> with Judson Althoff for the Microsoft IQ reveal (November 17).</li>
+<li class="wp-block-list-item"><strong>Watch the </strong><a href="https://ignite.microsoft.com/en-US/sessions/1787856726055001EpP1-1789751960282001d6eI?source=sessions"><strong>keynote</strong></a> with Judson Althoff for the Microsoft IQ reveal.</li>
 
 
 
-<li class="wp-block-list-item"><strong>Join our </strong><a href="https://ignite.microsoft.com/en-US/sessions/1787856657893001Euld-1789751958877001dRyn?source=sessions"><strong>Innovation session</strong></a> to go deeper into Microsoft IQ with us.</li>
+<li class="wp-block-list-item"><strong>Watch our </strong><a href="https://ignite.microsoft.com/en-US/sessions/1787856657893001Euld-1789751958877001dRyn?source=sessions"><strong>Innovation session</strong></a> to go deeper into Microsoft IQ with us.</li>
 
 
 
-<li class="wp-block-list-item"><strong>Attend </strong><a href="https://ignite.microsoft.com/en-US/sessions/1787856617524001EVUv-1791588071811001C0FN?source=sessions"><strong>BRK293</strong></a><strong>, &#8220;Build your IQ using your unique enterprise context with Microsoft IQ,&#8221;</strong> for a deep dive.</li>
+<li class="wp-block-list-item"><strong>Watch </strong><a href="https://ignite.microsoft.com/en-US/sessions/1787856617524001EVUv-1791588071811001C0FN?source=sessions"><strong>BRK293</strong></a><strong>, &#8220;Build your IQ using your unique enterprise context with Microsoft IQ,&#8221;</strong> for a deep dive.</li>
 
 
 
-<li class="wp-block-list-item">Read the <a href="https://aka.ms/ignite-live-blog"><strong>Microsoft Ignite 2026 Book of News</strong></a> for all of today&#8217;s announcements.</li>
-
-
-
-<li class="wp-block-list-item"><strong>Visit the Microsoft IQ area</strong> in the Expert Meetup zone to see the platform in action.</li>
+<li class="wp-block-list-item">Read the <a href="https://aka.ms/ignite-live-blog"><strong>Microsoft Ignite 2026 Book of News</strong></a> for all of the announcements.</li>
 </ul>
 
 
@@ -6931,7 +6857,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6afdad191e758&quot;}" data-wp-interactive="core/image" data-wp-key="6afdad191e758" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" width="1024" height="575" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-1024x575.jpg" alt="Bar chart comparing Cadence Xcelium RTL simulation throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 4.15x throughput, compared with 2.89x for x86-A and 1.67x for x86-B, delivering at least 40% higher throughput than x86-A." class="wp-image-54890" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-1024x575.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-768x431.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-809x455.jpg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1.jpg 1132w" sizes="(max-width: 1024px) 100vw, 1024px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b0147621ed7d&quot;}" data-wp-interactive="core/image" data-wp-key="6b0147621ed7d" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" width="1024" height="575" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-1024x575.jpg" alt="Bar chart comparing Cadence Xcelium RTL simulation throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 4.15x throughput, compared with 2.89x for x86-A and 1.67x for x86-B, delivering at least 40% higher throughput than x86-A." class="wp-image-54890" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-1024x575.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-300x169.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-768x431.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-809x455.jpg 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1.jpg 1132w" sizes="(max-width: 1024px) 100vw, 1024px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6948,7 +6874,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6afdad191f160&quot;}" data-wp-interactive="core/image" data-wp-key="6afdad191f160" class="wp-block-image size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="602" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput-1024x602.jpg" alt="Bar chart comparing Synopsys VCS RTL simulation throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 2.58x throughput, compared with 1.84x for x86-A and 1.32x for x86-B, delivering at least 40% higher throughput than x86-A." class="wp-image-54885" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput-1024x602.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput-300x176.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput-768x451.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput.jpg 1149w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b0147621f4d1&quot;}" data-wp-interactive="core/image" data-wp-key="6b0147621f4d1" class="wp-block-image size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="602" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput-1024x602.jpg" alt="Bar chart comparing Synopsys VCS RTL simulation throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 2.58x throughput, compared with 1.84x for x86-A and 1.32x for x86-B, delivering at least 40% higher throughput than x86-A." class="wp-image-54885" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput-1024x602.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput-300x176.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput-768x451.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput.jpg 1149w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -6973,7 +6899,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6afdad191fb6f&quot;}" data-wp-interactive="core/image" data-wp-key="6afdad191fb6f" class="wp-block-image aligncenter size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="570" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1-1024x570.jpg" alt="Bar chart comparing Cadence Spectre analog simulation throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 1.38x throughput, compared with 1.24x for x86-A and 0.91x for x86-B, delivering the highest throughput among the four configurations." class="wp-image-54891" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1-1024x570.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1-300x167.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1-768x427.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1.jpg 1165w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b0147621fd10&quot;}" data-wp-interactive="core/image" data-wp-key="6b0147621fd10" class="wp-block-image aligncenter size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="570" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1-1024x570.jpg" alt="Bar chart comparing Cadence Spectre analog simulation throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 1.38x throughput, compared with 1.24x for x86-A and 0.91x for x86-B, delivering the highest throughput among the four configurations." class="wp-image-54891" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1-1024x570.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1-300x167.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1-768x427.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1.jpg 1165w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7005,7 +6931,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 <p class="wp-block-paragraph">For the Calibre workload we tested DRC against an IP Macro with 16 cores per job, Cobalt 200 completed the run in approximately 23% lower wall time than Cobalt 100, equivalent to 1.30x relative performance. It also outperformed the selected x86 Azure VMs at the same per-job core count.</p>
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6afdad19207e5&quot;}" data-wp-interactive="core/image" data-wp-key="6afdad19207e5" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-1024x576.webp" alt="Bar chart comparing Siemens Calibre DRC performance using 16 cores, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 1.30x performance, compared with 0.86x for x86-A and 1.08x for x86-B, delivering the highest performance among the four configurations." class="wp-image-54909 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog.webp 1280w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-1024x576.webp"><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b01476220760&quot;}" data-wp-interactive="core/image" data-wp-key="6b01476220760" class="wp-block-image aligncenter size-large wp-lightbox-container"><img decoding="async" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-1024x576.webp" alt="Bar chart comparing Siemens Calibre DRC performance using 16 cores, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 1.30x performance, compared with 0.86x for x86-A and 1.08x for x86-B, delivering the highest performance among the four configurations." class="wp-image-54909 webp-format" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-1024x576.webp 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-300x169.webp 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-768x432.webp 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-809x455.webp 809w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog.webp 1280w" data-orig-src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-1024x576.webp"><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"
@@ -7030,7 +6956,7 @@ print("Reason:   ", resp["RoutingReason"])&lt;/code&gt;&lt;/pre&gt;
 
 
 
-<figure data-wp-context="{&quot;imageId&quot;:&quot;6afdad1921338&quot;}" data-wp-interactive="core/image" data-wp-key="6afdad1921338" class="wp-block-image aligncenter size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="570" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput-1024x570.jpg" alt="Bar chart comparing Synopsys PrimeTime static timing throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 2.03x throughput, compared with 1.45x for x86-A and 1.21x for x86-B, delivering the highest throughput among the four configurations." class="wp-image-54888" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput-1024x570.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput-300x167.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput-768x428.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput.jpg 1144w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
+<figure data-wp-context="{&quot;imageId&quot;:&quot;6b0147622114e&quot;}" data-wp-interactive="core/image" data-wp-key="6b0147622114e" class="wp-block-image aligncenter size-large wp-lightbox-container"><img loading="lazy" decoding="async" width="1024" height="570" data-wp-class--hide="state.isContentHidden" data-wp-class--show="state.isContentVisible" data-wp-init="callbacks.setButtonStyles" data-wp-on--click="actions.showLightbox" data-wp-on--load="callbacks.setButtonStyles" data-wp-on-window--resize="callbacks.setButtonStyles" src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput-1024x570.jpg" alt="Bar chart comparing Synopsys PrimeTime static timing throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 2.03x throughput, compared with 1.45x for x86-A and 1.21x for x86-B, delivering the highest throughput among the four configurations." class="wp-image-54888" srcset="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput-1024x570.jpg 1024w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput-300x167.jpg 300w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput-768x428.jpg 768w, https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput.jpg 1144w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><button
 			class="lightbox-trigger"
 			type="button"
 			aria-haspopup="dialog"

@@ -1,43 +1,45 @@
 {
-  "date": "2026-11-22",
-  "generated_at": "2026-11-22T00:12:04.842864+00:00",
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T00:42:02.410853+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-11-22",
+      "date": "2026-11-23",
       "item_count": 1,
-      "generated_at": "2026-11-22T00:12:04.842588+00:00",
+      "generated_at": "2026-11-23T00:42:02.410572+00:00",
       "content": {
         "ko": {
-          "executive_summary": "AI Glasses는 저전력 DRAM 수요 급증으로 반도체 산업의 새로운 경쟁 무대로 부상했다.",
+          "executive_summary": "Qualcomm의 다각화 전략이 성과를 나타내고 있으며, 2027년 자동차 칩 시장에서 $8억 규모의 비즈니스로 업계 선도 위치를 확보할 것으로 예상된다.",
           "key_facts": [
-            "AI Glasses 용 저전력 DRAM 수요 4배 증가"
+            "Qualcomm 자동차 칩 사업 규모: $8억",
+            "예상 시장 주도 시점: 2027년"
           ],
           "implications": [
             {
-              "keyword": "Mobile AP 시장 확대",
-              "text": "웨어러블 AI 기기의 성장으로 모바일 AP와 메모리 칩의 새로운 애플리케이션 창출"
+              "keyword": "자동차 반도체 확장",
+              "text": "Qualcomm의 자동차 칩 사업 성장은 모바일 중심 사업 모델의 한계를 극복하고 새로운 수익원 창출을 의미"
             },
             {
-              "keyword": "저전력 설계 요구",
-              "text": "AI Glasses의 배터리 제약으로 인한 저전력 아키텍처 설계 중요성 증대"
+              "keyword": "시장 리더십",
+              "text": "2027년 자동차 반도체 시장에서 주도적 위치 확보로 타 경쟁사 대비 경쟁 우위 선점"
             }
           ],
           "counterpoint": ""
         },
         "en": {
-          "executive_summary": "AI Glasses has emerged as a new competitive arena in the semiconductor industry due to surging demand for low-power DRAM.",
+          "executive_summary": "Qualcomm's diversification strategy is showing results, and by 2027 it is expected to secure a leading position in the automotive chip market with an $800 million business.",
           "key_facts": [
-            "Low-power DRAM demand for AI Glasses increased 4-fold"
+            "Qualcomm automotive chip business scale: $800 million",
+            "Anticipated market leadership timeframe: 2027"
           ],
           "implications": [
             {
-              "keyword": "Mobile AP market expansion",
-              "text": "Growth of wearable AI devices creates new applications for mobile AP and memory chips"
+              "keyword": "Automotive semiconductor expansion",
+              "text": "Qualcomm's growth in automotive chip business signifies overcoming limitations of a mobile-centric business model and creating new revenue streams"
             },
             {
-              "keyword": "Low-power design requirements",
-              "text": "Battery constraints in AI Glasses increase importance of low-power architecture design"
+              "keyword": "Market leadership",
+              "text": "Securing a dominant position in the automotive semiconductor market by 2027 establishes competitive advantage over rival competitors"
             }
           ],
           "counterpoint": ""
@@ -46,183 +48,139 @@
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-11-22",
+      "date": "2026-11-23",
       "item_count": 3,
-      "generated_at": "2026-11-22T00:12:04.842588+00:00",
+      "generated_at": "2026-11-23T00:42:02.410572+00:00",
       "content": {
         "ko": {
-          "executive_summary": "반도체 호황으로 삼성, SK하이닉스, Intel 등 주요 제조사들이 대규모 인력 채용에 나섰으며, 2026년 반도체 업계 채용 붐이 예상되고 있다.",
+          "executive_summary": "한국 정부가 Nvidia, AMD, Intel을 소환하여 AI 칩 공급망을 검토 중이며, HBM 및 기판 부족이 소규모 팹리스 기업들에 압박을 가하고 있다. Tesla는 Hot Chips에서 자체 Dojo AI 슈퍼컴퓨터 정보를 공개했다.",
           "key_facts": [
-            "Samsung, SK Hynix 열린채용 추진",
-            "Intel 주가 20% 상승, 채용 확대 신호",
-            "Micron vs NVIDIA 경쟁 격화"
+            "한국 정부 소환 대상: Nvidia, AMD, Intel",
+            "주요 병목: HBM 및 기판 부족",
+            "영향 대상: 소규모 팹리스 기업",
+            "Tesla Dojo AI 슈퍼컴퓨터 발표: Hot Chips 컨퍼런스"
           ],
           "implications": [
             {
-              "keyword": "인재 수급 경쟁",
-              "text": "반도체 수요 급증으로 엔지니어 확보 경쟁 심화, 채용 조건 개선"
+              "keyword": "공급망 정부 개입",
+              "text": "한국 정부의 주요 칩 설계사 소환은 AI 칩 공급 불안정성 심화와 국가 차원의 대응 필요성을 반영"
             },
             {
-              "keyword": "생산 능력 증설",
-              "text": "주요 메모리/로직 제조사의 인력 확충은 향후 설비 투자 및 생산 확대 의도 반영"
+              "keyword": "HBM 병목",
+              "text": "HBM 및 기판 부족으로 대규모 기업과 소규모 팹리스 기업 간 자원 접근성 격차 심화"
             },
             {
-              "keyword": "경영진 신호",
-              "text": "Intel의 주가 회복과 채용 확대는 반도체 사이클 회복에 대한 시장 낙관감 표현"
+              "keyword": "주요 고객사 자체 개발",
+              "text": "Tesla의 Dojo 등 주요 고객사 자체 AI 칩 개발 추진으로 Nvidia 등 기존 공급사의 독점 구조 약화"
             }
           ],
-          "counterpoint": "채용 증가가 실제 수요 증가로 전환되지 않을 경우 과잉 인력 문제 가능성"
+          "counterpoint": "한국 정부의 공급망 검토가 단기 해결책이 되기는 어려울 수 있음"
         },
         "en": {
-          "executive_summary": "Amid semiconductor boom, major manufacturers including Samsung, SK Hynix, and Intel have launched large-scale recruitment, with a semiconductor industry hiring boom expected by 2026.",
+          "executive_summary": "The Korean government has summoned Nvidia, AMD, and Intel to review the AI chip supply chain, while HBM and substrate shortages are pressuring small fabless companies. Tesla disclosed details about its own Dojo AI supercomputer at Hot Chips.",
           "key_facts": [
-            "Samsung, SK Hynix pursuing open recruitment",
-            "Intel stock price up 20%, signaling expansion in hiring",
-            "Micron vs NVIDIA competition intensifying"
+            "Korean government summoned: Nvidia, AMD, Intel",
+            "Major bottlenecks: HBM and substrate shortage",
+            "Affected parties: Small fabless companies",
+            "Tesla Dojo AI supercomputer announcement: Hot Chips conference"
           ],
           "implications": [
             {
-              "keyword": "Talent acquisition competition",
-              "text": "Surging semiconductor demand intensifies engineer recruitment competition, improving hiring conditions"
+              "keyword": "Government intervention in supply chain",
+              "text": "The Korean government's summons of major chip design companies reflects intensifying AI chip supply instability and the necessity of national-level response"
             },
             {
-              "keyword": "Production capacity expansion",
-              "text": "Workforce expansion by major memory and logic manufacturers reflects intent for future capital investment and production scaling"
+              "keyword": "HBM bottleneck",
+              "text": "HBM and substrate shortages are widening the resource accessibility gap between large corporations and small fabless companies"
             },
             {
-              "keyword": "Management signaling",
-              "text": "Intel's stock recovery and hiring expansion reflect market optimism about semiconductor cycle recovery"
+              "keyword": "Major customers developing in-house solutions",
+              "text": "Leading customers such as Tesla pursuing proprietary AI chip development with Dojo and others weakens the monopolistic structure of existing suppliers like Nvidia"
             }
           ],
-          "counterpoint": "Risk of overstaffing if hiring increases do not translate into actual demand growth"
+          "counterpoint": "The Korean government's supply chain review may be difficult to serve as a short-term solution"
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-11-22",
-      "item_count": 3,
-      "generated_at": "2026-11-22T00:12:04.842588+00:00",
+      "date": "2026-11-23",
+      "item_count": 4,
+      "generated_at": "2026-11-23T00:42:02.410572+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Nvidia 견제 움직임이 본격화되고 있으며, GlobalFoundries의 Cyient Semiconductors 투자, Microsoft의 Intel EMIB 고급 패키징 채택 등 Custom SoC 개발 생태계가 다각화되고 있다.",
+          "executive_summary": "Morgan Stanley가 MediaTek의 TPU 프로젝트 추진을 지지하며 목표가 NT$6,188을 제시했고, Google의 2027년 칩 계획이 Broadcom에 부정적 영향을 미칠 것으로 예상된다. Amazon은 Nvidia에 대항하기 위해 Decart 인수를 $7.5억에 추진 중이다.",
           "key_facts": [
-            "Cyient Semiconductors, GlobalFoundries로부터 $1천만 투자 유치",
-            "Microsoft Azure, Intel EMIB 고급 패키징 다년도 계약 체결",
-            "Nvidia 견제 AI 칩 경쟁 본격화"
+            "Morgan Stanley MediaTek 목표가: NT$6,188",
+            "Amazon Decart 인수 규모: $7.5억",
+            "Google 자체 칩 개발 목표 연도: 2027년",
+            "Nvidia Nemotron 프로젝트 진행 중"
           ],
           "implications": [
             {
-              "keyword": "파운드리 차별화",
-              "text": "GlobalFoundries와 Intel이 Custom SoC 설계사 투자와 고급 패키징으로 TSMC 견제 전개"
+              "keyword": "AI 칩 경쟁 심화",
+              "text": "Amazon, Google 등 메이저 클라우드 기업의 자체 AI 칩 개발/인수로 Nvidia의 독점적 지위 도전 가시화"
             },
             {
-              "keyword": "클라우드 AI 칩 다원화",
-              "text": "Microsoft 같은 대형 클라우드 업체가 Nvidia 의존도 감소 위해 고급 패키징 활용한 커스텀 칩 추진"
+              "keyword": "Design House 성장",
+              "text": "MediaTek의 TPU 프로젝트 추진과 Decart 인수는 팹리스 AI 칩 설계 역량 강화 흐름을 의미"
             },
             {
-              "keyword": "설계-제조 통합 생태계",
-              "text": "팩토리와 설계사 간 협력으로 Fabless AI 칩 스타트업 육성 가속화"
+              "keyword": "Broadcom 사업 영향",
+              "text": "Google의 2027년 자체 칩 계획은 기존 Broadcom 등 협력사 선택지 축소 가능성 내포"
+            },
+            {
+              "keyword": "Nvidia의 전략적 대응",
+              "text": "Nemotron 등 자체 소프트웨어 역량 강화로 칩 경쟁력 보강 필요"
             }
           ],
-          "counterpoint": "Nvidia의 기술 우위와 생태계 선점 효과로 신규 진입자의 실질적 성공 기간 장기화 가능"
+          "counterpoint": "두 개 미해결 주요 변수가 MediaTek의 성장 경로에 불확실성 존재"
         },
         "en": {
-          "executive_summary": "Efforts to counter Nvidia are intensifying, and the Custom SoC development ecosystem is diversifying through GlobalFoundries' investment in Cyient Semiconductors and Microsoft's adoption of Intel EMIB advanced packaging.",
+          "executive_summary": "Morgan Stanley supports MediaTek's TPU project pursuits with a price target of NT$6,188, and Google's 2027 chip plan is expected to negatively impact Broadcom. Amazon is pursuing the acquisition of Decart for $750 million to counter Nvidia.",
           "key_facts": [
-            "Cyient Semiconductors raised $10 million investment from GlobalFoundries",
-            "Microsoft Azure entered multi-year contract for Intel EMIB advanced packaging",
-            "AI chip competition to counter Nvidia gaining momentum"
+            "Morgan Stanley price target for MediaTek: NT$6,188",
+            "Amazon Decart acquisition scale: $750 million",
+            "Google proprietary chip development target year: 2027",
+            "Nvidia Nemotron project in progress"
           ],
           "implications": [
             {
-              "keyword": "Foundry differentiation",
-              "text": "GlobalFoundries and Intel are countering TSMC through investments in Custom SoC designers and advanced packaging"
+              "keyword": "Intensifying AI chip competition",
+              "text": "Major cloud companies including Amazon and Google pursuing proprietary AI chip development and acquisitions is making visible the challenge to Nvidia's monopolistic position"
             },
             {
-              "keyword": "Cloud AI chip diversification",
-              "text": "Large cloud providers like Microsoft pursue custom chips using advanced packaging to reduce Nvidia dependency"
+              "keyword": "Design house growth",
+              "text": "MediaTek's TPU project pursuits and Decart acquisition signify a strengthening trend in fabless AI chip design capabilities"
             },
             {
-              "keyword": "Design-manufacturing integrated ecosystem",
-              "text": "Collaboration between fabs and designers accelerates cultivation of fabless AI chip startups"
+              "keyword": "Broadcom business impact",
+              "text": "Google's 2027 proprietary chip plan implies potential reduction in supplier options for existing partners such as Broadcom"
+            },
+            {
+              "keyword": "Nvidia's strategic response",
+              "text": "Strengthening proprietary software capabilities such as Nemotron becomes necessary to reinforce chip competitiveness"
             }
           ],
-          "counterpoint": "Nvidia's technological superiority and ecosystem lock-in may prolong time to meaningful success for new entrants"
+          "counterpoint": "Two unresolved major variables create uncertainty in MediaTek's growth trajectory"
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-11-22",
-      "item_count": 5,
-      "generated_at": "2026-11-22T00:12:04.842588+00:00",
+      "date": "2026-11-23",
+      "item_count": 8,
+      "generated_at": "2026-11-23T00:42:02.410572+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "Rapidus의 2nm 기술 개발이 지연되고 있으며 FY2027 목표 달성이 불확실한 상황이고, 한국 기업들은 고주파 GaN 소자 국산화와 에피택시 장비 선진화로 복합반도체 경쟁력을 강화 중이다. 또한 유럽은 역내 가전 보호 정책과 함께 무역장벽 강화 움직임이 예상되고 있다.",
-          "key_facts": [
-            "Rapidus 2nm SRAM 샘플 미확보, FY2027 목표 위험",
-            "IQlab, 76GHz급 GaN RF 소자 국산화 개발 완료",
-            "TES (테스), 복합반도체 에피택시 장비 글로벌 3강 진입",
-            "KOSPI 4,900선, 코스닥 650선 붕괴 (외국인·기관 대규모 매도)",
-            "유럽, 역외 가전제품 규제 강화 추진"
-          ],
-          "implications": [
-            {
-              "keyword": "일본 파운드리 경쟁력 약화",
-              "text": "Rapidus의 2nm 개발 지연은 국제 경쟁에서 TSMC·Samsung 대비 역할 축소 우려"
-            },
-            {
-              "keyword": "한국 소부장 고도화",
-              "text": "IQlab의 GaN 국산화와 TES의 에피 장비 선진화로 복합반도체 공급망 자립도 제고"
-            },
-            {
-              "keyword": "지정학적 무역장벽",
-              "text": "유럽의 역내 보호주의 강화는 한국 삼성·LG 등 가전기업과 파운드리 고객사에 추가 규제 부담 초래"
-            },
-            {
-              "keyword": "시장 심리 악화",
-              "text": "AI 산업 불확실성과 미국 금리 우려로 반도체 대형주 매도세 가중, 자본 조달 환경 악화 신호"
-            }
-          ],
-          "counterpoint": "한국 기업의 기술 성과에도 불구하고 글로벌 경제 불확실성이 개별 역량 발휘를 제약할 가능성"
-        },
-        "en": {
-          "executive_summary": "Rapidus' 2nm technology development is experiencing delays with FY2027 target achievement now uncertain, while Korean companies are strengthening compound semiconductor competitiveness through domestication of high-frequency GaN devices and advancement of epitaxy equipment. Additionally, Europe is expected to strengthen intra-regional protective policies and trade barriers.",
-          "key_facts": [
-            "Rapidus failed to secure 2nm SRAM samples, FY2027 target at risk",
-            "IQlab completed domestication of 76GHz-class GaN RF devices",
-            "TES (Theses) entered global top 3 in compound semiconductor epitaxy equipment",
-            "KOSPI dropped below 4,900, KOSDAQ collapsed below 650 (massive foreign and institutional selling)",
-            "Europe strengthening regulations on extra-regional home appliances"
-          ],
-          "implications": [
-            {
-              "keyword": "Japanese foundry competitiveness weakening",
-              "text": "Rapidus' 2nm development delay raises concerns about role reduction compared to TSMC and Samsung in international competition"
-            },
-            {
-              "keyword": "Korean materials and parts advancement",
-              "text": "IQlab's GaN domestication and TES' epitaxy equipment advancement improve self-sufficiency in compound semiconductor supply chain"
-            },
-            {
-              "keyword": "Geopolitical trade barriers",
-              "text": "Europe's strengthened intra-regional protectionism imposes additional regulatory burdens on Korean appliance companies like Samsung and LG and their foundry customers"
-            },
-            {
-              "keyword": "Market sentiment deterioration",
-              "text": "AI industry uncertainty and US interest rate concerns intensify selling pressure on semiconductor majors, signaling deteriorating capital raising environment"
-            }
-          ],
-          "counterpoint": "Despite Korean companies' technological achievements, global economic uncertainty may constrain individual competencies from being fully exercised"
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-11-22",
-      "item_count": 4,
-      "generated_at": "2026-11-22T00:12:04.842588+00:00",
+      "date": "2026-11-23",
+      "item_count": 3,
+      "generated_at": "2026-11-23T00:42:02.410572+00:00",
       "content": {
         "ko": {},
         "en": {}
