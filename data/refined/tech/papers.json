@@ -2,6 +2,254 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Giant magnetic anisotropy in layered polar metal Sr$_3$Co$_2$O$_7$ from Charge-disproportionation orbital unquenching",
+    "url": "https://arxiv.org/abs/2611.29742v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "Crystal-field quenching usually suppresses orbital angular momentum and limits magnetic anisotropy in transition-metal oxides. Here we identify charge disproportionation as a route to giant magnetocrystalline anisotropy in the layered polar metal Sr$_3$Co$_2$O$_7$. First-principles calculations reveal an energy preference of 234.0 meV per cell for in-plane [110] magnetization over [001]. Charge disproportionation and the associated polar displacement reconstruct the local cobalt crystal fields, ",
+    "authors": [
+      "Houssam Sabri",
+      "Hong-Fei Huang",
+      "Jie-Xiang Yu",
+      "Jiadong Zang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "MagPot: A magnetoelastic potential generator for molecular dynamics simulations",
+    "url": "https://arxiv.org/abs/2611.29574v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "Magnetoelastic phenomena originate from the coupling between atomic displacements and magnetic degrees of freedom, and their atomistic simulation requires interatomic models in which magnetic interactions depend explicitly on interatomic distance. This paper presents MagPot, a Python program that generates Bethe-Slater parameter sets for spin-lattice molecular dynamics simulations using the SPIN package of the Large-scale Atomic/Molecular Massively Parallel Simulator (LAMMPS). From a compact set",
+    "authors": [
+      "P. Nieves",
+      "I. Korniienko",
+      "S. Arapan",
+      "A. Fraile",
+      "R. Iglesias",
+      "D. Legut"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "AmorphGen: A Python package for amorphous structure generation with machine-learning and classical interatomic potentials",
+    "url": "https://arxiv.org/abs/2611.29539v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "AmorphGen is an open-source Python package for generating and analyzing amorphous structures from a composition or a crystal. Chemically informed rules estimate initial densities and assign separation and coordination constraints. Three routes are available: random placement followed by relaxation, melt-quench from a crystal, and a hybrid route that anneals and quenches random structures. ASE provides access to classical and machine-learning potentials, with GPU batching for selected backends. A",
+    "authors": [
+      "Chaiyawat Kaewmeechai",
+      "Louie Slocombe",
+      "Alexis G. Manche",
+      "David O. Scanlon"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Approximate Convex Decomposition (ACD) with Divide and Conquer Strategy for DRL-Based BS Localization",
+    "url": "https://arxiv.org/abs/2611.29503v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "Optimal base station (BS) placement is a fundamental challenge in wireless localization. Conventional optimization approaches may become computationally demanding as the geometric complexity of the environment increases, limiting their scalability to realistic building layouts. This paper proposes an Approximate Convex Decomposition (ACD)-based divide-and-conquer framework integrated with deep reinforcement learning (DRL) for optimizing BS placement. The proposed approach exploits the geometric ",
+    "authors": [
+      "Omar Awad",
+      "Aly Morsy",
+      "Mohamed Shalma"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "RF-Florence: Unified RF Detection and Physical Grounding with a Foundation Model",
+    "url": "https://arxiv.org/abs/2611.29496v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "Reliable signal detection is essential for spectrum sharing and intelligent sensing in sixth-generation (6G) wireless networks. Wideband radio-frequency (RF) monitoring must locate emissions and identify those satisfying waveform-family and physical constraints. The latter task, physical grounding, requires query meaning to agree with measurable signal attributes. RF-Florence unifies three tasks---full-scene detection, physical grounding, and supplied-region recognition---through a shared pretra",
+    "authors": [
+      "Mu Jia",
+      "Junting Chen",
+      "Pooi-Yuen Kam"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Population of spin orbit-split-electron branches in semimetallic HgTe quantum wells",
+    "url": "https://arxiv.org/abs/2611.29487v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "We present the results of experimental studies on magnetoresistance, the Hall effect, and Shubnikov-de Haas oscillations performed in gated heterostructures with HgTe-based gapless semiconductor quantum wells. We show that in quantum wells with widths corresponding to a semimetallic charge carrier spectrum, electrons, in contrast to the idealized model, populate both spin-orbit-split branches of the spectrum. This occurs regardless of whether the Fermi level lies exclusively in the conduction ba",
+    "authors": [
+      "G. M. Minkov",
+      "O. E. Rut",
+      "A. A. Sherstobitov",
+      "A. V. Germanenko",
+      "S. A. Dvoretski",
+      "N. N. Mikhailov"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Fully solid-state all-2D micro-supercapacitors for on-chip energy storage",
+    "url": "https://arxiv.org/abs/2611.29476v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "Integrating energy storage directly into microelectronic platforms remains a major challenge. Although solid-state micro-supercapacitors (MSCs) have been previously demonstrated, most still rely on liquid or solvent-containing gel electrolytes, which require additional encapsulation and complicate device integration. Here, we demonstrate wafer-scale fabrication of all-2D, fully solid-state MSCs by combining conductive Ti3C2Tz MXene electrodes with a natural vermiculite (VMT) clay solid electroly",
+    "authors": [
+      "Bar Favelukis",
+      "Andreas Furchner",
+      "Barak Ratzker",
+      "Yiftach Kushnir",
+      "Asaf Nitsan",
+      "Rebeca Miyar",
+      "Yugal Rathod",
+      "Alexander Upcher",
+      "Nitzan Maman",
+      "Pini Shekhter",
+      "Varun Natu",
+      "Maxim Sokol"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.chem-ph",
+    "title": "Nonempirical Determination of the Optimal TAO-DFT Fictitious Temperature for Molecular Systems in the Lowest Singlet State",
+    "url": "https://arxiv.org/abs/2611.29414v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "Thermally-assisted-occupation density functional theory (TAO-DFT) [J.-D. Chai, J. Chem. Phys., 2012, ${\\bf 136}$, 154104] has been developed to investigate the ground-state properties of large electronic systems exhibiting varying multi-reference (MR) character. As a central parameter in TAO-DFT, the fictitious temperature $θ$ is closely linked to the degree of static correlation in an electronic system. While the conventional system-independent $θ$-scheme is computationally efficient and broadl",
+    "authors": [
+      "Bing-Ying Li",
+      "Jeng-Da Chai"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Motivo: A Motif-Based Algorithm-Architecture Co-Design for Fast and Energy-Efficient Graph-Based Genome Analysis",
+    "url": "https://arxiv.org/abs/2611.29410v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "Read mapping, a key step of genome sequence analysis, matches each fragment of a sequenced genome (a read) to its location in a reference genome. A genome graph is a graph-based reference genome that represents the genetic diversity of a population as alternative paths, and thus improves read mapping accuracy. However, the size and complexity of a genome graph make sequence-to-graph (S2G) mapping a major bottleneck. Prior software and hardware approaches for S2G mapping perform redundant costly ",
+    "authors": [
+      "Eirini Maria Tzermpou",
+      "Konstantina Koliogeorgi",
+      "Konstantinos Kanellopoulos",
+      "Ataberk Olgun",
+      "Nisa Bostancı",
+      "Dimitrios Soudris",
+      "Nika Mansouri Ghiasi",
+      "Onur Mutlu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "On linear MMSE receivers in the presence of data-like multiuser interference",
+    "url": "https://arxiv.org/abs/2611.29370v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "Linear minimum mean-square error (LMMSE) receivers have been of great interest for many decades for multi-user interference (MUI) mitigation in radiocommunications networks in particular. Despite the extensive literature on this subject, this topic remains relevant to several current and emerging applications. In this context, the paper presents a continuous-time approach showing that most of LMME receivers of the literature are suboptimal. In particular, they are typically implemented at the sy",
+    "authors": [
+      "Pascal Chevalier",
+      "Jean-Pierre Delmas",
+      "Roger Lamberti"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "LIELLA: Private Edge Adaptation with Photonic Weight Streams",
+    "url": "https://arxiv.org/abs/2611.29343v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "Although photonic accelerators have shown promise for energy-efficient machine learning inference, privately personalizing large models across multiple edge clients remains difficult under tight memory, precision, and hardware constraints. We present LIELLA, a weight-streaming architecture that enables multiple edge clients to personalize a shared model through compact private adapters. The two proposed photonic adapter architectures accommodate both backpropagation and forward-only optimization",
+    "authors": [
+      "Yuexun Huang",
+      "Kfir Sulimany",
+      "Ke Lin",
+      "Xiangyu Ren",
+      "Dirk Englund",
+      "Liang Jiang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "AscendFHE: Efficient Fully Homomorphic Encryption on Ascend NPUs",
+    "url": "https://arxiv.org/abs/2611.29301v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "Fully homomorphic encryption enables cloud servers to run neural networks on encrypted inputs. In CKKS, inference requires costly arithmetic on high-degree polynomials. On Ascend neural processing units, preparing operands and reconstructing intermediate results add to this cost, while limited local memory constrains parallel execution. We present AscendFHE, a CKKS backend that coordinates Ascend's matrix engines and vector cores for bootstrapping and encrypted inference. It uses balanced-byte e",
+    "authors": [
+      "Honghui You",
+      "Haoping Yang",
+      "Wenzhe Wang",
+      "Lei Ju"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "Denoised but Not Improved: What EEG Denoising Does to a Downstream Task",
+    "url": "https://arxiv.org/abs/2611.29256v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "Scalp electroencephalography (EEG) is routinely denoised before it reaches a downstream model, and the denoising literature scores a method by how closely its output matches a clean reference waveform. That reference does not exist for real scalp recordings: it is synthesized by adding artifact templates to signals merely presumed clean, and even an exact separation would return cortical activity blurred by volume conduction rather than the activity itself. Fidelity to it is therefore an unvalid",
+    "authors": [
+      "Xianglong Bao",
+      "Zhe Wang",
+      "Kewen Wang",
+      "Ming Jin"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "AgenticMM: A Material-Centered Multi-Agent Architecture for Scalable First-Principles Materials Modeling",
+    "url": "https://arxiv.org/abs/2611.29248v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "Multi-agent frameworks are attracting increasing attention as a means of autonomously driving complex, long-running workflows in first-principles materials modeling. However, such frameworks commonly organize AI agents by computational task or scientific role. When scaled across many materials, this organization can require repeated transfers of material-specific context and complicate persistent execution and resource coordination. Here, we introduce AgenticMM, a material-centered multi-agent a",
+    "authors": [
+      "Zhenkun Yuan",
+      "Geoffroy Hautier"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.IT",
+    "title": "From Footprints to Service Regions: Modeling and Analysis of Dense LEO Satellite Networks Using an Orbit-Aware Cox Point Process",
+    "url": "https://arxiv.org/abs/2611.29119v1",
+    "published_date": "2026-11-22",
+    "source": "arXiv",
+    "summary": "In dense low Earth orbit (LEO) satellite networks, several accessible satellites cover the same location. A footprint therefore identifies where communication is feasible but does not determine which satellite serves each user. The service region of a satellite, namely the set of locations it serves, governs satellite load, resource sharing, and user throughput. Using an orbit-aware Cox point process on a common orbital shell, we model each service region as the intersection of a satellite's sph",
+    "authors": [
+      "Chang-Sik Choi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "physics.optics",
     "title": "From power to spectrum: an off-the-shelf photodiode turned into a spectrometer by its bias alone",
     "url": "https://arxiv.org/abs/2611.26532v1",
