@@ -2,6 +2,312 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cs.AR",
+    "title": "CPU-Eval: Evaluating Large Language Models for CPU Hardware Code Generation",
+    "url": "https://arxiv.org/abs/2611.32405v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Benchmarks such as VerilogEval have supported rapid advances in hardware description language (HDL) generation by large language models (LLMs). However, recent HDL-generation systems achieve pass rates above 90% on VerilogEval, leaving limited headroom for revealing further advances. To provide a challenging target for further progress on a practically important hardware-development task, we introduce CPU-Eval, a benchmark of 339 HDL-generation problems constructed from six CPUs. Drawn from prac",
+    "authors": [
+      "Yuisei Iwata",
+      "Yutaka Masuda",
+      "Tohru Ishihara"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "CRISP: Sparse Risk-Calibrated Front-End Allocation and Fusion for Low-Resolution Snapshot GNSS Positioning",
+    "url": "https://arxiv.org/abs/2611.32307v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Low-resolution global navigation satellite system snapshot receivers face strong coupling among automatic gain control compression, coarse quantization, and waveform distortion from nonlinear interference mitigation. This paper presents Cross-Risk Interference-Resilient Snapshot Positioning, denoted CRISP, an aided single-snapshot architecture that allocates and fuses complementary pre-correlation processors over a bounded position-clock search region under a shared direct position estimation so",
+    "authors": [
+      "Zhihan Zeng",
+      "Kaihe Wang",
+      "Zhongpei Zhang",
+      "Li-Ta Hsu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Trading BRAM for LUTs: Hybrid Bit-Level Weight Storage for FPGA-Based Spiking Neural Networks",
+    "url": "https://arxiv.org/abs/2611.32288v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Spiking Neural Networks (SNNs) offer an attractive paradigm for energy-efficient AI inference, while their deployment on reconfigurable hardware enables application-specific acceleration without sacrificing model reprogrammability. However, realizing this potential on FPGAs is often severely constrained by the immense on-chip memory needed to store synaptic weights. Existing compression techniques reduce this storage requirement at the cost of weight precision or accuracy. This work presents a h",
+    "authors": [
+      "Dimitrios Sekertzis",
+      "Giorgos Dimitrakopoulos"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.comp-ph",
+    "title": "First-principles phase diagram of monolayer CrS$_2$ polymorphs under biaxial strain and its sensitivity to the Hubbard U parameter",
+    "url": "https://arxiv.org/abs/2611.32265v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "In correlated two-dimensional magnets the balance between competing electronic and magnetic phases is often set by the strength of the on-site Coulomb interaction, so that the predicted ground state can hinge on a parameter that is not uniquely defined. Monolayer CrS$_2$ lies squarely in this regime, hosting several energetically close polymorphs whose character ranges from non-magnetic semiconducting to magnetically ordered metallic. We therefore investigate, using DFT$+U$ within the generalize",
+    "authors": [
+      "Rashmi Ranjan Routaray",
+      "Ali Ghojavand",
+      "Eric Bousquet"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Mayfly: Lifecycle-Aware High-Bandwidth Flash for Recursive Self-Improvement",
+    "url": "https://arxiv.org/abs/2611.32264v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Recursive self-improvement (RSI) lets an LLM improve its agent system by proposing and evaluating candidate variants across tasks. A generation's sessions grow their KV caches together and release them as they finish, creating a burst followed by a decline. At high concurrency, even the KV of sessions ready to run exceeds the GPU's HBM. Offloading that KV to host DRAM or SSDs adds capacity but leaves ready sessions waiting for HBM space before execution. High-Bandwidth Flash (HBF) can serve the ",
+    "authors": [
+      "Chunlin Tian",
+      "Mingjia Fan",
+      "Feng Yu",
+      "Qingyun Zou",
+      "Wenju Zhao",
+      "Weng-Fai Wong",
+      "Bingsheng He"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Beyond Autoregression: Diffusion Language Model is All Analog In-Memory Computing Need",
+    "url": "https://arxiv.org/abs/2611.32223v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Analog in-memory computing (AIMC) enables energy-efficient language-model inference, but hardware non-idealities perturb matrix--vector multiplications and degrade generation quality. Autoregressive (AR) models are especially vulnerable: each token is committed to the causal context at birth, so perturbation-induced errors cascade. We study diffusion language models (DLMs), which iteratively refine a masked sequence, as an alternative paradigm. Across scale-matched model pairs and open checkpoin",
+    "authors": [
+      "Yuanuo Feng",
+      "Yubing Ye",
+      "Yizhe Chen",
+      "Wenshuai Yao",
+      "Ngai Wong",
+      "Wenyong Zhou",
+      "Wang Kang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Walk the Cycle: An Efficient Stochastic Solver for Periodic Thermal Analysis of 2.5D/3D ICs",
+    "url": "https://arxiv.org/abs/2611.32082v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Long-term periodic thermal analysis is essential for designing 2.5D/3D ICs operating under periodic workloads. Deterministic global solvers can be costly for repeated thermal queries, while existing random-walk methods are not tailored to long-term periodic problems or multiscale 3D IC structures, limiting their efficiency and accuracy. We propose CycleWalker, a periodic residual random-walk solver. First, we formulate the periodic steady state (PSS) as an infinite-history backward walk, which n",
+    "authors": [
+      "Shengnan Cai",
+      "Qibo Xue",
+      "Tianshu Hou",
+      "Tianxiang Zhu",
+      "Zixiao Wang",
+      "Yibo Lin",
+      "Runsheng Wang",
+      "Bei Yu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "From Weighted Frontier d-States to Geometric Descriptors for Atomically Dispersed Catalysts at the Molecule-Solid Crossover",
+    "url": "https://arxiv.org/abs/2611.32059v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Atomically dispersed catalysts exhibit molecule-solid crossover character when localized metal orbitals hybridize with support-derived bands, a regime not fully captured by either a d-band-center description or a frontier-orbital picture. We establish an electronic-to-geometric framework for oxygen reduction across fourteen metals. N-to-P substitution in M-N4 sites raises theoretical onset potentials in 13 systems, with Rh-N3P reaching 0.88 V, comparable to the Pt(111) benchmark. Scaling relatio",
+    "authors": [
+      "Yuqi Li",
+      "Zewen Wu",
+      "Longling Pang",
+      "Zhidan Li",
+      "Xianghua Kong"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Model Order Detection with Parameter Estimation Guarantees for the Matrix Pencil Method",
+    "url": "https://arxiv.org/abs/2611.32056v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Detecting the model order and estimating the parameters of sums of damped complex exponentials in noise is challenging when poles are closely spaced, the sample size is small, or the signal-to-noise ratio (SNR) is low. We propose REECAP, a matrix pencil (MP) algorithm for joint model order detection and pole estimation. The algorithm computes candidate poles using an overestimated working rank and classifies them using a score derived from their associated eigenvectors. The model order is then e",
+    "authors": [
+      "Yehonatan-Itay Segman",
+      "David Sadka",
+      "Ronen Talmon"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Machine-Learning-Assisted Hybrid Cooling of a Raspberry Pi 5",
+    "url": "https://arxiv.org/abs/2611.32047v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Thermal management is a critical challenge in compact computing platforms operating under sustained high computational loads. Elevated processor temperatures can lead to thermal throttling, degraded performance, and reduced reliability. This study develops and experimentally evaluates a smart hybrid heat sink that integrates passive thermal energy storage with active cooling for sustained device operation. The proposed design comprises an aluminum cavity containing paraffin wax as a phase change",
+    "authors": [
+      "Abdallah Ghazal",
+      "Fazal Hameed",
+      "Elshafey Elshafey",
+      "Mohammad Awadallah",
+      "Alhasan Emam"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Network-Guided Automated Synthesis of MAC Units for Neural Network Inference",
+    "url": "https://arxiv.org/abs/2611.31986v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "In neural inference accelerators, multiply-accumulate (MAC) datapaths account for the majority of circuit area and critical-path delay, where operator-level numerical formats simultaneously dictate hardware overhead and quantization error. Yet no straightforward mapping exists between hardware cost and end-to-end network accuracy: logic synthesis transforms datapaths in a highly nonlinear manner, while numerical errors propagate and couple across layers. To address this disconnect, we present NA",
+    "authors": [
+      "Zhouyang Wu",
+      "Hongyang Pan",
+      "Chuyu Wang",
+      "Ji Zhuang",
+      "Keren Zhu",
+      "Xin Zhao",
+      "Xuan Zeng"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AI",
+    "title": "Discovering Bandwidth-Efficient Prefetchers to Shrink the Cache Hierarchy",
+    "url": "https://arxiv.org/abs/2611.31983v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Shared last-level caches (LLCs) increasingly dominate server processor die area, forcing architects to trade core counts for cache capacity. While intelligent data prefetching offers a pathway to reclaim this silicon, designing coordinated, multi-level prefetching policies for multi-core systems is bottlenecked by day-long, cycle-level simulations. This simulation wall limits even LLM-based microarchitecture discovery; the state-of-the-art ArchAgent system evolves one cache level at a time on si",
+    "authors": [
+      "Patrick Tser Jern Kon",
+      "Akanksha Jain",
+      "Abraham Gonzalez",
+      "Rui Meng",
+      "Dilara Soylu",
+      "Shubham Agarwal",
+      "Yawen Wang",
+      "Iman Hosseini",
+      "Hanna Alam",
+      "Jinsung Yoon",
+      "Tomas Pfister",
+      "Nanyun Peng",
+      "Chun-Liang Li",
+      "Parthasarathy Ranganathan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Native Block-Quantized Matrix Multiplication and Explicit K/V Residency with Dual-View Access for LLM Inference on RISC-V Vector Processors",
+    "url": "https://arxiv.org/abs/2611.31937v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Some key execution states in large language model inference persist across multiple instructions and are difficult to express and exploit within RVV semantics centered on individual operations. We define specialization boundaries according to data-state lifetimes and propose Quantized Block Streams (QBS) and Attention/KV Context (AKV) while preserving RVV programmability. QBS organizes native-block format processing, block traversal, integer computation, and ordered FP32 accumulation into a unif",
+    "authors": [
+      "Weiying Wang",
+      "Yuanyang Xiang",
+      "Zhiwei Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Accelerating Equivariant Interatomic Potentials for Molecular Dynamics through Radial tabulation and Kernel Fusion",
+    "url": "https://arxiv.org/abs/2611.31865v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Equivariant machine-learned interatomic potentials (MLIPs) achieve near-quantum-chemical accuracy, but their computational cost and GPU memory footprint restrict molecular dynamics (MD) at extended length and time scales. Even when the tensor product (TP) is accelerated, both bottlenecks remain governed by evaluating and storing per-edge radial weights in the NequIP convolution. We introduce JET-MLIPs (Joint-Kernel Equivariant Convolution with Tabulated Radial Weights for MLIP simulation), a GPU",
+    "authors": [
+      "Jaekyun Yoo",
+      "Suyeon Ju"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Interface and film engineering for improved spin-charge interconversion in sputtered GeTe nanodevices",
+    "url": "https://arxiv.org/abs/2611.31816v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Spin-logic devices promise non-volatile logic-in-memory computing with ultra-low power consumption, offering a route to circumvent the von Neumann bottleneck. Magnetoelectric and ferroelectric spin-orbit (MESO/FESO) devices, however, require spin-charge interconversion materials that combine a large output signal with properties that survive nanoscale integration. Tellurides are particularly fragile in this respect, as processing readily introduces defects that degrade their spin-charge intercon",
+    "authors": [
+      "S. Teresi",
+      "T. Frottier",
+      "M. Culot",
+      "W. Savero-Torres",
+      "P. Sgarro",
+      "M. Wissmann",
+      "A. Kandazoglou",
+      "F. Osana",
+      "J. Lagrave",
+      "D. Térébénec",
+      "J. Paterson",
+      "A. Oysel Mestre",
+      "O. J. Mouawad",
+      "E. Chevilley",
+      "N. Bernier",
+      "P. Noé",
+      "M. Bibes",
+      "F. Hippert",
+      "J. -P. Attané",
+      "L. Vila",
+      "M. Cosset-Chéneau"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "Translation Validation of SystemVerilog-to-SystemC RTL Conversion by Reading the Generated C++",
+    "url": "https://arxiv.org/abs/2611.31674v1",
+    "published_date": "2026-11-23",
+    "source": "arXiv",
+    "summary": "SystemC models of register-transfer level (RTL) designs are used for virtual platforms, firmware bring-up and simulation without a commercial license, and more of them now come from translators and language models. A wrong model usually compiles, and it usually agrees with the RTL. SystemVerilog evaluates an 8-bit sum in 8 bits while C++ evaluates it in 64, so a translation that forgets one truncation keeps a carry the RTL drops, and only inputs near the top of the range show it. I built svcc, a",
+    "authors": [
+      "Mayur Kubavat"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "N-Polar AlGaN/GaN Heterojunction Bipolar Transistor",
+    "url": "https://arxiv.org/abs/2611.31646v1",
+    "published_date": "2026-11-23",
+    "source": "arXiv",
+    "summary": "Heterojunction bipolar transistors based on the III-Nitride systems have significantly lower performance than field effect transistors due to challenges associated with p-type doping of the base. N-polar AlGaN/GaN HBTs can overcome these challenges by polarization-induced holes in the base and base-emitter interface. We experimentally demonstrate the first N-polar AlGaN/GaN heterojunction bipolar transistors (HBTs) grown by plasma-assisted molecular beam epitaxy on GaN substrate without emitter ",
+    "authors": [
+      "Md Saklain Morshed",
+      "John Cobbinah",
+      "Ijaas Mohamed",
+      "Jonathan Pratt",
+      "Akilesh Srikanth",
+      "Chandan Joishi",
+      "Siddharth Rajan"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cond-mat.mtrl-sci",
     "title": "Giant magnetic anisotropy in layered polar metal Sr$_3$Co$_2$O$_7$ from Charge-disproportionation orbital unquenching",
     "url": "https://arxiv.org/abs/2611.29742v1",

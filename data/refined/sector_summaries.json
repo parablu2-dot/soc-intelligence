@@ -1,198 +1,194 @@
 {
-  "date": "2026-11-24",
-  "generated_at": "2026-11-24T04:55:51.099508+00:00",
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T03:31:39.542501+00:00",
   "sectors": {
     "mobile_ap": {
       "sector": "Mobile AP",
-      "date": "2026-11-24",
-      "item_count": 3,
-      "generated_at": "2026-11-24T04:55:51.098639+00:00",
+      "date": "2026-11-25",
+      "item_count": 1,
+      "generated_at": "2026-11-25T03:31:39.541912+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Apple expands silicon photonics hiring for data center interconnect capabilities, while Silicon Labs integrates SiWx917 into TuyaOpen Platform and Samsung positions Exynos 2500 against competing flagship processors.",
+          "executive_summary": "일본의 mobileFab 이니셔티브가 반도체 엔지니어 부족 대응을 위해 트럭 기반의 이동식 칩제조 랩을 배치했다. 30cm 리소그래피 장비를 탑재한 모바일 팹은 10년간 지속된 반도체 엔지니어 인력난을 해결하기 위한 혁신적 접근이다.",
           "key_facts": [
-            "Apple Silicon Photonics hiring initiative for data center connections",
-            "Silicon Labs SiWx917 added to TuyaOpen Platform",
-            "Samsung Exynos 2500 positioning for 2026 market comparison with Snapdragon 8 Elite and Exynos 1480"
+            "mobileFab 트럭 기반 칩제조 랩 도입",
+            "30cm 리소그래피 장비 탑재",
+            "일본 반도체 엔지니어 10년 단위 부족 현상"
           ],
           "implications": [
             {
-              "keyword": "Apple Data Center Strategy",
-              "text": "Photonics hiring signals Apple's vertical integration in AI/ML infrastructure connectivity beyond consumer devices"
+              "keyword": "인력 대응 전략",
+              "text": "이동식 제조 시설을 통해 지역별 엔지니어링 역량 강화 및 교육 접근성 개선 가능"
             },
             {
-              "keyword": "Samsung Mobile SoC Competition",
-              "text": "Exynos 2500 development maintains Samsung's platform independence against Qualcomm dominance"
+              "keyword": "생산 혁신",
+              "text": "탁상형 제조 환경의 유연성이 소규모 배치 및 맞춤형 칩 생산에 기여 가능"
             }
           ],
-          "counterpoint": "Limited detail on photonics roadmap specifics or production timelines for Apple's initiative."
+          "counterpoint": "30cm 리소그래피는 첨단 프로세스 노드(1nm, 2nm 등)와 비교하여 오래된 기술로, 대량 고도의 AI/HPC 칩 생산에는 제한적."
         },
         "en": {
-          "executive_summary": "Apple expands silicon photonics hiring for data center interconnect capabilities, while Silicon Labs integrates SiWx917 into TuyaOpen Platform and Samsung positions Exynos 2500 against competing flagship processors.",
+          "executive_summary": "Japan's mobileFab initiative has deployed truck-based mobile chip manufacturing labs to address semiconductor engineer shortages. The mobile fab equipped with 30cm lithography equipment represents an innovative approach to solving a decade-long semiconductor engineer workforce crisis in Japan.",
           "key_facts": [
-            "Apple Silicon Photonics hiring initiative for data center connections",
-            "Silicon Labs SiWx917 added to TuyaOpen Platform",
-            "Samsung Exynos 2500 positioning for 2026 market comparison with Snapdragon 8 Elite and Exynos 1480"
+            "mobileFab truck-based chip manufacturing lab deployment",
+            "30cm lithography equipment installation",
+            "Japan semiconductor engineer shortage spanning a decade"
           ],
           "implications": [
             {
-              "keyword": "Apple Data Center Strategy",
-              "text": "Photonics hiring signals Apple's vertical integration in AI/ML infrastructure connectivity beyond consumer devices"
+              "keyword": "Workforce Response Strategy",
+              "text": "Mobile manufacturing facilities can enhance regional engineering capabilities and improve educational accessibility through distributed deployment"
             },
             {
-              "keyword": "Samsung Mobile SoC Competition",
-              "text": "Exynos 2500 development maintains Samsung's platform independence against Qualcomm dominance"
+              "keyword": "Production Innovation",
+              "text": "Flexibility of tabletop manufacturing environments can contribute to small-batch deployment and customized chip production"
             }
           ],
-          "counterpoint": "Limited detail on photonics roadmap specifics or production timelines for Apple's initiative."
+          "counterpoint": "30cm lithography is an older technology compared to advanced process nodes (1nm, 2nm), limiting its capability for high-volume, advanced AI/HPC chip production"
         }
       }
     },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-11-24",
-      "item_count": 32,
-      "generated_at": "2026-11-24T04:55:51.098639+00:00",
+      "date": "2026-11-25",
+      "item_count": 6,
+      "generated_at": "2026-11-25T03:31:39.541912+00:00",
       "content": {
         "ko": {
-          "executive_summary": "South Korean AI chip sector experiences acute talent shortage with 47% hiring surge; SK hynix adds 2,152 employees while aggressively removing degree requirements, Samsung ramps HBM4/HBM4E hiring, and global competitors including Intel recruit Korean talent. Compensation pressure mounts with 40,000 Samsung workers threatening 2026 strikes demanding $400K bonuses amid memory talent competition.",
+          "executive_summary": "Samsung, SK Hynix, Micron 등 주요 반도체 기업들이 HBM 및 고급 칩 설계 인력 확보를 위해 공격적인 채용에 나섰다. 한국은 260,000명의 인력 수요를 충족하기 위해 퇴직 군인 등 대체 인력을 모집하고 있으며, TSMC는 미국 애리조나 공장에 현지 인력 채용을 우선하겠다고 약속했다.",
           "key_facts": [
-            "47% surge in entry-level semiconductor hiring in South Korea",
-            "SK hynix workforce exceeds 100,000 with 2,152 new employees",
-            "SK hynix eliminated degree requirements for new recruit hiring",
-            "Samsung workforce reaches 40,000 with strike threat tied to AI memory ramp",
-            "Former SK hynix President joining Intel",
-            "SanDisk expanding Korean engineer recruitment targeting Samsung and SK hynix talent",
-            "Samsung accelerating hiring across entire HBM process for HBM4/HBM4E/HBM5",
-            "SK hynix VP Kim Dong-kyun: international school benefits required to attract external talent"
+            "Samsung, SK Hynix 메가 프로젝트 260,000명 인력 수요",
+            "SK Hynix HBM·HBF 경력 채용 추진",
+            "Micron, 한국 반도체 인재 채용 (HBM 기술 경쟁)",
+            "TSMC 애리조나 공장 미국 현지 인력 채용 우선화",
+            "Intel Core Ultra 프로세서를 활용한 로봇 안전 광산 채굴 프로젝트",
+            "인도 태밀나두 반도체 정책 현지 인재 채용 인센티브"
           ],
           "implications": [
             {
-              "keyword": "HBM Capacity Race",
-              "text": "Samsung and SK hynix simultaneously ramping HBM4/HBM4E workforce signals competitive pressure from AI datacenters with potential supply constraints through 2027"
+              "keyword": "글로벌 인력 경쟁",
+              "text": "미·중·인도 간 반도체 인재 확보 전쟁 심화로 개발도상국 인재 유출 우려"
             },
             {
-              "keyword": "Talent Arbitrage & Attrition Risk",
-              "text": "Global tech firms (Intel, SanDisk) poaching Korean talent combined with Samsung strike risk creates execution risk for memory roadmap delivery"
+              "keyword": "HBM 기술 경쟁",
+              "text": "고급 메모리 설계 경험을 가진 경력 인력이 핵심 차별화 요소로 부상"
             },
             {
-              "keyword": "Labor Market Structural Changes",
-              "text": "Removal of degree requirements signals unprecedented talent shortage despite high compensation; suggests fundamental supply constraint rather than wage mismatch"
+              "keyword": "지정학적 공급망",
+              "text": "현지 채용 우선 정책이 각국의 반도체 산업 주권화 전략을 반영"
             },
             {
-              "keyword": "Geographic Retention Challenge",
-              "text": "SK hynix VP explicitly flagging international school access as retention lever indicates non-financial barriers to external recruitment"
+              "keyword": "대체 인력 활용",
+              "text": "한국의 퇴직 군인 활용은 고령화 사회의 인력 활용 모델로 주목"
             }
           ],
-          "counterpoint": "Samsung strike remains threatened for 2026; actual impact on HBM ramp contingent on labor negotiation outcomes."
+          "counterpoint": "대규모 신규 인력 채용은 단기 비용 증가 및 교육/생산성 적응 기간 필요로 프로젝트 일정 위험 존재."
         },
         "en": {
-          "executive_summary": "South Korean AI chip sector experiences acute talent shortage with 47% hiring surge; SK hynix adds 2,152 employees while aggressively removing degree requirements, Samsung ramps HBM4/HBM4E hiring, and global competitors including Intel recruit Korean talent. Compensation pressure mounts with 40,000 Samsung workers threatening 2026 strikes demanding $400K bonuses amid memory talent competition.",
+          "executive_summary": "Major semiconductor companies including Samsung, SK Hynix, and Micron have launched aggressive recruitment to secure HBM and advanced chip design talent. South Korea is recruiting alternative workforce including retired military personnel to meet 260,000 personnel demand, while TSMC has committed to prioritizing local hiring at its Arizona facility.",
           "key_facts": [
-            "47% surge in entry-level semiconductor hiring in South Korea",
-            "SK hynix workforce exceeds 100,000 with 2,152 new employees",
-            "SK hynix eliminated degree requirements for new recruit hiring",
-            "Samsung workforce reaches 40,000 with strike threat tied to AI memory ramp",
-            "Former SK hynix President joining Intel",
-            "SanDisk expanding Korean engineer recruitment targeting Samsung and SK hynix talent",
-            "Samsung accelerating hiring across entire HBM process for HBM4/HBM4E/HBM5",
-            "SK hynix VP Kim Dong-kyun: international school benefits required to attract external talent"
+            "Samsung, SK Hynix mega-projects requiring 260,000 personnel",
+            "SK Hynix pursuing HBM and HBF experienced talent recruitment",
+            "Micron recruiting Korean semiconductor talent (HBM technology competition)",
+            "TSMC Arizona facility prioritizing U.S. local workforce recruitment",
+            "Intel Core Ultra processor utilization for robot safety mining operation project",
+            "Tamil Nadu semiconductor policy incentivizing local talent recruitment in India"
           ],
           "implications": [
             {
-              "keyword": "HBM Capacity Race",
-              "text": "Samsung and SK hynix simultaneously ramping HBM4/HBM4E workforce signals competitive pressure from AI datacenters with potential supply constraints through 2027"
+              "keyword": "Global Talent Competition",
+              "text": "Intensifying semiconductor talent acquisition war among U.S., China, and India raising concerns about brain drain from developing nations"
             },
             {
-              "keyword": "Talent Arbitrage & Attrition Risk",
-              "text": "Global tech firms (Intel, SanDisk) poaching Korean talent combined with Samsung strike risk creates execution risk for memory roadmap delivery"
+              "keyword": "HBM Technology Competition",
+              "text": "Experienced engineers with advanced memory design expertise emerging as key differentiation factor"
             },
             {
-              "keyword": "Labor Market Structural Changes",
-              "text": "Removal of degree requirements signals unprecedented talent shortage despite high compensation; suggests fundamental supply constraint rather than wage mismatch"
+              "keyword": "Geopolitical Supply Chain",
+              "text": "Local hiring prioritization policies reflecting each nation's semiconductor industry sovereignty strategy"
             },
             {
-              "keyword": "Geographic Retention Challenge",
-              "text": "SK hynix VP explicitly flagging international school access as retention lever indicates non-financial barriers to external recruitment"
+              "keyword": "Alternative Workforce Utilization",
+              "text": "South Korea's deployment of retired military personnel attracting attention as a workforce model for aging societies"
             }
           ],
-          "counterpoint": "Samsung strike remains threatened for 2026; actual impact on HBM ramp contingent on labor negotiation outcomes."
+          "counterpoint": "Large-scale new workforce recruitment risks short-term cost increases and requires training/productivity adaptation periods, creating project schedule risks"
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-11-24",
-      "item_count": 27,
-      "generated_at": "2026-11-24T04:55:51.098639+00:00",
+      "date": "2026-11-25",
+      "item_count": 21,
+      "generated_at": "2026-11-25T03:31:39.541912+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Amazon acquires Decart AI chip optimization software for $7.5B to accelerate Trainium chip deployment while Google expands TPU lineup to 4 SKUs targeting agentic AI stages. Market volatility follows Google TPU reduction reports; Microsoft selects Intel EMIB for future Azure silicon packaging; EnSilica secures $80M satellite navigation chip contract.",
+          "executive_summary": "Amazon이 AI 칩 최적화 기술 Decart를 $7.5B에 인수하며 Nvidia에 대한 도전을 강화했다. Amazon의 $25B 규모 커스텀 칩 사업은 Trainium AI 칩을 중심으로 소프트웨어 최적화를 통해 기술 격차 축소를 목표로 한다. MediaTek은 AI 데이터센터 및 2nm 기술 연구에서 17개 톱티어 컨퍼런스 논문을 발표하며 기술 리더십을 입증했다.",
           "key_facts": [
-            "Amazon acquires Decart AI chip software for $7.5 billion",
-            "Google expands TPU lineup to 4 processor variants for agentic AI",
-            "Microsoft chooses Intel EMIB for Azure silicon packaging",
-            "EnSilica wins $80 million satellite navigation chip contract",
-            "Broadcom equity declined 12% on Google TPU reduction report",
-            "Amazon Trainium chip with Decart technology for physical AI robotics acceleration"
+            "Amazon Decart 인수 가격 $7.5B",
+            "Amazon 커스텀 칩 사업 규모 $25B",
+            "Amazon Trainium AI 칩 최적화",
+            "MediaTek 톱티어 컨퍼런스 논문 17개 (AI 데이터센터, 2nm 기술)",
+            "EnSilica GNSS ASIC 계약 $80M",
+            "Broadcom AI 칩 부문 주가 하락"
           ],
           "implications": [
             {
-              "keyword": "Amazon Vertical Integration",
-              "text": "Decart acquisition signals Amazon commitment to in-house AI chip software stack for Trainium/Trainium2 competitive positioning against NVIDIA GPU ecosystems"
+              "keyword": "소프트웨어 차별화",
+              "text": "Nvidia의 CUDA 생태계에 대응하기 위해 소프트웨어 최적화 계층이 경쟁 무기로 부상"
             },
             {
-              "keyword": "Google TPU Diversification",
-              "text": "Four-SKU lineup targeting distinct agentic AI stages indicates Google reducing reliance on third-party accelerators while creating multiple addressable markets"
+              "keyword": "커스텀 칩 추세",
+              "text": "클라우드 및 AI 기업들의 자체 설계 칩 개발 확대로 순수 칩 판매 모델 압박"
             },
             {
-              "keyword": "Advanced Packaging Consolidation",
-              "text": "Microsoft-Intel EMIB selection validates chiplet-based approaches for hyperscaler silicon, potentially influencing other cloud OEMs toward disaggregated designs"
+              "keyword": "기술 검증",
+              "text": "MediaTek의 학술 논문 발표가 AI/2nm 기술에서의 경쟁력 신호로 작용"
             },
             {
-              "keyword": "Market Sentiment Volatility",
-              "text": "Broadcom's 12% decline on TPU rumors reflects hyperscaler capacity concerns despite continued foundational AI demand"
+              "keyword": "시장 조정",
+              "text": "AI 랠리 냉각으로 Broadcom 등 광대역 칩 공급사 주가 하락세 전환"
             }
           ],
-          "counterpoint": "Google TPU production cuts remain unconfirmed; Broadcom exposure limited if cuts apply only to specific SKUs rather than broad platform reductions."
+          "counterpoint": "Amazon의 Trainium 성숙도와 실제 추론 성능이 Nvidia H100/H200 대비 아직 증명되지 않은 상태로 $7.5B 인수가 과도한 평가일 가능성 존재."
         },
         "en": {
-          "executive_summary": "Amazon acquires Decart AI chip optimization software for $7.5B to accelerate Trainium chip deployment while Google expands TPU lineup to 4 SKUs targeting agentic AI stages. Market volatility follows Google TPU reduction reports; Microsoft selects Intel EMIB for future Azure silicon packaging; EnSilica secures $80M satellite navigation chip contract.",
+          "executive_summary": "Amazon strengthened its challenge to Nvidia by acquiring Decart, an AI chip optimization technology, for $7.5B. Amazon's $25B custom chip business centered on Trainium AI chips aims to narrow the technology gap through software optimization. MediaTek demonstrated technical leadership by publishing 17 top-tier conference papers on AI datacenters and 2nm technology research.",
           "key_facts": [
-            "Amazon acquires Decart AI chip software for $7.5 billion",
-            "Google expands TPU lineup to 4 processor variants for agentic AI",
-            "Microsoft chooses Intel EMIB for Azure silicon packaging",
-            "EnSilica wins $80 million satellite navigation chip contract",
-            "Broadcom equity declined 12% on Google TPU reduction report",
-            "Amazon Trainium chip with Decart technology for physical AI robotics acceleration"
+            "Amazon Decart acquisition price $7.5B",
+            "Amazon custom chip business scale $25B",
+            "Amazon Trainium AI chip optimization",
+            "MediaTek 17 top-tier conference papers (AI datacenters, 2nm technology)",
+            "EnSilica GNSS ASIC contract $80M",
+            "Broadcom AI chip segment stock price decline"
           ],
           "implications": [
             {
-              "keyword": "Amazon Vertical Integration",
-              "text": "Decart acquisition signals Amazon commitment to in-house AI chip software stack for Trainium/Trainium2 competitive positioning against NVIDIA GPU ecosystems"
+              "keyword": "Software Differentiation",
+              "text": "Software optimization layer emerging as competitive weapon to counter Nvidia's CUDA ecosystem"
             },
             {
-              "keyword": "Google TPU Diversification",
-              "text": "Four-SKU lineup targeting distinct agentic AI stages indicates Google reducing reliance on third-party accelerators while creating multiple addressable markets"
+              "keyword": "Custom Chip Trend",
+              "text": "Expansion of in-house chip design by cloud and AI companies pressuring pure chip sales models"
             },
             {
-              "keyword": "Advanced Packaging Consolidation",
-              "text": "Microsoft-Intel EMIB selection validates chiplet-based approaches for hyperscaler silicon, potentially influencing other cloud OEMs toward disaggregated designs"
+              "keyword": "Technology Validation",
+              "text": "MediaTek's academic paper publications serving as competitive signal in AI/2nm technology"
             },
             {
-              "keyword": "Market Sentiment Volatility",
-              "text": "Broadcom's 12% decline on TPU rumors reflects hyperscaler capacity concerns despite continued foundational AI demand"
+              "keyword": "Market Adjustment",
+              "text": "AI rally cooling causing stock price decline among broadband chip suppliers like Broadcom"
             }
           ],
-          "counterpoint": "Google TPU production cuts remain unconfirmed; Broadcom exposure limited if cuts apply only to specific SKUs rather than broad platform reductions."
+          "counterpoint": "Amazon's Trainium maturity and actual inference performance remain unproven versus Nvidia H100/H200, raising possibility that the $7.5B acquisition may represent an overvaluation"
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-11-24",
-      "item_count": 15,
-      "generated_at": "2026-11-24T04:55:51.098639+00:00",
+      "date": "2026-11-25",
+      "item_count": 22,
+      "generated_at": "2026-11-25T03:31:39.541912+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -200,9 +196,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-11-24",
-      "item_count": 19,
-      "generated_at": "2026-11-24T04:55:51.098639+00:00",
+      "date": "2026-11-25",
+      "item_count": 14,
+      "generated_at": "2026-11-25T03:31:39.541912+00:00",
       "content": {
         "ko": {},
         "en": {}
