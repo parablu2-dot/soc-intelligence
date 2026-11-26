@@ -2,6 +2,105 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "physics.flu-dyn",
+    "title": "Remote and Noncontact Acceleration and Suppression of Heat Convection on Object Surfaces using Intensity-Adjusted Acoustic Streaming",
+    "url": "https://arxiv.org/abs/2611.33752v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "The temperature of objects in an environment is often controlled by accelerating or suppressing heat convection. Conventional methods generally involve insulation for heat retention and forced convection for cooling. However, there is no practical method for remotely and target-selectively controlling heat convection in objects in room environments. In this study, we demonstrated that intensity-adjusted acoustic streaming (ultrasound-driven airflow) can both suppress natural convection and induc",
+    "authors": [
+      "Yuki Yuzawa",
+      "Keisuke Hasegawa"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "L2C2: Enhancing Large-scale Chiplets for Agent Long-Context LLM Inference with Sparse and Distributed Attention",
+    "url": "https://arxiv.org/abs/2611.33691v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Long-context inference is a rising demand for LLMs, especially for agent applications. Sparse attention (SpAt) and chiplet technology are promising solutions to reduce computations and scale hardware performance. However, deploying SpAt on distributed chiplets necessitates context parallelism for workload partitioning, introducing complex distributed attention. In this work, we present L2C2, a system optimization for distributed SpAt in long-context inference. During the partial-prefill stage, w",
+    "authors": [
+      "Kangbo Bai",
+      "Zhonghua Mu",
+      "Hongze Zhou",
+      "Tianyu Jia"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "From Entropy Source to Stochastic Bit-Stream: Low-Cost Converters for True-Random Stochastic Computing",
+    "url": "https://arxiv.org/abs/2611.33686v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Stochastic computing (SC) encodes values as the probability of ones in random bit-streams, which allows arithmetic circuits with very low area and power and a natural tolerance to faults. The accuracy and security of an SC system depend on the quality of those bit-streams. Conventional generators build them from pseudo-random or quasi-random sequences, which are predictable, periodic, and correlated across streams drawn from the same generator. This work proposes three methods for converting the",
+    "authors": [
+      "Mehran Moghadam",
+      "Abu Masum",
+      "M. Hassan Najafi",
+      "Sercan Aygun",
+      "Di Wu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Symbol-Level Precoding With Microwave Linear Analog Computers (MiLACs): Performance Limits and Stem-Connected Hardware Design",
+    "url": "https://arxiv.org/abs/2611.33651v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Symbol-level precoding (SLP) improves multiuser transmission by exploiting constructive interference based on user symbols. A microwave linear analog computer (MiLAC) maps a reduced number of radio-frequency (RF) port input signals to a large antenna array through a tunable passive microwave network. Their combination enables MiLAC to reduce the RF-chain burden of SLP, while SLP offers symbol-dependent design flexibility that can alleviate the performance loss caused by a limited number of RF ch",
+    "authors": [
+      "Yafei Wang",
+      "Yuchen Zhang",
+      "Yiming Zhu",
+      "Jiayang Wan",
+      "Wenjin Wang",
+      "Symeon Chatzinotas",
+      "Björn Ottersten"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "quant-ph",
+    "title": "A scalable dense silicon qubit architecture with logical operations",
+    "url": "https://arxiv.org/abs/2611.33590v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Fault-tolerant quantum computing (FTQC) requires a large number of physical qubits to encode logical qubits with sufficiently low error rates. Silicon spin qubits are a promising platform because of their small footprint, compatibility with semiconductor manufacturing technologies, and demonstrated high-fidelity operations. However, realizing a scalable architecture that supports quantum error correction, qubit transport, wiring, and logical gate operations remains a major challenge. Here, we pr",
+    "authors": [
+      "Masahiro Tadokoro",
+      "Tetsuo Kodera"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "eess.SP",
+    "title": "Geometry-Time Graph Attention for 3-D TOA Localization in Underwater Acoustic Sensor Networks",
+    "url": "https://arxiv.org/abs/2611.33587v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "In underwater acoustic sensor networks, depth-dependent variations in sound speed refract acoustic rays, complicating the estimation of target positions from travel-time measurements. Propagation-model-based methods rely on an assumed or estimated sound speed profile (SSP), and a mismatch between that profile and the current environment can bias position estimates. To address this limitation, this paper proposes an underwater graph attention network (UGAN) that fuses synchronized time-of-arrival",
+    "authors": [
+      "Wei Huang",
+      "Hongfei Chang",
+      "Kaitao Meng",
+      "Tianhe Xu",
+      "Hao Zhang",
+      "Yanan Wu",
+      "Qian Sun"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.AR",
     "title": "CPU-Eval: Evaluating Large Language Models for CPU Hardware Code Generation",
     "url": "https://arxiv.org/abs/2611.32405v1",
@@ -271,6 +370,296 @@
       "J. -P. Attané",
       "L. Vila",
       "M. Cosset-Chéneau"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "ILMlip: fast and universal machine-learning interatomic potentials",
+    "url": "https://arxiv.org/abs/2611.33538v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Large-scale pretrained machine-learned interatomic potentials keep growing more accurate as new models appear at a rapid pace, and more expensive: the current leader of Matbench Discovery as of November 2026 (F1 score 0.935) has $9.9\\times10^7$ parameters and took 3.6 thousand GPU-hours to train. The ILMlip potentials presented here are optimised for speed as well as zero-shot accuracy. They are equivariant, conservative message-passing potentials in which every component is arranged for through",
+    "authors": [
+      "Jonas Hänseroth",
+      "Christian Dreßler"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Low-barrier-height Hf$_\\text{1-x}$Zr$_\\text{x}$O$_2$ ferroelectric tunnel junctions with large ON-state currents",
+    "url": "https://arxiv.org/abs/2611.33495v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Ferroelectric tunnel junctions (FTJs) hold great promise for nonvolatile memory, neuromorphic computing, and other applications. Hf$_\\text{1-x}$Zr$_\\text{x}$O$_2$ (HZO) has become a leading candidate for the tunnel barrier due primarily to its compatibility with CMOS technology. Recent advances on HZO based FTJs have highlighted the importance of understanding the electrical transport through a ferroelectric tunnel barrier for fulfilling the technological promises of FTJs. In this paper we repor",
+    "authors": [
+      "Shaoqing Ding",
+      "Jinyuan Yao",
+      "Eknath Sarkar",
+      "Emmanuel Quezada",
+      "Thomas N. Jackson",
+      "Susan Trolier-McKinstry",
+      "Suman Datta",
+      "Ying Liu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Electron--phonon interactions in a pseudo--atomic orbital basis: superconductivity, transport, spectroscopy and thermal emission from one interpolated vertex",
+    "url": "https://arxiv.org/abs/2611.33473v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Electron--phonon interactions govern superconductivity, electrical resistivity, optical absorption and electronic excitation lifetimes in solids. First--principles calculations require interpolating this coupling onto dense Brillouin--zone grids, traditionally using maximally localized Wannier functions that demand material--specific tuning. Here we show that a fixed basis of pseudo--atomic orbitals--automatically generated from pseudopotentials and implemented in the open--source code PAOFLOW c",
+    "authors": [
+      "Marco Buongiorno Nardelli"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.geo-ph",
+    "title": "APEX: Agentic Platform for Ensemble eXploration",
+    "url": "https://arxiv.org/abs/2611.33450v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Ensemble-based methods provide a practical framework for history matching, prediction, and optimization of subsurface models. In methodological studies, however, performance is rarely assessed from a single run. Comparisons typically span cases, configurations, and random seeds, while each evaluation may require an expensive external simulator. Keeping such studies computationally bounded, auditable, and reproducible therefore requires more than implementing a numerical method: experiments must ",
+    "authors": [
+      "Xiaodong Luo"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.app-ph",
+    "title": "Physics-Based TCAD Modeling of Nanowire Cryotrons with Coupled Superconducting and Thermal Dynamics",
+    "url": "https://arxiv.org/abs/2611.33420v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Nanowire cryotrons (nTrons) provide gate-controlled superconducting switching, current gain, and high-impedance outputs for cryogenic computing, detector readout, and superconductor-semiconductor interfaces. We develop a physics-based Sentaurus TCAD framework that couples time-dependent Ginzburg-Landau dynamics, separate electron and phonon energy equations, and mixed-mode circuit simulation. Superconducting terminal-current corrections connect the custom solver to the native electrical solution",
+    "authors": [
+      "Abdullah All Hasib",
+      "Md Shafayat Hossain",
+      "Ahmedullah Aziz",
+      "Shamiul Alam"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "WADJET: Whole-Job Authorization and Dispatch for Job Execution Trust on FPGA System-on-Chip Accelerators",
+    "url": "https://arxiv.org/abs/2611.33406v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "On an FPGA system-on-chip, the software that submits work to an accelerator also decides what the accelerator does. It writes the registers one by one, and the hardware runs whatever it finds, so faulty or compromised software can change one address or resend a job. Existing protections decide who may reach an accelerator or keep its data safe. Deciding whether one job was approved and is still unused takes three things in one place: the only way to the accelerator, the whole job held back until",
+    "authors": [
+      "Mohamed El-Hadedy"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Unveiling ferroelectricity in wafer-scale beta-phase In$_2$Se$_3$",
+    "url": "https://arxiv.org/abs/2611.33405v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Pushing ferroelectricity to the ultimate thickness limit is a central challenge for memory hardware, because conventional three-dimensional ferroelectrics degrade through depolarization and interfacial effects when thinned. Here we identify $β$-In$_2$Se$_3$, a van der Waals semiconductor regarded as centrosymmetric, as a host of bistable polar order arising from a picometre-scale distortion within each quintuple layer. The polar state has out-of-plane and in-plane components, is switched by a ve",
+    "authors": [
+      "Kyungmin Yang",
+      "Hyunmin Cho",
+      "Jihwan Jeon",
+      "Tae Hyeon Park",
+      "Seojeong Ro",
+      "Hye Jung Kim",
+      "Jung-Hoon Lee",
+      "Jaewon Wang",
+      "Hyeon Suk Shin",
+      "Young-Min Kim",
+      "Chang Woo Myung",
+      "Roy H. Olsson",
+      "Seunguk Song",
+      "Deep Jariwala"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Compositionally Tunable Synthesis of High-Entropy Transition Metal Dichalcogenides Exhibiting Above-Room-Temperature Magnetism",
+    "url": "https://arxiv.org/abs/2611.33115v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "As silicon-based electronics approach their physical limits, low-dimensional magnetic materials have attracted increasing attention for next-generation electronic and information technologies. Realizing these opportunities requires two-dimensional (2D) materials with robust and tunable room-temperature magnetism. Here, we report a two-step synthesis strategy for fabricating 2D high-entropy transition metal dichalcogenides (HE-TMDs) incorporating magnetic elements beyond conventional groups 4-6. ",
+    "authors": [
+      "Chen Zhang",
+      "Xiahua Zhong",
+      "Dejia Kong",
+      "Wenhu Wang",
+      "Christopher T. Nelson",
+      "Mingfeng Chen",
+      "Xiaoqing He",
+      "Benjamin J. Lawrie",
+      "Hsin-Yun Chao",
+      "Alex L. Melendez",
+      "Peixin Liu",
+      "Benjamin G. Gibson",
+      "Xiaodong Yan",
+      "Xi Wang",
+      "Liangbo Liang",
+      "Zheng Gai",
+      "Huan Zhao",
+      "Yingchao Yang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.soft",
+    "title": "A model colloidal gel former for the measurement of inter-particle forces",
+    "url": "https://arxiv.org/abs/2611.33091v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Tracking of particle coordinates in colloidal model systems is an established technique. Recently, an emulsion system has been introduced where not only the coordinates, but also contacts and compressive forces between the droplets can be determined [Dong  et al. J. Chem. Phys.   156  214907 (2022). Here we develop this system to control both the density mismatch and refractive index contrast between the emulsion droplets and the solvent. The former is important in minimizing sedimentation due t",
+    "authors": [
+      "Rui Cheng",
+      "Kristian Thijssen",
+      "Abraham Mauleon Amieva",
+      "Tanniemola B. Liverpool",
+      "Malcolm A. Faers",
+      "Robert L. Jack",
+      "C. Patrick Royall"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Native vacancy energetics and association in TiN and CrN: chemical potential dependence, clustering, and surface effects",
+    "url": "https://arxiv.org/abs/2611.33060v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Native vacancy populations in transition-metal nitride coatings reflect vacancy formation, association, and depth-dependent stability. Using density functional theory (DFT), we compare these effects in rocksalt TiN and CrN in bulk and at (001) surfaces, within phase-stability-constrained chemical potential ranges. In TiN, $V_\\mathrm{N}$ is favoured under N-poor and $V_\\mathrm{Ti}$ under N-rich conditions; in CrN, $V_\\mathrm{N}$ remains preferred throughout its stability range. Association energi",
+    "authors": [
+      "Barsha Bhattacharjee",
+      "Emilia Olsson"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CV",
+    "title": "SHARPnP: Self-Supervised and Plug-and-Play Hyperspectral Super-Resolution from Real Noisy Unaligned Camera Measurements",
+    "url": "https://arxiv.org/abs/2611.33032v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Affordable snapshot hyperspectral cameras capture spectral images in a single exposure but suffer from limited spatial resolution and sensor noise. Low-cost RGB cameras provide fine visible details to guide NIR reconstruction, but introduce spatially varying cross-camera misalignment. Supervised fusion methods require relatively large datasets of clean, high-resolution hyperspectral images, are sensitive to sensor noise, and generalize poorly across new sensors. We introduce SHARPnP, an interpre",
+    "authors": [
+      "Mohamad Jouni",
+      "Brayan Monroy",
+      "Jorge Bacca",
+      "Mauro Dalla Mura"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.NE",
+    "title": "Low-Power Spiking Neural Network Acceleration with Differential Time Representation: A Modular Hardware Framework",
+    "url": "https://arxiv.org/abs/2611.32758v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Spiking Neural Networks (SNNs) offer promising energy efficiency, making them well suited for energy-constrained applications. Much of their energy savings stems from the sparse encoding of spike trains. We show that spike trains can be represented more efficiently using Differential Time Representation (DTR), which requires fewer bits than Address-Event Representation (AER) or equidistantly sampled 1-bit spike trains. To support multiple input spike trains, we provide a rigorous proof that DTR ",
+    "authors": [
+      "Daniel Windhager",
+      "Lothar Ratschbacher",
+      "Bernhard A. Moser",
+      "Michael Lunglmayr"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Neutron Spectroscopy Transformed: Deuterated ZIF-8 and Machine-Learned Potentials Catch Nitrogen Threading Its Gates",
+    "url": "https://arxiv.org/abs/2611.32739v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "We report a step change in what inelastic neutron scattering (INS) can reveal, by combining machine-learned interatomic potentials (MLIPs) with deliberate deuteration of the sample. INS's prowess in charting framework and guest motions within porous materials during in situ dosing has historically had one caveat: costly density-functional-theory calculations are a major bottleneck in the speed and depth of analysis. We show that rapid frontier MLIPs remove this bottleneck on both counts, keeping",
+    "authors": [
+      "Jeff Armstrong",
+      "Hamish Cavaye",
+      "Pankaj Sharma",
+      "Matthew E. Potter"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "OpenWoud: Vendor-Unlocked Scalable Adaptive Random Forest Accelerator",
+    "url": "https://arxiv.org/abs/2611.32662v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Online Machine Learning (ML) enables real-time decision-making on evolving data streams. These dynamic models learn continuously to adapt to new concepts, as previous ones become invalid, but their performance is often limited by throughput. The Adaptive Random Forest (ARF) is a state-of-the-art model for this setting, which naturally exposes parallelism and is therefore well-suited for hardware acceleration. However, prior Field Programmable Gate Array (FPGA)-based accelerators are vendor-locke",
+    "authors": [
+      "Ewout van Nimwegen",
+      "Elijah Seth Cishugi",
+      "Hendrik Folmer",
+      "Marco Ottavi",
+      "Kuan-Hsun Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.CR",
+    "title": "Power Side-Channel Evaluation using Multi-FPGA Systems",
+    "url": "https://arxiv.org/abs/2611.32652v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Complex out-of-order processors are difficult to evaluate for power side-channel leakage before tapeout. A single FPGA often lacks sufficient capacity, whereas conventional CAD-based analysis is too slow to support the large numbers of traces required by practical attacks. Multi-FPGA emulation provides greater capacity, but existing partitioning schemes are not security-aware and thus results in poor attack performance. This work presents Scissors, a security-aware multi-FPGA partitioning approa",
+    "authors": [
+      "Yaswanth Tavva",
+      "Geng Luo",
+      "Trevor E. Carlson",
+      "Li-Shiuan Peh"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Constrained Allen-Cahn phase-field topology optimization of flexoelectric devices",
+    "url": "https://arxiv.org/abs/2611.32620v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Topology optimization provides an effective approach to exploring performance-oriented designs for miniature devices. In this work, a phase-field framework for constrained topology optimization of microscale flexoelectric devices is developed using a continuum model under the assumption of infinitesimal deformations. The material distribution is optimized at the device level with the output voltage as the objective. The framework also accommodates objectives based on capacitance or stored electr",
+    "authors": [
+      "Hao Zhen",
+      "Sheng Mao"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Spin-Group versus Magnetic-Group Selection Rules for Nonlinear Photocurrents in Compensated Ferrimagnets",
+    "url": "https://arxiv.org/abs/2611.32618v1",
+    "published_date": "2026-11-24",
+    "source": "arXiv",
+    "summary": "Optical excitation offers a contact-free, ultrafast route to charge and spin currents, with symmetry determining which nonlinear photocurrents are allowed and whether they carry charge, spin, or both. Spin-group symmetry describes the limit without spin-orbit coupling (SOC), whereas magnetic-group symmetry accounts for SOC. We show that the two descriptions yield different selection rules for both charge and spin photocurrents in the multiferroic compensated ferrimagnet GaFeO$_3$. Without SOC, o",
+    "authors": [
+      "Fu Li",
+      "Vikrant Chaudhary",
+      "Weiyi Pan",
+      "Hongbin Zhang",
+      "Harish K. Singh"
     ]
   },
   {

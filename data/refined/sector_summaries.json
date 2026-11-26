@@ -1,194 +1,142 @@
 {
-  "date": "2026-11-25",
-  "generated_at": "2026-11-25T03:31:39.542501+00:00",
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T02:46:59.518184+00:00",
   "sectors": {
-    "mobile_ap": {
-      "sector": "Mobile AP",
-      "date": "2026-11-25",
-      "item_count": 1,
-      "generated_at": "2026-11-25T03:31:39.541912+00:00",
-      "content": {
-        "ko": {
-          "executive_summary": "일본의 mobileFab 이니셔티브가 반도체 엔지니어 부족 대응을 위해 트럭 기반의 이동식 칩제조 랩을 배치했다. 30cm 리소그래피 장비를 탑재한 모바일 팹은 10년간 지속된 반도체 엔지니어 인력난을 해결하기 위한 혁신적 접근이다.",
-          "key_facts": [
-            "mobileFab 트럭 기반 칩제조 랩 도입",
-            "30cm 리소그래피 장비 탑재",
-            "일본 반도체 엔지니어 10년 단위 부족 현상"
-          ],
-          "implications": [
-            {
-              "keyword": "인력 대응 전략",
-              "text": "이동식 제조 시설을 통해 지역별 엔지니어링 역량 강화 및 교육 접근성 개선 가능"
-            },
-            {
-              "keyword": "생산 혁신",
-              "text": "탁상형 제조 환경의 유연성이 소규모 배치 및 맞춤형 칩 생산에 기여 가능"
-            }
-          ],
-          "counterpoint": "30cm 리소그래피는 첨단 프로세스 노드(1nm, 2nm 등)와 비교하여 오래된 기술로, 대량 고도의 AI/HPC 칩 생산에는 제한적."
-        },
-        "en": {
-          "executive_summary": "Japan's mobileFab initiative has deployed truck-based mobile chip manufacturing labs to address semiconductor engineer shortages. The mobile fab equipped with 30cm lithography equipment represents an innovative approach to solving a decade-long semiconductor engineer workforce crisis in Japan.",
-          "key_facts": [
-            "mobileFab truck-based chip manufacturing lab deployment",
-            "30cm lithography equipment installation",
-            "Japan semiconductor engineer shortage spanning a decade"
-          ],
-          "implications": [
-            {
-              "keyword": "Workforce Response Strategy",
-              "text": "Mobile manufacturing facilities can enhance regional engineering capabilities and improve educational accessibility through distributed deployment"
-            },
-            {
-              "keyword": "Production Innovation",
-              "text": "Flexibility of tabletop manufacturing environments can contribute to small-batch deployment and customized chip production"
-            }
-          ],
-          "counterpoint": "30cm lithography is an older technology compared to advanced process nodes (1nm, 2nm), limiting its capability for high-volume, advanced AI/HPC chip production"
-        }
-      }
-    },
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-11-25",
-      "item_count": 6,
-      "generated_at": "2026-11-25T03:31:39.541912+00:00",
+      "date": "2026-11-26",
+      "item_count": 8,
+      "generated_at": "2026-11-26T02:46:59.517697+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Samsung, SK Hynix, Micron 등 주요 반도체 기업들이 HBM 및 고급 칩 설계 인력 확보를 위해 공격적인 채용에 나섰다. 한국은 260,000명의 인력 수요를 충족하기 위해 퇴직 군인 등 대체 인력을 모집하고 있으며, TSMC는 미국 애리조나 공장에 현지 인력 채용을 우선하겠다고 약속했다.",
+          "executive_summary": "SK하이닉스와 한국 반도체 산업이 AI 칩 붐 속에 대규모 인력 확보에 나서고 있으며, 47% 증가한 신입 채용과 함께 HBM·HBF 경력사원을 모집하고 있다. AMD는 대만에 R&D 센터 개설을 추진하고, 애플은 M6 칩을 2nm로 이동시켜 로컬 AI 확대를 추진 중이다.",
           "key_facts": [
-            "Samsung, SK Hynix 메가 프로젝트 260,000명 인력 수요",
-            "SK Hynix HBM·HBF 경력 채용 추진",
-            "Micron, 한국 반도체 인재 채용 (HBM 기술 경쟁)",
-            "TSMC 애리조나 공장 미국 현지 인력 채용 우선화",
-            "Intel Core Ultra 프로세서를 활용한 로봇 안전 광산 채굴 프로젝트",
-            "인도 태밀나두 반도체 정책 현지 인재 채용 인센티브"
+            "한국 신입 반도체 채용 47% 급증",
+            "SK하이닉스 HBM·HBF 경력사원 대규모 모집",
+            "SK하이닉스 1인당 억대 성과급 제시",
+            "AMD 대만 R&D 센터 개설 신청",
+            "애플 M6 칩 2nm 공정 전환",
+            "TSMC 3나노·GPU 설계 경험자 채용 대상"
           ],
           "implications": [
             {
-              "keyword": "글로벌 인력 경쟁",
-              "text": "미·중·인도 간 반도체 인재 확보 전쟁 심화로 개발도상국 인재 유출 우려"
+              "keyword": "인력 경쟁",
+              "text": "SK하이닉스의 적극적 채용과 성과급 제시는 AI 반도체 인력 쟁탈전 심화를 반영하며, TSMC 경험자 모집은 고급 설계 역량 확보 의지 표현"
             },
             {
-              "keyword": "HBM 기술 경쟁",
-              "text": "고급 메모리 설계 경험을 가진 경력 인력이 핵심 차별화 요소로 부상"
+              "keyword": "R&D 센터 확충",
+              "text": "AMD의 대만 R&D 센터, SK하이닉스의 신규 팹 구축 계획은 AI 칩 설계·제조 인프라 국제화 추세"
             },
             {
-              "keyword": "지정학적 공급망",
-              "text": "현지 채용 우선 정책이 각국의 반도체 산업 주권화 전략을 반영"
-            },
-            {
-              "keyword": "대체 인력 활용",
-              "text": "한국의 퇴직 군인 활용은 고령화 사회의 인력 활용 모델로 주목"
+              "keyword": "공정 고도화",
+              "text": "애플 M6의 2nm 전환, SK하이닉스의 HBM 설계 집중은 HPC 가속기 성능 경쟁 고도화"
             }
           ],
-          "counterpoint": "대규모 신규 인력 채용은 단기 비용 증가 및 교육/생산성 적응 기간 필요로 프로젝트 일정 위험 존재."
+          "counterpoint": "채용 시 학력 제한 완화 등 품질 우려 가능성 있으며, 성과급 위주 보상은 장기 인력 안정성 미지수."
         },
         "en": {
-          "executive_summary": "Major semiconductor companies including Samsung, SK Hynix, and Micron have launched aggressive recruitment to secure HBM and advanced chip design talent. South Korea is recruiting alternative workforce including retired military personnel to meet 260,000 personnel demand, while TSMC has committed to prioritizing local hiring at its Arizona facility.",
+          "executive_summary": "SK Hynix and the Korean semiconductor industry are undertaking large-scale recruitment amid the AI chip boom, with new hires increasing 47% alongside recruitment of experienced HBM and HBF personnel. AMD is pursuing the opening of an R&D center in Taiwan, and Apple is transitioning the M6 chip to 2nm to expand local AI.",
           "key_facts": [
-            "Samsung, SK Hynix mega-projects requiring 260,000 personnel",
-            "SK Hynix pursuing HBM and HBF experienced talent recruitment",
-            "Micron recruiting Korean semiconductor talent (HBM technology competition)",
-            "TSMC Arizona facility prioritizing U.S. local workforce recruitment",
-            "Intel Core Ultra processor utilization for robot safety mining operation project",
-            "Tamil Nadu semiconductor policy incentivizing local talent recruitment in India"
+            "Korean semiconductor new hire recruitment surges 47%",
+            "SK Hynix mass recruitment of experienced HBM and HBF personnel",
+            "SK Hynix offers hundred-million-won performance bonuses per employee",
+            "AMD submits application for Taiwan R&D center opening",
+            "Apple M6 chip transitions to 2nm process",
+            "TSMC targets 3nm and GPU design experience hires"
           ],
           "implications": [
             {
-              "keyword": "Global Talent Competition",
-              "text": "Intensifying semiconductor talent acquisition war among U.S., China, and India raising concerns about brain drain from developing nations"
+              "keyword": "Talent competition",
+              "text": "SK Hynix's aggressive recruitment and performance bonus offerings reflect intensifying AI semiconductor talent acquisition battles, with TSMC experience recruitment signaling commitment to securing advanced design capabilities."
             },
             {
-              "keyword": "HBM Technology Competition",
-              "text": "Experienced engineers with advanced memory design expertise emerging as key differentiation factor"
+              "keyword": "R&D center expansion",
+              "text": "AMD's Taiwan R&D center and SK Hynix's new fab construction plans reflect internationalization of AI chip design and manufacturing infrastructure."
             },
             {
-              "keyword": "Geopolitical Supply Chain",
-              "text": "Local hiring prioritization policies reflecting each nation's semiconductor industry sovereignty strategy"
-            },
-            {
-              "keyword": "Alternative Workforce Utilization",
-              "text": "South Korea's deployment of retired military personnel attracting attention as a workforce model for aging societies"
+              "keyword": "Process advancement",
+              "text": "Apple M6's transition to 2nm and SK Hynix's HBM design focus represent intensifying HPC accelerator performance competition."
             }
           ],
-          "counterpoint": "Large-scale new workforce recruitment risks short-term cost increases and requires training/productivity adaptation periods, creating project schedule risks"
+          "counterpoint": "Quality concerns possible due to relaxed educational requirements in recruitment, and performance bonus-focused compensation raises uncertainties regarding long-term workforce stability."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-11-25",
-      "item_count": 21,
-      "generated_at": "2026-11-25T03:31:39.541912+00:00",
+      "date": "2026-11-26",
+      "item_count": 11,
+      "generated_at": "2026-11-26T02:46:59.517697+00:00",
       "content": {
         "ko": {
-          "executive_summary": "Amazon이 AI 칩 최적화 기술 Decart를 $7.5B에 인수하며 Nvidia에 대한 도전을 강화했다. Amazon의 $25B 규모 커스텀 칩 사업은 Trainium AI 칩을 중심으로 소프트웨어 최적화를 통해 기술 격차 축소를 목표로 한다. MediaTek은 AI 데이터센터 및 2nm 기술 연구에서 17개 톱티어 컨퍼런스 논문을 발표하며 기술 리더십을 입증했다.",
+          "executive_summary": "TSMC 2nm이 Q3 매출의 8%를 차지하며 AI 칩 수요 집중도가 높으나, 메가-클라우드 기업들(Amazon, Google 등)이 자체 AI 칩 개발로 엔비디아 의존도 감소를 추진 중이다. 커스텀 AI 칩이 시장의 20%에 도달할 것으로 예상되며 엔비디아의 GPU 가격과 신용등급 하락 압력이 증가하고 있다.",
           "key_facts": [
-            "Amazon Decart 인수 가격 $7.5B",
-            "Amazon 커스텀 칩 사업 규모 $25B",
-            "Amazon Trainium AI 칩 최적화",
-            "MediaTek 톱티어 컨퍼런스 논문 17개 (AI 데이터센터, 2nm 기술)",
-            "EnSilica GNSS ASIC 계약 $80M",
-            "Broadcom AI 칩 부문 주가 하락"
+            "TSMC 2nm Q3 매출 비중 8%",
+            "커스텀 AI 칩 시장 점유율 20% 예상",
+            "Amazon $7.5B 규모 Decart AI 최적화 기술 인수",
+            "중국 국내 GPU 시장 85% 이상 급락",
+            "화창베이 암시장 NVIDIA Blackwell 칩 거래 발생",
+            "S&P, NVIDIA 신용등급 강등 검토 (AA -> 부정적 관찰)",
+            "AMD Helios, Google TPU 등 대안 기술 경쟁"
           ],
           "implications": [
             {
-              "keyword": "소프트웨어 차별화",
-              "text": "Nvidia의 CUDA 생태계에 대응하기 위해 소프트웨어 최적화 계층이 경쟁 무기로 부상"
+              "keyword": "소비자 분산",
+              "text": "Amazon(Trainium), Google(TPU), Anthropic 등이 자체 칩 개발로 NVIDIA 단일 의존도 20% 감소 추세"
             },
             {
-              "keyword": "커스텀 칩 추세",
-              "text": "클라우드 및 AI 기업들의 자체 설계 칩 개발 확대로 순수 칩 판매 모델 압박"
+              "keyword": "지배구조 위기",
+              "text": "지센슨 황 CEO 복귀 과정 논란과 대중국 수출통제 의혹이 S&P 신용등급 평가 부정적 대상 지정으로 확대"
             },
             {
-              "keyword": "기술 검증",
-              "text": "MediaTek의 학술 논문 발표가 AI/2nm 기술에서의 경쟁력 신호로 작용"
+              "keyword": "지역 공급망 붕괴",
+              "text": "중국 국내 GPU 시장 85% 초과 하락은 미국 수출통제의 직접적 영향 반영"
             },
             {
-              "keyword": "시장 조정",
-              "text": "AI 랠리 냉각으로 Broadcom 등 광대역 칩 공급사 주가 하락세 전환"
+              "keyword": "설계 아키텍처 다원화",
+              "text": "CUDA, TPU, Helios, NVIDIA 사이 성능·비용 경쟁으로 엔터프라이즈 최적화 선택 폭 확대"
             }
           ],
-          "counterpoint": "Amazon의 Trainium 성숙도와 실제 추론 성능이 Nvidia H100/H200 대비 아직 증명되지 않은 상태로 $7.5B 인수가 과도한 평가일 가능성 존재."
+          "counterpoint": "커스텀 칩 개발 초기 비용·시간 투자가 높으며, 짧은 제품 수명 주기에서 ROI 불확실성 존재."
         },
         "en": {
-          "executive_summary": "Amazon strengthened its challenge to Nvidia by acquiring Decart, an AI chip optimization technology, for $7.5B. Amazon's $25B custom chip business centered on Trainium AI chips aims to narrow the technology gap through software optimization. MediaTek demonstrated technical leadership by publishing 17 top-tier conference papers on AI datacenters and 2nm technology research.",
+          "executive_summary": "TSMC 2nm accounts for 8% of Q3 revenue with concentrated AI chip demand, while mega-cloud companies (Amazon, Google, etc.) are pursuing reduced NVIDIA dependence through in-house AI chip development. Custom AI chips are expected to reach 20% market share, with increasing pressure on NVIDIA's GPU pricing and credit rating.",
           "key_facts": [
-            "Amazon Decart acquisition price $7.5B",
-            "Amazon custom chip business scale $25B",
-            "Amazon Trainium AI chip optimization",
-            "MediaTek 17 top-tier conference papers (AI datacenters, 2nm technology)",
-            "EnSilica GNSS ASIC contract $80M",
-            "Broadcom AI chip segment stock price decline"
+            "TSMC 2nm represents 8% of Q3 revenue",
+            "Custom AI chip market share expected at 20%",
+            "Amazon acquires Decart AI optimization technology for $7.5B",
+            "China domestic GPU market plummets over 85%",
+            "Huaqiangbei black market NVIDIA Blackwell chip transactions occur",
+            "S&P reviews NVIDIA credit rating downgrade (AA to negative outlook)",
+            "AMD Helios, Google TPU and alternative technologies compete"
           ],
           "implications": [
             {
-              "keyword": "Software Differentiation",
-              "text": "Software optimization layer emerging as competitive weapon to counter Nvidia's CUDA ecosystem"
+              "keyword": "Consumer dispersion",
+              "text": "Amazon (Trainium), Google (TPU), Anthropic and others developing in-house chips show 20% reduction trend in single NVIDIA dependency."
             },
             {
-              "keyword": "Custom Chip Trend",
-              "text": "Expansion of in-house chip design by cloud and AI companies pressuring pure chip sales models"
+              "keyword": "Governance crisis",
+              "text": "Controversies surrounding CEO Jensen Huang's return and allegations of China export control violations expand to S&P's negative credit rating designation."
             },
             {
-              "keyword": "Technology Validation",
-              "text": "MediaTek's academic paper publications serving as competitive signal in AI/2nm technology"
+              "keyword": "Regional supply chain collapse",
+              "text": "China domestic GPU market decline exceeding 85% reflects direct impact of U.S. export controls."
             },
             {
-              "keyword": "Market Adjustment",
-              "text": "AI rally cooling causing stock price decline among broadband chip suppliers like Broadcom"
+              "keyword": "Design architecture diversification",
+              "text": "CUDA, TPU, Helios and NVIDIA performance-cost competition expands enterprise optimization choices."
             }
           ],
-          "counterpoint": "Amazon's Trainium maturity and actual inference performance remain unproven versus Nvidia H100/H200, raising possibility that the $7.5B acquisition may represent an overvaluation"
+          "counterpoint": "Custom chip development entails high initial capital and time investment, with ROI uncertainty in short product lifecycle."
         }
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-11-25",
-      "item_count": 22,
-      "generated_at": "2026-11-25T03:31:39.541912+00:00",
+      "date": "2026-11-26",
+      "item_count": 18,
+      "generated_at": "2026-11-26T02:46:59.517697+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -196,9 +144,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-11-25",
-      "item_count": 14,
-      "generated_at": "2026-11-25T03:31:39.541912+00:00",
+      "date": "2026-11-26",
+      "item_count": 13,
+      "generated_at": "2026-11-26T02:46:59.517697+00:00",
       "content": {
         "ko": {},
         "en": {}
