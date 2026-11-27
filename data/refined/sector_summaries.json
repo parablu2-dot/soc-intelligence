@@ -1,142 +1,78 @@
 {
-  "date": "2026-11-26",
-  "generated_at": "2026-11-26T02:46:59.518184+00:00",
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T02:50:52.037474+00:00",
   "sectors": {
     "hpc_datacenter": {
       "sector": "HPC·Datacenter",
-      "date": "2026-11-26",
-      "item_count": 8,
-      "generated_at": "2026-11-26T02:46:59.517697+00:00",
+      "date": "2026-11-27",
+      "item_count": 10,
+      "generated_at": "2026-11-27T02:50:52.036926+00:00",
       "content": {
         "ko": {
-          "executive_summary": "SK하이닉스와 한국 반도체 산업이 AI 칩 붐 속에 대규모 인력 확보에 나서고 있으며, 47% 증가한 신입 채용과 함께 HBM·HBF 경력사원을 모집하고 있다. AMD는 대만에 R&D 센터 개설을 추진하고, 애플은 M6 칩을 2nm로 이동시켜 로컬 AI 확대를 추진 중이다.",
+          "executive_summary": "SK Hynix aggressively pursues talent acquisition by removing educational barriers in new hiring and recruiting treasury experts from Seoul's financial sector, while seeking TSMC 3nm expertise. Meanwhile, Nvidia halts Southeast Asia server shipments amid U.S. export controls, and Nvidia/Kioxia explore alternatives to South Korean memory chips for AI servers.",
           "key_facts": [
-            "한국 신입 반도체 채용 47% 급증",
-            "SK하이닉스 HBM·HBF 경력사원 대규모 모집",
-            "SK하이닉스 1인당 억대 성과급 제시",
-            "AMD 대만 R&D 센터 개설 신청",
-            "애플 M6 칩 2nm 공정 전환",
-            "TSMC 3나노·GPU 설계 경험자 채용 대상"
+            "SK Hynix holding $61.5 billion in cash",
+            "SK Hynix eliminates educational degree requirements for new hires",
+            "Nvidia suspends AI server shipments to Southeast Asia",
+            "Nvidia and Kioxia partnering on alternative AI server memory"
           ],
           "implications": [
             {
-              "keyword": "인력 경쟁",
-              "text": "SK하이닉스의 적극적 채용과 성과급 제시는 AI 반도체 인력 쟁탈전 심화를 반영하며, TSMC 경험자 모집은 고급 설계 역량 확보 의지 표현"
+              "keyword": "Talent Competition",
+              "text": "Small chipmakers struggle to compete with nine-figure bonuses from Samsung and SK Hynix; U.S. semiconductor workforce talent gap persists despite recruitment efforts."
             },
             {
-              "keyword": "R&D 센터 확충",
-              "text": "AMD의 대만 R&D 센터, SK하이닉스의 신규 팹 구축 계획은 AI 칩 설계·제조 인프라 국제화 추세"
+              "keyword": "Export Control Impact",
+              "text": "U.S. AI chip restrictions forcing Nvidia to halt regional shipments and spurring development of non-Korean memory alternatives."
             },
             {
-              "keyword": "공정 고도화",
-              "text": "애플 M6의 2nm 전환, SK하이닉스의 HBM 설계 집중은 HPC 가속기 성능 경쟁 고도화"
+              "keyword": "Strategic Hiring",
+              "text": "SK Hynix's removal of degree barriers and financial sector recruitment signal aggressive capacity-building for AI/HBM growth."
             }
           ],
-          "counterpoint": "채용 시 학력 제한 완화 등 품질 우려 가능성 있으며, 성과급 위주 보상은 장기 인력 안정성 미지수."
+          "counterpoint": "SK Hynix's large cash position and hiring breadth may not translate to immediate 3nm process capability gains versus TSMC."
         },
         "en": {
-          "executive_summary": "SK Hynix and the Korean semiconductor industry are undertaking large-scale recruitment amid the AI chip boom, with new hires increasing 47% alongside recruitment of experienced HBM and HBF personnel. AMD is pursuing the opening of an R&D center in Taiwan, and Apple is transitioning the M6 chip to 2nm to expand local AI.",
+          "executive_summary": "SK Hynix aggressively pursues talent acquisition by removing educational barriers in new hiring and recruiting treasury experts from Seoul's financial sector, while seeking TSMC 3nm expertise. Meanwhile, Nvidia halts Southeast Asia server shipments amid U.S. export controls, and Nvidia/Kioxia explore alternatives to South Korean memory chips for AI servers.",
           "key_facts": [
-            "Korean semiconductor new hire recruitment surges 47%",
-            "SK Hynix mass recruitment of experienced HBM and HBF personnel",
-            "SK Hynix offers hundred-million-won performance bonuses per employee",
-            "AMD submits application for Taiwan R&D center opening",
-            "Apple M6 chip transitions to 2nm process",
-            "TSMC targets 3nm and GPU design experience hires"
+            "SK Hynix holding $61.5 billion in cash",
+            "SK Hynix eliminates educational degree requirements for new hires",
+            "Nvidia suspends AI server shipments to Southeast Asia",
+            "Nvidia and Kioxia partnering on alternative AI server memory"
           ],
           "implications": [
             {
-              "keyword": "Talent competition",
-              "text": "SK Hynix's aggressive recruitment and performance bonus offerings reflect intensifying AI semiconductor talent acquisition battles, with TSMC experience recruitment signaling commitment to securing advanced design capabilities."
+              "keyword": "Talent Competition",
+              "text": "Small chipmakers struggle to compete with nine-figure bonuses from Samsung and SK Hynix; U.S. semiconductor workforce talent gap persists despite recruitment efforts."
             },
             {
-              "keyword": "R&D center expansion",
-              "text": "AMD's Taiwan R&D center and SK Hynix's new fab construction plans reflect internationalization of AI chip design and manufacturing infrastructure."
+              "keyword": "Export Control Impact",
+              "text": "U.S. AI chip restrictions forcing Nvidia to halt regional shipments and spurring development of non-Korean memory alternatives."
             },
             {
-              "keyword": "Process advancement",
-              "text": "Apple M6's transition to 2nm and SK Hynix's HBM design focus represent intensifying HPC accelerator performance competition."
+              "keyword": "Strategic Hiring",
+              "text": "SK Hynix's removal of degree barriers and financial sector recruitment signal aggressive capacity-building for AI/HBM growth."
             }
           ],
-          "counterpoint": "Quality concerns possible due to relaxed educational requirements in recruitment, and performance bonus-focused compensation raises uncertainties regarding long-term workforce stability."
+          "counterpoint": "SK Hynix's large cash position and hiring breadth may not translate to immediate 3nm process capability gains versus TSMC."
         }
       }
     },
     "custom_soc": {
       "sector": "Custom SoC",
-      "date": "2026-11-26",
+      "date": "2026-11-27",
       "item_count": 11,
-      "generated_at": "2026-11-26T02:46:59.517697+00:00",
+      "generated_at": "2026-11-27T02:50:52.036926+00:00",
       "content": {
-        "ko": {
-          "executive_summary": "TSMC 2nm이 Q3 매출의 8%를 차지하며 AI 칩 수요 집중도가 높으나, 메가-클라우드 기업들(Amazon, Google 등)이 자체 AI 칩 개발로 엔비디아 의존도 감소를 추진 중이다. 커스텀 AI 칩이 시장의 20%에 도달할 것으로 예상되며 엔비디아의 GPU 가격과 신용등급 하락 압력이 증가하고 있다.",
-          "key_facts": [
-            "TSMC 2nm Q3 매출 비중 8%",
-            "커스텀 AI 칩 시장 점유율 20% 예상",
-            "Amazon $7.5B 규모 Decart AI 최적화 기술 인수",
-            "중국 국내 GPU 시장 85% 이상 급락",
-            "화창베이 암시장 NVIDIA Blackwell 칩 거래 발생",
-            "S&P, NVIDIA 신용등급 강등 검토 (AA -> 부정적 관찰)",
-            "AMD Helios, Google TPU 등 대안 기술 경쟁"
-          ],
-          "implications": [
-            {
-              "keyword": "소비자 분산",
-              "text": "Amazon(Trainium), Google(TPU), Anthropic 등이 자체 칩 개발로 NVIDIA 단일 의존도 20% 감소 추세"
-            },
-            {
-              "keyword": "지배구조 위기",
-              "text": "지센슨 황 CEO 복귀 과정 논란과 대중국 수출통제 의혹이 S&P 신용등급 평가 부정적 대상 지정으로 확대"
-            },
-            {
-              "keyword": "지역 공급망 붕괴",
-              "text": "중국 국내 GPU 시장 85% 초과 하락은 미국 수출통제의 직접적 영향 반영"
-            },
-            {
-              "keyword": "설계 아키텍처 다원화",
-              "text": "CUDA, TPU, Helios, NVIDIA 사이 성능·비용 경쟁으로 엔터프라이즈 최적화 선택 폭 확대"
-            }
-          ],
-          "counterpoint": "커스텀 칩 개발 초기 비용·시간 투자가 높으며, 짧은 제품 수명 주기에서 ROI 불확실성 존재."
-        },
-        "en": {
-          "executive_summary": "TSMC 2nm accounts for 8% of Q3 revenue with concentrated AI chip demand, while mega-cloud companies (Amazon, Google, etc.) are pursuing reduced NVIDIA dependence through in-house AI chip development. Custom AI chips are expected to reach 20% market share, with increasing pressure on NVIDIA's GPU pricing and credit rating.",
-          "key_facts": [
-            "TSMC 2nm represents 8% of Q3 revenue",
-            "Custom AI chip market share expected at 20%",
-            "Amazon acquires Decart AI optimization technology for $7.5B",
-            "China domestic GPU market plummets over 85%",
-            "Huaqiangbei black market NVIDIA Blackwell chip transactions occur",
-            "S&P reviews NVIDIA credit rating downgrade (AA to negative outlook)",
-            "AMD Helios, Google TPU and alternative technologies compete"
-          ],
-          "implications": [
-            {
-              "keyword": "Consumer dispersion",
-              "text": "Amazon (Trainium), Google (TPU), Anthropic and others developing in-house chips show 20% reduction trend in single NVIDIA dependency."
-            },
-            {
-              "keyword": "Governance crisis",
-              "text": "Controversies surrounding CEO Jensen Huang's return and allegations of China export control violations expand to S&P's negative credit rating designation."
-            },
-            {
-              "keyword": "Regional supply chain collapse",
-              "text": "China domestic GPU market decline exceeding 85% reflects direct impact of U.S. export controls."
-            },
-            {
-              "keyword": "Design architecture diversification",
-              "text": "CUDA, TPU, Helios and NVIDIA performance-cost competition expands enterprise optimization choices."
-            }
-          ],
-          "counterpoint": "Custom chip development entails high initial capital and time investment, with ROI uncertainty in short product lifecycle."
-        }
+        "ko": {},
+        "en": {}
       }
     },
     "foundry": {
       "sector": "Foundry",
-      "date": "2026-11-26",
-      "item_count": 18,
-      "generated_at": "2026-11-26T02:46:59.517697+00:00",
+      "date": "2026-11-27",
+      "item_count": 19,
+      "generated_at": "2026-11-27T02:50:52.036926+00:00",
       "content": {
         "ko": {},
         "en": {}
@@ -144,9 +80,9 @@
     },
     "packaging": {
       "sector": "Packaging",
-      "date": "2026-11-26",
-      "item_count": 13,
-      "generated_at": "2026-11-26T02:46:59.517697+00:00",
+      "date": "2026-11-27",
+      "item_count": 12,
+      "generated_at": "2026-11-27T02:50:52.036926+00:00",
       "content": {
         "ko": {},
         "en": {}

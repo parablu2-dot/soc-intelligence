@@ -101,6 +101,248 @@
   {
     "lens": "tech",
     "source_class": "paper",
+    "category": "cond-mat.mes-hall",
+    "title": "Brightening spin- and parity-forbidden interlayer excitons through rhombohedral stacking",
+    "url": "https://arxiv.org/abs/2611.34900v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Brightened symmetry-forbidden excitons can provide critical information about the electronic structure and many-body interactions in semiconductors. Recently, interlayer atomic registry has emerged as a new way to control atomically thin layered materials in both ground and excited states. Here we show that the rhombohedral stacking in a 3R-MoS_2 homobilayer can brighten two symmetry-forbidden interlayer excitons: one is a spin-unlike 1s exciton and the other is a parity-odd 2p exciton. The natu",
+    "authors": [
+      "Haodong Hu",
+      "Chih-En Hsu",
+      "Kenji Watanabe",
+      "Takashi Taniguchi",
+      "Hung-Chung Hsueh",
+      "Zhenglu Li",
+      "Ziliang Ye"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "An Embedded Ergonomic Posture Monitoring and AI-Assisted Home Learning System on a Raspberry Pi 3B Edge Platform",
+    "url": "https://arxiv.org/abs/2611.34669v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "During independent home study sessions, students frequently sustain improper sitting postures, accumulate excessive sedentary hours, and experience productivity loss from off-task digital distractions. Furthermore, learners often lack real-time pedagogical scaffolding for demanding self-study curricula. To mitigate these ergonomic and instructional challenges, this paper presents an affordable, privacy-preserving cyber-physical embedded system for domestic study spaces. Engineered on a Raspberry",
+    "authors": [
+      "Truyen T. Le",
+      "Vinh Dang Ngoc",
+      "Thai Bao Huynh"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "A Differential Computing Accelerator for LLM Inference Leveraging Bit-Slice Transition Sparsity",
+    "url": "https://arxiv.org/abs/2611.34630v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Large language models (LLMs) have become foundational to modern artificial intelligence. Driven by scaling laws, their rapid growth poses increasing computational and memory challenges for deployment. To accelerate the general matrix multiplication (GEMM) operations that dominate LLM computation, bit-slice architectures decompose quantized operands along the bit dimension, exposing slice-level sparsity and redundancy. However, existing bit-slice designs primarily exploit sparsity in high-order s",
+    "authors": [
+      "Yifan Wang",
+      "Zetao Guo",
+      "You Xiao",
+      "Wendi Sun",
+      "Song Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "stat.ML",
+    "title": "Conditional Independence Graph Learning from Dependent Data Via Time-Delay Embedding",
+    "url": "https://arxiv.org/abs/2611.34616v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "We consider the problem of inferring the conditional independence graph (CIG) of a high-dimensional stationary multivariate Gaussian time series which could be short-range dependent (SRD) or long-range dependent (LRD). In a time series graph, each component of the vector series is represented by a distinct node, and associations between components are represented by edges between the corresponding nodes. We consider a time-domain approach based on time-delay embedding, casting the problem as one",
+    "authors": [
+      "Jitendra K. Tugnait"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "physics.optics",
+    "title": "Arbitrarily Weak Losses Destroy Fractal Bandstructure in Temporal Fibonacci Quasicrystals",
+    "url": "https://arxiv.org/abs/2611.34552v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Lossless photonic crystals with weak refractive index contrasts block limited frequencies. However, the same materials arranged in a non-periodic Fibonacci quasicrystal block all but infinitely rare fractally-distributed frequencies. Similar analysis shows that weak quasiperiodic refractive index variation in time should achieve infinitely broadband gain.\n  We demonstrate that any small experimental losses immediately destroy this effect. Our methods also provide smoothness and approximation the",
+    "authors": [
+      "Calvin M. Hooper"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "EGQCA Code: automated high-throughput thermodynamic modeling of solid solutions",
+    "url": "https://arxiv.org/abs/2611.34551v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Modeling disordered systems from first principles across the full composition range is a long-standing computational challenge. We present a code package implementing the extended generalized quasichemical approximation (EGQCA), which describes solid solutions through the statistics of a finite set of clusters and enables their thermodynamic modeling at arbitrary compositions and temperatures. The package automates the complete workflow and interfaces with both DFT codes and universal machine-le",
+    "authors": [
+      "Dominik Spath",
+      "Luka Wibmer",
+      "Kieran Bozier",
+      "Ralf Meyer",
+      "Eva Kogler",
+      "Efisio Madeddu",
+      "Chris Pickard",
+      "Markus Aichhorn",
+      "Simone Di Cataldo",
+      "Luiz T. F. Eleno",
+      "Christoph Heil",
+      "Pedro N. Ferreira"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "AFM metrology for 3D high aspect ratio semiconductor structures",
+    "url": "https://arxiv.org/abs/2611.34507v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Transistors have long been the foundation of the semiconductor industry, with continuous architectural innovations enabling the scaling of integrated circuits while maintaining high performance. Advancements in deposition and lithographic techniques have further expanded design possibilities, while increasing structural complexity demands stricter process control. Atomic force microscopy (AFM) offers a rapid and reliable metrology solution, providing high-resolution measurements and robust stati",
+    "authors": [
+      "Hokyun Chin",
+      "Shihwei Yu",
+      "Lucas Rencker",
+      "Omid Tajalizadehkhoob",
+      "Khalid El Maghawry Elsayed",
+      "Po-Cheng Wu",
+      "Duygu Akbulut",
+      "Niranjan Saikumar",
+      "Hamed Sadeghian"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "LetzElPhC: an electron-phonon code for efficient exciton-phonon workflows",
+    "url": "https://arxiv.org/abs/2611.34500v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "We present \\texttt{LetzElPhC}, an open-source software package that computes electron-phonon matrix elements from the output of density functional perturbation theory calculations performed with the \\texttt{Quantum ESPRESSO} code. By interfacing directly with the \\texttt{Yambo} code and exploiting crystal symmetries, \\texttt{LetzElPhC} enables a scalable workflow for evaluating exciton-phonon matrix elements while enforcing strict gauge consistency between one-electron Bloch states and Bethe-Sal",
+    "authors": [
+      "Muralidhar Nalabothula",
+      "Ludger Wirtz"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "quant-ph",
+    "title": "High-Throughput GPU Decoding of Quantum Bivariate Bicycle Codes under Circuit-Level Noise",
+    "url": "https://arxiv.org/abs/2611.34481v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Bivariate bicycle (BB) codes reduce the physical-qubit overhead of quantum error correction compared to other codes such as Surface codes, but circuit-level faults create dependencies across measurement rounds that limit decoding throughput. We present a parallel-window GPU decoder that combines reusable fault patterns, compact shared-memory state, and persistent GPU workers using min-sum with Relay-BP recovery. On an RTX 5090, the proposed decoder keeps pace with one syndrome round every 1 $μ$s",
+    "authors": [
+      "Aditya Sodhani",
+      "Keshab K. Parhi"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Electronic topological modes in hexagonal NbSi$_{2}$ with a double helix",
+    "url": "https://arxiv.org/abs/2611.34356v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Chiral systems can host nontrivial topological states, including characteristic edge modes and Fermi arcs. Here, we investigate the electronic properties of hexagonal NbSi$_2$ with chiral symmetry using first-principles calculations for both bulk and slab geometries. We find that spin--orbit coupling (SOC) is relatively weak. Notably, the topological edge state originates from structural chirality rather than the SOC. From the Berry curvature analysis, we confirm the existence of Weyl points, so",
+    "authors": [
+      "Issam Mahraj",
+      "Andrzej Ptok"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Anisotropic magnetic-field modulation of hysteretic sheet resistance in few-layer ferroelectric WTe2",
+    "url": "https://arxiv.org/abs/2611.34259v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Ferroelectricity in few-layer WTe2, a polar semimetal, originates from interlayer sliding and can be probed through gate-dependent resistance hysteresis. Yet the role of magnetic fields in this transport signature remains largely unexplored. Here, we examine magnetic-field-induced changes in the hysteresis in exfoliated few-layer WTe2. Applying an out-of-plane magnetic field produces a pronounced hysteresis enhancement, while an in-plane field yields a negligible response. Analysis of the indivi",
+    "authors": [
+      "Arpan Manna",
+      "Soumik Mukhopadhyay"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.LG",
+    "title": "When High Capacity Becomes Undeployable: Pore-Filling Constraints for Multi-Objective Optimization of Direct Air Capture Sorbents",
+    "url": "https://arxiv.org/abs/2611.34154v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Amine-impregnated sorbents with the highest nominal CO2 capacity are frequently the least deployable, as amine beyond the pore-volume limit blocks active sites. Yet multi-objective Bayesian optimization (MOBO) for direct air capture (DAC) treats formulation search as unconstrained. We encode the pore-filling boundary as an explicit outcome constraint, c(x) = tanh(1 - phi_hat) - tau, and use it as a diagnostic instrument on a hand-curated, DOI-traceable benchmark of 618 solid-amine formulations f",
+    "authors": [
+      "Yujie Liu",
+      "Xuehua Shen",
+      "Zuotai Zhang"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Quantum Metric Connects Bond Delocalization to Phonon Softening",
+    "url": "https://arxiv.org/abs/2611.34118v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Delocalized bonding electrons have long been associated with soft bonds and low phonon frequencies. However, a quantitative connection between electron delocalization and phonon softening remains elusive. We identify such a connection through the momentum-space quantum metric, which measures the intrinsic delocalization of the occupied electronic states. We show that a quantum geometric contribution to phonon softening is proportional to the integrated quantum metric. First-principles calculatio",
+    "authors": [
+      "Tianqi Deng",
+      "Tiejun Zhu"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cond-mat.mtrl-sci",
+    "title": "Quantum Geometric Origin of Néel-Order-Driven Magneto-Optical Response in MnTe",
+    "url": "https://arxiv.org/abs/2611.34076v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Magneto-optical (MO) responses provide a direct probe of magnetic order, yet resolving compensated antiferromagnetic order remains challenging. Here, we demonstrate in altermagnetic MnTe that the symmetry of the Néel order is imprinted on the MO response through distinct quantum-geometric contributions. Combining first-principles calculations with a Landau symmetry framework, we demonstrate that the quantum metric gives rise to a twofold optical anisotropy, with its diagonal and symmetric off-di",
+    "authors": [
+      "Suman Rooj",
+      "M. S. Mrudul",
+      "Daegeun Jo",
+      "Peter M. Oppeneer"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
+    "category": "cs.AR",
+    "title": "MixMoMo: Accelerating Extra--Large MoE Inference with Mixed--Precision GPU--NPU Execution on Mobile Devices",
+    "url": "https://arxiv.org/abs/2611.33981v1",
+    "published_date": "2026-11-25",
+    "source": "arXiv",
+    "summary": "Mobile agents and on-device intelligence increasingly demand more capable models on smartphones. Through sparse expert activation, Mixture-of-Experts (MoE) scales model capacity, yet growing numbers of fine-grained experts complicate loading and computation. Model compression complements expert offloading by reducing storage and computation costs. Among compression techniques, mixed-precision quantization assigns lower expert bitwidths to balance model quality and inference efficiency. However, ",
+    "authors": [
+      "Hailong Zou",
+      "Maoliang Li",
+      "Taohong Han",
+      "Haoze Chi",
+      "Zihao Zheng",
+      "Jiayu Chen",
+      "Xiang Chen"
+    ]
+  },
+  {
+    "lens": "tech",
+    "source_class": "paper",
     "category": "cs.AR",
     "title": "CPU-Eval: Evaluating Large Language Models for CPU Hardware Code Generation",
     "url": "https://arxiv.org/abs/2611.32405v1",
