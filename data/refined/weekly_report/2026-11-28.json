@@ -1,0 +1,466 @@
+{
+  "week_of": "2026-11-22",
+  "generated_through": "2026-11-28",
+  "generated_at": "2026-11-27T23:01:59.698252+00:00",
+  "macro": {
+    "fed_policy": [
+      "연준 등 금융감독 기관이 고금리 모기지론의 감정평가 면제 기준액 발표",
+      "연방 금융감시 기관들, 소비자 신용·리스 거래 규제 적용 기준 금액 공시",
+      "연준 할인율 회의록 (10월 19일, 28일) 공개"
+    ],
+    "rates_fx": [],
+    "polarization": [
+      "CBO, 11월 30주 하원 긴급절차 법안의 재정영향 평가 발표",
+      "S. 2887 Route 66 국립역사탐방로 지정법, 상원 통과 (2026년 11월 12일)",
+      "H.R. 7495: 위스콘신 보병 전몰자 추도 기념물 설립 법안 하원 자연자원위원회 가결",
+      "S. 4577 탄자니아 양자관계 재평가법안, 상원외교위원회 보고(2026.7.27)",
+      "Route 66 국립역사보도 지정법안, 하원 천연자원위원회 보고 (2026.11.18)"
+    ]
+  },
+  "axes": {
+    "mobile_ap": {
+      "ko": {
+        "executive_summary": "Mobile AP competitive posture shifts marginally toward system-level diversification rather than core AP design: Qualcomm's $8B automotive chip position and Apple's photonics infrastructure hiring signal value migration from standalone processors to integrated platform interfaces, while Samsung's Exynos 2500 positioning against Snapdragon 8 Elite remains conventional performance play. Low-power DRAM demand surge for AI glasses and connectivity protocol expansion (SiWx917 integration) define emerging battery-constrained interfaces, but no production feasibility or yield data supports imminent market share transitions in flagship AP competition.",
+        "key_facts": [
+          "Qualcomm automotive chip business valued at $8 billion, targeting industry lead by 2027",
+          "AI glasses market driving low-power DRAM demand quadrupled versus baseline",
+          "Apple recruiting for silicon photonics expertise (data center interconnect scope)",
+          "Samsung Exynos 2500 positioned against Snapdragon 8 Elite (2026 comparison)",
+          "Silicon Labs SiWx917 integrated into TuyaOpen IoT platform",
+          "Japan mobileFab project deploys 30-cm lithography on mobile units targeting 10-year engineer shortage"
+        ],
+        "implications": [
+          {
+            "keyword": "Platform boundary shift",
+            "text": "Qualcomm's $8B automotive revenue and Apple's photonics hiring indicate value accrual moving from AP core design to system-level interposer/connectivity layers; flagship AP design becomes commodity interface rather than competitive moat."
+          },
+          {
+            "keyword": "Power protocol evolution",
+            "text": "Quadrupled low-power DRAM demand for AI glasses creates new power-interface arbitrage: vendors optimizing sub-1W DRAM-AP handshake protocols gain edge over traditional performance-focused AP design; impacts packaging margins."
+          },
+          {
+            "keyword": "Supply-side constraint",
+            "text": "Japan's mobileFab addresses 10-year lithography engineer shortage via truck-mounted 30-cm tools; indicates regional capacity shortfall and potential yield/NRE overhead for mobile AP skew production, favoring established Snapdragon/Exynos yields."
+          },
+          {
+            "keyword": "Connectivity tier consolidation",
+            "text": "SiWx917/TuyaOpen integration reflects IoT-to-edge convergence; mobile AP vendors must embed multi-band wireless stacks as standard interface, raising design complexity without clear architectural differentiation."
+          }
+        ],
+        "counterpoint": "Exynos 2500 vs. Snapdragon 8 Elite positioning remains locked in conventional performance benchmarking (CPU/GPU), without disclosed photonics, power-protocol, or automotive integration moves; Samsung's core AP standing unchanged despite diversification signals elsewhere.",
+        "feasibility_observation": "",
+        "changed_from_last_week": true,
+        "change_note": "Value migration from core AP design to system integration (Qualcomm automotive $8B, Apple photonics, low-power DRAM interfaces) now visible in market positioning; last week lacked this structural competitive data."
+      },
+      "en": {
+        "executive_summary": "Mobile AP competitive posture shifts marginally toward system-level diversification rather than core AP design: Qualcomm's $8B automotive chip position and Apple's photonics infrastructure hiring signal value migration from standalone processors to integrated platform interfaces, while Samsung's Exynos 2500 positioning against Snapdragon 8 Elite remains conventional performance play. Low-power DRAM demand surge for AI glasses and connectivity protocol expansion (SiWx917 integration) define emerging battery-constrained interfaces, but no production feasibility or yield data supports imminent market share transitions in flagship AP competition.",
+        "key_facts": [
+          "Qualcomm automotive chip business valued at $8 billion, targeting industry lead by 2027",
+          "AI glasses market driving low-power DRAM demand quadrupled versus baseline",
+          "Apple recruiting for silicon photonics expertise (data center interconnect scope)",
+          "Samsung Exynos 2500 positioned against Snapdragon 8 Elite (2026 comparison)",
+          "Silicon Labs SiWx917 integrated into TuyaOpen IoT platform",
+          "Japan mobileFab project deploys 30-cm lithography on mobile units targeting 10-year engineer shortage"
+        ],
+        "implications": [
+          {
+            "keyword": "Platform boundary shift",
+            "text": "Qualcomm's $8B automotive revenue and Apple's photonics hiring indicate value accrual moving from AP core design to system-level interposer/connectivity layers; flagship AP design becomes commodity interface rather than competitive moat."
+          },
+          {
+            "keyword": "Power protocol evolution",
+            "text": "Quadrupled low-power DRAM demand for AI glasses creates new power-interface arbitrage: vendors optimizing sub-1W DRAM-AP handshake protocols gain edge over traditional performance-focused AP design; impacts packaging margins."
+          },
+          {
+            "keyword": "Supply-side constraint",
+            "text": "Japan's mobileFab addresses 10-year lithography engineer shortage via truck-mounted 30-cm tools; indicates regional capacity shortfall and potential yield/NRE overhead for mobile AP skew production, favoring established Snapdragon/Exynos yields."
+          },
+          {
+            "keyword": "Connectivity tier consolidation",
+            "text": "SiWx917/TuyaOpen integration reflects IoT-to-edge convergence; mobile AP vendors must embed multi-band wireless stacks as standard interface, raising design complexity without clear architectural differentiation."
+          }
+        ],
+        "counterpoint": "Exynos 2500 vs. Snapdragon 8 Elite positioning remains locked in conventional performance benchmarking (CPU/GPU), without disclosed photonics, power-protocol, or automotive integration moves; Samsung's core AP standing unchanged despite diversification signals elsewhere.",
+        "feasibility_observation": "",
+        "changed_from_last_week": true,
+        "change_note": "Value migration from core AP design to system integration (Qualcomm automotive $8B, Apple photonics, low-power DRAM interfaces) now visible in market positioning; last week lacked this structural competitive data."
+      }
+    },
+    "hpc_datacenter": {
+      "ko": {
+        "executive_summary": "HPC datacenter competitive standing remains defined by memory supply tightness, not technology differentiation. This week the material reveals not market shift but operational stress: SK hynix and Samsung are locked in a talent war (HBM staffing, degree-requirement removal, performance bonuses up to $400K) to accelerate HBM4/HBM4E ramp, while NVIDIA, AMD, and Intel face Korean government scrutiny on AI chip supply chains and substrate bottlenecks. The interface friction point is now labor and supply-chain governance, not chip architecture—a sign the competitive moat has narrowed to execution speed and supply reliability.",
+        "key_facts": [
+          "SK hynix added 2,152 employees; workforce now above 100,000",
+          "SK hynix eliminated degree requirement for production hiring",
+          "Samsung escalating HBM4 ramp and HBM4E/HBM5 development hiring across entire process",
+          "South Korean government summoned NVIDIA, AMD, Intel to review AI chip supply chain",
+          "HBM and substrate shortages identified as constraint for small fabless firms",
+          "Entry-level semiconductor hiring in South Korea surged 47%",
+          "Intel 20% hiring surge reported for 2026",
+          "Former SK hynix President recruited by Intel",
+          "SanDisk expanding Korea engineering recruitment targeting Samsung/SK hynix talent",
+          "Samsung facing $400K bonus demands and 40,000-worker strike threat"
+        ],
+        "implications": [
+          {
+            "keyword": "Supply bottleneck",
+            "text": "HBM and substrate shortages are now the binding constraint in AI datacenter deployment, not compute chip availability. Memory interface (HBM to GPU socket) is the technical friction point where smaller players lose leverage."
+          },
+          {
+            "keyword": "Talent as competitive asset",
+            "text": "Samsung and SK hynix are treating worker acquisition and retention (degree removal, performance bonuses, international school incentives) as a supply-chain defense. This suggests production ramp speed, not design innovation, is the differentiator in HPC memory."
+          },
+          {
+            "keyword": "Geopolitical friction",
+            "text": "South Korean government intervention in AI chip supply chain review signals state-level competition over HBM supply control. Fabless firms are trapped in substrate/HBM allocation bottlenecks despite NVIDIA/AMD design superiority."
+          },
+          {
+            "keyword": "Execution velocity",
+            "text": "Intel and global tech firms actively recruiting from Korean memory shops (former SK hynix leadership to Intel) suggests established players are co-opting competitor execution expertise rather than outinnovating on architecture."
+          }
+        ],
+        "counterpoint": "Material does not detail actual HBM4/HBM4E technical specifications, yield or performance metrics; workforce expansion may reflect demand-driven hiring rather than evidence of supply shortage resolution.",
+        "feasibility_observation": "Mass-production feasibility constraint surfaced: South Korean government identified HBM and substrate shortages as limiting AI chip deployment for small fabless firms, indicating yield or allocation bottleneck in advanced packaging (HBM interposer) is now the production gate, not design performance.",
+        "changed_from_last_week": true,
+        "change_note": "Last week: no material change. This week: HPC datacenter competitiveness redefined from architecture to supply-chain execution; memory interface (HBM shortage, substrate scarcity) now the binding technical friction point; state-level intervention and talent war evidence represents shift from product differentiation to allocation control."
+      },
+      "en": {
+        "executive_summary": "HPC datacenter competitive standing remains defined by memory supply tightness, not technology differentiation. This week the material reveals not market shift but operational stress: SK hynix and Samsung are locked in a talent war (HBM staffing, degree-requirement removal, performance bonuses up to $400K) to accelerate HBM4/HBM4E ramp, while NVIDIA, AMD, and Intel face Korean government scrutiny on AI chip supply chains and substrate bottlenecks. The interface friction point is now labor and supply-chain governance, not chip architecture—a sign the competitive moat has narrowed to execution speed and supply reliability.",
+        "key_facts": [
+          "SK hynix added 2,152 employees; workforce now above 100,000",
+          "SK hynix eliminated degree requirement for production hiring",
+          "Samsung escalating HBM4 ramp and HBM4E/HBM5 development hiring across entire process",
+          "South Korean government summoned NVIDIA, AMD, Intel to review AI chip supply chain",
+          "HBM and substrate shortages identified as constraint for small fabless firms",
+          "Entry-level semiconductor hiring in South Korea surged 47%",
+          "Intel 20% hiring surge reported for 2026",
+          "Former SK hynix President recruited by Intel",
+          "SanDisk expanding Korea engineering recruitment targeting Samsung/SK hynix talent",
+          "Samsung facing $400K bonus demands and 40,000-worker strike threat"
+        ],
+        "implications": [
+          {
+            "keyword": "Supply bottleneck",
+            "text": "HBM and substrate shortages are now the binding constraint in AI datacenter deployment, not compute chip availability. Memory interface (HBM to GPU socket) is the technical friction point where smaller players lose leverage."
+          },
+          {
+            "keyword": "Talent as competitive asset",
+            "text": "Samsung and SK hynix are treating worker acquisition and retention (degree removal, performance bonuses, international school incentives) as a supply-chain defense. This suggests production ramp speed, not design innovation, is the differentiator in HPC memory."
+          },
+          {
+            "keyword": "Geopolitical friction",
+            "text": "South Korean government intervention in AI chip supply chain review signals state-level competition over HBM supply control. Fabless firms are trapped in substrate/HBM allocation bottlenecks despite NVIDIA/AMD design superiority."
+          },
+          {
+            "keyword": "Execution velocity",
+            "text": "Intel and global tech firms actively recruiting from Korean memory shops (former SK hynix leadership to Intel) suggests established players are co-opting competitor execution expertise rather than outinnovating on architecture."
+          }
+        ],
+        "counterpoint": "Material does not detail actual HBM4/HBM4E technical specifications, yield or performance metrics; workforce expansion may reflect demand-driven hiring rather than evidence of supply shortage resolution.",
+        "feasibility_observation": "Mass-production feasibility constraint surfaced: South Korean government identified HBM and substrate shortages as limiting AI chip deployment for small fabless firms, indicating yield or allocation bottleneck in advanced packaging (HBM interposer) is now the production gate, not design performance.",
+        "changed_from_last_week": true,
+        "change_note": "Last week: no material change. This week: HPC datacenter competitiveness redefined from architecture to supply-chain execution; memory interface (HBM shortage, substrate scarcity) now the binding technical friction point; state-level intervention and talent war evidence represents shift from product differentiation to allocation control."
+      }
+    },
+    "custom_soc": {
+      "ko": {
+        "executive_summary": "Custom SoC competition is consolidating around software-defined hardware optimization: Microsoft locks Intel EMIB for Azure silicon packaging (multi-year agreement), Amazon acquires Decart's $7.5B AI chip software stack to accelerate Trainium/commercialization, and Google extends TPU to 4 variants for agentic AI workloads, while Broadcom faces margin pressure as hyperscale customers invert their outsourcing logic—moving optimization from broadcast silicon to in-house stacks. The technical boundary has shifted from die design to system-level compiler and workload mapping.",
+        "key_facts": [
+          "Microsoft Azure: multi-year Intel EMIB advanced packaging agreement for custom silicon",
+          "Amazon: $7.5 billion acquisition of Decart AI chip software; Trainium commercialization underway",
+          "Google: TPU lineup expanded to 4 variants, each targeting distinct agentic AI pipeline stage",
+          "Broadcom: lost $200 billion market cap on Google TPU cut report; stock down 12%",
+          "EnSilica: $80 million satellite navigation chip contract (largest program to date)",
+          "Cyient Semiconductors: $10 million investment from GlobalFoundries",
+          "MediaTek: TPU project momentum noted by Morgan Stanley; target NT$6,188"
+        ],
+        "implications": [
+          {
+            "keyword": "packaging as differentiation",
+            "text": "Intel EMIB adoption by Microsoft signals that advanced chiplet integration (not monolithic custom SoC) has become the competitive baseline for hyperscale; this inverts pressure on integrated foundries and raises barriers for one-off full-custom designs."
+          },
+          {
+            "keyword": "software lock-in at silicon boundary",
+            "text": "Amazon's Decart acquisition ($7.5B) for chip optimization software—not chip design—reveals that hyperscalers now capture value at the compiler/algorithm layer, not die layout. Custom SoC vendors face margin compression as workload optimization shifts upstream."
+          },
+          {
+            "keyword": "TPU fragmentation",
+            "text": "Google's 4-TPU lineup by application phase (vs. monolithic acceleration) suggests custom SoCs must now decompose into task-specific accelerators; broadcast-appeal processors (Broadcom reference designs, generic custom silicon) lose leverage."
+          },
+          {
+            "keyword": "niche SoC resilience",
+            "text": "EnSilica's $80M satellite navigation chip and Cyient's GF backing indicate domain-specific custom SoCs (resilient PNT, aerospace, defense) retain pricing power where hyperscale optimization stacks cannot arbitrage."
+          }
+        ],
+        "counterpoint": "Broadcom's Nvidia-independent revenue (networking, storage, infrastructure chipsets) remains substantial; Google/Amazon in-house silicon does not eliminate demand for switch fabric, timing, or fabric integration ASICs at datacenter scale—yet.",
+        "feasibility_observation": "Microsoft's EMIB adoption for multi-year production implies Intel demonstrated chiplet yield and thermal performance sufficient for production Azure silicon; Amazon's Decart acquisition suggests custom SoC design feasibility now gates on software co-design maturity (compiler, scheduler, heuristics), not pure silicon layout.",
+        "changed_from_last_week": true,
+        "change_note": "Last week: no change. This week: custom SoC competitive axis shifted from full-stack die design to packaged-chiplet + software-stack bundles; hyperscaler vertical integration now directly threatens margin-dependent custom SoC vendors (Broadcom equity impact, MediaTek diversification into TPU) while insulating domain-specific ASICs (EnSilica, defense/aerospace)."
+      },
+      "en": {
+        "executive_summary": "Custom SoC competition is consolidating around software-defined hardware optimization: Microsoft locks Intel EMIB for Azure silicon packaging (multi-year agreement), Amazon acquires Decart's $7.5B AI chip software stack to accelerate Trainium/commercialization, and Google extends TPU to 4 variants for agentic AI workloads, while Broadcom faces margin pressure as hyperscale customers invert their outsourcing logic—moving optimization from broadcast silicon to in-house stacks. The technical boundary has shifted from die design to system-level compiler and workload mapping.",
+        "key_facts": [
+          "Microsoft Azure: multi-year Intel EMIB advanced packaging agreement for custom silicon",
+          "Amazon: $7.5 billion acquisition of Decart AI chip software; Trainium commercialization underway",
+          "Google: TPU lineup expanded to 4 variants, each targeting distinct agentic AI pipeline stage",
+          "Broadcom: lost $200 billion market cap on Google TPU cut report; stock down 12%",
+          "EnSilica: $80 million satellite navigation chip contract (largest program to date)",
+          "Cyient Semiconductors: $10 million investment from GlobalFoundries",
+          "MediaTek: TPU project momentum noted by Morgan Stanley; target NT$6,188"
+        ],
+        "implications": [
+          {
+            "keyword": "packaging as differentiation",
+            "text": "Intel EMIB adoption by Microsoft signals that advanced chiplet integration (not monolithic custom SoC) has become the competitive baseline for hyperscale; this inverts pressure on integrated foundries and raises barriers for one-off full-custom designs."
+          },
+          {
+            "keyword": "software lock-in at silicon boundary",
+            "text": "Amazon's Decart acquisition ($7.5B) for chip optimization software—not chip design—reveals that hyperscalers now capture value at the compiler/algorithm layer, not die layout. Custom SoC vendors face margin compression as workload optimization shifts upstream."
+          },
+          {
+            "keyword": "TPU fragmentation",
+            "text": "Google's 4-TPU lineup by application phase (vs. monolithic acceleration) suggests custom SoCs must now decompose into task-specific accelerators; broadcast-appeal processors (Broadcom reference designs, generic custom silicon) lose leverage."
+          },
+          {
+            "keyword": "niche SoC resilience",
+            "text": "EnSilica's $80M satellite navigation chip and Cyient's GF backing indicate domain-specific custom SoCs (resilient PNT, aerospace, defense) retain pricing power where hyperscale optimization stacks cannot arbitrage."
+          }
+        ],
+        "counterpoint": "Broadcom's Nvidia-independent revenue (networking, storage, infrastructure chipsets) remains substantial; Google/Amazon in-house silicon does not eliminate demand for switch fabric, timing, or fabric integration ASICs at datacenter scale—yet.",
+        "feasibility_observation": "Microsoft's EMIB adoption for multi-year production implies Intel demonstrated chiplet yield and thermal performance sufficient for production Azure silicon; Amazon's Decart acquisition suggests custom SoC design feasibility now gates on software co-design maturity (compiler, scheduler, heuristics), not pure silicon layout.",
+        "changed_from_last_week": true,
+        "change_note": "Last week: no change. This week: custom SoC competitive axis shifted from full-stack die design to packaged-chiplet + software-stack bundles; hyperscaler vertical integration now directly threatens margin-dependent custom SoC vendors (Broadcom equity impact, MediaTek diversification into TPU) while insulating domain-specific ASICs (EnSilica, defense/aerospace)."
+      }
+    },
+    "foundry": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "packaging": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "cpo_optics": {
+      "ko": {
+        "executive_summary": "Apple is demonstrating material acceleration toward in-house silicon photonics mass production targeting 2.5 TB/s interconnects, while Wacker gains design-in for government-backed CPO optical materials and GlobalFoundries expands its photonics platform. This week's hiring activity and project selections signal that the CPO ecosystem is shifting from feasibility validation toward supply-chain buildout, with testing protocols moving upstream (Keysight) in anticipation of volume transitions. The competitive boundary is consolidating around vertical integration of photonics into packaging and interconnect design rather than discrete component brokerage.",
+        "key_facts": [
+          "Apple pursuing mass production of light-based server chip interconnects with 2.5 TB/s target bandwidth",
+          "Wacker selected for government-backed CPO optical interconnect materials project",
+          "Keysight Technologies advancing CPO testing methodology upstream in design cycle",
+          "GlobalFoundries making major silicon photonics platform push",
+          "Apple recruiting for silicon photonics and light-based data link design roles"
+        ],
+        "implications": [
+          {
+            "keyword": "Vertical Integration",
+            "text": "Apple and hyperscalers moving from outsourced discrete optics to in-house photonics IP signals collapse of traditional optics vendor margins at the interconnect interface; packaged optics become a capability moat, not a commodity procurement."
+          },
+          {
+            "keyword": "Supply Chain Consolidation",
+            "text": "Wacker's selection for government-backed materials project and GF's photonics expansion indicate state-level commitment to captive optical-layer manufacturing; reduces neutrality and increases geopolitical bifurcation risk in CPO supply."
+          },
+          {
+            "keyword": "Design Methodology Shift",
+            "text": "Keysight's upstream testing migration (design-phase CPO validation) reduces post-fabrication yield rework and embeds optics validation into standard semiconductor design flow—enables cost-down and mass-production feasibility."
+          },
+          {
+            "keyword": "Capability Barrier Hardening",
+            "text": "2.5 TB/s silicon photonics target and Apple hiring focus on in-house design signal that photonics subsystem complexity now exceeds module-level integration; ODMs and secondary optics suppliers face disintermediation."
+          }
+        ],
+        "counterpoint": "El Niño climate risk to Southeast Asia data centers and broader power/thermal sustainability concerns may constrain CPO adoption rate if hyperscalers deprioritize density gains in favor of operational resilience.",
+        "feasibility_observation": "Keysight's upstream CPO testing protocol shift and Apple's 2.5 TB/s production roadmap indicate design feasibility and production-scale validation are both advancing in parallel; no yield gate reported, but integration complexity into standard photonic-electronic chiplet architectures remains unproven at volume.",
+        "changed_from_last_week": true,
+        "change_note": "Last week reported no change; this week shows active material transition—Apple mass-production timeline, Wacker material supply contract, GF platform expansion, and Keysight methodology shift collectively signal CPO ecosystem moving from R&D into production ramp and supply-chain lock-in."
+      },
+      "en": {
+        "executive_summary": "Apple is demonstrating material acceleration toward in-house silicon photonics mass production targeting 2.5 TB/s interconnects, while Wacker gains design-in for government-backed CPO optical materials and GlobalFoundries expands its photonics platform. This week's hiring activity and project selections signal that the CPO ecosystem is shifting from feasibility validation toward supply-chain buildout, with testing protocols moving upstream (Keysight) in anticipation of volume transitions. The competitive boundary is consolidating around vertical integration of photonics into packaging and interconnect design rather than discrete component brokerage.",
+        "key_facts": [
+          "Apple pursuing mass production of light-based server chip interconnects with 2.5 TB/s target bandwidth",
+          "Wacker selected for government-backed CPO optical interconnect materials project",
+          "Keysight Technologies advancing CPO testing methodology upstream in design cycle",
+          "GlobalFoundries making major silicon photonics platform push",
+          "Apple recruiting for silicon photonics and light-based data link design roles"
+        ],
+        "implications": [
+          {
+            "keyword": "Vertical Integration",
+            "text": "Apple and hyperscalers moving from outsourced discrete optics to in-house photonics IP signals collapse of traditional optics vendor margins at the interconnect interface; packaged optics become a capability moat, not a commodity procurement."
+          },
+          {
+            "keyword": "Supply Chain Consolidation",
+            "text": "Wacker's selection for government-backed materials project and GF's photonics expansion indicate state-level commitment to captive optical-layer manufacturing; reduces neutrality and increases geopolitical bifurcation risk in CPO supply."
+          },
+          {
+            "keyword": "Design Methodology Shift",
+            "text": "Keysight's upstream testing migration (design-phase CPO validation) reduces post-fabrication yield rework and embeds optics validation into standard semiconductor design flow—enables cost-down and mass-production feasibility."
+          },
+          {
+            "keyword": "Capability Barrier Hardening",
+            "text": "2.5 TB/s silicon photonics target and Apple hiring focus on in-house design signal that photonics subsystem complexity now exceeds module-level integration; ODMs and secondary optics suppliers face disintermediation."
+          }
+        ],
+        "counterpoint": "El Niño climate risk to Southeast Asia data centers and broader power/thermal sustainability concerns may constrain CPO adoption rate if hyperscalers deprioritize density gains in favor of operational resilience.",
+        "feasibility_observation": "Keysight's upstream CPO testing protocol shift and Apple's 2.5 TB/s production roadmap indicate design feasibility and production-scale validation are both advancing in parallel; no yield gate reported, but integration complexity into standard photonic-electronic chiplet architectures remains unproven at volume.",
+        "changed_from_last_week": true,
+        "change_note": "Last week reported no change; this week shows active material transition—Apple mass-production timeline, Wacker material supply contract, GF platform expansion, and Keysight methodology shift collectively signal CPO ecosystem moving from R&D into production ramp and supply-chain lock-in."
+      }
+    },
+    "dram": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "nand": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "hbm": {
+      "ko": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      },
+      "en": {
+        "executive_summary": "변화 없음",
+        "key_facts": [],
+        "implications": [],
+        "counterpoint": "",
+        "feasibility_observation": "",
+        "changed_from_last_week": false,
+        "change_note": ""
+      }
+    },
+    "pmic": {
+      "ko": {
+        "executive_summary": "SMIC reports renewed foreign client repatriation to Chinese fabs, signaling a structural shift in PMIC procurement away from TSMC/Samsung's shrinking 8-inch capacity toward Chinese mature-node producers. This validates the existing BCD capacity imbalance but does not yet confirm pricing recovery—SMIC's 40% gross-margin target remains gated by competitive cost pressure and fab utilization gaps.",
+        "key_facts": [
+          "SMIC reports foreign clients shifting orders back to China",
+          "SMIC targeting return to 40% gross margins",
+          "TSMC/Samsung 8-inch capacity reduction remains structural driver"
+        ],
+        "implications": [
+          {
+            "keyword": "BOM supply stability",
+            "text": "Foreign OEMs consolidating BCD sourcing into Chinese fabs (SMIC, Hua Hong) for cost and lead-time advantage as Taiwan/Korea mature-node supply tightens; expect acceleration if TSMC/Samsung 8-inch capacity further constrains."
+          },
+          {
+            "keyword": "Pricing pressure",
+            "text": "SMIC's gross-margin recovery remains constrained by Chinese competitor oversupply; repatriated volume alone insufficient to close the cost gap without utilization recovery or certified (automotive/server-grade) product mix improvement."
+          },
+          {
+            "keyword": "Geographic concentration risk",
+            "text": "Accelerating Chinese consolidation of PMIC supply creates dual exposure: geopolitical vulnerability for Taiwan-sensitive designs, and competitive margin compression for non-Chinese suppliers dependent on commodity mature-node segments."
+          }
+        ],
+        "counterpoint": "SMIC's repatriation claims lack third-party volume confirmation; actual fab utilization gains and gross-margin trend data needed to validate the shift beyond customer messaging.",
+        "feasibility_observation": "해당 없음",
+        "changed_from_last_week": true,
+        "change_note": "Last week treated SMIC consolidation as passive margin pressure; this week's client-repatriation signals suggest active OEM procurement shift toward China—a supply-dynamics inflection rather than static overcapacity."
+      },
+      "en": {
+        "executive_summary": "SMIC reports renewed foreign client repatriation to Chinese fabs, signaling a structural shift in PMIC procurement away from TSMC/Samsung's shrinking 8-inch capacity toward Chinese mature-node producers. This validates the existing BCD capacity imbalance but does not yet confirm pricing recovery—SMIC's 40% gross-margin target remains gated by competitive cost pressure and fab utilization gaps.",
+        "key_facts": [
+          "SMIC reports foreign clients shifting orders back to China",
+          "SMIC targeting return to 40% gross margins",
+          "TSMC/Samsung 8-inch capacity reduction remains structural driver"
+        ],
+        "implications": [
+          {
+            "keyword": "BOM supply stability",
+            "text": "Foreign OEMs consolidating BCD sourcing into Chinese fabs (SMIC, Hua Hong) for cost and lead-time advantage as Taiwan/Korea mature-node supply tightens; expect acceleration if TSMC/Samsung 8-inch capacity further constrains."
+          },
+          {
+            "keyword": "Pricing pressure",
+            "text": "SMIC's gross-margin recovery remains constrained by Chinese competitor oversupply; repatriated volume alone insufficient to close the cost gap without utilization recovery or certified (automotive/server-grade) product mix improvement."
+          },
+          {
+            "keyword": "Geographic concentration risk",
+            "text": "Accelerating Chinese consolidation of PMIC supply creates dual exposure: geopolitical vulnerability for Taiwan-sensitive designs, and competitive margin compression for non-Chinese suppliers dependent on commodity mature-node segments."
+          }
+        ],
+        "counterpoint": "SMIC's repatriation claims lack third-party volume confirmation; actual fab utilization gains and gross-margin trend data needed to validate the shift beyond customer messaging.",
+        "feasibility_observation": "",
+        "changed_from_last_week": true,
+        "change_note": "Last week treated SMIC consolidation as passive margin pressure; this week's client-repatriation signals suggest active OEM procurement shift toward China—a supply-dynamics inflection rather than static overcapacity."
+      }
+    }
+  },
+  "item_counts": {
+    "mobile_ap": 6,
+    "hpc_datacenter": 60,
+    "custom_soc": 74,
+    "foundry": 87,
+    "packaging": 64,
+    "cpo_optics": 13,
+    "hbm": 18,
+    "pmic": 2
+  }
+}

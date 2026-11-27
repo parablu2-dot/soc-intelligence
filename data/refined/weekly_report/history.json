@@ -1,42 +1,42 @@
 {
   "mobile_ap": {
-    "date": "2026-11-21",
-    "executive_summary": "This week's material lacks substantive technical or competitive moves in mobile AP design, packaging, or protocol boundaries. The Apple health study signals compute capability relevance but remains research-stage; the India laptop survey confirms Snapdragon's market share momentum but offers no new architectural or yield data. No change to competitive standings."
+    "date": "2026-11-28",
+    "executive_summary": "Mobile AP competitive posture shifts marginally toward system-level diversification rather than core AP design: Qualcomm's $8B automotive chip position and Apple's photonics infrastructure hiring signal value migration from standalone processors to integrated platform interfaces, while Samsung's Exynos 2500 positioning against Snapdragon 8 Elite remains conventional performance play. Low-power DRAM demand surge for AI glasses and connectivity protocol expansion (SiWx917 integration) define emerging battery-constrained interfaces, but no production feasibility or yield data supports imminent market share transitions in flagship AP competition."
   },
   "hpc_datacenter": {
-    "date": "2026-11-21",
-    "executive_summary": "변화 없음"
+    "date": "2026-11-28",
+    "executive_summary": "HPC datacenter competitive standing remains defined by memory supply tightness, not technology differentiation. This week the material reveals not market shift but operational stress: SK hynix and Samsung are locked in a talent war (HBM staffing, degree-requirement removal, performance bonuses up to $400K) to accelerate HBM4/HBM4E ramp, while NVIDIA, AMD, and Intel face Korean government scrutiny on AI chip supply chains and substrate bottlenecks. The interface friction point is now labor and supply-chain governance, not chip architecture—a sign the competitive moat has narrowed to execution speed and supply reliability."
   },
   "custom_soc": {
-    "date": "2026-11-21",
-    "executive_summary": "변화 없음"
+    "date": "2026-11-28",
+    "executive_summary": "Custom SoC competition is consolidating around software-defined hardware optimization: Microsoft locks Intel EMIB for Azure silicon packaging (multi-year agreement), Amazon acquires Decart's $7.5B AI chip software stack to accelerate Trainium/commercialization, and Google extends TPU to 4 variants for agentic AI workloads, while Broadcom faces margin pressure as hyperscale customers invert their outsourcing logic—moving optimization from broadcast silicon to in-house stacks. The technical boundary has shifted from die design to system-level compiler and workload mapping."
   },
   "foundry": {
-    "date": "2026-11-21",
-    "executive_summary": "NVIDIA's CEO transition injects supply-chain recalculation risk into the foundry ecosystem; Samsung gains tactical negotiating room with TSMC while SK Hynix doubles down on HBM4 packaging and test capacity despite AI sector uncertainty, signaling that memory-interface integration—not core logic—remains the competitive vector. TSMC's public logic-only posture is now shadowed by rival capital deployment aimed explicitly at packaging and assembly nodes where margin and control concentrate."
-  },
-  "packaging": {
-    "date": "2026-11-21",
-    "executive_summary": "Packaging ecosystem consolidates around dual momentum: TSMC-Xintec seven-year CoWoS capacity deal (through 2033) anchors AI/HBM supply guarantees, while Daxin Materials' semiconductor revenue breakthrough (22.7%, first time >20%) and Taiwan APS Holdings' ceramic substrate IPO (NT$188/share) signal materials-layer commoditization is reversing through platform differentiation. Chiplet standardization (UCIe 4.0 memory integration, Imec-ASRA automotive ACIR specs) now creates vertical lock-in at the interposer boundary, favoring integrated materials players over standalone interconnect vendors."
-  },
-  "cpo_optics": {
-    "date": "2026-11-21",
+    "date": "2026-11-28",
     "executive_summary": "변화 없음"
   },
+  "packaging": {
+    "date": "2026-11-28",
+    "executive_summary": "변화 없음"
+  },
+  "cpo_optics": {
+    "date": "2026-11-28",
+    "executive_summary": "Apple is demonstrating material acceleration toward in-house silicon photonics mass production targeting 2.5 TB/s interconnects, while Wacker gains design-in for government-backed CPO optical materials and GlobalFoundries expands its photonics platform. This week's hiring activity and project selections signal that the CPO ecosystem is shifting from feasibility validation toward supply-chain buildout, with testing protocols moving upstream (Keysight) in anticipation of volume transitions. The competitive boundary is consolidating around vertical integration of photonics into packaging and interconnect design rather than discrete component brokerage."
+  },
   "dram": {
-    "date": "2026-11-21",
+    "date": "2026-11-28",
     "executive_summary": "변화 없음"
   },
   "nand": {
-    "date": "2026-11-21",
+    "date": "2026-11-28",
     "executive_summary": "변화 없음"
   },
   "hbm": {
-    "date": "2026-11-21",
-    "executive_summary": "Samsung and SK Hynix are consolidating HBM packaging and test dominance while simultaneously capturing custom base-die production via platform-locked partnerships—Samsung now holds HBM4E for Meta on 2nm (outsourcing commodity logic, not packaging), while SK Hynix aggressively scales HBM4 capacity for H1 2025 operations. The tactical inversion is now complete: Korean suppliers own the packaging-interposer boundary (high-margin, differentiation point), while hyperscalers (Google, Meta) are systematizing direct HBM procurement to bypass Broadcom intermediation and lock packaging specs to their own base-die roadmaps, fragmenting the previously unified HBM ecosystem into platform-specific supply chains."
+    "date": "2026-11-28",
+    "executive_summary": "변화 없음"
   },
   "pmic": {
-    "date": "2026-11-21",
-    "executive_summary": "No material shift in PMIC supply dynamics this week. MaxLinear's new AI optics power chip launch addresses application-layer demand but does not alter underlying BCD/mature-node capacity allocation or pricing pressure from Chinese competitors (SMIC, Hua Hong). TSMC/Samsung's continued 8-inch capacity reduction remains the structural driver; Chinese matnode producers remain positioned to capture volume-based cost advantage."
+    "date": "2026-11-28",
+    "executive_summary": "SMIC reports renewed foreign client repatriation to Chinese fabs, signaling a structural shift in PMIC procurement away from TSMC/Samsung's shrinking 8-inch capacity toward Chinese mature-node producers. This validates the existing BCD capacity imbalance but does not yet confirm pricing recovery—SMIC's 40% gross-margin target remains gated by competitive cost pressure and fab utilization gaps."
   }
 }
